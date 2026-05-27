@@ -1,6 +1,6 @@
-# Contributing to OSCALiFY
+# Contributing to CKODEX XOSCAL
 
-Thank you for your interest in contributing to OSCALiFY!
+Thank you for your interest in contributing to CKODEX XOSCAL!
 
 ## Getting Started
 
@@ -16,8 +16,8 @@ Thank you for your interest in contributing to OSCALiFY!
 
 ```bash
 # Clone the repository
-git clone https://github.com/ckodex/ckodex-oscalify.git
-cd ckodex-oscalify
+git clone https://github.com/ckodex-labs/ckodex-xoscal.git
+cd ckodex-xoscal
 
 # Install dependencies
 make deps

@@ -3,7 +3,7 @@
 ## Supported Versions
 
 | Version | Supported          |
-|---------|--------------------|
+| ------- | ------------------ |
 | 0.1.x   | :white_check_mark: |
 
 ## Reporting a Vulnerability
@@ -35,7 +35,7 @@ We request that you do not publicly disclose the vulnerability until we have had
 For users of OSCALiFY:
 
 - Keep dependencies updated
-- Review the [SBOM](https://github.com/ckodex/ckodex-oscalify/releases) for each release
+- Review the [SBOM](https://github.com/ckodex-labs/ckodex-xoscal/releases) for each release
 - Follow the principle of least privilege when deploying
 - Enable authentication and rate limiting in production deployments
 - Regularly audit generated OSCAL artifacts
