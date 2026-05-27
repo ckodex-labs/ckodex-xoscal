@@ -1,0 +1,68 @@
+NOTICE
+
+This product includes software developed by the following organizations and
+individuals as part of their open source projects. The original copyright
+notices and license terms are included below.
+
+================================================================================
+THIRD-PARTY SOFTWARE NOTICES
+================================================================================
+
+This software incorporates code from the following open source projects.
+Each project is licensed under its respective license, which may be found
+in the project's repository or in the vendor directory.
+
+Key Third-Party Dependencies:
+
+- Apache Arrow (Apache License 2.0)
+  https://arrow.apache.org/
+  Copyright 2016-2024 The Apache Software Foundation
+
+- gRPC (Apache License 2.0)
+  https://grpc.io/
+  Copyright 2015-2024 gRPC Authors
+
+- Protocol Buffers (BSD 3-Clause)
+  https://developers.google.com/protocol-buffers/
+  Copyright 2008-2024 Google Inc.
+
+- Envoy Proxy (Apache License 2.0)
+  https://www.envoyproxy.io/
+  Copyright 2016-2024 Envoy Project Authors
+
+- Go standard library and related packages (BSD 3-Clause)
+  https://golang.org/
+  Copyright 2009-2024 The Go Authors
+
+- OpenTelemetry (Apache License 2.0)
+  https://opentelemetry.io/
+  Copyright 2019-2024 OpenTelemetry Authors
+
+- Prometheus (Apache License 2.0)
+  https://prometheus.io/
+  Copyright 2012-2024 The Prometheus Authors
+
+- buf.build (Apache License 2.0)
+  https://buf.build/
+  Copyright 2020-2024 Buf Technologies, Inc.
+
+- Dagger (Apache License 2.0)
+  https://dagger.io/
+  Copyright 2022-2024 Dagger Authors
+
+Full dependency list is available in go.mod and go.sum files.
+To view detailed license information for each dependency, run:
+  go-licenses save ./... --save_path=licenses
+
+================================================================================
+MODIFICATIONS AND ATTRIBUTION
+================================================================================
+
+This project, xoscal, is developed and maintained by CKODEX.
+
+Modifications have been made to integrate these components into a unified
+OSCAL artifact generation and management system.
+
+For questions about third-party license compliance, contact: legal@ckodex.io
+
+================================================================================
