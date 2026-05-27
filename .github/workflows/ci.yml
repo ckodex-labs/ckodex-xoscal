@@ -15,21 +15,17 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Dagger All (lint + test + race + security)
+      - name: Setup Dagger
         uses: dagger/dagger-for-github@v6
         with:
-          verb: call
-          module: .
-          args: all --source=.
-          cloud-token: ${{ secrets.DAGGER_CLOUD_TOKEN }}
+          install-only: true
+          version: "v0.21.0"
+
+      - name: Dagger All (lint + test + race + security)
+        run: dagger call all --source=.
 
       - name: Coverage Report
-        uses: dagger/dagger-for-github@v6
-        with:
-          verb: call
-          module: .
-          args: coverage --source=. export --path=coverage.html
-          cloud-token: ${{ secrets.DAGGER_CLOUD_TOKEN }}
+        run: dagger call coverage --source=. export --path=coverage.html
 
       - name: Upload coverage
         uses: codecov/codecov-action@v5
@@ -44,13 +40,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Dagger Security (govulncheck + gosec)
+      - name: Setup Dagger
         uses: dagger/dagger-for-github@v6
         with:
-          verb: call
-          module: .
-          args: security --source=. export --path=gosec-results.sarif
-          cloud-token: ${{ secrets.DAGGER_CLOUD_TOKEN }}
+          install-only: true
+          version: "v0.21.0"
+
+      - name: Dagger Security (govulncheck + gosec)
+        run: dagger call security --source=. export --path=gosec-results.sarif
 
       - name: Upload SARIF
         uses: github/codeql-action/upload-sarif@v3
@@ -65,13 +62,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Dagger Image Build
+      - name: Setup Dagger
         uses: dagger/dagger-for-github@v6
         with:
-          verb: call
-          module: .
-          args: image --source=.
-          cloud-token: ${{ secrets.DAGGER_CLOUD_TOKEN }}
+          install-only: true
+          version: "v0.21.0"
+
+      - name: Dagger Image Build
+        run: dagger call image --source=.
 
       - name: Scan image with Trivy
         uses: aquasecurity/trivy-action@master
