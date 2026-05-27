@@ -182,3 +182,4 @@ trivy-report.json
 snyk-report.json
 *.sarif
 
+/proto/oscal/gen/**
