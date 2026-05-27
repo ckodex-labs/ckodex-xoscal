@@ -50,7 +50,7 @@ jobs:
         run: dagger call security --source=. export --path=gosec-results.sarif
 
       - name: Upload SARIF
-        uses: github/codeql-action/upload-sarif@v3
+        uses: github/codeql-action/upload-sarif@v4
         if: always()
         with:
           sarif_file: gosec-results.sarif
@@ -69,7 +69,10 @@ jobs:
           version: "v0.21.0"
 
       - name: Dagger Image Build
-        run: dagger call image --source=.
+        run: |
+          dagger call image --source=. export --path=/tmp/xoscal-server.tar
+          docker load -i /tmp/xoscal-server.tar
+          docker tag xoscal-server:latest xoscal-server:${{ github.sha }}
 
       - name: Scan image with Trivy
         uses: aquasecurity/trivy-action@master
@@ -79,7 +82,7 @@ jobs:
           output: trivy-results.sarif
 
       - name: Upload Trivy SARIF
-        uses: github/codeql-action/upload-sarif@v3
+        uses: github/codeql-action/upload-sarif@v4
         if: always()
         with:
           sarif_file: trivy-results.sarif
