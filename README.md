@@ -4,15 +4,15 @@ A Go gRPC server for managing OSCAL (Open Security Controls Assessment Language)
 
 ## Architecture
 
-```
+```plaintext
 ┌─────────────────────────────────────────────────────────────┐
-│                     gRPC Clients                              │
-└──────────────────────┬────────────────────────────────────────┘
+│                     gRPC Clients                            │
+└──────────────────────┬──────────────────────────────────────┘
                        │
-┌──────────────────────▼────────────────────────────────────────┐
+┌──────────────────────▼──────────────────────────────────────┐
 │              OSCAL gRPC Service (port 50051)                │
 │  ┌──────────────┐  ┌──────────────┐  ┌──────────────────┐   │
-│  │   Catalog    │  │   Profile    │  │ Component Def. │   │
+│  │   Catalog    │  │   Profile    │  │ Component Def.   │   │
 │  │   CRUD +     │  │   CRUD +     │  │     CRUD +       │   │
 │  │   Search     │  │   Search     │  │     Search       │   │
 │  └──────────────┘  └──────────────┘  └──────────────────┘   │
@@ -21,18 +21,18 @@ A Go gRPC server for managing OSCAL (Open Security Controls Assessment Language)
 │  │   CRUD +     │  │    Plan      │  │    Results       │   │
 │  │   Search     │  │   CRUD +     │  │   CRUD +         │   │
 │  └──────────────┘  └──────────────┘  └──────────────────┘   │
-│  ┌──────────────┐  ┌──────────────┐                          │
-│  │    POAM      │  │   Mapping    │                          │
-│  │   CRUD +     │  │   CRUD +     │                          │
-│  │   Search     │  │   Search     │                          │
-│  └──────────────┘  └──────────────┘                          │
-└──────────────────────┬────────────────────────────────────────┘
+│  ┌──────────────┐  ┌──────────────┐                         │
+│  │    POAM      │  │   Mapping    │                         │
+│  │   CRUD +     │  │   CRUD +     │                         │
+│  │   Search     │  │   Search     │                         │
+│  └──────────────┘  └──────────────┘                         │
+└──────────────────────┬──────────────────────────────────────┘
                        │
-┌──────────────────────▼────────────────────────────────────────┐
-│              SQLite Store (embedded, single-node)             │
-│  One table per OSCAL model: catalogs, profiles, ssps, etc.   │
-│  Protobuf messages serialized as BLOBs for storage.          │
-└───────────────────────────────────────────────────────────────┘
+┌──────────────────────▼──────────────────────────────────────┐
+│              SQLite Store (embedded, single-node)           │
+│  One table per OSCAL model: catalogs, profiles, ssps, etc.  │
+│  Protobuf messages serialized as BLOBs for storage.         │
+└─────────────────────────────────────────────────────────────┘
 ```
 
 ## Quick Start
@@ -111,7 +111,7 @@ Health checks are available via the standard gRPC health protocol, and reflectio
 
 ## Project Structure
 
-```
+```plaintext
 .
 ├── buf.yaml                     # Buf module config
 ├── buf.gen.yaml                 # Code generation plugins
@@ -142,6 +142,7 @@ Health checks are available via the standard gRPC health protocol, and reflectio
 ## CI/CD
 
 GitHub Actions workflow (`.github/workflows/ci.yml`) runs on every push/PR:
+
 - `buf lint`
 - `buf generate`
 - `go build ./...`

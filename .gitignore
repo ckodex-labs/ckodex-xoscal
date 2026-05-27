@@ -183,3 +183,4 @@ snyk-report.json
 *.sarif
 
 /proto/oscal/gen/**
+THIRD_PARTY_LICENSES
