@@ -1,0 +1,21 @@
+{
+  "$id": "oscal.services.v1.ListComponentDefinitionsResponse.jsonschema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "componentDefinitions": {
+      "items": {
+        "$ref": "oscal.component_definition.v1.ComponentDefinition.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "nextPageToken": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "nextPageToken"
+  ],
+  "title": "List Component Definitions Response",
+  "type": "object"
+}

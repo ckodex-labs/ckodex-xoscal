@@ -1,0 +1,27 @@
+{
+  "$defs": {
+    "oscal.services.v1.ListReleasesRequest.jsonschema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "properties": {
+        "pageSize": {
+          "maximum": 2147483647,
+          "minimum": -2147483648,
+          "type": "integer"
+        },
+        "pageToken": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "pageSize",
+        "pageToken"
+      ],
+      "title": "List Releases Request",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.services.v1.ListReleasesRequest.jsonschema.strict.bundle.json",
+  "$ref": "#/$defs/oscal.services.v1.ListReleasesRequest.jsonschema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

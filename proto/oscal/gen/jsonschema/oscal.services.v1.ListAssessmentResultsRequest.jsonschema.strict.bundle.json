@@ -1,0 +1,31 @@
+{
+  "$defs": {
+    "oscal.services.v1.ListAssessmentResultsRequest.jsonschema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "properties": {
+        "filter": {
+          "type": "string"
+        },
+        "pageSize": {
+          "maximum": 2147483647,
+          "minimum": -2147483648,
+          "type": "integer"
+        },
+        "pageToken": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "pageSize",
+        "pageToken",
+        "filter"
+      ],
+      "title": "List Assessment Results Request",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.services.v1.ListAssessmentResultsRequest.jsonschema.strict.bundle.json",
+  "$ref": "#/$defs/oscal.services.v1.ListAssessmentResultsRequest.jsonschema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

@@ -1,0 +1,75 @@
+{
+  "$id": "oscal.poam.v1.RiskLogEntry.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "RiskLogEntry represents a risk log entry",
+  "patternProperties": {
+    "^(logged_by)$": {
+      "items": {
+        "$ref": "oscal.poam.v1.LoggedBy.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "^(related_responses)$": {
+      "items": {
+        "$ref": "oscal.poam.v1.RelatedResponse.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "^(status_change)$": {
+      "$ref": "oscal.poam.v1.RiskStatus.jsonschema.json"
+    }
+  },
+  "properties": {
+    "description": {
+      "$ref": "oscal.common.v1.MarkupMultiline.jsonschema.json"
+    },
+    "end": {
+      "$ref": "oscal.common.v1.DateTime.jsonschema.json"
+    },
+    "links": {
+      "items": {
+        "$ref": "oscal.common.v1.Link.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "loggedBy": {
+      "items": {
+        "$ref": "oscal.poam.v1.LoggedBy.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "props": {
+      "items": {
+        "$ref": "oscal.common.v1.Property.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "relatedResponses": {
+      "items": {
+        "$ref": "oscal.poam.v1.RelatedResponse.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "remarks": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupMultiline.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "start": {
+      "$ref": "oscal.common.v1.DateTime.jsonschema.json"
+    },
+    "statusChange": {
+      "$ref": "oscal.poam.v1.RiskStatus.jsonschema.json"
+    },
+    "title": {
+      "$ref": "oscal.common.v1.MarkupLine.jsonschema.json"
+    },
+    "uuid": {
+      "$ref": "oscal.common.v1.UUID.jsonschema.json"
+    }
+  },
+  "title": "Risk Log Entry",
+  "type": "object"
+}

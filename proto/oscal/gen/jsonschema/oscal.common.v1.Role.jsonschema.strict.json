@@ -1,0 +1,38 @@
+{
+  "$id": "oscal.common.v1.Role.jsonschema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Role represents a role definition",
+  "properties": {
+    "description": {
+      "$ref": "oscal.common.v1.MarkupMultiline.jsonschema.strict.json"
+    },
+    "id": {
+      "$ref": "oscal.common.v1.Token.jsonschema.strict.json"
+    },
+    "links": {
+      "items": {
+        "$ref": "oscal.common.v1.Link.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "props": {
+      "items": {
+        "$ref": "oscal.common.v1.Property.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "shortName": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "title",
+    "shortName"
+  ],
+  "title": "Role",
+  "type": "object"
+}

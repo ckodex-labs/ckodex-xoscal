@@ -1,0 +1,25 @@
+{
+  "$defs": {
+    "oscal.services.v1.DeleteEdgeRequest.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "patternProperties": {
+        "^(edgeId)$": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "properties": {
+        "edge_id": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Delete Edge Request",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.services.v1.DeleteEdgeRequest.schema.bundle.json",
+  "$ref": "#/$defs/oscal.services.v1.DeleteEdgeRequest.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

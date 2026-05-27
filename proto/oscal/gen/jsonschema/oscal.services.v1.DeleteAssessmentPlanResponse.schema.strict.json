@@ -1,0 +1,15 @@
+{
+  "$id": "oscal.services.v1.DeleteAssessmentPlanResponse.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "success": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "success"
+  ],
+  "title": "Delete Assessment Plan Response",
+  "type": "object"
+}

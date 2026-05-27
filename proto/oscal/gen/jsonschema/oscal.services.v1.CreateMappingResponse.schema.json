@@ -1,0 +1,12 @@
+{
+  "$id": "oscal.services.v1.CreateMappingResponse.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "mapping": {
+      "$ref": "oscal.mapping.v1.MappingCollection.schema.json"
+    }
+  },
+  "title": "Create Mapping Response",
+  "type": "object"
+}

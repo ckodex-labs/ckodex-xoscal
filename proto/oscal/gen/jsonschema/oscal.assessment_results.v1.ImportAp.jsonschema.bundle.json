@@ -1,0 +1,51 @@
+{
+  "$defs": {
+    "oscal.assessment_results.v1.ImportAp.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "ImportAp represents an imported assessment plan",
+      "properties": {
+        "href": {
+          "$ref": "#/$defs/oscal.common.v1.URIReference.jsonschema.json"
+        },
+        "remarks": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.jsonschema.json"
+          },
+          "type": "array"
+        }
+      },
+      "title": "Import Ap",
+      "type": "object"
+    },
+    "oscal.common.v1.MarkupMultiline.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "MarkupMultiline represents multiline markup text",
+      "properties": {
+        "value": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Markup Multiline",
+      "type": "object"
+    },
+    "oscal.common.v1.URIReference.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "URIReference represents a URI reference (may be relative)",
+      "properties": {
+        "value": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "URI Reference",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.assessment_results.v1.ImportAp.jsonschema.bundle.json",
+  "$ref": "#/$defs/oscal.assessment_results.v1.ImportAp.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

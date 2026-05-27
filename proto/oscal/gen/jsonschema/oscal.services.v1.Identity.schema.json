@@ -1,0 +1,27 @@
+{
+  "$id": "oscal.services.v1.Identity.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "patternProperties": {
+    "^(keyJson)$": {
+      "default": "",
+      "type": "string"
+    }
+  },
+  "properties": {
+    "id": {
+      "default": "",
+      "type": "string"
+    },
+    "key_json": {
+      "default": "",
+      "type": "string"
+    },
+    "kind": {
+      "default": "",
+      "type": "string"
+    }
+  },
+  "title": "Identity",
+  "type": "object"
+}

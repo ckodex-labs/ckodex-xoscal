@@ -1,0 +1,26 @@
+{
+  "$defs": {
+    "oscal.common.v1.DocumentId.schema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "DocumentId represents a document identifier",
+      "properties": {
+        "identifier": {
+          "type": "string"
+        },
+        "scheme": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "scheme",
+        "identifier"
+      ],
+      "title": "Document Id",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.common.v1.DocumentId.schema.strict.bundle.json",
+  "$ref": "#/$defs/oscal.common.v1.DocumentId.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

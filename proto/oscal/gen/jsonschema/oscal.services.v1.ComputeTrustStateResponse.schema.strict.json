@@ -1,0 +1,32 @@
+{
+  "$id": "oscal.services.v1.ComputeTrustStateResponse.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "claim_id": {
+      "type": "string"
+    },
+    "diagnostics": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "edge_id": {
+      "type": "string"
+    },
+    "proof_state": {
+      "$ref": "oscal.services.v1.ProofState.schema.strict.json"
+    },
+    "trust_state": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "claim_id",
+    "edge_id",
+    "trust_state"
+  ],
+  "title": "Compute Trust State Response",
+  "type": "object"
+}

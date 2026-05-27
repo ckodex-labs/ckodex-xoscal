@@ -1,0 +1,17 @@
+{
+  "$id": "oscal.services.v1.UpdateAssessmentResultsResponse.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "patternProperties": {
+    "^(assessment_results)$": {
+      "$ref": "oscal.assessment_results.v1.AssessmentResults.jsonschema.json"
+    }
+  },
+  "properties": {
+    "assessmentResults": {
+      "$ref": "oscal.assessment_results.v1.AssessmentResults.jsonschema.json"
+    }
+  },
+  "title": "Update Assessment Results Response",
+  "type": "object"
+}

@@ -1,0 +1,25 @@
+{
+  "$defs": {
+    "oscal.services.v1.GetEdgeRequest.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "patternProperties": {
+        "^(edge_id)$": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "properties": {
+        "edgeId": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Get Edge Request",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.services.v1.GetEdgeRequest.jsonschema.bundle.json",
+  "$ref": "#/$defs/oscal.services.v1.GetEdgeRequest.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

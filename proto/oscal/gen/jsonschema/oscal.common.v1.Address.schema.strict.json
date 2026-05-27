@@ -1,0 +1,34 @@
+{
+  "$id": "oscal.common.v1.Address.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Address represents a postal address",
+  "properties": {
+    "addr_lines": {
+      "items": {
+        "$ref": "oscal.common.v1.AddrLine.schema.strict.json"
+      },
+      "type": "array"
+    },
+    "city": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
+    },
+    "postal_code": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "city",
+    "state",
+    "postal_code",
+    "country"
+  ],
+  "title": "Address",
+  "type": "object"
+}

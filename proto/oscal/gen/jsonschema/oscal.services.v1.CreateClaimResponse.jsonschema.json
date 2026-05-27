@@ -1,0 +1,22 @@
+{
+  "$id": "oscal.services.v1.CreateClaimResponse.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "patternProperties": {
+    "^(trust_state)$": {
+      "default": "",
+      "type": "string"
+    }
+  },
+  "properties": {
+    "claim": {
+      "$ref": "oscal.services.v1.Claim.jsonschema.json"
+    },
+    "trustState": {
+      "default": "",
+      "type": "string"
+    }
+  },
+  "title": "Create Claim Response",
+  "type": "object"
+}

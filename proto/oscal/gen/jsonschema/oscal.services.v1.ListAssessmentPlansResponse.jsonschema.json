@@ -1,0 +1,31 @@
+{
+  "$id": "oscal.services.v1.ListAssessmentPlansResponse.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "patternProperties": {
+    "^(assessment_plans)$": {
+      "items": {
+        "$ref": "oscal.assessment_plan.v1.AssessmentPlan.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "^(next_page_token)$": {
+      "default": "",
+      "type": "string"
+    }
+  },
+  "properties": {
+    "assessmentPlans": {
+      "items": {
+        "$ref": "oscal.assessment_plan.v1.AssessmentPlan.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "nextPageToken": {
+      "default": "",
+      "type": "string"
+    }
+  },
+  "title": "List Assessment Plans Response",
+  "type": "object"
+}

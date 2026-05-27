@@ -1,0 +1,38 @@
+{
+  "$id": "oscal.ssp.v1.Impact.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Impact represents an impact level",
+  "patternProperties": {
+    "^(adjustment_justification)$": {
+      "$ref": "oscal.common.v1.MarkupMultiline.jsonschema.json"
+    }
+  },
+  "properties": {
+    "adjustmentJustification": {
+      "$ref": "oscal.common.v1.MarkupMultiline.jsonschema.json"
+    },
+    "base": {
+      "default": "",
+      "type": "string"
+    },
+    "links": {
+      "items": {
+        "$ref": "oscal.common.v1.Link.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "props": {
+      "items": {
+        "$ref": "oscal.common.v1.Property.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "selected": {
+      "default": "",
+      "type": "string"
+    }
+  },
+  "title": "Impact",
+  "type": "object"
+}

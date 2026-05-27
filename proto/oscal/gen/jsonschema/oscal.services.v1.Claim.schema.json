@@ -1,0 +1,101 @@
+{
+  "$id": "oscal.services.v1.Claim.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "patternProperties": {
+    "^(bomKind)$": {
+      "default": "",
+      "type": "string"
+    },
+    "^(extensionsJson)$": {
+      "default": "",
+      "type": "string"
+    },
+    "^(nullObject)$": {
+      "$ref": "google.protobuf.Timestamp.schema.json"
+    },
+    "^(observedTime)$": {
+      "$ref": "google.protobuf.Timestamp.schema.json"
+    },
+    "^(policyRefs)$": {
+      "items": {
+        "$ref": "oscal.services.v1.PolicyRef.schema.json"
+      },
+      "type": "array"
+    },
+    "^(proofRefs)$": {
+      "items": {
+        "$ref": "oscal.services.v1.ProofRef.schema.json"
+      },
+      "type": "array"
+    },
+    "^(sourceRefs)$": {
+      "items": {
+        "$ref": "oscal.services.v1.EvidenceRef.schema.json"
+      },
+      "type": "array"
+    },
+    "^(validTime)$": {
+      "$ref": "oscal.services.v1.TimeWindow.schema.json"
+    }
+  },
+  "properties": {
+    "bom_kind": {
+      "default": "",
+      "type": "string"
+    },
+    "extensions_json": {
+      "default": "",
+      "type": "string"
+    },
+    "id": {
+      "default": "",
+      "type": "string"
+    },
+    "issuer": {
+      "$ref": "oscal.services.v1.Identity.schema.json"
+    },
+    "null_object": {
+      "$ref": "google.protobuf.Timestamp.schema.json"
+    },
+    "object": {
+      "$ref": "oscal.services.v1.Reference.schema.json"
+    },
+    "observed_time": {
+      "$ref": "google.protobuf.Timestamp.schema.json"
+    },
+    "policy_refs": {
+      "items": {
+        "$ref": "oscal.services.v1.PolicyRef.schema.json"
+      },
+      "type": "array"
+    },
+    "predicate": {
+      "$ref": "oscal.services.v1.Predicate.schema.json"
+    },
+    "proof_refs": {
+      "items": {
+        "$ref": "oscal.services.v1.ProofRef.schema.json"
+      },
+      "type": "array"
+    },
+    "source_refs": {
+      "items": {
+        "$ref": "oscal.services.v1.EvidenceRef.schema.json"
+      },
+      "type": "array"
+    },
+    "subject": {
+      "$ref": "oscal.services.v1.Reference.schema.json"
+    },
+    "type": {
+      "default": "",
+      "type": "string"
+    },
+    "valid_time": {
+      "$ref": "oscal.services.v1.TimeWindow.schema.json"
+    }
+  },
+  "title": "Claim",
+  "type": "object"
+}

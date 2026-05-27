@@ -1,0 +1,19 @@
+{
+  "$id": "oscal.services.v1.GetEvidenceRequest.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "patternProperties": {
+    "^(evidence_id)$": {
+      "default": "",
+      "type": "string"
+    }
+  },
+  "properties": {
+    "evidenceId": {
+      "default": "",
+      "type": "string"
+    }
+  },
+  "title": "Get Evidence Request",
+  "type": "object"
+}

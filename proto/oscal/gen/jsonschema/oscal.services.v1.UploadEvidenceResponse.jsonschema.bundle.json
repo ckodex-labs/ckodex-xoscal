@@ -1,0 +1,265 @@
+{
+  "$defs": {
+    "google.protobuf.Timestamp.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "format": "date-time",
+      "title": "Timestamp",
+      "type": "string"
+    },
+    "oscal.services.v1.Evidence.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "patternProperties": {
+        "^(bom_kind)$": {
+          "default": "",
+          "type": "string"
+        },
+        "^(created_at)$": {
+          "$ref": "#/$defs/google.protobuf.Timestamp.jsonschema.json"
+        },
+        "^(extensions_json)$": {
+          "default": "",
+          "type": "string"
+        },
+        "^(integrity_methods_json)$": {
+          "default": "",
+          "type": "string"
+        },
+        "^(media_type)$": {
+          "default": "",
+          "type": "string"
+        },
+        "^(predicate_type)$": {
+          "default": "",
+          "type": "string"
+        },
+        "^(produced_by_json)$": {
+          "default": "",
+          "type": "string"
+        },
+        "^(size_bytes)$": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "pattern": "^-?[0-9]+$",
+              "type": "string"
+            }
+          ],
+          "default": 0
+        },
+        "^(spec_json)$": {
+          "default": "",
+          "type": "string"
+        },
+        "^(subject_refs)$": {
+          "items": {
+            "$ref": "#/$defs/oscal.services.v1.Reference.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "^(valid_time)$": {
+          "$ref": "#/$defs/oscal.services.v1.TimeWindow.jsonschema.json"
+        }
+      },
+      "properties": {
+        "bomKind": {
+          "default": "",
+          "type": "string"
+        },
+        "classification": {
+          "default": "",
+          "type": "string"
+        },
+        "createdAt": {
+          "$ref": "#/$defs/google.protobuf.Timestamp.jsonschema.json"
+        },
+        "digest": {
+          "default": "",
+          "type": "string"
+        },
+        "extensionsJson": {
+          "default": "",
+          "type": "string"
+        },
+        "id": {
+          "default": "",
+          "type": "string"
+        },
+        "integrityMethodsJson": {
+          "default": "",
+          "type": "string"
+        },
+        "mediaType": {
+          "default": "",
+          "type": "string"
+        },
+        "predicateType": {
+          "default": "",
+          "type": "string"
+        },
+        "producedByJson": {
+          "default": "",
+          "type": "string"
+        },
+        "sizeBytes": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "pattern": "^-?[0-9]+$",
+              "type": "string"
+            }
+          ],
+          "default": 0
+        },
+        "specJson": {
+          "default": "",
+          "type": "string"
+        },
+        "storage": {
+          "$ref": "#/$defs/oscal.services.v1.Storage.jsonschema.json"
+        },
+        "subjectRefs": {
+          "items": {
+            "$ref": "#/$defs/oscal.services.v1.Reference.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "supersedes": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "validTime": {
+          "$ref": "#/$defs/oscal.services.v1.TimeWindow.jsonschema.json"
+        }
+      },
+      "title": "Evidence",
+      "type": "object"
+    },
+    "oscal.services.v1.Reference.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "patternProperties": {
+        "^(bom_ref)$": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "properties": {
+        "bomRef": {
+          "default": "",
+          "type": "string"
+        },
+        "digest": {
+          "default": "",
+          "type": "string"
+        },
+        "id": {
+          "default": "",
+          "type": "string"
+        },
+        "kind": {
+          "default": "",
+          "type": "string"
+        },
+        "purl": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Reference",
+      "type": "object"
+    },
+    "oscal.services.v1.Storage.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "patternProperties": {
+        "^(air_gap_json)$": {
+          "default": "",
+          "type": "string"
+        },
+        "^(fetch_policy)$": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "properties": {
+        "airGapJson": {
+          "default": "",
+          "type": "string"
+        },
+        "fetchPolicy": {
+          "default": "",
+          "type": "string"
+        },
+        "quorum": {
+          "anyOf": [
+            {
+              "maximum": 2147483647,
+              "minimum": -2147483648,
+              "type": "integer"
+            },
+            {
+              "pattern": "^-?[0-9]+$",
+              "type": "string"
+            }
+          ],
+          "default": 0
+        },
+        "uris": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "title": "Storage",
+      "type": "object"
+    },
+    "oscal.services.v1.TimeWindow.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "patternProperties": {
+        "^(from_time)$": {
+          "$ref": "#/$defs/google.protobuf.Timestamp.jsonschema.json"
+        },
+        "^(to_time)$": {
+          "$ref": "#/$defs/google.protobuf.Timestamp.jsonschema.json"
+        }
+      },
+      "properties": {
+        "fromTime": {
+          "$ref": "#/$defs/google.protobuf.Timestamp.jsonschema.json"
+        },
+        "toTime": {
+          "$ref": "#/$defs/google.protobuf.Timestamp.jsonschema.json"
+        }
+      },
+      "title": "Time Window",
+      "type": "object"
+    },
+    "oscal.services.v1.UploadEvidenceResponse.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "properties": {
+        "evidence": {
+          "$ref": "#/$defs/oscal.services.v1.Evidence.jsonschema.json"
+        },
+        "stored": {
+          "default": false,
+          "type": "boolean"
+        }
+      },
+      "title": "Upload Evidence Response",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.services.v1.UploadEvidenceResponse.jsonschema.bundle.json",
+  "$ref": "#/$defs/oscal.services.v1.UploadEvidenceResponse.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

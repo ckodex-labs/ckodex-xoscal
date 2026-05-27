@@ -1,0 +1,58 @@
+{
+  "$id": "oscal.common.v1.Resource.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Resource represents an external resource",
+  "properties": {
+    "base64": {
+      "items": {
+        "$ref": "oscal.common.v1.Base64.schema.strict.json"
+      },
+      "type": "array"
+    },
+    "citation": {
+      "type": "string"
+    },
+    "description": {
+      "$ref": "oscal.common.v1.MarkupMultiline.schema.strict.json"
+    },
+    "document_ids": {
+      "items": {
+        "$ref": "oscal.common.v1.DocumentId.schema.strict.json"
+      },
+      "type": "array"
+    },
+    "links": {
+      "items": {
+        "$ref": "oscal.common.v1.Link.schema.strict.json"
+      },
+      "type": "array"
+    },
+    "props": {
+      "items": {
+        "$ref": "oscal.common.v1.Property.schema.strict.json"
+      },
+      "type": "array"
+    },
+    "remarks": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "title": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "uuid": {
+      "$ref": "oscal.common.v1.UUID.schema.strict.json"
+    }
+  },
+  "required": [
+    "citation"
+  ],
+  "title": "Resource",
+  "type": "object"
+}

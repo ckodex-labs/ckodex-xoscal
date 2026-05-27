@@ -1,0 +1,37 @@
+{
+  "$id": "oscal.ssp.v1.AuthorizationBoundary.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "AuthorizationBoundary represents authorization boundary",
+  "properties": {
+    "description": {
+      "$ref": "oscal.common.v1.MarkupMultiline.jsonschema.json"
+    },
+    "diagrams": {
+      "items": {
+        "$ref": "oscal.ssp.v1.Diagram.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "links": {
+      "items": {
+        "$ref": "oscal.common.v1.Link.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "props": {
+      "items": {
+        "$ref": "oscal.common.v1.Property.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "remarks": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupMultiline.jsonschema.json"
+      },
+      "type": "array"
+    }
+  },
+  "title": "Authorization Boundary",
+  "type": "object"
+}

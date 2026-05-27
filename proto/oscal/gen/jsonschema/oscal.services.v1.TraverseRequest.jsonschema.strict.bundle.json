@@ -1,0 +1,41 @@
+{
+  "$defs": {
+    "oscal.services.v1.TraverseRequest.jsonschema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "properties": {
+        "maxDepth": {
+          "maximum": 2147483647,
+          "minimum": -2147483648,
+          "type": "integer"
+        },
+        "minTrustState": {
+          "type": "string"
+        },
+        "relations": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "startNode": {
+          "type": "string"
+        },
+        "traversalMode": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "startNode",
+        "maxDepth",
+        "minTrustState",
+        "traversalMode"
+      ],
+      "title": "Traverse Request",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.services.v1.TraverseRequest.jsonschema.strict.bundle.json",
+  "$ref": "#/$defs/oscal.services.v1.TraverseRequest.jsonschema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

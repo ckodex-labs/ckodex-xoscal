@@ -1,0 +1,60 @@
+{
+  "$id": "oscal.profile.v1.SetParameters.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "SetParameters represents parameter value assignments",
+  "patternProperties": {
+    "^(withClass)$": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "^(withIds)$": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    }
+  },
+  "properties": {
+    "links": {
+      "items": {
+        "$ref": "oscal.common.v1.Link.schema.json"
+      },
+      "type": "array"
+    },
+    "params": {
+      "items": {
+        "$ref": "oscal.catalog.v1.Parameter.schema.json"
+      },
+      "type": "array"
+    },
+    "props": {
+      "items": {
+        "$ref": "oscal.common.v1.Property.schema.json"
+      },
+      "type": "array"
+    },
+    "remarks": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupMultiline.schema.json"
+      },
+      "type": "array"
+    },
+    "with_class": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "with_ids": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    }
+  },
+  "title": "Set Parameters",
+  "type": "object"
+}

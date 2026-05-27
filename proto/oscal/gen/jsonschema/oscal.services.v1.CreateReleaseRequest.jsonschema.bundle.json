@@ -1,0 +1,30 @@
+{
+  "$defs": {
+    "oscal.services.v1.CreateReleaseRequest.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "--- Release messages ---",
+      "patternProperties": {
+        "^(snapshot_name)$": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "properties": {
+        "name": {
+          "default": "",
+          "type": "string"
+        },
+        "snapshotName": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Create Release Request",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.services.v1.CreateReleaseRequest.jsonschema.bundle.json",
+  "$ref": "#/$defs/oscal.services.v1.CreateReleaseRequest.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

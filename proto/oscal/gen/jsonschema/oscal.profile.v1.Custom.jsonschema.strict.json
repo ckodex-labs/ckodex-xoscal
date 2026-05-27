@@ -1,0 +1,40 @@
+{
+  "$id": "oscal.profile.v1.Custom.jsonschema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Custom represents custom control additions",
+  "properties": {
+    "links": {
+      "items": {
+        "$ref": "oscal.common.v1.Link.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "props": {
+      "items": {
+        "$ref": "oscal.common.v1.Property.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "remarks": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupMultiline.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "withClass": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "withIds": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    }
+  },
+  "title": "Custom",
+  "type": "object"
+}

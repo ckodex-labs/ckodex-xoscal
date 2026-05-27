@@ -1,0 +1,29 @@
+{
+  "$defs": {
+    "oscal.services.v1.Identity.schema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "key_json": {
+          "type": "string"
+        },
+        "kind": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "kind",
+        "id",
+        "key_json"
+      ],
+      "title": "Identity",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.services.v1.Identity.schema.strict.bundle.json",
+  "$ref": "#/$defs/oscal.services.v1.Identity.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

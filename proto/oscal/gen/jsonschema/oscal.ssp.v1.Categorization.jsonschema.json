@@ -1,0 +1,28 @@
+{
+  "$id": "oscal.ssp.v1.Categorization.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Categorization represents an information type categorization",
+  "patternProperties": {
+    "^(information_type_ids)$": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    }
+  },
+  "properties": {
+    "informationTypeIds": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "system": {
+      "default": "",
+      "type": "string"
+    }
+  },
+  "title": "Categorization",
+  "type": "object"
+}

@@ -1,0 +1,12 @@
+{
+  "$id": "oscal.services.v1.CreateSspRequest.jsonschema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "ssp": {
+      "$ref": "oscal.ssp.v1.SystemSecurityPlan.jsonschema.strict.json"
+    }
+  },
+  "title": "Create Ssp Request",
+  "type": "object"
+}

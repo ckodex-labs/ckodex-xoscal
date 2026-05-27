@@ -1,0 +1,12 @@
+{
+  "$id": "oscal.services.v1.CreateEntityResponse.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "entity": {
+      "$ref": "oscal.services.v1.Entity.schema.json"
+    }
+  },
+  "title": "Create Entity Response",
+  "type": "object"
+}

@@ -1,0 +1,22 @@
+{
+  "$id": "oscal.assessment_plan.v1.ReviewedControls.jsonschema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "ReviewedControls represents reviewed controls",
+  "properties": {
+    "controlSelection": {
+      "type": "string"
+    },
+    "controls": {
+      "items": {
+        "$ref": "oscal.assessment_plan.v1.ControlSelection.jsonschema.strict.json"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "controlSelection"
+  ],
+  "title": "Reviewed Controls",
+  "type": "object"
+}

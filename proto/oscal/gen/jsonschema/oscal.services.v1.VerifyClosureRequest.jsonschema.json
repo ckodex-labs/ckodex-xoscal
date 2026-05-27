@@ -1,0 +1,29 @@
+{
+  "$id": "oscal.services.v1.VerifyClosureRequest.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "patternProperties": {
+    "^(as_of)$": {
+      "$ref": "google.protobuf.Timestamp.jsonschema.json"
+    },
+    "^(subject_node)$": {
+      "default": "",
+      "type": "string"
+    }
+  },
+  "properties": {
+    "asOf": {
+      "$ref": "google.protobuf.Timestamp.jsonschema.json"
+    },
+    "purpose": {
+      "default": "",
+      "type": "string"
+    },
+    "subjectNode": {
+      "default": "",
+      "type": "string"
+    }
+  },
+  "title": "Verify Closure Request",
+  "type": "object"
+}

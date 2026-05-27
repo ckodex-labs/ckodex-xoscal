@@ -1,0 +1,242 @@
+{
+  "$defs": {
+    "google.protobuf.Timestamp.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "format": "date-time",
+      "title": "Timestamp",
+      "type": "string"
+    },
+    "oscal.services.v1.GraphEdge.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "patternProperties": {
+        "^(claim_id)$": {
+          "default": "",
+          "type": "string"
+        },
+        "^(evidence_digest)$": {
+          "default": "",
+          "type": "string"
+        },
+        "^(extensions_json)$": {
+          "default": "",
+          "type": "string"
+        },
+        "^(from_node)$": {
+          "default": "",
+          "type": "string"
+        },
+        "^(proof_state)$": {
+          "$ref": "#/$defs/oscal.services.v1.ProofState.jsonschema.json"
+        },
+        "^(to_node)$": {
+          "default": "",
+          "type": "string"
+        },
+        "^(trust_state)$": {
+          "default": "",
+          "type": "string"
+        },
+        "^(valid_time)$": {
+          "$ref": "#/$defs/oscal.services.v1.TimeWindow.jsonschema.json"
+        }
+      },
+      "properties": {
+        "claimId": {
+          "default": "",
+          "type": "string"
+        },
+        "evidenceDigest": {
+          "default": "",
+          "type": "string"
+        },
+        "extensionsJson": {
+          "default": "",
+          "type": "string"
+        },
+        "fromNode": {
+          "default": "",
+          "type": "string"
+        },
+        "id": {
+          "default": "",
+          "type": "string"
+        },
+        "proofState": {
+          "$ref": "#/$defs/oscal.services.v1.ProofState.jsonschema.json"
+        },
+        "qualifier": {
+          "default": "",
+          "type": "string"
+        },
+        "relation": {
+          "default": "",
+          "type": "string"
+        },
+        "toNode": {
+          "default": "",
+          "type": "string"
+        },
+        "trustState": {
+          "default": "",
+          "type": "string"
+        },
+        "validTime": {
+          "$ref": "#/$defs/oscal.services.v1.TimeWindow.jsonschema.json"
+        },
+        "weight": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "enum": [
+                "Infinity",
+                "-Infinity",
+                "NaN"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "string"
+            }
+          ],
+          "default": 0
+        }
+      },
+      "title": "Graph Edge",
+      "type": "object"
+    },
+    "oscal.services.v1.GraphNode.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "patternProperties": {
+        "^(created_at)$": {
+          "$ref": "#/$defs/google.protobuf.Timestamp.jsonschema.json"
+        },
+        "^(labels_json)$": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "properties": {
+        "createdAt": {
+          "$ref": "#/$defs/google.protobuf.Timestamp.jsonschema.json"
+        },
+        "id": {
+          "default": "",
+          "type": "string"
+        },
+        "kind": {
+          "default": "",
+          "type": "string"
+        },
+        "labelsJson": {
+          "default": "",
+          "type": "string"
+        },
+        "urn": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Graph Node",
+      "type": "object"
+    },
+    "oscal.services.v1.ImpactRadiusResponse.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "properties": {
+        "edges": {
+          "items": {
+            "$ref": "#/$defs/oscal.services.v1.GraphEdge.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "nodes": {
+          "items": {
+            "$ref": "#/$defs/oscal.services.v1.GraphNode.jsonschema.json"
+          },
+          "type": "array"
+        }
+      },
+      "title": "Impact Radius Response",
+      "type": "object"
+    },
+    "oscal.services.v1.ProofState.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "patternProperties": {
+        "^(witness_json)$": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "properties": {
+        "claim": {
+          "default": "",
+          "type": "string"
+        },
+        "discovery": {
+          "default": "",
+          "type": "string"
+        },
+        "graph": {
+          "default": "",
+          "type": "string"
+        },
+        "policy": {
+          "default": "",
+          "type": "string"
+        },
+        "signature": {
+          "default": "",
+          "type": "string"
+        },
+        "source": {
+          "default": "",
+          "type": "string"
+        },
+        "state": {
+          "default": "",
+          "type": "string"
+        },
+        "transparency": {
+          "default": "",
+          "type": "string"
+        },
+        "witnessJson": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Proof State",
+      "type": "object"
+    },
+    "oscal.services.v1.TimeWindow.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "patternProperties": {
+        "^(from_time)$": {
+          "$ref": "#/$defs/google.protobuf.Timestamp.jsonschema.json"
+        },
+        "^(to_time)$": {
+          "$ref": "#/$defs/google.protobuf.Timestamp.jsonschema.json"
+        }
+      },
+      "properties": {
+        "fromTime": {
+          "$ref": "#/$defs/google.protobuf.Timestamp.jsonschema.json"
+        },
+        "toTime": {
+          "$ref": "#/$defs/google.protobuf.Timestamp.jsonschema.json"
+        }
+      },
+      "title": "Time Window",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.services.v1.ImpactRadiusResponse.jsonschema.bundle.json",
+  "$ref": "#/$defs/oscal.services.v1.ImpactRadiusResponse.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

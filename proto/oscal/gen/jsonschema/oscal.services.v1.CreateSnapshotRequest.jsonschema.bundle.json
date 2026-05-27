@@ -1,0 +1,20 @@
+{
+  "$defs": {
+    "oscal.services.v1.CreateSnapshotRequest.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "--- Snapshot messages ---",
+      "properties": {
+        "name": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Create Snapshot Request",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.services.v1.CreateSnapshotRequest.jsonschema.bundle.json",
+  "$ref": "#/$defs/oscal.services.v1.CreateSnapshotRequest.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

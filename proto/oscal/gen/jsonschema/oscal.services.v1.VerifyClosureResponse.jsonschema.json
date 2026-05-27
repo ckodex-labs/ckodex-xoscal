@@ -1,0 +1,97 @@
+{
+  "$id": "oscal.services.v1.VerifyClosureResponse.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "patternProperties": {
+    "^(edges_checked)$": {
+      "anyOf": [
+        {
+          "maximum": 2147483647,
+          "minimum": -2147483648,
+          "type": "integer"
+        },
+        {
+          "pattern": "^-?[0-9]+$",
+          "type": "string"
+        }
+      ],
+      "default": 0
+    },
+    "^(edges_failed)$": {
+      "anyOf": [
+        {
+          "maximum": 2147483647,
+          "minimum": -2147483648,
+          "type": "integer"
+        },
+        {
+          "pattern": "^-?[0-9]+$",
+          "type": "string"
+        }
+      ],
+      "default": 0
+    },
+    "^(subject_node)$": {
+      "default": "",
+      "type": "string"
+    },
+    "^(trust_state)$": {
+      "default": "",
+      "type": "string"
+    }
+  },
+  "properties": {
+    "diagnostics": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "edgesChecked": {
+      "anyOf": [
+        {
+          "maximum": 2147483647,
+          "minimum": -2147483648,
+          "type": "integer"
+        },
+        {
+          "pattern": "^-?[0-9]+$",
+          "type": "string"
+        }
+      ],
+      "default": 0
+    },
+    "edgesFailed": {
+      "anyOf": [
+        {
+          "maximum": 2147483647,
+          "minimum": -2147483648,
+          "type": "integer"
+        },
+        {
+          "pattern": "^-?[0-9]+$",
+          "type": "string"
+        }
+      ],
+      "default": 0
+    },
+    "purpose": {
+      "default": "",
+      "type": "string"
+    },
+    "subjectNode": {
+      "default": "",
+      "type": "string"
+    },
+    "trustState": {
+      "default": "",
+      "type": "string"
+    },
+    "verdict": {
+      "default": false,
+      "type": "boolean"
+    }
+  },
+  "title": "Verify Closure Response",
+  "type": "object"
+}

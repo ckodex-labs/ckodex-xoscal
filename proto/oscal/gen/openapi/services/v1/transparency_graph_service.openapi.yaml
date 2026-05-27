@@ -1,0 +1,1319 @@
+openapi: 3.1.0
+info:
+  title: oscal.services.v1
+paths:
+  /v1/graph/edges:
+    get:
+      tags:
+        - oscal.services.v1.TransparencyGraphService
+      summary: ListEdges
+      operationId: oscal.services.v1.TransparencyGraphService.ListEdges
+      parameters:
+        - name: fromNode
+          in: query
+          schema:
+            type: string
+            title: from_node
+        - name: toNode
+          in: query
+          schema:
+            type: string
+            title: to_node
+        - name: relation
+          in: query
+          schema:
+            type: string
+            title: relation
+        - name: trustState
+          in: query
+          schema:
+            type: string
+            title: trust_state
+        - name: validAfter
+          in: query
+          schema:
+            type: string
+            examples:
+              - "2023-01-15T01:30:15.01Z"
+              - "2024-12-25T12:00:00Z"
+            format: date-time
+            description: |-
+              A Timestamp represents a point in time independent of any time zone or local
+               calendar, encoded as a count of seconds and fractions of seconds at
+               nanosecond resolution. The count is relative to an epoch at UTC midnight on
+               January 1, 1970, in the proleptic Gregorian calendar which extends the
+               Gregorian calendar backwards to year one.
+
+               All minutes are 60 seconds long. Leap seconds are "smeared" so that no leap
+               second table is needed for interpretation, using a [24-hour linear
+               smear](https://developers.google.com/time/smear).
+
+               The range is from 0001-01-01T00:00:00Z to 9999-12-31T23:59:59.999999999Z. By
+               restricting to that range, we ensure that we can convert to and from [RFC
+               3339](https://www.ietf.org/rfc/rfc3339.txt) date strings.
+
+               # Examples
+
+               Example 1: Compute Timestamp from POSIX `time()`.
+
+                   Timestamp timestamp;
+                   timestamp.set_seconds(time(NULL));
+                   timestamp.set_nanos(0);
+
+               Example 2: Compute Timestamp from POSIX `gettimeofday()`.
+
+                   struct timeval tv;
+                   gettimeofday(&tv, NULL);
+
+                   Timestamp timestamp;
+                   timestamp.set_seconds(tv.tv_sec);
+                   timestamp.set_nanos(tv.tv_usec * 1000);
+
+               Example 3: Compute Timestamp from Win32 `GetSystemTimeAsFileTime()`.
+
+                   FILETIME ft;
+                   GetSystemTimeAsFileTime(&ft);
+                   UINT64 ticks = (((UINT64)ft.dwHighDateTime) << 32) | ft.dwLowDateTime;
+
+                   // A Windows tick is 100 nanoseconds. Windows epoch 1601-01-01T00:00:00Z
+                   // is 11644473600 seconds before Unix epoch 1970-01-01T00:00:00Z.
+                   Timestamp timestamp;
+                   timestamp.set_seconds((INT64) ((ticks / 10000000) - 11644473600LL));
+                   timestamp.set_nanos((INT32) ((ticks % 10000000) * 100));
+
+               Example 4: Compute Timestamp from Java `System.currentTimeMillis()`.
+
+                   long millis = System.currentTimeMillis();
+
+                   Timestamp timestamp = Timestamp.newBuilder().setSeconds(millis / 1000)
+                       .setNanos((int) ((millis % 1000) * 1000000)).build();
+
+               Example 5: Compute Timestamp from Java `Instant.now()`.
+
+                   Instant now = Instant.now();
+
+                   Timestamp timestamp =
+                       Timestamp.newBuilder().setSeconds(now.getEpochSecond())
+                           .setNanos(now.getNano()).build();
+
+               Example 6: Compute Timestamp from current time in Python.
+
+                   timestamp = Timestamp()
+                   timestamp.GetCurrentTime()
+
+               # JSON Mapping
+
+               In JSON format, the Timestamp type is encoded as a string in the
+               [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) format. That is, the
+               format is "{year}-{month}-{day}T{hour}:{min}:{sec}[.{frac_sec}]Z"
+               where {year} is always expressed using four digits while {month}, {day},
+               {hour}, {min}, and {sec} are zero-padded to two digits each. The fractional
+               seconds, which can go up to 9 digits (i.e. up to 1 nanosecond resolution),
+               are optional. The "Z" suffix indicates the timezone ("UTC"); the timezone
+               is required. A proto3 JSON serializer should always use UTC (as indicated by
+               "Z") when printing the Timestamp type and a proto3 JSON parser should be
+               able to accept both UTC and other timezones (as indicated by an offset).
+
+               For example, "2017-01-15T01:30:15.01Z" encodes 15.01 seconds past
+               01:30 UTC on January 15, 2017.
+
+               In JavaScript, one can convert a Date object to this format using the
+               standard
+               [toISOString()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString)
+               method. In Python, a standard `datetime.datetime` object can be converted
+               to this format using
+               [`strftime`](https://docs.python.org/2/library/time.html#time.strftime) with
+               the time format spec '%Y-%m-%dT%H:%M:%S.%fZ'. Likewise, in Java, one can use
+               the Joda Time's [`ISODateTimeFormat.dateTime()`](
+               http://joda-time.sourceforge.net/apidocs/org/joda/time/format/ISODateTimeFormat.html#dateTime()
+               ) to obtain a formatter capable of generating timestamps in this format.
+        - name: pageSize
+          in: query
+          schema:
+            type: integer
+            title: page_size
+            format: int32
+        - name: pageToken
+          in: query
+          schema:
+            type: string
+            title: page_token
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/oscal.services.v1.ListEdgesResponse'
+    post:
+      tags:
+        - oscal.services.v1.TransparencyGraphService
+      summary: ProjectEdge
+      operationId: oscal.services.v1.TransparencyGraphService.ProjectEdge
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/oscal.services.v1.ProjectEdgeRequest'
+        required: true
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/oscal.services.v1.ProjectEdgeResponse'
+  /v1/graph/edges/{edge_id}:
+    get:
+      tags:
+        - oscal.services.v1.TransparencyGraphService
+      summary: GetEdge
+      operationId: oscal.services.v1.TransparencyGraphService.GetEdge
+      parameters:
+        - name: edge_id
+          in: path
+          required: true
+          schema:
+            type: string
+            title: edge_id
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/oscal.services.v1.GetEdgeResponse'
+    delete:
+      tags:
+        - oscal.services.v1.TransparencyGraphService
+      summary: DeleteEdge
+      operationId: oscal.services.v1.TransparencyGraphService.DeleteEdge
+      parameters:
+        - name: edge_id
+          in: path
+          required: true
+          schema:
+            type: string
+            title: edge_id
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/oscal.services.v1.DeleteEdgeResponse'
+  /v1/graph/explain:
+    post:
+      tags:
+        - oscal.services.v1.TransparencyGraphService
+      summary: ExplainClaim
+      operationId: oscal.services.v1.TransparencyGraphService.ExplainClaim
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/oscal.services.v1.ExplainClaimRequest'
+        required: true
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/oscal.services.v1.ExplainClaimResponse'
+  /v1/graph/impact-radius:
+    post:
+      tags:
+        - oscal.services.v1.TransparencyGraphService
+      summary: ImpactRadius
+      operationId: oscal.services.v1.TransparencyGraphService.ImpactRadius
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/oscal.services.v1.ImpactRadiusRequest'
+        required: true
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/oscal.services.v1.ImpactRadiusResponse'
+  /v1/graph/nodes:
+    get:
+      tags:
+        - oscal.services.v1.TransparencyGraphService
+      summary: ListNodes
+      operationId: oscal.services.v1.TransparencyGraphService.ListNodes
+      parameters:
+        - name: kind
+          in: query
+          schema:
+            type: string
+            title: kind
+        - name: labelFilter
+          in: query
+          description: JSON path expression e.g. {"framework":"iso-42001"}
+          schema:
+            type: string
+            title: label_filter
+            description: JSON path expression e.g. {"framework":"iso-42001"}
+        - name: createdAfter
+          in: query
+          schema:
+            type: string
+            examples:
+              - "2023-01-15T01:30:15.01Z"
+              - "2024-12-25T12:00:00Z"
+            format: date-time
+            description: |-
+              A Timestamp represents a point in time independent of any time zone or local
+               calendar, encoded as a count of seconds and fractions of seconds at
+               nanosecond resolution. The count is relative to an epoch at UTC midnight on
+               January 1, 1970, in the proleptic Gregorian calendar which extends the
+               Gregorian calendar backwards to year one.
+
+               All minutes are 60 seconds long. Leap seconds are "smeared" so that no leap
+               second table is needed for interpretation, using a [24-hour linear
+               smear](https://developers.google.com/time/smear).
+
+               The range is from 0001-01-01T00:00:00Z to 9999-12-31T23:59:59.999999999Z. By
+               restricting to that range, we ensure that we can convert to and from [RFC
+               3339](https://www.ietf.org/rfc/rfc3339.txt) date strings.
+
+               # Examples
+
+               Example 1: Compute Timestamp from POSIX `time()`.
+
+                   Timestamp timestamp;
+                   timestamp.set_seconds(time(NULL));
+                   timestamp.set_nanos(0);
+
+               Example 2: Compute Timestamp from POSIX `gettimeofday()`.
+
+                   struct timeval tv;
+                   gettimeofday(&tv, NULL);
+
+                   Timestamp timestamp;
+                   timestamp.set_seconds(tv.tv_sec);
+                   timestamp.set_nanos(tv.tv_usec * 1000);
+
+               Example 3: Compute Timestamp from Win32 `GetSystemTimeAsFileTime()`.
+
+                   FILETIME ft;
+                   GetSystemTimeAsFileTime(&ft);
+                   UINT64 ticks = (((UINT64)ft.dwHighDateTime) << 32) | ft.dwLowDateTime;
+
+                   // A Windows tick is 100 nanoseconds. Windows epoch 1601-01-01T00:00:00Z
+                   // is 11644473600 seconds before Unix epoch 1970-01-01T00:00:00Z.
+                   Timestamp timestamp;
+                   timestamp.set_seconds((INT64) ((ticks / 10000000) - 11644473600LL));
+                   timestamp.set_nanos((INT32) ((ticks % 10000000) * 100));
+
+               Example 4: Compute Timestamp from Java `System.currentTimeMillis()`.
+
+                   long millis = System.currentTimeMillis();
+
+                   Timestamp timestamp = Timestamp.newBuilder().setSeconds(millis / 1000)
+                       .setNanos((int) ((millis % 1000) * 1000000)).build();
+
+               Example 5: Compute Timestamp from Java `Instant.now()`.
+
+                   Instant now = Instant.now();
+
+                   Timestamp timestamp =
+                       Timestamp.newBuilder().setSeconds(now.getEpochSecond())
+                           .setNanos(now.getNano()).build();
+
+               Example 6: Compute Timestamp from current time in Python.
+
+                   timestamp = Timestamp()
+                   timestamp.GetCurrentTime()
+
+               # JSON Mapping
+
+               In JSON format, the Timestamp type is encoded as a string in the
+               [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) format. That is, the
+               format is "{year}-{month}-{day}T{hour}:{min}:{sec}[.{frac_sec}]Z"
+               where {year} is always expressed using four digits while {month}, {day},
+               {hour}, {min}, and {sec} are zero-padded to two digits each. The fractional
+               seconds, which can go up to 9 digits (i.e. up to 1 nanosecond resolution),
+               are optional. The "Z" suffix indicates the timezone ("UTC"); the timezone
+               is required. A proto3 JSON serializer should always use UTC (as indicated by
+               "Z") when printing the Timestamp type and a proto3 JSON parser should be
+               able to accept both UTC and other timezones (as indicated by an offset).
+
+               For example, "2017-01-15T01:30:15.01Z" encodes 15.01 seconds past
+               01:30 UTC on January 15, 2017.
+
+               In JavaScript, one can convert a Date object to this format using the
+               standard
+               [toISOString()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString)
+               method. In Python, a standard `datetime.datetime` object can be converted
+               to this format using
+               [`strftime`](https://docs.python.org/2/library/time.html#time.strftime) with
+               the time format spec '%Y-%m-%dT%H:%M:%S.%fZ'. Likewise, in Java, one can use
+               the Joda Time's [`ISODateTimeFormat.dateTime()`](
+               http://joda-time.sourceforge.net/apidocs/org/joda/time/format/ISODateTimeFormat.html#dateTime()
+               ) to obtain a formatter capable of generating timestamps in this format.
+        - name: pageSize
+          in: query
+          schema:
+            type: integer
+            title: page_size
+            format: int32
+        - name: pageToken
+          in: query
+          schema:
+            type: string
+            title: page_token
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/oscal.services.v1.ListNodesResponse'
+  /v1/graph/nodes/{node_id}:
+    get:
+      tags:
+        - oscal.services.v1.TransparencyGraphService
+      summary: GetNode
+      operationId: oscal.services.v1.TransparencyGraphService.GetNode
+      parameters:
+        - name: node_id
+          in: path
+          required: true
+          schema:
+            type: string
+            title: node_id
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/oscal.services.v1.GetNodeResponse'
+  /v1/graph/shortest-path:
+    post:
+      tags:
+        - oscal.services.v1.TransparencyGraphService
+      summary: ShortestPath
+      operationId: oscal.services.v1.TransparencyGraphService.ShortestPath
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/oscal.services.v1.ShortestPathRequest'
+        required: true
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/oscal.services.v1.ShortestPathResponse'
+  /v1/graph/traverse:
+    post:
+      tags:
+        - oscal.services.v1.TransparencyGraphService
+      summary: Traverse
+      operationId: oscal.services.v1.TransparencyGraphService.Traverse
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/oscal.services.v1.TraverseRequest'
+        required: true
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/oscal.services.v1.TraverseResponse'
+  /v1/graph/trust-state:
+    post:
+      tags:
+        - oscal.services.v1.TransparencyGraphService
+      summary: ComputeTrustState
+      operationId: oscal.services.v1.TransparencyGraphService.ComputeTrustState
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/oscal.services.v1.ComputeTrustStateRequest'
+        required: true
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/oscal.services.v1.ComputeTrustStateResponse'
+  /v1/graph/verify-closure:
+    post:
+      tags:
+        - oscal.services.v1.TransparencyGraphService
+      summary: VerifyClosure
+      operationId: oscal.services.v1.TransparencyGraphService.VerifyClosure
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/oscal.services.v1.VerifyClosureRequest'
+        required: true
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/oscal.services.v1.VerifyClosureResponse'
+components:
+  schemas:
+    google.protobuf.Timestamp:
+      type: string
+      examples:
+        - "2023-01-15T01:30:15.01Z"
+        - "2024-12-25T12:00:00Z"
+      format: date-time
+      description: |-
+        A Timestamp represents a point in time independent of any time zone or local
+         calendar, encoded as a count of seconds and fractions of seconds at
+         nanosecond resolution. The count is relative to an epoch at UTC midnight on
+         January 1, 1970, in the proleptic Gregorian calendar which extends the
+         Gregorian calendar backwards to year one.
+
+         All minutes are 60 seconds long. Leap seconds are "smeared" so that no leap
+         second table is needed for interpretation, using a [24-hour linear
+         smear](https://developers.google.com/time/smear).
+
+         The range is from 0001-01-01T00:00:00Z to 9999-12-31T23:59:59.999999999Z. By
+         restricting to that range, we ensure that we can convert to and from [RFC
+         3339](https://www.ietf.org/rfc/rfc3339.txt) date strings.
+
+         # Examples
+
+         Example 1: Compute Timestamp from POSIX `time()`.
+
+             Timestamp timestamp;
+             timestamp.set_seconds(time(NULL));
+             timestamp.set_nanos(0);
+
+         Example 2: Compute Timestamp from POSIX `gettimeofday()`.
+
+             struct timeval tv;
+             gettimeofday(&tv, NULL);
+
+             Timestamp timestamp;
+             timestamp.set_seconds(tv.tv_sec);
+             timestamp.set_nanos(tv.tv_usec * 1000);
+
+         Example 3: Compute Timestamp from Win32 `GetSystemTimeAsFileTime()`.
+
+             FILETIME ft;
+             GetSystemTimeAsFileTime(&ft);
+             UINT64 ticks = (((UINT64)ft.dwHighDateTime) << 32) | ft.dwLowDateTime;
+
+             // A Windows tick is 100 nanoseconds. Windows epoch 1601-01-01T00:00:00Z
+             // is 11644473600 seconds before Unix epoch 1970-01-01T00:00:00Z.
+             Timestamp timestamp;
+             timestamp.set_seconds((INT64) ((ticks / 10000000) - 11644473600LL));
+             timestamp.set_nanos((INT32) ((ticks % 10000000) * 100));
+
+         Example 4: Compute Timestamp from Java `System.currentTimeMillis()`.
+
+             long millis = System.currentTimeMillis();
+
+             Timestamp timestamp = Timestamp.newBuilder().setSeconds(millis / 1000)
+                 .setNanos((int) ((millis % 1000) * 1000000)).build();
+
+         Example 5: Compute Timestamp from Java `Instant.now()`.
+
+             Instant now = Instant.now();
+
+             Timestamp timestamp =
+                 Timestamp.newBuilder().setSeconds(now.getEpochSecond())
+                     .setNanos(now.getNano()).build();
+
+         Example 6: Compute Timestamp from current time in Python.
+
+             timestamp = Timestamp()
+             timestamp.GetCurrentTime()
+
+         # JSON Mapping
+
+         In JSON format, the Timestamp type is encoded as a string in the
+         [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) format. That is, the
+         format is "{year}-{month}-{day}T{hour}:{min}:{sec}[.{frac_sec}]Z"
+         where {year} is always expressed using four digits while {month}, {day},
+         {hour}, {min}, and {sec} are zero-padded to two digits each. The fractional
+         seconds, which can go up to 9 digits (i.e. up to 1 nanosecond resolution),
+         are optional. The "Z" suffix indicates the timezone ("UTC"); the timezone
+         is required. A proto3 JSON serializer should always use UTC (as indicated by
+         "Z") when printing the Timestamp type and a proto3 JSON parser should be
+         able to accept both UTC and other timezones (as indicated by an offset).
+
+         For example, "2017-01-15T01:30:15.01Z" encodes 15.01 seconds past
+         01:30 UTC on January 15, 2017.
+
+         In JavaScript, one can convert a Date object to this format using the
+         standard
+         [toISOString()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString)
+         method. In Python, a standard `datetime.datetime` object can be converted
+         to this format using
+         [`strftime`](https://docs.python.org/2/library/time.html#time.strftime) with
+         the time format spec '%Y-%m-%dT%H:%M:%S.%fZ'. Likewise, in Java, one can use
+         the Joda Time's [`ISODateTimeFormat.dateTime()`](
+         http://joda-time.sourceforge.net/apidocs/org/joda/time/format/ISODateTimeFormat.html#dateTime()
+         ) to obtain a formatter capable of generating timestamps in this format.
+    oscal.services.v1.Claim:
+      type: object
+      allOf:
+        - properties:
+            id:
+              type: string
+              title: id
+            type:
+              type: string
+              title: type
+            subject:
+              title: subject
+              $ref: '#/components/schemas/oscal.services.v1.Reference'
+            predicate:
+              title: predicate
+              $ref: '#/components/schemas/oscal.services.v1.Predicate'
+            issuer:
+              title: issuer
+              $ref: '#/components/schemas/oscal.services.v1.Identity'
+            bomKind:
+              type: string
+              title: bom_kind
+            validTime:
+              title: valid_time
+              $ref: '#/components/schemas/oscal.services.v1.TimeWindow'
+            observedTime:
+              title: observed_time
+              $ref: '#/components/schemas/google.protobuf.Timestamp'
+            sourceRefs:
+              type: array
+              items:
+                $ref: '#/components/schemas/oscal.services.v1.EvidenceRef'
+              title: source_refs
+            proofRefs:
+              type: array
+              items:
+                $ref: '#/components/schemas/oscal.services.v1.ProofRef'
+              title: proof_refs
+            policyRefs:
+              type: array
+              items:
+                $ref: '#/components/schemas/oscal.services.v1.PolicyRef'
+              title: policy_refs
+            extensionsJson:
+              type: string
+              title: extensions_json
+              description: JSON blob for flexible extensions
+        - oneOf:
+            - type: object
+              properties:
+                nullObject:
+                  title: null_object
+                  $ref: '#/components/schemas/google.protobuf.Timestamp'
+              title: null_object
+              required:
+                - nullObject
+            - type: object
+              properties:
+                object:
+                  title: object
+                  $ref: '#/components/schemas/oscal.services.v1.Reference'
+              title: object
+              required:
+                - object
+      title: Claim
+      additionalProperties: false
+    oscal.services.v1.ComputeTrustStateRequest:
+      type: object
+      properties:
+        claimId:
+          type: string
+          title: claim_id
+        edgeId:
+          type: string
+          title: edge_id
+      title: ComputeTrustStateRequest
+      additionalProperties: false
+    oscal.services.v1.ComputeTrustStateResponse:
+      type: object
+      properties:
+        claimId:
+          type: string
+          title: claim_id
+        edgeId:
+          type: string
+          title: edge_id
+        proofState:
+          title: proof_state
+          $ref: '#/components/schemas/oscal.services.v1.ProofState'
+        trustState:
+          type: string
+          title: trust_state
+        diagnostics:
+          type: array
+          items:
+            type: string
+          title: diagnostics
+      title: ComputeTrustStateResponse
+      additionalProperties: false
+    oscal.services.v1.DeleteEdgeRequest:
+      type: object
+      properties:
+        edgeId:
+          type: string
+          title: edge_id
+      title: DeleteEdgeRequest
+      additionalProperties: false
+    oscal.services.v1.DeleteEdgeResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          title: success
+      title: DeleteEdgeResponse
+      additionalProperties: false
+    oscal.services.v1.Evidence:
+      type: object
+      properties:
+        id:
+          type: string
+          title: id
+        mediaType:
+          type: string
+          title: media_type
+        bomKind:
+          type: string
+          title: bom_kind
+        digest:
+          type: string
+          title: digest
+        sizeBytes:
+          type:
+            - integer
+            - string
+          title: size_bytes
+          format: int64
+        storage:
+          title: storage
+          $ref: '#/components/schemas/oscal.services.v1.Storage'
+        producedByJson:
+          type: string
+          title: produced_by_json
+          description: JSON blob
+        subjectRefs:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.services.v1.Reference'
+          title: subject_refs
+        predicateType:
+          type: string
+          title: predicate_type
+        specJson:
+          type: string
+          title: spec_json
+        createdAt:
+          title: created_at
+          $ref: '#/components/schemas/google.protobuf.Timestamp'
+        validTime:
+          title: valid_time
+          $ref: '#/components/schemas/oscal.services.v1.TimeWindow'
+        supersedes:
+          type: array
+          items:
+            type: string
+          title: supersedes
+        integrityMethodsJson:
+          type: string
+          title: integrity_methods_json
+        classification:
+          type: string
+          title: classification
+          description: public | internal | confidential | restricted
+        extensionsJson:
+          type: string
+          title: extensions_json
+      title: Evidence
+      additionalProperties: false
+    oscal.services.v1.EvidenceRef:
+      type: object
+      properties:
+        ref:
+          type: string
+          title: ref
+        digest:
+          type: string
+          title: digest
+        mediaType:
+          type: string
+          title: media_type
+        bomKind:
+          type: string
+          title: bom_kind
+      title: EvidenceRef
+      additionalProperties: false
+    oscal.services.v1.ExplainClaimRequest:
+      type: object
+      properties:
+        claimId:
+          type: string
+          title: claim_id
+        edgeId:
+          type: string
+          title: edge_id
+      title: ExplainClaimRequest
+      additionalProperties: false
+    oscal.services.v1.ExplainClaimResponse:
+      type: object
+      properties:
+        claim:
+          title: claim
+          $ref: '#/components/schemas/oscal.services.v1.Claim'
+        evidence:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.services.v1.Evidence'
+          title: evidence
+        proofStateJson:
+          type: string
+          title: proof_state_json
+        trustState:
+          type: string
+          title: trust_state
+      title: ExplainClaimResponse
+      additionalProperties: false
+    oscal.services.v1.GetEdgeRequest:
+      type: object
+      properties:
+        edgeId:
+          type: string
+          title: edge_id
+      title: GetEdgeRequest
+      additionalProperties: false
+    oscal.services.v1.GetEdgeResponse:
+      type: object
+      properties:
+        edge:
+          title: edge
+          $ref: '#/components/schemas/oscal.services.v1.GraphEdge'
+      title: GetEdgeResponse
+      additionalProperties: false
+    oscal.services.v1.GetNodeRequest:
+      type: object
+      properties:
+        nodeId:
+          type: string
+          title: node_id
+      title: GetNodeRequest
+      additionalProperties: false
+    oscal.services.v1.GetNodeResponse:
+      type: object
+      properties:
+        node:
+          title: node
+          $ref: '#/components/schemas/oscal.services.v1.GraphNode'
+      title: GetNodeResponse
+      additionalProperties: false
+    oscal.services.v1.GraphEdge:
+      type: object
+      properties:
+        id:
+          type: string
+          title: id
+        fromNode:
+          type: string
+          title: from_node
+        toNode:
+          type: string
+          title: to_node
+        relation:
+          type: string
+          title: relation
+        qualifier:
+          type: string
+          title: qualifier
+        claimId:
+          type: string
+          title: claim_id
+        evidenceDigest:
+          type: string
+          title: evidence_digest
+        proofState:
+          title: proof_state
+          $ref: '#/components/schemas/oscal.services.v1.ProofState'
+        validTime:
+          title: valid_time
+          $ref: '#/components/schemas/oscal.services.v1.TimeWindow'
+        trustState:
+          type: string
+          title: trust_state
+        weight:
+          type: number
+          title: weight
+          format: double
+        extensionsJson:
+          type: string
+          title: extensions_json
+      title: GraphEdge
+      additionalProperties: false
+    oscal.services.v1.GraphNode:
+      type: object
+      properties:
+        id:
+          type: string
+          title: id
+        kind:
+          type: string
+          title: kind
+          description: artifact | component | service | pipeline_run | model | dataset | identity | document | policy | vulnerability | license | tool
+        urn:
+          type: string
+          title: urn
+        labelsJson:
+          type: string
+          title: labels_json
+          description: JSON blob for key-value labels
+        createdAt:
+          title: created_at
+          $ref: '#/components/schemas/google.protobuf.Timestamp'
+      title: GraphNode
+      additionalProperties: false
+    oscal.services.v1.Identity:
+      type: object
+      properties:
+        kind:
+          type: string
+          title: kind
+          description: workload | human | organization | tool
+        id:
+          type: string
+          title: id
+        keyJson:
+          type: string
+          title: key_json
+          description: JSON blob for key metadata
+      title: Identity
+      additionalProperties: false
+    oscal.services.v1.ImpactRadiusRequest:
+      type: object
+      properties:
+        node:
+          type: string
+          title: node
+        maxDepth:
+          type: integer
+          title: max_depth
+          format: int32
+        minTrustState:
+          type: string
+          title: min_trust_state
+        relations:
+          type: array
+          items:
+            type: string
+          title: relations
+      title: ImpactRadiusRequest
+      additionalProperties: false
+    oscal.services.v1.ImpactRadiusResponse:
+      type: object
+      properties:
+        nodes:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.services.v1.GraphNode'
+          title: nodes
+        edges:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.services.v1.GraphEdge'
+          title: edges
+      title: ImpactRadiusResponse
+      additionalProperties: false
+    oscal.services.v1.ListEdgesRequest:
+      type: object
+      properties:
+        fromNode:
+          type: string
+          title: from_node
+        toNode:
+          type: string
+          title: to_node
+        relation:
+          type: string
+          title: relation
+        trustState:
+          type: string
+          title: trust_state
+        validAfter:
+          title: valid_after
+          $ref: '#/components/schemas/google.protobuf.Timestamp'
+        pageSize:
+          type: integer
+          title: page_size
+          format: int32
+        pageToken:
+          type: string
+          title: page_token
+      title: ListEdgesRequest
+      additionalProperties: false
+    oscal.services.v1.ListEdgesResponse:
+      type: object
+      properties:
+        edges:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.services.v1.GraphEdge'
+          title: edges
+        nextPageToken:
+          type: string
+          title: next_page_token
+      title: ListEdgesResponse
+      additionalProperties: false
+    oscal.services.v1.ListNodesRequest:
+      type: object
+      properties:
+        kind:
+          type: string
+          title: kind
+        labelFilter:
+          type: string
+          title: label_filter
+          description: JSON path expression e.g. {"framework":"iso-42001"}
+        createdAfter:
+          title: created_after
+          $ref: '#/components/schemas/google.protobuf.Timestamp'
+        pageSize:
+          type: integer
+          title: page_size
+          format: int32
+        pageToken:
+          type: string
+          title: page_token
+      title: ListNodesRequest
+      additionalProperties: false
+    oscal.services.v1.ListNodesResponse:
+      type: object
+      properties:
+        nodes:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.services.v1.GraphNode'
+          title: nodes
+        nextPageToken:
+          type: string
+          title: next_page_token
+      title: ListNodesResponse
+      additionalProperties: false
+    oscal.services.v1.PathSegment:
+      type: object
+      properties:
+        depth:
+          type: integer
+          title: depth
+          format: int32
+        edge:
+          title: edge
+          $ref: '#/components/schemas/oscal.services.v1.GraphEdge'
+        node:
+          title: node
+          $ref: '#/components/schemas/oscal.services.v1.GraphNode'
+      title: PathSegment
+      additionalProperties: false
+    oscal.services.v1.PolicyRef:
+      type: object
+      properties:
+        type:
+          type: string
+          title: type
+          description: opa_bundle | oscal_profile | cdxa_standard | spdx_security_profile
+        ref:
+          type: string
+          title: ref
+        digest:
+          type: string
+          title: digest
+        validTo:
+          title: valid_to
+          $ref: '#/components/schemas/google.protobuf.Timestamp'
+      title: PolicyRef
+      additionalProperties: false
+    oscal.services.v1.Predicate:
+      type: object
+      properties:
+        relation:
+          type: string
+          title: relation
+        direction:
+          type: string
+          title: direction
+          description: '"forward" | "reverse"'
+        qualifier:
+          type: string
+          title: qualifier
+      title: Predicate
+      additionalProperties: false
+    oscal.services.v1.ProjectEdgeRequest:
+      type: object
+      properties:
+        claimId:
+          type: string
+          title: claim_id
+        edgeId:
+          type: string
+          title: edge_id
+          description: optional; auto-generated if empty
+      title: ProjectEdgeRequest
+      additionalProperties: false
+    oscal.services.v1.ProjectEdgeResponse:
+      type: object
+      properties:
+        edge:
+          title: edge
+          $ref: '#/components/schemas/oscal.services.v1.GraphEdge'
+      title: ProjectEdgeResponse
+      additionalProperties: false
+    oscal.services.v1.ProofRef:
+      type: object
+      properties:
+        type:
+          type: string
+          title: type
+          description: signature | transparency_log | witness_checkpoint | zk_proof | tsa_timestamp
+        ref:
+          type: string
+          title: ref
+        digest:
+          type: string
+          title: digest
+        witnessQuorumJson:
+          type: string
+          title: witness_quorum_json
+          description: JSON blob for quorum metadata
+      title: ProofRef
+      additionalProperties: false
+    oscal.services.v1.ProofState:
+      type: object
+      properties:
+        discovery:
+          type: string
+          title: discovery
+          description: candidate | discovered
+        graph:
+          type: string
+          title: graph
+          description: unresolved | graph_resolved
+        claim:
+          type: string
+          title: claim
+          description: unbound | claim_bound
+        source:
+          type: string
+          title: source
+          description: unbound | source_bound | rejected
+        signature:
+          type: string
+          title: signature
+          description: unverified | signature_verified | invalid
+        transparency:
+          type: string
+          title: transparency
+          description: unverified | inclusion_verified | missing | invalid
+        witnessJson:
+          type: string
+          title: witness_json
+          description: JSON blob for WitnessSubState
+        state:
+          type: string
+          title: state
+          description: unverified | current_state_verified | superseded
+        policy:
+          type: string
+          title: policy
+          description: unevaluated | policy_admissible | policy_inadmissible | stale_policy
+      title: ProofState
+      additionalProperties: false
+    oscal.services.v1.Reference:
+      type: object
+      properties:
+        kind:
+          type: string
+          title: kind
+        id:
+          type: string
+          title: id
+        digest:
+          type: string
+          title: digest
+        purl:
+          type: string
+          title: purl
+        bomRef:
+          type: string
+          title: bom_ref
+      title: Reference
+      additionalProperties: false
+    oscal.services.v1.ShortestPathRequest:
+      type: object
+      properties:
+        fromNode:
+          type: string
+          title: from_node
+        toNode:
+          type: string
+          title: to_node
+        minTrustState:
+          type: string
+          title: min_trust_state
+        allowedRelations:
+          type: array
+          items:
+            type: string
+          title: allowed_relations
+      title: ShortestPathRequest
+      additionalProperties: false
+    oscal.services.v1.ShortestPathResponse:
+      type: object
+      properties:
+        edges:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.services.v1.GraphEdge'
+          title: edges
+        totalWeight:
+          type: number
+          title: total_weight
+          format: double
+        found:
+          type: boolean
+          title: found
+      title: ShortestPathResponse
+      additionalProperties: false
+    oscal.services.v1.Storage:
+      type: object
+      properties:
+        uris:
+          type: array
+          items:
+            type: string
+          title: uris
+        fetchPolicy:
+          type: string
+          title: fetch_policy
+          description: any | all | quorum
+        quorum:
+          type: integer
+          title: quorum
+          format: int32
+        airGapJson:
+          type: string
+          title: air_gap_json
+      title: Storage
+      additionalProperties: false
+    oscal.services.v1.TimeWindow:
+      type: object
+      properties:
+        fromTime:
+          title: from_time
+          $ref: '#/components/schemas/google.protobuf.Timestamp'
+        toTime:
+          title: to_time
+          description: null = open-ended
+          $ref: '#/components/schemas/google.protobuf.Timestamp'
+      title: TimeWindow
+      additionalProperties: false
+    oscal.services.v1.TraverseRequest:
+      type: object
+      properties:
+        startNode:
+          type: string
+          title: start_node
+        relations:
+          type: array
+          items:
+            type: string
+          title: relations
+          description: empty = all
+        maxDepth:
+          type: integer
+          title: max_depth
+          format: int32
+        minTrustState:
+          type: string
+          title: min_trust_state
+        traversalMode:
+          type: string
+          title: traversal_mode
+          description: bfs | dfs
+      title: TraverseRequest
+      additionalProperties: false
+    oscal.services.v1.TraverseResponse:
+      type: object
+      properties:
+        path:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.services.v1.PathSegment'
+          title: path
+      title: TraverseResponse
+      additionalProperties: false
+    oscal.services.v1.VerifyClosureRequest:
+      type: object
+      properties:
+        subjectNode:
+          type: string
+          title: subject_node
+        purpose:
+          type: string
+          title: purpose
+        asOf:
+          title: as_of
+          $ref: '#/components/schemas/google.protobuf.Timestamp'
+      title: VerifyClosureRequest
+      additionalProperties: false
+    oscal.services.v1.VerifyClosureResponse:
+      type: object
+      properties:
+        subjectNode:
+          type: string
+          title: subject_node
+        purpose:
+          type: string
+          title: purpose
+        verdict:
+          type: boolean
+          title: verdict
+        trustState:
+          type: string
+          title: trust_state
+        diagnostics:
+          type: array
+          items:
+            type: string
+          title: diagnostics
+        edgesChecked:
+          type: integer
+          title: edges_checked
+          format: int32
+        edgesFailed:
+          type: integer
+          title: edges_failed
+          format: int32
+      title: VerifyClosureResponse
+      additionalProperties: false
+security: []
+tags:
+  - name: oscal.services.v1.TransparencyGraphService
+    description: |-
+      TransparencyGraphService provides graph traversal over projected claims
+       with structured proof-state verification for xOSCAL.

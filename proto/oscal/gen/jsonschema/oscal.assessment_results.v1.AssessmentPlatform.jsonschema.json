@@ -1,0 +1,36 @@
+{
+  "$id": "oscal.assessment_results.v1.AssessmentPlatform.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "AssessmentPlatform represents an assessment platform",
+  "patternProperties": {
+    "^(uses_components)$": {
+      "items": {
+        "$ref": "oscal.assessment_results.v1.UsesComponent.jsonschema.json"
+      },
+      "type": "array"
+    }
+  },
+  "properties": {
+    "description": {
+      "$ref": "oscal.common.v1.MarkupMultiline.jsonschema.json"
+    },
+    "remarks": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupMultiline.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "usesComponents": {
+      "items": {
+        "$ref": "oscal.assessment_results.v1.UsesComponent.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "uuid": {
+      "$ref": "oscal.common.v1.UUID.jsonschema.json"
+    }
+  },
+  "title": "Assessment Platform",
+  "type": "object"
+}

@@ -1,0 +1,31 @@
+{
+  "$id": "oscal.common.v1.Link.jsonschema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Link represents a hyperlink with metadata",
+  "properties": {
+    "href": {
+      "$ref": "oscal.common.v1.URI.jsonschema.strict.json"
+    },
+    "mediaType": {
+      "type": "string"
+    },
+    "rel": {
+      "type": "string"
+    },
+    "resourceFragment": {
+      "type": "string"
+    },
+    "text": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "rel",
+    "mediaType",
+    "text",
+    "resourceFragment"
+  ],
+  "title": "Link",
+  "type": "object"
+}

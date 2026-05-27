@@ -1,0 +1,16 @@
+{
+  "$id": "oscal.assessment_plan.v1.Terms.jsonschema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Terms represents assessment plan terms",
+  "properties": {
+    "terms": {
+      "items": {
+        "$ref": "oscal.assessment_plan.v1.Term.jsonschema.strict.json"
+      },
+      "type": "array"
+    }
+  },
+  "title": "Terms",
+  "type": "object"
+}

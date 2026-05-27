@@ -1,0 +1,13 @@
+{
+  "$id": "oscal.common.v1.DateTime.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "DateTime represents a date-time with timezone (RFC3339)",
+  "properties": {
+    "value": {
+      "$ref": "google.protobuf.Timestamp.schema.strict.json"
+    }
+  },
+  "title": "Date Time",
+  "type": "object"
+}

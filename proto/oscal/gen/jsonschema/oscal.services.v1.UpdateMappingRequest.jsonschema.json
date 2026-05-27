@@ -1,0 +1,15 @@
+{
+  "$id": "oscal.services.v1.UpdateMappingRequest.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "mapping": {
+      "$ref": "oscal.mapping.v1.MappingCollection.jsonschema.json"
+    },
+    "uuid": {
+      "$ref": "oscal.common.v1.UUID.jsonschema.json"
+    }
+  },
+  "title": "Update Mapping Request",
+  "type": "object"
+}

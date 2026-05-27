@@ -1,0 +1,26 @@
+{
+  "$id": "oscal.services.v1.SemanticSearchRequest.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "--- Semantic Search messages ---",
+  "properties": {
+    "framework": {
+      "type": "string"
+    },
+    "query": {
+      "type": "string"
+    },
+    "top_k": {
+      "maximum": 2147483647,
+      "minimum": -2147483648,
+      "type": "integer"
+    }
+  },
+  "required": [
+    "query",
+    "framework",
+    "top_k"
+  ],
+  "title": "Semantic Search Request",
+  "type": "object"
+}

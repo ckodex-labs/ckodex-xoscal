@@ -1,0 +1,26 @@
+{
+  "$id": "oscal.profile.v1.Combine.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Combine represents combine method for merging",
+  "properties": {
+    "as_is": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupLine.schema.strict.json"
+      },
+      "type": "array"
+    },
+    "flat": {
+      "type": "boolean"
+    },
+    "method": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "method",
+    "flat"
+  ],
+  "title": "Combine",
+  "type": "object"
+}

@@ -1,0 +1,61 @@
+{
+  "$id": "oscal.poam.v1.Response.jsonschema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Response represents a risk response/remediation",
+  "properties": {
+    "deadline": {
+      "$ref": "oscal.common.v1.DateTime.jsonschema.strict.json"
+    },
+    "description": {
+      "$ref": "oscal.common.v1.MarkupMultiline.jsonschema.strict.json"
+    },
+    "links": {
+      "items": {
+        "$ref": "oscal.common.v1.Link.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "props": {
+      "items": {
+        "$ref": "oscal.common.v1.Property.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "relatedTasks": {
+      "items": {
+        "$ref": "oscal.poam.v1.RelatedTask.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "remarks": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupMultiline.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "responsibleRoles": {
+      "items": {
+        "$ref": "oscal.poam.v1.ResponsibleRole.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "status": {
+      "$ref": "oscal.poam.v1.ResponseStatus.jsonschema.strict.json"
+    },
+    "subjects": {
+      "items": {
+        "$ref": "oscal.poam.v1.SubjectReference.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "title": {
+      "$ref": "oscal.common.v1.MarkupLine.jsonschema.strict.json"
+    },
+    "uuid": {
+      "$ref": "oscal.common.v1.UUID.jsonschema.strict.json"
+    }
+  },
+  "title": "Response",
+  "type": "object"
+}

@@ -1,0 +1,21 @@
+{
+  "$defs": {
+    "oscal.services.v1.DeleteComponentDefinitionResponse.jsonschema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "properties": {
+        "success": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "success"
+      ],
+      "title": "Delete Component Definition Response",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.services.v1.DeleteComponentDefinitionResponse.jsonschema.strict.bundle.json",
+  "$ref": "#/$defs/oscal.services.v1.DeleteComponentDefinitionResponse.jsonschema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

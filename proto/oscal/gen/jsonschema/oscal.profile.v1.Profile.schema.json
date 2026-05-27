@@ -1,0 +1,36 @@
+{
+  "$id": "oscal.profile.v1.Profile.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Profile represents an OSCAL profile that tailors controls from catalogs or other profiles",
+  "patternProperties": {
+    "^(backMatter)$": {
+      "$ref": "oscal.common.v1.BackMatter.schema.json"
+    }
+  },
+  "properties": {
+    "back_matter": {
+      "$ref": "oscal.common.v1.BackMatter.schema.json"
+    },
+    "imports": {
+      "items": {
+        "$ref": "oscal.profile.v1.Import.schema.json"
+      },
+      "type": "array"
+    },
+    "merge": {
+      "$ref": "oscal.profile.v1.Merge.schema.json"
+    },
+    "metadata": {
+      "$ref": "oscal.common.v1.Metadata.schema.json"
+    },
+    "modify": {
+      "$ref": "oscal.profile.v1.Modify.schema.json"
+    },
+    "uuid": {
+      "$ref": "oscal.common.v1.UUID.schema.json"
+    }
+  },
+  "title": "Profile",
+  "type": "object"
+}

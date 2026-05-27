@@ -1,0 +1,59 @@
+{
+  "$id": "oscal.services.v1.ShortestPathResponse.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "patternProperties": {
+    "^(total_weight)$": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "enum": [
+            "Infinity",
+            "-Infinity",
+            "NaN"
+          ],
+          "type": "string"
+        },
+        {
+          "type": "string"
+        }
+      ],
+      "default": 0
+    }
+  },
+  "properties": {
+    "edges": {
+      "items": {
+        "$ref": "oscal.services.v1.GraphEdge.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "found": {
+      "default": false,
+      "type": "boolean"
+    },
+    "totalWeight": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "enum": [
+            "Infinity",
+            "-Infinity",
+            "NaN"
+          ],
+          "type": "string"
+        },
+        {
+          "type": "string"
+        }
+      ],
+      "default": 0
+    }
+  },
+  "title": "Shortest Path Response",
+  "type": "object"
+}

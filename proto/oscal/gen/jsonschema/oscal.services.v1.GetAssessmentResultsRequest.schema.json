@@ -1,0 +1,13 @@
+{
+  "$id": "oscal.services.v1.GetAssessmentResultsRequest.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Assessment Results Request/Response messages",
+  "properties": {
+    "uuid": {
+      "$ref": "oscal.common.v1.UUID.schema.json"
+    }
+  },
+  "title": "Get Assessment Results Request",
+  "type": "object"
+}

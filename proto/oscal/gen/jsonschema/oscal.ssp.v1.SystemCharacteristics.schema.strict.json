@@ -1,0 +1,78 @@
+{
+  "$id": "oscal.ssp.v1.SystemCharacteristics.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "SystemCharacteristics represents system characteristics",
+  "properties": {
+    "authorization_boundary": {
+      "$ref": "oscal.ssp.v1.AuthorizationBoundary.schema.strict.json"
+    },
+    "data_flow": {
+      "$ref": "oscal.ssp.v1.DataFlow.schema.strict.json"
+    },
+    "date_authorized": {
+      "$ref": "oscal.common.v1.Date.schema.strict.json"
+    },
+    "description": {
+      "$ref": "oscal.common.v1.MarkupMultiline.schema.strict.json"
+    },
+    "links": {
+      "items": {
+        "$ref": "oscal.common.v1.Link.schema.strict.json"
+      },
+      "type": "array"
+    },
+    "network_architecture": {
+      "$ref": "oscal.ssp.v1.NetworkArchitecture.schema.strict.json"
+    },
+    "props": {
+      "items": {
+        "$ref": "oscal.common.v1.Property.schema.strict.json"
+      },
+      "type": "array"
+    },
+    "remarks": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupMultiline.schema.strict.json"
+      },
+      "type": "array"
+    },
+    "responsible_parties": {
+      "items": {
+        "$ref": "oscal.common.v1.ResponsibleParty.schema.strict.json"
+      },
+      "type": "array"
+    },
+    "security_impact_level": {
+      "$ref": "oscal.ssp.v1.SecurityImpactLevel.schema.strict.json"
+    },
+    "security_sensitivity_level": {
+      "type": "string"
+    },
+    "status": {
+      "$ref": "oscal.ssp.v1.Status.schema.strict.json"
+    },
+    "system_ids": {
+      "items": {
+        "$ref": "oscal.ssp.v1.SystemId.schema.strict.json"
+      },
+      "type": "array"
+    },
+    "system_information": {
+      "$ref": "oscal.ssp.v1.SystemInformation.schema.strict.json"
+    },
+    "system_name": {
+      "type": "string"
+    },
+    "system_name_short": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "system_name",
+    "system_name_short",
+    "security_sensitivity_level"
+  ],
+  "title": "System Characteristics",
+  "type": "object"
+}

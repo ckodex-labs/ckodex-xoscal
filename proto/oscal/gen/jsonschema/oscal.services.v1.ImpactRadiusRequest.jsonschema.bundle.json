@@ -1,0 +1,63 @@
+{
+  "$defs": {
+    "oscal.services.v1.ImpactRadiusRequest.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "patternProperties": {
+        "^(max_depth)$": {
+          "anyOf": [
+            {
+              "maximum": 2147483647,
+              "minimum": -2147483648,
+              "type": "integer"
+            },
+            {
+              "pattern": "^-?[0-9]+$",
+              "type": "string"
+            }
+          ],
+          "default": 0
+        },
+        "^(min_trust_state)$": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "properties": {
+        "maxDepth": {
+          "anyOf": [
+            {
+              "maximum": 2147483647,
+              "minimum": -2147483648,
+              "type": "integer"
+            },
+            {
+              "pattern": "^-?[0-9]+$",
+              "type": "string"
+            }
+          ],
+          "default": 0
+        },
+        "minTrustState": {
+          "default": "",
+          "type": "string"
+        },
+        "node": {
+          "default": "",
+          "type": "string"
+        },
+        "relations": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "title": "Impact Radius Request",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.services.v1.ImpactRadiusRequest.jsonschema.bundle.json",
+  "$ref": "#/$defs/oscal.services.v1.ImpactRadiusRequest.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

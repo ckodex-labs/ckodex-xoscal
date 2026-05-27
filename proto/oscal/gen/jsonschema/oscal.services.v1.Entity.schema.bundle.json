@@ -1,0 +1,36 @@
+{
+  "$defs": {
+    "oscal.services.v1.Entity.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "--- Entity messages ---",
+      "properties": {
+        "payload": {
+          "default": "",
+          "type": "string"
+        },
+        "status": {
+          "default": "",
+          "type": "string"
+        },
+        "type": {
+          "default": "",
+          "type": "string"
+        },
+        "urn": {
+          "default": "",
+          "type": "string"
+        },
+        "version": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Entity",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.services.v1.Entity.schema.bundle.json",
+  "$ref": "#/$defs/oscal.services.v1.Entity.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

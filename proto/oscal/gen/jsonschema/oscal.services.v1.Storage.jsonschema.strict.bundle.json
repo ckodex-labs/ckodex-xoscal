@@ -1,0 +1,37 @@
+{
+  "$defs": {
+    "oscal.services.v1.Storage.jsonschema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "properties": {
+        "airGapJson": {
+          "type": "string"
+        },
+        "fetchPolicy": {
+          "type": "string"
+        },
+        "quorum": {
+          "maximum": 2147483647,
+          "minimum": -2147483648,
+          "type": "integer"
+        },
+        "uris": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "fetchPolicy",
+        "quorum",
+        "airGapJson"
+      ],
+      "title": "Storage",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.services.v1.Storage.jsonschema.strict.bundle.json",
+  "$ref": "#/$defs/oscal.services.v1.Storage.jsonschema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

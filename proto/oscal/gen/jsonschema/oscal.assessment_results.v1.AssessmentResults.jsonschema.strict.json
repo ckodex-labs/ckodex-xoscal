@@ -1,0 +1,34 @@
+{
+  "$id": "oscal.assessment_results.v1.AssessmentResults.jsonschema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "AssessmentResults represents assessment results",
+  "properties": {
+    "backMatter": {
+      "$ref": "oscal.common.v1.BackMatter.jsonschema.strict.json"
+    },
+    "importAp": {
+      "$ref": "oscal.assessment_results.v1.ImportAp.jsonschema.strict.json"
+    },
+    "importSsp": {
+      "$ref": "oscal.assessment_results.v1.ImportSsp.jsonschema.strict.json"
+    },
+    "localDefinitions": {
+      "$ref": "oscal.assessment_results.v1.LocalDefinitions.jsonschema.strict.json"
+    },
+    "metadata": {
+      "$ref": "oscal.common.v1.Metadata.jsonschema.strict.json"
+    },
+    "results": {
+      "items": {
+        "$ref": "oscal.assessment_results.v1.Result.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "uuid": {
+      "$ref": "oscal.common.v1.UUID.jsonschema.strict.json"
+    }
+  },
+  "title": "Assessment Results",
+  "type": "object"
+}

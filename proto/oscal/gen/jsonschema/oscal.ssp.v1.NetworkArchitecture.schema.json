@@ -1,0 +1,37 @@
+{
+  "$id": "oscal.ssp.v1.NetworkArchitecture.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "NetworkArchitecture represents network architecture",
+  "properties": {
+    "description": {
+      "$ref": "oscal.common.v1.MarkupMultiline.schema.json"
+    },
+    "diagrams": {
+      "items": {
+        "$ref": "oscal.ssp.v1.Diagram.schema.json"
+      },
+      "type": "array"
+    },
+    "links": {
+      "items": {
+        "$ref": "oscal.common.v1.Link.schema.json"
+      },
+      "type": "array"
+    },
+    "props": {
+      "items": {
+        "$ref": "oscal.common.v1.Property.schema.json"
+      },
+      "type": "array"
+    },
+    "remarks": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupMultiline.schema.json"
+      },
+      "type": "array"
+    }
+  },
+  "title": "Network Architecture",
+  "type": "object"
+}

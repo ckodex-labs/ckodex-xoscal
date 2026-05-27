@@ -1,0 +1,48 @@
+{
+  "$id": "oscal.component_definition.v1.ComponentDefinition.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "ComponentDefinition represents a collection of component descriptions",
+  "patternProperties": {
+    "^(back_matter)$": {
+      "$ref": "oscal.common.v1.BackMatter.jsonschema.json"
+    },
+    "^(import_component_definitions)$": {
+      "items": {
+        "$ref": "oscal.component_definition.v1.ImportComponentDefinition.jsonschema.json"
+      },
+      "type": "array"
+    }
+  },
+  "properties": {
+    "backMatter": {
+      "$ref": "oscal.common.v1.BackMatter.jsonschema.json"
+    },
+    "capabilities": {
+      "items": {
+        "$ref": "oscal.component_definition.v1.Capability.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "components": {
+      "items": {
+        "$ref": "oscal.component_definition.v1.DefinedComponent.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "importComponentDefinitions": {
+      "items": {
+        "$ref": "oscal.component_definition.v1.ImportComponentDefinition.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "metadata": {
+      "$ref": "oscal.common.v1.Metadata.jsonschema.json"
+    },
+    "uuid": {
+      "$ref": "oscal.common.v1.UUID.jsonschema.json"
+    }
+  },
+  "title": "Component Definition",
+  "type": "object"
+}

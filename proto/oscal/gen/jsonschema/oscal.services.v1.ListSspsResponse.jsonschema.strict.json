@@ -1,0 +1,21 @@
+{
+  "$id": "oscal.services.v1.ListSspsResponse.jsonschema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "nextPageToken": {
+      "type": "string"
+    },
+    "ssps": {
+      "items": {
+        "$ref": "oscal.ssp.v1.SystemSecurityPlan.jsonschema.strict.json"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "nextPageToken"
+  ],
+  "title": "List Ssps Response",
+  "type": "object"
+}

@@ -1,0 +1,51 @@
+{
+  "$id": "oscal.services.v1.ProofState.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "patternProperties": {
+    "^(witness_json)$": {
+      "default": "",
+      "type": "string"
+    }
+  },
+  "properties": {
+    "claim": {
+      "default": "",
+      "type": "string"
+    },
+    "discovery": {
+      "default": "",
+      "type": "string"
+    },
+    "graph": {
+      "default": "",
+      "type": "string"
+    },
+    "policy": {
+      "default": "",
+      "type": "string"
+    },
+    "signature": {
+      "default": "",
+      "type": "string"
+    },
+    "source": {
+      "default": "",
+      "type": "string"
+    },
+    "state": {
+      "default": "",
+      "type": "string"
+    },
+    "transparency": {
+      "default": "",
+      "type": "string"
+    },
+    "witnessJson": {
+      "default": "",
+      "type": "string"
+    }
+  },
+  "title": "Proof State",
+  "type": "object"
+}

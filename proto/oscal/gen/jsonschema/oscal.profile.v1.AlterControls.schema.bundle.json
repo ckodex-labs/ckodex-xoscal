@@ -1,0 +1,512 @@
+{
+  "$defs": {
+    "oscal.catalog.v1.Constraint.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Constraint represents a constraint on a parameter value",
+      "properties": {
+        "description": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Constraint",
+      "type": "object"
+    },
+    "oscal.catalog.v1.Parameter.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Parameter represents a control parameter",
+      "properties": {
+        "class": {
+          "default": "",
+          "type": "string"
+        },
+        "constraints": {
+          "items": {
+            "$ref": "#/$defs/oscal.catalog.v1.Constraint.schema.json"
+          },
+          "type": "array"
+        },
+        "guidance": {
+          "$ref": "#/$defs/oscal.common.v1.MarkupLine.schema.json"
+        },
+        "id": {
+          "$ref": "#/$defs/oscal.common.v1.Token.schema.json"
+        },
+        "label": {
+          "$ref": "#/$defs/oscal.common.v1.MarkupLine.schema.json"
+        },
+        "links": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Link.schema.json"
+          },
+          "type": "array"
+        },
+        "props": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Property.schema.json"
+          },
+          "type": "array"
+        },
+        "remarks": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.schema.json"
+          },
+          "type": "array"
+        },
+        "select": {
+          "$ref": "#/$defs/oscal.catalog.v1.Select.schema.json"
+        },
+        "values": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.MarkupLine.schema.json"
+          },
+          "type": "array"
+        }
+      },
+      "title": "Parameter",
+      "type": "object"
+    },
+    "oscal.catalog.v1.Part.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Part represents a part of a control (e.g., statement, objective)",
+      "properties": {
+        "class": {
+          "default": "",
+          "type": "string"
+        },
+        "id": {
+          "$ref": "#/$defs/oscal.common.v1.Token.schema.json"
+        },
+        "links": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Link.schema.json"
+          },
+          "type": "array"
+        },
+        "name": {
+          "default": "",
+          "type": "string"
+        },
+        "ns": {
+          "default": "",
+          "type": "string"
+        },
+        "parts": {
+          "items": {
+            "$ref": "#/$defs/oscal.catalog.v1.Part.schema.json"
+          },
+          "type": "array"
+        },
+        "props": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Property.schema.json"
+          },
+          "type": "array"
+        },
+        "prose": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.schema.json"
+          },
+          "type": "array"
+        },
+        "remarks": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.schema.json"
+          },
+          "type": "array"
+        },
+        "title": {
+          "$ref": "#/$defs/oscal.common.v1.MarkupLine.schema.json"
+        }
+      },
+      "title": "Part",
+      "type": "object"
+    },
+    "oscal.catalog.v1.Select.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Select represents a selection of parameter values",
+      "patternProperties": {
+        "^(howMany)$": {
+          "default": false,
+          "type": "boolean"
+        }
+      },
+      "properties": {
+        "choices": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.MarkupLine.schema.json"
+          },
+          "type": "array"
+        },
+        "how_many": {
+          "default": false,
+          "type": "boolean"
+        }
+      },
+      "title": "Select",
+      "type": "object"
+    },
+    "oscal.common.v1.Link.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Link represents a hyperlink with metadata",
+      "patternProperties": {
+        "^(mediaType)$": {
+          "default": "",
+          "type": "string"
+        },
+        "^(resourceFragment)$": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "properties": {
+        "href": {
+          "$ref": "#/$defs/oscal.common.v1.URI.schema.json"
+        },
+        "media_type": {
+          "default": "",
+          "type": "string"
+        },
+        "rel": {
+          "default": "",
+          "type": "string"
+        },
+        "resource_fragment": {
+          "default": "",
+          "type": "string"
+        },
+        "text": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Link",
+      "type": "object"
+    },
+    "oscal.common.v1.MarkupLine.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "MarkupLine represents a line of markup text (e.g., markdown)",
+      "properties": {
+        "value": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Markup Line",
+      "type": "object"
+    },
+    "oscal.common.v1.MarkupMultiline.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "MarkupMultiline represents multiline markup text",
+      "properties": {
+        "value": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Markup Multiline",
+      "type": "object"
+    },
+    "oscal.common.v1.Property.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Property represents a key-value property with optional classification",
+      "properties": {
+        "class": {
+          "default": "",
+          "type": "string"
+        },
+        "id": {
+          "default": "",
+          "type": "string"
+        },
+        "name": {
+          "default": "",
+          "type": "string"
+        },
+        "value": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Property",
+      "type": "object"
+    },
+    "oscal.common.v1.Token.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Token represents an alphanumeric token (e.g., control IDs)",
+      "properties": {
+        "value": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Token",
+      "type": "object"
+    },
+    "oscal.common.v1.URI.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "URI represents a uniform resource identifier",
+      "properties": {
+        "value": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "URI",
+      "type": "object"
+    },
+    "oscal.profile.v1.Add.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Add represents addition of control content",
+      "patternProperties": {
+        "^(itemName)$": {
+          "default": "",
+          "type": "string"
+        },
+        "^(withClass)$": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "^(withIds)$": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "properties": {
+        "item_name": {
+          "default": "",
+          "type": "string"
+        },
+        "links": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Link.schema.json"
+          },
+          "type": "array"
+        },
+        "params": {
+          "items": {
+            "$ref": "#/$defs/oscal.catalog.v1.Parameter.schema.json"
+          },
+          "type": "array"
+        },
+        "parts": {
+          "items": {
+            "$ref": "#/$defs/oscal.catalog.v1.Part.schema.json"
+          },
+          "type": "array"
+        },
+        "position": {
+          "default": "",
+          "type": "string"
+        },
+        "props": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Property.schema.json"
+          },
+          "type": "array"
+        },
+        "with_class": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "with_ids": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "title": "Add",
+      "type": "object"
+    },
+    "oscal.profile.v1.Alter.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Alter represents a specific alteration to a control",
+      "patternProperties": {
+        "^(controlId)$": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "properties": {
+        "adds": {
+          "items": {
+            "$ref": "#/$defs/oscal.profile.v1.Add.schema.json"
+          },
+          "type": "array"
+        },
+        "control_id": {
+          "default": "",
+          "type": "string"
+        },
+        "remarks": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.schema.json"
+          },
+          "type": "array"
+        },
+        "removes": {
+          "items": {
+            "$ref": "#/$defs/oscal.profile.v1.Remove.schema.json"
+          },
+          "type": "array"
+        }
+      },
+      "title": "Alter",
+      "type": "object"
+    },
+    "oscal.profile.v1.AlterControls.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "AlterControls represents alterations to controls",
+      "patternProperties": {
+        "^(controlAlterations)$": {
+          "items": {
+            "$ref": "#/$defs/oscal.profile.v1.Alter.schema.json"
+          },
+          "type": "array"
+        },
+        "^(withClass)$": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "^(withIds)$": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "properties": {
+        "control_alterations": {
+          "items": {
+            "$ref": "#/$defs/oscal.profile.v1.Alter.schema.json"
+          },
+          "type": "array"
+        },
+        "links": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Link.schema.json"
+          },
+          "type": "array"
+        },
+        "props": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Property.schema.json"
+          },
+          "type": "array"
+        },
+        "remarks": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.schema.json"
+          },
+          "type": "array"
+        },
+        "with_class": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "with_ids": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "title": "Alter Controls",
+      "type": "object"
+    },
+    "oscal.profile.v1.Remove.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Remove represents removal of control content",
+      "patternProperties": {
+        "^(itemName)$": {
+          "default": "",
+          "type": "string"
+        },
+        "^(withClass)$": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "^(withIds)$": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "^(withName)$": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "^(withNs)$": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "properties": {
+        "item_name": {
+          "default": "",
+          "type": "string"
+        },
+        "with_class": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "with_ids": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "with_name": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "with_ns": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "title": "Remove",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.profile.v1.AlterControls.schema.bundle.json",
+  "$ref": "#/$defs/oscal.profile.v1.AlterControls.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

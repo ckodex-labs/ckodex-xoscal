@@ -1,0 +1,80 @@
+{
+  "$defs": {
+    "oscal.services.v1.ProofState.schema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "properties": {
+        "claim": {
+          "type": "string"
+        },
+        "discovery": {
+          "type": "string"
+        },
+        "graph": {
+          "type": "string"
+        },
+        "policy": {
+          "type": "string"
+        },
+        "signature": {
+          "type": "string"
+        },
+        "source": {
+          "type": "string"
+        },
+        "state": {
+          "type": "string"
+        },
+        "transparency": {
+          "type": "string"
+        },
+        "witness_json": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "discovery",
+        "graph",
+        "claim",
+        "source",
+        "signature",
+        "transparency",
+        "witness_json",
+        "state",
+        "policy"
+      ],
+      "title": "Proof State",
+      "type": "object"
+    },
+    "oscal.services.v1.VerifyClaimResponse.schema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "properties": {
+        "claim_id": {
+          "type": "string"
+        },
+        "diagnostics": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "proof_state": {
+          "$ref": "#/$defs/oscal.services.v1.ProofState.schema.strict.json"
+        },
+        "trust_state": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "claim_id",
+        "trust_state"
+      ],
+      "title": "Verify Claim Response",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.services.v1.VerifyClaimResponse.schema.strict.bundle.json",
+  "$ref": "#/$defs/oscal.services.v1.VerifyClaimResponse.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

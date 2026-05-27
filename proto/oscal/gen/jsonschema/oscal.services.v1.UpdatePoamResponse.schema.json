@@ -1,0 +1,12 @@
+{
+  "$id": "oscal.services.v1.UpdatePoamResponse.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "poam": {
+      "$ref": "oscal.poam.v1.PlanOfActionAndMilestones.schema.json"
+    }
+  },
+  "title": "Update Poam Response",
+  "type": "object"
+}

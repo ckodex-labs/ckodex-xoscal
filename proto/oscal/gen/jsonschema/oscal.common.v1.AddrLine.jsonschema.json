@@ -1,0 +1,13 @@
+{
+  "$id": "oscal.common.v1.AddrLine.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "AddrLine represents a line of an address",
+  "properties": {
+    "value": {
+      "$ref": "oscal.common.v1.MarkupLine.jsonschema.json"
+    }
+  },
+  "title": "Addr Line",
+  "type": "object"
+}

@@ -1,0 +1,15 @@
+{
+  "$id": "oscal.services.v1.UpdateSspRequest.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "ssp": {
+      "$ref": "oscal.ssp.v1.SystemSecurityPlan.schema.json"
+    },
+    "uuid": {
+      "$ref": "oscal.common.v1.UUID.schema.json"
+    }
+  },
+  "title": "Update Ssp Request",
+  "type": "object"
+}

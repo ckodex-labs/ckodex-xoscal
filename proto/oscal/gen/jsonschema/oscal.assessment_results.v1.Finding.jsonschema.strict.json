@@ -1,0 +1,61 @@
+{
+  "$id": "oscal.assessment_results.v1.Finding.jsonschema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Finding represents a finding",
+  "properties": {
+    "description": {
+      "$ref": "oscal.common.v1.MarkupMultiline.jsonschema.strict.json"
+    },
+    "implementationStatementUuid": {
+      "$ref": "oscal.common.v1.UUID.jsonschema.strict.json"
+    },
+    "links": {
+      "items": {
+        "$ref": "oscal.common.v1.Link.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "origins": {
+      "items": {
+        "$ref": "oscal.assessment_results.v1.Origin.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "props": {
+      "items": {
+        "$ref": "oscal.common.v1.Property.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "relatedObservations": {
+      "items": {
+        "$ref": "oscal.assessment_results.v1.RelatedObservation.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "relatedRisks": {
+      "items": {
+        "$ref": "oscal.assessment_results.v1.AssociatedRisk.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "remarks": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupMultiline.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "target": {
+      "$ref": "oscal.assessment_results.v1.FindingTarget.jsonschema.strict.json"
+    },
+    "title": {
+      "$ref": "oscal.common.v1.MarkupLine.jsonschema.strict.json"
+    },
+    "uuid": {
+      "$ref": "oscal.common.v1.UUID.jsonschema.strict.json"
+    }
+  },
+  "title": "Finding",
+  "type": "object"
+}

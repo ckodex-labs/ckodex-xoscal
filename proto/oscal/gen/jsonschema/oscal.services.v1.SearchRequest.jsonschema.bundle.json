@@ -1,0 +1,70 @@
+{
+  "$defs": {
+    "oscal.services.v1.SearchRequest.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Search Request/Response messages",
+      "patternProperties": {
+        "^(model_types)$": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "^(page_size)$": {
+          "anyOf": [
+            {
+              "maximum": 2147483647,
+              "minimum": -2147483648,
+              "type": "integer"
+            },
+            {
+              "pattern": "^-?[0-9]+$",
+              "type": "string"
+            }
+          ],
+          "default": 0
+        },
+        "^(page_token)$": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "properties": {
+        "modelTypes": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "pageSize": {
+          "anyOf": [
+            {
+              "maximum": 2147483647,
+              "minimum": -2147483648,
+              "type": "integer"
+            },
+            {
+              "pattern": "^-?[0-9]+$",
+              "type": "string"
+            }
+          ],
+          "default": 0
+        },
+        "pageToken": {
+          "default": "",
+          "type": "string"
+        },
+        "query": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Search Request",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.services.v1.SearchRequest.jsonschema.bundle.json",
+  "$ref": "#/$defs/oscal.services.v1.SearchRequest.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

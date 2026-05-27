@@ -1,0 +1,1091 @@
+openapi: 3.1.0
+info:
+  title: oscal.profile.v1
+paths: {}
+components:
+  schemas:
+    google.protobuf.Timestamp:
+      type: string
+      examples:
+        - "2023-01-15T01:30:15.01Z"
+        - "2024-12-25T12:00:00Z"
+      format: date-time
+      description: |-
+        A Timestamp represents a point in time independent of any time zone or local
+         calendar, encoded as a count of seconds and fractions of seconds at
+         nanosecond resolution. The count is relative to an epoch at UTC midnight on
+         January 1, 1970, in the proleptic Gregorian calendar which extends the
+         Gregorian calendar backwards to year one.
+
+         All minutes are 60 seconds long. Leap seconds are "smeared" so that no leap
+         second table is needed for interpretation, using a [24-hour linear
+         smear](https://developers.google.com/time/smear).
+
+         The range is from 0001-01-01T00:00:00Z to 9999-12-31T23:59:59.999999999Z. By
+         restricting to that range, we ensure that we can convert to and from [RFC
+         3339](https://www.ietf.org/rfc/rfc3339.txt) date strings.
+
+         # Examples
+
+         Example 1: Compute Timestamp from POSIX `time()`.
+
+             Timestamp timestamp;
+             timestamp.set_seconds(time(NULL));
+             timestamp.set_nanos(0);
+
+         Example 2: Compute Timestamp from POSIX `gettimeofday()`.
+
+             struct timeval tv;
+             gettimeofday(&tv, NULL);
+
+             Timestamp timestamp;
+             timestamp.set_seconds(tv.tv_sec);
+             timestamp.set_nanos(tv.tv_usec * 1000);
+
+         Example 3: Compute Timestamp from Win32 `GetSystemTimeAsFileTime()`.
+
+             FILETIME ft;
+             GetSystemTimeAsFileTime(&ft);
+             UINT64 ticks = (((UINT64)ft.dwHighDateTime) << 32) | ft.dwLowDateTime;
+
+             // A Windows tick is 100 nanoseconds. Windows epoch 1601-01-01T00:00:00Z
+             // is 11644473600 seconds before Unix epoch 1970-01-01T00:00:00Z.
+             Timestamp timestamp;
+             timestamp.set_seconds((INT64) ((ticks / 10000000) - 11644473600LL));
+             timestamp.set_nanos((INT32) ((ticks % 10000000) * 100));
+
+         Example 4: Compute Timestamp from Java `System.currentTimeMillis()`.
+
+             long millis = System.currentTimeMillis();
+
+             Timestamp timestamp = Timestamp.newBuilder().setSeconds(millis / 1000)
+                 .setNanos((int) ((millis % 1000) * 1000000)).build();
+
+         Example 5: Compute Timestamp from Java `Instant.now()`.
+
+             Instant now = Instant.now();
+
+             Timestamp timestamp =
+                 Timestamp.newBuilder().setSeconds(now.getEpochSecond())
+                     .setNanos(now.getNano()).build();
+
+         Example 6: Compute Timestamp from current time in Python.
+
+             timestamp = Timestamp()
+             timestamp.GetCurrentTime()
+
+         # JSON Mapping
+
+         In JSON format, the Timestamp type is encoded as a string in the
+         [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) format. That is, the
+         format is "{year}-{month}-{day}T{hour}:{min}:{sec}[.{frac_sec}]Z"
+         where {year} is always expressed using four digits while {month}, {day},
+         {hour}, {min}, and {sec} are zero-padded to two digits each. The fractional
+         seconds, which can go up to 9 digits (i.e. up to 1 nanosecond resolution),
+         are optional. The "Z" suffix indicates the timezone ("UTC"); the timezone
+         is required. A proto3 JSON serializer should always use UTC (as indicated by
+         "Z") when printing the Timestamp type and a proto3 JSON parser should be
+         able to accept both UTC and other timezones (as indicated by an offset).
+
+         For example, "2017-01-15T01:30:15.01Z" encodes 15.01 seconds past
+         01:30 UTC on January 15, 2017.
+
+         In JavaScript, one can convert a Date object to this format using the
+         standard
+         [toISOString()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString)
+         method. In Python, a standard `datetime.datetime` object can be converted
+         to this format using
+         [`strftime`](https://docs.python.org/2/library/time.html#time.strftime) with
+         the time format spec '%Y-%m-%dT%H:%M:%S.%fZ'. Likewise, in Java, one can use
+         the Joda Time's [`ISODateTimeFormat.dateTime()`](
+         http://joda-time.sourceforge.net/apidocs/org/joda/time/format/ISODateTimeFormat.html#dateTime()
+         ) to obtain a formatter capable of generating timestamps in this format.
+    oscal.catalog.v1.Constraint:
+      type: object
+      properties:
+        description:
+          type: string
+          title: description
+      title: Constraint
+      additionalProperties: false
+      description: Constraint represents a constraint on a parameter value
+    oscal.catalog.v1.Control:
+      type: object
+      properties:
+        id:
+          title: id
+          $ref: '#/components/schemas/oscal.common.v1.Token'
+        class:
+          type: string
+          title: class
+        title:
+          title: title
+          $ref: '#/components/schemas/oscal.common.v1.MarkupLine'
+        params:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.catalog.v1.Parameter'
+          title: params
+        parts:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.catalog.v1.Part'
+          title: parts
+        controls:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.catalog.v1.Control'
+          title: controls
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: Control
+      additionalProperties: false
+      description: Control represents a security control
+    oscal.catalog.v1.Parameter:
+      type: object
+      properties:
+        id:
+          title: id
+          $ref: '#/components/schemas/oscal.common.v1.Token'
+        class:
+          type: string
+          title: class
+        label:
+          title: label
+          $ref: '#/components/schemas/oscal.common.v1.MarkupLine'
+        values:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupLine'
+          title: values
+        select:
+          title: select
+          $ref: '#/components/schemas/oscal.catalog.v1.Select'
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+        constraints:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.catalog.v1.Constraint'
+          title: constraints
+        guidance:
+          title: guidance
+          $ref: '#/components/schemas/oscal.common.v1.MarkupLine'
+      title: Parameter
+      additionalProperties: false
+      description: Parameter represents a control parameter
+    oscal.catalog.v1.Part:
+      type: object
+      properties:
+        id:
+          title: id
+          $ref: '#/components/schemas/oscal.common.v1.Token'
+        name:
+          type: string
+          title: name
+        ns:
+          type: string
+          title: ns
+          description: Namespace
+        class:
+          type: string
+          title: class
+        title:
+          title: title
+          $ref: '#/components/schemas/oscal.common.v1.MarkupLine'
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        parts:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.catalog.v1.Part'
+          title: parts
+        prose:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: prose
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: Part
+      additionalProperties: false
+      description: Part represents a part of a control (e.g., statement, objective)
+    oscal.catalog.v1.Select:
+      type: object
+      properties:
+        choices:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupLine'
+          title: choices
+        howMany:
+          type: boolean
+          title: how_many
+      title: Select
+      additionalProperties: false
+      description: Select represents a selection of parameter values
+    oscal.common.v1.AddrLine:
+      type: object
+      properties:
+        value:
+          title: value
+          $ref: '#/components/schemas/oscal.common.v1.MarkupLine'
+      title: AddrLine
+      additionalProperties: false
+      description: AddrLine represents a line of an address
+    oscal.common.v1.Address:
+      type: object
+      properties:
+        addrLines:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.AddrLine'
+          title: addr_lines
+        city:
+          type: string
+          title: city
+        state:
+          type: string
+          title: state
+        postalCode:
+          type: string
+          title: postal_code
+        country:
+          type: string
+          title: country
+      title: Address
+      additionalProperties: false
+      description: Address represents a postal address
+    oscal.common.v1.BackMatter:
+      type: object
+      properties:
+        resources:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Resource'
+          title: resources
+      title: BackMatter
+      additionalProperties: false
+      description: BackMatter represents appendices and resources
+    oscal.common.v1.Base64:
+      type: object
+      properties:
+        value:
+          type: string
+          title: value
+      title: Base64
+      additionalProperties: false
+      description: Base64 represents base64-encoded binary data
+    oscal.common.v1.DateTime:
+      type: object
+      properties:
+        value:
+          title: value
+          $ref: '#/components/schemas/google.protobuf.Timestamp'
+      title: DateTime
+      additionalProperties: false
+      description: DateTime represents a date-time with timezone (RFC3339)
+    oscal.common.v1.DocumentId:
+      type: object
+      properties:
+        scheme:
+          type: string
+          title: scheme
+        identifier:
+          type: string
+          title: identifier
+      title: DocumentId
+      additionalProperties: false
+      description: DocumentId represents a document identifier
+    oscal.common.v1.EmailAddress:
+      type: object
+      properties:
+        value:
+          type: string
+          title: value
+      title: EmailAddress
+      additionalProperties: false
+      description: EmailAddress represents an email address
+    oscal.common.v1.Link:
+      type: object
+      properties:
+        href:
+          title: href
+          $ref: '#/components/schemas/oscal.common.v1.URI'
+        rel:
+          type: string
+          title: rel
+          description: Relationship type
+        mediaType:
+          type: string
+          title: media_type
+          description: Media type (e.g., application/json)
+        text:
+          type: string
+          title: text
+          description: Link text
+        resourceFragment:
+          type: string
+          title: resource_fragment
+          description: Fragment identifier
+      title: Link
+      additionalProperties: false
+      description: Link represents a hyperlink with metadata
+    oscal.common.v1.MarkupLine:
+      type: object
+      properties:
+        value:
+          type: string
+          title: value
+      title: MarkupLine
+      additionalProperties: false
+      description: MarkupLine represents a line of markup text (e.g., markdown)
+    oscal.common.v1.MarkupMultiline:
+      type: object
+      properties:
+        value:
+          type: string
+          title: value
+      title: MarkupMultiline
+      additionalProperties: false
+      description: MarkupMultiline represents multiline markup text
+    oscal.common.v1.Metadata:
+      type: object
+      properties:
+        title:
+          type: string
+          title: title
+        lastModified:
+          title: last_modified
+          $ref: '#/components/schemas/oscal.common.v1.DateTime'
+        version:
+          type: string
+          title: version
+        oscalVersion:
+          type: string
+          title: oscal_version
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        roles:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Role'
+          title: roles
+        parties:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Party'
+          title: parties
+        responsibleParties:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.ResponsibleParty'
+          title: responsible_parties
+        documentId:
+          title: document_id
+          $ref: '#/components/schemas/oscal.common.v1.DocumentId'
+        published:
+          title: published
+          $ref: '#/components/schemas/oscal.common.v1.DateTime'
+        remarks:
+          title: remarks
+          $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+      title: Metadata
+      additionalProperties: false
+      description: Metadata represents document metadata shared across all OSCAL models
+    oscal.common.v1.Party:
+      type: object
+      properties:
+        uuid:
+          title: uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        type:
+          type: string
+          title: type
+        name:
+          type: string
+          title: name
+        shortNames:
+          type: array
+          items:
+            type: string
+          title: short_names
+        address:
+          title: address
+          $ref: '#/components/schemas/oscal.common.v1.Address'
+        emailAddresses:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.EmailAddress'
+          title: email_addresses
+        telephoneNumbers:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.TelephoneNumber'
+          title: telephone_numbers
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        responsibleParties:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.ResponsibleParty'
+          title: responsible_parties
+        remarks:
+          type: array
+          items:
+            type: string
+          title: remarks
+      title: Party
+      additionalProperties: false
+      description: Party represents an organization or person
+    oscal.common.v1.Property:
+      type: object
+      properties:
+        name:
+          type: string
+          title: name
+        value:
+          type: string
+          title: value
+        class:
+          type: string
+          title: class
+          description: Optional classification
+        id:
+          type: string
+          title: id
+          description: Optional identifier
+      title: Property
+      additionalProperties: false
+      description: Property represents a key-value property with optional classification
+    oscal.common.v1.Resource:
+      type: object
+      properties:
+        uuid:
+          title: uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        title:
+          type: array
+          items:
+            type: string
+          title: title
+        description:
+          title: description
+          $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        base64:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Base64'
+          title: base64
+        documentIds:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.DocumentId'
+          title: document_ids
+        remarks:
+          type: array
+          items:
+            type: string
+          title: remarks
+        citation:
+          type: string
+          title: citation
+      title: Resource
+      additionalProperties: false
+      description: Resource represents an external resource
+    oscal.common.v1.ResponsibleParty:
+      type: object
+      properties:
+        roleId:
+          title: role_id
+          $ref: '#/components/schemas/oscal.common.v1.Token'
+        partyUuids:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.UUID'
+          title: party_uuids
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          title: remarks
+          $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+      title: ResponsibleParty
+      additionalProperties: false
+      description: ResponsibleParty represents a party responsible for a role
+    oscal.common.v1.Role:
+      type: object
+      properties:
+        id:
+          title: id
+          $ref: '#/components/schemas/oscal.common.v1.Token'
+        title:
+          type: string
+          title: title
+        shortName:
+          type: string
+          title: short_name
+        description:
+          title: description
+          $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+      title: Role
+      additionalProperties: false
+      description: Role represents a role definition
+    oscal.common.v1.TelephoneNumber:
+      type: object
+      properties:
+        value:
+          type: string
+          title: value
+      title: TelephoneNumber
+      additionalProperties: false
+      description: TelephoneNumber represents a telephone number
+    oscal.common.v1.Token:
+      type: object
+      properties:
+        value:
+          type: string
+          title: value
+      title: Token
+      additionalProperties: false
+      description: Token represents an alphanumeric token (e.g., control IDs)
+    oscal.common.v1.URI:
+      type: object
+      properties:
+        value:
+          type: string
+          title: value
+      title: URI
+      additionalProperties: false
+      description: URI represents a uniform resource identifier
+    oscal.common.v1.URIReference:
+      type: object
+      properties:
+        value:
+          type: string
+          title: value
+      title: URIReference
+      additionalProperties: false
+      description: URIReference represents a URI reference (may be relative)
+    oscal.common.v1.UUID:
+      type: object
+      properties:
+        value:
+          type: string
+          title: value
+      title: UUID
+      additionalProperties: false
+      description: UUID represents a universally unique identifier
+    oscal.profile.v1.Add:
+      type: object
+      properties:
+        itemName:
+          type: string
+          title: item_name
+        position:
+          type: string
+          title: position
+        parts:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.catalog.v1.Part'
+          title: parts
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        params:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.catalog.v1.Parameter'
+          title: params
+        withIds:
+          type: array
+          items:
+            type: string
+          title: with_ids
+        withClass:
+          type: array
+          items:
+            type: string
+          title: with_class
+      title: Add
+      additionalProperties: false
+      description: Add represents addition of control content
+    oscal.profile.v1.AddControls:
+      type: object
+      properties:
+        controls:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.catalog.v1.Control'
+          title: controls
+        withIds:
+          type: array
+          items:
+            type: string
+          title: with_ids
+        withClass:
+          type: array
+          items:
+            type: string
+          title: with_class
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: AddControls
+      additionalProperties: false
+      description: AddControls represents addition of new controls
+    oscal.profile.v1.Alter:
+      type: object
+      properties:
+        controlId:
+          type: string
+          title: control_id
+        removes:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.profile.v1.Remove'
+          title: removes
+        adds:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.profile.v1.Add'
+          title: adds
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: Alter
+      additionalProperties: false
+      description: Alter represents a specific alteration to a control
+    oscal.profile.v1.AlterControls:
+      type: object
+      properties:
+        controlAlterations:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.profile.v1.Alter'
+          title: control_alterations
+        withIds:
+          type: array
+          items:
+            type: string
+          title: with_ids
+        withClass:
+          type: array
+          items:
+            type: string
+          title: with_class
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: AlterControls
+      additionalProperties: false
+      description: AlterControls represents alterations to controls
+    oscal.profile.v1.Combine:
+      type: object
+      properties:
+        method:
+          type: string
+          title: method
+        flat:
+          type: boolean
+          title: flat
+        asIs:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupLine'
+          title: as_is
+      title: Combine
+      additionalProperties: false
+      description: Combine represents combine method for merging
+    oscal.profile.v1.Custom:
+      type: object
+      properties:
+        withIds:
+          type: array
+          items:
+            type: string
+          title: with_ids
+        withClass:
+          type: array
+          items:
+            type: string
+          title: with_class
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: Custom
+      additionalProperties: false
+      description: Custom represents custom control additions
+    oscal.profile.v1.ExcludeControls:
+      type: object
+      properties:
+        withIds:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.catalog.v1.Control'
+          title: with_ids
+        withClass:
+          type: array
+          items:
+            type: string
+          title: with_class
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: ExcludeControls
+      additionalProperties: false
+      description: ExcludeControls represents controls to exclude from the imported resource
+    oscal.profile.v1.Import:
+      type: object
+      properties:
+        href:
+          title: href
+          $ref: '#/components/schemas/oscal.common.v1.URIReference'
+        includeAll:
+          title: include_all
+          $ref: '#/components/schemas/oscal.profile.v1.IncludeAll'
+        excludeControls:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.profile.v1.ExcludeControls'
+          title: exclude_controls
+        custom:
+          title: custom
+          $ref: '#/components/schemas/oscal.profile.v1.Custom'
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: Import
+      additionalProperties: false
+      description: Import represents a reference to a source catalog or profile
+    oscal.profile.v1.IncludeAll:
+      type: object
+      properties:
+        params:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.catalog.v1.Parameter'
+          title: params
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: IncludeAll
+      additionalProperties: false
+      description: IncludeAll represents including all controls from the imported resource
+    oscal.profile.v1.Merge:
+      type: object
+      properties:
+        custom:
+          title: custom
+          $ref: '#/components/schemas/oscal.profile.v1.Custom'
+        combine:
+          title: combine
+          $ref: '#/components/schemas/oscal.profile.v1.Combine'
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: Merge
+      additionalProperties: false
+      description: Merge represents merge instructions for combining imports
+    oscal.profile.v1.Modify:
+      type: object
+      properties:
+        setParameters:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.profile.v1.SetParameters'
+          title: set_parameters
+        alterControls:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.profile.v1.AlterControls'
+          title: alter_controls
+        addControls:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.profile.v1.AddControls'
+          title: add_controls
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: Modify
+      additionalProperties: false
+      description: Modify represents modifications to controls
+    oscal.profile.v1.Profile:
+      type: object
+      properties:
+        uuid:
+          title: uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        metadata:
+          title: metadata
+          $ref: '#/components/schemas/oscal.common.v1.Metadata'
+        imports:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.profile.v1.Import'
+          title: imports
+        merge:
+          title: merge
+          $ref: '#/components/schemas/oscal.profile.v1.Merge'
+        modify:
+          title: modify
+          $ref: '#/components/schemas/oscal.profile.v1.Modify'
+        backMatter:
+          title: back_matter
+          $ref: '#/components/schemas/oscal.common.v1.BackMatter'
+      title: Profile
+      additionalProperties: false
+      description: Profile represents an OSCAL profile that tailors controls from catalogs or other profiles
+    oscal.profile.v1.Remove:
+      type: object
+      properties:
+        itemName:
+          type: string
+          title: item_name
+        withIds:
+          type: array
+          items:
+            type: string
+          title: with_ids
+        withClass:
+          type: array
+          items:
+            type: string
+          title: with_class
+        withName:
+          type: array
+          items:
+            type: string
+          title: with_name
+        withNs:
+          type: array
+          items:
+            type: string
+          title: with_ns
+      title: Remove
+      additionalProperties: false
+      description: Remove represents removal of control content
+    oscal.profile.v1.SetParameters:
+      type: object
+      properties:
+        params:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.catalog.v1.Parameter'
+          title: params
+        withIds:
+          type: array
+          items:
+            type: string
+          title: with_ids
+        withClass:
+          type: array
+          items:
+            type: string
+          title: with_class
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: SetParameters
+      additionalProperties: false
+      description: SetParameters represents parameter value assignments
+security: []

@@ -1,0 +1,21 @@
+{
+  "$id": "oscal.services.v1.ImpactRadiusResponse.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "edges": {
+      "items": {
+        "$ref": "oscal.services.v1.GraphEdge.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "nodes": {
+      "items": {
+        "$ref": "oscal.services.v1.GraphNode.jsonschema.json"
+      },
+      "type": "array"
+    }
+  },
+  "title": "Impact Radius Response",
+  "type": "object"
+}

@@ -1,0 +1,140 @@
+syntax = "proto3";
+
+package oscal.profile.v1;
+
+import "common/v1/common.proto";
+import "catalog/v1/catalog.proto";
+
+option go_package = "github.com/mchorfa/xoscal/proto/oscal/profile/v1;profilev1";
+
+// Profile represents an OSCAL profile that tailors controls from catalogs or other profiles
+message Profile {
+  oscal.common.v1.UUID uuid = 1;
+  oscal.common.v1.Metadata metadata = 2;
+  repeated Import imports = 3;
+  Merge merge = 4;
+  Modify modify = 5;
+  oscal.common.v1.BackMatter back_matter = 6;
+}
+
+// Import represents a reference to a source catalog or profile
+message Import {
+  oscal.common.v1.URIReference href = 1;
+  IncludeAll include_all = 2;
+  repeated ExcludeControls exclude_controls = 3;
+  Custom custom = 4;
+  repeated oscal.common.v1.Property props = 5;
+  repeated oscal.common.v1.Link links = 6;
+  repeated oscal.common.v1.MarkupMultiline remarks = 7;
+}
+
+// IncludeAll represents including all controls from the imported resource
+message IncludeAll {
+  repeated oscal.catalog.v1.Parameter params = 1;
+  repeated oscal.common.v1.Property props = 2;
+  repeated oscal.common.v1.Link links = 3;
+  repeated oscal.common.v1.MarkupMultiline remarks = 4;
+}
+
+// ExcludeControls represents controls to exclude from the imported resource
+message ExcludeControls {
+  repeated oscal.catalog.v1.Control with_ids = 1;
+  repeated string with_class = 2;
+  repeated oscal.common.v1.Property props = 3;
+  repeated oscal.common.v1.Link links = 4;
+  repeated oscal.common.v1.MarkupMultiline remarks = 5;
+}
+
+// Custom represents custom control additions
+message Custom {
+  repeated string with_ids = 1;
+  repeated string with_class = 2;
+  repeated oscal.common.v1.Property props = 3;
+  repeated oscal.common.v1.Link links = 4;
+  repeated oscal.common.v1.MarkupMultiline remarks = 5;
+}
+
+// Merge represents merge instructions for combining imports
+message Merge {
+  Custom custom = 1;
+  Combine combine = 2;
+  repeated oscal.common.v1.Property props = 3;
+  repeated oscal.common.v1.Link links = 4;
+  repeated oscal.common.v1.MarkupMultiline remarks = 5;
+}
+
+// Combine represents combine method for merging
+message Combine {
+  string method = 1;
+  bool flat = 2;
+  repeated oscal.common.v1.MarkupLine as_is = 3;
+}
+
+// Modify represents modifications to controls
+message Modify {
+  repeated SetParameters set_parameters = 1;
+  repeated AlterControls alter_controls = 2;
+  repeated AddControls add_controls = 3;
+  repeated oscal.common.v1.Property props = 4;
+  repeated oscal.common.v1.Link links = 5;
+  repeated oscal.common.v1.MarkupMultiline remarks = 6;
+}
+
+// SetParameters represents parameter value assignments
+message SetParameters {
+  repeated oscal.catalog.v1.Parameter params = 1;
+  repeated string with_ids = 2;
+  repeated string with_class = 3;
+  repeated oscal.common.v1.Property props = 4;
+  repeated oscal.common.v1.Link links = 5;
+  repeated oscal.common.v1.MarkupMultiline remarks = 6;
+}
+
+// AlterControls represents alterations to controls
+message AlterControls {
+  repeated Alter control_alterations = 1;
+  repeated string with_ids = 2;
+  repeated string with_class = 3;
+  repeated oscal.common.v1.Property props = 4;
+  repeated oscal.common.v1.Link links = 5;
+  repeated oscal.common.v1.MarkupMultiline remarks = 6;
+}
+
+// Alter represents a specific alteration to a control
+message Alter {
+  string control_id = 1;
+  repeated Remove removes = 2;
+  repeated Add adds = 3;
+  repeated oscal.common.v1.MarkupMultiline remarks = 4;
+}
+
+// Remove represents removal of control content
+message Remove {
+  string item_name = 1;
+  repeated string with_ids = 2;
+  repeated string with_class = 3;
+  repeated string with_name = 4;
+  repeated string with_ns = 5;
+}
+
+// Add represents addition of control content
+message Add {
+  string item_name = 1;
+  string position = 2;
+  repeated oscal.catalog.v1.Part parts = 3;
+  repeated oscal.common.v1.Property props = 4;
+  repeated oscal.common.v1.Link links = 5;
+  repeated oscal.catalog.v1.Parameter params = 6;
+  repeated string with_ids = 7;
+  repeated string with_class = 8;
+}
+
+// AddControls represents addition of new controls
+message AddControls {
+  repeated oscal.catalog.v1.Control controls = 1;
+  repeated string with_ids = 2;
+  repeated string with_class = 3;
+  repeated oscal.common.v1.Property props = 4;
+  repeated oscal.common.v1.Link links = 5;
+  repeated oscal.common.v1.MarkupMultiline remarks = 6;
+}

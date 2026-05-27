@@ -1,0 +1,92 @@
+{
+  "$id": "oscal.common.v1.Party.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Party represents an organization or person",
+  "patternProperties": {
+    "^(emailAddresses)$": {
+      "items": {
+        "$ref": "oscal.common.v1.EmailAddress.schema.json"
+      },
+      "type": "array"
+    },
+    "^(responsibleParties)$": {
+      "items": {
+        "$ref": "oscal.common.v1.ResponsibleParty.schema.json"
+      },
+      "type": "array"
+    },
+    "^(shortNames)$": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "^(telephoneNumbers)$": {
+      "items": {
+        "$ref": "oscal.common.v1.TelephoneNumber.schema.json"
+      },
+      "type": "array"
+    }
+  },
+  "properties": {
+    "address": {
+      "$ref": "oscal.common.v1.Address.schema.json"
+    },
+    "email_addresses": {
+      "items": {
+        "$ref": "oscal.common.v1.EmailAddress.schema.json"
+      },
+      "type": "array"
+    },
+    "links": {
+      "items": {
+        "$ref": "oscal.common.v1.Link.schema.json"
+      },
+      "type": "array"
+    },
+    "name": {
+      "default": "",
+      "type": "string"
+    },
+    "props": {
+      "items": {
+        "$ref": "oscal.common.v1.Property.schema.json"
+      },
+      "type": "array"
+    },
+    "remarks": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "responsible_parties": {
+      "items": {
+        "$ref": "oscal.common.v1.ResponsibleParty.schema.json"
+      },
+      "type": "array"
+    },
+    "short_names": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "telephone_numbers": {
+      "items": {
+        "$ref": "oscal.common.v1.TelephoneNumber.schema.json"
+      },
+      "type": "array"
+    },
+    "type": {
+      "default": "",
+      "type": "string"
+    },
+    "uuid": {
+      "$ref": "oscal.common.v1.UUID.schema.json"
+    }
+  },
+  "title": "Party",
+  "type": "object"
+}

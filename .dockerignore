@@ -1,0 +1,58 @@
+# Build artifacts
+bin/
+dist/
+*.exe
+*.test
+*.out
+coverage.out
+
+# Dependencies
+vendor/
+
+# IDE / Editor
+.idea/
+.vscode/
+*.swp
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary / Cache
+tmp/
+temp/
+*.tmp
+data/cache/
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+*.db-shm
+*.db-wal
+
+# Secrets / Local config
+.env
+.env.local
+*.local.yaml
+*.local.yml
+*.local.json
+
+# Logs
+*.log
+
+# Git
+.git/
+.gitignore
+
+# CI/CD
+.github/
+
+# Documentation (not needed in build)
+docs/
+*.md
+
+# Kubernetes manifests (not needed in build)
+k8s/

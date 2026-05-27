@@ -1,0 +1,51 @@
+{
+  "$defs": {
+    "oscal.services.v1.VerifyClosureResponse.schema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "properties": {
+        "diagnostics": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "edges_checked": {
+          "maximum": 2147483647,
+          "minimum": -2147483648,
+          "type": "integer"
+        },
+        "edges_failed": {
+          "maximum": 2147483647,
+          "minimum": -2147483648,
+          "type": "integer"
+        },
+        "purpose": {
+          "type": "string"
+        },
+        "subject_node": {
+          "type": "string"
+        },
+        "trust_state": {
+          "type": "string"
+        },
+        "verdict": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "subject_node",
+        "purpose",
+        "verdict",
+        "trust_state",
+        "edges_checked",
+        "edges_failed"
+      ],
+      "title": "Verify Closure Response",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.services.v1.VerifyClosureResponse.schema.strict.bundle.json",
+  "$ref": "#/$defs/oscal.services.v1.VerifyClosureResponse.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

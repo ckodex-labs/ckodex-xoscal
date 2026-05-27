@@ -1,0 +1,19 @@
+{
+  "$defs": {
+    "oscal.services.v1.GetEntityRequest.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "properties": {
+        "urn": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Get Entity Request",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.services.v1.GetEntityRequest.schema.bundle.json",
+  "$ref": "#/$defs/oscal.services.v1.GetEntityRequest.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

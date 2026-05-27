@@ -1,0 +1,20 @@
+{
+  "$defs": {
+    "oscal.common.v1.Token.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Token represents an alphanumeric token (e.g., control IDs)",
+      "properties": {
+        "value": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Token",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.common.v1.Token.jsonschema.bundle.json",
+  "$ref": "#/$defs/oscal.common.v1.Token.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

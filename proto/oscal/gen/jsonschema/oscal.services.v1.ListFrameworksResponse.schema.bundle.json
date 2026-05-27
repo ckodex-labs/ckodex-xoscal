@@ -1,0 +1,121 @@
+{
+  "$defs": {
+    "oscal.services.v1.FrameworkSummary.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "patternProperties": {
+        "^(assessableCount)$": {
+          "anyOf": [
+            {
+              "maximum": 2147483647,
+              "minimum": -2147483648,
+              "type": "integer"
+            },
+            {
+              "pattern": "^-?[0-9]+$",
+              "type": "string"
+            }
+          ],
+          "default": 0
+        },
+        "^(nodeCount)$": {
+          "anyOf": [
+            {
+              "maximum": 2147483647,
+              "minimum": -2147483648,
+              "type": "integer"
+            },
+            {
+              "pattern": "^-?[0-9]+$",
+              "type": "string"
+            }
+          ],
+          "default": 0
+        },
+        "^(refId)$": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "properties": {
+        "assessable_count": {
+          "anyOf": [
+            {
+              "maximum": 2147483647,
+              "minimum": -2147483648,
+              "type": "integer"
+            },
+            {
+              "pattern": "^-?[0-9]+$",
+              "type": "string"
+            }
+          ],
+          "default": 0
+        },
+        "jurisdiction": {
+          "default": "",
+          "type": "string"
+        },
+        "name": {
+          "default": "",
+          "type": "string"
+        },
+        "node_count": {
+          "anyOf": [
+            {
+              "maximum": 2147483647,
+              "minimum": -2147483648,
+              "type": "integer"
+            },
+            {
+              "pattern": "^-?[0-9]+$",
+              "type": "string"
+            }
+          ],
+          "default": 0
+        },
+        "provider": {
+          "default": "",
+          "type": "string"
+        },
+        "ref_id": {
+          "default": "",
+          "type": "string"
+        },
+        "version": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Framework Summary",
+      "type": "object"
+    },
+    "oscal.services.v1.ListFrameworksResponse.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "patternProperties": {
+        "^(nextPageToken)$": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "properties": {
+        "frameworks": {
+          "items": {
+            "$ref": "#/$defs/oscal.services.v1.FrameworkSummary.schema.json"
+          },
+          "type": "array"
+        },
+        "next_page_token": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "List Frameworks Response",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.services.v1.ListFrameworksResponse.schema.bundle.json",
+  "$ref": "#/$defs/oscal.services.v1.ListFrameworksResponse.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

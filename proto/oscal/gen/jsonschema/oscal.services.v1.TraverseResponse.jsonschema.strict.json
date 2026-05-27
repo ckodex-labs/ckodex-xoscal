@@ -1,0 +1,15 @@
+{
+  "$id": "oscal.services.v1.TraverseResponse.jsonschema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "path": {
+      "items": {
+        "$ref": "oscal.services.v1.PathSegment.jsonschema.strict.json"
+      },
+      "type": "array"
+    }
+  },
+  "title": "Traverse Response",
+  "type": "object"
+}

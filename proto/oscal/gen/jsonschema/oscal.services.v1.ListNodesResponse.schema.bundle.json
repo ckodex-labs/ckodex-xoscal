@@ -1,0 +1,73 @@
+{
+  "$defs": {
+    "google.protobuf.Timestamp.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "format": "date-time",
+      "title": "Timestamp",
+      "type": "string"
+    },
+    "oscal.services.v1.GraphNode.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "patternProperties": {
+        "^(createdAt)$": {
+          "$ref": "#/$defs/google.protobuf.Timestamp.schema.json"
+        },
+        "^(labelsJson)$": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "properties": {
+        "created_at": {
+          "$ref": "#/$defs/google.protobuf.Timestamp.schema.json"
+        },
+        "id": {
+          "default": "",
+          "type": "string"
+        },
+        "kind": {
+          "default": "",
+          "type": "string"
+        },
+        "labels_json": {
+          "default": "",
+          "type": "string"
+        },
+        "urn": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Graph Node",
+      "type": "object"
+    },
+    "oscal.services.v1.ListNodesResponse.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "patternProperties": {
+        "^(nextPageToken)$": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "properties": {
+        "next_page_token": {
+          "default": "",
+          "type": "string"
+        },
+        "nodes": {
+          "items": {
+            "$ref": "#/$defs/oscal.services.v1.GraphNode.schema.json"
+          },
+          "type": "array"
+        }
+      },
+      "title": "List Nodes Response",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.services.v1.ListNodesResponse.schema.bundle.json",
+  "$ref": "#/$defs/oscal.services.v1.ListNodesResponse.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

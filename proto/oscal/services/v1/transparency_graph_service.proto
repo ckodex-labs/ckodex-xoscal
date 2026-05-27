@@ -1,0 +1,231 @@
+syntax = "proto3";
+
+package oscal.services.v1;
+
+import "google/api/annotations.proto";
+import "google/protobuf/timestamp.proto";
+import "services/v1/transparency_exchange_service.proto";
+
+option go_package = "github.com/mchorfa/xoscal/proto/oscal/services/v1;servicesv1";
+
+// TransparencyGraphService provides graph traversal over projected claims
+// with structured proof-state verification for xOSCAL.
+service TransparencyGraphService {
+  rpc ProjectEdge(ProjectEdgeRequest) returns (ProjectEdgeResponse) {
+    option (google.api.http) = { post: "/v1/graph/edges" body: "*" };
+  }
+  rpc GetEdge(GetEdgeRequest) returns (GetEdgeResponse) {
+    option (google.api.http) = { get: "/v1/graph/edges/{edge_id}" };
+  }
+  rpc ListEdges(ListEdgesRequest) returns (ListEdgesResponse) {
+    option (google.api.http) = { get: "/v1/graph/edges" };
+  }
+  rpc DeleteEdge(DeleteEdgeRequest) returns (DeleteEdgeResponse) {
+    option (google.api.http) = { delete: "/v1/graph/edges/{edge_id}" };
+  }
+
+  rpc GetNode(GetNodeRequest) returns (GetNodeResponse) {
+    option (google.api.http) = { get: "/v1/graph/nodes/{node_id}" };
+  }
+  rpc ListNodes(ListNodesRequest) returns (ListNodesResponse) {
+    option (google.api.http) = { get: "/v1/graph/nodes" };
+  }
+
+  rpc Traverse(TraverseRequest) returns (TraverseResponse) {
+    option (google.api.http) = { post: "/v1/graph/traverse" body: "*" };
+  }
+  rpc ShortestPath(ShortestPathRequest) returns (ShortestPathResponse) {
+    option (google.api.http) = { post: "/v1/graph/shortest-path" body: "*" };
+  }
+  rpc ImpactRadius(ImpactRadiusRequest) returns (ImpactRadiusResponse) {
+    option (google.api.http) = { post: "/v1/graph/impact-radius" body: "*" };
+  }
+
+  rpc ExplainClaim(ExplainClaimRequest) returns (ExplainClaimResponse) {
+    option (google.api.http) = { post: "/v1/graph/explain" body: "*" };
+  }
+  rpc ComputeTrustState(ComputeTrustStateRequest) returns (ComputeTrustStateResponse) {
+    option (google.api.http) = { post: "/v1/graph/trust-state" body: "*" };
+  }
+  rpc VerifyClosure(VerifyClosureRequest) returns (VerifyClosureResponse) {
+    option (google.api.http) = { post: "/v1/graph/verify-closure" body: "*" };
+  }
+}
+
+// ---- GraphNode message ----
+
+message GraphNode {
+  string id = 1;
+  string kind = 2; // artifact | component | service | pipeline_run | model | dataset | identity | document | policy | vulnerability | license | tool
+  string urn = 3;
+  string labels_json = 4; // JSON blob for key-value labels
+  google.protobuf.Timestamp created_at = 5;
+}
+
+// ---- GraphEdge message ----
+
+message GraphEdge {
+  string id = 1;
+  string from_node = 2;
+  string to_node = 3;
+  string relation = 4;
+  string qualifier = 5;
+  string claim_id = 6;
+  string evidence_digest = 7;
+  ProofState proof_state = 8;
+  TimeWindow valid_time = 9;
+  string trust_state = 10;
+  double weight = 11;
+  string extensions_json = 12;
+}
+
+// Reuse TimeWindow from transparency_exchange_service.proto (same package)
+
+// ---- Request/Response messages ----
+
+message ProjectEdgeRequest {
+  string claim_id = 1;
+  string edge_id = 2; // optional; auto-generated if empty
+}
+
+message ProjectEdgeResponse {
+  GraphEdge edge = 1;
+}
+
+message GetEdgeRequest {
+  string edge_id = 1;
+}
+
+message GetEdgeResponse {
+  GraphEdge edge = 1;
+}
+
+message ListEdgesRequest {
+  string from_node = 1;
+  string to_node = 2;
+  string relation = 3;
+  string trust_state = 4;
+  google.protobuf.Timestamp valid_after = 5;
+  int32 page_size = 6;
+  string page_token = 7;
+}
+
+message ListEdgesResponse {
+  repeated GraphEdge edges = 1;
+  string next_page_token = 2;
+}
+
+message DeleteEdgeRequest {
+  string edge_id = 1;
+}
+
+message DeleteEdgeResponse {
+  bool success = 1;
+}
+
+message GetNodeRequest {
+  string node_id = 1;
+}
+
+message GetNodeResponse {
+  GraphNode node = 1;
+}
+
+message ListNodesRequest {
+  string kind = 1;
+  string label_filter = 2; // JSON path expression e.g. {"framework":"iso-42001"}
+  google.protobuf.Timestamp created_after = 3;
+  int32 page_size = 4;
+  string page_token = 5;
+}
+
+message ListNodesResponse {
+  repeated GraphNode nodes = 1;
+  string next_page_token = 2;
+}
+
+message TraverseRequest {
+  string start_node = 1;
+  repeated string relations = 2; // empty = all
+  int32 max_depth = 3;
+  string min_trust_state = 4;
+  string traversal_mode = 5; // bfs | dfs
+}
+
+message PathSegment {
+  int32 depth = 1;
+  GraphEdge edge = 2;
+  GraphNode node = 3;
+}
+
+message TraverseResponse {
+  repeated PathSegment path = 1;
+}
+
+message ShortestPathRequest {
+  string from_node = 1;
+  string to_node = 2;
+  string min_trust_state = 3;
+  repeated string allowed_relations = 4;
+}
+
+message ShortestPathResponse {
+  repeated GraphEdge edges = 1;
+  double total_weight = 2;
+  bool found = 3;
+}
+
+message ImpactRadiusRequest {
+  string node = 1;
+  int32 max_depth = 2;
+  string min_trust_state = 3;
+  repeated string relations = 4;
+}
+
+message ImpactRadiusResponse {
+  repeated GraphNode nodes = 1;
+  repeated GraphEdge edges = 2;
+}
+
+message ExplainClaimRequest {
+  string claim_id = 1;
+  string edge_id = 2;
+}
+
+message ExplainClaimResponse {
+  Claim claim = 1;
+  repeated Evidence evidence = 2;
+  string proof_state_json = 3;
+  string trust_state = 4;
+}
+
+message ComputeTrustStateRequest {
+  string claim_id = 1;
+  string edge_id = 2;
+}
+
+message ComputeTrustStateResponse {
+  string claim_id = 1;
+  string edge_id = 2;
+  ProofState proof_state = 3;
+  string trust_state = 4;
+  repeated string diagnostics = 5;
+}
+
+message VerifyClosureRequest {
+  string subject_node = 1;
+  string purpose = 2;
+  google.protobuf.Timestamp as_of = 3;
+}
+
+message VerifyClosureResponse {
+  string subject_node = 1;
+  string purpose = 2;
+  bool verdict = 3;
+  string trust_state = 4;
+  repeated string diagnostics = 5;
+  int32 edges_checked = 6;
+  int32 edges_failed = 7;
+}
+
+// Reuse Claim, Evidence, ProofState from transparency_exchange_service.proto

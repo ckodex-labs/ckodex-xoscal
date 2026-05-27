@@ -1,0 +1,24 @@
+{
+  "$id": "oscal.assessment_plan.v1.ControlSelection.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "ControlSelection represents a control selection",
+  "patternProperties": {
+    "^(controlId)$": {
+      "$ref": "oscal.common.v1.Token.schema.json"
+    }
+  },
+  "properties": {
+    "control_id": {
+      "$ref": "oscal.common.v1.Token.schema.json"
+    },
+    "remarks": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupMultiline.schema.json"
+      },
+      "type": "array"
+    }
+  },
+  "title": "Control Selection",
+  "type": "object"
+}

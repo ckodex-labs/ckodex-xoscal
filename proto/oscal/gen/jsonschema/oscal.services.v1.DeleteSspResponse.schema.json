@@ -1,0 +1,13 @@
+{
+  "$id": "oscal.services.v1.DeleteSspResponse.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "success": {
+      "default": false,
+      "type": "boolean"
+    }
+  },
+  "title": "Delete Ssp Response",
+  "type": "object"
+}

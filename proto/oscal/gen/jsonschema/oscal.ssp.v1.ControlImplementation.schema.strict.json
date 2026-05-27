@@ -1,0 +1,25 @@
+{
+  "$id": "oscal.ssp.v1.ControlImplementation.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "ControlImplementation represents control implementation",
+  "properties": {
+    "description": {
+      "$ref": "oscal.common.v1.MarkupMultiline.schema.strict.json"
+    },
+    "implemented_requirements": {
+      "items": {
+        "$ref": "oscal.ssp.v1.ImplementedRequirement.schema.strict.json"
+      },
+      "type": "array"
+    },
+    "set_parameters": {
+      "items": {
+        "$ref": "oscal.ssp.v1.SetParameter.schema.strict.json"
+      },
+      "type": "array"
+    }
+  },
+  "title": "Control Implementation",
+  "type": "object"
+}

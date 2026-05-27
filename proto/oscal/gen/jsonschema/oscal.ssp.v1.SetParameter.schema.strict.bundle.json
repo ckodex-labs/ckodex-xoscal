@@ -1,0 +1,61 @@
+{
+  "$defs": {
+    "oscal.common.v1.MarkupMultiline.schema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "MarkupMultiline represents multiline markup text",
+      "properties": {
+        "value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "value"
+      ],
+      "title": "Markup Multiline",
+      "type": "object"
+    },
+    "oscal.common.v1.Token.schema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Token represents an alphanumeric token (e.g., control IDs)",
+      "properties": {
+        "value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "value"
+      ],
+      "title": "Token",
+      "type": "object"
+    },
+    "oscal.ssp.v1.SetParameter.schema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "SetParameter represents a set parameter",
+      "properties": {
+        "param_id": {
+          "$ref": "#/$defs/oscal.common.v1.Token.schema.strict.json"
+        },
+        "remarks": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.schema.strict.json"
+          },
+          "type": "array"
+        },
+        "value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "value"
+      ],
+      "title": "Set Parameter",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.ssp.v1.SetParameter.schema.strict.bundle.json",
+  "$ref": "#/$defs/oscal.ssp.v1.SetParameter.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

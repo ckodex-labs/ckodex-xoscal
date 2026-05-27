@@ -1,0 +1,19 @@
+{
+  "$id": "oscal.services.v1.ComputeTrustStateRequest.jsonschema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "claimId": {
+      "type": "string"
+    },
+    "edgeId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "claimId",
+    "edgeId"
+  ],
+  "title": "Compute Trust State Request",
+  "type": "object"
+}

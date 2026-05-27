@@ -1,0 +1,212 @@
+syntax = "proto3";
+
+package oscal.assessment_results.v1;
+
+import "common/v1/common.proto";
+
+option go_package = "github.com/mchorfa/xoscal/proto/oscal/assessment_results/v1;assessment_resultsv1";
+
+// AssessmentResults represents assessment results
+message AssessmentResults {
+  oscal.common.v1.UUID uuid = 1;
+  oscal.common.v1.Metadata metadata = 2;
+  ImportAp import_ap = 3;
+  ImportSsp import_ssp = 4;
+  LocalDefinitions local_definitions = 5;
+  repeated Result results = 6;
+  oscal.common.v1.BackMatter back_matter = 7;
+}
+
+// ImportAp represents an imported assessment plan
+message ImportAp {
+  oscal.common.v1.URIReference href = 1;
+  repeated oscal.common.v1.MarkupMultiline remarks = 2;
+}
+
+// ImportSsp represents an imported system security plan
+message ImportSsp {
+  oscal.common.v1.URIReference href = 1;
+  repeated oscal.common.v1.MarkupMultiline remarks = 2;
+}
+
+// LocalDefinitions represents local definitions for assessment results
+message LocalDefinitions {
+  repeated Component components = 1;
+  repeated InventoryItem inventory_items = 2;
+  repeated User users = 3;
+  repeated AssessmentPlatform assessment_platforms = 4;
+}
+
+// Component represents a system component
+message Component {
+  oscal.common.v1.UUID uuid = 1;
+  string type = 2;
+  string title = 3;
+  string description = 4;
+  repeated oscal.common.v1.Property props = 5;
+  repeated oscal.common.v1.Link links = 6;
+  repeated oscal.common.v1.MarkupMultiline remarks = 7;
+}
+
+// InventoryItem represents an inventory item
+message InventoryItem {
+  oscal.common.v1.UUID uuid = 1;
+  oscal.common.v1.MarkupLine description = 2;
+  repeated oscal.common.v1.Property props = 3;
+  repeated oscal.common.v1.Link links = 4;
+  repeated oscal.common.v1.MarkupMultiline remarks = 5;
+}
+
+// User represents a system user
+message User {
+  oscal.common.v1.UUID uuid = 1;
+  string title = 2;
+  string short_name = 3;
+  oscal.common.v1.MarkupMultiline description = 4;
+  repeated oscal.common.v1.Property props = 5;
+  repeated oscal.common.v1.Link links = 6;
+  repeated oscal.common.v1.MarkupMultiline remarks = 7;
+}
+
+// AssessmentPlatform represents an assessment platform
+message AssessmentPlatform {
+  oscal.common.v1.UUID uuid = 1;
+  oscal.common.v1.MarkupMultiline description = 2;
+  repeated UsesComponent uses_components = 3;
+  repeated oscal.common.v1.MarkupMultiline remarks = 4;
+}
+
+// UsesComponent represents a component used by the assessment platform
+message UsesComponent {
+  oscal.common.v1.UUID component_uuid = 1;
+  repeated oscal.common.v1.Property props = 2;
+  repeated oscal.common.v1.Link links = 3;
+  repeated oscal.common.v1.ResponsibleParty responsible_parties = 4;
+  repeated oscal.common.v1.MarkupMultiline remarks = 5;
+}
+
+// Result represents an assessment result
+message Result {
+  oscal.common.v1.UUID uuid = 1;
+  oscal.common.v1.MarkupLine title = 2;
+  oscal.common.v1.MarkupMultiline description = 3;
+  oscal.common.v1.DateTime start = 4;
+  oscal.common.v1.DateTime end = 5;
+  repeated Finding findings = 6;
+  repeated Observation observations = 7;
+  repeated oscal.common.v1.Property props = 8;
+  repeated oscal.common.v1.Link links = 9;
+  repeated oscal.common.v1.MarkupMultiline remarks = 10;
+}
+
+// Finding represents a finding
+message Finding {
+  oscal.common.v1.UUID uuid = 1;
+  oscal.common.v1.MarkupLine title = 2;
+  oscal.common.v1.MarkupMultiline description = 3;
+  repeated oscal.common.v1.Property props = 4;
+  repeated oscal.common.v1.Link links = 5;
+  repeated Origin origins = 6;
+  FindingTarget target = 7;
+  oscal.common.v1.UUID implementation_statement_uuid = 8;
+  repeated RelatedObservation related_observations = 9;
+  repeated AssociatedRisk related_risks = 10;
+  repeated oscal.common.v1.MarkupMultiline remarks = 11;
+}
+
+// FindingTarget represents a finding target
+message FindingTarget {
+  string type = 1;
+  oscal.common.v1.Token target_id = 2;
+  oscal.common.v1.MarkupLine title = 3;
+  oscal.common.v1.MarkupMultiline description = 4;
+  repeated oscal.common.v1.Property props = 5;
+  repeated oscal.common.v1.Link links = 6;
+  ObjectiveStatus status = 7;
+  ImplementationStatus implementation_status = 8;
+  repeated oscal.common.v1.MarkupMultiline remarks = 9;
+}
+
+// ObjectiveStatus represents objective status
+message ObjectiveStatus {
+  string state = 1;
+  string reason = 2;
+  repeated oscal.common.v1.MarkupMultiline remarks = 3;
+}
+
+// ImplementationStatus represents implementation status
+message ImplementationStatus {
+  string state = 1;
+  oscal.common.v1.MarkupMultiline remarks = 2;
+}
+
+// Origin represents the origin of a finding
+message Origin {
+  repeated OriginActor actors = 1;
+  repeated RelatedTask related_tasks = 2;
+}
+
+// OriginActor represents an originating actor
+message OriginActor {
+  oscal.common.v1.UUID actor_uuid = 1;
+  oscal.common.v1.MarkupLine title = 2;
+  repeated oscal.common.v1.Property props = 3;
+  repeated oscal.common.v1.Link links = 4;
+  repeated oscal.common.v1.MarkupMultiline remarks = 5;
+}
+
+// RelatedTask represents a related task
+message RelatedTask {
+  oscal.common.v1.UUID task_uuid = 1;
+  oscal.common.v1.MarkupLine title = 2;
+  repeated oscal.common.v1.Property props = 3;
+  repeated oscal.common.v1.Link links = 4;
+  repeated oscal.common.v1.MarkupMultiline remarks = 5;
+}
+
+// RelatedObservation represents a related observation
+message RelatedObservation {
+  oscal.common.v1.UUID observation_uuid = 1;
+  repeated oscal.common.v1.MarkupMultiline remarks = 2;
+}
+
+// AssociatedRisk represents an associated risk
+message AssociatedRisk {
+  oscal.common.v1.UUID risk_uuid = 1;
+  repeated oscal.common.v1.MarkupMultiline remarks = 2;
+}
+
+// Observation represents an observation
+message Observation {
+  oscal.common.v1.UUID uuid = 1;
+  oscal.common.v1.MarkupLine title = 2;
+  oscal.common.v1.MarkupMultiline description = 3;
+  repeated oscal.common.v1.Property props = 4;
+  repeated oscal.common.v1.Link links = 5;
+  repeated string methods = 6;
+  repeated string types = 7;
+  repeated Origin origins = 8;
+  repeated SubjectReference subjects = 9;
+  repeated RelevantEvidence relevant_evidence = 10;
+  oscal.common.v1.DateTime collected = 11;
+  oscal.common.v1.DateTime expires = 12;
+  repeated oscal.common.v1.MarkupMultiline remarks = 13;
+}
+
+// SubjectReference represents a subject reference
+message SubjectReference {
+  oscal.common.v1.UUID subject_uuid = 1;
+  oscal.common.v1.MarkupLine title = 2;
+  repeated oscal.common.v1.Property props = 3;
+  repeated oscal.common.v1.Link links = 4;
+  repeated oscal.common.v1.MarkupMultiline remarks = 5;
+}
+
+// RelevantEvidence represents relevant evidence
+message RelevantEvidence {
+  oscal.common.v1.URIReference href = 1;
+  oscal.common.v1.MarkupMultiline description = 2;
+  repeated oscal.common.v1.Property props = 3;
+  repeated oscal.common.v1.Link links = 4;
+  repeated oscal.common.v1.MarkupMultiline remarks = 5;
+}

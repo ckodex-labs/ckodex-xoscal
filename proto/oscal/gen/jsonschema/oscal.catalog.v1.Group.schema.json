@@ -1,0 +1,56 @@
+{
+  "$id": "oscal.catalog.v1.Group.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Group represents a group of controls, or of groups of controls",
+  "properties": {
+    "class": {
+      "default": "",
+      "type": "string"
+    },
+    "controls": {
+      "items": {
+        "$ref": "oscal.catalog.v1.Control.schema.json"
+      },
+      "type": "array"
+    },
+    "groups": {
+      "items": {
+        "$ref": "#"
+      },
+      "type": "array"
+    },
+    "id": {
+      "$ref": "oscal.common.v1.Token.schema.json"
+    },
+    "links": {
+      "items": {
+        "$ref": "oscal.common.v1.Link.schema.json"
+      },
+      "type": "array"
+    },
+    "params": {
+      "items": {
+        "$ref": "oscal.catalog.v1.Parameter.schema.json"
+      },
+      "type": "array"
+    },
+    "props": {
+      "items": {
+        "$ref": "oscal.common.v1.Property.schema.json"
+      },
+      "type": "array"
+    },
+    "remarks": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupMultiline.schema.json"
+      },
+      "type": "array"
+    },
+    "title": {
+      "$ref": "oscal.common.v1.MarkupLine.schema.json"
+    }
+  },
+  "title": "Group",
+  "type": "object"
+}

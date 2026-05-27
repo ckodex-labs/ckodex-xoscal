@@ -1,0 +1,92 @@
+{
+  "$id": "oscal.common.v1.Party.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Party represents an organization or person",
+  "patternProperties": {
+    "^(email_addresses)$": {
+      "items": {
+        "$ref": "oscal.common.v1.EmailAddress.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "^(responsible_parties)$": {
+      "items": {
+        "$ref": "oscal.common.v1.ResponsibleParty.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "^(short_names)$": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "^(telephone_numbers)$": {
+      "items": {
+        "$ref": "oscal.common.v1.TelephoneNumber.jsonschema.json"
+      },
+      "type": "array"
+    }
+  },
+  "properties": {
+    "address": {
+      "$ref": "oscal.common.v1.Address.jsonschema.json"
+    },
+    "emailAddresses": {
+      "items": {
+        "$ref": "oscal.common.v1.EmailAddress.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "links": {
+      "items": {
+        "$ref": "oscal.common.v1.Link.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "name": {
+      "default": "",
+      "type": "string"
+    },
+    "props": {
+      "items": {
+        "$ref": "oscal.common.v1.Property.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "remarks": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "responsibleParties": {
+      "items": {
+        "$ref": "oscal.common.v1.ResponsibleParty.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "shortNames": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "telephoneNumbers": {
+      "items": {
+        "$ref": "oscal.common.v1.TelephoneNumber.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "type": {
+      "default": "",
+      "type": "string"
+    },
+    "uuid": {
+      "$ref": "oscal.common.v1.UUID.jsonschema.json"
+    }
+  },
+  "title": "Party",
+  "type": "object"
+}

@@ -1,0 +1,38 @@
+{
+  "$id": "oscal.profile.v1.Alter.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Alter represents a specific alteration to a control",
+  "patternProperties": {
+    "^(control_id)$": {
+      "default": "",
+      "type": "string"
+    }
+  },
+  "properties": {
+    "adds": {
+      "items": {
+        "$ref": "oscal.profile.v1.Add.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "controlId": {
+      "default": "",
+      "type": "string"
+    },
+    "remarks": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupMultiline.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "removes": {
+      "items": {
+        "$ref": "oscal.profile.v1.Remove.jsonschema.json"
+      },
+      "type": "array"
+    }
+  },
+  "title": "Alter",
+  "type": "object"
+}

@@ -1,0 +1,23 @@
+{
+  "$id": "oscal.services.v1.Predicate.jsonschema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "direction": {
+      "type": "string"
+    },
+    "qualifier": {
+      "type": "string"
+    },
+    "relation": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "relation",
+    "direction",
+    "qualifier"
+  ],
+  "title": "Predicate",
+  "type": "object"
+}

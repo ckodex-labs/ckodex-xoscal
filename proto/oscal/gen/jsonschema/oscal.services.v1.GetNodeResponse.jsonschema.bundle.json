@@ -1,0 +1,60 @@
+{
+  "$defs": {
+    "google.protobuf.Timestamp.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "format": "date-time",
+      "title": "Timestamp",
+      "type": "string"
+    },
+    "oscal.services.v1.GetNodeResponse.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "properties": {
+        "node": {
+          "$ref": "#/$defs/oscal.services.v1.GraphNode.jsonschema.json"
+        }
+      },
+      "title": "Get Node Response",
+      "type": "object"
+    },
+    "oscal.services.v1.GraphNode.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "patternProperties": {
+        "^(created_at)$": {
+          "$ref": "#/$defs/google.protobuf.Timestamp.jsonschema.json"
+        },
+        "^(labels_json)$": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "properties": {
+        "createdAt": {
+          "$ref": "#/$defs/google.protobuf.Timestamp.jsonschema.json"
+        },
+        "id": {
+          "default": "",
+          "type": "string"
+        },
+        "kind": {
+          "default": "",
+          "type": "string"
+        },
+        "labelsJson": {
+          "default": "",
+          "type": "string"
+        },
+        "urn": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Graph Node",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.services.v1.GetNodeResponse.jsonschema.bundle.json",
+  "$ref": "#/$defs/oscal.services.v1.GetNodeResponse.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

@@ -1,0 +1,32 @@
+{
+  "$id": "oscal.services.v1.ListNodesRequest.jsonschema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "createdAfter": {
+      "$ref": "google.protobuf.Timestamp.jsonschema.strict.json"
+    },
+    "kind": {
+      "type": "string"
+    },
+    "labelFilter": {
+      "type": "string"
+    },
+    "pageSize": {
+      "maximum": 2147483647,
+      "minimum": -2147483648,
+      "type": "integer"
+    },
+    "pageToken": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "kind",
+    "labelFilter",
+    "pageSize",
+    "pageToken"
+  ],
+  "title": "List Nodes Request",
+  "type": "object"
+}

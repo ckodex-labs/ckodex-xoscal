@@ -1,0 +1,54 @@
+{
+  "$id": "oscal.ssp.v1.Satisfied.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Satisfied represents satisfied control implementation responsibility",
+  "patternProperties": {
+    "^(responsibilityUuid)$": {
+      "$ref": "oscal.common.v1.UUID.schema.json"
+    },
+    "^(responsibleRoles)$": {
+      "items": {
+        "$ref": "oscal.ssp.v1.ResponsibleRole.schema.json"
+      },
+      "type": "array"
+    }
+  },
+  "properties": {
+    "description": {
+      "$ref": "oscal.common.v1.MarkupMultiline.schema.json"
+    },
+    "links": {
+      "items": {
+        "$ref": "oscal.common.v1.Link.schema.json"
+      },
+      "type": "array"
+    },
+    "props": {
+      "items": {
+        "$ref": "oscal.common.v1.Property.schema.json"
+      },
+      "type": "array"
+    },
+    "remarks": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupMultiline.schema.json"
+      },
+      "type": "array"
+    },
+    "responsibility_uuid": {
+      "$ref": "oscal.common.v1.UUID.schema.json"
+    },
+    "responsible_roles": {
+      "items": {
+        "$ref": "oscal.ssp.v1.ResponsibleRole.schema.json"
+      },
+      "type": "array"
+    },
+    "uuid": {
+      "$ref": "oscal.common.v1.UUID.schema.json"
+    }
+  },
+  "title": "Satisfied",
+  "type": "object"
+}

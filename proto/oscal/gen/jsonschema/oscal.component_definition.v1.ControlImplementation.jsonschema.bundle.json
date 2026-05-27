@@ -1,0 +1,327 @@
+{
+  "$defs": {
+    "oscal.common.v1.Link.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Link represents a hyperlink with metadata",
+      "patternProperties": {
+        "^(media_type)$": {
+          "default": "",
+          "type": "string"
+        },
+        "^(resource_fragment)$": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "properties": {
+        "href": {
+          "$ref": "#/$defs/oscal.common.v1.URI.jsonschema.json"
+        },
+        "mediaType": {
+          "default": "",
+          "type": "string"
+        },
+        "rel": {
+          "default": "",
+          "type": "string"
+        },
+        "resourceFragment": {
+          "default": "",
+          "type": "string"
+        },
+        "text": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Link",
+      "type": "object"
+    },
+    "oscal.common.v1.MarkupLine.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "MarkupLine represents a line of markup text (e.g., markdown)",
+      "properties": {
+        "value": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Markup Line",
+      "type": "object"
+    },
+    "oscal.common.v1.MarkupMultiline.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "MarkupMultiline represents multiline markup text",
+      "properties": {
+        "value": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Markup Multiline",
+      "type": "object"
+    },
+    "oscal.common.v1.Property.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Property represents a key-value property with optional classification",
+      "properties": {
+        "class": {
+          "default": "",
+          "type": "string"
+        },
+        "id": {
+          "default": "",
+          "type": "string"
+        },
+        "name": {
+          "default": "",
+          "type": "string"
+        },
+        "value": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Property",
+      "type": "object"
+    },
+    "oscal.common.v1.URI.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "URI represents a uniform resource identifier",
+      "properties": {
+        "value": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "URI",
+      "type": "object"
+    },
+    "oscal.component_definition.v1.ControlImplementation.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "ControlImplementation represents control implementation by a component",
+      "patternProperties": {
+        "^(control_id)$": {
+          "default": "",
+          "type": "string"
+        },
+        "^(implemented_requirements)$": {
+          "items": {
+            "$ref": "#/$defs/oscal.component_definition.v1.ImplementedRequirement.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "^(set_parameters)$": {
+          "items": {
+            "$ref": "#/$defs/oscal.component_definition.v1.SetParameter.jsonschema.json"
+          },
+          "type": "array"
+        }
+      },
+      "properties": {
+        "controlId": {
+          "default": "",
+          "type": "string"
+        },
+        "description": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.MarkupLine.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "implementedRequirements": {
+          "items": {
+            "$ref": "#/$defs/oscal.component_definition.v1.ImplementedRequirement.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "links": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Link.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "props": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Property.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "remarks": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "setParameters": {
+          "items": {
+            "$ref": "#/$defs/oscal.component_definition.v1.SetParameter.jsonschema.json"
+          },
+          "type": "array"
+        }
+      },
+      "title": "Control Implementation",
+      "type": "object"
+    },
+    "oscal.component_definition.v1.ImplementedRequirement.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "ImplementedRequirement represents a control requirement implementation",
+      "patternProperties": {
+        "^(control_id)$": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "properties": {
+        "controlId": {
+          "default": "",
+          "type": "string"
+        },
+        "description": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.MarkupLine.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "links": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Link.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "props": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Property.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "remarks": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "statements": {
+          "items": {
+            "$ref": "#/$defs/oscal.component_definition.v1.Statement.jsonschema.json"
+          },
+          "type": "array"
+        }
+      },
+      "title": "Implemented Requirement",
+      "type": "object"
+    },
+    "oscal.component_definition.v1.SetParameter.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "SetParameter represents parameter value assignments",
+      "patternProperties": {
+        "^(param_id)$": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "properties": {
+        "links": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Link.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "paramId": {
+          "default": "",
+          "type": "string"
+        },
+        "props": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Property.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "remarks": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "values": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.MarkupLine.jsonschema.json"
+          },
+          "type": "array"
+        }
+      },
+      "title": "Set Parameter",
+      "type": "object"
+    },
+    "oscal.component_definition.v1.Statement.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Statement represents a control implementation statement",
+      "patternProperties": {
+        "^(by_components)$": {
+          "items": {
+            "$ref": "#/$defs/oscal.component_definition.v1.Statement.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "^(statement_id)$": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "properties": {
+        "byComponents": {
+          "items": {
+            "$ref": "#/$defs/oscal.component_definition.v1.Statement.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "description": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.MarkupLine.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "links": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Link.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "props": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Property.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "remarks": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "statementId": {
+          "default": "",
+          "type": "string"
+        },
+        "uuid": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Statement",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.component_definition.v1.ControlImplementation.jsonschema.bundle.json",
+  "$ref": "#/$defs/oscal.component_definition.v1.ControlImplementation.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

@@ -1,0 +1,20 @@
+{
+  "$defs": {
+    "oscal.common.v1.UUID.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "UUID represents a universally unique identifier",
+      "properties": {
+        "value": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "UUID",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.common.v1.UUID.schema.bundle.json",
+  "$ref": "#/$defs/oscal.common.v1.UUID.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

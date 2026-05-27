@@ -1,0 +1,27 @@
+{
+  "$id": "oscal.services.v1.VerifyEvidenceResponse.jsonschema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "digestOk": {
+      "type": "boolean"
+    },
+    "error": {
+      "type": "string"
+    },
+    "evidenceId": {
+      "type": "string"
+    },
+    "sizeOk": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "evidenceId",
+    "digestOk",
+    "sizeOk",
+    "error"
+  ],
+  "title": "Verify Evidence Response",
+  "type": "object"
+}

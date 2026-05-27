@@ -1,0 +1,19 @@
+{
+  "$id": "oscal.assessment_results.v1.AssociatedRisk.jsonschema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "AssociatedRisk represents an associated risk",
+  "properties": {
+    "remarks": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupMultiline.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "riskUuid": {
+      "$ref": "oscal.common.v1.UUID.jsonschema.strict.json"
+    }
+  },
+  "title": "Associated Risk",
+  "type": "object"
+}

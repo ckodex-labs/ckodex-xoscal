@@ -1,0 +1,41 @@
+{
+  "$defs": {
+    "oscal.services.v1.ProposeMappingUpdateRequest.jsonschema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "properties": {
+        "baseBranch": {
+          "type": "string"
+        },
+        "body": {
+          "type": "string"
+        },
+        "headBranch": {
+          "type": "string"
+        },
+        "repoName": {
+          "type": "string"
+        },
+        "repoOwner": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "repoOwner",
+        "repoName",
+        "baseBranch",
+        "headBranch",
+        "title",
+        "body"
+      ],
+      "title": "Propose Mapping Update Request",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.services.v1.ProposeMappingUpdateRequest.jsonschema.strict.bundle.json",
+  "$ref": "#/$defs/oscal.services.v1.ProposeMappingUpdateRequest.jsonschema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

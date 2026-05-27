@@ -1,0 +1,71 @@
+{
+  "$id": "oscal.mapping.v1.MappingCollection.jsonschema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "MappingCollection represents a collection of mappings",
+  "properties": {
+    "confidenceScore": {
+      "$ref": "oscal.mapping.v1.ConfidenceScore.jsonschema.strict.json"
+    },
+    "coverage": {
+      "$ref": "oscal.mapping.v1.Coverage.jsonschema.strict.json"
+    },
+    "links": {
+      "items": {
+        "$ref": "oscal.common.v1.Link.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "mappingDescription": {
+      "$ref": "oscal.mapping.v1.MappingDescription.jsonschema.strict.json"
+    },
+    "maps": {
+      "items": {
+        "$ref": "oscal.mapping.v1.Map.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "matchingRationale": {
+      "type": "string"
+    },
+    "metadata": {
+      "$ref": "oscal.common.v1.Metadata.jsonschema.strict.json"
+    },
+    "props": {
+      "items": {
+        "$ref": "oscal.common.v1.Property.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "remarks": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupMultiline.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "sourceGapSummary": {
+      "$ref": "oscal.mapping.v1.GapSummary.jsonschema.strict.json"
+    },
+    "sourceResource": {
+      "$ref": "oscal.mapping.v1.MappingResourceReference.jsonschema.strict.json"
+    },
+    "status": {
+      "type": "string"
+    },
+    "targetGapSummary": {
+      "$ref": "oscal.mapping.v1.GapSummary.jsonschema.strict.json"
+    },
+    "targetResource": {
+      "$ref": "oscal.mapping.v1.MappingResourceReference.jsonschema.strict.json"
+    },
+    "uuid": {
+      "$ref": "oscal.common.v1.UUID.jsonschema.strict.json"
+    }
+  },
+  "required": [
+    "matchingRationale",
+    "status"
+  ],
+  "title": "Mapping Collection",
+  "type": "object"
+}

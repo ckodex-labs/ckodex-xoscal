@@ -1,0 +1,25 @@
+{
+  "$defs": {
+    "oscal.services.v1.GetClaimRequest.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "patternProperties": {
+        "^(claim_id)$": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "properties": {
+        "claimId": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Get Claim Request",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.services.v1.GetClaimRequest.jsonschema.bundle.json",
+  "$ref": "#/$defs/oscal.services.v1.GetClaimRequest.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

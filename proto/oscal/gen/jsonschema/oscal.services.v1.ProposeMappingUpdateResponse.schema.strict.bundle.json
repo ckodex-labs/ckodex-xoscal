@@ -1,0 +1,27 @@
+{
+  "$defs": {
+    "oscal.services.v1.ProposeMappingUpdateResponse.schema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "properties": {
+        "pull_request_number": {
+          "maximum": 2147483647,
+          "minimum": -2147483648,
+          "type": "integer"
+        },
+        "pull_request_url": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "pull_request_url",
+        "pull_request_number"
+      ],
+      "title": "Propose Mapping Update Response",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.services.v1.ProposeMappingUpdateResponse.schema.strict.bundle.json",
+  "$ref": "#/$defs/oscal.services.v1.ProposeMappingUpdateResponse.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

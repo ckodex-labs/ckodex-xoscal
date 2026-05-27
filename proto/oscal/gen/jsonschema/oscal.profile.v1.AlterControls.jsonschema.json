@@ -1,0 +1,66 @@
+{
+  "$id": "oscal.profile.v1.AlterControls.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "AlterControls represents alterations to controls",
+  "patternProperties": {
+    "^(control_alterations)$": {
+      "items": {
+        "$ref": "oscal.profile.v1.Alter.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "^(with_class)$": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "^(with_ids)$": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    }
+  },
+  "properties": {
+    "controlAlterations": {
+      "items": {
+        "$ref": "oscal.profile.v1.Alter.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "links": {
+      "items": {
+        "$ref": "oscal.common.v1.Link.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "props": {
+      "items": {
+        "$ref": "oscal.common.v1.Property.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "remarks": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupMultiline.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "withClass": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "withIds": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    }
+  },
+  "title": "Alter Controls",
+  "type": "object"
+}

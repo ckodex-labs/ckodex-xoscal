@@ -1,0 +1,14 @@
+{
+  "$id": "oscal.common.v1.Boolean.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Boolean represents a boolean value",
+  "properties": {
+    "value": {
+      "default": false,
+      "type": "boolean"
+    }
+  },
+  "title": "Boolean",
+  "type": "object"
+}

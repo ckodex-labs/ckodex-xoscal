@@ -1,0 +1,58 @@
+{
+  "$id": "oscal.assessment_plan.v1.AssessmentPart.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "AssessmentPart represents an assessment part",
+  "properties": {
+    "class": {
+      "default": "",
+      "type": "string"
+    },
+    "id": {
+      "$ref": "oscal.common.v1.Token.jsonschema.json"
+    },
+    "links": {
+      "items": {
+        "$ref": "oscal.common.v1.Link.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "name": {
+      "default": "",
+      "type": "string"
+    },
+    "ns": {
+      "default": "",
+      "type": "string"
+    },
+    "parts": {
+      "items": {
+        "$ref": "#"
+      },
+      "type": "array"
+    },
+    "props": {
+      "items": {
+        "$ref": "oscal.common.v1.Property.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "prose": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupMultiline.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "remarks": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupMultiline.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "title": {
+      "$ref": "oscal.common.v1.MarkupLine.jsonschema.json"
+    }
+  },
+  "title": "Assessment Part",
+  "type": "object"
+}

@@ -1,0 +1,17 @@
+{
+  "$id": "oscal.common.v1.Hash.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Hash represents a cryptographic hash",
+  "properties": {
+    "algorithm": {
+      "default": "",
+      "type": "string"
+    },
+    "value": {
+      "$ref": "oscal.common.v1.Base64.schema.json"
+    }
+  },
+  "title": "Hash",
+  "type": "object"
+}

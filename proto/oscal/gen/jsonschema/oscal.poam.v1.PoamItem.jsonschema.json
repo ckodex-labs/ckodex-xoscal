@@ -1,0 +1,42 @@
+{
+  "$id": "oscal.poam.v1.PoamItem.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "PoamItem represents a plan of action and milestones item",
+  "patternProperties": {
+    "^(back_matter)$": {
+      "$ref": "oscal.common.v1.BackMatter.jsonschema.json"
+    },
+    "^(import_ssp)$": {
+      "$ref": "oscal.poam.v1.ImportSsp.jsonschema.json"
+    },
+    "^(local_definitions)$": {
+      "$ref": "oscal.poam.v1.LocalDefinitions.jsonschema.json"
+    }
+  },
+  "properties": {
+    "backMatter": {
+      "$ref": "oscal.common.v1.BackMatter.jsonschema.json"
+    },
+    "importSsp": {
+      "$ref": "oscal.poam.v1.ImportSsp.jsonschema.json"
+    },
+    "localDefinitions": {
+      "$ref": "oscal.poam.v1.LocalDefinitions.jsonschema.json"
+    },
+    "metadata": {
+      "$ref": "oscal.common.v1.Metadata.jsonschema.json"
+    },
+    "risks": {
+      "items": {
+        "$ref": "oscal.poam.v1.Risk.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "uuid": {
+      "$ref": "oscal.common.v1.UUID.jsonschema.json"
+    }
+  },
+  "title": "Poam Item",
+  "type": "object"
+}

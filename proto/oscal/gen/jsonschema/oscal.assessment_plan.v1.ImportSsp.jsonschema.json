@@ -1,0 +1,19 @@
+{
+  "$id": "oscal.assessment_plan.v1.ImportSsp.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "ImportSsp represents an imported system security plan",
+  "properties": {
+    "href": {
+      "$ref": "oscal.common.v1.URIReference.jsonschema.json"
+    },
+    "remarks": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupMultiline.jsonschema.json"
+      },
+      "type": "array"
+    }
+  },
+  "title": "Import Ssp",
+  "type": "object"
+}

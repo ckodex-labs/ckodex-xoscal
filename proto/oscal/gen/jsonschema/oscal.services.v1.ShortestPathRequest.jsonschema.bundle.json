@@ -1,0 +1,53 @@
+{
+  "$defs": {
+    "oscal.services.v1.ShortestPathRequest.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "patternProperties": {
+        "^(allowed_relations)$": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "^(from_node)$": {
+          "default": "",
+          "type": "string"
+        },
+        "^(min_trust_state)$": {
+          "default": "",
+          "type": "string"
+        },
+        "^(to_node)$": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "properties": {
+        "allowedRelations": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "fromNode": {
+          "default": "",
+          "type": "string"
+        },
+        "minTrustState": {
+          "default": "",
+          "type": "string"
+        },
+        "toNode": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Shortest Path Request",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.services.v1.ShortestPathRequest.jsonschema.bundle.json",
+  "$ref": "#/$defs/oscal.services.v1.ShortestPathRequest.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

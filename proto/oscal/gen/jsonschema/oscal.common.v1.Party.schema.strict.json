@@ -1,0 +1,68 @@
+{
+  "$id": "oscal.common.v1.Party.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Party represents an organization or person",
+  "properties": {
+    "address": {
+      "$ref": "oscal.common.v1.Address.schema.strict.json"
+    },
+    "email_addresses": {
+      "items": {
+        "$ref": "oscal.common.v1.EmailAddress.schema.strict.json"
+      },
+      "type": "array"
+    },
+    "links": {
+      "items": {
+        "$ref": "oscal.common.v1.Link.schema.strict.json"
+      },
+      "type": "array"
+    },
+    "name": {
+      "type": "string"
+    },
+    "props": {
+      "items": {
+        "$ref": "oscal.common.v1.Property.schema.strict.json"
+      },
+      "type": "array"
+    },
+    "remarks": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "responsible_parties": {
+      "items": {
+        "$ref": "oscal.common.v1.ResponsibleParty.schema.strict.json"
+      },
+      "type": "array"
+    },
+    "short_names": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "telephone_numbers": {
+      "items": {
+        "$ref": "oscal.common.v1.TelephoneNumber.schema.strict.json"
+      },
+      "type": "array"
+    },
+    "type": {
+      "type": "string"
+    },
+    "uuid": {
+      "$ref": "oscal.common.v1.UUID.schema.strict.json"
+    }
+  },
+  "required": [
+    "type",
+    "name"
+  ],
+  "title": "Party",
+  "type": "object"
+}

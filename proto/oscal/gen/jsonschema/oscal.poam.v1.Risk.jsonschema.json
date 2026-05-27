@@ -1,0 +1,84 @@
+{
+  "$id": "oscal.poam.v1.Risk.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Risk represents a risk",
+  "patternProperties": {
+    "^(mitigating_factors)$": {
+      "items": {
+        "$ref": "oscal.poam.v1.MitigatingFactor.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "^(related_observations)$": {
+      "items": {
+        "$ref": "oscal.poam.v1.RelatedObservation.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "^(risk_log)$": {
+      "$ref": "oscal.poam.v1.RiskLog.jsonschema.json"
+    }
+  },
+  "properties": {
+    "deadline": {
+      "$ref": "oscal.common.v1.DateTime.jsonschema.json"
+    },
+    "description": {
+      "$ref": "oscal.common.v1.MarkupMultiline.jsonschema.json"
+    },
+    "links": {
+      "items": {
+        "$ref": "oscal.common.v1.Link.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "mitigatingFactors": {
+      "items": {
+        "$ref": "oscal.poam.v1.MitigatingFactor.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "props": {
+      "items": {
+        "$ref": "oscal.common.v1.Property.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "relatedObservations": {
+      "items": {
+        "$ref": "oscal.poam.v1.RelatedObservation.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "remarks": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupMultiline.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "remediations": {
+      "items": {
+        "$ref": "oscal.poam.v1.Response.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "riskLog": {
+      "$ref": "oscal.poam.v1.RiskLog.jsonschema.json"
+    },
+    "statement": {
+      "$ref": "oscal.common.v1.MarkupMultiline.jsonschema.json"
+    },
+    "status": {
+      "$ref": "oscal.poam.v1.RiskStatus.jsonschema.json"
+    },
+    "title": {
+      "$ref": "oscal.common.v1.MarkupLine.jsonschema.json"
+    },
+    "uuid": {
+      "$ref": "oscal.common.v1.UUID.jsonschema.json"
+    }
+  },
+  "title": "Risk",
+  "type": "object"
+}

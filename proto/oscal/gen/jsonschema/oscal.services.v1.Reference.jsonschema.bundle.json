@@ -1,0 +1,41 @@
+{
+  "$defs": {
+    "oscal.services.v1.Reference.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "patternProperties": {
+        "^(bom_ref)$": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "properties": {
+        "bomRef": {
+          "default": "",
+          "type": "string"
+        },
+        "digest": {
+          "default": "",
+          "type": "string"
+        },
+        "id": {
+          "default": "",
+          "type": "string"
+        },
+        "kind": {
+          "default": "",
+          "type": "string"
+        },
+        "purl": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Reference",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.services.v1.Reference.jsonschema.bundle.json",
+  "$ref": "#/$defs/oscal.services.v1.Reference.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

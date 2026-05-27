@@ -1,0 +1,57 @@
+{
+  "$id": "oscal.assessment_plan.v1.AssessmentPlan.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "AssessmentPlan represents a security assessment plan",
+  "patternProperties": {
+    "^(assessment_tasks)$": {
+      "items": {
+        "$ref": "oscal.assessment_plan.v1.AssessmentTask.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "^(back_matter)$": {
+      "$ref": "oscal.common.v1.BackMatter.jsonschema.json"
+    },
+    "^(import_ssp)$": {
+      "$ref": "oscal.assessment_plan.v1.ImportSsp.jsonschema.json"
+    },
+    "^(local_definitions)$": {
+      "$ref": "oscal.assessment_plan.v1.LocalDefinitions.jsonschema.json"
+    },
+    "^(reviewed_controls)$": {
+      "$ref": "oscal.assessment_plan.v1.ReviewedControls.jsonschema.json"
+    }
+  },
+  "properties": {
+    "assessmentTasks": {
+      "items": {
+        "$ref": "oscal.assessment_plan.v1.AssessmentTask.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "backMatter": {
+      "$ref": "oscal.common.v1.BackMatter.jsonschema.json"
+    },
+    "importSsp": {
+      "$ref": "oscal.assessment_plan.v1.ImportSsp.jsonschema.json"
+    },
+    "localDefinitions": {
+      "$ref": "oscal.assessment_plan.v1.LocalDefinitions.jsonschema.json"
+    },
+    "metadata": {
+      "$ref": "oscal.common.v1.Metadata.jsonschema.json"
+    },
+    "reviewedControls": {
+      "$ref": "oscal.assessment_plan.v1.ReviewedControls.jsonschema.json"
+    },
+    "terms": {
+      "$ref": "oscal.assessment_plan.v1.Terms.jsonschema.json"
+    },
+    "uuid": {
+      "$ref": "oscal.common.v1.UUID.jsonschema.json"
+    }
+  },
+  "title": "Assessment Plan",
+  "type": "object"
+}

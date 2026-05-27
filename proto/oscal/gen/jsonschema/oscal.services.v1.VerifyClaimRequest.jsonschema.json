@@ -1,0 +1,25 @@
+{
+  "$id": "oscal.services.v1.VerifyClaimRequest.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "patternProperties": {
+    "^(claim_id)$": {
+      "default": "",
+      "type": "string"
+    }
+  },
+  "properties": {
+    "checks": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "claimId": {
+      "default": "",
+      "type": "string"
+    }
+  },
+  "title": "Verify Claim Request",
+  "type": "object"
+}

@@ -1,0 +1,39 @@
+{
+  "$id": "oscal.poam.v1.LoggedBy.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "LoggedBy represents who logged the entry",
+  "patternProperties": {
+    "^(partyUuid)$": {
+      "$ref": "oscal.common.v1.UUID.schema.json"
+    }
+  },
+  "properties": {
+    "links": {
+      "items": {
+        "$ref": "oscal.common.v1.Link.schema.json"
+      },
+      "type": "array"
+    },
+    "party_uuid": {
+      "$ref": "oscal.common.v1.UUID.schema.json"
+    },
+    "props": {
+      "items": {
+        "$ref": "oscal.common.v1.Property.schema.json"
+      },
+      "type": "array"
+    },
+    "remarks": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupMultiline.schema.json"
+      },
+      "type": "array"
+    },
+    "title": {
+      "$ref": "oscal.common.v1.MarkupLine.schema.json"
+    }
+  },
+  "title": "Logged By",
+  "type": "object"
+}

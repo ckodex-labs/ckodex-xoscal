@@ -1,0 +1,25 @@
+{
+  "$defs": {
+    "oscal.services.v1.ExplainClaimRequest.schema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "properties": {
+        "claim_id": {
+          "type": "string"
+        },
+        "edge_id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "claim_id",
+        "edge_id"
+      ],
+      "title": "Explain Claim Request",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.services.v1.ExplainClaimRequest.schema.strict.bundle.json",
+  "$ref": "#/$defs/oscal.services.v1.ExplainClaimRequest.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

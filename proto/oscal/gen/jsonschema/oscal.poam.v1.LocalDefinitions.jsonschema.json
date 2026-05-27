@@ -1,0 +1,36 @@
+{
+  "$id": "oscal.poam.v1.LocalDefinitions.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "LocalDefinitions represents local definitions for POAM",
+  "patternProperties": {
+    "^(inventory_items)$": {
+      "items": {
+        "$ref": "oscal.poam.v1.InventoryItem.jsonschema.json"
+      },
+      "type": "array"
+    }
+  },
+  "properties": {
+    "components": {
+      "items": {
+        "$ref": "oscal.poam.v1.Component.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "inventoryItems": {
+      "items": {
+        "$ref": "oscal.poam.v1.InventoryItem.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "users": {
+      "items": {
+        "$ref": "oscal.poam.v1.User.jsonschema.json"
+      },
+      "type": "array"
+    }
+  },
+  "title": "Local Definitions",
+  "type": "object"
+}

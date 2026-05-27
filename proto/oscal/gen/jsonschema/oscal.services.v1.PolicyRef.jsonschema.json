@@ -1,0 +1,29 @@
+{
+  "$id": "oscal.services.v1.PolicyRef.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "patternProperties": {
+    "^(valid_to)$": {
+      "$ref": "google.protobuf.Timestamp.jsonschema.json"
+    }
+  },
+  "properties": {
+    "digest": {
+      "default": "",
+      "type": "string"
+    },
+    "ref": {
+      "default": "",
+      "type": "string"
+    },
+    "type": {
+      "default": "",
+      "type": "string"
+    },
+    "validTo": {
+      "$ref": "google.protobuf.Timestamp.jsonschema.json"
+    }
+  },
+  "title": "Policy Ref",
+  "type": "object"
+}

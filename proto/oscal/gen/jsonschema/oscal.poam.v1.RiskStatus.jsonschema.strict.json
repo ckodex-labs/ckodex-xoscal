@@ -1,0 +1,22 @@
+{
+  "$id": "oscal.poam.v1.RiskStatus.jsonschema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "RiskStatus represents risk status",
+  "properties": {
+    "remarks": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupMultiline.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "state": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "state"
+  ],
+  "title": "Risk Status",
+  "type": "object"
+}

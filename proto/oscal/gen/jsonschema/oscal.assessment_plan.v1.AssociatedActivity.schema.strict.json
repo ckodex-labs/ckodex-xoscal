@@ -1,0 +1,25 @@
+{
+  "$id": "oscal.assessment_plan.v1.AssociatedActivity.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "AssociatedActivity represents an associated activity",
+  "properties": {
+    "activity_uuid": {
+      "$ref": "oscal.common.v1.UUID.schema.strict.json"
+    },
+    "activity_uuids": {
+      "items": {
+        "$ref": "oscal.common.v1.UUID.schema.strict.json"
+      },
+      "type": "array"
+    },
+    "include_all": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "include_all"
+  ],
+  "title": "Associated Activity",
+  "type": "object"
+}

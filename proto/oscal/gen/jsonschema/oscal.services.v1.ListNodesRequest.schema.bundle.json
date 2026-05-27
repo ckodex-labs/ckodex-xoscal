@@ -1,0 +1,77 @@
+{
+  "$defs": {
+    "google.protobuf.Timestamp.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "format": "date-time",
+      "title": "Timestamp",
+      "type": "string"
+    },
+    "oscal.services.v1.ListNodesRequest.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "patternProperties": {
+        "^(createdAfter)$": {
+          "$ref": "#/$defs/google.protobuf.Timestamp.schema.json"
+        },
+        "^(labelFilter)$": {
+          "default": "",
+          "type": "string"
+        },
+        "^(pageSize)$": {
+          "anyOf": [
+            {
+              "maximum": 2147483647,
+              "minimum": -2147483648,
+              "type": "integer"
+            },
+            {
+              "pattern": "^-?[0-9]+$",
+              "type": "string"
+            }
+          ],
+          "default": 0
+        },
+        "^(pageToken)$": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "properties": {
+        "created_after": {
+          "$ref": "#/$defs/google.protobuf.Timestamp.schema.json"
+        },
+        "kind": {
+          "default": "",
+          "type": "string"
+        },
+        "label_filter": {
+          "default": "",
+          "type": "string"
+        },
+        "page_size": {
+          "anyOf": [
+            {
+              "maximum": 2147483647,
+              "minimum": -2147483648,
+              "type": "integer"
+            },
+            {
+              "pattern": "^-?[0-9]+$",
+              "type": "string"
+            }
+          ],
+          "default": 0
+        },
+        "page_token": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "List Nodes Request",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.services.v1.ListNodesRequest.schema.bundle.json",
+  "$ref": "#/$defs/oscal.services.v1.ListNodesRequest.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

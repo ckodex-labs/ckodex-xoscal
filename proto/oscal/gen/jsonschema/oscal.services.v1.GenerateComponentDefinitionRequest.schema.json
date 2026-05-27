@@ -1,0 +1,23 @@
+{
+  "$id": "oscal.services.v1.GenerateComponentDefinitionRequest.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "patternProperties": {
+    "^(snapshotName)$": {
+      "default": "",
+      "type": "string"
+    }
+  },
+  "properties": {
+    "framework": {
+      "default": "",
+      "type": "string"
+    },
+    "snapshot_name": {
+      "default": "",
+      "type": "string"
+    }
+  },
+  "title": "Generate Component Definition Request",
+  "type": "object"
+}

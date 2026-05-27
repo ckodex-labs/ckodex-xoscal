@@ -1,0 +1,53 @@
+{
+  "$defs": {
+    "oscal.services.v1.Entity.schema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "--- Entity messages ---",
+      "properties": {
+        "payload": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "urn": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "urn",
+        "type",
+        "version",
+        "status",
+        "payload"
+      ],
+      "title": "Entity",
+      "type": "object"
+    },
+    "oscal.services.v1.ProposeRequest.schema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "--- Reconciler messages ---",
+      "properties": {
+        "proposals": {
+          "items": {
+            "$ref": "#/$defs/oscal.services.v1.Entity.schema.strict.json"
+          },
+          "type": "array"
+        }
+      },
+      "title": "Propose Request",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.services.v1.ProposeRequest.schema.strict.bundle.json",
+  "$ref": "#/$defs/oscal.services.v1.ProposeRequest.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

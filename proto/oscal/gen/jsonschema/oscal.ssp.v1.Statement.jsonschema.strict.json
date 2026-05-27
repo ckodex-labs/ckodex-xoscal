@@ -1,0 +1,46 @@
+{
+  "$id": "oscal.ssp.v1.Statement.jsonschema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Statement represents a control statement",
+  "properties": {
+    "byComponents": {
+      "items": {
+        "$ref": "oscal.ssp.v1.ByComponent.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "links": {
+      "items": {
+        "$ref": "oscal.common.v1.Link.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "props": {
+      "items": {
+        "$ref": "oscal.common.v1.Property.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "remarks": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupMultiline.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "responsibleRoles": {
+      "items": {
+        "$ref": "oscal.ssp.v1.ResponsibleRole.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "statementId": {
+      "$ref": "oscal.common.v1.Token.jsonschema.strict.json"
+    },
+    "uuid": {
+      "$ref": "oscal.common.v1.UUID.jsonschema.strict.json"
+    }
+  },
+  "title": "Statement",
+  "type": "object"
+}

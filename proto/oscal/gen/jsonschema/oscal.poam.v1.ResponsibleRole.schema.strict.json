@@ -1,0 +1,31 @@
+{
+  "$id": "oscal.poam.v1.ResponsibleRole.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "ResponsibleRole represents a responsible role",
+  "properties": {
+    "party_uuids": {
+      "items": {
+        "$ref": "oscal.common.v1.UUID.schema.strict.json"
+      },
+      "type": "array"
+    },
+    "props": {
+      "items": {
+        "$ref": "oscal.common.v1.Property.schema.strict.json"
+      },
+      "type": "array"
+    },
+    "remarks": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupMultiline.schema.strict.json"
+      },
+      "type": "array"
+    },
+    "role_id": {
+      "$ref": "oscal.common.v1.Token.schema.strict.json"
+    }
+  },
+  "title": "Responsible Role",
+  "type": "object"
+}

@@ -1,0 +1,13 @@
+{
+  "$id": "oscal.services.v1.GetPoamRequest.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "POA\u0026M Request/Response messages",
+  "properties": {
+    "uuid": {
+      "$ref": "oscal.common.v1.UUID.jsonschema.json"
+    }
+  },
+  "title": "Get Poam Request",
+  "type": "object"
+}

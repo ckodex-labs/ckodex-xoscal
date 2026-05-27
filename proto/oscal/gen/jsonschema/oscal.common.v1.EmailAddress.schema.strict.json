@@ -1,0 +1,16 @@
+{
+  "$id": "oscal.common.v1.EmailAddress.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "EmailAddress represents an email address",
+  "properties": {
+    "value": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "value"
+  ],
+  "title": "Email Address",
+  "type": "object"
+}

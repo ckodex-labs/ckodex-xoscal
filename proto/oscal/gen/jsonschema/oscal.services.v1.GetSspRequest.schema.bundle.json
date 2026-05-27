@@ -1,0 +1,32 @@
+{
+  "$defs": {
+    "oscal.common.v1.UUID.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "UUID represents a universally unique identifier",
+      "properties": {
+        "value": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "UUID",
+      "type": "object"
+    },
+    "oscal.services.v1.GetSspRequest.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "SSP Request/Response messages",
+      "properties": {
+        "uuid": {
+          "$ref": "#/$defs/oscal.common.v1.UUID.schema.json"
+        }
+      },
+      "title": "Get Ssp Request",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.services.v1.GetSspRequest.schema.bundle.json",
+  "$ref": "#/$defs/oscal.services.v1.GetSspRequest.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

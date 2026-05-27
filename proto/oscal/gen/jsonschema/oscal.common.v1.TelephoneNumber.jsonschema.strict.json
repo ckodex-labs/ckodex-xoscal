@@ -1,0 +1,16 @@
+{
+  "$id": "oscal.common.v1.TelephoneNumber.jsonschema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "TelephoneNumber represents a telephone number",
+  "properties": {
+    "value": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "value"
+  ],
+  "title": "Telephone Number",
+  "type": "object"
+}

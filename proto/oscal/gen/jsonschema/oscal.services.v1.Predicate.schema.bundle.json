@@ -1,0 +1,27 @@
+{
+  "$defs": {
+    "oscal.services.v1.Predicate.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "properties": {
+        "direction": {
+          "default": "",
+          "type": "string"
+        },
+        "qualifier": {
+          "default": "",
+          "type": "string"
+        },
+        "relation": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Predicate",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.services.v1.Predicate.schema.bundle.json",
+  "$ref": "#/$defs/oscal.services.v1.Predicate.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

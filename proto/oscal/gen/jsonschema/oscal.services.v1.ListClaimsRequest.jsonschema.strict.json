@@ -1,0 +1,40 @@
+{
+  "$id": "oscal.services.v1.ListClaimsRequest.jsonschema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "bomKind": {
+      "type": "string"
+    },
+    "pageSize": {
+      "maximum": 2147483647,
+      "minimum": -2147483648,
+      "type": "integer"
+    },
+    "pageToken": {
+      "type": "string"
+    },
+    "relation": {
+      "type": "string"
+    },
+    "subjectDigest": {
+      "type": "string"
+    },
+    "trustState": {
+      "type": "string"
+    },
+    "validAfter": {
+      "$ref": "google.protobuf.Timestamp.jsonschema.strict.json"
+    }
+  },
+  "required": [
+    "subjectDigest",
+    "bomKind",
+    "relation",
+    "trustState",
+    "pageSize",
+    "pageToken"
+  ],
+  "title": "List Claims Request",
+  "type": "object"
+}

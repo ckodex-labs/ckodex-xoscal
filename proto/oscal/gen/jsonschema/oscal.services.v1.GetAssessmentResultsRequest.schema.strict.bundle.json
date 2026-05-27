@@ -1,0 +1,34 @@
+{
+  "$defs": {
+    "oscal.common.v1.UUID.schema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "UUID represents a universally unique identifier",
+      "properties": {
+        "value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "value"
+      ],
+      "title": "UUID",
+      "type": "object"
+    },
+    "oscal.services.v1.GetAssessmentResultsRequest.schema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Assessment Results Request/Response messages",
+      "properties": {
+        "uuid": {
+          "$ref": "#/$defs/oscal.common.v1.UUID.schema.strict.json"
+        }
+      },
+      "title": "Get Assessment Results Request",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.services.v1.GetAssessmentResultsRequest.schema.strict.bundle.json",
+  "$ref": "#/$defs/oscal.services.v1.GetAssessmentResultsRequest.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

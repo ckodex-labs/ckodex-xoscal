@@ -1,0 +1,20 @@
+{
+  "$id": "oscal.ssp.v1.SystemId.jsonschema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "SystemId represents a system identifier",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "identifierType": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "identifierType"
+  ],
+  "title": "System Id",
+  "type": "object"
+}

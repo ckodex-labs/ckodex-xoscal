@@ -1,0 +1,33 @@
+{
+  "$defs": {
+    "oscal.services.v1.ProjectEdgeRequest.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "patternProperties": {
+        "^(claimId)$": {
+          "default": "",
+          "type": "string"
+        },
+        "^(edgeId)$": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "properties": {
+        "claim_id": {
+          "default": "",
+          "type": "string"
+        },
+        "edge_id": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Project Edge Request",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.services.v1.ProjectEdgeRequest.schema.bundle.json",
+  "$ref": "#/$defs/oscal.services.v1.ProjectEdgeRequest.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

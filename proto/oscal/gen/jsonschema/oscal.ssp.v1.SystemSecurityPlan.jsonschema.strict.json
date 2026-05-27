@@ -1,0 +1,31 @@
+{
+  "$id": "oscal.ssp.v1.SystemSecurityPlan.jsonschema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "SystemSecurityPlan represents a system security plan",
+  "properties": {
+    "backMatter": {
+      "$ref": "oscal.common.v1.BackMatter.jsonschema.strict.json"
+    },
+    "controlImplementation": {
+      "$ref": "oscal.ssp.v1.ControlImplementation.jsonschema.strict.json"
+    },
+    "importProfile": {
+      "$ref": "oscal.ssp.v1.ImportProfile.jsonschema.strict.json"
+    },
+    "metadata": {
+      "$ref": "oscal.common.v1.Metadata.jsonschema.strict.json"
+    },
+    "systemCharacteristics": {
+      "$ref": "oscal.ssp.v1.SystemCharacteristics.jsonschema.strict.json"
+    },
+    "systemImplementation": {
+      "$ref": "oscal.ssp.v1.SystemImplementation.jsonschema.strict.json"
+    },
+    "uuid": {
+      "$ref": "oscal.common.v1.UUID.jsonschema.strict.json"
+    }
+  },
+  "title": "System Security Plan",
+  "type": "object"
+}

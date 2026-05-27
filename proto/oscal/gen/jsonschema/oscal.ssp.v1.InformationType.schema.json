@@ -1,0 +1,57 @@
+{
+  "$id": "oscal.ssp.v1.InformationType.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "InformationType represents an information type",
+  "patternProperties": {
+    "^(availabilityImpact)$": {
+      "$ref": "oscal.ssp.v1.Impact.schema.json"
+    },
+    "^(confidentialityImpact)$": {
+      "$ref": "oscal.ssp.v1.Impact.schema.json"
+    },
+    "^(integrityImpact)$": {
+      "$ref": "oscal.ssp.v1.Impact.schema.json"
+    }
+  },
+  "properties": {
+    "availability_impact": {
+      "$ref": "oscal.ssp.v1.Impact.schema.json"
+    },
+    "categorizations": {
+      "items": {
+        "$ref": "oscal.ssp.v1.Categorization.schema.json"
+      },
+      "type": "array"
+    },
+    "confidentiality_impact": {
+      "$ref": "oscal.ssp.v1.Impact.schema.json"
+    },
+    "description": {
+      "$ref": "oscal.common.v1.MarkupMultiline.schema.json"
+    },
+    "integrity_impact": {
+      "$ref": "oscal.ssp.v1.Impact.schema.json"
+    },
+    "links": {
+      "items": {
+        "$ref": "oscal.common.v1.Link.schema.json"
+      },
+      "type": "array"
+    },
+    "props": {
+      "items": {
+        "$ref": "oscal.common.v1.Property.schema.json"
+      },
+      "type": "array"
+    },
+    "title": {
+      "$ref": "oscal.common.v1.MarkupLine.schema.json"
+    },
+    "uuid": {
+      "$ref": "oscal.common.v1.UUID.schema.json"
+    }
+  },
+  "title": "Information Type",
+  "type": "object"
+}

@@ -1,0 +1,38 @@
+{
+  "$id": "oscal.services.v1.SyncClaimsRequest.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "patternProperties": {
+    "^(filter_bom_kind)$": {
+      "default": "",
+      "type": "string"
+    },
+    "^(filter_subject)$": {
+      "default": "",
+      "type": "string"
+    },
+    "^(peer_endpoint)$": {
+      "default": "",
+      "type": "string"
+    }
+  },
+  "properties": {
+    "filterBomKind": {
+      "default": "",
+      "type": "string"
+    },
+    "filterSubject": {
+      "default": "",
+      "type": "string"
+    },
+    "peerEndpoint": {
+      "default": "",
+      "type": "string"
+    },
+    "since": {
+      "$ref": "google.protobuf.Timestamp.jsonschema.json"
+    }
+  },
+  "title": "Sync Claims Request",
+  "type": "object"
+}

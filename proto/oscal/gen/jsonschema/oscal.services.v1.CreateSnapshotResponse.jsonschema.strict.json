@@ -1,0 +1,21 @@
+{
+  "$id": "oscal.services.v1.CreateSnapshotResponse.jsonschema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "entityCount": {
+      "maximum": 2147483647,
+      "minimum": -2147483648,
+      "type": "integer"
+    },
+    "name": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "name",
+    "entityCount"
+  ],
+  "title": "Create Snapshot Response",
+  "type": "object"
+}

@@ -1,0 +1,20 @@
+{
+  "$id": "oscal.services.v1.UpdateComponentDefinitionRequest.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "patternProperties": {
+    "^(component_definition)$": {
+      "$ref": "oscal.component_definition.v1.ComponentDefinition.jsonschema.json"
+    }
+  },
+  "properties": {
+    "componentDefinition": {
+      "$ref": "oscal.component_definition.v1.ComponentDefinition.jsonschema.json"
+    },
+    "uuid": {
+      "$ref": "oscal.common.v1.UUID.jsonschema.json"
+    }
+  },
+  "title": "Update Component Definition Request",
+  "type": "object"
+}

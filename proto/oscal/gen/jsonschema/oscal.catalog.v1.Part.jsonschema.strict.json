@@ -1,0 +1,60 @@
+{
+  "$id": "oscal.catalog.v1.Part.jsonschema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Part represents a part of a control (e.g., statement, objective)",
+  "properties": {
+    "class": {
+      "type": "string"
+    },
+    "id": {
+      "$ref": "oscal.common.v1.Token.jsonschema.strict.json"
+    },
+    "links": {
+      "items": {
+        "$ref": "oscal.common.v1.Link.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "name": {
+      "type": "string"
+    },
+    "ns": {
+      "type": "string"
+    },
+    "parts": {
+      "items": {
+        "$ref": "#"
+      },
+      "type": "array"
+    },
+    "props": {
+      "items": {
+        "$ref": "oscal.common.v1.Property.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "prose": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupMultiline.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "remarks": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupMultiline.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "title": {
+      "$ref": "oscal.common.v1.MarkupLine.jsonschema.strict.json"
+    }
+  },
+  "required": [
+    "name",
+    "ns",
+    "class"
+  ],
+  "title": "Part",
+  "type": "object"
+}

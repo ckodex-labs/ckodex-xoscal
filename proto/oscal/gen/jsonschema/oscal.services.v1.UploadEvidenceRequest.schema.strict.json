@@ -1,0 +1,19 @@
+{
+  "$id": "oscal.services.v1.UploadEvidenceRequest.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "blob": {
+      "pattern": "^[A-Za-z0-9+/]*={0,2}$",
+      "type": "string"
+    },
+    "evidence": {
+      "$ref": "oscal.services.v1.Evidence.schema.strict.json"
+    }
+  },
+  "required": [
+    "blob"
+  ],
+  "title": "Upload Evidence Request",
+  "type": "object"
+}

@@ -1,0 +1,31 @@
+{
+  "$defs": {
+    "oscal.common.v1.UUID.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "UUID represents a universally unique identifier",
+      "properties": {
+        "value": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "UUID",
+      "type": "object"
+    },
+    "oscal.services.v1.DeleteComponentDefinitionRequest.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "properties": {
+        "uuid": {
+          "$ref": "#/$defs/oscal.common.v1.UUID.jsonschema.json"
+        }
+      },
+      "title": "Delete Component Definition Request",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.services.v1.DeleteComponentDefinitionRequest.jsonschema.bundle.json",
+  "$ref": "#/$defs/oscal.services.v1.DeleteComponentDefinitionRequest.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

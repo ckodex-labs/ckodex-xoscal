@@ -1,0 +1,33 @@
+{
+  "$defs": {
+    "oscal.services.v1.VerifyEvidenceRequest.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "patternProperties": {
+        "^(evidence_id)$": {
+          "default": "",
+          "type": "string"
+        },
+        "^(fetch_and_hash)$": {
+          "default": false,
+          "type": "boolean"
+        }
+      },
+      "properties": {
+        "evidenceId": {
+          "default": "",
+          "type": "string"
+        },
+        "fetchAndHash": {
+          "default": false,
+          "type": "boolean"
+        }
+      },
+      "title": "Verify Evidence Request",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.services.v1.VerifyEvidenceRequest.jsonschema.bundle.json",
+  "$ref": "#/$defs/oscal.services.v1.VerifyEvidenceRequest.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

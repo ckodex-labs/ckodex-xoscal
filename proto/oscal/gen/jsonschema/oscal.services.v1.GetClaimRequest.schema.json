@@ -1,0 +1,19 @@
+{
+  "$id": "oscal.services.v1.GetClaimRequest.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "patternProperties": {
+    "^(claimId)$": {
+      "default": "",
+      "type": "string"
+    }
+  },
+  "properties": {
+    "claim_id": {
+      "default": "",
+      "type": "string"
+    }
+  },
+  "title": "Get Claim Request",
+  "type": "object"
+}

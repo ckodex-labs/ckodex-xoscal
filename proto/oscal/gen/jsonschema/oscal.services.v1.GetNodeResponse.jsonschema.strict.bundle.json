@@ -1,0 +1,53 @@
+{
+  "$defs": {
+    "google.protobuf.Timestamp.jsonschema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "format": "date-time",
+      "title": "Timestamp",
+      "type": "string"
+    },
+    "oscal.services.v1.GetNodeResponse.jsonschema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "properties": {
+        "node": {
+          "$ref": "#/$defs/oscal.services.v1.GraphNode.jsonschema.strict.json"
+        }
+      },
+      "title": "Get Node Response",
+      "type": "object"
+    },
+    "oscal.services.v1.GraphNode.jsonschema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "properties": {
+        "createdAt": {
+          "$ref": "#/$defs/google.protobuf.Timestamp.jsonschema.strict.json"
+        },
+        "id": {
+          "type": "string"
+        },
+        "kind": {
+          "type": "string"
+        },
+        "labelsJson": {
+          "type": "string"
+        },
+        "urn": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "urn",
+        "labelsJson"
+      ],
+      "title": "Graph Node",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.services.v1.GetNodeResponse.jsonschema.strict.bundle.json",
+  "$ref": "#/$defs/oscal.services.v1.GetNodeResponse.jsonschema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

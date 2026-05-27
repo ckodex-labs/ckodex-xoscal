@@ -1,0 +1,46 @@
+{
+  "$id": "oscal.profile.v1.AddControls.jsonschema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "AddControls represents addition of new controls",
+  "properties": {
+    "controls": {
+      "items": {
+        "$ref": "oscal.catalog.v1.Control.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "links": {
+      "items": {
+        "$ref": "oscal.common.v1.Link.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "props": {
+      "items": {
+        "$ref": "oscal.common.v1.Property.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "remarks": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupMultiline.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "withClass": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "withIds": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    }
+  },
+  "title": "Add Controls",
+  "type": "object"
+}

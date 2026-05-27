@@ -1,0 +1,46 @@
+{
+  "$id": "oscal.ssp.v1.InformationType.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "InformationType represents an information type",
+  "properties": {
+    "availability_impact": {
+      "$ref": "oscal.ssp.v1.Impact.schema.strict.json"
+    },
+    "categorizations": {
+      "items": {
+        "$ref": "oscal.ssp.v1.Categorization.schema.strict.json"
+      },
+      "type": "array"
+    },
+    "confidentiality_impact": {
+      "$ref": "oscal.ssp.v1.Impact.schema.strict.json"
+    },
+    "description": {
+      "$ref": "oscal.common.v1.MarkupMultiline.schema.strict.json"
+    },
+    "integrity_impact": {
+      "$ref": "oscal.ssp.v1.Impact.schema.strict.json"
+    },
+    "links": {
+      "items": {
+        "$ref": "oscal.common.v1.Link.schema.strict.json"
+      },
+      "type": "array"
+    },
+    "props": {
+      "items": {
+        "$ref": "oscal.common.v1.Property.schema.strict.json"
+      },
+      "type": "array"
+    },
+    "title": {
+      "$ref": "oscal.common.v1.MarkupLine.schema.strict.json"
+    },
+    "uuid": {
+      "$ref": "oscal.common.v1.UUID.schema.strict.json"
+    }
+  },
+  "title": "Information Type",
+  "type": "object"
+}

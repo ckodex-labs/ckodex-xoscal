@@ -1,0 +1,24 @@
+{
+  "$id": "oscal.services.v1.GenerateCrossFrameworkMappingsRequest.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "--- Cross-Framework Mapping messages ---",
+  "properties": {
+    "snapshot_name": {
+      "type": "string"
+    },
+    "source_framework": {
+      "type": "string"
+    },
+    "target_framework": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "source_framework",
+    "target_framework",
+    "snapshot_name"
+  ],
+  "title": "Generate Cross Framework Mappings Request",
+  "type": "object"
+}

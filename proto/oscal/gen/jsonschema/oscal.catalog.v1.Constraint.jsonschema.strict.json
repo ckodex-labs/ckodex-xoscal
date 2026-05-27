@@ -1,0 +1,16 @@
+{
+  "$id": "oscal.catalog.v1.Constraint.jsonschema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Constraint represents a constraint on a parameter value",
+  "properties": {
+    "description": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "description"
+  ],
+  "title": "Constraint",
+  "type": "object"
+}

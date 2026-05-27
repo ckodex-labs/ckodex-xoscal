@@ -1,0 +1,15 @@
+{
+  "$id": "oscal.services.v1.UpdateCatalogRequest.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "catalog": {
+      "$ref": "oscal.catalog.v1.Catalog.schema.json"
+    },
+    "uuid": {
+      "$ref": "oscal.common.v1.UUID.schema.json"
+    }
+  },
+  "title": "Update Catalog Request",
+  "type": "object"
+}

@@ -1,0 +1,72 @@
+{
+  "$id": "oscal.profile.v1.Add.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Add represents addition of control content",
+  "patternProperties": {
+    "^(itemName)$": {
+      "default": "",
+      "type": "string"
+    },
+    "^(withClass)$": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "^(withIds)$": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    }
+  },
+  "properties": {
+    "item_name": {
+      "default": "",
+      "type": "string"
+    },
+    "links": {
+      "items": {
+        "$ref": "oscal.common.v1.Link.schema.json"
+      },
+      "type": "array"
+    },
+    "params": {
+      "items": {
+        "$ref": "oscal.catalog.v1.Parameter.schema.json"
+      },
+      "type": "array"
+    },
+    "parts": {
+      "items": {
+        "$ref": "oscal.catalog.v1.Part.schema.json"
+      },
+      "type": "array"
+    },
+    "position": {
+      "default": "",
+      "type": "string"
+    },
+    "props": {
+      "items": {
+        "$ref": "oscal.common.v1.Property.schema.json"
+      },
+      "type": "array"
+    },
+    "with_class": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "with_ids": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    }
+  },
+  "title": "Add",
+  "type": "object"
+}

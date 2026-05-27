@@ -1,0 +1,25 @@
+{
+  "$id": "oscal.services.v1.SearchResponse.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "patternProperties": {
+    "^(nextPageToken)$": {
+      "default": "",
+      "type": "string"
+    }
+  },
+  "properties": {
+    "next_page_token": {
+      "default": "",
+      "type": "string"
+    },
+    "results": {
+      "items": {
+        "$ref": "oscal.services.v1.SearchResult.schema.json"
+      },
+      "type": "array"
+    }
+  },
+  "title": "Search Response",
+  "type": "object"
+}

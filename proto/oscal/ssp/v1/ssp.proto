@@ -1,0 +1,308 @@
+syntax = "proto3";
+
+package oscal.ssp.v1;
+
+import "common/v1/common.proto";
+
+option go_package = "github.com/mchorfa/xoscal/proto/oscal/ssp/v1;sspv1";
+
+// SystemSecurityPlan represents a system security plan
+message SystemSecurityPlan {
+  oscal.common.v1.UUID uuid = 1;
+  oscal.common.v1.Metadata metadata = 2;
+  ImportProfile import_profile = 3;
+  SystemCharacteristics system_characteristics = 4;
+  SystemImplementation system_implementation = 5;
+  ControlImplementation control_implementation = 6;
+  oscal.common.v1.BackMatter back_matter = 7;
+}
+
+// ImportProfile represents an imported OSCAL profile
+message ImportProfile {
+  oscal.common.v1.URIReference href = 1;
+  repeated oscal.common.v1.MarkupMultiline remarks = 2;
+}
+
+// SystemCharacteristics represents system characteristics
+message SystemCharacteristics {
+  repeated SystemId system_ids = 1;
+  string system_name = 2;
+  string system_name_short = 3;
+  oscal.common.v1.MarkupMultiline description = 4;
+  repeated oscal.common.v1.Property props = 5;
+  repeated oscal.common.v1.Link links = 6;
+  oscal.common.v1.Date date_authorized = 7;
+  string security_sensitivity_level = 8;
+  SystemInformation system_information = 9;
+  SecurityImpactLevel security_impact_level = 10;
+  Status status = 11;
+  AuthorizationBoundary authorization_boundary = 12;
+  NetworkArchitecture network_architecture = 13;
+  DataFlow data_flow = 14;
+  repeated oscal.common.v1.ResponsibleParty responsible_parties = 15;
+  repeated oscal.common.v1.MarkupMultiline remarks = 16;
+}
+
+// SystemId represents a system identifier
+message SystemId {
+  string id = 1;
+  string identifier_type = 2;
+}
+
+// SystemInformation represents system information
+message SystemInformation {
+  repeated oscal.common.v1.Property props = 1;
+  repeated oscal.common.v1.Link links = 2;
+  repeated InformationType information_types = 3;
+}
+
+// InformationType represents an information type
+message InformationType {
+  oscal.common.v1.UUID uuid = 1;
+  oscal.common.v1.MarkupLine title = 2;
+  oscal.common.v1.MarkupMultiline description = 3;
+  repeated Categorization categorizations = 4;
+  repeated oscal.common.v1.Property props = 5;
+  repeated oscal.common.v1.Link links = 6;
+  Impact confidentiality_impact = 7;
+  Impact integrity_impact = 8;
+  Impact availability_impact = 9;
+}
+
+// Categorization represents an information type categorization
+message Categorization {
+  string system = 1;
+  repeated string information_type_ids = 2;
+}
+
+// Impact represents an impact level
+message Impact {
+  repeated oscal.common.v1.Property props = 1;
+  repeated oscal.common.v1.Link links = 2;
+  string base = 3;
+  string selected = 4;
+  oscal.common.v1.MarkupMultiline adjustment_justification = 5;
+}
+
+// SecurityImpactLevel represents security impact level
+message SecurityImpactLevel {
+  string security_objective_confidentiality = 1;
+  string security_objective_integrity = 2;
+  string security_objective_availability = 3;
+}
+
+// Status represents system status
+message Status {
+  string state = 1;
+  repeated oscal.common.v1.MarkupMultiline remarks = 2;
+}
+
+// AuthorizationBoundary represents authorization boundary
+message AuthorizationBoundary {
+  oscal.common.v1.MarkupMultiline description = 1;
+  repeated oscal.common.v1.Property props = 2;
+  repeated oscal.common.v1.Link links = 3;
+  repeated Diagram diagrams = 4;
+  repeated oscal.common.v1.MarkupMultiline remarks = 5;
+}
+
+// Diagram represents a diagram
+message Diagram {
+  oscal.common.v1.UUID uuid = 1;
+  oscal.common.v1.MarkupMultiline description = 2;
+  repeated oscal.common.v1.Property props = 3;
+  repeated oscal.common.v1.Link links = 4;
+  oscal.common.v1.MarkupLine caption = 5;
+  repeated oscal.common.v1.MarkupMultiline remarks = 6;
+}
+
+// NetworkArchitecture represents network architecture
+message NetworkArchitecture {
+  oscal.common.v1.MarkupMultiline description = 1;
+  repeated oscal.common.v1.Property props = 2;
+  repeated oscal.common.v1.Link links = 3;
+  repeated Diagram diagrams = 4;
+  repeated oscal.common.v1.MarkupMultiline remarks = 5;
+}
+
+// DataFlow represents data flow
+message DataFlow {
+  oscal.common.v1.MarkupMultiline description = 1;
+  repeated oscal.common.v1.Property props = 2;
+  repeated oscal.common.v1.Link links = 3;
+  repeated Diagram diagrams = 4;
+  repeated oscal.common.v1.MarkupMultiline remarks = 5;
+}
+
+// SystemImplementation represents system implementation
+message SystemImplementation {
+  repeated oscal.common.v1.Property props = 1;
+  repeated oscal.common.v1.Link links = 2;
+  repeated LeveragedAuthorization leveraged_authorizations = 3;
+  repeated SystemUser users = 4;
+  repeated SystemComponent components = 5;
+  repeated InventoryItem inventory_items = 6;
+  repeated oscal.common.v1.MarkupMultiline remarks = 7;
+}
+
+// LeveragedAuthorization represents a leveraged authorization
+message LeveragedAuthorization {
+  oscal.common.v1.UUID uuid = 1;
+  oscal.common.v1.MarkupLine title = 2;
+  repeated oscal.common.v1.Property props = 3;
+  repeated oscal.common.v1.Link links = 4;
+  oscal.common.v1.UUID party_uuid = 5;
+  oscal.common.v1.Date date_authorized = 6;
+  repeated oscal.common.v1.MarkupMultiline remarks = 7;
+}
+
+// SystemUser represents a system user
+message SystemUser {
+  oscal.common.v1.UUID uuid = 1;
+  string title = 2;
+  string short_name = 3;
+  oscal.common.v1.MarkupMultiline description = 4;
+  repeated oscal.common.v1.Property props = 5;
+  repeated oscal.common.v1.Link links = 6;
+  repeated oscal.common.v1.MarkupMultiline remarks = 7;
+}
+
+// SystemComponent represents a system component
+message SystemComponent {
+  oscal.common.v1.UUID uuid = 2;
+  string type = 3;
+  string title = 4;
+  string description = 5;
+  repeated oscal.common.v1.Property props = 6;
+  repeated oscal.common.v1.Link links = 7;
+  repeated oscal.common.v1.MarkupMultiline remarks = 8;
+}
+
+// InventoryItem represents an inventory item
+message InventoryItem {
+  oscal.common.v1.UUID uuid = 1;
+  oscal.common.v1.MarkupLine description = 2;
+  repeated oscal.common.v1.Property props = 3;
+  repeated oscal.common.v1.Link links = 4;
+  repeated oscal.common.v1.MarkupMultiline remarks = 5;
+}
+
+// ControlImplementation represents control implementation
+message ControlImplementation {
+  oscal.common.v1.MarkupMultiline description = 1;
+  repeated SetParameter set_parameters = 2;
+  repeated ImplementedRequirement implemented_requirements = 3;
+}
+
+// SetParameter represents a set parameter
+message SetParameter {
+  oscal.common.v1.Token param_id = 1;
+  string value = 2;
+  repeated oscal.common.v1.MarkupMultiline remarks = 3;
+}
+
+// ImplementedRequirement represents an implemented requirement
+message ImplementedRequirement {
+  oscal.common.v1.UUID uuid = 1;
+  oscal.common.v1.Token control_id = 2;
+  repeated oscal.common.v1.Property props = 3;
+  repeated oscal.common.v1.Link links = 4;
+  repeated SetParameter set_parameters = 5;
+  repeated ResponsibleRole responsible_roles = 6;
+  repeated Statement statements = 7;
+  repeated ByComponent by_components = 8;
+  repeated oscal.common.v1.MarkupMultiline remarks = 9;
+}
+
+// ResponsibleRole represents a responsible role
+message ResponsibleRole {
+  oscal.common.v1.Token role_id = 1;
+  repeated oscal.common.v1.UUID party_uuids = 2;
+  repeated oscal.common.v1.Property props = 3;
+  repeated oscal.common.v1.MarkupMultiline remarks = 4;
+}
+
+// Statement represents a control statement
+message Statement {
+  oscal.common.v1.Token statement_id = 1;
+  oscal.common.v1.UUID uuid = 2;
+  repeated oscal.common.v1.Property props = 3;
+  repeated oscal.common.v1.Link links = 4;
+  repeated ResponsibleRole responsible_roles = 5;
+  repeated ByComponent by_components = 6;
+  repeated oscal.common.v1.MarkupMultiline remarks = 7;
+}
+
+// ByComponent represents component control implementation
+message ByComponent {
+  oscal.common.v1.UUID component_uuid = 1;
+  oscal.common.v1.UUID uuid = 2;
+  oscal.common.v1.MarkupMultiline description = 3;
+  repeated oscal.common.v1.Property props = 4;
+  repeated oscal.common.v1.Link links = 5;
+  repeated SetParameter set_parameters = 6;
+  ImplementationStatus implementation_status = 7;
+  Export export = 8;
+  repeated Inherited inherited = 9;
+  repeated Satisfied satisfied = 10;
+  repeated ResponsibleRole responsible_roles = 11;
+  repeated oscal.common.v1.MarkupMultiline remarks = 12;
+}
+
+// ImplementationStatus represents implementation status
+message ImplementationStatus {
+  string state = 1;
+  oscal.common.v1.MarkupMultiline remarks = 2;
+}
+
+// Export represents export information
+message Export {
+  oscal.common.v1.MarkupMultiline description = 1;
+  repeated oscal.common.v1.Property props = 2;
+  repeated oscal.common.v1.Link links = 3;
+  repeated Provided provided = 4;
+  repeated Responsibility responsibilities = 5;
+  repeated oscal.common.v1.MarkupMultiline remarks = 6;
+}
+
+// Provided represents provided control implementation
+message Provided {
+  oscal.common.v1.UUID uuid = 1;
+  oscal.common.v1.MarkupMultiline description = 2;
+  repeated oscal.common.v1.Property props = 3;
+  repeated oscal.common.v1.Link links = 4;
+  repeated ResponsibleRole responsible_roles = 5;
+  repeated oscal.common.v1.MarkupMultiline remarks = 6;
+}
+
+// Responsibility represents a control implementation responsibility
+message Responsibility {
+  oscal.common.v1.UUID uuid = 1;
+  oscal.common.v1.UUID provided_uuid = 2;
+  oscal.common.v1.MarkupMultiline description = 3;
+  repeated oscal.common.v1.Property props = 4;
+  repeated oscal.common.v1.Link links = 5;
+  repeated ResponsibleRole responsible_roles = 6;
+  repeated oscal.common.v1.MarkupMultiline remarks = 7;
+}
+
+// Inherited represents inherited control implementation
+message Inherited {
+  oscal.common.v1.UUID uuid = 1;
+  oscal.common.v1.UUID provided_uuid = 2;
+  oscal.common.v1.MarkupMultiline description = 3;
+  repeated oscal.common.v1.Property props = 4;
+  repeated oscal.common.v1.Link links = 5;
+  repeated ResponsibleRole responsible_roles = 6;
+}
+
+// Satisfied represents satisfied control implementation responsibility
+message Satisfied {
+  oscal.common.v1.UUID uuid = 1;
+  oscal.common.v1.UUID responsibility_uuid = 2;
+  oscal.common.v1.MarkupMultiline description = 3;
+  repeated oscal.common.v1.Property props = 4;
+  repeated oscal.common.v1.Link links = 5;
+  repeated ResponsibleRole responsible_roles = 6;
+  repeated oscal.common.v1.MarkupMultiline remarks = 7;
+}

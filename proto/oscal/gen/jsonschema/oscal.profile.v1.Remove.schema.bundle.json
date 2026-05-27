@@ -1,0 +1,74 @@
+{
+  "$defs": {
+    "oscal.profile.v1.Remove.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Remove represents removal of control content",
+      "patternProperties": {
+        "^(itemName)$": {
+          "default": "",
+          "type": "string"
+        },
+        "^(withClass)$": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "^(withIds)$": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "^(withName)$": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "^(withNs)$": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "properties": {
+        "item_name": {
+          "default": "",
+          "type": "string"
+        },
+        "with_class": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "with_ids": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "with_name": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "with_ns": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "title": "Remove",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.profile.v1.Remove.schema.bundle.json",
+  "$ref": "#/$defs/oscal.profile.v1.Remove.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

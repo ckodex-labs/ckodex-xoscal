@@ -1,0 +1,20 @@
+{
+  "$defs": {
+    "oscal.common.v1.EmailAddress.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "EmailAddress represents an email address",
+      "properties": {
+        "value": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Email Address",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.common.v1.EmailAddress.schema.bundle.json",
+  "$ref": "#/$defs/oscal.common.v1.EmailAddress.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

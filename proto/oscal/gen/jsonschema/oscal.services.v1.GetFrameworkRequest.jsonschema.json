@@ -1,0 +1,19 @@
+{
+  "$id": "oscal.services.v1.GetFrameworkRequest.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "patternProperties": {
+    "^(ref_id)$": {
+      "default": "",
+      "type": "string"
+    }
+  },
+  "properties": {
+    "refId": {
+      "default": "",
+      "type": "string"
+    }
+  },
+  "title": "Get Framework Request",
+  "type": "object"
+}

@@ -1,0 +1,13 @@
+{
+  "$id": "oscal.services.v1.GetCatalogRequest.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Catalog Request/Response messages",
+  "properties": {
+    "uuid": {
+      "$ref": "oscal.common.v1.UUID.schema.strict.json"
+    }
+  },
+  "title": "Get Catalog Request",
+  "type": "object"
+}

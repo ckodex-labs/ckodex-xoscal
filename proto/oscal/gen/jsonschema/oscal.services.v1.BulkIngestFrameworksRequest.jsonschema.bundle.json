@@ -1,0 +1,54 @@
+{
+  "$defs": {
+    "oscal.services.v1.BulkIngestFrameworksRequest.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "--- Framework Ingestion messages ---",
+      "patternProperties": {
+        "^(dry_run)$": {
+          "default": false,
+          "type": "boolean"
+        },
+        "^(github_owner)$": {
+          "default": "",
+          "type": "string"
+        },
+        "^(github_path)$": {
+          "default": "",
+          "type": "string"
+        },
+        "^(github_repo)$": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "properties": {
+        "dryRun": {
+          "default": false,
+          "type": "boolean"
+        },
+        "filter": {
+          "default": "",
+          "type": "string"
+        },
+        "githubOwner": {
+          "default": "",
+          "type": "string"
+        },
+        "githubPath": {
+          "default": "",
+          "type": "string"
+        },
+        "githubRepo": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Bulk Ingest Frameworks Request",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.services.v1.BulkIngestFrameworksRequest.jsonschema.bundle.json",
+  "$ref": "#/$defs/oscal.services.v1.BulkIngestFrameworksRequest.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

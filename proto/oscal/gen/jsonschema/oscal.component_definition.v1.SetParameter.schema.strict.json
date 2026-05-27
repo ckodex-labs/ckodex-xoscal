@@ -1,0 +1,40 @@
+{
+  "$id": "oscal.component_definition.v1.SetParameter.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "SetParameter represents parameter value assignments",
+  "properties": {
+    "links": {
+      "items": {
+        "$ref": "oscal.common.v1.Link.schema.strict.json"
+      },
+      "type": "array"
+    },
+    "param_id": {
+      "type": "string"
+    },
+    "props": {
+      "items": {
+        "$ref": "oscal.common.v1.Property.schema.strict.json"
+      },
+      "type": "array"
+    },
+    "remarks": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupMultiline.schema.strict.json"
+      },
+      "type": "array"
+    },
+    "values": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupLine.schema.strict.json"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "param_id"
+  ],
+  "title": "Set Parameter",
+  "type": "object"
+}

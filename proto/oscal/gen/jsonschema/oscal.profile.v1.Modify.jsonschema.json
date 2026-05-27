@@ -1,0 +1,66 @@
+{
+  "$id": "oscal.profile.v1.Modify.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Modify represents modifications to controls",
+  "patternProperties": {
+    "^(add_controls)$": {
+      "items": {
+        "$ref": "oscal.profile.v1.AddControls.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "^(alter_controls)$": {
+      "items": {
+        "$ref": "oscal.profile.v1.AlterControls.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "^(set_parameters)$": {
+      "items": {
+        "$ref": "oscal.profile.v1.SetParameters.jsonschema.json"
+      },
+      "type": "array"
+    }
+  },
+  "properties": {
+    "addControls": {
+      "items": {
+        "$ref": "oscal.profile.v1.AddControls.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "alterControls": {
+      "items": {
+        "$ref": "oscal.profile.v1.AlterControls.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "links": {
+      "items": {
+        "$ref": "oscal.common.v1.Link.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "props": {
+      "items": {
+        "$ref": "oscal.common.v1.Property.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "remarks": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupMultiline.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "setParameters": {
+      "items": {
+        "$ref": "oscal.profile.v1.SetParameters.jsonschema.json"
+      },
+      "type": "array"
+    }
+  },
+  "title": "Modify",
+  "type": "object"
+}

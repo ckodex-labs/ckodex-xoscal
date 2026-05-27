@@ -1,0 +1,15 @@
+{
+  "$id": "oscal.services.v1.SemanticSearchResponse.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "results": {
+      "items": {
+        "$ref": "oscal.services.v1.SemanticSearchResult.schema.strict.json"
+      },
+      "type": "array"
+    }
+  },
+  "title": "Semantic Search Response",
+  "type": "object"
+}

@@ -1,0 +1,78 @@
+{
+  "$id": "oscal.assessment_results.v1.Finding.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Finding represents a finding",
+  "patternProperties": {
+    "^(implementationStatementUuid)$": {
+      "$ref": "oscal.common.v1.UUID.schema.json"
+    },
+    "^(relatedObservations)$": {
+      "items": {
+        "$ref": "oscal.assessment_results.v1.RelatedObservation.schema.json"
+      },
+      "type": "array"
+    },
+    "^(relatedRisks)$": {
+      "items": {
+        "$ref": "oscal.assessment_results.v1.AssociatedRisk.schema.json"
+      },
+      "type": "array"
+    }
+  },
+  "properties": {
+    "description": {
+      "$ref": "oscal.common.v1.MarkupMultiline.schema.json"
+    },
+    "implementation_statement_uuid": {
+      "$ref": "oscal.common.v1.UUID.schema.json"
+    },
+    "links": {
+      "items": {
+        "$ref": "oscal.common.v1.Link.schema.json"
+      },
+      "type": "array"
+    },
+    "origins": {
+      "items": {
+        "$ref": "oscal.assessment_results.v1.Origin.schema.json"
+      },
+      "type": "array"
+    },
+    "props": {
+      "items": {
+        "$ref": "oscal.common.v1.Property.schema.json"
+      },
+      "type": "array"
+    },
+    "related_observations": {
+      "items": {
+        "$ref": "oscal.assessment_results.v1.RelatedObservation.schema.json"
+      },
+      "type": "array"
+    },
+    "related_risks": {
+      "items": {
+        "$ref": "oscal.assessment_results.v1.AssociatedRisk.schema.json"
+      },
+      "type": "array"
+    },
+    "remarks": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupMultiline.schema.json"
+      },
+      "type": "array"
+    },
+    "target": {
+      "$ref": "oscal.assessment_results.v1.FindingTarget.schema.json"
+    },
+    "title": {
+      "$ref": "oscal.common.v1.MarkupLine.schema.json"
+    },
+    "uuid": {
+      "$ref": "oscal.common.v1.UUID.schema.json"
+    }
+  },
+  "title": "Finding",
+  "type": "object"
+}

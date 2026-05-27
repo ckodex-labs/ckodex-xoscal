@@ -1,0 +1,50 @@
+{
+  "$defs": {
+    "google.protobuf.Timestamp.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "format": "date-time",
+      "title": "Timestamp",
+      "type": "string"
+    },
+    "oscal.services.v1.SyncClaimsRequest.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "patternProperties": {
+        "^(filterBomKind)$": {
+          "default": "",
+          "type": "string"
+        },
+        "^(filterSubject)$": {
+          "default": "",
+          "type": "string"
+        },
+        "^(peerEndpoint)$": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "properties": {
+        "filter_bom_kind": {
+          "default": "",
+          "type": "string"
+        },
+        "filter_subject": {
+          "default": "",
+          "type": "string"
+        },
+        "peer_endpoint": {
+          "default": "",
+          "type": "string"
+        },
+        "since": {
+          "$ref": "#/$defs/google.protobuf.Timestamp.schema.json"
+        }
+      },
+      "title": "Sync Claims Request",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.services.v1.SyncClaimsRequest.schema.bundle.json",
+  "$ref": "#/$defs/oscal.services.v1.SyncClaimsRequest.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

@@ -1,0 +1,12 @@
+{
+  "$id": "oscal.services.v1.GetClaimResponse.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "claim": {
+      "$ref": "oscal.services.v1.Claim.schema.json"
+    }
+  },
+  "title": "Get Claim Response",
+  "type": "object"
+}

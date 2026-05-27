@@ -1,0 +1,16 @@
+{
+  "$id": "oscal.common.v1.URIReference.jsonschema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "URIReference represents a URI reference (may be relative)",
+  "properties": {
+    "value": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "value"
+  ],
+  "title": "URI Reference",
+  "type": "object"
+}

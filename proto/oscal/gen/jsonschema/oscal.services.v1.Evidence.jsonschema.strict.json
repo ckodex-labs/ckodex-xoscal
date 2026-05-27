@@ -1,0 +1,76 @@
+{
+  "$id": "oscal.services.v1.Evidence.jsonschema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "bomKind": {
+      "type": "string"
+    },
+    "classification": {
+      "type": "string"
+    },
+    "createdAt": {
+      "$ref": "google.protobuf.Timestamp.jsonschema.strict.json"
+    },
+    "digest": {
+      "type": "string"
+    },
+    "extensionsJson": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "integrityMethodsJson": {
+      "type": "string"
+    },
+    "mediaType": {
+      "type": "string"
+    },
+    "predicateType": {
+      "type": "string"
+    },
+    "producedByJson": {
+      "type": "string"
+    },
+    "sizeBytes": {
+      "type": "integer"
+    },
+    "specJson": {
+      "type": "string"
+    },
+    "storage": {
+      "$ref": "oscal.services.v1.Storage.jsonschema.strict.json"
+    },
+    "subjectRefs": {
+      "items": {
+        "$ref": "oscal.services.v1.Reference.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "supersedes": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "validTime": {
+      "$ref": "oscal.services.v1.TimeWindow.jsonschema.strict.json"
+    }
+  },
+  "required": [
+    "id",
+    "mediaType",
+    "bomKind",
+    "digest",
+    "sizeBytes",
+    "producedByJson",
+    "predicateType",
+    "specJson",
+    "integrityMethodsJson",
+    "classification",
+    "extensionsJson"
+  ],
+  "title": "Evidence",
+  "type": "object"
+}

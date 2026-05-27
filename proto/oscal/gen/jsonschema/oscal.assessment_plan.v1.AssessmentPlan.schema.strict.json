@@ -1,0 +1,37 @@
+{
+  "$id": "oscal.assessment_plan.v1.AssessmentPlan.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "AssessmentPlan represents a security assessment plan",
+  "properties": {
+    "assessment_tasks": {
+      "items": {
+        "$ref": "oscal.assessment_plan.v1.AssessmentTask.schema.strict.json"
+      },
+      "type": "array"
+    },
+    "back_matter": {
+      "$ref": "oscal.common.v1.BackMatter.schema.strict.json"
+    },
+    "import_ssp": {
+      "$ref": "oscal.assessment_plan.v1.ImportSsp.schema.strict.json"
+    },
+    "local_definitions": {
+      "$ref": "oscal.assessment_plan.v1.LocalDefinitions.schema.strict.json"
+    },
+    "metadata": {
+      "$ref": "oscal.common.v1.Metadata.schema.strict.json"
+    },
+    "reviewed_controls": {
+      "$ref": "oscal.assessment_plan.v1.ReviewedControls.schema.strict.json"
+    },
+    "terms": {
+      "$ref": "oscal.assessment_plan.v1.Terms.schema.strict.json"
+    },
+    "uuid": {
+      "$ref": "oscal.common.v1.UUID.schema.strict.json"
+    }
+  },
+  "title": "Assessment Plan",
+  "type": "object"
+}

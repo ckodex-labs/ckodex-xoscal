@@ -1,0 +1,50 @@
+{
+  "$id": "oscal.component_definition.v1.ResponsibleParty.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "ResponsibleParty represents a party responsible for the component",
+  "patternProperties": {
+    "^(party_uuids)$": {
+      "items": {
+        "$ref": "oscal.common.v1.UUID.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "^(role_id)$": {
+      "default": "",
+      "type": "string"
+    }
+  },
+  "properties": {
+    "links": {
+      "items": {
+        "$ref": "oscal.common.v1.Link.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "partyUuids": {
+      "items": {
+        "$ref": "oscal.common.v1.UUID.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "props": {
+      "items": {
+        "$ref": "oscal.common.v1.Property.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "remarks": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupMultiline.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "roleId": {
+      "default": "",
+      "type": "string"
+    }
+  },
+  "title": "Responsible Party",
+  "type": "object"
+}

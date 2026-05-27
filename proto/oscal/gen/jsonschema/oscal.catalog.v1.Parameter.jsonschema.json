@@ -1,0 +1,56 @@
+{
+  "$id": "oscal.catalog.v1.Parameter.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Parameter represents a control parameter",
+  "properties": {
+    "class": {
+      "default": "",
+      "type": "string"
+    },
+    "constraints": {
+      "items": {
+        "$ref": "oscal.catalog.v1.Constraint.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "guidance": {
+      "$ref": "oscal.common.v1.MarkupLine.jsonschema.json"
+    },
+    "id": {
+      "$ref": "oscal.common.v1.Token.jsonschema.json"
+    },
+    "label": {
+      "$ref": "oscal.common.v1.MarkupLine.jsonschema.json"
+    },
+    "links": {
+      "items": {
+        "$ref": "oscal.common.v1.Link.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "props": {
+      "items": {
+        "$ref": "oscal.common.v1.Property.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "remarks": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupMultiline.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "select": {
+      "$ref": "oscal.catalog.v1.Select.jsonschema.json"
+    },
+    "values": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupLine.jsonschema.json"
+      },
+      "type": "array"
+    }
+  },
+  "title": "Parameter",
+  "type": "object"
+}

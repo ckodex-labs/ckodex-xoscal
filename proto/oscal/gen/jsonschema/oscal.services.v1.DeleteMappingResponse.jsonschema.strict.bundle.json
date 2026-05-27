@@ -1,0 +1,21 @@
+{
+  "$defs": {
+    "oscal.services.v1.DeleteMappingResponse.jsonschema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "properties": {
+        "success": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "success"
+      ],
+      "title": "Delete Mapping Response",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.services.v1.DeleteMappingResponse.jsonschema.strict.bundle.json",
+  "$ref": "#/$defs/oscal.services.v1.DeleteMappingResponse.jsonschema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

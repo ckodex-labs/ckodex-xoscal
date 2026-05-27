@@ -1,0 +1,67 @@
+{
+  "$id": "oscal.assessment_plan.v1.Task.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Task represents a sub-task",
+  "properties": {
+    "associated_activities": {
+      "items": {
+        "$ref": "oscal.assessment_plan.v1.AssociatedActivity.schema.strict.json"
+      },
+      "type": "array"
+    },
+    "description": {
+      "$ref": "oscal.common.v1.MarkupMultiline.schema.strict.json"
+    },
+    "links": {
+      "items": {
+        "$ref": "oscal.common.v1.Link.schema.strict.json"
+      },
+      "type": "array"
+    },
+    "props": {
+      "items": {
+        "$ref": "oscal.common.v1.Property.schema.strict.json"
+      },
+      "type": "array"
+    },
+    "remarks": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupMultiline.schema.strict.json"
+      },
+      "type": "array"
+    },
+    "responsible_roles": {
+      "items": {
+        "$ref": "oscal.assessment_plan.v1.ResponsibleRole.schema.strict.json"
+      },
+      "type": "array"
+    },
+    "subjects": {
+      "items": {
+        "$ref": "oscal.assessment_plan.v1.SubjectReference.schema.strict.json"
+      },
+      "type": "array"
+    },
+    "tasks": {
+      "items": {
+        "$ref": "#"
+      },
+      "type": "array"
+    },
+    "title": {
+      "$ref": "oscal.common.v1.MarkupLine.schema.strict.json"
+    },
+    "type": {
+      "type": "string"
+    },
+    "uuid": {
+      "$ref": "oscal.common.v1.UUID.schema.strict.json"
+    }
+  },
+  "required": [
+    "type"
+  ],
+  "title": "Task",
+  "type": "object"
+}

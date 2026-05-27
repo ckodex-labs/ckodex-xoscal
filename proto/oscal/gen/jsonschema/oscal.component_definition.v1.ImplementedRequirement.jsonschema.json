@@ -1,0 +1,50 @@
+{
+  "$id": "oscal.component_definition.v1.ImplementedRequirement.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "ImplementedRequirement represents a control requirement implementation",
+  "patternProperties": {
+    "^(control_id)$": {
+      "default": "",
+      "type": "string"
+    }
+  },
+  "properties": {
+    "controlId": {
+      "default": "",
+      "type": "string"
+    },
+    "description": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupLine.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "links": {
+      "items": {
+        "$ref": "oscal.common.v1.Link.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "props": {
+      "items": {
+        "$ref": "oscal.common.v1.Property.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "remarks": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupMultiline.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "statements": {
+      "items": {
+        "$ref": "oscal.component_definition.v1.Statement.jsonschema.json"
+      },
+      "type": "array"
+    }
+  },
+  "title": "Implemented Requirement",
+  "type": "object"
+}

@@ -1,0 +1,102 @@
+{
+  "$id": "oscal.services.v1.GraphEdge.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "patternProperties": {
+    "^(claimId)$": {
+      "default": "",
+      "type": "string"
+    },
+    "^(evidenceDigest)$": {
+      "default": "",
+      "type": "string"
+    },
+    "^(extensionsJson)$": {
+      "default": "",
+      "type": "string"
+    },
+    "^(fromNode)$": {
+      "default": "",
+      "type": "string"
+    },
+    "^(proofState)$": {
+      "$ref": "oscal.services.v1.ProofState.schema.json"
+    },
+    "^(toNode)$": {
+      "default": "",
+      "type": "string"
+    },
+    "^(trustState)$": {
+      "default": "",
+      "type": "string"
+    },
+    "^(validTime)$": {
+      "$ref": "oscal.services.v1.TimeWindow.schema.json"
+    }
+  },
+  "properties": {
+    "claim_id": {
+      "default": "",
+      "type": "string"
+    },
+    "evidence_digest": {
+      "default": "",
+      "type": "string"
+    },
+    "extensions_json": {
+      "default": "",
+      "type": "string"
+    },
+    "from_node": {
+      "default": "",
+      "type": "string"
+    },
+    "id": {
+      "default": "",
+      "type": "string"
+    },
+    "proof_state": {
+      "$ref": "oscal.services.v1.ProofState.schema.json"
+    },
+    "qualifier": {
+      "default": "",
+      "type": "string"
+    },
+    "relation": {
+      "default": "",
+      "type": "string"
+    },
+    "to_node": {
+      "default": "",
+      "type": "string"
+    },
+    "trust_state": {
+      "default": "",
+      "type": "string"
+    },
+    "valid_time": {
+      "$ref": "oscal.services.v1.TimeWindow.schema.json"
+    },
+    "weight": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "enum": [
+            "Infinity",
+            "-Infinity",
+            "NaN"
+          ],
+          "type": "string"
+        },
+        {
+          "type": "string"
+        }
+      ],
+      "default": 0
+    }
+  },
+  "title": "Graph Edge",
+  "type": "object"
+}

@@ -1,0 +1,93 @@
+{
+  "$id": "oscal.mapping.v1.MappingCollection.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "MappingCollection represents a collection of mappings",
+  "patternProperties": {
+    "^(confidence_score)$": {
+      "$ref": "oscal.mapping.v1.ConfidenceScore.jsonschema.json"
+    },
+    "^(mapping_description)$": {
+      "$ref": "oscal.mapping.v1.MappingDescription.jsonschema.json"
+    },
+    "^(matching_rationale)$": {
+      "default": "",
+      "type": "string"
+    },
+    "^(source_gap_summary)$": {
+      "$ref": "oscal.mapping.v1.GapSummary.jsonschema.json"
+    },
+    "^(source_resource)$": {
+      "$ref": "oscal.mapping.v1.MappingResourceReference.jsonschema.json"
+    },
+    "^(target_gap_summary)$": {
+      "$ref": "oscal.mapping.v1.GapSummary.jsonschema.json"
+    },
+    "^(target_resource)$": {
+      "$ref": "oscal.mapping.v1.MappingResourceReference.jsonschema.json"
+    }
+  },
+  "properties": {
+    "confidenceScore": {
+      "$ref": "oscal.mapping.v1.ConfidenceScore.jsonschema.json"
+    },
+    "coverage": {
+      "$ref": "oscal.mapping.v1.Coverage.jsonschema.json"
+    },
+    "links": {
+      "items": {
+        "$ref": "oscal.common.v1.Link.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "mappingDescription": {
+      "$ref": "oscal.mapping.v1.MappingDescription.jsonschema.json"
+    },
+    "maps": {
+      "items": {
+        "$ref": "oscal.mapping.v1.Map.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "matchingRationale": {
+      "default": "",
+      "type": "string"
+    },
+    "metadata": {
+      "$ref": "oscal.common.v1.Metadata.jsonschema.json"
+    },
+    "props": {
+      "items": {
+        "$ref": "oscal.common.v1.Property.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "remarks": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupMultiline.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "sourceGapSummary": {
+      "$ref": "oscal.mapping.v1.GapSummary.jsonschema.json"
+    },
+    "sourceResource": {
+      "$ref": "oscal.mapping.v1.MappingResourceReference.jsonschema.json"
+    },
+    "status": {
+      "default": "",
+      "type": "string"
+    },
+    "targetGapSummary": {
+      "$ref": "oscal.mapping.v1.GapSummary.jsonschema.json"
+    },
+    "targetResource": {
+      "$ref": "oscal.mapping.v1.MappingResourceReference.jsonschema.json"
+    },
+    "uuid": {
+      "$ref": "oscal.common.v1.UUID.jsonschema.json"
+    }
+  },
+  "title": "Mapping Collection",
+  "type": "object"
+}

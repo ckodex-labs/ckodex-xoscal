@@ -1,0 +1,25 @@
+{
+  "$id": "oscal.services.v1.ListEntitiesResponse.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "patternProperties": {
+    "^(nextPageToken)$": {
+      "default": "",
+      "type": "string"
+    }
+  },
+  "properties": {
+    "entities": {
+      "items": {
+        "$ref": "oscal.services.v1.Entity.schema.json"
+      },
+      "type": "array"
+    },
+    "next_page_token": {
+      "default": "",
+      "type": "string"
+    }
+  },
+  "title": "List Entities Response",
+  "type": "object"
+}

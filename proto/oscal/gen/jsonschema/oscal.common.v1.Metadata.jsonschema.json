@@ -1,0 +1,82 @@
+{
+  "$id": "oscal.common.v1.Metadata.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Metadata represents document metadata shared across all OSCAL models",
+  "patternProperties": {
+    "^(document_id)$": {
+      "$ref": "oscal.common.v1.DocumentId.jsonschema.json"
+    },
+    "^(last_modified)$": {
+      "$ref": "oscal.common.v1.DateTime.jsonschema.json"
+    },
+    "^(oscal_version)$": {
+      "default": "",
+      "type": "string"
+    },
+    "^(responsible_parties)$": {
+      "items": {
+        "$ref": "oscal.common.v1.ResponsibleParty.jsonschema.json"
+      },
+      "type": "array"
+    }
+  },
+  "properties": {
+    "documentId": {
+      "$ref": "oscal.common.v1.DocumentId.jsonschema.json"
+    },
+    "lastModified": {
+      "$ref": "oscal.common.v1.DateTime.jsonschema.json"
+    },
+    "links": {
+      "items": {
+        "$ref": "oscal.common.v1.Link.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "oscalVersion": {
+      "default": "",
+      "type": "string"
+    },
+    "parties": {
+      "items": {
+        "$ref": "oscal.common.v1.Party.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "props": {
+      "items": {
+        "$ref": "oscal.common.v1.Property.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "published": {
+      "$ref": "oscal.common.v1.DateTime.jsonschema.json"
+    },
+    "remarks": {
+      "$ref": "oscal.common.v1.MarkupMultiline.jsonschema.json"
+    },
+    "responsibleParties": {
+      "items": {
+        "$ref": "oscal.common.v1.ResponsibleParty.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "roles": {
+      "items": {
+        "$ref": "oscal.common.v1.Role.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "title": {
+      "default": "",
+      "type": "string"
+    },
+    "version": {
+      "default": "",
+      "type": "string"
+    }
+  },
+  "title": "Metadata",
+  "type": "object"
+}

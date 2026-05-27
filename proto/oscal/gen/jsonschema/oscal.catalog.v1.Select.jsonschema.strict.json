@@ -1,0 +1,22 @@
+{
+  "$id": "oscal.catalog.v1.Select.jsonschema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Select represents a selection of parameter values",
+  "properties": {
+    "choices": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupLine.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "howMany": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "howMany"
+  ],
+  "title": "Select",
+  "type": "object"
+}

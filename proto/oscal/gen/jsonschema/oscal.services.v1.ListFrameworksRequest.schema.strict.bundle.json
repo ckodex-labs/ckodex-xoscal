@@ -1,0 +1,31 @@
+{
+  "$defs": {
+    "oscal.services.v1.ListFrameworksRequest.schema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "properties": {
+        "jurisdiction_filter": {
+          "type": "string"
+        },
+        "page_size": {
+          "maximum": 2147483647,
+          "minimum": -2147483648,
+          "type": "integer"
+        },
+        "page_token": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "jurisdiction_filter",
+        "page_size",
+        "page_token"
+      ],
+      "title": "List Frameworks Request",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.services.v1.ListFrameworksRequest.schema.strict.bundle.json",
+  "$ref": "#/$defs/oscal.services.v1.ListFrameworksRequest.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

@@ -1,0 +1,21 @@
+{
+  "$id": "oscal.services.v1.ListPoamsResponse.jsonschema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "nextPageToken": {
+      "type": "string"
+    },
+    "poams": {
+      "items": {
+        "$ref": "oscal.poam.v1.PlanOfActionAndMilestones.jsonschema.strict.json"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "nextPageToken"
+  ],
+  "title": "List Poams Response",
+  "type": "object"
+}

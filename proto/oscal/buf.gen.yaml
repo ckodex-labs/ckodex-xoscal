@@ -1,0 +1,38 @@
+version: v2
+plugins:
+  # Python SDK with gRPC
+  - remote: buf.build/protocolbuffers/python:v24.4
+    out: gen/python
+  - remote: buf.build/grpc/python
+    out: gen/python
+  # Go SDK with gRPC
+  - remote: buf.build/protocolbuffers/go
+    out: gen/go
+    opt:
+      - paths=source_relative
+  - remote: buf.build/grpc/go
+    out: gen/go
+    opt:
+      - paths=source_relative
+  # Java SDK with gRPC
+  - remote: buf.build/protocolbuffers/java
+    out: gen/java
+  - remote: buf.build/grpc/java
+    out: gen/java
+  # C# SDK
+  - remote: buf.build/protocolbuffers/csharp
+    out: gen/csharp
+  # TypeScript/JavaScript SDK (protobuf only, gRPC via grpc-js manually)
+  - remote: buf.build/bufbuild/es
+    out: gen/ts
+  # Swift SDK with Connect RPC
+  - remote: buf.build/apple/swift
+    out: gen/swift
+  - remote: buf.build/connectrpc/swift
+    out: gen/swift
+  # OpenAPI specifications for Scalar UI
+  - remote: buf.build/community/sudorandom-connect-openapi
+    out: gen/openapi
+  # JSON Schema specifications
+  - remote: buf.build/bufbuild/protoschema-jsonschema
+    out: gen/jsonschema

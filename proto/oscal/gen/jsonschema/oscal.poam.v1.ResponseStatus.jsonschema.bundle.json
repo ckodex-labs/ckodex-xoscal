@@ -1,0 +1,39 @@
+{
+  "$defs": {
+    "oscal.common.v1.MarkupMultiline.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "MarkupMultiline represents multiline markup text",
+      "properties": {
+        "value": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Markup Multiline",
+      "type": "object"
+    },
+    "oscal.poam.v1.ResponseStatus.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "ResponseStatus represents response status",
+      "properties": {
+        "remarks": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "state": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Response Status",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.poam.v1.ResponseStatus.jsonschema.bundle.json",
+  "$ref": "#/$defs/oscal.poam.v1.ResponseStatus.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

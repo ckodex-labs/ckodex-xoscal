@@ -1,0 +1,58 @@
+{
+  "$id": "oscal.catalog.v1.Control.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Control represents a security control",
+  "properties": {
+    "class": {
+      "type": "string"
+    },
+    "controls": {
+      "items": {
+        "$ref": "#"
+      },
+      "type": "array"
+    },
+    "id": {
+      "$ref": "oscal.common.v1.Token.schema.strict.json"
+    },
+    "links": {
+      "items": {
+        "$ref": "oscal.common.v1.Link.schema.strict.json"
+      },
+      "type": "array"
+    },
+    "params": {
+      "items": {
+        "$ref": "oscal.catalog.v1.Parameter.schema.strict.json"
+      },
+      "type": "array"
+    },
+    "parts": {
+      "items": {
+        "$ref": "oscal.catalog.v1.Part.schema.strict.json"
+      },
+      "type": "array"
+    },
+    "props": {
+      "items": {
+        "$ref": "oscal.common.v1.Property.schema.strict.json"
+      },
+      "type": "array"
+    },
+    "remarks": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupMultiline.schema.strict.json"
+      },
+      "type": "array"
+    },
+    "title": {
+      "$ref": "oscal.common.v1.MarkupLine.schema.strict.json"
+    }
+  },
+  "required": [
+    "class"
+  ],
+  "title": "Control",
+  "type": "object"
+}

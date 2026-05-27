@@ -1,0 +1,29 @@
+{
+  "$defs": {
+    "oscal.services.v1.GenerateAssessmentResultsRequest.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "patternProperties": {
+        "^(snapshot_name)$": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "properties": {
+        "framework": {
+          "default": "",
+          "type": "string"
+        },
+        "snapshotName": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Generate Assessment Results Request",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.services.v1.GenerateAssessmentResultsRequest.jsonschema.bundle.json",
+  "$ref": "#/$defs/oscal.services.v1.GenerateAssessmentResultsRequest.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

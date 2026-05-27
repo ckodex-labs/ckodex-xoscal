@@ -1,0 +1,37 @@
+{
+  "$id": "oscal.catalog.v1.Catalog.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Catalog represents a structured, organized collection of control information",
+  "properties": {
+    "back_matter": {
+      "$ref": "oscal.common.v1.BackMatter.schema.strict.json"
+    },
+    "controls": {
+      "items": {
+        "$ref": "oscal.catalog.v1.Control.schema.strict.json"
+      },
+      "type": "array"
+    },
+    "groups": {
+      "items": {
+        "$ref": "oscal.catalog.v1.Group.schema.strict.json"
+      },
+      "type": "array"
+    },
+    "metadata": {
+      "$ref": "oscal.common.v1.Metadata.schema.strict.json"
+    },
+    "params": {
+      "items": {
+        "$ref": "oscal.catalog.v1.Parameter.schema.strict.json"
+      },
+      "type": "array"
+    },
+    "uuid": {
+      "$ref": "oscal.common.v1.UUID.schema.strict.json"
+    }
+  },
+  "title": "Catalog",
+  "type": "object"
+}

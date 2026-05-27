@@ -1,0 +1,14 @@
+{
+  "$id": "oscal.common.v1.Date.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Date represents a date without time",
+  "properties": {
+    "value": {
+      "default": "",
+      "type": "string"
+    }
+  },
+  "title": "Date",
+  "type": "object"
+}

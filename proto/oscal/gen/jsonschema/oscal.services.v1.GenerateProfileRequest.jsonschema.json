@@ -1,0 +1,35 @@
+{
+  "$id": "oscal.services.v1.GenerateProfileRequest.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "patternProperties": {
+    "^(selected_controls)$": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "^(snapshot_name)$": {
+      "default": "",
+      "type": "string"
+    }
+  },
+  "properties": {
+    "framework": {
+      "default": "",
+      "type": "string"
+    },
+    "selectedControls": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "snapshotName": {
+      "default": "",
+      "type": "string"
+    }
+  },
+  "title": "Generate Profile Request",
+  "type": "object"
+}

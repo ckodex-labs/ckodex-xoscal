@@ -1,0 +1,19 @@
+{
+  "$id": "oscal.services.v1.GenerateSSPRequest.jsonschema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "framework": {
+      "type": "string"
+    },
+    "snapshotName": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "snapshotName",
+    "framework"
+  ],
+  "title": "GenerateSSP Request",
+  "type": "object"
+}

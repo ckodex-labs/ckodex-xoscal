@@ -1,0 +1,25 @@
+{
+  "$defs": {
+    "oscal.services.v1.GetNodeRequest.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "patternProperties": {
+        "^(nodeId)$": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "properties": {
+        "node_id": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Get Node Request",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.services.v1.GetNodeRequest.schema.bundle.json",
+  "$ref": "#/$defs/oscal.services.v1.GetNodeRequest.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

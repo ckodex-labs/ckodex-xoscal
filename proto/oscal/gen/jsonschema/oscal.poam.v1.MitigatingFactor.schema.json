@@ -1,0 +1,42 @@
+{
+  "$id": "oscal.poam.v1.MitigatingFactor.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "MitigatingFactor represents a mitigating factor",
+  "patternProperties": {
+    "^(implementationUuid)$": {
+      "$ref": "oscal.common.v1.UUID.schema.json"
+    }
+  },
+  "properties": {
+    "description": {
+      "$ref": "oscal.common.v1.MarkupMultiline.schema.json"
+    },
+    "implementation_uuid": {
+      "$ref": "oscal.common.v1.UUID.schema.json"
+    },
+    "links": {
+      "items": {
+        "$ref": "oscal.common.v1.Link.schema.json"
+      },
+      "type": "array"
+    },
+    "props": {
+      "items": {
+        "$ref": "oscal.common.v1.Property.schema.json"
+      },
+      "type": "array"
+    },
+    "subjects": {
+      "items": {
+        "$ref": "oscal.poam.v1.SubjectReference.schema.json"
+      },
+      "type": "array"
+    },
+    "uuid": {
+      "$ref": "oscal.common.v1.UUID.schema.json"
+    }
+  },
+  "title": "Mitigating Factor",
+  "type": "object"
+}

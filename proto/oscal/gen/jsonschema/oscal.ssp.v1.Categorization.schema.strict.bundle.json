@@ -1,0 +1,28 @@
+{
+  "$defs": {
+    "oscal.ssp.v1.Categorization.schema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Categorization represents an information type categorization",
+      "properties": {
+        "information_type_ids": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "system": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "system"
+      ],
+      "title": "Categorization",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.ssp.v1.Categorization.schema.strict.bundle.json",
+  "$ref": "#/$defs/oscal.ssp.v1.Categorization.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

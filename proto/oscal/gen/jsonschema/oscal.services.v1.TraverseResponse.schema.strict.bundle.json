@@ -1,0 +1,206 @@
+{
+  "$defs": {
+    "google.protobuf.Timestamp.schema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "format": "date-time",
+      "title": "Timestamp",
+      "type": "string"
+    },
+    "oscal.services.v1.GraphEdge.schema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "properties": {
+        "claim_id": {
+          "type": "string"
+        },
+        "evidence_digest": {
+          "type": "string"
+        },
+        "extensions_json": {
+          "type": "string"
+        },
+        "from_node": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "proof_state": {
+          "$ref": "#/$defs/oscal.services.v1.ProofState.schema.strict.json"
+        },
+        "qualifier": {
+          "type": "string"
+        },
+        "relation": {
+          "type": "string"
+        },
+        "to_node": {
+          "type": "string"
+        },
+        "trust_state": {
+          "type": "string"
+        },
+        "valid_time": {
+          "$ref": "#/$defs/oscal.services.v1.TimeWindow.schema.strict.json"
+        },
+        "weight": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "enum": [
+                "Infinity",
+                "-Infinity",
+                "NaN"
+              ],
+              "type": "string"
+            }
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "from_node",
+        "to_node",
+        "relation",
+        "qualifier",
+        "claim_id",
+        "evidence_digest",
+        "trust_state",
+        "weight",
+        "extensions_json"
+      ],
+      "title": "Graph Edge",
+      "type": "object"
+    },
+    "oscal.services.v1.GraphNode.schema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "properties": {
+        "created_at": {
+          "$ref": "#/$defs/google.protobuf.Timestamp.schema.strict.json"
+        },
+        "id": {
+          "type": "string"
+        },
+        "kind": {
+          "type": "string"
+        },
+        "labels_json": {
+          "type": "string"
+        },
+        "urn": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "urn",
+        "labels_json"
+      ],
+      "title": "Graph Node",
+      "type": "object"
+    },
+    "oscal.services.v1.PathSegment.schema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "properties": {
+        "depth": {
+          "maximum": 2147483647,
+          "minimum": -2147483648,
+          "type": "integer"
+        },
+        "edge": {
+          "$ref": "#/$defs/oscal.services.v1.GraphEdge.schema.strict.json"
+        },
+        "node": {
+          "$ref": "#/$defs/oscal.services.v1.GraphNode.schema.strict.json"
+        }
+      },
+      "required": [
+        "depth"
+      ],
+      "title": "Path Segment",
+      "type": "object"
+    },
+    "oscal.services.v1.ProofState.schema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "properties": {
+        "claim": {
+          "type": "string"
+        },
+        "discovery": {
+          "type": "string"
+        },
+        "graph": {
+          "type": "string"
+        },
+        "policy": {
+          "type": "string"
+        },
+        "signature": {
+          "type": "string"
+        },
+        "source": {
+          "type": "string"
+        },
+        "state": {
+          "type": "string"
+        },
+        "transparency": {
+          "type": "string"
+        },
+        "witness_json": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "discovery",
+        "graph",
+        "claim",
+        "source",
+        "signature",
+        "transparency",
+        "witness_json",
+        "state",
+        "policy"
+      ],
+      "title": "Proof State",
+      "type": "object"
+    },
+    "oscal.services.v1.TimeWindow.schema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "properties": {
+        "from_time": {
+          "$ref": "#/$defs/google.protobuf.Timestamp.schema.strict.json"
+        },
+        "to_time": {
+          "$ref": "#/$defs/google.protobuf.Timestamp.schema.strict.json"
+        }
+      },
+      "title": "Time Window",
+      "type": "object"
+    },
+    "oscal.services.v1.TraverseResponse.schema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "properties": {
+        "path": {
+          "items": {
+            "$ref": "#/$defs/oscal.services.v1.PathSegment.schema.strict.json"
+          },
+          "type": "array"
+        }
+      },
+      "title": "Traverse Response",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.services.v1.TraverseResponse.schema.strict.bundle.json",
+  "$ref": "#/$defs/oscal.services.v1.TraverseResponse.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

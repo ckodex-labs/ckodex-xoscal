@@ -1,0 +1,75 @@
+{
+  "$defs": {
+    "oscal.common.v1.AddrLine.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "AddrLine represents a line of an address",
+      "properties": {
+        "value": {
+          "$ref": "#/$defs/oscal.common.v1.MarkupLine.schema.json"
+        }
+      },
+      "title": "Addr Line",
+      "type": "object"
+    },
+    "oscal.common.v1.Address.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Address represents a postal address",
+      "patternProperties": {
+        "^(addrLines)$": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.AddrLine.schema.json"
+          },
+          "type": "array"
+        },
+        "^(postalCode)$": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "properties": {
+        "addr_lines": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.AddrLine.schema.json"
+          },
+          "type": "array"
+        },
+        "city": {
+          "default": "",
+          "type": "string"
+        },
+        "country": {
+          "default": "",
+          "type": "string"
+        },
+        "postal_code": {
+          "default": "",
+          "type": "string"
+        },
+        "state": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Address",
+      "type": "object"
+    },
+    "oscal.common.v1.MarkupLine.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "MarkupLine represents a line of markup text (e.g., markdown)",
+      "properties": {
+        "value": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Markup Line",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.common.v1.Address.schema.bundle.json",
+  "$ref": "#/$defs/oscal.common.v1.Address.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

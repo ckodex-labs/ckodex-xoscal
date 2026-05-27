@@ -1,0 +1,36 @@
+{
+  "$id": "oscal.services.v1.ExplainClaimResponse.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "patternProperties": {
+    "^(proofStateJson)$": {
+      "default": "",
+      "type": "string"
+    },
+    "^(trustState)$": {
+      "default": "",
+      "type": "string"
+    }
+  },
+  "properties": {
+    "claim": {
+      "$ref": "oscal.services.v1.Claim.schema.json"
+    },
+    "evidence": {
+      "items": {
+        "$ref": "oscal.services.v1.Evidence.schema.json"
+      },
+      "type": "array"
+    },
+    "proof_state_json": {
+      "default": "",
+      "type": "string"
+    },
+    "trust_state": {
+      "default": "",
+      "type": "string"
+    }
+  },
+  "title": "Explain Claim Response",
+  "type": "object"
+}

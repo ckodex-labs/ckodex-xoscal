@@ -1,0 +1,12 @@
+{
+  "$id": "oscal.services.v1.GetComponentDefinitionResponse.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "component_definition": {
+      "$ref": "oscal.component_definition.v1.ComponentDefinition.schema.strict.json"
+    }
+  },
+  "title": "Get Component Definition Response",
+  "type": "object"
+}

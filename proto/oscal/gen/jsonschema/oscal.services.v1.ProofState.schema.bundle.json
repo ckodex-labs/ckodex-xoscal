@@ -1,0 +1,57 @@
+{
+  "$defs": {
+    "oscal.services.v1.ProofState.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "patternProperties": {
+        "^(witnessJson)$": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "properties": {
+        "claim": {
+          "default": "",
+          "type": "string"
+        },
+        "discovery": {
+          "default": "",
+          "type": "string"
+        },
+        "graph": {
+          "default": "",
+          "type": "string"
+        },
+        "policy": {
+          "default": "",
+          "type": "string"
+        },
+        "signature": {
+          "default": "",
+          "type": "string"
+        },
+        "source": {
+          "default": "",
+          "type": "string"
+        },
+        "state": {
+          "default": "",
+          "type": "string"
+        },
+        "transparency": {
+          "default": "",
+          "type": "string"
+        },
+        "witness_json": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Proof State",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.services.v1.ProofState.schema.bundle.json",
+  "$ref": "#/$defs/oscal.services.v1.ProofState.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

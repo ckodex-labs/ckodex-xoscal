@@ -1,0 +1,31 @@
+{
+  "$id": "oscal.component_definition.v1.ImportComponentDefinition.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "ImportComponentDefinition loads a component definition from another resource",
+  "properties": {
+    "href": {
+      "$ref": "oscal.common.v1.URIReference.schema.json"
+    },
+    "links": {
+      "items": {
+        "$ref": "oscal.common.v1.Link.schema.json"
+      },
+      "type": "array"
+    },
+    "props": {
+      "items": {
+        "$ref": "oscal.common.v1.Property.schema.json"
+      },
+      "type": "array"
+    },
+    "remarks": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupMultiline.schema.json"
+      },
+      "type": "array"
+    }
+  },
+  "title": "Import Component Definition",
+  "type": "object"
+}

@@ -1,0 +1,60 @@
+{
+  "$id": "oscal.component_definition.v1.Statement.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Statement represents a control implementation statement",
+  "patternProperties": {
+    "^(byComponents)$": {
+      "items": {
+        "$ref": "#"
+      },
+      "type": "array"
+    },
+    "^(statementId)$": {
+      "default": "",
+      "type": "string"
+    }
+  },
+  "properties": {
+    "by_components": {
+      "items": {
+        "$ref": "#"
+      },
+      "type": "array"
+    },
+    "description": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupLine.schema.json"
+      },
+      "type": "array"
+    },
+    "links": {
+      "items": {
+        "$ref": "oscal.common.v1.Link.schema.json"
+      },
+      "type": "array"
+    },
+    "props": {
+      "items": {
+        "$ref": "oscal.common.v1.Property.schema.json"
+      },
+      "type": "array"
+    },
+    "remarks": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupMultiline.schema.json"
+      },
+      "type": "array"
+    },
+    "statement_id": {
+      "default": "",
+      "type": "string"
+    },
+    "uuid": {
+      "default": "",
+      "type": "string"
+    }
+  },
+  "title": "Statement",
+  "type": "object"
+}

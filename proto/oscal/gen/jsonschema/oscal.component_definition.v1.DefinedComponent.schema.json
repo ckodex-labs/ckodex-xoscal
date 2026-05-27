@@ -1,0 +1,85 @@
+{
+  "$id": "oscal.component_definition.v1.DefinedComponent.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "DefinedComponent represents a component description",
+  "patternProperties": {
+    "^(controlImplementations)$": {
+      "items": {
+        "$ref": "oscal.component_definition.v1.ControlImplementation.schema.json"
+      },
+      "type": "array"
+    },
+    "^(responsibleParties)$": {
+      "items": {
+        "$ref": "oscal.component_definition.v1.ResponsibleParty.schema.json"
+      },
+      "type": "array"
+    },
+    "^(supplyChainType)$": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    }
+  },
+  "properties": {
+    "control_implementations": {
+      "items": {
+        "$ref": "oscal.component_definition.v1.ControlImplementation.schema.json"
+      },
+      "type": "array"
+    },
+    "description": {
+      "$ref": "oscal.common.v1.MarkupMultiline.schema.json"
+    },
+    "links": {
+      "items": {
+        "$ref": "oscal.common.v1.Link.schema.json"
+      },
+      "type": "array"
+    },
+    "props": {
+      "items": {
+        "$ref": "oscal.common.v1.Property.schema.json"
+      },
+      "type": "array"
+    },
+    "protocols": {
+      "items": {
+        "$ref": "oscal.component_definition.v1.Protocol.schema.json"
+      },
+      "type": "array"
+    },
+    "remarks": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupMultiline.schema.json"
+      },
+      "type": "array"
+    },
+    "responsible_parties": {
+      "items": {
+        "$ref": "oscal.component_definition.v1.ResponsibleParty.schema.json"
+      },
+      "type": "array"
+    },
+    "supply_chain_type": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "title": {
+      "$ref": "oscal.common.v1.MarkupLine.schema.json"
+    },
+    "type": {
+      "default": "",
+      "type": "string"
+    },
+    "uuid": {
+      "$ref": "oscal.common.v1.UUID.schema.json"
+    }
+  },
+  "title": "Defined Component",
+  "type": "object"
+}

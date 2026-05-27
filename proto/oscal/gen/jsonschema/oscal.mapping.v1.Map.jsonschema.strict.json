@@ -1,0 +1,68 @@
+{
+  "$id": "oscal.mapping.v1.Map.jsonschema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Map represents a mapping entry",
+  "properties": {
+    "confidenceScore": {
+      "$ref": "oscal.mapping.v1.ConfidenceScore.jsonschema.strict.json"
+    },
+    "coverage": {
+      "$ref": "oscal.mapping.v1.Coverage.jsonschema.strict.json"
+    },
+    "links": {
+      "items": {
+        "$ref": "oscal.common.v1.Link.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "matchingRationale": {
+      "type": "string"
+    },
+    "ns": {
+      "type": "string"
+    },
+    "props": {
+      "items": {
+        "$ref": "oscal.common.v1.Property.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "qualifiers": {
+      "items": {
+        "$ref": "oscal.mapping.v1.QualifierItem.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "relationship": {
+      "$ref": "oscal.common.v1.Token.jsonschema.strict.json"
+    },
+    "remarks": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupMultiline.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "sources": {
+      "items": {
+        "$ref": "oscal.mapping.v1.MappingItem.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "targets": {
+      "items": {
+        "$ref": "oscal.mapping.v1.MappingItem.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "uuid": {
+      "$ref": "oscal.common.v1.UUID.jsonschema.strict.json"
+    }
+  },
+  "required": [
+    "ns",
+    "matchingRationale"
+  ],
+  "title": "Map",
+  "type": "object"
+}

@@ -1,0 +1,33 @@
+{
+  "$defs": {
+    "oscal.services.v1.PublishReleaseResponse.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "patternProperties": {
+        "^(releaseUrl)$": {
+          "default": "",
+          "type": "string"
+        },
+        "^(uploadUrl)$": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "properties": {
+        "release_url": {
+          "default": "",
+          "type": "string"
+        },
+        "upload_url": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Publish Release Response",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.services.v1.PublishReleaseResponse.schema.bundle.json",
+  "$ref": "#/$defs/oscal.services.v1.PublishReleaseResponse.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

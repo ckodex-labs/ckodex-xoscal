@@ -1,0 +1,25 @@
+{
+  "$id": "oscal.services.v1.ListClaimsResponse.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "patternProperties": {
+    "^(next_page_token)$": {
+      "default": "",
+      "type": "string"
+    }
+  },
+  "properties": {
+    "claims": {
+      "items": {
+        "$ref": "oscal.services.v1.Claim.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "nextPageToken": {
+      "default": "",
+      "type": "string"
+    }
+  },
+  "title": "List Claims Response",
+  "type": "object"
+}

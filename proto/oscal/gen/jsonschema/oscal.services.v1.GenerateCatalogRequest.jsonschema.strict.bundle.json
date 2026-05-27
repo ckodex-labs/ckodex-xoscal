@@ -1,0 +1,26 @@
+{
+  "$defs": {
+    "oscal.services.v1.GenerateCatalogRequest.jsonschema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "--- OSCAL Generation messages ---",
+      "properties": {
+        "framework": {
+          "type": "string"
+        },
+        "snapshotName": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "snapshotName",
+        "framework"
+      ],
+      "title": "Generate Catalog Request",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.services.v1.GenerateCatalogRequest.jsonschema.strict.bundle.json",
+  "$ref": "#/$defs/oscal.services.v1.GenerateCatalogRequest.jsonschema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

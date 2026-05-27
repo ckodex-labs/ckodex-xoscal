@@ -1,0 +1,12 @@
+{
+  "$id": "oscal.services.v1.DeleteMappingRequest.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "uuid": {
+      "$ref": "oscal.common.v1.UUID.jsonschema.json"
+    }
+  },
+  "title": "Delete Mapping Request",
+  "type": "object"
+}

@@ -1,0 +1,29 @@
+{
+  "$id": "oscal.services.v1.ListEntitiesRequest.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "page_size": {
+      "maximum": 2147483647,
+      "minimum": -2147483648,
+      "type": "integer"
+    },
+    "page_token": {
+      "type": "string"
+    },
+    "status_filter": {
+      "type": "string"
+    },
+    "type_filter": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "type_filter",
+    "status_filter",
+    "page_size",
+    "page_token"
+  ],
+  "title": "List Entities Request",
+  "type": "object"
+}

@@ -1,0 +1,67 @@
+{
+  "$id": "oscal.component_definition.v1.DefinedComponent.jsonschema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "DefinedComponent represents a component description",
+  "properties": {
+    "controlImplementations": {
+      "items": {
+        "$ref": "oscal.component_definition.v1.ControlImplementation.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "description": {
+      "$ref": "oscal.common.v1.MarkupMultiline.jsonschema.strict.json"
+    },
+    "links": {
+      "items": {
+        "$ref": "oscal.common.v1.Link.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "props": {
+      "items": {
+        "$ref": "oscal.common.v1.Property.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "protocols": {
+      "items": {
+        "$ref": "oscal.component_definition.v1.Protocol.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "remarks": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupMultiline.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "responsibleParties": {
+      "items": {
+        "$ref": "oscal.component_definition.v1.ResponsibleParty.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "supplyChainType": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "title": {
+      "$ref": "oscal.common.v1.MarkupLine.jsonschema.strict.json"
+    },
+    "type": {
+      "type": "string"
+    },
+    "uuid": {
+      "$ref": "oscal.common.v1.UUID.jsonschema.strict.json"
+    }
+  },
+  "required": [
+    "type"
+  ],
+  "title": "Defined Component",
+  "type": "object"
+}

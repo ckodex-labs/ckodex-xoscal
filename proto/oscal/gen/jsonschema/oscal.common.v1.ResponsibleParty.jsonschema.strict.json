@@ -1,0 +1,34 @@
+{
+  "$id": "oscal.common.v1.ResponsibleParty.jsonschema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "ResponsibleParty represents a party responsible for a role",
+  "properties": {
+    "links": {
+      "items": {
+        "$ref": "oscal.common.v1.Link.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "partyUuids": {
+      "items": {
+        "$ref": "oscal.common.v1.UUID.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "props": {
+      "items": {
+        "$ref": "oscal.common.v1.Property.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "remarks": {
+      "$ref": "oscal.common.v1.MarkupMultiline.jsonschema.strict.json"
+    },
+    "roleId": {
+      "$ref": "oscal.common.v1.Token.jsonschema.strict.json"
+    }
+  },
+  "title": "Responsible Party",
+  "type": "object"
+}

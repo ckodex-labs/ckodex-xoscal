@@ -1,0 +1,15 @@
+{
+  "$id": "oscal.services.v1.ListConflictsResponse.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "conflicts": {
+      "items": {
+        "$ref": "oscal.services.v1.Entity.schema.strict.json"
+      },
+      "type": "array"
+    }
+  },
+  "title": "List Conflicts Response",
+  "type": "object"
+}

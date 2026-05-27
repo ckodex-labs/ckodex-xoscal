@@ -1,0 +1,40 @@
+{
+  "$id": "oscal.profile.v1.Remove.jsonschema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Remove represents removal of control content",
+  "properties": {
+    "itemName": {
+      "type": "string"
+    },
+    "withClass": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "withIds": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "withName": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "withNs": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "itemName"
+  ],
+  "title": "Remove",
+  "type": "object"
+}

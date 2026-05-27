@@ -1,0 +1,60 @@
+{
+  "$defs": {
+    "oscal.services.v1.Entity.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "--- Entity messages ---",
+      "properties": {
+        "payload": {
+          "default": "",
+          "type": "string"
+        },
+        "status": {
+          "default": "",
+          "type": "string"
+        },
+        "type": {
+          "default": "",
+          "type": "string"
+        },
+        "urn": {
+          "default": "",
+          "type": "string"
+        },
+        "version": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Entity",
+      "type": "object"
+    },
+    "oscal.services.v1.ListEntitiesResponse.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "patternProperties": {
+        "^(next_page_token)$": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "properties": {
+        "entities": {
+          "items": {
+            "$ref": "#/$defs/oscal.services.v1.Entity.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "nextPageToken": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "List Entities Response",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.services.v1.ListEntitiesResponse.jsonschema.bundle.json",
+  "$ref": "#/$defs/oscal.services.v1.ListEntitiesResponse.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

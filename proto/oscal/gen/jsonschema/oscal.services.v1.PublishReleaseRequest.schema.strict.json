@@ -1,0 +1,42 @@
+{
+  "$id": "oscal.services.v1.PublishReleaseRequest.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "--- GitOps messages ---",
+  "properties": {
+    "asset_paths": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "body": {
+      "type": "string"
+    },
+    "release_name": {
+      "type": "string"
+    },
+    "repo_name": {
+      "type": "string"
+    },
+    "repo_owner": {
+      "type": "string"
+    },
+    "tag_name": {
+      "type": "string"
+    },
+    "target_commitish": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "repo_owner",
+    "repo_name",
+    "tag_name",
+    "target_commitish",
+    "release_name",
+    "body"
+  ],
+  "title": "Publish Release Request",
+  "type": "object"
+}

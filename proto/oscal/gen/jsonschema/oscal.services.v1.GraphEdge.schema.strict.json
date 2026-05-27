@@ -1,0 +1,69 @@
+{
+  "$id": "oscal.services.v1.GraphEdge.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "claim_id": {
+      "type": "string"
+    },
+    "evidence_digest": {
+      "type": "string"
+    },
+    "extensions_json": {
+      "type": "string"
+    },
+    "from_node": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "proof_state": {
+      "$ref": "oscal.services.v1.ProofState.schema.strict.json"
+    },
+    "qualifier": {
+      "type": "string"
+    },
+    "relation": {
+      "type": "string"
+    },
+    "to_node": {
+      "type": "string"
+    },
+    "trust_state": {
+      "type": "string"
+    },
+    "valid_time": {
+      "$ref": "oscal.services.v1.TimeWindow.schema.strict.json"
+    },
+    "weight": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "enum": [
+            "Infinity",
+            "-Infinity",
+            "NaN"
+          ],
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "required": [
+    "id",
+    "from_node",
+    "to_node",
+    "relation",
+    "qualifier",
+    "claim_id",
+    "evidence_digest",
+    "trust_state",
+    "weight",
+    "extensions_json"
+  ],
+  "title": "Graph Edge",
+  "type": "object"
+}

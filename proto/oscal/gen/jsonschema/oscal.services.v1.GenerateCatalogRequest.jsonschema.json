@@ -1,0 +1,24 @@
+{
+  "$id": "oscal.services.v1.GenerateCatalogRequest.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "--- OSCAL Generation messages ---",
+  "patternProperties": {
+    "^(snapshot_name)$": {
+      "default": "",
+      "type": "string"
+    }
+  },
+  "properties": {
+    "framework": {
+      "default": "",
+      "type": "string"
+    },
+    "snapshotName": {
+      "default": "",
+      "type": "string"
+    }
+  },
+  "title": "Generate Catalog Request",
+  "type": "object"
+}

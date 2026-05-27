@@ -1,0 +1,18 @@
+{
+  "$id": "oscal.common.v1.DocumentId.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "DocumentId represents a document identifier",
+  "properties": {
+    "identifier": {
+      "default": "",
+      "type": "string"
+    },
+    "scheme": {
+      "default": "",
+      "type": "string"
+    }
+  },
+  "title": "Document Id",
+  "type": "object"
+}

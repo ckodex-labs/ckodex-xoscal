@@ -1,0 +1,22 @@
+{
+  "$defs": {
+    "oscal.common.v1.Base64.schema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Base64 represents base64-encoded binary data",
+      "properties": {
+        "value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "value"
+      ],
+      "title": "Base64",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.common.v1.Base64.schema.strict.bundle.json",
+  "$ref": "#/$defs/oscal.common.v1.Base64.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

@@ -1,0 +1,56 @@
+{
+  "$defs": {
+    "oscal.services.v1.SemanticSearchResult.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "patternProperties": {
+        "^(entityType)$": {
+          "default": "",
+          "type": "string"
+        },
+        "^(entityUrn)$": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "properties": {
+        "content": {
+          "default": "",
+          "type": "string"
+        },
+        "entity_type": {
+          "default": "",
+          "type": "string"
+        },
+        "entity_urn": {
+          "default": "",
+          "type": "string"
+        },
+        "score": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "enum": [
+                "Infinity",
+                "-Infinity",
+                "NaN"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "string"
+            }
+          ],
+          "default": 0
+        }
+      },
+      "title": "Semantic Search Result",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.services.v1.SemanticSearchResult.schema.bundle.json",
+  "$ref": "#/$defs/oscal.services.v1.SemanticSearchResult.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

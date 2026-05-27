@@ -1,0 +1,34 @@
+{
+  "$id": "oscal.assessment_results.v1.LocalDefinitions.jsonschema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "LocalDefinitions represents local definitions for assessment results",
+  "properties": {
+    "assessmentPlatforms": {
+      "items": {
+        "$ref": "oscal.assessment_results.v1.AssessmentPlatform.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "components": {
+      "items": {
+        "$ref": "oscal.assessment_results.v1.Component.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "inventoryItems": {
+      "items": {
+        "$ref": "oscal.assessment_results.v1.InventoryItem.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "users": {
+      "items": {
+        "$ref": "oscal.assessment_results.v1.User.jsonschema.strict.json"
+      },
+      "type": "array"
+    }
+  },
+  "title": "Local Definitions",
+  "type": "object"
+}

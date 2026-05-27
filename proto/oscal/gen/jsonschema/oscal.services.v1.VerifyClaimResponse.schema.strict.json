@@ -1,0 +1,28 @@
+{
+  "$id": "oscal.services.v1.VerifyClaimResponse.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "claim_id": {
+      "type": "string"
+    },
+    "diagnostics": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "proof_state": {
+      "$ref": "oscal.services.v1.ProofState.schema.strict.json"
+    },
+    "trust_state": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "claim_id",
+    "trust_state"
+  ],
+  "title": "Verify Claim Response",
+  "type": "object"
+}

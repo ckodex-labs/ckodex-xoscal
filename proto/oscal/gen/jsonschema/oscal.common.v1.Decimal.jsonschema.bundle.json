@@ -1,0 +1,35 @@
+{
+  "$defs": {
+    "oscal.common.v1.Decimal.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Decimal represents a decimal value",
+      "properties": {
+        "value": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "enum": [
+                "Infinity",
+                "-Infinity",
+                "NaN"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "string"
+            }
+          ],
+          "default": 0
+        }
+      },
+      "title": "Decimal",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.common.v1.Decimal.jsonschema.bundle.json",
+  "$ref": "#/$defs/oscal.common.v1.Decimal.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

@@ -1,0 +1,23 @@
+{
+  "$id": "oscal.services.v1.TimeWindow.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "patternProperties": {
+    "^(from_time)$": {
+      "$ref": "google.protobuf.Timestamp.jsonschema.json"
+    },
+    "^(to_time)$": {
+      "$ref": "google.protobuf.Timestamp.jsonschema.json"
+    }
+  },
+  "properties": {
+    "fromTime": {
+      "$ref": "google.protobuf.Timestamp.jsonschema.json"
+    },
+    "toTime": {
+      "$ref": "google.protobuf.Timestamp.jsonschema.json"
+    }
+  },
+  "title": "Time Window",
+  "type": "object"
+}

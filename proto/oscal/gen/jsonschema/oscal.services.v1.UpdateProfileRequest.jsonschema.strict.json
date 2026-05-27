@@ -1,0 +1,15 @@
+{
+  "$id": "oscal.services.v1.UpdateProfileRequest.jsonschema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "profile": {
+      "$ref": "oscal.profile.v1.Profile.jsonschema.strict.json"
+    },
+    "uuid": {
+      "$ref": "oscal.common.v1.UUID.jsonschema.strict.json"
+    }
+  },
+  "title": "Update Profile Request",
+  "type": "object"
+}

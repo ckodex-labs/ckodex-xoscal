@@ -1,0 +1,12 @@
+{
+  "$id": "oscal.services.v1.UpdateCatalogResponse.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "catalog": {
+      "$ref": "oscal.catalog.v1.Catalog.jsonschema.json"
+    }
+  },
+  "title": "Update Catalog Response",
+  "type": "object"
+}

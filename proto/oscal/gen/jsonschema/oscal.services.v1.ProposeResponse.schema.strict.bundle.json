@@ -1,0 +1,29 @@
+{
+  "$defs": {
+    "oscal.services.v1.ProposeResponse.schema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "properties": {
+        "accepted": {
+          "maximum": 2147483647,
+          "minimum": -2147483648,
+          "type": "integer"
+        },
+        "conflicts": {
+          "maximum": 2147483647,
+          "minimum": -2147483648,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "accepted",
+        "conflicts"
+      ],
+      "title": "Propose Response",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.services.v1.ProposeResponse.schema.strict.bundle.json",
+  "$ref": "#/$defs/oscal.services.v1.ProposeResponse.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

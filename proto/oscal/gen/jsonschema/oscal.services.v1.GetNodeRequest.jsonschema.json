@@ -1,0 +1,19 @@
+{
+  "$id": "oscal.services.v1.GetNodeRequest.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "patternProperties": {
+    "^(node_id)$": {
+      "default": "",
+      "type": "string"
+    }
+  },
+  "properties": {
+    "nodeId": {
+      "default": "",
+      "type": "string"
+    }
+  },
+  "title": "Get Node Request",
+  "type": "object"
+}

@@ -1,0 +1,43 @@
+version: v2
+plugins:
+  # Go SDK with gRPC
+  - remote: buf.build/protocolbuffers/go
+    out: proto/oscal
+    opt:
+      - paths=source_relative
+  - remote: buf.build/grpc/go
+    out: proto/oscal
+    opt:
+      - paths=source_relative
+  # gRPC-Gateway
+  - remote: buf.build/grpc-ecosystem/gateway
+    out: proto/oscal
+    opt:
+      - paths=source_relative
+  # Python SDK with gRPC
+  - remote: buf.build/protocolbuffers/python:v24.4
+    out: proto/oscal/gen/python
+  - remote: buf.build/grpc/python
+    out: proto/oscal/gen/python
+  # Java SDK with gRPC
+  - remote: buf.build/protocolbuffers/java
+    out: proto/oscal/gen/java
+  - remote: buf.build/grpc/java
+    out: proto/oscal/gen/java
+  # C# SDK
+  - remote: buf.build/protocolbuffers/csharp
+    out: proto/oscal/gen/csharp
+  # TypeScript/JavaScript SDK
+  - remote: buf.build/bufbuild/es
+    out: proto/oscal/gen/ts
+  # Swift SDK with Connect RPC
+  - remote: buf.build/apple/swift
+    out: proto/oscal/gen/swift
+  - remote: buf.build/connectrpc/swift
+    out: proto/oscal/gen/swift
+  # OpenAPI specifications
+  - remote: buf.build/community/sudorandom-connect-openapi
+    out: proto/oscal/gen/openapi
+  # JSON Schema specifications
+  - remote: buf.build/bufbuild/protoschema-jsonschema
+    out: proto/oscal/gen/jsonschema

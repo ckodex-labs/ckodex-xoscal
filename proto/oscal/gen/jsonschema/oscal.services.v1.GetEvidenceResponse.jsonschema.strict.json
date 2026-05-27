@@ -1,0 +1,12 @@
+{
+  "$id": "oscal.services.v1.GetEvidenceResponse.jsonschema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "evidence": {
+      "$ref": "oscal.services.v1.Evidence.jsonschema.strict.json"
+    }
+  },
+  "title": "Get Evidence Response",
+  "type": "object"
+}

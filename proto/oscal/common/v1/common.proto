@@ -1,0 +1,200 @@
+syntax = "proto3";
+
+package oscal.common.v1;
+
+import "google/protobuf/timestamp.proto";
+
+option go_package = "github.com/mchorfa/xoscal/proto/oscal/common/v1;commonv1";
+
+// Common datatypes used across all OSCAL models
+
+// UUID represents a universally unique identifier
+message UUID {
+  string value = 1;
+}
+
+// Token represents an alphanumeric token (e.g., control IDs)
+message Token {
+  string value = 1;
+}
+
+// URI represents a uniform resource identifier
+message URI {
+  string value = 1;
+}
+
+// URIReference represents a URI reference (may be relative)
+message URIReference {
+  string value = 1;
+}
+
+// DateTime represents a date-time with timezone (RFC3339)
+message DateTime {
+  google.protobuf.Timestamp value = 1;
+}
+
+// Date represents a date without time
+message Date {
+  string value = 1;
+}
+
+// MarkupLine represents a line of markup text (e.g., markdown)
+message MarkupLine {
+  string value = 1;
+}
+
+// MarkupMultiline represents multiline markup text
+message MarkupMultiline {
+  string value = 1;
+}
+
+// Base64 represents base64-encoded binary data
+message Base64 {
+  string value = 1;
+}
+
+// Integer represents an integer value
+message Integer {
+  int64 value = 1;
+}
+
+// NonNegativeInteger represents a non-negative integer
+message NonNegativeInteger {
+  int64 value = 1;
+}
+
+// PositiveInteger represents a positive integer
+message PositiveInteger {
+  int64 value = 1;
+}
+
+// Decimal represents a decimal value
+message Decimal {
+  double value = 1;
+}
+
+// Boolean represents a boolean value
+message Boolean {
+  bool value = 1;
+}
+
+// EmailAddress represents an email address
+message EmailAddress {
+  string value = 1;
+}
+
+// Property represents a key-value property with optional classification
+message Property {
+  string name = 1;
+  string value = 2;
+  string class = 3;  // Optional classification
+  string id = 4;    // Optional identifier
+}
+
+// Link represents a hyperlink with metadata
+message Link {
+  URI href = 1;
+  string rel = 2;              // Relationship type
+  string media_type = 3;       // Media type (e.g., application/json)
+  string text = 4;             // Link text
+  string resource_fragment = 5;  // Fragment identifier
+}
+
+// Hash represents a cryptographic hash
+message Hash {
+  string algorithm = 1;
+  Base64 value = 2;
+}
+
+// Address represents a postal address
+message Address {
+  repeated AddrLine addr_lines = 1;
+  string city = 2;
+  string state = 3;
+  string postal_code = 4;
+  string country = 5;
+}
+
+// AddrLine represents a line of an address
+message AddrLine {
+  MarkupLine value = 1;
+}
+
+// TelephoneNumber represents a telephone number
+message TelephoneNumber {
+  string value = 1;
+}
+
+// Role represents a role definition
+message Role {
+  Token id = 1;
+  string title = 2;
+  string short_name = 3;
+  MarkupMultiline description = 4;
+  repeated Property props = 5;
+  repeated Link links = 6;
+}
+
+// ResponsibleParty represents a party responsible for a role
+message ResponsibleParty {
+  Token role_id = 1;
+  repeated UUID party_uuids = 2;
+  repeated Property props = 3;
+  repeated Link links = 4;
+  MarkupMultiline remarks = 5;
+}
+
+// Party represents an organization or person
+message Party {
+  UUID uuid = 1;
+  string type = 2;
+  string name = 3;
+  repeated string short_names = 4;
+  Address address = 5;
+  repeated EmailAddress email_addresses = 6;
+  repeated TelephoneNumber telephone_numbers = 7;
+  repeated Property props = 8;
+  repeated Link links = 9;
+  repeated ResponsibleParty responsible_parties = 10;
+  repeated string remarks = 11;
+}
+
+// DocumentId represents a document identifier
+message DocumentId {
+  string scheme = 1;
+  string identifier = 2;
+}
+
+// BackMatter represents appendices and resources
+message BackMatter {
+  repeated Resource resources = 1;
+}
+
+// Resource represents an external resource
+message Resource {
+  UUID uuid = 1;
+  repeated string title = 2;
+  MarkupMultiline description = 3;
+  repeated Property props = 4;
+  repeated Link links = 5;
+  repeated Base64 base64 = 6;
+  repeated DocumentId document_ids = 7;
+  repeated string remarks = 8;
+  string citation = 9;
+}
+
+// Metadata represents document metadata shared across all OSCAL models
+message Metadata {
+  string title = 1;
+  DateTime last_modified = 2;
+  string version = 3;
+  string oscal_version = 4;
+  repeated Property props = 5;
+  repeated Link links = 6;
+  repeated Role roles = 7;
+  repeated Party parties = 8;
+  repeated ResponsibleParty responsible_parties = 9;
+  DocumentId document_id = 10;
+  DateTime published = 11;
+  MarkupMultiline remarks = 12;
+}

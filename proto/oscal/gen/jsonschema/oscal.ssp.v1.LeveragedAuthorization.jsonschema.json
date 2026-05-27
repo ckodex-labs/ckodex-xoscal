@@ -1,0 +1,48 @@
+{
+  "$id": "oscal.ssp.v1.LeveragedAuthorization.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "LeveragedAuthorization represents a leveraged authorization",
+  "patternProperties": {
+    "^(date_authorized)$": {
+      "$ref": "oscal.common.v1.Date.jsonschema.json"
+    },
+    "^(party_uuid)$": {
+      "$ref": "oscal.common.v1.UUID.jsonschema.json"
+    }
+  },
+  "properties": {
+    "dateAuthorized": {
+      "$ref": "oscal.common.v1.Date.jsonschema.json"
+    },
+    "links": {
+      "items": {
+        "$ref": "oscal.common.v1.Link.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "partyUuid": {
+      "$ref": "oscal.common.v1.UUID.jsonschema.json"
+    },
+    "props": {
+      "items": {
+        "$ref": "oscal.common.v1.Property.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "remarks": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupMultiline.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "title": {
+      "$ref": "oscal.common.v1.MarkupLine.jsonschema.json"
+    },
+    "uuid": {
+      "$ref": "oscal.common.v1.UUID.jsonschema.json"
+    }
+  },
+  "title": "Leveraged Authorization",
+  "type": "object"
+}

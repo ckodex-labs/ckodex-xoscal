@@ -1,0 +1,54 @@
+{
+  "$id": "oscal.profile.v1.Import.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Import represents a reference to a source catalog or profile",
+  "patternProperties": {
+    "^(exclude_controls)$": {
+      "items": {
+        "$ref": "oscal.profile.v1.ExcludeControls.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "^(include_all)$": {
+      "$ref": "oscal.profile.v1.IncludeAll.jsonschema.json"
+    }
+  },
+  "properties": {
+    "custom": {
+      "$ref": "oscal.profile.v1.Custom.jsonschema.json"
+    },
+    "excludeControls": {
+      "items": {
+        "$ref": "oscal.profile.v1.ExcludeControls.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "href": {
+      "$ref": "oscal.common.v1.URIReference.jsonschema.json"
+    },
+    "includeAll": {
+      "$ref": "oscal.profile.v1.IncludeAll.jsonschema.json"
+    },
+    "links": {
+      "items": {
+        "$ref": "oscal.common.v1.Link.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "props": {
+      "items": {
+        "$ref": "oscal.common.v1.Property.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "remarks": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupMultiline.jsonschema.json"
+      },
+      "type": "array"
+    }
+  },
+  "title": "Import",
+  "type": "object"
+}

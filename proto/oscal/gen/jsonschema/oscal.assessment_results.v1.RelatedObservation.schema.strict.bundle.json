@@ -1,0 +1,55 @@
+{
+  "$defs": {
+    "oscal.assessment_results.v1.RelatedObservation.schema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "RelatedObservation represents a related observation",
+      "properties": {
+        "observation_uuid": {
+          "$ref": "#/$defs/oscal.common.v1.UUID.schema.strict.json"
+        },
+        "remarks": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.schema.strict.json"
+          },
+          "type": "array"
+        }
+      },
+      "title": "Related Observation",
+      "type": "object"
+    },
+    "oscal.common.v1.MarkupMultiline.schema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "MarkupMultiline represents multiline markup text",
+      "properties": {
+        "value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "value"
+      ],
+      "title": "Markup Multiline",
+      "type": "object"
+    },
+    "oscal.common.v1.UUID.schema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "UUID represents a universally unique identifier",
+      "properties": {
+        "value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "value"
+      ],
+      "title": "UUID",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.assessment_results.v1.RelatedObservation.schema.strict.bundle.json",
+  "$ref": "#/$defs/oscal.assessment_results.v1.RelatedObservation.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

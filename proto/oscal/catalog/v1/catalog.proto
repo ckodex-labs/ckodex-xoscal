@@ -1,0 +1,82 @@
+syntax = "proto3";
+
+package oscal.catalog.v1;
+
+import "common/v1/common.proto";
+
+option go_package = "github.com/mchorfa/xoscal/proto/oscal/catalog/v1;catalogv1";
+
+// Catalog represents a structured, organized collection of control information
+message Catalog {
+  oscal.common.v1.UUID uuid = 1;
+  oscal.common.v1.Metadata metadata = 2;
+  repeated Parameter params = 3;
+  repeated Control controls = 4;
+  repeated Group groups = 5;
+  oscal.common.v1.BackMatter back_matter = 6;
+}
+
+// Group represents a group of controls, or of groups of controls
+message Group {
+  oscal.common.v1.Token id = 1;
+  string class = 2;
+  oscal.common.v1.MarkupLine title = 3;
+  repeated Parameter params = 4;
+  repeated Control controls = 5;
+  repeated Group groups = 6;
+  repeated oscal.common.v1.Property props = 7;
+  repeated oscal.common.v1.Link links = 8;
+  repeated oscal.common.v1.MarkupMultiline remarks = 9;
+}
+
+// Control represents a security control
+message Control {
+  oscal.common.v1.Token id = 1;
+  string class = 2;
+  oscal.common.v1.MarkupLine title = 3;
+  repeated Parameter params = 4;
+  repeated Part parts = 5;
+  repeated Control controls = 6;
+  repeated oscal.common.v1.Property props = 7;
+  repeated oscal.common.v1.Link links = 8;
+  repeated oscal.common.v1.MarkupMultiline remarks = 9;
+}
+
+// Parameter represents a control parameter
+message Parameter {
+  oscal.common.v1.Token id = 1;
+  string class = 2;
+  oscal.common.v1.MarkupLine label = 3;
+  repeated oscal.common.v1.MarkupLine values = 4;
+  Select select = 5;
+  repeated oscal.common.v1.Property props = 6;
+  repeated oscal.common.v1.Link links = 7;
+  repeated oscal.common.v1.MarkupMultiline remarks = 8;
+  repeated Constraint constraints = 9;
+  oscal.common.v1.MarkupLine guidance = 10;
+}
+
+// Select represents a selection of parameter values
+message Select {
+  repeated oscal.common.v1.MarkupLine choices = 1;
+  bool how_many = 2;
+}
+
+// Constraint represents a constraint on a parameter value
+message Constraint {
+  string description = 1;
+}
+
+// Part represents a part of a control (e.g., statement, objective)
+message Part {
+  oscal.common.v1.Token id = 1;
+  string name = 2;
+  string ns = 3;  // Namespace
+  string class = 4;
+  oscal.common.v1.MarkupLine title = 5;
+  repeated oscal.common.v1.Property props = 6;
+  repeated oscal.common.v1.Link links = 7;
+  repeated Part parts = 8;
+  repeated oscal.common.v1.MarkupMultiline prose = 9;
+  repeated oscal.common.v1.MarkupMultiline remarks = 10;
+}

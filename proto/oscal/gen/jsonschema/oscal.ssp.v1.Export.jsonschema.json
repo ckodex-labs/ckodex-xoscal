@@ -1,0 +1,43 @@
+{
+  "$id": "oscal.ssp.v1.Export.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Export represents export information",
+  "properties": {
+    "description": {
+      "$ref": "oscal.common.v1.MarkupMultiline.jsonschema.json"
+    },
+    "links": {
+      "items": {
+        "$ref": "oscal.common.v1.Link.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "props": {
+      "items": {
+        "$ref": "oscal.common.v1.Property.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "provided": {
+      "items": {
+        "$ref": "oscal.ssp.v1.Provided.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "remarks": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupMultiline.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "responsibilities": {
+      "items": {
+        "$ref": "oscal.ssp.v1.Responsibility.jsonschema.json"
+      },
+      "type": "array"
+    }
+  },
+  "title": "Export",
+  "type": "object"
+}

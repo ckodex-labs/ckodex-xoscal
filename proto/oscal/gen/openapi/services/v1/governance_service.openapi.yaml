@@ -1,0 +1,5719 @@
+openapi: 3.1.0
+info:
+  title: oscal.services.v1
+paths:
+  /v1/conflicts:
+    get:
+      tags:
+        - oscal.services.v1.GovernanceService
+      summary: ListConflicts
+      operationId: oscal.services.v1.GovernanceService.ListConflicts
+      parameters:
+        - name: pageSize
+          in: query
+          schema:
+            type: integer
+            title: page_size
+            format: int32
+        - name: pageToken
+          in: query
+          schema:
+            type: string
+            title: page_token
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/oscal.services.v1.ListConflictsResponse'
+  /v1/conflicts/{conflict_urn}/resolve:
+    post:
+      tags:
+        - oscal.services.v1.GovernanceService
+      summary: ResolveConflict
+      operationId: oscal.services.v1.GovernanceService.ResolveConflict
+      parameters:
+        - name: conflict_urn
+          in: path
+          required: true
+          schema:
+            type: string
+            title: conflict_urn
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                resolution:
+                  type: string
+                  title: resolution
+                  description: JSON-LD blob describing resolution
+              title: ResolveConflictRequest
+              additionalProperties: false
+        required: true
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/oscal.services.v1.ResolveConflictResponse'
+  /v1/entities:
+    get:
+      tags:
+        - oscal.services.v1.GovernanceService
+      summary: ListEntities
+      operationId: oscal.services.v1.GovernanceService.ListEntities
+      parameters:
+        - name: typeFilter
+          in: query
+          schema:
+            type: string
+            title: type_filter
+        - name: statusFilter
+          in: query
+          schema:
+            type: string
+            title: status_filter
+        - name: pageSize
+          in: query
+          schema:
+            type: integer
+            title: page_size
+            format: int32
+        - name: pageToken
+          in: query
+          schema:
+            type: string
+            title: page_token
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/oscal.services.v1.ListEntitiesResponse'
+    post:
+      tags:
+        - oscal.services.v1.GovernanceService
+      summary: CreateEntity
+      description: '--- Entity CRUD ---'
+      operationId: oscal.services.v1.GovernanceService.CreateEntity
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/oscal.services.v1.CreateEntityRequest'
+        required: true
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/oscal.services.v1.CreateEntityResponse'
+  /v1/entities/{entity.urn}:
+    put:
+      tags:
+        - oscal.services.v1.GovernanceService
+      summary: UpdateEntity
+      operationId: oscal.services.v1.GovernanceService.UpdateEntity
+      parameters:
+        - name: entity.urn
+          in: path
+          required: true
+          schema:
+            type: string
+            title: urn
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                entity:
+                  title: entity
+                  $ref: '#/components/schemas/oscal.services.v1.Entity'
+              title: UpdateEntityRequest
+              additionalProperties: false
+        required: true
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/oscal.services.v1.UpdateEntityResponse'
+  /v1/entities/{urn}:
+    get:
+      tags:
+        - oscal.services.v1.GovernanceService
+      summary: GetEntity
+      operationId: oscal.services.v1.GovernanceService.GetEntity
+      parameters:
+        - name: urn
+          in: path
+          required: true
+          schema:
+            type: string
+            title: urn
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/oscal.services.v1.GetEntityResponse'
+  /v1/frameworks:
+    get:
+      tags:
+        - oscal.services.v1.GovernanceService
+      summary: ListFrameworks
+      operationId: oscal.services.v1.GovernanceService.ListFrameworks
+      parameters:
+        - name: jurisdictionFilter
+          in: query
+          schema:
+            type: string
+            title: jurisdiction_filter
+        - name: pageSize
+          in: query
+          schema:
+            type: integer
+            title: page_size
+            format: int32
+        - name: pageToken
+          in: query
+          schema:
+            type: string
+            title: page_token
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/oscal.services.v1.ListFrameworksResponse'
+  /v1/frameworks/{ref_id}:
+    get:
+      tags:
+        - oscal.services.v1.GovernanceService
+      summary: GetFramework
+      operationId: oscal.services.v1.GovernanceService.GetFramework
+      parameters:
+        - name: ref_id
+          in: path
+          required: true
+          schema:
+            type: string
+            title: ref_id
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/oscal.services.v1.GetFrameworkResponse'
+  /v1/generate/assessment-plan:
+    post:
+      tags:
+        - oscal.services.v1.GovernanceService
+      summary: GenerateAssessmentPlan
+      operationId: oscal.services.v1.GovernanceService.GenerateAssessmentPlan
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/oscal.services.v1.GenerateAssessmentPlanRequest'
+        required: true
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/oscal.services.v1.GenerateAssessmentPlanResponse'
+  /v1/generate/assessment-results:
+    post:
+      tags:
+        - oscal.services.v1.GovernanceService
+      summary: GenerateAssessmentResults
+      operationId: oscal.services.v1.GovernanceService.GenerateAssessmentResults
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/oscal.services.v1.GenerateAssessmentResultsRequest'
+        required: true
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/oscal.services.v1.GenerateAssessmentResultsResponse'
+  /v1/generate/catalog:
+    post:
+      tags:
+        - oscal.services.v1.GovernanceService
+      summary: GenerateCatalog
+      description: '--- OSCAL Generation ---'
+      operationId: oscal.services.v1.GovernanceService.GenerateCatalog
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/oscal.services.v1.GenerateCatalogRequest'
+        required: true
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/oscal.services.v1.GenerateCatalogResponse'
+  /v1/generate/component-definition:
+    post:
+      tags:
+        - oscal.services.v1.GovernanceService
+      summary: GenerateComponentDefinition
+      operationId: oscal.services.v1.GovernanceService.GenerateComponentDefinition
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/oscal.services.v1.GenerateComponentDefinitionRequest'
+        required: true
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/oscal.services.v1.GenerateComponentDefinitionResponse'
+  /v1/generate/cross-mappings:
+    post:
+      tags:
+        - oscal.services.v1.GovernanceService
+      summary: GenerateCrossFrameworkMappings
+      description: '--- Cross-Framework Mappings ---'
+      operationId: oscal.services.v1.GovernanceService.GenerateCrossFrameworkMappings
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/oscal.services.v1.GenerateCrossFrameworkMappingsRequest'
+        required: true
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/oscal.services.v1.GenerateCrossFrameworkMappingsResponse'
+  /v1/generate/mappings:
+    post:
+      tags:
+        - oscal.services.v1.GovernanceService
+      summary: GenerateMappings
+      operationId: oscal.services.v1.GovernanceService.GenerateMappings
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/oscal.services.v1.GenerateMappingsRequest'
+        required: true
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/oscal.services.v1.GenerateMappingsResponse'
+  /v1/generate/poam:
+    post:
+      tags:
+        - oscal.services.v1.GovernanceService
+      summary: GeneratePOAM
+      operationId: oscal.services.v1.GovernanceService.GeneratePOAM
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/oscal.services.v1.GeneratePOAMRequest'
+        required: true
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/oscal.services.v1.GeneratePOAMResponse'
+  /v1/generate/profile:
+    post:
+      tags:
+        - oscal.services.v1.GovernanceService
+      summary: GenerateProfile
+      operationId: oscal.services.v1.GovernanceService.GenerateProfile
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/oscal.services.v1.GenerateProfileRequest'
+        required: true
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/oscal.services.v1.GenerateProfileResponse'
+  /v1/generate/ssp:
+    post:
+      tags:
+        - oscal.services.v1.GovernanceService
+      summary: GenerateSSP
+      operationId: oscal.services.v1.GovernanceService.GenerateSSP
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/oscal.services.v1.GenerateSSPRequest'
+        required: true
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/oscal.services.v1.GenerateSSPResponse'
+  /v1/gitops/mapping-pr:
+    post:
+      tags:
+        - oscal.services.v1.GovernanceService
+      summary: ProposeMappingUpdate
+      operationId: oscal.services.v1.GovernanceService.ProposeMappingUpdate
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/oscal.services.v1.ProposeMappingUpdateRequest'
+        required: true
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/oscal.services.v1.ProposeMappingUpdateResponse'
+  /v1/gitops/release:
+    post:
+      tags:
+        - oscal.services.v1.GovernanceService
+      summary: PublishRelease
+      description: '--- GitOps ---'
+      operationId: oscal.services.v1.GovernanceService.PublishRelease
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/oscal.services.v1.PublishReleaseRequest'
+        required: true
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/oscal.services.v1.PublishReleaseResponse'
+  /v1/ingest:
+    post:
+      tags:
+        - oscal.services.v1.GovernanceService
+      summary: IngestRequirements
+      description: '--- Ingestion ---'
+      operationId: oscal.services.v1.GovernanceService.IngestRequirements
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/oscal.services.v1.IngestRequirementsRequest'
+        required: true
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/oscal.services.v1.IngestRequirementsResponse'
+  /v1/ingest/bulk:
+    post:
+      tags:
+        - oscal.services.v1.GovernanceService
+      summary: BulkIngestFrameworks
+      description: '--- Framework Ingestion ---'
+      operationId: oscal.services.v1.GovernanceService.BulkIngestFrameworks
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/oscal.services.v1.BulkIngestFrameworksRequest'
+        required: true
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/oscal.services.v1.BulkIngestFrameworksResponse'
+  /v1/propose:
+    post:
+      tags:
+        - oscal.services.v1.GovernanceService
+      summary: Propose
+      description: '--- Reconciler ---'
+      operationId: oscal.services.v1.GovernanceService.Propose
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/oscal.services.v1.ProposeRequest'
+        required: true
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/oscal.services.v1.ProposeResponse'
+  /v1/releases:
+    get:
+      tags:
+        - oscal.services.v1.GovernanceService
+      summary: ListReleases
+      operationId: oscal.services.v1.GovernanceService.ListReleases
+      parameters:
+        - name: pageSize
+          in: query
+          schema:
+            type: integer
+            title: page_size
+            format: int32
+        - name: pageToken
+          in: query
+          schema:
+            type: string
+            title: page_token
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/oscal.services.v1.ListReleasesResponse'
+    post:
+      tags:
+        - oscal.services.v1.GovernanceService
+      summary: CreateRelease
+      operationId: oscal.services.v1.GovernanceService.CreateRelease
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/oscal.services.v1.CreateReleaseRequest'
+        required: true
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/oscal.services.v1.CreateReleaseResponse'
+  /v1/search:
+    get:
+      tags:
+        - oscal.services.v1.GovernanceService
+      summary: SemanticSearch
+      description: '--- Semantic Search ---'
+      operationId: oscal.services.v1.GovernanceService.SemanticSearch
+      parameters:
+        - name: query
+          in: query
+          schema:
+            type: string
+            title: query
+        - name: framework
+          in: query
+          schema:
+            type: string
+            title: framework
+        - name: topK
+          in: query
+          schema:
+            type: integer
+            title: top_k
+            format: int32
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/oscal.services.v1.SemanticSearchResponse'
+  /v1/snapshots:
+    get:
+      tags:
+        - oscal.services.v1.GovernanceService
+      summary: ListSnapshots
+      operationId: oscal.services.v1.GovernanceService.ListSnapshots
+      parameters:
+        - name: pageSize
+          in: query
+          schema:
+            type: integer
+            title: page_size
+            format: int32
+        - name: pageToken
+          in: query
+          schema:
+            type: string
+            title: page_token
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/oscal.services.v1.ListSnapshotsResponse'
+    post:
+      tags:
+        - oscal.services.v1.GovernanceService
+      summary: CreateSnapshot
+      description: '--- Snapshots & Releases ---'
+      operationId: oscal.services.v1.GovernanceService.CreateSnapshot
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/oscal.services.v1.CreateSnapshotRequest'
+        required: true
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/oscal.services.v1.CreateSnapshotResponse'
+  /v1/snapshots/{name}:
+    get:
+      tags:
+        - oscal.services.v1.GovernanceService
+      summary: GetSnapshot
+      operationId: oscal.services.v1.GovernanceService.GetSnapshot
+      parameters:
+        - name: name
+          in: path
+          required: true
+          schema:
+            type: string
+            title: name
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/oscal.services.v1.GetSnapshotResponse'
+components:
+  schemas:
+    google.protobuf.Timestamp:
+      type: string
+      examples:
+        - "2023-01-15T01:30:15.01Z"
+        - "2024-12-25T12:00:00Z"
+      format: date-time
+      description: |-
+        A Timestamp represents a point in time independent of any time zone or local
+         calendar, encoded as a count of seconds and fractions of seconds at
+         nanosecond resolution. The count is relative to an epoch at UTC midnight on
+         January 1, 1970, in the proleptic Gregorian calendar which extends the
+         Gregorian calendar backwards to year one.
+
+         All minutes are 60 seconds long. Leap seconds are "smeared" so that no leap
+         second table is needed for interpretation, using a [24-hour linear
+         smear](https://developers.google.com/time/smear).
+
+         The range is from 0001-01-01T00:00:00Z to 9999-12-31T23:59:59.999999999Z. By
+         restricting to that range, we ensure that we can convert to and from [RFC
+         3339](https://www.ietf.org/rfc/rfc3339.txt) date strings.
+
+         # Examples
+
+         Example 1: Compute Timestamp from POSIX `time()`.
+
+             Timestamp timestamp;
+             timestamp.set_seconds(time(NULL));
+             timestamp.set_nanos(0);
+
+         Example 2: Compute Timestamp from POSIX `gettimeofday()`.
+
+             struct timeval tv;
+             gettimeofday(&tv, NULL);
+
+             Timestamp timestamp;
+             timestamp.set_seconds(tv.tv_sec);
+             timestamp.set_nanos(tv.tv_usec * 1000);
+
+         Example 3: Compute Timestamp from Win32 `GetSystemTimeAsFileTime()`.
+
+             FILETIME ft;
+             GetSystemTimeAsFileTime(&ft);
+             UINT64 ticks = (((UINT64)ft.dwHighDateTime) << 32) | ft.dwLowDateTime;
+
+             // A Windows tick is 100 nanoseconds. Windows epoch 1601-01-01T00:00:00Z
+             // is 11644473600 seconds before Unix epoch 1970-01-01T00:00:00Z.
+             Timestamp timestamp;
+             timestamp.set_seconds((INT64) ((ticks / 10000000) - 11644473600LL));
+             timestamp.set_nanos((INT32) ((ticks % 10000000) * 100));
+
+         Example 4: Compute Timestamp from Java `System.currentTimeMillis()`.
+
+             long millis = System.currentTimeMillis();
+
+             Timestamp timestamp = Timestamp.newBuilder().setSeconds(millis / 1000)
+                 .setNanos((int) ((millis % 1000) * 1000000)).build();
+
+         Example 5: Compute Timestamp from Java `Instant.now()`.
+
+             Instant now = Instant.now();
+
+             Timestamp timestamp =
+                 Timestamp.newBuilder().setSeconds(now.getEpochSecond())
+                     .setNanos(now.getNano()).build();
+
+         Example 6: Compute Timestamp from current time in Python.
+
+             timestamp = Timestamp()
+             timestamp.GetCurrentTime()
+
+         # JSON Mapping
+
+         In JSON format, the Timestamp type is encoded as a string in the
+         [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) format. That is, the
+         format is "{year}-{month}-{day}T{hour}:{min}:{sec}[.{frac_sec}]Z"
+         where {year} is always expressed using four digits while {month}, {day},
+         {hour}, {min}, and {sec} are zero-padded to two digits each. The fractional
+         seconds, which can go up to 9 digits (i.e. up to 1 nanosecond resolution),
+         are optional. The "Z" suffix indicates the timezone ("UTC"); the timezone
+         is required. A proto3 JSON serializer should always use UTC (as indicated by
+         "Z") when printing the Timestamp type and a proto3 JSON parser should be
+         able to accept both UTC and other timezones (as indicated by an offset).
+
+         For example, "2017-01-15T01:30:15.01Z" encodes 15.01 seconds past
+         01:30 UTC on January 15, 2017.
+
+         In JavaScript, one can convert a Date object to this format using the
+         standard
+         [toISOString()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString)
+         method. In Python, a standard `datetime.datetime` object can be converted
+         to this format using
+         [`strftime`](https://docs.python.org/2/library/time.html#time.strftime) with
+         the time format spec '%Y-%m-%dT%H:%M:%S.%fZ'. Likewise, in Java, one can use
+         the Joda Time's [`ISODateTimeFormat.dateTime()`](
+         http://joda-time.sourceforge.net/apidocs/org/joda/time/format/ISODateTimeFormat.html#dateTime()
+         ) to obtain a formatter capable of generating timestamps in this format.
+    oscal.assessment_plan.v1.Activity:
+      type: object
+      properties:
+        uuid:
+          title: uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        title:
+          title: title
+          $ref: '#/components/schemas/oscal.common.v1.MarkupLine'
+        description:
+          title: description
+          $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        steps:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.assessment_plan.v1.Step'
+          title: steps
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: Activity
+      additionalProperties: false
+      description: Activity represents an assessment activity
+    oscal.assessment_plan.v1.AssessmentMethod:
+      type: object
+      properties:
+        uuid:
+          title: uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        description:
+          title: description
+          $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        part:
+          title: part
+          $ref: '#/components/schemas/oscal.assessment_plan.v1.AssessmentPart'
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: AssessmentMethod
+      additionalProperties: false
+      description: AssessmentMethod represents an assessment method
+    oscal.assessment_plan.v1.AssessmentPart:
+      type: object
+      properties:
+        id:
+          title: id
+          $ref: '#/components/schemas/oscal.common.v1.Token'
+        name:
+          type: string
+          title: name
+        ns:
+          type: string
+          title: ns
+        class:
+          type: string
+          title: class
+        title:
+          title: title
+          $ref: '#/components/schemas/oscal.common.v1.MarkupLine'
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        parts:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.assessment_plan.v1.AssessmentPart'
+          title: parts
+        prose:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: prose
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: AssessmentPart
+      additionalProperties: false
+      description: AssessmentPart represents an assessment part
+    oscal.assessment_plan.v1.AssessmentPlan:
+      type: object
+      properties:
+        uuid:
+          title: uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        metadata:
+          title: metadata
+          $ref: '#/components/schemas/oscal.common.v1.Metadata'
+        importSsp:
+          title: import_ssp
+          $ref: '#/components/schemas/oscal.assessment_plan.v1.ImportSsp'
+        localDefinitions:
+          title: local_definitions
+          $ref: '#/components/schemas/oscal.assessment_plan.v1.LocalDefinitions'
+        terms:
+          title: terms
+          $ref: '#/components/schemas/oscal.assessment_plan.v1.Terms'
+        reviewedControls:
+          title: reviewed_controls
+          $ref: '#/components/schemas/oscal.assessment_plan.v1.ReviewedControls'
+        assessmentTasks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.assessment_plan.v1.AssessmentTask'
+          title: assessment_tasks
+        backMatter:
+          title: back_matter
+          $ref: '#/components/schemas/oscal.common.v1.BackMatter'
+      title: AssessmentPlan
+      additionalProperties: false
+      description: AssessmentPlan represents a security assessment plan
+    oscal.assessment_plan.v1.AssessmentTask:
+      type: object
+      properties:
+        uuid:
+          title: uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        type:
+          type: string
+          title: type
+        title:
+          title: title
+          $ref: '#/components/schemas/oscal.common.v1.MarkupLine'
+        description:
+          title: description
+          $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+        subjects:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.assessment_plan.v1.SubjectReference'
+          title: subjects
+        tasks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.assessment_plan.v1.Task'
+          title: tasks
+        associatedActivities:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.assessment_plan.v1.AssociatedActivity'
+          title: associated_activities
+        responsibleRoles:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.assessment_plan.v1.ResponsibleRole'
+          title: responsible_roles
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: AssessmentTask
+      additionalProperties: false
+      description: AssessmentTask represents an assessment task
+    oscal.assessment_plan.v1.AssociatedActivity:
+      type: object
+      properties:
+        activityUuid:
+          title: activity_uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        includeAll:
+          type: boolean
+          title: include_all
+        activityUuids:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.UUID'
+          title: activity_uuids
+      title: AssociatedActivity
+      additionalProperties: false
+      description: AssociatedActivity represents an associated activity
+    oscal.assessment_plan.v1.Component:
+      type: object
+      properties:
+        uuid:
+          title: uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        type:
+          type: string
+          title: type
+        title:
+          type: string
+          title: title
+        description:
+          type: string
+          title: description
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: Component
+      additionalProperties: false
+      description: Component represents a system component
+    oscal.assessment_plan.v1.ControlSelection:
+      type: object
+      properties:
+        controlId:
+          title: control_id
+          $ref: '#/components/schemas/oscal.common.v1.Token'
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: ControlSelection
+      additionalProperties: false
+      description: ControlSelection represents a control selection
+    oscal.assessment_plan.v1.ImportSsp:
+      type: object
+      properties:
+        href:
+          title: href
+          $ref: '#/components/schemas/oscal.common.v1.URIReference'
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: ImportSsp
+      additionalProperties: false
+      description: ImportSsp represents an imported system security plan
+    oscal.assessment_plan.v1.InventoryItem:
+      type: object
+      properties:
+        uuid:
+          title: uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        description:
+          title: description
+          $ref: '#/components/schemas/oscal.common.v1.MarkupLine'
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: InventoryItem
+      additionalProperties: false
+      description: InventoryItem represents an inventory item
+    oscal.assessment_plan.v1.LocalDefinitions:
+      type: object
+      properties:
+        components:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.assessment_plan.v1.Component'
+          title: components
+        inventoryItems:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.assessment_plan.v1.InventoryItem'
+          title: inventory_items
+        users:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.assessment_plan.v1.User'
+          title: users
+        objectives:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.assessment_plan.v1.LocalObjective'
+          title: objectives
+        methods:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.assessment_plan.v1.AssessmentMethod'
+          title: methods
+        activities:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.assessment_plan.v1.Activity'
+          title: activities
+      title: LocalDefinitions
+      additionalProperties: false
+      description: LocalDefinitions represents local definitions for the assessment plan
+    oscal.assessment_plan.v1.LocalObjective:
+      type: object
+      properties:
+        controlId:
+          title: control_id
+          $ref: '#/components/schemas/oscal.common.v1.Token'
+        description:
+          title: description
+          $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        parts:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.assessment_plan.v1.Part'
+          title: parts
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: LocalObjective
+      additionalProperties: false
+      description: LocalObjective represents a local control objective
+    oscal.assessment_plan.v1.Part:
+      type: object
+      properties:
+        id:
+          title: id
+          $ref: '#/components/schemas/oscal.common.v1.Token'
+        name:
+          type: string
+          title: name
+        ns:
+          type: string
+          title: ns
+        class:
+          type: string
+          title: class
+        title:
+          title: title
+          $ref: '#/components/schemas/oscal.common.v1.MarkupLine'
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        parts:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.assessment_plan.v1.Part'
+          title: parts
+        prose:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: prose
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: Part
+      additionalProperties: false
+      description: Part represents a part of an objective
+    oscal.assessment_plan.v1.ResponsibleRole:
+      type: object
+      properties:
+        roleId:
+          title: role_id
+          $ref: '#/components/schemas/oscal.common.v1.Token'
+        partyUuids:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.UUID'
+          title: party_uuids
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: ResponsibleRole
+      additionalProperties: false
+      description: ResponsibleRole represents a responsible role
+    oscal.assessment_plan.v1.ReviewedControls:
+      type: object
+      properties:
+        controlSelection:
+          type: string
+          title: control_selection
+        controls:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.assessment_plan.v1.ControlSelection'
+          title: controls
+      title: ReviewedControls
+      additionalProperties: false
+      description: ReviewedControls represents reviewed controls
+    oscal.assessment_plan.v1.Step:
+      type: object
+      properties:
+        uuid:
+          title: uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        title:
+          title: title
+          $ref: '#/components/schemas/oscal.common.v1.MarkupLine'
+        description:
+          title: description
+          $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: Step
+      additionalProperties: false
+      description: Step represents a step in an activity
+    oscal.assessment_plan.v1.SubjectReference:
+      type: object
+      properties:
+        subjectUuid:
+          title: subject_uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        title:
+          title: title
+          $ref: '#/components/schemas/oscal.common.v1.MarkupLine'
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: SubjectReference
+      additionalProperties: false
+      description: SubjectReference represents a subject reference
+    oscal.assessment_plan.v1.Task:
+      type: object
+      properties:
+        uuid:
+          title: uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        type:
+          type: string
+          title: type
+        title:
+          title: title
+          $ref: '#/components/schemas/oscal.common.v1.MarkupLine'
+        description:
+          title: description
+          $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+        subjects:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.assessment_plan.v1.SubjectReference'
+          title: subjects
+        tasks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.assessment_plan.v1.Task'
+          title: tasks
+        associatedActivities:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.assessment_plan.v1.AssociatedActivity'
+          title: associated_activities
+        responsibleRoles:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.assessment_plan.v1.ResponsibleRole'
+          title: responsible_roles
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: Task
+      additionalProperties: false
+      description: Task represents a sub-task
+    oscal.assessment_plan.v1.Term:
+      type: object
+      properties:
+        id:
+          title: id
+          $ref: '#/components/schemas/oscal.common.v1.Token'
+        name:
+          title: name
+          $ref: '#/components/schemas/oscal.common.v1.MarkupLine'
+        definition:
+          title: definition
+          $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: Term
+      additionalProperties: false
+      description: Term represents a defined term
+    oscal.assessment_plan.v1.Terms:
+      type: object
+      properties:
+        terms:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.assessment_plan.v1.Term'
+          title: terms
+      title: Terms
+      additionalProperties: false
+      description: Terms represents assessment plan terms
+    oscal.assessment_plan.v1.User:
+      type: object
+      properties:
+        uuid:
+          title: uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        title:
+          type: string
+          title: title
+        shortName:
+          type: string
+          title: short_name
+        description:
+          title: description
+          $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: User
+      additionalProperties: false
+      description: User represents a system user
+    oscal.assessment_results.v1.AssessmentPlatform:
+      type: object
+      properties:
+        uuid:
+          title: uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        description:
+          title: description
+          $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+        usesComponents:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.assessment_results.v1.UsesComponent'
+          title: uses_components
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: AssessmentPlatform
+      additionalProperties: false
+      description: AssessmentPlatform represents an assessment platform
+    oscal.assessment_results.v1.AssessmentResults:
+      type: object
+      properties:
+        uuid:
+          title: uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        metadata:
+          title: metadata
+          $ref: '#/components/schemas/oscal.common.v1.Metadata'
+        importAp:
+          title: import_ap
+          $ref: '#/components/schemas/oscal.assessment_results.v1.ImportAp'
+        importSsp:
+          title: import_ssp
+          $ref: '#/components/schemas/oscal.assessment_results.v1.ImportSsp'
+        localDefinitions:
+          title: local_definitions
+          $ref: '#/components/schemas/oscal.assessment_results.v1.LocalDefinitions'
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.assessment_results.v1.Result'
+          title: results
+        backMatter:
+          title: back_matter
+          $ref: '#/components/schemas/oscal.common.v1.BackMatter'
+      title: AssessmentResults
+      additionalProperties: false
+      description: AssessmentResults represents assessment results
+    oscal.assessment_results.v1.AssociatedRisk:
+      type: object
+      properties:
+        riskUuid:
+          title: risk_uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: AssociatedRisk
+      additionalProperties: false
+      description: AssociatedRisk represents an associated risk
+    oscal.assessment_results.v1.Component:
+      type: object
+      properties:
+        uuid:
+          title: uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        type:
+          type: string
+          title: type
+        title:
+          type: string
+          title: title
+        description:
+          type: string
+          title: description
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: Component
+      additionalProperties: false
+      description: Component represents a system component
+    oscal.assessment_results.v1.Finding:
+      type: object
+      properties:
+        uuid:
+          title: uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        title:
+          title: title
+          $ref: '#/components/schemas/oscal.common.v1.MarkupLine'
+        description:
+          title: description
+          $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        origins:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.assessment_results.v1.Origin'
+          title: origins
+        target:
+          title: target
+          $ref: '#/components/schemas/oscal.assessment_results.v1.FindingTarget'
+        implementationStatementUuid:
+          title: implementation_statement_uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        relatedObservations:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.assessment_results.v1.RelatedObservation'
+          title: related_observations
+        relatedRisks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.assessment_results.v1.AssociatedRisk'
+          title: related_risks
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: Finding
+      additionalProperties: false
+      description: Finding represents a finding
+    oscal.assessment_results.v1.FindingTarget:
+      type: object
+      properties:
+        type:
+          type: string
+          title: type
+        targetId:
+          title: target_id
+          $ref: '#/components/schemas/oscal.common.v1.Token'
+        title:
+          title: title
+          $ref: '#/components/schemas/oscal.common.v1.MarkupLine'
+        description:
+          title: description
+          $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        status:
+          title: status
+          $ref: '#/components/schemas/oscal.assessment_results.v1.ObjectiveStatus'
+        implementationStatus:
+          title: implementation_status
+          $ref: '#/components/schemas/oscal.assessment_results.v1.ImplementationStatus'
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: FindingTarget
+      additionalProperties: false
+      description: FindingTarget represents a finding target
+    oscal.assessment_results.v1.ImplementationStatus:
+      type: object
+      properties:
+        state:
+          type: string
+          title: state
+        remarks:
+          title: remarks
+          $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+      title: ImplementationStatus
+      additionalProperties: false
+      description: ImplementationStatus represents implementation status
+    oscal.assessment_results.v1.ImportAp:
+      type: object
+      properties:
+        href:
+          title: href
+          $ref: '#/components/schemas/oscal.common.v1.URIReference'
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: ImportAp
+      additionalProperties: false
+      description: ImportAp represents an imported assessment plan
+    oscal.assessment_results.v1.ImportSsp:
+      type: object
+      properties:
+        href:
+          title: href
+          $ref: '#/components/schemas/oscal.common.v1.URIReference'
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: ImportSsp
+      additionalProperties: false
+      description: ImportSsp represents an imported system security plan
+    oscal.assessment_results.v1.InventoryItem:
+      type: object
+      properties:
+        uuid:
+          title: uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        description:
+          title: description
+          $ref: '#/components/schemas/oscal.common.v1.MarkupLine'
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: InventoryItem
+      additionalProperties: false
+      description: InventoryItem represents an inventory item
+    oscal.assessment_results.v1.LocalDefinitions:
+      type: object
+      properties:
+        components:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.assessment_results.v1.Component'
+          title: components
+        inventoryItems:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.assessment_results.v1.InventoryItem'
+          title: inventory_items
+        users:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.assessment_results.v1.User'
+          title: users
+        assessmentPlatforms:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.assessment_results.v1.AssessmentPlatform'
+          title: assessment_platforms
+      title: LocalDefinitions
+      additionalProperties: false
+      description: LocalDefinitions represents local definitions for assessment results
+    oscal.assessment_results.v1.ObjectiveStatus:
+      type: object
+      properties:
+        state:
+          type: string
+          title: state
+        reason:
+          type: string
+          title: reason
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: ObjectiveStatus
+      additionalProperties: false
+      description: ObjectiveStatus represents objective status
+    oscal.assessment_results.v1.Observation:
+      type: object
+      properties:
+        uuid:
+          title: uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        title:
+          title: title
+          $ref: '#/components/schemas/oscal.common.v1.MarkupLine'
+        description:
+          title: description
+          $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        methods:
+          type: array
+          items:
+            type: string
+          title: methods
+        types:
+          type: array
+          items:
+            type: string
+          title: types
+        origins:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.assessment_results.v1.Origin'
+          title: origins
+        subjects:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.assessment_results.v1.SubjectReference'
+          title: subjects
+        relevantEvidence:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.assessment_results.v1.RelevantEvidence'
+          title: relevant_evidence
+        collected:
+          title: collected
+          $ref: '#/components/schemas/oscal.common.v1.DateTime'
+        expires:
+          title: expires
+          $ref: '#/components/schemas/oscal.common.v1.DateTime'
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: Observation
+      additionalProperties: false
+      description: Observation represents an observation
+    oscal.assessment_results.v1.Origin:
+      type: object
+      properties:
+        actors:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.assessment_results.v1.OriginActor'
+          title: actors
+        relatedTasks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.assessment_results.v1.RelatedTask'
+          title: related_tasks
+      title: Origin
+      additionalProperties: false
+      description: Origin represents the origin of a finding
+    oscal.assessment_results.v1.OriginActor:
+      type: object
+      properties:
+        actorUuid:
+          title: actor_uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        title:
+          title: title
+          $ref: '#/components/schemas/oscal.common.v1.MarkupLine'
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: OriginActor
+      additionalProperties: false
+      description: OriginActor represents an originating actor
+    oscal.assessment_results.v1.RelatedObservation:
+      type: object
+      properties:
+        observationUuid:
+          title: observation_uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: RelatedObservation
+      additionalProperties: false
+      description: RelatedObservation represents a related observation
+    oscal.assessment_results.v1.RelatedTask:
+      type: object
+      properties:
+        taskUuid:
+          title: task_uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        title:
+          title: title
+          $ref: '#/components/schemas/oscal.common.v1.MarkupLine'
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: RelatedTask
+      additionalProperties: false
+      description: RelatedTask represents a related task
+    oscal.assessment_results.v1.RelevantEvidence:
+      type: object
+      properties:
+        href:
+          title: href
+          $ref: '#/components/schemas/oscal.common.v1.URIReference'
+        description:
+          title: description
+          $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: RelevantEvidence
+      additionalProperties: false
+      description: RelevantEvidence represents relevant evidence
+    oscal.assessment_results.v1.Result:
+      type: object
+      properties:
+        uuid:
+          title: uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        title:
+          title: title
+          $ref: '#/components/schemas/oscal.common.v1.MarkupLine'
+        description:
+          title: description
+          $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+        start:
+          title: start
+          $ref: '#/components/schemas/oscal.common.v1.DateTime'
+        end:
+          title: end
+          $ref: '#/components/schemas/oscal.common.v1.DateTime'
+        findings:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.assessment_results.v1.Finding'
+          title: findings
+        observations:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.assessment_results.v1.Observation'
+          title: observations
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: Result
+      additionalProperties: false
+      description: Result represents an assessment result
+    oscal.assessment_results.v1.SubjectReference:
+      type: object
+      properties:
+        subjectUuid:
+          title: subject_uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        title:
+          title: title
+          $ref: '#/components/schemas/oscal.common.v1.MarkupLine'
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: SubjectReference
+      additionalProperties: false
+      description: SubjectReference represents a subject reference
+    oscal.assessment_results.v1.User:
+      type: object
+      properties:
+        uuid:
+          title: uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        title:
+          type: string
+          title: title
+        shortName:
+          type: string
+          title: short_name
+        description:
+          title: description
+          $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: User
+      additionalProperties: false
+      description: User represents a system user
+    oscal.assessment_results.v1.UsesComponent:
+      type: object
+      properties:
+        componentUuid:
+          title: component_uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        responsibleParties:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.ResponsibleParty'
+          title: responsible_parties
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: UsesComponent
+      additionalProperties: false
+      description: UsesComponent represents a component used by the assessment platform
+    oscal.catalog.v1.Catalog:
+      type: object
+      properties:
+        uuid:
+          title: uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        metadata:
+          title: metadata
+          $ref: '#/components/schemas/oscal.common.v1.Metadata'
+        params:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.catalog.v1.Parameter'
+          title: params
+        controls:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.catalog.v1.Control'
+          title: controls
+        groups:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.catalog.v1.Group'
+          title: groups
+        backMatter:
+          title: back_matter
+          $ref: '#/components/schemas/oscal.common.v1.BackMatter'
+      title: Catalog
+      additionalProperties: false
+      description: Catalog represents a structured, organized collection of control information
+    oscal.catalog.v1.Constraint:
+      type: object
+      properties:
+        description:
+          type: string
+          title: description
+      title: Constraint
+      additionalProperties: false
+      description: Constraint represents a constraint on a parameter value
+    oscal.catalog.v1.Control:
+      type: object
+      properties:
+        id:
+          title: id
+          $ref: '#/components/schemas/oscal.common.v1.Token'
+        class:
+          type: string
+          title: class
+        title:
+          title: title
+          $ref: '#/components/schemas/oscal.common.v1.MarkupLine'
+        params:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.catalog.v1.Parameter'
+          title: params
+        parts:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.catalog.v1.Part'
+          title: parts
+        controls:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.catalog.v1.Control'
+          title: controls
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: Control
+      additionalProperties: false
+      description: Control represents a security control
+    oscal.catalog.v1.Group:
+      type: object
+      properties:
+        id:
+          title: id
+          $ref: '#/components/schemas/oscal.common.v1.Token'
+        class:
+          type: string
+          title: class
+        title:
+          title: title
+          $ref: '#/components/schemas/oscal.common.v1.MarkupLine'
+        params:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.catalog.v1.Parameter'
+          title: params
+        controls:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.catalog.v1.Control'
+          title: controls
+        groups:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.catalog.v1.Group'
+          title: groups
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: Group
+      additionalProperties: false
+      description: Group represents a group of controls, or of groups of controls
+    oscal.catalog.v1.Parameter:
+      type: object
+      properties:
+        id:
+          title: id
+          $ref: '#/components/schemas/oscal.common.v1.Token'
+        class:
+          type: string
+          title: class
+        label:
+          title: label
+          $ref: '#/components/schemas/oscal.common.v1.MarkupLine'
+        values:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupLine'
+          title: values
+        select:
+          title: select
+          $ref: '#/components/schemas/oscal.catalog.v1.Select'
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+        constraints:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.catalog.v1.Constraint'
+          title: constraints
+        guidance:
+          title: guidance
+          $ref: '#/components/schemas/oscal.common.v1.MarkupLine'
+      title: Parameter
+      additionalProperties: false
+      description: Parameter represents a control parameter
+    oscal.catalog.v1.Part:
+      type: object
+      properties:
+        id:
+          title: id
+          $ref: '#/components/schemas/oscal.common.v1.Token'
+        name:
+          type: string
+          title: name
+        ns:
+          type: string
+          title: ns
+          description: Namespace
+        class:
+          type: string
+          title: class
+        title:
+          title: title
+          $ref: '#/components/schemas/oscal.common.v1.MarkupLine'
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        parts:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.catalog.v1.Part'
+          title: parts
+        prose:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: prose
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: Part
+      additionalProperties: false
+      description: Part represents a part of a control (e.g., statement, objective)
+    oscal.catalog.v1.Select:
+      type: object
+      properties:
+        choices:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupLine'
+          title: choices
+        howMany:
+          type: boolean
+          title: how_many
+      title: Select
+      additionalProperties: false
+      description: Select represents a selection of parameter values
+    oscal.common.v1.AddrLine:
+      type: object
+      properties:
+        value:
+          title: value
+          $ref: '#/components/schemas/oscal.common.v1.MarkupLine'
+      title: AddrLine
+      additionalProperties: false
+      description: AddrLine represents a line of an address
+    oscal.common.v1.Address:
+      type: object
+      properties:
+        addrLines:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.AddrLine'
+          title: addr_lines
+        city:
+          type: string
+          title: city
+        state:
+          type: string
+          title: state
+        postalCode:
+          type: string
+          title: postal_code
+        country:
+          type: string
+          title: country
+      title: Address
+      additionalProperties: false
+      description: Address represents a postal address
+    oscal.common.v1.BackMatter:
+      type: object
+      properties:
+        resources:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Resource'
+          title: resources
+      title: BackMatter
+      additionalProperties: false
+      description: BackMatter represents appendices and resources
+    oscal.common.v1.Base64:
+      type: object
+      properties:
+        value:
+          type: string
+          title: value
+      title: Base64
+      additionalProperties: false
+      description: Base64 represents base64-encoded binary data
+    oscal.common.v1.Date:
+      type: object
+      properties:
+        value:
+          type: string
+          title: value
+      title: Date
+      additionalProperties: false
+      description: Date represents a date without time
+    oscal.common.v1.DateTime:
+      type: object
+      properties:
+        value:
+          title: value
+          $ref: '#/components/schemas/google.protobuf.Timestamp'
+      title: DateTime
+      additionalProperties: false
+      description: DateTime represents a date-time with timezone (RFC3339)
+    oscal.common.v1.DocumentId:
+      type: object
+      properties:
+        scheme:
+          type: string
+          title: scheme
+        identifier:
+          type: string
+          title: identifier
+      title: DocumentId
+      additionalProperties: false
+      description: DocumentId represents a document identifier
+    oscal.common.v1.EmailAddress:
+      type: object
+      properties:
+        value:
+          type: string
+          title: value
+      title: EmailAddress
+      additionalProperties: false
+      description: EmailAddress represents an email address
+    oscal.common.v1.Link:
+      type: object
+      properties:
+        href:
+          title: href
+          $ref: '#/components/schemas/oscal.common.v1.URI'
+        rel:
+          type: string
+          title: rel
+          description: Relationship type
+        mediaType:
+          type: string
+          title: media_type
+          description: Media type (e.g., application/json)
+        text:
+          type: string
+          title: text
+          description: Link text
+        resourceFragment:
+          type: string
+          title: resource_fragment
+          description: Fragment identifier
+      title: Link
+      additionalProperties: false
+      description: Link represents a hyperlink with metadata
+    oscal.common.v1.MarkupLine:
+      type: object
+      properties:
+        value:
+          type: string
+          title: value
+      title: MarkupLine
+      additionalProperties: false
+      description: MarkupLine represents a line of markup text (e.g., markdown)
+    oscal.common.v1.MarkupMultiline:
+      type: object
+      properties:
+        value:
+          type: string
+          title: value
+      title: MarkupMultiline
+      additionalProperties: false
+      description: MarkupMultiline represents multiline markup text
+    oscal.common.v1.Metadata:
+      type: object
+      properties:
+        title:
+          type: string
+          title: title
+        lastModified:
+          title: last_modified
+          $ref: '#/components/schemas/oscal.common.v1.DateTime'
+        version:
+          type: string
+          title: version
+        oscalVersion:
+          type: string
+          title: oscal_version
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        roles:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Role'
+          title: roles
+        parties:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Party'
+          title: parties
+        responsibleParties:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.ResponsibleParty'
+          title: responsible_parties
+        documentId:
+          title: document_id
+          $ref: '#/components/schemas/oscal.common.v1.DocumentId'
+        published:
+          title: published
+          $ref: '#/components/schemas/oscal.common.v1.DateTime'
+        remarks:
+          title: remarks
+          $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+      title: Metadata
+      additionalProperties: false
+      description: Metadata represents document metadata shared across all OSCAL models
+    oscal.common.v1.Party:
+      type: object
+      properties:
+        uuid:
+          title: uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        type:
+          type: string
+          title: type
+        name:
+          type: string
+          title: name
+        shortNames:
+          type: array
+          items:
+            type: string
+          title: short_names
+        address:
+          title: address
+          $ref: '#/components/schemas/oscal.common.v1.Address'
+        emailAddresses:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.EmailAddress'
+          title: email_addresses
+        telephoneNumbers:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.TelephoneNumber'
+          title: telephone_numbers
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        responsibleParties:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.ResponsibleParty'
+          title: responsible_parties
+        remarks:
+          type: array
+          items:
+            type: string
+          title: remarks
+      title: Party
+      additionalProperties: false
+      description: Party represents an organization or person
+    oscal.common.v1.Property:
+      type: object
+      properties:
+        name:
+          type: string
+          title: name
+        value:
+          type: string
+          title: value
+        class:
+          type: string
+          title: class
+          description: Optional classification
+        id:
+          type: string
+          title: id
+          description: Optional identifier
+      title: Property
+      additionalProperties: false
+      description: Property represents a key-value property with optional classification
+    oscal.common.v1.Resource:
+      type: object
+      properties:
+        uuid:
+          title: uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        title:
+          type: array
+          items:
+            type: string
+          title: title
+        description:
+          title: description
+          $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        base64:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Base64'
+          title: base64
+        documentIds:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.DocumentId'
+          title: document_ids
+        remarks:
+          type: array
+          items:
+            type: string
+          title: remarks
+        citation:
+          type: string
+          title: citation
+      title: Resource
+      additionalProperties: false
+      description: Resource represents an external resource
+    oscal.common.v1.ResponsibleParty:
+      type: object
+      properties:
+        roleId:
+          title: role_id
+          $ref: '#/components/schemas/oscal.common.v1.Token'
+        partyUuids:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.UUID'
+          title: party_uuids
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          title: remarks
+          $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+      title: ResponsibleParty
+      additionalProperties: false
+      description: ResponsibleParty represents a party responsible for a role
+    oscal.common.v1.Role:
+      type: object
+      properties:
+        id:
+          title: id
+          $ref: '#/components/schemas/oscal.common.v1.Token'
+        title:
+          type: string
+          title: title
+        shortName:
+          type: string
+          title: short_name
+        description:
+          title: description
+          $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+      title: Role
+      additionalProperties: false
+      description: Role represents a role definition
+    oscal.common.v1.TelephoneNumber:
+      type: object
+      properties:
+        value:
+          type: string
+          title: value
+      title: TelephoneNumber
+      additionalProperties: false
+      description: TelephoneNumber represents a telephone number
+    oscal.common.v1.Token:
+      type: object
+      properties:
+        value:
+          type: string
+          title: value
+      title: Token
+      additionalProperties: false
+      description: Token represents an alphanumeric token (e.g., control IDs)
+    oscal.common.v1.URI:
+      type: object
+      properties:
+        value:
+          type: string
+          title: value
+      title: URI
+      additionalProperties: false
+      description: URI represents a uniform resource identifier
+    oscal.common.v1.URIReference:
+      type: object
+      properties:
+        value:
+          type: string
+          title: value
+      title: URIReference
+      additionalProperties: false
+      description: URIReference represents a URI reference (may be relative)
+    oscal.common.v1.UUID:
+      type: object
+      properties:
+        value:
+          type: string
+          title: value
+      title: UUID
+      additionalProperties: false
+      description: UUID represents a universally unique identifier
+    oscal.component_definition.v1.Capability:
+      type: object
+      properties:
+        uuid:
+          title: uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        name:
+          type: string
+          title: name
+        description:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: description
+        controlImplementations:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.component_definition.v1.ControlImplementation'
+          title: control_implementations
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: Capability
+      additionalProperties: false
+      description: Capability represents a grouping of control implementations
+    oscal.component_definition.v1.ComponentDefinition:
+      type: object
+      properties:
+        uuid:
+          title: uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        metadata:
+          title: metadata
+          $ref: '#/components/schemas/oscal.common.v1.Metadata'
+        importComponentDefinitions:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.component_definition.v1.ImportComponentDefinition'
+          title: import_component_definitions
+        components:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.component_definition.v1.DefinedComponent'
+          title: components
+        capabilities:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.component_definition.v1.Capability'
+          title: capabilities
+        backMatter:
+          title: back_matter
+          $ref: '#/components/schemas/oscal.common.v1.BackMatter'
+      title: ComponentDefinition
+      additionalProperties: false
+      description: ComponentDefinition represents a collection of component descriptions
+    oscal.component_definition.v1.ControlImplementation:
+      type: object
+      properties:
+        controlId:
+          type: string
+          title: control_id
+        description:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupLine'
+          title: description
+        setParameters:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.component_definition.v1.SetParameter'
+          title: set_parameters
+        implementedRequirements:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.component_definition.v1.ImplementedRequirement'
+          title: implemented_requirements
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: ControlImplementation
+      additionalProperties: false
+      description: ControlImplementation represents control implementation by a component
+    oscal.component_definition.v1.DefinedComponent:
+      type: object
+      properties:
+        uuid:
+          title: uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        type:
+          type: string
+          title: type
+        title:
+          title: title
+          $ref: '#/components/schemas/oscal.common.v1.MarkupLine'
+        description:
+          title: description
+          $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+        controlImplementations:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.component_definition.v1.ControlImplementation'
+          title: control_implementations
+        protocols:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.component_definition.v1.Protocol'
+          title: protocols
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+        responsibleParties:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.component_definition.v1.ResponsibleParty'
+          title: responsible_parties
+        supplyChainType:
+          type: array
+          items:
+            type: string
+          title: supply_chain_type
+      title: DefinedComponent
+      additionalProperties: false
+      description: DefinedComponent represents a component description
+    oscal.component_definition.v1.ImplementedRequirement:
+      type: object
+      properties:
+        controlId:
+          type: string
+          title: control_id
+        description:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupLine'
+          title: description
+        statements:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.component_definition.v1.Statement'
+          title: statements
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: ImplementedRequirement
+      additionalProperties: false
+      description: ImplementedRequirement represents a control requirement implementation
+    oscal.component_definition.v1.ImportComponentDefinition:
+      type: object
+      properties:
+        href:
+          title: href
+          $ref: '#/components/schemas/oscal.common.v1.URIReference'
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: ImportComponentDefinition
+      additionalProperties: false
+      description: ImportComponentDefinition loads a component definition from another resource
+    oscal.component_definition.v1.Protocol:
+      type: object
+      properties:
+        uuid:
+          title: uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        name:
+          type: string
+          title: name
+        title:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupLine'
+          title: title
+        description:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: description
+        portNumbers:
+          type: array
+          items:
+            type: string
+          title: port_numbers
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: Protocol
+      additionalProperties: false
+      description: Protocol represents a protocol used by the component
+    oscal.component_definition.v1.ResponsibleParty:
+      type: object
+      properties:
+        roleId:
+          type: string
+          title: role_id
+        partyUuids:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.UUID'
+          title: party_uuids
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: ResponsibleParty
+      additionalProperties: false
+      description: ResponsibleParty represents a party responsible for the component
+    oscal.component_definition.v1.SetParameter:
+      type: object
+      properties:
+        paramId:
+          type: string
+          title: param_id
+        values:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupLine'
+          title: values
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: SetParameter
+      additionalProperties: false
+      description: SetParameter represents parameter value assignments
+    oscal.component_definition.v1.Statement:
+      type: object
+      properties:
+        statementId:
+          type: string
+          title: statement_id
+        uuid:
+          type: string
+          title: uuid
+        description:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupLine'
+          title: description
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+        byComponents:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.component_definition.v1.Statement'
+          title: by_components
+      title: Statement
+      additionalProperties: false
+      description: Statement represents a control implementation statement
+    oscal.mapping.v1.ConfidenceScore:
+      type: object
+      properties:
+        value:
+          type: number
+          title: value
+          format: double
+        method:
+          type: string
+          title: method
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: ConfidenceScore
+      additionalProperties: false
+      description: ConfidenceScore represents a confidence score
+    oscal.mapping.v1.Coverage:
+      type: object
+      properties:
+        value:
+          type: number
+          title: value
+          format: double
+        method:
+          type: string
+          title: method
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: Coverage
+      additionalProperties: false
+      description: Coverage represents coverage information
+    oscal.mapping.v1.Map:
+      type: object
+      properties:
+        uuid:
+          title: uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        ns:
+          type: string
+          title: ns
+        matchingRationale:
+          type: string
+          title: matching_rationale
+        relationship:
+          title: relationship
+          $ref: '#/components/schemas/oscal.common.v1.Token'
+        sources:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.mapping.v1.MappingItem'
+          title: sources
+        targets:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.mapping.v1.MappingItem'
+          title: targets
+        qualifiers:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.mapping.v1.QualifierItem'
+          title: qualifiers
+        confidenceScore:
+          title: confidence_score
+          $ref: '#/components/schemas/oscal.mapping.v1.ConfidenceScore'
+        coverage:
+          title: coverage
+          $ref: '#/components/schemas/oscal.mapping.v1.Coverage'
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: Map
+      additionalProperties: false
+      description: Map represents a mapping entry
+    oscal.mapping.v1.MappingItem:
+      type: object
+      properties:
+        type:
+          type: string
+          title: type
+        idRef:
+          type: string
+          title: id_ref
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: MappingItem
+      additionalProperties: false
+      description: MappingItem represents a mapping entry item (source or target)
+    oscal.mapping.v1.QualifierItem:
+      type: object
+      properties:
+        type:
+          type: string
+          title: type
+        idRef:
+          type: string
+          title: id_ref
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: QualifierItem
+      additionalProperties: false
+      description: QualifierItem represents a qualifier item
+    oscal.poam.v1.Component:
+      type: object
+      properties:
+        uuid:
+          title: uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        type:
+          type: string
+          title: type
+        title:
+          type: string
+          title: title
+        description:
+          type: string
+          title: description
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: Component
+      additionalProperties: false
+      description: Component represents a system component
+    oscal.poam.v1.ImportSsp:
+      type: object
+      properties:
+        href:
+          title: href
+          $ref: '#/components/schemas/oscal.common.v1.URIReference'
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: ImportSsp
+      additionalProperties: false
+      description: ImportSsp represents an imported system security plan
+    oscal.poam.v1.InventoryItem:
+      type: object
+      properties:
+        uuid:
+          title: uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        description:
+          title: description
+          $ref: '#/components/schemas/oscal.common.v1.MarkupLine'
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: InventoryItem
+      additionalProperties: false
+      description: InventoryItem represents an inventory item
+    oscal.poam.v1.LocalDefinitions:
+      type: object
+      properties:
+        components:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.poam.v1.Component'
+          title: components
+        inventoryItems:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.poam.v1.InventoryItem'
+          title: inventory_items
+        users:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.poam.v1.User'
+          title: users
+      title: LocalDefinitions
+      additionalProperties: false
+      description: LocalDefinitions represents local definitions for POAM
+    oscal.poam.v1.LoggedBy:
+      type: object
+      properties:
+        partyUuid:
+          title: party_uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        title:
+          title: title
+          $ref: '#/components/schemas/oscal.common.v1.MarkupLine'
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: LoggedBy
+      additionalProperties: false
+      description: LoggedBy represents who logged the entry
+    oscal.poam.v1.MitigatingFactor:
+      type: object
+      properties:
+        uuid:
+          title: uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        implementationUuid:
+          title: implementation_uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        description:
+          title: description
+          $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        subjects:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.poam.v1.SubjectReference'
+          title: subjects
+      title: MitigatingFactor
+      additionalProperties: false
+      description: MitigatingFactor represents a mitigating factor
+    oscal.poam.v1.PlanOfActionAndMilestones:
+      type: object
+      properties:
+        uuid:
+          title: uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        metadata:
+          title: metadata
+          $ref: '#/components/schemas/oscal.common.v1.Metadata'
+        importSsp:
+          title: import_ssp
+          $ref: '#/components/schemas/oscal.poam.v1.ImportSsp'
+        localDefinitions:
+          title: local_definitions
+          $ref: '#/components/schemas/oscal.poam.v1.LocalDefinitions'
+        risks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.poam.v1.Risk'
+          title: risks
+        backMatter:
+          title: back_matter
+          $ref: '#/components/schemas/oscal.common.v1.BackMatter'
+      title: PlanOfActionAndMilestones
+      additionalProperties: false
+      description: PlanOfActionAndMilestones represents a plan of action and milestones item
+    oscal.poam.v1.RelatedObservation:
+      type: object
+      properties:
+        observationUuid:
+          title: observation_uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: RelatedObservation
+      additionalProperties: false
+      description: RelatedObservation represents a related observation
+    oscal.poam.v1.RelatedResponse:
+      type: object
+      properties:
+        responseUuid:
+          title: response_uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        relatedTasks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.poam.v1.RelatedTask'
+          title: related_tasks
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: RelatedResponse
+      additionalProperties: false
+      description: RelatedResponse represents a related risk response
+    oscal.poam.v1.RelatedTask:
+      type: object
+      properties:
+        taskUuid:
+          title: task_uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        title:
+          title: title
+          $ref: '#/components/schemas/oscal.common.v1.MarkupLine'
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: RelatedTask
+      additionalProperties: false
+      description: RelatedTask represents a related task
+    oscal.poam.v1.Response:
+      type: object
+      properties:
+        uuid:
+          title: uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        title:
+          title: title
+          $ref: '#/components/schemas/oscal.common.v1.MarkupLine'
+        description:
+          title: description
+          $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+        deadline:
+          title: deadline
+          $ref: '#/components/schemas/oscal.common.v1.DateTime'
+        status:
+          title: status
+          $ref: '#/components/schemas/oscal.poam.v1.ResponseStatus'
+        responsibleRoles:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.poam.v1.ResponsibleRole'
+          title: responsible_roles
+        relatedTasks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.poam.v1.RelatedTask'
+          title: related_tasks
+        subjects:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.poam.v1.SubjectReference'
+          title: subjects
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: Response
+      additionalProperties: false
+      description: Response represents a risk response/remediation
+    oscal.poam.v1.ResponseStatus:
+      type: object
+      properties:
+        state:
+          type: string
+          title: state
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: ResponseStatus
+      additionalProperties: false
+      description: ResponseStatus represents response status
+    oscal.poam.v1.ResponsibleRole:
+      type: object
+      properties:
+        roleId:
+          title: role_id
+          $ref: '#/components/schemas/oscal.common.v1.Token'
+        partyUuids:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.UUID'
+          title: party_uuids
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: ResponsibleRole
+      additionalProperties: false
+      description: ResponsibleRole represents a responsible role
+    oscal.poam.v1.Risk:
+      type: object
+      properties:
+        uuid:
+          title: uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        title:
+          title: title
+          $ref: '#/components/schemas/oscal.common.v1.MarkupLine'
+        description:
+          title: description
+          $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+        statement:
+          title: statement
+          $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+        status:
+          title: status
+          $ref: '#/components/schemas/oscal.poam.v1.RiskStatus'
+        mitigatingFactors:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.poam.v1.MitigatingFactor'
+          title: mitigating_factors
+        deadline:
+          title: deadline
+          $ref: '#/components/schemas/oscal.common.v1.DateTime'
+        remediations:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.poam.v1.Response'
+          title: remediations
+        riskLog:
+          title: risk_log
+          $ref: '#/components/schemas/oscal.poam.v1.RiskLog'
+        relatedObservations:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.poam.v1.RelatedObservation'
+          title: related_observations
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: Risk
+      additionalProperties: false
+      description: Risk represents a risk
+    oscal.poam.v1.RiskLog:
+      type: object
+      properties:
+        entries:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.poam.v1.RiskLogEntry'
+          title: entries
+      title: RiskLog
+      additionalProperties: false
+      description: RiskLog represents a risk log
+    oscal.poam.v1.RiskLogEntry:
+      type: object
+      properties:
+        uuid:
+          title: uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        title:
+          title: title
+          $ref: '#/components/schemas/oscal.common.v1.MarkupLine'
+        description:
+          title: description
+          $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+        start:
+          title: start
+          $ref: '#/components/schemas/oscal.common.v1.DateTime'
+        end:
+          title: end
+          $ref: '#/components/schemas/oscal.common.v1.DateTime'
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        loggedBy:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.poam.v1.LoggedBy'
+          title: logged_by
+        statusChange:
+          title: status_change
+          $ref: '#/components/schemas/oscal.poam.v1.RiskStatus'
+        relatedResponses:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.poam.v1.RelatedResponse'
+          title: related_responses
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: RiskLogEntry
+      additionalProperties: false
+      description: RiskLogEntry represents a risk log entry
+    oscal.poam.v1.RiskStatus:
+      type: object
+      properties:
+        state:
+          type: string
+          title: state
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: RiskStatus
+      additionalProperties: false
+      description: RiskStatus represents risk status
+    oscal.poam.v1.SubjectReference:
+      type: object
+      properties:
+        subjectUuid:
+          title: subject_uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        title:
+          title: title
+          $ref: '#/components/schemas/oscal.common.v1.MarkupLine'
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: SubjectReference
+      additionalProperties: false
+      description: SubjectReference represents a subject reference
+    oscal.poam.v1.User:
+      type: object
+      properties:
+        uuid:
+          title: uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        title:
+          type: string
+          title: title
+        shortName:
+          type: string
+          title: short_name
+        description:
+          title: description
+          $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: User
+      additionalProperties: false
+      description: User represents a system user
+    oscal.profile.v1.Add:
+      type: object
+      properties:
+        itemName:
+          type: string
+          title: item_name
+        position:
+          type: string
+          title: position
+        parts:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.catalog.v1.Part'
+          title: parts
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        params:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.catalog.v1.Parameter'
+          title: params
+        withIds:
+          type: array
+          items:
+            type: string
+          title: with_ids
+        withClass:
+          type: array
+          items:
+            type: string
+          title: with_class
+      title: Add
+      additionalProperties: false
+      description: Add represents addition of control content
+    oscal.profile.v1.AddControls:
+      type: object
+      properties:
+        controls:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.catalog.v1.Control'
+          title: controls
+        withIds:
+          type: array
+          items:
+            type: string
+          title: with_ids
+        withClass:
+          type: array
+          items:
+            type: string
+          title: with_class
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: AddControls
+      additionalProperties: false
+      description: AddControls represents addition of new controls
+    oscal.profile.v1.Alter:
+      type: object
+      properties:
+        controlId:
+          type: string
+          title: control_id
+        removes:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.profile.v1.Remove'
+          title: removes
+        adds:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.profile.v1.Add'
+          title: adds
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: Alter
+      additionalProperties: false
+      description: Alter represents a specific alteration to a control
+    oscal.profile.v1.AlterControls:
+      type: object
+      properties:
+        controlAlterations:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.profile.v1.Alter'
+          title: control_alterations
+        withIds:
+          type: array
+          items:
+            type: string
+          title: with_ids
+        withClass:
+          type: array
+          items:
+            type: string
+          title: with_class
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: AlterControls
+      additionalProperties: false
+      description: AlterControls represents alterations to controls
+    oscal.profile.v1.Combine:
+      type: object
+      properties:
+        method:
+          type: string
+          title: method
+        flat:
+          type: boolean
+          title: flat
+        asIs:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupLine'
+          title: as_is
+      title: Combine
+      additionalProperties: false
+      description: Combine represents combine method for merging
+    oscal.profile.v1.Custom:
+      type: object
+      properties:
+        withIds:
+          type: array
+          items:
+            type: string
+          title: with_ids
+        withClass:
+          type: array
+          items:
+            type: string
+          title: with_class
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: Custom
+      additionalProperties: false
+      description: Custom represents custom control additions
+    oscal.profile.v1.ExcludeControls:
+      type: object
+      properties:
+        withIds:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.catalog.v1.Control'
+          title: with_ids
+        withClass:
+          type: array
+          items:
+            type: string
+          title: with_class
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: ExcludeControls
+      additionalProperties: false
+      description: ExcludeControls represents controls to exclude from the imported resource
+    oscal.profile.v1.Import:
+      type: object
+      properties:
+        href:
+          title: href
+          $ref: '#/components/schemas/oscal.common.v1.URIReference'
+        includeAll:
+          title: include_all
+          $ref: '#/components/schemas/oscal.profile.v1.IncludeAll'
+        excludeControls:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.profile.v1.ExcludeControls'
+          title: exclude_controls
+        custom:
+          title: custom
+          $ref: '#/components/schemas/oscal.profile.v1.Custom'
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: Import
+      additionalProperties: false
+      description: Import represents a reference to a source catalog or profile
+    oscal.profile.v1.IncludeAll:
+      type: object
+      properties:
+        params:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.catalog.v1.Parameter'
+          title: params
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: IncludeAll
+      additionalProperties: false
+      description: IncludeAll represents including all controls from the imported resource
+    oscal.profile.v1.Merge:
+      type: object
+      properties:
+        custom:
+          title: custom
+          $ref: '#/components/schemas/oscal.profile.v1.Custom'
+        combine:
+          title: combine
+          $ref: '#/components/schemas/oscal.profile.v1.Combine'
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: Merge
+      additionalProperties: false
+      description: Merge represents merge instructions for combining imports
+    oscal.profile.v1.Modify:
+      type: object
+      properties:
+        setParameters:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.profile.v1.SetParameters'
+          title: set_parameters
+        alterControls:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.profile.v1.AlterControls'
+          title: alter_controls
+        addControls:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.profile.v1.AddControls'
+          title: add_controls
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: Modify
+      additionalProperties: false
+      description: Modify represents modifications to controls
+    oscal.profile.v1.Profile:
+      type: object
+      properties:
+        uuid:
+          title: uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        metadata:
+          title: metadata
+          $ref: '#/components/schemas/oscal.common.v1.Metadata'
+        imports:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.profile.v1.Import'
+          title: imports
+        merge:
+          title: merge
+          $ref: '#/components/schemas/oscal.profile.v1.Merge'
+        modify:
+          title: modify
+          $ref: '#/components/schemas/oscal.profile.v1.Modify'
+        backMatter:
+          title: back_matter
+          $ref: '#/components/schemas/oscal.common.v1.BackMatter'
+      title: Profile
+      additionalProperties: false
+      description: Profile represents an OSCAL profile that tailors controls from catalogs or other profiles
+    oscal.profile.v1.Remove:
+      type: object
+      properties:
+        itemName:
+          type: string
+          title: item_name
+        withIds:
+          type: array
+          items:
+            type: string
+          title: with_ids
+        withClass:
+          type: array
+          items:
+            type: string
+          title: with_class
+        withName:
+          type: array
+          items:
+            type: string
+          title: with_name
+        withNs:
+          type: array
+          items:
+            type: string
+          title: with_ns
+      title: Remove
+      additionalProperties: false
+      description: Remove represents removal of control content
+    oscal.profile.v1.SetParameters:
+      type: object
+      properties:
+        params:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.catalog.v1.Parameter'
+          title: params
+        withIds:
+          type: array
+          items:
+            type: string
+          title: with_ids
+        withClass:
+          type: array
+          items:
+            type: string
+          title: with_class
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: SetParameters
+      additionalProperties: false
+      description: SetParameters represents parameter value assignments
+    oscal.services.v1.BulkIngestFrameworksRequest:
+      type: object
+      properties:
+        githubOwner:
+          type: string
+          title: github_owner
+        githubRepo:
+          type: string
+          title: github_repo
+        githubPath:
+          type: string
+          title: github_path
+        filter:
+          type: string
+          title: filter
+          description: comma-separated ref_id prefixes or glob patterns
+        dryRun:
+          type: boolean
+          title: dry_run
+      title: BulkIngestFrameworksRequest
+      additionalProperties: false
+      description: '--- Framework Ingestion messages ---'
+    oscal.services.v1.BulkIngestFrameworksResponse:
+      type: object
+      properties:
+        frameworks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.services.v1.FrameworkSummary'
+          title: frameworks
+        totalNodes:
+          type: integer
+          title: total_nodes
+          format: int32
+        totalConflicts:
+          type: integer
+          title: total_conflicts
+          format: int32
+      title: BulkIngestFrameworksResponse
+      additionalProperties: false
+    oscal.services.v1.CreateEntityRequest:
+      type: object
+      properties:
+        entity:
+          title: entity
+          $ref: '#/components/schemas/oscal.services.v1.Entity'
+      title: CreateEntityRequest
+      additionalProperties: false
+    oscal.services.v1.CreateEntityResponse:
+      type: object
+      properties:
+        entity:
+          title: entity
+          $ref: '#/components/schemas/oscal.services.v1.Entity'
+      title: CreateEntityResponse
+      additionalProperties: false
+    oscal.services.v1.CreateReleaseRequest:
+      type: object
+      properties:
+        name:
+          type: string
+          title: name
+        snapshotName:
+          type: string
+          title: snapshot_name
+      title: CreateReleaseRequest
+      additionalProperties: false
+      description: '--- Release messages ---'
+    oscal.services.v1.CreateReleaseResponse:
+      type: object
+      properties:
+        name:
+          type: string
+          title: name
+        snapshotName:
+          type: string
+          title: snapshot_name
+      title: CreateReleaseResponse
+      additionalProperties: false
+    oscal.services.v1.CreateSnapshotRequest:
+      type: object
+      properties:
+        name:
+          type: string
+          title: name
+      title: CreateSnapshotRequest
+      additionalProperties: false
+      description: '--- Snapshot messages ---'
+    oscal.services.v1.CreateSnapshotResponse:
+      type: object
+      properties:
+        name:
+          type: string
+          title: name
+        entityCount:
+          type: integer
+          title: entity_count
+          format: int32
+      title: CreateSnapshotResponse
+      additionalProperties: false
+    oscal.services.v1.Entity:
+      type: object
+      properties:
+        urn:
+          type: string
+          title: urn
+        type:
+          type: string
+          title: type
+        version:
+          type: string
+          title: version
+        status:
+          type: string
+          title: status
+        payload:
+          type: string
+          title: payload
+          description: JSON-LD blob
+      title: Entity
+      additionalProperties: false
+      description: '--- Entity messages ---'
+    oscal.services.v1.FrameworkSummary:
+      type: object
+      properties:
+        refId:
+          type: string
+          title: ref_id
+        name:
+          type: string
+          title: name
+        provider:
+          type: string
+          title: provider
+        jurisdiction:
+          type: string
+          title: jurisdiction
+        nodeCount:
+          type: integer
+          title: node_count
+          format: int32
+        assessableCount:
+          type: integer
+          title: assessable_count
+          format: int32
+        version:
+          type: string
+          title: version
+      title: FrameworkSummary
+      additionalProperties: false
+    oscal.services.v1.GenerateAssessmentPlanRequest:
+      type: object
+      properties:
+        snapshotName:
+          type: string
+          title: snapshot_name
+        framework:
+          type: string
+          title: framework
+      title: GenerateAssessmentPlanRequest
+      additionalProperties: false
+    oscal.services.v1.GenerateAssessmentPlanResponse:
+      type: object
+      properties:
+        assessmentPlan:
+          title: assessment_plan
+          $ref: '#/components/schemas/oscal.assessment_plan.v1.AssessmentPlan'
+      title: GenerateAssessmentPlanResponse
+      additionalProperties: false
+    oscal.services.v1.GenerateAssessmentResultsRequest:
+      type: object
+      properties:
+        snapshotName:
+          type: string
+          title: snapshot_name
+        framework:
+          type: string
+          title: framework
+      title: GenerateAssessmentResultsRequest
+      additionalProperties: false
+    oscal.services.v1.GenerateAssessmentResultsResponse:
+      type: object
+      properties:
+        assessmentResults:
+          title: assessment_results
+          $ref: '#/components/schemas/oscal.assessment_results.v1.AssessmentResults'
+      title: GenerateAssessmentResultsResponse
+      additionalProperties: false
+    oscal.services.v1.GenerateCatalogRequest:
+      type: object
+      properties:
+        snapshotName:
+          type: string
+          title: snapshot_name
+        framework:
+          type: string
+          title: framework
+      title: GenerateCatalogRequest
+      additionalProperties: false
+      description: '--- OSCAL Generation messages ---'
+    oscal.services.v1.GenerateCatalogResponse:
+      type: object
+      properties:
+        catalog:
+          title: catalog
+          $ref: '#/components/schemas/oscal.catalog.v1.Catalog'
+      title: GenerateCatalogResponse
+      additionalProperties: false
+    oscal.services.v1.GenerateComponentDefinitionRequest:
+      type: object
+      properties:
+        snapshotName:
+          type: string
+          title: snapshot_name
+        framework:
+          type: string
+          title: framework
+      title: GenerateComponentDefinitionRequest
+      additionalProperties: false
+    oscal.services.v1.GenerateComponentDefinitionResponse:
+      type: object
+      properties:
+        componentDefinition:
+          title: component_definition
+          $ref: '#/components/schemas/oscal.component_definition.v1.ComponentDefinition'
+      title: GenerateComponentDefinitionResponse
+      additionalProperties: false
+    oscal.services.v1.GenerateCrossFrameworkMappingsRequest:
+      type: object
+      properties:
+        sourceFramework:
+          type: string
+          title: source_framework
+        targetFramework:
+          type: string
+          title: target_framework
+        snapshotName:
+          type: string
+          title: snapshot_name
+      title: GenerateCrossFrameworkMappingsRequest
+      additionalProperties: false
+      description: '--- Cross-Framework Mapping messages ---'
+    oscal.services.v1.GenerateCrossFrameworkMappingsResponse:
+      type: object
+      properties:
+        maps:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.mapping.v1.Map'
+          title: maps
+      title: GenerateCrossFrameworkMappingsResponse
+      additionalProperties: false
+    oscal.services.v1.GenerateMappingsRequest:
+      type: object
+      properties:
+        snapshotName:
+          type: string
+          title: snapshot_name
+      title: GenerateMappingsRequest
+      additionalProperties: false
+    oscal.services.v1.GenerateMappingsResponse:
+      type: object
+      properties:
+        maps:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.mapping.v1.Map'
+          title: maps
+      title: GenerateMappingsResponse
+      additionalProperties: false
+    oscal.services.v1.GeneratePOAMRequest:
+      type: object
+      properties:
+        snapshotName:
+          type: string
+          title: snapshot_name
+        framework:
+          type: string
+          title: framework
+      title: GeneratePOAMRequest
+      additionalProperties: false
+    oscal.services.v1.GeneratePOAMResponse:
+      type: object
+      properties:
+        poam:
+          title: poam
+          $ref: '#/components/schemas/oscal.poam.v1.PlanOfActionAndMilestones'
+      title: GeneratePOAMResponse
+      additionalProperties: false
+    oscal.services.v1.GenerateProfileRequest:
+      type: object
+      properties:
+        snapshotName:
+          type: string
+          title: snapshot_name
+        framework:
+          type: string
+          title: framework
+        selectedControls:
+          type: array
+          items:
+            type: string
+          title: selected_controls
+      title: GenerateProfileRequest
+      additionalProperties: false
+    oscal.services.v1.GenerateProfileResponse:
+      type: object
+      properties:
+        profile:
+          title: profile
+          $ref: '#/components/schemas/oscal.profile.v1.Profile'
+      title: GenerateProfileResponse
+      additionalProperties: false
+    oscal.services.v1.GenerateSSPRequest:
+      type: object
+      properties:
+        snapshotName:
+          type: string
+          title: snapshot_name
+        framework:
+          type: string
+          title: framework
+      title: GenerateSSPRequest
+      additionalProperties: false
+    oscal.services.v1.GenerateSSPResponse:
+      type: object
+      properties:
+        ssp:
+          title: ssp
+          $ref: '#/components/schemas/oscal.ssp.v1.SystemSecurityPlan'
+      title: GenerateSSPResponse
+      additionalProperties: false
+    oscal.services.v1.GetEntityRequest:
+      type: object
+      properties:
+        urn:
+          type: string
+          title: urn
+      title: GetEntityRequest
+      additionalProperties: false
+    oscal.services.v1.GetEntityResponse:
+      type: object
+      properties:
+        entity:
+          title: entity
+          $ref: '#/components/schemas/oscal.services.v1.Entity'
+      title: GetEntityResponse
+      additionalProperties: false
+    oscal.services.v1.GetFrameworkRequest:
+      type: object
+      properties:
+        refId:
+          type: string
+          title: ref_id
+      title: GetFrameworkRequest
+      additionalProperties: false
+    oscal.services.v1.GetFrameworkResponse:
+      type: object
+      properties:
+        framework:
+          title: framework
+          $ref: '#/components/schemas/oscal.services.v1.FrameworkSummary'
+      title: GetFrameworkResponse
+      additionalProperties: false
+    oscal.services.v1.GetSnapshotRequest:
+      type: object
+      properties:
+        name:
+          type: string
+          title: name
+      title: GetSnapshotRequest
+      additionalProperties: false
+    oscal.services.v1.GetSnapshotResponse:
+      type: object
+      properties:
+        entities:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.services.v1.Entity'
+          title: entities
+      title: GetSnapshotResponse
+      additionalProperties: false
+    oscal.services.v1.IngestRequirementsRequest:
+      type: object
+      properties:
+        rawData:
+          type: string
+          title: raw_data
+          format: byte
+        format:
+          type: string
+          title: format
+          description: e.g. "eu-ai-act-json"
+        framework:
+          type: string
+          title: framework
+      title: IngestRequirementsRequest
+      additionalProperties: false
+      description: '--- Ingestion messages ---'
+    oscal.services.v1.IngestRequirementsResponse:
+      type: object
+      properties:
+        created:
+          type: integer
+          title: created
+          format: int32
+        updated:
+          type: integer
+          title: updated
+          format: int32
+        conflicts:
+          type: integer
+          title: conflicts
+          format: int32
+      title: IngestRequirementsResponse
+      additionalProperties: false
+    oscal.services.v1.ListConflictsRequest:
+      type: object
+      properties:
+        pageSize:
+          type: integer
+          title: page_size
+          format: int32
+        pageToken:
+          type: string
+          title: page_token
+      title: ListConflictsRequest
+      additionalProperties: false
+    oscal.services.v1.ListConflictsResponse:
+      type: object
+      properties:
+        conflicts:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.services.v1.Entity'
+          title: conflicts
+      title: ListConflictsResponse
+      additionalProperties: false
+    oscal.services.v1.ListEntitiesRequest:
+      type: object
+      properties:
+        typeFilter:
+          type: string
+          title: type_filter
+        statusFilter:
+          type: string
+          title: status_filter
+        pageSize:
+          type: integer
+          title: page_size
+          format: int32
+        pageToken:
+          type: string
+          title: page_token
+      title: ListEntitiesRequest
+      additionalProperties: false
+    oscal.services.v1.ListEntitiesResponse:
+      type: object
+      properties:
+        entities:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.services.v1.Entity'
+          title: entities
+        nextPageToken:
+          type: string
+          title: next_page_token
+      title: ListEntitiesResponse
+      additionalProperties: false
+    oscal.services.v1.ListFrameworksRequest:
+      type: object
+      properties:
+        jurisdictionFilter:
+          type: string
+          title: jurisdiction_filter
+        pageSize:
+          type: integer
+          title: page_size
+          format: int32
+        pageToken:
+          type: string
+          title: page_token
+      title: ListFrameworksRequest
+      additionalProperties: false
+    oscal.services.v1.ListFrameworksResponse:
+      type: object
+      properties:
+        frameworks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.services.v1.FrameworkSummary'
+          title: frameworks
+        nextPageToken:
+          type: string
+          title: next_page_token
+      title: ListFrameworksResponse
+      additionalProperties: false
+    oscal.services.v1.ListReleasesRequest:
+      type: object
+      properties:
+        pageSize:
+          type: integer
+          title: page_size
+          format: int32
+        pageToken:
+          type: string
+          title: page_token
+      title: ListReleasesRequest
+      additionalProperties: false
+    oscal.services.v1.ListReleasesResponse:
+      type: object
+      properties:
+        names:
+          type: array
+          items:
+            type: string
+          title: names
+      title: ListReleasesResponse
+      additionalProperties: false
+    oscal.services.v1.ListSnapshotsRequest:
+      type: object
+      properties:
+        pageSize:
+          type: integer
+          title: page_size
+          format: int32
+        pageToken:
+          type: string
+          title: page_token
+      title: ListSnapshotsRequest
+      additionalProperties: false
+    oscal.services.v1.ListSnapshotsResponse:
+      type: object
+      properties:
+        names:
+          type: array
+          items:
+            type: string
+          title: names
+      title: ListSnapshotsResponse
+      additionalProperties: false
+    oscal.services.v1.ProposeMappingUpdateRequest:
+      type: object
+      properties:
+        repoOwner:
+          type: string
+          title: repo_owner
+        repoName:
+          type: string
+          title: repo_name
+        baseBranch:
+          type: string
+          title: base_branch
+        headBranch:
+          type: string
+          title: head_branch
+        title:
+          type: string
+          title: title
+        body:
+          type: string
+          title: body
+      title: ProposeMappingUpdateRequest
+      additionalProperties: false
+    oscal.services.v1.ProposeMappingUpdateResponse:
+      type: object
+      properties:
+        pullRequestUrl:
+          type: string
+          title: pull_request_url
+        pullRequestNumber:
+          type: integer
+          title: pull_request_number
+          format: int32
+      title: ProposeMappingUpdateResponse
+      additionalProperties: false
+    oscal.services.v1.ProposeRequest:
+      type: object
+      properties:
+        proposals:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.services.v1.Entity'
+          title: proposals
+      title: ProposeRequest
+      additionalProperties: false
+      description: '--- Reconciler messages ---'
+    oscal.services.v1.ProposeResponse:
+      type: object
+      properties:
+        accepted:
+          type: integer
+          title: accepted
+          format: int32
+        conflicts:
+          type: integer
+          title: conflicts
+          format: int32
+      title: ProposeResponse
+      additionalProperties: false
+    oscal.services.v1.PublishReleaseRequest:
+      type: object
+      properties:
+        repoOwner:
+          type: string
+          title: repo_owner
+        repoName:
+          type: string
+          title: repo_name
+        tagName:
+          type: string
+          title: tag_name
+        targetCommitish:
+          type: string
+          title: target_commitish
+        releaseName:
+          type: string
+          title: release_name
+        body:
+          type: string
+          title: body
+        assetPaths:
+          type: array
+          items:
+            type: string
+          title: asset_paths
+      title: PublishReleaseRequest
+      additionalProperties: false
+      description: '--- GitOps messages ---'
+    oscal.services.v1.PublishReleaseResponse:
+      type: object
+      properties:
+        releaseUrl:
+          type: string
+          title: release_url
+        uploadUrl:
+          type: string
+          title: upload_url
+      title: PublishReleaseResponse
+      additionalProperties: false
+    oscal.services.v1.ResolveConflictRequest:
+      type: object
+      properties:
+        conflictUrn:
+          type: string
+          title: conflict_urn
+        resolution:
+          type: string
+          title: resolution
+          description: JSON-LD blob describing resolution
+      title: ResolveConflictRequest
+      additionalProperties: false
+    oscal.services.v1.ResolveConflictResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          title: success
+      title: ResolveConflictResponse
+      additionalProperties: false
+    oscal.services.v1.SemanticSearchRequest:
+      type: object
+      properties:
+        query:
+          type: string
+          title: query
+        framework:
+          type: string
+          title: framework
+        topK:
+          type: integer
+          title: top_k
+          format: int32
+      title: SemanticSearchRequest
+      additionalProperties: false
+      description: '--- Semantic Search messages ---'
+    oscal.services.v1.SemanticSearchResponse:
+      type: object
+      properties:
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.services.v1.SemanticSearchResult'
+          title: results
+      title: SemanticSearchResponse
+      additionalProperties: false
+    oscal.services.v1.SemanticSearchResult:
+      type: object
+      properties:
+        entityUrn:
+          type: string
+          title: entity_urn
+        entityType:
+          type: string
+          title: entity_type
+        content:
+          type: string
+          title: content
+        score:
+          type: number
+          title: score
+          format: double
+      title: SemanticSearchResult
+      additionalProperties: false
+    oscal.services.v1.UpdateEntityRequest:
+      type: object
+      properties:
+        entity:
+          title: entity
+          $ref: '#/components/schemas/oscal.services.v1.Entity'
+      title: UpdateEntityRequest
+      additionalProperties: false
+    oscal.services.v1.UpdateEntityResponse:
+      type: object
+      properties:
+        entity:
+          title: entity
+          $ref: '#/components/schemas/oscal.services.v1.Entity'
+      title: UpdateEntityResponse
+      additionalProperties: false
+    oscal.ssp.v1.AuthorizationBoundary:
+      type: object
+      properties:
+        description:
+          title: description
+          $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        diagrams:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.ssp.v1.Diagram'
+          title: diagrams
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: AuthorizationBoundary
+      additionalProperties: false
+      description: AuthorizationBoundary represents authorization boundary
+    oscal.ssp.v1.ByComponent:
+      type: object
+      properties:
+        componentUuid:
+          title: component_uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        uuid:
+          title: uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        description:
+          title: description
+          $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        setParameters:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.ssp.v1.SetParameter'
+          title: set_parameters
+        implementationStatus:
+          title: implementation_status
+          $ref: '#/components/schemas/oscal.ssp.v1.ImplementationStatus'
+        export:
+          title: export
+          $ref: '#/components/schemas/oscal.ssp.v1.Export'
+        inherited:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.ssp.v1.Inherited'
+          title: inherited
+        satisfied:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.ssp.v1.Satisfied'
+          title: satisfied
+        responsibleRoles:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.ssp.v1.ResponsibleRole'
+          title: responsible_roles
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: ByComponent
+      additionalProperties: false
+      description: ByComponent represents component control implementation
+    oscal.ssp.v1.Categorization:
+      type: object
+      properties:
+        system:
+          type: string
+          title: system
+        informationTypeIds:
+          type: array
+          items:
+            type: string
+          title: information_type_ids
+      title: Categorization
+      additionalProperties: false
+      description: Categorization represents an information type categorization
+    oscal.ssp.v1.ControlImplementation:
+      type: object
+      properties:
+        description:
+          title: description
+          $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+        setParameters:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.ssp.v1.SetParameter'
+          title: set_parameters
+        implementedRequirements:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.ssp.v1.ImplementedRequirement'
+          title: implemented_requirements
+      title: ControlImplementation
+      additionalProperties: false
+      description: ControlImplementation represents control implementation
+    oscal.ssp.v1.DataFlow:
+      type: object
+      properties:
+        description:
+          title: description
+          $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        diagrams:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.ssp.v1.Diagram'
+          title: diagrams
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: DataFlow
+      additionalProperties: false
+      description: DataFlow represents data flow
+    oscal.ssp.v1.Diagram:
+      type: object
+      properties:
+        uuid:
+          title: uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        description:
+          title: description
+          $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        caption:
+          title: caption
+          $ref: '#/components/schemas/oscal.common.v1.MarkupLine'
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: Diagram
+      additionalProperties: false
+      description: Diagram represents a diagram
+    oscal.ssp.v1.Export:
+      type: object
+      properties:
+        description:
+          title: description
+          $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        provided:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.ssp.v1.Provided'
+          title: provided
+        responsibilities:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.ssp.v1.Responsibility'
+          title: responsibilities
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: Export
+      additionalProperties: false
+      description: Export represents export information
+    oscal.ssp.v1.Impact:
+      type: object
+      properties:
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        base:
+          type: string
+          title: base
+        selected:
+          type: string
+          title: selected
+        adjustmentJustification:
+          title: adjustment_justification
+          $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+      title: Impact
+      additionalProperties: false
+      description: Impact represents an impact level
+    oscal.ssp.v1.ImplementationStatus:
+      type: object
+      properties:
+        state:
+          type: string
+          title: state
+        remarks:
+          title: remarks
+          $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+      title: ImplementationStatus
+      additionalProperties: false
+      description: ImplementationStatus represents implementation status
+    oscal.ssp.v1.ImplementedRequirement:
+      type: object
+      properties:
+        uuid:
+          title: uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        controlId:
+          title: control_id
+          $ref: '#/components/schemas/oscal.common.v1.Token'
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        setParameters:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.ssp.v1.SetParameter'
+          title: set_parameters
+        responsibleRoles:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.ssp.v1.ResponsibleRole'
+          title: responsible_roles
+        statements:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.ssp.v1.Statement'
+          title: statements
+        byComponents:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.ssp.v1.ByComponent'
+          title: by_components
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: ImplementedRequirement
+      additionalProperties: false
+      description: ImplementedRequirement represents an implemented requirement
+    oscal.ssp.v1.ImportProfile:
+      type: object
+      properties:
+        href:
+          title: href
+          $ref: '#/components/schemas/oscal.common.v1.URIReference'
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: ImportProfile
+      additionalProperties: false
+      description: ImportProfile represents an imported OSCAL profile
+    oscal.ssp.v1.InformationType:
+      type: object
+      properties:
+        uuid:
+          title: uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        title:
+          title: title
+          $ref: '#/components/schemas/oscal.common.v1.MarkupLine'
+        description:
+          title: description
+          $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+        categorizations:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.ssp.v1.Categorization'
+          title: categorizations
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        confidentialityImpact:
+          title: confidentiality_impact
+          $ref: '#/components/schemas/oscal.ssp.v1.Impact'
+        integrityImpact:
+          title: integrity_impact
+          $ref: '#/components/schemas/oscal.ssp.v1.Impact'
+        availabilityImpact:
+          title: availability_impact
+          $ref: '#/components/schemas/oscal.ssp.v1.Impact'
+      title: InformationType
+      additionalProperties: false
+      description: InformationType represents an information type
+    oscal.ssp.v1.Inherited:
+      type: object
+      properties:
+        uuid:
+          title: uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        providedUuid:
+          title: provided_uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        description:
+          title: description
+          $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        responsibleRoles:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.ssp.v1.ResponsibleRole'
+          title: responsible_roles
+      title: Inherited
+      additionalProperties: false
+      description: Inherited represents inherited control implementation
+    oscal.ssp.v1.InventoryItem:
+      type: object
+      properties:
+        uuid:
+          title: uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        description:
+          title: description
+          $ref: '#/components/schemas/oscal.common.v1.MarkupLine'
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: InventoryItem
+      additionalProperties: false
+      description: InventoryItem represents an inventory item
+    oscal.ssp.v1.LeveragedAuthorization:
+      type: object
+      properties:
+        uuid:
+          title: uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        title:
+          title: title
+          $ref: '#/components/schemas/oscal.common.v1.MarkupLine'
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        partyUuid:
+          title: party_uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        dateAuthorized:
+          title: date_authorized
+          $ref: '#/components/schemas/oscal.common.v1.Date'
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: LeveragedAuthorization
+      additionalProperties: false
+      description: LeveragedAuthorization represents a leveraged authorization
+    oscal.ssp.v1.NetworkArchitecture:
+      type: object
+      properties:
+        description:
+          title: description
+          $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        diagrams:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.ssp.v1.Diagram'
+          title: diagrams
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: NetworkArchitecture
+      additionalProperties: false
+      description: NetworkArchitecture represents network architecture
+    oscal.ssp.v1.Provided:
+      type: object
+      properties:
+        uuid:
+          title: uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        description:
+          title: description
+          $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        responsibleRoles:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.ssp.v1.ResponsibleRole'
+          title: responsible_roles
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: Provided
+      additionalProperties: false
+      description: Provided represents provided control implementation
+    oscal.ssp.v1.Responsibility:
+      type: object
+      properties:
+        uuid:
+          title: uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        providedUuid:
+          title: provided_uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        description:
+          title: description
+          $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        responsibleRoles:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.ssp.v1.ResponsibleRole'
+          title: responsible_roles
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: Responsibility
+      additionalProperties: false
+      description: Responsibility represents a control implementation responsibility
+    oscal.ssp.v1.ResponsibleRole:
+      type: object
+      properties:
+        roleId:
+          title: role_id
+          $ref: '#/components/schemas/oscal.common.v1.Token'
+        partyUuids:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.UUID'
+          title: party_uuids
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: ResponsibleRole
+      additionalProperties: false
+      description: ResponsibleRole represents a responsible role
+    oscal.ssp.v1.Satisfied:
+      type: object
+      properties:
+        uuid:
+          title: uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        responsibilityUuid:
+          title: responsibility_uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        description:
+          title: description
+          $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        responsibleRoles:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.ssp.v1.ResponsibleRole'
+          title: responsible_roles
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: Satisfied
+      additionalProperties: false
+      description: Satisfied represents satisfied control implementation responsibility
+    oscal.ssp.v1.SecurityImpactLevel:
+      type: object
+      properties:
+        securityObjectiveConfidentiality:
+          type: string
+          title: security_objective_confidentiality
+        securityObjectiveIntegrity:
+          type: string
+          title: security_objective_integrity
+        securityObjectiveAvailability:
+          type: string
+          title: security_objective_availability
+      title: SecurityImpactLevel
+      additionalProperties: false
+      description: SecurityImpactLevel represents security impact level
+    oscal.ssp.v1.SetParameter:
+      type: object
+      properties:
+        paramId:
+          title: param_id
+          $ref: '#/components/schemas/oscal.common.v1.Token'
+        value:
+          type: string
+          title: value
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: SetParameter
+      additionalProperties: false
+      description: SetParameter represents a set parameter
+    oscal.ssp.v1.Statement:
+      type: object
+      properties:
+        statementId:
+          title: statement_id
+          $ref: '#/components/schemas/oscal.common.v1.Token'
+        uuid:
+          title: uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        responsibleRoles:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.ssp.v1.ResponsibleRole'
+          title: responsible_roles
+        byComponents:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.ssp.v1.ByComponent'
+          title: by_components
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: Statement
+      additionalProperties: false
+      description: Statement represents a control statement
+    oscal.ssp.v1.Status:
+      type: object
+      properties:
+        state:
+          type: string
+          title: state
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: Status
+      additionalProperties: false
+      description: Status represents system status
+    oscal.ssp.v1.SystemCharacteristics:
+      type: object
+      properties:
+        systemIds:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.ssp.v1.SystemId'
+          title: system_ids
+        systemName:
+          type: string
+          title: system_name
+        systemNameShort:
+          type: string
+          title: system_name_short
+        description:
+          title: description
+          $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        dateAuthorized:
+          title: date_authorized
+          $ref: '#/components/schemas/oscal.common.v1.Date'
+        securitySensitivityLevel:
+          type: string
+          title: security_sensitivity_level
+        systemInformation:
+          title: system_information
+          $ref: '#/components/schemas/oscal.ssp.v1.SystemInformation'
+        securityImpactLevel:
+          title: security_impact_level
+          $ref: '#/components/schemas/oscal.ssp.v1.SecurityImpactLevel'
+        status:
+          title: status
+          $ref: '#/components/schemas/oscal.ssp.v1.Status'
+        authorizationBoundary:
+          title: authorization_boundary
+          $ref: '#/components/schemas/oscal.ssp.v1.AuthorizationBoundary'
+        networkArchitecture:
+          title: network_architecture
+          $ref: '#/components/schemas/oscal.ssp.v1.NetworkArchitecture'
+        dataFlow:
+          title: data_flow
+          $ref: '#/components/schemas/oscal.ssp.v1.DataFlow'
+        responsibleParties:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.ResponsibleParty'
+          title: responsible_parties
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: SystemCharacteristics
+      additionalProperties: false
+      description: SystemCharacteristics represents system characteristics
+    oscal.ssp.v1.SystemComponent:
+      type: object
+      properties:
+        uuid:
+          title: uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        type:
+          type: string
+          title: type
+        title:
+          type: string
+          title: title
+        description:
+          type: string
+          title: description
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: SystemComponent
+      additionalProperties: false
+      description: SystemComponent represents a system component
+    oscal.ssp.v1.SystemId:
+      type: object
+      properties:
+        id:
+          type: string
+          title: id
+        identifierType:
+          type: string
+          title: identifier_type
+      title: SystemId
+      additionalProperties: false
+      description: SystemId represents a system identifier
+    oscal.ssp.v1.SystemImplementation:
+      type: object
+      properties:
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        leveragedAuthorizations:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.ssp.v1.LeveragedAuthorization'
+          title: leveraged_authorizations
+        users:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.ssp.v1.SystemUser'
+          title: users
+        components:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.ssp.v1.SystemComponent'
+          title: components
+        inventoryItems:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.ssp.v1.InventoryItem'
+          title: inventory_items
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: SystemImplementation
+      additionalProperties: false
+      description: SystemImplementation represents system implementation
+    oscal.ssp.v1.SystemInformation:
+      type: object
+      properties:
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        informationTypes:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.ssp.v1.InformationType'
+          title: information_types
+      title: SystemInformation
+      additionalProperties: false
+      description: SystemInformation represents system information
+    oscal.ssp.v1.SystemSecurityPlan:
+      type: object
+      properties:
+        uuid:
+          title: uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        metadata:
+          title: metadata
+          $ref: '#/components/schemas/oscal.common.v1.Metadata'
+        importProfile:
+          title: import_profile
+          $ref: '#/components/schemas/oscal.ssp.v1.ImportProfile'
+        systemCharacteristics:
+          title: system_characteristics
+          $ref: '#/components/schemas/oscal.ssp.v1.SystemCharacteristics'
+        systemImplementation:
+          title: system_implementation
+          $ref: '#/components/schemas/oscal.ssp.v1.SystemImplementation'
+        controlImplementation:
+          title: control_implementation
+          $ref: '#/components/schemas/oscal.ssp.v1.ControlImplementation'
+        backMatter:
+          title: back_matter
+          $ref: '#/components/schemas/oscal.common.v1.BackMatter'
+      title: SystemSecurityPlan
+      additionalProperties: false
+      description: SystemSecurityPlan represents a system security plan
+    oscal.ssp.v1.SystemUser:
+      type: object
+      properties:
+        uuid:
+          title: uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        title:
+          type: string
+          title: title
+        shortName:
+          type: string
+          title: short_name
+        description:
+          title: description
+          $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: SystemUser
+      additionalProperties: false
+      description: SystemUser represents a system user
+security: []
+tags:
+  - name: oscal.services.v1.GovernanceService
+    description: |-
+      GovernanceService provides advanced governance, ingestion, and semantic
+       search operations over the OSCALify knowledge graph.

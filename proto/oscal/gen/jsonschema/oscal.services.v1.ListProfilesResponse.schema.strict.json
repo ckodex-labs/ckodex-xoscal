@@ -1,0 +1,21 @@
+{
+  "$id": "oscal.services.v1.ListProfilesResponse.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "next_page_token": {
+      "type": "string"
+    },
+    "profiles": {
+      "items": {
+        "$ref": "oscal.profile.v1.Profile.schema.strict.json"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "next_page_token"
+  ],
+  "title": "List Profiles Response",
+  "type": "object"
+}

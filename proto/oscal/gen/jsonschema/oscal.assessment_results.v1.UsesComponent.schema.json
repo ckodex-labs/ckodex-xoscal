@@ -1,0 +1,48 @@
+{
+  "$id": "oscal.assessment_results.v1.UsesComponent.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "UsesComponent represents a component used by the assessment platform",
+  "patternProperties": {
+    "^(componentUuid)$": {
+      "$ref": "oscal.common.v1.UUID.schema.json"
+    },
+    "^(responsibleParties)$": {
+      "items": {
+        "$ref": "oscal.common.v1.ResponsibleParty.schema.json"
+      },
+      "type": "array"
+    }
+  },
+  "properties": {
+    "component_uuid": {
+      "$ref": "oscal.common.v1.UUID.schema.json"
+    },
+    "links": {
+      "items": {
+        "$ref": "oscal.common.v1.Link.schema.json"
+      },
+      "type": "array"
+    },
+    "props": {
+      "items": {
+        "$ref": "oscal.common.v1.Property.schema.json"
+      },
+      "type": "array"
+    },
+    "remarks": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupMultiline.schema.json"
+      },
+      "type": "array"
+    },
+    "responsible_parties": {
+      "items": {
+        "$ref": "oscal.common.v1.ResponsibleParty.schema.json"
+      },
+      "type": "array"
+    }
+  },
+  "title": "Uses Component",
+  "type": "object"
+}

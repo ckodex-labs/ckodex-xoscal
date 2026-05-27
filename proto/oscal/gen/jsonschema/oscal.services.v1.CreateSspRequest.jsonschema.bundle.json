@@ -1,0 +1,2022 @@
+{
+  "$defs": {
+    "google.protobuf.Timestamp.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "format": "date-time",
+      "title": "Timestamp",
+      "type": "string"
+    },
+    "oscal.common.v1.AddrLine.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "AddrLine represents a line of an address",
+      "properties": {
+        "value": {
+          "$ref": "#/$defs/oscal.common.v1.MarkupLine.jsonschema.json"
+        }
+      },
+      "title": "Addr Line",
+      "type": "object"
+    },
+    "oscal.common.v1.Address.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Address represents a postal address",
+      "patternProperties": {
+        "^(addr_lines)$": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.AddrLine.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "^(postal_code)$": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "properties": {
+        "addrLines": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.AddrLine.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "city": {
+          "default": "",
+          "type": "string"
+        },
+        "country": {
+          "default": "",
+          "type": "string"
+        },
+        "postalCode": {
+          "default": "",
+          "type": "string"
+        },
+        "state": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Address",
+      "type": "object"
+    },
+    "oscal.common.v1.BackMatter.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "BackMatter represents appendices and resources",
+      "properties": {
+        "resources": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Resource.jsonschema.json"
+          },
+          "type": "array"
+        }
+      },
+      "title": "Back Matter",
+      "type": "object"
+    },
+    "oscal.common.v1.Base64.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Base64 represents base64-encoded binary data",
+      "properties": {
+        "value": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Base64",
+      "type": "object"
+    },
+    "oscal.common.v1.Date.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Date represents a date without time",
+      "properties": {
+        "value": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Date",
+      "type": "object"
+    },
+    "oscal.common.v1.DateTime.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "DateTime represents a date-time with timezone (RFC3339)",
+      "properties": {
+        "value": {
+          "$ref": "#/$defs/google.protobuf.Timestamp.jsonschema.json"
+        }
+      },
+      "title": "Date Time",
+      "type": "object"
+    },
+    "oscal.common.v1.DocumentId.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "DocumentId represents a document identifier",
+      "properties": {
+        "identifier": {
+          "default": "",
+          "type": "string"
+        },
+        "scheme": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Document Id",
+      "type": "object"
+    },
+    "oscal.common.v1.EmailAddress.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "EmailAddress represents an email address",
+      "properties": {
+        "value": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Email Address",
+      "type": "object"
+    },
+    "oscal.common.v1.Link.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Link represents a hyperlink with metadata",
+      "patternProperties": {
+        "^(media_type)$": {
+          "default": "",
+          "type": "string"
+        },
+        "^(resource_fragment)$": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "properties": {
+        "href": {
+          "$ref": "#/$defs/oscal.common.v1.URI.jsonschema.json"
+        },
+        "mediaType": {
+          "default": "",
+          "type": "string"
+        },
+        "rel": {
+          "default": "",
+          "type": "string"
+        },
+        "resourceFragment": {
+          "default": "",
+          "type": "string"
+        },
+        "text": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Link",
+      "type": "object"
+    },
+    "oscal.common.v1.MarkupLine.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "MarkupLine represents a line of markup text (e.g., markdown)",
+      "properties": {
+        "value": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Markup Line",
+      "type": "object"
+    },
+    "oscal.common.v1.MarkupMultiline.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "MarkupMultiline represents multiline markup text",
+      "properties": {
+        "value": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Markup Multiline",
+      "type": "object"
+    },
+    "oscal.common.v1.Metadata.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Metadata represents document metadata shared across all OSCAL models",
+      "patternProperties": {
+        "^(document_id)$": {
+          "$ref": "#/$defs/oscal.common.v1.DocumentId.jsonschema.json"
+        },
+        "^(last_modified)$": {
+          "$ref": "#/$defs/oscal.common.v1.DateTime.jsonschema.json"
+        },
+        "^(oscal_version)$": {
+          "default": "",
+          "type": "string"
+        },
+        "^(responsible_parties)$": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.ResponsibleParty.jsonschema.json"
+          },
+          "type": "array"
+        }
+      },
+      "properties": {
+        "documentId": {
+          "$ref": "#/$defs/oscal.common.v1.DocumentId.jsonschema.json"
+        },
+        "lastModified": {
+          "$ref": "#/$defs/oscal.common.v1.DateTime.jsonschema.json"
+        },
+        "links": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Link.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "oscalVersion": {
+          "default": "",
+          "type": "string"
+        },
+        "parties": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Party.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "props": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Property.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "published": {
+          "$ref": "#/$defs/oscal.common.v1.DateTime.jsonschema.json"
+        },
+        "remarks": {
+          "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.jsonschema.json"
+        },
+        "responsibleParties": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.ResponsibleParty.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "roles": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Role.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "title": {
+          "default": "",
+          "type": "string"
+        },
+        "version": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Metadata",
+      "type": "object"
+    },
+    "oscal.common.v1.Party.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Party represents an organization or person",
+      "patternProperties": {
+        "^(email_addresses)$": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.EmailAddress.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "^(responsible_parties)$": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.ResponsibleParty.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "^(short_names)$": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "^(telephone_numbers)$": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.TelephoneNumber.jsonschema.json"
+          },
+          "type": "array"
+        }
+      },
+      "properties": {
+        "address": {
+          "$ref": "#/$defs/oscal.common.v1.Address.jsonschema.json"
+        },
+        "emailAddresses": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.EmailAddress.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "links": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Link.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "name": {
+          "default": "",
+          "type": "string"
+        },
+        "props": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Property.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "remarks": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "responsibleParties": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.ResponsibleParty.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "shortNames": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "telephoneNumbers": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.TelephoneNumber.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "type": {
+          "default": "",
+          "type": "string"
+        },
+        "uuid": {
+          "$ref": "#/$defs/oscal.common.v1.UUID.jsonschema.json"
+        }
+      },
+      "title": "Party",
+      "type": "object"
+    },
+    "oscal.common.v1.Property.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Property represents a key-value property with optional classification",
+      "properties": {
+        "class": {
+          "default": "",
+          "type": "string"
+        },
+        "id": {
+          "default": "",
+          "type": "string"
+        },
+        "name": {
+          "default": "",
+          "type": "string"
+        },
+        "value": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Property",
+      "type": "object"
+    },
+    "oscal.common.v1.Resource.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Resource represents an external resource",
+      "patternProperties": {
+        "^(document_ids)$": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.DocumentId.jsonschema.json"
+          },
+          "type": "array"
+        }
+      },
+      "properties": {
+        "base64": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Base64.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "citation": {
+          "default": "",
+          "type": "string"
+        },
+        "description": {
+          "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.jsonschema.json"
+        },
+        "documentIds": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.DocumentId.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "links": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Link.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "props": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Property.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "remarks": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "title": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "uuid": {
+          "$ref": "#/$defs/oscal.common.v1.UUID.jsonschema.json"
+        }
+      },
+      "title": "Resource",
+      "type": "object"
+    },
+    "oscal.common.v1.ResponsibleParty.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "ResponsibleParty represents a party responsible for a role",
+      "patternProperties": {
+        "^(party_uuids)$": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.UUID.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "^(role_id)$": {
+          "$ref": "#/$defs/oscal.common.v1.Token.jsonschema.json"
+        }
+      },
+      "properties": {
+        "links": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Link.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "partyUuids": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.UUID.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "props": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Property.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "remarks": {
+          "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.jsonschema.json"
+        },
+        "roleId": {
+          "$ref": "#/$defs/oscal.common.v1.Token.jsonschema.json"
+        }
+      },
+      "title": "Responsible Party",
+      "type": "object"
+    },
+    "oscal.common.v1.Role.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Role represents a role definition",
+      "patternProperties": {
+        "^(short_name)$": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "properties": {
+        "description": {
+          "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.jsonschema.json"
+        },
+        "id": {
+          "$ref": "#/$defs/oscal.common.v1.Token.jsonschema.json"
+        },
+        "links": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Link.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "props": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Property.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "shortName": {
+          "default": "",
+          "type": "string"
+        },
+        "title": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Role",
+      "type": "object"
+    },
+    "oscal.common.v1.TelephoneNumber.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "TelephoneNumber represents a telephone number",
+      "properties": {
+        "value": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Telephone Number",
+      "type": "object"
+    },
+    "oscal.common.v1.Token.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Token represents an alphanumeric token (e.g., control IDs)",
+      "properties": {
+        "value": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Token",
+      "type": "object"
+    },
+    "oscal.common.v1.URI.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "URI represents a uniform resource identifier",
+      "properties": {
+        "value": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "URI",
+      "type": "object"
+    },
+    "oscal.common.v1.URIReference.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "URIReference represents a URI reference (may be relative)",
+      "properties": {
+        "value": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "URI Reference",
+      "type": "object"
+    },
+    "oscal.common.v1.UUID.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "UUID represents a universally unique identifier",
+      "properties": {
+        "value": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "UUID",
+      "type": "object"
+    },
+    "oscal.services.v1.CreateSspRequest.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "properties": {
+        "ssp": {
+          "$ref": "#/$defs/oscal.ssp.v1.SystemSecurityPlan.jsonschema.json"
+        }
+      },
+      "title": "Create Ssp Request",
+      "type": "object"
+    },
+    "oscal.ssp.v1.AuthorizationBoundary.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "AuthorizationBoundary represents authorization boundary",
+      "properties": {
+        "description": {
+          "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.jsonschema.json"
+        },
+        "diagrams": {
+          "items": {
+            "$ref": "#/$defs/oscal.ssp.v1.Diagram.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "links": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Link.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "props": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Property.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "remarks": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.jsonschema.json"
+          },
+          "type": "array"
+        }
+      },
+      "title": "Authorization Boundary",
+      "type": "object"
+    },
+    "oscal.ssp.v1.ByComponent.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "ByComponent represents component control implementation",
+      "patternProperties": {
+        "^(component_uuid)$": {
+          "$ref": "#/$defs/oscal.common.v1.UUID.jsonschema.json"
+        },
+        "^(implementation_status)$": {
+          "$ref": "#/$defs/oscal.ssp.v1.ImplementationStatus.jsonschema.json"
+        },
+        "^(responsible_roles)$": {
+          "items": {
+            "$ref": "#/$defs/oscal.ssp.v1.ResponsibleRole.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "^(set_parameters)$": {
+          "items": {
+            "$ref": "#/$defs/oscal.ssp.v1.SetParameter.jsonschema.json"
+          },
+          "type": "array"
+        }
+      },
+      "properties": {
+        "componentUuid": {
+          "$ref": "#/$defs/oscal.common.v1.UUID.jsonschema.json"
+        },
+        "description": {
+          "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.jsonschema.json"
+        },
+        "export": {
+          "$ref": "#/$defs/oscal.ssp.v1.Export.jsonschema.json"
+        },
+        "implementationStatus": {
+          "$ref": "#/$defs/oscal.ssp.v1.ImplementationStatus.jsonschema.json"
+        },
+        "inherited": {
+          "items": {
+            "$ref": "#/$defs/oscal.ssp.v1.Inherited.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "links": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Link.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "props": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Property.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "remarks": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "responsibleRoles": {
+          "items": {
+            "$ref": "#/$defs/oscal.ssp.v1.ResponsibleRole.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "satisfied": {
+          "items": {
+            "$ref": "#/$defs/oscal.ssp.v1.Satisfied.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "setParameters": {
+          "items": {
+            "$ref": "#/$defs/oscal.ssp.v1.SetParameter.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "uuid": {
+          "$ref": "#/$defs/oscal.common.v1.UUID.jsonschema.json"
+        }
+      },
+      "title": "By Component",
+      "type": "object"
+    },
+    "oscal.ssp.v1.Categorization.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Categorization represents an information type categorization",
+      "patternProperties": {
+        "^(information_type_ids)$": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "properties": {
+        "informationTypeIds": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "system": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Categorization",
+      "type": "object"
+    },
+    "oscal.ssp.v1.ControlImplementation.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "ControlImplementation represents control implementation",
+      "patternProperties": {
+        "^(implemented_requirements)$": {
+          "items": {
+            "$ref": "#/$defs/oscal.ssp.v1.ImplementedRequirement.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "^(set_parameters)$": {
+          "items": {
+            "$ref": "#/$defs/oscal.ssp.v1.SetParameter.jsonschema.json"
+          },
+          "type": "array"
+        }
+      },
+      "properties": {
+        "description": {
+          "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.jsonschema.json"
+        },
+        "implementedRequirements": {
+          "items": {
+            "$ref": "#/$defs/oscal.ssp.v1.ImplementedRequirement.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "setParameters": {
+          "items": {
+            "$ref": "#/$defs/oscal.ssp.v1.SetParameter.jsonschema.json"
+          },
+          "type": "array"
+        }
+      },
+      "title": "Control Implementation",
+      "type": "object"
+    },
+    "oscal.ssp.v1.DataFlow.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "DataFlow represents data flow",
+      "properties": {
+        "description": {
+          "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.jsonschema.json"
+        },
+        "diagrams": {
+          "items": {
+            "$ref": "#/$defs/oscal.ssp.v1.Diagram.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "links": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Link.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "props": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Property.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "remarks": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.jsonschema.json"
+          },
+          "type": "array"
+        }
+      },
+      "title": "Data Flow",
+      "type": "object"
+    },
+    "oscal.ssp.v1.Diagram.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Diagram represents a diagram",
+      "properties": {
+        "caption": {
+          "$ref": "#/$defs/oscal.common.v1.MarkupLine.jsonschema.json"
+        },
+        "description": {
+          "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.jsonschema.json"
+        },
+        "links": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Link.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "props": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Property.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "remarks": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "uuid": {
+          "$ref": "#/$defs/oscal.common.v1.UUID.jsonschema.json"
+        }
+      },
+      "title": "Diagram",
+      "type": "object"
+    },
+    "oscal.ssp.v1.Export.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Export represents export information",
+      "properties": {
+        "description": {
+          "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.jsonschema.json"
+        },
+        "links": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Link.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "props": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Property.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "provided": {
+          "items": {
+            "$ref": "#/$defs/oscal.ssp.v1.Provided.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "remarks": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "responsibilities": {
+          "items": {
+            "$ref": "#/$defs/oscal.ssp.v1.Responsibility.jsonschema.json"
+          },
+          "type": "array"
+        }
+      },
+      "title": "Export",
+      "type": "object"
+    },
+    "oscal.ssp.v1.Impact.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Impact represents an impact level",
+      "patternProperties": {
+        "^(adjustment_justification)$": {
+          "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.jsonschema.json"
+        }
+      },
+      "properties": {
+        "adjustmentJustification": {
+          "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.jsonschema.json"
+        },
+        "base": {
+          "default": "",
+          "type": "string"
+        },
+        "links": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Link.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "props": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Property.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "selected": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Impact",
+      "type": "object"
+    },
+    "oscal.ssp.v1.ImplementationStatus.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "ImplementationStatus represents implementation status",
+      "properties": {
+        "remarks": {
+          "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.jsonschema.json"
+        },
+        "state": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Implementation Status",
+      "type": "object"
+    },
+    "oscal.ssp.v1.ImplementedRequirement.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "ImplementedRequirement represents an implemented requirement",
+      "patternProperties": {
+        "^(by_components)$": {
+          "items": {
+            "$ref": "#/$defs/oscal.ssp.v1.ByComponent.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "^(control_id)$": {
+          "$ref": "#/$defs/oscal.common.v1.Token.jsonschema.json"
+        },
+        "^(responsible_roles)$": {
+          "items": {
+            "$ref": "#/$defs/oscal.ssp.v1.ResponsibleRole.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "^(set_parameters)$": {
+          "items": {
+            "$ref": "#/$defs/oscal.ssp.v1.SetParameter.jsonschema.json"
+          },
+          "type": "array"
+        }
+      },
+      "properties": {
+        "byComponents": {
+          "items": {
+            "$ref": "#/$defs/oscal.ssp.v1.ByComponent.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "controlId": {
+          "$ref": "#/$defs/oscal.common.v1.Token.jsonschema.json"
+        },
+        "links": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Link.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "props": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Property.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "remarks": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "responsibleRoles": {
+          "items": {
+            "$ref": "#/$defs/oscal.ssp.v1.ResponsibleRole.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "setParameters": {
+          "items": {
+            "$ref": "#/$defs/oscal.ssp.v1.SetParameter.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "statements": {
+          "items": {
+            "$ref": "#/$defs/oscal.ssp.v1.Statement.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "uuid": {
+          "$ref": "#/$defs/oscal.common.v1.UUID.jsonschema.json"
+        }
+      },
+      "title": "Implemented Requirement",
+      "type": "object"
+    },
+    "oscal.ssp.v1.ImportProfile.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "ImportProfile represents an imported OSCAL profile",
+      "properties": {
+        "href": {
+          "$ref": "#/$defs/oscal.common.v1.URIReference.jsonschema.json"
+        },
+        "remarks": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.jsonschema.json"
+          },
+          "type": "array"
+        }
+      },
+      "title": "Import Profile",
+      "type": "object"
+    },
+    "oscal.ssp.v1.InformationType.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "InformationType represents an information type",
+      "patternProperties": {
+        "^(availability_impact)$": {
+          "$ref": "#/$defs/oscal.ssp.v1.Impact.jsonschema.json"
+        },
+        "^(confidentiality_impact)$": {
+          "$ref": "#/$defs/oscal.ssp.v1.Impact.jsonschema.json"
+        },
+        "^(integrity_impact)$": {
+          "$ref": "#/$defs/oscal.ssp.v1.Impact.jsonschema.json"
+        }
+      },
+      "properties": {
+        "availabilityImpact": {
+          "$ref": "#/$defs/oscal.ssp.v1.Impact.jsonschema.json"
+        },
+        "categorizations": {
+          "items": {
+            "$ref": "#/$defs/oscal.ssp.v1.Categorization.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "confidentialityImpact": {
+          "$ref": "#/$defs/oscal.ssp.v1.Impact.jsonschema.json"
+        },
+        "description": {
+          "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.jsonschema.json"
+        },
+        "integrityImpact": {
+          "$ref": "#/$defs/oscal.ssp.v1.Impact.jsonschema.json"
+        },
+        "links": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Link.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "props": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Property.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "title": {
+          "$ref": "#/$defs/oscal.common.v1.MarkupLine.jsonschema.json"
+        },
+        "uuid": {
+          "$ref": "#/$defs/oscal.common.v1.UUID.jsonschema.json"
+        }
+      },
+      "title": "Information Type",
+      "type": "object"
+    },
+    "oscal.ssp.v1.Inherited.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Inherited represents inherited control implementation",
+      "patternProperties": {
+        "^(provided_uuid)$": {
+          "$ref": "#/$defs/oscal.common.v1.UUID.jsonschema.json"
+        },
+        "^(responsible_roles)$": {
+          "items": {
+            "$ref": "#/$defs/oscal.ssp.v1.ResponsibleRole.jsonschema.json"
+          },
+          "type": "array"
+        }
+      },
+      "properties": {
+        "description": {
+          "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.jsonschema.json"
+        },
+        "links": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Link.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "props": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Property.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "providedUuid": {
+          "$ref": "#/$defs/oscal.common.v1.UUID.jsonschema.json"
+        },
+        "responsibleRoles": {
+          "items": {
+            "$ref": "#/$defs/oscal.ssp.v1.ResponsibleRole.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "uuid": {
+          "$ref": "#/$defs/oscal.common.v1.UUID.jsonschema.json"
+        }
+      },
+      "title": "Inherited",
+      "type": "object"
+    },
+    "oscal.ssp.v1.InventoryItem.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "InventoryItem represents an inventory item",
+      "properties": {
+        "description": {
+          "$ref": "#/$defs/oscal.common.v1.MarkupLine.jsonschema.json"
+        },
+        "links": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Link.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "props": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Property.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "remarks": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "uuid": {
+          "$ref": "#/$defs/oscal.common.v1.UUID.jsonschema.json"
+        }
+      },
+      "title": "Inventory Item",
+      "type": "object"
+    },
+    "oscal.ssp.v1.LeveragedAuthorization.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "LeveragedAuthorization represents a leveraged authorization",
+      "patternProperties": {
+        "^(date_authorized)$": {
+          "$ref": "#/$defs/oscal.common.v1.Date.jsonschema.json"
+        },
+        "^(party_uuid)$": {
+          "$ref": "#/$defs/oscal.common.v1.UUID.jsonschema.json"
+        }
+      },
+      "properties": {
+        "dateAuthorized": {
+          "$ref": "#/$defs/oscal.common.v1.Date.jsonschema.json"
+        },
+        "links": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Link.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "partyUuid": {
+          "$ref": "#/$defs/oscal.common.v1.UUID.jsonschema.json"
+        },
+        "props": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Property.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "remarks": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "title": {
+          "$ref": "#/$defs/oscal.common.v1.MarkupLine.jsonschema.json"
+        },
+        "uuid": {
+          "$ref": "#/$defs/oscal.common.v1.UUID.jsonschema.json"
+        }
+      },
+      "title": "Leveraged Authorization",
+      "type": "object"
+    },
+    "oscal.ssp.v1.NetworkArchitecture.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "NetworkArchitecture represents network architecture",
+      "properties": {
+        "description": {
+          "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.jsonschema.json"
+        },
+        "diagrams": {
+          "items": {
+            "$ref": "#/$defs/oscal.ssp.v1.Diagram.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "links": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Link.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "props": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Property.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "remarks": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.jsonschema.json"
+          },
+          "type": "array"
+        }
+      },
+      "title": "Network Architecture",
+      "type": "object"
+    },
+    "oscal.ssp.v1.Provided.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Provided represents provided control implementation",
+      "patternProperties": {
+        "^(responsible_roles)$": {
+          "items": {
+            "$ref": "#/$defs/oscal.ssp.v1.ResponsibleRole.jsonschema.json"
+          },
+          "type": "array"
+        }
+      },
+      "properties": {
+        "description": {
+          "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.jsonschema.json"
+        },
+        "links": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Link.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "props": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Property.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "remarks": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "responsibleRoles": {
+          "items": {
+            "$ref": "#/$defs/oscal.ssp.v1.ResponsibleRole.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "uuid": {
+          "$ref": "#/$defs/oscal.common.v1.UUID.jsonschema.json"
+        }
+      },
+      "title": "Provided",
+      "type": "object"
+    },
+    "oscal.ssp.v1.Responsibility.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Responsibility represents a control implementation responsibility",
+      "patternProperties": {
+        "^(provided_uuid)$": {
+          "$ref": "#/$defs/oscal.common.v1.UUID.jsonschema.json"
+        },
+        "^(responsible_roles)$": {
+          "items": {
+            "$ref": "#/$defs/oscal.ssp.v1.ResponsibleRole.jsonschema.json"
+          },
+          "type": "array"
+        }
+      },
+      "properties": {
+        "description": {
+          "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.jsonschema.json"
+        },
+        "links": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Link.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "props": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Property.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "providedUuid": {
+          "$ref": "#/$defs/oscal.common.v1.UUID.jsonschema.json"
+        },
+        "remarks": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "responsibleRoles": {
+          "items": {
+            "$ref": "#/$defs/oscal.ssp.v1.ResponsibleRole.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "uuid": {
+          "$ref": "#/$defs/oscal.common.v1.UUID.jsonschema.json"
+        }
+      },
+      "title": "Responsibility",
+      "type": "object"
+    },
+    "oscal.ssp.v1.ResponsibleRole.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "ResponsibleRole represents a responsible role",
+      "patternProperties": {
+        "^(party_uuids)$": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.UUID.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "^(role_id)$": {
+          "$ref": "#/$defs/oscal.common.v1.Token.jsonschema.json"
+        }
+      },
+      "properties": {
+        "partyUuids": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.UUID.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "props": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Property.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "remarks": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "roleId": {
+          "$ref": "#/$defs/oscal.common.v1.Token.jsonschema.json"
+        }
+      },
+      "title": "Responsible Role",
+      "type": "object"
+    },
+    "oscal.ssp.v1.Satisfied.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Satisfied represents satisfied control implementation responsibility",
+      "patternProperties": {
+        "^(responsibility_uuid)$": {
+          "$ref": "#/$defs/oscal.common.v1.UUID.jsonschema.json"
+        },
+        "^(responsible_roles)$": {
+          "items": {
+            "$ref": "#/$defs/oscal.ssp.v1.ResponsibleRole.jsonschema.json"
+          },
+          "type": "array"
+        }
+      },
+      "properties": {
+        "description": {
+          "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.jsonschema.json"
+        },
+        "links": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Link.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "props": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Property.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "remarks": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "responsibilityUuid": {
+          "$ref": "#/$defs/oscal.common.v1.UUID.jsonschema.json"
+        },
+        "responsibleRoles": {
+          "items": {
+            "$ref": "#/$defs/oscal.ssp.v1.ResponsibleRole.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "uuid": {
+          "$ref": "#/$defs/oscal.common.v1.UUID.jsonschema.json"
+        }
+      },
+      "title": "Satisfied",
+      "type": "object"
+    },
+    "oscal.ssp.v1.SecurityImpactLevel.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "SecurityImpactLevel represents security impact level",
+      "patternProperties": {
+        "^(security_objective_availability)$": {
+          "default": "",
+          "type": "string"
+        },
+        "^(security_objective_confidentiality)$": {
+          "default": "",
+          "type": "string"
+        },
+        "^(security_objective_integrity)$": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "properties": {
+        "securityObjectiveAvailability": {
+          "default": "",
+          "type": "string"
+        },
+        "securityObjectiveConfidentiality": {
+          "default": "",
+          "type": "string"
+        },
+        "securityObjectiveIntegrity": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Security Impact Level",
+      "type": "object"
+    },
+    "oscal.ssp.v1.SetParameter.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "SetParameter represents a set parameter",
+      "patternProperties": {
+        "^(param_id)$": {
+          "$ref": "#/$defs/oscal.common.v1.Token.jsonschema.json"
+        }
+      },
+      "properties": {
+        "paramId": {
+          "$ref": "#/$defs/oscal.common.v1.Token.jsonschema.json"
+        },
+        "remarks": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "value": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Set Parameter",
+      "type": "object"
+    },
+    "oscal.ssp.v1.Statement.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Statement represents a control statement",
+      "patternProperties": {
+        "^(by_components)$": {
+          "items": {
+            "$ref": "#/$defs/oscal.ssp.v1.ByComponent.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "^(responsible_roles)$": {
+          "items": {
+            "$ref": "#/$defs/oscal.ssp.v1.ResponsibleRole.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "^(statement_id)$": {
+          "$ref": "#/$defs/oscal.common.v1.Token.jsonschema.json"
+        }
+      },
+      "properties": {
+        "byComponents": {
+          "items": {
+            "$ref": "#/$defs/oscal.ssp.v1.ByComponent.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "links": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Link.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "props": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Property.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "remarks": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "responsibleRoles": {
+          "items": {
+            "$ref": "#/$defs/oscal.ssp.v1.ResponsibleRole.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "statementId": {
+          "$ref": "#/$defs/oscal.common.v1.Token.jsonschema.json"
+        },
+        "uuid": {
+          "$ref": "#/$defs/oscal.common.v1.UUID.jsonschema.json"
+        }
+      },
+      "title": "Statement",
+      "type": "object"
+    },
+    "oscal.ssp.v1.Status.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Status represents system status",
+      "properties": {
+        "remarks": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "state": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Status",
+      "type": "object"
+    },
+    "oscal.ssp.v1.SystemCharacteristics.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "SystemCharacteristics represents system characteristics",
+      "patternProperties": {
+        "^(authorization_boundary)$": {
+          "$ref": "#/$defs/oscal.ssp.v1.AuthorizationBoundary.jsonschema.json"
+        },
+        "^(data_flow)$": {
+          "$ref": "#/$defs/oscal.ssp.v1.DataFlow.jsonschema.json"
+        },
+        "^(date_authorized)$": {
+          "$ref": "#/$defs/oscal.common.v1.Date.jsonschema.json"
+        },
+        "^(network_architecture)$": {
+          "$ref": "#/$defs/oscal.ssp.v1.NetworkArchitecture.jsonschema.json"
+        },
+        "^(responsible_parties)$": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.ResponsibleParty.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "^(security_impact_level)$": {
+          "$ref": "#/$defs/oscal.ssp.v1.SecurityImpactLevel.jsonschema.json"
+        },
+        "^(security_sensitivity_level)$": {
+          "default": "",
+          "type": "string"
+        },
+        "^(system_ids)$": {
+          "items": {
+            "$ref": "#/$defs/oscal.ssp.v1.SystemId.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "^(system_information)$": {
+          "$ref": "#/$defs/oscal.ssp.v1.SystemInformation.jsonschema.json"
+        },
+        "^(system_name)$": {
+          "default": "",
+          "type": "string"
+        },
+        "^(system_name_short)$": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "properties": {
+        "authorizationBoundary": {
+          "$ref": "#/$defs/oscal.ssp.v1.AuthorizationBoundary.jsonschema.json"
+        },
+        "dataFlow": {
+          "$ref": "#/$defs/oscal.ssp.v1.DataFlow.jsonschema.json"
+        },
+        "dateAuthorized": {
+          "$ref": "#/$defs/oscal.common.v1.Date.jsonschema.json"
+        },
+        "description": {
+          "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.jsonschema.json"
+        },
+        "links": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Link.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "networkArchitecture": {
+          "$ref": "#/$defs/oscal.ssp.v1.NetworkArchitecture.jsonschema.json"
+        },
+        "props": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Property.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "remarks": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "responsibleParties": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.ResponsibleParty.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "securityImpactLevel": {
+          "$ref": "#/$defs/oscal.ssp.v1.SecurityImpactLevel.jsonschema.json"
+        },
+        "securitySensitivityLevel": {
+          "default": "",
+          "type": "string"
+        },
+        "status": {
+          "$ref": "#/$defs/oscal.ssp.v1.Status.jsonschema.json"
+        },
+        "systemIds": {
+          "items": {
+            "$ref": "#/$defs/oscal.ssp.v1.SystemId.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "systemInformation": {
+          "$ref": "#/$defs/oscal.ssp.v1.SystemInformation.jsonschema.json"
+        },
+        "systemName": {
+          "default": "",
+          "type": "string"
+        },
+        "systemNameShort": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "System Characteristics",
+      "type": "object"
+    },
+    "oscal.ssp.v1.SystemComponent.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "SystemComponent represents a system component",
+      "properties": {
+        "description": {
+          "default": "",
+          "type": "string"
+        },
+        "links": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Link.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "props": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Property.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "remarks": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "title": {
+          "default": "",
+          "type": "string"
+        },
+        "type": {
+          "default": "",
+          "type": "string"
+        },
+        "uuid": {
+          "$ref": "#/$defs/oscal.common.v1.UUID.jsonschema.json"
+        }
+      },
+      "title": "System Component",
+      "type": "object"
+    },
+    "oscal.ssp.v1.SystemId.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "SystemId represents a system identifier",
+      "patternProperties": {
+        "^(identifier_type)$": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "properties": {
+        "id": {
+          "default": "",
+          "type": "string"
+        },
+        "identifierType": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "System Id",
+      "type": "object"
+    },
+    "oscal.ssp.v1.SystemImplementation.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "SystemImplementation represents system implementation",
+      "patternProperties": {
+        "^(inventory_items)$": {
+          "items": {
+            "$ref": "#/$defs/oscal.ssp.v1.InventoryItem.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "^(leveraged_authorizations)$": {
+          "items": {
+            "$ref": "#/$defs/oscal.ssp.v1.LeveragedAuthorization.jsonschema.json"
+          },
+          "type": "array"
+        }
+      },
+      "properties": {
+        "components": {
+          "items": {
+            "$ref": "#/$defs/oscal.ssp.v1.SystemComponent.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "inventoryItems": {
+          "items": {
+            "$ref": "#/$defs/oscal.ssp.v1.InventoryItem.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "leveragedAuthorizations": {
+          "items": {
+            "$ref": "#/$defs/oscal.ssp.v1.LeveragedAuthorization.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "links": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Link.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "props": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Property.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "remarks": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "users": {
+          "items": {
+            "$ref": "#/$defs/oscal.ssp.v1.SystemUser.jsonschema.json"
+          },
+          "type": "array"
+        }
+      },
+      "title": "System Implementation",
+      "type": "object"
+    },
+    "oscal.ssp.v1.SystemInformation.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "SystemInformation represents system information",
+      "patternProperties": {
+        "^(information_types)$": {
+          "items": {
+            "$ref": "#/$defs/oscal.ssp.v1.InformationType.jsonschema.json"
+          },
+          "type": "array"
+        }
+      },
+      "properties": {
+        "informationTypes": {
+          "items": {
+            "$ref": "#/$defs/oscal.ssp.v1.InformationType.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "links": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Link.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "props": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Property.jsonschema.json"
+          },
+          "type": "array"
+        }
+      },
+      "title": "System Information",
+      "type": "object"
+    },
+    "oscal.ssp.v1.SystemSecurityPlan.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "SystemSecurityPlan represents a system security plan",
+      "patternProperties": {
+        "^(back_matter)$": {
+          "$ref": "#/$defs/oscal.common.v1.BackMatter.jsonschema.json"
+        },
+        "^(control_implementation)$": {
+          "$ref": "#/$defs/oscal.ssp.v1.ControlImplementation.jsonschema.json"
+        },
+        "^(import_profile)$": {
+          "$ref": "#/$defs/oscal.ssp.v1.ImportProfile.jsonschema.json"
+        },
+        "^(system_characteristics)$": {
+          "$ref": "#/$defs/oscal.ssp.v1.SystemCharacteristics.jsonschema.json"
+        },
+        "^(system_implementation)$": {
+          "$ref": "#/$defs/oscal.ssp.v1.SystemImplementation.jsonschema.json"
+        }
+      },
+      "properties": {
+        "backMatter": {
+          "$ref": "#/$defs/oscal.common.v1.BackMatter.jsonschema.json"
+        },
+        "controlImplementation": {
+          "$ref": "#/$defs/oscal.ssp.v1.ControlImplementation.jsonschema.json"
+        },
+        "importProfile": {
+          "$ref": "#/$defs/oscal.ssp.v1.ImportProfile.jsonschema.json"
+        },
+        "metadata": {
+          "$ref": "#/$defs/oscal.common.v1.Metadata.jsonschema.json"
+        },
+        "systemCharacteristics": {
+          "$ref": "#/$defs/oscal.ssp.v1.SystemCharacteristics.jsonschema.json"
+        },
+        "systemImplementation": {
+          "$ref": "#/$defs/oscal.ssp.v1.SystemImplementation.jsonschema.json"
+        },
+        "uuid": {
+          "$ref": "#/$defs/oscal.common.v1.UUID.jsonschema.json"
+        }
+      },
+      "title": "System Security Plan",
+      "type": "object"
+    },
+    "oscal.ssp.v1.SystemUser.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "SystemUser represents a system user",
+      "patternProperties": {
+        "^(short_name)$": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "properties": {
+        "description": {
+          "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.jsonschema.json"
+        },
+        "links": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Link.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "props": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Property.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "remarks": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "shortName": {
+          "default": "",
+          "type": "string"
+        },
+        "title": {
+          "default": "",
+          "type": "string"
+        },
+        "uuid": {
+          "$ref": "#/$defs/oscal.common.v1.UUID.jsonschema.json"
+        }
+      },
+      "title": "System User",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.services.v1.CreateSspRequest.jsonschema.bundle.json",
+  "$ref": "#/$defs/oscal.services.v1.CreateSspRequest.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

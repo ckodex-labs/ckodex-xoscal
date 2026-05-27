@@ -1,0 +1,16 @@
+{
+  "$id": "oscal.common.v1.NonNegativeInteger.jsonschema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "NonNegativeInteger represents a non-negative integer",
+  "properties": {
+    "value": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "value"
+  ],
+  "title": "Non Negative Integer",
+  "type": "object"
+}

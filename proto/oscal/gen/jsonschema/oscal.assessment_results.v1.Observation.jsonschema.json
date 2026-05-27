@@ -1,0 +1,81 @@
+{
+  "$id": "oscal.assessment_results.v1.Observation.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Observation represents an observation",
+  "patternProperties": {
+    "^(relevant_evidence)$": {
+      "items": {
+        "$ref": "oscal.assessment_results.v1.RelevantEvidence.jsonschema.json"
+      },
+      "type": "array"
+    }
+  },
+  "properties": {
+    "collected": {
+      "$ref": "oscal.common.v1.DateTime.jsonschema.json"
+    },
+    "description": {
+      "$ref": "oscal.common.v1.MarkupMultiline.jsonschema.json"
+    },
+    "expires": {
+      "$ref": "oscal.common.v1.DateTime.jsonschema.json"
+    },
+    "links": {
+      "items": {
+        "$ref": "oscal.common.v1.Link.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "methods": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "origins": {
+      "items": {
+        "$ref": "oscal.assessment_results.v1.Origin.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "props": {
+      "items": {
+        "$ref": "oscal.common.v1.Property.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "relevantEvidence": {
+      "items": {
+        "$ref": "oscal.assessment_results.v1.RelevantEvidence.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "remarks": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupMultiline.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "subjects": {
+      "items": {
+        "$ref": "oscal.assessment_results.v1.SubjectReference.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "title": {
+      "$ref": "oscal.common.v1.MarkupLine.jsonschema.json"
+    },
+    "types": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "uuid": {
+      "$ref": "oscal.common.v1.UUID.jsonschema.json"
+    }
+  },
+  "title": "Observation",
+  "type": "object"
+}

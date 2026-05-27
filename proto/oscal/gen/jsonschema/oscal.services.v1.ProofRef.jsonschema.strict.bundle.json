@@ -1,0 +1,33 @@
+{
+  "$defs": {
+    "oscal.services.v1.ProofRef.jsonschema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "properties": {
+        "digest": {
+          "type": "string"
+        },
+        "ref": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "witnessQuorumJson": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "type",
+        "ref",
+        "digest",
+        "witnessQuorumJson"
+      ],
+      "title": "Proof Ref",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.services.v1.ProofRef.jsonschema.strict.bundle.json",
+  "$ref": "#/$defs/oscal.services.v1.ProofRef.jsonschema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

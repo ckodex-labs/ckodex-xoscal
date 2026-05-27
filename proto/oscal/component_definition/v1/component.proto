@@ -1,0 +1,113 @@
+syntax = "proto3";
+
+package oscal.component_definition.v1;
+
+import "common/v1/common.proto";
+
+option go_package = "github.com/mchorfa/xoscal/proto/oscal/component_definition/v1;componentdefinitionv1";
+
+// ComponentDefinition represents a collection of component descriptions
+message ComponentDefinition {
+  oscal.common.v1.UUID uuid = 1;
+  oscal.common.v1.Metadata metadata = 2;
+  repeated ImportComponentDefinition import_component_definitions = 3;
+  repeated DefinedComponent components = 4;
+  repeated Capability capabilities = 5;
+  oscal.common.v1.BackMatter back_matter = 6;
+}
+
+// ImportComponentDefinition loads a component definition from another resource
+message ImportComponentDefinition {
+  oscal.common.v1.URIReference href = 1;
+  repeated oscal.common.v1.Property props = 2;
+  repeated oscal.common.v1.Link links = 3;
+  repeated oscal.common.v1.MarkupMultiline remarks = 4;
+}
+
+// DefinedComponent represents a component description
+message DefinedComponent {
+  oscal.common.v1.UUID uuid = 1;
+  string type = 2;
+  oscal.common.v1.MarkupLine title = 3;
+  oscal.common.v1.MarkupMultiline description = 4;
+  repeated ControlImplementation control_implementations = 5;
+  repeated Protocol protocols = 6;
+  repeated oscal.common.v1.Property props = 7;
+  repeated oscal.common.v1.Link links = 8;
+  repeated oscal.common.v1.MarkupMultiline remarks = 9;
+  repeated ResponsibleParty responsible_parties = 10;
+  repeated string supply_chain_type = 11;
+}
+
+// ControlImplementation represents control implementation by a component
+message ControlImplementation {
+  string control_id = 1;
+  repeated oscal.common.v1.MarkupLine description = 2;
+  repeated SetParameter set_parameters = 3;
+  repeated ImplementedRequirement implemented_requirements = 4;
+  repeated oscal.common.v1.Property props = 5;
+  repeated oscal.common.v1.Link links = 6;
+  repeated oscal.common.v1.MarkupMultiline remarks = 7;
+}
+
+// SetParameter represents parameter value assignments
+message SetParameter {
+  string param_id = 1;
+  repeated oscal.common.v1.MarkupLine values = 2;
+  repeated oscal.common.v1.Property props = 3;
+  repeated oscal.common.v1.Link links = 4;
+  repeated oscal.common.v1.MarkupMultiline remarks = 5;
+}
+
+// ImplementedRequirement represents a control requirement implementation
+message ImplementedRequirement {
+  string control_id = 1;
+  repeated oscal.common.v1.MarkupLine description = 2;
+  repeated Statement statements = 3;
+  repeated oscal.common.v1.Property props = 4;
+  repeated oscal.common.v1.Link links = 5;
+  repeated oscal.common.v1.MarkupMultiline remarks = 6;
+}
+
+// Statement represents a control implementation statement
+message Statement {
+  string statement_id = 1;
+  string uuid = 2;
+  repeated oscal.common.v1.MarkupLine description = 3;
+  repeated oscal.common.v1.Property props = 4;
+  repeated oscal.common.v1.Link links = 5;
+  repeated oscal.common.v1.MarkupMultiline remarks = 6;
+  repeated Statement by_components = 7;
+}
+
+// Protocol represents a protocol used by the component
+message Protocol {
+  oscal.common.v1.UUID uuid = 1;
+  string name = 2;
+  repeated oscal.common.v1.MarkupLine title = 3;
+  repeated oscal.common.v1.MarkupMultiline description = 4;
+  repeated string port_numbers = 5;
+  repeated oscal.common.v1.Property props = 6;
+  repeated oscal.common.v1.Link links = 7;
+  repeated oscal.common.v1.MarkupMultiline remarks = 8;
+}
+
+// ResponsibleParty represents a party responsible for the component
+message ResponsibleParty {
+  string role_id = 1;
+  repeated oscal.common.v1.UUID party_uuids = 2;
+  repeated oscal.common.v1.Property props = 3;
+  repeated oscal.common.v1.Link links = 4;
+  repeated oscal.common.v1.MarkupMultiline remarks = 5;
+}
+
+// Capability represents a grouping of control implementations
+message Capability {
+  oscal.common.v1.UUID uuid = 1;
+  string name = 2;
+  repeated oscal.common.v1.MarkupMultiline description = 3;
+  repeated ControlImplementation control_implementations = 4;
+  repeated oscal.common.v1.Property props = 5;
+  repeated oscal.common.v1.Link links = 6;
+  repeated oscal.common.v1.MarkupMultiline remarks = 7;
+}

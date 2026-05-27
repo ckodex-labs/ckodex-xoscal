@@ -1,0 +1,93 @@
+{
+  "$defs": {
+    "google.protobuf.Timestamp.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "format": "date-time",
+      "title": "Timestamp",
+      "type": "string"
+    },
+    "oscal.services.v1.ListClaimsRequest.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "patternProperties": {
+        "^(bomKind)$": {
+          "default": "",
+          "type": "string"
+        },
+        "^(pageSize)$": {
+          "anyOf": [
+            {
+              "maximum": 2147483647,
+              "minimum": -2147483648,
+              "type": "integer"
+            },
+            {
+              "pattern": "^-?[0-9]+$",
+              "type": "string"
+            }
+          ],
+          "default": 0
+        },
+        "^(pageToken)$": {
+          "default": "",
+          "type": "string"
+        },
+        "^(subjectDigest)$": {
+          "default": "",
+          "type": "string"
+        },
+        "^(trustState)$": {
+          "default": "",
+          "type": "string"
+        },
+        "^(validAfter)$": {
+          "$ref": "#/$defs/google.protobuf.Timestamp.schema.json"
+        }
+      },
+      "properties": {
+        "bom_kind": {
+          "default": "",
+          "type": "string"
+        },
+        "page_size": {
+          "anyOf": [
+            {
+              "maximum": 2147483647,
+              "minimum": -2147483648,
+              "type": "integer"
+            },
+            {
+              "pattern": "^-?[0-9]+$",
+              "type": "string"
+            }
+          ],
+          "default": 0
+        },
+        "page_token": {
+          "default": "",
+          "type": "string"
+        },
+        "relation": {
+          "default": "",
+          "type": "string"
+        },
+        "subject_digest": {
+          "default": "",
+          "type": "string"
+        },
+        "trust_state": {
+          "default": "",
+          "type": "string"
+        },
+        "valid_after": {
+          "$ref": "#/$defs/google.protobuf.Timestamp.schema.json"
+        }
+      },
+      "title": "List Claims Request",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.services.v1.ListClaimsRequest.schema.bundle.json",
+  "$ref": "#/$defs/oscal.services.v1.ListClaimsRequest.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

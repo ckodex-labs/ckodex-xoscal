@@ -1,0 +1,15 @@
+{
+  "$id": "oscal.services.v1.UpdateAssessmentPlanRequest.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "assessment_plan": {
+      "$ref": "oscal.assessment_plan.v1.AssessmentPlan.schema.strict.json"
+    },
+    "uuid": {
+      "$ref": "oscal.common.v1.UUID.schema.strict.json"
+    }
+  },
+  "title": "Update Assessment Plan Request",
+  "type": "object"
+}

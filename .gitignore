@@ -1,0 +1,66 @@
+# --- Build artifacts ---
+bin/
+dist/
+*.exe
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+coverage.out
+*.prof
+
+# --- Go ---
+vendor/
+go.work
+go.work.sum
+
+# --- IDE / Editor ---
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.*.un~
+
+# --- OS files ---
+.DS_Store
+Thumbs.db
+
+# --- Temporary / Cache ---
+tmp/
+temp/
+*.tmp
+data/cache/
+
+# --- Database ---
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+*.db-shm
+*.db-wal
+
+# --- Secrets / Local config ---
+.env
+.env.local
+*.local.yaml
+*.local.yml
+*.local.json
+
+# --- Logs ---
+*.log
+
+# --- gRPC / Proto generated (if regenerating in CI) ---
+# Uncomment if you prefer CI-only generation:
+# proto/gen/
+
+# --- Dependency lock backups ---
+go.sum.bak
+
+# --- Dagger generated ---
+dagger/dagger.gen.go
+dagger/internal/
+!dagger/main.go
+.codegraph/
+

@@ -1,0 +1,15 @@
+{
+  "$id": "oscal.services.v1.GenerateMappingsRequest.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "snapshot_name": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "snapshot_name"
+  ],
+  "title": "Generate Mappings Request",
+  "type": "object"
+}

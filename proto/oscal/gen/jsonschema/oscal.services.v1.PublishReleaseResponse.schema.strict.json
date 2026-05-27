@@ -1,0 +1,19 @@
+{
+  "$id": "oscal.services.v1.PublishReleaseResponse.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "release_url": {
+      "type": "string"
+    },
+    "upload_url": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "release_url",
+    "upload_url"
+  ],
+  "title": "Publish Release Response",
+  "type": "object"
+}

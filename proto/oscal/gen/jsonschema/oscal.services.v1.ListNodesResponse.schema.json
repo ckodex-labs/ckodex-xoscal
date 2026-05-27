@@ -1,0 +1,25 @@
+{
+  "$id": "oscal.services.v1.ListNodesResponse.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "patternProperties": {
+    "^(nextPageToken)$": {
+      "default": "",
+      "type": "string"
+    }
+  },
+  "properties": {
+    "next_page_token": {
+      "default": "",
+      "type": "string"
+    },
+    "nodes": {
+      "items": {
+        "$ref": "oscal.services.v1.GraphNode.schema.json"
+      },
+      "type": "array"
+    }
+  },
+  "title": "List Nodes Response",
+  "type": "object"
+}

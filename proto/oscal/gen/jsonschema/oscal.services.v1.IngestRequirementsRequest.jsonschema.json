@@ -1,0 +1,30 @@
+{
+  "$id": "oscal.services.v1.IngestRequirementsRequest.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "--- Ingestion messages ---",
+  "patternProperties": {
+    "^(raw_data)$": {
+      "default": null,
+      "pattern": "^[A-Za-z0-9+/]*={0,2}$",
+      "type": "string"
+    }
+  },
+  "properties": {
+    "format": {
+      "default": "",
+      "type": "string"
+    },
+    "framework": {
+      "default": "",
+      "type": "string"
+    },
+    "rawData": {
+      "default": null,
+      "pattern": "^[A-Za-z0-9+/]*={0,2}$",
+      "type": "string"
+    }
+  },
+  "title": "Ingest Requirements Request",
+  "type": "object"
+}

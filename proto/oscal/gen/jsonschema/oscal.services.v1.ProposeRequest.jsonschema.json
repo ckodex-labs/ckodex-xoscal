@@ -1,0 +1,16 @@
+{
+  "$id": "oscal.services.v1.ProposeRequest.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "--- Reconciler messages ---",
+  "properties": {
+    "proposals": {
+      "items": {
+        "$ref": "oscal.services.v1.Entity.jsonschema.json"
+      },
+      "type": "array"
+    }
+  },
+  "title": "Propose Request",
+  "type": "object"
+}

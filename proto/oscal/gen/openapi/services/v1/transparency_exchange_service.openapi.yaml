@@ -1,0 +1,936 @@
+openapi: 3.1.0
+info:
+  title: oscal.services.v1
+paths:
+  /v1/transparency/claims:
+    get:
+      tags:
+        - oscal.services.v1.TransparencyExchangeService
+      summary: ListClaims
+      operationId: oscal.services.v1.TransparencyExchangeService.ListClaims
+      parameters:
+        - name: subjectDigest
+          in: query
+          schema:
+            type: string
+            title: subject_digest
+        - name: bomKind
+          in: query
+          schema:
+            type: string
+            title: bom_kind
+        - name: relation
+          in: query
+          schema:
+            type: string
+            title: relation
+        - name: trustState
+          in: query
+          schema:
+            type: string
+            title: trust_state
+        - name: validAfter
+          in: query
+          schema:
+            type: string
+            examples:
+              - "2023-01-15T01:30:15.01Z"
+              - "2024-12-25T12:00:00Z"
+            format: date-time
+            description: |-
+              A Timestamp represents a point in time independent of any time zone or local
+               calendar, encoded as a count of seconds and fractions of seconds at
+               nanosecond resolution. The count is relative to an epoch at UTC midnight on
+               January 1, 1970, in the proleptic Gregorian calendar which extends the
+               Gregorian calendar backwards to year one.
+
+               All minutes are 60 seconds long. Leap seconds are "smeared" so that no leap
+               second table is needed for interpretation, using a [24-hour linear
+               smear](https://developers.google.com/time/smear).
+
+               The range is from 0001-01-01T00:00:00Z to 9999-12-31T23:59:59.999999999Z. By
+               restricting to that range, we ensure that we can convert to and from [RFC
+               3339](https://www.ietf.org/rfc/rfc3339.txt) date strings.
+
+               # Examples
+
+               Example 1: Compute Timestamp from POSIX `time()`.
+
+                   Timestamp timestamp;
+                   timestamp.set_seconds(time(NULL));
+                   timestamp.set_nanos(0);
+
+               Example 2: Compute Timestamp from POSIX `gettimeofday()`.
+
+                   struct timeval tv;
+                   gettimeofday(&tv, NULL);
+
+                   Timestamp timestamp;
+                   timestamp.set_seconds(tv.tv_sec);
+                   timestamp.set_nanos(tv.tv_usec * 1000);
+
+               Example 3: Compute Timestamp from Win32 `GetSystemTimeAsFileTime()`.
+
+                   FILETIME ft;
+                   GetSystemTimeAsFileTime(&ft);
+                   UINT64 ticks = (((UINT64)ft.dwHighDateTime) << 32) | ft.dwLowDateTime;
+
+                   // A Windows tick is 100 nanoseconds. Windows epoch 1601-01-01T00:00:00Z
+                   // is 11644473600 seconds before Unix epoch 1970-01-01T00:00:00Z.
+                   Timestamp timestamp;
+                   timestamp.set_seconds((INT64) ((ticks / 10000000) - 11644473600LL));
+                   timestamp.set_nanos((INT32) ((ticks % 10000000) * 100));
+
+               Example 4: Compute Timestamp from Java `System.currentTimeMillis()`.
+
+                   long millis = System.currentTimeMillis();
+
+                   Timestamp timestamp = Timestamp.newBuilder().setSeconds(millis / 1000)
+                       .setNanos((int) ((millis % 1000) * 1000000)).build();
+
+               Example 5: Compute Timestamp from Java `Instant.now()`.
+
+                   Instant now = Instant.now();
+
+                   Timestamp timestamp =
+                       Timestamp.newBuilder().setSeconds(now.getEpochSecond())
+                           .setNanos(now.getNano()).build();
+
+               Example 6: Compute Timestamp from current time in Python.
+
+                   timestamp = Timestamp()
+                   timestamp.GetCurrentTime()
+
+               # JSON Mapping
+
+               In JSON format, the Timestamp type is encoded as a string in the
+               [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) format. That is, the
+               format is "{year}-{month}-{day}T{hour}:{min}:{sec}[.{frac_sec}]Z"
+               where {year} is always expressed using four digits while {month}, {day},
+               {hour}, {min}, and {sec} are zero-padded to two digits each. The fractional
+               seconds, which can go up to 9 digits (i.e. up to 1 nanosecond resolution),
+               are optional. The "Z" suffix indicates the timezone ("UTC"); the timezone
+               is required. A proto3 JSON serializer should always use UTC (as indicated by
+               "Z") when printing the Timestamp type and a proto3 JSON parser should be
+               able to accept both UTC and other timezones (as indicated by an offset).
+
+               For example, "2017-01-15T01:30:15.01Z" encodes 15.01 seconds past
+               01:30 UTC on January 15, 2017.
+
+               In JavaScript, one can convert a Date object to this format using the
+               standard
+               [toISOString()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString)
+               method. In Python, a standard `datetime.datetime` object can be converted
+               to this format using
+               [`strftime`](https://docs.python.org/2/library/time.html#time.strftime) with
+               the time format spec '%Y-%m-%dT%H:%M:%S.%fZ'. Likewise, in Java, one can use
+               the Joda Time's [`ISODateTimeFormat.dateTime()`](
+               http://joda-time.sourceforge.net/apidocs/org/joda/time/format/ISODateTimeFormat.html#dateTime()
+               ) to obtain a formatter capable of generating timestamps in this format.
+        - name: pageSize
+          in: query
+          schema:
+            type: integer
+            title: page_size
+            format: int32
+        - name: pageToken
+          in: query
+          schema:
+            type: string
+            title: page_token
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/oscal.services.v1.ListClaimsResponse'
+    post:
+      tags:
+        - oscal.services.v1.TransparencyExchangeService
+      summary: CreateClaim
+      operationId: oscal.services.v1.TransparencyExchangeService.CreateClaim
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/oscal.services.v1.CreateClaimRequest'
+        required: true
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/oscal.services.v1.CreateClaimResponse'
+  /v1/transparency/claims/{claim_id}:
+    get:
+      tags:
+        - oscal.services.v1.TransparencyExchangeService
+      summary: GetClaim
+      operationId: oscal.services.v1.TransparencyExchangeService.GetClaim
+      parameters:
+        - name: claim_id
+          in: path
+          required: true
+          schema:
+            type: string
+            title: claim_id
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/oscal.services.v1.GetClaimResponse'
+  /v1/transparency/claims/{claim_id}/verify:
+    post:
+      tags:
+        - oscal.services.v1.TransparencyExchangeService
+      summary: VerifyClaim
+      operationId: oscal.services.v1.TransparencyExchangeService.VerifyClaim
+      parameters:
+        - name: claim_id
+          in: path
+          required: true
+          schema:
+            type: string
+            title: claim_id
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                checks:
+                  type: array
+                  items:
+                    type: string
+                  title: checks
+                  description: 'empty = run all: digest, signature, policy'
+              title: VerifyClaimRequest
+              additionalProperties: false
+        required: true
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/oscal.services.v1.VerifyClaimResponse'
+  /v1/transparency/evidence:
+    post:
+      tags:
+        - oscal.services.v1.TransparencyExchangeService
+      summary: UploadEvidence
+      operationId: oscal.services.v1.TransparencyExchangeService.UploadEvidence
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/oscal.services.v1.UploadEvidenceRequest'
+        required: true
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/oscal.services.v1.UploadEvidenceResponse'
+  /v1/transparency/evidence/{evidence_id}:
+    get:
+      tags:
+        - oscal.services.v1.TransparencyExchangeService
+      summary: GetEvidence
+      operationId: oscal.services.v1.TransparencyExchangeService.GetEvidence
+      parameters:
+        - name: evidence_id
+          in: path
+          required: true
+          schema:
+            type: string
+            title: evidence_id
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/oscal.services.v1.GetEvidenceResponse'
+  /v1/transparency/evidence/{evidence_id}/verify:
+    post:
+      tags:
+        - oscal.services.v1.TransparencyExchangeService
+      summary: VerifyEvidence
+      operationId: oscal.services.v1.TransparencyExchangeService.VerifyEvidence
+      parameters:
+        - name: evidence_id
+          in: path
+          required: true
+          schema:
+            type: string
+            title: evidence_id
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                fetchAndHash:
+                  type: boolean
+                  title: fetch_and_hash
+              title: VerifyEvidenceRequest
+              additionalProperties: false
+        required: true
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/oscal.services.v1.VerifyEvidenceResponse'
+  /v1/transparency/sync:
+    post:
+      tags:
+        - oscal.services.v1.TransparencyExchangeService
+      summary: SyncClaims
+      operationId: oscal.services.v1.TransparencyExchangeService.SyncClaims
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/oscal.services.v1.SyncClaimsRequest'
+        required: true
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/oscal.services.v1.SyncClaimsResponse'
+components:
+  schemas:
+    google.protobuf.Timestamp:
+      type: string
+      examples:
+        - "2023-01-15T01:30:15.01Z"
+        - "2024-12-25T12:00:00Z"
+      format: date-time
+      description: |-
+        A Timestamp represents a point in time independent of any time zone or local
+         calendar, encoded as a count of seconds and fractions of seconds at
+         nanosecond resolution. The count is relative to an epoch at UTC midnight on
+         January 1, 1970, in the proleptic Gregorian calendar which extends the
+         Gregorian calendar backwards to year one.
+
+         All minutes are 60 seconds long. Leap seconds are "smeared" so that no leap
+         second table is needed for interpretation, using a [24-hour linear
+         smear](https://developers.google.com/time/smear).
+
+         The range is from 0001-01-01T00:00:00Z to 9999-12-31T23:59:59.999999999Z. By
+         restricting to that range, we ensure that we can convert to and from [RFC
+         3339](https://www.ietf.org/rfc/rfc3339.txt) date strings.
+
+         # Examples
+
+         Example 1: Compute Timestamp from POSIX `time()`.
+
+             Timestamp timestamp;
+             timestamp.set_seconds(time(NULL));
+             timestamp.set_nanos(0);
+
+         Example 2: Compute Timestamp from POSIX `gettimeofday()`.
+
+             struct timeval tv;
+             gettimeofday(&tv, NULL);
+
+             Timestamp timestamp;
+             timestamp.set_seconds(tv.tv_sec);
+             timestamp.set_nanos(tv.tv_usec * 1000);
+
+         Example 3: Compute Timestamp from Win32 `GetSystemTimeAsFileTime()`.
+
+             FILETIME ft;
+             GetSystemTimeAsFileTime(&ft);
+             UINT64 ticks = (((UINT64)ft.dwHighDateTime) << 32) | ft.dwLowDateTime;
+
+             // A Windows tick is 100 nanoseconds. Windows epoch 1601-01-01T00:00:00Z
+             // is 11644473600 seconds before Unix epoch 1970-01-01T00:00:00Z.
+             Timestamp timestamp;
+             timestamp.set_seconds((INT64) ((ticks / 10000000) - 11644473600LL));
+             timestamp.set_nanos((INT32) ((ticks % 10000000) * 100));
+
+         Example 4: Compute Timestamp from Java `System.currentTimeMillis()`.
+
+             long millis = System.currentTimeMillis();
+
+             Timestamp timestamp = Timestamp.newBuilder().setSeconds(millis / 1000)
+                 .setNanos((int) ((millis % 1000) * 1000000)).build();
+
+         Example 5: Compute Timestamp from Java `Instant.now()`.
+
+             Instant now = Instant.now();
+
+             Timestamp timestamp =
+                 Timestamp.newBuilder().setSeconds(now.getEpochSecond())
+                     .setNanos(now.getNano()).build();
+
+         Example 6: Compute Timestamp from current time in Python.
+
+             timestamp = Timestamp()
+             timestamp.GetCurrentTime()
+
+         # JSON Mapping
+
+         In JSON format, the Timestamp type is encoded as a string in the
+         [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) format. That is, the
+         format is "{year}-{month}-{day}T{hour}:{min}:{sec}[.{frac_sec}]Z"
+         where {year} is always expressed using four digits while {month}, {day},
+         {hour}, {min}, and {sec} are zero-padded to two digits each. The fractional
+         seconds, which can go up to 9 digits (i.e. up to 1 nanosecond resolution),
+         are optional. The "Z" suffix indicates the timezone ("UTC"); the timezone
+         is required. A proto3 JSON serializer should always use UTC (as indicated by
+         "Z") when printing the Timestamp type and a proto3 JSON parser should be
+         able to accept both UTC and other timezones (as indicated by an offset).
+
+         For example, "2017-01-15T01:30:15.01Z" encodes 15.01 seconds past
+         01:30 UTC on January 15, 2017.
+
+         In JavaScript, one can convert a Date object to this format using the
+         standard
+         [toISOString()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString)
+         method. In Python, a standard `datetime.datetime` object can be converted
+         to this format using
+         [`strftime`](https://docs.python.org/2/library/time.html#time.strftime) with
+         the time format spec '%Y-%m-%dT%H:%M:%S.%fZ'. Likewise, in Java, one can use
+         the Joda Time's [`ISODateTimeFormat.dateTime()`](
+         http://joda-time.sourceforge.net/apidocs/org/joda/time/format/ISODateTimeFormat.html#dateTime()
+         ) to obtain a formatter capable of generating timestamps in this format.
+    oscal.services.v1.Claim:
+      type: object
+      allOf:
+        - properties:
+            id:
+              type: string
+              title: id
+            type:
+              type: string
+              title: type
+            subject:
+              title: subject
+              $ref: '#/components/schemas/oscal.services.v1.Reference'
+            predicate:
+              title: predicate
+              $ref: '#/components/schemas/oscal.services.v1.Predicate'
+            issuer:
+              title: issuer
+              $ref: '#/components/schemas/oscal.services.v1.Identity'
+            bomKind:
+              type: string
+              title: bom_kind
+            validTime:
+              title: valid_time
+              $ref: '#/components/schemas/oscal.services.v1.TimeWindow'
+            observedTime:
+              title: observed_time
+              $ref: '#/components/schemas/google.protobuf.Timestamp'
+            sourceRefs:
+              type: array
+              items:
+                $ref: '#/components/schemas/oscal.services.v1.EvidenceRef'
+              title: source_refs
+            proofRefs:
+              type: array
+              items:
+                $ref: '#/components/schemas/oscal.services.v1.ProofRef'
+              title: proof_refs
+            policyRefs:
+              type: array
+              items:
+                $ref: '#/components/schemas/oscal.services.v1.PolicyRef'
+              title: policy_refs
+            extensionsJson:
+              type: string
+              title: extensions_json
+              description: JSON blob for flexible extensions
+        - oneOf:
+            - type: object
+              properties:
+                nullObject:
+                  title: null_object
+                  $ref: '#/components/schemas/google.protobuf.Timestamp'
+              title: null_object
+              required:
+                - nullObject
+            - type: object
+              properties:
+                object:
+                  title: object
+                  $ref: '#/components/schemas/oscal.services.v1.Reference'
+              title: object
+              required:
+                - object
+      title: Claim
+      additionalProperties: false
+    oscal.services.v1.CreateClaimRequest:
+      type: object
+      properties:
+        claim:
+          title: claim
+          $ref: '#/components/schemas/oscal.services.v1.Claim'
+      title: CreateClaimRequest
+      additionalProperties: false
+    oscal.services.v1.CreateClaimResponse:
+      type: object
+      properties:
+        claim:
+          title: claim
+          $ref: '#/components/schemas/oscal.services.v1.Claim'
+        trustState:
+          type: string
+          title: trust_state
+          description: computed initial state
+      title: CreateClaimResponse
+      additionalProperties: false
+    oscal.services.v1.Evidence:
+      type: object
+      properties:
+        id:
+          type: string
+          title: id
+        mediaType:
+          type: string
+          title: media_type
+        bomKind:
+          type: string
+          title: bom_kind
+        digest:
+          type: string
+          title: digest
+        sizeBytes:
+          type:
+            - integer
+            - string
+          title: size_bytes
+          format: int64
+        storage:
+          title: storage
+          $ref: '#/components/schemas/oscal.services.v1.Storage'
+        producedByJson:
+          type: string
+          title: produced_by_json
+          description: JSON blob
+        subjectRefs:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.services.v1.Reference'
+          title: subject_refs
+        predicateType:
+          type: string
+          title: predicate_type
+        specJson:
+          type: string
+          title: spec_json
+        createdAt:
+          title: created_at
+          $ref: '#/components/schemas/google.protobuf.Timestamp'
+        validTime:
+          title: valid_time
+          $ref: '#/components/schemas/oscal.services.v1.TimeWindow'
+        supersedes:
+          type: array
+          items:
+            type: string
+          title: supersedes
+        integrityMethodsJson:
+          type: string
+          title: integrity_methods_json
+        classification:
+          type: string
+          title: classification
+          description: public | internal | confidential | restricted
+        extensionsJson:
+          type: string
+          title: extensions_json
+      title: Evidence
+      additionalProperties: false
+    oscal.services.v1.EvidenceRef:
+      type: object
+      properties:
+        ref:
+          type: string
+          title: ref
+        digest:
+          type: string
+          title: digest
+        mediaType:
+          type: string
+          title: media_type
+        bomKind:
+          type: string
+          title: bom_kind
+      title: EvidenceRef
+      additionalProperties: false
+    oscal.services.v1.GetClaimRequest:
+      type: object
+      properties:
+        claimId:
+          type: string
+          title: claim_id
+      title: GetClaimRequest
+      additionalProperties: false
+    oscal.services.v1.GetClaimResponse:
+      type: object
+      properties:
+        claim:
+          title: claim
+          $ref: '#/components/schemas/oscal.services.v1.Claim'
+      title: GetClaimResponse
+      additionalProperties: false
+    oscal.services.v1.GetEvidenceRequest:
+      type: object
+      properties:
+        evidenceId:
+          type: string
+          title: evidence_id
+      title: GetEvidenceRequest
+      additionalProperties: false
+    oscal.services.v1.GetEvidenceResponse:
+      type: object
+      properties:
+        evidence:
+          title: evidence
+          $ref: '#/components/schemas/oscal.services.v1.Evidence'
+      title: GetEvidenceResponse
+      additionalProperties: false
+    oscal.services.v1.Identity:
+      type: object
+      properties:
+        kind:
+          type: string
+          title: kind
+          description: workload | human | organization | tool
+        id:
+          type: string
+          title: id
+        keyJson:
+          type: string
+          title: key_json
+          description: JSON blob for key metadata
+      title: Identity
+      additionalProperties: false
+    oscal.services.v1.ListClaimsRequest:
+      type: object
+      properties:
+        subjectDigest:
+          type: string
+          title: subject_digest
+        bomKind:
+          type: string
+          title: bom_kind
+        relation:
+          type: string
+          title: relation
+        trustState:
+          type: string
+          title: trust_state
+        validAfter:
+          title: valid_after
+          $ref: '#/components/schemas/google.protobuf.Timestamp'
+        pageSize:
+          type: integer
+          title: page_size
+          format: int32
+        pageToken:
+          type: string
+          title: page_token
+      title: ListClaimsRequest
+      additionalProperties: false
+    oscal.services.v1.ListClaimsResponse:
+      type: object
+      properties:
+        claims:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.services.v1.Claim'
+          title: claims
+        nextPageToken:
+          type: string
+          title: next_page_token
+      title: ListClaimsResponse
+      additionalProperties: false
+    oscal.services.v1.PolicyRef:
+      type: object
+      properties:
+        type:
+          type: string
+          title: type
+          description: opa_bundle | oscal_profile | cdxa_standard | spdx_security_profile
+        ref:
+          type: string
+          title: ref
+        digest:
+          type: string
+          title: digest
+        validTo:
+          title: valid_to
+          $ref: '#/components/schemas/google.protobuf.Timestamp'
+      title: PolicyRef
+      additionalProperties: false
+    oscal.services.v1.Predicate:
+      type: object
+      properties:
+        relation:
+          type: string
+          title: relation
+        direction:
+          type: string
+          title: direction
+          description: '"forward" | "reverse"'
+        qualifier:
+          type: string
+          title: qualifier
+      title: Predicate
+      additionalProperties: false
+    oscal.services.v1.ProofRef:
+      type: object
+      properties:
+        type:
+          type: string
+          title: type
+          description: signature | transparency_log | witness_checkpoint | zk_proof | tsa_timestamp
+        ref:
+          type: string
+          title: ref
+        digest:
+          type: string
+          title: digest
+        witnessQuorumJson:
+          type: string
+          title: witness_quorum_json
+          description: JSON blob for quorum metadata
+      title: ProofRef
+      additionalProperties: false
+    oscal.services.v1.ProofState:
+      type: object
+      properties:
+        discovery:
+          type: string
+          title: discovery
+          description: candidate | discovered
+        graph:
+          type: string
+          title: graph
+          description: unresolved | graph_resolved
+        claim:
+          type: string
+          title: claim
+          description: unbound | claim_bound
+        source:
+          type: string
+          title: source
+          description: unbound | source_bound | rejected
+        signature:
+          type: string
+          title: signature
+          description: unverified | signature_verified | invalid
+        transparency:
+          type: string
+          title: transparency
+          description: unverified | inclusion_verified | missing | invalid
+        witnessJson:
+          type: string
+          title: witness_json
+          description: JSON blob for WitnessSubState
+        state:
+          type: string
+          title: state
+          description: unverified | current_state_verified | superseded
+        policy:
+          type: string
+          title: policy
+          description: unevaluated | policy_admissible | policy_inadmissible | stale_policy
+      title: ProofState
+      additionalProperties: false
+    oscal.services.v1.Reference:
+      type: object
+      properties:
+        kind:
+          type: string
+          title: kind
+        id:
+          type: string
+          title: id
+        digest:
+          type: string
+          title: digest
+        purl:
+          type: string
+          title: purl
+        bomRef:
+          type: string
+          title: bom_ref
+      title: Reference
+      additionalProperties: false
+    oscal.services.v1.Storage:
+      type: object
+      properties:
+        uris:
+          type: array
+          items:
+            type: string
+          title: uris
+        fetchPolicy:
+          type: string
+          title: fetch_policy
+          description: any | all | quorum
+        quorum:
+          type: integer
+          title: quorum
+          format: int32
+        airGapJson:
+          type: string
+          title: air_gap_json
+      title: Storage
+      additionalProperties: false
+    oscal.services.v1.SyncClaimsRequest:
+      type: object
+      properties:
+        peerEndpoint:
+          type: string
+          title: peer_endpoint
+        filterSubject:
+          type: string
+          title: filter_subject
+        filterBomKind:
+          type: string
+          title: filter_bom_kind
+        since:
+          title: since
+          $ref: '#/components/schemas/google.protobuf.Timestamp'
+      title: SyncClaimsRequest
+      additionalProperties: false
+    oscal.services.v1.SyncClaimsResponse:
+      type: object
+      properties:
+        imported:
+          type: integer
+          title: imported
+          format: int32
+        skipped:
+          type: integer
+          title: skipped
+          format: int32
+        failed:
+          type: integer
+          title: failed
+          format: int32
+        diagnostics:
+          type: array
+          items:
+            type: string
+          title: diagnostics
+      title: SyncClaimsResponse
+      additionalProperties: false
+    oscal.services.v1.TimeWindow:
+      type: object
+      properties:
+        fromTime:
+          title: from_time
+          $ref: '#/components/schemas/google.protobuf.Timestamp'
+        toTime:
+          title: to_time
+          description: null = open-ended
+          $ref: '#/components/schemas/google.protobuf.Timestamp'
+      title: TimeWindow
+      additionalProperties: false
+    oscal.services.v1.UploadEvidenceRequest:
+      type: object
+      properties:
+        evidence:
+          title: evidence
+          $ref: '#/components/schemas/oscal.services.v1.Evidence'
+        blob:
+          type: string
+          title: blob
+          format: byte
+      title: UploadEvidenceRequest
+      additionalProperties: false
+    oscal.services.v1.UploadEvidenceResponse:
+      type: object
+      properties:
+        evidence:
+          title: evidence
+          $ref: '#/components/schemas/oscal.services.v1.Evidence'
+        stored:
+          type: boolean
+          title: stored
+      title: UploadEvidenceResponse
+      additionalProperties: false
+    oscal.services.v1.VerifyClaimRequest:
+      type: object
+      properties:
+        claimId:
+          type: string
+          title: claim_id
+        checks:
+          type: array
+          items:
+            type: string
+          title: checks
+          description: 'empty = run all: digest, signature, policy'
+      title: VerifyClaimRequest
+      additionalProperties: false
+    oscal.services.v1.VerifyClaimResponse:
+      type: object
+      properties:
+        claimId:
+          type: string
+          title: claim_id
+        proofState:
+          title: proof_state
+          $ref: '#/components/schemas/oscal.services.v1.ProofState'
+        trustState:
+          type: string
+          title: trust_state
+        diagnostics:
+          type: array
+          items:
+            type: string
+          title: diagnostics
+      title: VerifyClaimResponse
+      additionalProperties: false
+    oscal.services.v1.VerifyEvidenceRequest:
+      type: object
+      properties:
+        evidenceId:
+          type: string
+          title: evidence_id
+        fetchAndHash:
+          type: boolean
+          title: fetch_and_hash
+      title: VerifyEvidenceRequest
+      additionalProperties: false
+    oscal.services.v1.VerifyEvidenceResponse:
+      type: object
+      properties:
+        evidenceId:
+          type: string
+          title: evidence_id
+        digestOk:
+          type: boolean
+          title: digest_ok
+        sizeOk:
+          type: boolean
+          title: size_ok
+        error:
+          type: string
+          title: error
+      title: VerifyEvidenceResponse
+      additionalProperties: false
+security: []
+tags:
+  - name: oscal.services.v1.TransparencyExchangeService
+    description: |-
+      TransparencyExchangeService provides content-addressed attestation claims
+       and xBOM evidence exchange for xOSCAL.

@@ -1,0 +1,47 @@
+{
+  "$defs": {
+    "oscal.assessment_results.v1.ObjectiveStatus.schema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "ObjectiveStatus represents objective status",
+      "properties": {
+        "reason": {
+          "type": "string"
+        },
+        "remarks": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.schema.strict.json"
+          },
+          "type": "array"
+        },
+        "state": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "state",
+        "reason"
+      ],
+      "title": "Objective Status",
+      "type": "object"
+    },
+    "oscal.common.v1.MarkupMultiline.schema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "MarkupMultiline represents multiline markup text",
+      "properties": {
+        "value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "value"
+      ],
+      "title": "Markup Multiline",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.assessment_results.v1.ObjectiveStatus.schema.strict.bundle.json",
+  "$ref": "#/$defs/oscal.assessment_results.v1.ObjectiveStatus.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

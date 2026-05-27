@@ -1,0 +1,81 @@
+{
+  "$defs": {
+    "oscal.assessment_plan.v1.ControlSelection.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "ControlSelection represents a control selection",
+      "patternProperties": {
+        "^(controlId)$": {
+          "$ref": "#/$defs/oscal.common.v1.Token.schema.json"
+        }
+      },
+      "properties": {
+        "control_id": {
+          "$ref": "#/$defs/oscal.common.v1.Token.schema.json"
+        },
+        "remarks": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.schema.json"
+          },
+          "type": "array"
+        }
+      },
+      "title": "Control Selection",
+      "type": "object"
+    },
+    "oscal.assessment_plan.v1.ReviewedControls.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "ReviewedControls represents reviewed controls",
+      "patternProperties": {
+        "^(controlSelection)$": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "properties": {
+        "control_selection": {
+          "default": "",
+          "type": "string"
+        },
+        "controls": {
+          "items": {
+            "$ref": "#/$defs/oscal.assessment_plan.v1.ControlSelection.schema.json"
+          },
+          "type": "array"
+        }
+      },
+      "title": "Reviewed Controls",
+      "type": "object"
+    },
+    "oscal.common.v1.MarkupMultiline.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "MarkupMultiline represents multiline markup text",
+      "properties": {
+        "value": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Markup Multiline",
+      "type": "object"
+    },
+    "oscal.common.v1.Token.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Token represents an alphanumeric token (e.g., control IDs)",
+      "properties": {
+        "value": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Token",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.assessment_plan.v1.ReviewedControls.schema.bundle.json",
+  "$ref": "#/$defs/oscal.assessment_plan.v1.ReviewedControls.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

@@ -1,0 +1,54 @@
+{
+  "$id": "oscal.assessment_plan.v1.LocalDefinitions.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "LocalDefinitions represents local definitions for the assessment plan",
+  "patternProperties": {
+    "^(inventoryItems)$": {
+      "items": {
+        "$ref": "oscal.assessment_plan.v1.InventoryItem.schema.json"
+      },
+      "type": "array"
+    }
+  },
+  "properties": {
+    "activities": {
+      "items": {
+        "$ref": "oscal.assessment_plan.v1.Activity.schema.json"
+      },
+      "type": "array"
+    },
+    "components": {
+      "items": {
+        "$ref": "oscal.assessment_plan.v1.Component.schema.json"
+      },
+      "type": "array"
+    },
+    "inventory_items": {
+      "items": {
+        "$ref": "oscal.assessment_plan.v1.InventoryItem.schema.json"
+      },
+      "type": "array"
+    },
+    "methods": {
+      "items": {
+        "$ref": "oscal.assessment_plan.v1.AssessmentMethod.schema.json"
+      },
+      "type": "array"
+    },
+    "objectives": {
+      "items": {
+        "$ref": "oscal.assessment_plan.v1.LocalObjective.schema.json"
+      },
+      "type": "array"
+    },
+    "users": {
+      "items": {
+        "$ref": "oscal.assessment_plan.v1.User.schema.json"
+      },
+      "type": "array"
+    }
+  },
+  "title": "Local Definitions",
+  "type": "object"
+}

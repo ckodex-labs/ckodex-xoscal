@@ -1,0 +1,48 @@
+{
+  "$id": "oscal.ssp.v1.Provided.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Provided represents provided control implementation",
+  "patternProperties": {
+    "^(responsibleRoles)$": {
+      "items": {
+        "$ref": "oscal.ssp.v1.ResponsibleRole.schema.json"
+      },
+      "type": "array"
+    }
+  },
+  "properties": {
+    "description": {
+      "$ref": "oscal.common.v1.MarkupMultiline.schema.json"
+    },
+    "links": {
+      "items": {
+        "$ref": "oscal.common.v1.Link.schema.json"
+      },
+      "type": "array"
+    },
+    "props": {
+      "items": {
+        "$ref": "oscal.common.v1.Property.schema.json"
+      },
+      "type": "array"
+    },
+    "remarks": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupMultiline.schema.json"
+      },
+      "type": "array"
+    },
+    "responsible_roles": {
+      "items": {
+        "$ref": "oscal.ssp.v1.ResponsibleRole.schema.json"
+      },
+      "type": "array"
+    },
+    "uuid": {
+      "$ref": "oscal.common.v1.UUID.schema.json"
+    }
+  },
+  "title": "Provided",
+  "type": "object"
+}

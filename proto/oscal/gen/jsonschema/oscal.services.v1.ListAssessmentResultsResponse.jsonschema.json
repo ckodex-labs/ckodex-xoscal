@@ -1,0 +1,31 @@
+{
+  "$id": "oscal.services.v1.ListAssessmentResultsResponse.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "patternProperties": {
+    "^(assessment_results_list)$": {
+      "items": {
+        "$ref": "oscal.assessment_results.v1.AssessmentResults.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "^(next_page_token)$": {
+      "default": "",
+      "type": "string"
+    }
+  },
+  "properties": {
+    "assessmentResultsList": {
+      "items": {
+        "$ref": "oscal.assessment_results.v1.AssessmentResults.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "nextPageToken": {
+      "default": "",
+      "type": "string"
+    }
+  },
+  "title": "List Assessment Results Response",
+  "type": "object"
+}

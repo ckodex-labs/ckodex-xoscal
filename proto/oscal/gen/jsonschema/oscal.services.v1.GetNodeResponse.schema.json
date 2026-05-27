@@ -1,0 +1,12 @@
+{
+  "$id": "oscal.services.v1.GetNodeResponse.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "node": {
+      "$ref": "oscal.services.v1.GraphNode.schema.json"
+    }
+  },
+  "title": "Get Node Response",
+  "type": "object"
+}

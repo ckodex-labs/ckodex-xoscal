@@ -1,0 +1,24 @@
+{
+  "$id": "oscal.assessment_results.v1.ObjectiveStatus.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "ObjectiveStatus represents objective status",
+  "properties": {
+    "reason": {
+      "default": "",
+      "type": "string"
+    },
+    "remarks": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupMultiline.schema.json"
+      },
+      "type": "array"
+    },
+    "state": {
+      "default": "",
+      "type": "string"
+    }
+  },
+  "title": "Objective Status",
+  "type": "object"
+}

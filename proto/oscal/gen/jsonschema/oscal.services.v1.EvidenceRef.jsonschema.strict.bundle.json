@@ -1,0 +1,33 @@
+{
+  "$defs": {
+    "oscal.services.v1.EvidenceRef.jsonschema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "properties": {
+        "bomKind": {
+          "type": "string"
+        },
+        "digest": {
+          "type": "string"
+        },
+        "mediaType": {
+          "type": "string"
+        },
+        "ref": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "ref",
+        "digest",
+        "mediaType",
+        "bomKind"
+      ],
+      "title": "Evidence Ref",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.services.v1.EvidenceRef.jsonschema.strict.bundle.json",
+  "$ref": "#/$defs/oscal.services.v1.EvidenceRef.jsonschema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

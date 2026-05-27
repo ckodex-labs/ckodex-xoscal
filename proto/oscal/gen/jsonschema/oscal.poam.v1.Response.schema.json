@@ -1,0 +1,75 @@
+{
+  "$id": "oscal.poam.v1.Response.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Response represents a risk response/remediation",
+  "patternProperties": {
+    "^(relatedTasks)$": {
+      "items": {
+        "$ref": "oscal.poam.v1.RelatedTask.schema.json"
+      },
+      "type": "array"
+    },
+    "^(responsibleRoles)$": {
+      "items": {
+        "$ref": "oscal.poam.v1.ResponsibleRole.schema.json"
+      },
+      "type": "array"
+    }
+  },
+  "properties": {
+    "deadline": {
+      "$ref": "oscal.common.v1.DateTime.schema.json"
+    },
+    "description": {
+      "$ref": "oscal.common.v1.MarkupMultiline.schema.json"
+    },
+    "links": {
+      "items": {
+        "$ref": "oscal.common.v1.Link.schema.json"
+      },
+      "type": "array"
+    },
+    "props": {
+      "items": {
+        "$ref": "oscal.common.v1.Property.schema.json"
+      },
+      "type": "array"
+    },
+    "related_tasks": {
+      "items": {
+        "$ref": "oscal.poam.v1.RelatedTask.schema.json"
+      },
+      "type": "array"
+    },
+    "remarks": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupMultiline.schema.json"
+      },
+      "type": "array"
+    },
+    "responsible_roles": {
+      "items": {
+        "$ref": "oscal.poam.v1.ResponsibleRole.schema.json"
+      },
+      "type": "array"
+    },
+    "status": {
+      "$ref": "oscal.poam.v1.ResponseStatus.schema.json"
+    },
+    "subjects": {
+      "items": {
+        "$ref": "oscal.poam.v1.SubjectReference.schema.json"
+      },
+      "type": "array"
+    },
+    "title": {
+      "$ref": "oscal.common.v1.MarkupLine.schema.json"
+    },
+    "uuid": {
+      "$ref": "oscal.common.v1.UUID.schema.json"
+    }
+  },
+  "title": "Response",
+  "type": "object"
+}

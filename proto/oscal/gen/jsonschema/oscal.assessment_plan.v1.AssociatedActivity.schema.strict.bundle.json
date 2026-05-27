@@ -1,0 +1,46 @@
+{
+  "$defs": {
+    "oscal.assessment_plan.v1.AssociatedActivity.schema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "AssociatedActivity represents an associated activity",
+      "properties": {
+        "activity_uuid": {
+          "$ref": "#/$defs/oscal.common.v1.UUID.schema.strict.json"
+        },
+        "activity_uuids": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.UUID.schema.strict.json"
+          },
+          "type": "array"
+        },
+        "include_all": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "include_all"
+      ],
+      "title": "Associated Activity",
+      "type": "object"
+    },
+    "oscal.common.v1.UUID.schema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "UUID represents a universally unique identifier",
+      "properties": {
+        "value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "value"
+      ],
+      "title": "UUID",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.assessment_plan.v1.AssociatedActivity.schema.strict.bundle.json",
+  "$ref": "#/$defs/oscal.assessment_plan.v1.AssociatedActivity.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

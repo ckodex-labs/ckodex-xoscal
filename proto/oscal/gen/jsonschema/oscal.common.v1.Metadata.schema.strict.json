@@ -1,0 +1,66 @@
+{
+  "$id": "oscal.common.v1.Metadata.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Metadata represents document metadata shared across all OSCAL models",
+  "properties": {
+    "document_id": {
+      "$ref": "oscal.common.v1.DocumentId.schema.strict.json"
+    },
+    "last_modified": {
+      "$ref": "oscal.common.v1.DateTime.schema.strict.json"
+    },
+    "links": {
+      "items": {
+        "$ref": "oscal.common.v1.Link.schema.strict.json"
+      },
+      "type": "array"
+    },
+    "oscal_version": {
+      "type": "string"
+    },
+    "parties": {
+      "items": {
+        "$ref": "oscal.common.v1.Party.schema.strict.json"
+      },
+      "type": "array"
+    },
+    "props": {
+      "items": {
+        "$ref": "oscal.common.v1.Property.schema.strict.json"
+      },
+      "type": "array"
+    },
+    "published": {
+      "$ref": "oscal.common.v1.DateTime.schema.strict.json"
+    },
+    "remarks": {
+      "$ref": "oscal.common.v1.MarkupMultiline.schema.strict.json"
+    },
+    "responsible_parties": {
+      "items": {
+        "$ref": "oscal.common.v1.ResponsibleParty.schema.strict.json"
+      },
+      "type": "array"
+    },
+    "roles": {
+      "items": {
+        "$ref": "oscal.common.v1.Role.schema.strict.json"
+      },
+      "type": "array"
+    },
+    "title": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "title",
+    "version",
+    "oscal_version"
+  ],
+  "title": "Metadata",
+  "type": "object"
+}

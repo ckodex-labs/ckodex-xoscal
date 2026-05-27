@@ -1,0 +1,66 @@
+{
+  "$id": "oscal.ssp.v1.SystemImplementation.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "SystemImplementation represents system implementation",
+  "patternProperties": {
+    "^(inventoryItems)$": {
+      "items": {
+        "$ref": "oscal.ssp.v1.InventoryItem.schema.json"
+      },
+      "type": "array"
+    },
+    "^(leveragedAuthorizations)$": {
+      "items": {
+        "$ref": "oscal.ssp.v1.LeveragedAuthorization.schema.json"
+      },
+      "type": "array"
+    }
+  },
+  "properties": {
+    "components": {
+      "items": {
+        "$ref": "oscal.ssp.v1.SystemComponent.schema.json"
+      },
+      "type": "array"
+    },
+    "inventory_items": {
+      "items": {
+        "$ref": "oscal.ssp.v1.InventoryItem.schema.json"
+      },
+      "type": "array"
+    },
+    "leveraged_authorizations": {
+      "items": {
+        "$ref": "oscal.ssp.v1.LeveragedAuthorization.schema.json"
+      },
+      "type": "array"
+    },
+    "links": {
+      "items": {
+        "$ref": "oscal.common.v1.Link.schema.json"
+      },
+      "type": "array"
+    },
+    "props": {
+      "items": {
+        "$ref": "oscal.common.v1.Property.schema.json"
+      },
+      "type": "array"
+    },
+    "remarks": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupMultiline.schema.json"
+      },
+      "type": "array"
+    },
+    "users": {
+      "items": {
+        "$ref": "oscal.ssp.v1.SystemUser.schema.json"
+      },
+      "type": "array"
+    }
+  },
+  "title": "System Implementation",
+  "type": "object"
+}

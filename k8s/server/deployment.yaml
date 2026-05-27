@@ -1,0 +1,96 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: xoscal-server
+  labels:
+    app: xoscal-server
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: xoscal-server
+  template:
+    metadata:
+      labels:
+        app: xoscal-server
+    spec:
+      serviceAccountName: xoscal-server
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 65532
+        fsGroup: 65532
+        seccompProfile:
+          type: RuntimeDefault
+      containers:
+        - name: server
+          image: xoscal-server:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 50051
+              name: grpc
+            - containerPort: 9090
+              name: metrics
+          args:
+            - "-config"
+            - "/etc/xoscal/config.yaml"
+          env:
+            - name: XOSCAL_SERVER_ADDR
+              value: ":50051"
+            - name: XOSCAL_STORE_DSN
+              value: "/data/oscal.db"
+            - name: XOSCAL_OBSERVABILITY_METRICS_ENABLED
+              value: "true"
+            - name: XOSCAL_OBSERVABILITY_METRICS_ADDR
+              value: ":9090"
+          volumeMounts:
+            - name: data
+              mountPath: /data
+            - name: config
+              mountPath: /etc/xoscal
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            capabilities:
+              drop:
+                - ALL
+          resources:
+            requests:
+              memory: "128Mi"
+              cpu: "100m"
+            limits:
+              memory: "512Mi"
+              cpu: "1000m"
+          startupProbe:
+            grpc:
+              port: 50051
+            initialDelaySeconds: 5
+            periodSeconds: 5
+            failureThreshold: 12
+          livenessProbe:
+            grpc:
+              port: 50051
+            initialDelaySeconds: 10
+            periodSeconds: 15
+          readinessProbe:
+            grpc:
+              port: 50051
+            initialDelaySeconds: 5
+            periodSeconds: 10
+      volumes:
+        - name: data
+          persistentVolumeClaim:
+            claimName: xoscal-server-data
+        - name: config
+          configMap:
+            name: xoscal-server-config
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: xoscal-server-data
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 5Gi

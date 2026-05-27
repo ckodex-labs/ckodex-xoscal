@@ -1,0 +1,20 @@
+{
+  "$defs": {
+    "oscal.common.v1.MarkupLine.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "MarkupLine represents a line of markup text (e.g., markdown)",
+      "properties": {
+        "value": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Markup Line",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.common.v1.MarkupLine.jsonschema.bundle.json",
+  "$ref": "#/$defs/oscal.common.v1.MarkupLine.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

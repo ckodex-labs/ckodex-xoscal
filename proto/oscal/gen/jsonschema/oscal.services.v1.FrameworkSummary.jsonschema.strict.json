@@ -1,0 +1,43 @@
+{
+  "$id": "oscal.services.v1.FrameworkSummary.jsonschema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "assessableCount": {
+      "maximum": 2147483647,
+      "minimum": -2147483648,
+      "type": "integer"
+    },
+    "jurisdiction": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "nodeCount": {
+      "maximum": 2147483647,
+      "minimum": -2147483648,
+      "type": "integer"
+    },
+    "provider": {
+      "type": "string"
+    },
+    "refId": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "refId",
+    "name",
+    "provider",
+    "jurisdiction",
+    "nodeCount",
+    "assessableCount",
+    "version"
+  ],
+  "title": "Framework Summary",
+  "type": "object"
+}

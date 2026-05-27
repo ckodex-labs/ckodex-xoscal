@@ -1,0 +1,20 @@
+{
+  "$id": "oscal.poam.v1.ResponseStatus.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "ResponseStatus represents response status",
+  "properties": {
+    "remarks": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupMultiline.schema.json"
+      },
+      "type": "array"
+    },
+    "state": {
+      "default": "",
+      "type": "string"
+    }
+  },
+  "title": "Response Status",
+  "type": "object"
+}

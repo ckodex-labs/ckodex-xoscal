@@ -1,0 +1,42 @@
+{
+  "$id": "oscal.mapping.v1.MappingItem.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "MappingItem represents a mapping entry item (source or target)",
+  "patternProperties": {
+    "^(id_ref)$": {
+      "default": "",
+      "type": "string"
+    }
+  },
+  "properties": {
+    "idRef": {
+      "default": "",
+      "type": "string"
+    },
+    "links": {
+      "items": {
+        "$ref": "oscal.common.v1.Link.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "props": {
+      "items": {
+        "$ref": "oscal.common.v1.Property.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "remarks": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupMultiline.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "type": {
+      "default": "",
+      "type": "string"
+    }
+  },
+  "title": "Mapping Item",
+  "type": "object"
+}

@@ -1,0 +1,24 @@
+{
+  "$id": "oscal.poam.v1.RelatedObservation.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "RelatedObservation represents a related observation",
+  "patternProperties": {
+    "^(observation_uuid)$": {
+      "$ref": "oscal.common.v1.UUID.jsonschema.json"
+    }
+  },
+  "properties": {
+    "observationUuid": {
+      "$ref": "oscal.common.v1.UUID.jsonschema.json"
+    },
+    "remarks": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupMultiline.jsonschema.json"
+      },
+      "type": "array"
+    }
+  },
+  "title": "Related Observation",
+  "type": "object"
+}

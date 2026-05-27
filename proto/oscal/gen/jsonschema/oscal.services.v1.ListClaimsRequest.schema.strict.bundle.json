@@ -1,0 +1,52 @@
+{
+  "$defs": {
+    "google.protobuf.Timestamp.schema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "format": "date-time",
+      "title": "Timestamp",
+      "type": "string"
+    },
+    "oscal.services.v1.ListClaimsRequest.schema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "properties": {
+        "bom_kind": {
+          "type": "string"
+        },
+        "page_size": {
+          "maximum": 2147483647,
+          "minimum": -2147483648,
+          "type": "integer"
+        },
+        "page_token": {
+          "type": "string"
+        },
+        "relation": {
+          "type": "string"
+        },
+        "subject_digest": {
+          "type": "string"
+        },
+        "trust_state": {
+          "type": "string"
+        },
+        "valid_after": {
+          "$ref": "#/$defs/google.protobuf.Timestamp.schema.strict.json"
+        }
+      },
+      "required": [
+        "subject_digest",
+        "bom_kind",
+        "relation",
+        "trust_state",
+        "page_size",
+        "page_token"
+      ],
+      "title": "List Claims Request",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.services.v1.ListClaimsRequest.schema.strict.bundle.json",
+  "$ref": "#/$defs/oscal.services.v1.ListClaimsRequest.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

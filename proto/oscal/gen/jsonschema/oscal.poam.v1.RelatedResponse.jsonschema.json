@@ -1,0 +1,48 @@
+{
+  "$id": "oscal.poam.v1.RelatedResponse.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "RelatedResponse represents a related risk response",
+  "patternProperties": {
+    "^(related_tasks)$": {
+      "items": {
+        "$ref": "oscal.poam.v1.RelatedTask.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "^(response_uuid)$": {
+      "$ref": "oscal.common.v1.UUID.jsonschema.json"
+    }
+  },
+  "properties": {
+    "links": {
+      "items": {
+        "$ref": "oscal.common.v1.Link.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "props": {
+      "items": {
+        "$ref": "oscal.common.v1.Property.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "relatedTasks": {
+      "items": {
+        "$ref": "oscal.poam.v1.RelatedTask.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "remarks": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupMultiline.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "responseUuid": {
+      "$ref": "oscal.common.v1.UUID.jsonschema.json"
+    }
+  },
+  "title": "Related Response",
+  "type": "object"
+}

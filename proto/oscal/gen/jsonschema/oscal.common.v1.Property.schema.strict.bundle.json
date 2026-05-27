@@ -1,0 +1,34 @@
+{
+  "$defs": {
+    "oscal.common.v1.Property.schema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Property represents a key-value property with optional classification",
+      "properties": {
+        "class": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "value",
+        "class",
+        "id"
+      ],
+      "title": "Property",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.common.v1.Property.schema.strict.bundle.json",
+  "$ref": "#/$defs/oscal.common.v1.Property.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

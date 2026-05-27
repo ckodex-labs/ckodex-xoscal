@@ -1,0 +1,22 @@
+{
+  "$defs": {
+    "oscal.common.v1.Boolean.jsonschema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Boolean represents a boolean value",
+      "properties": {
+        "value": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "value"
+      ],
+      "title": "Boolean",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.common.v1.Boolean.jsonschema.strict.bundle.json",
+  "$ref": "#/$defs/oscal.common.v1.Boolean.jsonschema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

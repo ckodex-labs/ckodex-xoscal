@@ -1,0 +1,19 @@
+{
+  "$id": "oscal.ssp.v1.ImportProfile.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "ImportProfile represents an imported OSCAL profile",
+  "properties": {
+    "href": {
+      "$ref": "oscal.common.v1.URIReference.jsonschema.json"
+    },
+    "remarks": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupMultiline.jsonschema.json"
+      },
+      "type": "array"
+    }
+  },
+  "title": "Import Profile",
+  "type": "object"
+}

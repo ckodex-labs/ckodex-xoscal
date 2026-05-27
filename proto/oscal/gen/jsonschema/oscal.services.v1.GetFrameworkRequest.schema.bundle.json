@@ -1,0 +1,25 @@
+{
+  "$defs": {
+    "oscal.services.v1.GetFrameworkRequest.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "patternProperties": {
+        "^(refId)$": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "properties": {
+        "ref_id": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Get Framework Request",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.services.v1.GetFrameworkRequest.schema.bundle.json",
+  "$ref": "#/$defs/oscal.services.v1.GetFrameworkRequest.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

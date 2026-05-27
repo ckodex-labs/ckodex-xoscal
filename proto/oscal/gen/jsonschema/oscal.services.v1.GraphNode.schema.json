@@ -1,0 +1,37 @@
+{
+  "$id": "oscal.services.v1.GraphNode.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "patternProperties": {
+    "^(createdAt)$": {
+      "$ref": "google.protobuf.Timestamp.schema.json"
+    },
+    "^(labelsJson)$": {
+      "default": "",
+      "type": "string"
+    }
+  },
+  "properties": {
+    "created_at": {
+      "$ref": "google.protobuf.Timestamp.schema.json"
+    },
+    "id": {
+      "default": "",
+      "type": "string"
+    },
+    "kind": {
+      "default": "",
+      "type": "string"
+    },
+    "labels_json": {
+      "default": "",
+      "type": "string"
+    },
+    "urn": {
+      "default": "",
+      "type": "string"
+    }
+  },
+  "title": "Graph Node",
+  "type": "object"
+}

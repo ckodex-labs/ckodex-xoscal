@@ -1,0 +1,430 @@
+syntax = "proto3";
+
+package oscal.services.v1;
+
+import "catalog/v1/catalog.proto";
+import "profile/v1/profile.proto";
+import "mapping/v1/mapping.proto";
+import "ssp/v1/ssp.proto";
+import "component_definition/v1/component.proto";
+import "assessment_plan/v1/assessment_plan.proto";
+import "assessment_results/v1/assessment_results.proto";
+import "poam/v1/poam.proto";
+import "google/api/annotations.proto";
+
+option go_package = "github.com/mchorfa/xoscal/proto/oscal/services/v1;servicesv1";
+
+// GovernanceService provides advanced governance, ingestion, and semantic
+// search operations over the OSCALify knowledge graph.
+service GovernanceService {
+  // --- Entity CRUD ---
+  rpc CreateEntity(CreateEntityRequest) returns (CreateEntityResponse) {
+    option (google.api.http) = { post: "/v1/entities" body: "*" };
+  }
+  rpc GetEntity(GetEntityRequest) returns (GetEntityResponse) {
+    option (google.api.http) = { get: "/v1/entities/{urn}" };
+  }
+  rpc UpdateEntity(UpdateEntityRequest) returns (UpdateEntityResponse) {
+    option (google.api.http) = { put: "/v1/entities/{entity.urn}" body: "*" };
+  }
+  rpc ListEntities(ListEntitiesRequest) returns (ListEntitiesResponse) {
+    option (google.api.http) = { get: "/v1/entities" };
+  }
+
+  // --- Snapshots & Releases ---
+  rpc CreateSnapshot(CreateSnapshotRequest) returns (CreateSnapshotResponse) {
+    option (google.api.http) = { post: "/v1/snapshots" body: "*" };
+  }
+  rpc GetSnapshot(GetSnapshotRequest) returns (GetSnapshotResponse) {
+    option (google.api.http) = { get: "/v1/snapshots/{name}" };
+  }
+  rpc ListSnapshots(ListSnapshotsRequest) returns (ListSnapshotsResponse) {
+    option (google.api.http) = { get: "/v1/snapshots" };
+  }
+  rpc CreateRelease(CreateReleaseRequest) returns (CreateReleaseResponse) {
+    option (google.api.http) = { post: "/v1/releases" body: "*" };
+  }
+  rpc ListReleases(ListReleasesRequest) returns (ListReleasesResponse) {
+    option (google.api.http) = { get: "/v1/releases" };
+  }
+
+  // --- Ingestion ---
+  rpc IngestRequirements(IngestRequirementsRequest) returns (IngestRequirementsResponse) {
+    option (google.api.http) = { post: "/v1/ingest" body: "*" };
+  }
+
+  // --- Semantic Search ---
+  rpc SemanticSearch(SemanticSearchRequest) returns (SemanticSearchResponse) {
+    option (google.api.http) = { get: "/v1/search" };
+  }
+
+  // --- OSCAL Generation ---
+  rpc GenerateCatalog(GenerateCatalogRequest) returns (GenerateCatalogResponse) {
+    option (google.api.http) = { post: "/v1/generate/catalog" body: "*" };
+  }
+  rpc GenerateProfile(GenerateProfileRequest) returns (GenerateProfileResponse) {
+    option (google.api.http) = { post: "/v1/generate/profile" body: "*" };
+  }
+  rpc GenerateMappings(GenerateMappingsRequest) returns (GenerateMappingsResponse) {
+    option (google.api.http) = { post: "/v1/generate/mappings" body: "*" };
+  }
+  rpc GenerateSSP(GenerateSSPRequest) returns (GenerateSSPResponse) {
+    option (google.api.http) = { post: "/v1/generate/ssp" body: "*" };
+  }
+  rpc GenerateComponentDefinition(GenerateComponentDefinitionRequest) returns (GenerateComponentDefinitionResponse) {
+    option (google.api.http) = { post: "/v1/generate/component-definition" body: "*" };
+  }
+  rpc GenerateAssessmentPlan(GenerateAssessmentPlanRequest) returns (GenerateAssessmentPlanResponse) {
+    option (google.api.http) = { post: "/v1/generate/assessment-plan" body: "*" };
+  }
+  rpc GeneratePOAM(GeneratePOAMRequest) returns (GeneratePOAMResponse) {
+    option (google.api.http) = { post: "/v1/generate/poam" body: "*" };
+  }
+  rpc GenerateAssessmentResults(GenerateAssessmentResultsRequest) returns (GenerateAssessmentResultsResponse) {
+    option (google.api.http) = { post: "/v1/generate/assessment-results" body: "*" };
+  }
+
+  // --- Framework Ingestion ---
+  rpc BulkIngestFrameworks(BulkIngestFrameworksRequest) returns (BulkIngestFrameworksResponse) {
+    option (google.api.http) = { post: "/v1/ingest/bulk" body: "*" };
+  }
+  rpc ListFrameworks(ListFrameworksRequest) returns (ListFrameworksResponse) {
+    option (google.api.http) = { get: "/v1/frameworks" };
+  }
+  rpc GetFramework(GetFrameworkRequest) returns (GetFrameworkResponse) {
+    option (google.api.http) = { get: "/v1/frameworks/{ref_id}" };
+  }
+
+  // --- Cross-Framework Mappings ---
+  rpc GenerateCrossFrameworkMappings(GenerateCrossFrameworkMappingsRequest) returns (GenerateCrossFrameworkMappingsResponse) {
+    option (google.api.http) = { post: "/v1/generate/cross-mappings" body: "*" };
+  }
+
+  // --- Reconciler ---
+  rpc Propose(ProposeRequest) returns (ProposeResponse) {
+    option (google.api.http) = { post: "/v1/propose" body: "*" };
+  }
+  rpc ListConflicts(ListConflictsRequest) returns (ListConflictsResponse) {
+    option (google.api.http) = { get: "/v1/conflicts" };
+  }
+  rpc ResolveConflict(ResolveConflictRequest) returns (ResolveConflictResponse) {
+    option (google.api.http) = { post: "/v1/conflicts/{conflict_urn}/resolve" body: "*" };
+  }
+
+  // --- GitOps ---
+  rpc PublishRelease(PublishReleaseRequest) returns (PublishReleaseResponse) {
+    option (google.api.http) = { post: "/v1/gitops/release" body: "*" };
+  }
+  rpc ProposeMappingUpdate(ProposeMappingUpdateRequest) returns (ProposeMappingUpdateResponse) {
+    option (google.api.http) = { post: "/v1/gitops/mapping-pr" body: "*" };
+  }
+}
+
+// --- Entity messages ---
+message Entity {
+  string urn = 1;
+  string type = 2;
+  string version = 3;
+  string status = 4;
+  string payload = 5; // JSON-LD blob
+}
+
+message CreateEntityRequest {
+  Entity entity = 1;
+}
+
+message CreateEntityResponse {
+  Entity entity = 1;
+}
+
+message GetEntityRequest {
+  string urn = 1;
+}
+
+message GetEntityResponse {
+  Entity entity = 1;
+}
+
+message UpdateEntityRequest {
+  Entity entity = 1;
+}
+
+message UpdateEntityResponse {
+  Entity entity = 1;
+}
+
+message ListEntitiesRequest {
+  string type_filter = 1;
+  string status_filter = 2;
+  int32 page_size = 3;
+  string page_token = 4;
+}
+
+message ListEntitiesResponse {
+  repeated Entity entities = 1;
+  string next_page_token = 2;
+}
+
+// --- Snapshot messages ---
+message CreateSnapshotRequest {
+  string name = 1;
+}
+
+message CreateSnapshotResponse {
+  string name = 1;
+  int32 entity_count = 2;
+}
+
+message GetSnapshotRequest {
+  string name = 1;
+}
+
+message GetSnapshotResponse {
+  repeated Entity entities = 1;
+}
+
+message ListSnapshotsRequest {
+  int32 page_size = 1;
+  string page_token = 2;
+}
+
+message ListSnapshotsResponse {
+  repeated string names = 1;
+}
+
+// --- Release messages ---
+message CreateReleaseRequest {
+  string name = 1;
+  string snapshot_name = 2;
+}
+
+message CreateReleaseResponse {
+  string name = 1;
+  string snapshot_name = 2;
+}
+
+message ListReleasesRequest {
+  int32 page_size = 1;
+  string page_token = 2;
+}
+
+message ListReleasesResponse {
+  repeated string names = 1;
+}
+
+// --- Ingestion messages ---
+message IngestRequirementsRequest {
+  bytes raw_data = 1;
+  string format = 2; // e.g. "eu-ai-act-json"
+  string framework = 3;
+}
+
+message IngestRequirementsResponse {
+  int32 created = 1;
+  int32 updated = 2;
+  int32 conflicts = 3;
+}
+
+// --- Semantic Search messages ---
+message SemanticSearchRequest {
+  string query = 1;
+  string framework = 2;
+  int32 top_k = 3;
+}
+
+message SemanticSearchResult {
+  string entity_urn = 1;
+  string entity_type = 2;
+  string content = 3;
+  double score = 4;
+}
+
+message SemanticSearchResponse {
+  repeated SemanticSearchResult results = 1;
+}
+
+// --- OSCAL Generation messages ---
+message GenerateCatalogRequest {
+  string snapshot_name = 1;
+  string framework = 2;
+}
+
+message GenerateCatalogResponse {
+  oscal.catalog.v1.Catalog catalog = 1;
+}
+
+message GenerateProfileRequest {
+  string snapshot_name = 1;
+  string framework = 2;
+  repeated string selected_controls = 3;
+}
+
+message GenerateProfileResponse {
+  oscal.profile.v1.Profile profile = 1;
+}
+
+message GenerateMappingsRequest {
+  string snapshot_name = 1;
+}
+
+message GenerateMappingsResponse {
+  repeated oscal.mapping.v1.Map maps = 1;
+}
+
+message GenerateSSPRequest {
+  string snapshot_name = 1;
+  string framework = 2;
+}
+
+message GenerateSSPResponse {
+  oscal.ssp.v1.SystemSecurityPlan ssp = 1;
+}
+
+message GenerateComponentDefinitionRequest {
+  string snapshot_name = 1;
+  string framework = 2;
+}
+
+message GenerateComponentDefinitionResponse {
+  oscal.component_definition.v1.ComponentDefinition component_definition = 1;
+}
+
+message GenerateAssessmentPlanRequest {
+  string snapshot_name = 1;
+  string framework = 2;
+}
+
+message GenerateAssessmentPlanResponse {
+  oscal.assessment_plan.v1.AssessmentPlan assessment_plan = 1;
+}
+
+message GeneratePOAMRequest {
+  string snapshot_name = 1;
+  string framework = 2;
+}
+
+message GeneratePOAMResponse {
+  oscal.poam.v1.PlanOfActionAndMilestones poam = 1;
+}
+
+message GenerateAssessmentResultsRequest {
+  string snapshot_name = 1;
+  string framework = 2;
+}
+
+message GenerateAssessmentResultsResponse {
+  oscal.assessment_results.v1.AssessmentResults assessment_results = 1;
+}
+
+// --- Reconciler messages ---
+message ProposeRequest {
+  repeated Entity proposals = 1;
+}
+
+message ProposeResponse {
+  int32 accepted = 1;
+  int32 conflicts = 2;
+}
+
+message ListConflictsRequest {
+  int32 page_size = 1;
+  string page_token = 2;
+}
+
+message ListConflictsResponse {
+  repeated Entity conflicts = 1;
+}
+
+message ResolveConflictRequest {
+  string conflict_urn = 1;
+  string resolution = 2; // JSON-LD blob describing resolution
+}
+
+message ResolveConflictResponse {
+  bool success = 1;
+}
+
+// --- Framework Ingestion messages ---
+message BulkIngestFrameworksRequest {
+  string github_owner = 1;
+  string github_repo = 2;
+  string github_path = 3;
+  string filter = 4; // comma-separated ref_id prefixes or glob patterns
+  bool dry_run = 5;
+}
+
+message FrameworkSummary {
+  string ref_id = 1;
+  string name = 2;
+  string provider = 3;
+  string jurisdiction = 4;
+  int32 node_count = 5;
+  int32 assessable_count = 6;
+  string version = 7;
+}
+
+message BulkIngestFrameworksResponse {
+  repeated FrameworkSummary frameworks = 1;
+  int32 total_nodes = 2;
+  int32 total_conflicts = 3;
+}
+
+message ListFrameworksRequest {
+  string jurisdiction_filter = 1;
+  int32 page_size = 2;
+  string page_token = 3;
+}
+
+message ListFrameworksResponse {
+  repeated FrameworkSummary frameworks = 1;
+  string next_page_token = 2;
+}
+
+message GetFrameworkRequest {
+  string ref_id = 1;
+}
+
+message GetFrameworkResponse {
+  FrameworkSummary framework = 1;
+}
+
+// --- Cross-Framework Mapping messages ---
+message GenerateCrossFrameworkMappingsRequest {
+  string source_framework = 1;
+  string target_framework = 2;
+  string snapshot_name = 3;
+}
+
+message GenerateCrossFrameworkMappingsResponse {
+  repeated oscal.mapping.v1.Map maps = 1;
+}
+
+// --- GitOps messages ---
+message PublishReleaseRequest {
+  string repo_owner = 1;
+  string repo_name = 2;
+  string tag_name = 3;
+  string target_commitish = 4;
+  string release_name = 5;
+  string body = 6;
+  repeated string asset_paths = 7;
+}
+
+message PublishReleaseResponse {
+  string release_url = 1;
+  string upload_url = 2;
+}
+
+message ProposeMappingUpdateRequest {
+  string repo_owner = 1;
+  string repo_name = 2;
+  string base_branch = 3;
+  string head_branch = 4;
+  string title = 5;
+  string body = 6;
+}
+
+message ProposeMappingUpdateResponse {
+  string pull_request_url = 1;
+  int32 pull_request_number = 2;
+}

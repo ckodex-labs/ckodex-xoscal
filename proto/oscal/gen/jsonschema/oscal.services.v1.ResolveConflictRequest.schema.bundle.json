@@ -1,0 +1,29 @@
+{
+  "$defs": {
+    "oscal.services.v1.ResolveConflictRequest.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "patternProperties": {
+        "^(conflictUrn)$": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "properties": {
+        "conflict_urn": {
+          "default": "",
+          "type": "string"
+        },
+        "resolution": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Resolve Conflict Request",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.services.v1.ResolveConflictRequest.schema.bundle.json",
+  "$ref": "#/$defs/oscal.services.v1.ResolveConflictRequest.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

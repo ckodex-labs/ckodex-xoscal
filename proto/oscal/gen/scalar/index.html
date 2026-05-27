@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSCAL gRPC Services API</title>
+    <style>
+        * { box-sizing: border-box; }
+        body { 
+            margin: 0; 
+            padding: 20px; 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #1a1a2e;
+            color: #eee;
+        }
+        .container { max-width: 1200px; margin: 0 auto; }
+        h1 { color: #9b59b6; border-bottom: 2px solid #9b59b6; padding-bottom: 10px; }
+        .endpoint { 
+            background: #16213e; 
+            border: 1px solid #0f3460; 
+            border-radius: 8px; 
+            margin: 20px 0; 
+            padding: 20px;
+        }
+        .endpoint h3 { color: #e94560; margin-top: 0; }
+        .method { 
+            display: inline-block; 
+            padding: 4px 8px; 
+            border-radius: 4px; 
+            font-weight: bold; 
+            font-size: 12px;
+            margin-right: 10px;
+        }
+        .get { background: #27ae60; color: white; }
+        .post { background: #2980b9; color: white; }
+        .put { background: #f39c12; color: white; }
+        .delete { background: #e74c3c; color: white; }
+        .path { 
+            font-family: 'Courier New', monospace; 
+            background: #0f3460; 
+            padding: 8px 12px; 
+            border-radius: 4px;
+            display: inline-block;
+        }
+        .description { margin: 10px 0; color: #aaa; }
+        .param { 
+            background: #1a1a2e; 
+            padding: 10px; 
+            margin: 10px 0; 
+            border-radius: 4px;
+            border-left: 3px solid #9b59b6;
+        }
+        .param strong { color: #9b59b6; }
+        code { 
+            background: #0f3460; 
+            padding: 2px 6px; 
+            border-radius: 3px; 
+            font-family: 'Courier New', monospace;
+        }
+        .tag { 
+            display: inline-block; 
+            background: #e94560; 
+            color: white; 
+            padding: 2px 8px; 
+            border-radius: 12px; 
+            font-size: 12px; 
+            margin-bottom: 10px;
+        }
+        .server-info {
+            background: #0f3460;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .server-info strong { color: #9b59b6; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>OSCAL gRPC Services API</h1>
+        
+        <div class="server-info">
+            <strong>Server:</strong> http://localhost:50051<br>
+            <strong>Description:</strong> Local gRPC server
+        </div>
+        
+        <div class="endpoint">
+            <span class="tag">Catalog</span>
+            <h3>Get Catalog by UUID</h3>
+            <span class="method get">GET</span>
+            <span class="path">/catalog/{uuid}</span>
+            <p class="description">Retrieve a specific catalog by its UUID</p>
+            <div class="param"><strong>uuid</strong> (path, required): string (format: uuid)</div>
+        </div>
+        
+        <div class="endpoint">
+            <span class="tag">Catalog</span>
+            <h3>List Catalogs</h3>
+            <span class="method get">GET</span>
+            <span class="path">/catalog</span>
+            <p class="description">List all available catalogs</p>
+        </div>
+        
+        <div class="endpoint">
+            <span class="tag">Profile</span>
+            <h3>Get Profile by UUID</h3>
+            <span class="method get">GET</span>
+            <span class="path">/profile/{uuid}</span>
+            <p class="description">Retrieve a specific profile by its UUID</p>
+            <div class="param"><strong>uuid</strong> (path, required): string (format: uuid)</div>
+        </div>
+        
+        <div class="endpoint">
+            <span class="tag">Profile</span>
+            <h3>List Profiles</h3>
+            <span class="method get">GET</span>
+            <span class="path">/profile</span>
+            <p class="description">List all available profiles</p>
+        </div>
+        
+        <div class="endpoint">
+            <span class="tag">Component Definition</span>
+            <h3>Get Component Definition by UUID</h3>
+            <span class="method get">GET</span>
+            <span class="path">/component-definition/{uuid}</span>
+            <p class="description">Retrieve a specific component definition by its UUID</p>
+            <div class="param"><strong>uuid</strong> (path, required): string (format: uuid)</div>
+        </div>
+        
+        <div class="endpoint">
+            <span class="tag">Component Definition</span>
+            <h3>List Component Definitions</h3>
+            <span class="method get">GET</span>
+            <span class="path">/component-definition</span>
+            <p class="description">List all available component definitions</p>
+        </div>
+        
+        <div class="endpoint">
+            <span class="tag">SSP</span>
+            <h3>Get SSP by UUID</h3>
+            <span class="method get">GET</span>
+            <span class="path">/ssp/{uuid}</span>
+            <p class="description">Retrieve a specific System Security Plan by its UUID</p>
+            <div class="param"><strong>uuid</strong> (path, required): string (format: uuid)</div>
+        </div>
+        
+        <div class="endpoint">
+            <span class="tag">SSP</span>
+            <h3>List SSPs</h3>
+            <span class="method get">GET</span>
+            <span class="path">/ssp</span>
+            <p class="description">List all available System Security Plans</p>
+        </div>
+        
+        <div class="endpoint">
+            <span class="tag">Assessment Plan</span>
+            <h3>Get Assessment Plan by UUID</h3>
+            <span class="method get">GET</span>
+            <span class="path">/assessment-plan/{uuid}</span>
+            <p class="description">Retrieve a specific assessment plan by its UUID</p>
+            <div class="param"><strong>uuid</strong> (path, required): string (format: uuid)</div>
+        </div>
+        
+        <div class="endpoint">
+            <span class="tag">Assessment Plan</span>
+            <h3>List Assessment Plans</h3>
+            <span class="method get">GET</span>
+            <span class="path">/assessment-plan</span>
+            <p class="description">List all available assessment plans</p>
+        </div>
+        
+        <div class="endpoint">
+            <span class="tag">Assessment Results</span>
+            <h3>Get Assessment Results by UUID</h3>
+            <span class="method get">GET</span>
+            <span class="path">/assessment-results/{uuid}</span>
+            <p class="description">Retrieve specific assessment results by their UUID</p>
+            <div class="param"><strong>uuid</strong> (path, required): string (format: uuid)</div>
+        </div>
+        
+        <div class="endpoint">
+            <span class="tag">Assessment Results</span>
+            <h3>List Assessment Results</h3>
+            <span class="method get">GET</span>
+            <span class="path">/assessment-results</span>
+            <p class="description">List all available assessment results</p>
+        </div>
+        
+        <div class="endpoint">
+            <span class="tag">POA&M</span>
+            <h3>Get POA&M by UUID</h3>
+            <span class="method get">GET</span>
+            <span class="path">/poam/{uuid}</span>
+            <p class="description">Retrieve a specific POA&M by its UUID</p>
+            <div class="param"><strong>uuid</strong> (path, required): string (format: uuid)</div>
+        </div>
+        
+        <div class="endpoint">
+            <span class="tag">POA&M</span>
+            <h3>List POA&Ms</h3>
+            <span class="method get">GET</span>
+            <span class="path">/poam</span>
+            <p class="description">List all available POA&Ms</p>
+        </div>
+        
+        <div class="endpoint">
+            <span class="tag">Mapping</span>
+            <h3>Get Mapping by UUID</h3>
+            <span class="method get">GET</span>
+            <span class="path">/mapping/{uuid}</span>
+            <p class="description">Retrieve a specific mapping by its UUID</p>
+            <div class="param"><strong>uuid</strong> (path, required): string (format: uuid)</div>
+        </div>
+        
+        <div class="endpoint">
+            <span class="tag">Mapping</span>
+            <h3>List Mappings</h3>
+            <span class="method get">GET</span>
+            <span class="path">/mapping</span>
+            <p class="description">List all available mappings</p>
+        </div>
+        
+        <div style="margin-top: 40px; padding: 20px; background: #0f3460; border-radius: 8px;">
+            <h3 style="color: #9b59b6;">gRPC Server Information</h3>
+            <p><strong>Host:</strong> localhost</p>
+            <p><strong>Port:</strong> 50051</p>
+            <p><strong>Protocol:</strong> gRPC</p>
+            <p style="margin-top: 15px; color: #aaa;">This is a static documentation page. For interactive API testing, use the gRPC client with the generated SDKs.</p>
+        </div>
+    </div>
+</body>
+</html>

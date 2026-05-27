@@ -1,0 +1,12 @@
+{
+  "$id": "oscal.services.v1.ProjectEdgeResponse.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "edge": {
+      "$ref": "oscal.services.v1.GraphEdge.schema.strict.json"
+    }
+  },
+  "title": "Project Edge Response",
+  "type": "object"
+}

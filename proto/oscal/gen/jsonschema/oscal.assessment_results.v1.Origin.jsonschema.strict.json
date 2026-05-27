@@ -1,0 +1,22 @@
+{
+  "$id": "oscal.assessment_results.v1.Origin.jsonschema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Origin represents the origin of a finding",
+  "properties": {
+    "actors": {
+      "items": {
+        "$ref": "oscal.assessment_results.v1.OriginActor.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "relatedTasks": {
+      "items": {
+        "$ref": "oscal.assessment_results.v1.RelatedTask.jsonschema.strict.json"
+      },
+      "type": "array"
+    }
+  },
+  "title": "Origin",
+  "type": "object"
+}

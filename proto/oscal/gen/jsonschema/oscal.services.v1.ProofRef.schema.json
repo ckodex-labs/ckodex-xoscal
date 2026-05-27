@@ -1,0 +1,31 @@
+{
+  "$id": "oscal.services.v1.ProofRef.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "patternProperties": {
+    "^(witnessQuorumJson)$": {
+      "default": "",
+      "type": "string"
+    }
+  },
+  "properties": {
+    "digest": {
+      "default": "",
+      "type": "string"
+    },
+    "ref": {
+      "default": "",
+      "type": "string"
+    },
+    "type": {
+      "default": "",
+      "type": "string"
+    },
+    "witness_quorum_json": {
+      "default": "",
+      "type": "string"
+    }
+  },
+  "title": "Proof Ref",
+  "type": "object"
+}

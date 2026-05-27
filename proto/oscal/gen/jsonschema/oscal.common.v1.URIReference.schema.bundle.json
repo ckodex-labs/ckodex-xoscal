@@ -1,0 +1,20 @@
+{
+  "$defs": {
+    "oscal.common.v1.URIReference.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "URIReference represents a URI reference (may be relative)",
+      "properties": {
+        "value": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "URI Reference",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.common.v1.URIReference.schema.bundle.json",
+  "$ref": "#/$defs/oscal.common.v1.URIReference.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

@@ -1,0 +1,29 @@
+{
+  "$id": "oscal.services.v1.BulkIngestFrameworksResponse.jsonschema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "frameworks": {
+      "items": {
+        "$ref": "oscal.services.v1.FrameworkSummary.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "totalConflicts": {
+      "maximum": 2147483647,
+      "minimum": -2147483648,
+      "type": "integer"
+    },
+    "totalNodes": {
+      "maximum": 2147483647,
+      "minimum": -2147483648,
+      "type": "integer"
+    }
+  },
+  "required": [
+    "totalNodes",
+    "totalConflicts"
+  ],
+  "title": "Bulk Ingest Frameworks Response",
+  "type": "object"
+}

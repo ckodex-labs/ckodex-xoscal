@@ -1,0 +1,78 @@
+{
+  "$id": "oscal.ssp.v1.SystemCharacteristics.jsonschema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "SystemCharacteristics represents system characteristics",
+  "properties": {
+    "authorizationBoundary": {
+      "$ref": "oscal.ssp.v1.AuthorizationBoundary.jsonschema.strict.json"
+    },
+    "dataFlow": {
+      "$ref": "oscal.ssp.v1.DataFlow.jsonschema.strict.json"
+    },
+    "dateAuthorized": {
+      "$ref": "oscal.common.v1.Date.jsonschema.strict.json"
+    },
+    "description": {
+      "$ref": "oscal.common.v1.MarkupMultiline.jsonschema.strict.json"
+    },
+    "links": {
+      "items": {
+        "$ref": "oscal.common.v1.Link.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "networkArchitecture": {
+      "$ref": "oscal.ssp.v1.NetworkArchitecture.jsonschema.strict.json"
+    },
+    "props": {
+      "items": {
+        "$ref": "oscal.common.v1.Property.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "remarks": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupMultiline.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "responsibleParties": {
+      "items": {
+        "$ref": "oscal.common.v1.ResponsibleParty.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "securityImpactLevel": {
+      "$ref": "oscal.ssp.v1.SecurityImpactLevel.jsonschema.strict.json"
+    },
+    "securitySensitivityLevel": {
+      "type": "string"
+    },
+    "status": {
+      "$ref": "oscal.ssp.v1.Status.jsonschema.strict.json"
+    },
+    "systemIds": {
+      "items": {
+        "$ref": "oscal.ssp.v1.SystemId.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "systemInformation": {
+      "$ref": "oscal.ssp.v1.SystemInformation.jsonschema.strict.json"
+    },
+    "systemName": {
+      "type": "string"
+    },
+    "systemNameShort": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "systemName",
+    "systemNameShort",
+    "securitySensitivityLevel"
+  ],
+  "title": "System Characteristics",
+  "type": "object"
+}

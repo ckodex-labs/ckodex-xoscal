@@ -1,0 +1,19 @@
+{
+  "$id": "oscal.assessment_results.v1.ImportAp.jsonschema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "ImportAp represents an imported assessment plan",
+  "properties": {
+    "href": {
+      "$ref": "oscal.common.v1.URIReference.jsonschema.strict.json"
+    },
+    "remarks": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupMultiline.jsonschema.strict.json"
+      },
+      "type": "array"
+    }
+  },
+  "title": "Import Ap",
+  "type": "object"
+}

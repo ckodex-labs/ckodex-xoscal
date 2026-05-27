@@ -1,0 +1,46 @@
+{
+  "$id": "oscal.profile.v1.Modify.jsonschema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Modify represents modifications to controls",
+  "properties": {
+    "addControls": {
+      "items": {
+        "$ref": "oscal.profile.v1.AddControls.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "alterControls": {
+      "items": {
+        "$ref": "oscal.profile.v1.AlterControls.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "links": {
+      "items": {
+        "$ref": "oscal.common.v1.Link.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "props": {
+      "items": {
+        "$ref": "oscal.common.v1.Property.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "remarks": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupMultiline.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "setParameters": {
+      "items": {
+        "$ref": "oscal.profile.v1.SetParameters.jsonschema.strict.json"
+      },
+      "type": "array"
+    }
+  },
+  "title": "Modify",
+  "type": "object"
+}

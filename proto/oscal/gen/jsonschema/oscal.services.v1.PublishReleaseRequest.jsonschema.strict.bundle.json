@@ -1,0 +1,48 @@
+{
+  "$defs": {
+    "oscal.services.v1.PublishReleaseRequest.jsonschema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "--- GitOps messages ---",
+      "properties": {
+        "assetPaths": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "body": {
+          "type": "string"
+        },
+        "releaseName": {
+          "type": "string"
+        },
+        "repoName": {
+          "type": "string"
+        },
+        "repoOwner": {
+          "type": "string"
+        },
+        "tagName": {
+          "type": "string"
+        },
+        "targetCommitish": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "repoOwner",
+        "repoName",
+        "tagName",
+        "targetCommitish",
+        "releaseName",
+        "body"
+      ],
+      "title": "Publish Release Request",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.services.v1.PublishReleaseRequest.jsonschema.strict.bundle.json",
+  "$ref": "#/$defs/oscal.services.v1.PublishReleaseRequest.jsonschema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

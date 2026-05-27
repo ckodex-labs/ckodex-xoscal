@@ -1,0 +1,45 @@
+{
+  "$defs": {
+    "oscal.services.v1.VerifyEvidenceResponse.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "patternProperties": {
+        "^(digestOk)$": {
+          "default": false,
+          "type": "boolean"
+        },
+        "^(evidenceId)$": {
+          "default": "",
+          "type": "string"
+        },
+        "^(sizeOk)$": {
+          "default": false,
+          "type": "boolean"
+        }
+      },
+      "properties": {
+        "digest_ok": {
+          "default": false,
+          "type": "boolean"
+        },
+        "error": {
+          "default": "",
+          "type": "string"
+        },
+        "evidence_id": {
+          "default": "",
+          "type": "string"
+        },
+        "size_ok": {
+          "default": false,
+          "type": "boolean"
+        }
+      },
+      "title": "Verify Evidence Response",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.services.v1.VerifyEvidenceResponse.schema.bundle.json",
+  "$ref": "#/$defs/oscal.services.v1.VerifyEvidenceResponse.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

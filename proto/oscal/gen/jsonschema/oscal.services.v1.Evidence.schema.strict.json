@@ -1,0 +1,76 @@
+{
+  "$id": "oscal.services.v1.Evidence.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "bom_kind": {
+      "type": "string"
+    },
+    "classification": {
+      "type": "string"
+    },
+    "created_at": {
+      "$ref": "google.protobuf.Timestamp.schema.strict.json"
+    },
+    "digest": {
+      "type": "string"
+    },
+    "extensions_json": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "integrity_methods_json": {
+      "type": "string"
+    },
+    "media_type": {
+      "type": "string"
+    },
+    "predicate_type": {
+      "type": "string"
+    },
+    "produced_by_json": {
+      "type": "string"
+    },
+    "size_bytes": {
+      "type": "integer"
+    },
+    "spec_json": {
+      "type": "string"
+    },
+    "storage": {
+      "$ref": "oscal.services.v1.Storage.schema.strict.json"
+    },
+    "subject_refs": {
+      "items": {
+        "$ref": "oscal.services.v1.Reference.schema.strict.json"
+      },
+      "type": "array"
+    },
+    "supersedes": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "valid_time": {
+      "$ref": "oscal.services.v1.TimeWindow.schema.strict.json"
+    }
+  },
+  "required": [
+    "id",
+    "media_type",
+    "bom_kind",
+    "digest",
+    "size_bytes",
+    "produced_by_json",
+    "predicate_type",
+    "spec_json",
+    "integrity_methods_json",
+    "classification",
+    "extensions_json"
+  ],
+  "title": "Evidence",
+  "type": "object"
+}

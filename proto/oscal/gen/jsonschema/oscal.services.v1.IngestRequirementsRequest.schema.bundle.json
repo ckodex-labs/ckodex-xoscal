@@ -1,0 +1,36 @@
+{
+  "$defs": {
+    "oscal.services.v1.IngestRequirementsRequest.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "--- Ingestion messages ---",
+      "patternProperties": {
+        "^(rawData)$": {
+          "default": null,
+          "pattern": "^[A-Za-z0-9+/]*={0,2}$",
+          "type": "string"
+        }
+      },
+      "properties": {
+        "format": {
+          "default": "",
+          "type": "string"
+        },
+        "framework": {
+          "default": "",
+          "type": "string"
+        },
+        "raw_data": {
+          "default": null,
+          "pattern": "^[A-Za-z0-9+/]*={0,2}$",
+          "type": "string"
+        }
+      },
+      "title": "Ingest Requirements Request",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.services.v1.IngestRequirementsRequest.schema.bundle.json",
+  "$ref": "#/$defs/oscal.services.v1.IngestRequirementsRequest.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

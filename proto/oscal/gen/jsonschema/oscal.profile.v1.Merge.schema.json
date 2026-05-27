@@ -1,0 +1,34 @@
+{
+  "$id": "oscal.profile.v1.Merge.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Merge represents merge instructions for combining imports",
+  "properties": {
+    "combine": {
+      "$ref": "oscal.profile.v1.Combine.schema.json"
+    },
+    "custom": {
+      "$ref": "oscal.profile.v1.Custom.schema.json"
+    },
+    "links": {
+      "items": {
+        "$ref": "oscal.common.v1.Link.schema.json"
+      },
+      "type": "array"
+    },
+    "props": {
+      "items": {
+        "$ref": "oscal.common.v1.Property.schema.json"
+      },
+      "type": "array"
+    },
+    "remarks": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupMultiline.schema.json"
+      },
+      "type": "array"
+    }
+  },
+  "title": "Merge",
+  "type": "object"
+}

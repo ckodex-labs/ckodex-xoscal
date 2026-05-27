@@ -1,0 +1,79 @@
+{
+  "$defs": {
+    "oscal.common.v1.UUID.jsonschema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "UUID represents a universally unique identifier",
+      "properties": {
+        "value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "value"
+      ],
+      "title": "UUID",
+      "type": "object"
+    },
+    "oscal.services.v1.SearchResponse.jsonschema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "properties": {
+        "nextPageToken": {
+          "type": "string"
+        },
+        "results": {
+          "items": {
+            "$ref": "#/$defs/oscal.services.v1.SearchResult.jsonschema.strict.json"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "nextPageToken"
+      ],
+      "title": "Search Response",
+      "type": "object"
+    },
+    "oscal.services.v1.SearchResult.jsonschema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "properties": {
+        "modelType": {
+          "type": "string"
+        },
+        "score": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "enum": [
+                "Infinity",
+                "-Infinity",
+                "NaN"
+              ],
+              "type": "string"
+            }
+          ]
+        },
+        "title": {
+          "type": "string"
+        },
+        "uuid": {
+          "$ref": "#/$defs/oscal.common.v1.UUID.jsonschema.strict.json"
+        }
+      },
+      "required": [
+        "modelType",
+        "title",
+        "score"
+      ],
+      "title": "Search Result",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.services.v1.SearchResponse.jsonschema.strict.bundle.json",
+  "$ref": "#/$defs/oscal.services.v1.SearchResponse.jsonschema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

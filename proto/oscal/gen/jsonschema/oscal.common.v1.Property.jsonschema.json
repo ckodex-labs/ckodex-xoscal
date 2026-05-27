@@ -1,0 +1,26 @@
+{
+  "$id": "oscal.common.v1.Property.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Property represents a key-value property with optional classification",
+  "properties": {
+    "class": {
+      "default": "",
+      "type": "string"
+    },
+    "id": {
+      "default": "",
+      "type": "string"
+    },
+    "name": {
+      "default": "",
+      "type": "string"
+    },
+    "value": {
+      "default": "",
+      "type": "string"
+    }
+  },
+  "title": "Property",
+  "type": "object"
+}

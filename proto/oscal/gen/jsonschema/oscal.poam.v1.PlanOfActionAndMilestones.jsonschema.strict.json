@@ -1,0 +1,31 @@
+{
+  "$id": "oscal.poam.v1.PlanOfActionAndMilestones.jsonschema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "PlanOfActionAndMilestones represents a plan of action and milestones item",
+  "properties": {
+    "backMatter": {
+      "$ref": "oscal.common.v1.BackMatter.jsonschema.strict.json"
+    },
+    "importSsp": {
+      "$ref": "oscal.poam.v1.ImportSsp.jsonschema.strict.json"
+    },
+    "localDefinitions": {
+      "$ref": "oscal.poam.v1.LocalDefinitions.jsonschema.strict.json"
+    },
+    "metadata": {
+      "$ref": "oscal.common.v1.Metadata.jsonschema.strict.json"
+    },
+    "risks": {
+      "items": {
+        "$ref": "oscal.poam.v1.Risk.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "uuid": {
+      "$ref": "oscal.common.v1.UUID.jsonschema.strict.json"
+    }
+  },
+  "title": "Plan Of Action And Milestones",
+  "type": "object"
+}

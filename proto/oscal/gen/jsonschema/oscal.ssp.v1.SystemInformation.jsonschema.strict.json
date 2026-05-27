@@ -1,0 +1,28 @@
+{
+  "$id": "oscal.ssp.v1.SystemInformation.jsonschema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "SystemInformation represents system information",
+  "properties": {
+    "informationTypes": {
+      "items": {
+        "$ref": "oscal.ssp.v1.InformationType.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "links": {
+      "items": {
+        "$ref": "oscal.common.v1.Link.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "props": {
+      "items": {
+        "$ref": "oscal.common.v1.Property.jsonschema.strict.json"
+      },
+      "type": "array"
+    }
+  },
+  "title": "System Information",
+  "type": "object"
+}

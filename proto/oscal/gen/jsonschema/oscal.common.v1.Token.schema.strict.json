@@ -1,0 +1,16 @@
+{
+  "$id": "oscal.common.v1.Token.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Token represents an alphanumeric token (e.g., control IDs)",
+  "properties": {
+    "value": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "value"
+  ],
+  "title": "Token",
+  "type": "object"
+}

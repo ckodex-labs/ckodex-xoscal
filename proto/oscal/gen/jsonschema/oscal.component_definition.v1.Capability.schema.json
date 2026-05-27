@@ -1,0 +1,55 @@
+{
+  "$id": "oscal.component_definition.v1.Capability.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Capability represents a grouping of control implementations",
+  "patternProperties": {
+    "^(controlImplementations)$": {
+      "items": {
+        "$ref": "oscal.component_definition.v1.ControlImplementation.schema.json"
+      },
+      "type": "array"
+    }
+  },
+  "properties": {
+    "control_implementations": {
+      "items": {
+        "$ref": "oscal.component_definition.v1.ControlImplementation.schema.json"
+      },
+      "type": "array"
+    },
+    "description": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupMultiline.schema.json"
+      },
+      "type": "array"
+    },
+    "links": {
+      "items": {
+        "$ref": "oscal.common.v1.Link.schema.json"
+      },
+      "type": "array"
+    },
+    "name": {
+      "default": "",
+      "type": "string"
+    },
+    "props": {
+      "items": {
+        "$ref": "oscal.common.v1.Property.schema.json"
+      },
+      "type": "array"
+    },
+    "remarks": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupMultiline.schema.json"
+      },
+      "type": "array"
+    },
+    "uuid": {
+      "$ref": "oscal.common.v1.UUID.schema.json"
+    }
+  },
+  "title": "Capability",
+  "type": "object"
+}

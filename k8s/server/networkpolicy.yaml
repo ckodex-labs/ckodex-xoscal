@@ -1,0 +1,21 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: xoscal-server
+spec:
+  podSelector:
+    matchLabels:
+      app: xoscal-server
+  policyTypes:
+    - Ingress
+    - Egress
+  ingress:
+    - from:
+        - namespaceSelector: {}
+      ports:
+        - protocol: TCP
+          port: 50051
+        - protocol: TCP
+          port: 9090
+  egress:
+    - {}

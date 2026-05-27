@@ -1,0 +1,24 @@
+{
+  "$id": "oscal.ssp.v1.SecurityImpactLevel.jsonschema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "SecurityImpactLevel represents security impact level",
+  "properties": {
+    "securityObjectiveAvailability": {
+      "type": "string"
+    },
+    "securityObjectiveConfidentiality": {
+      "type": "string"
+    },
+    "securityObjectiveIntegrity": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "securityObjectiveConfidentiality",
+    "securityObjectiveIntegrity",
+    "securityObjectiveAvailability"
+  ],
+  "title": "Security Impact Level",
+  "type": "object"
+}

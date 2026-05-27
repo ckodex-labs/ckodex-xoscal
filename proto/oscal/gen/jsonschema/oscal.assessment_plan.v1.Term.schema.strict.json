@@ -1,0 +1,37 @@
+{
+  "$id": "oscal.assessment_plan.v1.Term.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Term represents a defined term",
+  "properties": {
+    "definition": {
+      "$ref": "oscal.common.v1.MarkupMultiline.schema.strict.json"
+    },
+    "id": {
+      "$ref": "oscal.common.v1.Token.schema.strict.json"
+    },
+    "links": {
+      "items": {
+        "$ref": "oscal.common.v1.Link.schema.strict.json"
+      },
+      "type": "array"
+    },
+    "name": {
+      "$ref": "oscal.common.v1.MarkupLine.schema.strict.json"
+    },
+    "props": {
+      "items": {
+        "$ref": "oscal.common.v1.Property.schema.strict.json"
+      },
+      "type": "array"
+    },
+    "remarks": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupMultiline.schema.strict.json"
+      },
+      "type": "array"
+    }
+  },
+  "title": "Term",
+  "type": "object"
+}

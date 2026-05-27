@@ -1,0 +1,51 @@
+{
+  "$defs": {
+    "oscal.common.v1.MarkupLine.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "MarkupLine represents a line of markup text (e.g., markdown)",
+      "properties": {
+        "value": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Markup Line",
+      "type": "object"
+    },
+    "oscal.profile.v1.Combine.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Combine represents combine method for merging",
+      "patternProperties": {
+        "^(asIs)$": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.MarkupLine.schema.json"
+          },
+          "type": "array"
+        }
+      },
+      "properties": {
+        "as_is": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.MarkupLine.schema.json"
+          },
+          "type": "array"
+        },
+        "flat": {
+          "default": false,
+          "type": "boolean"
+        },
+        "method": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Combine",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.profile.v1.Combine.schema.bundle.json",
+  "$ref": "#/$defs/oscal.profile.v1.Combine.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

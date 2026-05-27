@@ -1,0 +1,216 @@
+syntax = "proto3";
+
+package oscal.assessment_plan.v1;
+
+import "common/v1/common.proto";
+
+option go_package = "github.com/mchorfa/xoscal/proto/oscal/assessment_plan/v1;assessment_planv1";
+
+// AssessmentPlan represents a security assessment plan
+message AssessmentPlan {
+  oscal.common.v1.UUID uuid = 1;
+  oscal.common.v1.Metadata metadata = 2;
+  ImportSsp import_ssp = 3;
+  LocalDefinitions local_definitions = 4;
+  Terms terms = 5;
+  ReviewedControls reviewed_controls = 6;
+  repeated AssessmentTask assessment_tasks = 7;
+  oscal.common.v1.BackMatter back_matter = 8;
+}
+
+// ImportSsp represents an imported system security plan
+message ImportSsp {
+  oscal.common.v1.URIReference href = 1;
+  repeated oscal.common.v1.MarkupMultiline remarks = 2;
+}
+
+// LocalDefinitions represents local definitions for the assessment plan
+message LocalDefinitions {
+  repeated Component components = 1;
+  repeated InventoryItem inventory_items = 2;
+  repeated User users = 3;
+  repeated LocalObjective objectives = 4;
+  repeated AssessmentMethod methods = 5;
+  repeated Activity activities = 6;
+}
+
+// Component represents a system component
+message Component {
+  oscal.common.v1.UUID uuid = 1;
+  string type = 2;
+  string title = 3;
+  string description = 4;
+  repeated oscal.common.v1.Property props = 5;
+  repeated oscal.common.v1.Link links = 6;
+  repeated oscal.common.v1.MarkupMultiline remarks = 7;
+}
+
+// InventoryItem represents an inventory item
+message InventoryItem {
+  oscal.common.v1.UUID uuid = 1;
+  oscal.common.v1.MarkupLine description = 2;
+  repeated oscal.common.v1.Property props = 3;
+  repeated oscal.common.v1.Link links = 4;
+  repeated oscal.common.v1.MarkupMultiline remarks = 5;
+}
+
+// User represents a system user
+message User {
+  oscal.common.v1.UUID uuid = 1;
+  string title = 2;
+  string short_name = 3;
+  oscal.common.v1.MarkupMultiline description = 4;
+  repeated oscal.common.v1.Property props = 5;
+  repeated oscal.common.v1.Link links = 6;
+  repeated oscal.common.v1.MarkupMultiline remarks = 7;
+}
+
+// LocalObjective represents a local control objective
+message LocalObjective {
+  oscal.common.v1.Token control_id = 1;
+  oscal.common.v1.MarkupMultiline description = 2;
+  repeated oscal.common.v1.Property props = 3;
+  repeated oscal.common.v1.Link links = 4;
+  repeated Part parts = 5;
+  repeated oscal.common.v1.MarkupMultiline remarks = 6;
+}
+
+// Part represents a part of an objective
+message Part {
+  oscal.common.v1.Token id = 1;
+  string name = 2;
+  string ns = 3;
+  string class = 4;
+  oscal.common.v1.MarkupLine title = 5;
+  repeated oscal.common.v1.Property props = 6;
+  repeated oscal.common.v1.Link links = 7;
+  repeated Part parts = 8;
+  repeated oscal.common.v1.MarkupMultiline prose = 9;
+  repeated oscal.common.v1.MarkupMultiline remarks = 10;
+}
+
+// AssessmentMethod represents an assessment method
+message AssessmentMethod {
+  oscal.common.v1.UUID uuid = 1;
+  oscal.common.v1.MarkupMultiline description = 2;
+  repeated oscal.common.v1.Property props = 3;
+  repeated oscal.common.v1.Link links = 4;
+  AssessmentPart part = 5;
+  repeated oscal.common.v1.MarkupMultiline remarks = 6;
+}
+
+// AssessmentPart represents an assessment part
+message AssessmentPart {
+  oscal.common.v1.Token id = 1;
+  string name = 2;
+  string ns = 3;
+  string class = 4;
+  oscal.common.v1.MarkupLine title = 5;
+  repeated oscal.common.v1.Property props = 6;
+  repeated oscal.common.v1.Link links = 7;
+  repeated AssessmentPart parts = 8;
+  repeated oscal.common.v1.MarkupMultiline prose = 9;
+  repeated oscal.common.v1.MarkupMultiline remarks = 10;
+}
+
+// Activity represents an assessment activity
+message Activity {
+  oscal.common.v1.UUID uuid = 1;
+  oscal.common.v1.MarkupLine title = 2;
+  oscal.common.v1.MarkupMultiline description = 3;
+  repeated oscal.common.v1.Property props = 4;
+  repeated oscal.common.v1.Link links = 5;
+  repeated Step steps = 6;
+  repeated oscal.common.v1.MarkupMultiline remarks = 7;
+}
+
+// Step represents a step in an activity
+message Step {
+  oscal.common.v1.UUID uuid = 1;
+  oscal.common.v1.MarkupLine title = 2;
+  oscal.common.v1.MarkupMultiline description = 3;
+  repeated oscal.common.v1.Property props = 4;
+  repeated oscal.common.v1.Link links = 5;
+  repeated oscal.common.v1.MarkupMultiline remarks = 6;
+}
+
+// Terms represents assessment plan terms
+message Terms {
+  repeated Term terms = 1;
+}
+
+// Term represents a defined term
+message Term {
+  oscal.common.v1.Token id = 1;
+  oscal.common.v1.MarkupLine name = 2;
+  oscal.common.v1.MarkupMultiline definition = 3;
+  repeated oscal.common.v1.Property props = 4;
+  repeated oscal.common.v1.Link links = 5;
+  repeated oscal.common.v1.MarkupMultiline remarks = 6;
+}
+
+// ReviewedControls represents reviewed controls
+message ReviewedControls {
+  string control_selection = 1;
+  repeated ControlSelection controls = 2;
+}
+
+// ControlSelection represents a control selection
+message ControlSelection {
+  oscal.common.v1.Token control_id = 1;
+  repeated oscal.common.v1.MarkupMultiline remarks = 2;
+}
+
+// AssessmentTask represents an assessment task
+message AssessmentTask {
+  oscal.common.v1.UUID uuid = 1;
+  string type = 2;
+  oscal.common.v1.MarkupLine title = 3;
+  oscal.common.v1.MarkupMultiline description = 4;
+  repeated SubjectReference subjects = 5;
+  repeated Task tasks = 6;
+  repeated AssociatedActivity associated_activities = 7;
+  repeated ResponsibleRole responsible_roles = 8;
+  repeated oscal.common.v1.Property props = 9;
+  repeated oscal.common.v1.Link links = 10;
+  repeated oscal.common.v1.MarkupMultiline remarks = 11;
+}
+
+// SubjectReference represents a subject reference
+message SubjectReference {
+  oscal.common.v1.UUID subject_uuid = 1;
+  oscal.common.v1.MarkupLine title = 2;
+  repeated oscal.common.v1.Property props = 3;
+  repeated oscal.common.v1.Link links = 4;
+  repeated oscal.common.v1.MarkupMultiline remarks = 5;
+}
+
+// Task represents a sub-task
+message Task {
+  oscal.common.v1.UUID uuid = 1;
+  string type = 2;
+  oscal.common.v1.MarkupLine title = 3;
+  oscal.common.v1.MarkupMultiline description = 4;
+  repeated SubjectReference subjects = 5;
+  repeated Task tasks = 6;
+  repeated AssociatedActivity associated_activities = 7;
+  repeated ResponsibleRole responsible_roles = 8;
+  repeated oscal.common.v1.Property props = 9;
+  repeated oscal.common.v1.Link links = 10;
+  repeated oscal.common.v1.MarkupMultiline remarks = 11;
+}
+
+// AssociatedActivity represents an associated activity
+message AssociatedActivity {
+  oscal.common.v1.UUID activity_uuid = 1;
+  bool include_all = 2;
+  repeated oscal.common.v1.UUID activity_uuids = 3;
+}
+
+// ResponsibleRole represents a responsible role
+message ResponsibleRole {
+  oscal.common.v1.Token role_id = 1;
+  repeated oscal.common.v1.UUID party_uuids = 2;
+  repeated oscal.common.v1.Property props = 3;
+  repeated oscal.common.v1.MarkupMultiline remarks = 4;
+}

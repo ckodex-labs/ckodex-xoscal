@@ -1,0 +1,28 @@
+{
+  "$id": "oscal.ssp.v1.SetParameter.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "SetParameter represents a set parameter",
+  "patternProperties": {
+    "^(param_id)$": {
+      "$ref": "oscal.common.v1.Token.jsonschema.json"
+    }
+  },
+  "properties": {
+    "paramId": {
+      "$ref": "oscal.common.v1.Token.jsonschema.json"
+    },
+    "remarks": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupMultiline.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "value": {
+      "default": "",
+      "type": "string"
+    }
+  },
+  "title": "Set Parameter",
+  "type": "object"
+}

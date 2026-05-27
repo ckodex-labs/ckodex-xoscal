@@ -1,0 +1,19 @@
+{
+  "$defs": {
+    "oscal.services.v1.GetSnapshotRequest.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Get Snapshot Request",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.services.v1.GetSnapshotRequest.jsonschema.bundle.json",
+  "$ref": "#/$defs/oscal.services.v1.GetSnapshotRequest.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

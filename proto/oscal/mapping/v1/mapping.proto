@@ -1,0 +1,105 @@
+syntax = "proto3";
+
+package oscal.mapping.v1;
+
+import "common/v1/common.proto";
+
+option go_package = "github.com/mchorfa/xoscal/proto/oscal/mapping/v1;mappingv1";
+
+// MappingCollection represents a collection of mappings
+message MappingCollection {
+  oscal.common.v1.UUID uuid = 1;
+  oscal.common.v1.Metadata metadata = 2;
+  string matching_rationale = 3;
+  string status = 4;
+  MappingResourceReference source_resource = 5;
+  MappingResourceReference target_resource = 6;
+  repeated Map maps = 7;
+  repeated oscal.common.v1.Property props = 8;
+  repeated oscal.common.v1.Link links = 9;
+  repeated oscal.common.v1.MarkupMultiline remarks = 10;
+  MappingDescription mapping_description = 11;
+  GapSummary source_gap_summary = 12;
+  GapSummary target_gap_summary = 13;
+  ConfidenceScore confidence_score = 14;
+  Coverage coverage = 15;
+}
+
+// MappingResourceReference represents a mapped resource reference
+message MappingResourceReference {
+  string ns = 1;
+  string type = 2;
+  oscal.common.v1.URIReference href = 3;
+  repeated oscal.common.v1.Property props = 4;
+  repeated oscal.common.v1.Link links = 5;
+  repeated oscal.common.v1.MarkupMultiline remarks = 6;
+}
+
+// Map represents a mapping entry
+message Map {
+  oscal.common.v1.UUID uuid = 1;
+  string ns = 2;
+  string matching_rationale = 3;
+  oscal.common.v1.Token relationship = 4;
+  repeated MappingItem sources = 5;
+  repeated MappingItem targets = 6;
+  repeated QualifierItem qualifiers = 7;
+  ConfidenceScore confidence_score = 8;
+  Coverage coverage = 9;
+  repeated oscal.common.v1.Property props = 10;
+  repeated oscal.common.v1.Link links = 11;
+  repeated oscal.common.v1.MarkupMultiline remarks = 12;
+}
+
+// MappingItem represents a mapping entry item (source or target)
+message MappingItem {
+  string type = 1;
+  string id_ref = 2;
+  repeated oscal.common.v1.Property props = 3;
+  repeated oscal.common.v1.Link links = 4;
+  repeated oscal.common.v1.MarkupMultiline remarks = 5;
+}
+
+// QualifierItem represents a qualifier item
+message QualifierItem {
+  string type = 1;
+  string id_ref = 2;
+  repeated oscal.common.v1.Property props = 3;
+  repeated oscal.common.v1.Link links = 4;
+  repeated oscal.common.v1.MarkupMultiline remarks = 5;
+}
+
+// ConfidenceScore represents a confidence score
+message ConfidenceScore {
+  double value = 1;
+  string method = 2;
+  repeated oscal.common.v1.Property props = 3;
+  repeated oscal.common.v1.Link links = 4;
+  repeated oscal.common.v1.MarkupMultiline remarks = 5;
+}
+
+// Coverage represents coverage information
+message Coverage {
+  double value = 1;
+  string method = 2;
+  repeated oscal.common.v1.Property props = 3;
+  repeated oscal.common.v1.Link links = 4;
+  repeated oscal.common.v1.MarkupMultiline remarks = 5;
+}
+
+// GapSummary represents a gap summary
+message GapSummary {
+  int32 count = 1;
+  repeated string gaps = 2;
+  repeated oscal.common.v1.Property props = 3;
+  repeated oscal.common.v1.Link links = 4;
+  repeated oscal.common.v1.MarkupMultiline remarks = 5;
+}
+
+// MappingDescription represents a mapping description
+message MappingDescription {
+  oscal.common.v1.MarkupMultiline description = 1;
+  repeated oscal.common.v1.Property props = 2;
+  repeated oscal.common.v1.Link links = 3;
+  repeated oscal.common.v1.MarkupMultiline remarks = 4;
+}

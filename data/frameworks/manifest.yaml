@@ -1,0 +1,110 @@
+version: "1.0"
+source_base_url: "https://raw.githubusercontent.com/intuitem/ciso-assistant-community/main/backend/library/libraries"
+frameworks:
+  # USA
+  - ref_id: nist-csf-2.0
+    jurisdiction: usa
+    filename: nist-csf-2.0.yaml
+  - ref_id: cmmc-2.0
+    jurisdiction: usa
+    filename: cmmc-2.0.yaml
+  - ref_id: fedramp-rev5
+    jurisdiction: usa
+    filename: fedramp-rev5.yaml
+  - ref_id: cisa-cpg-2.0
+    jurisdiction: usa
+    filename: cisa-cpg-2.0.yaml
+  - ref_id: cisa-vendor-scrm
+    jurisdiction: usa
+    filename: cisa-vendor-scrm.yaml
+  - ref_id: cjis-version-5.9.5
+    jurisdiction: usa
+    filename: cjis-version-5.9.5.yaml
+  - ref_id: dfs-500-2023-11
+    jurisdiction: usa
+    filename: dfs-500-2023-11.yaml
+
+  # Canada
+  - ref_id: itsp.10.171
+    jurisdiction: canada
+    filename: itsp.10.171.yaml
+
+  # UK
+  - ref_id: cyber_essentials
+    jurisdiction: uk
+    filename: cyber_essentials.yaml
+
+  # France
+  - ref_id: anssi-guide-hygiene
+    jurisdiction: france
+    filename: anssi-guide-hygiene.yaml
+  - ref_id: anssi-guide-hygiene-detail
+    jurisdiction: france
+    filename: anssi-guide-hygiene-detail.yaml
+  - ref_id: anssi-guide-admin-securisee-si
+    jurisdiction: france
+    filename: anssi-guide-admin-securisee-si.yaml
+  - ref_id: anssi-referentiel-general-de-securite-annexe-b2
+    jurisdiction: france
+    filename: anssi-referentiel-general-de-securite-annexe-b2.yaml
+  - ref_id: cnil-guide-securite
+    jurisdiction: france
+    filename: cnil-guide-securite.yaml
+  - ref_id: 3cf-v2
+    jurisdiction: france
+    filename: 3cf-v2.yaml
+
+  # Germany
+  - ref_id: bs-it-gs-2023-isms
+    jurisdiction: germany
+    filename: bs-it-gs-2023-isms-sicherheitsmanagement.yaml
+  - ref_id: bs-it-gs-2023-orp
+    jurisdiction: germany
+    filename: bs-it-gs-2023-orp-organisation-und-personal.yaml
+  - ref_id: bs-it-gs-2023-con
+    jurisdiction: germany
+    filename: bs-it-gs-2023-con-konzeption-und-vorgehensweisen.yaml
+  - ref_id: bs-it-gs-2023-sys
+    jurisdiction: germany
+    filename: bs-it-gs-2023-sys-it-systeme.yaml
+  - ref_id: bs-it-gs-2023-app
+    jurisdiction: germany
+    filename: bs-it-gs-2023-app-anwendungen.yaml
+  - ref_id: bs-it-gs-2023-inf
+    jurisdiction: germany
+    filename: bs-it-gs-2023-inf-infrastruktur.yaml
+  - ref_id: bs-it-gs-2023-net
+    jurisdiction: germany
+    filename: bs-it-gs-2023-net-netze-und-kommunikation.yaml
+  - ref_id: bs-it-gs-2023-ops
+    jurisdiction: germany
+    filename: bs-it-gs-2023-ops-betrieb.yaml
+  - ref_id: bs-it-gs-2023-ind
+    jurisdiction: germany
+    filename: bs-it-gs-2023-ind-industrielle-it.yaml
+  - ref_id: bs-it-gs-2023-der
+    jurisdiction: germany
+    filename: bs-it-gs-2023-der-detektion-und-reaktion.yaml
+  - ref_id: bsi-c5-2020
+    jurisdiction: germany
+    filename: bsi-c5-2020.yaml
+  - ref_id: bsi-externer-cloud-dienste
+    jurisdiction: germany
+    filename: bsi-externer-cloud-dienste.yaml
+  - ref_id: e-its-2024
+    jurisdiction: germany
+    filename: e-its-2024.yaml
+
+  # EU-wide
+  - ref_id: nis2
+    jurisdiction: eu
+    filename: annex-nis2-regulation--2024-2690-with-technical-implementation-guidance-by-enisa.yaml
+  - ref_id: dora
+    jurisdiction: eu
+    filename: dora.yaml
+  - ref_id: eu-ai-act
+    jurisdiction: eu
+    filename: ai-act.yaml
+  - ref_id: iso-iec-42001
+    jurisdiction: eu
+    filename: iso-iec-42001.yaml

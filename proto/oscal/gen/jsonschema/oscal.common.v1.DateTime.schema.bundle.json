@@ -1,0 +1,25 @@
+{
+  "$defs": {
+    "google.protobuf.Timestamp.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "format": "date-time",
+      "title": "Timestamp",
+      "type": "string"
+    },
+    "oscal.common.v1.DateTime.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "DateTime represents a date-time with timezone (RFC3339)",
+      "properties": {
+        "value": {
+          "$ref": "#/$defs/google.protobuf.Timestamp.schema.json"
+        }
+      },
+      "title": "Date Time",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.common.v1.DateTime.schema.bundle.json",
+  "$ref": "#/$defs/oscal.common.v1.DateTime.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

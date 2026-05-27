@@ -1,0 +1,31 @@
+{
+  "$id": "oscal.services.v1.Reference.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "bom_ref": {
+      "type": "string"
+    },
+    "digest": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "kind": {
+      "type": "string"
+    },
+    "purl": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "kind",
+    "id",
+    "digest",
+    "purl",
+    "bom_ref"
+  ],
+  "title": "Reference",
+  "type": "object"
+}

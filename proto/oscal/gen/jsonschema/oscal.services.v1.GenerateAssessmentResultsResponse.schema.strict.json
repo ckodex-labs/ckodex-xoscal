@@ -1,0 +1,12 @@
+{
+  "$id": "oscal.services.v1.GenerateAssessmentResultsResponse.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "assessment_results": {
+      "$ref": "oscal.assessment_results.v1.AssessmentResults.schema.strict.json"
+    }
+  },
+  "title": "Generate Assessment Results Response",
+  "type": "object"
+}

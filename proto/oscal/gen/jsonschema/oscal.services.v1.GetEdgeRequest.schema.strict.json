@@ -1,0 +1,15 @@
+{
+  "$id": "oscal.services.v1.GetEdgeRequest.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "edge_id": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "edge_id"
+  ],
+  "title": "Get Edge Request",
+  "type": "object"
+}

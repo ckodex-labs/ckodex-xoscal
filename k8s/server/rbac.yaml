@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: xoscal-server
+  annotations:
+    seccomp.security.alpha.kubernetes.io/pod: runtime/default
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: xoscal-server
+rules: []
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: xoscal-server
+subjects:
+  - kind: ServiceAccount
+    name: xoscal-server
+roleRef:
+  kind: Role
+  name: xoscal-server
+  apiGroup: rbac.authorization.k8s.io

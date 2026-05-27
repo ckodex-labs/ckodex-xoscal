@@ -1,0 +1,19 @@
+{
+  "$id": "oscal.services.v1.ResolveConflictRequest.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "conflict_urn": {
+      "type": "string"
+    },
+    "resolution": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "conflict_urn",
+    "resolution"
+  ],
+  "title": "Resolve Conflict Request",
+  "type": "object"
+}

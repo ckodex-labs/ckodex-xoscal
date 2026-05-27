@@ -1,0 +1,21 @@
+{
+  "$id": "oscal.services.v1.ListMappingsResponse.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "mappings": {
+      "items": {
+        "$ref": "oscal.mapping.v1.MappingCollection.schema.strict.json"
+      },
+      "type": "array"
+    },
+    "next_page_token": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "next_page_token"
+  ],
+  "title": "List Mappings Response",
+  "type": "object"
+}

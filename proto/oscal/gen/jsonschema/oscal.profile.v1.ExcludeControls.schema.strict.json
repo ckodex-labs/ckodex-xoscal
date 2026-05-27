@@ -1,0 +1,40 @@
+{
+  "$id": "oscal.profile.v1.ExcludeControls.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "ExcludeControls represents controls to exclude from the imported resource",
+  "properties": {
+    "links": {
+      "items": {
+        "$ref": "oscal.common.v1.Link.schema.strict.json"
+      },
+      "type": "array"
+    },
+    "props": {
+      "items": {
+        "$ref": "oscal.common.v1.Property.schema.strict.json"
+      },
+      "type": "array"
+    },
+    "remarks": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupMultiline.schema.strict.json"
+      },
+      "type": "array"
+    },
+    "with_class": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "with_ids": {
+      "items": {
+        "$ref": "oscal.catalog.v1.Control.schema.strict.json"
+      },
+      "type": "array"
+    }
+  },
+  "title": "Exclude Controls",
+  "type": "object"
+}

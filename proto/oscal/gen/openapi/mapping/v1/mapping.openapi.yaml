@@ -1,0 +1,740 @@
+openapi: 3.1.0
+info:
+  title: oscal.mapping.v1
+paths: {}
+components:
+  schemas:
+    google.protobuf.Timestamp:
+      type: string
+      examples:
+        - "2023-01-15T01:30:15.01Z"
+        - "2024-12-25T12:00:00Z"
+      format: date-time
+      description: |-
+        A Timestamp represents a point in time independent of any time zone or local
+         calendar, encoded as a count of seconds and fractions of seconds at
+         nanosecond resolution. The count is relative to an epoch at UTC midnight on
+         January 1, 1970, in the proleptic Gregorian calendar which extends the
+         Gregorian calendar backwards to year one.
+
+         All minutes are 60 seconds long. Leap seconds are "smeared" so that no leap
+         second table is needed for interpretation, using a [24-hour linear
+         smear](https://developers.google.com/time/smear).
+
+         The range is from 0001-01-01T00:00:00Z to 9999-12-31T23:59:59.999999999Z. By
+         restricting to that range, we ensure that we can convert to and from [RFC
+         3339](https://www.ietf.org/rfc/rfc3339.txt) date strings.
+
+         # Examples
+
+         Example 1: Compute Timestamp from POSIX `time()`.
+
+             Timestamp timestamp;
+             timestamp.set_seconds(time(NULL));
+             timestamp.set_nanos(0);
+
+         Example 2: Compute Timestamp from POSIX `gettimeofday()`.
+
+             struct timeval tv;
+             gettimeofday(&tv, NULL);
+
+             Timestamp timestamp;
+             timestamp.set_seconds(tv.tv_sec);
+             timestamp.set_nanos(tv.tv_usec * 1000);
+
+         Example 3: Compute Timestamp from Win32 `GetSystemTimeAsFileTime()`.
+
+             FILETIME ft;
+             GetSystemTimeAsFileTime(&ft);
+             UINT64 ticks = (((UINT64)ft.dwHighDateTime) << 32) | ft.dwLowDateTime;
+
+             // A Windows tick is 100 nanoseconds. Windows epoch 1601-01-01T00:00:00Z
+             // is 11644473600 seconds before Unix epoch 1970-01-01T00:00:00Z.
+             Timestamp timestamp;
+             timestamp.set_seconds((INT64) ((ticks / 10000000) - 11644473600LL));
+             timestamp.set_nanos((INT32) ((ticks % 10000000) * 100));
+
+         Example 4: Compute Timestamp from Java `System.currentTimeMillis()`.
+
+             long millis = System.currentTimeMillis();
+
+             Timestamp timestamp = Timestamp.newBuilder().setSeconds(millis / 1000)
+                 .setNanos((int) ((millis % 1000) * 1000000)).build();
+
+         Example 5: Compute Timestamp from Java `Instant.now()`.
+
+             Instant now = Instant.now();
+
+             Timestamp timestamp =
+                 Timestamp.newBuilder().setSeconds(now.getEpochSecond())
+                     .setNanos(now.getNano()).build();
+
+         Example 6: Compute Timestamp from current time in Python.
+
+             timestamp = Timestamp()
+             timestamp.GetCurrentTime()
+
+         # JSON Mapping
+
+         In JSON format, the Timestamp type is encoded as a string in the
+         [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) format. That is, the
+         format is "{year}-{month}-{day}T{hour}:{min}:{sec}[.{frac_sec}]Z"
+         where {year} is always expressed using four digits while {month}, {day},
+         {hour}, {min}, and {sec} are zero-padded to two digits each. The fractional
+         seconds, which can go up to 9 digits (i.e. up to 1 nanosecond resolution),
+         are optional. The "Z" suffix indicates the timezone ("UTC"); the timezone
+         is required. A proto3 JSON serializer should always use UTC (as indicated by
+         "Z") when printing the Timestamp type and a proto3 JSON parser should be
+         able to accept both UTC and other timezones (as indicated by an offset).
+
+         For example, "2017-01-15T01:30:15.01Z" encodes 15.01 seconds past
+         01:30 UTC on January 15, 2017.
+
+         In JavaScript, one can convert a Date object to this format using the
+         standard
+         [toISOString()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString)
+         method. In Python, a standard `datetime.datetime` object can be converted
+         to this format using
+         [`strftime`](https://docs.python.org/2/library/time.html#time.strftime) with
+         the time format spec '%Y-%m-%dT%H:%M:%S.%fZ'. Likewise, in Java, one can use
+         the Joda Time's [`ISODateTimeFormat.dateTime()`](
+         http://joda-time.sourceforge.net/apidocs/org/joda/time/format/ISODateTimeFormat.html#dateTime()
+         ) to obtain a formatter capable of generating timestamps in this format.
+    oscal.common.v1.AddrLine:
+      type: object
+      properties:
+        value:
+          title: value
+          $ref: '#/components/schemas/oscal.common.v1.MarkupLine'
+      title: AddrLine
+      additionalProperties: false
+      description: AddrLine represents a line of an address
+    oscal.common.v1.Address:
+      type: object
+      properties:
+        addrLines:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.AddrLine'
+          title: addr_lines
+        city:
+          type: string
+          title: city
+        state:
+          type: string
+          title: state
+        postalCode:
+          type: string
+          title: postal_code
+        country:
+          type: string
+          title: country
+      title: Address
+      additionalProperties: false
+      description: Address represents a postal address
+    oscal.common.v1.DateTime:
+      type: object
+      properties:
+        value:
+          title: value
+          $ref: '#/components/schemas/google.protobuf.Timestamp'
+      title: DateTime
+      additionalProperties: false
+      description: DateTime represents a date-time with timezone (RFC3339)
+    oscal.common.v1.DocumentId:
+      type: object
+      properties:
+        scheme:
+          type: string
+          title: scheme
+        identifier:
+          type: string
+          title: identifier
+      title: DocumentId
+      additionalProperties: false
+      description: DocumentId represents a document identifier
+    oscal.common.v1.EmailAddress:
+      type: object
+      properties:
+        value:
+          type: string
+          title: value
+      title: EmailAddress
+      additionalProperties: false
+      description: EmailAddress represents an email address
+    oscal.common.v1.Link:
+      type: object
+      properties:
+        href:
+          title: href
+          $ref: '#/components/schemas/oscal.common.v1.URI'
+        rel:
+          type: string
+          title: rel
+          description: Relationship type
+        mediaType:
+          type: string
+          title: media_type
+          description: Media type (e.g., application/json)
+        text:
+          type: string
+          title: text
+          description: Link text
+        resourceFragment:
+          type: string
+          title: resource_fragment
+          description: Fragment identifier
+      title: Link
+      additionalProperties: false
+      description: Link represents a hyperlink with metadata
+    oscal.common.v1.MarkupLine:
+      type: object
+      properties:
+        value:
+          type: string
+          title: value
+      title: MarkupLine
+      additionalProperties: false
+      description: MarkupLine represents a line of markup text (e.g., markdown)
+    oscal.common.v1.MarkupMultiline:
+      type: object
+      properties:
+        value:
+          type: string
+          title: value
+      title: MarkupMultiline
+      additionalProperties: false
+      description: MarkupMultiline represents multiline markup text
+    oscal.common.v1.Metadata:
+      type: object
+      properties:
+        title:
+          type: string
+          title: title
+        lastModified:
+          title: last_modified
+          $ref: '#/components/schemas/oscal.common.v1.DateTime'
+        version:
+          type: string
+          title: version
+        oscalVersion:
+          type: string
+          title: oscal_version
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        roles:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Role'
+          title: roles
+        parties:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Party'
+          title: parties
+        responsibleParties:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.ResponsibleParty'
+          title: responsible_parties
+        documentId:
+          title: document_id
+          $ref: '#/components/schemas/oscal.common.v1.DocumentId'
+        published:
+          title: published
+          $ref: '#/components/schemas/oscal.common.v1.DateTime'
+        remarks:
+          title: remarks
+          $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+      title: Metadata
+      additionalProperties: false
+      description: Metadata represents document metadata shared across all OSCAL models
+    oscal.common.v1.Party:
+      type: object
+      properties:
+        uuid:
+          title: uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        type:
+          type: string
+          title: type
+        name:
+          type: string
+          title: name
+        shortNames:
+          type: array
+          items:
+            type: string
+          title: short_names
+        address:
+          title: address
+          $ref: '#/components/schemas/oscal.common.v1.Address'
+        emailAddresses:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.EmailAddress'
+          title: email_addresses
+        telephoneNumbers:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.TelephoneNumber'
+          title: telephone_numbers
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        responsibleParties:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.ResponsibleParty'
+          title: responsible_parties
+        remarks:
+          type: array
+          items:
+            type: string
+          title: remarks
+      title: Party
+      additionalProperties: false
+      description: Party represents an organization or person
+    oscal.common.v1.Property:
+      type: object
+      properties:
+        name:
+          type: string
+          title: name
+        value:
+          type: string
+          title: value
+        class:
+          type: string
+          title: class
+          description: Optional classification
+        id:
+          type: string
+          title: id
+          description: Optional identifier
+      title: Property
+      additionalProperties: false
+      description: Property represents a key-value property with optional classification
+    oscal.common.v1.ResponsibleParty:
+      type: object
+      properties:
+        roleId:
+          title: role_id
+          $ref: '#/components/schemas/oscal.common.v1.Token'
+        partyUuids:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.UUID'
+          title: party_uuids
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          title: remarks
+          $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+      title: ResponsibleParty
+      additionalProperties: false
+      description: ResponsibleParty represents a party responsible for a role
+    oscal.common.v1.Role:
+      type: object
+      properties:
+        id:
+          title: id
+          $ref: '#/components/schemas/oscal.common.v1.Token'
+        title:
+          type: string
+          title: title
+        shortName:
+          type: string
+          title: short_name
+        description:
+          title: description
+          $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+      title: Role
+      additionalProperties: false
+      description: Role represents a role definition
+    oscal.common.v1.TelephoneNumber:
+      type: object
+      properties:
+        value:
+          type: string
+          title: value
+      title: TelephoneNumber
+      additionalProperties: false
+      description: TelephoneNumber represents a telephone number
+    oscal.common.v1.Token:
+      type: object
+      properties:
+        value:
+          type: string
+          title: value
+      title: Token
+      additionalProperties: false
+      description: Token represents an alphanumeric token (e.g., control IDs)
+    oscal.common.v1.URI:
+      type: object
+      properties:
+        value:
+          type: string
+          title: value
+      title: URI
+      additionalProperties: false
+      description: URI represents a uniform resource identifier
+    oscal.common.v1.URIReference:
+      type: object
+      properties:
+        value:
+          type: string
+          title: value
+      title: URIReference
+      additionalProperties: false
+      description: URIReference represents a URI reference (may be relative)
+    oscal.common.v1.UUID:
+      type: object
+      properties:
+        value:
+          type: string
+          title: value
+      title: UUID
+      additionalProperties: false
+      description: UUID represents a universally unique identifier
+    oscal.mapping.v1.ConfidenceScore:
+      type: object
+      properties:
+        value:
+          type: number
+          title: value
+          format: double
+        method:
+          type: string
+          title: method
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: ConfidenceScore
+      additionalProperties: false
+      description: ConfidenceScore represents a confidence score
+    oscal.mapping.v1.Coverage:
+      type: object
+      properties:
+        value:
+          type: number
+          title: value
+          format: double
+        method:
+          type: string
+          title: method
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: Coverage
+      additionalProperties: false
+      description: Coverage represents coverage information
+    oscal.mapping.v1.GapSummary:
+      type: object
+      properties:
+        count:
+          type: integer
+          title: count
+          format: int32
+        gaps:
+          type: array
+          items:
+            type: string
+          title: gaps
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: GapSummary
+      additionalProperties: false
+      description: GapSummary represents a gap summary
+    oscal.mapping.v1.Map:
+      type: object
+      properties:
+        uuid:
+          title: uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        ns:
+          type: string
+          title: ns
+        matchingRationale:
+          type: string
+          title: matching_rationale
+        relationship:
+          title: relationship
+          $ref: '#/components/schemas/oscal.common.v1.Token'
+        sources:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.mapping.v1.MappingItem'
+          title: sources
+        targets:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.mapping.v1.MappingItem'
+          title: targets
+        qualifiers:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.mapping.v1.QualifierItem'
+          title: qualifiers
+        confidenceScore:
+          title: confidence_score
+          $ref: '#/components/schemas/oscal.mapping.v1.ConfidenceScore'
+        coverage:
+          title: coverage
+          $ref: '#/components/schemas/oscal.mapping.v1.Coverage'
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: Map
+      additionalProperties: false
+      description: Map represents a mapping entry
+    oscal.mapping.v1.MappingCollection:
+      type: object
+      properties:
+        uuid:
+          title: uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        metadata:
+          title: metadata
+          $ref: '#/components/schemas/oscal.common.v1.Metadata'
+        matchingRationale:
+          type: string
+          title: matching_rationale
+        status:
+          type: string
+          title: status
+        sourceResource:
+          title: source_resource
+          $ref: '#/components/schemas/oscal.mapping.v1.MappingResourceReference'
+        targetResource:
+          title: target_resource
+          $ref: '#/components/schemas/oscal.mapping.v1.MappingResourceReference'
+        maps:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.mapping.v1.Map'
+          title: maps
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+        mappingDescription:
+          title: mapping_description
+          $ref: '#/components/schemas/oscal.mapping.v1.MappingDescription'
+        sourceGapSummary:
+          title: source_gap_summary
+          $ref: '#/components/schemas/oscal.mapping.v1.GapSummary'
+        targetGapSummary:
+          title: target_gap_summary
+          $ref: '#/components/schemas/oscal.mapping.v1.GapSummary'
+        confidenceScore:
+          title: confidence_score
+          $ref: '#/components/schemas/oscal.mapping.v1.ConfidenceScore'
+        coverage:
+          title: coverage
+          $ref: '#/components/schemas/oscal.mapping.v1.Coverage'
+      title: MappingCollection
+      additionalProperties: false
+      description: MappingCollection represents a collection of mappings
+    oscal.mapping.v1.MappingDescription:
+      type: object
+      properties:
+        description:
+          title: description
+          $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: MappingDescription
+      additionalProperties: false
+      description: MappingDescription represents a mapping description
+    oscal.mapping.v1.MappingItem:
+      type: object
+      properties:
+        type:
+          type: string
+          title: type
+        idRef:
+          type: string
+          title: id_ref
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: MappingItem
+      additionalProperties: false
+      description: MappingItem represents a mapping entry item (source or target)
+    oscal.mapping.v1.MappingResourceReference:
+      type: object
+      properties:
+        ns:
+          type: string
+          title: ns
+        type:
+          type: string
+          title: type
+        href:
+          title: href
+          $ref: '#/components/schemas/oscal.common.v1.URIReference'
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: MappingResourceReference
+      additionalProperties: false
+      description: MappingResourceReference represents a mapped resource reference
+    oscal.mapping.v1.QualifierItem:
+      type: object
+      properties:
+        type:
+          type: string
+          title: type
+        idRef:
+          type: string
+          title: id_ref
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: QualifierItem
+      additionalProperties: false
+      description: QualifierItem represents a qualifier item
+security: []

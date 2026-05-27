@@ -1,0 +1,23 @@
+{
+  "$id": "oscal.services.v1.PathSegment.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "depth": {
+      "maximum": 2147483647,
+      "minimum": -2147483648,
+      "type": "integer"
+    },
+    "edge": {
+      "$ref": "oscal.services.v1.GraphEdge.schema.strict.json"
+    },
+    "node": {
+      "$ref": "oscal.services.v1.GraphNode.schema.strict.json"
+    }
+  },
+  "required": [
+    "depth"
+  ],
+  "title": "Path Segment",
+  "type": "object"
+}

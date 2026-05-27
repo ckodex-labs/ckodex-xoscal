@@ -1,0 +1,21 @@
+{
+  "$id": "oscal.services.v1.ListEdgesResponse.jsonschema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "edges": {
+      "items": {
+        "$ref": "oscal.services.v1.GraphEdge.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "nextPageToken": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "nextPageToken"
+  ],
+  "title": "List Edges Response",
+  "type": "object"
+}

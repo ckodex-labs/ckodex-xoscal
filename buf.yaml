@@ -1,0 +1,16 @@
+version: v2
+modules:
+  - path: proto/oscal
+    name: buf.build/awslabs/oscal
+lint:
+  use:
+    - DEFAULT
+  except:
+    - FIELD_LOWER_SNAKE_CASE
+    - PACKAGE_DIRECTORY_MATCH
+breaking:
+  use:
+    - FILE
+    - PACKAGE
+deps:
+  - buf.build/googleapis/googleapis

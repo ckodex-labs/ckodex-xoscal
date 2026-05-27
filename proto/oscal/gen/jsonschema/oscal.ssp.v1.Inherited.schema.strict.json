@@ -1,0 +1,37 @@
+{
+  "$id": "oscal.ssp.v1.Inherited.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Inherited represents inherited control implementation",
+  "properties": {
+    "description": {
+      "$ref": "oscal.common.v1.MarkupMultiline.schema.strict.json"
+    },
+    "links": {
+      "items": {
+        "$ref": "oscal.common.v1.Link.schema.strict.json"
+      },
+      "type": "array"
+    },
+    "props": {
+      "items": {
+        "$ref": "oscal.common.v1.Property.schema.strict.json"
+      },
+      "type": "array"
+    },
+    "provided_uuid": {
+      "$ref": "oscal.common.v1.UUID.schema.strict.json"
+    },
+    "responsible_roles": {
+      "items": {
+        "$ref": "oscal.ssp.v1.ResponsibleRole.schema.strict.json"
+      },
+      "type": "array"
+    },
+    "uuid": {
+      "$ref": "oscal.common.v1.UUID.schema.strict.json"
+    }
+  },
+  "title": "Inherited",
+  "type": "object"
+}

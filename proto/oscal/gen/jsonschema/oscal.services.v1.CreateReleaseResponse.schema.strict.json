@@ -1,0 +1,19 @@
+{
+  "$id": "oscal.services.v1.CreateReleaseResponse.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "snapshot_name": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "name",
+    "snapshot_name"
+  ],
+  "title": "Create Release Response",
+  "type": "object"
+}

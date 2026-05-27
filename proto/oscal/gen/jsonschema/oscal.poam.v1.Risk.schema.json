@@ -1,0 +1,84 @@
+{
+  "$id": "oscal.poam.v1.Risk.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Risk represents a risk",
+  "patternProperties": {
+    "^(mitigatingFactors)$": {
+      "items": {
+        "$ref": "oscal.poam.v1.MitigatingFactor.schema.json"
+      },
+      "type": "array"
+    },
+    "^(relatedObservations)$": {
+      "items": {
+        "$ref": "oscal.poam.v1.RelatedObservation.schema.json"
+      },
+      "type": "array"
+    },
+    "^(riskLog)$": {
+      "$ref": "oscal.poam.v1.RiskLog.schema.json"
+    }
+  },
+  "properties": {
+    "deadline": {
+      "$ref": "oscal.common.v1.DateTime.schema.json"
+    },
+    "description": {
+      "$ref": "oscal.common.v1.MarkupMultiline.schema.json"
+    },
+    "links": {
+      "items": {
+        "$ref": "oscal.common.v1.Link.schema.json"
+      },
+      "type": "array"
+    },
+    "mitigating_factors": {
+      "items": {
+        "$ref": "oscal.poam.v1.MitigatingFactor.schema.json"
+      },
+      "type": "array"
+    },
+    "props": {
+      "items": {
+        "$ref": "oscal.common.v1.Property.schema.json"
+      },
+      "type": "array"
+    },
+    "related_observations": {
+      "items": {
+        "$ref": "oscal.poam.v1.RelatedObservation.schema.json"
+      },
+      "type": "array"
+    },
+    "remarks": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupMultiline.schema.json"
+      },
+      "type": "array"
+    },
+    "remediations": {
+      "items": {
+        "$ref": "oscal.poam.v1.Response.schema.json"
+      },
+      "type": "array"
+    },
+    "risk_log": {
+      "$ref": "oscal.poam.v1.RiskLog.schema.json"
+    },
+    "statement": {
+      "$ref": "oscal.common.v1.MarkupMultiline.schema.json"
+    },
+    "status": {
+      "$ref": "oscal.poam.v1.RiskStatus.schema.json"
+    },
+    "title": {
+      "$ref": "oscal.common.v1.MarkupLine.schema.json"
+    },
+    "uuid": {
+      "$ref": "oscal.common.v1.UUID.schema.json"
+    }
+  },
+  "title": "Risk",
+  "type": "object"
+}

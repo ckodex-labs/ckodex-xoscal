@@ -1,0 +1,34 @@
+{
+  "$defs": {
+    "google.protobuf.Timestamp.jsonschema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "format": "date-time",
+      "title": "Timestamp",
+      "type": "string"
+    },
+    "oscal.services.v1.VerifyClosureRequest.jsonschema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "properties": {
+        "asOf": {
+          "$ref": "#/$defs/google.protobuf.Timestamp.jsonschema.strict.json"
+        },
+        "purpose": {
+          "type": "string"
+        },
+        "subjectNode": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "subjectNode",
+        "purpose"
+      ],
+      "title": "Verify Closure Request",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.services.v1.VerifyClosureRequest.jsonschema.strict.bundle.json",
+  "$ref": "#/$defs/oscal.services.v1.VerifyClosureRequest.jsonschema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

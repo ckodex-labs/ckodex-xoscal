@@ -1,0 +1,41 @@
+{
+  "$defs": {
+    "google.protobuf.Timestamp.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "format": "date-time",
+      "title": "Timestamp",
+      "type": "string"
+    },
+    "oscal.services.v1.PolicyRef.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "patternProperties": {
+        "^(validTo)$": {
+          "$ref": "#/$defs/google.protobuf.Timestamp.schema.json"
+        }
+      },
+      "properties": {
+        "digest": {
+          "default": "",
+          "type": "string"
+        },
+        "ref": {
+          "default": "",
+          "type": "string"
+        },
+        "type": {
+          "default": "",
+          "type": "string"
+        },
+        "valid_to": {
+          "$ref": "#/$defs/google.protobuf.Timestamp.schema.json"
+        }
+      },
+      "title": "Policy Ref",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.services.v1.PolicyRef.schema.bundle.json",
+  "$ref": "#/$defs/oscal.services.v1.PolicyRef.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

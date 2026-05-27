@@ -1,0 +1,55 @@
+{
+  "$id": "oscal.assessment_results.v1.Result.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Result represents an assessment result",
+  "properties": {
+    "description": {
+      "$ref": "oscal.common.v1.MarkupMultiline.jsonschema.json"
+    },
+    "end": {
+      "$ref": "oscal.common.v1.DateTime.jsonschema.json"
+    },
+    "findings": {
+      "items": {
+        "$ref": "oscal.assessment_results.v1.Finding.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "links": {
+      "items": {
+        "$ref": "oscal.common.v1.Link.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "observations": {
+      "items": {
+        "$ref": "oscal.assessment_results.v1.Observation.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "props": {
+      "items": {
+        "$ref": "oscal.common.v1.Property.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "remarks": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupMultiline.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "start": {
+      "$ref": "oscal.common.v1.DateTime.jsonschema.json"
+    },
+    "title": {
+      "$ref": "oscal.common.v1.MarkupLine.jsonschema.json"
+    },
+    "uuid": {
+      "$ref": "oscal.common.v1.UUID.jsonschema.json"
+    }
+  },
+  "title": "Result",
+  "type": "object"
+}

@@ -1,0 +1,19 @@
+{
+  "$id": "oscal.services.v1.VerifyEvidenceRequest.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "evidence_id": {
+      "type": "string"
+    },
+    "fetch_and_hash": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "evidence_id",
+    "fetch_and_hash"
+  ],
+  "title": "Verify Evidence Request",
+  "type": "object"
+}

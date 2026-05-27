@@ -1,0 +1,52 @@
+{
+  "$defs": {
+    "google.protobuf.Timestamp.jsonschema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "format": "date-time",
+      "title": "Timestamp",
+      "type": "string"
+    },
+    "oscal.services.v1.ListEdgesRequest.jsonschema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "properties": {
+        "fromNode": {
+          "type": "string"
+        },
+        "pageSize": {
+          "maximum": 2147483647,
+          "minimum": -2147483648,
+          "type": "integer"
+        },
+        "pageToken": {
+          "type": "string"
+        },
+        "relation": {
+          "type": "string"
+        },
+        "toNode": {
+          "type": "string"
+        },
+        "trustState": {
+          "type": "string"
+        },
+        "validAfter": {
+          "$ref": "#/$defs/google.protobuf.Timestamp.jsonschema.strict.json"
+        }
+      },
+      "required": [
+        "fromNode",
+        "toNode",
+        "relation",
+        "trustState",
+        "pageSize",
+        "pageToken"
+      ],
+      "title": "List Edges Request",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.services.v1.ListEdgesRequest.jsonschema.strict.bundle.json",
+  "$ref": "#/$defs/oscal.services.v1.ListEdgesRequest.jsonschema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

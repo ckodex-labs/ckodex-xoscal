@@ -1,0 +1,48 @@
+{
+  "$id": "oscal.assessment_results.v1.LocalDefinitions.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "LocalDefinitions represents local definitions for assessment results",
+  "patternProperties": {
+    "^(assessment_platforms)$": {
+      "items": {
+        "$ref": "oscal.assessment_results.v1.AssessmentPlatform.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "^(inventory_items)$": {
+      "items": {
+        "$ref": "oscal.assessment_results.v1.InventoryItem.jsonschema.json"
+      },
+      "type": "array"
+    }
+  },
+  "properties": {
+    "assessmentPlatforms": {
+      "items": {
+        "$ref": "oscal.assessment_results.v1.AssessmentPlatform.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "components": {
+      "items": {
+        "$ref": "oscal.assessment_results.v1.Component.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "inventoryItems": {
+      "items": {
+        "$ref": "oscal.assessment_results.v1.InventoryItem.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "users": {
+      "items": {
+        "$ref": "oscal.assessment_results.v1.User.jsonschema.json"
+      },
+      "type": "array"
+    }
+  },
+  "title": "Local Definitions",
+  "type": "object"
+}

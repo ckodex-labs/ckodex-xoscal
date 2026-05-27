@@ -1,0 +1,120 @@
+{
+  "$id": "oscal.ssp.v1.SystemCharacteristics.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "SystemCharacteristics represents system characteristics",
+  "patternProperties": {
+    "^(authorization_boundary)$": {
+      "$ref": "oscal.ssp.v1.AuthorizationBoundary.jsonschema.json"
+    },
+    "^(data_flow)$": {
+      "$ref": "oscal.ssp.v1.DataFlow.jsonschema.json"
+    },
+    "^(date_authorized)$": {
+      "$ref": "oscal.common.v1.Date.jsonschema.json"
+    },
+    "^(network_architecture)$": {
+      "$ref": "oscal.ssp.v1.NetworkArchitecture.jsonschema.json"
+    },
+    "^(responsible_parties)$": {
+      "items": {
+        "$ref": "oscal.common.v1.ResponsibleParty.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "^(security_impact_level)$": {
+      "$ref": "oscal.ssp.v1.SecurityImpactLevel.jsonschema.json"
+    },
+    "^(security_sensitivity_level)$": {
+      "default": "",
+      "type": "string"
+    },
+    "^(system_ids)$": {
+      "items": {
+        "$ref": "oscal.ssp.v1.SystemId.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "^(system_information)$": {
+      "$ref": "oscal.ssp.v1.SystemInformation.jsonschema.json"
+    },
+    "^(system_name)$": {
+      "default": "",
+      "type": "string"
+    },
+    "^(system_name_short)$": {
+      "default": "",
+      "type": "string"
+    }
+  },
+  "properties": {
+    "authorizationBoundary": {
+      "$ref": "oscal.ssp.v1.AuthorizationBoundary.jsonschema.json"
+    },
+    "dataFlow": {
+      "$ref": "oscal.ssp.v1.DataFlow.jsonschema.json"
+    },
+    "dateAuthorized": {
+      "$ref": "oscal.common.v1.Date.jsonschema.json"
+    },
+    "description": {
+      "$ref": "oscal.common.v1.MarkupMultiline.jsonschema.json"
+    },
+    "links": {
+      "items": {
+        "$ref": "oscal.common.v1.Link.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "networkArchitecture": {
+      "$ref": "oscal.ssp.v1.NetworkArchitecture.jsonschema.json"
+    },
+    "props": {
+      "items": {
+        "$ref": "oscal.common.v1.Property.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "remarks": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupMultiline.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "responsibleParties": {
+      "items": {
+        "$ref": "oscal.common.v1.ResponsibleParty.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "securityImpactLevel": {
+      "$ref": "oscal.ssp.v1.SecurityImpactLevel.jsonschema.json"
+    },
+    "securitySensitivityLevel": {
+      "default": "",
+      "type": "string"
+    },
+    "status": {
+      "$ref": "oscal.ssp.v1.Status.jsonschema.json"
+    },
+    "systemIds": {
+      "items": {
+        "$ref": "oscal.ssp.v1.SystemId.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "systemInformation": {
+      "$ref": "oscal.ssp.v1.SystemInformation.jsonschema.json"
+    },
+    "systemName": {
+      "default": "",
+      "type": "string"
+    },
+    "systemNameShort": {
+      "default": "",
+      "type": "string"
+    }
+  },
+  "title": "System Characteristics",
+  "type": "object"
+}

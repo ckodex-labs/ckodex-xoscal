@@ -1,0 +1,238 @@
+syntax = "proto3";
+
+package oscal.services.v1;
+
+import "google/api/annotations.proto";
+import "google/protobuf/timestamp.proto";
+
+option go_package = "github.com/mchorfa/xoscal/proto/oscal/services/v1;servicesv1";
+
+// TransparencyExchangeService provides content-addressed attestation claims
+// and xBOM evidence exchange for xOSCAL.
+service TransparencyExchangeService {
+  rpc CreateClaim(CreateClaimRequest) returns (CreateClaimResponse) {
+    option (google.api.http) = { post: "/v1/transparency/claims" body: "*" };
+  }
+  rpc GetClaim(GetClaimRequest) returns (GetClaimResponse) {
+    option (google.api.http) = { get: "/v1/transparency/claims/{claim_id}" };
+  }
+  rpc ListClaims(ListClaimsRequest) returns (ListClaimsResponse) {
+    option (google.api.http) = { get: "/v1/transparency/claims" };
+  }
+  rpc VerifyClaim(VerifyClaimRequest) returns (VerifyClaimResponse) {
+    option (google.api.http) = { post: "/v1/transparency/claims/{claim_id}/verify" body: "*" };
+  }
+
+  rpc UploadEvidence(UploadEvidenceRequest) returns (UploadEvidenceResponse) {
+    option (google.api.http) = { post: "/v1/transparency/evidence" body: "*" };
+  }
+  rpc GetEvidence(GetEvidenceRequest) returns (GetEvidenceResponse) {
+    option (google.api.http) = { get: "/v1/transparency/evidence/{evidence_id}" };
+  }
+  rpc VerifyEvidence(VerifyEvidenceRequest) returns (VerifyEvidenceResponse) {
+    option (google.api.http) = { post: "/v1/transparency/evidence/{evidence_id}/verify" body: "*" };
+  }
+
+  rpc SyncClaims(SyncClaimsRequest) returns (SyncClaimsResponse) {
+    option (google.api.http) = { post: "/v1/transparency/sync" body: "*" };
+  }
+}
+
+// ---- Claim messages ----
+
+message Claim {
+  string id = 1;
+  string type = 2;
+  Reference subject = 3;
+  Predicate predicate = 4;
+  oneof object_opt {
+    Reference object = 5;
+    google.protobuf.Timestamp null_object = 6;
+  }
+  Identity issuer = 7;
+  string bom_kind = 8;
+  TimeWindow valid_time = 9;
+  google.protobuf.Timestamp observed_time = 10;
+  repeated EvidenceRef source_refs = 11;
+  repeated ProofRef proof_refs = 12;
+  repeated PolicyRef policy_refs = 13;
+  string extensions_json = 14; // JSON blob for flexible extensions
+}
+
+message Reference {
+  string kind = 1;
+  string id = 2;
+  string digest = 3;
+  string purl = 4;
+  string bom_ref = 5;
+}
+
+message Predicate {
+  string relation = 1;
+  string direction = 2; // "forward" | "reverse"
+  string qualifier = 3;
+}
+
+message Identity {
+  string kind = 1; // workload | human | organization | tool
+  string id = 2;
+  string key_json = 3; // JSON blob for key metadata
+}
+
+message TimeWindow {
+  google.protobuf.Timestamp from_time = 1;
+  google.protobuf.Timestamp to_time = 2; // null = open-ended
+}
+
+message EvidenceRef {
+  string ref = 1;
+  string digest = 2;
+  string media_type = 3;
+  string bom_kind = 4;
+}
+
+message ProofRef {
+  string type = 1; // signature | transparency_log | witness_checkpoint | zk_proof | tsa_timestamp
+  string ref = 2;
+  string digest = 3;
+  string witness_quorum_json = 4; // JSON blob for quorum metadata
+}
+
+message PolicyRef {
+  string type = 1; // opa_bundle | oscal_profile | cdxa_standard | spdx_security_profile
+  string ref = 2;
+  string digest = 3;
+  google.protobuf.Timestamp valid_to = 4;
+}
+
+// ---- Evidence messages ----
+
+message Evidence {
+  string id = 1;
+  string media_type = 2;
+  string bom_kind = 3;
+  string digest = 4;
+  int64 size_bytes = 5;
+  Storage storage = 6;
+  string produced_by_json = 7; // JSON blob
+  repeated Reference subject_refs = 8;
+  string predicate_type = 9;
+  string spec_json = 10;
+  google.protobuf.Timestamp created_at = 11;
+  TimeWindow valid_time = 12;
+  repeated string supersedes = 13;
+  string integrity_methods_json = 14;
+  string classification = 15; // public | internal | confidential | restricted
+  string extensions_json = 16;
+}
+
+message Storage {
+  repeated string uris = 1;
+  string fetch_policy = 2; // any | all | quorum
+  int32 quorum = 3;
+  string air_gap_json = 4;
+}
+
+// ---- Request/Response messages ----
+
+message CreateClaimRequest {
+  Claim claim = 1;
+}
+
+message CreateClaimResponse {
+  Claim claim = 1;
+  string trust_state = 2; // computed initial state
+}
+
+message GetClaimRequest {
+  string claim_id = 1;
+}
+
+message GetClaimResponse {
+  Claim claim = 1;
+}
+
+message ListClaimsRequest {
+  string subject_digest = 1;
+  string bom_kind = 2;
+  string relation = 3;
+  string trust_state = 4;
+  google.protobuf.Timestamp valid_after = 5;
+  int32 page_size = 6;
+  string page_token = 7;
+}
+
+message ListClaimsResponse {
+  repeated Claim claims = 1;
+  string next_page_token = 2;
+}
+
+message VerifyClaimRequest {
+  string claim_id = 1;
+  repeated string checks = 2; // empty = run all: digest, signature, policy
+}
+
+message VerifyClaimResponse {
+  string claim_id = 1;
+  ProofState proof_state = 2;
+  string trust_state = 3;
+  repeated string diagnostics = 4;
+}
+
+message UploadEvidenceRequest {
+  Evidence evidence = 1;
+  bytes blob = 2;
+}
+
+message UploadEvidenceResponse {
+  Evidence evidence = 1;
+  bool stored = 2;
+}
+
+message GetEvidenceRequest {
+  string evidence_id = 1;
+}
+
+message GetEvidenceResponse {
+  Evidence evidence = 1;
+}
+
+message VerifyEvidenceRequest {
+  string evidence_id = 1;
+  bool fetch_and_hash = 2;
+}
+
+message VerifyEvidenceResponse {
+  string evidence_id = 1;
+  bool digest_ok = 2;
+  bool size_ok = 3;
+  string error = 4;
+}
+
+message SyncClaimsRequest {
+  string peer_endpoint = 1;
+  string filter_subject = 2;
+  string filter_bom_kind = 3;
+  google.protobuf.Timestamp since = 4;
+}
+
+message SyncClaimsResponse {
+  int32 imported = 1;
+  int32 skipped = 2;
+  int32 failed = 3;
+  repeated string diagnostics = 4;
+}
+
+// ---- ProofState message (shared) ----
+
+message ProofState {
+  string discovery = 1;       // candidate | discovered
+  string graph = 2;             // unresolved | graph_resolved
+  string claim = 3;             // unbound | claim_bound
+  string source = 4;            // unbound | source_bound | rejected
+  string signature = 5;       // unverified | signature_verified | invalid
+  string transparency = 6;      // unverified | inclusion_verified | missing | invalid
+  string witness_json = 7;    // JSON blob for WitnessSubState
+  string state = 8;             // unverified | current_state_verified | superseded
+  string policy = 9;            // unevaluated | policy_admissible | policy_inadmissible | stale_policy
+}

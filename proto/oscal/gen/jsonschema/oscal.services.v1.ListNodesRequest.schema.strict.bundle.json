@@ -1,0 +1,44 @@
+{
+  "$defs": {
+    "google.protobuf.Timestamp.schema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "format": "date-time",
+      "title": "Timestamp",
+      "type": "string"
+    },
+    "oscal.services.v1.ListNodesRequest.schema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "properties": {
+        "created_after": {
+          "$ref": "#/$defs/google.protobuf.Timestamp.schema.strict.json"
+        },
+        "kind": {
+          "type": "string"
+        },
+        "label_filter": {
+          "type": "string"
+        },
+        "page_size": {
+          "maximum": 2147483647,
+          "minimum": -2147483648,
+          "type": "integer"
+        },
+        "page_token": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "kind",
+        "label_filter",
+        "page_size",
+        "page_token"
+      ],
+      "title": "List Nodes Request",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.services.v1.ListNodesRequest.schema.strict.bundle.json",
+  "$ref": "#/$defs/oscal.services.v1.ListNodesRequest.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

@@ -1,0 +1,244 @@
+{
+  "$defs": {
+    "google.protobuf.Timestamp.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "format": "date-time",
+      "title": "Timestamp",
+      "type": "string"
+    },
+    "oscal.services.v1.GraphEdge.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "patternProperties": {
+        "^(claimId)$": {
+          "default": "",
+          "type": "string"
+        },
+        "^(evidenceDigest)$": {
+          "default": "",
+          "type": "string"
+        },
+        "^(extensionsJson)$": {
+          "default": "",
+          "type": "string"
+        },
+        "^(fromNode)$": {
+          "default": "",
+          "type": "string"
+        },
+        "^(proofState)$": {
+          "$ref": "#/$defs/oscal.services.v1.ProofState.schema.json"
+        },
+        "^(toNode)$": {
+          "default": "",
+          "type": "string"
+        },
+        "^(trustState)$": {
+          "default": "",
+          "type": "string"
+        },
+        "^(validTime)$": {
+          "$ref": "#/$defs/oscal.services.v1.TimeWindow.schema.json"
+        }
+      },
+      "properties": {
+        "claim_id": {
+          "default": "",
+          "type": "string"
+        },
+        "evidence_digest": {
+          "default": "",
+          "type": "string"
+        },
+        "extensions_json": {
+          "default": "",
+          "type": "string"
+        },
+        "from_node": {
+          "default": "",
+          "type": "string"
+        },
+        "id": {
+          "default": "",
+          "type": "string"
+        },
+        "proof_state": {
+          "$ref": "#/$defs/oscal.services.v1.ProofState.schema.json"
+        },
+        "qualifier": {
+          "default": "",
+          "type": "string"
+        },
+        "relation": {
+          "default": "",
+          "type": "string"
+        },
+        "to_node": {
+          "default": "",
+          "type": "string"
+        },
+        "trust_state": {
+          "default": "",
+          "type": "string"
+        },
+        "valid_time": {
+          "$ref": "#/$defs/oscal.services.v1.TimeWindow.schema.json"
+        },
+        "weight": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "enum": [
+                "Infinity",
+                "-Infinity",
+                "NaN"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "string"
+            }
+          ],
+          "default": 0
+        }
+      },
+      "title": "Graph Edge",
+      "type": "object"
+    },
+    "oscal.services.v1.ProofState.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "patternProperties": {
+        "^(witnessJson)$": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "properties": {
+        "claim": {
+          "default": "",
+          "type": "string"
+        },
+        "discovery": {
+          "default": "",
+          "type": "string"
+        },
+        "graph": {
+          "default": "",
+          "type": "string"
+        },
+        "policy": {
+          "default": "",
+          "type": "string"
+        },
+        "signature": {
+          "default": "",
+          "type": "string"
+        },
+        "source": {
+          "default": "",
+          "type": "string"
+        },
+        "state": {
+          "default": "",
+          "type": "string"
+        },
+        "transparency": {
+          "default": "",
+          "type": "string"
+        },
+        "witness_json": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Proof State",
+      "type": "object"
+    },
+    "oscal.services.v1.ShortestPathResponse.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "patternProperties": {
+        "^(totalWeight)$": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "enum": [
+                "Infinity",
+                "-Infinity",
+                "NaN"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "string"
+            }
+          ],
+          "default": 0
+        }
+      },
+      "properties": {
+        "edges": {
+          "items": {
+            "$ref": "#/$defs/oscal.services.v1.GraphEdge.schema.json"
+          },
+          "type": "array"
+        },
+        "found": {
+          "default": false,
+          "type": "boolean"
+        },
+        "total_weight": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "enum": [
+                "Infinity",
+                "-Infinity",
+                "NaN"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "string"
+            }
+          ],
+          "default": 0
+        }
+      },
+      "title": "Shortest Path Response",
+      "type": "object"
+    },
+    "oscal.services.v1.TimeWindow.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "patternProperties": {
+        "^(fromTime)$": {
+          "$ref": "#/$defs/google.protobuf.Timestamp.schema.json"
+        },
+        "^(toTime)$": {
+          "$ref": "#/$defs/google.protobuf.Timestamp.schema.json"
+        }
+      },
+      "properties": {
+        "from_time": {
+          "$ref": "#/$defs/google.protobuf.Timestamp.schema.json"
+        },
+        "to_time": {
+          "$ref": "#/$defs/google.protobuf.Timestamp.schema.json"
+        }
+      },
+      "title": "Time Window",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.services.v1.ShortestPathResponse.schema.bundle.json",
+  "$ref": "#/$defs/oscal.services.v1.ShortestPathResponse.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

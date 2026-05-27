@@ -1,0 +1,38 @@
+{
+  "$defs": {
+    "oscal.services.v1.SearchRequest.jsonschema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Search Request/Response messages",
+      "properties": {
+        "modelTypes": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "pageSize": {
+          "maximum": 2147483647,
+          "minimum": -2147483648,
+          "type": "integer"
+        },
+        "pageToken": {
+          "type": "string"
+        },
+        "query": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "query",
+        "pageSize",
+        "pageToken"
+      ],
+      "title": "Search Request",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.services.v1.SearchRequest.jsonschema.strict.bundle.json",
+  "$ref": "#/$defs/oscal.services.v1.SearchRequest.jsonschema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

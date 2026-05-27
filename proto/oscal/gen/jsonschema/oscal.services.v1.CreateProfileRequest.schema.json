@@ -1,0 +1,12 @@
+{
+  "$id": "oscal.services.v1.CreateProfileRequest.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "profile": {
+      "$ref": "oscal.profile.v1.Profile.schema.json"
+    }
+  },
+  "title": "Create Profile Request",
+  "type": "object"
+}
