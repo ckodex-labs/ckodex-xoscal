@@ -141,6 +141,16 @@ func (m *Xoscal) ProtoCheck(source *dagger.Directory) *dagger.Container {
 		WithExec([]string{"sh", "-c", "echo 'proto-ok' > /tmp/proto.ok"})
 }
 
+// SpecRegistryCheck verifies the protos are lock-step with the pinned OSCAL
+// spec: it re-fetches each model's upstream schema and compares to the committed
+// registry. Needs network (fetches release assets), so it runs in-container.
+func (m *Xoscal) SpecRegistryCheck(source *dagger.Directory) *dagger.Container {
+	return m.base(source).
+		WithExec([]string{"go", "build", "-o", "/bin/spec-registry", "./server/cmd/xoscal-spec-registry"}).
+		WithExec([]string{"/bin/spec-registry", "-mode", "verify", "-registry", "data/oscal/spec-registry.yaml"}).
+		WithExec([]string{"sh", "-c", "echo 'specreg-ok' > /tmp/specreg.ok"})
+}
+
 // sdkBundles runs buf generate and zips each language SDK with a sha256 sidecar.
 // Also extracts the OpenAPI document for the docs page.
 func (m *Xoscal) sdkBundles(source *dagger.Directory) *dagger.Directory {
@@ -337,11 +347,13 @@ func (m *Xoscal) All(source *dagger.Directory) *dagger.Directory {
 	race := m.TestRace(source)
 	sec := m.Security(source)
 	proto := m.ProtoCheck(source)
+	specreg := m.SpecRegistryCheck(source)
 
 	return dag.Directory().
 		WithFile("lint.ok", lint.File("/tmp/lint.ok")).
 		WithFile("test.ok", test.File("/tmp/test.ok")).
 		WithFile("race.ok", race.File("/tmp/race.ok")).
 		WithFile("proto.ok", proto.File("/tmp/proto.ok")).
+		WithFile("specreg.ok", specreg.File("/tmp/specreg.ok")).
 		WithFile("gosec-results.sarif", sec)
 }
