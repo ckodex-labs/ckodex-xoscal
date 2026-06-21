@@ -146,7 +146,7 @@ func (m *Xoscal) ProtoCheck(source *dagger.Directory) *dagger.Container {
 func (m *Xoscal) sdkBundles(source *dagger.Directory) *dagger.Directory {
 	langs := "go python java csharp ts swift"
 	gen := m.toolBase().
-		WithExec([]string{"sh", "-c", "apt-get install -y --no-install-recommends zip"}).
+		WithExec([]string{"sh", "-c", "apt-get update && apt-get install -y --no-install-recommends zip"}).
 		WithDirectory("/src", source).
 		WithWorkdir("/src").
 		WithExec([]string{"buf", "generate"}).
@@ -158,7 +158,7 @@ func (m *Xoscal) sdkBundles(source *dagger.Directory) *dagger.Directory {
 				"sha256sum /out/$l.zip | awk '{print \"sha256:\"$1}' > /out/$l.zip.sha256; " +
 				"done"}).
 		WithExec([]string{"sh", "-c",
-			"cp \"$(find proto/oscal/gen/openapi -name '*.json' -o -name '*.yaml' | head -n1)\" /out/openapi.json"})
+			"f=\"$(find proto/oscal/gen/openapi -name '*.json' -o -name '*.yaml' | head -n1)\"; [ -n \"$f\" ] || { echo 'no openapi doc found' >&2; exit 1; }; cp \"$f\" /out/openapi.json; test -s /out/openapi.json"})
 	return gen.Directory("/out")
 }
 
