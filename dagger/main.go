@@ -114,6 +114,33 @@ func (m *Xoscal) Lint(source *dagger.Directory) *dagger.Container {
 	return c.WithExec([]string{"sh", "-c", "echo 'lint-ok' > /tmp/lint.ok"})
 }
 
+// Proto regenerates all SDKs from the protos via `buf generate` and returns
+// the regenerated proto tree. Runs in-container so buf.build remote plugins
+// have network (they cannot run in a restricted local sandbox).
+func (m *Xoscal) Proto(source *dagger.Directory) *dagger.Directory {
+	return m.toolBase().
+		WithDirectory("/src", source).
+		WithWorkdir("/src").
+		WithExec([]string{"buf", "generate"}).
+		Directory("/src/proto")
+}
+
+// ProtoCheck is the SDK-drift gate: it regenerates from the protos and fails
+// if the committed generated code differs — i.e. protos and SDKs are out of
+// sync. Keeps the wire contract and its generated SDKs provably aligned.
+func (m *Xoscal) ProtoCheck(source *dagger.Directory) *dagger.Container {
+	return m.toolBase().
+		WithDirectory("/src", source).
+		WithWorkdir("/src").
+		WithExec([]string{"git", "config", "--global", "--add", "safe.directory", "/src"}).
+		WithExec([]string{"buf", "lint"}).
+		WithExec([]string{"buf", "generate"}).
+		WithExec([]string{"sh", "-c",
+			"git diff --stat -- proto/ | tee /tmp/proto.diff; " +
+				"if [ -s /tmp/proto.diff ]; then echo 'SDK drift: protos changed but generated SDKs not regenerated' >&2; exit 1; fi"}).
+		WithExec([]string{"sh", "-c", "echo 'proto-ok' > /tmp/proto.ok"})
+}
+
 // Security runs govulncheck and gosec, returning the SARIF report file.
 // Reuses the cached toolBase layer so tools are not reinstalled on every run.
 func (m *Xoscal) Security(source *dagger.Directory) *dagger.File {
@@ -210,10 +237,12 @@ func (m *Xoscal) All(source *dagger.Directory) *dagger.Directory {
 	test := m.Test(source)
 	race := m.TestRace(source)
 	sec := m.Security(source)
+	proto := m.ProtoCheck(source)
 
 	return dag.Directory().
 		WithFile("lint.ok", lint.File("/tmp/lint.ok")).
 		WithFile("test.ok", test.File("/tmp/test.ok")).
 		WithFile("race.ok", race.File("/tmp/race.ok")).
+		WithFile("proto.ok", proto.File("/tmp/proto.ok")).
 		WithFile("gosec-results.sarif", sec)
 }
