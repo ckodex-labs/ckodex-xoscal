@@ -45,6 +45,17 @@ func (r *Registry) Serialize() ([]byte, error) {
 	return b, nil
 }
 
+// IsPopulated reports whether every model has a non-empty schema hash. An
+// unpopulated registry cannot verify lock-step (nothing is pinned yet).
+func (r *Registry) IsPopulated() bool {
+	for _, m := range r.Models {
+		if m.SchemaSHA256 == "" {
+			return false
+		}
+	}
+	return len(r.Models) > 0
+}
+
 // SchemaURL builds the GitHub release-asset URL for an OSCAL model schema.
 func SchemaURL(oscalVersion, asset string) string {
 	return fmt.Sprintf("https://github.com/usnistgov/OSCAL/releases/download/v%s/%s", oscalVersion, asset)

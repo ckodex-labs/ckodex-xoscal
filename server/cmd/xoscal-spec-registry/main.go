@@ -78,6 +78,10 @@ func populate(reg *specregistry.Registry, path, version string) (int, error) {
 }
 
 func verify(reg *specregistry.Registry, version string) (int, error) {
+	if !reg.IsPopulated() {
+		fmt.Fprintln(os.Stderr, "spec-registry not populated (empty schema_sha256); run -mode populate to pin hashes — gate inert until then")
+		return 0, nil
+	}
 	var statuses []specregistry.ModelStatus
 	for _, m := range reg.Models {
 		data, err := fetch(specregistry.SchemaURL(version, m.SchemaAsset))
