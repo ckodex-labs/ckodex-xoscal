@@ -141,6 +141,27 @@ func (m *Xoscal) ProtoCheck(source *dagger.Directory) *dagger.Container {
 		WithExec([]string{"sh", "-c", "echo 'proto-ok' > /tmp/proto.ok"})
 }
 
+// sdkBundles runs buf generate and zips each language SDK with a sha256 sidecar.
+// Also extracts the OpenAPI document for the docs page.
+func (m *Xoscal) sdkBundles(source *dagger.Directory) *dagger.Directory {
+	langs := "go python java csharp ts swift"
+	gen := m.toolBase().
+		WithExec([]string{"sh", "-c", "apt-get install -y --no-install-recommends zip"}).
+		WithDirectory("/src", source).
+		WithWorkdir("/src").
+		WithExec([]string{"buf", "generate"}).
+		WithExec([]string{"mkdir", "-p", "/out"}).
+		WithExec([]string{"sh", "-c",
+			"for l in " + langs + "; do " +
+				"d=proto/oscal/gen/$l; [ -d \"$d\" ] || { echo \"missing $d\" >&2; exit 1; }; " +
+				"(cd \"$d\" && zip -qr /out/$l.zip .); " +
+				"sha256sum /out/$l.zip | awk '{print \"sha256:\"$1}' > /out/$l.zip.sha256; " +
+				"done"}).
+		WithExec([]string{"sh", "-c",
+			"cp \"$(find proto/oscal/gen/openapi -name '*.json' -o -name '*.yaml' | head -n1)\" /out/openapi.json"})
+	return gen.Directory("/out")
+}
+
 // Security runs govulncheck and gosec, returning the SARIF report file.
 // Reuses the cached toolBase layer so tools are not reinstalled on every run.
 func (m *Xoscal) Security(source *dagger.Directory) *dagger.File {
