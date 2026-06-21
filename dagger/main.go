@@ -141,9 +141,8 @@ func (m *Xoscal) ProtoCheck(source *dagger.Directory) *dagger.Container {
 		WithExec([]string{"sh", "-c", "echo 'proto-ok' > /tmp/proto.ok"})
 }
 
-// SpecRegistryCheck verifies the protos are lock-step with the pinned OSCAL
-// spec: it re-fetches each model's upstream schema and compares to the committed
-// registry. Needs network (fetches release assets), so it runs in-container.
+// SpecRegistryCheck verifies the committed spec-registry hashes are lock-step with the pinned OSCAL release assets (re-fetches each model schema and compares).
+// Needs network (fetches release assets), so it runs in-container.
 func (m *Xoscal) SpecRegistryCheck(source *dagger.Directory) *dagger.Container {
 	return m.base(source).
 		WithExec([]string{"go", "build", "-o", "/bin/spec-registry", "./server/cmd/xoscal-spec-registry"}).
@@ -338,7 +337,7 @@ func (m *Xoscal) Snapshot(source *dagger.Directory, githubToken *dagger.Secret) 
 		Directory("/src/dist")
 }
 
-// All runs lint, test, security, and race checks in parallel branches.
+// All runs lint, test, race, security, proto-drift, and spec-registry checks in parallel branches.
 // Each branch shares the cached base container. The returned directory
 // contains outputs from all four parallel checks.
 func (m *Xoscal) All(source *dagger.Directory) *dagger.Directory {

@@ -59,7 +59,7 @@ jobs:
           cat spec-verify.json
           # exit 3 = per-model schema drift; surface it but let the existing
           # drift handling open the PR (do not hard-fail the scheduled run).
-          if [ "${code:-0}" = "1" ]; then echo "spec verify operational error" >&2; exit 1; fi
+          if [ "${code:-0}" -ne 0 ] && [ "${code:-0}" -ne 3 ]; then echo "spec verify operational error (exit ${code:-0})" >&2; exit 1; fi
 
       - name: Summarize
         run: |
