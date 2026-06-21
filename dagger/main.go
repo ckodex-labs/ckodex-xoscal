@@ -190,6 +190,54 @@ func (m *Xoscal) provenanceManifest(source *dagger.Directory, sdks *dagger.Direc
 		Directory("/out")
 }
 
+// buildDownloadsIndex emits /out/downloads.json from the SDK zips and OSCAL catalogs.
+const buildDownloadsIndex = `
+{
+  echo '{"sdks":['
+  first=1
+  for z in /out/sdk/*.zip; do
+    d=$(cat "$z.sha256" 2>/dev/null || echo "")
+    [ $first -eq 1 ] || echo ','
+    first=0
+    printf '{"name":"%s","path":"sdk/%s","digest":"%s"}' "$(basename "$z")" "$(basename "$z")" "$d"
+  done
+  echo '],"frameworks":['
+  first=1
+  for c in /out/frameworks/*/catalog.json; do
+    d=$(cat "$c.sha256" 2>/dev/null || echo "")
+    name=$(basename "$(dirname "$c")")
+    [ $first -eq 1 ] || echo ','
+    first=0
+    printf '{"name":"%s","path":"frameworks/%s/catalog.json","digest":"%s"}' "$name" "$name" "$d"
+  done
+  echo ']}'
+} > /out/downloads.json
+`
+
+// Site assembles the static GitHub Pages portal: docs (Scalar+OpenAPI),
+// transparency (provenance.json), and downloads (SDK zips + OSCAL catalogs).
+func (m *Xoscal) Site(source *dagger.Directory) *dagger.Directory {
+	sdks := m.sdkBundles(source)
+	frameworks := m.oscalFrameworks(source)
+	prov := m.provenanceManifest(source, sdks)
+
+	// Vendor a PINNED Scalar standalone bundle into the site (no runtime CDN).
+	scalarVer := "1.25.0" // pin explicitly; bump deliberately
+	scalarURL := "https://cdn.jsdelivr.net/npm/@scalar/api-reference@" + scalarVer + "/dist/browser/standalone.js"
+
+	asm := m.base(source).
+		WithDirectory("/out", source.Directory("site")).
+		WithDirectory("/out/sdk", sdks).
+		WithDirectory("/out/frameworks", frameworks).
+		WithFile("/out/openapi.json", sdks.File("openapi.json")).
+		WithFile("/out/provenance.json", prov.File("provenance.json")).
+		WithExec([]string{"sh", "-c",
+			"curl -fsSL '" + scalarURL + "' -o /out/scalar.js && test -s /out/scalar.js"}).
+		WithExec([]string{"sh", "-c", buildDownloadsIndex}).
+		Directory("/out")
+	return asm
+}
+
 // Security runs govulncheck and gosec, returning the SARIF report file.
 // Reuses the cached toolBase layer so tools are not reinstalled on every run.
 func (m *Xoscal) Security(source *dagger.Directory) *dagger.File {
