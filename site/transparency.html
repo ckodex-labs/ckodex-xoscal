@@ -1,0 +1,17 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>xOSCAL — Transparency</title><link rel="stylesheet" href="ds3.css"></head>
+<body><header><h1>Supply-chain Transparency</h1>
+<nav><a href="index.html">Home</a></nav></header><main id="cards"></main>
+<script>
+fetch("./provenance.json").then(r=>r.json()).then(rows=>{
+  document.getElementById("cards").innerHTML = rows.map(a=>{
+    const cls = a.signed ? "ck-quiet ck-sealed" : "ck-quiet";
+    const mark = a.signed
+      ? `<span class="ck-proof">◆ attested · cosign+rekor #${a.rekor_id}</span>`
+      : `<span class="unsigned">○ unsigned</span>`;
+    return `<div class="${cls}"><strong>${a.name}</strong> ${mark}
+      <div class="ck-hash">${a.digest}</div></div>`;
+  }).join("");
+});
+</script></body></html>

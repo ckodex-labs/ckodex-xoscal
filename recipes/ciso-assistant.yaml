@@ -1,0 +1,29 @@
+# Reconcile recipe: ciso-assistant-community framework libraries.
+#
+# data/frameworks/manifest.yaml pulls framework YAML from this repo's main
+# branch, so it drifts whenever upstream updates a library. Tracked by the
+# newest commit on the default branch via the commits Atom feed.
+name: ciso-assistant
+source: intuitem/ciso-assistant-community
+
+# GitHub exposes a commits Atom feed per branch.
+feed: https://github.com/intuitem/ciso-assistant-community/commits/main.atom
+
+# Each commit feed entry <id> ends with the 40-char SHA; capture it.
+version_extract: '([0-9a-f]{40})'
+
+lock_path: sources.ciso_assistant.source_commit
+
+# Drift here means: a tracked framework file may have changed upstream.
+# Reconcile re-fetches the manifest's frameworks and diffs content hashes.
+targets:
+  data:
+    - data/frameworks/manifest.yaml
+  skills:
+    - oscal
+
+# Lighter gate set: framework data is not a wire contract, so no buf-breaking.
+gates:
+  - manifest-validate
+
+on_drift: open-draft-pr

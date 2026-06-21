@@ -1,0 +1,50 @@
+# Reconcile recipe: NIST OSCAL metaschema -> hand-authored protos.
+#
+# Declarative source definition consumed by scripts/reconcile/poll-feeds.sh
+# (drift detection) and the oscal-schema-reconciler agent (on drift). All
+# source-specific knowledge lives here, not in code (CKODEX App.C Rule 5).
+name: oscal
+source: usnistgov/OSCAL
+
+# RSS/Atom feed GitHub exposes for every repo's releases. Parsed for the
+# newest entry title; no API token required.
+feed: https://github.com/usnistgov/OSCAL/releases.atom
+
+# Regex applied to each feed <title> to extract a comparable version string.
+# Matches "v1.2.2", "1.2.2", "OSCAL v1.2.2", etc. -> capture group 1.
+version_extract: 'v?([0-9]+\.[0-9]+\.[0-9]+)'
+
+# Where the extracted version is stored/compared in the lock file.
+lock_path: sources.oscal.oscal_metaschema_version
+
+# Upstream JSON-schema bundle to diff against the protos (per released version).
+# {version} is the bare semver from the lock; the release tag prefixes it with "v".
+schema_url_template: https://github.com/usnistgov/OSCAL/releases/download/v{version}/oscal_complete_schema.json
+
+# Downstream surfaces a version bump must propagate to.
+targets:
+  protos:
+    - proto/oscal/common/v1/common.proto
+    - proto/oscal/catalog/v1/catalog.proto
+    - proto/oscal/profile/v1/profile.proto
+    - proto/oscal/ssp/v1/ssp.proto
+    - proto/oscal/assessment_plan/v1/assessment_plan.proto
+    - proto/oscal/assessment_results/v1/assessment_results.proto
+    - proto/oscal/poam/v1/poam.proto
+    - proto/oscal/component_definition/v1/component.proto
+    - proto/oscal/mapping/v1/mapping.proto
+  skills:
+    - oscal
+  docs:
+    - docs/SDK_USAGE_EXAMPLES.md
+    - docs/GRPC_USAGE_EXAMPLES.md
+
+# Gates that MUST pass before the reconcile PR can be merged (CV-SAFE).
+# buf-breaking enforces buf.yaml's declared [FILE, PACKAGE] breaking policy.
+gates:
+  - buf-lint
+  - buf-breaking
+  - make-proto
+
+# Drift response. open-draft-pr => human approves (DAL 3, no auto-merge).
+on_drift: open-draft-pr
