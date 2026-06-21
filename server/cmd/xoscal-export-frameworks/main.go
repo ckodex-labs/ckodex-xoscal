@@ -41,11 +41,11 @@ func run(manifestPath, outDir, dsn string) error {
 	}
 	m, err := portal.ParseManifest(raw)
 	if err != nil {
-		return err
+		return fmt.Errorf("parse manifest: %w", err)
 	}
 	owner, repo, path, err := m.Source()
 	if err != nil {
-		return err
+		return fmt.Errorf("derive source: %w", err)
 	}
 
 	store, err := kg.NewSQLiteStore(dsn, dbutil.PoolConfig{})
