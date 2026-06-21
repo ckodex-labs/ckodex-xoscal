@@ -143,6 +143,12 @@ func (m *Xoscal) ProtoCheck(source *dagger.Directory) *dagger.Container {
 
 // SpecRegistryCheck verifies the committed spec-registry hashes are lock-step with the pinned OSCAL release assets (re-fetches each model schema and compares).
 // Needs network (fetches release assets), so it runs in-container.
+//
+// Drift posture (intentional, distinct from the reconcile workflow): any
+// non-zero verify exit — including exit 3 (per-model drift) — hard-fails this
+// gate, because CI MUST be lock-step with the pinned spec. The async reconcile
+// workflow (oscal-reconcile.yml) instead tolerates exit 3 and opens a handoff
+// PR. CI = enforce now; reconcile = propose a fix. (Rule 7: one policy each, stated.)
 func (m *Xoscal) SpecRegistryCheck(source *dagger.Directory) *dagger.Container {
 	return m.base(source).
 		WithExec([]string{"go", "build", "-o", "/bin/spec-registry", "./server/cmd/xoscal-spec-registry"}).
