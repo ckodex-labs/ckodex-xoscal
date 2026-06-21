@@ -17,6 +17,10 @@ version_extract: 'v?([0-9]+\.[0-9]+\.[0-9]+)'
 # Where the extracted version is stored/compared in the lock file.
 lock_path: sources.oscal.oscal_metaschema_version
 
+# Per-model spec integrity registry (lock-step ledger). xoscal-spec-registry
+# verifies each model's upstream schema hash against this file.
+spec_registry: data/oscal/spec-registry.yaml
+
 # Upstream JSON-schema bundle to diff against the protos (per released version).
 # {version} is the bare semver from the lock; the release tag prefixes it with "v".
 schema_url_template: https://github.com/usnistgov/OSCAL/releases/download/v{version}/oscal_complete_schema.json
