@@ -162,6 +162,34 @@ func (m *Xoscal) sdkBundles(source *dagger.Directory) *dagger.Directory {
 	return gen.Directory("/out")
 }
 
+// oscalFrameworks builds and runs xoscal-export-frameworks over the manifest,
+// emitting one OSCAL catalog per framework. Needs network (fetches upstream).
+func (m *Xoscal) oscalFrameworks(source *dagger.Directory) *dagger.Directory {
+	return m.base(source).
+		WithExec([]string{"go", "build", "-o", "/bin/export-fw", "./server/cmd/xoscal-export-frameworks"}).
+		WithExec([]string{"/bin/export-fw", "-manifest", "data/frameworks/manifest.yaml", "-out", "/out", "-dsn", "/tmp/fw.db"}).
+		Directory("/out")
+}
+
+// provenanceManifest digests the proto set and each SDK zip and renders
+// provenance.json. Signing fields are left empty here (no cosign/rekor in this
+// build stage), so every record is honestly signed:false until Release wires them.
+func (m *Xoscal) provenanceManifest(source *dagger.Directory, sdks *dagger.Directory) *dagger.Directory {
+	return m.base(source).
+		WithDirectory("/sdks", sdks).
+		WithExec([]string{"go", "build", "-o", "/bin/prov", "./server/cmd/xoscal-provenance"}).
+		WithExec([]string{"sh", "-c",
+			"proto_digest=$(find proto/oscal -name '*.proto' | sort | xargs sha256sum | sha256sum | awk '{print \"sha256:\"$1}'); " +
+				"printf '[{\"Name\":\"proto-set\",\"Digest\":\"%s\"}' \"$proto_digest\" > /tmp/arts.json; " +
+				"for z in /sdks/*.zip; do " +
+				"d=$(sha256sum \"$z\" | awk '{print \"sha256:\"$1}'); " +
+				"printf ',{\"Name\":\"%s\",\"Digest\":\"%s\"}' \"$(basename $z .zip)-sdk\" \"$d\" >> /tmp/arts.json; " +
+				"done; printf ']' >> /tmp/arts.json"}).
+		WithExec([]string{"mkdir", "-p", "/out"}).
+		WithExec([]string{"/bin/prov", "-in", "/tmp/arts.json", "-out", "/out/provenance.json"}).
+		Directory("/out")
+}
+
 // Security runs govulncheck and gosec, returning the SARIF report file.
 // Reuses the cached toolBase layer so tools are not reinstalled on every run.
 func (m *Xoscal) Security(source *dagger.Directory) *dagger.File {
