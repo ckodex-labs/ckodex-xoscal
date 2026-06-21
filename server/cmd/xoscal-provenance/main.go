@@ -32,7 +32,7 @@ func run(in, out string) error {
 	}
 	data, err := portal.BuildManifest(arts)
 	if err != nil {
-		return err
+		return fmt.Errorf("build manifest: %w", err)
 	}
 	if err := os.WriteFile(out, data, 0o644); err != nil {
 		return fmt.Errorf("write %s: %w", out, err)
