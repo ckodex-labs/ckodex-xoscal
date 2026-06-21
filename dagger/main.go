@@ -196,6 +196,7 @@ const buildDownloadsIndex = `
   echo '{"sdks":['
   first=1
   for z in /out/sdk/*.zip; do
+    [ -e "$z" ] || continue
     d=$(cat "$z.sha256" 2>/dev/null || echo "")
     [ $first -eq 1 ] || echo ','
     first=0
@@ -204,6 +205,7 @@ const buildDownloadsIndex = `
   echo '],"frameworks":['
   first=1
   for c in /out/frameworks/*/catalog.json; do
+    [ -e "$c" ] || continue
     d=$(cat "$c.sha256" 2>/dev/null || echo "")
     name=$(basename "$(dirname "$c")")
     [ $first -eq 1 ] || echo ','
