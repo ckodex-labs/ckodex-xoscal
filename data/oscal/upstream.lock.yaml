@@ -22,7 +22,6 @@ sources:
     # Latest verified release at pin time (2026-06-21, via releases feed): 1.2.2 (2026-04-30).
     oscal_metaschema_version: "1.2.2"
     source_commit: ""        # filled by reconcile run when a verified diff is taken
-    schema_sha256: ""        # sha256 of the upstream JSON schema bundle at that version
     reconciled_at: ""        # ISO-8601; empty = never reconciled, baseline only
     parity: unverified       # unverified | verified | drift
   ciso_assistant:

@@ -141,6 +141,21 @@ func (m *Xoscal) ProtoCheck(source *dagger.Directory) *dagger.Container {
 		WithExec([]string{"sh", "-c", "echo 'proto-ok' > /tmp/proto.ok"})
 }
 
+// SpecRegistryCheck verifies the committed spec-registry hashes are lock-step with the pinned OSCAL release assets (re-fetches each model schema and compares).
+// Needs network (fetches release assets), so it runs in-container.
+//
+// Drift posture (intentional, distinct from the reconcile workflow): any
+// non-zero verify exit — including exit 3 (per-model drift) — hard-fails this
+// gate, because CI MUST be lock-step with the pinned spec. The async reconcile
+// workflow (oscal-reconcile.yml) instead tolerates exit 3 and opens a handoff
+// PR. CI = enforce now; reconcile = propose a fix. (Rule 7: one policy each, stated.)
+func (m *Xoscal) SpecRegistryCheck(source *dagger.Directory) *dagger.Container {
+	return m.base(source).
+		WithExec([]string{"go", "build", "-o", "/bin/spec-registry", "./server/cmd/xoscal-spec-registry"}).
+		WithExec([]string{"/bin/spec-registry", "-mode", "verify", "-registry", "data/oscal/spec-registry.yaml"}).
+		WithExec([]string{"sh", "-c", "echo 'specreg-ok' > /tmp/specreg.ok"})
+}
+
 // sdkBundles runs buf generate and zips each language SDK with a sha256 sidecar.
 // Also extracts the OpenAPI document for the docs page.
 func (m *Xoscal) sdkBundles(source *dagger.Directory) *dagger.Directory {
@@ -328,7 +343,7 @@ func (m *Xoscal) Snapshot(source *dagger.Directory, githubToken *dagger.Secret) 
 		Directory("/src/dist")
 }
 
-// All runs lint, test, security, and race checks in parallel branches.
+// All runs lint, test, race, security, proto-drift, and spec-registry checks in parallel branches.
 // Each branch shares the cached base container. The returned directory
 // contains outputs from all four parallel checks.
 func (m *Xoscal) All(source *dagger.Directory) *dagger.Directory {
@@ -337,11 +352,13 @@ func (m *Xoscal) All(source *dagger.Directory) *dagger.Directory {
 	race := m.TestRace(source)
 	sec := m.Security(source)
 	proto := m.ProtoCheck(source)
+	specreg := m.SpecRegistryCheck(source)
 
 	return dag.Directory().
 		WithFile("lint.ok", lint.File("/tmp/lint.ok")).
 		WithFile("test.ok", test.File("/tmp/test.ok")).
 		WithFile("race.ok", race.File("/tmp/race.ok")).
 		WithFile("proto.ok", proto.File("/tmp/proto.ok")).
+		WithFile("specreg.ok", specreg.File("/tmp/specreg.ok")).
 		WithFile("gosec-results.sarif", sec)
 }

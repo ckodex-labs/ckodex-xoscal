@@ -44,6 +44,23 @@ jobs:
             exit "$code"
           fi
 
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: "1.25"
+
+      - name: Verify OSCAL spec lock-step
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          go run ./server/cmd/xoscal-spec-registry -mode verify \
+            -registry data/oscal/spec-registry.yaml > spec-verify.json || code=$?
+          cat spec-verify.json
+          # exit 3 = per-model schema drift; surface it but let the existing
+          # drift handling open the PR (do not hard-fail the scheduled run).
+          if [ "${code:-0}" -ne 0 ] && [ "${code:-0}" -ne 3 ]; then echo "spec verify operational error (exit ${code:-0})" >&2; exit 1; fi
+
       - name: Summarize
         run: |
           {

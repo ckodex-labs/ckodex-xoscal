@@ -1,0 +1,51 @@
+# OSCAL spec integrity registry.
+#
+# Per-model upstream OSCAL schema hashes bound to the protos that implement them.
+# Keeps the protos provably lock-step with a pinned OSCAL release: `verify`
+# re-fetches each model's schema and compares to schema_sha256; a mismatch is
+# per-model drift (re-tag or silent upstream change).
+#
+# Boundary (honest): this pins the exact upstream schema BYTES and detects
+# upstream change per model. It does NOT prove a proto semantically conforms to
+# its schema — that stays the oscal-schema-reconciler agent + buf. The registry
+# is the trigger/anchor ("model X drifted -> re-verify proto X").
+#
+# common.proto is intentionally excluded (shared types, no upstream OSCAL model).
+# schema_sha256 fields are empty until `xoscal-spec-registry -mode populate` runs
+# against a pinned release (network required; runs in CI/engine, not the sandbox).
+version: "1.0"
+oscal_version: "1.2.2"
+generated_at: ""
+models:
+  - model: catalog
+    schema_asset: oscal_catalog_schema.json
+    schema_sha256: ""
+    proto: proto/oscal/catalog/v1/catalog.proto
+  - model: profile
+    schema_asset: oscal_profile_schema.json
+    schema_sha256: ""
+    proto: proto/oscal/profile/v1/profile.proto
+  - model: ssp
+    schema_asset: oscal_ssp_schema.json
+    schema_sha256: ""
+    proto: proto/oscal/ssp/v1/ssp.proto
+  - model: component-definition
+    schema_asset: oscal_component_schema.json
+    schema_sha256: ""
+    proto: proto/oscal/component_definition/v1/component.proto
+  - model: assessment-plan
+    schema_asset: oscal_assessment-plan_schema.json
+    schema_sha256: ""
+    proto: proto/oscal/assessment_plan/v1/assessment_plan.proto
+  - model: assessment-results
+    schema_asset: oscal_assessment-results_schema.json
+    schema_sha256: ""
+    proto: proto/oscal/assessment_results/v1/assessment_results.proto
+  - model: poam
+    schema_asset: oscal_poam_schema.json
+    schema_sha256: ""
+    proto: proto/oscal/poam/v1/poam.proto
+  - model: mapping
+    schema_asset: oscal_mapping_schema.json
+    schema_sha256: ""
+    proto: proto/oscal/mapping/v1/mapping.proto
