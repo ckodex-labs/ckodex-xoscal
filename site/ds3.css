@@ -1,0 +1,12 @@
+:root { --ck-bg-0:#F6F1E8; --ck-fg-1:#211B14; --ck-fg-3:#6E6457; --ck-accent:#B4532A; --ck-proof:#6D28D9; }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--ck-bg-0); color:var(--ck-fg-1);
+  font-family:"Geist",system-ui,sans-serif; line-height:1.5; }
+header,main { padding:24px 32px; max-width:1100px; }
+h1 { font-family:"Instrument Serif",Georgia,serif; font-weight:400; }
+nav a { color:var(--ck-accent); margin-right:16px; text-decoration:none; }
+.ck-quiet { border:1px solid var(--ck-fg-3); padding:16px; margin:12px 0; background:#fff; }
+.ck-sealed { border-width:2px; clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,0 100%); }
+.ck-hash { font-family:"JetBrains Mono",monospace; font-variant-ligatures:none; font-size:13px; }
+.ck-proof { color:var(--ck-proof); }
+.unsigned { color:var(--ck-fg-3); }
