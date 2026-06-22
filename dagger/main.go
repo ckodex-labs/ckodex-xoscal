@@ -164,7 +164,10 @@ func (m *Xoscal) sdkBundles(source *dagger.Directory) *dagger.Directory {
 		WithExec([]string{"sh", "-c", "apt-get update && apt-get install -y --no-install-recommends zip"}).
 		WithDirectory("/src", source).
 		WithWorkdir("/src").
-		WithExec([]string{"buf", "generate"}).
+		// Use the nested proto/oscal module config: it emits every SDK to a
+		// uniform gen/<lang> layout (incl. gen/go). The ROOT buf.gen.yaml sends
+		// the Go SDK to proto/oscal/ source-relative, so gen/go never exists there.
+		WithExec([]string{"sh", "-c", "cd proto/oscal && buf generate"}).
 		WithExec([]string{"mkdir", "-p", "/out"}).
 		WithExec([]string{"sh", "-c",
 			"for l in " + langs + "; do " +
