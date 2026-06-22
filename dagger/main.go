@@ -255,6 +255,24 @@ func (m *Xoscal) Site(source *dagger.Directory) *dagger.Directory {
 	return asm
 }
 
+// Serve builds the portal site and serves it as a static HTTP service on :8080.
+// One command to preview the real site locally (built on the engine, so buf
+// generate + framework fetch have network):
+//
+//	dagger call serve --source=. up --ports 8080:8080
+//
+// then open http://localhost:8080.
+func (m *Xoscal) Serve(source *dagger.Directory) *dagger.Service {
+	return dag.Container().
+		From("python:3.13-alpine").
+		WithDirectory("/site", m.Site(source)).
+		WithWorkdir("/site").
+		WithExposedPort(8080).
+		AsService(dagger.ContainerAsServiceOpts{
+			Args: []string{"python", "-m", "http.server", "8080"},
+		})
+}
+
 // Security runs govulncheck and gosec, returning the SARIF report file.
 // Reuses the cached toolBase layer so tools are not reinstalled on every run.
 func (m *Xoscal) Security(source *dagger.Directory) *dagger.File {

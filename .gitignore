@@ -184,3 +184,8 @@ snyk-report.json
 
 /proto/oscal/gen/**
 THIRD_PARTY_LICENSES
+# Portal site build artifacts (dagger Site / local preview)
+/_site/
+/_site_real/
+/oscal-frameworks/
+/oscal-out/
