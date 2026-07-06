@@ -306,8 +306,8 @@ func (m *Xoscal) Image(source *dagger.Directory) *dagger.Container {
 // Sbom generates a CycloneDX SBOM for the built binary using syft.
 func (m *Xoscal) Sbom(source *dagger.Directory) *dagger.File {
 	bin := m.Build(source)
-	return dag.Container().
-		From("anchore/syft:latest").
+	return m.toolBase().
+		WithExec([]string{"sh", "-c", "curl -fsSL https://raw.githubusercontent.com/anchore/syft/main/install.sh | sh -s -- -b /usr/local/bin"}).
 		WithFile("/xoscal-server", bin).
 		WithExec([]string{"syft", "packages", "file:/xoscal-server", "-o", "cyclonedx-json", "-q", "--file", "/tmp/sbom.json"}).
 		File("/tmp/sbom.json")
