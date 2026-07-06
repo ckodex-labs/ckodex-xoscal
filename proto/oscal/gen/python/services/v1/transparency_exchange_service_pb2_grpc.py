@@ -5,7 +5,7 @@ import grpc
 from services.v1 import transparency_exchange_service_pb2 as services_dot_v1_dot_transparency__exchange__service__pb2
 
 
-class TransparencyExchangeServiceStub(object):
+class TransparencyExchangeServiceStub:
     """TransparencyExchangeService provides content-addressed attestation claims
     and xBOM evidence exchange for xOSCAL.
     """
@@ -58,7 +58,7 @@ class TransparencyExchangeServiceStub(object):
                 _registered_method=True)
 
 
-class TransparencyExchangeServiceServicer(object):
+class TransparencyExchangeServiceServicer:
     """TransparencyExchangeService provides content-addressed attestation claims
     and xBOM evidence exchange for xOSCAL.
     """
@@ -162,7 +162,7 @@ def add_TransparencyExchangeServiceServicer_to_server(servicer, server):
 
 
  # This class is part of an EXPERIMENTAL API.
-class TransparencyExchangeService(object):
+class TransparencyExchangeService:
     """TransparencyExchangeService provides content-addressed attestation claims
     and xBOM evidence exchange for xOSCAL.
     """

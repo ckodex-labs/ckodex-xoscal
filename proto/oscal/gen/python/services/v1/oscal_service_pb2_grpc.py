@@ -5,7 +5,7 @@ import grpc
 from services.v1 import oscal_service_pb2 as services_dot_v1_dot_oscal__service__pb2
 
 
-class OscalServiceStub(object):
+class OscalServiceStub:
     """OSCAL Service provides CRUD operations for all OSCAL models
     """
 
@@ -222,7 +222,7 @@ class OscalServiceStub(object):
                 _registered_method=True)
 
 
-class OscalServiceServicer(object):
+class OscalServiceServicer:
     """OSCAL Service provides CRUD operations for all OSCAL models
     """
 
@@ -697,7 +697,7 @@ def add_OscalServiceServicer_to_server(servicer, server):
 
 
  # This class is part of an EXPERIMENTAL API.
-class OscalService(object):
+class OscalService:
     """OSCAL Service provides CRUD operations for all OSCAL models
     """
 

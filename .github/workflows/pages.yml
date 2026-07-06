@@ -23,7 +23,7 @@ jobs:
         uses: dagger/dagger-for-github@v6
         with:
           install-only: true
-          version: "v0.21.0"
+          version: "v0.21.7"
       - name: Build site
         run: dagger call site --source=. export --path=_site
       - uses: actions/upload-pages-artifact@v3

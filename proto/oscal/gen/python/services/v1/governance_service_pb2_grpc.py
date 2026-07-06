@@ -5,7 +5,7 @@ import grpc
 from services.v1 import governance_service_pb2 as services_dot_v1_dot_governance__service__pb2
 
 
-class GovernanceServiceStub(object):
+class GovernanceServiceStub:
     """GovernanceService provides advanced governance, ingestion, and semantic
     search operations over the OSCALify knowledge graph.
     """
@@ -158,7 +158,7 @@ class GovernanceServiceStub(object):
                 _registered_method=True)
 
 
-class GovernanceServiceServicer(object):
+class GovernanceServiceServicer:
     """GovernanceService provides advanced governance, ingestion, and semantic
     search operations over the OSCALify knowledge graph.
     """
@@ -491,7 +491,7 @@ def add_GovernanceServiceServicer_to_server(servicer, server):
 
 
  # This class is part of an EXPERIMENTAL API.
-class GovernanceService(object):
+class GovernanceService:
     """GovernanceService provides advanced governance, ingestion, and semantic
     search operations over the OSCALify knowledge graph.
     """

@@ -1,6 +1,6 @@
 {
   "name": "xoscal",
-  "engineVersion": "v0.21.0",
+  "engineVersion": "v0.21.7",
   "sdk": {
     "source": "go"
   },

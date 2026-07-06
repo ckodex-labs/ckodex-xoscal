@@ -41,8 +41,8 @@ func (m *Xoscal) base(source *dagger.Directory) *dagger.Container {
 		WithEnvVariable("GOCACHE", "/root/.cache/go-build").
 		WithEnvVariable("CGO_ENABLED", "0").
 		WithEnvVariable("DEBIAN_FRONTEND", "noninteractive").
-		WithMountedCache("/var/cache/apt", aptCache).
-		WithMountedCache("/var/lib/apt/lists", aptLists).
+		WithMountedCache("/var/cache/apt", aptCache, dagger.ContainerWithMountedCacheOpts{Sharing: dagger.CacheSharingModePrivate}).
+		WithMountedCache("/var/lib/apt/lists", aptLists, dagger.ContainerWithMountedCacheOpts{Sharing: dagger.CacheSharingModePrivate}).
 		WithExec([]string{"apt-get", "update"}).
 		WithExec([]string{"apt-get", "install", "-y", "--no-install-recommends", "ca-certificates", "git", "curl"}).
 		WithFile("/src/go.mod", source.File("go.mod")).
@@ -94,11 +94,11 @@ func (m *Xoscal) toolBase() *dagger.Container {
 	aptLists := dag.CacheVolume("apt-lists")
 	return dag.Container().
 		From("golang:1.25-bookworm").
-		WithMountedCache("/var/cache/apt", aptCache).
-		WithMountedCache("/var/lib/apt/lists", aptLists).
+		WithMountedCache("/var/cache/apt", aptCache, dagger.ContainerWithMountedCacheOpts{Sharing: dagger.CacheSharingModePrivate}).
+		WithMountedCache("/var/lib/apt/lists", aptLists, dagger.ContainerWithMountedCacheOpts{Sharing: dagger.CacheSharingModePrivate}).
 		WithExec([]string{"apt-get", "update"}).
 		WithExec([]string{"apt-get", "install", "-y", "--no-install-recommends", "ca-certificates", "git", "curl"}).
-		WithExec([]string{"sh", "-c", "curl -fsSL https://github.com/bufbuild/buf/releases/download/v1.50.0/buf-$(uname -s)-$(uname -m) -o /usr/local/bin/buf && chmod +x /usr/local/bin/buf"}).
+		WithExec([]string{"sh", "-c", "curl -fsSL https://github.com/bufbuild/buf/releases/download/v1.71.0/buf-$(uname -s)-$(uname -m) -o /usr/local/bin/buf && chmod +x /usr/local/bin/buf"}).
 		WithExec([]string{"go", "install", "golang.org/x/vuln/cmd/govulncheck@latest"}).
 		WithExec([]string{"go", "install", "github.com/securego/gosec/v2/cmd/gosec@latest"})
 }
@@ -164,7 +164,10 @@ func (m *Xoscal) sdkBundles(source *dagger.Directory) *dagger.Directory {
 		WithExec([]string{"sh", "-c", "apt-get update && apt-get install -y --no-install-recommends zip"}).
 		WithDirectory("/src", source).
 		WithWorkdir("/src").
-		WithExec([]string{"buf", "generate"}).
+		// Use the nested proto/oscal module config: it emits every SDK to a
+		// uniform gen/<lang> layout (incl. gen/go). The ROOT buf.gen.yaml sends
+		// the Go SDK to proto/oscal/ source-relative, so gen/go never exists there.
+		WithExec([]string{"sh", "-c", "cd proto/oscal && buf generate"}).
 		WithExec([]string{"mkdir", "-p", "/out"}).
 		WithExec([]string{"sh", "-c",
 			"for l in " + langs + "; do " +
@@ -255,6 +258,24 @@ func (m *Xoscal) Site(source *dagger.Directory) *dagger.Directory {
 	return asm
 }
 
+// Serve builds the portal site and serves it as a static HTTP service on :8080.
+// One command to preview the real site locally (built on the engine, so buf
+// generate + framework fetch have network):
+//
+//	dagger call serve --source=. up --ports 8080:8080
+//
+// then open http://localhost:8080.
+func (m *Xoscal) Serve(source *dagger.Directory) *dagger.Service {
+	return dag.Container().
+		From("python:3.13-alpine").
+		WithDirectory("/site", m.Site(source)).
+		WithWorkdir("/site").
+		WithExposedPort(8080).
+		AsService(dagger.ContainerAsServiceOpts{
+			Args: []string{"python", "-m", "http.server", "8080"},
+		})
+}
+
 // Security runs govulncheck and gosec, returning the SARIF report file.
 // Reuses the cached toolBase layer so tools are not reinstalled on every run.
 func (m *Xoscal) Security(source *dagger.Directory) *dagger.File {
@@ -304,8 +325,8 @@ func (m *Xoscal) goreleaserBase() *dagger.Container {
 	aptLists := dag.CacheVolume("apt-lists")
 	return dag.Container().
 		From("golang:1.25").
-		WithMountedCache("/var/cache/apt", aptCache).
-		WithMountedCache("/var/lib/apt/lists", aptLists).
+		WithMountedCache("/var/cache/apt", aptCache, dagger.ContainerWithMountedCacheOpts{Sharing: dagger.CacheSharingModePrivate}).
+		WithMountedCache("/var/lib/apt/lists", aptLists, dagger.ContainerWithMountedCacheOpts{Sharing: dagger.CacheSharingModePrivate}).
 		WithExec([]string{"apt-get", "update"}).
 		WithExec([]string{"apt-get", "install", "-y", "--no-install-recommends", "ca-certificates", "git", "curl"}).
 		WithExec([]string{"sh", "-c", "curl -fsSL https://github.com/goreleaser/goreleaser/releases/latest/download/goreleaser_Linux_$(uname -m | sed 's/x86_64/amd64/;s/aarch64/arm64/').tar.gz | tar -xzf - -C /usr/local/bin goreleaser"}).
