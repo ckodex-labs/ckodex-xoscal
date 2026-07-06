@@ -309,7 +309,7 @@ func (m *Xoscal) Sbom(source *dagger.Directory) *dagger.File {
 	return dag.Container().
 		From("anchore/syft:latest").
 		WithFile("/xoscal-server", bin).
-		WithExec([]string{"packages", "file:/xoscal-server", "-o", "cyclonedx-json", "-q", "--file", "/tmp/sbom.json"}).
+		WithExec([]string{"syft", "packages", "file:/xoscal-server", "-o", "cyclonedx-json", "-q", "--file", "/tmp/sbom.json"}).
 		File("/tmp/sbom.json")
 }
 
