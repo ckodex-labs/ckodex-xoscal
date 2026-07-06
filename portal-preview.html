@@ -490,6 +490,32 @@
     margin:20px 0 4px;border-bottom:1px solid var(--tone);padding-bottom:6px}
   .card-section-sub{color:var(--tone);font-size:13px;margin:0 0 14px}
 
+  /* ── Prev/next view nav ── */
+  .view-nav{display:flex;justify-content:space-between;align-items:stretch;
+    gap:0;margin-top:32px;border-top:1px solid var(--rule);padding-top:16px}
+  .view-nav a{flex:1;text-decoration:none;color:var(--ink);padding:10px 14px;
+    border:1px solid var(--hairline);background:var(--surface);
+    display:flex;flex-direction:column;gap:2px;transition:border-color .12s,background .12s}
+  .view-nav a:hover{border-color:var(--ink);background:var(--paper)}
+  .view-nav a.next{text-align:right;align-items:flex-end}
+  .view-nav a .vlabel{font-size:10px;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--tone)}
+  .view-nav a .vname{font-family:var(--serif);font-size:18px;font-weight:400;
+    color:var(--ink)}
+  .view-nav .gap{flex:0 0 8px}
+
+  /* ── Pipeline → portal trace table ── */
+  .trace-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px}
+  .trace-table th{font-size:11px;letter-spacing:.06em;text-transform:uppercase;
+    color:var(--tone);font-weight:600;text-align:left;padding:8px 12px;
+    border-bottom:1px solid var(--tone)}
+  .trace-table td{padding:8px 12px;border-bottom:1px solid var(--rule);vertical-align:top}
+  .trace-table td:first-child{font-family:var(--mono);font-size:12px;color:var(--rust)}
+  .trace-table td:nth-child(2){font-weight:600;color:var(--ink)}
+  .trace-table td .where{font-family:var(--mono);font-size:11px;color:var(--proof)}
+  .trace-table tr:last-child td{border-bottom:none}
+  .trace-table tr:hover td{background:var(--paper)}
+
   /* ── Print: evidence export stylesheet ── */
   @media print{
     :root{--paper:#fff;--ink:#000;--tone:#555;--rust:#000;--proof:#333;
@@ -498,7 +524,7 @@
       --proof:#333;--alarm:#000;--surface:#fff;--hairline:#ccc;--rule:#ddd}
     body{font-size:11pt;background:#fff;color:#000}
     header.top,.banner,.card-filter,.persona-filter,.toggle,.act-list,
-    nav.surfaces,footer{display:none!important}
+    nav.surfaces,footer,.view-nav,.pipe-filter{display:none!important}
     .view{display:block!important}
     .view:not(#view-room) .room-title,
     .view:not(#view-room) .room-sub{display:none}
@@ -1140,6 +1166,17 @@
     <p class="card-section-sub">Four workflows chain Dagger functions into CI/CD journeys.
       Each workflow is a path through the pipeline, triggered by a different event.</p>
     <div id="wf-list"></div>
+
+    <!-- Pipeline → Portal trace -->
+    <h2 class="card-section-title" style="margin-top:28px">Pipeline → portal trace</h2>
+    <p class="card-section-sub">Every pipeline output has a home in the portal. This table
+      traces each Dagger function's output to the view and element where it surfaces.
+      The pipeline is the evidence generation layer; the portal is the evidence
+      presentation layer. Nothing appears in the portal that was not produced by
+      a declared pipeline step.</p>
+    <div class="panel" style="padding:0;overflow-x:auto">
+      <table class="trace-table" id="trace-table"></table>
+    </div>
   </section>
 
 </div>
@@ -1948,6 +1985,32 @@ function workflow(w){
 }
 document.getElementById("wf-list").innerHTML = WORKFLOWS.map(workflow).join("");
 
+// ── Pipeline → portal trace ──
+const TRACE = [
+  ["sdkBundles", "go.zip · python.zip · java.zip · csharp.zip · ts.zip · swift.zip", "Downloads", "SDK Clients grid (6 cards, unsigned, not downloadable)"],
+  ["sdkBundles", "openapi.json", "Downloads → live portal", "Scalar API reference docs"],
+  ["oscalFrameworks", "catalog.json per framework (32 frameworks)", "Downloads", "OSCAL Frameworks grid (32 cards, unsigned, not downloadable)"],
+  ["provenanceManifest", "provenance.json (signed:false)", "Downloads", "Supply-chain transparency section — proto-set + per-SDK digests"],
+  ["Site", "downloads.json", "Downloads → live portal", "Index of all downloadable artifacts with digests"],
+  ["Site", "scalar.js (pinned v1.25.0)", "Downloads → live portal", "Vendored Scalar standalone bundle (no CDN runtime)"],
+  ["Security", "gosec-results.sarif", "GitHub Security tab", "SARIF uploaded via codeql-action/upload-sarif"],
+  ["Image + Trivy", "trivy-results.sarif", "GitHub Security tab", "Container image scan results"],
+  ["Coverage", "coverage.html", "Codecov", "Test coverage report (external, not in portal)"],
+  ["SBOM", "sbom.cyclonedx.json", "Cartography → SBOM Card", "CycloneDX component inventory (design-layer card)"],
+  ["Security", "gosec-results.sarif", "Cartography → Scanner Card", "Static analysis findings (design-layer card)"],
+  ["Release", "dist/ archives + checksums", "GitHub Release page", "Release artifacts (signed by GoReleaser)"],
+  ["Release", "intoto.attestation (SLSA L3)", "GitHub Release page", "SLSA Level 3 build provenance"],
+  ["Release", "cosign signature on container image", "GHCR", "Keyless cosign signature on multi-arch image"],
+  ["Release", "image-sbom.cyclonedx.json", "GitHub Release artifacts", "Container image SBOM"],
+  ["SpecRegistryCheck", "specreg.ok", "CI gate (not in portal)", "OSCAL schema lock-step verification"],
+  ["ProtoCheck", "proto.ok", "CI gate (not in portal)", "SDK-drift gate — proto/SDK alignment"],
+  ["OSCAL Reconcile", "reconcile-report.json + draft PR", "GitHub PRs", "Upstream drift detection (DAL 3, no auto-merge)"],
+];
+document.getElementById("trace-table").innerHTML =
+  `<thead><tr><th>Dagger function</th><th>Output</th><th>Surfaces in</th><th>Where</th></tr></thead><tbody>` +
+  TRACE.map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td><td><span class="where">${r[2]}</span></td><td>${r[3]}</td></tr>`).join("") +
+  `</tbody>`;
+
 // ── Card filter ──
 document.querySelectorAll('#card-filter button').forEach(b=>{
   b.addEventListener('click',()=>{
@@ -1962,18 +2025,43 @@ document.querySelectorAll('#card-filter button').forEach(b=>{
 
 // ── View switching (reusable) ──
 const VIEWS = ['room','exchange','downloads','cartography','personas','pipeline'];
-function switchView(name){
+const VIEW_LABELS = {
+  room:'Assurance Room', exchange:'Exchange', downloads:'Downloads',
+  cartography:'Cartography', personas:'Personas', pipeline:'Pipeline'
+};
+function switchView(name, opts){
+  opts = opts || {};
   document.querySelectorAll('#nav button').forEach(x=>x.classList.remove('active'));
   const btn = document.querySelector(`#nav button[data-view="${name}"]`);
   if(btn) btn.classList.add('active');
   document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));
   const v = document.getElementById('view-'+name);
   if(v) v.classList.add('active');
-  window.scrollTo({top:0,behavior:'smooth'});
+  // Inject prev/next nav if not already present
+  if(!v.querySelector('.view-nav')){
+    const idx = VIEWS.indexOf(name);
+    const prev = idx>0 ? VIEWS[idx-1] : null;
+    const next = idx<VIEWS.length-1 ? VIEWS[idx+1] : null;
+    let nav = '<div class="view-nav">';
+    if(prev) nav += `<a class="prev" href="#" data-vnav="${prev}"><span class="vlabel">← previous</span><span class="vname">${VIEW_LABELS[prev]}</span></a>`;
+    else nav += '<a class="prev" style="visibility:hidden"></a>';
+    nav += '<div class="gap"></div>';
+    if(next) nav += `<a class="next" href="#" data-vnav="${next}"><span class="vlabel">next →</span><span class="vname">${VIEW_LABELS[next]}</span></a>`;
+    else nav += '<a class="next" style="visibility:hidden"></a>';
+    nav += '</div>';
+    v.insertAdjacentHTML('beforeend', nav);
+    v.querySelectorAll('[data-vnav]').forEach(a=>{
+      a.addEventListener('click',e=>{e.preventDefault();switchView(a.dataset.vnav);});
+    });
+  }
+  if(!opts.skipScroll) window.scrollTo({top:0,behavior:'smooth'});
 }
 document.querySelectorAll('#nav button').forEach(b=>{
   b.addEventListener('click',()=>switchView(b.dataset.view));
 });
+
+// Inject prev/next nav into the initially active view (no scroll on load)
+switchView('room', {skipScroll:true});
 
 // ── Keyboard navigation: 1-5 to switch views, t to toggle theme ──
 document.addEventListener('keydown',e=>{
