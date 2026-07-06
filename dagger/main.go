@@ -361,7 +361,7 @@ func (m *Xoscal) goreleaserBase() *dagger.Container {
 		WithExec([]string{"apt-get", "install", "-y", "--no-install-recommends", "ca-certificates", "git", "curl"}).
 		WithExec([]string{"sh", "-c", "curl -fsSL https://github.com/goreleaser/goreleaser/releases/latest/download/goreleaser_Linux_$(uname -m | sed 's/aarch64/arm64/').tar.gz | tar -xzf - -C /usr/local/bin goreleaser"}).
 		WithExec([]string{"sh", "-c", "curl -fsSL https://raw.githubusercontent.com/anchore/syft/main/install.sh | sh -s -- -b /usr/local/bin"}).
-		WithExec([]string{"sh", "-c", "curl -fsSL https://github.com/sigstore/cosign/releases/latest/download/cosign-linux-$(uname -m | sed 's/x86_64/amd64/;s/aarch64/arm64/') -o /usr/local/bin/cosign && chmod +x /usr/local/bin/cosign"})
+		WithExec([]string{"sh", "-c", "curl -fsSL https://github.com/sigstore/cosign/releases/download/v2.4.1/cosign-linux-$(uname -m | sed 's/x86_64/amd64/;s/aarch64/arm64/') -o /usr/local/bin/cosign && chmod +x /usr/local/bin/cosign"})
 }
 
 // goreleaser returns a GoReleaser container with source, caches, and token mounted.
