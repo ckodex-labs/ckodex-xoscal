@@ -1,4 +1,4 @@
-:root { --ck-bg-0:#F6F1E8; --ck-fg-1:#211B14; --ck-fg-3:#6E6457; --ck-accent:#B4532A; --ck-proof:#6D28D9; --ck-surface:#fff; }
+:root { --ck-bg-0:#F6F1E8; --ck-fg-1:#211B14; --ck-fg-3:#5A5048; --ck-accent:#A04A26; --ck-proof:#6D28D9; --ck-surface:#fff; }
 * { box-sizing: border-box; }
 body { margin:0; background:var(--ck-bg-0); color:var(--ck-fg-1);
   font-family:"Geist",system-ui,sans-serif; line-height:1.5; }

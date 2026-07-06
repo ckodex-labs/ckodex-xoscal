@@ -1192,11 +1192,11 @@
 // Signing is NOT wired in the dagger pipeline today, so every real SDK/framework
 // is unsigned. Only the explicitly-labeled SAMPLE shows attested state.
 const SDKS = [
-  {name:"go.zip", lang:"Go · gRPC + gateway", digest:"sha256:1a2b3c4d5e6f7081920a1b2c3d4e5f607182", signed:false},
+  {name:"go.zip", lang:"Go · protobuf + gRPC", digest:"sha256:1a2b3c4d5e6f7081920a1b2c3d4e5f607182", signed:false},
   {name:"python.zip", lang:"Python · protobuf + gRPC", digest:"sha256:7d4e5f607182930a1b2c3d4e5f60718293", signed:false},
   {name:"java.zip", lang:"Java · protobuf + gRPC", digest:"sha256:b2c3d4e5f607182930a1b2c3d4e5f607182", signed:false},
   {name:"csharp.zip", lang:"C# · protobuf", digest:"sha256:930a1b2c3d4e5f60718293a1b2c3d4e5f6", signed:false},
-  {name:"ts.zip", lang:"TypeScript · @bufbuild/es", digest:"sha256:c3d4e5f607182930a1b2c3d4e5f607182", signed:false},
+  {name:"ts.zip", lang:"TypeScript · @bufbuild/es (protobuf only)", digest:"sha256:c3d4e5f607182930a1b2c3d4e5f607182", signed:false},
   {name:"swift.zip", lang:"Swift · protobuf + Connect RPC", digest:"sha256:e5f607182930a1b2c3d4e5f60718293a1b2", signed:false}
 ];
 const FRAMEWORKS = [
@@ -1698,17 +1698,17 @@ const PIPE_FLOW = [
   {node:"lint", name:"Lint",       cmd:"buf, go vet, gofmt", cls:"gate"},
   {node:"test", name:"Test",       cmd:"go test -v",         cls:"gate"},
   {node:"race", name:"Race",       cmd:"go test -race",      cls:"gate"},
-  {node:"sec",  name:"Security",   cmd:"govulncheck, gosec", cls:"gate"},
+  {node:"sec",  name:"Security",   cmd:"govulncheck + gosec → SARIF", cls:"gate"},
   {node:"proto",name:"Proto Check",cmd:"buf generate + diff",cls:"gate"},
   {node:"spec", name:"Spec Reg",   cmd:"spec-registry verify",cls:"gate"},
   {node:"build",name:"Build",      cmd:"go build -ldflags",  cls:"evidence"},
   {node:"sbom", name:"SBOM",       cmd:"syft → CycloneDX",   cls:"evidence unsigned"},
-  {node:"sec-s",name:"SARIF",      cmd:"gosec → SARIF",      cls:"evidence unsigned"},
-  {node:"sdk",  name:"SDK Bundles",cmd:"buf gen + zip",      cls:"evidence unsigned"},
+  {node:"sdk",  name:"SDK Bundles",cmd:"buf gen + zip + sha256", cls:"evidence unsigned"},
   {node:"fw",   name:"OSCAL Cats", cmd:"export-frameworks",  cls:"evidence unsigned"},
-  {node:"prov", name:"Provenance", cmd:"provenance.json",    cls:"evidence unsigned"},
-  {node:"site", name:"Site",       cmd:"site assembly",      cls:"evidence unsigned"},
-  {node:"rel",  name:"Release",    cmd:"goreleaser + cosign",cls:"release"},
+  {node:"prov", name:"Provenance", cmd:"provenance.json (signed:false)", cls:"evidence unsigned"},
+  {node:"site", name:"Site",       cmd:"portal assembly",    cls:"evidence unsigned"},
+  {node:"img",  name:"Image",      cmd:"distroless + Trivy", cls:"evidence unsigned"},
+  {node:"rel",  name:"Release",    cmd:"goreleaser + cosign + SLSA", cls:"release"},
 ];
 document.getElementById("pipe-flow").innerHTML = PIPE_FLOW.map(s=>
   `<div class="pipe-stage ${s.cls}">
@@ -1908,11 +1908,11 @@ const WORKFLOWS = [
    chip:"unsigned", signed:false,
    journey:[
      {step:"Checkout source", detail:"actions/checkout@v4"},
-     {step:"Setup Dagger v0.21.0", detail:"dagger-for-github@v6"},
+     {step:"Job: ssdlc — Setup Dagger v0.21.0", detail:"dagger-for-github@v6, install-only"},
      {step:"dagger call all --source=.", detail:"Parallel: Lint + Test + Race + Security + ProtoCheck + SpecRegistryCheck. 6 gates in parallel branches sharing cached base."},
-     {step:"dagger call coverage --source=.", detail:"HTML coverage report exported, uploaded to Codecov."},
-     {step:"dagger call security --source=. export --path=gosec-results.sarif", detail:"SARIF uploaded to GitHub Security tab via codeql-action/upload-sarif."},
-     {step:"dagger call image --source=. export --path=xoscal-server.tar", detail:"Container image built, scanned by Trivy. SARIF uploaded."},
+     {step:"dagger call coverage --source=. export --path=coverage.html", detail:"HTML coverage report exported, uploaded to Codecov."},
+     {step:"Job: security — dagger call security --source=. export --path=gosec-results.sarif", detail:"Separate job. SARIF uploaded to GitHub Security tab via codeql-action/upload-sarif."},
+     {step:"Job: container — dagger call image --source=. export --path=xoscal-server.tar", detail:"Separate job. Container image built, scanned by Trivy. SARIF uploaded."},
    ],
    oscal:"assessment-plan → assessment-result · 6 parallel gates + coverage + security SARIF + container scan",
    produces:["lint.ok","test.ok","race.ok","proto.ok","specreg.ok","gosec-results.sarif","trivy-results.sarif","coverage.html"]},
@@ -1933,7 +1933,8 @@ const WORKFLOWS = [
    chip:"signed", signed:true,
    journey:[
      {step:"Checkout source (fetch-depth: 0)", detail:"Full history for GoReleaser changelog"},
-     {step:"dagger call release --source=. --github-token=env:GITHUB_TOKEN", detail:"GoReleaser release --clean: archives, SBOMs, checksums. Published to GitHub Release."},
+     {step:"dagger-for-github@v7 (with args)", detail:"Uses dagger-for-github@v7 with args: call release --source=. --github-token=env:GITHUB_TOKEN export --path=./dist"},
+     {step:"GoReleaser release --clean", detail:"Archives, SBOMs, checksums. Published to GitHub Release."},
      {step:"Compute hashes (sha256sum * | base64)", detail:"Base64-encoded subjects for SLSA provenance"},
      {step:"SLSA provenance (slsa-github-generator v2.0.0)", detail:"Generates intoto.attestation — SLSA Level 3 build provenance. Uploaded as release asset."},
      {step:"Build + push multi-arch image (amd64 + arm64)", detail:"docker/build-push-action to GHCR"},
@@ -1989,7 +1990,7 @@ document.getElementById("wf-list").innerHTML = WORKFLOWS.map(workflow).join("");
 const TRACE = [
   ["sdkBundles", "go.zip · python.zip · java.zip · csharp.zip · ts.zip · swift.zip", "Downloads", "SDK Clients grid (6 cards, unsigned, not downloadable)"],
   ["sdkBundles", "openapi.json", "Downloads → live portal", "Scalar API reference docs"],
-  ["oscalFrameworks", "catalog.json per framework (32 frameworks)", "Downloads", "OSCAL Frameworks grid (32 cards, unsigned, not downloadable)"],
+  ["oscalFrameworks", "catalog.json per framework (32 frameworks)", "Downloads", "OSCAL Frameworks grid (4 shown, 32 in manifest, all unsigned)"],
   ["provenanceManifest", "provenance.json (signed:false)", "Downloads", "Supply-chain transparency section — proto-set + per-SDK digests"],
   ["Site", "downloads.json", "Downloads → live portal", "Index of all downloadable artifacts with digests"],
   ["Site", "scalar.js (pinned v1.25.0)", "Downloads → live portal", "Vendored Scalar standalone bundle (no CDN runtime)"],
