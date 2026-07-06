@@ -411,6 +411,85 @@
   .persona-filter button.active{background:var(--ink);color:var(--paper);border-color:var(--ink)}
   .persona-filter button .glyph{font-family:var(--serif);font-size:15px}
 
+  /* ── Pipeline view (Dagger CI → OSCAL evidence journey) ── */
+  .pipe-flow{display:flex;overflow-x:auto;gap:0;padding:8px 0 16px;
+    border-bottom:1px solid var(--rule);margin-bottom:20px}
+  .pipe-stage{flex:none;width:160px;position:relative;
+    display:flex;flex-direction:column;align-items:center;text-align:center}
+  .pipe-stage:not(:last-child)::after{content:"";position:absolute;
+    right:-10px;top:24px;width:20px;height:1px;background:var(--hairline)}
+  .pipe-stage .pnode{width:48px;height:48px;border:1px solid var(--hairline);
+    background:var(--surface);display:flex;align-items:center;justify-content:center;
+    font-family:var(--mono);font-size:11px;font-weight:600;color:var(--tone);
+    position:relative;z-index:1}
+  .pipe-stage.gate .pnode{border-color:var(--ink);color:var(--ink)}
+  .pipe-stage.evidence .pnode{border-color:var(--proof);color:var(--proof)}
+  .pipe-stage.release .pnode{border-color:var(--rust);color:var(--rust)}
+  .pipe-stage.unsigned .pnode{border-style:dashed}
+  .pipe-stage .pname{font-size:11px;font-weight:600;color:var(--ink);
+    margin-top:8px;line-height:1.2}
+  .pipe-stage .pcmd{font-family:var(--mono);font-size:10px;color:var(--rust);
+    margin-top:2px;line-height:1.2}
+
+  /* Pipeline stage detail cards */
+  .pipe-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(380px,1fr));gap:12px}
+  .pipe-card{border:1px solid var(--hairline);background:var(--surface);
+    padding:14px 16px;display:flex;flex-direction:column}
+  .pipe-card .pc-head{display:flex;align-items:flex-start;justify-content:space-between;
+    gap:8px;margin-bottom:8px}
+  .pipe-card .pc-name{font-family:var(--mono);font-size:13px;font-weight:600;color:var(--ink)}
+  .pipe-card .pc-fn{font-family:var(--mono);font-size:11px;color:var(--rust);margin-top:1px}
+  .pipe-card .pc-chip{font-size:10px;font-weight:600;padding:2px 8px;
+    border:1px solid var(--hairline);color:var(--tone);white-space:nowrap}
+  .pipe-card .pc-chip.gate{border-color:var(--ink);color:var(--ink)}
+  .pipe-card .pc-chip.evidence{border-color:var(--proof);color:var(--proof)}
+  .pipe-card .pc-chip.release{border-color:var(--rust);color:var(--rust)}
+  .pipe-card .pc-chip.unsigned{border-style:dashed}
+  .pipe-card .pc-body{font-size:12px;color:var(--tone);line-height:1.5}
+  .pipe-card .pc-body .lab{font-size:10px;letter-spacing:.06em;text-transform:uppercase;
+    color:var(--tone);display:block;margin-top:6px;margin-bottom:1px}
+  .pipe-card .pc-body .mono{font-family:var(--mono);font-size:11px;color:var(--ink)}
+  .pipe-card .pc-oscal{font-size:11px;color:var(--proof);font-family:var(--mono);
+    padding:6px 8px;border:1px solid var(--hairline);background:var(--paper);
+    margin-top:8px;line-height:1.4}
+  .pipe-card .pc-oscal .lab{color:var(--tone);font-size:10px;
+    text-transform:uppercase;letter-spacing:.06em;display:block;margin-bottom:2px}
+
+  /* Workflow journey (GitHub Actions) */
+  .wf-card{border:1px solid var(--hairline);background:var(--surface);
+    padding:16px 18px;margin-bottom:12px}
+  .wf-card .wf-head{display:flex;align-items:flex-start;justify-content:space-between;
+    gap:10px;margin-bottom:10px}
+  .wf-card .wf-name{font-family:var(--serif);font-size:18px;font-weight:400}
+  .wf-card .wf-trigger{font-family:var(--mono);font-size:11px;color:var(--tone);
+    margin-top:2px}
+  .wf-card .wf-chip{font-size:10px;font-weight:600;padding:2px 8px;
+    border:1px solid var(--hairline);color:var(--tone);white-space:nowrap}
+  .wf-card .wf-chip.signed{border-color:var(--proof);color:var(--proof)}
+  .wf-card .wf-chip.unsigned{border-style:dashed}
+  .wf-card .wf-body{font-size:13px;color:var(--ink);line-height:1.5;
+    padding:8px 10px;border-left:2px solid var(--rule);background:var(--paper);
+    margin-bottom:10px}
+  .wf-card .wf-body .lab{font-size:10px;letter-spacing:.06em;text-transform:uppercase;
+    color:var(--tone);display:block;margin-bottom:2px}
+
+  /* Pipeline filter */
+  .pipe-filter{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+  .pipe-filter button{font-family:var(--sans);font-size:12px;font-weight:500;padding:4px 10px;
+    border:1px solid var(--hairline);background:var(--surface);color:var(--tone);cursor:pointer}
+  .pipe-filter button.active{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+
+  /* Honesty banner for pipeline */
+  .pipe-honesty{border:1px dashed var(--alarm);background:var(--surface);
+    padding:12px 16px;margin-bottom:20px;font-size:13px;color:var(--ink);line-height:1.5}
+  .pipe-honesty .lab{font-size:10px;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--alarm);font-weight:600;display:block;margin-bottom:4px}
+  .pipe-honesty code{font-family:var(--mono);font-size:12px;color:var(--rust)}
+
+  .card-section-title{font-family:var(--serif);font-weight:400;font-size:22px;
+    margin:20px 0 4px;border-bottom:1px solid var(--tone);padding-bottom:6px}
+  .card-section-sub{color:var(--tone);font-size:13px;margin:0 0 14px}
+
   /* ── Print: evidence export stylesheet ── */
   @media print{
     :root{--paper:#fff;--ink:#000;--tone:#555;--rust:#000;--proof:#333;
@@ -455,6 +534,7 @@
       <button data-view="downloads">Downloads</button>
       <button data-view="cartography">Cartography</button>
       <button data-view="personas">Personas</button>
+      <button data-view="pipeline">Pipeline</button>
     </nav>
     <div class="toggle" title="Theme">
       <button data-theme="atlas" class="on">Atlas</button>
@@ -468,7 +548,7 @@
   <div class="banner">PREVIEW — single file, <b>sample data</b>, no server, no build.
     The live portal is generated by <code>dagger call site</code>. This surface previews the
     Claim + Proof Ladder, Exchange verification, SDK provenance, Evidence Cartography card
-    system, and persona journeys under DS-3 Evidence Editorial.</div>
+    system, persona journeys, and the Dagger CI pipeline under DS-3 Evidence Editorial.</div>
 
   <!-- ════════════════════════════════════════════════════════════════
        VIEW 1 · ASSURANCE ROOM
@@ -1013,6 +1093,55 @@
     <div class="persona-grid" id="persona-grid"></div>
   </section>
 
+  <!-- ════════════════════════════════════════════════════════════════
+       VIEW 6 · PIPELINE (Dagger CI → OSCAL evidence journey)
+       Shows the real Dagger functions, the GitHub Actions workflows,
+       and how each stage maps to an OSCAL evidence touchpoint.
+       ════════════════════════════════════════════════════════════════ -->
+  <section class="view" id="view-pipeline">
+    <h1 class="room-title">Dagger pipeline — CI as OSCAL evidence generation</h1>
+    <p class="room-sub">Every Dagger function is an evidence-producing step. Every GitHub Actions
+      workflow is a journey that chains those steps. Every output maps to an OSCAL touchpoint.
+      The pipeline is the evidence generation layer; the portal is the evidence presentation layer.
+      No stage claims to be signed when it is not.</p>
+
+    <div class="pipe-honesty">
+      <span class="lab">honest posture — read first</span>
+      The Dagger pipeline <b>generates evidence</b> (SBOMs, SARIF, provenance, OSCAL catalogs,
+      SDK digests) but does <b>not sign</b> most of it. Only <code>release.yml</code> wires
+      cosign (for the container image) and SLSA provenance (for release archives). The
+      <code>provenanceManifest</code> function honestly emits <code>signed:false</code> for
+      every SDK and framework until signing is wired. This is not a gap to hide — it is a
+      state to declare.
+    </div>
+
+    <!-- Pipeline flow diagram -->
+    <h2 class="card-section-title">Pipeline flow</h2>
+    <p class="card-section-sub">Source enters from the left. Gate stages (ink) enforce quality.
+      Evidence stages (proof violet, dashed when unsigned) produce artifacts. Release stage
+      (rust) publishes and signs.</p>
+    <div class="pipe-flow" id="pipe-flow"></div>
+
+    <!-- Stage detail cards -->
+    <h2 class="card-section-title">Dagger functions — evidence producers</h2>
+    <p class="card-section-sub">Each function is a reproducible, hermetic step. The OSCAL
+      touchpoint column shows where the output lands in the OSCAL evidence model.</p>
+    <div class="pipe-filter" id="pipe-filter">
+      <button class="active" data-pipef="all">all stages</button>
+      <button data-pipef="gate">gates</button>
+      <button data-pipef="evidence">evidence</button>
+      <button data-pipef="release">release</button>
+      <button data-pipef="unsigned">unsigned</button>
+    </div>
+    <div class="pipe-grid" id="pipe-grid"></div>
+
+    <!-- GitHub Actions workflows -->
+    <h2 class="card-section-title" style="margin-top:28px">GitHub Actions — the journeys</h2>
+    <p class="card-section-sub">Four workflows chain Dagger functions into CI/CD journeys.
+      Each workflow is a path through the pipeline, triggered by a different event.</p>
+    <div id="wf-list"></div>
+  </section>
+
 </div>
 
 <footer>
@@ -1522,6 +1651,303 @@ document.querySelectorAll('#persona-filter button').forEach(b=>{
   });
 });
 
+// ════════════════════════════════════════════════════════════════
+// PIPELINE VIEW — Dagger CI as OSCAL evidence generation
+// ════════════════════════════════════════════════════════════════
+
+// ── Pipeline flow diagram (left-to-right stages) ──
+const PIPE_FLOW = [
+  {node:"src",  name:"Source",     cmd:"git checkout",      cls:""},
+  {node:"lint", name:"Lint",       cmd:"buf, go vet, gofmt", cls:"gate"},
+  {node:"test", name:"Test",       cmd:"go test -v",         cls:"gate"},
+  {node:"race", name:"Race",       cmd:"go test -race",      cls:"gate"},
+  {node:"sec",  name:"Security",   cmd:"govulncheck, gosec", cls:"gate"},
+  {node:"proto",name:"Proto Check",cmd:"buf generate + diff",cls:"gate"},
+  {node:"spec", name:"Spec Reg",   cmd:"spec-registry verify",cls:"gate"},
+  {node:"build",name:"Build",      cmd:"go build -ldflags",  cls:"evidence"},
+  {node:"sbom", name:"SBOM",       cmd:"syft → CycloneDX",   cls:"evidence unsigned"},
+  {node:"sec-s",name:"SARIF",      cmd:"gosec → SARIF",      cls:"evidence unsigned"},
+  {node:"sdk",  name:"SDK Bundles",cmd:"buf gen + zip",      cls:"evidence unsigned"},
+  {node:"fw",   name:"OSCAL Cats", cmd:"export-frameworks",  cls:"evidence unsigned"},
+  {node:"prov", name:"Provenance", cmd:"provenance.json",    cls:"evidence unsigned"},
+  {node:"site", name:"Site",       cmd:"site assembly",      cls:"evidence unsigned"},
+  {node:"rel",  name:"Release",    cmd:"goreleaser + cosign",cls:"release"},
+];
+document.getElementById("pipe-flow").innerHTML = PIPE_FLOW.map(s=>
+  `<div class="pipe-stage ${s.cls}">
+    <div class="pnode">${s.node}</div>
+    <div class="pname">${s.name}</div>
+    <div class="pcmd">${s.cmd}</div>
+  </div>`
+).join("");
+
+// ── Dagger function detail cards ──
+const PIPE_CARDS = [
+  {name:"Lint", fn:"Xoscal.Lint(source)", cls:"gate", signed:true,
+   inputs:"source directory",
+   outputs:"lint.ok marker · gofmt diff · buf lint result",
+   desc:"Runs buf lint, go vet, and gofmt check. Fails on format drift or proto lint violations.",
+   cmd:"dagger call lint --source=.",
+   oscal:"assessment-result · checked-requirement · (quality gate, not evidence artifact)",
+   tags:["gate"]},
+
+  {name:"Test", fn:"Xoscal.Test(source)", cls:"gate", signed:true,
+   inputs:"source directory",
+   outputs:"test.ok marker · go test output",
+   desc:"Runs go test -v ./server/.... Unit tests for the OSCAL server and export tools.",
+   cmd:"dagger call test --source=.",
+   oscal:"assessment-result · observation · (test execution evidence)",
+   tags:["gate"]},
+
+  {name:"TestRace", fn:"Xoscal.TestRace(source)", cls:"gate", signed:true,
+   inputs:"source directory",
+   outputs:"race.ok marker · race detector output",
+   desc:"Runs go test -race ./server/.... Concurrent access violations detected.",
+   cmd:"dagger call test-race --source=.",
+   oscal:"assessment-result · observation · (concurrency safety evidence)",
+   tags:["gate"]},
+
+  {name:"Security", fn:"Xoscal.Security(source)", cls:"gate", signed:false,
+   inputs:"source directory",
+   outputs:"gosec-results.sarif",
+   desc:"Runs govulncheck (Go vulnerability database) and gosec (static analysis). SARIF output uploaded to GitHub Security tab.",
+   cmd:"dagger call security --source=. export --path=gosec-results.sarif",
+   oscal:"assessment-result · finding · risk · (vulnerability scan evidence)",
+   tags:["gate","evidence","unsigned"]},
+
+  {name:"ProtoCheck", fn:"Xoscal.ProtoCheck(source)", cls:"gate", signed:true,
+   inputs:"source directory",
+   outputs:"proto.ok marker · proto.diff (empty if aligned)",
+   desc:"SDK-drift gate: regenerates from protos via buf generate, fails if committed generated code differs. Keeps wire contract and SDKs provably aligned.",
+   cmd:"dagger call proto-check --source=.",
+   oscal:"assessment-result · checked-requirement · (contract integrity gate)",
+   tags:["gate"]},
+
+  {name:"SpecRegistryCheck", fn:"Xoscal.SpecRegistryCheck(source)", cls:"gate", signed:true,
+   inputs:"source directory + data/oscal/spec-registry.yaml",
+   outputs:"specreg.ok marker · spec-verify.json",
+   desc:"Verifies committed spec-registry hashes are lock-step with pinned OSCAL release assets. Re-fetches each model schema and compares. Any drift hard-fails CI.",
+   cmd:"dagger call spec-registry-check --source=.",
+   oscal:"catalog · profile · (schema integrity gate — the OSCAL models themselves)",
+   tags:["gate"]},
+
+  {name:"Build", fn:"Xoscal.Build(source)", cls:"evidence", signed:false,
+   inputs:"source directory + version string",
+   outputs:"xoscal-server (static Go binary, CGO_ENABLED=0)",
+   desc:"Compiles a static release binary with -ldflags for version injection. Stripped (-s -w) for size.",
+   cmd:"dagger call build --source=. export --path=xoscal-server",
+   oscal:"component-definition · back-matter resource · (the built artifact under assessment)",
+   tags:["evidence","unsigned"]},
+
+  {name:"Coverage", fn:"Xoscal.Coverage(source)", cls:"evidence", signed:false,
+   inputs:"source directory",
+   outputs:"coverage.html (HTML coverage report)",
+   desc:"Generates HTML coverage report via go test -coverprofile + go tool cover. Uploaded to Codecov.",
+   cmd:"dagger call coverage --source=. export --path=coverage.html",
+   oscal:"assessment-result · observation · (test coverage metric)",
+   tags:["evidence","unsigned"]},
+
+  {name:"SBOM", fn:"Xoscal.Sbom(source)", cls:"evidence", signed:false,
+   inputs:"built binary (from Build)",
+   outputs:"sbom.cyclonedx.json (CycloneDX format)",
+   desc:"Generates CycloneDX SBOM for the built binary using anchore/syft. Component-level dependency inventory.",
+   cmd:"dagger call sbom --source=. export --path=sbom.cyclonedx.json",
+   oscal:"back-matter resource · assessment evidence · component inventory · (SBOM Card)",
+   tags:["evidence","unsigned"]},
+
+  {name:"Image", fn:"Xoscal.Image(source)", cls:"evidence", signed:false,
+   inputs:"built binary (from Build)",
+   outputs:"container image (distroless base-debian12:nonroot)",
+   desc:"Builds a distroless container image. Exposes gRPC :50051 and gRPC-gateway :9090. Scanned by Trivy in CI.",
+   cmd:"dagger call image --source=. export --path=xoscal-server.tar",
+   oscal:"component-definition · (container artifact under assessment)",
+   tags:["evidence","unsigned"]},
+
+  {name:"SDK Bundles", fn:"Xoscal.sdkBundles(source)", cls:"evidence", signed:false,
+   inputs:"source directory + proto/oscal/buf.gen.yaml",
+   outputs:"go.zip · python.zip · java.zip · csharp.zip · ts.zip · swift.zip + sha256 sidecars + openapi.json",
+   desc:"Runs buf generate for 6 languages, zips each SDK with sha256 sidecar. Extracts OpenAPI document for docs page.",
+   cmd:"(internal — called by Site)",
+   oscal:"back-matter resource · assessment evidence · (SDK provenance — Downloads view)",
+   tags:["evidence","unsigned"]},
+
+  {name:"OSCAL Frameworks", fn:"Xoscal.oscalFrameworks(source)", cls:"evidence", signed:false,
+   inputs:"data/frameworks/manifest.yaml",
+   outputs:"one OSCAL catalog.json per framework (FedRAMP, NIST 800-53, etc.)",
+   desc:"Builds and runs xoscal-export-frameworks over the manifest. Fetches upstream framework sources. Emits one OSCAL catalog per framework.",
+   cmd:"(internal — called by Site)",
+   oscal:"catalog · profile · (the OSCAL catalogs themselves — Downloads view)",
+   tags:["evidence","unsigned"]},
+
+  {name:"Provenance", fn:"Xoscal.provenanceManifest(source, sdks)", cls:"evidence", signed:false,
+   inputs:"source directory + SDK bundles directory",
+   outputs:"provenance.json (proto-set digest + per-SDK sha256, signed:false)",
+   desc:"Digests the proto set and each SDK zip. Renders provenance.json. Signing fields left empty — no cosign/rekor in this stage. Every record is honestly signed:false until Release wires them.",
+   cmd:"(internal — called by Site)",
+   oscal:"back-matter resource · assessment evidence · (provenance manifest — transparency layer)",
+   tags:["evidence","unsigned"]},
+
+  {name:"Site", fn:"Xoscal.Site(source)", cls:"evidence", signed:false,
+   inputs:"source directory (calls sdkBundles + oscalFrameworks + provenanceManifest)",
+   outputs:"static site directory (docs + sdk/ + frameworks/ + provenance.json + downloads.json + openapi.json + scalar.js)",
+   desc:"Assembles the full GitHub Pages portal: Scalar API docs, SDK downloads, OSCAL framework catalogs, provenance manifest, downloads index. Pinned Scalar standalone bundle (no CDN runtime).",
+   cmd:"dagger call site --source=. export --path=_site",
+   oscal:"back-matter resource · (the portal itself is an OSCAL evidence presentation surface)",
+   tags:["evidence","unsigned"]},
+
+  {name:"Serve", fn:"Xoscal.Serve(source)", cls:"evidence", signed:false,
+   inputs:"source directory",
+   outputs:"HTTP service on :8080",
+   desc:"Builds the portal site and serves it as a static HTTP service. One command to preview the real site locally.",
+   cmd:"dagger call serve --source=. up --ports 8080:8080",
+   oscal:"(local preview — not an evidence artifact, but a verification surface)",
+   tags:["evidence","unsigned"]},
+
+  {name:"All (parallel)", fn:"Xoscal.All(source)", cls:"gate", signed:true,
+   inputs:"source directory",
+   outputs:"lint.ok · test.ok · race.ok · proto.ok · specreg.ok · gosec-results.sarif",
+   desc:"Runs lint, test, race, security, proto-drift, and spec-registry checks as parallel branches. Each branch shares the cached base container. The CI gate.",
+   cmd:"dagger call all --source=.",
+   oscal:"assessment-plan · assessment-result · (the CI gate — all checks must pass)",
+   tags:["gate"]},
+
+  {name:"Release", fn:"Xoscal.Release(source, githubToken)", cls:"release", signed:true,
+   inputs:"source directory + GITHUB_TOKEN secret",
+   outputs:"dist/ directory (archives, SBOMs, checksums — signed by GoReleaser)",
+   desc:"Runs GoReleaser release --clean. Publishes GitHub release with archives, SBOMs, and checksums. SLSA provenance generated by slsa-github-generator. Container image signed with cosign (keyless).",
+   cmd:"dagger call release --source=. --github-token=env:GITHUB_TOKEN export --path=./dist",
+   oscal:"back-matter resource · attestation · (signed release artifacts — the only signed stage)",
+   tags:["release"]},
+
+  {name:"Snapshot", fn:"Xoscal.Snapshot(source, githubToken)", cls:"release", signed:false,
+   inputs:"source directory + GITHUB_TOKEN secret",
+   outputs:"dist/ directory (archives, SBOMs — NOT signed, NOT published)",
+   desc:"Runs GoReleaser in snapshot mode. No publish, no sign. For CI validation of the release config without creating a real release.",
+   cmd:"dagger call snapshot --source=. --github-token=env:GITHUB_TOKEN export --path=./dist",
+   oscal:"(CI validation — not a release artifact)",
+   tags:["release","unsigned"]},
+];
+
+function pipeCard(c){
+  const chipCls = c.signed ? c.cls : c.cls + " unsigned";
+  const chipTxt = c.signed ? "signed" : "unsigned";
+  return `<div class="pipe-card" data-pc-tags="${c.tags.join(',')}">
+    <div class="pc-head">
+      <div>
+        <div class="pc-name">${c.name}</div>
+        <div class="pc-fn">${c.fn}</div>
+      </div>
+      <span class="pc-chip ${chipCls}">${chipTxt}</span>
+    </div>
+    <div class="pc-body">
+      <span class="lab">command</span><span class="mono">${c.cmd}</span>
+      <span class="lab">inputs</span>${c.inputs}
+      <span class="lab">outputs</span>${c.outputs}
+      <span class="lab">what it does</span>${c.desc}
+    </div>
+    <div class="pc-oscal">
+      <span class="lab">OSCAL touchpoint</span>${c.oscal}
+    </div>
+  </div>`;
+}
+document.getElementById("pipe-grid").innerHTML = PIPE_CARDS.map(pipeCard).join("");
+
+// ── Pipeline filter ──
+document.querySelectorAll('#pipe-filter button').forEach(b=>{
+  b.addEventListener('click',()=>{
+    document.querySelectorAll('#pipe-filter button').forEach(x=>x.classList.remove('active'));
+    b.classList.add('active');
+    const f=b.dataset.pipef;
+    document.querySelectorAll('#pipe-grid .pipe-card').forEach(c=>{
+      const tags=c.dataset.pcTags.split(',');
+      c.style.display=(f==='all'||tags.includes(f))?'flex':'none';
+    });
+  });
+});
+
+// ── GitHub Actions workflows ──
+const WORKFLOWS = [
+  {name:"CI", file:".github/workflows/ci.yml", trigger:"push to main · PR to main",
+   chip:"unsigned", signed:false,
+   journey:[
+     {step:"Checkout source", detail:"actions/checkout@v4"},
+     {step:"Setup Dagger v0.21.0", detail:"dagger-for-github@v6"},
+     {step:"dagger call all --source=.", detail:"Parallel: Lint + Test + Race + Security + ProtoCheck + SpecRegistryCheck. 6 gates in parallel branches sharing cached base."},
+     {step:"dagger call coverage --source=.", detail:"HTML coverage report exported, uploaded to Codecov."},
+     {step:"dagger call security --source=. export --path=gosec-results.sarif", detail:"SARIF uploaded to GitHub Security tab via codeql-action/upload-sarif."},
+     {step:"dagger call image --source=. export --path=xoscal-server.tar", detail:"Container image built, scanned by Trivy. SARIF uploaded."},
+   ],
+   oscal:"assessment-plan → assessment-result · 6 parallel gates + coverage + security SARIF + container scan",
+   produces:["lint.ok","test.ok","race.ok","proto.ok","specreg.ok","gosec-results.sarif","trivy-results.sarif","coverage.html"]},
+
+  {name:"Pages", file:".github/workflows/pages.yml", trigger:"push to main · workflow_dispatch",
+   chip:"unsigned", signed:false,
+   journey:[
+     {step:"Checkout source", detail:"actions/checkout@v4"},
+     {step:"Setup Dagger v0.21.0", detail:"dagger-for-github@v6"},
+     {step:"dagger call site --source=. export --path=_site", detail:"Site assembles: SDK bundles (6 langs + sha256) + OSCAL framework catalogs + provenance.json (signed:false) + OpenAPI + Scalar + downloads.json"},
+     {step:"Upload pages artifact", detail:"actions/upload-pages-artifact@v3"},
+     {step:"Deploy to GitHub Pages", detail:"actions/deploy-pages@v4 — the live portal"},
+   ],
+   oscal:"back-matter resource · assessment evidence · (the portal is the OSCAL evidence presentation surface)",
+   produces:["_site/ (portal)","sdk/*.zip","frameworks/*/catalog.json","provenance.json","downloads.json","openapi.json"]},
+
+  {name:"Release", file:".github/workflows/release.yml", trigger:"tag push: v*",
+   chip:"signed", signed:true,
+   journey:[
+     {step:"Checkout source (fetch-depth: 0)", detail:"Full history for GoReleaser changelog"},
+     {step:"dagger call release --source=. --github-token=env:GITHUB_TOKEN", detail:"GoReleaser release --clean: archives, SBOMs, checksums. Published to GitHub Release."},
+     {step:"Compute hashes (sha256sum * | base64)", detail:"Base64-encoded subjects for SLSA provenance"},
+     {step:"SLSA provenance (slsa-github-generator v2.0.0)", detail:"Generates intoto.attestation — SLSA Level 3 build provenance. Uploaded as release asset."},
+     {step:"Build + push multi-arch image (amd64 + arm64)", detail:"docker/build-push-action to GHCR"},
+     {step:"cosign sign --yes (keyless)", detail:"Container image signed with cosign keyless (OIDC-based, no key management)"},
+     {step:"Generate image SBOM (anchore/sbom-action)", detail:"CycloneDX SBOM for the container image. Uploaded as artifact."},
+   ],
+   oscal:"back-matter resource · attestation · (SLSA L3 provenance + cosign image signature — the only signed stage)",
+   produces:["dist/ (archives + SBOMs + checksums)","intoto.attestation (SLSA L3)","cosign signature on container image","image-sbom.cyclonedx.json"]},
+
+  {name:"OSCAL Reconcile", file:".github/workflows/oscal-reconcile.yml", trigger:"schedule: Mon 06:00 UTC · workflow_dispatch",
+   chip:"unsigned", signed:false,
+   journey:[
+     {step:"Checkout source", detail:"actions/checkout@v4"},
+     {step:"Install yq (mikefarah)", detail:"For parsing upstream.lock.yaml"},
+     {step:"Poll feeds for drift (poll-feeds.sh)", detail:"Checks upstream OSCAL / framework sources for changes. Exit 0 = in sync, 3 = drift, else = operational failure."},
+     {step:"Verify OSCAL spec lock-step (spec-registry verify)", detail:"Re-fetches each pinned model schema, compares. Exit 3 = per-model drift — tolerated here (CI would hard-fail)."},
+     {step:"If drift detected: open draft PR", detail:"Branch keyed to drift fingerprint (re-runs reuse, not duplicate). Draft PR with reconcile checklist. Human reviews (DAL 3, no auto-merge)."},
+   ],
+   oscal:"catalog · profile · (drift detection — the OSCAL models themselves are monitored for upstream changes)",
+   produces:["reconcile-report.json","draft PR (DAL 3, human-reviewed, no auto-merge)"]},
+];
+
+function workflow(w){
+  const steps = w.journey.map((s,i)=>
+    `<li class="${i===w.journey.length-1?'complete':''}">
+      <div class="jtitle">${s.step}</div>
+      <div class="jdetail">${s.detail}</div>
+    </li>`
+  ).join("");
+  return `<div class="wf-card">
+    <div class="wf-head">
+      <div>
+        <div class="wf-name">${w.name}</div>
+        <div class="wf-trigger">${w.file} · trigger: ${w.trigger}</div>
+      </div>
+      <span class="wf-chip ${w.chip}">${w.signed?'signed':'unsigned'}</span>
+    </div>
+    <div class="wf-body">
+      <span class="lab">OSCAL touchpoint</span>${w.oscal}
+    </div>
+    <ol class="journey">${steps}</ol>
+    <div class="act-footer" style="margin-top:14px">
+      <span class="act-label">produces</span>
+      <div class="act-list">
+        ${w.produces.map((x,i)=>`<a class="act${i===0?' primary':''}${/^export|^sign|^publish|^release|^bundle|attestation|signature/i.test(x)?' export':''}" href="#">${x}</a>`).join("")}
+      </div>
+    </div>
+  </div>`;
+}
+document.getElementById("wf-list").innerHTML = WORKFLOWS.map(workflow).join("");
+
 // ── Card filter ──
 document.querySelectorAll('#card-filter button').forEach(b=>{
   b.addEventListener('click',()=>{
@@ -1535,7 +1961,7 @@ document.querySelectorAll('#card-filter button').forEach(b=>{
 });
 
 // ── View switching (reusable) ──
-const VIEWS = ['room','exchange','downloads','cartography','personas'];
+const VIEWS = ['room','exchange','downloads','cartography','personas','pipeline'];
 function switchView(name){
   document.querySelectorAll('#nav button').forEach(x=>x.classList.remove('active'));
   const btn = document.querySelector(`#nav button[data-view="${name}"]`);
@@ -1588,6 +2014,7 @@ const SURFACE_MAP = [
   {match:/Exchange|inbound|verify row|outbound|disposition|quarantine/i, view:'exchange'},
   {match:/Downloads|SDK|framework/i, view:'downloads'},
   {match:/Cartography|SBOM Card|Scanner Card|VEX Card|AI Tool Card|AI-BOM|Attestation Card|Finding Card|Defensive UX|stale evidence/i, view:'cartography'},
+  {match:/Pipeline|Dagger|CI|workflow|Release|Pages|Reconcile|gate|evidence producer/i, view:'pipeline'},
 ];
 document.querySelectorAll('.journey .jsurface').forEach(s=>{
   s.style.cursor = 'pointer';
@@ -1603,7 +2030,7 @@ document.querySelectorAll('.journey .jsurface').forEach(s=>{
 // ── Keyboard hint in footer ──
 const hint = document.createElement('span');
 hint.className = 'mono';
-hint.textContent = 'keys: 1-5 views · t theme';
+hint.textContent = 'keys: 1-6 views · t theme';
 hint.style.opacity = '0.6';
 document.querySelector('footer').appendChild(hint);
 </script>
