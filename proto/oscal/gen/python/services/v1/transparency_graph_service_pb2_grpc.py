@@ -5,7 +5,7 @@ import grpc
 from services.v1 import transparency_graph_service_pb2 as services_dot_v1_dot_transparency__graph__service__pb2
 
 
-class TransparencyGraphServiceStub(object):
+class TransparencyGraphServiceStub:
     """TransparencyGraphService provides graph traversal over projected claims
     with structured proof-state verification for xOSCAL.
     """
@@ -78,7 +78,7 @@ class TransparencyGraphServiceStub(object):
                 _registered_method=True)
 
 
-class TransparencyGraphServiceServicer(object):
+class TransparencyGraphServiceServicer:
     """TransparencyGraphService provides graph traversal over projected claims
     with structured proof-state verification for xOSCAL.
     """
@@ -226,7 +226,7 @@ def add_TransparencyGraphServiceServicer_to_server(servicer, server):
 
 
  # This class is part of an EXPERIMENTAL API.
-class TransparencyGraphService(object):
+class TransparencyGraphService:
     """TransparencyGraphService provides graph traversal over projected claims
     with structured proof-state verification for xOSCAL.
     """
