@@ -43,6 +43,7 @@ jobs:
           path: dist/
 
   sbom-validation:
+    needs: [goreleaser]
     runs-on: ubuntu-latest
     permissions:
       contents: write
