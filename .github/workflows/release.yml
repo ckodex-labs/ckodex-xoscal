@@ -126,6 +126,8 @@ jobs:
           image: ghcr.io/${{ github.repository }}:${{ github.ref_name }}
           format: cyclonedx-json
           output-file: image-sbom.cyclonedx.json
+          upload-artifact: false
+          upload-release-assets: false
 
       - name: Upload image SBOM
         uses: actions/upload-artifact@v4
