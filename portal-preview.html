@@ -1792,6 +1792,14 @@ const PIPE_CARDS = [
    oscal:"back-matter resource · assessment evidence · component inventory · (SBOM Card)",
    tags:["evidence","unsigned"]},
 
+  {name:"SBOM Validation", fn:"Xoscal.SbomValidation(source)", cls:"evidence", signed:false,
+   inputs:"CycloneDX SBOM (from Sbom)",
+   outputs:"sbom-assessment-results.json (OSCAL 1.1.2 assessment-results)",
+   desc:"Validates the CycloneDX SBOM with sbom-tools (sbom-tool/sbom-tools) against NTIA Minimum Elements. Emits findings as OSCAL assessment-results via the oscal-json output format (PR #280). Served on GitHub Pages at /sbom-validation.html.",
+   cmd:"dagger call sbom-validation --source=. export --path=sbom-assessment-results.json",
+   oscal:"assessment-results · observations · findings · (SBOM Validation page)",
+   tags:["evidence","unsigned","oscal"]},
+
   {name:"Image", fn:"Xoscal.Image(source)", cls:"evidence", signed:false,
    inputs:"built binary (from Build)",
    outputs:"container image (distroless base-debian12:nonroot)",
@@ -1998,6 +2006,7 @@ const TRACE = [
   ["Image + Trivy", "trivy-results.sarif", "GitHub Security tab", "Container image scan results"],
   ["Coverage", "coverage.html", "Codecov", "Test coverage report (external, not in portal)"],
   ["SBOM", "sbom.cyclonedx.json", "Cartography → SBOM Card", "CycloneDX component inventory (design-layer card)"],
+  ["SbomValidation", "sbom-assessment-results.json", "SBOM Validation page", "OSCAL 1.1.2 assessment-results from sbom-tools validate (NTIA standard, oscal-json output)"],
   ["Security", "gosec-results.sarif", "Cartography → Scanner Card", "Static analysis findings (design-layer card)"],
   ["Release", "dist/ archives + checksums", "GitHub Release page", "Release artifacts (signed by GoReleaser)"],
   ["Release", "intoto.attestation (SLSA L3)", "GitHub Release page", "SLSA Level 3 build provenance"],

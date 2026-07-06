@@ -73,7 +73,7 @@ changelog:
 
 release:
   github:
-    owner: mchorfa
-    name: xoscal
+    owner: ckodex-labs
+    name: ckodex-xoscal
   draft: false
   prerelease: auto

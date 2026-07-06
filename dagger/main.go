@@ -235,11 +235,13 @@ const buildDownloadsIndex = `
 `
 
 // Site assembles the static GitHub Pages portal: docs (Scalar+OpenAPI),
-// transparency (provenance.json), and downloads (SDK zips + OSCAL catalogs).
+// transparency (provenance.json), downloads (SDK zips + OSCAL catalogs),
+// and SBOM validation (OSCAL assessment-results from sbom-tools).
 func (m *Xoscal) Site(source *dagger.Directory) *dagger.Directory {
 	sdks := m.sdkBundles(source)
 	frameworks := m.oscalFrameworks(source)
 	prov := m.provenanceManifest(source, sdks)
+	sbomValidation := m.SbomValidation(source)
 
 	// Vendor a PINNED Scalar standalone bundle into the site (no runtime CDN).
 	scalarVer := "1.25.0" // pin explicitly; bump deliberately
@@ -251,6 +253,7 @@ func (m *Xoscal) Site(source *dagger.Directory) *dagger.Directory {
 		WithDirectory("/out/frameworks", frameworks).
 		WithFile("/out/openapi.json", sdks.File("openapi.json")).
 		WithFile("/out/provenance.json", prov.File("provenance.json")).
+		WithFile("/out/sbom-assessment-results.json", sbomValidation).
 		WithExec([]string{"sh", "-c",
 			"curl -fsSL '" + scalarURL + "' -o /out/scalar.js && test -s /out/scalar.js"}).
 		WithExec([]string{"sh", "-c", buildDownloadsIndex}).
@@ -308,6 +311,30 @@ func (m *Xoscal) Sbom(source *dagger.Directory) *dagger.File {
 		WithFile("/xoscal-server", bin).
 		WithExec([]string{"packages", "file:/xoscal-server", "-o", "cyclonedx-json", "-q", "--file", "/tmp/sbom.json"}).
 		File("/tmp/sbom.json")
+}
+
+// SbomValidation validates the CycloneDX SBOM with sbom-tools (from
+// sbom-tool/sbom-tools) and emits an OSCAL 1.1.2 assessment-results
+// document via the oscal-json output format (PR #280).
+//
+// The oscal-json feature is merged to main but not yet in a release,
+// so we build from git. Cargo registry + build are cached.
+func (m *Xoscal) SbomValidation(source *dagger.Directory) *dagger.File {
+	sbom := m.Sbom(source)
+	cargoRegistry := dag.CacheVolume("cargo-registry")
+	cargoBuild := dag.CacheVolume("cargo-build-sbom-tools")
+	return dag.Container().
+		From("rust:1-bookworm").
+		WithMountedCache("/usr/local/cargo/registry", cargoRegistry).
+		WithMountedCache("/usr/local/cargo/git", cargoRegistry).
+		WithMountedCache("/tmp/sbom-tools-build", cargoBuild).
+		WithExec([]string{"apt-get", "update"}).
+		WithExec([]string{"apt-get", "install", "-y", "--no-install-recommends", "pkg-config", "libssl-dev"}).
+		WithExec([]string{"cargo", "install", "sbom-tools", "--git", "https://github.com/sbom-tool/sbom-tools", "--root", "/usr/local", "--locked"}).
+		WithFile("/tmp/sbom.cyclonedx.json", sbom).
+		WithExec([]string{"sbom-tools", "validate", "/tmp/sbom.cyclonedx.json", "--standard", "ntia", "-o", "oscal-json", "-O", "/tmp/sbom-assessment-results.oscal.json"}).
+		WithExec([]string{"sh", "-c", "test -s /tmp/sbom-assessment-results.oscal.json"}).
+		File("/tmp/sbom-assessment-results.oscal.json")
 }
 
 // Dist packages the binary and SBOM into a directory.

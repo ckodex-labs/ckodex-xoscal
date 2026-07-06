@@ -42,6 +42,35 @@ jobs:
           name: dist
           path: dist/
 
+  sbom-validation:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Dagger
+        uses: dagger/dagger-for-github@v7
+        with:
+          version: "v0.21.7"
+          install-only: true
+
+      - name: Validate SBOM with sbom-tools (oscal-json output)
+        run: |
+          dagger call sbom-validation --source=. export --path=./sbom-assessment-results.json
+
+      - name: Upload SBOM validation results
+        uses: actions/upload-artifact@v4
+        with:
+          name: sbom-validation
+          path: sbom-assessment-results.json
+
+      - name: Attach to GitHub release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: sbom-assessment-results.json
+
   provenance:
     needs: [goreleaser]
     permissions:
