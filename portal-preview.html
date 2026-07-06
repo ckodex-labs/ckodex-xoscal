@@ -3,119 +3,1155 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>xOSCAL Proto Portal — Preview</title>
+<title>XOSCAL — Governed Assurance Room (Preview)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
+  /* ════════════════════════════════════════════════════════════════
+     XOSCAL · DS-3 Evidence Editorial
+     Two themes: Atlas (paper) + Vault (dark)  ·  toggle via [data-theme]
+     Proof violet + chamfer earned only by a complete proof ladder.
+     ════════════════════════════════════════════════════════════════ */
   :root{
-    --paper:#F6F1E8; --ink:#211B14; --tone:#6E6457; --rust:#B4532A;
-    --violet:#6D28D9; --surface:#fff;
+    --paper:#F6F1E8; --ink:#211B14; --tone:#6E6457;
+    --rust:#B4532A; --proof:#6D28D9; --alarm:#B91C1C;
+    --surface:#fff; --hairline:#D9D2C4; --rule:#E8E1D2;
+    --serif:"Instrument Serif",Georgia,serif;
+    --sans:"Geist",system-ui,-apple-system,sans-serif;
+    --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+    --density:1;
   }
+  [data-theme="vault"]{
+    --paper:#0A1322; --ink:#EAE5DA; --tone:#9A9284;
+    --rust:#D2693A; --proof:#A78BFA; --alarm:#F87171;
+    --surface:#111B2E; --hairline:#2A3A55; --rule:#1E2A42;
+  }
+
   *{box-sizing:border-box}
-  body{margin:0;background:var(--paper);color:var(--ink);
-    font-family:"Geist",system-ui,-apple-system,sans-serif;line-height:1.55}
-  header,main,footer{max-width:1080px;margin:0 auto;padding:20px 32px}
-  header{border-bottom:1px solid var(--tone)}
-  h1{font-family:"Instrument Serif",Georgia,serif;font-weight:400;font-size:38px;margin:.2em 0}
-  h2{font-family:"Instrument Serif",Georgia,serif;font-weight:400;font-size:24px;
-    margin:28px 0 8px;border-bottom:1px solid var(--tone);padding-bottom:4px}
-  nav a{color:var(--rust);margin-right:18px;text-decoration:none;font-weight:500}
-  nav a:hover{text-decoration:underline}
-  .banner{border:1px solid var(--rust);background:var(--surface);padding:8px 12px;margin:12px 0;font-size:14px}
-  .quiet{border:1px solid var(--tone);background:var(--surface);padding:14px 16px;margin:10px 0}
-  .sealed{border-width:2px;
+  html,body{margin:0;padding:0}
+  body{background:var(--paper);color:var(--ink);
+    font-family:var(--sans);line-height:1.55;font-size:calc(15px * var(--density));
+    -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+    transition:background .15s,color .15s}
+
+  /* ── Shell ── */
+  .shell{max-width:1240px;margin:0 auto;padding:0 32px 64px}
+  header.top{max-width:1240px;margin:0 auto;padding:18px 32px;
+    border-bottom:1px solid var(--hairline);
+    display:flex;align-items:baseline;justify-content:space-between;gap:24px;flex-wrap:wrap}
+  .wordmark{font-family:var(--serif);font-size:26px;letter-spacing:.2px}
+  .wordmark .x{color:var(--rust)}
+  .top-controls{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+  nav.surfaces{display:flex;gap:22px;flex-wrap:wrap}
+  nav.surfaces button{background:none;border:none;color:var(--ink);font:inherit;
+    font-size:14px;font-weight:500;cursor:pointer;padding:0 0 2px;
+    border-bottom:1px solid transparent;font-family:var(--sans)}
+  nav.surfaces button.active{color:var(--rust);border-bottom-color:var(--rust)}
+  nav.surfaces button:hover{color:var(--rust)}
+  .toggle{display:inline-flex;border:1px solid var(--hairline);font-size:12px}
+  .toggle button{background:var(--surface);border:none;color:var(--tone);
+    padding:4px 10px;cursor:pointer;font:inherit;font-size:12px;font-family:var(--sans)}
+  .toggle button.on{background:var(--ink);color:var(--paper)}
+
+  /* ── Provenance header ── */
+  .prov{margin:28px 0 0;border:1px solid var(--hairline);background:var(--surface);
+    padding:18px 22px}
+  .prov .row{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px 28px}
+  .prov dt{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--tone);margin:0 0 3px}
+  .prov dd{margin:0;font-size:14px}
+  .prov .mono{font-family:var(--mono);font-variant-ligatures:none;font-size:13px}
+  .pill{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;
+    padding:2px 8px;border:1px solid var(--hairline);background:var(--paper)}
+  .pill.released{color:var(--proof);border-color:var(--proof)}
+
+  /* ── Room title ── */
+  .room-title{font-family:var(--serif);font-weight:400;font-size:34px;line-height:1.1;
+    margin:32px 0 4px;max-width:760px}
+  .room-sub{color:var(--tone);font-size:15px;max-width:760px;margin:0 0 24px}
+
+  /* ── Grid ── */
+  .grid{display:grid;grid-template-columns:1.15fr 1fr;gap:24px;align-items:start}
+  @media (max-width:920px){.grid{grid-template-columns:1fr}}
+  .col{display:flex;flex-direction:column;gap:calc(24px * var(--density))}
+
+  /* ── Panels ── */
+  .panel{border:1px solid var(--hairline);background:var(--surface);
+    padding:calc(20px * var(--density)) calc(22px * var(--density))}
+  .panel.sealed{border-width:2px;
     clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,0 100%)}
-  .hash{font-family:"JetBrains Mono",ui-monospace,Menlo,monospace;
-    font-variant-ligatures:none;font-size:13px;color:var(--tone)}
-  .row{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
-  .proof{color:var(--violet);font-weight:600}
-  .unsigned{color:var(--tone)}
-  .name{font-weight:600}
-  .ep{font-family:"JetBrains Mono",monospace;font-size:13px;color:var(--tone)}
-  a.dl{color:var(--rust);text-decoration:none;font-weight:600}
-  footer{color:var(--tone);font-size:13px;border-top:1px solid var(--tone);margin-top:32px}
+  .panel h2{font-family:var(--serif);font-weight:400;font-size:21px;margin:0 0 14px;
+    padding-bottom:8px;border-bottom:1px solid var(--rule)}
+  .panel h3{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--tone);
+    margin:18px 0 8px;font-weight:600}
+
+  /* ── Coverage ── */
+  .cov .bar{height:10px;background:var(--rule);position:relative;margin:10px 0 6px}
+  .cov .bar > span{position:absolute;left:0;top:0;bottom:0;background:var(--proof)}
+  .cov .legend{display:flex;justify-content:space-between;font-family:var(--mono);
+    font-size:12px;color:var(--tone)}
+  .cov .legend b{color:var(--ink);font-weight:500}
+  .cov table{width:100%;border-collapse:collapse;margin-top:14px;font-size:13px}
+  .cov td{padding:5px 0;border-bottom:1px solid var(--rule);vertical-align:top}
+  .cov td:last-child{text-align:right;font-family:var(--mono);color:var(--ink);white-space:nowrap}
+  .cov td .g{display:inline-block;width:14px;text-align:center;color:var(--tone)}
+  .cov .attested .g{color:var(--proof)}
+  .cov .alarm .g{color:var(--alarm)}
+  .cov .sub{color:var(--tone);font-size:12px;margin-top:12px;padding-top:10px;border-top:1px solid var(--rule)}
+  .cov .sub h3{margin:0 0 6px}
+
+  /* ── Claim list ── */
+  .claims .group{margin:0 0 14px}
+  .claims .group > summary{list-style:none;cursor:pointer;display:flex;align-items:center;
+    gap:10px;padding:9px 10px;border:1px solid var(--hairline);background:var(--paper);
+    font-size:14px;font-weight:600}
+  .claims .group > summary::-webkit-details-marker{display:none}
+  .claims .group > summary .g{font-size:16px;width:18px;text-align:center}
+  .claims .group > summary .count{margin-left:auto;font-family:var(--mono);font-size:13px;
+    color:var(--tone);font-weight:400}
+  .claims .group[open] > summary{border-bottom-color:var(--rule)}
+  .claims .claim{display:flex;align-items:flex-start;gap:12px;padding:10px 12px;
+    border:1px solid var(--hairline);border-top:none;background:var(--surface);cursor:pointer}
+  .claims .claim:first-of-type{border-top:none}
+  .claims .claim:hover{background:var(--paper)}
+  .claims .claim.sel{background:var(--paper);box-shadow:inset 3px 0 0 var(--rust)}
+  .claims .claim .g{font-size:15px;width:18px;text-align:center;flex:none;margin-top:1px}
+  .claims .claim .body{min-width:0}
+  .claims .claim .id{font-family:var(--mono);font-size:13px;font-weight:500}
+  .claims .claim .desc{font-size:13px;color:var(--tone);margin-top:2px}
+  .claims .claim .meta{font-family:var(--mono);font-size:11px;color:var(--tone);margin-top:3px}
+
+  .st-observed .g{color:var(--ink)}
+  .st-inferred .g{color:var(--tone)}
+  .st-claimed .g{color:var(--tone)}
+  .st-attested .g{color:var(--proof)}
+  .st-contradicted .g{color:var(--alarm)}
+  .st-quarantined .g{color:var(--alarm)}
+
+  /* ── Proof ladder ── */
+  .ladder .claim-head{padding-bottom:14px;border-bottom:1px solid var(--rule);margin-bottom:6px}
+  .ladder .claim-head .cid{font-family:var(--mono);font-size:14px;font-weight:500}
+  .ladder .claim-head .ctitle{font-family:var(--serif);font-size:22px;margin:4px 0 2px;line-height:1.15}
+  .ladder .claim-head .csubj{font-size:13px;color:var(--tone)}
+  .rung{display:grid;grid-template-columns:22px 1fr auto;gap:12px;align-items:start;
+    padding:11px 0;border-bottom:1px solid var(--rule)}
+  .rung:last-child{border-bottom:none}
+  .rung .mark{font-size:15px;line-height:1.3;text-align:center}
+  .rung.resolved .mark{color:var(--ink)}
+  .rung.pending .mark{color:var(--tone)}
+  .rung .name{font-size:14px;font-weight:600}
+  .rung .detail{font-size:12.5px;color:var(--tone);margin-top:1px;
+    font-family:var(--mono);font-variant-ligatures:none}
+  .rung .state{font-size:11px;letter-spacing:.06em;text-transform:uppercase;font-weight:600}
+  .rung.resolved .state{color:var(--ink)}
+  .rung.pending .state{color:var(--tone)}
+  .ladder .status{margin-top:14px;padding:12px 14px;border:1px solid var(--hairline);
+    background:var(--paper);font-size:13px}
+  .ladder .status .track{font-family:var(--mono);font-size:12px;color:var(--tone);margin-top:4px}
+  .ladder .status .track b{color:var(--ink);font-weight:500}
+
+  /* ── Actions / buttons ── */
+  .actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+  .btn{font-family:var(--sans);font-size:13px;font-weight:600;padding:8px 14px;
+    border:1px solid var(--ink);background:var(--surface);color:var(--ink);cursor:pointer}
+  .btn:hover{background:var(--paper)}
+  .btn.primary{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+  .btn.primary:hover{background:var(--rust);border-color:var(--rust)}
+  .btn.ghost{border-color:var(--hairline);color:var(--tone);background:transparent}
+  .btn:disabled{opacity:.4;cursor:not-allowed}
+
+  /* ── Evidence drawer ── */
+  .evd ol{list-style:none;margin:0;padding:0;counter-reset:step}
+  .evd li{counter-increment:step;position:relative;padding:0 0 16px 30px;
+    border-left:1px solid var(--hairline);margin-left:8px;padding-left:22px}
+  .evd li:last-child{border-left-color:transparent}
+  .evd li::before{content:counter(step);position:absolute;left:-12px;top:-1px;
+    width:18px;height:18px;line-height:16px;text-align:center;font-size:10px;
+    font-family:var(--mono);color:var(--tone);background:var(--surface);
+    border:1px solid var(--hairline)}
+  .evd li .t{font-size:14px;font-weight:600}
+  .evd li .s{font-size:12px;color:var(--tone);margin:2px 0 4px}
+  .evd li .s .g{display:inline-block;width:14px;text-align:center;margin-right:4px}
+  .evd li .s.attested .g{color:var(--proof)}
+  .evd li .s.observed .g{color:var(--ink)}
+  .evd li .s.inferred .g{color:var(--tone)}
+  .evd li .s.claimed .g{color:var(--tone)}
+  .evd li .ref{font-family:var(--mono);font-size:12px;color:var(--tone);
+    font-variant-ligatures:none}
+  .evd li .ref .dig{color:var(--ink)}
+  .evd li.pending::before{border-style:dashed;color:var(--tone)}
+
+  /* ── Gap card ── */
+  .gap .ctrl{font-family:var(--mono);font-size:13px;font-weight:500}
+  .gap .ctrl-name{font-family:var(--sans);font-size:14px;font-weight:600;margin:2px 0 10px}
+  .gap .blk{font-size:13px;color:var(--ink);margin:10px 0}
+  .gap .blk .lab{color:var(--tone);font-size:12px;text-transform:uppercase;letter-spacing:.06em;
+    display:block;margin-bottom:3px}
+  .gap .next{list-style:none;margin:8px 0 0;padding:0}
+  .gap .next li{padding:5px 0;font-size:13px;border-bottom:1px solid var(--rule)}
+  .gap .next li:last-child{border-bottom:none}
+  .gap .next a{color:var(--rust);text-decoration:none;font-weight:500}
+  .gap .next a:hover{text-decoration:underline}
+
+  /* ── Snapshot / release ── */
+  .sr .item{padding:12px 0;border-bottom:1px solid var(--rule)}
+  .sr .item:last-child{border-bottom:none}
+  .sr .item .lab{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--tone)}
+  .sr .item .v{font-family:var(--mono);font-size:14px;font-weight:500;margin:2px 0}
+  .sr .item .meta{font-size:12px;color:var(--tone);font-family:var(--mono)}
+  .sr .item .meta .dig{color:var(--ink)}
+  .sealed-tag{display:inline-block;font-size:11px;font-weight:600;color:var(--proof);
+    border:1px solid var(--proof);padding:1px 6px;margin-left:8px}
+
+  /* ── Conflict card ── */
+  .conflict .ctrl{font-family:var(--mono);font-size:13px;font-weight:500;color:var(--alarm)}
+  .conflict .ctrl-name{font-family:var(--sans);font-size:15px;font-weight:600;margin:2px 0 14px}
+  .conflict .side{border:1px solid var(--hairline);padding:12px 14px;margin:10px 0;background:var(--paper)}
+  .conflict .side .who{font-size:12px;color:var(--tone);text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px}
+  .conflict .side .who b{color:var(--ink);text-transform:none;letter-spacing:0}
+  .conflict .side .stmt{font-size:13px}
+  .conflict .diff{margin:14px 0;border:1px solid var(--hairline);background:var(--surface)}
+  .conflict .diff h3{margin:0;padding:10px 14px;border-bottom:1px solid var(--rule)}
+  .conflict .diff table{width:100%;border-collapse:collapse;font-family:var(--mono);font-size:13px}
+  .conflict .diff td{padding:8px 14px;border-bottom:1px solid var(--rule);vertical-align:top}
+  .conflict .diff td:first-child{color:var(--tone);width:40%}
+  .conflict .diff td.a{color:var(--ink)}
+  .conflict .diff td.b{color:var(--ink)}
+  .conflict .diff tr:last-child td{border-bottom:none}
+
+  /* ── Inbound claim (exchange) ── */
+  .inbound .subj{font-family:var(--mono);font-size:13px;color:var(--tone);margin-bottom:4px}
+  .inbound .subj b{color:var(--ink);font-weight:500}
+  .inbound .from{font-size:13px;color:var(--tone);margin-bottom:14px}
+  .verify-row{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;
+    padding:9px 0;border-bottom:1px solid var(--rule)}
+  .verify-row:last-of-type{border-bottom:none}
+  .verify-row .name{font-size:14px;font-weight:500}
+  .verify-row .name .mono{font-family:var(--mono);font-size:12px;color:var(--tone);margin-left:6px}
+  .verify-row .result{font-size:11px;letter-spacing:.06em;text-transform:uppercase;font-weight:600;
+    padding:2px 8px;border:1px solid}
+  .v-pass{color:var(--proof);border-color:var(--proof)}
+  .v-fail{color:var(--alarm);border-color:var(--alarm)}
+  .v-skip{color:var(--tone);border-color:var(--hairline)}
+  .disposition{margin-top:14px;padding:14px;border:1px solid var(--proof);background:var(--surface)}
+  .disposition.fail{border-color:var(--alarm)}
+  .disposition .label{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--tone);margin-bottom:4px}
+  .disposition .verdict{font-family:var(--serif);font-size:20px}
+  .disposition.fail .verdict{color:var(--alarm)}
+  .disposition .reason{font-size:13px;color:var(--tone);margin-top:6px}
+
+  /* ── Downloads (SDKs + frameworks) ── */
+  .dl-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+  .dl-card{border:1px solid var(--hairline);background:var(--surface);padding:16px 18px}
+  .dl-card.attested{border-width:2px;
+    clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,0 100%)}
+  .dl-card .name{font-family:var(--mono);font-size:14px;font-weight:600}
+  .dl-card .lang{font-size:12px;color:var(--tone);margin:2px 0 10px}
+  .dl-card .digest{font-family:var(--mono);font-size:12px;color:var(--tone);
+    font-variant-ligatures:none;word-break:break-all;margin:8px 0}
+  .dl-card .digest .dig{color:var(--ink)}
+  .dl-card .row{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:8px}
+  .dl-card .mark{font-size:12px;font-weight:600;display:inline-flex;align-items:center;gap:6px}
+  .dl-card.attested .mark{color:var(--proof)}
+  .dl-card.unsigned .mark{color:var(--tone)}
+  .dl-card a.dl{color:var(--rust);text-decoration:none;font-weight:600;font-size:13px}
+  .dl-card a.dl:hover{text-decoration:underline}
+  .dl-card .nolink{font-size:12px;color:var(--tone);font-family:var(--mono)}
+  .dl-section{margin-top:28px}
+  .dl-section > h2{font-family:var(--serif);font-weight:400;font-size:24px;
+    margin:0 0 4px;border-bottom:1px solid var(--tone);padding-bottom:6px}
+  .dl-section > p{color:var(--tone);font-size:13px;margin:0 0 14px}
+
+  /* ── Banner / footer ── */
+  .banner{margin:24px 0 0;border:1px solid var(--rust);background:var(--surface);
+    padding:10px 14px;font-size:13px}
+  .banner b{color:var(--rust)}
+  footer{max-width:1240px;margin:40px auto 0;padding:18px 32px;border-top:1px solid var(--hairline);
+    color:var(--tone);font-size:12px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  footer .mono{font-family:var(--mono)}
+
+  /* ── View switching ── */
+  .view{display:none}
+  .view.active{display:block}
+
+  /* ── Card system (Evidence Cartography Addendum) ── */
+  .card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:16px}
+  .ecard{border:1px solid var(--hairline);background:var(--surface);padding:16px 18px;
+    display:flex;flex-direction:column;gap:8px}
+  .ecard.sealed{border-width:2px;
+    clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,0 100%)}
+  .ecard.alarm{border-color:var(--alarm)}
+  .ecard .head{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+  .ecard .head .title{font-family:var(--mono);font-size:13px;font-weight:600}
+  .ecard .head .title .sub{font-family:var(--sans);font-size:14px;font-weight:600;
+    display:block;color:var(--ink);margin-top:1px}
+  .ecard .head .chip{font-size:11px;font-weight:600;white-space:nowrap;display:inline-flex;
+    align-items:center;gap:5px;padding:2px 7px;border:1px solid var(--hairline)}
+  .ecard .chip.attested{color:var(--proof);border-color:var(--proof)}
+  .ecard .chip.observed{color:var(--ink);border-color:var(--ink)}
+  .ecard .chip.inferred,.ecard .chip.claimed,.ecard .chip.source-pinned{color:var(--tone)}
+  .ecard .chip.contradicted,.ecard .chip.quarantined,.ecard .chip.past-due{color:var(--alarm);border-color:var(--alarm)}
+  .ecard .chip.signed{color:var(--proof);border-color:var(--proof)}
+  .ecard .chip.verified{color:var(--proof);border-color:var(--proof)}
+  .ecard .meta{font-size:12px;color:var(--tone);line-height:1.5}
+  .ecard .meta b{color:var(--ink);font-weight:500}
+  .ecard .meta .mono{font-family:var(--mono);font-variant-ligatures:none;font-size:11px}
+  .ecard .role{font-size:13px;color:var(--ink);padding:6px 0;border-top:1px solid var(--rule);
+    border-bottom:1px solid var(--rule)}
+  .ecard .evidence{font-size:12px;color:var(--tone);font-family:var(--mono);
+    font-variant-ligatures:none}
+  .ecard .evidence .dig{color:var(--ink)}
+  .ecard .links{font-size:12px;color:var(--tone)}
+  .ecard .links .lk{font-family:var(--mono);font-size:11px}
+  .ecard .next{list-style:none;margin:0;padding:0}
+  .ecard .next li{padding:3px 0;font-size:12px}
+  .ecard .next a{color:var(--rust);text-decoration:none}
+  .ecard .next a:hover{text-decoration:underline}
+  .ecard .blocked{font-size:11px;color:var(--alarm);font-family:var(--mono);margin-top:4px}
+  .ecard .diff-row{display:grid;grid-template-columns:1fr 1fr;gap:8px;font-family:var(--mono);
+    font-size:12px;padding:6px 0;border-bottom:1px solid var(--rule)}
+  .ecard .diff-row:last-child{border-bottom:none}
+  .ecard .diff-row .side{color:var(--ink)}
+  .ecard .diff-row .side .who{color:var(--tone);font-size:11px;display:block}
+
+  /* defensive experience blocks */
+  .defensive{border:1px solid var(--hairline);background:var(--surface);padding:16px 18px}
+  .defensive.stale{border-color:var(--tone);border-style:dashed}
+  .defensive.denied{border-color:var(--alarm)}
+  .defensive.redacted{border-color:var(--proof)}
+  .defensive h3{font-family:var(--serif);font-weight:400;font-size:18px;margin:0 0 8px}
+  .defensive .body{font-size:13px;color:var(--ink);line-height:1.6}
+  .defensive .body .lab{color:var(--tone);font-size:11px;text-transform:uppercase;
+    letter-spacing:.06em;display:block;margin-top:8px;margin-bottom:2px}
+  .defensive .body .mono{font-family:var(--mono);font-size:12px}
+  .defensive ul.next{list-style:none;margin:8px 0 0;padding:0}
+  .defensive ul.next li{padding:3px 0;font-size:13px}
+  .defensive ul.next a{color:var(--rust);text-decoration:none}
+  .defensive ul.next a:hover{text-decoration:underline}
+
+  .card-section{margin-top:28px}
+  .card-section > h2{font-family:var(--serif);font-weight:400;font-size:24px;
+    margin:0 0 4px;border-bottom:1px solid var(--tone);padding-bottom:6px}
+  .card-section > p{color:var(--tone);font-size:13px;margin:0 0 14px}
+  .card-filter{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+  .card-filter button{font-family:var(--sans);font-size:12px;font-weight:500;padding:4px 10px;
+    border:1px solid var(--hairline);background:var(--surface);color:var(--tone);cursor:pointer}
+  .card-filter button.active{background:var(--ink);color:var(--paper);border-color:var(--ink)}
 </style>
 </head>
 <body>
-<header>
-  <h1>xOSCAL Proto Portal</h1>
-  <nav>
-    <a href="#docs">API Docs</a>
-    <a href="#transparency">Transparency</a>
-    <a href="#downloads">Downloads</a>
-  </nav>
+
+<header class="top">
+  <div class="wordmark"><span class="x">X</span>OSCAL</div>
+  <div class="top-controls">
+    <nav class="surfaces" id="nav">
+      <button data-view="room" class="active">Assurance Room</button>
+      <button data-view="exchange">Exchange</button>
+      <button data-view="downloads">Downloads</button>
+      <button data-view="cartography">Cartography</button>
+    </nav>
+    <div class="toggle" title="Theme">
+      <button data-theme="atlas" class="on">Atlas</button>
+      <button data-theme="vault">Vault</button>
+    </div>
+  </div>
 </header>
 
-<main>
-  <div class="banner">PREVIEW — self-contained single file with <strong>sample</strong> data
-    (no server, no build). The real portal is generated by <code>dagger call site</code>:
-    live OpenAPI, the 6 SDK zips, OSCAL framework catalogs, and build-time provenance.</div>
+<div class="shell">
 
-  <div class="quiet">OSCAL gRPC contracts: documentation, supply-chain provenance,
-    SDK clients, and frameworks converted to OSCAL.</div>
+  <div class="banner">PREVIEW — single file, <b>sample data</b>, no server, no build.
+    The live portal is generated by <code>dagger call site</code>. This surface previews the
+    Claim + Proof Ladder, Exchange verification, SDK provenance, and Evidence Cartography card
+    system under DS-3 Evidence Editorial.</div>
 
-  <h2 id="transparency">Supply-chain Transparency</h2>
-  <p>Per artifact: a <code>sha256:</code> digest and signing state. Only an
-    <span class="proof">attested</span> artifact earns violet + the sealed chamfer;
-    everything else stays tone — color is the policy.</p>
-  <div id="cards"></div>
+  <!-- ════════════════════════════════════════════════════════════════
+       VIEW 1 · ASSURANCE ROOM
+       ════════════════════════════════════════════════════════════════ -->
+  <section class="view active" id="view-room">
 
-  <h2 id="downloads">Downloads</h2>
-  <h3>SDK Clients</h3>
-  <div id="sdks"></div>
-  <h3>OSCAL Frameworks</h3>
-  <div id="frameworks"></div>
+    <section class="prov" aria-label="Provenance">
+      <dl class="row">
+        <div><dt>URN</dt><dd class="mono">urn:oscal:ssp:prod-platform:v3</dd></div>
+        <div><dt>Framework</dt><dd>FedRAMP Moderate · NIST 800-53</dd></div>
+        <div><dt>Jurisdiction</dt><dd>US Federal</dd></div>
+        <div><dt>Model</dt><dd>system-security-plan</dd></div>
+        <div><dt>Origin</dt><dd>authored + reg-to-OSCAL</dd></div>
+        <div><dt>OSCAL</dt><dd class="mono">1.2.2</dd></div>
+        <div><dt>Snapshot</dt><dd><span class="pill">v3 · sealed</span></dd></div>
+        <div><dt>Release</dt><dd><span class="pill released">r-0194 · signed</span></dd></div>
+      </dl>
+    </section>
 
-  <h2 id="docs">API Docs</h2>
-  <p>The real page renders an interactive <strong>Scalar</strong> reference over the
-    buf-generated OpenAPI. Sample endpoints:</p>
-  <div id="endpoints"></div>
-</main>
+    <h1 class="room-title">Prod Platform · FedRAMP Moderate</h1>
+    <p class="room-sub">System Security Plan — 274 of 323 assessable controls attested through a
+      witnessed proof chain. 19 inferred drafts pending review. 16 honest gaps. 3 conflicts open.</p>
+
+    <div class="grid">
+      <div class="col">
+
+        <section class="panel claims" aria-label="Claims by state">
+          <h2>Claims by state</h2>
+          <details class="group st-attested" open>
+            <summary><span class="g">◆</span> Attested <span class="count">274</span></summary>
+            <div class="claim st-attested sel" data-claim="ac2">
+              <span class="g">◆</span>
+              <div class="body"><div class="id">AC-2 · Account Management</div>
+                <div class="desc">→ prod-platform · signed, witnessed, transparency-logged</div>
+                <div class="meta">3 observations · 1 finding · proof complete</div></div>
+            </div>
+            <div class="claim st-attested">
+              <span class="g">◆</span>
+              <div class="body"><div class="id">AU-2 · Audit Events</div>
+                <div class="desc">→ prod-platform · signed, witnessed</div>
+                <div class="meta">2 observations · proof complete</div></div>
+            </div>
+          </details>
+          <details class="group st-observed">
+            <summary><span class="g">⊢</span> Observed <span class="count">31</span></summary>
+            <div class="claim st-observed"><span class="g">⊢</span>
+              <div class="body"><div class="id">IA-2 · Identification & Auth</div>
+                <div class="desc">observation exists · proof incomplete</div>
+                <div class="meta">1 observation · 0 findings</div></div></div>
+          </details>
+          <details class="group st-claimed">
+            <summary><span class="g">○</span> Claimed <span class="count">22</span></summary>
+            <div class="claim st-claimed"><span class="g">○</span>
+              <div class="body"><div class="id">AU-6(1) · Audit Review</div>
+                <div class="desc">authored · unassessed</div>
+                <div class="meta">0 observations · 0 proofs</div></div></div>
+          </details>
+          <details class="group st-inferred">
+            <summary><span class="g">⇝</span> Inferred <span class="count">19</span></summary>
+            <div class="claim st-inferred"><span class="g">⇝</span>
+              <div class="body"><div class="id">SC-7 · Boundary Protection</div>
+                <div class="desc">reg-to-OSCAL draft · unverified</div>
+                <div class="meta">0 proofs · awaiting human review</div></div></div>
+          </details>
+          <details class="group st-contradicted">
+            <summary><span class="g">⊭</span> Contradicted <span class="count">3</span></summary>
+            <div class="claim st-contradicted"><span class="g">⊭</span>
+              <div class="body"><div class="id">IA-5 · Authenticator Mgmt</div>
+                <div class="desc">observation O-118 refutes claim</div>
+                <div class="meta">conflict open · needs resolution</div></div></div>
+          </details>
+          <details class="group st-quarantined">
+            <summary><span class="g">⊘</span> Quarantined <span class="count">2</span></summary>
+            <div class="claim st-quarantined"><span class="g">⊘</span>
+              <div class="body"><div class="id">CM-6 · Configuration Settings</div>
+                <div class="desc">imported claim failed VerifyClaim</div>
+                <div class="meta">digest mismatch · under containment</div></div></div>
+          </details>
+          <details class="group">
+            <summary><span class="g" style="color:var(--tone)">—</span> Gap <span class="count">16</span></summary>
+            <div class="claim"><span class="g" style="color:var(--tone)">—</span>
+              <div class="body"><div class="id">SC-7 · Boundary Protection</div>
+                <div class="desc">required by baseline · no attested claim</div>
+                <div class="meta">1 inferred · 0 proofs</div></div></div>
+          </details>
+        </section>
+
+        <section class="panel evd" aria-label="Evidence chain">
+          <h2>Evidence chain — AC-2</h2>
+          <ol>
+            <li class="pending"><div class="t">Generation Receipt</div>
+              <div class="s inferred"><span class="g">⇝</span> Inferred · reg-to-OSCAL draft from 800-53r5</div>
+              <div class="ref">source: 800-53r5 §AC-2 · <span class="dig">draft</span></div></li>
+            <li><div class="t">Implementation Statement</div>
+              <div class="s claimed"><span class="g">○</span> Claimed · authored by prod-platform ISSO</div>
+              <div class="ref">stmt: ac-2_impl.md</div></li>
+            <li><div class="t">Observation ×4</div>
+              <div class="s observed"><span class="g">⊢</span> Observed · assessment-results · method EXAMINE</div>
+              <div class="ref">O-441 · O-442 · O-443 · O-444</div></li>
+            <li><div class="t">Finding</div>
+              <div class="s attested"><span class="g">◆</span> Attested candidate · rolls up observations</div>
+              <div class="ref">F-0218 · <span class="dig">sha256:9f3c…a217</span></div></li>
+            <li><div class="t">ProofRef · signature</div>
+              <div class="s attested"><span class="g">◆</span> cosign · verified</div>
+              <div class="ref">digest <span class="dig">sha256:9f3c1d2e…a217</span></div></li>
+            <li><div class="t">ProofRef · transparency_log</div>
+              <div class="s attested"><span class="g">◆</span> inclusion proof</div>
+              <div class="ref">log index 44182</div></li>
+            <li class="pending"><div class="t">ProofRef · witness_checkpoint</div>
+              <div class="s"><span class="g" style="color:var(--tone)">○</span> Pending · witness anchor not yet set</div>
+              <div class="ref">awaiting checkpoint</div></li>
+            <li class="pending"><div class="t">ProofRef · policy_ref</div>
+              <div class="s"><span class="g" style="color:var(--tone)">○</span> Pending · policy not evaluated</div>
+              <div class="ref">policy: fedramp-moderate-attest</div></li>
+          </ol>
+        </section>
+
+        <!-- Conflict card -->
+        <section class="panel conflict" aria-label="Conflict">
+          <h2>Conflict — competing statements</h2>
+          <div class="ctrl">AU-6(1)</div>
+          <div class="ctrl-name">Audit Review — two statements claim this control</div>
+          <div class="side">
+            <div class="who">Proposed A · <b>authored by ISSO</b></div>
+            <div class="stmt">References SIEM component. Review window 7 days.</div>
+          </div>
+          <div class="side">
+            <div class="who">Proposed B · <b>generated by reg-to-OSCAL</b></div>
+            <div class="stmt">References log-review procedure. Review window 30 days.</div>
+          </div>
+          <div class="diff">
+            <h3>Parameter difference</h3>
+            <table>
+              <tr><td>au-6_prm_1</td><td class="a">A: 7 days</td><td class="b">B: 30 days</td></tr>
+              <tr><td>overlap</td><td class="a" colspan="2">Both claim AU-6(1)</td></tr>
+            </table>
+          </div>
+          <div class="actions">
+            <button class="btn primary">Accept A</button>
+            <button class="btn">Accept B</button>
+            <button class="btn">Merge</button>
+            <button class="btn ghost">Reject both</button>
+            <button class="btn ghost">Escalate to human-root reviewer</button>
+          </div>
+        </section>
+
+        <!-- Gap card -->
+        <section class="panel gap" aria-label="Gap detail">
+          <h2>Gap — no attested claim</h2>
+          <div class="ctrl">SC-7</div>
+          <div class="ctrl-name">Boundary Protection — required by FedRAMP Moderate</div>
+          <div class="blk"><span class="lab">Coverage</span>
+            Baseline requires SC-7. No implementation statement resolves to an attested result.</div>
+          <div class="blk"><span class="lab">Current state</span>
+            1 inferred claim from reg-to-OSCAL · 0 proofs · 0 observations.</div>
+          <div class="blk"><span class="lab">Missing</span>
+            Authored implementation statement or assessment observation.</div>
+          <div class="blk"><span class="lab">Next safe actions</span>
+            <ul class="next">
+              <li><a href="#">Author implementation statement</a></li>
+              <li><a href="#">Attach observation</a></li>
+              <li><a href="#">Open reg-to-OSCAL provenance</a></li>
+              <li><a href="#">Export gap summary</a></li>
+            </ul>
+          </div>
+        </section>
+
+      </div>
+
+      <div class="col">
+
+        <section class="panel cov" aria-label="Coverage">
+          <h2>Coverage — FedRAMP Moderate</h2>
+          <div class="bar"><span style="width:84.8%"></span></div>
+          <div class="legend"><span><b>274</b> attested</span><span>of <b>323</b> assessable</span></div>
+          <table>
+            <tr class="attested"><td><span class="g">◆</span> Attested</td><td>274</td></tr>
+            <tr><td><span class="g">⊢</span> Observed</td><td>31</td></tr>
+            <tr><td><span class="g">○</span> Claimed, unverified</td><td>22</td></tr>
+            <tr><td><span class="g">⇝</span> Inferred drafts</td><td>19</td></tr>
+            <tr><td><span class="g">—</span> Gap</td><td>16</td></tr>
+            <tr class="alarm"><td><span class="g">⊭</span> In conflict</td><td>3</td></tr>
+            <tr class="alarm"><td><span class="g">⊘</span> Quarantined</td><td>2</td></tr>
+          </table>
+          <div class="sub">
+            <h3>Attestation quality</h3>
+            <table>
+              <tr><td>Signed</td><td>271</td></tr>
+              <tr><td>Witnessed</td><td>240</td></tr>
+              <tr><td>Transparency logged</td><td>268</td></tr>
+              <tr><td>Policy evaluated</td><td>236</td></tr>
+            </table>
+          </div>
+        </section>
+
+        <section class="panel ladder" aria-label="Proof ladder">
+          <h2>Proof ladder</h2>
+          <div class="claim-head">
+            <div class="cid">AC-2 · Account Management</div>
+            <div class="ctitle">Account Management → prod-platform</div>
+            <div class="csubj">Claimed → attesting · 2 stages remain</div>
+          </div>
+          <div class="rung resolved"><span class="mark">●</span>
+            <div><div class="name">Discovery</div><div class="detail">statement located</div></div>
+            <span class="state">resolved</span></div>
+          <div class="rung resolved"><span class="mark">●</span>
+            <div><div class="name">Graph</div><div class="detail">linked to 4 observations</div></div>
+            <span class="state">resolved</span></div>
+          <div class="rung resolved"><span class="mark">●</span>
+            <div><div class="name">Claim</div><div class="detail">assessment-result cites them</div></div>
+            <span class="state">resolved</span></div>
+          <div class="rung resolved"><span class="mark">●</span>
+            <div><div class="name">Source</div><div class="detail">source refs digest ok</div></div>
+            <span class="state">resolved</span></div>
+          <div class="rung resolved"><span class="mark">●</span>
+            <div><div class="name">Signature</div><div class="detail">proof_ref: signature</div></div>
+            <span class="state">resolved</span></div>
+          <div class="rung resolved"><span class="mark">●</span>
+            <div><div class="name">Transparency</div><div class="detail">inclusion proof · log 44182</div></div>
+            <span class="state">resolved</span></div>
+          <div class="rung pending"><span class="mark">○</span>
+            <div><div class="name">Witness</div><div class="detail">witness checkpoint not anchored</div></div>
+            <span class="state">pending</span></div>
+          <div class="rung pending"><span class="mark">○</span>
+            <div><div class="name">Policy</div><div class="detail">policy_ref not evaluated</div></div>
+            <span class="state">pending</span></div>
+          <div class="status">
+            <div><b style="color:var(--ink)">Claimed → attesting…</b> 2 stages remain.</div>
+            <div class="track">track: <b>Claimed</b> → Observed → <b>Attested</b> (on ladder completion)</div>
+          </div>
+          <div class="actions">
+            <button class="btn primary">Run Attest</button>
+            <button class="btn ghost">Open evidence</button>
+            <button class="btn ghost">Open source refs</button>
+            <button class="btn ghost">Export trace</button>
+          </div>
+        </section>
+
+        <section class="panel sr" aria-label="Snapshot and release">
+          <h2>Lifecycle</h2>
+          <div class="item">
+            <div class="lab">Snapshot</div>
+            <div class="v">v3 <span class="sealed-tag">sealed</span></div>
+            <div class="meta">2026-07-05 16:42 UTC · manifest <span class="dig">sha256:22ac…19ff</span></div>
+            <div class="meta">from 274 attested · 16 gaps · 3 conflicts</div>
+          </div>
+          <div class="item">
+            <div class="lab">Release</div>
+            <div class="v">r-0194 <span class="sealed-tag">published</span></div>
+            <div class="meta">recipient: FedRAMP PMO · signature: valid</div>
+            <div class="meta">exchange: receiver verified</div>
+          </div>
+          <div class="actions">
+            <button class="btn ghost">Create new snapshot</button>
+            <button class="btn ghost">Compare with v2</button>
+            <button class="btn ghost">Export manifest</button>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════════
+       VIEW 2 · EXCHANGE
+       ════════════════════════════════════════════════════════════════ -->
+  <section class="view" id="view-exchange">
+    <h1 class="room-title">Exchange — receiver-side verification</h1>
+    <p class="room-sub">Publishing does not imply trusted. Receiving does not imply verified.
+      Verification is re-run by the receiver. Reconciliation is by hash, not custody transfer.</p>
+
+    <div class="grid">
+      <div class="col">
+
+        <section class="panel inbound" aria-label="Inbound claim — pass">
+          <h2>Inbound Claim — from Agency-B</h2>
+          <div class="subj">Subject · <b>Shared-Service Boundary · AC-4</b></div>
+          <div class="from">Presented proofs: signature · transparency_log · witness_checkpoint</div>
+          <div class="verify-row">
+            <div class="name">VerifyClaim <span class="mono">rpc</span></div>
+            <span class="result v-pass">passed</span>
+          </div>
+          <div class="verify-row">
+            <div class="name">VerifyEvidence <span class="mono">rpc</span></div>
+            <span class="result v-pass">passed</span>
+          </div>
+          <div class="verify-row">
+            <div class="name">Digest reconciliation</div>
+            <span class="result v-pass">passed</span>
+          </div>
+          <div class="verify-row">
+            <div class="name">Disclosure class</div>
+            <span class="result v-pass">respected</span>
+          </div>
+          <div class="disposition">
+            <div class="label">Disposition</div>
+            <div class="verdict">◆ Attested — independently verified.</div>
+            <div class="reason">Receiver policy: accepted into graph. Sender assertion was not sufficient;
+              local verification passed.</div>
+          </div>
+          <div class="actions">
+            <button class="btn primary">Accept into graph</button>
+            <button class="btn ghost">Open proof ladder</button>
+            <button class="btn ghost">Export verification receipt</button>
+          </div>
+        </section>
+
+        <section class="panel inbound" aria-label="Inbound claim — fail">
+          <h2>Inbound Claim — from Partner-C</h2>
+          <div class="subj">Subject · <b>Secure Transfer · SC-8</b></div>
+          <div class="from">Presented proofs: signature only</div>
+          <div class="verify-row">
+            <div class="name">VerifyClaim <span class="mono">rpc</span></div>
+            <span class="result v-fail">failed</span>
+          </div>
+          <div class="verify-row">
+            <div class="name">VerifyEvidence <span class="mono">rpc</span></div>
+            <span class="result v-skip">not run</span>
+          </div>
+          <div class="verify-row">
+            <div class="name">Digest reconciliation</div>
+            <span class="result v-fail">mismatch</span>
+          </div>
+          <div class="disposition fail">
+            <div class="label">Disposition</div>
+            <div class="verdict">⊘ Quarantined.</div>
+            <div class="reason">Digest mismatch between presented evidence and source reference.
+              Sender assertion is not sufficient. Claim held under containment pending re-verification.</div>
+          </div>
+          <div class="actions">
+            <button class="btn">Request corrected evidence</button>
+            <button class="btn ghost">Open quarantine trace</button>
+            <button class="btn ghost">Reject import</button>
+          </div>
+        </section>
+
+      </div>
+
+      <div class="col">
+        <section class="panel" aria-label="Exchange doctrine">
+          <h2>Exchange doctrine</h2>
+          <p style="font-size:14px;color:var(--ink);margin:0 0 12px">
+            XOSCAL Exchange is a verification substrate, not a share button.</p>
+          <ul style="margin:0;padding-left:18px;font-size:13px;color:var(--tone);line-height:1.7">
+            <li>Publishing does not imply trusted.</li>
+            <li>Receiving does not imply verified.</li>
+            <li>Verification is the receiver's, re-run locally.</li>
+            <li>Reconciliation is by hash, not custody transfer.</li>
+            <li>Disclosure requires explicit class.</li>
+            <li>Inbound claims enter as <b style="color:var(--ink)">imported-unverified</b> until
+              <code style="font-family:var(--mono)">VerifyClaim</code> passes locally.</li>
+          </ul>
+        </section>
+
+        <section class="panel" aria-label="Sync status">
+          <h2>Sync status</h2>
+          <div class="verify-row">
+            <div class="name">FedRAMP PMO</div>
+            <span class="result v-pass">receiver verified</span>
+          </div>
+          <div class="verify-row">
+            <div class="name">Agency-B</div>
+            <span class="result v-pass">verified</span>
+          </div>
+          <div class="verify-row">
+            <div class="name">Partner-C</div>
+            <span class="result v-fail">quarantined</span>
+          </div>
+          <div class="verify-row">
+            <div class="name">Partner-D</div>
+            <span class="result v-skip">pending</span>
+          </div>
+          <div class="actions" style="margin-top:14px">
+            <button class="btn primary">Sync claims</button>
+            <button class="btn ghost">Reconcile-by-hash</button>
+          </div>
+        </section>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════════
+       VIEW 3 · DOWNLOADS (SDKs + frameworks with provenance)
+       ════════════════════════════════════════════════════════════════ -->
+  <section class="view" id="view-downloads">
+    <h1 class="room-title">Downloads — SDK clients & OSCAL frameworks</h1>
+    <p class="room-sub">Each artifact carries a sha256 digest and signing state. Only an
+      attested artifact is downloadable and earns violet + the sealed chamfer;
+      unsigned artifacts stay tone and are not downloadable — color is the policy.</p>
+
+    <div class="dl-section">
+      <h2>SDK Clients</h2>
+      <p>Generated from the OSCAL proto contracts via <code>dagger call site</code>
+        (buf generate). One zip per language. <b>Signing is not yet wired into the
+        dagger pipeline</b> — all SDKs are currently unsigned and therefore not
+        downloadable from this preview. The sample attested card below shows what an
+        earned attestation will look like once cosign+rekor integration lands.</p>
+      <div class="dl-grid" id="sdks"></div>
+    </div>
+
+    <div class="dl-section">
+      <h2>OSCAL Frameworks</h2>
+      <p>Converted catalogs published as <code>catalog.json</code> per framework,
+        produced by <code>xoscal-export-frameworks</code> over
+        <code>data/frameworks/manifest.yaml</code> (32 frameworks). All currently
+        unsigned — not downloadable until attested.</p>
+      <div class="dl-grid" id="frameworks"></div>
+    </div>
+
+    <div class="dl-section">
+      <h2>Supply-chain transparency</h2>
+      <p>Per artifact: digest + signing state. The attested <b>sample</b> shows the
+        earned violet + chamfer; the proto-set is unsigned (tone) — honestly.</p>
+      <div class="dl-grid" id="prov"></div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════════
+       VIEW 4 · CARTOGRAPHY (Evidence Cartography Addendum)
+       Card system: canonical families + interoperability dialects +
+       defensive experience patterns. All sample data, design-layer.
+       ════════════════════════════════════════════════════════════════ -->
+  <section class="view" id="view-cartography">
+    <h1 class="room-title">Evidence Cartography — the card system</h1>
+    <p class="room-sub">Every external artifact becomes a card only when it can trace to an
+      OSCAL object, claim, assessment result, back-matter resource, mapping edge, or declared
+      extension manifest. No card may be decorative.</p>
+
+    <div class="card-filter" id="card-filter">
+      <button class="active" data-filter="all">all</button>
+      <button data-filter="canonical">canonical</button>
+      <button data-filter="interop">interoperability</button>
+      <button data-filter="defensive">defensive UX</button>
+    </div>
+
+    <!-- Canonical card families -->
+    <div class="card-section" data-cat="canonical">
+      <h2>Canonical card families</h2>
+      <p>Control · Claim · Evidence · Finding · Gap · Conflict · POA&amp;M · Mapping Edge · Source · Export Bundle.
+        Each card answers: what is this, what does it claim, what does it support, what is its proof state,
+        what can safely happen next.</p>
+      <div class="card-grid" id="canonical-cards"></div>
+    </div>
+
+    <!-- Interoperability dialect cards -->
+    <div class="card-section" data-cat="interop">
+      <h2>Interoperability dialect cards</h2>
+      <p>External assurance ecosystems linked into OSCAL through back-matter, assessment evidence,
+        mapping edges, or declared extension manifests. When OSCAL can carry it natively, use OSCAL.
+        When it cannot, declare lossiness and link via extension manifest.</p>
+      <div class="card-grid" id="interop-cards"></div>
+    </div>
+
+    <!-- Defensive experience patterns -->
+    <div class="card-section" data-cat="defensive">
+      <h2>Defensive experience patterns</h2>
+      <p>Gap is honest. Stale evidence is visible. Contradiction uses alarm. Quarantine holds.
+        Redaction is a visible transformation. Lossiness must be declared. Import never means trust.</p>
+      <div class="card-grid" id="defensive-cards"></div>
+    </div>
+
+    <!-- Extension manifest -->
+    <div class="card-section" data-cat="interop">
+      <h2>Extension manifest</h2>
+      <p>When OSCAL cannot natively represent external semantics, the extension manifest makes
+        the gap explicit — with schema, reason, lossiness, and OSCAL linkage.</p>
+      <div class="card-grid" id="ext-cards"></div>
+    </div>
+  </section>
+
+</div>
 
 <footer>
-  CKODEX-DS-3 "Evidence Editorial" · preview · sample data
+  <span>CKODEX-DS-3 "Evidence Editorial" · preview · sample data · the claim is the hero</span>
+  <span class="mono">XOSCAL · governed evidence for the compliance economy</span>
 </footer>
 
 <script>
-// Inline sample data — no fetch, so this works from file:// with no server.
-const PROVENANCE = [
-  {name:"proto-set", digest:"sha256:9f3c1d2e4a5b6c7d8e9f0a1b…e5f", signed:false},
-  {name:"go-sdk",    digest:"sha256:1a2b3c4d5e6f708192…e5f60", signed:false},
-  {name:"python-sdk",digest:"sha256:7d4e5f6071829…0a1b2c", signed:false},
-  {name:"example-signed-artifact (SAMPLE — attested state)",
-   digest:"sha256:a4b5c6d7e8f9…718293", signed:true, rekor_id:"1234567"}
+// ── Sample data — honest about real pipeline state ──
+// SDK languages match buf.gen.yaml (go, python, java, csharp, ts, swift).
+// Signing is NOT wired in the dagger pipeline today, so every real SDK/framework
+// is unsigned. Only the explicitly-labeled SAMPLE shows attested state.
+const SDKS = [
+  {name:"go.zip", lang:"Go · gRPC + gateway", digest:"sha256:1a2b3c4d5e6f7081920a1b2c3d4e5f607182", signed:false},
+  {name:"python.zip", lang:"Python · protobuf + gRPC", digest:"sha256:7d4e5f607182930a1b2c3d4e5f60718293", signed:false},
+  {name:"java.zip", lang:"Java · protobuf + gRPC", digest:"sha256:b2c3d4e5f607182930a1b2c3d4e5f607182", signed:false},
+  {name:"csharp.zip", lang:"C# · protobuf", digest:"sha256:930a1b2c3d4e5f60718293a1b2c3d4e5f6", signed:false},
+  {name:"ts.zip", lang:"TypeScript · @bufbuild/es", digest:"sha256:c3d4e5f607182930a1b2c3d4e5f607182", signed:false},
+  {name:"swift.zip", lang:"Swift · protobuf + Connect RPC", digest:"sha256:e5f607182930a1b2c3d4e5f60718293a1b2", signed:false}
 ];
-const DOWNLOADS = {
-  sdks:[
-    {name:"go.zip",     digest:"sha256:1a2b3c4d5e6f…e5f60"},
-    {name:"python.zip", digest:"sha256:7d4e5f6071…1b2c"},
-    {name:"ts.zip",     digest:"sha256:c3d4e5f607…a1b2"}
-  ],
-  frameworks:[
-    {name:"nist-csf-2.0 / catalog.json", digest:"sha256:e5f60718…2c3d4"},
-    {name:"dora / catalog.json",         digest:"sha256:b2c3d4e5…60718"}
-  ]
-};
-const ENDPOINTS = [
-  {m:"POST", p:"/oscal.services.v1.OscalService/GetCatalog"},
-  {m:"POST", p:"/oscal.services.v1.OscalService/ListMappings"},
-  {m:"POST", p:"/oscal.services.v1.TransparencyExchangeService/VerifyClaim"}
+const FRAMEWORKS = [
+  {name:"nist-csf-2.0 / catalog.json", lang:"NIST CSF 2.0 · USA", digest:"sha256:e5f607182930a1b2c3d4e5f60718293", signed:false},
+  {name:"dora / catalog.json", lang:"DORA · EU", digest:"sha256:b2c3d4e5f607182930a1b2c3d4e5f60718", signed:false},
+  {name:"fedramp-rev5 / catalog.json", lang:"FedRAMP Rev5 · USA", digest:"sha256:22ac19ff0a1b2c3d4e5f607182930a1b", signed:false},
+  {name:"eu-ai-act / catalog.json", lang:"EU AI Act · EU", digest:"sha256:7182930a1b2c3d4e5f607182930a1b2c", signed:false}
+];
+const PROV = [
+  {name:"proto-set", lang:"buf-generated proto bundle", digest:"sha256:9f3c1d2e4a5b6c7d8e9f0a1b2c3d4e5f", signed:false},
+  {name:"SAMPLE — attested state demo", lang:"not a real artifact", digest:"sha256:a4b5c6d7e8f9a1b2c3d4e5f60718293", signed:true, rekor:"1234567"}
 ];
 
-document.getElementById("cards").innerHTML = PROVENANCE.map(a=>{
-  const cls = a.signed ? "quiet sealed" : "quiet";
-  const mark = a.signed
-    ? `<span class="proof">◆ attested · cosign+rekor #${a.rekor_id}</span>`
-    : `<span class="unsigned">○ unsigned</span>`;
-  return `<div class="${cls}"><div class="row"><span class="name">${a.name}</span>${mark}</div>
-    <div class="hash">${a.digest}</div></div>`;
-}).join("");
+function dlCard(x){
+  const cls = x.signed ? "dl-card attested" : "dl-card unsigned";
+  const mark = x.signed
+    ? `<span class="mark">◆ attested · cosign+rekor #${x.rekor}</span>`
+    : `<span class="mark">○ unsigned</span>`;
+  const link = x.signed
+    ? `<a class="dl" href="#">download</a>`
+    : `<span class="nolink">not downloadable</span>`;
+  return `<div class="${cls}">
+    <div class="name">${x.name}</div>
+    <div class="lang">${x.lang}</div>
+    <div class="digest">digest <span class="dig">${x.digest}</span></div>
+    <div class="row">${link}${mark}</div>
+  </div>`;
+}
+document.getElementById("sdks").innerHTML = SDKS.map(dlCard).join("");
+document.getElementById("frameworks").innerHTML = FRAMEWORKS.map(dlCard).join("");
+document.getElementById("prov").innerHTML = PROV.map(dlCard).join("");
 
-const dlRow = x => `<div class="quiet"><div class="row">
-  <a class="dl" href="#">${x.name}</a></div><div class="hash">${x.digest}</div></div>`;
-document.getElementById("sdks").innerHTML = DOWNLOADS.sdks.map(dlRow).join("");
-document.getElementById("frameworks").innerHTML = DOWNLOADS.frameworks.map(dlRow).join("");
+// ── Evidence Cartography card system ──
+// Card anatomy: identity (type, id, title, source, scope) · state (claim, proof, freshness, validation)
+// · trace (oscal links, evidence, source refs, digest) · action (safe next, blocked, exportability)
+// All sample data — design-layer cards showing the target vocabulary.
 
-document.getElementById("endpoints").innerHTML = ENDPOINTS.map(e=>
-  `<div class="quiet"><span class="ep">${e.m} ${e.p}</span></div>`).join("");
+function card(c){
+  const sealed = c.sealed ? " sealed" : "";
+  const alarm = c.alarm ? " alarm" : "";
+  return `<div class="ecard${sealed}${alarm}">
+    <div class="head">
+      <div class="title">${c.id}<span class="sub">${c.title}</span></div>
+      <span class="chip ${c.chipCls}">${c.chip}</span>
+    </div>
+    ${c.meta ? `<div class="meta">${c.meta}</div>` : ""}
+    ${c.role ? `<div class="role">${c.role}</div>` : ""}
+    ${c.evidence ? `<div class="evidence">${c.evidence}</div>` : ""}
+    ${c.diff ? `<div>${c.diff}</div>` : ""}
+    ${c.links ? `<div class="links">${c.links}</div>` : ""}
+    ${c.next ? `<ul class="next">${c.next.map(n=>`<li><a href="#">${n}</a></li>`).join("")}</ul>` : ""}
+    ${c.blocked ? `<div class="blocked">blocked: ${c.blocked}</div>` : ""}
+  </div>`;
+}
+
+const CANONICAL = [
+  {id:"AC-2", title:"Account Management", chip:"◆ Attested", chipCls:"attested", sealed:true,
+   meta:"Baseline: FedRAMP Moderate<br>Parameters: <b>ac-2_prm_1 = 30 days</b><br>State: 4 observations · 1 attested result · 0 open POA&M",
+   evidence:"digest <span class='dig'>sha256:9f3c…a217</span>",
+   links:"OSCAL: catalog · profile · SSP · assessment-results · POA&M · mapping",
+   next:["Open proof ladder","Open evidence drawer","Export trace"]},
+
+  {id:"C-018", title:"Account lifecycle reviewed every 30 days", chip:"○ Claimed", chipCls:"claimed",
+   meta:"Subject: <b>AC-2 for prod-platform</b><br>Origin: authored<br>Proof: <b>incomplete</b><br>Missing: witness checkpoint, policy evaluation",
+   links:"OSCAL: claim · assessment-result",
+   next:["Run Attest","Open source refs"],
+   blocked:"cannot skip to attested — proof ladder incomplete"},
+
+  {id:"E-442", title:"Configuration export — Entra ID", chip:"⊢ Observed", chipCls:"observed",
+   meta:"Type: configuration export<br>Source system: <b>Entra ID</b><br>Produced by: evidence-ingestor/entra<br>Collected: 2026-07-05<br>Freshness: <b>valid</b><br>Linked claims: AC-2, IA-2",
+   evidence:"digest <span class='dig'>sha256:a91c…77e2</span><br>integrity: sha256 · redaction: none",
+   links:"OSCAL: back-matter resource · assessment evidence",
+   next:["Link to claim","Open evidence drawer"]},
+
+  {id:"F-018", title:"AC-2 — satisfied", chip:"◆ Attested", chipCls:"attested", sealed:true,
+   meta:"Control: <b>AC-2</b><br>Result: satisfied<br>Observations: 4<br>Evidence: 3 signed artifacts<br>Policy: passed<br>Transparency: logged",
+   evidence:"digest <span class='dig'>sha256:9f3c…a217</span>",
+   links:"OSCAL: finding · assessment-results",
+   next:["Open proof ladder","Export finding trace"]},
+
+  {id:"SC-7", title:"Boundary Protection — no attested claim", chip:"Gap", chipCls:"inferred",
+   meta:"Required by: <b>FedRAMP Moderate</b><br>Current: 1 inferred claim · 0 observations · 0 proofs<br>Missing: authored statement or assessment observation",
+   links:"OSCAL: catalog · baseline requirement",
+   next:["Author implementation statement","Attach observation","Open reg-to-OSCAL provenance","Export gap summary"]},
+
+  {id:"CF-021", title:"AU-6 — competing statements", chip:"⊭ Contradicted", chipCls:"contradicted", alarm:true,
+   meta:"Control: <b>AU-6</b><br>Difference: parameter <span class='mono'>au-6_prm_1</span>",
+   diff:`<div class="diff-row"><div class="side"><span class="who">Claim A · authored by ISSO</span>7 days</div><div class="side"><span class="who">Claim B · reg-to-OSCAL</span>30 days</div></div>`,
+   links:"OSCAL: conflict · assessment-results",
+   next:["Accept A","Accept B","Merge","Reject both","Escalate to human-root reviewer"]},
+
+  {id:"P-017", title:"Logging retention fix", chip:"⊘ Past due", chipCls:"past-due", alarm:true,
+   meta:"Finding: F-031<br>Risk: <b>moderate</b><br>Owner: platform-security<br>Due: <b>2026-07-20</b><br>Milestone: logging retention fix<br>Evidence required: new retention export + test result",
+   links:"OSCAL: POA&M · finding",
+   next:["Attach evidence","Update milestone","Request extension"]},
+
+  {id:"M-088", title:"NIST AC-2 → ISO A.5.16", chip:"○ Claimed", chipCls:"claimed",
+   meta:"Relation: <b>equivalent-to</b><br>Confidence: 0.95<br>Coverage: 100%<br>Method: human<br>Evidence: mapping rationale attached",
+   links:"OSCAL: mapping edge · cross-framework",
+   next:["Open rationale","Verify mapping","Export bridge"]},
+
+  {id:"S-CA-CPCSC-L1", title:"CPCSC Level 1", chip:"source pinned", chipCls:"source-pinned",
+   meta:"Authority: <b>PSPC</b><br>Jurisdiction: Canada<br>Framework: CPCSC Level 1<br>Maturity: <b>active</b><br>Pinned version: 2026-06<br>Used by: 13 controls · 1 profile",
+   links:"OSCAL: catalog · profile",
+   next:["Open framework","Check maturity","View usage"]},
+
+  {id:"X-0194", title:"Export Bundle — to Agency-B", chip:"◆ Signed", chipCls:"signed", sealed:true,
+   meta:"Contents: SSP, assessment-results, POA&M, evidence manifest<br>Scope: <b>prod-platform</b><br>Recipient: Agency-B<br>Redaction: <b>applied</b><br>Verification script: included",
+   evidence:"manifest <span class='dig'>sha256:be21…04af</span>",
+   links:"OSCAL: export bundle · back-matter",
+   next:["Open manifest","Verify bundle","Download (attested)"]},
+];
+
+const INTEROP = [
+  {id:"SB-204", title:"SBOM — prod-platform release 3.8.1", chip:"⊢ Observed", chipCls:"observed",
+   meta:"Format: <b>CycloneDX</b><br>Components: 1,284<br>Critical vulnerabilities: 0 open<br>License findings: 2 review<br>Linked controls: CM, RA, SA, SI",
+   evidence:"digest <span class='dig'>sha256:43ab…91df</span>",
+   links:"OSCAL: back-matter + evidence refs",
+   next:["Open component drilldown","Link to controls","Export SBOM trace"],
+   blocked:"stale SBOM cannot support current release"},
+
+  {id:"VX-011", title:"VEX — CVE-2026-12345 / openssl", chip:"○ Claimed", chipCls:"claimed",
+   meta:"Vulnerability: CVE-2026-12345<br>Component: openssl<br>Status: <b>not_affected</b><br>Justification: vulnerable_code_not_in_execute_path<br>Evidence: runtime path analysis<br>Linked finding: RA-5",
+   links:"OSCAL: assessment result · risk · POA&M",
+   next:["Open justification","Link to finding"],
+   blocked:"not_affected requires justification — present"},
+
+  {id:"AI-042", title:"AI-BOM — claims-classifier", chip:"⊢ Observed", chipCls:"observed",
+   meta:"System: claims-classifier<br>Model: internal-risk-router-v2<br>Datasets: 4 · Prompts: 12 · Tools: 6<br>Evaluation suites: 3<br>Known limitations: 5<br>Linked controls: AI governance, RA, SA, SI",
+   evidence:"digest <span class='dig'>sha256:8a21…c901</span>",
+   links:"OSCAL: back-matter + evidence refs · extension: ckx.ai_bom.v1",
+   next:["Open model route","Open dataset lineage","Open eval evidence"],
+   blocked:"model without eval cannot support autonomy claim"},
+
+  {id:"AT-017", title:"AI Tool — reg-to-OSCAL generator", chip:"⇝ Inferred", chipCls:"inferred",
+   meta:"Model route: model-x / policy route P-014<br>Input: EU AI Act Articles 9–15<br>Output: 41 inferred claims<br>Review: <b>required</b><br>Attestation: <b>forbidden</b> until human review + proof ladder",
+   evidence:"prompt digest <span class='dig'>sha256:3f1a…b08c</span><br>context digest <span class='dig'>sha256:7c2d…e91f</span>",
+   links:"OSCAL: inferred claim · provenance · extension: ckx.ai_tool.v1",
+   next:["Open generation receipt","Review claims","Open source spans"],
+   blocked:"generated claim cannot skip to attested"},
+
+  {id:"SCAN-221", title:"Scanner Run — Trivy / prod-platform image", chip:"⊢ Observed", chipCls:"observed",
+   meta:"Tool: Trivy<br>Target: prod-platform image<br>Findings: 0 critical · 4 high · 18 medium<br>SBOM: linked · VEX: partial<br>Collected: 2026-07-03<br>Linked controls: RA-5, SI-2, CM-6",
+   evidence:"digest <span class='dig'>sha256:aa33…19fe</span>",
+   links:"OSCAL: observation · finding · risk",
+   next:["Open findings","Link to controls","Open VEX"],
+   blocked:"stale scan cannot support current claim (47 days old)"},
+
+  {id:"A-918", title:"Attestation — build provenance / release 3.8.1", chip:"◆ Attested", chipCls:"attested", sealed:true,
+   meta:"Type: <b>in-toto / SLSA</b><br>Subject: release 3.8.1<br>Predicate: build provenance<br>Signer: <span class='mono'>workload://ci/release</span><br>Transparency: included",
+   evidence:"digest <span class='dig'>sha256:e77a…1cd0</span>",
+   links:"OSCAL: back-matter · evidence ref",
+   next:["Open attestation","Verify signature","View transparency entry"]},
+
+  {id:"CMMC L2", title:"CMMC Level 2 — CUI scope", chip:"source pinned", chipCls:"source-pinned",
+   meta:"Jurisdiction: United States<br>Protected term: <b>CUI</b><br>Scope: CUI Asset · SPA · Specialized · OOS<br>Assessment: external assessment support<br>Projection: OSCAL + CKX scope manifest",
+   links:"OSCAL: SSP · assessment plan/results · back-matter · extension: ckx.cmmc.v1",
+   next:["Open CUI flow","Open scope manifest","View SPA dependencies"],
+   blocked:"CUI flow without boundary decision is gap"},
+
+  {id:"CPCSC L1", title:"CPCSC Level 1 — Specified Information", chip:"source pinned", chipCls:"source-pinned",
+   meta:"Jurisdiction: Canada<br>Protected term: <b>Specified Information</b><br>Controls: 13<br>Assessment: annual self-assessment<br>Projection: OSCAL + CKX Canadian manifest",
+   links:"OSCAL: catalog/profile/SSP/evidence · extension: ckx.cpcsc.v1",
+   next:["Open control status","Open annual affirmation","View evidence retention"],
+   blocked:"self-assessment is not external certification"},
+
+  {id:"CG-001", title:"Controlled Goods Registration — supplier-qc", chip:"◆ Verified", chipCls:"verified", sealed:true,
+   meta:"Organization: supplier-qc<br>Designated Official: verified attestation<br>Sites: 2<br>Security Plan: <b>current</b><br>Transfer Records: 42<br>Projection: CKX controlled-goods manifest + OSCAL evidence refs",
+   evidence:"digest <span class='dig'>sha256:5b3c…f0a1</span>",
+   links:"OSCAL: evidence refs · back-matter · extension: ckx.controlled_goods.v1",
+   next:["Open transfer records","Open site security plan","View breach reports"]},
+];
+
+const DEFENSIVE = [
+  // Stale evidence
+  {html:`<div class="defensive stale">
+    <h3>Evidence stale</h3>
+    <div class="body">
+      <span class="lab">Artifact</span> Scanner Run SCAN-221
+      <span class="lab">Collected</span> 47 days ago
+      <span class="lab">Freshness policy</span> 30 days
+      <span class="lab">Impact</span> Cannot support current release claim.
+      <span class="lab">Safe next actions</span>
+      <ul class="next"><li><a href="#">Run new scan</a></li><li><a href="#">Attach updated evidence</a></li><li><a href="#">Open affected claims</a></li></ul>
+    </div>
+  </div>`},
+
+  // Denied projection
+  {html:`<div class="defensive denied">
+    <h3>Projection blocked</h3>
+    <div class="body">
+      <span class="lab">Reason</span> Claim C-018 is marked attested but has no verified proof reference.
+      <span class="lab">Safe next actions</span>
+      <ul class="next"><li><a href="#">Run proof verification</a></li><li><a href="#">Downgrade claim to observed</a></li><li><a href="#">Remove from attested coverage</a></li></ul>
+    </div>
+  </div>`},
+
+  // Redacted export
+  {html:`<div class="defensive redacted">
+    <h3>Export redacted</h3>
+    <div class="body">
+      <span class="lab">Reason</span> Personnel screening details are restricted.
+      <span class="lab">Included</span> status attestation · validity window · contract scope · hash reference
+      <span class="lab">Excluded</span> raw investigation records · personal history · sensitive identifiers
+      <span class="lab">Redaction record</span> <span class="mono">sha256:1b7e…4420</span>
+    </div>
+  </div>`},
+
+  // Lossiness declared
+  {html:`<div class="defensive">
+    <h3>Projection lossiness declared</h3>
+    <div class="body">
+      <span class="lab">Source</span> Controlled Goods Transfer Ledger
+      <span class="lab">Native OSCAL representation</span> back-matter resource + evidence refs
+      <span class="lab">CKX extension required</span> <span class="mono">controlled-goods-transfer-record</span>
+      <span class="lab">Impact</span> OSCAL export valid with extension manifest.
+      <span class="lab">Rule</span> Lossiness is not failure. Undeclared lossiness is failure.
+    </div>
+  </div>`},
+
+  // Contradiction
+  {html:`<div class="defensive denied">
+    <h3>Contradicted</h3>
+    <div class="body">
+      <span class="lab">Claim</span> MFA enforced for all privileged accounts.
+      <span class="lab">Observation</span> Privileged account <span class="mono">svc-admin-04</span> has no MFA method.
+      <span class="lab">Impact</span> IA-2 claim downgraded. Finding opened. POA&M required.
+      <span class="lab">Safe next actions</span>
+      <ul class="next"><li><a href="#">Open conflict</a></li><li><a href="#">Create POA&M</a></li><li><a href="#">Downgrade IA-2 to observed</a></li></ul>
+    </div>
+  </div>`},
+
+  // Receiver verification
+  {html:`<div class="defensive">
+    <h3>Receiver verification</h3>
+    <div class="body">
+      <span class="lab">Sender</span> Agency-B
+      <span class="lab">Sender state</span> attested
+      <span class="lab">Local state</span> <b>imported-unverified</b>
+      <span class="lab">Verification</span> VerifyClaim pending · VerifyEvidence pending
+      <span class="lab">Disposition</span> Cannot count toward local attested coverage yet.
+      <span class="lab">Rule</span> Import never means trust.
+      <span class="lab">Safe next actions</span>
+      <ul class="next"><li><a href="#">Run VerifyClaim</a></li><li><a href="#">Run VerifyEvidence</a></li><li><a href="#">Reconcile-by-hash</a></li></ul>
+    </div>
+  </div>`},
+];
+
+const EXT = [
+  {id:"EXT-CA-CG-001", title:"Canada Controlled Goods — transfer ledger", chip:"○ Claimed", chipCls:"claimed",
+   meta:"Dialect: <b>Canada Controlled Goods</b><br>Reason: OSCAL cannot natively represent transfer ledger semantics<br>Linked OSCAL object: back-matter resource R-088<br>Schema: <span class='mono'>ckx.controlled_goods.v1</span><br>Lossiness: <b>declared</b>",
+   evidence:"transfer ledger digest <span class='dig'>sha256:5b3c…f0a1</span>",
+   links:"OSCAL: back-matter R-088 · export manifest",
+   next:["Open schema","Open linked resource","View in export manifest"],
+   blocked:"extension cannot export without schema and reason"},
+];
+
+document.getElementById("canonical-cards").innerHTML = CANONICAL.map(card).join("");
+document.getElementById("interop-cards").innerHTML = INTEROP.map(card).join("");
+document.getElementById("defensive-cards").innerHTML = DEFENSIVE.map(d=>d.html).join("");
+document.getElementById("ext-cards").innerHTML = EXT.map(card).join("");
+
+// ── Card filter ──
+document.querySelectorAll('#card-filter button').forEach(b=>{
+  b.addEventListener('click',()=>{
+    document.querySelectorAll('#card-filter button').forEach(x=>x.classList.remove('active'));
+    b.classList.add('active');
+    const f=b.dataset.filter;
+    document.querySelectorAll('#view-cartography .card-section').forEach(s=>{
+      s.style.display=(f==='all'||s.dataset.cat===f)?'block':'none';
+    });
+  });
+});
+
+// ── View switching ──
+document.querySelectorAll('#nav button').forEach(b=>{
+  b.addEventListener('click',()=>{
+    document.querySelectorAll('#nav button').forEach(x=>x.classList.remove('active'));
+    b.classList.add('active');
+    document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));
+    document.getElementById('view-'+b.dataset.view).classList.add('active');
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+});
+
+// ── Theme toggle ──
+document.querySelectorAll('.toggle[title="Theme"] button').forEach(b=>{
+  b.addEventListener('click',()=>{
+    document.querySelectorAll('.toggle[title="Theme"] button').forEach(x=>x.classList.remove('on'));
+    b.classList.add('on');
+    document.documentElement.setAttribute('data-theme', b.dataset.theme);
+  });
+});
+
+// ── Claim selection ──
+document.querySelectorAll('.claims .claim').forEach(c=>{
+  c.addEventListener('click',()=>{
+    document.querySelectorAll('.claims .claim.sel').forEach(s=>s.classList.remove('sel'));
+    c.classList.add('sel');
+  });
+});
 </script>
 </body>
 </html>
