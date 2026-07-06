@@ -303,19 +303,36 @@
   .ecard .evidence .dig{color:var(--ink)}
   .ecard .links{font-size:12px;color:var(--tone)}
   .ecard .links .lk{font-family:var(--mono);font-size:11px}
-  .ecard .next{list-style:none;margin:0;padding:0}
-  .ecard .next li{padding:3px 0;font-size:12px}
-  .ecard .next a{color:var(--rust);text-decoration:none}
-  .ecard .next a:hover{text-decoration:underline}
-  .ecard .blocked{font-size:11px;color:var(--alarm);font-family:var(--mono);margin-top:4px}
   .ecard .diff-row{display:grid;grid-template-columns:1fr 1fr;gap:8px;font-family:var(--mono);
     font-size:12px;padding:6px 0;border-bottom:1px solid var(--rule)}
   .ecard .diff-row:last-child{border-bottom:none}
   .ecard .diff-row .side{color:var(--ink)}
   .ecard .diff-row .side .who{color:var(--tone);font-size:11px;display:block}
 
+  /* ── Action footer (unified across cards + defensive blocks) ── */
+  .act-footer{margin-top:auto;padding-top:10px;border-top:1px solid var(--rule)}
+  .act-label{font-size:10px;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--tone);margin-bottom:6px;display:block}
+  .act-list{display:flex;flex-wrap:wrap;gap:6px}
+  .act{font-family:var(--sans);font-size:12px;font-weight:600;padding:5px 10px;
+    border:1px solid var(--hairline);background:var(--surface);color:var(--ink);
+    cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:5px;
+    transition:background .12s,border-color .12s,color .12s}
+  .act:hover{background:var(--paper);border-color:var(--ink)}
+  .act.primary{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+  .act.primary:hover{background:var(--rust);border-color:var(--rust);color:var(--paper)}
+  .act.export{color:var(--tone);border-style:dashed}
+  .act.export:hover{color:var(--ink);border-style:solid;border-color:var(--ink)}
+  .act .glyph{font-size:13px;line-height:1;flex:none}
+  .act-blocked{font-size:11px;color:var(--alarm);font-family:var(--mono);
+    padding:6px 10px;border:1px solid var(--alarm);background:var(--surface);
+    margin-bottom:8px;display:flex;align-items:flex-start;gap:6px;line-height:1.4}
+  .act-blocked::before{content:"⊘";font-size:13px;flex:none;margin-top:1px}
+  .act-blocked .why{color:var(--alarm)}
+
   /* defensive experience blocks */
-  .defensive{border:1px solid var(--hairline);background:var(--surface);padding:16px 18px}
+  .defensive{border:1px solid var(--hairline);background:var(--surface);padding:16px 18px;
+    display:flex;flex-direction:column}
   .defensive.stale{border-color:var(--tone);border-style:dashed}
   .defensive.denied{border-color:var(--alarm)}
   .defensive.redacted{border-color:var(--proof)}
@@ -324,10 +341,6 @@
   .defensive .body .lab{color:var(--tone);font-size:11px;text-transform:uppercase;
     letter-spacing:.06em;display:block;margin-top:8px;margin-bottom:2px}
   .defensive .body .mono{font-family:var(--mono);font-size:12px}
-  .defensive ul.next{list-style:none;margin:8px 0 0;padding:0}
-  .defensive ul.next li{padding:3px 0;font-size:13px}
-  .defensive ul.next a{color:var(--rust);text-decoration:none}
-  .defensive ul.next a:hover{text-decoration:underline}
 
   .card-section{margin-top:28px}
   .card-section > h2{font-family:var(--serif);font-weight:400;font-size:24px;
@@ -891,6 +904,18 @@ document.getElementById("prov").innerHTML = PROV.map(dlCard).join("");
 function card(c){
   const sealed = c.sealed ? " sealed" : "";
   const alarm = c.alarm ? " alarm" : "";
+  // Action typing: first action = primary (advance), "Export/Download" = export, rest = inspect
+  const acts = (c.next||[]).map((n,i)=>{
+    let cls = "act", glyph = "";
+    if(i===0){ cls += " primary"; }
+    else if(/^export|^download/i.test(n)){ cls += " export"; }
+    return `<a class="${cls}" href="#">${glyph}${n}</a>`;
+  }).join("");
+  const blocked = c.blocked
+    ? `<div class="act-blocked"><span class="why">${c.blocked}</span></div>` : "";
+  const footer = c.next
+    ? `<div class="act-footer">${blocked}<span class="act-label">safe next actions</span><div class="act-list">${acts}</div></div>`
+    : c.blocked ? `<div class="act-footer">${blocked}</div>` : "";
   return `<div class="ecard${sealed}${alarm}">
     <div class="head">
       <div class="title">${c.id}<span class="sub">${c.title}</span></div>
@@ -901,8 +926,7 @@ function card(c){
     ${c.evidence ? `<div class="evidence">${c.evidence}</div>` : ""}
     ${c.diff ? `<div>${c.diff}</div>` : ""}
     ${c.links ? `<div class="links">${c.links}</div>` : ""}
-    ${c.next ? `<ul class="next">${c.next.map(n=>`<li><a href="#">${n}</a></li>`).join("")}</ul>` : ""}
-    ${c.blocked ? `<div class="blocked">blocked: ${c.blocked}</div>` : ""}
+    ${footer}
   </div>`;
 }
 
@@ -1033,8 +1057,14 @@ const DEFENSIVE = [
       <span class="lab">Collected</span> 47 days ago
       <span class="lab">Freshness policy</span> 30 days
       <span class="lab">Impact</span> Cannot support current release claim.
-      <span class="lab">Safe next actions</span>
-      <ul class="next"><li><a href="#">Run new scan</a></li><li><a href="#">Attach updated evidence</a></li><li><a href="#">Open affected claims</a></li></ul>
+    </div>
+    <div class="act-footer">
+      <span class="act-label">safe next actions</span>
+      <div class="act-list">
+        <a class="act primary" href="#">Run new scan</a>
+        <a class="act" href="#">Attach updated evidence</a>
+        <a class="act" href="#">Open affected claims</a>
+      </div>
     </div>
   </div>`},
 
@@ -1043,8 +1073,15 @@ const DEFENSIVE = [
     <h3>Projection blocked</h3>
     <div class="body">
       <span class="lab">Reason</span> Claim C-018 is marked attested but has no verified proof reference.
-      <span class="lab">Safe next actions</span>
-      <ul class="next"><li><a href="#">Run proof verification</a></li><li><a href="#">Downgrade claim to observed</a></li><li><a href="#">Remove from attested coverage</a></li></ul>
+    </div>
+    <div class="act-footer">
+      <div class="act-blocked"><span class="why">attested claim has no verified proof reference — projection denied</span></div>
+      <span class="act-label">safe next actions</span>
+      <div class="act-list">
+        <a class="act primary" href="#">Run proof verification</a>
+        <a class="act" href="#">Downgrade claim to observed</a>
+        <a class="act" href="#">Remove from attested coverage</a>
+      </div>
     </div>
   </div>`},
 
@@ -1056,6 +1093,14 @@ const DEFENSIVE = [
       <span class="lab">Included</span> status attestation · validity window · contract scope · hash reference
       <span class="lab">Excluded</span> raw investigation records · personal history · sensitive identifiers
       <span class="lab">Redaction record</span> <span class="mono">sha256:1b7e…4420</span>
+    </div>
+    <div class="act-footer">
+      <span class="act-label">safe next actions</span>
+      <div class="act-list">
+        <a class="act primary" href="#">Export redacted bundle</a>
+        <a class="act" href="#">View redaction record</a>
+        <a class="act export" href="#">Export redaction manifest</a>
+      </div>
     </div>
   </div>`},
 
@@ -1069,6 +1114,14 @@ const DEFENSIVE = [
       <span class="lab">Impact</span> OSCAL export valid with extension manifest.
       <span class="lab">Rule</span> Lossiness is not failure. Undeclared lossiness is failure.
     </div>
+    <div class="act-footer">
+      <span class="act-label">safe next actions</span>
+      <div class="act-list">
+        <a class="act primary" href="#">Open extension manifest</a>
+        <a class="act" href="#">View linked OSCAL resource</a>
+        <a class="act export" href="#">Export with extension</a>
+      </div>
+    </div>
   </div>`},
 
   // Contradiction
@@ -1078,8 +1131,15 @@ const DEFENSIVE = [
       <span class="lab">Claim</span> MFA enforced for all privileged accounts.
       <span class="lab">Observation</span> Privileged account <span class="mono">svc-admin-04</span> has no MFA method.
       <span class="lab">Impact</span> IA-2 claim downgraded. Finding opened. POA&M required.
-      <span class="lab">Safe next actions</span>
-      <ul class="next"><li><a href="#">Open conflict</a></li><li><a href="#">Create POA&M</a></li><li><a href="#">Downgrade IA-2 to observed</a></li></ul>
+    </div>
+    <div class="act-footer">
+      <div class="act-blocked"><span class="why">observation refutes claim — IA-2 downgraded, finding opened</span></div>
+      <span class="act-label">safe next actions</span>
+      <div class="act-list">
+        <a class="act primary" href="#">Open conflict</a>
+        <a class="act" href="#">Create POA&M</a>
+        <a class="act" href="#">Downgrade IA-2 to observed</a>
+      </div>
     </div>
   </div>`},
 
@@ -1093,8 +1153,15 @@ const DEFENSIVE = [
       <span class="lab">Verification</span> VerifyClaim pending · VerifyEvidence pending
       <span class="lab">Disposition</span> Cannot count toward local attested coverage yet.
       <span class="lab">Rule</span> Import never means trust.
-      <span class="lab">Safe next actions</span>
-      <ul class="next"><li><a href="#">Run VerifyClaim</a></li><li><a href="#">Run VerifyEvidence</a></li><li><a href="#">Reconcile-by-hash</a></li></ul>
+    </div>
+    <div class="act-footer">
+      <div class="act-blocked"><span class="why">imported-unverified — cannot count toward local attested coverage</span></div>
+      <span class="act-label">safe next actions</span>
+      <div class="act-list">
+        <a class="act primary" href="#">Run VerifyClaim</a>
+        <a class="act" href="#">Run VerifyEvidence</a>
+        <a class="act" href="#">Reconcile-by-hash</a>
+      </div>
     </div>
   </div>`},
 ];
