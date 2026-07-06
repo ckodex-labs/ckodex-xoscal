@@ -45,22 +45,6 @@ sboms:
     documents:
       - "{{ .ArtifactName }}.sbom.json"
 
-signs:
-  - cmd: cosign
-    env:
-      - COSIGN_EXPERIMENTAL=1
-    certificate: "${artifact}.cert"
-    args:
-      - sign-blob
-      - --yes
-      - --output-certificate
-      - "${certificate}"
-      - --output-signature
-      - "${signature}"
-      - "${artifact}"
-    artifacts: all
-    output: true
-
 changelog:
   sort: asc
   filters:

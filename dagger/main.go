@@ -360,8 +360,7 @@ func (m *Xoscal) goreleaserBase() *dagger.Container {
 		WithExec([]string{"apt-get", "update"}).
 		WithExec([]string{"apt-get", "install", "-y", "--no-install-recommends", "ca-certificates", "git", "curl"}).
 		WithExec([]string{"sh", "-c", "curl -fsSL https://github.com/goreleaser/goreleaser/releases/latest/download/goreleaser_Linux_$(uname -m | sed 's/aarch64/arm64/').tar.gz | tar -xzf - -C /usr/local/bin goreleaser"}).
-		WithExec([]string{"sh", "-c", "curl -fsSL https://raw.githubusercontent.com/anchore/syft/main/install.sh | sh -s -- -b /usr/local/bin"}).
-		WithExec([]string{"sh", "-c", "curl -fsSL https://github.com/sigstore/cosign/releases/download/v2.4.1/cosign-linux-$(uname -m | sed 's/x86_64/amd64/;s/aarch64/arm64/') -o /usr/local/bin/cosign && chmod +x /usr/local/bin/cosign"})
+		WithExec([]string{"sh", "-c", "curl -fsSL https://raw.githubusercontent.com/anchore/syft/main/install.sh | sh -s -- -b /usr/local/bin"})
 }
 
 // goreleaser returns a GoReleaser container with source, caches, and token mounted.
@@ -376,11 +375,12 @@ func (m *Xoscal) goreleaser(source *dagger.Directory, githubToken *dagger.Secret
 		WithEnvVariable("GOMODCACHE", "/go/pkg/mod").
 		WithEnvVariable("GOCACHE", "/root/.cache/go-build").
 		WithEnvVariable("CGO_ENABLED", "0").
-		WithEnvVariable("COSIGN_EXPERIMENTAL", "1").
 		WithSecretVariable("GITHUB_TOKEN", githubToken)
 }
 
-// Release runs GoReleaser release --clean (publishes GitHub release, archives, SBOMs, signs).
+// Release runs GoReleaser release --clean (publishes GitHub release, archives, SBOMs).
+// SLSA L3 provenance is generated separately by slsa-github-generator.
+// Container image signing is done separately by cosign in the image job.
 func (m *Xoscal) Release(source *dagger.Directory, githubToken *dagger.Secret) *dagger.Directory {
 	return m.goreleaser(source, githubToken).
 		WithExec([]string{"goreleaser", "release", "--clean"}).
