@@ -1,0 +1,113 @@
+name: OSCAL Reconcile
+
+# Scheduled RSS-driven drift detection between upstream OSCAL / framework
+# sources and the hand-authored protos. Detection is automated; the actual
+# proto reconciliation is gated behind a human-reviewed draft PR (DAL 3,
+# never auto-merged) per CKODEX governance.
+
+on:
+  schedule:
+    - cron: "0 6 * * 1" # weekly, Monday 06:00 UTC
+  workflow_dispatch: {} # manual trigger for on-demand checks
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  detect-drift:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install yq (mikefarah)
+        run: |
+          sudo curl -fsSL -o /usr/local/bin/yq \
+            https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64
+          sudo chmod +x /usr/local/bin/yq
+          yq --version
+
+      - name: Poll feeds for drift
+        id: poll
+        run: |
+          set +e
+          report=$(./scripts/reconcile/poll-feeds.sh)
+          code=$?
+          set -e
+          printf '%s\n' "$report" > reconcile-report.json
+          echo "exit_code=$code" >> "$GITHUB_OUTPUT"
+          echo "--- drift report ---"
+          cat reconcile-report.json
+          # 0 = in sync, 3 = drift, anything else = operational failure
+          if [ "$code" -ne 0 ] && [ "$code" -ne 3 ]; then
+            echo "poller failed (exit $code)" >&2
+            exit "$code"
+          fi
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: "1.25"
+
+      - name: Verify OSCAL spec lock-step
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          go run ./server/cmd/xoscal-spec-registry -mode verify \
+            -registry data/oscal/spec-registry.yaml > spec-verify.json || code=$?
+          cat spec-verify.json
+          # exit 3 = per-model schema drift; surface it but let the existing
+          # drift handling open the PR (do not hard-fail the scheduled run).
+          if [ "${code:-0}" -ne 0 ] && [ "${code:-0}" -ne 3 ]; then echo "spec verify operational error (exit ${code:-0})" >&2; exit 1; fi
+
+      - name: Summarize
+        run: |
+          {
+            echo "## OSCAL Reconcile — drift report"
+            echo '```json'
+            cat reconcile-report.json
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Open reconcile draft PR on drift
+        if: steps.poll.outputs.exit_code == '3'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          # Branch keyed to the drift fingerprint so re-runs reuse, not duplicate.
+          fp=$(jq -r '[.sources[] | select(.status=="drift") | "\(.source):\(.latest)"] | join("_")' reconcile-report.json)
+          branch="oscal-reconcile/${fp//[^a-zA-Z0-9._-]/-}"
+
+          if gh pr list --head "$branch" --state open --json number | jq -e 'length > 0' >/dev/null; then
+            echo "Reconcile PR already open for $branch — skipping."
+            exit 0
+          fi
+
+          git config user.name  "oscal-reconcile-bot"
+          git config user.email "oscal-reconcile-bot@users.noreply.github.com"
+          git checkout -b "$branch"
+          git add reconcile-report.json
+          git commit -m "chore(oscal): detected upstream drift ($fp)"
+          git push -u origin "$branch"
+
+          # YAML strips the block's common indent, so heredoc body lands at
+          # column 0 — markdown renders as checkboxes, not an indented code block.
+          cat > pr-body.md <<'BODY'
+          Automated upstream-drift detection found a delta between a tracked source
+          and `data/oscal/upstream.lock.yaml`. See `reconcile-report.json` in this PR.
+
+          This PR is a **handoff**, not a completed reconciliation. To reconcile:
+
+          - [ ] Run `/oscal-reconcile` (oscal-schema-reconciler agent) on this branch
+          - [ ] Review proposed additive proto edits (buf-breaking must pass)
+          - [ ] Regenerate SDKs (`make proto`)
+          - [ ] Update affected downstream skills/docs listed by the agent
+          - [ ] Bump `data/oscal/upstream.lock.yaml` (parity: verified, fill sha + reconciled_at)
+          - [ ] Mark PR ready; human approves (DAL 3, no auto-merge)
+          BODY
+
+          gh pr create --draft --head "$branch" --base main \
+            --title "chore(oscal): reconcile upstream drift — $fp" \
+            --body-file pr-body.md

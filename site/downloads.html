@@ -1,0 +1,14 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>xOSCAL — Downloads</title><link rel="stylesheet" href="ds3.css"></head>
+<body><header><h1>Downloads</h1><nav><a href="index.html">Home</a></nav></header>
+<main><h2>SDK Clients</h2><div id="sdks"></div>
+<h2>OSCAL Frameworks</h2><div id="frameworks"></div></main>
+<script>
+fetch("./downloads.json").then(r=>r.json()).then(d=>{
+  const row = x => `<div class="ck-quiet"><a href="${x.path}">${x.name}</a>
+    <div class="ck-hash">${x.digest}</div></div>`;
+  document.getElementById("sdks").innerHTML = d.sdks.map(row).join("");
+  document.getElementById("frameworks").innerHTML = d.frameworks.map(row).join("");
+});
+</script></body></html>

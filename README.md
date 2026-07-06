@@ -2,6 +2,16 @@
 
 A Go gRPC server for managing OSCAL (Open Security Controls Assessment Language) artifacts, backed by SQLite. Part of the broader reg-to-OSCAL engine for converting regulatory texts into structured compliance documents.
 
+## Portal
+
+Proto docs, supply-chain transparency, SDK clients, and OSCAL framework
+downloads are published to GitHub Pages (built by `dagger call site`).
+
+- Live local preview (real data, needs the Dagger engine + network):
+  `make site-serve` → http://localhost:8080
+- Standalone preview (sample data, no server, no build): open
+  `portal-preview.html` directly in a browser.
+
 ## Architecture
 
 ```plaintext

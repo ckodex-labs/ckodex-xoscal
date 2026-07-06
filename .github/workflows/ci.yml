@@ -19,7 +19,7 @@ jobs:
         uses: dagger/dagger-for-github@v6
         with:
           install-only: true
-          version: "v0.21.0"
+          version: "v0.21.7"
 
       - name: Dagger All (lint + test + race + security)
         run: dagger call all --source=.
@@ -44,7 +44,7 @@ jobs:
         uses: dagger/dagger-for-github@v6
         with:
           install-only: true
-          version: "v0.21.0"
+          version: "v0.21.7"
 
       - name: Dagger Security (govulncheck + gosec)
         run: dagger call security --source=. export --path=gosec-results.sarif
@@ -66,7 +66,7 @@ jobs:
         uses: dagger/dagger-for-github@v6
         with:
           install-only: true
-          version: "v0.21.0"
+          version: "v0.21.7"
 
       - name: Dagger Image Build
         run: dagger call image --source=. export --path=xoscal-server.tar

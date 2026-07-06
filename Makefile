@@ -1,4 +1,4 @@
-.PHONY: all build build-release test test-race coverage proto lint fmt security docker clean tidy dagger-dev dagger-all dagger-test dagger-lint dagger-security dagger-image
+.PHONY: all build build-release test test-race coverage proto lint fmt security docker clean tidy dagger-dev dagger-all dagger-test dagger-lint dagger-security dagger-image site site-serve
 
 BINARY := xoscal-server
 IMAGE  := xoscal-server
@@ -74,3 +74,9 @@ dagger-snapshot: dagger-dev
 
 dagger-release: dagger-dev
 	dagger call release --source=. --github-token=env:GITHUB_TOKEN
+
+site: dagger-dev ## Build the portal site to ./_site (real data; needs engine + network)
+	dagger call site --source=. export --path=_site
+
+site-serve: dagger-dev ## Build and serve the portal at http://localhost:8080 (Ctrl-C to stop)
+	dagger call serve --source=. up --ports 8080:8080
