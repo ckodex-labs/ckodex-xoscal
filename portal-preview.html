@@ -350,6 +350,29 @@
   .card-filter button{font-family:var(--sans);font-size:12px;font-weight:500;padding:4px 10px;
     border:1px solid var(--hairline);background:var(--surface);color:var(--tone);cursor:pointer}
   .card-filter button.active{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+
+  /* ── Interop matrix table ── */
+  .interop-matrix{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px}
+  .interop-matrix th{font-size:11px;letter-spacing:.06em;text-transform:uppercase;
+    color:var(--tone);font-weight:600;text-align:left;padding:8px 12px;
+    border-bottom:1px solid var(--tone)}
+  .interop-matrix td{padding:8px 12px;border-bottom:1px solid var(--rule);vertical-align:top}
+  .interop-matrix td:first-child{font-weight:600;color:var(--ink)}
+  .interop-matrix td .ext-yes{color:var(--proof);font-weight:600}
+  .interop-matrix td .ext-no{color:var(--tone)}
+  .interop-matrix td .ext-sometimes{color:var(--tone)}
+  .interop-matrix tr:last-child td{border-bottom:none}
+  .interop-matrix .touch{font-family:var(--mono);font-size:12px;color:var(--tone)}
+
+  /* ── DUX invariants ── */
+  .dux-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:8px}
+  .dux-item{border:1px solid var(--hairline);background:var(--surface);padding:10px 14px}
+  .dux-item .id{font-family:var(--mono);font-size:11px;font-weight:600;color:var(--tone)}
+  .dux-item .rule{font-size:13px;color:var(--ink);margin-top:3px;line-height:1.4}
+  .dux-mantra{font-family:var(--serif);font-size:18px;line-height:1.6;color:var(--ink);
+    padding:16px 20px;border:1px solid var(--hairline);background:var(--paper);margin-top:16px}
+  .dux-mantra .line{display:block}
+  .dux-mantra .line + .line{margin-top:2px}
 </style>
 </head>
 <body>
@@ -513,12 +536,16 @@
               <tr><td>overlap</td><td class="a" colspan="2">Both claim AU-6(1)</td></tr>
             </table>
           </div>
-          <div class="actions">
-            <button class="btn primary">Accept A</button>
-            <button class="btn">Accept B</button>
-            <button class="btn">Merge</button>
-            <button class="btn ghost">Reject both</button>
-            <button class="btn ghost">Escalate to human-root reviewer</button>
+          <div class="act-footer" style="margin-top:14px">
+            <div class="act-blocked"><span class="why">conflicts are surfaced, never auto-merged — human resolution required</span></div>
+            <span class="act-label">resolution actions</span>
+            <div class="act-list">
+              <a class="act primary" href="#">Accept A</a>
+              <a class="act" href="#">Accept B</a>
+              <a class="act" href="#">Merge</a>
+              <a class="act" href="#">Reject both</a>
+              <a class="act" href="#">Escalate to human-root reviewer</a>
+            </div>
           </div>
         </section>
 
@@ -533,13 +560,14 @@
             1 inferred claim from reg-to-OSCAL · 0 proofs · 0 observations.</div>
           <div class="blk"><span class="lab">Missing</span>
             Authored implementation statement or assessment observation.</div>
-          <div class="blk"><span class="lab">Next safe actions</span>
-            <ul class="next">
-              <li><a href="#">Author implementation statement</a></li>
-              <li><a href="#">Attach observation</a></li>
-              <li><a href="#">Open reg-to-OSCAL provenance</a></li>
-              <li><a href="#">Export gap summary</a></li>
-            </ul>
+          <div class="act-footer" style="margin-top:14px">
+            <span class="act-label">safe next actions</span>
+            <div class="act-list">
+              <a class="act primary" href="#">Author implementation statement</a>
+              <a class="act" href="#">Attach observation</a>
+              <a class="act" href="#">Open reg-to-OSCAL provenance</a>
+              <a class="act export" href="#">Export gap summary</a>
+            </div>
           </div>
         </section>
 
@@ -606,11 +634,14 @@
             <div><b style="color:var(--ink)">Claimed → attesting…</b> 2 stages remain.</div>
             <div class="track">track: <b>Claimed</b> → Observed → <b>Attested</b> (on ladder completion)</div>
           </div>
-          <div class="actions">
-            <button class="btn primary">Run Attest</button>
-            <button class="btn ghost">Open evidence</button>
-            <button class="btn ghost">Open source refs</button>
-            <button class="btn ghost">Export trace</button>
+          <div class="act-footer" style="margin-top:14px">
+            <span class="act-label">safe next actions</span>
+            <div class="act-list">
+              <a class="act primary" href="#">Run Attest</a>
+              <a class="act" href="#">Open evidence</a>
+              <a class="act" href="#">Open source refs</a>
+              <a class="act export" href="#">Export trace</a>
+            </div>
           </div>
         </section>
 
@@ -628,10 +659,13 @@
             <div class="meta">recipient: FedRAMP PMO · signature: valid</div>
             <div class="meta">exchange: receiver verified</div>
           </div>
-          <div class="actions">
-            <button class="btn ghost">Create new snapshot</button>
-            <button class="btn ghost">Compare with v2</button>
-            <button class="btn ghost">Export manifest</button>
+          <div class="act-footer" style="margin-top:14px">
+            <span class="act-label">lifecycle actions</span>
+            <div class="act-list">
+              <a class="act primary" href="#">Create new snapshot</a>
+              <a class="act" href="#">Compare with v2</a>
+              <a class="act export" href="#">Export manifest</a>
+            </div>
           </div>
         </section>
 
@@ -676,10 +710,13 @@
             <div class="reason">Receiver policy: accepted into graph. Sender assertion was not sufficient;
               local verification passed.</div>
           </div>
-          <div class="actions">
-            <button class="btn primary">Accept into graph</button>
-            <button class="btn ghost">Open proof ladder</button>
-            <button class="btn ghost">Export verification receipt</button>
+          <div class="act-footer" style="margin-top:14px">
+            <span class="act-label">safe next actions</span>
+            <div class="act-list">
+              <a class="act primary" href="#">Accept into graph</a>
+              <a class="act" href="#">Open proof ladder</a>
+              <a class="act export" href="#">Export verification receipt</a>
+            </div>
           </div>
         </section>
 
@@ -705,10 +742,14 @@
             <div class="reason">Digest mismatch between presented evidence and source reference.
               Sender assertion is not sufficient. Claim held under containment pending re-verification.</div>
           </div>
-          <div class="actions">
-            <button class="btn">Request corrected evidence</button>
-            <button class="btn ghost">Open quarantine trace</button>
-            <button class="btn ghost">Reject import</button>
+          <div class="act-footer" style="margin-top:14px">
+            <div class="act-blocked"><span class="why">digest mismatch — claim held under containment, not accepted into local graph</span></div>
+            <span class="act-label">safe next actions</span>
+            <div class="act-list">
+              <a class="act primary" href="#">Request corrected evidence</a>
+              <a class="act" href="#">Open quarantine trace</a>
+              <a class="act" href="#">Reject import</a>
+            </div>
           </div>
         </section>
 
@@ -748,9 +789,12 @@
             <div class="name">Partner-D</div>
             <span class="result v-skip">pending</span>
           </div>
-          <div class="actions" style="margin-top:14px">
-            <button class="btn primary">Sync claims</button>
-            <button class="btn ghost">Reconcile-by-hash</button>
+          <div class="act-footer" style="margin-top:14px">
+            <span class="act-label">sync actions</span>
+            <div class="act-list">
+              <a class="act primary" href="#">Sync claims</a>
+              <a class="act" href="#">Reconcile-by-hash</a>
+            </div>
           </div>
         </section>
       </div>
@@ -843,6 +887,34 @@
       <p>When OSCAL cannot natively represent external semantics, the extension manifest makes
         the gap explicit — with schema, reason, lossiness, and OSCAL linkage.</p>
       <div class="card-grid" id="ext-cards"></div>
+    </div>
+
+    <!-- Interop matrix -->
+    <div class="card-section" data-cat="interop">
+      <h2>Interoperability matrix</h2>
+      <p>Every external artifact maps to a primary card, an OSCAL touchpoint, and an extension
+        decision. When OSCAL can carry it natively, use OSCAL. When it cannot, declare lossiness
+        and link via extension manifest.</p>
+      <div class="panel" style="padding:0;overflow-x:auto">
+        <table class="interop-matrix" id="interop-matrix"></table>
+      </div>
+    </div>
+
+    <!-- DUX invariants -->
+    <div class="card-section" data-cat="defensive">
+      <h2>Defensive UX invariants</h2>
+      <p>Twelve invariants that govern every card, every state transition, every export.
+        These are not suggestions — they are release-blocking constraints on the experience.</p>
+      <div class="dux-grid" id="dux-grid"></div>
+      <div class="dux-mantra">
+        <span class="line">Every external artifact is a card.</span>
+        <span class="line">Every card supports, refutes, qualifies, or maps a claim.</span>
+        <span class="line">Every claim traces to evidence.</span>
+        <span class="line">Every export carries its envelope.</span>
+        <span class="line">Every receiver verifies locally.</span>
+        <span class="line">Every gap is drawn.</span>
+        <span class="line">Every loss is declared.</span>
+      </div>
     </div>
   </section>
 
@@ -1179,6 +1251,50 @@ document.getElementById("canonical-cards").innerHTML = CANONICAL.map(card).join(
 document.getElementById("interop-cards").innerHTML = INTEROP.map(card).join("");
 document.getElementById("defensive-cards").innerHTML = DEFENSIVE.map(d=>d.html).join("");
 document.getElementById("ext-cards").innerHTML = EXT.map(card).join("");
+
+// ── Interop matrix ──
+const INTEROP_MATRIX = [
+  ["SBOM", "SBOM Card", "back-matter, assessment evidence, component inventory", "sometimes"],
+  ["VEX / VDR", "VEX Card", "assessment result, risk, POA&M", "sometimes"],
+  ["AI-BOM / ML-BOM", "AI-BOM Card", "back-matter, assessment evidence", "yes"],
+  ["Scanner result", "Scanner Card", "observation, finding, risk", "no / sometimes"],
+  ["Build attestation", "Attestation Card", "back-matter, evidence ref", "sometimes"],
+  ["CMMC scope", "CMMC Profile / Scope Cards", "SSP, assessment plan/results, back-matter", "yes"],
+  ["CPCSC", "CPCSC Profile Card", "catalog/profile/SSP/evidence", "yes"],
+  ["Contract Security", "Capability Cards", "back-matter, SSP metadata, evidence refs", "yes"],
+  ["Controlled Goods", "Controlled Goods Cards", "evidence refs, back-matter", "yes"],
+  ["AI tool output", "AI Tool Card", "inferred claim, provenance", "yes"],
+  ["Partner evidence", "Inbound Evidence Card", "back-matter, exchange ledger", "sometimes"],
+];
+document.getElementById("interop-matrix").innerHTML =
+  `<thead><tr><th>Artifact</th><th>Primary Card</th><th>OSCAL Touchpoint</th><th>Extension</th></tr></thead><tbody>` +
+  INTEROP_MATRIX.map(r=>{
+    const ext = r[3];
+    let cls = "ext-sometimes", txt = ext;
+    if(ext==="yes"){cls="ext-yes"; txt="required"}
+    else if(ext==="no / sometimes"){cls="ext-no"; txt="no / sometimes"}
+    else if(ext==="sometimes"){cls="ext-sometimes"; txt="sometimes"}
+    return `<tr><td>${r[0]}</td><td>${r[1]}</td><td class="touch">${r[2]}</td><td><span class="${cls}">${txt}</span></td></tr>`;
+  }).join("") + `</tbody>`;
+
+// ── DUX invariants ──
+const DUX = [
+  ["DUX_001", "No external artifact supports a claim without digest and subject binding."],
+  ["DUX_002", "Generated AI output lands as inferred."],
+  ["DUX_003", "Imported evidence lands as imported-unverified."],
+  ["DUX_004", "Receiver verification is local."],
+  ["DUX_005", "Stale evidence remains visible and cannot render green/proof."],
+  ["DUX_006", "Lossiness must be declared when projecting non-native evidence."],
+  ["DUX_007", "Redaction is a visible transformation."],
+  ["DUX_008", "Personnel-sensitive evidence is minimized by default."],
+  ["DUX_009", "A scan result must match the release or subject it claims to support."],
+  ["DUX_010", "A bill of materials must be bound to a product, release, model, system, or dataset."],
+  ["DUX_011", "No extension manifest can be exported without schema and reason."],
+  ["DUX_012", "No export bundle leaves without manifest, hash, and redaction state."],
+];
+document.getElementById("dux-grid").innerHTML = DUX.map(d=>
+  `<div class="dux-item"><div class="id">${d[0]}</div><div class="rule">${d[1]}</div></div>`
+).join("");
 
 // ── Card filter ──
 document.querySelectorAll('#card-filter button').forEach(b=>{
