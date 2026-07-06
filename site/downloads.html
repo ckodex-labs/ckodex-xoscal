@@ -4,9 +4,48 @@
 <body><header><h1>Downloads</h1>
 <nav><a href="portal.html">Portal</a><a href="docs.html">API Docs</a>
 <a href="transparency.html">Transparency</a><a href="sbom-validation.html">SBOM Validation</a><a href="index.html">Home</a></nav></header>
-<main><h2>SDK Clients</h2><div id="sdks"></div>
-<h2>OSCAL Frameworks</h2><div id="frameworks"></div></main>
+<main>
+<h2>Release v0.1.0 — Binaries &amp; Container</h2>
+<p>Release artifacts published via goreleaser with SLSA L3 provenance and cosign-signed container image.
+All archives include per-archive CycloneDX SBOMs. <strong>These are signed and downloadable.</strong></p>
+<div id="release"></div>
+
+<h2>SDK Clients</h2><div id="sdks"></div>
+<h2>OSCAL Frameworks</h2><div id="frameworks"></div>
+</main>
 <script>
+const RELEASE_URL = "https://github.com/ckodex-labs/ckodex-xoscal/releases/download/v0.1.0";
+const RELEASE = [
+  {name:"ckodex-xoscal_0.1.0_Linux_x86_64.tar.gz", desc:"Linux x86_64 archive + SBOM",
+   digest:"sha256:a3dedd07dc8e8272e5059dcd2437857510e071c23b3c16449dd55c023b2682d7",
+   url:RELEASE_URL+"/ckodex-xoscal_0.1.0_Linux_x86_64.tar.gz"},
+  {name:"ckodex-xoscal_0.1.0_Linux_arm64.tar.gz", desc:"Linux arm64 archive + SBOM",
+   digest:"sha256:cb165f107509067d9ab956544f8a2388086cd1c2cbc0a57717a2621dee5aa7b0",
+   url:RELEASE_URL+"/ckodex-xoscal_0.1.0_Linux_arm64.tar.gz"},
+  {name:"ckodex-xoscal_0.1.0_Darwin_x86_64.tar.gz", desc:"macOS x86_64 archive + SBOM",
+   digest:"sha256:c1b803d3675ee01b26beeccbff3ea5be3751859e1426ae15dfae25e9fac93d4d",
+   url:RELEASE_URL+"/ckodex-xoscal_0.1.0_Darwin_x86_64.tar.gz"},
+  {name:"ckodex-xoscal_0.1.0_Darwin_arm64.tar.gz", desc:"macOS arm64 (Apple Silicon) archive + SBOM",
+   digest:"sha256:73f7d74946b2fe2d5d038b3c3da73621c5fcae6da96492530891774b1852294e",
+   url:RELEASE_URL+"/ckodex-xoscal_0.1.0_Darwin_arm64.tar.gz"},
+  {name:"checksums.txt", desc:"SHA256 checksums for all archives",
+   digest:"sha256:3a7c474ce80ba594d5a1f39bfbb8470858ec88c28849f76874a00eac646f36",
+   url:RELEASE_URL+"/checksums.txt"},
+  {name:"provenance.intoto.jsonl", desc:"SLSA L3 in-toto attestation (sigstore-signed)",
+   digest:"18314 bytes",
+   url:RELEASE_URL+"/provenance.intoto.jsonl"},
+  {name:"sbom-assessment-results.json", desc:"OSCAL assessment-results (sbom-tools validation)",
+   digest:"82492 bytes",
+   url:RELEASE_URL+"/sbom-assessment-results.json"},
+  {name:"ghcr.io/ckodex-labs/ckodex-xoscal:v0.1.0", desc:"Container image multi-arch cosign-signed",
+   digest:"cosign keyless (OIDC)",
+   url:"https://github.com/ckodex-labs/ckodex-xoscal/pkgs/container/ckodex-xoscal"}
+];
+const relRow = x => `<div class="ck-quiet"><a href="${x.url}" rel="noopener">${x.name}</a>
+  <div class="ck-desc">${x.desc}</div>
+  <div class="ck-hash">${x.digest}</div></div>`;
+document.getElementById("release").innerHTML = RELEASE.map(relRow).join("");
+
 fetch("./downloads.json").then(r=>r.json()).then(d=>{
   const row = x => `<div class="ck-quiet"><a href="${x.path}">${x.name}</a>
     <div class="ck-hash">${x.digest}</div></div>`;

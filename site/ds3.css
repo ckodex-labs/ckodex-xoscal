@@ -8,5 +8,6 @@ nav a { color:var(--ck-accent); margin-right:16px; text-decoration:none; }
 .ck-quiet { border:1px solid var(--ck-fg-3); padding:16px; margin:12px 0; background:var(--ck-surface); }
 .ck-sealed { border-width:2px; clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,0 100%); }
 .ck-hash { font-family:"JetBrains Mono",monospace; font-variant-ligatures:none; font-size:13px; }
+.ck-desc { font-size:13px; color:var(--ck-fg-3); margin:2px 0 4px; }
 .ck-proof { color:var(--ck-proof); }
 .unsigned { color:var(--ck-fg-3); }
