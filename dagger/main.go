@@ -332,8 +332,11 @@ func (m *Xoscal) SbomValidation(source *dagger.Directory) *dagger.File {
 		WithExec([]string{"apt-get", "install", "-y", "--no-install-recommends", "pkg-config", "libssl-dev"}).
 		WithExec([]string{"cargo", "install", "sbom-tools", "--git", "https://github.com/sbom-tool/sbom-tools", "--root", "/usr/local", "--locked"}).
 		WithFile("/tmp/sbom.cyclonedx.json", sbom).
-		WithExec([]string{"sbom-tools", "validate", "/tmp/sbom.cyclonedx.json", "--standard", "ntia", "-o", "oscal-json", "-O", "/tmp/sbom-assessment-results.oscal.json"}).
-		WithExec([]string{"sh", "-c", "test -s /tmp/sbom-assessment-results.oscal.json"}).
+		// sbom-tools validate exits non-zero when it finds violations — that's
+		// the expected case (we WANT the findings). The OSCAL assessment-results
+		// file is still written. Wrap so we don't fail the build; just verify
+		// the output file exists and is non-empty.
+		WithExec([]string{"sh", "-c", "sbom-tools validate /tmp/sbom.cyclonedx.json --standard ntia -o oscal-json -O /tmp/sbom-assessment-results.oscal.json; test -s /tmp/sbom-assessment-results.oscal.json"}).
 		File("/tmp/sbom-assessment-results.oscal.json")
 }
 
