@@ -15,7 +15,7 @@
      ════════════════════════════════════════════════════════════════ */
   :root{
     --paper:#F6F1E8; --ink:#211B14; --tone:#6E6457;
-    --rust:#B4532A; --proof:#6D28D9; --alarm:#B91C1C;
+    --rust:#A04A26; --proof:#6D28D9; --alarm:#B91C1C;
     --surface:#fff; --hairline:#D9D2C4; --rule:#E8E1D2;
     --serif:"Instrument Serif",Georgia,serif;
     --sans:"Geist",system-ui,-apple-system,sans-serif;
@@ -149,16 +149,6 @@
     background:var(--paper);font-size:13px}
   .ladder .status .track{font-family:var(--mono);font-size:12px;color:var(--tone);margin-top:4px}
   .ladder .status .track b{color:var(--ink);font-weight:500}
-
-  /* ── Actions / buttons ── */
-  .actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
-  .btn{font-family:var(--sans);font-size:13px;font-weight:600;padding:8px 14px;
-    border:1px solid var(--ink);background:var(--surface);color:var(--ink);cursor:pointer}
-  .btn:hover{background:var(--paper)}
-  .btn.primary{background:var(--ink);color:var(--paper);border-color:var(--ink)}
-  .btn.primary:hover{background:var(--rust);border-color:var(--rust)}
-  .btn.ghost{border-color:var(--hairline);color:var(--tone);background:transparent}
-  .btn:disabled{opacity:.4;cursor:not-allowed}
 
   /* ── Evidence drawer ── */
   .evd ol{list-style:none;margin:0;padding:0;counter-reset:step}
@@ -400,7 +390,10 @@
     font-family:var(--mono);color:var(--tone);background:var(--surface);
     border:1px solid var(--hairline)}
   .journey li .jtitle{font-size:13px;font-weight:600;color:var(--ink)}
-  .journey li .jsurface{font-family:var(--mono);font-size:11px;color:var(--rust);margin-top:1px}
+  .journey li .jsurface{font-family:var(--mono);font-size:11px;color:var(--rust);margin-top:1px;
+    cursor:pointer;text-decoration:underline;text-decoration-color:transparent;
+    text-decoration-thickness:1px;transition:text-decoration-color .12s}
+  .journey li .jsurface:hover{text-decoration-color:var(--rust)}
   .journey li .jdetail{font-size:12px;color:var(--tone);margin-top:3px;line-height:1.4}
   .journey li .jstate{font-size:11px;font-weight:600;margin-top:4px;display:inline-block}
   .journey li .jstate.advance{color:var(--proof)}
@@ -417,6 +410,38 @@
     display:inline-flex;align-items:center;gap:6px}
   .persona-filter button.active{background:var(--ink);color:var(--paper);border-color:var(--ink)}
   .persona-filter button .glyph{font-family:var(--serif);font-size:15px}
+
+  /* ── Print: evidence export stylesheet ── */
+  @media print{
+    :root{--paper:#fff;--ink:#000;--tone:#555;--rust:#000;--proof:#333;
+      --alarm:#000;--surface:#fff;--hairline:#ccc;--rule:#ddd}
+    [data-theme="vault"]{--paper:#fff;--ink:#000;--tone:#555;--rust:#000;
+      --proof:#333;--alarm:#000;--surface:#fff;--hairline:#ccc;--rule:#ddd}
+    body{font-size:11pt;background:#fff;color:#000}
+    header.top,.banner,.card-filter,.persona-filter,.toggle,.act-list,
+    nav.surfaces,footer{display:none!important}
+    .view{display:block!important}
+    .view:not(#view-room) .room-title,
+    .view:not(#view-room) .room-sub{display:none}
+    .shell{max-width:100%;padding:0}
+    .panel,.ecard,.defensive,.persona-card{border:1px solid #ccc;
+      page-break-inside:avoid;break-inside:avoid}
+    .panel.sealed,.ecard.sealed{clip-path:none;border:2px solid #333}
+    .act-footer{border-top:1px solid #ddd;padding-top:6px}
+    .act-label{color:#555}
+    .chip,.sealed-tag,.pill{border:1px solid #999!important}
+    .act-blocked{border:1px solid #000!important}
+    a{color:#000;text-decoration:none}
+    a[href]:after{content:" (" attr(href) ")";font-size:9pt;color:#555}
+    a[href="#"]:after{content:""}
+    .prov{page-break-after:avoid}
+    .room-title{font-size:20pt}
+    .card-grid,.persona-grid,.dl-grid,.dux-grid{display:block}
+    .card-grid > *,.persona-grid > *,.dl-grid > *,.dux-grid > *{
+      margin-bottom:12pt;page-break-inside:avoid}
+    .grid{display:block}
+    .col{gap:12pt}
+  }
 </style>
 </head>
 <body>
@@ -1509,15 +1534,34 @@ document.querySelectorAll('#card-filter button').forEach(b=>{
   });
 });
 
-// ── View switching ──
+// ── View switching (reusable) ──
+const VIEWS = ['room','exchange','downloads','cartography','personas'];
+function switchView(name){
+  document.querySelectorAll('#nav button').forEach(x=>x.classList.remove('active'));
+  const btn = document.querySelector(`#nav button[data-view="${name}"]`);
+  if(btn) btn.classList.add('active');
+  document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));
+  const v = document.getElementById('view-'+name);
+  if(v) v.classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
 document.querySelectorAll('#nav button').forEach(b=>{
-  b.addEventListener('click',()=>{
-    document.querySelectorAll('#nav button').forEach(x=>x.classList.remove('active'));
-    b.classList.add('active');
-    document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));
-    document.getElementById('view-'+b.dataset.view).classList.add('active');
-    window.scrollTo({top:0,behavior:'smooth'});
-  });
+  b.addEventListener('click',()=>switchView(b.dataset.view));
+});
+
+// ── Keyboard navigation: 1-5 to switch views, t to toggle theme ──
+document.addEventListener('keydown',e=>{
+  if(e.target.tagName==='INPUT'||e.target.tagName==='TEXTAREA'||e.target.isContentEditable) return;
+  const idx = parseInt(e.key,10);
+  if(idx>=1 && idx<=VIEWS.length){ switchView(VIEWS[idx-1]); return; }
+  if(e.key==='t'||e.key==='T'){
+    const cur = document.documentElement.getAttribute('data-theme')||'atlas';
+    const next = cur==='atlas'?'vault':'atlas';
+    document.documentElement.setAttribute('data-theme',next);
+    document.querySelectorAll('.toggle[title="Theme"] button').forEach(x=>{
+      x.classList.toggle('on', x.dataset.theme===next);
+    });
+  }
 });
 
 // ── Theme toggle ──
@@ -1536,6 +1580,32 @@ document.querySelectorAll('.claims .claim').forEach(c=>{
     c.classList.add('sel');
   });
 });
+
+// ── Cross-view linking: persona journey steps link to their surfaces ──
+// Parse the surface text to determine target view and navigate on click.
+const SURFACE_MAP = [
+  {match:/Assurance Room|provenance header|coverage meter|Claim list|Claim Card|Proof Ladder|Evidence Card|Gap Card|Conflict Card|Lifecycle|Finding Card/i, view:'room'},
+  {match:/Exchange|inbound|verify row|outbound|disposition|quarantine/i, view:'exchange'},
+  {match:/Downloads|SDK|framework/i, view:'downloads'},
+  {match:/Cartography|SBOM Card|Scanner Card|VEX Card|AI Tool Card|AI-BOM|Attestation Card|Finding Card|Defensive UX|stale evidence/i, view:'cartography'},
+];
+document.querySelectorAll('.journey .jsurface').forEach(s=>{
+  s.style.cursor = 'pointer';
+  s.title = 'click to open surface';
+  s.addEventListener('click',()=>{
+    const txt = s.textContent;
+    for(const m of SURFACE_MAP){
+      if(m.match.test(txt)){ switchView(m.view); return; }
+    }
+  });
+});
+
+// ── Keyboard hint in footer ──
+const hint = document.createElement('span');
+hint.className = 'mono';
+hint.textContent = 'keys: 1-5 views · t theme';
+hint.style.opacity = '0.6';
+document.querySelector('footer').appendChild(hint);
 </script>
 </body>
 </html>
