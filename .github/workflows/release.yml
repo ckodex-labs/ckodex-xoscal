@@ -26,7 +26,7 @@ jobs:
         uses: dagger/dagger-for-github@v7
         with:
           version: "v0.21.7"
-          args: call release --source=. --github-token=env:GITHUB_TOKEN export --path=./dist
+          args: release --source=. --github-token=env:GITHUB_TOKEN export --path=./dist
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 

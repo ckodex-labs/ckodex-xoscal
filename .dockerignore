@@ -53,6 +53,3 @@ data/cache/
 # Documentation (not needed in build)
 docs/
 *.md
-
-# Kubernetes manifests (not needed in build)
-k8s/
