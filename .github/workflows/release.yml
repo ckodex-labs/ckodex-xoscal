@@ -82,7 +82,7 @@ jobs:
     with:
       base64-subjects: "${{ needs.goreleaser.outputs.hashes }}"
       upload-assets: true
-      provenance-name: "intoto.attestation"
+      provenance-name: "provenance.intoto.jsonl"
 
   image:
     runs-on: ubuntu-latest
