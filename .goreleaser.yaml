@@ -40,10 +40,6 @@ sboms:
     artifacts: archive
     documents:
       - "{{ .ArtifactName }}.sbom.json"
-  - id: binary
-    artifacts: binary
-    documents:
-      - "{{ .ArtifactName }}.sbom.json"
 
 changelog:
   sort: asc
