@@ -332,7 +332,7 @@ func (m *Xoscal) Site(source *dagger.Directory,
 func (m *Xoscal) Serve(source *dagger.Directory) *dagger.Service {
 	return dag.Container().
 		From("python:3.13-alpine").
-		WithDirectory("/site", m.Site(source)).
+		WithDirectory("/site", m.Site(source, nil)).
 		WithWorkdir("/site").
 		WithExposedPort(8080).
 		AsService(dagger.ContainerAsServiceOpts{
