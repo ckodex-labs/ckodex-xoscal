@@ -180,9 +180,9 @@ func (m *Xoscal) SdkBundles(source *dagger.Directory) *dagger.Directory {
 	return gen.Directory("/out")
 }
 
-// oscalFrameworks builds and runs xoscal-export-frameworks over the manifest,
+// OscalFrameworks builds and runs xoscal-export-frameworks over the manifest,
 // emitting one OSCAL catalog per framework. Needs network (fetches upstream).
-func (m *Xoscal) oscalFrameworks(source *dagger.Directory) *dagger.Directory {
+func (m *Xoscal) OscalFrameworks(source *dagger.Directory) *dagger.Directory {
 	return m.base(source).
 		WithExec([]string{"go", "build", "-o", "/bin/export-fw", "./server/cmd/xoscal-export-frameworks"}).
 		WithExec([]string{"/bin/export-fw", "-manifest", "data/frameworks/manifest.yaml", "-out", "/out", "-dsn", "/tmp/fw.db"}).
@@ -238,12 +238,16 @@ const buildDownloadsIndex = `
 // release-assets.json (name, url, size, digest) + downloads the
 // sbom-assessment-results.json from the release. This pins the site
 // to the actual release artifacts instead of regenerating independently.
-// Wrapped in a subshell so failures don't abort the site build.
+// Uses GITHUB_TOKEN if available for authenticated API access (5000 req/hr
+// vs 60 unauthenticated). Wrapped in a subshell so failures don't abort
+// the site build.
 const releaseAssetsScript = `
 (
+  auth=""
+  if [ -n "$GH_TOKEN" ]; then auth="-H \"Authorization: Bearer $GH_TOKEN\""; fi
   api="https://api.github.com/repos/ckodex-labs/ckodex-xoscal/releases/latest"
-  echo "Fetching latest release from $api" >&2
-  rel=$(curl -fsSL "$api") || { echo "API fetch failed" >&2; exit 1; }
+  echo "Fetching latest release from $api (auth: $([ -n "$auth" ] && echo yes || echo no))" >&2
+  rel=$(eval curl -fsSL $auth "$api") || { echo "API fetch failed" >&2; exit 1; }
   tag=$(echo "$rel" | jq -r .tag_name 2>/dev/null) || { echo "jq parse failed" >&2; exit 1; }
   [ "$tag" != "null" ] && [ -n "$tag" ] || { echo "No release found" >&2; exit 1; }
   echo "Latest release: $tag" >&2
@@ -266,9 +270,17 @@ const releaseAssetsScript = `
 // Site assembles the static GitHub Pages portal: docs (Scalar+OpenAPI),
 // transparency (provenance.json), downloads (SDK zips + OSCAL catalogs),
 // and SBOM validation (OSCAL assessment-results from the latest release).
-func (m *Xoscal) Site(source *dagger.Directory) *dagger.Directory {
+//
+// +optional
+// githubToken — when provided, authenticates GitHub API calls (5000 req/hr
+// vs 60 unauthenticated). Pass env:GITHUB_TOKEN in CI for reliable
+// release-assets.json generation.
+func (m *Xoscal) Site(source *dagger.Directory,
+	// +optional
+	githubToken *dagger.Secret,
+) *dagger.Directory {
 	sdks := m.SdkBundles(source)
-	frameworks := m.oscalFrameworks(source)
+	frameworks := m.OscalFrameworks(source)
 	prov := m.provenanceManifest(source, sdks)
 	sbomValidation := m.SbomValidation(source)
 
@@ -285,7 +297,14 @@ func (m *Xoscal) Site(source *dagger.Directory) *dagger.Directory {
 		WithFile("/out/sbom-assessment-results.json", sbomValidation).
 		WithExec([]string{"sh", "-c",
 			"curl -fsSL '" + scalarURL + "' -o /out/scalar.js && test -s /out/scalar.js"}).
-		WithExec([]string{"sh", "-c", buildDownloadsIndex}).
+		WithExec([]string{"sh", "-c", buildDownloadsIndex})
+
+	// Wire GitHub token if provided (authenticated API access).
+	if githubToken != nil {
+		asm = asm.WithSecretVariable("GH_TOKEN", githubToken)
+	}
+
+	asm = asm.
 		// Fetch release-assets.json from the latest GitHub release.
 		// If the API call fails (rate limit, no release), the site still
 		// builds — the downloads page falls back to the hardcoded data.

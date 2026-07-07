@@ -229,8 +229,11 @@ jobs:
 
       - name: Build SDK bundles
         run: |
-          # Build SDK bundles via Dagger and export them
           dagger call sdk-bundles --source=. export --path=./sdks
+
+      - name: Build OSCAL frameworks
+        run: |
+          dagger call oscal-frameworks --source=. export --path=./frameworks
 
       - name: Install Cosign
         uses: sigstore/cosign-installer@v3
@@ -245,17 +248,27 @@ jobs:
               --output-certificate "signatures/${name}.pem" "$zip"
           done
 
+      - name: Sign each OSCAL framework catalog (keyless)
+        run: |
+          for fw in frameworks/*/catalog.json; do
+            name=$(basename "$(dirname "$fw")")
+            echo "Signing framework: $name..."
+            cosign sign-blob --yes --output-signature "signatures/${name}-catalog.json.sig" \
+              --output-certificate "signatures/${name}-catalog.json.pem" "$fw"
+          done
+
       - name: Upload signatures
         uses: actions/upload-artifact@v4
         with:
-          name: sdk-signatures
+          name: artifact-signatures
           path: signatures/
 
-      - name: Attach SDK zips + signatures to release
+      - name: Attach SDKs + frameworks + signatures to release
         uses: softprops/action-gh-release@v2
         with:
           files: |
             sdks/*.zip
             sdks/*.sha256
+            frameworks/*/catalog.json
             signatures/*.sig
             signatures/*.pem
