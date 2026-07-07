@@ -43,7 +43,7 @@ jobs:
           path: dist/
 
   sbom-validation:
-    needs: [goreleaser]
+    needs: [goreleaser, image]
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -57,20 +57,38 @@ jobs:
           version: "v0.21.7"
           install-only: true
 
-      - name: Validate SBOM with sbom-tools (oscal-json output)
+      - name: Validate binary SBOM with sbom-tools (oscal-json output)
         run: |
           dagger call sbom-validation --source=. export --path=./sbom-assessment-results.json
+
+      - name: Download image SBOM
+        uses: actions/download-artifact@v4
+        with:
+          name: image-sbom
+          path: .
+
+      - name: Validate image SBOM with sbom-tools
+        run: |
+          # Install sbom-tools (same version as Dagger)
+          curl -fsSL https://raw.githubusercontent.com/sbom-tool/sbom-tools/main/install.sh | sh -s -- -b /usr/local/bin || \
+          cargo install sbom-tools --git https://github.com/sbom-tool/sbom-tools --root /usr/local --locked
+          sbom-tools validate image-sbom.cyclonedx.json --standard ntis -o oscal-json -O image-sbom-assessment-results.json || true
+          test -s image-sbom-assessment-results.json
 
       - name: Upload SBOM validation results
         uses: actions/upload-artifact@v4
         with:
           name: sbom-validation
-          path: sbom-assessment-results.json
+          path: |
+            sbom-assessment-results.json
+            image-sbom-assessment-results.json
 
       - name: Attach to GitHub release
         uses: softprops/action-gh-release@v2
         with:
-          files: sbom-assessment-results.json
+          files: |
+            sbom-assessment-results.json
+            image-sbom-assessment-results.json
 
   provenance:
     needs: [goreleaser]
@@ -83,6 +101,41 @@ jobs:
       base64-subjects: "${{ needs.goreleaser.outputs.hashes }}"
       upload-assets: true
       provenance-name: "provenance.intoto.jsonl"
+
+  verify:
+    needs: [goreleaser, provenance]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download dist artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist
+
+      - name: Download provenance
+        uses: actions/download-artifact@v4
+        with:
+          name: provenance.intoto.jsonl
+          path: .
+
+      - name: Install slsa-verifier
+        run: |
+          curl -fsSL "https://github.com/slsa-framework/slsa-verifier/releases/download/v2.7.0/slsa-verifier-linux-amd64" -o /usr/local/bin/slsa-verifier
+          chmod +x /usr/local/bin/slsa-verifier
+          slsa-verifier version
+
+      - name: Verify SLSA provenance against archives
+        run: |
+          for archive in dist/ckodex-xoscal_*.tar.gz; do
+            echo "Verifying: $archive"
+            slsa-verifier verify-artifact "$archive" \
+              --provenance-path provenance.intoto.jsonl \
+              --source-uri github.com/ckodex-labs/ckodex-xoscal
+          done
 
   image:
     runs-on: ubuntu-latest
@@ -120,6 +173,29 @@ jobs:
         run: |
           cosign sign --yes \
             ghcr.io/${{ github.repository }}:${{ github.ref_name }}
+
+      - name: Verify image signature
+        run: |
+          cosign verify \
+            --certificate-identity-regexp "https://github.com/ckodex-labs/ckodex-xoscal/.github/" \
+            --certificate-oidc-issuer "https://token.actions.githubusercontent.com" \
+            ghcr.io/${{ github.repository }}:${{ github.ref_name }}
+
+      - name: Scan image with Trivy
+        uses: aquasecurity/trivy-action@master
+        with:
+          image-ref: ghcr.io/${{ github.repository }}:${{ github.ref_name }}
+          format: sarif
+          output: trivy-results.sarif
+          exit-code: "1"
+          severity: CRITICAL
+          ignore-unfixed: true
+
+      - name: Upload Trivy SARIF
+        uses: github/codeql-action/upload-sarif@v4
+        if: always()
+        with:
+          sarif_file: trivy-results.sarif
 
       - name: Generate image SBOM
         uses: anchore/sbom-action@v0

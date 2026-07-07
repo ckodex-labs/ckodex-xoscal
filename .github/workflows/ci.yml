@@ -86,3 +86,56 @@ jobs:
         if: always()
         with:
           sarif_file: trivy-results.sarif
+
+  verify-release:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push'
+    permissions:
+      contents: read
+      packages: read
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Get latest release tag
+        id: latest
+        run: echo "tag=$(gh release list --limit 1 --json tagName --jq '.[0].tagName')" >> "$GITHUB_OUTPUT"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Skip if no release
+        if: steps.latest.outputs.tag == ''
+        run: echo "No releases found, skipping verification."
+
+      - name: Install cosign + slsa-verifier
+        if: steps.latest.outputs.tag != ''
+        run: |
+          curl -fsSL "https://github.com/slsa-framework/slsa-verifier/releases/download/v2.7.0/slsa-verifier-linux-amd64" -o /usr/local/bin/slsa-verifier
+          chmod +x /usr/local/bin/slsa-verifier
+          slsa-verifier version
+
+      - name: Install Cosign
+        if: steps.latest.outputs.tag != ''
+        uses: sigstore/cosign-installer@v3
+
+      - name: Verify image signature (cosign)
+        if: steps.latest.outputs.tag != ''
+        run: |
+          cosign verify \
+            --certificate-identity-regexp "https://github.com/ckodex-labs/ckodex-xoscal/.github/" \
+            --certificate-oidc-issuer "https://token.actions.githubusercontent.com" \
+            ghcr.io/ckodex-labs/ckodex-xoscal:${{ steps.latest.outputs.tag }}
+
+      - name: Verify SLSA provenance (slsa-verifier)
+        if: steps.latest.outputs.tag != ''
+        run: |
+          tag="${{ steps.latest.outputs.tag }}"
+          gh release download "$tag" --pattern "provenance.intoto.jsonl" --dir /tmp
+          gh release download "$tag" --pattern "*.tar.gz" --dir /tmp
+          for archive in /tmp/ckodex-xoscal_*.tar.gz; do
+            echo "Verifying: $archive"
+            slsa-verifier verify-artifact "$archive" \
+              --provenance-path /tmp/provenance.intoto.jsonl \
+              --source-uri github.com/ckodex-labs/ckodex-xoscal
+          done
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
