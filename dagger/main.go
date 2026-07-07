@@ -234,9 +234,36 @@ const buildDownloadsIndex = `
 } > /out/downloads.json
 `
 
+// releaseAssets fetches the latest GitHub release assets and emits
+// release-assets.json (name, url, size, digest) + downloads the
+// sbom-assessment-results.json from the release. This pins the site
+// to the actual release artifacts instead of regenerating independently.
+const releaseAssetsScript = `
+set -e
+api="https://api.github.com/repos/ckodex-labs/ckodex-xoscal/releases/latest"
+echo "Fetching latest release from $api" >&2
+rel=$(curl -fsSL "$api")
+tag=$(echo "$rel" | jq -r .tag_name)
+echo "Latest release: $tag" >&2
+
+# Emit release-assets.json
+echo "$rel" | jq '[.assets[] | {name: .name, url: .browser_download_url, size: .size, digest: (.digest // "")}]' > /out/release-assets.json
+
+# Download sbom-assessment-results.json from the release if it exists
+ar_url=$(echo "$rel" | jq -r '.assets[] | select(.name == "sbom-assessment-results.json") | .browser_download_url')
+if [ -n "$ar_url" ] && [ "$ar_url" != "null" ]; then
+  echo "Downloading sbom-assessment-results.json from release $tag" >&2
+  curl -fsSL "$ar_url" -o /out/sbom-assessment-results.json
+  test -s /out/sbom-assessment-results.json
+else
+  echo "No sbom-assessment-results.json in release $tag — will regenerate" >&2
+  exit 1
+fi
+`
+
 // Site assembles the static GitHub Pages portal: docs (Scalar+OpenAPI),
 // transparency (provenance.json), downloads (SDK zips + OSCAL catalogs),
-// and SBOM validation (OSCAL assessment-results from sbom-tools).
+// and SBOM validation (OSCAL assessment-results from the latest release).
 func (m *Xoscal) Site(source *dagger.Directory) *dagger.Directory {
 	sdks := m.sdkBundles(source)
 	frameworks := m.oscalFrameworks(source)
@@ -257,6 +284,12 @@ func (m *Xoscal) Site(source *dagger.Directory) *dagger.Directory {
 		WithExec([]string{"sh", "-c",
 			"curl -fsSL '" + scalarURL + "' -o /out/scalar.js && test -s /out/scalar.js"}).
 		WithExec([]string{"sh", "-c", buildDownloadsIndex}).
+		// Fetch release-assets.json from the latest GitHub release.
+		// If the API call fails (rate limit, no release), the site still
+		// builds — the downloads page falls back to the hardcoded data.
+		WithExec([]string{"sh", "-c",
+			"apt-get update && apt-get install -y --no-install-recommends jq >/dev/null 2>&1; " +
+				releaseAssetsScript + " || echo 'release-assets.json: fetch failed, using fallback' >&2"}).
 		Directory("/out")
 	return asm
 }

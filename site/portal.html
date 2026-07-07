@@ -1747,7 +1747,7 @@ const PIPE_FLOW = [
   {node:"fw",   name:"OSCAL Cats", cmd:"export-frameworks",  cls:"evidence unsigned"},
   {node:"prov", name:"Provenance", cmd:"provenance.json (signed:false)", cls:"evidence unsigned"},
   {node:"site", name:"Site",       cmd:"portal assembly",    cls:"evidence unsigned"},
-  {node:"img",  name:"Image",      cmd:"distroless + Trivy", cls:"evidence unsigned"},
+  {node:"img",  name:"Image",      cmd:"distroless + cosign + Trivy", cls:"evidence"},
   {node:"rel",  name:"Release",    cmd:"goreleaser + cosign + SLSA", cls:"release"},
 ];
 document.getElementById("pipe-flow").innerHTML = PIPE_FLOW.map(s=>
@@ -1832,21 +1832,21 @@ const PIPE_CARDS = [
    oscal:"back-matter resource · assessment evidence · component inventory · (SBOM Card)",
    tags:["evidence","unsigned"]},
 
-  {name:"SBOM Validation", fn:"Xoscal.SbomValidation(source)", cls:"evidence", signed:false,
+  {name:"SBOM Validation", fn:"Xoscal.SbomValidation(source)", cls:"evidence", signed:true,
    inputs:"CycloneDX SBOM (from Sbom)",
    outputs:"sbom-assessment-results.json (OSCAL 1.1.2 assessment-results)",
    desc:"Validates the CycloneDX SBOM with sbom-tools (sbom-tool/sbom-tools) against NTIA Minimum Elements. Emits findings as OSCAL assessment-results via the oscal-json output format (PR #280). Served on GitHub Pages at /sbom-validation.html.",
    cmd:"dagger call sbom-validation --source=. export --path=sbom-assessment-results.json",
    oscal:"assessment-results · observations · findings · (SBOM Validation page)",
-   tags:["evidence","unsigned","oscal"]},
+   tags:["evidence","signed","oscal"]},
 
-  {name:"Image", fn:"Xoscal.Image(source)", cls:"evidence", signed:false,
+  {name:"Image", fn:"Xoscal.Image(source)", cls:"evidence", signed:true,
    inputs:"built binary (from Build)",
-   outputs:"container image (distroless base-debian12:nonroot)",
-   desc:"Builds a distroless container image. Exposes gRPC :50051 and gRPC-gateway :9090. Scanned by Trivy in CI.",
+   outputs:"container image (distroless base-debian12:nonroot) — cosign-signed in release",
+   desc:"Builds a distroless container image. Exposes gRPC :50051 and gRPC-gateway :9090. In release: cosign-signed (keyless), Trivy-scanned, SBOM generated.",
    cmd:"dagger call image --source=. export --path=xoscal-server.tar",
    oscal:"component-definition · (container artifact under assessment)",
-   tags:["evidence","unsigned"]},
+   tags:["evidence","signed"]},
 
   {name:"SDK Bundles", fn:"Xoscal.sdkBundles(source)", cls:"evidence", signed:false,
    inputs:"source directory + proto/oscal/buf.gen.yaml",
