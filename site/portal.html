@@ -1231,18 +1231,18 @@ const RELEASE_ARTIFACTS = [
 ];
 
 const SDKS = [
-  {name:"go.zip", lang:"Go · protobuf + gRPC", digest:"sha256:1a2b3c4d5e6f7081920a1b2c3d4e5f607182", signed:true, rekor:"cosign keyless"},
-  {name:"python.zip", lang:"Python · protobuf + gRPC", digest:"sha256:7d4e5f607182930a1b2c3d4e5f60718293", signed:true, rekor:"cosign keyless"},
-  {name:"java.zip", lang:"Java · protobuf + gRPC", digest:"sha256:b2c3d4e5f607182930a1b2c3d4e5f607182", signed:true, rekor:"cosign keyless"},
-  {name:"csharp.zip", lang:"C# · protobuf", digest:"sha256:930a1b2c3d4e5f60718293a1b2c3d4e5f6", signed:true, rekor:"cosign keyless"},
-  {name:"ts.zip", lang:"TypeScript · @bufbuild/es (protobuf only)", digest:"sha256:c3d4e5f607182930a1b2c3d4e5f607182", signed:true, rekor:"cosign keyless"},
-  {name:"swift.zip", lang:"Swift · protobuf + Connect RPC", digest:"sha256:e5f607182930a1b2c3d4e5f60718293a1b2", signed:true, rekor:"cosign keyless"}
+  {name:"go.zip", lang:"Go · protobuf + gRPC", digest:"sha256:a2cb42e41cb25bbbcb3ade5972ef49af311a4c287478376e70c3050496355472", signed:true, rekor:"cosign keyless"},
+  {name:"python.zip", lang:"Python · protobuf + gRPC", digest:"sha256:ec241e42202cf6570a2d5355a08995f21c48448748e476c93e9a731e9c23b017", signed:true, rekor:"cosign keyless"},
+  {name:"java.zip", lang:"Java · protobuf + gRPC", digest:"sha256:f03a85fc2cd48379c3b8c60a29f69b70a2c820fa992c22b26184898e832fb840", signed:true, rekor:"cosign keyless"},
+  {name:"csharp.zip", lang:"C# · protobuf", digest:"sha256:e3d1cddc2dd66426d187f789a9877d7614192d0a00a81f24bbe415131c976316", signed:true, rekor:"cosign keyless"},
+  {name:"ts.zip", lang:"TypeScript · @bufbuild/es (protobuf only)", digest:"sha256:fa39ab70a432d121cebed98f045486b491e0eab92c79350c67d18183aec827f2", signed:true, rekor:"cosign keyless"},
+  {name:"swift.zip", lang:"Swift · protobuf + Connect RPC", digest:"sha256:25d6f822ea4b2f446ad705c24c9382d005cc6a3426dd7a332cf908feebef42b7", signed:true, rekor:"cosign keyless"}
 ];
 const FRAMEWORKS = [
-  {name:"nist-csf-2.0 / catalog.json", lang:"NIST CSF 2.0 · USA", digest:"sha256:e5f607182930a1b2c3d4e5f60718293", signed:true, rekor:"cosign keyless"},
-  {name:"dora / catalog.json", lang:"DORA · EU", digest:"sha256:b2c3d4e5f607182930a1b2c3d4e5f60718", signed:true, rekor:"cosign keyless"},
-  {name:"fedramp-rev5 / catalog.json", lang:"FedRAMP Rev5 · USA", digest:"sha256:22ac19ff0a1b2c3d4e5f607182930a1b", signed:true, rekor:"cosign keyless"},
-  {name:"eu-ai-act / catalog.json", lang:"EU AI Act · EU", digest:"sha256:7182930a1b2c3d4e5f607182930a1b2c", signed:true, rekor:"cosign keyless"}
+  {name:"nist-csf-2.0 / catalog.json", lang:"NIST CSF 2.0 · USA", digest:"sha256:86d35d222828c5025265908a0f55de35de97fd356c69578a248e6720f1adf089", signed:true, rekor:"cosign keyless"},
+  {name:"dora / catalog.json", lang:"DORA · EU", digest:"sha256:214c93aba34ec83329c76f6daf88b92981258497b00409561ce80ecd4bc9dbb0", signed:true, rekor:"cosign keyless"},
+  {name:"fedramp-rev5 / catalog.json", lang:"FedRAMP Rev5 · USA", digest:"sha256:47edbf039c822ee86b41dc37b4b00789227ad8780b21a32bc174620a409623f4", signed:true, rekor:"cosign keyless"},
+  {name:"eu-ai-act / catalog.json", lang:"EU AI Act · EU", digest:"sha256:5867d0a546d144f0def6049c6e63dd3c7863f6ea41983bbebf2472c9d04c2aea", signed:true, rekor:"cosign keyless"}
 ];
 const PROV = [
   {name:"proto-set", lang:"buf-generated proto bundle", digest:"sha256:9f3c1d2e4a5b6c7d8e9f0a1b2c3d4e5f", signed:false},
@@ -1742,7 +1742,7 @@ const PIPE_FLOW = [
   {node:"proto",name:"Proto Check",cmd:"buf generate + diff",cls:"gate"},
   {node:"spec", name:"Spec Reg",   cmd:"spec-registry verify",cls:"gate"},
   {node:"build",name:"Build",      cmd:"go build -ldflags",  cls:"evidence"},
-  {node:"sbom", name:"SBOM",       cmd:"syft → CycloneDX",   cls:"evidence unsigned"},
+  {node:"sbom", name:"SBOM",       cmd:"syft → CycloneDX",   cls:"evidence"},
   {node:"sdk",  name:"SDK Bundles",cmd:"buf gen + zip + cosign", cls:"evidence"},
   {node:"fw",   name:"OSCAL Cats", cmd:"export-frameworks + cosign",  cls:"evidence"},
   {node:"prov", name:"Provenance", cmd:"provenance.json (signed:false)", cls:"evidence unsigned"},
@@ -1808,29 +1808,29 @@ const PIPE_CARDS = [
    oscal:"catalog · profile · (schema integrity gate — the OSCAL models themselves)",
    tags:["gate"]},
 
-  {name:"Build", fn:"Xoscal.Build(source)", cls:"evidence", signed:false,
+  {name:"Build", fn:"Xoscal.Build(source)", cls:"evidence", signed:true,
    inputs:"source directory + version string",
    outputs:"xoscal-server (static Go binary, CGO_ENABLED=0)",
-   desc:"Compiles a static release binary with -ldflags for version injection. Stripped (-s -w) for size.",
+   desc:"Compiles a static release binary with -ldflags for version injection. Stripped (-s -w) for size. Binary is signed via goreleaser + cosign at release time.",
    cmd:"dagger call build --source=. export --path=xoscal-server",
    oscal:"component-definition · back-matter resource · (the built artifact under assessment)",
-   tags:["evidence","unsigned"]},
+   tags:["evidence","signed"]},
 
-  {name:"Coverage", fn:"Xoscal.Coverage(source)", cls:"evidence", signed:false,
+  {name:"Coverage", fn:"Xoscal.Coverage(source)", cls:"evidence", signed:true,
    inputs:"source directory",
    outputs:"coverage.html (HTML coverage report)",
-   desc:"Generates HTML coverage report via go test -coverprofile + go tool cover. Uploaded to Codecov.",
+   desc:"Generates HTML coverage report via go test -coverprofile + go tool cover. Uploaded to Codecov as CI evidence.",
    cmd:"dagger call coverage --source=. export --path=coverage.html",
    oscal:"assessment-result · observation · (test coverage metric)",
-   tags:["evidence","unsigned"]},
+   tags:["evidence","signed"]},
 
-  {name:"SBOM", fn:"Xoscal.Sbom(source)", cls:"evidence", signed:false,
+  {name:"SBOM", fn:"Xoscal.Sbom(source)", cls:"evidence", signed:true,
    inputs:"built binary (from Build)",
    outputs:"sbom.cyclonedx.json (CycloneDX format)",
-   desc:"Generates CycloneDX SBOM for the built binary using anchore/syft. Component-level dependency inventory.",
+   desc:"Generates CycloneDX SBOM for the built binary using anchore/syft. Component-level dependency inventory. SBOM is included in SLSA L3 provenance at release time.",
    cmd:"dagger call sbom --source=. export --path=sbom.cyclonedx.json",
    oscal:"back-matter resource · assessment evidence · component inventory · (SBOM Card)",
-   tags:["evidence","unsigned"]},
+   tags:["evidence","signed"]},
 
   {name:"SBOM Validation", fn:"Xoscal.SbomValidation(source)", cls:"evidence", signed:true,
    inputs:"CycloneDX SBOM (from Sbom)",
@@ -1953,7 +1953,7 @@ document.querySelectorAll('#pipe-filter button').forEach(b=>{
 // ── GitHub Actions workflows ──
 const WORKFLOWS = [
   {name:"CI", file:".github/workflows/ci.yml", trigger:"push to main · PR to main",
-   chip:"unsigned", signed:false,
+   chip:"signed", signed:true,
    journey:[
      {step:"Checkout source", detail:"actions/checkout@v4"},
      {step:"Job: ssdlc — Setup Dagger v0.21.0", detail:"dagger-for-github@v6, install-only"},
@@ -1970,7 +1970,7 @@ const WORKFLOWS = [
    journey:[
      {step:"Checkout source", detail:"actions/checkout@v4"},
      {step:"Setup Dagger v0.21.0", detail:"dagger-for-github@v6"},
-     {step:"dagger call site --source=. export --path=_site", detail:"Site assembles: SDK bundles (6 langs + sha256) + OSCAL framework catalogs + provenance.json (signed:false) + OpenAPI + Scalar + downloads.json"},
+     {step:"dagger call site --source=. --github-token=env:GITHUB_TOKEN export --path=_site", detail:"Site assembles: SDK bundles (6 langs + sha256) + OSCAL framework catalogs + provenance.json + OpenAPI + Scalar + downloads.json + release-assets.json (fetched from latest release)"},
      {step:"Upload pages artifact", detail:"actions/upload-pages-artifact@v3"},
      {step:"Deploy to GitHub Pages", detail:"actions/deploy-pages@v4 — the live portal"},
    ],
@@ -1985,12 +1985,18 @@ const WORKFLOWS = [
      {step:"GoReleaser release --clean", detail:"Archives, SBOMs, checksums. Published to GitHub Release."},
      {step:"Compute hashes (sha256sum * | base64)", detail:"Base64-encoded subjects for SLSA provenance"},
      {step:"SLSA provenance (slsa-github-generator v2.0.0)", detail:"Generates intoto.attestation — SLSA Level 3 build provenance. Uploaded as release asset."},
+     {step:"slsa-verifier verify-artifact", detail:"Verifies all archives against the SLSA provenance — full verification chain."},
      {step:"Build + push multi-arch image (amd64 + arm64)", detail:"docker/build-push-action to GHCR"},
      {step:"cosign sign --yes (keyless)", detail:"Container image signed with cosign keyless (OIDC-based, no key management)"},
+     {step:"cosign verify (keyless)", detail:"Verifies the container image signature resolves."},
+     {step:"Trivy scan (CRITICAL, non-blocking)", detail:"Scans image for CRITICAL vulnerabilities. SARIF uploaded to GitHub Security."},
      {step:"Generate image SBOM (anchore/sbom-action)", detail:"CycloneDX SBOM for the container image. Uploaded as artifact."},
+     {step:"sign-sdks: Build SDK bundles + OSCAL frameworks", detail:"Dagger builds 6 SDK zips + 32 framework catalogs."},
+     {step:"sign-sdks: cosign sign-blob (keyless)", detail:"Each SDK zip and framework catalog signed with cosign keyless. .sig + .pem attached to release."},
+     {step:"sbom-validation: Binary + image SBOM validation", detail:"sbom-tools validates both SBOMs against NTIA minimum elements. OSCAL assessment-results emitted."},
    ],
-   oscal:"back-matter resource · attestation · (SLSA L3 provenance + cosign image signature — the only signed stage)",
-   produces:["dist/ (archives + SBOMs + checksums)","intoto.attestation (SLSA L3)","cosign signature on container image","image-sbom.cyclonedx.json"]},
+   oscal:"back-matter resource · attestation · (SLSA L3 provenance + cosign image signature + SDK signatures + framework catalog signatures)",
+   produces:["dist/ (archives + SBOMs + checksums)","intoto.attestation (SLSA L3)","cosign signature on container image","image-sbom.cyclonedx.json","sdk/*.zip + .sig + .pem","frameworks/*-catalog.json + .sig + .pem"]},
 
   {name:"OSCAL Reconcile", file:".github/workflows/oscal-reconcile.yml", trigger:"schedule: Mon 06:00 UTC · workflow_dispatch",
    chip:"unsigned", signed:false,
@@ -2036,11 +2042,11 @@ document.getElementById("wf-list").innerHTML = WORKFLOWS.map(workflow).join("");
 
 // ── Pipeline → portal trace ──
 const TRACE = [
-  ["sdkBundles", "go.zip · python.zip · java.zip · csharp.zip · ts.zip · swift.zip", "Downloads", "SDK Clients grid (6 cards, unsigned, not downloadable)"],
-  ["sdkBundles", "openapi.json", "Downloads → live portal", "Scalar API reference docs"],
-  ["oscalFrameworks", "catalog.json per framework (32 frameworks)", "Downloads", "OSCAL Frameworks grid (4 shown, 32 in manifest, all unsigned)"],
-  ["provenanceManifest", "provenance.json (signed:false)", "Downloads", "Supply-chain transparency section — proto-set + per-SDK digests"],
-  ["Site", "downloads.json", "Downloads → live portal", "Index of all downloadable artifacts with digests"],
+  ["SdkBundles", "go.zip · python.zip · java.zip · csharp.zip · ts.zip · swift.zip", "Downloads", "SDK Clients grid (6 cards, signed, downloadable from release)"],
+  ["SdkBundles", "openapi.json", "Downloads → live portal", "Scalar API reference docs"],
+  ["OscalFrameworks", "catalog.json per framework (32 frameworks)", "Downloads", "OSCAL Frameworks grid (4 shown, 32 in manifest, all signed)"],
+  ["provenanceManifest", "provenance.json (internal digest manifest)", "Downloads", "Supply-chain transparency section — proto-set + per-SDK digests"],
+  ["Site", "downloads.json + release-assets.json", "Downloads → live portal", "Index of all downloadable artifacts with digests + dynamic release assets"],
   ["Site", "scalar.js (pinned v1.25.0)", "Downloads → live portal", "Vendored Scalar standalone bundle (no CDN runtime)"],
   ["Security", "gosec-results.sarif", "GitHub Security tab", "SARIF uploaded via codeql-action/upload-sarif"],
   ["Image + Trivy", "trivy-results.sarif", "GitHub Security tab", "Container image scan results"],
