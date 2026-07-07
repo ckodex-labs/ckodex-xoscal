@@ -243,11 +243,14 @@ const buildDownloadsIndex = `
 // the site build.
 const releaseAssetsScript = `
 (
-  auth=""
-  if [ -n "$GH_TOKEN" ]; then auth="-H \"Authorization: Bearer $GH_TOKEN\""; fi
   api="https://api.github.com/repos/ckodex-labs/ckodex-xoscal/releases/latest"
-  echo "Fetching latest release from $api (auth: $([ -n "$auth" ] && echo yes || echo no))" >&2
-  rel=$(eval curl -fsSL $auth "$api") || { echo "API fetch failed" >&2; exit 1; }
+  if [ -n "$GH_TOKEN" ]; then
+    echo "Fetching latest release (auth: yes)" >&2
+    rel=$(curl -fsSL -H "Authorization: Bearer $GH_TOKEN" "$api") || { echo "API fetch failed" >&2; exit 1; }
+  else
+    echo "Fetching latest release (auth: no — rate limited)" >&2
+    rel=$(curl -fsSL "$api") || { echo "API fetch failed" >&2; exit 1; }
+  fi
   tag=$(echo "$rel" | jq -r .tag_name 2>/dev/null) || { echo "jq parse failed" >&2; exit 1; }
   [ "$tag" != "null" ] && [ -n "$tag" ] || { echo "No release found" >&2; exit 1; }
   echo "Latest release: $tag" >&2
