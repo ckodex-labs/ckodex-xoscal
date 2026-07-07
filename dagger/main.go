@@ -244,12 +244,25 @@ const buildDownloadsIndex = `
 const releaseAssetsScript = `
 (
   api="https://api.github.com/repos/ckodex-labs/ckodex-xoscal/releases/latest"
-  echo "Fetching latest release" >&2
-  rel=$(curl -fsSL -H "Accept: application/vnd.github+json" "$api" 2>/tmp/curl_err) || {
+  # Build curl args — use token if available
+  curl_args="-fsSL -H Accept:application/vnd.github+json"
+  if [ -n "$GH_TOKEN" ]; then
+    curl_args="$curl_args -H Authorization:Bearer\ $GH_TOKEN"
+    echo "Fetching latest release (with auth)" >&2
+  else
+    echo "Fetching latest release (no auth — may hit rate limit)" >&2
+  fi
+  rel=$(curl $curl_args "$api" 2>/tmp/curl_err) || {
     echo "API fetch failed: $(cat /tmp/curl_err)" >&2
     exit 1
   }
-  tag=$(echo "$rel" | jq -r .tag_name 2>/dev/null) || { echo "jq parse failed" >&2; exit 1; }
+  # Validate JSON
+  echo "$rel" | jq empty 2>/tmp/jq_err || {
+    echo "jq parse failed: $(head -c 200 /tmp/jq_err)" >&2
+    echo "Response starts with: $(echo "$rel" | head -c 200)" >&2
+    exit 1
+  }
+  tag=$(echo "$rel" | jq -r .tag_name)
   [ "$tag" != "null" ] && [ -n "$tag" ] || { echo "No release found" >&2; exit 1; }
   echo "Latest release: $tag" >&2
 
