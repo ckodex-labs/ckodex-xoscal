@@ -304,7 +304,7 @@ func (m *Xoscal) Site(source *dagger.Directory,
 		asm = asm.WithSecretVariable("GH_TOKEN", githubToken)
 	}
 
-	asm = asm.
+	return asm.
 		// Fetch release-assets.json from the latest GitHub release.
 		// If the API call fails (rate limit, no release), the site still
 		// builds — the downloads page falls back to the hardcoded data.
@@ -320,7 +320,6 @@ func (m *Xoscal) Site(source *dagger.Directory,
 				"s/\\(scalar\\.js\\)\\([\\\"']\\)/\\1?v=$sha\\2/g\" \"$f\"; " +
 				"done"}).
 		Directory("/out")
-	return asm
 }
 
 // Serve builds the portal site and serves it as a static HTTP service on :8080.
