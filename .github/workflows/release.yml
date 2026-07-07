@@ -67,12 +67,14 @@ jobs:
           name: image-sbom
           path: .
 
+      - name: Setup Rust toolchain
+        uses: dtolnay/rust-toolchain@stable
+
       - name: Validate image SBOM with sbom-tools
         run: |
-          # Install sbom-tools (same version as Dagger)
-          curl -fsSL https://raw.githubusercontent.com/sbom-tool/sbom-tools/main/install.sh | sh -s -- -b /usr/local/bin || \
+          # Install sbom-tools via cargo (same source as Dagger)
           cargo install sbom-tools --git https://github.com/sbom-tool/sbom-tools --root /usr/local --locked
-          sbom-tools validate image-sbom.cyclonedx.json --standard ntis -o oscal-json -O image-sbom-assessment-results.json || true
+          sbom-tools validate image-sbom.cyclonedx.json --standard ntia -o oscal-json -O image-sbom-assessment-results.json || true
           test -s image-sbom-assessment-results.json
 
       - name: Upload SBOM validation results
