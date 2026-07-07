@@ -244,19 +244,18 @@ const buildDownloadsIndex = `
 const releaseAssetsScript = `
 (
   api="https://api.github.com/repos/ckodex-labs/ckodex-xoscal/releases/latest"
-  if [ -n "$GH_TOKEN" ]; then
-    echo "Fetching latest release (auth: yes)" >&2
-    rel=$(curl -fsSL -H "Authorization: Bearer $GH_TOKEN" "$api") || { echo "API fetch failed" >&2; exit 1; }
-  else
-    echo "Fetching latest release (auth: no — rate limited)" >&2
-    rel=$(curl -fsSL "$api") || { echo "API fetch failed" >&2; exit 1; }
-  fi
+  echo "Fetching latest release" >&2
+  rel=$(curl -fsSL -H "Accept: application/vnd.github+json" "$api" 2>/tmp/curl_err) || {
+    echo "API fetch failed: $(cat /tmp/curl_err)" >&2
+    exit 1
+  }
   tag=$(echo "$rel" | jq -r .tag_name 2>/dev/null) || { echo "jq parse failed" >&2; exit 1; }
   [ "$tag" != "null" ] && [ -n "$tag" ] || { echo "No release found" >&2; exit 1; }
   echo "Latest release: $tag" >&2
 
   # Emit release-assets.json
   echo "$rel" | jq '[.assets[] | {name: .name, url: .browser_download_url, size: .size, digest: (.digest // "")}]' > /out/release-assets.json
+  test -s /out/release-assets.json && echo "release-assets.json written ($(wc -c < /out/release-assets.json) bytes)" >&2
 
   # Download sbom-assessment-results.json from the release if it exists
   ar_url=$(echo "$rel" | jq -r '.assets[] | select(.name == "sbom-assessment-results.json") | .browser_download_url')
@@ -313,6 +312,7 @@ func (m *Xoscal) Site(source *dagger.Directory,
 		// builds — the downloads page falls back to the hardcoded data.
 		WithExec([]string{"sh", "-c",
 			"apt-get update && apt-get install -y --no-install-recommends jq >/dev/null 2>&1; " +
+				"which jq && jq --version >&2; " +
 				releaseAssetsScript}).
 		// Cache-busting: append ?v=<short-sha> to CSS/JS asset URLs in all
 		// HTML files. Prevents CDN staleness after deploys.
