@@ -156,9 +156,9 @@ func (m *Xoscal) SpecRegistryCheck(source *dagger.Directory) *dagger.Container {
 		WithExec([]string{"sh", "-c", "echo 'specreg-ok' > /tmp/specreg.ok"})
 }
 
-// sdkBundles runs buf generate and zips each language SDK with a sha256 sidecar.
+// SdkBundles runs buf generate and zips each language SDK with a sha256 sidecar.
 // Also extracts the OpenAPI document for the docs page.
-func (m *Xoscal) sdkBundles(source *dagger.Directory) *dagger.Directory {
+func (m *Xoscal) SdkBundles(source *dagger.Directory) *dagger.Directory {
 	langs := "go python java csharp ts swift"
 	gen := m.toolBase().
 		WithExec([]string{"sh", "-c", "apt-get update && apt-get install -y --no-install-recommends zip"}).
@@ -267,7 +267,7 @@ const releaseAssetsScript = `
 // transparency (provenance.json), downloads (SDK zips + OSCAL catalogs),
 // and SBOM validation (OSCAL assessment-results from the latest release).
 func (m *Xoscal) Site(source *dagger.Directory) *dagger.Directory {
-	sdks := m.sdkBundles(source)
+	sdks := m.SdkBundles(source)
 	frameworks := m.oscalFrameworks(source)
 	prov := m.provenanceManifest(source, sdks)
 	sbomValidation := m.SbomValidation(source)
@@ -292,6 +292,14 @@ func (m *Xoscal) Site(source *dagger.Directory) *dagger.Directory {
 		WithExec([]string{"sh", "-c",
 			"apt-get update && apt-get install -y --no-install-recommends jq >/dev/null 2>&1; " +
 				releaseAssetsScript}).
+		// Cache-busting: append ?v=<short-sha> to CSS/JS asset URLs in all
+		// HTML files. Prevents CDN staleness after deploys.
+		WithExec([]string{"sh", "-c",
+			"sha=$(git -C /src rev-parse --short HEAD 2>/dev/null || echo dev); " +
+				"for f in /out/*.html; do " +
+				"sed -i \"s/\\(ds3\\.css\\)\\([\\\"']\\)/\\1?v=$sha\\2/g; " +
+				"s/\\(scalar\\.js\\)\\([\\\"']\\)/\\1?v=$sha\\2/g\" \"$f\"; " +
+				"done"}).
 		Directory("/out")
 	return asm
 }
