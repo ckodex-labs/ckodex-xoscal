@@ -252,27 +252,40 @@ const releaseAssetsScript = `
   else
     echo "Fetching latest release (no auth — may hit rate limit)" >&2
   fi
-  rel=$(curl $curl_args "$api" 2>/tmp/curl_err) || {
+  curl $curl_args "$api" -o /tmp/release.json 2>/tmp/curl_err || {
     echo "API fetch failed: $(cat /tmp/curl_err)" >&2
     exit 1
   }
-  # Validate JSON
-  echo "$rel" | jq empty 2>/tmp/jq_err || {
-    echo "jq parse failed: $(head -c 200 /tmp/jq_err)" >&2
-    echo "Response starts with: $(echo "$rel" | head -c 200)" >&2
+  # Use python3 to parse — jq 1.6 chokes on control chars in release body
+  tag=$(python3 -c "import json; print(json.load(open('/tmp/release.json'))['tag_name'])" 2>/tmp/py_err) || {
+    echo "JSON parse failed: $(head -c 200 /tmp/py_err)" >&2
     exit 1
   }
-  tag=$(echo "$rel" | jq -r .tag_name)
   [ "$tag" != "null" ] && [ -n "$tag" ] || { echo "No release found" >&2; exit 1; }
   echo "Latest release: $tag" >&2
 
-  # Emit release-assets.json
-  echo "$rel" | jq '[.assets[] | {name: .name, url: .browser_download_url, size: .size, digest: (.digest // "")}]' > /out/release-assets.json
+  # Emit release-assets.json using python3
+  python3 -c "
+import json
+rel = json.load(open('/tmp/release.json'))
+assets = [{'name': a['name'], 'url': a['browser_download_url'], 'size': a['size'], 'digest': a.get('digest', '')} for a in rel.get('assets', [])]
+json.dump(assets, open('/out/release-assets.json', 'w'), indent=2)
+" 2>/tmp/py_err || {
+    echo "Failed to emit release-assets.json: $(head -c 200 /tmp/py_err)" >&2
+    exit 1
+  }
   test -s /out/release-assets.json && echo "release-assets.json written ($(wc -c < /out/release-assets.json) bytes)" >&2
 
   # Download sbom-assessment-results.json from the release if it exists
-  ar_url=$(echo "$rel" | jq -r '.assets[] | select(.name == "sbom-assessment-results.json") | .browser_download_url')
-  if [ -n "$ar_url" ] && [ "$ar_url" != "null" ]; then
+  ar_url=$(python3 -c "
+import json
+rel = json.load(open('/tmp/release.json'))
+for a in rel.get('assets', []):
+    if a['name'] == 'sbom-assessment-results.json':
+        print(a['browser_download_url'])
+        break
+" 2>/dev/null)
+  if [ -n "$ar_url" ]; then
     echo "Downloading sbom-assessment-results.json from release $tag" >&2
     curl -fsSL "$ar_url" -o /out/sbom-assessment-results.json
     test -s /out/sbom-assessment-results.json
