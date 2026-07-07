@@ -244,21 +244,23 @@ const buildDownloadsIndex = `
 const releaseAssetsScript = `
 (
   api="https://api.github.com/repos/ckodex-labs/ckodex-xoscal/releases/latest"
-  # Build curl args — use token if available
-  curl_args="-fsSL -H Accept:application/vnd.github+json"
+  echo "Fetching latest release" >&2
   if [ -n "$GH_TOKEN" ]; then
-    curl_args="$curl_args -H Authorization:Bearer\ $GH_TOKEN"
-    echo "Fetching latest release (with auth)" >&2
+    curl -fsSL -H "Accept: application/vnd.github+json" -H "Authorization: Bearer $GH_TOKEN" "$api" -o /tmp/release.json 2>/tmp/curl_err || {
+      echo "API fetch failed: $(cat /tmp/curl_err)" >&2
+      exit 1
+    }
   else
-    echo "Fetching latest release (no auth — may hit rate limit)" >&2
+    curl -fsSL -H "Accept: application/vnd.github+json" "$api" -o /tmp/release.json 2>/tmp/curl_err || {
+      echo "API fetch failed: $(cat /tmp/curl_err)" >&2
+      exit 1
+    }
   fi
-  curl $curl_args "$api" -o /tmp/release.json 2>/tmp/curl_err || {
-    echo "API fetch failed: $(cat /tmp/curl_err)" >&2
-    exit 1
-  }
+  ls -la /tmp/release.json >&2
   # Use python3 to parse — jq 1.6 chokes on control chars in release body
   tag=$(python3 -c "import json; print(json.load(open('/tmp/release.json'))['tag_name'])" 2>/tmp/py_err) || {
-    echo "JSON parse failed: $(head -c 200 /tmp/py_err)" >&2
+    echo "JSON parse failed: $(head -c 300 /tmp/py_err)" >&2
+    head -c 300 /tmp/release.json >&2
     exit 1
   }
   [ "$tag" != "null" ] && [ -n "$tag" ] || { echo "No release found" >&2; exit 1; }
