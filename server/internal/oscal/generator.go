@@ -487,8 +487,8 @@ func (g *Generator) GenerateAssessmentPlan(ctx context.Context, snapshotName str
 				Description: &commonv1.MarkupMultiline{Value: fmt.Sprintf("Controls reviewed for %s", framework)},
 			}},
 		},
-		Tasks:           tasks,
-		BackMatter:      buildBackMatter(framework, snapshotName),
+		Tasks:      tasks,
+		BackMatter: buildBackMatter(framework, snapshotName),
 	}, nil
 }
 

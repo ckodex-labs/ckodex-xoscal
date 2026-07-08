@@ -187,8 +187,8 @@ func TestProtoConformanceSSP(t *testing.T) {
 			Href: &commonv1.URIReference{Value: "https://example.gov/profile.json"},
 		},
 		SystemCharacteristics: &sspv1.SystemCharacteristics{
-			SystemIds: []*sspv1.SystemId{{Id: "test-system"}},
-			SystemName: "Test System",
+			SystemIds:   []*sspv1.SystemId{{Id: "test-system"}},
+			SystemName:  "Test System",
 			Description: &commonv1.MarkupMultiline{Value: "A test system."},
 			SystemInformation: &sspv1.SystemInformation{
 				InformationTypes: []*sspv1.InformationType{{
@@ -197,8 +197,8 @@ func TestProtoConformanceSSP(t *testing.T) {
 					Description: &commonv1.MarkupMultiline{Value: "Test information type"},
 				}},
 			},
-			Status:                 &sspv1.Status{State: "operational"},
-			AuthorizationBoundary:  &sspv1.AuthorizationBoundary{Description: &commonv1.MarkupMultiline{Value: "Boundary"}},
+			Status:                &sspv1.Status{State: "operational"},
+			AuthorizationBoundary: &sspv1.AuthorizationBoundary{Description: &commonv1.MarkupMultiline{Value: "Boundary"}},
 		},
 		SystemImplementation: &sspv1.SystemImplementation{
 			Users: []*sspv1.SystemUser{{

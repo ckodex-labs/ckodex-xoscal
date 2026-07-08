@@ -191,9 +191,9 @@ func TestOSCALMarshalerSSP(t *testing.T) {
 			Href: &commonv1.URIReference{Value: "https://example.gov/profile.json"},
 		},
 		SystemCharacteristics: &sspv1.SystemCharacteristics{
-			SystemIds:     []*sspv1.SystemId{{Id: "test-system"}},
-			SystemName:    "Test System",
-			Description:   &commonv1.MarkupMultiline{Value: "A test system."},
+			SystemIds:   []*sspv1.SystemId{{Id: "test-system"}},
+			SystemName:  "Test System",
+			Description: &commonv1.MarkupMultiline{Value: "A test system."},
 			SystemInformation: &sspv1.SystemInformation{
 				InformationTypes: []*sspv1.InformationType{{
 					Uuid:        &commonv1.UUID{Value: testUUID},

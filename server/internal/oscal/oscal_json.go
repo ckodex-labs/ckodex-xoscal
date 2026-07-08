@@ -15,12 +15,12 @@ const OSCALVersion = "1.1.2"
 
 // oscalRootKeys maps protobuf message types to their OSCAL JSON root wrapper key.
 var oscalRootKeys = map[string]string{
-	"Catalog":             "catalog",
-	"Profile":             "profile",
-	"SystemSecurityPlan":  "system-security-plan",
-	"ComponentDefinition": "component-definition",
-	"AssessmentPlan":      "assessment-plan",
-	"AssessmentResults":   "assessment-results",
+	"Catalog":                   "catalog",
+	"Profile":                   "profile",
+	"SystemSecurityPlan":        "system-security-plan",
+	"ComponentDefinition":       "component-definition",
+	"AssessmentPlan":            "assessment-plan",
+	"AssessmentResults":         "assessment-results",
 	"PlanOfActionAndMilestones": "plan-of-action-and-milestones",
 }
 
@@ -59,8 +59,8 @@ func marshalOSCALJSON(msg proto.Message, rootKey string) ([]byte, error) {
 // oscalSingleValueFields are fields that OSCAL expects as a single value
 // but the proto defines as repeated. Single-element arrays are unwrapped.
 var oscalSingleValueFields = map[string]bool{
-	"prose":    true,
-	"remarks":  true,
+	"prose":   true,
+	"remarks": true,
 }
 
 // oscalFieldRenames maps protojson field names to their OSCAL JSON key name
