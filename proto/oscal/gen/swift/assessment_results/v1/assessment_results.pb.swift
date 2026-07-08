@@ -340,28 +340,124 @@ nonisolated struct Oscal_AssessmentResults_V1_UsesComponent: Sendable {
 }
 
 /// Result represents an assessment result
-nonisolated struct Oscal_AssessmentResults_V1_Result: Sendable {
+nonisolated struct Oscal_AssessmentResults_V1_Result: @unchecked Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   var uuid: Oscal_Common_V1_UUID {
-    get {_uuid ?? Oscal_Common_V1_UUID()}
-    set {_uuid = newValue}
+    get {_storage._uuid ?? Oscal_Common_V1_UUID()}
+    set {_uniqueStorage()._uuid = newValue}
   }
   /// Returns true if `uuid` has been explicitly set.
-  var hasUuid: Bool {self._uuid != nil}
+  var hasUuid: Bool {_storage._uuid != nil}
   /// Clears the value of `uuid`. Subsequent reads from it will return its default value.
-  mutating func clearUuid() {self._uuid = nil}
+  mutating func clearUuid() {_uniqueStorage()._uuid = nil}
 
   var title: Oscal_Common_V1_MarkupLine {
-    get {_title ?? Oscal_Common_V1_MarkupLine()}
-    set {_title = newValue}
+    get {_storage._title ?? Oscal_Common_V1_MarkupLine()}
+    set {_uniqueStorage()._title = newValue}
   }
   /// Returns true if `title` has been explicitly set.
-  var hasTitle: Bool {self._title != nil}
+  var hasTitle: Bool {_storage._title != nil}
   /// Clears the value of `title`. Subsequent reads from it will return its default value.
-  mutating func clearTitle() {self._title = nil}
+  mutating func clearTitle() {_uniqueStorage()._title = nil}
+
+  var description_p: Oscal_Common_V1_MarkupMultiline {
+    get {_storage._description_p ?? Oscal_Common_V1_MarkupMultiline()}
+    set {_uniqueStorage()._description_p = newValue}
+  }
+  /// Returns true if `description_p` has been explicitly set.
+  var hasDescription_p: Bool {_storage._description_p != nil}
+  /// Clears the value of `description_p`. Subsequent reads from it will return its default value.
+  mutating func clearDescription_p() {_uniqueStorage()._description_p = nil}
+
+  var start: Oscal_Common_V1_DateTime {
+    get {_storage._start ?? Oscal_Common_V1_DateTime()}
+    set {_uniqueStorage()._start = newValue}
+  }
+  /// Returns true if `start` has been explicitly set.
+  var hasStart: Bool {_storage._start != nil}
+  /// Clears the value of `start`. Subsequent reads from it will return its default value.
+  mutating func clearStart() {_uniqueStorage()._start = nil}
+
+  var end: Oscal_Common_V1_DateTime {
+    get {_storage._end ?? Oscal_Common_V1_DateTime()}
+    set {_uniqueStorage()._end = newValue}
+  }
+  /// Returns true if `end` has been explicitly set.
+  var hasEnd: Bool {_storage._end != nil}
+  /// Clears the value of `end`. Subsequent reads from it will return its default value.
+  mutating func clearEnd() {_uniqueStorage()._end = nil}
+
+  var findings: [Oscal_AssessmentResults_V1_Finding] {
+    get {_storage._findings}
+    set {_uniqueStorage()._findings = newValue}
+  }
+
+  var observations: [Oscal_AssessmentResults_V1_Observation] {
+    get {_storage._observations}
+    set {_uniqueStorage()._observations = newValue}
+  }
+
+  var props: [Oscal_Common_V1_Property] {
+    get {_storage._props}
+    set {_uniqueStorage()._props = newValue}
+  }
+
+  var links: [Oscal_Common_V1_Link] {
+    get {_storage._links}
+    set {_uniqueStorage()._links = newValue}
+  }
+
+  var remarks: [Oscal_Common_V1_MarkupMultiline] {
+    get {_storage._remarks}
+    set {_uniqueStorage()._remarks = newValue}
+  }
+
+  /// reviewed_controls is required by the OSCAL 1.1.2 schema for each result.
+  var reviewedControls: Oscal_AssessmentResults_V1_ReviewedControls {
+    get {_storage._reviewedControls ?? Oscal_AssessmentResults_V1_ReviewedControls()}
+    set {_uniqueStorage()._reviewedControls = newValue}
+  }
+  /// Returns true if `reviewedControls` has been explicitly set.
+  var hasReviewedControls: Bool {_storage._reviewedControls != nil}
+  /// Clears the value of `reviewedControls`. Subsequent reads from it will return its default value.
+  mutating func clearReviewedControls() {_uniqueStorage()._reviewedControls = nil}
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+
+  fileprivate var _storage = _StorageClass.defaultInstance
+}
+
+/// ReviewedControls represents the reviewed controls for a result
+nonisolated struct Oscal_AssessmentResults_V1_ReviewedControls: Sendable {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var controlSelections: [Oscal_AssessmentResults_V1_ControlSelection] = []
+
+  var controls: [Oscal_AssessmentResults_V1_SelectedControl] = []
+
+  var props: [Oscal_Common_V1_Property] = []
+
+  var links: [Oscal_Common_V1_Link] = []
+
+  var remarks: [Oscal_Common_V1_MarkupMultiline] = []
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
+/// ControlSelection represents a selection of controls for review
+nonisolated struct Oscal_AssessmentResults_V1_ControlSelection: Sendable {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
 
   var description_p: Oscal_Common_V1_MarkupMultiline {
     get {_description_p ?? Oscal_Common_V1_MarkupMultiline()}
@@ -372,27 +468,9 @@ nonisolated struct Oscal_AssessmentResults_V1_Result: Sendable {
   /// Clears the value of `description_p`. Subsequent reads from it will return its default value.
   mutating func clearDescription_p() {self._description_p = nil}
 
-  var start: Oscal_Common_V1_DateTime {
-    get {_start ?? Oscal_Common_V1_DateTime()}
-    set {_start = newValue}
-  }
-  /// Returns true if `start` has been explicitly set.
-  var hasStart: Bool {self._start != nil}
-  /// Clears the value of `start`. Subsequent reads from it will return its default value.
-  mutating func clearStart() {self._start = nil}
+  var includeControls: [Oscal_AssessmentResults_V1_SelectedControl] = []
 
-  var end: Oscal_Common_V1_DateTime {
-    get {_end ?? Oscal_Common_V1_DateTime()}
-    set {_end = newValue}
-  }
-  /// Returns true if `end` has been explicitly set.
-  var hasEnd: Bool {self._end != nil}
-  /// Clears the value of `end`. Subsequent reads from it will return its default value.
-  mutating func clearEnd() {self._end = nil}
-
-  var findings: [Oscal_AssessmentResults_V1_Finding] = []
-
-  var observations: [Oscal_AssessmentResults_V1_Observation] = []
+  var excludeControls: [Oscal_AssessmentResults_V1_SelectedControl] = []
 
   var props: [Oscal_Common_V1_Property] = []
 
@@ -404,11 +482,45 @@ nonisolated struct Oscal_AssessmentResults_V1_Result: Sendable {
 
   init() {}
 
-  fileprivate var _uuid: Oscal_Common_V1_UUID? = nil
-  fileprivate var _title: Oscal_Common_V1_MarkupLine? = nil
   fileprivate var _description_p: Oscal_Common_V1_MarkupMultiline? = nil
-  fileprivate var _start: Oscal_Common_V1_DateTime? = nil
-  fileprivate var _end: Oscal_Common_V1_DateTime? = nil
+}
+
+/// SelectedControl represents a selected control
+nonisolated struct Oscal_AssessmentResults_V1_SelectedControl: Sendable {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var controlID: Oscal_Common_V1_Token {
+    get {_controlID ?? Oscal_Common_V1_Token()}
+    set {_controlID = newValue}
+  }
+  /// Returns true if `controlID` has been explicitly set.
+  var hasControlID: Bool {self._controlID != nil}
+  /// Clears the value of `controlID`. Subsequent reads from it will return its default value.
+  mutating func clearControlID() {self._controlID = nil}
+
+  var statementID: Oscal_Common_V1_Token {
+    get {_statementID ?? Oscal_Common_V1_Token()}
+    set {_statementID = newValue}
+  }
+  /// Returns true if `statementID` has been explicitly set.
+  var hasStatementID: Bool {self._statementID != nil}
+  /// Clears the value of `statementID`. Subsequent reads from it will return its default value.
+  mutating func clearStatementID() {self._statementID = nil}
+
+  var props: [Oscal_Common_V1_Property] = []
+
+  var links: [Oscal_Common_V1_Link] = []
+
+  var remarks: [Oscal_Common_V1_MarkupMultiline] = []
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+
+  fileprivate var _controlID: Oscal_Common_V1_Token? = nil
+  fileprivate var _statementID: Oscal_Common_V1_Token? = nil
 }
 
 /// Finding represents a finding
@@ -841,6 +953,8 @@ nonisolated struct Oscal_AssessmentResults_V1_SubjectReference: Sendable {
   var hasSubjectUuid: Bool {self._subjectUuid != nil}
   /// Clears the value of `subjectUuid`. Subsequent reads from it will return its default value.
   mutating func clearSubjectUuid() {self._subjectUuid = nil}
+
+  var type: String = String()
 
   var title: Oscal_Common_V1_MarkupLine {
     get {_title ?? Oscal_Common_V1_MarkupLine()}
@@ -1429,7 +1543,147 @@ nonisolated extension Oscal_AssessmentResults_V1_UsesComponent: SwiftProtobuf.Me
 
 nonisolated extension Oscal_AssessmentResults_V1_Result: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   static let protoMessageName: String = _protobuf_package + ".Result"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}uuid\0\u{1}title\0\u{1}description\0\u{1}start\0\u{1}end\0\u{1}findings\0\u{1}observations\0\u{1}props\0\u{1}links\0\u{1}remarks\0")
+  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}uuid\0\u{1}title\0\u{1}description\0\u{1}start\0\u{1}end\0\u{1}findings\0\u{1}observations\0\u{1}props\0\u{1}links\0\u{1}remarks\0\u{3}reviewed_controls\0")
+
+  fileprivate class _StorageClass {
+    var _uuid: Oscal_Common_V1_UUID? = nil
+    var _title: Oscal_Common_V1_MarkupLine? = nil
+    var _description_p: Oscal_Common_V1_MarkupMultiline? = nil
+    var _start: Oscal_Common_V1_DateTime? = nil
+    var _end: Oscal_Common_V1_DateTime? = nil
+    var _findings: [Oscal_AssessmentResults_V1_Finding] = []
+    var _observations: [Oscal_AssessmentResults_V1_Observation] = []
+    var _props: [Oscal_Common_V1_Property] = []
+    var _links: [Oscal_Common_V1_Link] = []
+    var _remarks: [Oscal_Common_V1_MarkupMultiline] = []
+    var _reviewedControls: Oscal_AssessmentResults_V1_ReviewedControls? = nil
+
+      // This property is used as the initial default value for new instances of the type.
+      // The type itself is protecting the reference to its storage via CoW semantics.
+      // This will force a copy to be made of this reference when the first mutation occurs;
+      // hence, it is safe to mark this as `nonisolated(unsafe)`.
+      static nonisolated(unsafe) let defaultInstance = _StorageClass()
+
+    private init() {}
+
+    init(copying source: _StorageClass) {
+      _uuid = source._uuid
+      _title = source._title
+      _description_p = source._description_p
+      _start = source._start
+      _end = source._end
+      _findings = source._findings
+      _observations = source._observations
+      _props = source._props
+      _links = source._links
+      _remarks = source._remarks
+      _reviewedControls = source._reviewedControls
+    }
+  }
+
+  fileprivate mutating func _uniqueStorage() -> _StorageClass {
+    if !isKnownUniquelyReferenced(&_storage) {
+      _storage = _StorageClass(copying: _storage)
+    }
+    return _storage
+  }
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    _ = _uniqueStorage()
+    try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
+      while let fieldNumber = try decoder.nextFieldNumber() {
+        // The use of inline closures is to circumvent an issue where the compiler
+        // allocates stack space for every case branch when no optimizations are
+        // enabled. https://github.com/apple/swift-protobuf/issues/1034
+        switch fieldNumber {
+        case 1: try { try decoder.decodeSingularMessageField(value: &_storage._uuid) }()
+        case 2: try { try decoder.decodeSingularMessageField(value: &_storage._title) }()
+        case 3: try { try decoder.decodeSingularMessageField(value: &_storage._description_p) }()
+        case 4: try { try decoder.decodeSingularMessageField(value: &_storage._start) }()
+        case 5: try { try decoder.decodeSingularMessageField(value: &_storage._end) }()
+        case 6: try { try decoder.decodeRepeatedMessageField(value: &_storage._findings) }()
+        case 7: try { try decoder.decodeRepeatedMessageField(value: &_storage._observations) }()
+        case 8: try { try decoder.decodeRepeatedMessageField(value: &_storage._props) }()
+        case 9: try { try decoder.decodeRepeatedMessageField(value: &_storage._links) }()
+        case 10: try { try decoder.decodeRepeatedMessageField(value: &_storage._remarks) }()
+        case 11: try { try decoder.decodeSingularMessageField(value: &_storage._reviewedControls) }()
+        default: break
+        }
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every if/case branch local when no optimizations
+      // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+      // https://github.com/apple/swift-protobuf/issues/1182
+      try { if let v = _storage._uuid {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
+      } }()
+      try { if let v = _storage._title {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
+      } }()
+      try { if let v = _storage._description_p {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 3)
+      } }()
+      try { if let v = _storage._start {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 4)
+      } }()
+      try { if let v = _storage._end {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 5)
+      } }()
+      if !_storage._findings.isEmpty {
+        try visitor.visitRepeatedMessageField(value: _storage._findings, fieldNumber: 6)
+      }
+      if !_storage._observations.isEmpty {
+        try visitor.visitRepeatedMessageField(value: _storage._observations, fieldNumber: 7)
+      }
+      if !_storage._props.isEmpty {
+        try visitor.visitRepeatedMessageField(value: _storage._props, fieldNumber: 8)
+      }
+      if !_storage._links.isEmpty {
+        try visitor.visitRepeatedMessageField(value: _storage._links, fieldNumber: 9)
+      }
+      if !_storage._remarks.isEmpty {
+        try visitor.visitRepeatedMessageField(value: _storage._remarks, fieldNumber: 10)
+      }
+      try { if let v = _storage._reviewedControls {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 11)
+      } }()
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Oscal_AssessmentResults_V1_Result, rhs: Oscal_AssessmentResults_V1_Result) -> Bool {
+    if lhs._storage !== rhs._storage {
+      let storagesAreEqual: Bool = withExtendedLifetime((lhs._storage, rhs._storage)) { (_args: (_StorageClass, _StorageClass)) in
+        let _storage = _args.0
+        let rhs_storage = _args.1
+        if _storage._uuid != rhs_storage._uuid {return false}
+        if _storage._title != rhs_storage._title {return false}
+        if _storage._description_p != rhs_storage._description_p {return false}
+        if _storage._start != rhs_storage._start {return false}
+        if _storage._end != rhs_storage._end {return false}
+        if _storage._findings != rhs_storage._findings {return false}
+        if _storage._observations != rhs_storage._observations {return false}
+        if _storage._props != rhs_storage._props {return false}
+        if _storage._links != rhs_storage._links {return false}
+        if _storage._remarks != rhs_storage._remarks {return false}
+        if _storage._reviewedControls != rhs_storage._reviewedControls {return false}
+        return true
+      }
+      if !storagesAreEqual {return false}
+    }
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+nonisolated extension Oscal_AssessmentResults_V1_ReviewedControls: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".ReviewedControls"
+  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{3}control_selections\0\u{1}controls\0\u{1}props\0\u{1}links\0\u{1}remarks\0")
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
@@ -1437,16 +1691,62 @@ nonisolated extension Oscal_AssessmentResults_V1_Result: SwiftProtobuf.Message, 
       // allocates stack space for every case branch when no optimizations are
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
       switch fieldNumber {
-      case 1: try { try decoder.decodeSingularMessageField(value: &self._uuid) }()
-      case 2: try { try decoder.decodeSingularMessageField(value: &self._title) }()
-      case 3: try { try decoder.decodeSingularMessageField(value: &self._description_p) }()
-      case 4: try { try decoder.decodeSingularMessageField(value: &self._start) }()
-      case 5: try { try decoder.decodeSingularMessageField(value: &self._end) }()
-      case 6: try { try decoder.decodeRepeatedMessageField(value: &self.findings) }()
-      case 7: try { try decoder.decodeRepeatedMessageField(value: &self.observations) }()
-      case 8: try { try decoder.decodeRepeatedMessageField(value: &self.props) }()
-      case 9: try { try decoder.decodeRepeatedMessageField(value: &self.links) }()
-      case 10: try { try decoder.decodeRepeatedMessageField(value: &self.remarks) }()
+      case 1: try { try decoder.decodeRepeatedMessageField(value: &self.controlSelections) }()
+      case 2: try { try decoder.decodeRepeatedMessageField(value: &self.controls) }()
+      case 3: try { try decoder.decodeRepeatedMessageField(value: &self.props) }()
+      case 4: try { try decoder.decodeRepeatedMessageField(value: &self.links) }()
+      case 5: try { try decoder.decodeRepeatedMessageField(value: &self.remarks) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.controlSelections.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.controlSelections, fieldNumber: 1)
+    }
+    if !self.controls.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.controls, fieldNumber: 2)
+    }
+    if !self.props.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.props, fieldNumber: 3)
+    }
+    if !self.links.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.links, fieldNumber: 4)
+    }
+    if !self.remarks.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.remarks, fieldNumber: 5)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Oscal_AssessmentResults_V1_ReviewedControls, rhs: Oscal_AssessmentResults_V1_ReviewedControls) -> Bool {
+    if lhs.controlSelections != rhs.controlSelections {return false}
+    if lhs.controls != rhs.controls {return false}
+    if lhs.props != rhs.props {return false}
+    if lhs.links != rhs.links {return false}
+    if lhs.remarks != rhs.remarks {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+nonisolated extension Oscal_AssessmentResults_V1_ControlSelection: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".ControlSelection"
+  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}description\0\u{3}include_controls\0\u{3}exclude_controls\0\u{1}props\0\u{1}links\0\u{1}remarks\0")
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularMessageField(value: &self._description_p) }()
+      case 2: try { try decoder.decodeRepeatedMessageField(value: &self.includeControls) }()
+      case 3: try { try decoder.decodeRepeatedMessageField(value: &self.excludeControls) }()
+      case 4: try { try decoder.decodeRepeatedMessageField(value: &self.props) }()
+      case 5: try { try decoder.decodeRepeatedMessageField(value: &self.links) }()
+      case 6: try { try decoder.decodeRepeatedMessageField(value: &self.remarks) }()
       default: break
       }
     }
@@ -1457,47 +1757,85 @@ nonisolated extension Oscal_AssessmentResults_V1_Result: SwiftProtobuf.Message, 
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
     // https://github.com/apple/swift-protobuf/issues/1182
-    try { if let v = self._uuid {
+    try { if let v = self._description_p {
       try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
     } }()
-    try { if let v = self._title {
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
-    } }()
-    try { if let v = self._description_p {
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 3)
-    } }()
-    try { if let v = self._start {
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 4)
-    } }()
-    try { if let v = self._end {
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 5)
-    } }()
-    if !self.findings.isEmpty {
-      try visitor.visitRepeatedMessageField(value: self.findings, fieldNumber: 6)
+    if !self.includeControls.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.includeControls, fieldNumber: 2)
     }
-    if !self.observations.isEmpty {
-      try visitor.visitRepeatedMessageField(value: self.observations, fieldNumber: 7)
+    if !self.excludeControls.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.excludeControls, fieldNumber: 3)
     }
     if !self.props.isEmpty {
-      try visitor.visitRepeatedMessageField(value: self.props, fieldNumber: 8)
+      try visitor.visitRepeatedMessageField(value: self.props, fieldNumber: 4)
     }
     if !self.links.isEmpty {
-      try visitor.visitRepeatedMessageField(value: self.links, fieldNumber: 9)
+      try visitor.visitRepeatedMessageField(value: self.links, fieldNumber: 5)
     }
     if !self.remarks.isEmpty {
-      try visitor.visitRepeatedMessageField(value: self.remarks, fieldNumber: 10)
+      try visitor.visitRepeatedMessageField(value: self.remarks, fieldNumber: 6)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Oscal_AssessmentResults_V1_Result, rhs: Oscal_AssessmentResults_V1_Result) -> Bool {
-    if lhs._uuid != rhs._uuid {return false}
-    if lhs._title != rhs._title {return false}
+  static func ==(lhs: Oscal_AssessmentResults_V1_ControlSelection, rhs: Oscal_AssessmentResults_V1_ControlSelection) -> Bool {
     if lhs._description_p != rhs._description_p {return false}
-    if lhs._start != rhs._start {return false}
-    if lhs._end != rhs._end {return false}
-    if lhs.findings != rhs.findings {return false}
-    if lhs.observations != rhs.observations {return false}
+    if lhs.includeControls != rhs.includeControls {return false}
+    if lhs.excludeControls != rhs.excludeControls {return false}
+    if lhs.props != rhs.props {return false}
+    if lhs.links != rhs.links {return false}
+    if lhs.remarks != rhs.remarks {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+nonisolated extension Oscal_AssessmentResults_V1_SelectedControl: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".SelectedControl"
+  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{3}control_id\0\u{3}statement_id\0\u{1}props\0\u{1}links\0\u{1}remarks\0")
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularMessageField(value: &self._controlID) }()
+      case 2: try { try decoder.decodeSingularMessageField(value: &self._statementID) }()
+      case 3: try { try decoder.decodeRepeatedMessageField(value: &self.props) }()
+      case 4: try { try decoder.decodeRepeatedMessageField(value: &self.links) }()
+      case 5: try { try decoder.decodeRepeatedMessageField(value: &self.remarks) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
+    try { if let v = self._controlID {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
+    } }()
+    try { if let v = self._statementID {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
+    } }()
+    if !self.props.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.props, fieldNumber: 3)
+    }
+    if !self.links.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.links, fieldNumber: 4)
+    }
+    if !self.remarks.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.remarks, fieldNumber: 5)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Oscal_AssessmentResults_V1_SelectedControl, rhs: Oscal_AssessmentResults_V1_SelectedControl) -> Bool {
+    if lhs._controlID != rhs._controlID {return false}
+    if lhs._statementID != rhs._statementID {return false}
     if lhs.props != rhs.props {return false}
     if lhs.links != rhs.links {return false}
     if lhs.remarks != rhs.remarks {return false}
@@ -2116,7 +2454,7 @@ nonisolated extension Oscal_AssessmentResults_V1_Observation: SwiftProtobuf.Mess
 
 nonisolated extension Oscal_AssessmentResults_V1_SubjectReference: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   static let protoMessageName: String = _protobuf_package + ".SubjectReference"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{3}subject_uuid\0\u{1}title\0\u{1}props\0\u{1}links\0\u{1}remarks\0")
+  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{3}subject_uuid\0\u{1}type\0\u{1}title\0\u{1}props\0\u{1}links\0\u{1}remarks\0")
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
@@ -2125,10 +2463,11 @@ nonisolated extension Oscal_AssessmentResults_V1_SubjectReference: SwiftProtobuf
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
       switch fieldNumber {
       case 1: try { try decoder.decodeSingularMessageField(value: &self._subjectUuid) }()
-      case 2: try { try decoder.decodeSingularMessageField(value: &self._title) }()
-      case 3: try { try decoder.decodeRepeatedMessageField(value: &self.props) }()
-      case 4: try { try decoder.decodeRepeatedMessageField(value: &self.links) }()
-      case 5: try { try decoder.decodeRepeatedMessageField(value: &self.remarks) }()
+      case 2: try { try decoder.decodeSingularStringField(value: &self.type) }()
+      case 3: try { try decoder.decodeSingularMessageField(value: &self._title) }()
+      case 4: try { try decoder.decodeRepeatedMessageField(value: &self.props) }()
+      case 5: try { try decoder.decodeRepeatedMessageField(value: &self.links) }()
+      case 6: try { try decoder.decodeRepeatedMessageField(value: &self.remarks) }()
       default: break
       }
     }
@@ -2142,23 +2481,27 @@ nonisolated extension Oscal_AssessmentResults_V1_SubjectReference: SwiftProtobuf
     try { if let v = self._subjectUuid {
       try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
     } }()
+    if !self.type.isEmpty {
+      try visitor.visitSingularStringField(value: self.type, fieldNumber: 2)
+    }
     try { if let v = self._title {
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 3)
     } }()
     if !self.props.isEmpty {
-      try visitor.visitRepeatedMessageField(value: self.props, fieldNumber: 3)
+      try visitor.visitRepeatedMessageField(value: self.props, fieldNumber: 4)
     }
     if !self.links.isEmpty {
-      try visitor.visitRepeatedMessageField(value: self.links, fieldNumber: 4)
+      try visitor.visitRepeatedMessageField(value: self.links, fieldNumber: 5)
     }
     if !self.remarks.isEmpty {
-      try visitor.visitRepeatedMessageField(value: self.remarks, fieldNumber: 5)
+      try visitor.visitRepeatedMessageField(value: self.remarks, fieldNumber: 6)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
   static func ==(lhs: Oscal_AssessmentResults_V1_SubjectReference, rhs: Oscal_AssessmentResults_V1_SubjectReference) -> Bool {
     if lhs._subjectUuid != rhs._subjectUuid {return false}
+    if lhs.type != rhs.type {return false}
     if lhs._title != rhs._title {return false}
     if lhs.props != rhs.props {return false}
     if lhs.links != rhs.links {return false}

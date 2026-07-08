@@ -74,8 +74,30 @@ func TestExportCatalogJSON(t *testing.T) {
 	if len(b) == 0 {
 		t.Fatal("expected non-empty JSON")
 	}
-	if !bytes.Contains(b, []byte(`"Test Catalog"`)) {
-		t.Error("expected JSON to contain title")
+	// OSCAL JSON must have root "catalog" wrapper
+	if !bytes.Contains(b, []byte(`"catalog"`)) {
+		t.Error("expected JSON to contain root 'catalog' wrapper key")
+	}
+	// UUID must be a plain string, not {"value": "..."}
+	if !bytes.Contains(b, []byte(`"uuid": "123e4567-e89b-12d3-a456-426614174000"`)) {
+		t.Error("expected JSON to contain plain uuid string")
+	}
+	if bytes.Contains(b, []byte(`{"value":`)) {
+		t.Error("expected JSON to NOT contain {\"value\": ...} wrapper objects")
+	}
+	// Must have kebab-case keys
+	if !bytes.Contains(b, []byte(`"oscal-version"`)) {
+		t.Error("expected JSON to contain kebab-case 'oscal-version' field")
+	}
+	if !bytes.Contains(b, []byte(`"last-modified"`)) {
+		t.Error("expected JSON to contain kebab-case 'last-modified' field")
+	}
+	// Must NOT have camelCase keys
+	if bytes.Contains(b, []byte(`"backMatter"`)) {
+		t.Error("expected JSON to NOT contain camelCase 'backMatter'")
+	}
+	if bytes.Contains(b, []byte(`"lastModified"`)) {
+		t.Error("expected JSON to NOT contain camelCase 'lastModified'")
 	}
 }
 

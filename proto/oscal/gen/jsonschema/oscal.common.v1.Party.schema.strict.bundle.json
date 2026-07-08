@@ -134,9 +134,21 @@
           },
           "type": "array"
         },
+        "external_ids": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.PartyExternalId.schema.strict.json"
+          },
+          "type": "array"
+        },
         "links": {
           "items": {
             "$ref": "#/$defs/oscal.common.v1.Link.schema.strict.json"
+          },
+          "type": "array"
+        },
+        "location_uuids": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.UUID.schema.strict.json"
           },
           "type": "array"
         },
@@ -185,6 +197,24 @@
         "name"
       ],
       "title": "Party",
+      "type": "object"
+    },
+    "oscal.common.v1.PartyExternalId.schema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "PartyExternalId represents an external identifier for a party",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "scheme": {
+          "$ref": "#/$defs/oscal.common.v1.URI.schema.strict.json"
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "title": "Party External Id",
       "type": "object"
     },
     "oscal.common.v1.Property.schema.strict.json": {

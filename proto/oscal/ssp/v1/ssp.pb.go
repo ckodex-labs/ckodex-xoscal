@@ -1405,6 +1405,7 @@ type SystemComponent struct {
 	Props         []*v1.Property         `protobuf:"bytes,6,rep,name=props,proto3" json:"props,omitempty"`
 	Links         []*v1.Link             `protobuf:"bytes,7,rep,name=links,proto3" json:"links,omitempty"`
 	Remarks       []*v1.MarkupMultiline  `protobuf:"bytes,8,rep,name=remarks,proto3" json:"remarks,omitempty"`
+	Status        *Status                `protobuf:"bytes,9,opt,name=status,proto3" json:"status,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -1484,6 +1485,13 @@ func (x *SystemComponent) GetLinks() []*v1.Link {
 func (x *SystemComponent) GetRemarks() []*v1.MarkupMultiline {
 	if x != nil {
 		return x.Remarks
+	}
+	return nil
+}
+
+func (x *SystemComponent) GetStatus() *Status {
+	if x != nil {
+		return x.Status
 	}
 	return nil
 }
@@ -1628,10 +1636,15 @@ func (x *ControlImplementation) GetImplementedRequirements() []*ImplementedRequi
 
 // SetParameter represents a set parameter
 type SetParameter struct {
-	state         protoimpl.MessageState `protogen:"open.v1"`
-	ParamId       *v1.Token              `protobuf:"bytes,1,opt,name=param_id,json=paramId,proto3" json:"param_id,omitempty"`
-	Value         string                 `protobuf:"bytes,2,opt,name=value,proto3" json:"value,omitempty"`
-	Remarks       []*v1.MarkupMultiline  `protobuf:"bytes,3,rep,name=remarks,proto3" json:"remarks,omitempty"`
+	state   protoimpl.MessageState `protogen:"open.v1"`
+	ParamId *v1.Token              `protobuf:"bytes,1,opt,name=param_id,json=paramId,proto3" json:"param_id,omitempty"`
+	// Deprecated: use values instead. Kept for backward compatibility.
+	//
+	// Deprecated: Marked as deprecated in ssp/v1/ssp.proto.
+	Value   string                `protobuf:"bytes,2,opt,name=value,proto3" json:"value,omitempty"`
+	Remarks []*v1.MarkupMultiline `protobuf:"bytes,3,rep,name=remarks,proto3" json:"remarks,omitempty"`
+	// values is the OSCAL schema-required array of parameter values.
+	Values        []*v1.MarkupLine `protobuf:"bytes,4,rep,name=values,proto3" json:"values,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -1673,6 +1686,7 @@ func (x *SetParameter) GetParamId() *v1.Token {
 	return nil
 }
 
+// Deprecated: Marked as deprecated in ssp/v1/ssp.proto.
 func (x *SetParameter) GetValue() string {
 	if x != nil {
 		return x.Value
@@ -1683,6 +1697,13 @@ func (x *SetParameter) GetValue() string {
 func (x *SetParameter) GetRemarks() []*v1.MarkupMultiline {
 	if x != nil {
 		return x.Remarks
+	}
+	return nil
+}
+
+func (x *SetParameter) GetValues() []*v1.MarkupLine {
+	if x != nil {
+		return x.Values
 	}
 	return nil
 }
@@ -2708,7 +2729,7 @@ const file_ssp_v1_ssp_proto_rawDesc = "" +
 	"\vdescription\x18\x04 \x01(\v2 .oscal.common.v1.MarkupMultilineR\vdescription\x12/\n" +
 	"\x05props\x18\x05 \x03(\v2\x19.oscal.common.v1.PropertyR\x05props\x12+\n" +
 	"\x05links\x18\x06 \x03(\v2\x15.oscal.common.v1.LinkR\x05links\x12:\n" +
-	"\aremarks\x18\a \x03(\v2 .oscal.common.v1.MarkupMultilineR\aremarks\"\xa2\x02\n" +
+	"\aremarks\x18\a \x03(\v2 .oscal.common.v1.MarkupMultilineR\aremarks\"\xd0\x02\n" +
 	"\x0fSystemComponent\x12)\n" +
 	"\x04uuid\x18\x02 \x01(\v2\x15.oscal.common.v1.UUIDR\x04uuid\x12\x12\n" +
 	"\x04type\x18\x03 \x01(\tR\x04type\x12\x14\n" +
@@ -2716,7 +2737,8 @@ const file_ssp_v1_ssp_proto_rawDesc = "" +
 	"\vdescription\x18\x05 \x01(\tR\vdescription\x12/\n" +
 	"\x05props\x18\x06 \x03(\v2\x19.oscal.common.v1.PropertyR\x05props\x12+\n" +
 	"\x05links\x18\a \x03(\v2\x15.oscal.common.v1.LinkR\x05links\x12:\n" +
-	"\aremarks\x18\b \x03(\v2 .oscal.common.v1.MarkupMultilineR\aremarks\"\x93\x02\n" +
+	"\aremarks\x18\b \x03(\v2 .oscal.common.v1.MarkupMultilineR\aremarks\x12,\n" +
+	"\x06status\x18\t \x01(\v2\x14.oscal.ssp.v1.StatusR\x06status\"\x93\x02\n" +
 	"\rInventoryItem\x12)\n" +
 	"\x04uuid\x18\x01 \x01(\v2\x15.oscal.common.v1.UUIDR\x04uuid\x12=\n" +
 	"\vdescription\x18\x02 \x01(\v2\x1b.oscal.common.v1.MarkupLineR\vdescription\x12/\n" +
@@ -2726,11 +2748,12 @@ const file_ssp_v1_ssp_proto_rawDesc = "" +
 	"\x15ControlImplementation\x12B\n" +
 	"\vdescription\x18\x01 \x01(\v2 .oscal.common.v1.MarkupMultilineR\vdescription\x12A\n" +
 	"\x0eset_parameters\x18\x02 \x03(\v2\x1a.oscal.ssp.v1.SetParameterR\rsetParameters\x12_\n" +
-	"\x18implemented_requirements\x18\x03 \x03(\v2$.oscal.ssp.v1.ImplementedRequirementR\x17implementedRequirements\"\x93\x01\n" +
+	"\x18implemented_requirements\x18\x03 \x03(\v2$.oscal.ssp.v1.ImplementedRequirementR\x17implementedRequirements\"\xcc\x01\n" +
 	"\fSetParameter\x121\n" +
-	"\bparam_id\x18\x01 \x01(\v2\x16.oscal.common.v1.TokenR\aparamId\x12\x14\n" +
-	"\x05value\x18\x02 \x01(\tR\x05value\x12:\n" +
-	"\aremarks\x18\x03 \x03(\v2 .oscal.common.v1.MarkupMultilineR\aremarks\"\x9c\x04\n" +
+	"\bparam_id\x18\x01 \x01(\v2\x16.oscal.common.v1.TokenR\aparamId\x12\x18\n" +
+	"\x05value\x18\x02 \x01(\tB\x02\x18\x01R\x05value\x12:\n" +
+	"\aremarks\x18\x03 \x03(\v2 .oscal.common.v1.MarkupMultilineR\aremarks\x123\n" +
+	"\x06values\x18\x04 \x03(\v2\x1b.oscal.common.v1.MarkupLineR\x06values\"\x9c\x04\n" +
 	"\x16ImplementedRequirement\x12)\n" +
 	"\x04uuid\x18\x01 \x01(\v2\x15.oscal.common.v1.UUIDR\x04uuid\x125\n" +
 	"\n" +
@@ -2953,86 +2976,88 @@ var file_ssp_v1_ssp_proto_depIdxs = []int32{
 	36,  // 79: oscal.ssp.v1.SystemComponent.props:type_name -> oscal.common.v1.Property
 	37,  // 80: oscal.ssp.v1.SystemComponent.links:type_name -> oscal.common.v1.Link
 	35,  // 81: oscal.ssp.v1.SystemComponent.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	31,  // 82: oscal.ssp.v1.InventoryItem.uuid:type_name -> oscal.common.v1.UUID
-	40,  // 83: oscal.ssp.v1.InventoryItem.description:type_name -> oscal.common.v1.MarkupLine
-	36,  // 84: oscal.ssp.v1.InventoryItem.props:type_name -> oscal.common.v1.Property
-	37,  // 85: oscal.ssp.v1.InventoryItem.links:type_name -> oscal.common.v1.Link
-	35,  // 86: oscal.ssp.v1.InventoryItem.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	35,  // 87: oscal.ssp.v1.ControlImplementation.description:type_name -> oscal.common.v1.MarkupMultiline
-	20,  // 88: oscal.ssp.v1.ControlImplementation.set_parameters:type_name -> oscal.ssp.v1.SetParameter
-	21,  // 89: oscal.ssp.v1.ControlImplementation.implemented_requirements:type_name -> oscal.ssp.v1.ImplementedRequirement
-	41,  // 90: oscal.ssp.v1.SetParameter.param_id:type_name -> oscal.common.v1.Token
-	35,  // 91: oscal.ssp.v1.SetParameter.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	31,  // 92: oscal.ssp.v1.ImplementedRequirement.uuid:type_name -> oscal.common.v1.UUID
-	41,  // 93: oscal.ssp.v1.ImplementedRequirement.control_id:type_name -> oscal.common.v1.Token
-	36,  // 94: oscal.ssp.v1.ImplementedRequirement.props:type_name -> oscal.common.v1.Property
-	37,  // 95: oscal.ssp.v1.ImplementedRequirement.links:type_name -> oscal.common.v1.Link
-	20,  // 96: oscal.ssp.v1.ImplementedRequirement.set_parameters:type_name -> oscal.ssp.v1.SetParameter
-	22,  // 97: oscal.ssp.v1.ImplementedRequirement.responsible_roles:type_name -> oscal.ssp.v1.ResponsibleRole
-	23,  // 98: oscal.ssp.v1.ImplementedRequirement.statements:type_name -> oscal.ssp.v1.Statement
-	24,  // 99: oscal.ssp.v1.ImplementedRequirement.by_components:type_name -> oscal.ssp.v1.ByComponent
-	35,  // 100: oscal.ssp.v1.ImplementedRequirement.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	41,  // 101: oscal.ssp.v1.ResponsibleRole.role_id:type_name -> oscal.common.v1.Token
-	31,  // 102: oscal.ssp.v1.ResponsibleRole.party_uuids:type_name -> oscal.common.v1.UUID
-	36,  // 103: oscal.ssp.v1.ResponsibleRole.props:type_name -> oscal.common.v1.Property
-	35,  // 104: oscal.ssp.v1.ResponsibleRole.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	41,  // 105: oscal.ssp.v1.Statement.statement_id:type_name -> oscal.common.v1.Token
-	31,  // 106: oscal.ssp.v1.Statement.uuid:type_name -> oscal.common.v1.UUID
-	36,  // 107: oscal.ssp.v1.Statement.props:type_name -> oscal.common.v1.Property
-	37,  // 108: oscal.ssp.v1.Statement.links:type_name -> oscal.common.v1.Link
-	22,  // 109: oscal.ssp.v1.Statement.responsible_roles:type_name -> oscal.ssp.v1.ResponsibleRole
-	24,  // 110: oscal.ssp.v1.Statement.by_components:type_name -> oscal.ssp.v1.ByComponent
-	35,  // 111: oscal.ssp.v1.Statement.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	31,  // 112: oscal.ssp.v1.ByComponent.component_uuid:type_name -> oscal.common.v1.UUID
-	31,  // 113: oscal.ssp.v1.ByComponent.uuid:type_name -> oscal.common.v1.UUID
-	35,  // 114: oscal.ssp.v1.ByComponent.description:type_name -> oscal.common.v1.MarkupMultiline
-	36,  // 115: oscal.ssp.v1.ByComponent.props:type_name -> oscal.common.v1.Property
-	37,  // 116: oscal.ssp.v1.ByComponent.links:type_name -> oscal.common.v1.Link
-	20,  // 117: oscal.ssp.v1.ByComponent.set_parameters:type_name -> oscal.ssp.v1.SetParameter
-	25,  // 118: oscal.ssp.v1.ByComponent.implementation_status:type_name -> oscal.ssp.v1.ImplementationStatus
-	26,  // 119: oscal.ssp.v1.ByComponent.export:type_name -> oscal.ssp.v1.Export
-	29,  // 120: oscal.ssp.v1.ByComponent.inherited:type_name -> oscal.ssp.v1.Inherited
-	30,  // 121: oscal.ssp.v1.ByComponent.satisfied:type_name -> oscal.ssp.v1.Satisfied
-	22,  // 122: oscal.ssp.v1.ByComponent.responsible_roles:type_name -> oscal.ssp.v1.ResponsibleRole
-	35,  // 123: oscal.ssp.v1.ByComponent.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	35,  // 124: oscal.ssp.v1.ImplementationStatus.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	35,  // 125: oscal.ssp.v1.Export.description:type_name -> oscal.common.v1.MarkupMultiline
-	36,  // 126: oscal.ssp.v1.Export.props:type_name -> oscal.common.v1.Property
-	37,  // 127: oscal.ssp.v1.Export.links:type_name -> oscal.common.v1.Link
-	27,  // 128: oscal.ssp.v1.Export.provided:type_name -> oscal.ssp.v1.Provided
-	28,  // 129: oscal.ssp.v1.Export.responsibilities:type_name -> oscal.ssp.v1.Responsibility
-	35,  // 130: oscal.ssp.v1.Export.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	31,  // 131: oscal.ssp.v1.Provided.uuid:type_name -> oscal.common.v1.UUID
-	35,  // 132: oscal.ssp.v1.Provided.description:type_name -> oscal.common.v1.MarkupMultiline
-	36,  // 133: oscal.ssp.v1.Provided.props:type_name -> oscal.common.v1.Property
-	37,  // 134: oscal.ssp.v1.Provided.links:type_name -> oscal.common.v1.Link
-	22,  // 135: oscal.ssp.v1.Provided.responsible_roles:type_name -> oscal.ssp.v1.ResponsibleRole
-	35,  // 136: oscal.ssp.v1.Provided.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	31,  // 137: oscal.ssp.v1.Responsibility.uuid:type_name -> oscal.common.v1.UUID
-	31,  // 138: oscal.ssp.v1.Responsibility.provided_uuid:type_name -> oscal.common.v1.UUID
-	35,  // 139: oscal.ssp.v1.Responsibility.description:type_name -> oscal.common.v1.MarkupMultiline
-	36,  // 140: oscal.ssp.v1.Responsibility.props:type_name -> oscal.common.v1.Property
-	37,  // 141: oscal.ssp.v1.Responsibility.links:type_name -> oscal.common.v1.Link
-	22,  // 142: oscal.ssp.v1.Responsibility.responsible_roles:type_name -> oscal.ssp.v1.ResponsibleRole
-	35,  // 143: oscal.ssp.v1.Responsibility.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	31,  // 144: oscal.ssp.v1.Inherited.uuid:type_name -> oscal.common.v1.UUID
-	31,  // 145: oscal.ssp.v1.Inherited.provided_uuid:type_name -> oscal.common.v1.UUID
-	35,  // 146: oscal.ssp.v1.Inherited.description:type_name -> oscal.common.v1.MarkupMultiline
-	36,  // 147: oscal.ssp.v1.Inherited.props:type_name -> oscal.common.v1.Property
-	37,  // 148: oscal.ssp.v1.Inherited.links:type_name -> oscal.common.v1.Link
-	22,  // 149: oscal.ssp.v1.Inherited.responsible_roles:type_name -> oscal.ssp.v1.ResponsibleRole
-	31,  // 150: oscal.ssp.v1.Satisfied.uuid:type_name -> oscal.common.v1.UUID
-	31,  // 151: oscal.ssp.v1.Satisfied.responsibility_uuid:type_name -> oscal.common.v1.UUID
-	35,  // 152: oscal.ssp.v1.Satisfied.description:type_name -> oscal.common.v1.MarkupMultiline
-	36,  // 153: oscal.ssp.v1.Satisfied.props:type_name -> oscal.common.v1.Property
-	37,  // 154: oscal.ssp.v1.Satisfied.links:type_name -> oscal.common.v1.Link
-	22,  // 155: oscal.ssp.v1.Satisfied.responsible_roles:type_name -> oscal.ssp.v1.ResponsibleRole
-	35,  // 156: oscal.ssp.v1.Satisfied.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	157, // [157:157] is the sub-list for method output_type
-	157, // [157:157] is the sub-list for method input_type
-	157, // [157:157] is the sub-list for extension type_name
-	157, // [157:157] is the sub-list for extension extendee
-	0,   // [0:157] is the sub-list for field type_name
+	9,   // 82: oscal.ssp.v1.SystemComponent.status:type_name -> oscal.ssp.v1.Status
+	31,  // 83: oscal.ssp.v1.InventoryItem.uuid:type_name -> oscal.common.v1.UUID
+	40,  // 84: oscal.ssp.v1.InventoryItem.description:type_name -> oscal.common.v1.MarkupLine
+	36,  // 85: oscal.ssp.v1.InventoryItem.props:type_name -> oscal.common.v1.Property
+	37,  // 86: oscal.ssp.v1.InventoryItem.links:type_name -> oscal.common.v1.Link
+	35,  // 87: oscal.ssp.v1.InventoryItem.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	35,  // 88: oscal.ssp.v1.ControlImplementation.description:type_name -> oscal.common.v1.MarkupMultiline
+	20,  // 89: oscal.ssp.v1.ControlImplementation.set_parameters:type_name -> oscal.ssp.v1.SetParameter
+	21,  // 90: oscal.ssp.v1.ControlImplementation.implemented_requirements:type_name -> oscal.ssp.v1.ImplementedRequirement
+	41,  // 91: oscal.ssp.v1.SetParameter.param_id:type_name -> oscal.common.v1.Token
+	35,  // 92: oscal.ssp.v1.SetParameter.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	40,  // 93: oscal.ssp.v1.SetParameter.values:type_name -> oscal.common.v1.MarkupLine
+	31,  // 94: oscal.ssp.v1.ImplementedRequirement.uuid:type_name -> oscal.common.v1.UUID
+	41,  // 95: oscal.ssp.v1.ImplementedRequirement.control_id:type_name -> oscal.common.v1.Token
+	36,  // 96: oscal.ssp.v1.ImplementedRequirement.props:type_name -> oscal.common.v1.Property
+	37,  // 97: oscal.ssp.v1.ImplementedRequirement.links:type_name -> oscal.common.v1.Link
+	20,  // 98: oscal.ssp.v1.ImplementedRequirement.set_parameters:type_name -> oscal.ssp.v1.SetParameter
+	22,  // 99: oscal.ssp.v1.ImplementedRequirement.responsible_roles:type_name -> oscal.ssp.v1.ResponsibleRole
+	23,  // 100: oscal.ssp.v1.ImplementedRequirement.statements:type_name -> oscal.ssp.v1.Statement
+	24,  // 101: oscal.ssp.v1.ImplementedRequirement.by_components:type_name -> oscal.ssp.v1.ByComponent
+	35,  // 102: oscal.ssp.v1.ImplementedRequirement.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	41,  // 103: oscal.ssp.v1.ResponsibleRole.role_id:type_name -> oscal.common.v1.Token
+	31,  // 104: oscal.ssp.v1.ResponsibleRole.party_uuids:type_name -> oscal.common.v1.UUID
+	36,  // 105: oscal.ssp.v1.ResponsibleRole.props:type_name -> oscal.common.v1.Property
+	35,  // 106: oscal.ssp.v1.ResponsibleRole.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	41,  // 107: oscal.ssp.v1.Statement.statement_id:type_name -> oscal.common.v1.Token
+	31,  // 108: oscal.ssp.v1.Statement.uuid:type_name -> oscal.common.v1.UUID
+	36,  // 109: oscal.ssp.v1.Statement.props:type_name -> oscal.common.v1.Property
+	37,  // 110: oscal.ssp.v1.Statement.links:type_name -> oscal.common.v1.Link
+	22,  // 111: oscal.ssp.v1.Statement.responsible_roles:type_name -> oscal.ssp.v1.ResponsibleRole
+	24,  // 112: oscal.ssp.v1.Statement.by_components:type_name -> oscal.ssp.v1.ByComponent
+	35,  // 113: oscal.ssp.v1.Statement.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	31,  // 114: oscal.ssp.v1.ByComponent.component_uuid:type_name -> oscal.common.v1.UUID
+	31,  // 115: oscal.ssp.v1.ByComponent.uuid:type_name -> oscal.common.v1.UUID
+	35,  // 116: oscal.ssp.v1.ByComponent.description:type_name -> oscal.common.v1.MarkupMultiline
+	36,  // 117: oscal.ssp.v1.ByComponent.props:type_name -> oscal.common.v1.Property
+	37,  // 118: oscal.ssp.v1.ByComponent.links:type_name -> oscal.common.v1.Link
+	20,  // 119: oscal.ssp.v1.ByComponent.set_parameters:type_name -> oscal.ssp.v1.SetParameter
+	25,  // 120: oscal.ssp.v1.ByComponent.implementation_status:type_name -> oscal.ssp.v1.ImplementationStatus
+	26,  // 121: oscal.ssp.v1.ByComponent.export:type_name -> oscal.ssp.v1.Export
+	29,  // 122: oscal.ssp.v1.ByComponent.inherited:type_name -> oscal.ssp.v1.Inherited
+	30,  // 123: oscal.ssp.v1.ByComponent.satisfied:type_name -> oscal.ssp.v1.Satisfied
+	22,  // 124: oscal.ssp.v1.ByComponent.responsible_roles:type_name -> oscal.ssp.v1.ResponsibleRole
+	35,  // 125: oscal.ssp.v1.ByComponent.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	35,  // 126: oscal.ssp.v1.ImplementationStatus.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	35,  // 127: oscal.ssp.v1.Export.description:type_name -> oscal.common.v1.MarkupMultiline
+	36,  // 128: oscal.ssp.v1.Export.props:type_name -> oscal.common.v1.Property
+	37,  // 129: oscal.ssp.v1.Export.links:type_name -> oscal.common.v1.Link
+	27,  // 130: oscal.ssp.v1.Export.provided:type_name -> oscal.ssp.v1.Provided
+	28,  // 131: oscal.ssp.v1.Export.responsibilities:type_name -> oscal.ssp.v1.Responsibility
+	35,  // 132: oscal.ssp.v1.Export.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	31,  // 133: oscal.ssp.v1.Provided.uuid:type_name -> oscal.common.v1.UUID
+	35,  // 134: oscal.ssp.v1.Provided.description:type_name -> oscal.common.v1.MarkupMultiline
+	36,  // 135: oscal.ssp.v1.Provided.props:type_name -> oscal.common.v1.Property
+	37,  // 136: oscal.ssp.v1.Provided.links:type_name -> oscal.common.v1.Link
+	22,  // 137: oscal.ssp.v1.Provided.responsible_roles:type_name -> oscal.ssp.v1.ResponsibleRole
+	35,  // 138: oscal.ssp.v1.Provided.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	31,  // 139: oscal.ssp.v1.Responsibility.uuid:type_name -> oscal.common.v1.UUID
+	31,  // 140: oscal.ssp.v1.Responsibility.provided_uuid:type_name -> oscal.common.v1.UUID
+	35,  // 141: oscal.ssp.v1.Responsibility.description:type_name -> oscal.common.v1.MarkupMultiline
+	36,  // 142: oscal.ssp.v1.Responsibility.props:type_name -> oscal.common.v1.Property
+	37,  // 143: oscal.ssp.v1.Responsibility.links:type_name -> oscal.common.v1.Link
+	22,  // 144: oscal.ssp.v1.Responsibility.responsible_roles:type_name -> oscal.ssp.v1.ResponsibleRole
+	35,  // 145: oscal.ssp.v1.Responsibility.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	31,  // 146: oscal.ssp.v1.Inherited.uuid:type_name -> oscal.common.v1.UUID
+	31,  // 147: oscal.ssp.v1.Inherited.provided_uuid:type_name -> oscal.common.v1.UUID
+	35,  // 148: oscal.ssp.v1.Inherited.description:type_name -> oscal.common.v1.MarkupMultiline
+	36,  // 149: oscal.ssp.v1.Inherited.props:type_name -> oscal.common.v1.Property
+	37,  // 150: oscal.ssp.v1.Inherited.links:type_name -> oscal.common.v1.Link
+	22,  // 151: oscal.ssp.v1.Inherited.responsible_roles:type_name -> oscal.ssp.v1.ResponsibleRole
+	31,  // 152: oscal.ssp.v1.Satisfied.uuid:type_name -> oscal.common.v1.UUID
+	31,  // 153: oscal.ssp.v1.Satisfied.responsibility_uuid:type_name -> oscal.common.v1.UUID
+	35,  // 154: oscal.ssp.v1.Satisfied.description:type_name -> oscal.common.v1.MarkupMultiline
+	36,  // 155: oscal.ssp.v1.Satisfied.props:type_name -> oscal.common.v1.Property
+	37,  // 156: oscal.ssp.v1.Satisfied.links:type_name -> oscal.common.v1.Link
+	22,  // 157: oscal.ssp.v1.Satisfied.responsible_roles:type_name -> oscal.ssp.v1.ResponsibleRole
+	35,  // 158: oscal.ssp.v1.Satisfied.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	159, // [159:159] is the sub-list for method output_type
+	159, // [159:159] is the sub-list for method input_type
+	159, // [159:159] is the sub-list for extension type_name
+	159, // [159:159] is the sub-list for extension extendee
+	0,   // [0:159] is the sub-list for field type_name
 }
 
 func init() { file_ssp_v1_ssp_proto_init() }

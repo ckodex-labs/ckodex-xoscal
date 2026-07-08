@@ -161,6 +161,25 @@ components:
       title: Boolean
       additionalProperties: false
       description: Boolean represents a boolean value
+    oscal.common.v1.Citation:
+      type: object
+      properties:
+        text:
+          title: text
+          $ref: '#/components/schemas/oscal.common.v1.MarkupLine'
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+      title: Citation
+      additionalProperties: false
+      description: Citation represents a bibliographic citation
     oscal.common.v1.Date:
       type: object
       properties:
@@ -259,6 +278,51 @@ components:
       title: Link
       additionalProperties: false
       description: Link represents a hyperlink with metadata
+    oscal.common.v1.Location:
+      type: object
+      properties:
+        uuid:
+          title: uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        title:
+          type: string
+          title: title
+        address:
+          title: address
+          $ref: '#/components/schemas/oscal.common.v1.Address'
+        emailAddresses:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.EmailAddress'
+          title: email_addresses
+        telephoneNumbers:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.TelephoneNumber'
+          title: telephone_numbers
+        urls:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.URI'
+          title: urls
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: Location
+      additionalProperties: false
+      description: Location represents a physical or virtual location
     oscal.common.v1.MarkupLine:
       type: object
       properties:
@@ -326,6 +390,11 @@ components:
         remarks:
           title: remarks
           $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+        locations:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Location'
+          title: locations
       title: Metadata
       additionalProperties: false
       description: Metadata represents document metadata shared across all OSCAL models
@@ -391,9 +460,31 @@ components:
           items:
             type: string
           title: remarks
+        externalIds:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.PartyExternalId'
+          title: external_ids
+        locationUuids:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.UUID'
+          title: location_uuids
       title: Party
       additionalProperties: false
       description: Party represents an organization or person
+    oscal.common.v1.PartyExternalId:
+      type: object
+      properties:
+        id:
+          type: string
+          title: id
+        scheme:
+          title: scheme
+          $ref: '#/components/schemas/oscal.common.v1.URI'
+      title: PartyExternalId
+      additionalProperties: false
+      description: PartyExternalId represents an external identifier for a party
     oscal.common.v1.PositiveInteger:
       type: object
       properties:
@@ -433,9 +524,7 @@ components:
           title: uuid
           $ref: '#/components/schemas/oscal.common.v1.UUID'
         title:
-          type: array
-          items:
-            type: string
+          type: string
           title: title
         description:
           title: description
@@ -468,6 +557,16 @@ components:
         citation:
           type: string
           title: citation
+          description: 'Deprecated: use citation_obj instead. Kept for backward compatibility.'
+          deprecated: true
+        rlinks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Rlink'
+          title: rlinks
+        citationObj:
+          title: citation_obj
+          $ref: '#/components/schemas/oscal.common.v1.Citation'
       title: Resource
       additionalProperties: false
       description: Resource represents an external resource
@@ -498,6 +597,23 @@ components:
       title: ResponsibleParty
       additionalProperties: false
       description: ResponsibleParty represents a party responsible for a role
+    oscal.common.v1.Rlink:
+      type: object
+      properties:
+        href:
+          title: href
+          $ref: '#/components/schemas/oscal.common.v1.URI'
+        mediaType:
+          type: string
+          title: media_type
+        hashes:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Hash'
+          title: hashes
+      title: Rlink
+      additionalProperties: false
+      description: Rlink represents a resource link
     oscal.common.v1.Role:
       type: object
       properties:

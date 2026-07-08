@@ -398,6 +398,13 @@ export declare type Result = Message<"oscal.assessment_results.v1.Result"> & {
    * @generated from field: repeated oscal.common.v1.MarkupMultiline remarks = 10;
    */
   remarks: MarkupMultiline[];
+
+  /**
+   * reviewed_controls is required by the OSCAL 1.1.2 schema for each result.
+   *
+   * @generated from field: oscal.assessment_results.v1.ReviewedControls reviewed_controls = 11;
+   */
+  reviewedControls?: ReviewedControls | undefined;
 };
 
 /**
@@ -405,6 +412,125 @@ export declare type Result = Message<"oscal.assessment_results.v1.Result"> & {
  * Use `create(ResultSchema)` to create a new message.
  */
 export declare const ResultSchema: GenMessage<Result>;
+
+/**
+ * ReviewedControls represents the reviewed controls for a result
+ *
+ * @generated from message oscal.assessment_results.v1.ReviewedControls
+ */
+export declare type ReviewedControls = Message<"oscal.assessment_results.v1.ReviewedControls"> & {
+  /**
+   * @generated from field: repeated oscal.assessment_results.v1.ControlSelection control_selections = 1;
+   */
+  controlSelections: ControlSelection[];
+
+  /**
+   * @generated from field: repeated oscal.assessment_results.v1.SelectedControl controls = 2;
+   */
+  controls: SelectedControl[];
+
+  /**
+   * @generated from field: repeated oscal.common.v1.Property props = 3;
+   */
+  props: Property[];
+
+  /**
+   * @generated from field: repeated oscal.common.v1.Link links = 4;
+   */
+  links: Link[];
+
+  /**
+   * @generated from field: repeated oscal.common.v1.MarkupMultiline remarks = 5;
+   */
+  remarks: MarkupMultiline[];
+};
+
+/**
+ * Describes the message oscal.assessment_results.v1.ReviewedControls.
+ * Use `create(ReviewedControlsSchema)` to create a new message.
+ */
+export declare const ReviewedControlsSchema: GenMessage<ReviewedControls>;
+
+/**
+ * ControlSelection represents a selection of controls for review
+ *
+ * @generated from message oscal.assessment_results.v1.ControlSelection
+ */
+export declare type ControlSelection = Message<"oscal.assessment_results.v1.ControlSelection"> & {
+  /**
+   * @generated from field: oscal.common.v1.MarkupMultiline description = 1;
+   */
+  description?: MarkupMultiline | undefined;
+
+  /**
+   * @generated from field: repeated oscal.assessment_results.v1.SelectedControl include_controls = 2;
+   */
+  includeControls: SelectedControl[];
+
+  /**
+   * @generated from field: repeated oscal.assessment_results.v1.SelectedControl exclude_controls = 3;
+   */
+  excludeControls: SelectedControl[];
+
+  /**
+   * @generated from field: repeated oscal.common.v1.Property props = 4;
+   */
+  props: Property[];
+
+  /**
+   * @generated from field: repeated oscal.common.v1.Link links = 5;
+   */
+  links: Link[];
+
+  /**
+   * @generated from field: repeated oscal.common.v1.MarkupMultiline remarks = 6;
+   */
+  remarks: MarkupMultiline[];
+};
+
+/**
+ * Describes the message oscal.assessment_results.v1.ControlSelection.
+ * Use `create(ControlSelectionSchema)` to create a new message.
+ */
+export declare const ControlSelectionSchema: GenMessage<ControlSelection>;
+
+/**
+ * SelectedControl represents a selected control
+ *
+ * @generated from message oscal.assessment_results.v1.SelectedControl
+ */
+export declare type SelectedControl = Message<"oscal.assessment_results.v1.SelectedControl"> & {
+  /**
+   * @generated from field: oscal.common.v1.Token control_id = 1;
+   */
+  controlId?: Token | undefined;
+
+  /**
+   * @generated from field: oscal.common.v1.Token statement_id = 2;
+   */
+  statementId?: Token | undefined;
+
+  /**
+   * @generated from field: repeated oscal.common.v1.Property props = 3;
+   */
+  props: Property[];
+
+  /**
+   * @generated from field: repeated oscal.common.v1.Link links = 4;
+   */
+  links: Link[];
+
+  /**
+   * @generated from field: repeated oscal.common.v1.MarkupMultiline remarks = 5;
+   */
+  remarks: MarkupMultiline[];
+};
+
+/**
+ * Describes the message oscal.assessment_results.v1.SelectedControl.
+ * Use `create(SelectedControlSchema)` to create a new message.
+ */
+export declare const SelectedControlSchema: GenMessage<SelectedControl>;
 
 /**
  * Finding represents a finding
@@ -818,22 +944,27 @@ export declare type SubjectReference = Message<"oscal.assessment_results.v1.Subj
   subjectUuid?: UUID | undefined;
 
   /**
-   * @generated from field: oscal.common.v1.MarkupLine title = 2;
+   * @generated from field: string type = 2;
+   */
+  type: string;
+
+  /**
+   * @generated from field: oscal.common.v1.MarkupLine title = 3;
    */
   title?: MarkupLine | undefined;
 
   /**
-   * @generated from field: repeated oscal.common.v1.Property props = 3;
+   * @generated from field: repeated oscal.common.v1.Property props = 4;
    */
   props: Property[];
 
   /**
-   * @generated from field: repeated oscal.common.v1.Link links = 4;
+   * @generated from field: repeated oscal.common.v1.Link links = 5;
    */
   links: Link[];
 
   /**
-   * @generated from field: repeated oscal.common.v1.MarkupMultiline remarks = 5;
+   * @generated from field: repeated oscal.common.v1.MarkupMultiline remarks = 6;
    */
   remarks: MarkupMultiline[];
 };

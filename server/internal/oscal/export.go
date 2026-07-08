@@ -18,43 +18,46 @@ import (
 )
 
 // ExportJSON serializes a protobuf message to canonical JSON.
+// Deprecated: Use the model-specific Export*JSON functions instead, which
+// produce OSCAL-compliant JSON with proper kebab-case, unwrapped values,
+// and root model wrappers.
 func ExportJSON(msg proto.Message) ([]byte, error) {
 	return protojson.MarshalOptions{Multiline: true}.Marshal(msg)
 }
 
-// ExportCatalogJSON serializes a catalog to JSON.
+// ExportCatalogJSON serializes a catalog to OSCAL-compliant JSON.
 func ExportCatalogJSON(c *catalogv1.Catalog) ([]byte, error) {
-	return ExportJSON(c)
+	return marshalOSCALJSON(c, "catalog")
 }
 
-// ExportProfileJSON serializes a profile to JSON.
+// ExportProfileJSON serializes a profile to OSCAL-compliant JSON.
 func ExportProfileJSON(p *profilev1.Profile) ([]byte, error) {
-	return ExportJSON(p)
+	return marshalOSCALJSON(p, "profile")
 }
 
-// ExportSSPJSON serializes an SSP to JSON.
+// ExportSSPJSON serializes an SSP to OSCAL-compliant JSON.
 func ExportSSPJSON(s *sspv1.SystemSecurityPlan) ([]byte, error) {
-	return ExportJSON(s)
+	return marshalOSCALJSON(s, "system-security-plan")
 }
 
-// ExportComponentDefinitionJSON serializes a component definition to JSON.
+// ExportComponentDefinitionJSON serializes a component definition to OSCAL-compliant JSON.
 func ExportComponentDefinitionJSON(c *componentv1.ComponentDefinition) ([]byte, error) {
-	return ExportJSON(c)
+	return marshalOSCALJSON(c, "component-definition")
 }
 
-// ExportAssessmentPlanJSON serializes an assessment plan to JSON.
+// ExportAssessmentPlanJSON serializes an assessment plan to OSCAL-compliant JSON.
 func ExportAssessmentPlanJSON(a *assessment_planv1.AssessmentPlan) ([]byte, error) {
-	return ExportJSON(a)
+	return marshalOSCALJSON(a, "assessment-plan")
 }
 
-// ExportAssessmentResultsJSON serializes assessment results to JSON.
+// ExportAssessmentResultsJSON serializes assessment results to OSCAL-compliant JSON.
 func ExportAssessmentResultsJSON(a *assessment_resultsv1.AssessmentResults) ([]byte, error) {
-	return ExportJSON(a)
+	return marshalOSCALJSON(a, "assessment-results")
 }
 
-// ExportPOAMJSON serializes a plan of action and milestones to JSON.
+// ExportPOAMJSON serializes a plan of action and milestones to OSCAL-compliant JSON.
 func ExportPOAMJSON(p *poamv1.PlanOfActionAndMilestones) ([]byte, error) {
-	return ExportJSON(p)
+	return marshalOSCALJSON(p, "plan-of-action-and-milestones")
 }
 
 // ExportMappingsJSON serializes mappings to a JSON wrapper.

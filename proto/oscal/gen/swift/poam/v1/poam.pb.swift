@@ -62,6 +62,9 @@ nonisolated struct Oscal_Poam_V1_PlanOfActionAndMilestones: @unchecked Sendable 
   /// Clears the value of `localDefinitions`. Subsequent reads from it will return its default value.
   mutating func clearLocalDefinitions() {_uniqueStorage()._localDefinitions = nil}
 
+  /// Deprecated: use poam_items instead. Kept for backward compatibility.
+  ///
+  /// NOTE: This field was marked as deprecated in the .proto file.
   var risks: [Oscal_Poam_V1_Risk] {
     get {_storage._risks}
     set {_uniqueStorage()._risks = newValue}
@@ -75,6 +78,12 @@ nonisolated struct Oscal_Poam_V1_PlanOfActionAndMilestones: @unchecked Sendable 
   var hasBackMatter: Bool {_storage._backMatter != nil}
   /// Clears the value of `backMatter`. Subsequent reads from it will return its default value.
   mutating func clearBackMatter() {_uniqueStorage()._backMatter = nil}
+
+  /// poam_items is the OSCAL schema-required top-level array of POAM items.
+  var poamItems: [Oscal_Poam_V1_PoamItem] {
+    get {_storage._poamItems}
+    set {_uniqueStorage()._poamItems = newValue}
+  }
 
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
@@ -236,6 +245,159 @@ nonisolated struct Oscal_Poam_V1_User: Sendable {
 
   fileprivate var _uuid: Oscal_Common_V1_UUID? = nil
   fileprivate var _description_p: Oscal_Common_V1_MarkupMultiline? = nil
+}
+
+/// PoamItem represents a POAM item as defined by the OSCAL 1.1.2 schema.
+/// Unlike Risk, poam-item is a simpler container with title, description,
+/// and references to findings/observations/risks.
+nonisolated struct Oscal_Poam_V1_PoamItem: Sendable {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var uuid: Oscal_Common_V1_UUID {
+    get {_uuid ?? Oscal_Common_V1_UUID()}
+    set {_uuid = newValue}
+  }
+  /// Returns true if `uuid` has been explicitly set.
+  var hasUuid: Bool {self._uuid != nil}
+  /// Clears the value of `uuid`. Subsequent reads from it will return its default value.
+  mutating func clearUuid() {self._uuid = nil}
+
+  var title: Oscal_Common_V1_MarkupLine {
+    get {_title ?? Oscal_Common_V1_MarkupLine()}
+    set {_title = newValue}
+  }
+  /// Returns true if `title` has been explicitly set.
+  var hasTitle: Bool {self._title != nil}
+  /// Clears the value of `title`. Subsequent reads from it will return its default value.
+  mutating func clearTitle() {self._title = nil}
+
+  var description_p: Oscal_Common_V1_MarkupMultiline {
+    get {_description_p ?? Oscal_Common_V1_MarkupMultiline()}
+    set {_description_p = newValue}
+  }
+  /// Returns true if `description_p` has been explicitly set.
+  var hasDescription_p: Bool {self._description_p != nil}
+  /// Clears the value of `description_p`. Subsequent reads from it will return its default value.
+  mutating func clearDescription_p() {self._description_p = nil}
+
+  var props: [Oscal_Common_V1_Property] = []
+
+  var links: [Oscal_Common_V1_Link] = []
+
+  var origins: [Oscal_Poam_V1_Origin] = []
+
+  var relatedFindings: [Oscal_Poam_V1_RelatedFinding] = []
+
+  var relatedObservations: [Oscal_Poam_V1_RelatedObservation] = []
+
+  var relatedRisks: [Oscal_Poam_V1_RelatedRisk] = []
+
+  var remarks: [Oscal_Common_V1_MarkupMultiline] = []
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+
+  fileprivate var _uuid: Oscal_Common_V1_UUID? = nil
+  fileprivate var _title: Oscal_Common_V1_MarkupLine? = nil
+  fileprivate var _description_p: Oscal_Common_V1_MarkupMultiline? = nil
+}
+
+/// Origin represents the origin of a POAM item
+nonisolated struct Oscal_Poam_V1_Origin: Sendable {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var actors: [Oscal_Poam_V1_OriginActor] = []
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
+/// OriginActor represents an originating actor
+nonisolated struct Oscal_Poam_V1_OriginActor: Sendable {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var actorUuid: Oscal_Common_V1_UUID {
+    get {_actorUuid ?? Oscal_Common_V1_UUID()}
+    set {_actorUuid = newValue}
+  }
+  /// Returns true if `actorUuid` has been explicitly set.
+  var hasActorUuid: Bool {self._actorUuid != nil}
+  /// Clears the value of `actorUuid`. Subsequent reads from it will return its default value.
+  mutating func clearActorUuid() {self._actorUuid = nil}
+
+  var title: Oscal_Common_V1_MarkupLine {
+    get {_title ?? Oscal_Common_V1_MarkupLine()}
+    set {_title = newValue}
+  }
+  /// Returns true if `title` has been explicitly set.
+  var hasTitle: Bool {self._title != nil}
+  /// Clears the value of `title`. Subsequent reads from it will return its default value.
+  mutating func clearTitle() {self._title = nil}
+
+  var props: [Oscal_Common_V1_Property] = []
+
+  var links: [Oscal_Common_V1_Link] = []
+
+  var remarks: [Oscal_Common_V1_MarkupMultiline] = []
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+
+  fileprivate var _actorUuid: Oscal_Common_V1_UUID? = nil
+  fileprivate var _title: Oscal_Common_V1_MarkupLine? = nil
+}
+
+/// RelatedFinding represents a related finding
+nonisolated struct Oscal_Poam_V1_RelatedFinding: Sendable {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var findingUuid: Oscal_Common_V1_UUID {
+    get {_findingUuid ?? Oscal_Common_V1_UUID()}
+    set {_findingUuid = newValue}
+  }
+  /// Returns true if `findingUuid` has been explicitly set.
+  var hasFindingUuid: Bool {self._findingUuid != nil}
+  /// Clears the value of `findingUuid`. Subsequent reads from it will return its default value.
+  mutating func clearFindingUuid() {self._findingUuid = nil}
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+
+  fileprivate var _findingUuid: Oscal_Common_V1_UUID? = nil
+}
+
+/// RelatedRisk represents a related risk
+nonisolated struct Oscal_Poam_V1_RelatedRisk: Sendable {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var riskUuid: Oscal_Common_V1_UUID {
+    get {_riskUuid ?? Oscal_Common_V1_UUID()}
+    set {_riskUuid = newValue}
+  }
+  /// Returns true if `riskUuid` has been explicitly set.
+  var hasRiskUuid: Bool {self._riskUuid != nil}
+  /// Clears the value of `riskUuid`. Subsequent reads from it will return its default value.
+  mutating func clearRiskUuid() {self._riskUuid = nil}
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+
+  fileprivate var _riskUuid: Oscal_Common_V1_UUID? = nil
 }
 
 /// Risk represents a risk
@@ -781,7 +943,7 @@ fileprivate nonisolated let _protobuf_package = "oscal.poam.v1"
 
 nonisolated extension Oscal_Poam_V1_PlanOfActionAndMilestones: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   static let protoMessageName: String = _protobuf_package + ".PlanOfActionAndMilestones"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}uuid\0\u{1}metadata\0\u{3}import_ssp\0\u{3}local_definitions\0\u{1}risks\0\u{3}back_matter\0")
+  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}uuid\0\u{1}metadata\0\u{3}import_ssp\0\u{3}local_definitions\0\u{1}risks\0\u{3}back_matter\0\u{3}poam_items\0")
 
   fileprivate class _StorageClass {
     var _uuid: Oscal_Common_V1_UUID? = nil
@@ -790,6 +952,7 @@ nonisolated extension Oscal_Poam_V1_PlanOfActionAndMilestones: SwiftProtobuf.Mes
     var _localDefinitions: Oscal_Poam_V1_LocalDefinitions? = nil
     var _risks: [Oscal_Poam_V1_Risk] = []
     var _backMatter: Oscal_Common_V1_BackMatter? = nil
+    var _poamItems: [Oscal_Poam_V1_PoamItem] = []
 
       // This property is used as the initial default value for new instances of the type.
       // The type itself is protecting the reference to its storage via CoW semantics.
@@ -806,6 +969,7 @@ nonisolated extension Oscal_Poam_V1_PlanOfActionAndMilestones: SwiftProtobuf.Mes
       _localDefinitions = source._localDefinitions
       _risks = source._risks
       _backMatter = source._backMatter
+      _poamItems = source._poamItems
     }
   }
 
@@ -830,6 +994,7 @@ nonisolated extension Oscal_Poam_V1_PlanOfActionAndMilestones: SwiftProtobuf.Mes
         case 4: try { try decoder.decodeSingularMessageField(value: &_storage._localDefinitions) }()
         case 5: try { try decoder.decodeRepeatedMessageField(value: &_storage._risks) }()
         case 6: try { try decoder.decodeSingularMessageField(value: &_storage._backMatter) }()
+        case 7: try { try decoder.decodeRepeatedMessageField(value: &_storage._poamItems) }()
         default: break
         }
       }
@@ -860,6 +1025,9 @@ nonisolated extension Oscal_Poam_V1_PlanOfActionAndMilestones: SwiftProtobuf.Mes
       try { if let v = _storage._backMatter {
         try visitor.visitSingularMessageField(value: v, fieldNumber: 6)
       } }()
+      if !_storage._poamItems.isEmpty {
+        try visitor.visitRepeatedMessageField(value: _storage._poamItems, fieldNumber: 7)
+      }
     }
     try unknownFields.traverse(visitor: &visitor)
   }
@@ -875,6 +1043,7 @@ nonisolated extension Oscal_Poam_V1_PlanOfActionAndMilestones: SwiftProtobuf.Mes
         if _storage._localDefinitions != rhs_storage._localDefinitions {return false}
         if _storage._risks != rhs_storage._risks {return false}
         if _storage._backMatter != rhs_storage._backMatter {return false}
+        if _storage._poamItems != rhs_storage._poamItems {return false}
         return true
       }
       if !storagesAreEqual {return false}
@@ -1140,6 +1309,237 @@ nonisolated extension Oscal_Poam_V1_User: SwiftProtobuf.Message, SwiftProtobuf._
     if lhs.props != rhs.props {return false}
     if lhs.links != rhs.links {return false}
     if lhs.remarks != rhs.remarks {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+nonisolated extension Oscal_Poam_V1_PoamItem: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".PoamItem"
+  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}uuid\0\u{1}title\0\u{1}description\0\u{1}props\0\u{1}links\0\u{1}origins\0\u{3}related_findings\0\u{3}related_observations\0\u{3}related_risks\0\u{1}remarks\0")
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularMessageField(value: &self._uuid) }()
+      case 2: try { try decoder.decodeSingularMessageField(value: &self._title) }()
+      case 3: try { try decoder.decodeSingularMessageField(value: &self._description_p) }()
+      case 4: try { try decoder.decodeRepeatedMessageField(value: &self.props) }()
+      case 5: try { try decoder.decodeRepeatedMessageField(value: &self.links) }()
+      case 6: try { try decoder.decodeRepeatedMessageField(value: &self.origins) }()
+      case 7: try { try decoder.decodeRepeatedMessageField(value: &self.relatedFindings) }()
+      case 8: try { try decoder.decodeRepeatedMessageField(value: &self.relatedObservations) }()
+      case 9: try { try decoder.decodeRepeatedMessageField(value: &self.relatedRisks) }()
+      case 10: try { try decoder.decodeRepeatedMessageField(value: &self.remarks) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
+    try { if let v = self._uuid {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
+    } }()
+    try { if let v = self._title {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
+    } }()
+    try { if let v = self._description_p {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 3)
+    } }()
+    if !self.props.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.props, fieldNumber: 4)
+    }
+    if !self.links.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.links, fieldNumber: 5)
+    }
+    if !self.origins.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.origins, fieldNumber: 6)
+    }
+    if !self.relatedFindings.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.relatedFindings, fieldNumber: 7)
+    }
+    if !self.relatedObservations.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.relatedObservations, fieldNumber: 8)
+    }
+    if !self.relatedRisks.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.relatedRisks, fieldNumber: 9)
+    }
+    if !self.remarks.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.remarks, fieldNumber: 10)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Oscal_Poam_V1_PoamItem, rhs: Oscal_Poam_V1_PoamItem) -> Bool {
+    if lhs._uuid != rhs._uuid {return false}
+    if lhs._title != rhs._title {return false}
+    if lhs._description_p != rhs._description_p {return false}
+    if lhs.props != rhs.props {return false}
+    if lhs.links != rhs.links {return false}
+    if lhs.origins != rhs.origins {return false}
+    if lhs.relatedFindings != rhs.relatedFindings {return false}
+    if lhs.relatedObservations != rhs.relatedObservations {return false}
+    if lhs.relatedRisks != rhs.relatedRisks {return false}
+    if lhs.remarks != rhs.remarks {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+nonisolated extension Oscal_Poam_V1_Origin: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".Origin"
+  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}actors\0")
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeRepeatedMessageField(value: &self.actors) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.actors.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.actors, fieldNumber: 1)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Oscal_Poam_V1_Origin, rhs: Oscal_Poam_V1_Origin) -> Bool {
+    if lhs.actors != rhs.actors {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+nonisolated extension Oscal_Poam_V1_OriginActor: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".OriginActor"
+  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{3}actor_uuid\0\u{1}title\0\u{1}props\0\u{1}links\0\u{1}remarks\0")
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularMessageField(value: &self._actorUuid) }()
+      case 2: try { try decoder.decodeSingularMessageField(value: &self._title) }()
+      case 3: try { try decoder.decodeRepeatedMessageField(value: &self.props) }()
+      case 4: try { try decoder.decodeRepeatedMessageField(value: &self.links) }()
+      case 5: try { try decoder.decodeRepeatedMessageField(value: &self.remarks) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
+    try { if let v = self._actorUuid {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
+    } }()
+    try { if let v = self._title {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
+    } }()
+    if !self.props.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.props, fieldNumber: 3)
+    }
+    if !self.links.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.links, fieldNumber: 4)
+    }
+    if !self.remarks.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.remarks, fieldNumber: 5)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Oscal_Poam_V1_OriginActor, rhs: Oscal_Poam_V1_OriginActor) -> Bool {
+    if lhs._actorUuid != rhs._actorUuid {return false}
+    if lhs._title != rhs._title {return false}
+    if lhs.props != rhs.props {return false}
+    if lhs.links != rhs.links {return false}
+    if lhs.remarks != rhs.remarks {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+nonisolated extension Oscal_Poam_V1_RelatedFinding: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".RelatedFinding"
+  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{3}finding_uuid\0")
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularMessageField(value: &self._findingUuid) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
+    try { if let v = self._findingUuid {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
+    } }()
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Oscal_Poam_V1_RelatedFinding, rhs: Oscal_Poam_V1_RelatedFinding) -> Bool {
+    if lhs._findingUuid != rhs._findingUuid {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+nonisolated extension Oscal_Poam_V1_RelatedRisk: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".RelatedRisk"
+  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{3}risk_uuid\0")
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularMessageField(value: &self._riskUuid) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
+    try { if let v = self._riskUuid {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
+    } }()
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Oscal_Poam_V1_RelatedRisk, rhs: Oscal_Poam_V1_RelatedRisk) -> Bool {
+    if lhs._riskUuid != rhs._riskUuid {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

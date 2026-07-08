@@ -31,10 +31,14 @@ type AssessmentPlan struct {
 	LocalDefinitions *LocalDefinitions      `protobuf:"bytes,4,opt,name=local_definitions,json=localDefinitions,proto3" json:"local_definitions,omitempty"`
 	Terms            *Terms                 `protobuf:"bytes,5,opt,name=terms,proto3" json:"terms,omitempty"`
 	ReviewedControls *ReviewedControls      `protobuf:"bytes,6,opt,name=reviewed_controls,json=reviewedControls,proto3" json:"reviewed_controls,omitempty"`
-	AssessmentTasks  []*AssessmentTask      `protobuf:"bytes,7,rep,name=assessment_tasks,json=assessmentTasks,proto3" json:"assessment_tasks,omitempty"`
-	BackMatter       *v1.BackMatter         `protobuf:"bytes,8,opt,name=back_matter,json=backMatter,proto3" json:"back_matter,omitempty"`
-	unknownFields    protoimpl.UnknownFields
-	sizeCache        protoimpl.SizeCache
+	// Deprecated: use tasks instead. Kept for backward compatibility.
+	//
+	// Deprecated: Marked as deprecated in assessment_plan/v1/assessment_plan.proto.
+	AssessmentTasks []*AssessmentTask `protobuf:"bytes,7,rep,name=assessment_tasks,json=assessmentTasks,proto3" json:"assessment_tasks,omitempty"`
+	BackMatter      *v1.BackMatter    `protobuf:"bytes,8,opt,name=back_matter,json=backMatter,proto3" json:"back_matter,omitempty"`
+	Tasks           []*AssessmentTask `protobuf:"bytes,9,rep,name=tasks,proto3" json:"tasks,omitempty"`
+	unknownFields   protoimpl.UnknownFields
+	sizeCache       protoimpl.SizeCache
 }
 
 func (x *AssessmentPlan) Reset() {
@@ -109,6 +113,7 @@ func (x *AssessmentPlan) GetReviewedControls() *ReviewedControls {
 	return nil
 }
 
+// Deprecated: Marked as deprecated in assessment_plan/v1/assessment_plan.proto.
 func (x *AssessmentPlan) GetAssessmentTasks() []*AssessmentTask {
 	if x != nil {
 		return x.AssessmentTasks
@@ -119,6 +124,13 @@ func (x *AssessmentPlan) GetAssessmentTasks() []*AssessmentTask {
 func (x *AssessmentPlan) GetBackMatter() *v1.BackMatter {
 	if x != nil {
 		return x.BackMatter
+	}
+	return nil
+}
+
+func (x *AssessmentPlan) GetTasks() []*AssessmentTask {
+	if x != nil {
+		return x.Tasks
 	}
 	return nil
 }
@@ -1238,11 +1250,18 @@ func (x *Term) GetRemarks() []*v1.MarkupMultiline {
 
 // ReviewedControls represents reviewed controls
 type ReviewedControls struct {
-	state            protoimpl.MessageState `protogen:"open.v1"`
-	ControlSelection string                 `protobuf:"bytes,1,opt,name=control_selection,json=controlSelection,proto3" json:"control_selection,omitempty"`
-	Controls         []*ControlSelection    `protobuf:"bytes,2,rep,name=controls,proto3" json:"controls,omitempty"`
-	unknownFields    protoimpl.UnknownFields
-	sizeCache        protoimpl.SizeCache
+	state protoimpl.MessageState `protogen:"open.v1"`
+	// Deprecated: use control_selections instead. Kept for backward compatibility.
+	//
+	// Deprecated: Marked as deprecated in assessment_plan/v1/assessment_plan.proto.
+	ControlSelection  string                `protobuf:"bytes,1,opt,name=control_selection,json=controlSelection,proto3" json:"control_selection,omitempty"`
+	Controls          []*ControlSelection   `protobuf:"bytes,2,rep,name=controls,proto3" json:"controls,omitempty"`
+	ControlSelections []*ControlSelection   `protobuf:"bytes,3,rep,name=control_selections,json=controlSelections,proto3" json:"control_selections,omitempty"`
+	Props             []*v1.Property        `protobuf:"bytes,4,rep,name=props,proto3" json:"props,omitempty"`
+	Links             []*v1.Link            `protobuf:"bytes,5,rep,name=links,proto3" json:"links,omitempty"`
+	Remarks           []*v1.MarkupMultiline `protobuf:"bytes,6,rep,name=remarks,proto3" json:"remarks,omitempty"`
+	unknownFields     protoimpl.UnknownFields
+	sizeCache         protoimpl.SizeCache
 }
 
 func (x *ReviewedControls) Reset() {
@@ -1275,6 +1294,7 @@ func (*ReviewedControls) Descriptor() ([]byte, []int) {
 	return file_assessment_plan_v1_assessment_plan_proto_rawDescGZIP(), []int{14}
 }
 
+// Deprecated: Marked as deprecated in assessment_plan/v1/assessment_plan.proto.
 func (x *ReviewedControls) GetControlSelection() string {
 	if x != nil {
 		return x.ControlSelection
@@ -1289,13 +1309,45 @@ func (x *ReviewedControls) GetControls() []*ControlSelection {
 	return nil
 }
 
+func (x *ReviewedControls) GetControlSelections() []*ControlSelection {
+	if x != nil {
+		return x.ControlSelections
+	}
+	return nil
+}
+
+func (x *ReviewedControls) GetProps() []*v1.Property {
+	if x != nil {
+		return x.Props
+	}
+	return nil
+}
+
+func (x *ReviewedControls) GetLinks() []*v1.Link {
+	if x != nil {
+		return x.Links
+	}
+	return nil
+}
+
+func (x *ReviewedControls) GetRemarks() []*v1.MarkupMultiline {
+	if x != nil {
+		return x.Remarks
+	}
+	return nil
+}
+
 // ControlSelection represents a control selection
 type ControlSelection struct {
-	state         protoimpl.MessageState `protogen:"open.v1"`
-	ControlId     *v1.Token              `protobuf:"bytes,1,opt,name=control_id,json=controlId,proto3" json:"control_id,omitempty"`
-	Remarks       []*v1.MarkupMultiline  `protobuf:"bytes,2,rep,name=remarks,proto3" json:"remarks,omitempty"`
-	unknownFields protoimpl.UnknownFields
-	sizeCache     protoimpl.SizeCache
+	state           protoimpl.MessageState `protogen:"open.v1"`
+	Description     *v1.MarkupMultiline    `protobuf:"bytes,1,opt,name=description,proto3" json:"description,omitempty"`
+	IncludeControls []*SelectedControl     `protobuf:"bytes,2,rep,name=include_controls,json=includeControls,proto3" json:"include_controls,omitempty"`
+	ExcludeControls []*SelectedControl     `protobuf:"bytes,3,rep,name=exclude_controls,json=excludeControls,proto3" json:"exclude_controls,omitempty"`
+	Props           []*v1.Property         `protobuf:"bytes,4,rep,name=props,proto3" json:"props,omitempty"`
+	Links           []*v1.Link             `protobuf:"bytes,5,rep,name=links,proto3" json:"links,omitempty"`
+	Remarks         []*v1.MarkupMultiline  `protobuf:"bytes,6,rep,name=remarks,proto3" json:"remarks,omitempty"`
+	unknownFields   protoimpl.UnknownFields
+	sizeCache       protoimpl.SizeCache
 }
 
 func (x *ControlSelection) Reset() {
@@ -1328,14 +1380,119 @@ func (*ControlSelection) Descriptor() ([]byte, []int) {
 	return file_assessment_plan_v1_assessment_plan_proto_rawDescGZIP(), []int{15}
 }
 
-func (x *ControlSelection) GetControlId() *v1.Token {
+func (x *ControlSelection) GetDescription() *v1.MarkupMultiline {
+	if x != nil {
+		return x.Description
+	}
+	return nil
+}
+
+func (x *ControlSelection) GetIncludeControls() []*SelectedControl {
+	if x != nil {
+		return x.IncludeControls
+	}
+	return nil
+}
+
+func (x *ControlSelection) GetExcludeControls() []*SelectedControl {
+	if x != nil {
+		return x.ExcludeControls
+	}
+	return nil
+}
+
+func (x *ControlSelection) GetProps() []*v1.Property {
+	if x != nil {
+		return x.Props
+	}
+	return nil
+}
+
+func (x *ControlSelection) GetLinks() []*v1.Link {
+	if x != nil {
+		return x.Links
+	}
+	return nil
+}
+
+func (x *ControlSelection) GetRemarks() []*v1.MarkupMultiline {
+	if x != nil {
+		return x.Remarks
+	}
+	return nil
+}
+
+// SelectedControl represents a selected control
+type SelectedControl struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	ControlId     *v1.Token              `protobuf:"bytes,1,opt,name=control_id,json=controlId,proto3" json:"control_id,omitempty"`
+	StatementId   *v1.Token              `protobuf:"bytes,2,opt,name=statement_id,json=statementId,proto3" json:"statement_id,omitempty"`
+	Props         []*v1.Property         `protobuf:"bytes,3,rep,name=props,proto3" json:"props,omitempty"`
+	Links         []*v1.Link             `protobuf:"bytes,4,rep,name=links,proto3" json:"links,omitempty"`
+	Remarks       []*v1.MarkupMultiline  `protobuf:"bytes,5,rep,name=remarks,proto3" json:"remarks,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *SelectedControl) Reset() {
+	*x = SelectedControl{}
+	mi := &file_assessment_plan_v1_assessment_plan_proto_msgTypes[16]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *SelectedControl) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*SelectedControl) ProtoMessage() {}
+
+func (x *SelectedControl) ProtoReflect() protoreflect.Message {
+	mi := &file_assessment_plan_v1_assessment_plan_proto_msgTypes[16]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use SelectedControl.ProtoReflect.Descriptor instead.
+func (*SelectedControl) Descriptor() ([]byte, []int) {
+	return file_assessment_plan_v1_assessment_plan_proto_rawDescGZIP(), []int{16}
+}
+
+func (x *SelectedControl) GetControlId() *v1.Token {
 	if x != nil {
 		return x.ControlId
 	}
 	return nil
 }
 
-func (x *ControlSelection) GetRemarks() []*v1.MarkupMultiline {
+func (x *SelectedControl) GetStatementId() *v1.Token {
+	if x != nil {
+		return x.StatementId
+	}
+	return nil
+}
+
+func (x *SelectedControl) GetProps() []*v1.Property {
+	if x != nil {
+		return x.Props
+	}
+	return nil
+}
+
+func (x *SelectedControl) GetLinks() []*v1.Link {
+	if x != nil {
+		return x.Links
+	}
+	return nil
+}
+
+func (x *SelectedControl) GetRemarks() []*v1.MarkupMultiline {
 	if x != nil {
 		return x.Remarks
 	}
@@ -1362,7 +1519,7 @@ type AssessmentTask struct {
 
 func (x *AssessmentTask) Reset() {
 	*x = AssessmentTask{}
-	mi := &file_assessment_plan_v1_assessment_plan_proto_msgTypes[16]
+	mi := &file_assessment_plan_v1_assessment_plan_proto_msgTypes[17]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1374,7 +1531,7 @@ func (x *AssessmentTask) String() string {
 func (*AssessmentTask) ProtoMessage() {}
 
 func (x *AssessmentTask) ProtoReflect() protoreflect.Message {
-	mi := &file_assessment_plan_v1_assessment_plan_proto_msgTypes[16]
+	mi := &file_assessment_plan_v1_assessment_plan_proto_msgTypes[17]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1387,7 +1544,7 @@ func (x *AssessmentTask) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use AssessmentTask.ProtoReflect.Descriptor instead.
 func (*AssessmentTask) Descriptor() ([]byte, []int) {
-	return file_assessment_plan_v1_assessment_plan_proto_rawDescGZIP(), []int{16}
+	return file_assessment_plan_v1_assessment_plan_proto_rawDescGZIP(), []int{17}
 }
 
 func (x *AssessmentTask) GetUuid() *v1.UUID {
@@ -1481,7 +1638,7 @@ type SubjectReference struct {
 
 func (x *SubjectReference) Reset() {
 	*x = SubjectReference{}
-	mi := &file_assessment_plan_v1_assessment_plan_proto_msgTypes[17]
+	mi := &file_assessment_plan_v1_assessment_plan_proto_msgTypes[18]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1493,7 +1650,7 @@ func (x *SubjectReference) String() string {
 func (*SubjectReference) ProtoMessage() {}
 
 func (x *SubjectReference) ProtoReflect() protoreflect.Message {
-	mi := &file_assessment_plan_v1_assessment_plan_proto_msgTypes[17]
+	mi := &file_assessment_plan_v1_assessment_plan_proto_msgTypes[18]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1506,7 +1663,7 @@ func (x *SubjectReference) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SubjectReference.ProtoReflect.Descriptor instead.
 func (*SubjectReference) Descriptor() ([]byte, []int) {
-	return file_assessment_plan_v1_assessment_plan_proto_rawDescGZIP(), []int{17}
+	return file_assessment_plan_v1_assessment_plan_proto_rawDescGZIP(), []int{18}
 }
 
 func (x *SubjectReference) GetSubjectUuid() *v1.UUID {
@@ -1564,7 +1721,7 @@ type Task struct {
 
 func (x *Task) Reset() {
 	*x = Task{}
-	mi := &file_assessment_plan_v1_assessment_plan_proto_msgTypes[18]
+	mi := &file_assessment_plan_v1_assessment_plan_proto_msgTypes[19]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1576,7 +1733,7 @@ func (x *Task) String() string {
 func (*Task) ProtoMessage() {}
 
 func (x *Task) ProtoReflect() protoreflect.Message {
-	mi := &file_assessment_plan_v1_assessment_plan_proto_msgTypes[18]
+	mi := &file_assessment_plan_v1_assessment_plan_proto_msgTypes[19]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1589,7 +1746,7 @@ func (x *Task) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Task.ProtoReflect.Descriptor instead.
 func (*Task) Descriptor() ([]byte, []int) {
-	return file_assessment_plan_v1_assessment_plan_proto_rawDescGZIP(), []int{18}
+	return file_assessment_plan_v1_assessment_plan_proto_rawDescGZIP(), []int{19}
 }
 
 func (x *Task) GetUuid() *v1.UUID {
@@ -1681,7 +1838,7 @@ type AssociatedActivity struct {
 
 func (x *AssociatedActivity) Reset() {
 	*x = AssociatedActivity{}
-	mi := &file_assessment_plan_v1_assessment_plan_proto_msgTypes[19]
+	mi := &file_assessment_plan_v1_assessment_plan_proto_msgTypes[20]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1693,7 +1850,7 @@ func (x *AssociatedActivity) String() string {
 func (*AssociatedActivity) ProtoMessage() {}
 
 func (x *AssociatedActivity) ProtoReflect() protoreflect.Message {
-	mi := &file_assessment_plan_v1_assessment_plan_proto_msgTypes[19]
+	mi := &file_assessment_plan_v1_assessment_plan_proto_msgTypes[20]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1706,7 +1863,7 @@ func (x *AssociatedActivity) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use AssociatedActivity.ProtoReflect.Descriptor instead.
 func (*AssociatedActivity) Descriptor() ([]byte, []int) {
-	return file_assessment_plan_v1_assessment_plan_proto_rawDescGZIP(), []int{19}
+	return file_assessment_plan_v1_assessment_plan_proto_rawDescGZIP(), []int{20}
 }
 
 func (x *AssociatedActivity) GetActivityUuid() *v1.UUID {
@@ -1743,7 +1900,7 @@ type ResponsibleRole struct {
 
 func (x *ResponsibleRole) Reset() {
 	*x = ResponsibleRole{}
-	mi := &file_assessment_plan_v1_assessment_plan_proto_msgTypes[20]
+	mi := &file_assessment_plan_v1_assessment_plan_proto_msgTypes[21]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1755,7 +1912,7 @@ func (x *ResponsibleRole) String() string {
 func (*ResponsibleRole) ProtoMessage() {}
 
 func (x *ResponsibleRole) ProtoReflect() protoreflect.Message {
-	mi := &file_assessment_plan_v1_assessment_plan_proto_msgTypes[20]
+	mi := &file_assessment_plan_v1_assessment_plan_proto_msgTypes[21]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1768,7 +1925,7 @@ func (x *ResponsibleRole) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ResponsibleRole.ProtoReflect.Descriptor instead.
 func (*ResponsibleRole) Descriptor() ([]byte, []int) {
-	return file_assessment_plan_v1_assessment_plan_proto_rawDescGZIP(), []int{20}
+	return file_assessment_plan_v1_assessment_plan_proto_rawDescGZIP(), []int{21}
 }
 
 func (x *ResponsibleRole) GetRoleId() *v1.Token {
@@ -1803,7 +1960,7 @@ var File_assessment_plan_v1_assessment_plan_proto protoreflect.FileDescriptor
 
 const file_assessment_plan_v1_assessment_plan_proto_rawDesc = "" +
 	"\n" +
-	"(assessment_plan/v1/assessment_plan.proto\x12\x18oscal.assessment_plan.v1\x1a\x16common/v1/common.proto\"\xb2\x04\n" +
+	"(assessment_plan/v1/assessment_plan.proto\x12\x18oscal.assessment_plan.v1\x1a\x16common/v1/common.proto\"\xf6\x04\n" +
 	"\x0eAssessmentPlan\x12)\n" +
 	"\x04uuid\x18\x01 \x01(\v2\x15.oscal.common.v1.UUIDR\x04uuid\x125\n" +
 	"\bmetadata\x18\x02 \x01(\v2\x19.oscal.common.v1.MetadataR\bmetadata\x12B\n" +
@@ -1811,10 +1968,11 @@ const file_assessment_plan_v1_assessment_plan_proto_rawDesc = "" +
 	"import_ssp\x18\x03 \x01(\v2#.oscal.assessment_plan.v1.ImportSspR\timportSsp\x12W\n" +
 	"\x11local_definitions\x18\x04 \x01(\v2*.oscal.assessment_plan.v1.LocalDefinitionsR\x10localDefinitions\x125\n" +
 	"\x05terms\x18\x05 \x01(\v2\x1f.oscal.assessment_plan.v1.TermsR\x05terms\x12W\n" +
-	"\x11reviewed_controls\x18\x06 \x01(\v2*.oscal.assessment_plan.v1.ReviewedControlsR\x10reviewedControls\x12S\n" +
-	"\x10assessment_tasks\x18\a \x03(\v2(.oscal.assessment_plan.v1.AssessmentTaskR\x0fassessmentTasks\x12<\n" +
+	"\x11reviewed_controls\x18\x06 \x01(\v2*.oscal.assessment_plan.v1.ReviewedControlsR\x10reviewedControls\x12W\n" +
+	"\x10assessment_tasks\x18\a \x03(\v2(.oscal.assessment_plan.v1.AssessmentTaskB\x02\x18\x01R\x0fassessmentTasks\x12<\n" +
 	"\vback_matter\x18\b \x01(\v2\x1b.oscal.common.v1.BackMatterR\n" +
-	"backMatter\"z\n" +
+	"backMatter\x12>\n" +
+	"\x05tasks\x18\t \x03(\v2(.oscal.assessment_plan.v1.AssessmentTaskR\x05tasks\"z\n" +
 	"\tImportSsp\x121\n" +
 	"\x04href\x18\x01 \x01(\v2\x1d.oscal.common.v1.URIReferenceR\x04href\x12:\n" +
 	"\aremarks\x18\x02 \x03(\v2 .oscal.common.v1.MarkupMultilineR\aremarks\"\xb3\x03\n" +
@@ -1918,14 +2076,28 @@ const file_assessment_plan_v1_assessment_plan_proto_rawDesc = "" +
 	"definition\x12/\n" +
 	"\x05props\x18\x04 \x03(\v2\x19.oscal.common.v1.PropertyR\x05props\x12+\n" +
 	"\x05links\x18\x05 \x03(\v2\x15.oscal.common.v1.LinkR\x05links\x12:\n" +
-	"\aremarks\x18\x06 \x03(\v2 .oscal.common.v1.MarkupMultilineR\aremarks\"\x87\x01\n" +
-	"\x10ReviewedControls\x12+\n" +
-	"\x11control_selection\x18\x01 \x01(\tR\x10controlSelection\x12F\n" +
-	"\bcontrols\x18\x02 \x03(\v2*.oscal.assessment_plan.v1.ControlSelectionR\bcontrols\"\x85\x01\n" +
-	"\x10ControlSelection\x125\n" +
+	"\aremarks\x18\x06 \x03(\v2 .oscal.common.v1.MarkupMultilineR\aremarks\"\x80\x03\n" +
+	"\x10ReviewedControls\x12/\n" +
+	"\x11control_selection\x18\x01 \x01(\tB\x02\x18\x01R\x10controlSelection\x12F\n" +
+	"\bcontrols\x18\x02 \x03(\v2*.oscal.assessment_plan.v1.ControlSelectionR\bcontrols\x12Y\n" +
+	"\x12control_selections\x18\x03 \x03(\v2*.oscal.assessment_plan.v1.ControlSelectionR\x11controlSelections\x12/\n" +
+	"\x05props\x18\x04 \x03(\v2\x19.oscal.common.v1.PropertyR\x05props\x12+\n" +
+	"\x05links\x18\x05 \x03(\v2\x15.oscal.common.v1.LinkR\x05links\x12:\n" +
+	"\aremarks\x18\x06 \x03(\v2 .oscal.common.v1.MarkupMultilineR\aremarks\"\x9c\x03\n" +
+	"\x10ControlSelection\x12B\n" +
+	"\vdescription\x18\x01 \x01(\v2 .oscal.common.v1.MarkupMultilineR\vdescription\x12T\n" +
+	"\x10include_controls\x18\x02 \x03(\v2).oscal.assessment_plan.v1.SelectedControlR\x0fincludeControls\x12T\n" +
+	"\x10exclude_controls\x18\x03 \x03(\v2).oscal.assessment_plan.v1.SelectedControlR\x0fexcludeControls\x12/\n" +
+	"\x05props\x18\x04 \x03(\v2\x19.oscal.common.v1.PropertyR\x05props\x12+\n" +
+	"\x05links\x18\x05 \x03(\v2\x15.oscal.common.v1.LinkR\x05links\x12:\n" +
+	"\aremarks\x18\x06 \x03(\v2 .oscal.common.v1.MarkupMultilineR\aremarks\"\x9d\x02\n" +
+	"\x0fSelectedControl\x125\n" +
 	"\n" +
-	"control_id\x18\x01 \x01(\v2\x16.oscal.common.v1.TokenR\tcontrolId\x12:\n" +
-	"\aremarks\x18\x02 \x03(\v2 .oscal.common.v1.MarkupMultilineR\aremarks\"\x99\x05\n" +
+	"control_id\x18\x01 \x01(\v2\x16.oscal.common.v1.TokenR\tcontrolId\x129\n" +
+	"\fstatement_id\x18\x02 \x01(\v2\x16.oscal.common.v1.TokenR\vstatementId\x12/\n" +
+	"\x05props\x18\x03 \x03(\v2\x19.oscal.common.v1.PropertyR\x05props\x12+\n" +
+	"\x05links\x18\x04 \x03(\v2\x15.oscal.common.v1.LinkR\x05links\x12:\n" +
+	"\aremarks\x18\x05 \x03(\v2 .oscal.common.v1.MarkupMultilineR\aremarks\"\x99\x05\n" +
 	"\x0eAssessmentTask\x12)\n" +
 	"\x04uuid\x18\x01 \x01(\v2\x15.oscal.common.v1.UUIDR\x04uuid\x12\x12\n" +
 	"\x04type\x18\x02 \x01(\tR\x04type\x121\n" +
@@ -1982,7 +2154,7 @@ func file_assessment_plan_v1_assessment_plan_proto_rawDescGZIP() []byte {
 	return file_assessment_plan_v1_assessment_plan_proto_rawDescData
 }
 
-var file_assessment_plan_v1_assessment_plan_proto_msgTypes = make([]protoimpl.MessageInfo, 21)
+var file_assessment_plan_v1_assessment_plan_proto_msgTypes = make([]protoimpl.MessageInfo, 22)
 var file_assessment_plan_v1_assessment_plan_proto_goTypes = []any{
 	(*AssessmentPlan)(nil),     // 0: oscal.assessment_plan.v1.AssessmentPlan
 	(*ImportSsp)(nil),          // 1: oscal.assessment_plan.v1.ImportSsp
@@ -2000,137 +2172,152 @@ var file_assessment_plan_v1_assessment_plan_proto_goTypes = []any{
 	(*Term)(nil),               // 13: oscal.assessment_plan.v1.Term
 	(*ReviewedControls)(nil),   // 14: oscal.assessment_plan.v1.ReviewedControls
 	(*ControlSelection)(nil),   // 15: oscal.assessment_plan.v1.ControlSelection
-	(*AssessmentTask)(nil),     // 16: oscal.assessment_plan.v1.AssessmentTask
-	(*SubjectReference)(nil),   // 17: oscal.assessment_plan.v1.SubjectReference
-	(*Task)(nil),               // 18: oscal.assessment_plan.v1.Task
-	(*AssociatedActivity)(nil), // 19: oscal.assessment_plan.v1.AssociatedActivity
-	(*ResponsibleRole)(nil),    // 20: oscal.assessment_plan.v1.ResponsibleRole
-	(*v1.UUID)(nil),            // 21: oscal.common.v1.UUID
-	(*v1.Metadata)(nil),        // 22: oscal.common.v1.Metadata
-	(*v1.BackMatter)(nil),      // 23: oscal.common.v1.BackMatter
-	(*v1.URIReference)(nil),    // 24: oscal.common.v1.URIReference
-	(*v1.MarkupMultiline)(nil), // 25: oscal.common.v1.MarkupMultiline
-	(*v1.Property)(nil),        // 26: oscal.common.v1.Property
-	(*v1.Link)(nil),            // 27: oscal.common.v1.Link
-	(*v1.MarkupLine)(nil),      // 28: oscal.common.v1.MarkupLine
-	(*v1.Token)(nil),           // 29: oscal.common.v1.Token
+	(*SelectedControl)(nil),    // 16: oscal.assessment_plan.v1.SelectedControl
+	(*AssessmentTask)(nil),     // 17: oscal.assessment_plan.v1.AssessmentTask
+	(*SubjectReference)(nil),   // 18: oscal.assessment_plan.v1.SubjectReference
+	(*Task)(nil),               // 19: oscal.assessment_plan.v1.Task
+	(*AssociatedActivity)(nil), // 20: oscal.assessment_plan.v1.AssociatedActivity
+	(*ResponsibleRole)(nil),    // 21: oscal.assessment_plan.v1.ResponsibleRole
+	(*v1.UUID)(nil),            // 22: oscal.common.v1.UUID
+	(*v1.Metadata)(nil),        // 23: oscal.common.v1.Metadata
+	(*v1.BackMatter)(nil),      // 24: oscal.common.v1.BackMatter
+	(*v1.URIReference)(nil),    // 25: oscal.common.v1.URIReference
+	(*v1.MarkupMultiline)(nil), // 26: oscal.common.v1.MarkupMultiline
+	(*v1.Property)(nil),        // 27: oscal.common.v1.Property
+	(*v1.Link)(nil),            // 28: oscal.common.v1.Link
+	(*v1.MarkupLine)(nil),      // 29: oscal.common.v1.MarkupLine
+	(*v1.Token)(nil),           // 30: oscal.common.v1.Token
 }
 var file_assessment_plan_v1_assessment_plan_proto_depIdxs = []int32{
-	21,  // 0: oscal.assessment_plan.v1.AssessmentPlan.uuid:type_name -> oscal.common.v1.UUID
-	22,  // 1: oscal.assessment_plan.v1.AssessmentPlan.metadata:type_name -> oscal.common.v1.Metadata
+	22,  // 0: oscal.assessment_plan.v1.AssessmentPlan.uuid:type_name -> oscal.common.v1.UUID
+	23,  // 1: oscal.assessment_plan.v1.AssessmentPlan.metadata:type_name -> oscal.common.v1.Metadata
 	1,   // 2: oscal.assessment_plan.v1.AssessmentPlan.import_ssp:type_name -> oscal.assessment_plan.v1.ImportSsp
 	2,   // 3: oscal.assessment_plan.v1.AssessmentPlan.local_definitions:type_name -> oscal.assessment_plan.v1.LocalDefinitions
 	12,  // 4: oscal.assessment_plan.v1.AssessmentPlan.terms:type_name -> oscal.assessment_plan.v1.Terms
 	14,  // 5: oscal.assessment_plan.v1.AssessmentPlan.reviewed_controls:type_name -> oscal.assessment_plan.v1.ReviewedControls
-	16,  // 6: oscal.assessment_plan.v1.AssessmentPlan.assessment_tasks:type_name -> oscal.assessment_plan.v1.AssessmentTask
-	23,  // 7: oscal.assessment_plan.v1.AssessmentPlan.back_matter:type_name -> oscal.common.v1.BackMatter
-	24,  // 8: oscal.assessment_plan.v1.ImportSsp.href:type_name -> oscal.common.v1.URIReference
-	25,  // 9: oscal.assessment_plan.v1.ImportSsp.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	3,   // 10: oscal.assessment_plan.v1.LocalDefinitions.components:type_name -> oscal.assessment_plan.v1.Component
-	4,   // 11: oscal.assessment_plan.v1.LocalDefinitions.inventory_items:type_name -> oscal.assessment_plan.v1.InventoryItem
-	5,   // 12: oscal.assessment_plan.v1.LocalDefinitions.users:type_name -> oscal.assessment_plan.v1.User
-	6,   // 13: oscal.assessment_plan.v1.LocalDefinitions.objectives:type_name -> oscal.assessment_plan.v1.LocalObjective
-	8,   // 14: oscal.assessment_plan.v1.LocalDefinitions.methods:type_name -> oscal.assessment_plan.v1.AssessmentMethod
-	10,  // 15: oscal.assessment_plan.v1.LocalDefinitions.activities:type_name -> oscal.assessment_plan.v1.Activity
-	21,  // 16: oscal.assessment_plan.v1.Component.uuid:type_name -> oscal.common.v1.UUID
-	26,  // 17: oscal.assessment_plan.v1.Component.props:type_name -> oscal.common.v1.Property
-	27,  // 18: oscal.assessment_plan.v1.Component.links:type_name -> oscal.common.v1.Link
-	25,  // 19: oscal.assessment_plan.v1.Component.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	21,  // 20: oscal.assessment_plan.v1.InventoryItem.uuid:type_name -> oscal.common.v1.UUID
-	28,  // 21: oscal.assessment_plan.v1.InventoryItem.description:type_name -> oscal.common.v1.MarkupLine
-	26,  // 22: oscal.assessment_plan.v1.InventoryItem.props:type_name -> oscal.common.v1.Property
-	27,  // 23: oscal.assessment_plan.v1.InventoryItem.links:type_name -> oscal.common.v1.Link
-	25,  // 24: oscal.assessment_plan.v1.InventoryItem.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	21,  // 25: oscal.assessment_plan.v1.User.uuid:type_name -> oscal.common.v1.UUID
-	25,  // 26: oscal.assessment_plan.v1.User.description:type_name -> oscal.common.v1.MarkupMultiline
-	26,  // 27: oscal.assessment_plan.v1.User.props:type_name -> oscal.common.v1.Property
-	27,  // 28: oscal.assessment_plan.v1.User.links:type_name -> oscal.common.v1.Link
-	25,  // 29: oscal.assessment_plan.v1.User.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	29,  // 30: oscal.assessment_plan.v1.LocalObjective.control_id:type_name -> oscal.common.v1.Token
-	25,  // 31: oscal.assessment_plan.v1.LocalObjective.description:type_name -> oscal.common.v1.MarkupMultiline
-	26,  // 32: oscal.assessment_plan.v1.LocalObjective.props:type_name -> oscal.common.v1.Property
-	27,  // 33: oscal.assessment_plan.v1.LocalObjective.links:type_name -> oscal.common.v1.Link
-	7,   // 34: oscal.assessment_plan.v1.LocalObjective.parts:type_name -> oscal.assessment_plan.v1.Part
-	25,  // 35: oscal.assessment_plan.v1.LocalObjective.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	29,  // 36: oscal.assessment_plan.v1.Part.id:type_name -> oscal.common.v1.Token
-	28,  // 37: oscal.assessment_plan.v1.Part.title:type_name -> oscal.common.v1.MarkupLine
-	26,  // 38: oscal.assessment_plan.v1.Part.props:type_name -> oscal.common.v1.Property
-	27,  // 39: oscal.assessment_plan.v1.Part.links:type_name -> oscal.common.v1.Link
-	7,   // 40: oscal.assessment_plan.v1.Part.parts:type_name -> oscal.assessment_plan.v1.Part
-	25,  // 41: oscal.assessment_plan.v1.Part.prose:type_name -> oscal.common.v1.MarkupMultiline
-	25,  // 42: oscal.assessment_plan.v1.Part.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	21,  // 43: oscal.assessment_plan.v1.AssessmentMethod.uuid:type_name -> oscal.common.v1.UUID
-	25,  // 44: oscal.assessment_plan.v1.AssessmentMethod.description:type_name -> oscal.common.v1.MarkupMultiline
-	26,  // 45: oscal.assessment_plan.v1.AssessmentMethod.props:type_name -> oscal.common.v1.Property
-	27,  // 46: oscal.assessment_plan.v1.AssessmentMethod.links:type_name -> oscal.common.v1.Link
-	9,   // 47: oscal.assessment_plan.v1.AssessmentMethod.part:type_name -> oscal.assessment_plan.v1.AssessmentPart
-	25,  // 48: oscal.assessment_plan.v1.AssessmentMethod.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	29,  // 49: oscal.assessment_plan.v1.AssessmentPart.id:type_name -> oscal.common.v1.Token
-	28,  // 50: oscal.assessment_plan.v1.AssessmentPart.title:type_name -> oscal.common.v1.MarkupLine
-	26,  // 51: oscal.assessment_plan.v1.AssessmentPart.props:type_name -> oscal.common.v1.Property
-	27,  // 52: oscal.assessment_plan.v1.AssessmentPart.links:type_name -> oscal.common.v1.Link
-	9,   // 53: oscal.assessment_plan.v1.AssessmentPart.parts:type_name -> oscal.assessment_plan.v1.AssessmentPart
-	25,  // 54: oscal.assessment_plan.v1.AssessmentPart.prose:type_name -> oscal.common.v1.MarkupMultiline
-	25,  // 55: oscal.assessment_plan.v1.AssessmentPart.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	21,  // 56: oscal.assessment_plan.v1.Activity.uuid:type_name -> oscal.common.v1.UUID
-	28,  // 57: oscal.assessment_plan.v1.Activity.title:type_name -> oscal.common.v1.MarkupLine
-	25,  // 58: oscal.assessment_plan.v1.Activity.description:type_name -> oscal.common.v1.MarkupMultiline
-	26,  // 59: oscal.assessment_plan.v1.Activity.props:type_name -> oscal.common.v1.Property
-	27,  // 60: oscal.assessment_plan.v1.Activity.links:type_name -> oscal.common.v1.Link
-	11,  // 61: oscal.assessment_plan.v1.Activity.steps:type_name -> oscal.assessment_plan.v1.Step
-	25,  // 62: oscal.assessment_plan.v1.Activity.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	21,  // 63: oscal.assessment_plan.v1.Step.uuid:type_name -> oscal.common.v1.UUID
-	28,  // 64: oscal.assessment_plan.v1.Step.title:type_name -> oscal.common.v1.MarkupLine
-	25,  // 65: oscal.assessment_plan.v1.Step.description:type_name -> oscal.common.v1.MarkupMultiline
-	26,  // 66: oscal.assessment_plan.v1.Step.props:type_name -> oscal.common.v1.Property
-	27,  // 67: oscal.assessment_plan.v1.Step.links:type_name -> oscal.common.v1.Link
-	25,  // 68: oscal.assessment_plan.v1.Step.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	13,  // 69: oscal.assessment_plan.v1.Terms.terms:type_name -> oscal.assessment_plan.v1.Term
-	29,  // 70: oscal.assessment_plan.v1.Term.id:type_name -> oscal.common.v1.Token
-	28,  // 71: oscal.assessment_plan.v1.Term.name:type_name -> oscal.common.v1.MarkupLine
-	25,  // 72: oscal.assessment_plan.v1.Term.definition:type_name -> oscal.common.v1.MarkupMultiline
-	26,  // 73: oscal.assessment_plan.v1.Term.props:type_name -> oscal.common.v1.Property
-	27,  // 74: oscal.assessment_plan.v1.Term.links:type_name -> oscal.common.v1.Link
-	25,  // 75: oscal.assessment_plan.v1.Term.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	15,  // 76: oscal.assessment_plan.v1.ReviewedControls.controls:type_name -> oscal.assessment_plan.v1.ControlSelection
-	29,  // 77: oscal.assessment_plan.v1.ControlSelection.control_id:type_name -> oscal.common.v1.Token
-	25,  // 78: oscal.assessment_plan.v1.ControlSelection.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	21,  // 79: oscal.assessment_plan.v1.AssessmentTask.uuid:type_name -> oscal.common.v1.UUID
-	28,  // 80: oscal.assessment_plan.v1.AssessmentTask.title:type_name -> oscal.common.v1.MarkupLine
-	25,  // 81: oscal.assessment_plan.v1.AssessmentTask.description:type_name -> oscal.common.v1.MarkupMultiline
-	17,  // 82: oscal.assessment_plan.v1.AssessmentTask.subjects:type_name -> oscal.assessment_plan.v1.SubjectReference
-	18,  // 83: oscal.assessment_plan.v1.AssessmentTask.tasks:type_name -> oscal.assessment_plan.v1.Task
-	19,  // 84: oscal.assessment_plan.v1.AssessmentTask.associated_activities:type_name -> oscal.assessment_plan.v1.AssociatedActivity
-	20,  // 85: oscal.assessment_plan.v1.AssessmentTask.responsible_roles:type_name -> oscal.assessment_plan.v1.ResponsibleRole
-	26,  // 86: oscal.assessment_plan.v1.AssessmentTask.props:type_name -> oscal.common.v1.Property
-	27,  // 87: oscal.assessment_plan.v1.AssessmentTask.links:type_name -> oscal.common.v1.Link
-	25,  // 88: oscal.assessment_plan.v1.AssessmentTask.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	21,  // 89: oscal.assessment_plan.v1.SubjectReference.subject_uuid:type_name -> oscal.common.v1.UUID
-	28,  // 90: oscal.assessment_plan.v1.SubjectReference.title:type_name -> oscal.common.v1.MarkupLine
-	26,  // 91: oscal.assessment_plan.v1.SubjectReference.props:type_name -> oscal.common.v1.Property
-	27,  // 92: oscal.assessment_plan.v1.SubjectReference.links:type_name -> oscal.common.v1.Link
-	25,  // 93: oscal.assessment_plan.v1.SubjectReference.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	21,  // 94: oscal.assessment_plan.v1.Task.uuid:type_name -> oscal.common.v1.UUID
-	28,  // 95: oscal.assessment_plan.v1.Task.title:type_name -> oscal.common.v1.MarkupLine
-	25,  // 96: oscal.assessment_plan.v1.Task.description:type_name -> oscal.common.v1.MarkupMultiline
-	17,  // 97: oscal.assessment_plan.v1.Task.subjects:type_name -> oscal.assessment_plan.v1.SubjectReference
-	18,  // 98: oscal.assessment_plan.v1.Task.tasks:type_name -> oscal.assessment_plan.v1.Task
-	19,  // 99: oscal.assessment_plan.v1.Task.associated_activities:type_name -> oscal.assessment_plan.v1.AssociatedActivity
-	20,  // 100: oscal.assessment_plan.v1.Task.responsible_roles:type_name -> oscal.assessment_plan.v1.ResponsibleRole
-	26,  // 101: oscal.assessment_plan.v1.Task.props:type_name -> oscal.common.v1.Property
-	27,  // 102: oscal.assessment_plan.v1.Task.links:type_name -> oscal.common.v1.Link
-	25,  // 103: oscal.assessment_plan.v1.Task.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	21,  // 104: oscal.assessment_plan.v1.AssociatedActivity.activity_uuid:type_name -> oscal.common.v1.UUID
-	21,  // 105: oscal.assessment_plan.v1.AssociatedActivity.activity_uuids:type_name -> oscal.common.v1.UUID
-	29,  // 106: oscal.assessment_plan.v1.ResponsibleRole.role_id:type_name -> oscal.common.v1.Token
-	21,  // 107: oscal.assessment_plan.v1.ResponsibleRole.party_uuids:type_name -> oscal.common.v1.UUID
-	26,  // 108: oscal.assessment_plan.v1.ResponsibleRole.props:type_name -> oscal.common.v1.Property
-	25,  // 109: oscal.assessment_plan.v1.ResponsibleRole.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	110, // [110:110] is the sub-list for method output_type
-	110, // [110:110] is the sub-list for method input_type
-	110, // [110:110] is the sub-list for extension type_name
-	110, // [110:110] is the sub-list for extension extendee
-	0,   // [0:110] is the sub-list for field type_name
+	17,  // 6: oscal.assessment_plan.v1.AssessmentPlan.assessment_tasks:type_name -> oscal.assessment_plan.v1.AssessmentTask
+	24,  // 7: oscal.assessment_plan.v1.AssessmentPlan.back_matter:type_name -> oscal.common.v1.BackMatter
+	17,  // 8: oscal.assessment_plan.v1.AssessmentPlan.tasks:type_name -> oscal.assessment_plan.v1.AssessmentTask
+	25,  // 9: oscal.assessment_plan.v1.ImportSsp.href:type_name -> oscal.common.v1.URIReference
+	26,  // 10: oscal.assessment_plan.v1.ImportSsp.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	3,   // 11: oscal.assessment_plan.v1.LocalDefinitions.components:type_name -> oscal.assessment_plan.v1.Component
+	4,   // 12: oscal.assessment_plan.v1.LocalDefinitions.inventory_items:type_name -> oscal.assessment_plan.v1.InventoryItem
+	5,   // 13: oscal.assessment_plan.v1.LocalDefinitions.users:type_name -> oscal.assessment_plan.v1.User
+	6,   // 14: oscal.assessment_plan.v1.LocalDefinitions.objectives:type_name -> oscal.assessment_plan.v1.LocalObjective
+	8,   // 15: oscal.assessment_plan.v1.LocalDefinitions.methods:type_name -> oscal.assessment_plan.v1.AssessmentMethod
+	10,  // 16: oscal.assessment_plan.v1.LocalDefinitions.activities:type_name -> oscal.assessment_plan.v1.Activity
+	22,  // 17: oscal.assessment_plan.v1.Component.uuid:type_name -> oscal.common.v1.UUID
+	27,  // 18: oscal.assessment_plan.v1.Component.props:type_name -> oscal.common.v1.Property
+	28,  // 19: oscal.assessment_plan.v1.Component.links:type_name -> oscal.common.v1.Link
+	26,  // 20: oscal.assessment_plan.v1.Component.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	22,  // 21: oscal.assessment_plan.v1.InventoryItem.uuid:type_name -> oscal.common.v1.UUID
+	29,  // 22: oscal.assessment_plan.v1.InventoryItem.description:type_name -> oscal.common.v1.MarkupLine
+	27,  // 23: oscal.assessment_plan.v1.InventoryItem.props:type_name -> oscal.common.v1.Property
+	28,  // 24: oscal.assessment_plan.v1.InventoryItem.links:type_name -> oscal.common.v1.Link
+	26,  // 25: oscal.assessment_plan.v1.InventoryItem.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	22,  // 26: oscal.assessment_plan.v1.User.uuid:type_name -> oscal.common.v1.UUID
+	26,  // 27: oscal.assessment_plan.v1.User.description:type_name -> oscal.common.v1.MarkupMultiline
+	27,  // 28: oscal.assessment_plan.v1.User.props:type_name -> oscal.common.v1.Property
+	28,  // 29: oscal.assessment_plan.v1.User.links:type_name -> oscal.common.v1.Link
+	26,  // 30: oscal.assessment_plan.v1.User.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	30,  // 31: oscal.assessment_plan.v1.LocalObjective.control_id:type_name -> oscal.common.v1.Token
+	26,  // 32: oscal.assessment_plan.v1.LocalObjective.description:type_name -> oscal.common.v1.MarkupMultiline
+	27,  // 33: oscal.assessment_plan.v1.LocalObjective.props:type_name -> oscal.common.v1.Property
+	28,  // 34: oscal.assessment_plan.v1.LocalObjective.links:type_name -> oscal.common.v1.Link
+	7,   // 35: oscal.assessment_plan.v1.LocalObjective.parts:type_name -> oscal.assessment_plan.v1.Part
+	26,  // 36: oscal.assessment_plan.v1.LocalObjective.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	30,  // 37: oscal.assessment_plan.v1.Part.id:type_name -> oscal.common.v1.Token
+	29,  // 38: oscal.assessment_plan.v1.Part.title:type_name -> oscal.common.v1.MarkupLine
+	27,  // 39: oscal.assessment_plan.v1.Part.props:type_name -> oscal.common.v1.Property
+	28,  // 40: oscal.assessment_plan.v1.Part.links:type_name -> oscal.common.v1.Link
+	7,   // 41: oscal.assessment_plan.v1.Part.parts:type_name -> oscal.assessment_plan.v1.Part
+	26,  // 42: oscal.assessment_plan.v1.Part.prose:type_name -> oscal.common.v1.MarkupMultiline
+	26,  // 43: oscal.assessment_plan.v1.Part.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	22,  // 44: oscal.assessment_plan.v1.AssessmentMethod.uuid:type_name -> oscal.common.v1.UUID
+	26,  // 45: oscal.assessment_plan.v1.AssessmentMethod.description:type_name -> oscal.common.v1.MarkupMultiline
+	27,  // 46: oscal.assessment_plan.v1.AssessmentMethod.props:type_name -> oscal.common.v1.Property
+	28,  // 47: oscal.assessment_plan.v1.AssessmentMethod.links:type_name -> oscal.common.v1.Link
+	9,   // 48: oscal.assessment_plan.v1.AssessmentMethod.part:type_name -> oscal.assessment_plan.v1.AssessmentPart
+	26,  // 49: oscal.assessment_plan.v1.AssessmentMethod.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	30,  // 50: oscal.assessment_plan.v1.AssessmentPart.id:type_name -> oscal.common.v1.Token
+	29,  // 51: oscal.assessment_plan.v1.AssessmentPart.title:type_name -> oscal.common.v1.MarkupLine
+	27,  // 52: oscal.assessment_plan.v1.AssessmentPart.props:type_name -> oscal.common.v1.Property
+	28,  // 53: oscal.assessment_plan.v1.AssessmentPart.links:type_name -> oscal.common.v1.Link
+	9,   // 54: oscal.assessment_plan.v1.AssessmentPart.parts:type_name -> oscal.assessment_plan.v1.AssessmentPart
+	26,  // 55: oscal.assessment_plan.v1.AssessmentPart.prose:type_name -> oscal.common.v1.MarkupMultiline
+	26,  // 56: oscal.assessment_plan.v1.AssessmentPart.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	22,  // 57: oscal.assessment_plan.v1.Activity.uuid:type_name -> oscal.common.v1.UUID
+	29,  // 58: oscal.assessment_plan.v1.Activity.title:type_name -> oscal.common.v1.MarkupLine
+	26,  // 59: oscal.assessment_plan.v1.Activity.description:type_name -> oscal.common.v1.MarkupMultiline
+	27,  // 60: oscal.assessment_plan.v1.Activity.props:type_name -> oscal.common.v1.Property
+	28,  // 61: oscal.assessment_plan.v1.Activity.links:type_name -> oscal.common.v1.Link
+	11,  // 62: oscal.assessment_plan.v1.Activity.steps:type_name -> oscal.assessment_plan.v1.Step
+	26,  // 63: oscal.assessment_plan.v1.Activity.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	22,  // 64: oscal.assessment_plan.v1.Step.uuid:type_name -> oscal.common.v1.UUID
+	29,  // 65: oscal.assessment_plan.v1.Step.title:type_name -> oscal.common.v1.MarkupLine
+	26,  // 66: oscal.assessment_plan.v1.Step.description:type_name -> oscal.common.v1.MarkupMultiline
+	27,  // 67: oscal.assessment_plan.v1.Step.props:type_name -> oscal.common.v1.Property
+	28,  // 68: oscal.assessment_plan.v1.Step.links:type_name -> oscal.common.v1.Link
+	26,  // 69: oscal.assessment_plan.v1.Step.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	13,  // 70: oscal.assessment_plan.v1.Terms.terms:type_name -> oscal.assessment_plan.v1.Term
+	30,  // 71: oscal.assessment_plan.v1.Term.id:type_name -> oscal.common.v1.Token
+	29,  // 72: oscal.assessment_plan.v1.Term.name:type_name -> oscal.common.v1.MarkupLine
+	26,  // 73: oscal.assessment_plan.v1.Term.definition:type_name -> oscal.common.v1.MarkupMultiline
+	27,  // 74: oscal.assessment_plan.v1.Term.props:type_name -> oscal.common.v1.Property
+	28,  // 75: oscal.assessment_plan.v1.Term.links:type_name -> oscal.common.v1.Link
+	26,  // 76: oscal.assessment_plan.v1.Term.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	15,  // 77: oscal.assessment_plan.v1.ReviewedControls.controls:type_name -> oscal.assessment_plan.v1.ControlSelection
+	15,  // 78: oscal.assessment_plan.v1.ReviewedControls.control_selections:type_name -> oscal.assessment_plan.v1.ControlSelection
+	27,  // 79: oscal.assessment_plan.v1.ReviewedControls.props:type_name -> oscal.common.v1.Property
+	28,  // 80: oscal.assessment_plan.v1.ReviewedControls.links:type_name -> oscal.common.v1.Link
+	26,  // 81: oscal.assessment_plan.v1.ReviewedControls.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	26,  // 82: oscal.assessment_plan.v1.ControlSelection.description:type_name -> oscal.common.v1.MarkupMultiline
+	16,  // 83: oscal.assessment_plan.v1.ControlSelection.include_controls:type_name -> oscal.assessment_plan.v1.SelectedControl
+	16,  // 84: oscal.assessment_plan.v1.ControlSelection.exclude_controls:type_name -> oscal.assessment_plan.v1.SelectedControl
+	27,  // 85: oscal.assessment_plan.v1.ControlSelection.props:type_name -> oscal.common.v1.Property
+	28,  // 86: oscal.assessment_plan.v1.ControlSelection.links:type_name -> oscal.common.v1.Link
+	26,  // 87: oscal.assessment_plan.v1.ControlSelection.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	30,  // 88: oscal.assessment_plan.v1.SelectedControl.control_id:type_name -> oscal.common.v1.Token
+	30,  // 89: oscal.assessment_plan.v1.SelectedControl.statement_id:type_name -> oscal.common.v1.Token
+	27,  // 90: oscal.assessment_plan.v1.SelectedControl.props:type_name -> oscal.common.v1.Property
+	28,  // 91: oscal.assessment_plan.v1.SelectedControl.links:type_name -> oscal.common.v1.Link
+	26,  // 92: oscal.assessment_plan.v1.SelectedControl.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	22,  // 93: oscal.assessment_plan.v1.AssessmentTask.uuid:type_name -> oscal.common.v1.UUID
+	29,  // 94: oscal.assessment_plan.v1.AssessmentTask.title:type_name -> oscal.common.v1.MarkupLine
+	26,  // 95: oscal.assessment_plan.v1.AssessmentTask.description:type_name -> oscal.common.v1.MarkupMultiline
+	18,  // 96: oscal.assessment_plan.v1.AssessmentTask.subjects:type_name -> oscal.assessment_plan.v1.SubjectReference
+	19,  // 97: oscal.assessment_plan.v1.AssessmentTask.tasks:type_name -> oscal.assessment_plan.v1.Task
+	20,  // 98: oscal.assessment_plan.v1.AssessmentTask.associated_activities:type_name -> oscal.assessment_plan.v1.AssociatedActivity
+	21,  // 99: oscal.assessment_plan.v1.AssessmentTask.responsible_roles:type_name -> oscal.assessment_plan.v1.ResponsibleRole
+	27,  // 100: oscal.assessment_plan.v1.AssessmentTask.props:type_name -> oscal.common.v1.Property
+	28,  // 101: oscal.assessment_plan.v1.AssessmentTask.links:type_name -> oscal.common.v1.Link
+	26,  // 102: oscal.assessment_plan.v1.AssessmentTask.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	22,  // 103: oscal.assessment_plan.v1.SubjectReference.subject_uuid:type_name -> oscal.common.v1.UUID
+	29,  // 104: oscal.assessment_plan.v1.SubjectReference.title:type_name -> oscal.common.v1.MarkupLine
+	27,  // 105: oscal.assessment_plan.v1.SubjectReference.props:type_name -> oscal.common.v1.Property
+	28,  // 106: oscal.assessment_plan.v1.SubjectReference.links:type_name -> oscal.common.v1.Link
+	26,  // 107: oscal.assessment_plan.v1.SubjectReference.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	22,  // 108: oscal.assessment_plan.v1.Task.uuid:type_name -> oscal.common.v1.UUID
+	29,  // 109: oscal.assessment_plan.v1.Task.title:type_name -> oscal.common.v1.MarkupLine
+	26,  // 110: oscal.assessment_plan.v1.Task.description:type_name -> oscal.common.v1.MarkupMultiline
+	18,  // 111: oscal.assessment_plan.v1.Task.subjects:type_name -> oscal.assessment_plan.v1.SubjectReference
+	19,  // 112: oscal.assessment_plan.v1.Task.tasks:type_name -> oscal.assessment_plan.v1.Task
+	20,  // 113: oscal.assessment_plan.v1.Task.associated_activities:type_name -> oscal.assessment_plan.v1.AssociatedActivity
+	21,  // 114: oscal.assessment_plan.v1.Task.responsible_roles:type_name -> oscal.assessment_plan.v1.ResponsibleRole
+	27,  // 115: oscal.assessment_plan.v1.Task.props:type_name -> oscal.common.v1.Property
+	28,  // 116: oscal.assessment_plan.v1.Task.links:type_name -> oscal.common.v1.Link
+	26,  // 117: oscal.assessment_plan.v1.Task.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	22,  // 118: oscal.assessment_plan.v1.AssociatedActivity.activity_uuid:type_name -> oscal.common.v1.UUID
+	22,  // 119: oscal.assessment_plan.v1.AssociatedActivity.activity_uuids:type_name -> oscal.common.v1.UUID
+	30,  // 120: oscal.assessment_plan.v1.ResponsibleRole.role_id:type_name -> oscal.common.v1.Token
+	22,  // 121: oscal.assessment_plan.v1.ResponsibleRole.party_uuids:type_name -> oscal.common.v1.UUID
+	27,  // 122: oscal.assessment_plan.v1.ResponsibleRole.props:type_name -> oscal.common.v1.Property
+	26,  // 123: oscal.assessment_plan.v1.ResponsibleRole.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	124, // [124:124] is the sub-list for method output_type
+	124, // [124:124] is the sub-list for method input_type
+	124, // [124:124] is the sub-list for extension type_name
+	124, // [124:124] is the sub-list for extension extendee
+	0,   // [0:124] is the sub-list for field type_name
 }
 
 func init() { file_assessment_plan_v1_assessment_plan_proto_init() }
@@ -2144,7 +2331,7 @@ func file_assessment_plan_v1_assessment_plan_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_assessment_plan_v1_assessment_plan_proto_rawDesc), len(file_assessment_plan_v1_assessment_plan_proto_rawDesc)),
 			NumEnums:      0,
-			NumMessages:   21,
+			NumMessages:   22,
 			NumExtensions: 0,
 			NumServices:   0,
 		},

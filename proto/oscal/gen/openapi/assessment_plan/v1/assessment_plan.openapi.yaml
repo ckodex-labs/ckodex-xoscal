@@ -237,9 +237,16 @@ components:
           items:
             $ref: '#/components/schemas/oscal.assessment_plan.v1.AssessmentTask'
           title: assessment_tasks
+          description: 'Deprecated: use tasks instead. Kept for backward compatibility.'
+          deprecated: true
         backMatter:
           title: back_matter
           $ref: '#/components/schemas/oscal.common.v1.BackMatter'
+        tasks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.assessment_plan.v1.AssessmentTask'
+          title: tasks
       title: AssessmentPlan
       additionalProperties: false
       description: AssessmentPlan represents a security assessment plan
@@ -349,9 +356,29 @@ components:
     oscal.assessment_plan.v1.ControlSelection:
       type: object
       properties:
-        controlId:
-          title: control_id
-          $ref: '#/components/schemas/oscal.common.v1.Token'
+        description:
+          title: description
+          $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+        includeControls:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.assessment_plan.v1.SelectedControl'
+          title: include_controls
+        excludeControls:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.assessment_plan.v1.SelectedControl'
+          title: exclude_controls
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
         remarks:
           type: array
           items:
@@ -545,14 +572,63 @@ components:
         controlSelection:
           type: string
           title: control_selection
+          description: 'Deprecated: use control_selections instead. Kept for backward compatibility.'
+          deprecated: true
         controls:
           type: array
           items:
             $ref: '#/components/schemas/oscal.assessment_plan.v1.ControlSelection'
           title: controls
+        controlSelections:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.assessment_plan.v1.ControlSelection'
+          title: control_selections
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
       title: ReviewedControls
       additionalProperties: false
       description: ReviewedControls represents reviewed controls
+    oscal.assessment_plan.v1.SelectedControl:
+      type: object
+      properties:
+        controlId:
+          title: control_id
+          $ref: '#/components/schemas/oscal.common.v1.Token'
+        statementId:
+          title: statement_id
+          $ref: '#/components/schemas/oscal.common.v1.Token'
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: SelectedControl
+      additionalProperties: false
+      description: SelectedControl represents a selected control
     oscal.assessment_plan.v1.Step:
       type: object
       properties:
@@ -789,6 +865,25 @@ components:
       title: Base64
       additionalProperties: false
       description: Base64 represents base64-encoded binary data
+    oscal.common.v1.Citation:
+      type: object
+      properties:
+        text:
+          title: text
+          $ref: '#/components/schemas/oscal.common.v1.MarkupLine'
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+      title: Citation
+      additionalProperties: false
+      description: Citation represents a bibliographic citation
     oscal.common.v1.DateTime:
       type: object
       properties:
@@ -819,6 +914,18 @@ components:
       title: EmailAddress
       additionalProperties: false
       description: EmailAddress represents an email address
+    oscal.common.v1.Hash:
+      type: object
+      properties:
+        algorithm:
+          type: string
+          title: algorithm
+        value:
+          title: value
+          $ref: '#/components/schemas/oscal.common.v1.Base64'
+      title: Hash
+      additionalProperties: false
+      description: Hash represents a cryptographic hash
     oscal.common.v1.Link:
       type: object
       properties:
@@ -844,6 +951,51 @@ components:
       title: Link
       additionalProperties: false
       description: Link represents a hyperlink with metadata
+    oscal.common.v1.Location:
+      type: object
+      properties:
+        uuid:
+          title: uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        title:
+          type: string
+          title: title
+        address:
+          title: address
+          $ref: '#/components/schemas/oscal.common.v1.Address'
+        emailAddresses:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.EmailAddress'
+          title: email_addresses
+        telephoneNumbers:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.TelephoneNumber'
+          title: telephone_numbers
+        urls:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.URI'
+          title: urls
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: Location
+      additionalProperties: false
+      description: Location represents a physical or virtual location
     oscal.common.v1.MarkupLine:
       type: object
       properties:
@@ -911,6 +1063,11 @@ components:
         remarks:
           title: remarks
           $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+        locations:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Location'
+          title: locations
       title: Metadata
       additionalProperties: false
       description: Metadata represents document metadata shared across all OSCAL models
@@ -964,9 +1121,31 @@ components:
           items:
             type: string
           title: remarks
+        externalIds:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.PartyExternalId'
+          title: external_ids
+        locationUuids:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.UUID'
+          title: location_uuids
       title: Party
       additionalProperties: false
       description: Party represents an organization or person
+    oscal.common.v1.PartyExternalId:
+      type: object
+      properties:
+        id:
+          type: string
+          title: id
+        scheme:
+          title: scheme
+          $ref: '#/components/schemas/oscal.common.v1.URI'
+      title: PartyExternalId
+      additionalProperties: false
+      description: PartyExternalId represents an external identifier for a party
     oscal.common.v1.Property:
       type: object
       properties:
@@ -994,9 +1173,7 @@ components:
           title: uuid
           $ref: '#/components/schemas/oscal.common.v1.UUID'
         title:
-          type: array
-          items:
-            type: string
+          type: string
           title: title
         description:
           title: description
@@ -1029,6 +1206,16 @@ components:
         citation:
           type: string
           title: citation
+          description: 'Deprecated: use citation_obj instead. Kept for backward compatibility.'
+          deprecated: true
+        rlinks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Rlink'
+          title: rlinks
+        citationObj:
+          title: citation_obj
+          $ref: '#/components/schemas/oscal.common.v1.Citation'
       title: Resource
       additionalProperties: false
       description: Resource represents an external resource
@@ -1059,6 +1246,23 @@ components:
       title: ResponsibleParty
       additionalProperties: false
       description: ResponsibleParty represents a party responsible for a role
+    oscal.common.v1.Rlink:
+      type: object
+      properties:
+        href:
+          title: href
+          $ref: '#/components/schemas/oscal.common.v1.URI'
+        mediaType:
+          type: string
+          title: media_type
+        hashes:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Hash'
+          title: hashes
+      title: Rlink
+      additionalProperties: false
+      description: Rlink represents a resource link
     oscal.common.v1.Role:
       type: object
       properties:

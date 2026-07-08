@@ -4,7 +4,11 @@
   "additionalProperties": false,
   "description": "Add represents addition of control content",
   "properties": {
+    "by_id": {
+      "type": "string"
+    },
     "item_name": {
+      "description": "Deprecated: not in OSCAL schema. Kept for backward compatibility.",
       "type": "string"
     },
     "links": {
@@ -34,22 +38,15 @@
       },
       "type": "array"
     },
-    "with_class": {
-      "items": {
-        "type": "string"
-      },
-      "type": "array"
-    },
-    "with_ids": {
-      "items": {
-        "type": "string"
-      },
-      "type": "array"
+    "title": {
+      "type": "string"
     }
   },
   "required": [
     "item_name",
-    "position"
+    "position",
+    "by_id",
+    "title"
   ],
   "title": "Add",
   "type": "object"

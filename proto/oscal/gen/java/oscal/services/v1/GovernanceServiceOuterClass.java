@@ -42064,14 +42064,14 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
   static {
     java.lang.String[] descriptorData = {
       "\n$services/v1/governance_service.proto\022\021" +
-      "oscal.services.v1\032\030catalog/v1/catalog.pr" +
-      "oto\032\030profile/v1/profile.proto\032\030mapping/v" +
-      "1/mapping.proto\032\020ssp/v1/ssp.proto\032\'compo" +
-      "nent_definition/v1/component.proto\032(asse" +
-      "ssment_plan/v1/assessment_plan.proto\032.as" +
-      "sessment_results/v1/assessment_results.p" +
-      "roto\032\022poam/v1/poam.proto\032\034google/api/ann" +
-      "otations.proto\"z\n\006Entity\022\020\n\003urn\030\001 \001(\tR\003u" +
+      "oscal.services.v1\032(assessment_plan/v1/as" +
+      "sessment_plan.proto\032.assessment_results/" +
+      "v1/assessment_results.proto\032\030catalog/v1/" +
+      "catalog.proto\032\'component_definition/v1/c" +
+      "omponent.proto\032\034google/api/annotations.p" +
+      "roto\032\030mapping/v1/mapping.proto\032\022poam/v1/" +
+      "poam.proto\032\030profile/v1/profile.proto\032\020ss" +
+      "p/v1/ssp.proto\"z\n\006Entity\022\020\n\003urn\030\001 \001(\tR\003u" +
       "rn\022\022\n\004type\030\002 \001(\tR\004type\022\030\n\007version\030\003 \001(\tR" +
       "\007version\022\026\n\006status\030\004 \001(\tR\006status\022\030\n\007payl" +
       "oad\030\005 \001(\tR\007payload\"H\n\023CreateEntityReques" +
@@ -42324,15 +42324,15 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          oscal.catalog.v1.CatalogOuterClass.getDescriptor(),
-          oscal.profile.v1.ProfileOuterClass.getDescriptor(),
-          oscal.mapping.v1.Mapping.getDescriptor(),
-          oscal.ssp.v1.Ssp.getDescriptor(),
-          oscal.component_definition.v1.Component.getDescriptor(),
           oscal.assessment_plan.v1.AssessmentPlanOuterClass.getDescriptor(),
           oscal.assessment_results.v1.AssessmentResultsOuterClass.getDescriptor(),
-          oscal.poam.v1.Poam.getDescriptor(),
+          oscal.catalog.v1.CatalogOuterClass.getDescriptor(),
+          oscal.component_definition.v1.Component.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
+          oscal.mapping.v1.Mapping.getDescriptor(),
+          oscal.poam.v1.Poam.getDescriptor(),
+          oscal.profile.v1.ProfileOuterClass.getDescriptor(),
+          oscal.ssp.v1.Ssp.getDescriptor(),
         });
     internal_static_oscal_services_v1_Entity_descriptor =
       getDescriptor().getMessageType(0);
@@ -42689,15 +42689,15 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
         internal_static_oscal_services_v1_ProposeMappingUpdateResponse_descriptor,
         new java.lang.String[] { "PullRequestUrl", "PullRequestNumber", });
     descriptor.resolveAllFeaturesImmutable();
-    oscal.catalog.v1.CatalogOuterClass.getDescriptor();
-    oscal.profile.v1.ProfileOuterClass.getDescriptor();
-    oscal.mapping.v1.Mapping.getDescriptor();
-    oscal.ssp.v1.Ssp.getDescriptor();
-    oscal.component_definition.v1.Component.getDescriptor();
     oscal.assessment_plan.v1.AssessmentPlanOuterClass.getDescriptor();
     oscal.assessment_results.v1.AssessmentResultsOuterClass.getDescriptor();
-    oscal.poam.v1.Poam.getDescriptor();
+    oscal.catalog.v1.CatalogOuterClass.getDescriptor();
+    oscal.component_definition.v1.Component.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
+    oscal.mapping.v1.Mapping.getDescriptor();
+    oscal.poam.v1.Poam.getDescriptor();
+    oscal.profile.v1.ProfileOuterClass.getDescriptor();
+    oscal.ssp.v1.Ssp.getDescriptor();
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);

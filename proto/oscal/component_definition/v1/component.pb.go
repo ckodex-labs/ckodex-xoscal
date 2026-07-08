@@ -304,13 +304,14 @@ func (x *DefinedComponent) GetSupplyChainType() []string {
 // ControlImplementation represents control implementation by a component
 type ControlImplementation struct {
 	state                   protoimpl.MessageState    `protogen:"open.v1"`
-	ControlId               string                    `protobuf:"bytes,1,opt,name=control_id,json=controlId,proto3" json:"control_id,omitempty"`
-	Description             []*v1.MarkupLine          `protobuf:"bytes,2,rep,name=description,proto3" json:"description,omitempty"`
-	SetParameters           []*SetParameter           `protobuf:"bytes,3,rep,name=set_parameters,json=setParameters,proto3" json:"set_parameters,omitempty"`
-	ImplementedRequirements []*ImplementedRequirement `protobuf:"bytes,4,rep,name=implemented_requirements,json=implementedRequirements,proto3" json:"implemented_requirements,omitempty"`
-	Props                   []*v1.Property            `protobuf:"bytes,5,rep,name=props,proto3" json:"props,omitempty"`
-	Links                   []*v1.Link                `protobuf:"bytes,6,rep,name=links,proto3" json:"links,omitempty"`
-	Remarks                 []*v1.MarkupMultiline     `protobuf:"bytes,7,rep,name=remarks,proto3" json:"remarks,omitempty"`
+	Uuid                    *v1.UUID                  `protobuf:"bytes,1,opt,name=uuid,proto3" json:"uuid,omitempty"`
+	Source                  *v1.URIReference          `protobuf:"bytes,2,opt,name=source,proto3" json:"source,omitempty"`
+	Description             string                    `protobuf:"bytes,3,opt,name=description,proto3" json:"description,omitempty"`
+	SetParameters           []*SetParameter           `protobuf:"bytes,4,rep,name=set_parameters,json=setParameters,proto3" json:"set_parameters,omitempty"`
+	ImplementedRequirements []*ImplementedRequirement `protobuf:"bytes,5,rep,name=implemented_requirements,json=implementedRequirements,proto3" json:"implemented_requirements,omitempty"`
+	Props                   []*v1.Property            `protobuf:"bytes,6,rep,name=props,proto3" json:"props,omitempty"`
+	Links                   []*v1.Link                `protobuf:"bytes,7,rep,name=links,proto3" json:"links,omitempty"`
+	Remarks                 []*v1.MarkupMultiline     `protobuf:"bytes,8,rep,name=remarks,proto3" json:"remarks,omitempty"`
 	unknownFields           protoimpl.UnknownFields
 	sizeCache               protoimpl.SizeCache
 }
@@ -345,18 +346,25 @@ func (*ControlImplementation) Descriptor() ([]byte, []int) {
 	return file_component_definition_v1_component_proto_rawDescGZIP(), []int{3}
 }
 
-func (x *ControlImplementation) GetControlId() string {
+func (x *ControlImplementation) GetUuid() *v1.UUID {
 	if x != nil {
-		return x.ControlId
+		return x.Uuid
 	}
-	return ""
+	return nil
 }
 
-func (x *ControlImplementation) GetDescription() []*v1.MarkupLine {
+func (x *ControlImplementation) GetSource() *v1.URIReference {
+	if x != nil {
+		return x.Source
+	}
+	return nil
+}
+
+func (x *ControlImplementation) GetDescription() string {
 	if x != nil {
 		return x.Description
 	}
-	return nil
+	return ""
 }
 
 func (x *ControlImplementation) GetSetParameters() []*SetParameter {
@@ -474,12 +482,13 @@ func (x *SetParameter) GetRemarks() []*v1.MarkupMultiline {
 // ImplementedRequirement represents a control requirement implementation
 type ImplementedRequirement struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
-	ControlId     string                 `protobuf:"bytes,1,opt,name=control_id,json=controlId,proto3" json:"control_id,omitempty"`
-	Description   []*v1.MarkupLine       `protobuf:"bytes,2,rep,name=description,proto3" json:"description,omitempty"`
-	Statements    []*Statement           `protobuf:"bytes,3,rep,name=statements,proto3" json:"statements,omitempty"`
-	Props         []*v1.Property         `protobuf:"bytes,4,rep,name=props,proto3" json:"props,omitempty"`
-	Links         []*v1.Link             `protobuf:"bytes,5,rep,name=links,proto3" json:"links,omitempty"`
-	Remarks       []*v1.MarkupMultiline  `protobuf:"bytes,6,rep,name=remarks,proto3" json:"remarks,omitempty"`
+	Uuid          *v1.UUID               `protobuf:"bytes,1,opt,name=uuid,proto3" json:"uuid,omitempty"`
+	ControlId     string                 `protobuf:"bytes,2,opt,name=control_id,json=controlId,proto3" json:"control_id,omitempty"`
+	Description   string                 `protobuf:"bytes,3,opt,name=description,proto3" json:"description,omitempty"`
+	Statements    []*Statement           `protobuf:"bytes,4,rep,name=statements,proto3" json:"statements,omitempty"`
+	Props         []*v1.Property         `protobuf:"bytes,5,rep,name=props,proto3" json:"props,omitempty"`
+	Links         []*v1.Link             `protobuf:"bytes,6,rep,name=links,proto3" json:"links,omitempty"`
+	Remarks       []*v1.MarkupMultiline  `protobuf:"bytes,7,rep,name=remarks,proto3" json:"remarks,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -514,6 +523,13 @@ func (*ImplementedRequirement) Descriptor() ([]byte, []int) {
 	return file_component_definition_v1_component_proto_rawDescGZIP(), []int{5}
 }
 
+func (x *ImplementedRequirement) GetUuid() *v1.UUID {
+	if x != nil {
+		return x.Uuid
+	}
+	return nil
+}
+
 func (x *ImplementedRequirement) GetControlId() string {
 	if x != nil {
 		return x.ControlId
@@ -521,11 +537,11 @@ func (x *ImplementedRequirement) GetControlId() string {
 	return ""
 }
 
-func (x *ImplementedRequirement) GetDescription() []*v1.MarkupLine {
+func (x *ImplementedRequirement) GetDescription() string {
 	if x != nil {
 		return x.Description
 	}
-	return nil
+	return ""
 }
 
 func (x *ImplementedRequirement) GetStatements() []*Statement {
@@ -952,32 +968,33 @@ const file_component_definition_v1_component_proto_rawDesc = "" +
 	"\aremarks\x18\t \x03(\v2 .oscal.common.v1.MarkupMultilineR\aremarks\x12`\n" +
 	"\x13responsible_parties\x18\n" +
 	" \x03(\v2/.oscal.component_definition.v1.ResponsiblePartyR\x12responsibleParties\x12*\n" +
-	"\x11supply_chain_type\x18\v \x03(\tR\x0fsupplyChainType\"\xd5\x03\n" +
-	"\x15ControlImplementation\x12\x1d\n" +
-	"\n" +
-	"control_id\x18\x01 \x01(\tR\tcontrolId\x12=\n" +
-	"\vdescription\x18\x02 \x03(\v2\x1b.oscal.common.v1.MarkupLineR\vdescription\x12R\n" +
-	"\x0eset_parameters\x18\x03 \x03(\v2+.oscal.component_definition.v1.SetParameterR\rsetParameters\x12p\n" +
-	"\x18implemented_requirements\x18\x04 \x03(\v25.oscal.component_definition.v1.ImplementedRequirementR\x17implementedRequirements\x12/\n" +
-	"\x05props\x18\x05 \x03(\v2\x19.oscal.common.v1.PropertyR\x05props\x12+\n" +
-	"\x05links\x18\x06 \x03(\v2\x15.oscal.common.v1.LinkR\x05links\x12:\n" +
-	"\aremarks\x18\a \x03(\v2 .oscal.common.v1.MarkupMultilineR\aremarks\"\xf8\x01\n" +
+	"\x11supply_chain_type\x18\v \x03(\tR\x0fsupplyChainType\"\xfb\x03\n" +
+	"\x15ControlImplementation\x12)\n" +
+	"\x04uuid\x18\x01 \x01(\v2\x15.oscal.common.v1.UUIDR\x04uuid\x125\n" +
+	"\x06source\x18\x02 \x01(\v2\x1d.oscal.common.v1.URIReferenceR\x06source\x12 \n" +
+	"\vdescription\x18\x03 \x01(\tR\vdescription\x12R\n" +
+	"\x0eset_parameters\x18\x04 \x03(\v2+.oscal.component_definition.v1.SetParameterR\rsetParameters\x12p\n" +
+	"\x18implemented_requirements\x18\x05 \x03(\v25.oscal.component_definition.v1.ImplementedRequirementR\x17implementedRequirements\x12/\n" +
+	"\x05props\x18\x06 \x03(\v2\x19.oscal.common.v1.PropertyR\x05props\x12+\n" +
+	"\x05links\x18\a \x03(\v2\x15.oscal.common.v1.LinkR\x05links\x12:\n" +
+	"\aremarks\x18\b \x03(\v2 .oscal.common.v1.MarkupMultilineR\aremarks\"\xf8\x01\n" +
 	"\fSetParameter\x12\x19\n" +
 	"\bparam_id\x18\x01 \x01(\tR\aparamId\x123\n" +
 	"\x06values\x18\x02 \x03(\v2\x1b.oscal.common.v1.MarkupLineR\x06values\x12/\n" +
 	"\x05props\x18\x03 \x03(\v2\x19.oscal.common.v1.PropertyR\x05props\x12+\n" +
 	"\x05links\x18\x04 \x03(\v2\x15.oscal.common.v1.LinkR\x05links\x12:\n" +
-	"\aremarks\x18\x05 \x03(\v2 .oscal.common.v1.MarkupMultilineR\aremarks\"\xda\x02\n" +
-	"\x16ImplementedRequirement\x12\x1d\n" +
+	"\aremarks\x18\x05 \x03(\v2 .oscal.common.v1.MarkupMultilineR\aremarks\"\xe8\x02\n" +
+	"\x16ImplementedRequirement\x12)\n" +
+	"\x04uuid\x18\x01 \x01(\v2\x15.oscal.common.v1.UUIDR\x04uuid\x12\x1d\n" +
 	"\n" +
-	"control_id\x18\x01 \x01(\tR\tcontrolId\x12=\n" +
-	"\vdescription\x18\x02 \x03(\v2\x1b.oscal.common.v1.MarkupLineR\vdescription\x12H\n" +
+	"control_id\x18\x02 \x01(\tR\tcontrolId\x12 \n" +
+	"\vdescription\x18\x03 \x01(\tR\vdescription\x12H\n" +
 	"\n" +
-	"statements\x18\x03 \x03(\v2(.oscal.component_definition.v1.StatementR\n" +
+	"statements\x18\x04 \x03(\v2(.oscal.component_definition.v1.StatementR\n" +
 	"statements\x12/\n" +
-	"\x05props\x18\x04 \x03(\v2\x19.oscal.common.v1.PropertyR\x05props\x12+\n" +
-	"\x05links\x18\x05 \x03(\v2\x15.oscal.common.v1.LinkR\x05links\x12:\n" +
-	"\aremarks\x18\x06 \x03(\v2 .oscal.common.v1.MarkupMultilineR\aremarks\"\xea\x02\n" +
+	"\x05props\x18\x05 \x03(\v2\x19.oscal.common.v1.PropertyR\x05props\x12+\n" +
+	"\x05links\x18\x06 \x03(\v2\x15.oscal.common.v1.LinkR\x05links\x12:\n" +
+	"\aremarks\x18\a \x03(\v2 .oscal.common.v1.MarkupMultilineR\aremarks\"\xea\x02\n" +
 	"\tStatement\x12!\n" +
 	"\fstatement_id\x18\x01 \x01(\tR\vstatementId\x12\x12\n" +
 	"\x04uuid\x18\x02 \x01(\tR\x04uuid\x12=\n" +
@@ -1065,47 +1082,48 @@ var file_component_definition_v1_component_proto_depIdxs = []int32{
 	15, // 16: oscal.component_definition.v1.DefinedComponent.links:type_name -> oscal.common.v1.Link
 	16, // 17: oscal.component_definition.v1.DefinedComponent.remarks:type_name -> oscal.common.v1.MarkupMultiline
 	8,  // 18: oscal.component_definition.v1.DefinedComponent.responsible_parties:type_name -> oscal.component_definition.v1.ResponsibleParty
-	17, // 19: oscal.component_definition.v1.ControlImplementation.description:type_name -> oscal.common.v1.MarkupLine
-	4,  // 20: oscal.component_definition.v1.ControlImplementation.set_parameters:type_name -> oscal.component_definition.v1.SetParameter
-	5,  // 21: oscal.component_definition.v1.ControlImplementation.implemented_requirements:type_name -> oscal.component_definition.v1.ImplementedRequirement
-	14, // 22: oscal.component_definition.v1.ControlImplementation.props:type_name -> oscal.common.v1.Property
-	15, // 23: oscal.component_definition.v1.ControlImplementation.links:type_name -> oscal.common.v1.Link
-	16, // 24: oscal.component_definition.v1.ControlImplementation.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	17, // 25: oscal.component_definition.v1.SetParameter.values:type_name -> oscal.common.v1.MarkupLine
-	14, // 26: oscal.component_definition.v1.SetParameter.props:type_name -> oscal.common.v1.Property
-	15, // 27: oscal.component_definition.v1.SetParameter.links:type_name -> oscal.common.v1.Link
-	16, // 28: oscal.component_definition.v1.SetParameter.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	17, // 29: oscal.component_definition.v1.ImplementedRequirement.description:type_name -> oscal.common.v1.MarkupLine
-	6,  // 30: oscal.component_definition.v1.ImplementedRequirement.statements:type_name -> oscal.component_definition.v1.Statement
-	14, // 31: oscal.component_definition.v1.ImplementedRequirement.props:type_name -> oscal.common.v1.Property
-	15, // 32: oscal.component_definition.v1.ImplementedRequirement.links:type_name -> oscal.common.v1.Link
-	16, // 33: oscal.component_definition.v1.ImplementedRequirement.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	17, // 34: oscal.component_definition.v1.Statement.description:type_name -> oscal.common.v1.MarkupLine
-	14, // 35: oscal.component_definition.v1.Statement.props:type_name -> oscal.common.v1.Property
-	15, // 36: oscal.component_definition.v1.Statement.links:type_name -> oscal.common.v1.Link
-	16, // 37: oscal.component_definition.v1.Statement.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	6,  // 38: oscal.component_definition.v1.Statement.by_components:type_name -> oscal.component_definition.v1.Statement
-	10, // 39: oscal.component_definition.v1.Protocol.uuid:type_name -> oscal.common.v1.UUID
-	17, // 40: oscal.component_definition.v1.Protocol.title:type_name -> oscal.common.v1.MarkupLine
-	16, // 41: oscal.component_definition.v1.Protocol.description:type_name -> oscal.common.v1.MarkupMultiline
-	14, // 42: oscal.component_definition.v1.Protocol.props:type_name -> oscal.common.v1.Property
-	15, // 43: oscal.component_definition.v1.Protocol.links:type_name -> oscal.common.v1.Link
-	16, // 44: oscal.component_definition.v1.Protocol.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	10, // 45: oscal.component_definition.v1.ResponsibleParty.party_uuids:type_name -> oscal.common.v1.UUID
-	14, // 46: oscal.component_definition.v1.ResponsibleParty.props:type_name -> oscal.common.v1.Property
-	15, // 47: oscal.component_definition.v1.ResponsibleParty.links:type_name -> oscal.common.v1.Link
-	16, // 48: oscal.component_definition.v1.ResponsibleParty.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	10, // 49: oscal.component_definition.v1.Capability.uuid:type_name -> oscal.common.v1.UUID
-	16, // 50: oscal.component_definition.v1.Capability.description:type_name -> oscal.common.v1.MarkupMultiline
-	3,  // 51: oscal.component_definition.v1.Capability.control_implementations:type_name -> oscal.component_definition.v1.ControlImplementation
-	14, // 52: oscal.component_definition.v1.Capability.props:type_name -> oscal.common.v1.Property
-	15, // 53: oscal.component_definition.v1.Capability.links:type_name -> oscal.common.v1.Link
-	16, // 54: oscal.component_definition.v1.Capability.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	55, // [55:55] is the sub-list for method output_type
-	55, // [55:55] is the sub-list for method input_type
-	55, // [55:55] is the sub-list for extension type_name
-	55, // [55:55] is the sub-list for extension extendee
-	0,  // [0:55] is the sub-list for field type_name
+	10, // 19: oscal.component_definition.v1.ControlImplementation.uuid:type_name -> oscal.common.v1.UUID
+	13, // 20: oscal.component_definition.v1.ControlImplementation.source:type_name -> oscal.common.v1.URIReference
+	4,  // 21: oscal.component_definition.v1.ControlImplementation.set_parameters:type_name -> oscal.component_definition.v1.SetParameter
+	5,  // 22: oscal.component_definition.v1.ControlImplementation.implemented_requirements:type_name -> oscal.component_definition.v1.ImplementedRequirement
+	14, // 23: oscal.component_definition.v1.ControlImplementation.props:type_name -> oscal.common.v1.Property
+	15, // 24: oscal.component_definition.v1.ControlImplementation.links:type_name -> oscal.common.v1.Link
+	16, // 25: oscal.component_definition.v1.ControlImplementation.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	17, // 26: oscal.component_definition.v1.SetParameter.values:type_name -> oscal.common.v1.MarkupLine
+	14, // 27: oscal.component_definition.v1.SetParameter.props:type_name -> oscal.common.v1.Property
+	15, // 28: oscal.component_definition.v1.SetParameter.links:type_name -> oscal.common.v1.Link
+	16, // 29: oscal.component_definition.v1.SetParameter.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	10, // 30: oscal.component_definition.v1.ImplementedRequirement.uuid:type_name -> oscal.common.v1.UUID
+	6,  // 31: oscal.component_definition.v1.ImplementedRequirement.statements:type_name -> oscal.component_definition.v1.Statement
+	14, // 32: oscal.component_definition.v1.ImplementedRequirement.props:type_name -> oscal.common.v1.Property
+	15, // 33: oscal.component_definition.v1.ImplementedRequirement.links:type_name -> oscal.common.v1.Link
+	16, // 34: oscal.component_definition.v1.ImplementedRequirement.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	17, // 35: oscal.component_definition.v1.Statement.description:type_name -> oscal.common.v1.MarkupLine
+	14, // 36: oscal.component_definition.v1.Statement.props:type_name -> oscal.common.v1.Property
+	15, // 37: oscal.component_definition.v1.Statement.links:type_name -> oscal.common.v1.Link
+	16, // 38: oscal.component_definition.v1.Statement.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	6,  // 39: oscal.component_definition.v1.Statement.by_components:type_name -> oscal.component_definition.v1.Statement
+	10, // 40: oscal.component_definition.v1.Protocol.uuid:type_name -> oscal.common.v1.UUID
+	17, // 41: oscal.component_definition.v1.Protocol.title:type_name -> oscal.common.v1.MarkupLine
+	16, // 42: oscal.component_definition.v1.Protocol.description:type_name -> oscal.common.v1.MarkupMultiline
+	14, // 43: oscal.component_definition.v1.Protocol.props:type_name -> oscal.common.v1.Property
+	15, // 44: oscal.component_definition.v1.Protocol.links:type_name -> oscal.common.v1.Link
+	16, // 45: oscal.component_definition.v1.Protocol.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	10, // 46: oscal.component_definition.v1.ResponsibleParty.party_uuids:type_name -> oscal.common.v1.UUID
+	14, // 47: oscal.component_definition.v1.ResponsibleParty.props:type_name -> oscal.common.v1.Property
+	15, // 48: oscal.component_definition.v1.ResponsibleParty.links:type_name -> oscal.common.v1.Link
+	16, // 49: oscal.component_definition.v1.ResponsibleParty.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	10, // 50: oscal.component_definition.v1.Capability.uuid:type_name -> oscal.common.v1.UUID
+	16, // 51: oscal.component_definition.v1.Capability.description:type_name -> oscal.common.v1.MarkupMultiline
+	3,  // 52: oscal.component_definition.v1.Capability.control_implementations:type_name -> oscal.component_definition.v1.ControlImplementation
+	14, // 53: oscal.component_definition.v1.Capability.props:type_name -> oscal.common.v1.Property
+	15, // 54: oscal.component_definition.v1.Capability.links:type_name -> oscal.common.v1.Link
+	16, // 55: oscal.component_definition.v1.Capability.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	56, // [56:56] is the sub-list for method output_type
+	56, // [56:56] is the sub-list for method input_type
+	56, // [56:56] is the sub-list for extension type_name
+	56, // [56:56] is the sub-list for extension extendee
+	0,  // [0:56] is the sub-list for field type_name
 }
 
 func init() { file_component_definition_v1_component_proto_init() }

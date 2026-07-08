@@ -13,6 +13,30 @@
       "title": "Base64",
       "type": "object"
     },
+    "oscal.common.v1.Citation.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Citation represents a bibliographic citation",
+      "properties": {
+        "links": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Link.schema.json"
+          },
+          "type": "array"
+        },
+        "props": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Property.schema.json"
+          },
+          "type": "array"
+        },
+        "text": {
+          "$ref": "#/$defs/oscal.common.v1.MarkupLine.schema.json"
+        }
+      },
+      "title": "Citation",
+      "type": "object"
+    },
     "oscal.common.v1.DocumentId.schema.json": {
       "$schema": "https://json-schema.org/draft/2020-12/schema",
       "additionalProperties": false,
@@ -28,6 +52,22 @@
         }
       },
       "title": "Document Id",
+      "type": "object"
+    },
+    "oscal.common.v1.Hash.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Hash represents a cryptographic hash",
+      "properties": {
+        "algorithm": {
+          "default": "",
+          "type": "string"
+        },
+        "value": {
+          "$ref": "#/$defs/oscal.common.v1.Base64.schema.json"
+        }
+      },
+      "title": "Hash",
       "type": "object"
     },
     "oscal.common.v1.Link.schema.json": {
@@ -66,6 +106,19 @@
         }
       },
       "title": "Link",
+      "type": "object"
+    },
+    "oscal.common.v1.MarkupLine.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "MarkupLine represents a line of markup text (e.g., markdown)",
+      "properties": {
+        "value": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Markup Line",
       "type": "object"
     },
     "oscal.common.v1.MarkupMultiline.schema.json": {
@@ -111,6 +164,9 @@
       "additionalProperties": false,
       "description": "Resource represents an external resource",
       "patternProperties": {
+        "^(citationObj)$": {
+          "$ref": "#/$defs/oscal.common.v1.Citation.schema.json"
+        },
         "^(documentIds)$": {
           "items": {
             "$ref": "#/$defs/oscal.common.v1.DocumentId.schema.json"
@@ -127,7 +183,11 @@
         },
         "citation": {
           "default": "",
+          "description": "Deprecated: use citation_obj instead. Kept for backward compatibility.",
           "type": "string"
+        },
+        "citation_obj": {
+          "$ref": "#/$defs/oscal.common.v1.Citation.schema.json"
         },
         "description": {
           "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.schema.json"
@@ -156,17 +216,49 @@
           },
           "type": "array"
         },
-        "title": {
+        "rlinks": {
           "items": {
-            "type": "string"
+            "$ref": "#/$defs/oscal.common.v1.Rlink.schema.json"
           },
           "type": "array"
+        },
+        "title": {
+          "default": "",
+          "type": "string"
         },
         "uuid": {
           "$ref": "#/$defs/oscal.common.v1.UUID.schema.json"
         }
       },
       "title": "Resource",
+      "type": "object"
+    },
+    "oscal.common.v1.Rlink.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Rlink represents a resource link",
+      "patternProperties": {
+        "^(mediaType)$": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "properties": {
+        "hashes": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Hash.schema.json"
+          },
+          "type": "array"
+        },
+        "href": {
+          "$ref": "#/$defs/oscal.common.v1.URI.schema.json"
+        },
+        "media_type": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Rlink",
       "type": "object"
     },
     "oscal.common.v1.URI.schema.json": {

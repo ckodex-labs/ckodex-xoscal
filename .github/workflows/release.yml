@@ -247,6 +247,24 @@ jobs:
           done
           cd ..
 
+      - name: Validate OSCAL schema compliance
+        run: |
+          dagger call oscal-schema-validation --source=. --frameworks=./frameworks
+
+      - name: Build xoscal-validate-schema and validate each catalog
+        run: |
+          go build -o /tmp/validate-schema ./server/cmd/xoscal-validate-schema
+          fail=0
+          for f in frameworks/*/catalog.json; do
+            [ -f "$f" ] || continue
+            echo "Validating $f..."
+            if ! /tmp/validate-schema -file "$f" -kind catalog; then
+              echo "FAIL: $f does not conform to OSCAL 1.1.2 schema"
+              fail=1
+            fi
+          done
+          if [ $fail -ne 0 ]; then exit 1; fi
+
       - name: Install Cosign
         uses: sigstore/cosign-installer@v3
 

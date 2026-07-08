@@ -53,7 +53,14 @@ message Parameter {
   repeated oscal.common.v1.Link links = 7;
   repeated oscal.common.v1.MarkupMultiline remarks = 8;
   repeated Constraint constraints = 9;
-  oscal.common.v1.MarkupLine guidance = 10;
+  // Deprecated: use guidelines instead. Kept for backward compatibility.
+  oscal.common.v1.MarkupLine guidance = 10 [deprecated = true];
+  repeated Guideline guidelines = 11;
+}
+
+// Guideline represents a parameter guideline
+message Guideline {
+  oscal.common.v1.MarkupMultiline prose = 1;
 }
 
 // Select represents a selection of parameter values
@@ -65,13 +72,20 @@ message Select {
 // Constraint represents a constraint on a parameter value
 message Constraint {
   string description = 1;
+  repeated Test tests = 2;
+}
+
+// Test represents a constraint test
+message Test {
+  string expression = 1;
+  repeated oscal.common.v1.MarkupMultiline remarks = 2;
 }
 
 // Part represents a part of a control (e.g., statement, objective)
 message Part {
   oscal.common.v1.Token id = 1;
   string name = 2;
-  string ns = 3;  // Namespace
+  string ns = 3; // Namespace
   string class = 4;
   oscal.common.v1.MarkupLine title = 5;
   repeated oscal.common.v1.Property props = 6;

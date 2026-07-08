@@ -222,9 +222,17 @@ export declare type Parameter = Message<"oscal.catalog.v1.Parameter"> & {
   constraints: Constraint[];
 
   /**
-   * @generated from field: oscal.common.v1.MarkupLine guidance = 10;
+   * Deprecated: use guidelines instead. Kept for backward compatibility.
+   *
+   * @generated from field: oscal.common.v1.MarkupLine guidance = 10 [deprecated = true];
+   * @deprecated
    */
   guidance?: MarkupLine | undefined;
+
+  /**
+   * @generated from field: repeated oscal.catalog.v1.Guideline guidelines = 11;
+   */
+  guidelines: Guideline[];
 };
 
 /**
@@ -232,6 +240,24 @@ export declare type Parameter = Message<"oscal.catalog.v1.Parameter"> & {
  * Use `create(ParameterSchema)` to create a new message.
  */
 export declare const ParameterSchema: GenMessage<Parameter>;
+
+/**
+ * Guideline represents a parameter guideline
+ *
+ * @generated from message oscal.catalog.v1.Guideline
+ */
+export declare type Guideline = Message<"oscal.catalog.v1.Guideline"> & {
+  /**
+   * @generated from field: oscal.common.v1.MarkupMultiline prose = 1;
+   */
+  prose?: MarkupMultiline | undefined;
+};
+
+/**
+ * Describes the message oscal.catalog.v1.Guideline.
+ * Use `create(GuidelineSchema)` to create a new message.
+ */
+export declare const GuidelineSchema: GenMessage<Guideline>;
 
 /**
  * Select represents a selection of parameter values
@@ -266,6 +292,11 @@ export declare type Constraint = Message<"oscal.catalog.v1.Constraint"> & {
    * @generated from field: string description = 1;
    */
   description: string;
+
+  /**
+   * @generated from field: repeated oscal.catalog.v1.Test tests = 2;
+   */
+  tests: Test[];
 };
 
 /**
@@ -273,6 +304,29 @@ export declare type Constraint = Message<"oscal.catalog.v1.Constraint"> & {
  * Use `create(ConstraintSchema)` to create a new message.
  */
 export declare const ConstraintSchema: GenMessage<Constraint>;
+
+/**
+ * Test represents a constraint test
+ *
+ * @generated from message oscal.catalog.v1.Test
+ */
+export declare type Test = Message<"oscal.catalog.v1.Test"> & {
+  /**
+   * @generated from field: string expression = 1;
+   */
+  expression: string;
+
+  /**
+   * @generated from field: repeated oscal.common.v1.MarkupMultiline remarks = 2;
+   */
+  remarks: MarkupMultiline[];
+};
+
+/**
+ * Describes the message oscal.catalog.v1.Test.
+ * Use `create(TestSchema)` to create a new message.
+ */
+export declare const TestSchema: GenMessage<Test>;
 
 /**
  * Part represents a part of a control (e.g., statement, objective)

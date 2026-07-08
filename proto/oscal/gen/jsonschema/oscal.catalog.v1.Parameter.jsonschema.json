@@ -15,7 +15,14 @@
       "type": "array"
     },
     "guidance": {
-      "$ref": "oscal.common.v1.MarkupLine.jsonschema.json"
+      "$ref": "oscal.common.v1.MarkupLine.jsonschema.json",
+      "description": "Deprecated: use guidelines instead. Kept for backward compatibility."
+    },
+    "guidelines": {
+      "items": {
+        "$ref": "oscal.catalog.v1.Guideline.jsonschema.json"
+      },
+      "type": "array"
     },
     "id": {
       "$ref": "oscal.common.v1.Token.jsonschema.json"

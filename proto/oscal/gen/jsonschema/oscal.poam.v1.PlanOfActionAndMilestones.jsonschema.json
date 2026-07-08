@@ -12,6 +12,13 @@
     },
     "^(local_definitions)$": {
       "$ref": "oscal.poam.v1.LocalDefinitions.jsonschema.json"
+    },
+    "^(poam_items)$": {
+      "description": "poam_items is the OSCAL schema-required top-level array of POAM items.",
+      "items": {
+        "$ref": "oscal.poam.v1.PoamItem.jsonschema.json"
+      },
+      "type": "array"
     }
   },
   "properties": {
@@ -27,7 +34,15 @@
     "metadata": {
       "$ref": "oscal.common.v1.Metadata.jsonschema.json"
     },
+    "poamItems": {
+      "description": "poam_items is the OSCAL schema-required top-level array of POAM items.",
+      "items": {
+        "$ref": "oscal.poam.v1.PoamItem.jsonschema.json"
+      },
+      "type": "array"
+    },
     "risks": {
+      "description": "Deprecated: use poam_items instead. Kept for backward compatibility.",
       "items": {
         "$ref": "oscal.poam.v1.Risk.jsonschema.json"
       },

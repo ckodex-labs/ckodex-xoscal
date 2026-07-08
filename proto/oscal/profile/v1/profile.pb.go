@@ -566,11 +566,15 @@ func (x *Combine) GetAsIs() []*v1.MarkupLine {
 type Modify struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	SetParameters []*SetParameters       `protobuf:"bytes,1,rep,name=set_parameters,json=setParameters,proto3" json:"set_parameters,omitempty"`
-	AlterControls []*AlterControls       `protobuf:"bytes,2,rep,name=alter_controls,json=alterControls,proto3" json:"alter_controls,omitempty"`
-	AddControls   []*AddControls         `protobuf:"bytes,3,rep,name=add_controls,json=addControls,proto3" json:"add_controls,omitempty"`
-	Props         []*v1.Property         `protobuf:"bytes,4,rep,name=props,proto3" json:"props,omitempty"`
-	Links         []*v1.Link             `protobuf:"bytes,5,rep,name=links,proto3" json:"links,omitempty"`
-	Remarks       []*v1.MarkupMultiline  `protobuf:"bytes,6,rep,name=remarks,proto3" json:"remarks,omitempty"`
+	// Deprecated: use alters instead. Kept for backward compatibility.
+	//
+	// Deprecated: Marked as deprecated in profile/v1/profile.proto.
+	AlterControls []*AlterControls      `protobuf:"bytes,2,rep,name=alter_controls,json=alterControls,proto3" json:"alter_controls,omitempty"`
+	AddControls   []*AddControls        `protobuf:"bytes,3,rep,name=add_controls,json=addControls,proto3" json:"add_controls,omitempty"`
+	Props         []*v1.Property        `protobuf:"bytes,4,rep,name=props,proto3" json:"props,omitempty"`
+	Links         []*v1.Link            `protobuf:"bytes,5,rep,name=links,proto3" json:"links,omitempty"`
+	Remarks       []*v1.MarkupMultiline `protobuf:"bytes,6,rep,name=remarks,proto3" json:"remarks,omitempty"`
+	Alters        []*Alter              `protobuf:"bytes,7,rep,name=alters,proto3" json:"alters,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -612,6 +616,7 @@ func (x *Modify) GetSetParameters() []*SetParameters {
 	return nil
 }
 
+// Deprecated: Marked as deprecated in profile/v1/profile.proto.
 func (x *Modify) GetAlterControls() []*AlterControls {
 	if x != nil {
 		return x.AlterControls
@@ -643,6 +648,13 @@ func (x *Modify) GetLinks() []*v1.Link {
 func (x *Modify) GetRemarks() []*v1.MarkupMultiline {
 	if x != nil {
 		return x.Remarks
+	}
+	return nil
+}
+
+func (x *Modify) GetAlters() []*Alter {
+	if x != nil {
+		return x.Alters
 	}
 	return nil
 }
@@ -965,15 +977,18 @@ func (x *Remove) GetWithNs() []string {
 
 // Add represents addition of control content
 type Add struct {
-	state         protoimpl.MessageState `protogen:"open.v1"`
-	ItemName      string                 `protobuf:"bytes,1,opt,name=item_name,json=itemName,proto3" json:"item_name,omitempty"`
-	Position      string                 `protobuf:"bytes,2,opt,name=position,proto3" json:"position,omitempty"`
-	Parts         []*v11.Part            `protobuf:"bytes,3,rep,name=parts,proto3" json:"parts,omitempty"`
-	Props         []*v1.Property         `protobuf:"bytes,4,rep,name=props,proto3" json:"props,omitempty"`
-	Links         []*v1.Link             `protobuf:"bytes,5,rep,name=links,proto3" json:"links,omitempty"`
-	Params        []*v11.Parameter       `protobuf:"bytes,6,rep,name=params,proto3" json:"params,omitempty"`
-	WithIds       []string               `protobuf:"bytes,7,rep,name=with_ids,json=withIds,proto3" json:"with_ids,omitempty"`
-	WithClass     []string               `protobuf:"bytes,8,rep,name=with_class,json=withClass,proto3" json:"with_class,omitempty"`
+	state protoimpl.MessageState `protogen:"open.v1"`
+	// Deprecated: not in OSCAL schema. Kept for backward compatibility.
+	//
+	// Deprecated: Marked as deprecated in profile/v1/profile.proto.
+	ItemName      string           `protobuf:"bytes,1,opt,name=item_name,json=itemName,proto3" json:"item_name,omitempty"`
+	Position      string           `protobuf:"bytes,2,opt,name=position,proto3" json:"position,omitempty"`
+	Parts         []*v11.Part      `protobuf:"bytes,3,rep,name=parts,proto3" json:"parts,omitempty"`
+	Props         []*v1.Property   `protobuf:"bytes,4,rep,name=props,proto3" json:"props,omitempty"`
+	Links         []*v1.Link       `protobuf:"bytes,5,rep,name=links,proto3" json:"links,omitempty"`
+	Params        []*v11.Parameter `protobuf:"bytes,6,rep,name=params,proto3" json:"params,omitempty"`
+	ById          string           `protobuf:"bytes,7,opt,name=by_id,json=byId,proto3" json:"by_id,omitempty"`
+	Title         string           `protobuf:"bytes,8,opt,name=title,proto3" json:"title,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -1008,6 +1023,7 @@ func (*Add) Descriptor() ([]byte, []int) {
 	return file_profile_v1_profile_proto_rawDescGZIP(), []int{12}
 }
 
+// Deprecated: Marked as deprecated in profile/v1/profile.proto.
 func (x *Add) GetItemName() string {
 	if x != nil {
 		return x.ItemName
@@ -1050,18 +1066,18 @@ func (x *Add) GetParams() []*v11.Parameter {
 	return nil
 }
 
-func (x *Add) GetWithIds() []string {
+func (x *Add) GetById() string {
 	if x != nil {
-		return x.WithIds
+		return x.ById
 	}
-	return nil
+	return ""
 }
 
-func (x *Add) GetWithClass() []string {
+func (x *Add) GetTitle() string {
 	if x != nil {
-		return x.WithClass
+		return x.Title
 	}
-	return nil
+	return ""
 }
 
 // AddControls represents addition of new controls
@@ -1153,7 +1169,7 @@ var File_profile_v1_profile_proto protoreflect.FileDescriptor
 
 const file_profile_v1_profile_proto_rawDesc = "" +
 	"\n" +
-	"\x18profile/v1/profile.proto\x12\x10oscal.profile.v1\x1a\x16common/v1/common.proto\x1a\x18catalog/v1/catalog.proto\"\xbe\x02\n" +
+	"\x18profile/v1/profile.proto\x12\x10oscal.profile.v1\x1a\x18catalog/v1/catalog.proto\x1a\x16common/v1/common.proto\"\xbe\x02\n" +
 	"\aProfile\x12)\n" +
 	"\x04uuid\x18\x01 \x01(\v2\x15.oscal.common.v1.UUIDR\x04uuid\x125\n" +
 	"\bmetadata\x18\x02 \x01(\v2\x19.oscal.common.v1.MetadataR\bmetadata\x122\n" +
@@ -1200,14 +1216,15 @@ const file_profile_v1_profile_proto_rawDesc = "" +
 	"\aCombine\x12\x16\n" +
 	"\x06method\x18\x01 \x01(\tR\x06method\x12\x12\n" +
 	"\x04flat\x18\x02 \x01(\bR\x04flat\x120\n" +
-	"\x05as_is\x18\x03 \x03(\v2\x1b.oscal.common.v1.MarkupLineR\x04asIs\"\xf4\x02\n" +
+	"\x05as_is\x18\x03 \x03(\v2\x1b.oscal.common.v1.MarkupLineR\x04asIs\"\xa9\x03\n" +
 	"\x06Modify\x12F\n" +
-	"\x0eset_parameters\x18\x01 \x03(\v2\x1f.oscal.profile.v1.SetParametersR\rsetParameters\x12F\n" +
-	"\x0ealter_controls\x18\x02 \x03(\v2\x1f.oscal.profile.v1.AlterControlsR\ralterControls\x12@\n" +
+	"\x0eset_parameters\x18\x01 \x03(\v2\x1f.oscal.profile.v1.SetParametersR\rsetParameters\x12J\n" +
+	"\x0ealter_controls\x18\x02 \x03(\v2\x1f.oscal.profile.v1.AlterControlsB\x02\x18\x01R\ralterControls\x12@\n" +
 	"\fadd_controls\x18\x03 \x03(\v2\x1d.oscal.profile.v1.AddControlsR\vaddControls\x12/\n" +
 	"\x05props\x18\x04 \x03(\v2\x19.oscal.common.v1.PropertyR\x05props\x12+\n" +
 	"\x05links\x18\x05 \x03(\v2\x15.oscal.common.v1.LinkR\x05links\x12:\n" +
-	"\aremarks\x18\x06 \x03(\v2 .oscal.common.v1.MarkupMultilineR\aremarks\"\x98\x02\n" +
+	"\aremarks\x18\x06 \x03(\v2 .oscal.common.v1.MarkupMultilineR\aremarks\x12/\n" +
+	"\x06alters\x18\a \x03(\v2\x17.oscal.profile.v1.AlterR\x06alters\"\x98\x02\n" +
 	"\rSetParameters\x123\n" +
 	"\x06params\x18\x01 \x03(\v2\x1b.oscal.catalog.v1.ParameterR\x06params\x12\x19\n" +
 	"\bwith_ids\x18\x02 \x03(\tR\awithIds\x12\x1d\n" +
@@ -1236,17 +1253,16 @@ const file_profile_v1_profile_proto_rawDesc = "" +
 	"\n" +
 	"with_class\x18\x03 \x03(\tR\twithClass\x12\x1b\n" +
 	"\twith_name\x18\x04 \x03(\tR\bwithName\x12\x17\n" +
-	"\awith_ns\x18\x05 \x03(\tR\x06withNs\"\xb9\x02\n" +
-	"\x03Add\x12\x1b\n" +
-	"\titem_name\x18\x01 \x01(\tR\bitemName\x12\x1a\n" +
+	"\awith_ns\x18\x05 \x03(\tR\x06withNs\"\xae\x02\n" +
+	"\x03Add\x12\x1f\n" +
+	"\titem_name\x18\x01 \x01(\tB\x02\x18\x01R\bitemName\x12\x1a\n" +
 	"\bposition\x18\x02 \x01(\tR\bposition\x12,\n" +
 	"\x05parts\x18\x03 \x03(\v2\x16.oscal.catalog.v1.PartR\x05parts\x12/\n" +
 	"\x05props\x18\x04 \x03(\v2\x19.oscal.common.v1.PropertyR\x05props\x12+\n" +
 	"\x05links\x18\x05 \x03(\v2\x15.oscal.common.v1.LinkR\x05links\x123\n" +
-	"\x06params\x18\x06 \x03(\v2\x1b.oscal.catalog.v1.ParameterR\x06params\x12\x19\n" +
-	"\bwith_ids\x18\a \x03(\tR\awithIds\x12\x1d\n" +
-	"\n" +
-	"with_class\x18\b \x03(\tR\twithClass\"\x98\x02\n" +
+	"\x06params\x18\x06 \x03(\v2\x1b.oscal.catalog.v1.ParameterR\x06params\x12\x13\n" +
+	"\x05by_id\x18\a \x01(\tR\x04byId\x12\x14\n" +
+	"\x05title\x18\b \x01(\tR\x05title\"\x98\x02\n" +
 	"\vAddControls\x125\n" +
 	"\bcontrols\x18\x01 \x03(\v2\x19.oscal.catalog.v1.ControlR\bcontrols\x12\x19\n" +
 	"\bwith_ids\x18\x02 \x03(\tR\awithIds\x12\x1d\n" +
@@ -1333,30 +1349,31 @@ var file_profile_v1_profile_proto_depIdxs = []int32{
 	18, // 33: oscal.profile.v1.Modify.props:type_name -> oscal.common.v1.Property
 	19, // 34: oscal.profile.v1.Modify.links:type_name -> oscal.common.v1.Link
 	20, // 35: oscal.profile.v1.Modify.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	21, // 36: oscal.profile.v1.SetParameters.params:type_name -> oscal.catalog.v1.Parameter
-	18, // 37: oscal.profile.v1.SetParameters.props:type_name -> oscal.common.v1.Property
-	19, // 38: oscal.profile.v1.SetParameters.links:type_name -> oscal.common.v1.Link
-	20, // 39: oscal.profile.v1.SetParameters.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	10, // 40: oscal.profile.v1.AlterControls.control_alterations:type_name -> oscal.profile.v1.Alter
-	18, // 41: oscal.profile.v1.AlterControls.props:type_name -> oscal.common.v1.Property
-	19, // 42: oscal.profile.v1.AlterControls.links:type_name -> oscal.common.v1.Link
-	20, // 43: oscal.profile.v1.AlterControls.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	11, // 44: oscal.profile.v1.Alter.removes:type_name -> oscal.profile.v1.Remove
-	12, // 45: oscal.profile.v1.Alter.adds:type_name -> oscal.profile.v1.Add
-	20, // 46: oscal.profile.v1.Alter.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	24, // 47: oscal.profile.v1.Add.parts:type_name -> oscal.catalog.v1.Part
-	18, // 48: oscal.profile.v1.Add.props:type_name -> oscal.common.v1.Property
-	19, // 49: oscal.profile.v1.Add.links:type_name -> oscal.common.v1.Link
-	21, // 50: oscal.profile.v1.Add.params:type_name -> oscal.catalog.v1.Parameter
-	22, // 51: oscal.profile.v1.AddControls.controls:type_name -> oscal.catalog.v1.Control
-	18, // 52: oscal.profile.v1.AddControls.props:type_name -> oscal.common.v1.Property
-	19, // 53: oscal.profile.v1.AddControls.links:type_name -> oscal.common.v1.Link
-	20, // 54: oscal.profile.v1.AddControls.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	55, // [55:55] is the sub-list for method output_type
-	55, // [55:55] is the sub-list for method input_type
-	55, // [55:55] is the sub-list for extension type_name
-	55, // [55:55] is the sub-list for extension extendee
-	0,  // [0:55] is the sub-list for field type_name
+	10, // 36: oscal.profile.v1.Modify.alters:type_name -> oscal.profile.v1.Alter
+	21, // 37: oscal.profile.v1.SetParameters.params:type_name -> oscal.catalog.v1.Parameter
+	18, // 38: oscal.profile.v1.SetParameters.props:type_name -> oscal.common.v1.Property
+	19, // 39: oscal.profile.v1.SetParameters.links:type_name -> oscal.common.v1.Link
+	20, // 40: oscal.profile.v1.SetParameters.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	10, // 41: oscal.profile.v1.AlterControls.control_alterations:type_name -> oscal.profile.v1.Alter
+	18, // 42: oscal.profile.v1.AlterControls.props:type_name -> oscal.common.v1.Property
+	19, // 43: oscal.profile.v1.AlterControls.links:type_name -> oscal.common.v1.Link
+	20, // 44: oscal.profile.v1.AlterControls.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	11, // 45: oscal.profile.v1.Alter.removes:type_name -> oscal.profile.v1.Remove
+	12, // 46: oscal.profile.v1.Alter.adds:type_name -> oscal.profile.v1.Add
+	20, // 47: oscal.profile.v1.Alter.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	24, // 48: oscal.profile.v1.Add.parts:type_name -> oscal.catalog.v1.Part
+	18, // 49: oscal.profile.v1.Add.props:type_name -> oscal.common.v1.Property
+	19, // 50: oscal.profile.v1.Add.links:type_name -> oscal.common.v1.Link
+	21, // 51: oscal.profile.v1.Add.params:type_name -> oscal.catalog.v1.Parameter
+	22, // 52: oscal.profile.v1.AddControls.controls:type_name -> oscal.catalog.v1.Control
+	18, // 53: oscal.profile.v1.AddControls.props:type_name -> oscal.common.v1.Property
+	19, // 54: oscal.profile.v1.AddControls.links:type_name -> oscal.common.v1.Link
+	20, // 55: oscal.profile.v1.AddControls.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	56, // [56:56] is the sub-list for method output_type
+	56, // [56:56] is the sub-list for method input_type
+	56, // [56:56] is the sub-list for extension type_name
+	56, // [56:56] is the sub-list for extension extendee
+	0,  // [0:56] is the sub-list for field type_name
 }
 
 func init() { file_profile_v1_profile_proto_init() }

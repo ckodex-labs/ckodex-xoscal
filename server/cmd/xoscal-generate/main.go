@@ -12,8 +12,7 @@ import (
 	"github.com/mchorfa/xoscal/server/internal/dbutil"
 	"github.com/mchorfa/xoscal/server/internal/kg"
 	"github.com/mchorfa/xoscal/server/internal/oscal"
-	"google.golang.org/protobuf/encoding/protojson"
-	"google.golang.org/protobuf/proto"
+	"github.com/mchorfa/xoscal/server/internal/schemavalidate"
 )
 
 func main() {
@@ -23,6 +22,7 @@ func main() {
 		framework = flag.String("framework", "eu-ai-act", "Framework identifier")
 		outDir    = flag.String("out", "./oscal-out", "Output directory")
 		arOnly    = flag.Bool("assessment-results-only", false, "Emit only assessment-results (useful for CI)")
+		validate  = flag.Bool("validate", false, "Schema-validate each artifact after generation; fail on non-compliance")
 	)
 	flag.Parse()
 
@@ -43,12 +43,24 @@ func main() {
 		log.Fatalf("mkdir: %v", err)
 	}
 
+	// Optional schema validator
+	var validator *schemavalidate.Validator
+	if *validate {
+		v, err := schemavalidate.NewValidator()
+		if err != nil {
+			log.Fatalf("init schema validator: %v", err)
+		}
+		validator = v
+	}
+
 	if *arOnly {
 		ar, err := gen.GenerateAssessmentResults(ctx, *snapshot, *framework)
 		if err != nil {
 			log.Fatalf("generate assessment-results: %v", err)
 		}
-		writeJSON(fmt.Sprintf("%s/assessment-results.json", *outDir), ar)
+		writeOSCAL(fmt.Sprintf("%s/assessment-results.json", *outDir), func() ([]byte, error) {
+			return oscal.ExportAssessmentResultsJSON(ar)
+		}, validator, schemavalidate.KindAssessmentResults)
 		fmt.Printf("Assessment results written to %s/assessment-results.json\n", *outDir)
 		return
 	}
@@ -59,25 +71,46 @@ func main() {
 	}
 
 	if res.Catalog != nil {
-		writeJSON(fmt.Sprintf("%s/catalog.json", *outDir), res.Catalog)
+		c := res.Catalog
+		writeOSCAL(fmt.Sprintf("%s/catalog.json", *outDir), func() ([]byte, error) {
+			return oscal.ExportCatalogJSON(c)
+		}, validator, schemavalidate.KindCatalog)
 	}
 	if res.Profile != nil {
-		writeJSON(fmt.Sprintf("%s/profile.json", *outDir), res.Profile)
+		p := res.Profile
+		writeOSCAL(fmt.Sprintf("%s/profile.json", *outDir), func() ([]byte, error) {
+			return oscal.ExportProfileJSON(p)
+		}, validator, schemavalidate.KindProfile)
 	}
 	if res.SSP != nil {
-		writeJSON(fmt.Sprintf("%s/ssp.json", *outDir), res.SSP)
+		s := res.SSP
+		writeOSCAL(fmt.Sprintf("%s/ssp.json", *outDir), func() ([]byte, error) {
+			return oscal.ExportSSPJSON(s)
+		}, validator, schemavalidate.KindSSP)
 	}
 	if res.ComponentDefinition != nil {
-		writeJSON(fmt.Sprintf("%s/component-definition.json", *outDir), res.ComponentDefinition)
+		c := res.ComponentDefinition
+		writeOSCAL(fmt.Sprintf("%s/component-definition.json", *outDir), func() ([]byte, error) {
+			return oscal.ExportComponentDefinitionJSON(c)
+		}, validator, schemavalidate.KindComponentDefinition)
 	}
 	if res.AssessmentPlan != nil {
-		writeJSON(fmt.Sprintf("%s/assessment-plan.json", *outDir), res.AssessmentPlan)
+		a := res.AssessmentPlan
+		writeOSCAL(fmt.Sprintf("%s/assessment-plan.json", *outDir), func() ([]byte, error) {
+			return oscal.ExportAssessmentPlanJSON(a)
+		}, validator, schemavalidate.KindAssessmentPlan)
 	}
 	if res.AssessmentResults != nil {
-		writeJSON(fmt.Sprintf("%s/assessment-results.json", *outDir), res.AssessmentResults)
+		a := res.AssessmentResults
+		writeOSCAL(fmt.Sprintf("%s/assessment-results.json", *outDir), func() ([]byte, error) {
+			return oscal.ExportAssessmentResultsJSON(a)
+		}, validator, schemavalidate.KindAssessmentResults)
 	}
 	if res.POAM != nil {
-		writeJSON(fmt.Sprintf("%s/poam.json", *outDir), res.POAM)
+		p := res.POAM
+		writeOSCAL(fmt.Sprintf("%s/poam.json", *outDir), func() ([]byte, error) {
+			return oscal.ExportPOAMJSON(p)
+		}, validator, schemavalidate.KindPOAM)
 	}
 	if len(res.Mappings) > 0 {
 		mappingsData, err := json.MarshalIndent(struct{ Maps []*mappingv1.Map }{Maps: res.Mappings}, "", "  ")
@@ -92,10 +125,18 @@ func main() {
 	fmt.Printf("OSCAL artifacts written to %s\n", *outDir)
 }
 
-func writeJSON(path string, msg proto.Message) {
-	b, err := protojson.MarshalOptions{Multiline: true}.Marshal(msg)
+// writeOSCAL writes OSCAL-compliant JSON to the given path. If a validator
+// and kind are provided, the artifact is schema-validated and the command
+// fails on non-compliance.
+func writeOSCAL(path string, marshal func() ([]byte, error), validator *schemavalidate.Validator, kind schemavalidate.ArtifactKind) {
+	b, err := marshal()
 	if err != nil {
 		log.Fatalf("marshal %s: %v", path, err)
+	}
+	if validator != nil {
+		if err := validator.Validate(b, kind); err != nil {
+			log.Fatalf("schema validation failed for %s: %v", path, err)
+		}
 	}
 	if err := os.WriteFile(path, b, 0644); err != nil {
 		log.Fatalf("write %s: %v", path, err)

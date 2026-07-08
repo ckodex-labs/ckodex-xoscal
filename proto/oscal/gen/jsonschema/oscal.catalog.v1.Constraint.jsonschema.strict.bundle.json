@@ -7,12 +7,54 @@
       "properties": {
         "description": {
           "type": "string"
+        },
+        "tests": {
+          "items": {
+            "$ref": "#/$defs/oscal.catalog.v1.Test.jsonschema.strict.json"
+          },
+          "type": "array"
         }
       },
       "required": [
         "description"
       ],
       "title": "Constraint",
+      "type": "object"
+    },
+    "oscal.catalog.v1.Test.jsonschema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Test represents a constraint test",
+      "properties": {
+        "expression": {
+          "type": "string"
+        },
+        "remarks": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.jsonschema.strict.json"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "expression"
+      ],
+      "title": "Test",
+      "type": "object"
+    },
+    "oscal.common.v1.MarkupMultiline.jsonschema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "MarkupMultiline represents multiline markup text",
+      "properties": {
+        "value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "value"
+      ],
+      "title": "Markup Multiline",
       "type": "object"
     }
   },

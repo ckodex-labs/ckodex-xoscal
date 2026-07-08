@@ -97,7 +97,9 @@ func main() {
 	ctx, cancel := context.WithCancel(context.Background())
 	defer cancel()
 
-	mux := gwruntime.NewServeMux()
+	mux := gwruntime.NewServeMux(
+		gwruntime.WithMarshalerOption(gwruntime.MIMEWildcard, newOSCALMarshaler()),
+	)
 	opts := []grpc.DialOption{grpc.WithTransportCredentials(insecure.NewCredentials())}
 
 	if err := servicesv1.RegisterGovernanceServiceHandlerFromEndpoint(ctx, mux, *grpcEndpoint, opts); err != nil {

@@ -9,6 +9,7 @@ require (
 	github.com/grpc-ecosystem/grpc-gateway/v2 v2.29.0
 	github.com/lancedb/lancedb-go v0.1.2
 	github.com/prometheus/client_golang v1.23.2
+	github.com/santhosh-tekuri/jsonschema/v6 v6.0.2
 	github.com/spf13/viper v1.21.0
 	go.opentelemetry.io/otel v1.43.0
 	go.opentelemetry.io/otel/exporters/stdout/stdouttrace v1.43.0

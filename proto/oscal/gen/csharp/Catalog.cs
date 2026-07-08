@@ -52,7 +52,7 @@ namespace Oscal.Catalog.V1 {
             "Mhkub3NjYWwuY29tbW9uLnYxLlByb3BlcnR5UgVwcm9wcxIrCgVsaW5rcxgI",
             "IAMoCzIVLm9zY2FsLmNvbW1vbi52MS5MaW5rUgVsaW5rcxI6CgdyZW1hcmtz",
             "GAkgAygLMiAub3NjYWwuY29tbW9uLnYxLk1hcmt1cE11bHRpbGluZVIHcmVt",
-            "YXJrcyL2AwoJUGFyYW1ldGVyEiYKAmlkGAEgASgLMhYub3NjYWwuY29tbW9u",
+            "YXJrcyK3BAoJUGFyYW1ldGVyEiYKAmlkGAEgASgLMhYub3NjYWwuY29tbW9u",
             "LnYxLlRva2VuUgJpZBIUCgVjbGFzcxgCIAEoCVIFY2xhc3MSMQoFbGFiZWwY",
             "AyABKAsyGy5vc2NhbC5jb21tb24udjEuTWFya3VwTGluZVIFbGFiZWwSMwoG",
             "dmFsdWVzGAQgAygLMhsub3NjYWwuY29tbW9uLnYxLk1hcmt1cExpbmVSBnZh",
@@ -62,31 +62,39 @@ namespace Oscal.Catalog.V1 {
             "MS5MaW5rUgVsaW5rcxI6CgdyZW1hcmtzGAggAygLMiAub3NjYWwuY29tbW9u",
             "LnYxLk1hcmt1cE11bHRpbGluZVIHcmVtYXJrcxI+Cgtjb25zdHJhaW50cxgJ",
             "IAMoCzIcLm9zY2FsLmNhdGFsb2cudjEuQ29uc3RyYWludFILY29uc3RyYWlu",
-            "dHMSNwoIZ3VpZGFuY2UYCiABKAsyGy5vc2NhbC5jb21tb24udjEuTWFya3Vw",
-            "TGluZVIIZ3VpZGFuY2UiWgoGU2VsZWN0EjUKB2Nob2ljZXMYASADKAsyGy5v",
-            "c2NhbC5jb21tb24udjEuTWFya3VwTGluZVIHY2hvaWNlcxIZCghob3dfbWFu",
-            "eRgCIAEoCFIHaG93TWFueSIuCgpDb25zdHJhaW50EiAKC2Rlc2NyaXB0aW9u",
-            "GAEgASgJUgtkZXNjcmlwdGlvbiKbAwoEUGFydBImCgJpZBgBIAEoCzIWLm9z",
-            "Y2FsLmNvbW1vbi52MS5Ub2tlblICaWQSEgoEbmFtZRgCIAEoCVIEbmFtZRIO",
-            "CgJucxgDIAEoCVICbnMSFAoFY2xhc3MYBCABKAlSBWNsYXNzEjEKBXRpdGxl",
-            "GAUgASgLMhsub3NjYWwuY29tbW9uLnYxLk1hcmt1cExpbmVSBXRpdGxlEi8K",
-            "BXByb3BzGAYgAygLMhkub3NjYWwuY29tbW9uLnYxLlByb3BlcnR5UgVwcm9w",
-            "cxIrCgVsaW5rcxgHIAMoCzIVLm9zY2FsLmNvbW1vbi52MS5MaW5rUgVsaW5r",
-            "cxIsCgVwYXJ0cxgIIAMoCzIWLm9zY2FsLmNhdGFsb2cudjEuUGFydFIFcGFy",
-            "dHMSNgoFcHJvc2UYCSADKAsyIC5vc2NhbC5jb21tb24udjEuTWFya3VwTXVs",
-            "dGlsaW5lUgVwcm9zZRI6CgdyZW1hcmtzGAogAygLMiAub3NjYWwuY29tbW9u",
-            "LnYxLk1hcmt1cE11bHRpbGluZVIHcmVtYXJrc0I8WjpnaXRodWIuY29tL21j",
-            "aG9yZmEveG9zY2FsL3Byb3RvL29zY2FsL2NhdGFsb2cvdjE7Y2F0YWxvZ3Yx",
-            "YgZwcm90bzM="));
+            "dHMSOwoIZ3VpZGFuY2UYCiABKAsyGy5vc2NhbC5jb21tb24udjEuTWFya3Vw",
+            "TGluZUICGAFSCGd1aWRhbmNlEjsKCmd1aWRlbGluZXMYCyADKAsyGy5vc2Nh",
+            "bC5jYXRhbG9nLnYxLkd1aWRlbGluZVIKZ3VpZGVsaW5lcyJDCglHdWlkZWxp",
+            "bmUSNgoFcHJvc2UYASABKAsyIC5vc2NhbC5jb21tb24udjEuTWFya3VwTXVs",
+            "dGlsaW5lUgVwcm9zZSJaCgZTZWxlY3QSNQoHY2hvaWNlcxgBIAMoCzIbLm9z",
+            "Y2FsLmNvbW1vbi52MS5NYXJrdXBMaW5lUgdjaG9pY2VzEhkKCGhvd19tYW55",
+            "GAIgASgIUgdob3dNYW55IlwKCkNvbnN0cmFpbnQSIAoLZGVzY3JpcHRpb24Y",
+            "ASABKAlSC2Rlc2NyaXB0aW9uEiwKBXRlc3RzGAIgAygLMhYub3NjYWwuY2F0",
+            "YWxvZy52MS5UZXN0UgV0ZXN0cyJiCgRUZXN0Eh4KCmV4cHJlc3Npb24YASAB",
+            "KAlSCmV4cHJlc3Npb24SOgoHcmVtYXJrcxgCIAMoCzIgLm9zY2FsLmNvbW1v",
+            "bi52MS5NYXJrdXBNdWx0aWxpbmVSB3JlbWFya3MimwMKBFBhcnQSJgoCaWQY",
+            "ASABKAsyFi5vc2NhbC5jb21tb24udjEuVG9rZW5SAmlkEhIKBG5hbWUYAiAB",
+            "KAlSBG5hbWUSDgoCbnMYAyABKAlSAm5zEhQKBWNsYXNzGAQgASgJUgVjbGFz",
+            "cxIxCgV0aXRsZRgFIAEoCzIbLm9zY2FsLmNvbW1vbi52MS5NYXJrdXBMaW5l",
+            "UgV0aXRsZRIvCgVwcm9wcxgGIAMoCzIZLm9zY2FsLmNvbW1vbi52MS5Qcm9w",
+            "ZXJ0eVIFcHJvcHMSKwoFbGlua3MYByADKAsyFS5vc2NhbC5jb21tb24udjEu",
+            "TGlua1IFbGlua3MSLAoFcGFydHMYCCADKAsyFi5vc2NhbC5jYXRhbG9nLnYx",
+            "LlBhcnRSBXBhcnRzEjYKBXByb3NlGAkgAygLMiAub3NjYWwuY29tbW9uLnYx",
+            "Lk1hcmt1cE11bHRpbGluZVIFcHJvc2USOgoHcmVtYXJrcxgKIAMoCzIgLm9z",
+            "Y2FsLmNvbW1vbi52MS5NYXJrdXBNdWx0aWxpbmVSB3JlbWFya3NCPFo6Z2l0",
+            "aHViLmNvbS9tY2hvcmZhL3hvc2NhbC9wcm90by9vc2NhbC9jYXRhbG9nL3Yx",
+            "O2NhdGFsb2d2MWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Oscal.Common.V1.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Oscal.Catalog.V1.Catalog), global::Oscal.Catalog.V1.Catalog.Parser, new[]{ "Uuid", "Metadata", "Params", "Controls", "Groups", "BackMatter" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Oscal.Catalog.V1.Group), global::Oscal.Catalog.V1.Group.Parser, new[]{ "Id", "Class", "Title", "Params", "Controls", "Groups", "Props", "Links", "Remarks" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Oscal.Catalog.V1.Control), global::Oscal.Catalog.V1.Control.Parser, new[]{ "Id", "Class", "Title", "Params", "Parts", "Controls", "Props", "Links", "Remarks" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Oscal.Catalog.V1.Parameter), global::Oscal.Catalog.V1.Parameter.Parser, new[]{ "Id", "Class", "Label", "Values", "Select", "Props", "Links", "Remarks", "Constraints", "Guidance" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Oscal.Catalog.V1.Parameter), global::Oscal.Catalog.V1.Parameter.Parser, new[]{ "Id", "Class", "Label", "Values", "Select", "Props", "Links", "Remarks", "Constraints", "Guidance", "Guidelines" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Oscal.Catalog.V1.Guideline), global::Oscal.Catalog.V1.Guideline.Parser, new[]{ "Prose" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Oscal.Catalog.V1.Select), global::Oscal.Catalog.V1.Select.Parser, new[]{ "Choices", "HowMany" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Oscal.Catalog.V1.Constraint), global::Oscal.Catalog.V1.Constraint.Parser, new[]{ "Description" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Oscal.Catalog.V1.Constraint), global::Oscal.Catalog.V1.Constraint.Parser, new[]{ "Description", "Tests" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Oscal.Catalog.V1.Test), global::Oscal.Catalog.V1.Test.Parser, new[]{ "Expression", "Remarks" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Oscal.Catalog.V1.Part), global::Oscal.Catalog.V1.Part.Parser, new[]{ "Id", "Name", "Ns", "Class", "Title", "Props", "Links", "Parts", "Prose", "Remarks" }, null, null, null, null)
           }));
     }
@@ -1420,6 +1428,7 @@ namespace Oscal.Catalog.V1 {
       remarks_ = other.remarks_.Clone();
       constraints_ = other.constraints_.Clone();
       guidance_ = other.guidance_ != null ? other.guidance_.Clone() : null;
+      guidelines_ = other.guidelines_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1535,6 +1544,10 @@ namespace Oscal.Catalog.V1 {
     /// <summary>Field number for the "guidance" field.</summary>
     public const int GuidanceFieldNumber = 10;
     private global::Oscal.Common.V1.MarkupLine guidance_;
+    /// <summary>
+    /// Deprecated: use guidelines instead. Kept for backward compatibility.
+    /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Oscal.Common.V1.MarkupLine Guidance {
@@ -1542,6 +1555,17 @@ namespace Oscal.Catalog.V1 {
       set {
         guidance_ = value;
       }
+    }
+
+    /// <summary>Field number for the "guidelines" field.</summary>
+    public const int GuidelinesFieldNumber = 11;
+    private static readonly pb::FieldCodec<global::Oscal.Catalog.V1.Guideline> _repeated_guidelines_codec
+        = pb::FieldCodec.ForMessage(90, global::Oscal.Catalog.V1.Guideline.Parser);
+    private readonly pbc::RepeatedField<global::Oscal.Catalog.V1.Guideline> guidelines_ = new pbc::RepeatedField<global::Oscal.Catalog.V1.Guideline>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Oscal.Catalog.V1.Guideline> Guidelines {
+      get { return guidelines_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1569,6 +1593,7 @@ namespace Oscal.Catalog.V1 {
       if(!remarks_.Equals(other.remarks_)) return false;
       if(!constraints_.Equals(other.constraints_)) return false;
       if (!object.Equals(Guidance, other.Guidance)) return false;
+      if(!guidelines_.Equals(other.guidelines_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1586,6 +1611,7 @@ namespace Oscal.Catalog.V1 {
       hash ^= remarks_.GetHashCode();
       hash ^= constraints_.GetHashCode();
       if (guidance_ != null) hash ^= Guidance.GetHashCode();
+      hash ^= guidelines_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1629,6 +1655,7 @@ namespace Oscal.Catalog.V1 {
         output.WriteRawTag(82);
         output.WriteMessage(Guidance);
       }
+      guidelines_.WriteTo(output, _repeated_guidelines_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1664,6 +1691,7 @@ namespace Oscal.Catalog.V1 {
         output.WriteRawTag(82);
         output.WriteMessage(Guidance);
       }
+      guidelines_.WriteTo(ref output, _repeated_guidelines_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1694,6 +1722,7 @@ namespace Oscal.Catalog.V1 {
       if (guidance_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Guidance);
       }
+      size += guidelines_.CalculateSize(_repeated_guidelines_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1738,6 +1767,7 @@ namespace Oscal.Catalog.V1 {
         }
         Guidance.MergeFrom(other.Guidance);
       }
+      guidelines_.Add(other.guidelines_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1807,6 +1837,10 @@ namespace Oscal.Catalog.V1 {
               Guidance = new global::Oscal.Common.V1.MarkupLine();
             }
             input.ReadMessage(Guidance);
+            break;
+          }
+          case 90: {
+            guidelines_.AddEntriesFrom(input, _repeated_guidelines_codec);
             break;
           }
         }
@@ -1880,6 +1914,220 @@ namespace Oscal.Catalog.V1 {
             input.ReadMessage(Guidance);
             break;
           }
+          case 90: {
+            guidelines_.AddEntriesFrom(ref input, _repeated_guidelines_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Guideline represents a parameter guideline
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class Guideline : pb::IMessage<Guideline>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<Guideline> _parser = new pb::MessageParser<Guideline>(() => new Guideline());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<Guideline> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Oscal.Catalog.V1.CatalogReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Guideline() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Guideline(Guideline other) : this() {
+      prose_ = other.prose_ != null ? other.prose_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Guideline Clone() {
+      return new Guideline(this);
+    }
+
+    /// <summary>Field number for the "prose" field.</summary>
+    public const int ProseFieldNumber = 1;
+    private global::Oscal.Common.V1.MarkupMultiline prose_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Oscal.Common.V1.MarkupMultiline Prose {
+      get { return prose_; }
+      set {
+        prose_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as Guideline);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(Guideline other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Prose, other.Prose)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (prose_ != null) hash ^= Prose.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (prose_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Prose);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (prose_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Prose);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (prose_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Prose);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(Guideline other) {
+      if (other == null) {
+        return;
+      }
+      if (other.prose_ != null) {
+        if (prose_ == null) {
+          Prose = new global::Oscal.Common.V1.MarkupMultiline();
+        }
+        Prose.MergeFrom(other.Prose);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (prose_ == null) {
+              Prose = new global::Oscal.Common.V1.MarkupMultiline();
+            }
+            input.ReadMessage(Prose);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (prose_ == null) {
+              Prose = new global::Oscal.Common.V1.MarkupMultiline();
+            }
+            input.ReadMessage(Prose);
+            break;
+          }
         }
       }
     }
@@ -1905,7 +2153,7 @@ namespace Oscal.Catalog.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Oscal.Catalog.V1.CatalogReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Oscal.Catalog.V1.CatalogReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2132,7 +2380,7 @@ namespace Oscal.Catalog.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Oscal.Catalog.V1.CatalogReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Oscal.Catalog.V1.CatalogReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2153,6 +2401,7 @@ namespace Oscal.Catalog.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Constraint(Constraint other) : this() {
       description_ = other.description_;
+      tests_ = other.tests_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2174,6 +2423,17 @@ namespace Oscal.Catalog.V1 {
       }
     }
 
+    /// <summary>Field number for the "tests" field.</summary>
+    public const int TestsFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Oscal.Catalog.V1.Test> _repeated_tests_codec
+        = pb::FieldCodec.ForMessage(18, global::Oscal.Catalog.V1.Test.Parser);
+    private readonly pbc::RepeatedField<global::Oscal.Catalog.V1.Test> tests_ = new pbc::RepeatedField<global::Oscal.Catalog.V1.Test>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Oscal.Catalog.V1.Test> Tests {
+      get { return tests_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2190,6 +2450,7 @@ namespace Oscal.Catalog.V1 {
         return true;
       }
       if (Description != other.Description) return false;
+      if(!tests_.Equals(other.tests_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2198,6 +2459,7 @@ namespace Oscal.Catalog.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Description.Length != 0) hash ^= Description.GetHashCode();
+      hash ^= tests_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2220,6 +2482,7 @@ namespace Oscal.Catalog.V1 {
         output.WriteRawTag(10);
         output.WriteString(Description);
       }
+      tests_.WriteTo(output, _repeated_tests_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2234,6 +2497,7 @@ namespace Oscal.Catalog.V1 {
         output.WriteRawTag(10);
         output.WriteString(Description);
       }
+      tests_.WriteTo(ref output, _repeated_tests_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2247,6 +2511,7 @@ namespace Oscal.Catalog.V1 {
       if (Description.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
       }
+      size += tests_.CalculateSize(_repeated_tests_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -2262,6 +2527,7 @@ namespace Oscal.Catalog.V1 {
       if (other.Description.Length != 0) {
         Description = other.Description;
       }
+      tests_.Add(other.tests_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -2285,6 +2551,10 @@ namespace Oscal.Catalog.V1 {
             Description = input.ReadString();
             break;
           }
+          case 18: {
+            tests_.AddEntriesFrom(input, _repeated_tests_codec);
+            break;
+          }
         }
       }
     #endif
@@ -2306,6 +2576,237 @@ namespace Oscal.Catalog.V1 {
             break;
           case 10: {
             Description = input.ReadString();
+            break;
+          }
+          case 18: {
+            tests_.AddEntriesFrom(ref input, _repeated_tests_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Test represents a constraint test
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class Test : pb::IMessage<Test>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<Test> _parser = new pb::MessageParser<Test>(() => new Test());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<Test> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Oscal.Catalog.V1.CatalogReflection.Descriptor.MessageTypes[7]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Test() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Test(Test other) : this() {
+      expression_ = other.expression_;
+      remarks_ = other.remarks_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Test Clone() {
+      return new Test(this);
+    }
+
+    /// <summary>Field number for the "expression" field.</summary>
+    public const int ExpressionFieldNumber = 1;
+    private string expression_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Expression {
+      get { return expression_; }
+      set {
+        expression_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "remarks" field.</summary>
+    public const int RemarksFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Oscal.Common.V1.MarkupMultiline> _repeated_remarks_codec
+        = pb::FieldCodec.ForMessage(18, global::Oscal.Common.V1.MarkupMultiline.Parser);
+    private readonly pbc::RepeatedField<global::Oscal.Common.V1.MarkupMultiline> remarks_ = new pbc::RepeatedField<global::Oscal.Common.V1.MarkupMultiline>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Oscal.Common.V1.MarkupMultiline> Remarks {
+      get { return remarks_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as Test);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(Test other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Expression != other.Expression) return false;
+      if(!remarks_.Equals(other.remarks_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Expression.Length != 0) hash ^= Expression.GetHashCode();
+      hash ^= remarks_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Expression.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Expression);
+      }
+      remarks_.WriteTo(output, _repeated_remarks_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Expression.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Expression);
+      }
+      remarks_.WriteTo(ref output, _repeated_remarks_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Expression.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Expression);
+      }
+      size += remarks_.CalculateSize(_repeated_remarks_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(Test other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Expression.Length != 0) {
+        Expression = other.Expression;
+      }
+      remarks_.Add(other.remarks_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Expression = input.ReadString();
+            break;
+          }
+          case 18: {
+            remarks_.AddEntriesFrom(input, _repeated_remarks_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Expression = input.ReadString();
+            break;
+          }
+          case 18: {
+            remarks_.AddEntriesFrom(ref input, _repeated_remarks_codec);
             break;
           }
         }
@@ -2333,7 +2834,7 @@ namespace Oscal.Catalog.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Oscal.Catalog.V1.CatalogReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Oscal.Catalog.V1.CatalogReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

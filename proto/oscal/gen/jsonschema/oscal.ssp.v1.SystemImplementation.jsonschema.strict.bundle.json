@@ -204,6 +204,27 @@
       "title": "Leveraged Authorization",
       "type": "object"
     },
+    "oscal.ssp.v1.Status.jsonschema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Status represents system status",
+      "properties": {
+        "remarks": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.jsonschema.strict.json"
+          },
+          "type": "array"
+        },
+        "state": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "state"
+      ],
+      "title": "Status",
+      "type": "object"
+    },
     "oscal.ssp.v1.SystemComponent.jsonschema.strict.json": {
       "$schema": "https://json-schema.org/draft/2020-12/schema",
       "additionalProperties": false,
@@ -229,6 +250,9 @@
             "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.jsonschema.strict.json"
           },
           "type": "array"
+        },
+        "status": {
+          "$ref": "#/$defs/oscal.ssp.v1.Status.jsonschema.strict.json"
         },
         "title": {
           "type": "string"

@@ -5,6 +5,7 @@
   "description": "AssessmentPlan represents a security assessment plan",
   "properties": {
     "assessmentTasks": {
+      "description": "Deprecated: use tasks instead. Kept for backward compatibility.",
       "items": {
         "$ref": "oscal.assessment_plan.v1.AssessmentTask.jsonschema.strict.json"
       },
@@ -24,6 +25,12 @@
     },
     "reviewedControls": {
       "$ref": "oscal.assessment_plan.v1.ReviewedControls.jsonschema.strict.json"
+    },
+    "tasks": {
+      "items": {
+        "$ref": "oscal.assessment_plan.v1.AssessmentTask.jsonschema.strict.json"
+      },
+      "type": "array"
     },
     "terms": {
       "$ref": "oscal.assessment_plan.v1.Terms.jsonschema.strict.json"

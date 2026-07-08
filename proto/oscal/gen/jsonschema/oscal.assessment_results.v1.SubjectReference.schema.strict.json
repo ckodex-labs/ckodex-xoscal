@@ -27,8 +27,14 @@
     },
     "title": {
       "$ref": "oscal.common.v1.MarkupLine.schema.strict.json"
+    },
+    "type": {
+      "type": "string"
     }
   },
+  "required": [
+    "type"
+  ],
   "title": "Subject Reference",
   "type": "object"
 }

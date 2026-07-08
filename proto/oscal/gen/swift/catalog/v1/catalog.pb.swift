@@ -212,6 +212,9 @@ nonisolated struct Oscal_Catalog_V1_Parameter: Sendable {
 
   var constraints: [Oscal_Catalog_V1_Constraint] = []
 
+  /// Deprecated: use guidelines instead. Kept for backward compatibility.
+  ///
+  /// NOTE: This field was marked as deprecated in the .proto file.
   var guidance: Oscal_Common_V1_MarkupLine {
     get {_guidance ?? Oscal_Common_V1_MarkupLine()}
     set {_guidance = newValue}
@@ -221,6 +224,8 @@ nonisolated struct Oscal_Catalog_V1_Parameter: Sendable {
   /// Clears the value of `guidance`. Subsequent reads from it will return its default value.
   mutating func clearGuidance() {self._guidance = nil}
 
+  var guidelines: [Oscal_Catalog_V1_Guideline] = []
+
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
   init() {}
@@ -229,6 +234,28 @@ nonisolated struct Oscal_Catalog_V1_Parameter: Sendable {
   fileprivate var _label: Oscal_Common_V1_MarkupLine? = nil
   fileprivate var _select: Oscal_Catalog_V1_Select? = nil
   fileprivate var _guidance: Oscal_Common_V1_MarkupLine? = nil
+}
+
+/// Guideline represents a parameter guideline
+nonisolated struct Oscal_Catalog_V1_Guideline: Sendable {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var prose: Oscal_Common_V1_MarkupMultiline {
+    get {_prose ?? Oscal_Common_V1_MarkupMultiline()}
+    set {_prose = newValue}
+  }
+  /// Returns true if `prose` has been explicitly set.
+  var hasProse: Bool {self._prose != nil}
+  /// Clears the value of `prose`. Subsequent reads from it will return its default value.
+  mutating func clearProse() {self._prose = nil}
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+
+  fileprivate var _prose: Oscal_Common_V1_MarkupMultiline? = nil
 }
 
 /// Select represents a selection of parameter values
@@ -253,6 +280,23 @@ nonisolated struct Oscal_Catalog_V1_Constraint: Sendable {
   // methods supported on all messages.
 
   var description_p: String = String()
+
+  var tests: [Oscal_Catalog_V1_Test] = []
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
+/// Test represents a constraint test
+nonisolated struct Oscal_Catalog_V1_Test: Sendable {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var expression: String = String()
+
+  var remarks: [Oscal_Common_V1_MarkupMultiline] = []
 
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
@@ -567,7 +611,7 @@ nonisolated extension Oscal_Catalog_V1_Control: SwiftProtobuf.Message, SwiftProt
 
 nonisolated extension Oscal_Catalog_V1_Parameter: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   static let protoMessageName: String = _protobuf_package + ".Parameter"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}id\0\u{1}class\0\u{1}label\0\u{1}values\0\u{1}select\0\u{1}props\0\u{1}links\0\u{1}remarks\0\u{1}constraints\0\u{1}guidance\0")
+  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}id\0\u{1}class\0\u{1}label\0\u{1}values\0\u{1}select\0\u{1}props\0\u{1}links\0\u{1}remarks\0\u{1}constraints\0\u{1}guidance\0\u{1}guidelines\0")
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
@@ -585,6 +629,7 @@ nonisolated extension Oscal_Catalog_V1_Parameter: SwiftProtobuf.Message, SwiftPr
       case 8: try { try decoder.decodeRepeatedMessageField(value: &self.remarks) }()
       case 9: try { try decoder.decodeRepeatedMessageField(value: &self.constraints) }()
       case 10: try { try decoder.decodeSingularMessageField(value: &self._guidance) }()
+      case 11: try { try decoder.decodeRepeatedMessageField(value: &self.guidelines) }()
       default: break
       }
     }
@@ -625,6 +670,9 @@ nonisolated extension Oscal_Catalog_V1_Parameter: SwiftProtobuf.Message, SwiftPr
     try { if let v = self._guidance {
       try visitor.visitSingularMessageField(value: v, fieldNumber: 10)
     } }()
+    if !self.guidelines.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.guidelines, fieldNumber: 11)
+    }
     try unknownFields.traverse(visitor: &visitor)
   }
 
@@ -639,6 +687,41 @@ nonisolated extension Oscal_Catalog_V1_Parameter: SwiftProtobuf.Message, SwiftPr
     if lhs.remarks != rhs.remarks {return false}
     if lhs.constraints != rhs.constraints {return false}
     if lhs._guidance != rhs._guidance {return false}
+    if lhs.guidelines != rhs.guidelines {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+nonisolated extension Oscal_Catalog_V1_Guideline: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".Guideline"
+  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}prose\0")
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularMessageField(value: &self._prose) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
+    try { if let v = self._prose {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
+    } }()
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Oscal_Catalog_V1_Guideline, rhs: Oscal_Catalog_V1_Guideline) -> Bool {
+    if lhs._prose != rhs._prose {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -681,7 +764,7 @@ nonisolated extension Oscal_Catalog_V1_Select: SwiftProtobuf.Message, SwiftProto
 
 nonisolated extension Oscal_Catalog_V1_Constraint: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   static let protoMessageName: String = _protobuf_package + ".Constraint"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}description\0")
+  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}description\0\u{1}tests\0")
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
@@ -690,6 +773,7 @@ nonisolated extension Oscal_Catalog_V1_Constraint: SwiftProtobuf.Message, SwiftP
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
       switch fieldNumber {
       case 1: try { try decoder.decodeSingularStringField(value: &self.description_p) }()
+      case 2: try { try decoder.decodeRepeatedMessageField(value: &self.tests) }()
       default: break
       }
     }
@@ -699,11 +783,50 @@ nonisolated extension Oscal_Catalog_V1_Constraint: SwiftProtobuf.Message, SwiftP
     if !self.description_p.isEmpty {
       try visitor.visitSingularStringField(value: self.description_p, fieldNumber: 1)
     }
+    if !self.tests.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.tests, fieldNumber: 2)
+    }
     try unknownFields.traverse(visitor: &visitor)
   }
 
   static func ==(lhs: Oscal_Catalog_V1_Constraint, rhs: Oscal_Catalog_V1_Constraint) -> Bool {
     if lhs.description_p != rhs.description_p {return false}
+    if lhs.tests != rhs.tests {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+nonisolated extension Oscal_Catalog_V1_Test: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".Test"
+  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}expression\0\u{1}remarks\0")
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularStringField(value: &self.expression) }()
+      case 2: try { try decoder.decodeRepeatedMessageField(value: &self.remarks) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.expression.isEmpty {
+      try visitor.visitSingularStringField(value: self.expression, fieldNumber: 1)
+    }
+    if !self.remarks.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.remarks, fieldNumber: 2)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Oscal_Catalog_V1_Test, rhs: Oscal_Catalog_V1_Test) -> Bool {
+    if lhs.expression != rhs.expression {return false}
+    if lhs.remarks != rhs.remarks {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

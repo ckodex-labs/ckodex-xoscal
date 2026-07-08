@@ -16,7 +16,15 @@
     "metadata": {
       "$ref": "oscal.common.v1.Metadata.schema.strict.json"
     },
+    "poam_items": {
+      "description": "poam_items is the OSCAL schema-required top-level array of POAM items.",
+      "items": {
+        "$ref": "oscal.poam.v1.PoamItem.schema.strict.json"
+      },
+      "type": "array"
+    },
     "risks": {
+      "description": "Deprecated: use poam_items instead. Kept for backward compatibility.",
       "items": {
         "$ref": "oscal.poam.v1.Risk.schema.strict.json"
       },

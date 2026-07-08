@@ -3,6 +3,12 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "additionalProperties": false,
   "description": "Result represents an assessment result",
+  "patternProperties": {
+    "^(reviewed_controls)$": {
+      "$ref": "oscal.assessment_results.v1.ReviewedControls.jsonschema.json",
+      "description": "reviewed_controls is required by the OSCAL 1.1.2 schema for each result."
+    }
+  },
   "properties": {
     "description": {
       "$ref": "oscal.common.v1.MarkupMultiline.jsonschema.json"
@@ -39,6 +45,10 @@
         "$ref": "oscal.common.v1.MarkupMultiline.jsonschema.json"
       },
       "type": "array"
+    },
+    "reviewedControls": {
+      "$ref": "oscal.assessment_results.v1.ReviewedControls.jsonschema.json",
+      "description": "reviewed_controls is required by the OSCAL 1.1.2 schema for each result."
     },
     "start": {
       "$ref": "oscal.common.v1.DateTime.jsonschema.json"

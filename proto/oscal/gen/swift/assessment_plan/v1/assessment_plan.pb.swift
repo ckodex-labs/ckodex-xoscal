@@ -80,6 +80,9 @@ nonisolated struct Oscal_AssessmentPlan_V1_AssessmentPlan: @unchecked Sendable {
   /// Clears the value of `reviewedControls`. Subsequent reads from it will return its default value.
   mutating func clearReviewedControls() {_uniqueStorage()._reviewedControls = nil}
 
+  /// Deprecated: use tasks instead. Kept for backward compatibility.
+  ///
+  /// NOTE: This field was marked as deprecated in the .proto file.
   var assessmentTasks: [Oscal_AssessmentPlan_V1_AssessmentTask] {
     get {_storage._assessmentTasks}
     set {_uniqueStorage()._assessmentTasks = newValue}
@@ -93,6 +96,11 @@ nonisolated struct Oscal_AssessmentPlan_V1_AssessmentPlan: @unchecked Sendable {
   var hasBackMatter: Bool {_storage._backMatter != nil}
   /// Clears the value of `backMatter`. Subsequent reads from it will return its default value.
   mutating func clearBackMatter() {_uniqueStorage()._backMatter = nil}
+
+  var tasks: [Oscal_AssessmentPlan_V1_AssessmentTask] {
+    get {_storage._tasks}
+    set {_uniqueStorage()._tasks = newValue}
+  }
 
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
@@ -611,9 +619,20 @@ nonisolated struct Oscal_AssessmentPlan_V1_ReviewedControls: Sendable {
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
+  /// Deprecated: use control_selections instead. Kept for backward compatibility.
+  ///
+  /// NOTE: This field was marked as deprecated in the .proto file.
   var controlSelection: String = String()
 
   var controls: [Oscal_AssessmentPlan_V1_ControlSelection] = []
+
+  var controlSelections: [Oscal_AssessmentPlan_V1_ControlSelection] = []
+
+  var props: [Oscal_Common_V1_Property] = []
+
+  var links: [Oscal_Common_V1_Link] = []
+
+  var remarks: [Oscal_Common_V1_MarkupMultiline] = []
 
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
@@ -622,6 +641,38 @@ nonisolated struct Oscal_AssessmentPlan_V1_ReviewedControls: Sendable {
 
 /// ControlSelection represents a control selection
 nonisolated struct Oscal_AssessmentPlan_V1_ControlSelection: Sendable {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var description_p: Oscal_Common_V1_MarkupMultiline {
+    get {_description_p ?? Oscal_Common_V1_MarkupMultiline()}
+    set {_description_p = newValue}
+  }
+  /// Returns true if `description_p` has been explicitly set.
+  var hasDescription_p: Bool {self._description_p != nil}
+  /// Clears the value of `description_p`. Subsequent reads from it will return its default value.
+  mutating func clearDescription_p() {self._description_p = nil}
+
+  var includeControls: [Oscal_AssessmentPlan_V1_SelectedControl] = []
+
+  var excludeControls: [Oscal_AssessmentPlan_V1_SelectedControl] = []
+
+  var props: [Oscal_Common_V1_Property] = []
+
+  var links: [Oscal_Common_V1_Link] = []
+
+  var remarks: [Oscal_Common_V1_MarkupMultiline] = []
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+
+  fileprivate var _description_p: Oscal_Common_V1_MarkupMultiline? = nil
+}
+
+/// SelectedControl represents a selected control
+nonisolated struct Oscal_AssessmentPlan_V1_SelectedControl: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
@@ -635,6 +686,19 @@ nonisolated struct Oscal_AssessmentPlan_V1_ControlSelection: Sendable {
   /// Clears the value of `controlID`. Subsequent reads from it will return its default value.
   mutating func clearControlID() {self._controlID = nil}
 
+  var statementID: Oscal_Common_V1_Token {
+    get {_statementID ?? Oscal_Common_V1_Token()}
+    set {_statementID = newValue}
+  }
+  /// Returns true if `statementID` has been explicitly set.
+  var hasStatementID: Bool {self._statementID != nil}
+  /// Clears the value of `statementID`. Subsequent reads from it will return its default value.
+  mutating func clearStatementID() {self._statementID = nil}
+
+  var props: [Oscal_Common_V1_Property] = []
+
+  var links: [Oscal_Common_V1_Link] = []
+
   var remarks: [Oscal_Common_V1_MarkupMultiline] = []
 
   var unknownFields = SwiftProtobuf.UnknownStorage()
@@ -642,6 +706,7 @@ nonisolated struct Oscal_AssessmentPlan_V1_ControlSelection: Sendable {
   init() {}
 
   fileprivate var _controlID: Oscal_Common_V1_Token? = nil
+  fileprivate var _statementID: Oscal_Common_V1_Token? = nil
 }
 
 /// AssessmentTask represents an assessment task
@@ -858,7 +923,7 @@ fileprivate nonisolated let _protobuf_package = "oscal.assessment_plan.v1"
 
 nonisolated extension Oscal_AssessmentPlan_V1_AssessmentPlan: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   static let protoMessageName: String = _protobuf_package + ".AssessmentPlan"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}uuid\0\u{1}metadata\0\u{3}import_ssp\0\u{3}local_definitions\0\u{1}terms\0\u{3}reviewed_controls\0\u{3}assessment_tasks\0\u{3}back_matter\0")
+  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}uuid\0\u{1}metadata\0\u{3}import_ssp\0\u{3}local_definitions\0\u{1}terms\0\u{3}reviewed_controls\0\u{3}assessment_tasks\0\u{3}back_matter\0\u{1}tasks\0")
 
   fileprivate class _StorageClass {
     var _uuid: Oscal_Common_V1_UUID? = nil
@@ -869,6 +934,7 @@ nonisolated extension Oscal_AssessmentPlan_V1_AssessmentPlan: SwiftProtobuf.Mess
     var _reviewedControls: Oscal_AssessmentPlan_V1_ReviewedControls? = nil
     var _assessmentTasks: [Oscal_AssessmentPlan_V1_AssessmentTask] = []
     var _backMatter: Oscal_Common_V1_BackMatter? = nil
+    var _tasks: [Oscal_AssessmentPlan_V1_AssessmentTask] = []
 
       // This property is used as the initial default value for new instances of the type.
       // The type itself is protecting the reference to its storage via CoW semantics.
@@ -887,6 +953,7 @@ nonisolated extension Oscal_AssessmentPlan_V1_AssessmentPlan: SwiftProtobuf.Mess
       _reviewedControls = source._reviewedControls
       _assessmentTasks = source._assessmentTasks
       _backMatter = source._backMatter
+      _tasks = source._tasks
     }
   }
 
@@ -913,6 +980,7 @@ nonisolated extension Oscal_AssessmentPlan_V1_AssessmentPlan: SwiftProtobuf.Mess
         case 6: try { try decoder.decodeSingularMessageField(value: &_storage._reviewedControls) }()
         case 7: try { try decoder.decodeRepeatedMessageField(value: &_storage._assessmentTasks) }()
         case 8: try { try decoder.decodeSingularMessageField(value: &_storage._backMatter) }()
+        case 9: try { try decoder.decodeRepeatedMessageField(value: &_storage._tasks) }()
         default: break
         }
       }
@@ -949,6 +1017,9 @@ nonisolated extension Oscal_AssessmentPlan_V1_AssessmentPlan: SwiftProtobuf.Mess
       try { if let v = _storage._backMatter {
         try visitor.visitSingularMessageField(value: v, fieldNumber: 8)
       } }()
+      if !_storage._tasks.isEmpty {
+        try visitor.visitRepeatedMessageField(value: _storage._tasks, fieldNumber: 9)
+      }
     }
     try unknownFields.traverse(visitor: &visitor)
   }
@@ -966,6 +1037,7 @@ nonisolated extension Oscal_AssessmentPlan_V1_AssessmentPlan: SwiftProtobuf.Mess
         if _storage._reviewedControls != rhs_storage._reviewedControls {return false}
         if _storage._assessmentTasks != rhs_storage._assessmentTasks {return false}
         if _storage._backMatter != rhs_storage._backMatter {return false}
+        if _storage._tasks != rhs_storage._tasks {return false}
         return true
       }
       if !storagesAreEqual {return false}
@@ -1741,7 +1813,7 @@ nonisolated extension Oscal_AssessmentPlan_V1_Term: SwiftProtobuf.Message, Swift
 
 nonisolated extension Oscal_AssessmentPlan_V1_ReviewedControls: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   static let protoMessageName: String = _protobuf_package + ".ReviewedControls"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{3}control_selection\0\u{1}controls\0")
+  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{3}control_selection\0\u{1}controls\0\u{3}control_selections\0\u{1}props\0\u{1}links\0\u{1}remarks\0")
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
@@ -1751,6 +1823,10 @@ nonisolated extension Oscal_AssessmentPlan_V1_ReviewedControls: SwiftProtobuf.Me
       switch fieldNumber {
       case 1: try { try decoder.decodeSingularStringField(value: &self.controlSelection) }()
       case 2: try { try decoder.decodeRepeatedMessageField(value: &self.controls) }()
+      case 3: try { try decoder.decodeRepeatedMessageField(value: &self.controlSelections) }()
+      case 4: try { try decoder.decodeRepeatedMessageField(value: &self.props) }()
+      case 5: try { try decoder.decodeRepeatedMessageField(value: &self.links) }()
+      case 6: try { try decoder.decodeRepeatedMessageField(value: &self.remarks) }()
       default: break
       }
     }
@@ -1763,12 +1839,28 @@ nonisolated extension Oscal_AssessmentPlan_V1_ReviewedControls: SwiftProtobuf.Me
     if !self.controls.isEmpty {
       try visitor.visitRepeatedMessageField(value: self.controls, fieldNumber: 2)
     }
+    if !self.controlSelections.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.controlSelections, fieldNumber: 3)
+    }
+    if !self.props.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.props, fieldNumber: 4)
+    }
+    if !self.links.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.links, fieldNumber: 5)
+    }
+    if !self.remarks.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.remarks, fieldNumber: 6)
+    }
     try unknownFields.traverse(visitor: &visitor)
   }
 
   static func ==(lhs: Oscal_AssessmentPlan_V1_ReviewedControls, rhs: Oscal_AssessmentPlan_V1_ReviewedControls) -> Bool {
     if lhs.controlSelection != rhs.controlSelection {return false}
     if lhs.controls != rhs.controls {return false}
+    if lhs.controlSelections != rhs.controlSelections {return false}
+    if lhs.props != rhs.props {return false}
+    if lhs.links != rhs.links {return false}
+    if lhs.remarks != rhs.remarks {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -1776,7 +1868,66 @@ nonisolated extension Oscal_AssessmentPlan_V1_ReviewedControls: SwiftProtobuf.Me
 
 nonisolated extension Oscal_AssessmentPlan_V1_ControlSelection: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   static let protoMessageName: String = _protobuf_package + ".ControlSelection"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{3}control_id\0\u{1}remarks\0")
+  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}description\0\u{3}include_controls\0\u{3}exclude_controls\0\u{1}props\0\u{1}links\0\u{1}remarks\0")
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularMessageField(value: &self._description_p) }()
+      case 2: try { try decoder.decodeRepeatedMessageField(value: &self.includeControls) }()
+      case 3: try { try decoder.decodeRepeatedMessageField(value: &self.excludeControls) }()
+      case 4: try { try decoder.decodeRepeatedMessageField(value: &self.props) }()
+      case 5: try { try decoder.decodeRepeatedMessageField(value: &self.links) }()
+      case 6: try { try decoder.decodeRepeatedMessageField(value: &self.remarks) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
+    try { if let v = self._description_p {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
+    } }()
+    if !self.includeControls.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.includeControls, fieldNumber: 2)
+    }
+    if !self.excludeControls.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.excludeControls, fieldNumber: 3)
+    }
+    if !self.props.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.props, fieldNumber: 4)
+    }
+    if !self.links.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.links, fieldNumber: 5)
+    }
+    if !self.remarks.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.remarks, fieldNumber: 6)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Oscal_AssessmentPlan_V1_ControlSelection, rhs: Oscal_AssessmentPlan_V1_ControlSelection) -> Bool {
+    if lhs._description_p != rhs._description_p {return false}
+    if lhs.includeControls != rhs.includeControls {return false}
+    if lhs.excludeControls != rhs.excludeControls {return false}
+    if lhs.props != rhs.props {return false}
+    if lhs.links != rhs.links {return false}
+    if lhs.remarks != rhs.remarks {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+nonisolated extension Oscal_AssessmentPlan_V1_SelectedControl: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".SelectedControl"
+  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{3}control_id\0\u{3}statement_id\0\u{1}props\0\u{1}links\0\u{1}remarks\0")
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
@@ -1785,7 +1936,10 @@ nonisolated extension Oscal_AssessmentPlan_V1_ControlSelection: SwiftProtobuf.Me
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
       switch fieldNumber {
       case 1: try { try decoder.decodeSingularMessageField(value: &self._controlID) }()
-      case 2: try { try decoder.decodeRepeatedMessageField(value: &self.remarks) }()
+      case 2: try { try decoder.decodeSingularMessageField(value: &self._statementID) }()
+      case 3: try { try decoder.decodeRepeatedMessageField(value: &self.props) }()
+      case 4: try { try decoder.decodeRepeatedMessageField(value: &self.links) }()
+      case 5: try { try decoder.decodeRepeatedMessageField(value: &self.remarks) }()
       default: break
       }
     }
@@ -1799,14 +1953,26 @@ nonisolated extension Oscal_AssessmentPlan_V1_ControlSelection: SwiftProtobuf.Me
     try { if let v = self._controlID {
       try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
     } }()
+    try { if let v = self._statementID {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
+    } }()
+    if !self.props.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.props, fieldNumber: 3)
+    }
+    if !self.links.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.links, fieldNumber: 4)
+    }
     if !self.remarks.isEmpty {
-      try visitor.visitRepeatedMessageField(value: self.remarks, fieldNumber: 2)
+      try visitor.visitRepeatedMessageField(value: self.remarks, fieldNumber: 5)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Oscal_AssessmentPlan_V1_ControlSelection, rhs: Oscal_AssessmentPlan_V1_ControlSelection) -> Bool {
+  static func ==(lhs: Oscal_AssessmentPlan_V1_SelectedControl, rhs: Oscal_AssessmentPlan_V1_SelectedControl) -> Bool {
     if lhs._controlID != rhs._controlID {return false}
+    if lhs._statementID != rhs._statementID {return false}
+    if lhs.props != rhs.props {return false}
+    if lhs.links != rhs.links {return false}
     if lhs.remarks != rhs.remarks {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true

@@ -82,7 +82,7 @@ namespace Oscal.AssessmentResults.V1 {
             "FS5vc2NhbC5jb21tb24udjEuTGlua1IFbGlua3MSUgoTcmVzcG9uc2libGVf",
             "cGFydGllcxgEIAMoCzIhLm9zY2FsLmNvbW1vbi52MS5SZXNwb25zaWJsZVBh",
             "cnR5UhJyZXNwb25zaWJsZVBhcnRpZXMSOgoHcmVtYXJrcxgFIAMoCzIgLm9z",
-            "Y2FsLmNvbW1vbi52MS5NYXJrdXBNdWx0aWxpbmVSB3JlbWFya3MisgQKBlJl",
+            "Y2FsLmNvbW1vbi52MS5NYXJrdXBNdWx0aWxpbmVSB3JlbWFya3MijgUKBlJl",
             "c3VsdBIpCgR1dWlkGAEgASgLMhUub3NjYWwuY29tbW9uLnYxLlVVSURSBHV1",
             "aWQSMQoFdGl0bGUYAiABKAsyGy5vc2NhbC5jb21tb24udjEuTWFya3VwTGlu",
             "ZVIFdGl0bGUSQgoLZGVzY3JpcHRpb24YAyABKAsyIC5vc2NhbC5jb21tb24u",
@@ -95,93 +95,119 @@ namespace Oscal.AssessmentResults.V1 {
             "LwoFcHJvcHMYCCADKAsyGS5vc2NhbC5jb21tb24udjEuUHJvcGVydHlSBXBy",
             "b3BzEisKBWxpbmtzGAkgAygLMhUub3NjYWwuY29tbW9uLnYxLkxpbmtSBWxp",
             "bmtzEjoKB3JlbWFya3MYCiADKAsyIC5vc2NhbC5jb21tb24udjEuTWFya3Vw",
-            "TXVsdGlsaW5lUgdyZW1hcmtzItkFCgdGaW5kaW5nEikKBHV1aWQYASABKAsy",
-            "FS5vc2NhbC5jb21tb24udjEuVVVJRFIEdXVpZBIxCgV0aXRsZRgCIAEoCzIb",
-            "Lm9zY2FsLmNvbW1vbi52MS5NYXJrdXBMaW5lUgV0aXRsZRJCCgtkZXNjcmlw",
-            "dGlvbhgDIAEoCzIgLm9zY2FsLmNvbW1vbi52MS5NYXJrdXBNdWx0aWxpbmVS",
-            "C2Rlc2NyaXB0aW9uEi8KBXByb3BzGAQgAygLMhkub3NjYWwuY29tbW9uLnYx",
-            "LlByb3BlcnR5UgVwcm9wcxIrCgVsaW5rcxgFIAMoCzIVLm9zY2FsLmNvbW1v",
-            "bi52MS5MaW5rUgVsaW5rcxI9CgdvcmlnaW5zGAYgAygLMiMub3NjYWwuYXNz",
-            "ZXNzbWVudF9yZXN1bHRzLnYxLk9yaWdpblIHb3JpZ2lucxJCCgZ0YXJnZXQY",
-            "ByABKAsyKi5vc2NhbC5hc3Nlc3NtZW50X3Jlc3VsdHMudjEuRmluZGluZ1Rh",
-            "cmdldFIGdGFyZ2V0ElkKHWltcGxlbWVudGF0aW9uX3N0YXRlbWVudF91dWlk",
-            "GAggASgLMhUub3NjYWwuY29tbW9uLnYxLlVVSURSG2ltcGxlbWVudGF0aW9u",
-            "U3RhdGVtZW50VXVpZBJiChRyZWxhdGVkX29ic2VydmF0aW9ucxgJIAMoCzIv",
-            "Lm9zY2FsLmFzc2Vzc21lbnRfcmVzdWx0cy52MS5SZWxhdGVkT2JzZXJ2YXRp",
-            "b25SE3JlbGF0ZWRPYnNlcnZhdGlvbnMSUAoNcmVsYXRlZF9yaXNrcxgKIAMo",
-            "CzIrLm9zY2FsLmFzc2Vzc21lbnRfcmVzdWx0cy52MS5Bc3NvY2lhdGVkUmlz",
-            "a1IMcmVsYXRlZFJpc2tzEjoKB3JlbWFya3MYCyADKAsyIC5vc2NhbC5jb21t",
-            "b24udjEuTWFya3VwTXVsdGlsaW5lUgdyZW1hcmtzIpcECg1GaW5kaW5nVGFy",
-            "Z2V0EhIKBHR5cGUYASABKAlSBHR5cGUSMwoJdGFyZ2V0X2lkGAIgASgLMhYu",
-            "b3NjYWwuY29tbW9uLnYxLlRva2VuUgh0YXJnZXRJZBIxCgV0aXRsZRgDIAEo",
-            "CzIbLm9zY2FsLmNvbW1vbi52MS5NYXJrdXBMaW5lUgV0aXRsZRJCCgtkZXNj",
-            "cmlwdGlvbhgEIAEoCzIgLm9zY2FsLmNvbW1vbi52MS5NYXJrdXBNdWx0aWxp",
-            "bmVSC2Rlc2NyaXB0aW9uEi8KBXByb3BzGAUgAygLMhkub3NjYWwuY29tbW9u",
-            "LnYxLlByb3BlcnR5UgVwcm9wcxIrCgVsaW5rcxgGIAMoCzIVLm9zY2FsLmNv",
-            "bW1vbi52MS5MaW5rUgVsaW5rcxJECgZzdGF0dXMYByABKAsyLC5vc2NhbC5h",
-            "c3Nlc3NtZW50X3Jlc3VsdHMudjEuT2JqZWN0aXZlU3RhdHVzUgZzdGF0dXMS",
-            "ZgoVaW1wbGVtZW50YXRpb25fc3RhdHVzGAggASgLMjEub3NjYWwuYXNzZXNz",
-            "bWVudF9yZXN1bHRzLnYxLkltcGxlbWVudGF0aW9uU3RhdHVzUhRpbXBsZW1l",
-            "bnRhdGlvblN0YXR1cxI6CgdyZW1hcmtzGAkgAygLMiAub3NjYWwuY29tbW9u",
-            "LnYxLk1hcmt1cE11bHRpbGluZVIHcmVtYXJrcyJ7Cg9PYmplY3RpdmVTdGF0",
-            "dXMSFAoFc3RhdGUYASABKAlSBXN0YXRlEhYKBnJlYXNvbhgCIAEoCVIGcmVh",
-            "c29uEjoKB3JlbWFya3MYAyADKAsyIC5vc2NhbC5jb21tb24udjEuTWFya3Vw",
-            "TXVsdGlsaW5lUgdyZW1hcmtzImgKFEltcGxlbWVudGF0aW9uU3RhdHVzEhQK",
-            "BXN0YXRlGAEgASgJUgVzdGF0ZRI6CgdyZW1hcmtzGAIgASgLMiAub3NjYWwu",
-            "Y29tbW9uLnYxLk1hcmt1cE11bHRpbGluZVIHcmVtYXJrcyKZAQoGT3JpZ2lu",
-            "EkAKBmFjdG9ycxgBIAMoCzIoLm9zY2FsLmFzc2Vzc21lbnRfcmVzdWx0cy52",
-            "MS5PcmlnaW5BY3RvclIGYWN0b3JzEk0KDXJlbGF0ZWRfdGFza3MYAiADKAsy",
-            "KC5vc2NhbC5hc3Nlc3NtZW50X3Jlc3VsdHMudjEuUmVsYXRlZFRhc2tSDHJl",
-            "bGF0ZWRUYXNrcyKQAgoLT3JpZ2luQWN0b3ISNAoKYWN0b3JfdXVpZBgBIAEo",
-            "CzIVLm9zY2FsLmNvbW1vbi52MS5VVUlEUglhY3RvclV1aWQSMQoFdGl0bGUY",
-            "AiABKAsyGy5vc2NhbC5jb21tb24udjEuTWFya3VwTGluZVIFdGl0bGUSLwoF",
+            "TXVsdGlsaW5lUgdyZW1hcmtzEloKEXJldmlld2VkX2NvbnRyb2xzGAsgASgL",
+            "Mi0ub3NjYWwuYXNzZXNzbWVudF9yZXN1bHRzLnYxLlJldmlld2VkQ29udHJv",
+            "bHNSEHJldmlld2VkQ29udHJvbHMi1AIKEFJldmlld2VkQ29udHJvbHMSXAoS",
+            "Y29udHJvbF9zZWxlY3Rpb25zGAEgAygLMi0ub3NjYWwuYXNzZXNzbWVudF9y",
+            "ZXN1bHRzLnYxLkNvbnRyb2xTZWxlY3Rpb25SEWNvbnRyb2xTZWxlY3Rpb25z",
+            "EkgKCGNvbnRyb2xzGAIgAygLMiwub3NjYWwuYXNzZXNzbWVudF9yZXN1bHRz",
+            "LnYxLlNlbGVjdGVkQ29udHJvbFIIY29udHJvbHMSLwoFcHJvcHMYAyADKAsy",
+            "GS5vc2NhbC5jb21tb24udjEuUHJvcGVydHlSBXByb3BzEisKBWxpbmtzGAQg",
+            "AygLMhUub3NjYWwuY29tbW9uLnYxLkxpbmtSBWxpbmtzEjoKB3JlbWFya3MY",
+            "BSADKAsyIC5vc2NhbC5jb21tb24udjEuTWFya3VwTXVsdGlsaW5lUgdyZW1h",
+            "cmtzIqIDChBDb250cm9sU2VsZWN0aW9uEkIKC2Rlc2NyaXB0aW9uGAEgASgL",
+            "MiAub3NjYWwuY29tbW9uLnYxLk1hcmt1cE11bHRpbGluZVILZGVzY3JpcHRp",
+            "b24SVwoQaW5jbHVkZV9jb250cm9scxgCIAMoCzIsLm9zY2FsLmFzc2Vzc21l",
+            "bnRfcmVzdWx0cy52MS5TZWxlY3RlZENvbnRyb2xSD2luY2x1ZGVDb250cm9s",
+            "cxJXChBleGNsdWRlX2NvbnRyb2xzGAMgAygLMiwub3NjYWwuYXNzZXNzbWVu",
+            "dF9yZXN1bHRzLnYxLlNlbGVjdGVkQ29udHJvbFIPZXhjbHVkZUNvbnRyb2xz",
+            "Ei8KBXByb3BzGAQgAygLMhkub3NjYWwuY29tbW9uLnYxLlByb3BlcnR5UgVw",
+            "cm9wcxIrCgVsaW5rcxgFIAMoCzIVLm9zY2FsLmNvbW1vbi52MS5MaW5rUgVs",
+            "aW5rcxI6CgdyZW1hcmtzGAYgAygLMiAub3NjYWwuY29tbW9uLnYxLk1hcmt1",
+            "cE11bHRpbGluZVIHcmVtYXJrcyKdAgoPU2VsZWN0ZWRDb250cm9sEjUKCmNv",
+            "bnRyb2xfaWQYASABKAsyFi5vc2NhbC5jb21tb24udjEuVG9rZW5SCWNvbnRy",
+            "b2xJZBI5CgxzdGF0ZW1lbnRfaWQYAiABKAsyFi5vc2NhbC5jb21tb24udjEu",
+            "VG9rZW5SC3N0YXRlbWVudElkEi8KBXByb3BzGAMgAygLMhkub3NjYWwuY29t",
+            "bW9uLnYxLlByb3BlcnR5UgVwcm9wcxIrCgVsaW5rcxgEIAMoCzIVLm9zY2Fs",
+            "LmNvbW1vbi52MS5MaW5rUgVsaW5rcxI6CgdyZW1hcmtzGAUgAygLMiAub3Nj",
+            "YWwuY29tbW9uLnYxLk1hcmt1cE11bHRpbGluZVIHcmVtYXJrcyLZBQoHRmlu",
+            "ZGluZxIpCgR1dWlkGAEgASgLMhUub3NjYWwuY29tbW9uLnYxLlVVSURSBHV1",
+            "aWQSMQoFdGl0bGUYAiABKAsyGy5vc2NhbC5jb21tb24udjEuTWFya3VwTGlu",
+            "ZVIFdGl0bGUSQgoLZGVzY3JpcHRpb24YAyABKAsyIC5vc2NhbC5jb21tb24u",
+            "djEuTWFya3VwTXVsdGlsaW5lUgtkZXNjcmlwdGlvbhIvCgVwcm9wcxgEIAMo",
+            "CzIZLm9zY2FsLmNvbW1vbi52MS5Qcm9wZXJ0eVIFcHJvcHMSKwoFbGlua3MY",
+            "BSADKAsyFS5vc2NhbC5jb21tb24udjEuTGlua1IFbGlua3MSPQoHb3JpZ2lu",
+            "cxgGIAMoCzIjLm9zY2FsLmFzc2Vzc21lbnRfcmVzdWx0cy52MS5PcmlnaW5S",
+            "B29yaWdpbnMSQgoGdGFyZ2V0GAcgASgLMioub3NjYWwuYXNzZXNzbWVudF9y",
+            "ZXN1bHRzLnYxLkZpbmRpbmdUYXJnZXRSBnRhcmdldBJZCh1pbXBsZW1lbnRh",
+            "dGlvbl9zdGF0ZW1lbnRfdXVpZBgIIAEoCzIVLm9zY2FsLmNvbW1vbi52MS5V",
+            "VUlEUhtpbXBsZW1lbnRhdGlvblN0YXRlbWVudFV1aWQSYgoUcmVsYXRlZF9v",
+            "YnNlcnZhdGlvbnMYCSADKAsyLy5vc2NhbC5hc3Nlc3NtZW50X3Jlc3VsdHMu",
+            "djEuUmVsYXRlZE9ic2VydmF0aW9uUhNyZWxhdGVkT2JzZXJ2YXRpb25zElAK",
+            "DXJlbGF0ZWRfcmlza3MYCiADKAsyKy5vc2NhbC5hc3Nlc3NtZW50X3Jlc3Vs",
+            "dHMudjEuQXNzb2NpYXRlZFJpc2tSDHJlbGF0ZWRSaXNrcxI6CgdyZW1hcmtz",
+            "GAsgAygLMiAub3NjYWwuY29tbW9uLnYxLk1hcmt1cE11bHRpbGluZVIHcmVt",
+            "YXJrcyKXBAoNRmluZGluZ1RhcmdldBISCgR0eXBlGAEgASgJUgR0eXBlEjMK",
+            "CXRhcmdldF9pZBgCIAEoCzIWLm9zY2FsLmNvbW1vbi52MS5Ub2tlblIIdGFy",
+            "Z2V0SWQSMQoFdGl0bGUYAyABKAsyGy5vc2NhbC5jb21tb24udjEuTWFya3Vw",
+            "TGluZVIFdGl0bGUSQgoLZGVzY3JpcHRpb24YBCABKAsyIC5vc2NhbC5jb21t",
+            "b24udjEuTWFya3VwTXVsdGlsaW5lUgtkZXNjcmlwdGlvbhIvCgVwcm9wcxgF",
+            "IAMoCzIZLm9zY2FsLmNvbW1vbi52MS5Qcm9wZXJ0eVIFcHJvcHMSKwoFbGlu",
+            "a3MYBiADKAsyFS5vc2NhbC5jb21tb24udjEuTGlua1IFbGlua3MSRAoGc3Rh",
+            "dHVzGAcgASgLMiwub3NjYWwuYXNzZXNzbWVudF9yZXN1bHRzLnYxLk9iamVj",
+            "dGl2ZVN0YXR1c1IGc3RhdHVzEmYKFWltcGxlbWVudGF0aW9uX3N0YXR1cxgI",
+            "IAEoCzIxLm9zY2FsLmFzc2Vzc21lbnRfcmVzdWx0cy52MS5JbXBsZW1lbnRh",
+            "dGlvblN0YXR1c1IUaW1wbGVtZW50YXRpb25TdGF0dXMSOgoHcmVtYXJrcxgJ",
+            "IAMoCzIgLm9zY2FsLmNvbW1vbi52MS5NYXJrdXBNdWx0aWxpbmVSB3JlbWFy",
+            "a3MiewoPT2JqZWN0aXZlU3RhdHVzEhQKBXN0YXRlGAEgASgJUgVzdGF0ZRIW",
+            "CgZyZWFzb24YAiABKAlSBnJlYXNvbhI6CgdyZW1hcmtzGAMgAygLMiAub3Nj",
+            "YWwuY29tbW9uLnYxLk1hcmt1cE11bHRpbGluZVIHcmVtYXJrcyJoChRJbXBs",
+            "ZW1lbnRhdGlvblN0YXR1cxIUCgVzdGF0ZRgBIAEoCVIFc3RhdGUSOgoHcmVt",
+            "YXJrcxgCIAEoCzIgLm9zY2FsLmNvbW1vbi52MS5NYXJrdXBNdWx0aWxpbmVS",
+            "B3JlbWFya3MimQEKBk9yaWdpbhJACgZhY3RvcnMYASADKAsyKC5vc2NhbC5h",
+            "c3Nlc3NtZW50X3Jlc3VsdHMudjEuT3JpZ2luQWN0b3JSBmFjdG9ycxJNCg1y",
+            "ZWxhdGVkX3Rhc2tzGAIgAygLMigub3NjYWwuYXNzZXNzbWVudF9yZXN1bHRz",
+            "LnYxLlJlbGF0ZWRUYXNrUgxyZWxhdGVkVGFza3MikAIKC09yaWdpbkFjdG9y",
+            "EjQKCmFjdG9yX3V1aWQYASABKAsyFS5vc2NhbC5jb21tb24udjEuVVVJRFIJ",
+            "YWN0b3JVdWlkEjEKBXRpdGxlGAIgASgLMhsub3NjYWwuY29tbW9uLnYxLk1h",
+            "cmt1cExpbmVSBXRpdGxlEi8KBXByb3BzGAMgAygLMhkub3NjYWwuY29tbW9u",
+            "LnYxLlByb3BlcnR5UgVwcm9wcxIrCgVsaW5rcxgEIAMoCzIVLm9zY2FsLmNv",
+            "bW1vbi52MS5MaW5rUgVsaW5rcxI6CgdyZW1hcmtzGAUgAygLMiAub3NjYWwu",
+            "Y29tbW9uLnYxLk1hcmt1cE11bHRpbGluZVIHcmVtYXJrcyKOAgoLUmVsYXRl",
+            "ZFRhc2sSMgoJdGFza191dWlkGAEgASgLMhUub3NjYWwuY29tbW9uLnYxLlVV",
+            "SURSCHRhc2tVdWlkEjEKBXRpdGxlGAIgASgLMhsub3NjYWwuY29tbW9uLnYx",
+            "Lk1hcmt1cExpbmVSBXRpdGxlEi8KBXByb3BzGAMgAygLMhkub3NjYWwuY29t",
+            "bW9uLnYxLlByb3BlcnR5UgVwcm9wcxIrCgVsaW5rcxgEIAMoCzIVLm9zY2Fs",
+            "LmNvbW1vbi52MS5MaW5rUgVsaW5rcxI6CgdyZW1hcmtzGAUgAygLMiAub3Nj",
+            "YWwuY29tbW9uLnYxLk1hcmt1cE11bHRpbGluZVIHcmVtYXJrcyKSAQoSUmVs",
+            "YXRlZE9ic2VydmF0aW9uEkAKEG9ic2VydmF0aW9uX3V1aWQYASABKAsyFS5v",
+            "c2NhbC5jb21tb24udjEuVVVJRFIPb2JzZXJ2YXRpb25VdWlkEjoKB3JlbWFy",
+            "a3MYAiADKAsyIC5vc2NhbC5jb21tb24udjEuTWFya3VwTXVsdGlsaW5lUgdy",
+            "ZW1hcmtzIoABCg5Bc3NvY2lhdGVkUmlzaxIyCglyaXNrX3V1aWQYASABKAsy",
+            "FS5vc2NhbC5jb21tb24udjEuVVVJRFIIcmlza1V1aWQSOgoHcmVtYXJrcxgC",
+            "IAMoCzIgLm9zY2FsLmNvbW1vbi52MS5NYXJrdXBNdWx0aWxpbmVSB3JlbWFy",
+            "a3MizQUKC09ic2VydmF0aW9uEikKBHV1aWQYASABKAsyFS5vc2NhbC5jb21t",
+            "b24udjEuVVVJRFIEdXVpZBIxCgV0aXRsZRgCIAEoCzIbLm9zY2FsLmNvbW1v",
+            "bi52MS5NYXJrdXBMaW5lUgV0aXRsZRJCCgtkZXNjcmlwdGlvbhgDIAEoCzIg",
+            "Lm9zY2FsLmNvbW1vbi52MS5NYXJrdXBNdWx0aWxpbmVSC2Rlc2NyaXB0aW9u",
+            "Ei8KBXByb3BzGAQgAygLMhkub3NjYWwuY29tbW9uLnYxLlByb3BlcnR5UgVw",
+            "cm9wcxIrCgVsaW5rcxgFIAMoCzIVLm9zY2FsLmNvbW1vbi52MS5MaW5rUgVs",
+            "aW5rcxIYCgdtZXRob2RzGAYgAygJUgdtZXRob2RzEhQKBXR5cGVzGAcgAygJ",
+            "UgV0eXBlcxI9CgdvcmlnaW5zGAggAygLMiMub3NjYWwuYXNzZXNzbWVudF9y",
+            "ZXN1bHRzLnYxLk9yaWdpblIHb3JpZ2lucxJJCghzdWJqZWN0cxgJIAMoCzIt",
+            "Lm9zY2FsLmFzc2Vzc21lbnRfcmVzdWx0cy52MS5TdWJqZWN0UmVmZXJlbmNl",
+            "UghzdWJqZWN0cxJaChFyZWxldmFudF9ldmlkZW5jZRgKIAMoCzItLm9zY2Fs",
+            "LmFzc2Vzc21lbnRfcmVzdWx0cy52MS5SZWxldmFudEV2aWRlbmNlUhByZWxl",
+            "dmFudEV2aWRlbmNlEjcKCWNvbGxlY3RlZBgLIAEoCzIZLm9zY2FsLmNvbW1v",
+            "bi52MS5EYXRlVGltZVIJY29sbGVjdGVkEjMKB2V4cGlyZXMYDCABKAsyGS5v",
+            "c2NhbC5jb21tb24udjEuRGF0ZVRpbWVSB2V4cGlyZXMSOgoHcmVtYXJrcxgN",
+            "IAMoCzIgLm9zY2FsLmNvbW1vbi52MS5NYXJrdXBNdWx0aWxpbmVSB3JlbWFy",
+            "a3MirQIKEFN1YmplY3RSZWZlcmVuY2USOAoMc3ViamVjdF91dWlkGAEgASgL",
+            "MhUub3NjYWwuY29tbW9uLnYxLlVVSURSC3N1YmplY3RVdWlkEhIKBHR5cGUY",
+            "AiABKAlSBHR5cGUSMQoFdGl0bGUYAyABKAsyGy5vc2NhbC5jb21tb24udjEu",
+            "TWFya3VwTGluZVIFdGl0bGUSLwoFcHJvcHMYBCADKAsyGS5vc2NhbC5jb21t",
+            "b24udjEuUHJvcGVydHlSBXByb3BzEisKBWxpbmtzGAUgAygLMhUub3NjYWwu",
+            "Y29tbW9uLnYxLkxpbmtSBWxpbmtzEjoKB3JlbWFya3MYBiADKAsyIC5vc2Nh",
+            "bC5jb21tb24udjEuTWFya3VwTXVsdGlsaW5lUgdyZW1hcmtzIqMCChBSZWxl",
+            "dmFudEV2aWRlbmNlEjEKBGhyZWYYASABKAsyHS5vc2NhbC5jb21tb24udjEu",
+            "VVJJUmVmZXJlbmNlUgRocmVmEkIKC2Rlc2NyaXB0aW9uGAIgASgLMiAub3Nj",
+            "YWwuY29tbW9uLnYxLk1hcmt1cE11bHRpbGluZVILZGVzY3JpcHRpb24SLwoF",
             "cHJvcHMYAyADKAsyGS5vc2NhbC5jb21tb24udjEuUHJvcGVydHlSBXByb3Bz",
             "EisKBWxpbmtzGAQgAygLMhUub3NjYWwuY29tbW9uLnYxLkxpbmtSBWxpbmtz",
             "EjoKB3JlbWFya3MYBSADKAsyIC5vc2NhbC5jb21tb24udjEuTWFya3VwTXVs",
-            "dGlsaW5lUgdyZW1hcmtzIo4CCgtSZWxhdGVkVGFzaxIyCgl0YXNrX3V1aWQY",
-            "ASABKAsyFS5vc2NhbC5jb21tb24udjEuVVVJRFIIdGFza1V1aWQSMQoFdGl0",
-            "bGUYAiABKAsyGy5vc2NhbC5jb21tb24udjEuTWFya3VwTGluZVIFdGl0bGUS",
-            "LwoFcHJvcHMYAyADKAsyGS5vc2NhbC5jb21tb24udjEuUHJvcGVydHlSBXBy",
-            "b3BzEisKBWxpbmtzGAQgAygLMhUub3NjYWwuY29tbW9uLnYxLkxpbmtSBWxp",
-            "bmtzEjoKB3JlbWFya3MYBSADKAsyIC5vc2NhbC5jb21tb24udjEuTWFya3Vw",
-            "TXVsdGlsaW5lUgdyZW1hcmtzIpIBChJSZWxhdGVkT2JzZXJ2YXRpb24SQAoQ",
-            "b2JzZXJ2YXRpb25fdXVpZBgBIAEoCzIVLm9zY2FsLmNvbW1vbi52MS5VVUlE",
-            "Ug9vYnNlcnZhdGlvblV1aWQSOgoHcmVtYXJrcxgCIAMoCzIgLm9zY2FsLmNv",
-            "bW1vbi52MS5NYXJrdXBNdWx0aWxpbmVSB3JlbWFya3MigAEKDkFzc29jaWF0",
-            "ZWRSaXNrEjIKCXJpc2tfdXVpZBgBIAEoCzIVLm9zY2FsLmNvbW1vbi52MS5V",
-            "VUlEUghyaXNrVXVpZBI6CgdyZW1hcmtzGAIgAygLMiAub3NjYWwuY29tbW9u",
-            "LnYxLk1hcmt1cE11bHRpbGluZVIHcmVtYXJrcyLNBQoLT2JzZXJ2YXRpb24S",
-            "KQoEdXVpZBgBIAEoCzIVLm9zY2FsLmNvbW1vbi52MS5VVUlEUgR1dWlkEjEK",
-            "BXRpdGxlGAIgASgLMhsub3NjYWwuY29tbW9uLnYxLk1hcmt1cExpbmVSBXRp",
-            "dGxlEkIKC2Rlc2NyaXB0aW9uGAMgASgLMiAub3NjYWwuY29tbW9uLnYxLk1h",
-            "cmt1cE11bHRpbGluZVILZGVzY3JpcHRpb24SLwoFcHJvcHMYBCADKAsyGS5v",
-            "c2NhbC5jb21tb24udjEuUHJvcGVydHlSBXByb3BzEisKBWxpbmtzGAUgAygL",
-            "MhUub3NjYWwuY29tbW9uLnYxLkxpbmtSBWxpbmtzEhgKB21ldGhvZHMYBiAD",
-            "KAlSB21ldGhvZHMSFAoFdHlwZXMYByADKAlSBXR5cGVzEj0KB29yaWdpbnMY",
-            "CCADKAsyIy5vc2NhbC5hc3Nlc3NtZW50X3Jlc3VsdHMudjEuT3JpZ2luUgdv",
-            "cmlnaW5zEkkKCHN1YmplY3RzGAkgAygLMi0ub3NjYWwuYXNzZXNzbWVudF9y",
-            "ZXN1bHRzLnYxLlN1YmplY3RSZWZlcmVuY2VSCHN1YmplY3RzEloKEXJlbGV2",
-            "YW50X2V2aWRlbmNlGAogAygLMi0ub3NjYWwuYXNzZXNzbWVudF9yZXN1bHRz",
-            "LnYxLlJlbGV2YW50RXZpZGVuY2VSEHJlbGV2YW50RXZpZGVuY2USNwoJY29s",
-            "bGVjdGVkGAsgASgLMhkub3NjYWwuY29tbW9uLnYxLkRhdGVUaW1lUgljb2xs",
-            "ZWN0ZWQSMwoHZXhwaXJlcxgMIAEoCzIZLm9zY2FsLmNvbW1vbi52MS5EYXRl",
-            "VGltZVIHZXhwaXJlcxI6CgdyZW1hcmtzGA0gAygLMiAub3NjYWwuY29tbW9u",
-            "LnYxLk1hcmt1cE11bHRpbGluZVIHcmVtYXJrcyKZAgoQU3ViamVjdFJlZmVy",
-            "ZW5jZRI4CgxzdWJqZWN0X3V1aWQYASABKAsyFS5vc2NhbC5jb21tb24udjEu",
-            "VVVJRFILc3ViamVjdFV1aWQSMQoFdGl0bGUYAiABKAsyGy5vc2NhbC5jb21t",
-            "b24udjEuTWFya3VwTGluZVIFdGl0bGUSLwoFcHJvcHMYAyADKAsyGS5vc2Nh",
-            "bC5jb21tb24udjEuUHJvcGVydHlSBXByb3BzEisKBWxpbmtzGAQgAygLMhUu",
-            "b3NjYWwuY29tbW9uLnYxLkxpbmtSBWxpbmtzEjoKB3JlbWFya3MYBSADKAsy",
-            "IC5vc2NhbC5jb21tb24udjEuTWFya3VwTXVsdGlsaW5lUgdyZW1hcmtzIqMC",
-            "ChBSZWxldmFudEV2aWRlbmNlEjEKBGhyZWYYASABKAsyHS5vc2NhbC5jb21t",
-            "b24udjEuVVJJUmVmZXJlbmNlUgRocmVmEkIKC2Rlc2NyaXB0aW9uGAIgASgL",
-            "MiAub3NjYWwuY29tbW9uLnYxLk1hcmt1cE11bHRpbGluZVILZGVzY3JpcHRp",
-            "b24SLwoFcHJvcHMYAyADKAsyGS5vc2NhbC5jb21tb24udjEuUHJvcGVydHlS",
-            "BXByb3BzEisKBWxpbmtzGAQgAygLMhUub3NjYWwuY29tbW9uLnYxLkxpbmtS",
-            "BWxpbmtzEjoKB3JlbWFya3MYBSADKAsyIC5vc2NhbC5jb21tb24udjEuTWFy",
-            "a3VwTXVsdGlsaW5lUgdyZW1hcmtzQlJaUGdpdGh1Yi5jb20vbWNob3JmYS94",
-            "b3NjYWwvcHJvdG8vb3NjYWwvYXNzZXNzbWVudF9yZXN1bHRzL3YxO2Fzc2Vz",
-            "c21lbnRfcmVzdWx0c3YxYgZwcm90bzM="));
+            "dGlsaW5lUgdyZW1hcmtzQlJaUGdpdGh1Yi5jb20vbWNob3JmYS94b3NjYWwv",
+            "cHJvdG8vb3NjYWwvYXNzZXNzbWVudF9yZXN1bHRzL3YxO2Fzc2Vzc21lbnRf",
+            "cmVzdWx0c3YxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Oscal.Common.V1.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -194,7 +220,10 @@ namespace Oscal.AssessmentResults.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Oscal.AssessmentResults.V1.User), global::Oscal.AssessmentResults.V1.User.Parser, new[]{ "Uuid", "Title", "ShortName", "Description", "Props", "Links", "Remarks" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Oscal.AssessmentResults.V1.AssessmentPlatform), global::Oscal.AssessmentResults.V1.AssessmentPlatform.Parser, new[]{ "Uuid", "Description", "UsesComponents", "Remarks" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Oscal.AssessmentResults.V1.UsesComponent), global::Oscal.AssessmentResults.V1.UsesComponent.Parser, new[]{ "ComponentUuid", "Props", "Links", "ResponsibleParties", "Remarks" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Oscal.AssessmentResults.V1.Result), global::Oscal.AssessmentResults.V1.Result.Parser, new[]{ "Uuid", "Title", "Description", "Start", "End", "Findings", "Observations", "Props", "Links", "Remarks" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Oscal.AssessmentResults.V1.Result), global::Oscal.AssessmentResults.V1.Result.Parser, new[]{ "Uuid", "Title", "Description", "Start", "End", "Findings", "Observations", "Props", "Links", "Remarks", "ReviewedControls" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Oscal.AssessmentResults.V1.ReviewedControls), global::Oscal.AssessmentResults.V1.ReviewedControls.Parser, new[]{ "ControlSelections", "Controls", "Props", "Links", "Remarks" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Oscal.AssessmentResults.V1.ControlSelection), global::Oscal.AssessmentResults.V1.ControlSelection.Parser, new[]{ "Description", "IncludeControls", "ExcludeControls", "Props", "Links", "Remarks" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Oscal.AssessmentResults.V1.SelectedControl), global::Oscal.AssessmentResults.V1.SelectedControl.Parser, new[]{ "ControlId", "StatementId", "Props", "Links", "Remarks" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Oscal.AssessmentResults.V1.Finding), global::Oscal.AssessmentResults.V1.Finding.Parser, new[]{ "Uuid", "Title", "Description", "Props", "Links", "Origins", "Target", "ImplementationStatementUuid", "RelatedObservations", "RelatedRisks", "Remarks" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Oscal.AssessmentResults.V1.FindingTarget), global::Oscal.AssessmentResults.V1.FindingTarget.Parser, new[]{ "Type", "TargetId", "Title", "Description", "Props", "Links", "Status", "ImplementationStatus", "Remarks" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Oscal.AssessmentResults.V1.ObjectiveStatus), global::Oscal.AssessmentResults.V1.ObjectiveStatus.Parser, new[]{ "State", "Reason", "Remarks" }, null, null, null, null),
@@ -205,7 +234,7 @@ namespace Oscal.AssessmentResults.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Oscal.AssessmentResults.V1.RelatedObservation), global::Oscal.AssessmentResults.V1.RelatedObservation.Parser, new[]{ "ObservationUuid", "Remarks" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Oscal.AssessmentResults.V1.AssociatedRisk), global::Oscal.AssessmentResults.V1.AssociatedRisk.Parser, new[]{ "RiskUuid", "Remarks" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Oscal.AssessmentResults.V1.Observation), global::Oscal.AssessmentResults.V1.Observation.Parser, new[]{ "Uuid", "Title", "Description", "Props", "Links", "Methods", "Types_", "Origins", "Subjects", "RelevantEvidence", "Collected", "Expires", "Remarks" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Oscal.AssessmentResults.V1.SubjectReference), global::Oscal.AssessmentResults.V1.SubjectReference.Parser, new[]{ "SubjectUuid", "Title", "Props", "Links", "Remarks" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Oscal.AssessmentResults.V1.SubjectReference), global::Oscal.AssessmentResults.V1.SubjectReference.Parser, new[]{ "SubjectUuid", "Type", "Title", "Props", "Links", "Remarks" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Oscal.AssessmentResults.V1.RelevantEvidence), global::Oscal.AssessmentResults.V1.RelevantEvidence.Parser, new[]{ "Href", "Description", "Props", "Links", "Remarks" }, null, null, null, null)
           }));
     }
@@ -3230,6 +3259,7 @@ namespace Oscal.AssessmentResults.V1 {
       props_ = other.props_.Clone();
       links_ = other.links_.Clone();
       remarks_ = other.remarks_.Clone();
+      reviewedControls_ = other.reviewedControls_ != null ? other.reviewedControls_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3354,6 +3384,21 @@ namespace Oscal.AssessmentResults.V1 {
       get { return remarks_; }
     }
 
+    /// <summary>Field number for the "reviewed_controls" field.</summary>
+    public const int ReviewedControlsFieldNumber = 11;
+    private global::Oscal.AssessmentResults.V1.ReviewedControls reviewedControls_;
+    /// <summary>
+    /// reviewed_controls is required by the OSCAL 1.1.2 schema for each result.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Oscal.AssessmentResults.V1.ReviewedControls ReviewedControls {
+      get { return reviewedControls_; }
+      set {
+        reviewedControls_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -3379,6 +3424,7 @@ namespace Oscal.AssessmentResults.V1 {
       if(!props_.Equals(other.props_)) return false;
       if(!links_.Equals(other.links_)) return false;
       if(!remarks_.Equals(other.remarks_)) return false;
+      if (!object.Equals(ReviewedControls, other.ReviewedControls)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3396,6 +3442,7 @@ namespace Oscal.AssessmentResults.V1 {
       hash ^= props_.GetHashCode();
       hash ^= links_.GetHashCode();
       hash ^= remarks_.GetHashCode();
+      if (reviewedControls_ != null) hash ^= ReviewedControls.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3439,6 +3486,10 @@ namespace Oscal.AssessmentResults.V1 {
       props_.WriteTo(output, _repeated_props_codec);
       links_.WriteTo(output, _repeated_links_codec);
       remarks_.WriteTo(output, _repeated_remarks_codec);
+      if (reviewedControls_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(ReviewedControls);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3474,6 +3525,10 @@ namespace Oscal.AssessmentResults.V1 {
       props_.WriteTo(ref output, _repeated_props_codec);
       links_.WriteTo(ref output, _repeated_links_codec);
       remarks_.WriteTo(ref output, _repeated_remarks_codec);
+      if (reviewedControls_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(ReviewedControls);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3504,6 +3559,9 @@ namespace Oscal.AssessmentResults.V1 {
       size += props_.CalculateSize(_repeated_props_codec);
       size += links_.CalculateSize(_repeated_links_codec);
       size += remarks_.CalculateSize(_repeated_remarks_codec);
+      if (reviewedControls_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ReviewedControls);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -3551,6 +3609,12 @@ namespace Oscal.AssessmentResults.V1 {
       props_.Add(other.props_);
       links_.Add(other.links_);
       remarks_.Add(other.remarks_);
+      if (other.reviewedControls_ != null) {
+        if (reviewedControls_ == null) {
+          ReviewedControls = new global::Oscal.AssessmentResults.V1.ReviewedControls();
+        }
+        ReviewedControls.MergeFrom(other.ReviewedControls);
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -3623,6 +3687,13 @@ namespace Oscal.AssessmentResults.V1 {
           }
           case 82: {
             remarks_.AddEntriesFrom(input, _repeated_remarks_codec);
+            break;
+          }
+          case 90: {
+            if (reviewedControls_ == null) {
+              ReviewedControls = new global::Oscal.AssessmentResults.V1.ReviewedControls();
+            }
+            input.ReadMessage(ReviewedControls);
             break;
           }
         }
@@ -3699,6 +3770,981 @@ namespace Oscal.AssessmentResults.V1 {
             remarks_.AddEntriesFrom(ref input, _repeated_remarks_codec);
             break;
           }
+          case 90: {
+            if (reviewedControls_ == null) {
+              ReviewedControls = new global::Oscal.AssessmentResults.V1.ReviewedControls();
+            }
+            input.ReadMessage(ReviewedControls);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// ReviewedControls represents the reviewed controls for a result
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ReviewedControls : pb::IMessage<ReviewedControls>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ReviewedControls> _parser = new pb::MessageParser<ReviewedControls>(() => new ReviewedControls());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ReviewedControls> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Oscal.AssessmentResults.V1.AssessmentResultsReflection.Descriptor.MessageTypes[10]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ReviewedControls() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ReviewedControls(ReviewedControls other) : this() {
+      controlSelections_ = other.controlSelections_.Clone();
+      controls_ = other.controls_.Clone();
+      props_ = other.props_.Clone();
+      links_ = other.links_.Clone();
+      remarks_ = other.remarks_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ReviewedControls Clone() {
+      return new ReviewedControls(this);
+    }
+
+    /// <summary>Field number for the "control_selections" field.</summary>
+    public const int ControlSelectionsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Oscal.AssessmentResults.V1.ControlSelection> _repeated_controlSelections_codec
+        = pb::FieldCodec.ForMessage(10, global::Oscal.AssessmentResults.V1.ControlSelection.Parser);
+    private readonly pbc::RepeatedField<global::Oscal.AssessmentResults.V1.ControlSelection> controlSelections_ = new pbc::RepeatedField<global::Oscal.AssessmentResults.V1.ControlSelection>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Oscal.AssessmentResults.V1.ControlSelection> ControlSelections {
+      get { return controlSelections_; }
+    }
+
+    /// <summary>Field number for the "controls" field.</summary>
+    public const int ControlsFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Oscal.AssessmentResults.V1.SelectedControl> _repeated_controls_codec
+        = pb::FieldCodec.ForMessage(18, global::Oscal.AssessmentResults.V1.SelectedControl.Parser);
+    private readonly pbc::RepeatedField<global::Oscal.AssessmentResults.V1.SelectedControl> controls_ = new pbc::RepeatedField<global::Oscal.AssessmentResults.V1.SelectedControl>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Oscal.AssessmentResults.V1.SelectedControl> Controls {
+      get { return controls_; }
+    }
+
+    /// <summary>Field number for the "props" field.</summary>
+    public const int PropsFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::Oscal.Common.V1.Property> _repeated_props_codec
+        = pb::FieldCodec.ForMessage(26, global::Oscal.Common.V1.Property.Parser);
+    private readonly pbc::RepeatedField<global::Oscal.Common.V1.Property> props_ = new pbc::RepeatedField<global::Oscal.Common.V1.Property>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Oscal.Common.V1.Property> Props {
+      get { return props_; }
+    }
+
+    /// <summary>Field number for the "links" field.</summary>
+    public const int LinksFieldNumber = 4;
+    private static readonly pb::FieldCodec<global::Oscal.Common.V1.Link> _repeated_links_codec
+        = pb::FieldCodec.ForMessage(34, global::Oscal.Common.V1.Link.Parser);
+    private readonly pbc::RepeatedField<global::Oscal.Common.V1.Link> links_ = new pbc::RepeatedField<global::Oscal.Common.V1.Link>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Oscal.Common.V1.Link> Links {
+      get { return links_; }
+    }
+
+    /// <summary>Field number for the "remarks" field.</summary>
+    public const int RemarksFieldNumber = 5;
+    private static readonly pb::FieldCodec<global::Oscal.Common.V1.MarkupMultiline> _repeated_remarks_codec
+        = pb::FieldCodec.ForMessage(42, global::Oscal.Common.V1.MarkupMultiline.Parser);
+    private readonly pbc::RepeatedField<global::Oscal.Common.V1.MarkupMultiline> remarks_ = new pbc::RepeatedField<global::Oscal.Common.V1.MarkupMultiline>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Oscal.Common.V1.MarkupMultiline> Remarks {
+      get { return remarks_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ReviewedControls);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ReviewedControls other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!controlSelections_.Equals(other.controlSelections_)) return false;
+      if(!controls_.Equals(other.controls_)) return false;
+      if(!props_.Equals(other.props_)) return false;
+      if(!links_.Equals(other.links_)) return false;
+      if(!remarks_.Equals(other.remarks_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= controlSelections_.GetHashCode();
+      hash ^= controls_.GetHashCode();
+      hash ^= props_.GetHashCode();
+      hash ^= links_.GetHashCode();
+      hash ^= remarks_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      controlSelections_.WriteTo(output, _repeated_controlSelections_codec);
+      controls_.WriteTo(output, _repeated_controls_codec);
+      props_.WriteTo(output, _repeated_props_codec);
+      links_.WriteTo(output, _repeated_links_codec);
+      remarks_.WriteTo(output, _repeated_remarks_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      controlSelections_.WriteTo(ref output, _repeated_controlSelections_codec);
+      controls_.WriteTo(ref output, _repeated_controls_codec);
+      props_.WriteTo(ref output, _repeated_props_codec);
+      links_.WriteTo(ref output, _repeated_links_codec);
+      remarks_.WriteTo(ref output, _repeated_remarks_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += controlSelections_.CalculateSize(_repeated_controlSelections_codec);
+      size += controls_.CalculateSize(_repeated_controls_codec);
+      size += props_.CalculateSize(_repeated_props_codec);
+      size += links_.CalculateSize(_repeated_links_codec);
+      size += remarks_.CalculateSize(_repeated_remarks_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ReviewedControls other) {
+      if (other == null) {
+        return;
+      }
+      controlSelections_.Add(other.controlSelections_);
+      controls_.Add(other.controls_);
+      props_.Add(other.props_);
+      links_.Add(other.links_);
+      remarks_.Add(other.remarks_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            controlSelections_.AddEntriesFrom(input, _repeated_controlSelections_codec);
+            break;
+          }
+          case 18: {
+            controls_.AddEntriesFrom(input, _repeated_controls_codec);
+            break;
+          }
+          case 26: {
+            props_.AddEntriesFrom(input, _repeated_props_codec);
+            break;
+          }
+          case 34: {
+            links_.AddEntriesFrom(input, _repeated_links_codec);
+            break;
+          }
+          case 42: {
+            remarks_.AddEntriesFrom(input, _repeated_remarks_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            controlSelections_.AddEntriesFrom(ref input, _repeated_controlSelections_codec);
+            break;
+          }
+          case 18: {
+            controls_.AddEntriesFrom(ref input, _repeated_controls_codec);
+            break;
+          }
+          case 26: {
+            props_.AddEntriesFrom(ref input, _repeated_props_codec);
+            break;
+          }
+          case 34: {
+            links_.AddEntriesFrom(ref input, _repeated_links_codec);
+            break;
+          }
+          case 42: {
+            remarks_.AddEntriesFrom(ref input, _repeated_remarks_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// ControlSelection represents a selection of controls for review
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ControlSelection : pb::IMessage<ControlSelection>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ControlSelection> _parser = new pb::MessageParser<ControlSelection>(() => new ControlSelection());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ControlSelection> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Oscal.AssessmentResults.V1.AssessmentResultsReflection.Descriptor.MessageTypes[11]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ControlSelection() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ControlSelection(ControlSelection other) : this() {
+      description_ = other.description_ != null ? other.description_.Clone() : null;
+      includeControls_ = other.includeControls_.Clone();
+      excludeControls_ = other.excludeControls_.Clone();
+      props_ = other.props_.Clone();
+      links_ = other.links_.Clone();
+      remarks_ = other.remarks_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ControlSelection Clone() {
+      return new ControlSelection(this);
+    }
+
+    /// <summary>Field number for the "description" field.</summary>
+    public const int DescriptionFieldNumber = 1;
+    private global::Oscal.Common.V1.MarkupMultiline description_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Oscal.Common.V1.MarkupMultiline Description {
+      get { return description_; }
+      set {
+        description_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "include_controls" field.</summary>
+    public const int IncludeControlsFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Oscal.AssessmentResults.V1.SelectedControl> _repeated_includeControls_codec
+        = pb::FieldCodec.ForMessage(18, global::Oscal.AssessmentResults.V1.SelectedControl.Parser);
+    private readonly pbc::RepeatedField<global::Oscal.AssessmentResults.V1.SelectedControl> includeControls_ = new pbc::RepeatedField<global::Oscal.AssessmentResults.V1.SelectedControl>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Oscal.AssessmentResults.V1.SelectedControl> IncludeControls {
+      get { return includeControls_; }
+    }
+
+    /// <summary>Field number for the "exclude_controls" field.</summary>
+    public const int ExcludeControlsFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::Oscal.AssessmentResults.V1.SelectedControl> _repeated_excludeControls_codec
+        = pb::FieldCodec.ForMessage(26, global::Oscal.AssessmentResults.V1.SelectedControl.Parser);
+    private readonly pbc::RepeatedField<global::Oscal.AssessmentResults.V1.SelectedControl> excludeControls_ = new pbc::RepeatedField<global::Oscal.AssessmentResults.V1.SelectedControl>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Oscal.AssessmentResults.V1.SelectedControl> ExcludeControls {
+      get { return excludeControls_; }
+    }
+
+    /// <summary>Field number for the "props" field.</summary>
+    public const int PropsFieldNumber = 4;
+    private static readonly pb::FieldCodec<global::Oscal.Common.V1.Property> _repeated_props_codec
+        = pb::FieldCodec.ForMessage(34, global::Oscal.Common.V1.Property.Parser);
+    private readonly pbc::RepeatedField<global::Oscal.Common.V1.Property> props_ = new pbc::RepeatedField<global::Oscal.Common.V1.Property>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Oscal.Common.V1.Property> Props {
+      get { return props_; }
+    }
+
+    /// <summary>Field number for the "links" field.</summary>
+    public const int LinksFieldNumber = 5;
+    private static readonly pb::FieldCodec<global::Oscal.Common.V1.Link> _repeated_links_codec
+        = pb::FieldCodec.ForMessage(42, global::Oscal.Common.V1.Link.Parser);
+    private readonly pbc::RepeatedField<global::Oscal.Common.V1.Link> links_ = new pbc::RepeatedField<global::Oscal.Common.V1.Link>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Oscal.Common.V1.Link> Links {
+      get { return links_; }
+    }
+
+    /// <summary>Field number for the "remarks" field.</summary>
+    public const int RemarksFieldNumber = 6;
+    private static readonly pb::FieldCodec<global::Oscal.Common.V1.MarkupMultiline> _repeated_remarks_codec
+        = pb::FieldCodec.ForMessage(50, global::Oscal.Common.V1.MarkupMultiline.Parser);
+    private readonly pbc::RepeatedField<global::Oscal.Common.V1.MarkupMultiline> remarks_ = new pbc::RepeatedField<global::Oscal.Common.V1.MarkupMultiline>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Oscal.Common.V1.MarkupMultiline> Remarks {
+      get { return remarks_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ControlSelection);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ControlSelection other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Description, other.Description)) return false;
+      if(!includeControls_.Equals(other.includeControls_)) return false;
+      if(!excludeControls_.Equals(other.excludeControls_)) return false;
+      if(!props_.Equals(other.props_)) return false;
+      if(!links_.Equals(other.links_)) return false;
+      if(!remarks_.Equals(other.remarks_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (description_ != null) hash ^= Description.GetHashCode();
+      hash ^= includeControls_.GetHashCode();
+      hash ^= excludeControls_.GetHashCode();
+      hash ^= props_.GetHashCode();
+      hash ^= links_.GetHashCode();
+      hash ^= remarks_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (description_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Description);
+      }
+      includeControls_.WriteTo(output, _repeated_includeControls_codec);
+      excludeControls_.WriteTo(output, _repeated_excludeControls_codec);
+      props_.WriteTo(output, _repeated_props_codec);
+      links_.WriteTo(output, _repeated_links_codec);
+      remarks_.WriteTo(output, _repeated_remarks_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (description_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Description);
+      }
+      includeControls_.WriteTo(ref output, _repeated_includeControls_codec);
+      excludeControls_.WriteTo(ref output, _repeated_excludeControls_codec);
+      props_.WriteTo(ref output, _repeated_props_codec);
+      links_.WriteTo(ref output, _repeated_links_codec);
+      remarks_.WriteTo(ref output, _repeated_remarks_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (description_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Description);
+      }
+      size += includeControls_.CalculateSize(_repeated_includeControls_codec);
+      size += excludeControls_.CalculateSize(_repeated_excludeControls_codec);
+      size += props_.CalculateSize(_repeated_props_codec);
+      size += links_.CalculateSize(_repeated_links_codec);
+      size += remarks_.CalculateSize(_repeated_remarks_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ControlSelection other) {
+      if (other == null) {
+        return;
+      }
+      if (other.description_ != null) {
+        if (description_ == null) {
+          Description = new global::Oscal.Common.V1.MarkupMultiline();
+        }
+        Description.MergeFrom(other.Description);
+      }
+      includeControls_.Add(other.includeControls_);
+      excludeControls_.Add(other.excludeControls_);
+      props_.Add(other.props_);
+      links_.Add(other.links_);
+      remarks_.Add(other.remarks_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (description_ == null) {
+              Description = new global::Oscal.Common.V1.MarkupMultiline();
+            }
+            input.ReadMessage(Description);
+            break;
+          }
+          case 18: {
+            includeControls_.AddEntriesFrom(input, _repeated_includeControls_codec);
+            break;
+          }
+          case 26: {
+            excludeControls_.AddEntriesFrom(input, _repeated_excludeControls_codec);
+            break;
+          }
+          case 34: {
+            props_.AddEntriesFrom(input, _repeated_props_codec);
+            break;
+          }
+          case 42: {
+            links_.AddEntriesFrom(input, _repeated_links_codec);
+            break;
+          }
+          case 50: {
+            remarks_.AddEntriesFrom(input, _repeated_remarks_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (description_ == null) {
+              Description = new global::Oscal.Common.V1.MarkupMultiline();
+            }
+            input.ReadMessage(Description);
+            break;
+          }
+          case 18: {
+            includeControls_.AddEntriesFrom(ref input, _repeated_includeControls_codec);
+            break;
+          }
+          case 26: {
+            excludeControls_.AddEntriesFrom(ref input, _repeated_excludeControls_codec);
+            break;
+          }
+          case 34: {
+            props_.AddEntriesFrom(ref input, _repeated_props_codec);
+            break;
+          }
+          case 42: {
+            links_.AddEntriesFrom(ref input, _repeated_links_codec);
+            break;
+          }
+          case 50: {
+            remarks_.AddEntriesFrom(ref input, _repeated_remarks_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// SelectedControl represents a selected control
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class SelectedControl : pb::IMessage<SelectedControl>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SelectedControl> _parser = new pb::MessageParser<SelectedControl>(() => new SelectedControl());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SelectedControl> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Oscal.AssessmentResults.V1.AssessmentResultsReflection.Descriptor.MessageTypes[12]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SelectedControl() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SelectedControl(SelectedControl other) : this() {
+      controlId_ = other.controlId_ != null ? other.controlId_.Clone() : null;
+      statementId_ = other.statementId_ != null ? other.statementId_.Clone() : null;
+      props_ = other.props_.Clone();
+      links_ = other.links_.Clone();
+      remarks_ = other.remarks_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SelectedControl Clone() {
+      return new SelectedControl(this);
+    }
+
+    /// <summary>Field number for the "control_id" field.</summary>
+    public const int ControlIdFieldNumber = 1;
+    private global::Oscal.Common.V1.Token controlId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Oscal.Common.V1.Token ControlId {
+      get { return controlId_; }
+      set {
+        controlId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "statement_id" field.</summary>
+    public const int StatementIdFieldNumber = 2;
+    private global::Oscal.Common.V1.Token statementId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Oscal.Common.V1.Token StatementId {
+      get { return statementId_; }
+      set {
+        statementId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "props" field.</summary>
+    public const int PropsFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::Oscal.Common.V1.Property> _repeated_props_codec
+        = pb::FieldCodec.ForMessage(26, global::Oscal.Common.V1.Property.Parser);
+    private readonly pbc::RepeatedField<global::Oscal.Common.V1.Property> props_ = new pbc::RepeatedField<global::Oscal.Common.V1.Property>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Oscal.Common.V1.Property> Props {
+      get { return props_; }
+    }
+
+    /// <summary>Field number for the "links" field.</summary>
+    public const int LinksFieldNumber = 4;
+    private static readonly pb::FieldCodec<global::Oscal.Common.V1.Link> _repeated_links_codec
+        = pb::FieldCodec.ForMessage(34, global::Oscal.Common.V1.Link.Parser);
+    private readonly pbc::RepeatedField<global::Oscal.Common.V1.Link> links_ = new pbc::RepeatedField<global::Oscal.Common.V1.Link>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Oscal.Common.V1.Link> Links {
+      get { return links_; }
+    }
+
+    /// <summary>Field number for the "remarks" field.</summary>
+    public const int RemarksFieldNumber = 5;
+    private static readonly pb::FieldCodec<global::Oscal.Common.V1.MarkupMultiline> _repeated_remarks_codec
+        = pb::FieldCodec.ForMessage(42, global::Oscal.Common.V1.MarkupMultiline.Parser);
+    private readonly pbc::RepeatedField<global::Oscal.Common.V1.MarkupMultiline> remarks_ = new pbc::RepeatedField<global::Oscal.Common.V1.MarkupMultiline>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Oscal.Common.V1.MarkupMultiline> Remarks {
+      get { return remarks_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SelectedControl);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SelectedControl other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(ControlId, other.ControlId)) return false;
+      if (!object.Equals(StatementId, other.StatementId)) return false;
+      if(!props_.Equals(other.props_)) return false;
+      if(!links_.Equals(other.links_)) return false;
+      if(!remarks_.Equals(other.remarks_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (controlId_ != null) hash ^= ControlId.GetHashCode();
+      if (statementId_ != null) hash ^= StatementId.GetHashCode();
+      hash ^= props_.GetHashCode();
+      hash ^= links_.GetHashCode();
+      hash ^= remarks_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (controlId_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(ControlId);
+      }
+      if (statementId_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(StatementId);
+      }
+      props_.WriteTo(output, _repeated_props_codec);
+      links_.WriteTo(output, _repeated_links_codec);
+      remarks_.WriteTo(output, _repeated_remarks_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (controlId_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(ControlId);
+      }
+      if (statementId_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(StatementId);
+      }
+      props_.WriteTo(ref output, _repeated_props_codec);
+      links_.WriteTo(ref output, _repeated_links_codec);
+      remarks_.WriteTo(ref output, _repeated_remarks_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (controlId_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ControlId);
+      }
+      if (statementId_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(StatementId);
+      }
+      size += props_.CalculateSize(_repeated_props_codec);
+      size += links_.CalculateSize(_repeated_links_codec);
+      size += remarks_.CalculateSize(_repeated_remarks_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SelectedControl other) {
+      if (other == null) {
+        return;
+      }
+      if (other.controlId_ != null) {
+        if (controlId_ == null) {
+          ControlId = new global::Oscal.Common.V1.Token();
+        }
+        ControlId.MergeFrom(other.ControlId);
+      }
+      if (other.statementId_ != null) {
+        if (statementId_ == null) {
+          StatementId = new global::Oscal.Common.V1.Token();
+        }
+        StatementId.MergeFrom(other.StatementId);
+      }
+      props_.Add(other.props_);
+      links_.Add(other.links_);
+      remarks_.Add(other.remarks_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (controlId_ == null) {
+              ControlId = new global::Oscal.Common.V1.Token();
+            }
+            input.ReadMessage(ControlId);
+            break;
+          }
+          case 18: {
+            if (statementId_ == null) {
+              StatementId = new global::Oscal.Common.V1.Token();
+            }
+            input.ReadMessage(StatementId);
+            break;
+          }
+          case 26: {
+            props_.AddEntriesFrom(input, _repeated_props_codec);
+            break;
+          }
+          case 34: {
+            links_.AddEntriesFrom(input, _repeated_links_codec);
+            break;
+          }
+          case 42: {
+            remarks_.AddEntriesFrom(input, _repeated_remarks_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (controlId_ == null) {
+              ControlId = new global::Oscal.Common.V1.Token();
+            }
+            input.ReadMessage(ControlId);
+            break;
+          }
+          case 18: {
+            if (statementId_ == null) {
+              StatementId = new global::Oscal.Common.V1.Token();
+            }
+            input.ReadMessage(StatementId);
+            break;
+          }
+          case 26: {
+            props_.AddEntriesFrom(ref input, _repeated_props_codec);
+            break;
+          }
+          case 34: {
+            links_.AddEntriesFrom(ref input, _repeated_links_codec);
+            break;
+          }
+          case 42: {
+            remarks_.AddEntriesFrom(ref input, _repeated_remarks_codec);
+            break;
+          }
         }
       }
     }
@@ -3724,7 +4770,7 @@ namespace Oscal.AssessmentResults.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Oscal.AssessmentResults.V1.AssessmentResultsReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Oscal.AssessmentResults.V1.AssessmentResultsReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4274,7 +5320,7 @@ namespace Oscal.AssessmentResults.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Oscal.AssessmentResults.V1.AssessmentResultsReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Oscal.AssessmentResults.V1.AssessmentResultsReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4783,7 +5829,7 @@ namespace Oscal.AssessmentResults.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Oscal.AssessmentResults.V1.AssessmentResultsReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Oscal.AssessmentResults.V1.AssessmentResultsReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5047,7 +6093,7 @@ namespace Oscal.AssessmentResults.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Oscal.AssessmentResults.V1.AssessmentResultsReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Oscal.AssessmentResults.V1.AssessmentResultsReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5294,7 +6340,7 @@ namespace Oscal.AssessmentResults.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Oscal.AssessmentResults.V1.AssessmentResultsReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Oscal.AssessmentResults.V1.AssessmentResultsReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5510,7 +6556,7 @@ namespace Oscal.AssessmentResults.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Oscal.AssessmentResults.V1.AssessmentResultsReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Oscal.AssessmentResults.V1.AssessmentResultsReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5844,7 +6890,7 @@ namespace Oscal.AssessmentResults.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Oscal.AssessmentResults.V1.AssessmentResultsReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Oscal.AssessmentResults.V1.AssessmentResultsReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6178,7 +7224,7 @@ namespace Oscal.AssessmentResults.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Oscal.AssessmentResults.V1.AssessmentResultsReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Oscal.AssessmentResults.V1.AssessmentResultsReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6414,7 +7460,7 @@ namespace Oscal.AssessmentResults.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Oscal.AssessmentResults.V1.AssessmentResultsReflection.Descriptor.MessageTypes[18]; }
+      get { return global::Oscal.AssessmentResults.V1.AssessmentResultsReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6650,7 +7696,7 @@ namespace Oscal.AssessmentResults.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Oscal.AssessmentResults.V1.AssessmentResultsReflection.Descriptor.MessageTypes[19]; }
+      get { return global::Oscal.AssessmentResults.V1.AssessmentResultsReflection.Descriptor.MessageTypes[22]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7252,7 +8298,7 @@ namespace Oscal.AssessmentResults.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Oscal.AssessmentResults.V1.AssessmentResultsReflection.Descriptor.MessageTypes[20]; }
+      get { return global::Oscal.AssessmentResults.V1.AssessmentResultsReflection.Descriptor.MessageTypes[23]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7273,6 +8319,7 @@ namespace Oscal.AssessmentResults.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SubjectReference(SubjectReference other) : this() {
       subjectUuid_ = other.subjectUuid_ != null ? other.subjectUuid_.Clone() : null;
+      type_ = other.type_;
       title_ = other.title_ != null ? other.title_.Clone() : null;
       props_ = other.props_.Clone();
       links_ = other.links_.Clone();
@@ -7298,8 +8345,20 @@ namespace Oscal.AssessmentResults.V1 {
       }
     }
 
+    /// <summary>Field number for the "type" field.</summary>
+    public const int TypeFieldNumber = 2;
+    private string type_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Type {
+      get { return type_; }
+      set {
+        type_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     /// <summary>Field number for the "title" field.</summary>
-    public const int TitleFieldNumber = 2;
+    public const int TitleFieldNumber = 3;
     private global::Oscal.Common.V1.MarkupLine title_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7311,9 +8370,9 @@ namespace Oscal.AssessmentResults.V1 {
     }
 
     /// <summary>Field number for the "props" field.</summary>
-    public const int PropsFieldNumber = 3;
+    public const int PropsFieldNumber = 4;
     private static readonly pb::FieldCodec<global::Oscal.Common.V1.Property> _repeated_props_codec
-        = pb::FieldCodec.ForMessage(26, global::Oscal.Common.V1.Property.Parser);
+        = pb::FieldCodec.ForMessage(34, global::Oscal.Common.V1.Property.Parser);
     private readonly pbc::RepeatedField<global::Oscal.Common.V1.Property> props_ = new pbc::RepeatedField<global::Oscal.Common.V1.Property>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7322,9 +8381,9 @@ namespace Oscal.AssessmentResults.V1 {
     }
 
     /// <summary>Field number for the "links" field.</summary>
-    public const int LinksFieldNumber = 4;
+    public const int LinksFieldNumber = 5;
     private static readonly pb::FieldCodec<global::Oscal.Common.V1.Link> _repeated_links_codec
-        = pb::FieldCodec.ForMessage(34, global::Oscal.Common.V1.Link.Parser);
+        = pb::FieldCodec.ForMessage(42, global::Oscal.Common.V1.Link.Parser);
     private readonly pbc::RepeatedField<global::Oscal.Common.V1.Link> links_ = new pbc::RepeatedField<global::Oscal.Common.V1.Link>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7333,9 +8392,9 @@ namespace Oscal.AssessmentResults.V1 {
     }
 
     /// <summary>Field number for the "remarks" field.</summary>
-    public const int RemarksFieldNumber = 5;
+    public const int RemarksFieldNumber = 6;
     private static readonly pb::FieldCodec<global::Oscal.Common.V1.MarkupMultiline> _repeated_remarks_codec
-        = pb::FieldCodec.ForMessage(42, global::Oscal.Common.V1.MarkupMultiline.Parser);
+        = pb::FieldCodec.ForMessage(50, global::Oscal.Common.V1.MarkupMultiline.Parser);
     private readonly pbc::RepeatedField<global::Oscal.Common.V1.MarkupMultiline> remarks_ = new pbc::RepeatedField<global::Oscal.Common.V1.MarkupMultiline>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7359,6 +8418,7 @@ namespace Oscal.AssessmentResults.V1 {
         return true;
       }
       if (!object.Equals(SubjectUuid, other.SubjectUuid)) return false;
+      if (Type != other.Type) return false;
       if (!object.Equals(Title, other.Title)) return false;
       if(!props_.Equals(other.props_)) return false;
       if(!links_.Equals(other.links_)) return false;
@@ -7371,6 +8431,7 @@ namespace Oscal.AssessmentResults.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (subjectUuid_ != null) hash ^= SubjectUuid.GetHashCode();
+      if (Type.Length != 0) hash ^= Type.GetHashCode();
       if (title_ != null) hash ^= Title.GetHashCode();
       hash ^= props_.GetHashCode();
       hash ^= links_.GetHashCode();
@@ -7397,8 +8458,12 @@ namespace Oscal.AssessmentResults.V1 {
         output.WriteRawTag(10);
         output.WriteMessage(SubjectUuid);
       }
-      if (title_ != null) {
+      if (Type.Length != 0) {
         output.WriteRawTag(18);
+        output.WriteString(Type);
+      }
+      if (title_ != null) {
+        output.WriteRawTag(26);
         output.WriteMessage(Title);
       }
       props_.WriteTo(output, _repeated_props_codec);
@@ -7418,8 +8483,12 @@ namespace Oscal.AssessmentResults.V1 {
         output.WriteRawTag(10);
         output.WriteMessage(SubjectUuid);
       }
-      if (title_ != null) {
+      if (Type.Length != 0) {
         output.WriteRawTag(18);
+        output.WriteString(Type);
+      }
+      if (title_ != null) {
+        output.WriteRawTag(26);
         output.WriteMessage(Title);
       }
       props_.WriteTo(ref output, _repeated_props_codec);
@@ -7437,6 +8506,9 @@ namespace Oscal.AssessmentResults.V1 {
       int size = 0;
       if (subjectUuid_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(SubjectUuid);
+      }
+      if (Type.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Type);
       }
       if (title_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Title);
@@ -7461,6 +8533,9 @@ namespace Oscal.AssessmentResults.V1 {
           SubjectUuid = new global::Oscal.Common.V1.UUID();
         }
         SubjectUuid.MergeFrom(other.SubjectUuid);
+      }
+      if (other.Type.Length != 0) {
+        Type = other.Type;
       }
       if (other.title_ != null) {
         if (title_ == null) {
@@ -7498,21 +8573,25 @@ namespace Oscal.AssessmentResults.V1 {
             break;
           }
           case 18: {
+            Type = input.ReadString();
+            break;
+          }
+          case 26: {
             if (title_ == null) {
               Title = new global::Oscal.Common.V1.MarkupLine();
             }
             input.ReadMessage(Title);
             break;
           }
-          case 26: {
+          case 34: {
             props_.AddEntriesFrom(input, _repeated_props_codec);
             break;
           }
-          case 34: {
+          case 42: {
             links_.AddEntriesFrom(input, _repeated_links_codec);
             break;
           }
-          case 42: {
+          case 50: {
             remarks_.AddEntriesFrom(input, _repeated_remarks_codec);
             break;
           }
@@ -7543,21 +8622,25 @@ namespace Oscal.AssessmentResults.V1 {
             break;
           }
           case 18: {
+            Type = input.ReadString();
+            break;
+          }
+          case 26: {
             if (title_ == null) {
               Title = new global::Oscal.Common.V1.MarkupLine();
             }
             input.ReadMessage(Title);
             break;
           }
-          case 26: {
+          case 34: {
             props_.AddEntriesFrom(ref input, _repeated_props_codec);
             break;
           }
-          case 34: {
+          case 42: {
             links_.AddEntriesFrom(ref input, _repeated_links_codec);
             break;
           }
-          case 42: {
+          case 50: {
             remarks_.AddEntriesFrom(ref input, _repeated_remarks_codec);
             break;
           }
@@ -7586,7 +8669,7 @@ namespace Oscal.AssessmentResults.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Oscal.AssessmentResults.V1.AssessmentResultsReflection.Descriptor.MessageTypes[21]; }
+      get { return global::Oscal.AssessmentResults.V1.AssessmentResultsReflection.Descriptor.MessageTypes[24]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

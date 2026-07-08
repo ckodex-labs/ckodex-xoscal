@@ -102,6 +102,21 @@
       "title": "URI",
       "type": "object"
     },
+    "oscal.common.v1.URIReference.jsonschema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "URIReference represents a URI reference (may be relative)",
+      "properties": {
+        "value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "value"
+      ],
+      "title": "URI Reference",
+      "type": "object"
+    },
     "oscal.common.v1.UUID.jsonschema.strict.json": {
       "$schema": "https://json-schema.org/draft/2020-12/schema",
       "additionalProperties": false,
@@ -170,14 +185,8 @@
       "additionalProperties": false,
       "description": "ControlImplementation represents control implementation by a component",
       "properties": {
-        "controlId": {
-          "type": "string"
-        },
         "description": {
-          "items": {
-            "$ref": "#/$defs/oscal.common.v1.MarkupLine.jsonschema.strict.json"
-          },
-          "type": "array"
+          "type": "string"
         },
         "implementedRequirements": {
           "items": {
@@ -208,10 +217,16 @@
             "$ref": "#/$defs/oscal.component_definition.v1.SetParameter.jsonschema.strict.json"
           },
           "type": "array"
+        },
+        "source": {
+          "$ref": "#/$defs/oscal.common.v1.URIReference.jsonschema.strict.json"
+        },
+        "uuid": {
+          "$ref": "#/$defs/oscal.common.v1.UUID.jsonschema.strict.json"
         }
       },
       "required": [
-        "controlId"
+        "description"
       ],
       "title": "Control Implementation",
       "type": "object"
@@ -225,10 +240,7 @@
           "type": "string"
         },
         "description": {
-          "items": {
-            "$ref": "#/$defs/oscal.common.v1.MarkupLine.jsonschema.strict.json"
-          },
-          "type": "array"
+          "type": "string"
         },
         "links": {
           "items": {
@@ -253,10 +265,14 @@
             "$ref": "#/$defs/oscal.component_definition.v1.Statement.jsonschema.strict.json"
           },
           "type": "array"
+        },
+        "uuid": {
+          "$ref": "#/$defs/oscal.common.v1.UUID.jsonschema.strict.json"
         }
       },
       "required": [
-        "controlId"
+        "controlId",
+        "description"
       ],
       "title": "Implemented Requirement",
       "type": "object"

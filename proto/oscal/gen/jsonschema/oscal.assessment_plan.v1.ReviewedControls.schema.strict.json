@@ -5,11 +5,36 @@
   "description": "ReviewedControls represents reviewed controls",
   "properties": {
     "control_selection": {
+      "description": "Deprecated: use control_selections instead. Kept for backward compatibility.",
       "type": "string"
+    },
+    "control_selections": {
+      "items": {
+        "$ref": "oscal.assessment_plan.v1.ControlSelection.schema.strict.json"
+      },
+      "type": "array"
     },
     "controls": {
       "items": {
         "$ref": "oscal.assessment_plan.v1.ControlSelection.schema.strict.json"
+      },
+      "type": "array"
+    },
+    "links": {
+      "items": {
+        "$ref": "oscal.common.v1.Link.schema.strict.json"
+      },
+      "type": "array"
+    },
+    "props": {
+      "items": {
+        "$ref": "oscal.common.v1.Property.schema.strict.json"
+      },
+      "type": "array"
+    },
+    "remarks": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupMultiline.schema.strict.json"
       },
       "type": "array"
     }

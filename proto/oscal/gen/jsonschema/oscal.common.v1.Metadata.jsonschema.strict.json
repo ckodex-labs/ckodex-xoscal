@@ -16,6 +16,12 @@
       },
       "type": "array"
     },
+    "locations": {
+      "items": {
+        "$ref": "oscal.common.v1.Location.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
     "oscalVersion": {
       "type": "string"
     },

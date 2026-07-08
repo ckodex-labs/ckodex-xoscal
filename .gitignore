@@ -15,6 +15,12 @@ coverage.out
 # --- Go ---
 vendor/
 go.work
+
+# CLI binaries built by go build (not go install)
+/xoscal-gateway
+/xoscal-generate
+/xoscal-validate-schema
+/xoscal-export-frameworks
 go.work.sum
 # Go test cache
 *.testcache
@@ -49,6 +55,7 @@ tmp/
 temp/
 *.tmp
 data/cache/
+data/oscal/schemas/
 .cache/
 *.cache
 

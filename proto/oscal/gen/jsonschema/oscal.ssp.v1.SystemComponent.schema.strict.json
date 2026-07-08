@@ -25,6 +25,9 @@
       },
       "type": "array"
     },
+    "status": {
+      "$ref": "oscal.ssp.v1.Status.schema.strict.json"
+    },
     "title": {
       "type": "string"
     },

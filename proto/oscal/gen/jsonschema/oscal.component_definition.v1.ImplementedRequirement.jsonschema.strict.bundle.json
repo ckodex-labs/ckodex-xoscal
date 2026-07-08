@@ -102,6 +102,21 @@
       "title": "URI",
       "type": "object"
     },
+    "oscal.common.v1.UUID.jsonschema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "UUID represents a universally unique identifier",
+      "properties": {
+        "value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "value"
+      ],
+      "title": "UUID",
+      "type": "object"
+    },
     "oscal.component_definition.v1.ImplementedRequirement.jsonschema.strict.json": {
       "$schema": "https://json-schema.org/draft/2020-12/schema",
       "additionalProperties": false,
@@ -111,10 +126,7 @@
           "type": "string"
         },
         "description": {
-          "items": {
-            "$ref": "#/$defs/oscal.common.v1.MarkupLine.jsonschema.strict.json"
-          },
-          "type": "array"
+          "type": "string"
         },
         "links": {
           "items": {
@@ -139,10 +151,14 @@
             "$ref": "#/$defs/oscal.component_definition.v1.Statement.jsonschema.strict.json"
           },
           "type": "array"
+        },
+        "uuid": {
+          "$ref": "#/$defs/oscal.common.v1.UUID.jsonschema.strict.json"
         }
       },
       "required": [
-        "controlId"
+        "controlId",
+        "description"
       ],
       "title": "Implemented Requirement",
       "type": "object"

@@ -127,6 +127,63 @@
       "title": "Link",
       "type": "object"
     },
+    "oscal.common.v1.Location.schema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Location represents a physical or virtual location",
+      "properties": {
+        "address": {
+          "$ref": "#/$defs/oscal.common.v1.Address.schema.strict.json"
+        },
+        "email_addresses": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.EmailAddress.schema.strict.json"
+          },
+          "type": "array"
+        },
+        "links": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Link.schema.strict.json"
+          },
+          "type": "array"
+        },
+        "props": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Property.schema.strict.json"
+          },
+          "type": "array"
+        },
+        "remarks": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.schema.strict.json"
+          },
+          "type": "array"
+        },
+        "telephone_numbers": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.TelephoneNumber.schema.strict.json"
+          },
+          "type": "array"
+        },
+        "title": {
+          "type": "string"
+        },
+        "urls": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.URI.schema.strict.json"
+          },
+          "type": "array"
+        },
+        "uuid": {
+          "$ref": "#/$defs/oscal.common.v1.UUID.schema.strict.json"
+        }
+      },
+      "required": [
+        "title"
+      ],
+      "title": "Location",
+      "type": "object"
+    },
     "oscal.common.v1.MarkupLine.schema.strict.json": {
       "$schema": "https://json-schema.org/draft/2020-12/schema",
       "additionalProperties": false,
@@ -171,6 +228,12 @@
         "links": {
           "items": {
             "$ref": "#/$defs/oscal.common.v1.Link.schema.strict.json"
+          },
+          "type": "array"
+        },
+        "locations": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Location.schema.strict.json"
           },
           "type": "array"
         },
@@ -236,9 +299,21 @@
           },
           "type": "array"
         },
+        "external_ids": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.PartyExternalId.schema.strict.json"
+          },
+          "type": "array"
+        },
         "links": {
           "items": {
             "$ref": "#/$defs/oscal.common.v1.Link.schema.strict.json"
+          },
+          "type": "array"
+        },
+        "location_uuids": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.UUID.schema.strict.json"
           },
           "type": "array"
         },
@@ -287,6 +362,24 @@
         "name"
       ],
       "title": "Party",
+      "type": "object"
+    },
+    "oscal.common.v1.PartyExternalId.schema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "PartyExternalId represents an external identifier for a party",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "scheme": {
+          "$ref": "#/$defs/oscal.common.v1.URI.schema.strict.json"
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "title": "Party External Id",
       "type": "object"
     },
     "oscal.common.v1.Property.schema.strict.json": {

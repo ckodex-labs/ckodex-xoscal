@@ -15,10 +15,8 @@
       "type": "string"
     },
     "description": {
-      "items": {
-        "$ref": "oscal.common.v1.MarkupLine.schema.json"
-      },
-      "type": "array"
+      "default": "",
+      "type": "string"
     },
     "links": {
       "items": {
@@ -43,6 +41,9 @@
         "$ref": "oscal.component_definition.v1.Statement.schema.json"
       },
       "type": "array"
+    },
+    "uuid": {
+      "$ref": "oscal.common.v1.UUID.schema.json"
     }
   },
   "title": "Implemented Requirement",

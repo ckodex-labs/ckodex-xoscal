@@ -54030,14 +54030,14 @@ public final class OscalServiceOuterClass extends com.google.protobuf.GeneratedF
   static {
     java.lang.String[] descriptorData = {
       "\n\037services/v1/oscal_service.proto\022\021oscal" +
-      ".services.v1\032\026common/v1/common.proto\032\030ca" +
-      "talog/v1/catalog.proto\032\030profile/v1/profi" +
-      "le.proto\032\'component_definition/v1/compon" +
-      "ent.proto\032\020ssp/v1/ssp.proto\032(assessment_" +
-      "plan/v1/assessment_plan.proto\032.assessmen" +
-      "t_results/v1/assessment_results.proto\032\022p" +
-      "oam/v1/poam.proto\032\030mapping/v1/mapping.pr" +
-      "oto\032\034google/api/annotations.proto\">\n\021Get" +
+      ".services.v1\032(assessment_plan/v1/assessm" +
+      "ent_plan.proto\032.assessment_results/v1/as" +
+      "sessment_results.proto\032\030catalog/v1/catal" +
+      "og.proto\032\026common/v1/common.proto\032\'compon" +
+      "ent_definition/v1/component.proto\032\034googl" +
+      "e/api/annotations.proto\032\030mapping/v1/mapp" +
+      "ing.proto\032\022poam/v1/poam.proto\032\030profile/v" +
+      "1/profile.proto\032\020ssp/v1/ssp.proto\">\n\021Get" +
       "CatalogRequest\022)\n\004uuid\030\001 \001(\0132\025.oscal.com" +
       "mon.v1.UUIDR\004uuid\"I\n\022GetCatalogResponse\022" +
       "3\n\007catalog\030\001 \001(\0132\031.oscal.catalog.v1.Cata" +
@@ -54391,16 +54391,16 @@ public final class OscalServiceOuterClass extends com.google.protobuf.GeneratedF
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          oscal.common.v1.Common.getDescriptor(),
-          oscal.catalog.v1.CatalogOuterClass.getDescriptor(),
-          oscal.profile.v1.ProfileOuterClass.getDescriptor(),
-          oscal.component_definition.v1.Component.getDescriptor(),
-          oscal.ssp.v1.Ssp.getDescriptor(),
           oscal.assessment_plan.v1.AssessmentPlanOuterClass.getDescriptor(),
           oscal.assessment_results.v1.AssessmentResultsOuterClass.getDescriptor(),
-          oscal.poam.v1.Poam.getDescriptor(),
-          oscal.mapping.v1.Mapping.getDescriptor(),
+          oscal.catalog.v1.CatalogOuterClass.getDescriptor(),
+          oscal.common.v1.Common.getDescriptor(),
+          oscal.component_definition.v1.Component.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
+          oscal.mapping.v1.Mapping.getDescriptor(),
+          oscal.poam.v1.Poam.getDescriptor(),
+          oscal.profile.v1.ProfileOuterClass.getDescriptor(),
+          oscal.ssp.v1.Ssp.getDescriptor(),
         });
     internal_static_oscal_services_v1_GetCatalogRequest_descriptor =
       getDescriptor().getMessageType(0);
@@ -54901,16 +54901,16 @@ public final class OscalServiceOuterClass extends com.google.protobuf.GeneratedF
         internal_static_oscal_services_v1_SearchResponse_descriptor,
         new java.lang.String[] { "Results", "NextPageToken", });
     descriptor.resolveAllFeaturesImmutable();
-    oscal.common.v1.Common.getDescriptor();
-    oscal.catalog.v1.CatalogOuterClass.getDescriptor();
-    oscal.profile.v1.ProfileOuterClass.getDescriptor();
-    oscal.component_definition.v1.Component.getDescriptor();
-    oscal.ssp.v1.Ssp.getDescriptor();
     oscal.assessment_plan.v1.AssessmentPlanOuterClass.getDescriptor();
     oscal.assessment_results.v1.AssessmentResultsOuterClass.getDescriptor();
-    oscal.poam.v1.Poam.getDescriptor();
-    oscal.mapping.v1.Mapping.getDescriptor();
+    oscal.catalog.v1.CatalogOuterClass.getDescriptor();
+    oscal.common.v1.Common.getDescriptor();
+    oscal.component_definition.v1.Component.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
+    oscal.mapping.v1.Mapping.getDescriptor();
+    oscal.poam.v1.Poam.getDescriptor();
+    oscal.profile.v1.ProfileOuterClass.getDescriptor();
+    oscal.ssp.v1.Ssp.getDescriptor();
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);

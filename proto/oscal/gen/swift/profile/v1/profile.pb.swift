@@ -257,6 +257,9 @@ nonisolated struct Oscal_Profile_V1_Modify: Sendable {
 
   var setParameters: [Oscal_Profile_V1_SetParameters] = []
 
+  /// Deprecated: use alters instead. Kept for backward compatibility.
+  ///
+  /// NOTE: This field was marked as deprecated in the .proto file.
   var alterControls: [Oscal_Profile_V1_AlterControls] = []
 
   var addControls: [Oscal_Profile_V1_AddControls] = []
@@ -266,6 +269,8 @@ nonisolated struct Oscal_Profile_V1_Modify: Sendable {
   var links: [Oscal_Common_V1_Link] = []
 
   var remarks: [Oscal_Common_V1_MarkupMultiline] = []
+
+  var alters: [Oscal_Profile_V1_Alter] = []
 
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
@@ -364,6 +369,9 @@ nonisolated struct Oscal_Profile_V1_Add: Sendable {
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
+  /// Deprecated: not in OSCAL schema. Kept for backward compatibility.
+  ///
+  /// NOTE: This field was marked as deprecated in the .proto file.
   var itemName: String = String()
 
   var position: String = String()
@@ -376,9 +384,9 @@ nonisolated struct Oscal_Profile_V1_Add: Sendable {
 
   var params: [Oscal_Catalog_V1_Parameter] = []
 
-  var withIds: [String] = []
+  var byID: String = String()
 
-  var withClass: [String] = []
+  var title: String = String()
 
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
@@ -822,7 +830,7 @@ nonisolated extension Oscal_Profile_V1_Combine: SwiftProtobuf.Message, SwiftProt
 
 nonisolated extension Oscal_Profile_V1_Modify: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   static let protoMessageName: String = _protobuf_package + ".Modify"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{3}set_parameters\0\u{3}alter_controls\0\u{3}add_controls\0\u{1}props\0\u{1}links\0\u{1}remarks\0")
+  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{3}set_parameters\0\u{3}alter_controls\0\u{3}add_controls\0\u{1}props\0\u{1}links\0\u{1}remarks\0\u{1}alters\0")
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
@@ -836,6 +844,7 @@ nonisolated extension Oscal_Profile_V1_Modify: SwiftProtobuf.Message, SwiftProto
       case 4: try { try decoder.decodeRepeatedMessageField(value: &self.props) }()
       case 5: try { try decoder.decodeRepeatedMessageField(value: &self.links) }()
       case 6: try { try decoder.decodeRepeatedMessageField(value: &self.remarks) }()
+      case 7: try { try decoder.decodeRepeatedMessageField(value: &self.alters) }()
       default: break
       }
     }
@@ -860,6 +869,9 @@ nonisolated extension Oscal_Profile_V1_Modify: SwiftProtobuf.Message, SwiftProto
     if !self.remarks.isEmpty {
       try visitor.visitRepeatedMessageField(value: self.remarks, fieldNumber: 6)
     }
+    if !self.alters.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.alters, fieldNumber: 7)
+    }
     try unknownFields.traverse(visitor: &visitor)
   }
 
@@ -870,6 +882,7 @@ nonisolated extension Oscal_Profile_V1_Modify: SwiftProtobuf.Message, SwiftProto
     if lhs.props != rhs.props {return false}
     if lhs.links != rhs.links {return false}
     if lhs.remarks != rhs.remarks {return false}
+    if lhs.alters != rhs.alters {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -1082,7 +1095,7 @@ nonisolated extension Oscal_Profile_V1_Remove: SwiftProtobuf.Message, SwiftProto
 
 nonisolated extension Oscal_Profile_V1_Add: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   static let protoMessageName: String = _protobuf_package + ".Add"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{3}item_name\0\u{1}position\0\u{1}parts\0\u{1}props\0\u{1}links\0\u{1}params\0\u{3}with_ids\0\u{3}with_class\0")
+  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{3}item_name\0\u{1}position\0\u{1}parts\0\u{1}props\0\u{1}links\0\u{1}params\0\u{3}by_id\0\u{1}title\0")
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
@@ -1096,8 +1109,8 @@ nonisolated extension Oscal_Profile_V1_Add: SwiftProtobuf.Message, SwiftProtobuf
       case 4: try { try decoder.decodeRepeatedMessageField(value: &self.props) }()
       case 5: try { try decoder.decodeRepeatedMessageField(value: &self.links) }()
       case 6: try { try decoder.decodeRepeatedMessageField(value: &self.params) }()
-      case 7: try { try decoder.decodeRepeatedStringField(value: &self.withIds) }()
-      case 8: try { try decoder.decodeRepeatedStringField(value: &self.withClass) }()
+      case 7: try { try decoder.decodeSingularStringField(value: &self.byID) }()
+      case 8: try { try decoder.decodeSingularStringField(value: &self.title) }()
       default: break
       }
     }
@@ -1122,11 +1135,11 @@ nonisolated extension Oscal_Profile_V1_Add: SwiftProtobuf.Message, SwiftProtobuf
     if !self.params.isEmpty {
       try visitor.visitRepeatedMessageField(value: self.params, fieldNumber: 6)
     }
-    if !self.withIds.isEmpty {
-      try visitor.visitRepeatedStringField(value: self.withIds, fieldNumber: 7)
+    if !self.byID.isEmpty {
+      try visitor.visitSingularStringField(value: self.byID, fieldNumber: 7)
     }
-    if !self.withClass.isEmpty {
-      try visitor.visitRepeatedStringField(value: self.withClass, fieldNumber: 8)
+    if !self.title.isEmpty {
+      try visitor.visitSingularStringField(value: self.title, fieldNumber: 8)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
@@ -1138,8 +1151,8 @@ nonisolated extension Oscal_Profile_V1_Add: SwiftProtobuf.Message, SwiftProtobuf
     if lhs.props != rhs.props {return false}
     if lhs.links != rhs.links {return false}
     if lhs.params != rhs.params {return false}
-    if lhs.withIds != rhs.withIds {return false}
-    if lhs.withClass != rhs.withClass {return false}
+    if lhs.byID != rhs.byID {return false}
+    if lhs.title != rhs.title {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

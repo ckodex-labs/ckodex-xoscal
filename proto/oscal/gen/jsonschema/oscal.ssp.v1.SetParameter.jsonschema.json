@@ -20,7 +20,15 @@
     },
     "value": {
       "default": "",
+      "description": "Deprecated: use values instead. Kept for backward compatibility.",
       "type": "string"
+    },
+    "values": {
+      "description": "values is the OSCAL schema-required array of parameter values.",
+      "items": {
+        "$ref": "oscal.common.v1.MarkupLine.jsonschema.json"
+      },
+      "type": "array"
     }
   },
   "title": "Set Parameter",

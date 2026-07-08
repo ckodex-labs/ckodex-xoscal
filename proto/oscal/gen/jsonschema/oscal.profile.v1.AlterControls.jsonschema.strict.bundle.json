@@ -7,12 +7,30 @@
       "properties": {
         "description": {
           "type": "string"
+        },
+        "tests": {
+          "items": {
+            "$ref": "#/$defs/oscal.catalog.v1.Test.jsonschema.strict.json"
+          },
+          "type": "array"
         }
       },
       "required": [
         "description"
       ],
       "title": "Constraint",
+      "type": "object"
+    },
+    "oscal.catalog.v1.Guideline.jsonschema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Guideline represents a parameter guideline",
+      "properties": {
+        "prose": {
+          "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.jsonschema.strict.json"
+        }
+      },
+      "title": "Guideline",
       "type": "object"
     },
     "oscal.catalog.v1.Parameter.jsonschema.strict.json": {
@@ -30,7 +48,14 @@
           "type": "array"
         },
         "guidance": {
-          "$ref": "#/$defs/oscal.common.v1.MarkupLine.jsonschema.strict.json"
+          "$ref": "#/$defs/oscal.common.v1.MarkupLine.jsonschema.strict.json",
+          "description": "Deprecated: use guidelines instead. Kept for backward compatibility."
+        },
+        "guidelines": {
+          "items": {
+            "$ref": "#/$defs/oscal.catalog.v1.Guideline.jsonschema.strict.json"
+          },
+          "type": "array"
         },
         "id": {
           "$ref": "#/$defs/oscal.common.v1.Token.jsonschema.strict.json"
@@ -150,6 +175,27 @@
         "howMany"
       ],
       "title": "Select",
+      "type": "object"
+    },
+    "oscal.catalog.v1.Test.jsonschema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Test represents a constraint test",
+      "properties": {
+        "expression": {
+          "type": "string"
+        },
+        "remarks": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.jsonschema.strict.json"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "expression"
+      ],
+      "title": "Test",
       "type": "object"
     },
     "oscal.common.v1.Link.jsonschema.strict.json": {
@@ -274,7 +320,11 @@
       "additionalProperties": false,
       "description": "Add represents addition of control content",
       "properties": {
+        "byId": {
+          "type": "string"
+        },
         "itemName": {
+          "description": "Deprecated: not in OSCAL schema. Kept for backward compatibility.",
           "type": "string"
         },
         "links": {
@@ -304,22 +354,15 @@
           },
           "type": "array"
         },
-        "withClass": {
-          "items": {
-            "type": "string"
-          },
-          "type": "array"
-        },
-        "withIds": {
-          "items": {
-            "type": "string"
-          },
-          "type": "array"
+        "title": {
+          "type": "string"
         }
       },
       "required": [
         "itemName",
-        "position"
+        "position",
+        "byId",
+        "title"
       ],
       "title": "Add",
       "type": "object"

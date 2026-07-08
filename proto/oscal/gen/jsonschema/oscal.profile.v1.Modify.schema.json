@@ -11,6 +11,7 @@
       "type": "array"
     },
     "^(alterControls)$": {
+      "description": "Deprecated: use alters instead. Kept for backward compatibility.",
       "items": {
         "$ref": "oscal.profile.v1.AlterControls.schema.json"
       },
@@ -31,8 +32,15 @@
       "type": "array"
     },
     "alter_controls": {
+      "description": "Deprecated: use alters instead. Kept for backward compatibility.",
       "items": {
         "$ref": "oscal.profile.v1.AlterControls.schema.json"
+      },
+      "type": "array"
+    },
+    "alters": {
+      "items": {
+        "$ref": "oscal.profile.v1.Alter.schema.json"
       },
       "type": "array"
     },

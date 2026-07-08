@@ -32349,6 +32349,21 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      */
     oscal.common.v1.Common.MarkupMultilineOrBuilder getRemarksOrBuilder(
         int index);
+
+    /**
+     * <code>.oscal.ssp.v1.Status status = 9 [json_name = "status"];</code>
+     * @return Whether the status field is set.
+     */
+    boolean hasStatus();
+    /**
+     * <code>.oscal.ssp.v1.Status status = 9 [json_name = "status"];</code>
+     * @return The status.
+     */
+    oscal.ssp.v1.Ssp.Status getStatus();
+    /**
+     * <code>.oscal.ssp.v1.Status status = 9 [json_name = "status"];</code>
+     */
+    oscal.ssp.v1.Ssp.StatusOrBuilder getStatusOrBuilder();
   }
   /**
    * <pre>
@@ -32669,6 +32684,32 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       return remarks_.get(index);
     }
 
+    public static final int STATUS_FIELD_NUMBER = 9;
+    private oscal.ssp.v1.Ssp.Status status_;
+    /**
+     * <code>.oscal.ssp.v1.Status status = 9 [json_name = "status"];</code>
+     * @return Whether the status field is set.
+     */
+    @java.lang.Override
+    public boolean hasStatus() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>.oscal.ssp.v1.Status status = 9 [json_name = "status"];</code>
+     * @return The status.
+     */
+    @java.lang.Override
+    public oscal.ssp.v1.Ssp.Status getStatus() {
+      return status_ == null ? oscal.ssp.v1.Ssp.Status.getDefaultInstance() : status_;
+    }
+    /**
+     * <code>.oscal.ssp.v1.Status status = 9 [json_name = "status"];</code>
+     */
+    @java.lang.Override
+    public oscal.ssp.v1.Ssp.StatusOrBuilder getStatusOrBuilder() {
+      return status_ == null ? oscal.ssp.v1.Ssp.Status.getDefaultInstance() : status_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -32703,6 +32744,9 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       }
       for (int i = 0; i < remarks_.size(); i++) {
         output.writeMessage(8, remarks_.get(i));
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeMessage(9, getStatus());
       }
       getUnknownFields().writeTo(output);
     }
@@ -32748,6 +32792,10 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
             }
             size += 1 * count;
           }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, getStatus());
+      }
       return size;
     }
     @java.lang.Override
@@ -32789,6 +32837,11 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
           .equals(other.getLinksList())) return false;
       if (!getRemarksList()
           .equals(other.getRemarksList())) return false;
+      if (hasStatus() != other.hasStatus()) return false;
+      if (hasStatus()) {
+        if (!getStatus()
+            .equals(other.getStatus())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -32821,6 +32874,10 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       if (getRemarksCount() > 0) {
         hash = (37 * hash) + REMARKS_FIELD_NUMBER;
         hash = (53 * hash) + getRemarksList().hashCode();
+      }
+      if (hasStatus()) {
+        hash = (37 * hash) + STATUS_FIELD_NUMBER;
+        hash = (53 * hash) + getStatus().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -32960,6 +33017,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
           internalGetPropsFieldBuilder();
           internalGetLinksFieldBuilder();
           internalGetRemarksFieldBuilder();
+          internalGetStatusFieldBuilder();
         }
       }
       @java.lang.Override
@@ -32995,6 +33053,11 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
           remarksBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000040);
+        status_ = null;
+        if (statusBuilder_ != null) {
+          statusBuilder_.dispose();
+          statusBuilder_ = null;
+        }
         return this;
       }
 
@@ -33074,6 +33137,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.status_ = statusBuilder_ == null
+              ? status_
+              : statusBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         result.bitField0_ |= to_bitField0_;
       }
@@ -33186,6 +33255,9 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
             }
           }
         }
+        if (other.hasStatus()) {
+          mergeStatus(other.getStatus());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -33273,6 +33345,13 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
                 }
                 break;
               } // case 66
+              case 74: {
+                input.readMessage(
+                    internalGetStatusFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 74
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -34345,6 +34424,127 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
           remarks_ = null;
         }
         return remarksBuilder_;
+      }
+
+      private oscal.ssp.v1.Ssp.Status status_;
+      private com.google.protobuf.SingleFieldBuilder<
+          oscal.ssp.v1.Ssp.Status, oscal.ssp.v1.Ssp.Status.Builder, oscal.ssp.v1.Ssp.StatusOrBuilder> statusBuilder_;
+      /**
+       * <code>.oscal.ssp.v1.Status status = 9 [json_name = "status"];</code>
+       * @return Whether the status field is set.
+       */
+      public boolean hasStatus() {
+        return ((bitField0_ & 0x00000080) != 0);
+      }
+      /**
+       * <code>.oscal.ssp.v1.Status status = 9 [json_name = "status"];</code>
+       * @return The status.
+       */
+      public oscal.ssp.v1.Ssp.Status getStatus() {
+        if (statusBuilder_ == null) {
+          return status_ == null ? oscal.ssp.v1.Ssp.Status.getDefaultInstance() : status_;
+        } else {
+          return statusBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.oscal.ssp.v1.Status status = 9 [json_name = "status"];</code>
+       */
+      public Builder setStatus(oscal.ssp.v1.Ssp.Status value) {
+        if (statusBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          status_ = value;
+        } else {
+          statusBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.ssp.v1.Status status = 9 [json_name = "status"];</code>
+       */
+      public Builder setStatus(
+          oscal.ssp.v1.Ssp.Status.Builder builderForValue) {
+        if (statusBuilder_ == null) {
+          status_ = builderForValue.build();
+        } else {
+          statusBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.ssp.v1.Status status = 9 [json_name = "status"];</code>
+       */
+      public Builder mergeStatus(oscal.ssp.v1.Ssp.Status value) {
+        if (statusBuilder_ == null) {
+          if (((bitField0_ & 0x00000080) != 0) &&
+            status_ != null &&
+            status_ != oscal.ssp.v1.Ssp.Status.getDefaultInstance()) {
+            getStatusBuilder().mergeFrom(value);
+          } else {
+            status_ = value;
+          }
+        } else {
+          statusBuilder_.mergeFrom(value);
+        }
+        if (status_ != null) {
+          bitField0_ |= 0x00000080;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>.oscal.ssp.v1.Status status = 9 [json_name = "status"];</code>
+       */
+      public Builder clearStatus() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        status_ = null;
+        if (statusBuilder_ != null) {
+          statusBuilder_.dispose();
+          statusBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.ssp.v1.Status status = 9 [json_name = "status"];</code>
+       */
+      public oscal.ssp.v1.Ssp.Status.Builder getStatusBuilder() {
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return internalGetStatusFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.oscal.ssp.v1.Status status = 9 [json_name = "status"];</code>
+       */
+      public oscal.ssp.v1.Ssp.StatusOrBuilder getStatusOrBuilder() {
+        if (statusBuilder_ != null) {
+          return statusBuilder_.getMessageOrBuilder();
+        } else {
+          return status_ == null ?
+              oscal.ssp.v1.Ssp.Status.getDefaultInstance() : status_;
+        }
+      }
+      /**
+       * <code>.oscal.ssp.v1.Status status = 9 [json_name = "status"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          oscal.ssp.v1.Ssp.Status, oscal.ssp.v1.Ssp.Status.Builder, oscal.ssp.v1.Ssp.StatusOrBuilder> 
+          internalGetStatusFieldBuilder() {
+        if (statusBuilder_ == null) {
+          statusBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              oscal.ssp.v1.Ssp.Status, oscal.ssp.v1.Ssp.Status.Builder, oscal.ssp.v1.Ssp.StatusOrBuilder>(
+                  getStatus(),
+                  getParentForChildren(),
+                  isClean());
+          status_ = null;
+        }
+        return statusBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:oscal.ssp.v1.SystemComponent)
@@ -37700,15 +37900,27 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     oscal.common.v1.Common.TokenOrBuilder getParamIdOrBuilder();
 
     /**
-     * <code>string value = 2 [json_name = "value"];</code>
+     * <pre>
+     * Deprecated: use values instead. Kept for backward compatibility.
+     * </pre>
+     *
+     * <code>string value = 2 [json_name = "value", deprecated = true];</code>
+     * @deprecated oscal.ssp.v1.SetParameter.value is deprecated.
+     *     See ssp/v1/ssp.proto;l=201
      * @return The value.
      */
-    java.lang.String getValue();
+    @java.lang.Deprecated java.lang.String getValue();
     /**
-     * <code>string value = 2 [json_name = "value"];</code>
+     * <pre>
+     * Deprecated: use values instead. Kept for backward compatibility.
+     * </pre>
+     *
+     * <code>string value = 2 [json_name = "value", deprecated = true];</code>
+     * @deprecated oscal.ssp.v1.SetParameter.value is deprecated.
+     *     See ssp/v1/ssp.proto;l=201
      * @return The bytes for value.
      */
-    com.google.protobuf.ByteString
+    @java.lang.Deprecated com.google.protobuf.ByteString
         getValueBytes();
 
     /**
@@ -37733,6 +37945,50 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 3 [json_name = "remarks"];</code>
      */
     oscal.common.v1.Common.MarkupMultilineOrBuilder getRemarksOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * values is the OSCAL schema-required array of parameter values.
+     * </pre>
+     *
+     * <code>repeated .oscal.common.v1.MarkupLine values = 4 [json_name = "values"];</code>
+     */
+    java.util.List<oscal.common.v1.Common.MarkupLine> 
+        getValuesList();
+    /**
+     * <pre>
+     * values is the OSCAL schema-required array of parameter values.
+     * </pre>
+     *
+     * <code>repeated .oscal.common.v1.MarkupLine values = 4 [json_name = "values"];</code>
+     */
+    oscal.common.v1.Common.MarkupLine getValues(int index);
+    /**
+     * <pre>
+     * values is the OSCAL schema-required array of parameter values.
+     * </pre>
+     *
+     * <code>repeated .oscal.common.v1.MarkupLine values = 4 [json_name = "values"];</code>
+     */
+    int getValuesCount();
+    /**
+     * <pre>
+     * values is the OSCAL schema-required array of parameter values.
+     * </pre>
+     *
+     * <code>repeated .oscal.common.v1.MarkupLine values = 4 [json_name = "values"];</code>
+     */
+    java.util.List<? extends oscal.common.v1.Common.MarkupLineOrBuilder> 
+        getValuesOrBuilderList();
+    /**
+     * <pre>
+     * values is the OSCAL schema-required array of parameter values.
+     * </pre>
+     *
+     * <code>repeated .oscal.common.v1.MarkupLine values = 4 [json_name = "values"];</code>
+     */
+    oscal.common.v1.Common.MarkupLineOrBuilder getValuesOrBuilder(
         int index);
   }
   /**
@@ -37763,6 +38019,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     private SetParameter() {
       value_ = "";
       remarks_ = java.util.Collections.emptyList();
+      values_ = java.util.Collections.emptyList();
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
@@ -37814,11 +38071,17 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     @SuppressWarnings("serial")
     private volatile java.lang.Object value_ = "";
     /**
-     * <code>string value = 2 [json_name = "value"];</code>
+     * <pre>
+     * Deprecated: use values instead. Kept for backward compatibility.
+     * </pre>
+     *
+     * <code>string value = 2 [json_name = "value", deprecated = true];</code>
+     * @deprecated oscal.ssp.v1.SetParameter.value is deprecated.
+     *     See ssp/v1/ssp.proto;l=201
      * @return The value.
      */
     @java.lang.Override
-    public java.lang.String getValue() {
+    @java.lang.Deprecated public java.lang.String getValue() {
       java.lang.Object ref = value_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
@@ -37831,11 +38094,17 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       }
     }
     /**
-     * <code>string value = 2 [json_name = "value"];</code>
+     * <pre>
+     * Deprecated: use values instead. Kept for backward compatibility.
+     * </pre>
+     *
+     * <code>string value = 2 [json_name = "value", deprecated = true];</code>
+     * @deprecated oscal.ssp.v1.SetParameter.value is deprecated.
+     *     See ssp/v1/ssp.proto;l=201
      * @return The bytes for value.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getValueBytes() {
       java.lang.Object ref = value_;
       if (ref instanceof java.lang.String) {
@@ -37890,6 +38159,67 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       return remarks_.get(index);
     }
 
+    public static final int VALUES_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private java.util.List<oscal.common.v1.Common.MarkupLine> values_;
+    /**
+     * <pre>
+     * values is the OSCAL schema-required array of parameter values.
+     * </pre>
+     *
+     * <code>repeated .oscal.common.v1.MarkupLine values = 4 [json_name = "values"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<oscal.common.v1.Common.MarkupLine> getValuesList() {
+      return values_;
+    }
+    /**
+     * <pre>
+     * values is the OSCAL schema-required array of parameter values.
+     * </pre>
+     *
+     * <code>repeated .oscal.common.v1.MarkupLine values = 4 [json_name = "values"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends oscal.common.v1.Common.MarkupLineOrBuilder> 
+        getValuesOrBuilderList() {
+      return values_;
+    }
+    /**
+     * <pre>
+     * values is the OSCAL schema-required array of parameter values.
+     * </pre>
+     *
+     * <code>repeated .oscal.common.v1.MarkupLine values = 4 [json_name = "values"];</code>
+     */
+    @java.lang.Override
+    public int getValuesCount() {
+      return values_.size();
+    }
+    /**
+     * <pre>
+     * values is the OSCAL schema-required array of parameter values.
+     * </pre>
+     *
+     * <code>repeated .oscal.common.v1.MarkupLine values = 4 [json_name = "values"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.MarkupLine getValues(int index) {
+      return values_.get(index);
+    }
+    /**
+     * <pre>
+     * values is the OSCAL schema-required array of parameter values.
+     * </pre>
+     *
+     * <code>repeated .oscal.common.v1.MarkupLine values = 4 [json_name = "values"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.MarkupLineOrBuilder getValuesOrBuilder(
+        int index) {
+      return values_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -37913,6 +38243,9 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       for (int i = 0; i < remarks_.size(); i++) {
         output.writeMessage(3, remarks_.get(i));
       }
+      for (int i = 0; i < values_.size(); i++) {
+        output.writeMessage(4, values_.get(i));
+      }
       getUnknownFields().writeTo(output);
     }
     private int computeSerializedSize_0() {
@@ -37930,6 +38263,15 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
             for (int i = 0; i < count; i++) {
               size += com.google.protobuf.CodedOutputStream
                 .computeMessageSizeNoTag(remarks_.get(i));
+            }
+            size += 1 * count;
+          }
+
+          {
+            final int count = values_.size();
+            for (int i = 0; i < count; i++) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeMessageSizeNoTag(values_.get(i));
             }
             size += 1 * count;
           }
@@ -37966,6 +38308,8 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
           .equals(other.getValue())) return false;
       if (!getRemarksList()
           .equals(other.getRemarksList())) return false;
+      if (!getValuesList()
+          .equals(other.getValuesList())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -37986,6 +38330,10 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       if (getRemarksCount() > 0) {
         hash = (37 * hash) + REMARKS_FIELD_NUMBER;
         hash = (53 * hash) + getRemarksList().hashCode();
+      }
+      if (getValuesCount() > 0) {
+        hash = (37 * hash) + VALUES_FIELD_NUMBER;
+        hash = (53 * hash) + getValuesList().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -38123,6 +38471,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
                 .alwaysUseFieldBuilders) {
           internalGetParamIdFieldBuilder();
           internalGetRemarksFieldBuilder();
+          internalGetValuesFieldBuilder();
         }
       }
       @java.lang.Override
@@ -38142,6 +38491,13 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
           remarksBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000004);
+        if (valuesBuilder_ == null) {
+          values_ = java.util.Collections.emptyList();
+        } else {
+          values_ = null;
+          valuesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
         return this;
       }
 
@@ -38183,6 +38539,15 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
           result.remarks_ = remarks_;
         } else {
           result.remarks_ = remarksBuilder_.build();
+        }
+        if (valuesBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            values_ = java.util.Collections.unmodifiableList(values_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.values_ = values_;
+        } else {
+          result.values_ = valuesBuilder_.build();
         }
       }
 
@@ -38247,6 +38612,32 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
             }
           }
         }
+        if (valuesBuilder_ == null) {
+          if (!other.values_.isEmpty()) {
+            if (values_.isEmpty()) {
+              values_ = other.values_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureValuesIsMutable();
+              values_.addAll(other.values_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.values_.isEmpty()) {
+            if (valuesBuilder_.isEmpty()) {
+              valuesBuilder_.dispose();
+              valuesBuilder_ = null;
+              values_ = other.values_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              valuesBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   internalGetValuesFieldBuilder() : null;
+            } else {
+              valuesBuilder_.addAllMessages(other.values_);
+            }
+          }
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -38298,6 +38689,19 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
                 }
                 break;
               } // case 26
+              case 34: {
+                oscal.common.v1.Common.MarkupLine m =
+                    input.readMessage(
+                        oscal.common.v1.Common.MarkupLine.parser(),
+                        extensionRegistry);
+                if (valuesBuilder_ == null) {
+                  ensureValuesIsMutable();
+                  values_.add(m);
+                } else {
+                  valuesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 34
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -38438,10 +38842,16 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
 
       private java.lang.Object value_ = "";
       /**
-       * <code>string value = 2 [json_name = "value"];</code>
+       * <pre>
+       * Deprecated: use values instead. Kept for backward compatibility.
+       * </pre>
+       *
+       * <code>string value = 2 [json_name = "value", deprecated = true];</code>
+       * @deprecated oscal.ssp.v1.SetParameter.value is deprecated.
+       *     See ssp/v1/ssp.proto;l=201
        * @return The value.
        */
-      public java.lang.String getValue() {
+      @java.lang.Deprecated public java.lang.String getValue() {
         java.lang.Object ref = value_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
@@ -38454,10 +38864,16 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>string value = 2 [json_name = "value"];</code>
+       * <pre>
+       * Deprecated: use values instead. Kept for backward compatibility.
+       * </pre>
+       *
+       * <code>string value = 2 [json_name = "value", deprecated = true];</code>
+       * @deprecated oscal.ssp.v1.SetParameter.value is deprecated.
+       *     See ssp/v1/ssp.proto;l=201
        * @return The bytes for value.
        */
-      public com.google.protobuf.ByteString
+      @java.lang.Deprecated public com.google.protobuf.ByteString
           getValueBytes() {
         java.lang.Object ref = value_;
         if (ref instanceof String) {
@@ -38471,11 +38887,17 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>string value = 2 [json_name = "value"];</code>
+       * <pre>
+       * Deprecated: use values instead. Kept for backward compatibility.
+       * </pre>
+       *
+       * <code>string value = 2 [json_name = "value", deprecated = true];</code>
+       * @deprecated oscal.ssp.v1.SetParameter.value is deprecated.
+       *     See ssp/v1/ssp.proto;l=201
        * @param value The value to set.
        * @return This builder for chaining.
        */
-      public Builder setValue(
+      @java.lang.Deprecated public Builder setValue(
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         value_ = value;
@@ -38484,21 +38906,33 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>string value = 2 [json_name = "value"];</code>
+       * <pre>
+       * Deprecated: use values instead. Kept for backward compatibility.
+       * </pre>
+       *
+       * <code>string value = 2 [json_name = "value", deprecated = true];</code>
+       * @deprecated oscal.ssp.v1.SetParameter.value is deprecated.
+       *     See ssp/v1/ssp.proto;l=201
        * @return This builder for chaining.
        */
-      public Builder clearValue() {
+      @java.lang.Deprecated public Builder clearValue() {
         value_ = getDefaultInstance().getValue();
         bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
       /**
-       * <code>string value = 2 [json_name = "value"];</code>
+       * <pre>
+       * Deprecated: use values instead. Kept for backward compatibility.
+       * </pre>
+       *
+       * <code>string value = 2 [json_name = "value", deprecated = true];</code>
+       * @deprecated oscal.ssp.v1.SetParameter.value is deprecated.
+       *     See ssp/v1/ssp.proto;l=201
        * @param value The bytes for value to set.
        * @return This builder for chaining.
        */
-      public Builder setValueBytes(
+      @java.lang.Deprecated public Builder setValueBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
@@ -38746,6 +39180,318 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
           remarks_ = null;
         }
         return remarksBuilder_;
+      }
+
+      private java.util.List<oscal.common.v1.Common.MarkupLine> values_ =
+        java.util.Collections.emptyList();
+      private void ensureValuesIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          values_ = new java.util.ArrayList<oscal.common.v1.Common.MarkupLine>(values_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.common.v1.Common.MarkupLine, oscal.common.v1.Common.MarkupLine.Builder, oscal.common.v1.Common.MarkupLineOrBuilder> valuesBuilder_;
+
+      /**
+       * <pre>
+       * values is the OSCAL schema-required array of parameter values.
+       * </pre>
+       *
+       * <code>repeated .oscal.common.v1.MarkupLine values = 4 [json_name = "values"];</code>
+       */
+      public java.util.List<oscal.common.v1.Common.MarkupLine> getValuesList() {
+        if (valuesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(values_);
+        } else {
+          return valuesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * values is the OSCAL schema-required array of parameter values.
+       * </pre>
+       *
+       * <code>repeated .oscal.common.v1.MarkupLine values = 4 [json_name = "values"];</code>
+       */
+      public int getValuesCount() {
+        if (valuesBuilder_ == null) {
+          return values_.size();
+        } else {
+          return valuesBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * values is the OSCAL schema-required array of parameter values.
+       * </pre>
+       *
+       * <code>repeated .oscal.common.v1.MarkupLine values = 4 [json_name = "values"];</code>
+       */
+      public oscal.common.v1.Common.MarkupLine getValues(int index) {
+        if (valuesBuilder_ == null) {
+          return values_.get(index);
+        } else {
+          return valuesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * values is the OSCAL schema-required array of parameter values.
+       * </pre>
+       *
+       * <code>repeated .oscal.common.v1.MarkupLine values = 4 [json_name = "values"];</code>
+       */
+      public Builder setValues(
+          int index, oscal.common.v1.Common.MarkupLine value) {
+        if (valuesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureValuesIsMutable();
+          values_.set(index, value);
+          onChanged();
+        } else {
+          valuesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * values is the OSCAL schema-required array of parameter values.
+       * </pre>
+       *
+       * <code>repeated .oscal.common.v1.MarkupLine values = 4 [json_name = "values"];</code>
+       */
+      public Builder setValues(
+          int index, oscal.common.v1.Common.MarkupLine.Builder builderForValue) {
+        if (valuesBuilder_ == null) {
+          ensureValuesIsMutable();
+          values_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          valuesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * values is the OSCAL schema-required array of parameter values.
+       * </pre>
+       *
+       * <code>repeated .oscal.common.v1.MarkupLine values = 4 [json_name = "values"];</code>
+       */
+      public Builder addValues(oscal.common.v1.Common.MarkupLine value) {
+        if (valuesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureValuesIsMutable();
+          values_.add(value);
+          onChanged();
+        } else {
+          valuesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * values is the OSCAL schema-required array of parameter values.
+       * </pre>
+       *
+       * <code>repeated .oscal.common.v1.MarkupLine values = 4 [json_name = "values"];</code>
+       */
+      public Builder addValues(
+          int index, oscal.common.v1.Common.MarkupLine value) {
+        if (valuesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureValuesIsMutable();
+          values_.add(index, value);
+          onChanged();
+        } else {
+          valuesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * values is the OSCAL schema-required array of parameter values.
+       * </pre>
+       *
+       * <code>repeated .oscal.common.v1.MarkupLine values = 4 [json_name = "values"];</code>
+       */
+      public Builder addValues(
+          oscal.common.v1.Common.MarkupLine.Builder builderForValue) {
+        if (valuesBuilder_ == null) {
+          ensureValuesIsMutable();
+          values_.add(builderForValue.build());
+          onChanged();
+        } else {
+          valuesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * values is the OSCAL schema-required array of parameter values.
+       * </pre>
+       *
+       * <code>repeated .oscal.common.v1.MarkupLine values = 4 [json_name = "values"];</code>
+       */
+      public Builder addValues(
+          int index, oscal.common.v1.Common.MarkupLine.Builder builderForValue) {
+        if (valuesBuilder_ == null) {
+          ensureValuesIsMutable();
+          values_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          valuesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * values is the OSCAL schema-required array of parameter values.
+       * </pre>
+       *
+       * <code>repeated .oscal.common.v1.MarkupLine values = 4 [json_name = "values"];</code>
+       */
+      public Builder addAllValues(
+          java.lang.Iterable<? extends oscal.common.v1.Common.MarkupLine> values) {
+        if (valuesBuilder_ == null) {
+          ensureValuesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, values_);
+          onChanged();
+        } else {
+          valuesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * values is the OSCAL schema-required array of parameter values.
+       * </pre>
+       *
+       * <code>repeated .oscal.common.v1.MarkupLine values = 4 [json_name = "values"];</code>
+       */
+      public Builder clearValues() {
+        if (valuesBuilder_ == null) {
+          values_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          valuesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * values is the OSCAL schema-required array of parameter values.
+       * </pre>
+       *
+       * <code>repeated .oscal.common.v1.MarkupLine values = 4 [json_name = "values"];</code>
+       */
+      public Builder removeValues(int index) {
+        if (valuesBuilder_ == null) {
+          ensureValuesIsMutable();
+          values_.remove(index);
+          onChanged();
+        } else {
+          valuesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * values is the OSCAL schema-required array of parameter values.
+       * </pre>
+       *
+       * <code>repeated .oscal.common.v1.MarkupLine values = 4 [json_name = "values"];</code>
+       */
+      public oscal.common.v1.Common.MarkupLine.Builder getValuesBuilder(
+          int index) {
+        return internalGetValuesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * values is the OSCAL schema-required array of parameter values.
+       * </pre>
+       *
+       * <code>repeated .oscal.common.v1.MarkupLine values = 4 [json_name = "values"];</code>
+       */
+      public oscal.common.v1.Common.MarkupLineOrBuilder getValuesOrBuilder(
+          int index) {
+        if (valuesBuilder_ == null) {
+          return values_.get(index);  } else {
+          return valuesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * values is the OSCAL schema-required array of parameter values.
+       * </pre>
+       *
+       * <code>repeated .oscal.common.v1.MarkupLine values = 4 [json_name = "values"];</code>
+       */
+      public java.util.List<? extends oscal.common.v1.Common.MarkupLineOrBuilder> 
+           getValuesOrBuilderList() {
+        if (valuesBuilder_ != null) {
+          return valuesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(values_);
+        }
+      }
+      /**
+       * <pre>
+       * values is the OSCAL schema-required array of parameter values.
+       * </pre>
+       *
+       * <code>repeated .oscal.common.v1.MarkupLine values = 4 [json_name = "values"];</code>
+       */
+      public oscal.common.v1.Common.MarkupLine.Builder addValuesBuilder() {
+        return internalGetValuesFieldBuilder().addBuilder(
+            oscal.common.v1.Common.MarkupLine.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * values is the OSCAL schema-required array of parameter values.
+       * </pre>
+       *
+       * <code>repeated .oscal.common.v1.MarkupLine values = 4 [json_name = "values"];</code>
+       */
+      public oscal.common.v1.Common.MarkupLine.Builder addValuesBuilder(
+          int index) {
+        return internalGetValuesFieldBuilder().addBuilder(
+            index, oscal.common.v1.Common.MarkupLine.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * values is the OSCAL schema-required array of parameter values.
+       * </pre>
+       *
+       * <code>repeated .oscal.common.v1.MarkupLine values = 4 [json_name = "values"];</code>
+       */
+      public java.util.List<oscal.common.v1.Common.MarkupLine.Builder> 
+           getValuesBuilderList() {
+        return internalGetValuesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.common.v1.Common.MarkupLine, oscal.common.v1.Common.MarkupLine.Builder, oscal.common.v1.Common.MarkupLineOrBuilder> 
+          internalGetValuesFieldBuilder() {
+        if (valuesBuilder_ == null) {
+          valuesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              oscal.common.v1.Common.MarkupLine, oscal.common.v1.Common.MarkupLine.Builder, oscal.common.v1.Common.MarkupLineOrBuilder>(
+                  values_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          values_ = null;
+        }
+        return valuesBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:oscal.ssp.v1.SetParameter)
@@ -63717,7 +64463,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       "\005props\030\005 \003(\0132\031.oscal.common.v1.PropertyR" +
       "\005props\022+\n\005links\030\006 \003(\0132\025.oscal.common.v1." +
       "LinkR\005links\022:\n\007remarks\030\007 \003(\0132 .oscal.com" +
-      "mon.v1.MarkupMultilineR\007remarks\"\242\002\n\017Syst" +
+      "mon.v1.MarkupMultilineR\007remarks\"\320\002\n\017Syst" +
       "emComponent\022)\n\004uuid\030\002 \001(\0132\025.oscal.common" +
       ".v1.UUIDR\004uuid\022\022\n\004type\030\003 \001(\tR\004type\022\024\n\005ti" +
       "tle\030\004 \001(\tR\005title\022 \n\013description\030\005 \001(\tR\013d" +
@@ -63725,124 +64471,126 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       ".v1.PropertyR\005props\022+\n\005links\030\007 \003(\0132\025.osc" +
       "al.common.v1.LinkR\005links\022:\n\007remarks\030\010 \003(" +
       "\0132 .oscal.common.v1.MarkupMultilineR\007rem" +
-      "arks\"\223\002\n\rInventoryItem\022)\n\004uuid\030\001 \001(\0132\025.o" +
-      "scal.common.v1.UUIDR\004uuid\022=\n\013description" +
-      "\030\002 \001(\0132\033.oscal.common.v1.MarkupLineR\013des" +
-      "cription\022/\n\005props\030\003 \003(\0132\031.oscal.common.v" +
-      "1.PropertyR\005props\022+\n\005links\030\004 \003(\0132\025.oscal" +
-      ".common.v1.LinkR\005links\022:\n\007remarks\030\005 \003(\0132" +
-      " .oscal.common.v1.MarkupMultilineR\007remar" +
-      "ks\"\377\001\n\025ControlImplementation\022B\n\013descript" +
-      "ion\030\001 \001(\0132 .oscal.common.v1.MarkupMultil" +
-      "ineR\013description\022A\n\016set_parameters\030\002 \003(\013" +
-      "2\032.oscal.ssp.v1.SetParameterR\rsetParamet" +
-      "ers\022_\n\030implemented_requirements\030\003 \003(\0132$." +
-      "oscal.ssp.v1.ImplementedRequirementR\027imp" +
-      "lementedRequirements\"\223\001\n\014SetParameter\0221\n" +
-      "\010param_id\030\001 \001(\0132\026.oscal.common.v1.TokenR" +
-      "\007paramId\022\024\n\005value\030\002 \001(\tR\005value\022:\n\007remark" +
-      "s\030\003 \003(\0132 .oscal.common.v1.MarkupMultilin" +
-      "eR\007remarks\"\234\004\n\026ImplementedRequirement\022)\n" +
-      "\004uuid\030\001 \001(\0132\025.oscal.common.v1.UUIDR\004uuid" +
-      "\0225\n\ncontrol_id\030\002 \001(\0132\026.oscal.common.v1.T" +
-      "okenR\tcontrolId\022/\n\005props\030\003 \003(\0132\031.oscal.c" +
-      "ommon.v1.PropertyR\005props\022+\n\005links\030\004 \003(\0132" +
-      "\025.oscal.common.v1.LinkR\005links\022A\n\016set_par" +
-      "ameters\030\005 \003(\0132\032.oscal.ssp.v1.SetParamete" +
-      "rR\rsetParameters\022J\n\021responsible_roles\030\006 " +
-      "\003(\0132\035.oscal.ssp.v1.ResponsibleRoleR\020resp" +
-      "onsibleRoles\0227\n\nstatements\030\007 \003(\0132\027.oscal" +
-      ".ssp.v1.StatementR\nstatements\022>\n\rby_comp" +
-      "onents\030\010 \003(\0132\031.oscal.ssp.v1.ByComponentR" +
-      "\014byComponents\022:\n\007remarks\030\t \003(\0132 .oscal.c" +
-      "ommon.v1.MarkupMultilineR\007remarks\"\347\001\n\017Re" +
-      "sponsibleRole\022/\n\007role_id\030\001 \001(\0132\026.oscal.c" +
-      "ommon.v1.TokenR\006roleId\0226\n\013party_uuids\030\002 " +
-      "\003(\0132\025.oscal.common.v1.UUIDR\npartyUuids\022/" +
+      "arks\022,\n\006status\030\t \001(\0132\024.oscal.ssp.v1.Stat" +
+      "usR\006status\"\223\002\n\rInventoryItem\022)\n\004uuid\030\001 \001" +
+      "(\0132\025.oscal.common.v1.UUIDR\004uuid\022=\n\013descr" +
+      "iption\030\002 \001(\0132\033.oscal.common.v1.MarkupLin" +
+      "eR\013description\022/\n\005props\030\003 \003(\0132\031.oscal.co" +
+      "mmon.v1.PropertyR\005props\022+\n\005links\030\004 \003(\0132\025" +
+      ".oscal.common.v1.LinkR\005links\022:\n\007remarks\030" +
+      "\005 \003(\0132 .oscal.common.v1.MarkupMultilineR" +
+      "\007remarks\"\377\001\n\025ControlImplementation\022B\n\013de" +
+      "scription\030\001 \001(\0132 .oscal.common.v1.Markup" +
+      "MultilineR\013description\022A\n\016set_parameters" +
+      "\030\002 \003(\0132\032.oscal.ssp.v1.SetParameterR\rsetP" +
+      "arameters\022_\n\030implemented_requirements\030\003 " +
+      "\003(\0132$.oscal.ssp.v1.ImplementedRequiremen" +
+      "tR\027implementedRequirements\"\314\001\n\014SetParame" +
+      "ter\0221\n\010param_id\030\001 \001(\0132\026.oscal.common.v1." +
+      "TokenR\007paramId\022\030\n\005value\030\002 \001(\tB\002\030\001R\005value" +
+      "\022:\n\007remarks\030\003 \003(\0132 .oscal.common.v1.Mark" +
+      "upMultilineR\007remarks\0223\n\006values\030\004 \003(\0132\033.o" +
+      "scal.common.v1.MarkupLineR\006values\"\234\004\n\026Im" +
+      "plementedRequirement\022)\n\004uuid\030\001 \001(\0132\025.osc" +
+      "al.common.v1.UUIDR\004uuid\0225\n\ncontrol_id\030\002 " +
+      "\001(\0132\026.oscal.common.v1.TokenR\tcontrolId\022/" +
       "\n\005props\030\003 \003(\0132\031.oscal.common.v1.Property" +
-      "R\005props\022:\n\007remarks\030\004 \003(\0132 .oscal.common." +
-      "v1.MarkupMultilineR\007remarks\"\227\003\n\tStatemen" +
-      "t\0229\n\014statement_id\030\001 \001(\0132\026.oscal.common.v" +
-      "1.TokenR\013statementId\022)\n\004uuid\030\002 \001(\0132\025.osc" +
-      "al.common.v1.UUIDR\004uuid\022/\n\005props\030\003 \003(\0132\031" +
-      ".oscal.common.v1.PropertyR\005props\022+\n\005link" +
-      "s\030\004 \003(\0132\025.oscal.common.v1.LinkR\005links\022J\n" +
-      "\021responsible_roles\030\005 \003(\0132\035.oscal.ssp.v1." +
-      "ResponsibleRoleR\020responsibleRoles\022>\n\rby_" +
-      "components\030\006 \003(\0132\031.oscal.ssp.v1.ByCompon" +
-      "entR\014byComponents\022:\n\007remarks\030\007 \003(\0132 .osc" +
-      "al.common.v1.MarkupMultilineR\007remarks\"\330\005" +
-      "\n\013ByComponent\022<\n\016component_uuid\030\001 \001(\0132\025." +
-      "oscal.common.v1.UUIDR\rcomponentUuid\022)\n\004u" +
-      "uid\030\002 \001(\0132\025.oscal.common.v1.UUIDR\004uuid\022B" +
-      "\n\013description\030\003 \001(\0132 .oscal.common.v1.Ma" +
-      "rkupMultilineR\013description\022/\n\005props\030\004 \003(" +
-      "\0132\031.oscal.common.v1.PropertyR\005props\022+\n\005l" +
-      "inks\030\005 \003(\0132\025.oscal.common.v1.LinkR\005links" +
-      "\022A\n\016set_parameters\030\006 \003(\0132\032.oscal.ssp.v1." +
-      "SetParameterR\rsetParameters\022W\n\025implement" +
-      "ation_status\030\007 \001(\0132\".oscal.ssp.v1.Implem" +
-      "entationStatusR\024implementationStatus\022,\n\006" +
-      "export\030\010 \001(\0132\024.oscal.ssp.v1.ExportR\006expo" +
-      "rt\0225\n\tinherited\030\t \003(\0132\027.oscal.ssp.v1.Inh" +
-      "eritedR\tinherited\0225\n\tsatisfied\030\n \003(\0132\027.o" +
-      "scal.ssp.v1.SatisfiedR\tsatisfied\022J\n\021resp" +
-      "onsible_roles\030\013 \003(\0132\035.oscal.ssp.v1.Respo" +
-      "nsibleRoleR\020responsibleRoles\022:\n\007remarks\030" +
-      "\014 \003(\0132 .oscal.common.v1.MarkupMultilineR" +
-      "\007remarks\"h\n\024ImplementationStatus\022\024\n\005stat" +
-      "e\030\001 \001(\tR\005state\022:\n\007remarks\030\002 \001(\0132 .oscal." +
-      "common.v1.MarkupMultilineR\007remarks\"\344\002\n\006E" +
-      "xport\022B\n\013description\030\001 \001(\0132 .oscal.commo" +
-      "n.v1.MarkupMultilineR\013description\022/\n\005pro" +
-      "ps\030\002 \003(\0132\031.oscal.common.v1.PropertyR\005pro" +
-      "ps\022+\n\005links\030\003 \003(\0132\025.oscal.common.v1.Link" +
-      "R\005links\0222\n\010provided\030\004 \003(\0132\026.oscal.ssp.v1" +
-      ".ProvidedR\010provided\022H\n\020responsibilities\030" +
-      "\005 \003(\0132\034.oscal.ssp.v1.ResponsibilityR\020res" +
-      "ponsibilities\022:\n\007remarks\030\006 \003(\0132 .oscal.c" +
-      "ommon.v1.MarkupMultilineR\007remarks\"\337\002\n\010Pr" +
-      "ovided\022)\n\004uuid\030\001 \001(\0132\025.oscal.common.v1.U" +
-      "UIDR\004uuid\022B\n\013description\030\002 \001(\0132 .oscal.c" +
-      "ommon.v1.MarkupMultilineR\013description\022/\n" +
-      "\005props\030\003 \003(\0132\031.oscal.common.v1.PropertyR" +
-      "\005props\022+\n\005links\030\004 \003(\0132\025.oscal.common.v1." +
-      "LinkR\005links\022J\n\021responsible_roles\030\005 \003(\0132\035" +
-      ".oscal.ssp.v1.ResponsibleRoleR\020responsib" +
-      "leRoles\022:\n\007remarks\030\006 \003(\0132 .oscal.common." +
-      "v1.MarkupMultilineR\007remarks\"\241\003\n\016Responsi" +
-      "bility\022)\n\004uuid\030\001 \001(\0132\025.oscal.common.v1.U" +
-      "UIDR\004uuid\022:\n\rprovided_uuid\030\002 \001(\0132\025.oscal" +
-      ".common.v1.UUIDR\014providedUuid\022B\n\013descrip" +
-      "tion\030\003 \001(\0132 .oscal.common.v1.MarkupMulti" +
-      "lineR\013description\022/\n\005props\030\004 \003(\0132\031.oscal" +
-      ".common.v1.PropertyR\005props\022+\n\005links\030\005 \003(" +
-      "\0132\025.oscal.common.v1.LinkR\005links\022J\n\021respo" +
-      "nsible_roles\030\006 \003(\0132\035.oscal.ssp.v1.Respon" +
-      "sibleRoleR\020responsibleRoles\022:\n\007remarks\030\007" +
-      " \003(\0132 .oscal.common.v1.MarkupMultilineR\007" +
-      "remarks\"\340\002\n\tInherited\022)\n\004uuid\030\001 \001(\0132\025.os" +
-      "cal.common.v1.UUIDR\004uuid\022:\n\rprovided_uui" +
-      "d\030\002 \001(\0132\025.oscal.common.v1.UUIDR\014provided" +
-      "Uuid\022B\n\013description\030\003 \001(\0132 .oscal.common" +
-      ".v1.MarkupMultilineR\013description\022/\n\005prop" +
-      "s\030\004 \003(\0132\031.oscal.common.v1.PropertyR\005prop" +
-      "s\022+\n\005links\030\005 \003(\0132\025.oscal.common.v1.LinkR" +
-      "\005links\022J\n\021responsible_roles\030\006 \003(\0132\035.osca" +
-      "l.ssp.v1.ResponsibleRoleR\020responsibleRol" +
-      "es\"\250\003\n\tSatisfied\022)\n\004uuid\030\001 \001(\0132\025.oscal.c" +
-      "ommon.v1.UUIDR\004uuid\022F\n\023responsibility_uu" +
-      "id\030\002 \001(\0132\025.oscal.common.v1.UUIDR\022respons" +
-      "ibilityUuid\022B\n\013description\030\003 \001(\0132 .oscal" +
-      ".common.v1.MarkupMultilineR\013description\022" +
-      "/\n\005props\030\004 \003(\0132\031.oscal.common.v1.Propert" +
-      "yR\005props\022+\n\005links\030\005 \003(\0132\025.oscal.common.v" +
-      "1.LinkR\005links\022J\n\021responsible_roles\030\006 \003(\013" +
-      "2\035.oscal.ssp.v1.ResponsibleRoleR\020respons" +
-      "ibleRoles\022:\n\007remarks\030\007 \003(\0132 .oscal.commo" +
-      "n.v1.MarkupMultilineR\007remarksB4Z2github." +
-      "com/mchorfa/xoscal/proto/oscal/ssp/v1;ss" +
-      "pv1b\006proto3"
+      "R\005props\022+\n\005links\030\004 \003(\0132\025.oscal.common.v1" +
+      ".LinkR\005links\022A\n\016set_parameters\030\005 \003(\0132\032.o" +
+      "scal.ssp.v1.SetParameterR\rsetParameters\022" +
+      "J\n\021responsible_roles\030\006 \003(\0132\035.oscal.ssp.v" +
+      "1.ResponsibleRoleR\020responsibleRoles\0227\n\ns" +
+      "tatements\030\007 \003(\0132\027.oscal.ssp.v1.Statement" +
+      "R\nstatements\022>\n\rby_components\030\010 \003(\0132\031.os" +
+      "cal.ssp.v1.ByComponentR\014byComponents\022:\n\007" +
+      "remarks\030\t \003(\0132 .oscal.common.v1.MarkupMu" +
+      "ltilineR\007remarks\"\347\001\n\017ResponsibleRole\022/\n\007" +
+      "role_id\030\001 \001(\0132\026.oscal.common.v1.TokenR\006r" +
+      "oleId\0226\n\013party_uuids\030\002 \003(\0132\025.oscal.commo" +
+      "n.v1.UUIDR\npartyUuids\022/\n\005props\030\003 \003(\0132\031.o" +
+      "scal.common.v1.PropertyR\005props\022:\n\007remark" +
+      "s\030\004 \003(\0132 .oscal.common.v1.MarkupMultilin" +
+      "eR\007remarks\"\227\003\n\tStatement\0229\n\014statement_id" +
+      "\030\001 \001(\0132\026.oscal.common.v1.TokenR\013statemen" +
+      "tId\022)\n\004uuid\030\002 \001(\0132\025.oscal.common.v1.UUID" +
+      "R\004uuid\022/\n\005props\030\003 \003(\0132\031.oscal.common.v1." +
+      "PropertyR\005props\022+\n\005links\030\004 \003(\0132\025.oscal.c" +
+      "ommon.v1.LinkR\005links\022J\n\021responsible_role" +
+      "s\030\005 \003(\0132\035.oscal.ssp.v1.ResponsibleRoleR\020" +
+      "responsibleRoles\022>\n\rby_components\030\006 \003(\0132" +
+      "\031.oscal.ssp.v1.ByComponentR\014byComponents" +
+      "\022:\n\007remarks\030\007 \003(\0132 .oscal.common.v1.Mark" +
+      "upMultilineR\007remarks\"\330\005\n\013ByComponent\022<\n\016" +
+      "component_uuid\030\001 \001(\0132\025.oscal.common.v1.U" +
+      "UIDR\rcomponentUuid\022)\n\004uuid\030\002 \001(\0132\025.oscal" +
+      ".common.v1.UUIDR\004uuid\022B\n\013description\030\003 \001" +
+      "(\0132 .oscal.common.v1.MarkupMultilineR\013de" +
+      "scription\022/\n\005props\030\004 \003(\0132\031.oscal.common." +
+      "v1.PropertyR\005props\022+\n\005links\030\005 \003(\0132\025.osca" +
+      "l.common.v1.LinkR\005links\022A\n\016set_parameter" +
+      "s\030\006 \003(\0132\032.oscal.ssp.v1.SetParameterR\rset" +
+      "Parameters\022W\n\025implementation_status\030\007 \001(" +
+      "\0132\".oscal.ssp.v1.ImplementationStatusR\024i" +
+      "mplementationStatus\022,\n\006export\030\010 \001(\0132\024.os" +
+      "cal.ssp.v1.ExportR\006export\0225\n\tinherited\030\t" +
+      " \003(\0132\027.oscal.ssp.v1.InheritedR\tinherited" +
+      "\0225\n\tsatisfied\030\n \003(\0132\027.oscal.ssp.v1.Satis" +
+      "fiedR\tsatisfied\022J\n\021responsible_roles\030\013 \003" +
+      "(\0132\035.oscal.ssp.v1.ResponsibleRoleR\020respo" +
+      "nsibleRoles\022:\n\007remarks\030\014 \003(\0132 .oscal.com" +
+      "mon.v1.MarkupMultilineR\007remarks\"h\n\024Imple" +
+      "mentationStatus\022\024\n\005state\030\001 \001(\tR\005state\022:\n" +
+      "\007remarks\030\002 \001(\0132 .oscal.common.v1.MarkupM" +
+      "ultilineR\007remarks\"\344\002\n\006Export\022B\n\013descript" +
+      "ion\030\001 \001(\0132 .oscal.common.v1.MarkupMultil" +
+      "ineR\013description\022/\n\005props\030\002 \003(\0132\031.oscal." +
+      "common.v1.PropertyR\005props\022+\n\005links\030\003 \003(\013" +
+      "2\025.oscal.common.v1.LinkR\005links\0222\n\010provid" +
+      "ed\030\004 \003(\0132\026.oscal.ssp.v1.ProvidedR\010provid" +
+      "ed\022H\n\020responsibilities\030\005 \003(\0132\034.oscal.ssp" +
+      ".v1.ResponsibilityR\020responsibilities\022:\n\007" +
+      "remarks\030\006 \003(\0132 .oscal.common.v1.MarkupMu" +
+      "ltilineR\007remarks\"\337\002\n\010Provided\022)\n\004uuid\030\001 " +
+      "\001(\0132\025.oscal.common.v1.UUIDR\004uuid\022B\n\013desc" +
+      "ription\030\002 \001(\0132 .oscal.common.v1.MarkupMu" +
+      "ltilineR\013description\022/\n\005props\030\003 \003(\0132\031.os" +
+      "cal.common.v1.PropertyR\005props\022+\n\005links\030\004" +
+      " \003(\0132\025.oscal.common.v1.LinkR\005links\022J\n\021re" +
+      "sponsible_roles\030\005 \003(\0132\035.oscal.ssp.v1.Res" +
+      "ponsibleRoleR\020responsibleRoles\022:\n\007remark" +
+      "s\030\006 \003(\0132 .oscal.common.v1.MarkupMultilin" +
+      "eR\007remarks\"\241\003\n\016Responsibility\022)\n\004uuid\030\001 " +
+      "\001(\0132\025.oscal.common.v1.UUIDR\004uuid\022:\n\rprov" +
+      "ided_uuid\030\002 \001(\0132\025.oscal.common.v1.UUIDR\014" +
+      "providedUuid\022B\n\013description\030\003 \001(\0132 .osca" +
+      "l.common.v1.MarkupMultilineR\013description" +
+      "\022/\n\005props\030\004 \003(\0132\031.oscal.common.v1.Proper" +
+      "tyR\005props\022+\n\005links\030\005 \003(\0132\025.oscal.common." +
+      "v1.LinkR\005links\022J\n\021responsible_roles\030\006 \003(" +
+      "\0132\035.oscal.ssp.v1.ResponsibleRoleR\020respon" +
+      "sibleRoles\022:\n\007remarks\030\007 \003(\0132 .oscal.comm" +
+      "on.v1.MarkupMultilineR\007remarks\"\340\002\n\tInher" +
+      "ited\022)\n\004uuid\030\001 \001(\0132\025.oscal.common.v1.UUI" +
+      "DR\004uuid\022:\n\rprovided_uuid\030\002 \001(\0132\025.oscal.c" +
+      "ommon.v1.UUIDR\014providedUuid\022B\n\013descripti" +
+      "on\030\003 \001(\0132 .oscal.common.v1.MarkupMultili" +
+      "neR\013description\022/\n\005props\030\004 \003(\0132\031.oscal.c" +
+      "ommon.v1.PropertyR\005props\022+\n\005links\030\005 \003(\0132" +
+      "\025.oscal.common.v1.LinkR\005links\022J\n\021respons" +
+      "ible_roles\030\006 \003(\0132\035.oscal.ssp.v1.Responsi" +
+      "bleRoleR\020responsibleRoles\"\250\003\n\tSatisfied\022" +
+      ")\n\004uuid\030\001 \001(\0132\025.oscal.common.v1.UUIDR\004uu" +
+      "id\022F\n\023responsibility_uuid\030\002 \001(\0132\025.oscal." +
+      "common.v1.UUIDR\022responsibilityUuid\022B\n\013de" +
+      "scription\030\003 \001(\0132 .oscal.common.v1.Markup" +
+      "MultilineR\013description\022/\n\005props\030\004 \003(\0132\031." +
+      "oscal.common.v1.PropertyR\005props\022+\n\005links" +
+      "\030\005 \003(\0132\025.oscal.common.v1.LinkR\005links\022J\n\021" +
+      "responsible_roles\030\006 \003(\0132\035.oscal.ssp.v1.R" +
+      "esponsibleRoleR\020responsibleRoles\022:\n\007rema" +
+      "rks\030\007 \003(\0132 .oscal.common.v1.MarkupMultil" +
+      "ineR\007remarksB4Z2github.com/mchorfa/xosca" +
+      "l/proto/oscal/ssp/v1;sspv1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -63956,7 +64704,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     internal_static_oscal_ssp_v1_SystemComponent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_ssp_v1_SystemComponent_descriptor,
-        new java.lang.String[] { "Uuid", "Type", "Title", "Description", "Props", "Links", "Remarks", });
+        new java.lang.String[] { "Uuid", "Type", "Title", "Description", "Props", "Links", "Remarks", "Status", });
     internal_static_oscal_ssp_v1_InventoryItem_descriptor =
       getDescriptor().getMessageType(18);
     internal_static_oscal_ssp_v1_InventoryItem_fieldAccessorTable = new
@@ -63974,7 +64722,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     internal_static_oscal_ssp_v1_SetParameter_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_ssp_v1_SetParameter_descriptor,
-        new java.lang.String[] { "ParamId", "Value", "Remarks", });
+        new java.lang.String[] { "ParamId", "Value", "Remarks", "Values", });
     internal_static_oscal_ssp_v1_ImplementedRequirement_descriptor =
       getDescriptor().getMessageType(21);
     internal_static_oscal_ssp_v1_ImplementedRequirement_fieldAccessorTable = new

@@ -12,8 +12,11 @@ message PlanOfActionAndMilestones {
   oscal.common.v1.Metadata metadata = 2;
   ImportSsp import_ssp = 3;
   LocalDefinitions local_definitions = 4;
-  repeated Risk risks = 5;
+  // Deprecated: use poam_items instead. Kept for backward compatibility.
+  repeated Risk risks = 5 [deprecated = true];
   oscal.common.v1.BackMatter back_matter = 6;
+  // poam_items is the OSCAL schema-required top-level array of POAM items.
+  repeated PoamItem poam_items = 7;
 }
 
 // ImportSsp represents an imported system security plan
@@ -58,6 +61,46 @@ message User {
   repeated oscal.common.v1.Property props = 5;
   repeated oscal.common.v1.Link links = 6;
   repeated oscal.common.v1.MarkupMultiline remarks = 7;
+}
+
+// PoamItem represents a POAM item as defined by the OSCAL 1.1.2 schema.
+// Unlike Risk, poam-item is a simpler container with title, description,
+// and references to findings/observations/risks.
+message PoamItem {
+  oscal.common.v1.UUID uuid = 1;
+  oscal.common.v1.MarkupLine title = 2;
+  oscal.common.v1.MarkupMultiline description = 3;
+  repeated oscal.common.v1.Property props = 4;
+  repeated oscal.common.v1.Link links = 5;
+  repeated Origin origins = 6;
+  repeated RelatedFinding related_findings = 7;
+  repeated RelatedObservation related_observations = 8;
+  repeated RelatedRisk related_risks = 9;
+  repeated oscal.common.v1.MarkupMultiline remarks = 10;
+}
+
+// Origin represents the origin of a POAM item
+message Origin {
+  repeated OriginActor actors = 1;
+}
+
+// OriginActor represents an originating actor
+message OriginActor {
+  oscal.common.v1.UUID actor_uuid = 1;
+  oscal.common.v1.MarkupLine title = 2;
+  repeated oscal.common.v1.Property props = 3;
+  repeated oscal.common.v1.Link links = 4;
+  repeated oscal.common.v1.MarkupMultiline remarks = 5;
+}
+
+// RelatedFinding represents a related finding
+message RelatedFinding {
+  oscal.common.v1.UUID finding_uuid = 1;
+}
+
+// RelatedRisk represents a related risk
+message RelatedRisk {
+  oscal.common.v1.UUID risk_uuid = 1;
 }
 
 // Risk represents a risk

@@ -4,26 +4,24 @@
   "additionalProperties": false,
   "description": "Add represents addition of control content",
   "patternProperties": {
-    "^(itemName)$": {
+    "^(byId)$": {
       "default": "",
       "type": "string"
     },
-    "^(withClass)$": {
-      "items": {
-        "type": "string"
-      },
-      "type": "array"
-    },
-    "^(withIds)$": {
-      "items": {
-        "type": "string"
-      },
-      "type": "array"
+    "^(itemName)$": {
+      "default": "",
+      "description": "Deprecated: not in OSCAL schema. Kept for backward compatibility.",
+      "type": "string"
     }
   },
   "properties": {
+    "by_id": {
+      "default": "",
+      "type": "string"
+    },
     "item_name": {
       "default": "",
+      "description": "Deprecated: not in OSCAL schema. Kept for backward compatibility.",
       "type": "string"
     },
     "links": {
@@ -54,17 +52,9 @@
       },
       "type": "array"
     },
-    "with_class": {
-      "items": {
-        "type": "string"
-      },
-      "type": "array"
-    },
-    "with_ids": {
-      "items": {
-        "type": "string"
-      },
-      "type": "array"
+    "title": {
+      "default": "",
+      "type": "string"
     }
   },
   "title": "Add",

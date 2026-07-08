@@ -13,9 +13,21 @@
       },
       "type": "array"
     },
+    "external_ids": {
+      "items": {
+        "$ref": "oscal.common.v1.PartyExternalId.schema.strict.json"
+      },
+      "type": "array"
+    },
     "links": {
       "items": {
         "$ref": "oscal.common.v1.Link.schema.strict.json"
+      },
+      "type": "array"
+    },
+    "location_uuids": {
+      "items": {
+        "$ref": "oscal.common.v1.UUID.schema.strict.json"
       },
       "type": "array"
     },

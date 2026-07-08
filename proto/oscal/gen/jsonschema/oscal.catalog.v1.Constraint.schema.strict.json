@@ -6,6 +6,12 @@
   "properties": {
     "description": {
       "type": "string"
+    },
+    "tests": {
+      "items": {
+        "$ref": "oscal.catalog.v1.Test.schema.strict.json"
+      },
+      "type": "array"
     }
   },
   "required": [

@@ -40,6 +40,10 @@
       },
       "type": "array"
     },
+    "reviewedControls": {
+      "$ref": "oscal.assessment_results.v1.ReviewedControls.jsonschema.strict.json",
+      "description": "reviewed_controls is required by the OSCAL 1.1.2 schema for each result."
+    },
     "start": {
       "$ref": "oscal.common.v1.DateTime.jsonschema.strict.json"
     },

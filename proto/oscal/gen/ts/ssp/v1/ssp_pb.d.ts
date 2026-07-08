@@ -737,6 +737,11 @@ export declare type SystemComponent = Message<"oscal.ssp.v1.SystemComponent"> & 
    * @generated from field: repeated oscal.common.v1.MarkupMultiline remarks = 8;
    */
   remarks: MarkupMultiline[];
+
+  /**
+   * @generated from field: oscal.ssp.v1.Status status = 9;
+   */
+  status?: Status | undefined;
 };
 
 /**
@@ -823,7 +828,10 @@ export declare type SetParameter = Message<"oscal.ssp.v1.SetParameter"> & {
   paramId?: Token | undefined;
 
   /**
-   * @generated from field: string value = 2;
+   * Deprecated: use values instead. Kept for backward compatibility.
+   *
+   * @generated from field: string value = 2 [deprecated = true];
+   * @deprecated
    */
   value: string;
 
@@ -831,6 +839,13 @@ export declare type SetParameter = Message<"oscal.ssp.v1.SetParameter"> & {
    * @generated from field: repeated oscal.common.v1.MarkupMultiline remarks = 3;
    */
   remarks: MarkupMultiline[];
+
+  /**
+   * values is the OSCAL schema-required array of parameter values.
+   *
+   * @generated from field: repeated oscal.common.v1.MarkupLine values = 4;
+   */
+  values: MarkupLine[];
 };
 
 /**

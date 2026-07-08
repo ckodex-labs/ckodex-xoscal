@@ -38,6 +38,19 @@
       "title": "Link",
       "type": "object"
     },
+    "oscal.common.v1.MarkupLine.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "MarkupLine represents a line of markup text (e.g., markdown)",
+      "properties": {
+        "value": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Markup Line",
+      "type": "object"
+    },
     "oscal.common.v1.MarkupMultiline.jsonschema.json": {
       "$schema": "https://json-schema.org/draft/2020-12/schema",
       "additionalProperties": false,
@@ -601,7 +614,15 @@
         },
         "value": {
           "default": "",
+          "description": "Deprecated: use values instead. Kept for backward compatibility.",
           "type": "string"
+        },
+        "values": {
+          "description": "values is the OSCAL schema-required array of parameter values.",
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.MarkupLine.jsonschema.json"
+          },
+          "type": "array"
         }
       },
       "title": "Set Parameter",

@@ -2,36 +2,75 @@
   "$id": "oscal.poam.v1.PoamItem.jsonschema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "additionalProperties": false,
-  "description": "PoamItem represents a plan of action and milestones item",
+  "description": "PoamItem represents a POAM item as defined by the OSCAL 1.1.2 schema.\n Unlike Risk, poam-item is a simpler container with title, description,\n and references to findings/observations/risks.",
   "patternProperties": {
-    "^(back_matter)$": {
-      "$ref": "oscal.common.v1.BackMatter.jsonschema.json"
+    "^(related_findings)$": {
+      "items": {
+        "$ref": "oscal.poam.v1.RelatedFinding.jsonschema.json"
+      },
+      "type": "array"
     },
-    "^(import_ssp)$": {
-      "$ref": "oscal.poam.v1.ImportSsp.jsonschema.json"
+    "^(related_observations)$": {
+      "items": {
+        "$ref": "oscal.poam.v1.RelatedObservation.jsonschema.json"
+      },
+      "type": "array"
     },
-    "^(local_definitions)$": {
-      "$ref": "oscal.poam.v1.LocalDefinitions.jsonschema.json"
+    "^(related_risks)$": {
+      "items": {
+        "$ref": "oscal.poam.v1.RelatedRisk.jsonschema.json"
+      },
+      "type": "array"
     }
   },
   "properties": {
-    "backMatter": {
-      "$ref": "oscal.common.v1.BackMatter.jsonschema.json"
+    "description": {
+      "$ref": "oscal.common.v1.MarkupMultiline.jsonschema.json"
     },
-    "importSsp": {
-      "$ref": "oscal.poam.v1.ImportSsp.jsonschema.json"
-    },
-    "localDefinitions": {
-      "$ref": "oscal.poam.v1.LocalDefinitions.jsonschema.json"
-    },
-    "metadata": {
-      "$ref": "oscal.common.v1.Metadata.jsonschema.json"
-    },
-    "risks": {
+    "links": {
       "items": {
-        "$ref": "oscal.poam.v1.Risk.jsonschema.json"
+        "$ref": "oscal.common.v1.Link.jsonschema.json"
       },
       "type": "array"
+    },
+    "origins": {
+      "items": {
+        "$ref": "oscal.poam.v1.Origin.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "props": {
+      "items": {
+        "$ref": "oscal.common.v1.Property.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "relatedFindings": {
+      "items": {
+        "$ref": "oscal.poam.v1.RelatedFinding.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "relatedObservations": {
+      "items": {
+        "$ref": "oscal.poam.v1.RelatedObservation.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "relatedRisks": {
+      "items": {
+        "$ref": "oscal.poam.v1.RelatedRisk.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "remarks": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupMultiline.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "title": {
+      "$ref": "oscal.common.v1.MarkupLine.jsonschema.json"
     },
     "uuid": {
       "$ref": "oscal.common.v1.UUID.jsonschema.json"

@@ -701,19 +701,21 @@ func (x *UsesComponent) GetRemarks() []*v1.MarkupMultiline {
 
 // Result represents an assessment result
 type Result struct {
-	state         protoimpl.MessageState `protogen:"open.v1"`
-	Uuid          *v1.UUID               `protobuf:"bytes,1,opt,name=uuid,proto3" json:"uuid,omitempty"`
-	Title         *v1.MarkupLine         `protobuf:"bytes,2,opt,name=title,proto3" json:"title,omitempty"`
-	Description   *v1.MarkupMultiline    `protobuf:"bytes,3,opt,name=description,proto3" json:"description,omitempty"`
-	Start         *v1.DateTime           `protobuf:"bytes,4,opt,name=start,proto3" json:"start,omitempty"`
-	End           *v1.DateTime           `protobuf:"bytes,5,opt,name=end,proto3" json:"end,omitempty"`
-	Findings      []*Finding             `protobuf:"bytes,6,rep,name=findings,proto3" json:"findings,omitempty"`
-	Observations  []*Observation         `protobuf:"bytes,7,rep,name=observations,proto3" json:"observations,omitempty"`
-	Props         []*v1.Property         `protobuf:"bytes,8,rep,name=props,proto3" json:"props,omitempty"`
-	Links         []*v1.Link             `protobuf:"bytes,9,rep,name=links,proto3" json:"links,omitempty"`
-	Remarks       []*v1.MarkupMultiline  `protobuf:"bytes,10,rep,name=remarks,proto3" json:"remarks,omitempty"`
-	unknownFields protoimpl.UnknownFields
-	sizeCache     protoimpl.SizeCache
+	state        protoimpl.MessageState `protogen:"open.v1"`
+	Uuid         *v1.UUID               `protobuf:"bytes,1,opt,name=uuid,proto3" json:"uuid,omitempty"`
+	Title        *v1.MarkupLine         `protobuf:"bytes,2,opt,name=title,proto3" json:"title,omitempty"`
+	Description  *v1.MarkupMultiline    `protobuf:"bytes,3,opt,name=description,proto3" json:"description,omitempty"`
+	Start        *v1.DateTime           `protobuf:"bytes,4,opt,name=start,proto3" json:"start,omitempty"`
+	End          *v1.DateTime           `protobuf:"bytes,5,opt,name=end,proto3" json:"end,omitempty"`
+	Findings     []*Finding             `protobuf:"bytes,6,rep,name=findings,proto3" json:"findings,omitempty"`
+	Observations []*Observation         `protobuf:"bytes,7,rep,name=observations,proto3" json:"observations,omitempty"`
+	Props        []*v1.Property         `protobuf:"bytes,8,rep,name=props,proto3" json:"props,omitempty"`
+	Links        []*v1.Link             `protobuf:"bytes,9,rep,name=links,proto3" json:"links,omitempty"`
+	Remarks      []*v1.MarkupMultiline  `protobuf:"bytes,10,rep,name=remarks,proto3" json:"remarks,omitempty"`
+	// reviewed_controls is required by the OSCAL 1.1.2 schema for each result.
+	ReviewedControls *ReviewedControls `protobuf:"bytes,11,opt,name=reviewed_controls,json=reviewedControls,proto3" json:"reviewed_controls,omitempty"`
+	unknownFields    protoimpl.UnknownFields
+	sizeCache        protoimpl.SizeCache
 }
 
 func (x *Result) Reset() {
@@ -816,6 +818,252 @@ func (x *Result) GetRemarks() []*v1.MarkupMultiline {
 	return nil
 }
 
+func (x *Result) GetReviewedControls() *ReviewedControls {
+	if x != nil {
+		return x.ReviewedControls
+	}
+	return nil
+}
+
+// ReviewedControls represents the reviewed controls for a result
+type ReviewedControls struct {
+	state             protoimpl.MessageState `protogen:"open.v1"`
+	ControlSelections []*ControlSelection    `protobuf:"bytes,1,rep,name=control_selections,json=controlSelections,proto3" json:"control_selections,omitempty"`
+	Controls          []*SelectedControl     `protobuf:"bytes,2,rep,name=controls,proto3" json:"controls,omitempty"`
+	Props             []*v1.Property         `protobuf:"bytes,3,rep,name=props,proto3" json:"props,omitempty"`
+	Links             []*v1.Link             `protobuf:"bytes,4,rep,name=links,proto3" json:"links,omitempty"`
+	Remarks           []*v1.MarkupMultiline  `protobuf:"bytes,5,rep,name=remarks,proto3" json:"remarks,omitempty"`
+	unknownFields     protoimpl.UnknownFields
+	sizeCache         protoimpl.SizeCache
+}
+
+func (x *ReviewedControls) Reset() {
+	*x = ReviewedControls{}
+	mi := &file_assessment_results_v1_assessment_results_proto_msgTypes[10]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *ReviewedControls) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ReviewedControls) ProtoMessage() {}
+
+func (x *ReviewedControls) ProtoReflect() protoreflect.Message {
+	mi := &file_assessment_results_v1_assessment_results_proto_msgTypes[10]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ReviewedControls.ProtoReflect.Descriptor instead.
+func (*ReviewedControls) Descriptor() ([]byte, []int) {
+	return file_assessment_results_v1_assessment_results_proto_rawDescGZIP(), []int{10}
+}
+
+func (x *ReviewedControls) GetControlSelections() []*ControlSelection {
+	if x != nil {
+		return x.ControlSelections
+	}
+	return nil
+}
+
+func (x *ReviewedControls) GetControls() []*SelectedControl {
+	if x != nil {
+		return x.Controls
+	}
+	return nil
+}
+
+func (x *ReviewedControls) GetProps() []*v1.Property {
+	if x != nil {
+		return x.Props
+	}
+	return nil
+}
+
+func (x *ReviewedControls) GetLinks() []*v1.Link {
+	if x != nil {
+		return x.Links
+	}
+	return nil
+}
+
+func (x *ReviewedControls) GetRemarks() []*v1.MarkupMultiline {
+	if x != nil {
+		return x.Remarks
+	}
+	return nil
+}
+
+// ControlSelection represents a selection of controls for review
+type ControlSelection struct {
+	state           protoimpl.MessageState `protogen:"open.v1"`
+	Description     *v1.MarkupMultiline    `protobuf:"bytes,1,opt,name=description,proto3" json:"description,omitempty"`
+	IncludeControls []*SelectedControl     `protobuf:"bytes,2,rep,name=include_controls,json=includeControls,proto3" json:"include_controls,omitempty"`
+	ExcludeControls []*SelectedControl     `protobuf:"bytes,3,rep,name=exclude_controls,json=excludeControls,proto3" json:"exclude_controls,omitempty"`
+	Props           []*v1.Property         `protobuf:"bytes,4,rep,name=props,proto3" json:"props,omitempty"`
+	Links           []*v1.Link             `protobuf:"bytes,5,rep,name=links,proto3" json:"links,omitempty"`
+	Remarks         []*v1.MarkupMultiline  `protobuf:"bytes,6,rep,name=remarks,proto3" json:"remarks,omitempty"`
+	unknownFields   protoimpl.UnknownFields
+	sizeCache       protoimpl.SizeCache
+}
+
+func (x *ControlSelection) Reset() {
+	*x = ControlSelection{}
+	mi := &file_assessment_results_v1_assessment_results_proto_msgTypes[11]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *ControlSelection) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ControlSelection) ProtoMessage() {}
+
+func (x *ControlSelection) ProtoReflect() protoreflect.Message {
+	mi := &file_assessment_results_v1_assessment_results_proto_msgTypes[11]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ControlSelection.ProtoReflect.Descriptor instead.
+func (*ControlSelection) Descriptor() ([]byte, []int) {
+	return file_assessment_results_v1_assessment_results_proto_rawDescGZIP(), []int{11}
+}
+
+func (x *ControlSelection) GetDescription() *v1.MarkupMultiline {
+	if x != nil {
+		return x.Description
+	}
+	return nil
+}
+
+func (x *ControlSelection) GetIncludeControls() []*SelectedControl {
+	if x != nil {
+		return x.IncludeControls
+	}
+	return nil
+}
+
+func (x *ControlSelection) GetExcludeControls() []*SelectedControl {
+	if x != nil {
+		return x.ExcludeControls
+	}
+	return nil
+}
+
+func (x *ControlSelection) GetProps() []*v1.Property {
+	if x != nil {
+		return x.Props
+	}
+	return nil
+}
+
+func (x *ControlSelection) GetLinks() []*v1.Link {
+	if x != nil {
+		return x.Links
+	}
+	return nil
+}
+
+func (x *ControlSelection) GetRemarks() []*v1.MarkupMultiline {
+	if x != nil {
+		return x.Remarks
+	}
+	return nil
+}
+
+// SelectedControl represents a selected control
+type SelectedControl struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	ControlId     *v1.Token              `protobuf:"bytes,1,opt,name=control_id,json=controlId,proto3" json:"control_id,omitempty"`
+	StatementId   *v1.Token              `protobuf:"bytes,2,opt,name=statement_id,json=statementId,proto3" json:"statement_id,omitempty"`
+	Props         []*v1.Property         `protobuf:"bytes,3,rep,name=props,proto3" json:"props,omitempty"`
+	Links         []*v1.Link             `protobuf:"bytes,4,rep,name=links,proto3" json:"links,omitempty"`
+	Remarks       []*v1.MarkupMultiline  `protobuf:"bytes,5,rep,name=remarks,proto3" json:"remarks,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *SelectedControl) Reset() {
+	*x = SelectedControl{}
+	mi := &file_assessment_results_v1_assessment_results_proto_msgTypes[12]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *SelectedControl) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*SelectedControl) ProtoMessage() {}
+
+func (x *SelectedControl) ProtoReflect() protoreflect.Message {
+	mi := &file_assessment_results_v1_assessment_results_proto_msgTypes[12]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use SelectedControl.ProtoReflect.Descriptor instead.
+func (*SelectedControl) Descriptor() ([]byte, []int) {
+	return file_assessment_results_v1_assessment_results_proto_rawDescGZIP(), []int{12}
+}
+
+func (x *SelectedControl) GetControlId() *v1.Token {
+	if x != nil {
+		return x.ControlId
+	}
+	return nil
+}
+
+func (x *SelectedControl) GetStatementId() *v1.Token {
+	if x != nil {
+		return x.StatementId
+	}
+	return nil
+}
+
+func (x *SelectedControl) GetProps() []*v1.Property {
+	if x != nil {
+		return x.Props
+	}
+	return nil
+}
+
+func (x *SelectedControl) GetLinks() []*v1.Link {
+	if x != nil {
+		return x.Links
+	}
+	return nil
+}
+
+func (x *SelectedControl) GetRemarks() []*v1.MarkupMultiline {
+	if x != nil {
+		return x.Remarks
+	}
+	return nil
+}
+
 // Finding represents a finding
 type Finding struct {
 	state                       protoimpl.MessageState `protogen:"open.v1"`
@@ -836,7 +1084,7 @@ type Finding struct {
 
 func (x *Finding) Reset() {
 	*x = Finding{}
-	mi := &file_assessment_results_v1_assessment_results_proto_msgTypes[10]
+	mi := &file_assessment_results_v1_assessment_results_proto_msgTypes[13]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -848,7 +1096,7 @@ func (x *Finding) String() string {
 func (*Finding) ProtoMessage() {}
 
 func (x *Finding) ProtoReflect() protoreflect.Message {
-	mi := &file_assessment_results_v1_assessment_results_proto_msgTypes[10]
+	mi := &file_assessment_results_v1_assessment_results_proto_msgTypes[13]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -861,7 +1109,7 @@ func (x *Finding) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Finding.ProtoReflect.Descriptor instead.
 func (*Finding) Descriptor() ([]byte, []int) {
-	return file_assessment_results_v1_assessment_results_proto_rawDescGZIP(), []int{10}
+	return file_assessment_results_v1_assessment_results_proto_rawDescGZIP(), []int{13}
 }
 
 func (x *Finding) GetUuid() *v1.UUID {
@@ -959,7 +1207,7 @@ type FindingTarget struct {
 
 func (x *FindingTarget) Reset() {
 	*x = FindingTarget{}
-	mi := &file_assessment_results_v1_assessment_results_proto_msgTypes[11]
+	mi := &file_assessment_results_v1_assessment_results_proto_msgTypes[14]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -971,7 +1219,7 @@ func (x *FindingTarget) String() string {
 func (*FindingTarget) ProtoMessage() {}
 
 func (x *FindingTarget) ProtoReflect() protoreflect.Message {
-	mi := &file_assessment_results_v1_assessment_results_proto_msgTypes[11]
+	mi := &file_assessment_results_v1_assessment_results_proto_msgTypes[14]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -984,7 +1232,7 @@ func (x *FindingTarget) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use FindingTarget.ProtoReflect.Descriptor instead.
 func (*FindingTarget) Descriptor() ([]byte, []int) {
-	return file_assessment_results_v1_assessment_results_proto_rawDescGZIP(), []int{11}
+	return file_assessment_results_v1_assessment_results_proto_rawDescGZIP(), []int{14}
 }
 
 func (x *FindingTarget) GetType() string {
@@ -1062,7 +1310,7 @@ type ObjectiveStatus struct {
 
 func (x *ObjectiveStatus) Reset() {
 	*x = ObjectiveStatus{}
-	mi := &file_assessment_results_v1_assessment_results_proto_msgTypes[12]
+	mi := &file_assessment_results_v1_assessment_results_proto_msgTypes[15]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1074,7 +1322,7 @@ func (x *ObjectiveStatus) String() string {
 func (*ObjectiveStatus) ProtoMessage() {}
 
 func (x *ObjectiveStatus) ProtoReflect() protoreflect.Message {
-	mi := &file_assessment_results_v1_assessment_results_proto_msgTypes[12]
+	mi := &file_assessment_results_v1_assessment_results_proto_msgTypes[15]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1087,7 +1335,7 @@ func (x *ObjectiveStatus) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ObjectiveStatus.ProtoReflect.Descriptor instead.
 func (*ObjectiveStatus) Descriptor() ([]byte, []int) {
-	return file_assessment_results_v1_assessment_results_proto_rawDescGZIP(), []int{12}
+	return file_assessment_results_v1_assessment_results_proto_rawDescGZIP(), []int{15}
 }
 
 func (x *ObjectiveStatus) GetState() string {
@@ -1122,7 +1370,7 @@ type ImplementationStatus struct {
 
 func (x *ImplementationStatus) Reset() {
 	*x = ImplementationStatus{}
-	mi := &file_assessment_results_v1_assessment_results_proto_msgTypes[13]
+	mi := &file_assessment_results_v1_assessment_results_proto_msgTypes[16]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1134,7 +1382,7 @@ func (x *ImplementationStatus) String() string {
 func (*ImplementationStatus) ProtoMessage() {}
 
 func (x *ImplementationStatus) ProtoReflect() protoreflect.Message {
-	mi := &file_assessment_results_v1_assessment_results_proto_msgTypes[13]
+	mi := &file_assessment_results_v1_assessment_results_proto_msgTypes[16]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1147,7 +1395,7 @@ func (x *ImplementationStatus) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ImplementationStatus.ProtoReflect.Descriptor instead.
 func (*ImplementationStatus) Descriptor() ([]byte, []int) {
-	return file_assessment_results_v1_assessment_results_proto_rawDescGZIP(), []int{13}
+	return file_assessment_results_v1_assessment_results_proto_rawDescGZIP(), []int{16}
 }
 
 func (x *ImplementationStatus) GetState() string {
@@ -1175,7 +1423,7 @@ type Origin struct {
 
 func (x *Origin) Reset() {
 	*x = Origin{}
-	mi := &file_assessment_results_v1_assessment_results_proto_msgTypes[14]
+	mi := &file_assessment_results_v1_assessment_results_proto_msgTypes[17]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1187,7 +1435,7 @@ func (x *Origin) String() string {
 func (*Origin) ProtoMessage() {}
 
 func (x *Origin) ProtoReflect() protoreflect.Message {
-	mi := &file_assessment_results_v1_assessment_results_proto_msgTypes[14]
+	mi := &file_assessment_results_v1_assessment_results_proto_msgTypes[17]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1200,7 +1448,7 @@ func (x *Origin) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Origin.ProtoReflect.Descriptor instead.
 func (*Origin) Descriptor() ([]byte, []int) {
-	return file_assessment_results_v1_assessment_results_proto_rawDescGZIP(), []int{14}
+	return file_assessment_results_v1_assessment_results_proto_rawDescGZIP(), []int{17}
 }
 
 func (x *Origin) GetActors() []*OriginActor {
@@ -1231,7 +1479,7 @@ type OriginActor struct {
 
 func (x *OriginActor) Reset() {
 	*x = OriginActor{}
-	mi := &file_assessment_results_v1_assessment_results_proto_msgTypes[15]
+	mi := &file_assessment_results_v1_assessment_results_proto_msgTypes[18]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1243,7 +1491,7 @@ func (x *OriginActor) String() string {
 func (*OriginActor) ProtoMessage() {}
 
 func (x *OriginActor) ProtoReflect() protoreflect.Message {
-	mi := &file_assessment_results_v1_assessment_results_proto_msgTypes[15]
+	mi := &file_assessment_results_v1_assessment_results_proto_msgTypes[18]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1256,7 +1504,7 @@ func (x *OriginActor) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use OriginActor.ProtoReflect.Descriptor instead.
 func (*OriginActor) Descriptor() ([]byte, []int) {
-	return file_assessment_results_v1_assessment_results_proto_rawDescGZIP(), []int{15}
+	return file_assessment_results_v1_assessment_results_proto_rawDescGZIP(), []int{18}
 }
 
 func (x *OriginActor) GetActorUuid() *v1.UUID {
@@ -1308,7 +1556,7 @@ type RelatedTask struct {
 
 func (x *RelatedTask) Reset() {
 	*x = RelatedTask{}
-	mi := &file_assessment_results_v1_assessment_results_proto_msgTypes[16]
+	mi := &file_assessment_results_v1_assessment_results_proto_msgTypes[19]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1320,7 +1568,7 @@ func (x *RelatedTask) String() string {
 func (*RelatedTask) ProtoMessage() {}
 
 func (x *RelatedTask) ProtoReflect() protoreflect.Message {
-	mi := &file_assessment_results_v1_assessment_results_proto_msgTypes[16]
+	mi := &file_assessment_results_v1_assessment_results_proto_msgTypes[19]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1333,7 +1581,7 @@ func (x *RelatedTask) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use RelatedTask.ProtoReflect.Descriptor instead.
 func (*RelatedTask) Descriptor() ([]byte, []int) {
-	return file_assessment_results_v1_assessment_results_proto_rawDescGZIP(), []int{16}
+	return file_assessment_results_v1_assessment_results_proto_rawDescGZIP(), []int{19}
 }
 
 func (x *RelatedTask) GetTaskUuid() *v1.UUID {
@@ -1382,7 +1630,7 @@ type RelatedObservation struct {
 
 func (x *RelatedObservation) Reset() {
 	*x = RelatedObservation{}
-	mi := &file_assessment_results_v1_assessment_results_proto_msgTypes[17]
+	mi := &file_assessment_results_v1_assessment_results_proto_msgTypes[20]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1394,7 +1642,7 @@ func (x *RelatedObservation) String() string {
 func (*RelatedObservation) ProtoMessage() {}
 
 func (x *RelatedObservation) ProtoReflect() protoreflect.Message {
-	mi := &file_assessment_results_v1_assessment_results_proto_msgTypes[17]
+	mi := &file_assessment_results_v1_assessment_results_proto_msgTypes[20]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1407,7 +1655,7 @@ func (x *RelatedObservation) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use RelatedObservation.ProtoReflect.Descriptor instead.
 func (*RelatedObservation) Descriptor() ([]byte, []int) {
-	return file_assessment_results_v1_assessment_results_proto_rawDescGZIP(), []int{17}
+	return file_assessment_results_v1_assessment_results_proto_rawDescGZIP(), []int{20}
 }
 
 func (x *RelatedObservation) GetObservationUuid() *v1.UUID {
@@ -1435,7 +1683,7 @@ type AssociatedRisk struct {
 
 func (x *AssociatedRisk) Reset() {
 	*x = AssociatedRisk{}
-	mi := &file_assessment_results_v1_assessment_results_proto_msgTypes[18]
+	mi := &file_assessment_results_v1_assessment_results_proto_msgTypes[21]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1447,7 +1695,7 @@ func (x *AssociatedRisk) String() string {
 func (*AssociatedRisk) ProtoMessage() {}
 
 func (x *AssociatedRisk) ProtoReflect() protoreflect.Message {
-	mi := &file_assessment_results_v1_assessment_results_proto_msgTypes[18]
+	mi := &file_assessment_results_v1_assessment_results_proto_msgTypes[21]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1460,7 +1708,7 @@ func (x *AssociatedRisk) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use AssociatedRisk.ProtoReflect.Descriptor instead.
 func (*AssociatedRisk) Descriptor() ([]byte, []int) {
-	return file_assessment_results_v1_assessment_results_proto_rawDescGZIP(), []int{18}
+	return file_assessment_results_v1_assessment_results_proto_rawDescGZIP(), []int{21}
 }
 
 func (x *AssociatedRisk) GetRiskUuid() *v1.UUID {
@@ -1499,7 +1747,7 @@ type Observation struct {
 
 func (x *Observation) Reset() {
 	*x = Observation{}
-	mi := &file_assessment_results_v1_assessment_results_proto_msgTypes[19]
+	mi := &file_assessment_results_v1_assessment_results_proto_msgTypes[22]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1511,7 +1759,7 @@ func (x *Observation) String() string {
 func (*Observation) ProtoMessage() {}
 
 func (x *Observation) ProtoReflect() protoreflect.Message {
-	mi := &file_assessment_results_v1_assessment_results_proto_msgTypes[19]
+	mi := &file_assessment_results_v1_assessment_results_proto_msgTypes[22]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1524,7 +1772,7 @@ func (x *Observation) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Observation.ProtoReflect.Descriptor instead.
 func (*Observation) Descriptor() ([]byte, []int) {
-	return file_assessment_results_v1_assessment_results_proto_rawDescGZIP(), []int{19}
+	return file_assessment_results_v1_assessment_results_proto_rawDescGZIP(), []int{22}
 }
 
 func (x *Observation) GetUuid() *v1.UUID {
@@ -1622,17 +1870,18 @@ func (x *Observation) GetRemarks() []*v1.MarkupMultiline {
 type SubjectReference struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	SubjectUuid   *v1.UUID               `protobuf:"bytes,1,opt,name=subject_uuid,json=subjectUuid,proto3" json:"subject_uuid,omitempty"`
-	Title         *v1.MarkupLine         `protobuf:"bytes,2,opt,name=title,proto3" json:"title,omitempty"`
-	Props         []*v1.Property         `protobuf:"bytes,3,rep,name=props,proto3" json:"props,omitempty"`
-	Links         []*v1.Link             `protobuf:"bytes,4,rep,name=links,proto3" json:"links,omitempty"`
-	Remarks       []*v1.MarkupMultiline  `protobuf:"bytes,5,rep,name=remarks,proto3" json:"remarks,omitempty"`
+	Type          string                 `protobuf:"bytes,2,opt,name=type,proto3" json:"type,omitempty"`
+	Title         *v1.MarkupLine         `protobuf:"bytes,3,opt,name=title,proto3" json:"title,omitempty"`
+	Props         []*v1.Property         `protobuf:"bytes,4,rep,name=props,proto3" json:"props,omitempty"`
+	Links         []*v1.Link             `protobuf:"bytes,5,rep,name=links,proto3" json:"links,omitempty"`
+	Remarks       []*v1.MarkupMultiline  `protobuf:"bytes,6,rep,name=remarks,proto3" json:"remarks,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
 
 func (x *SubjectReference) Reset() {
 	*x = SubjectReference{}
-	mi := &file_assessment_results_v1_assessment_results_proto_msgTypes[20]
+	mi := &file_assessment_results_v1_assessment_results_proto_msgTypes[23]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1644,7 +1893,7 @@ func (x *SubjectReference) String() string {
 func (*SubjectReference) ProtoMessage() {}
 
 func (x *SubjectReference) ProtoReflect() protoreflect.Message {
-	mi := &file_assessment_results_v1_assessment_results_proto_msgTypes[20]
+	mi := &file_assessment_results_v1_assessment_results_proto_msgTypes[23]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1657,7 +1906,7 @@ func (x *SubjectReference) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SubjectReference.ProtoReflect.Descriptor instead.
 func (*SubjectReference) Descriptor() ([]byte, []int) {
-	return file_assessment_results_v1_assessment_results_proto_rawDescGZIP(), []int{20}
+	return file_assessment_results_v1_assessment_results_proto_rawDescGZIP(), []int{23}
 }
 
 func (x *SubjectReference) GetSubjectUuid() *v1.UUID {
@@ -1665,6 +1914,13 @@ func (x *SubjectReference) GetSubjectUuid() *v1.UUID {
 		return x.SubjectUuid
 	}
 	return nil
+}
+
+func (x *SubjectReference) GetType() string {
+	if x != nil {
+		return x.Type
+	}
+	return ""
 }
 
 func (x *SubjectReference) GetTitle() *v1.MarkupLine {
@@ -1709,7 +1965,7 @@ type RelevantEvidence struct {
 
 func (x *RelevantEvidence) Reset() {
 	*x = RelevantEvidence{}
-	mi := &file_assessment_results_v1_assessment_results_proto_msgTypes[21]
+	mi := &file_assessment_results_v1_assessment_results_proto_msgTypes[24]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1721,7 +1977,7 @@ func (x *RelevantEvidence) String() string {
 func (*RelevantEvidence) ProtoMessage() {}
 
 func (x *RelevantEvidence) ProtoReflect() protoreflect.Message {
-	mi := &file_assessment_results_v1_assessment_results_proto_msgTypes[21]
+	mi := &file_assessment_results_v1_assessment_results_proto_msgTypes[24]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1734,7 +1990,7 @@ func (x *RelevantEvidence) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use RelevantEvidence.ProtoReflect.Descriptor instead.
 func (*RelevantEvidence) Descriptor() ([]byte, []int) {
-	return file_assessment_results_v1_assessment_results_proto_rawDescGZIP(), []int{21}
+	return file_assessment_results_v1_assessment_results_proto_rawDescGZIP(), []int{24}
 }
 
 func (x *RelevantEvidence) GetHref() *v1.URIReference {
@@ -1833,7 +2089,7 @@ const file_assessment_results_v1_assessment_results_proto_rawDesc = "" +
 	"\x05props\x18\x02 \x03(\v2\x19.oscal.common.v1.PropertyR\x05props\x12+\n" +
 	"\x05links\x18\x03 \x03(\v2\x15.oscal.common.v1.LinkR\x05links\x12R\n" +
 	"\x13responsible_parties\x18\x04 \x03(\v2!.oscal.common.v1.ResponsiblePartyR\x12responsibleParties\x12:\n" +
-	"\aremarks\x18\x05 \x03(\v2 .oscal.common.v1.MarkupMultilineR\aremarks\"\xb2\x04\n" +
+	"\aremarks\x18\x05 \x03(\v2 .oscal.common.v1.MarkupMultilineR\aremarks\"\x8e\x05\n" +
 	"\x06Result\x12)\n" +
 	"\x04uuid\x18\x01 \x01(\v2\x15.oscal.common.v1.UUIDR\x04uuid\x121\n" +
 	"\x05title\x18\x02 \x01(\v2\x1b.oscal.common.v1.MarkupLineR\x05title\x12B\n" +
@@ -1845,7 +2101,28 @@ const file_assessment_results_v1_assessment_results_proto_rawDesc = "" +
 	"\x05props\x18\b \x03(\v2\x19.oscal.common.v1.PropertyR\x05props\x12+\n" +
 	"\x05links\x18\t \x03(\v2\x15.oscal.common.v1.LinkR\x05links\x12:\n" +
 	"\aremarks\x18\n" +
-	" \x03(\v2 .oscal.common.v1.MarkupMultilineR\aremarks\"\xd9\x05\n" +
+	" \x03(\v2 .oscal.common.v1.MarkupMultilineR\aremarks\x12Z\n" +
+	"\x11reviewed_controls\x18\v \x01(\v2-.oscal.assessment_results.v1.ReviewedControlsR\x10reviewedControls\"\xd4\x02\n" +
+	"\x10ReviewedControls\x12\\\n" +
+	"\x12control_selections\x18\x01 \x03(\v2-.oscal.assessment_results.v1.ControlSelectionR\x11controlSelections\x12H\n" +
+	"\bcontrols\x18\x02 \x03(\v2,.oscal.assessment_results.v1.SelectedControlR\bcontrols\x12/\n" +
+	"\x05props\x18\x03 \x03(\v2\x19.oscal.common.v1.PropertyR\x05props\x12+\n" +
+	"\x05links\x18\x04 \x03(\v2\x15.oscal.common.v1.LinkR\x05links\x12:\n" +
+	"\aremarks\x18\x05 \x03(\v2 .oscal.common.v1.MarkupMultilineR\aremarks\"\xa2\x03\n" +
+	"\x10ControlSelection\x12B\n" +
+	"\vdescription\x18\x01 \x01(\v2 .oscal.common.v1.MarkupMultilineR\vdescription\x12W\n" +
+	"\x10include_controls\x18\x02 \x03(\v2,.oscal.assessment_results.v1.SelectedControlR\x0fincludeControls\x12W\n" +
+	"\x10exclude_controls\x18\x03 \x03(\v2,.oscal.assessment_results.v1.SelectedControlR\x0fexcludeControls\x12/\n" +
+	"\x05props\x18\x04 \x03(\v2\x19.oscal.common.v1.PropertyR\x05props\x12+\n" +
+	"\x05links\x18\x05 \x03(\v2\x15.oscal.common.v1.LinkR\x05links\x12:\n" +
+	"\aremarks\x18\x06 \x03(\v2 .oscal.common.v1.MarkupMultilineR\aremarks\"\x9d\x02\n" +
+	"\x0fSelectedControl\x125\n" +
+	"\n" +
+	"control_id\x18\x01 \x01(\v2\x16.oscal.common.v1.TokenR\tcontrolId\x129\n" +
+	"\fstatement_id\x18\x02 \x01(\v2\x16.oscal.common.v1.TokenR\vstatementId\x12/\n" +
+	"\x05props\x18\x03 \x03(\v2\x19.oscal.common.v1.PropertyR\x05props\x12+\n" +
+	"\x05links\x18\x04 \x03(\v2\x15.oscal.common.v1.LinkR\x05links\x12:\n" +
+	"\aremarks\x18\x05 \x03(\v2 .oscal.common.v1.MarkupMultilineR\aremarks\"\xd9\x05\n" +
 	"\aFinding\x12)\n" +
 	"\x04uuid\x18\x01 \x01(\v2\x15.oscal.common.v1.UUIDR\x04uuid\x121\n" +
 	"\x05title\x18\x02 \x01(\v2\x1b.oscal.common.v1.MarkupLineR\x05title\x12B\n" +
@@ -1912,13 +2189,14 @@ const file_assessment_results_v1_assessment_results_proto_rawDesc = "" +
 	" \x03(\v2-.oscal.assessment_results.v1.RelevantEvidenceR\x10relevantEvidence\x127\n" +
 	"\tcollected\x18\v \x01(\v2\x19.oscal.common.v1.DateTimeR\tcollected\x123\n" +
 	"\aexpires\x18\f \x01(\v2\x19.oscal.common.v1.DateTimeR\aexpires\x12:\n" +
-	"\aremarks\x18\r \x03(\v2 .oscal.common.v1.MarkupMultilineR\aremarks\"\x99\x02\n" +
+	"\aremarks\x18\r \x03(\v2 .oscal.common.v1.MarkupMultilineR\aremarks\"\xad\x02\n" +
 	"\x10SubjectReference\x128\n" +
-	"\fsubject_uuid\x18\x01 \x01(\v2\x15.oscal.common.v1.UUIDR\vsubjectUuid\x121\n" +
-	"\x05title\x18\x02 \x01(\v2\x1b.oscal.common.v1.MarkupLineR\x05title\x12/\n" +
-	"\x05props\x18\x03 \x03(\v2\x19.oscal.common.v1.PropertyR\x05props\x12+\n" +
-	"\x05links\x18\x04 \x03(\v2\x15.oscal.common.v1.LinkR\x05links\x12:\n" +
-	"\aremarks\x18\x05 \x03(\v2 .oscal.common.v1.MarkupMultilineR\aremarks\"\xa3\x02\n" +
+	"\fsubject_uuid\x18\x01 \x01(\v2\x15.oscal.common.v1.UUIDR\vsubjectUuid\x12\x12\n" +
+	"\x04type\x18\x02 \x01(\tR\x04type\x121\n" +
+	"\x05title\x18\x03 \x01(\v2\x1b.oscal.common.v1.MarkupLineR\x05title\x12/\n" +
+	"\x05props\x18\x04 \x03(\v2\x19.oscal.common.v1.PropertyR\x05props\x12+\n" +
+	"\x05links\x18\x05 \x03(\v2\x15.oscal.common.v1.LinkR\x05links\x12:\n" +
+	"\aremarks\x18\x06 \x03(\v2 .oscal.common.v1.MarkupMultilineR\aremarks\"\xa3\x02\n" +
 	"\x10RelevantEvidence\x121\n" +
 	"\x04href\x18\x01 \x01(\v2\x1d.oscal.common.v1.URIReferenceR\x04href\x12B\n" +
 	"\vdescription\x18\x02 \x01(\v2 .oscal.common.v1.MarkupMultilineR\vdescription\x12/\n" +
@@ -1938,7 +2216,7 @@ func file_assessment_results_v1_assessment_results_proto_rawDescGZIP() []byte {
 	return file_assessment_results_v1_assessment_results_proto_rawDescData
 }
 
-var file_assessment_results_v1_assessment_results_proto_msgTypes = make([]protoimpl.MessageInfo, 22)
+var file_assessment_results_v1_assessment_results_proto_msgTypes = make([]protoimpl.MessageInfo, 25)
 var file_assessment_results_v1_assessment_results_proto_goTypes = []any{
 	(*AssessmentResults)(nil),    // 0: oscal.assessment_results.v1.AssessmentResults
 	(*ImportAp)(nil),             // 1: oscal.assessment_results.v1.ImportAp
@@ -1950,142 +2228,162 @@ var file_assessment_results_v1_assessment_results_proto_goTypes = []any{
 	(*AssessmentPlatform)(nil),   // 7: oscal.assessment_results.v1.AssessmentPlatform
 	(*UsesComponent)(nil),        // 8: oscal.assessment_results.v1.UsesComponent
 	(*Result)(nil),               // 9: oscal.assessment_results.v1.Result
-	(*Finding)(nil),              // 10: oscal.assessment_results.v1.Finding
-	(*FindingTarget)(nil),        // 11: oscal.assessment_results.v1.FindingTarget
-	(*ObjectiveStatus)(nil),      // 12: oscal.assessment_results.v1.ObjectiveStatus
-	(*ImplementationStatus)(nil), // 13: oscal.assessment_results.v1.ImplementationStatus
-	(*Origin)(nil),               // 14: oscal.assessment_results.v1.Origin
-	(*OriginActor)(nil),          // 15: oscal.assessment_results.v1.OriginActor
-	(*RelatedTask)(nil),          // 16: oscal.assessment_results.v1.RelatedTask
-	(*RelatedObservation)(nil),   // 17: oscal.assessment_results.v1.RelatedObservation
-	(*AssociatedRisk)(nil),       // 18: oscal.assessment_results.v1.AssociatedRisk
-	(*Observation)(nil),          // 19: oscal.assessment_results.v1.Observation
-	(*SubjectReference)(nil),     // 20: oscal.assessment_results.v1.SubjectReference
-	(*RelevantEvidence)(nil),     // 21: oscal.assessment_results.v1.RelevantEvidence
-	(*v1.UUID)(nil),              // 22: oscal.common.v1.UUID
-	(*v1.Metadata)(nil),          // 23: oscal.common.v1.Metadata
-	(*v1.BackMatter)(nil),        // 24: oscal.common.v1.BackMatter
-	(*v1.URIReference)(nil),      // 25: oscal.common.v1.URIReference
-	(*v1.MarkupMultiline)(nil),   // 26: oscal.common.v1.MarkupMultiline
-	(*v1.Property)(nil),          // 27: oscal.common.v1.Property
-	(*v1.Link)(nil),              // 28: oscal.common.v1.Link
-	(*v1.MarkupLine)(nil),        // 29: oscal.common.v1.MarkupLine
-	(*v1.ResponsibleParty)(nil),  // 30: oscal.common.v1.ResponsibleParty
-	(*v1.DateTime)(nil),          // 31: oscal.common.v1.DateTime
-	(*v1.Token)(nil),             // 32: oscal.common.v1.Token
+	(*ReviewedControls)(nil),     // 10: oscal.assessment_results.v1.ReviewedControls
+	(*ControlSelection)(nil),     // 11: oscal.assessment_results.v1.ControlSelection
+	(*SelectedControl)(nil),      // 12: oscal.assessment_results.v1.SelectedControl
+	(*Finding)(nil),              // 13: oscal.assessment_results.v1.Finding
+	(*FindingTarget)(nil),        // 14: oscal.assessment_results.v1.FindingTarget
+	(*ObjectiveStatus)(nil),      // 15: oscal.assessment_results.v1.ObjectiveStatus
+	(*ImplementationStatus)(nil), // 16: oscal.assessment_results.v1.ImplementationStatus
+	(*Origin)(nil),               // 17: oscal.assessment_results.v1.Origin
+	(*OriginActor)(nil),          // 18: oscal.assessment_results.v1.OriginActor
+	(*RelatedTask)(nil),          // 19: oscal.assessment_results.v1.RelatedTask
+	(*RelatedObservation)(nil),   // 20: oscal.assessment_results.v1.RelatedObservation
+	(*AssociatedRisk)(nil),       // 21: oscal.assessment_results.v1.AssociatedRisk
+	(*Observation)(nil),          // 22: oscal.assessment_results.v1.Observation
+	(*SubjectReference)(nil),     // 23: oscal.assessment_results.v1.SubjectReference
+	(*RelevantEvidence)(nil),     // 24: oscal.assessment_results.v1.RelevantEvidence
+	(*v1.UUID)(nil),              // 25: oscal.common.v1.UUID
+	(*v1.Metadata)(nil),          // 26: oscal.common.v1.Metadata
+	(*v1.BackMatter)(nil),        // 27: oscal.common.v1.BackMatter
+	(*v1.URIReference)(nil),      // 28: oscal.common.v1.URIReference
+	(*v1.MarkupMultiline)(nil),   // 29: oscal.common.v1.MarkupMultiline
+	(*v1.Property)(nil),          // 30: oscal.common.v1.Property
+	(*v1.Link)(nil),              // 31: oscal.common.v1.Link
+	(*v1.MarkupLine)(nil),        // 32: oscal.common.v1.MarkupLine
+	(*v1.ResponsibleParty)(nil),  // 33: oscal.common.v1.ResponsibleParty
+	(*v1.DateTime)(nil),          // 34: oscal.common.v1.DateTime
+	(*v1.Token)(nil),             // 35: oscal.common.v1.Token
 }
 var file_assessment_results_v1_assessment_results_proto_depIdxs = []int32{
-	22,  // 0: oscal.assessment_results.v1.AssessmentResults.uuid:type_name -> oscal.common.v1.UUID
-	23,  // 1: oscal.assessment_results.v1.AssessmentResults.metadata:type_name -> oscal.common.v1.Metadata
+	25,  // 0: oscal.assessment_results.v1.AssessmentResults.uuid:type_name -> oscal.common.v1.UUID
+	26,  // 1: oscal.assessment_results.v1.AssessmentResults.metadata:type_name -> oscal.common.v1.Metadata
 	1,   // 2: oscal.assessment_results.v1.AssessmentResults.import_ap:type_name -> oscal.assessment_results.v1.ImportAp
 	2,   // 3: oscal.assessment_results.v1.AssessmentResults.import_ssp:type_name -> oscal.assessment_results.v1.ImportSsp
 	3,   // 4: oscal.assessment_results.v1.AssessmentResults.local_definitions:type_name -> oscal.assessment_results.v1.LocalDefinitions
 	9,   // 5: oscal.assessment_results.v1.AssessmentResults.results:type_name -> oscal.assessment_results.v1.Result
-	24,  // 6: oscal.assessment_results.v1.AssessmentResults.back_matter:type_name -> oscal.common.v1.BackMatter
-	25,  // 7: oscal.assessment_results.v1.ImportAp.href:type_name -> oscal.common.v1.URIReference
-	26,  // 8: oscal.assessment_results.v1.ImportAp.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	25,  // 9: oscal.assessment_results.v1.ImportSsp.href:type_name -> oscal.common.v1.URIReference
-	26,  // 10: oscal.assessment_results.v1.ImportSsp.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	27,  // 6: oscal.assessment_results.v1.AssessmentResults.back_matter:type_name -> oscal.common.v1.BackMatter
+	28,  // 7: oscal.assessment_results.v1.ImportAp.href:type_name -> oscal.common.v1.URIReference
+	29,  // 8: oscal.assessment_results.v1.ImportAp.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	28,  // 9: oscal.assessment_results.v1.ImportSsp.href:type_name -> oscal.common.v1.URIReference
+	29,  // 10: oscal.assessment_results.v1.ImportSsp.remarks:type_name -> oscal.common.v1.MarkupMultiline
 	4,   // 11: oscal.assessment_results.v1.LocalDefinitions.components:type_name -> oscal.assessment_results.v1.Component
 	5,   // 12: oscal.assessment_results.v1.LocalDefinitions.inventory_items:type_name -> oscal.assessment_results.v1.InventoryItem
 	6,   // 13: oscal.assessment_results.v1.LocalDefinitions.users:type_name -> oscal.assessment_results.v1.User
 	7,   // 14: oscal.assessment_results.v1.LocalDefinitions.assessment_platforms:type_name -> oscal.assessment_results.v1.AssessmentPlatform
-	22,  // 15: oscal.assessment_results.v1.Component.uuid:type_name -> oscal.common.v1.UUID
-	27,  // 16: oscal.assessment_results.v1.Component.props:type_name -> oscal.common.v1.Property
-	28,  // 17: oscal.assessment_results.v1.Component.links:type_name -> oscal.common.v1.Link
-	26,  // 18: oscal.assessment_results.v1.Component.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	22,  // 19: oscal.assessment_results.v1.InventoryItem.uuid:type_name -> oscal.common.v1.UUID
-	29,  // 20: oscal.assessment_results.v1.InventoryItem.description:type_name -> oscal.common.v1.MarkupLine
-	27,  // 21: oscal.assessment_results.v1.InventoryItem.props:type_name -> oscal.common.v1.Property
-	28,  // 22: oscal.assessment_results.v1.InventoryItem.links:type_name -> oscal.common.v1.Link
-	26,  // 23: oscal.assessment_results.v1.InventoryItem.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	22,  // 24: oscal.assessment_results.v1.User.uuid:type_name -> oscal.common.v1.UUID
-	26,  // 25: oscal.assessment_results.v1.User.description:type_name -> oscal.common.v1.MarkupMultiline
-	27,  // 26: oscal.assessment_results.v1.User.props:type_name -> oscal.common.v1.Property
-	28,  // 27: oscal.assessment_results.v1.User.links:type_name -> oscal.common.v1.Link
-	26,  // 28: oscal.assessment_results.v1.User.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	22,  // 29: oscal.assessment_results.v1.AssessmentPlatform.uuid:type_name -> oscal.common.v1.UUID
-	26,  // 30: oscal.assessment_results.v1.AssessmentPlatform.description:type_name -> oscal.common.v1.MarkupMultiline
+	25,  // 15: oscal.assessment_results.v1.Component.uuid:type_name -> oscal.common.v1.UUID
+	30,  // 16: oscal.assessment_results.v1.Component.props:type_name -> oscal.common.v1.Property
+	31,  // 17: oscal.assessment_results.v1.Component.links:type_name -> oscal.common.v1.Link
+	29,  // 18: oscal.assessment_results.v1.Component.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	25,  // 19: oscal.assessment_results.v1.InventoryItem.uuid:type_name -> oscal.common.v1.UUID
+	32,  // 20: oscal.assessment_results.v1.InventoryItem.description:type_name -> oscal.common.v1.MarkupLine
+	30,  // 21: oscal.assessment_results.v1.InventoryItem.props:type_name -> oscal.common.v1.Property
+	31,  // 22: oscal.assessment_results.v1.InventoryItem.links:type_name -> oscal.common.v1.Link
+	29,  // 23: oscal.assessment_results.v1.InventoryItem.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	25,  // 24: oscal.assessment_results.v1.User.uuid:type_name -> oscal.common.v1.UUID
+	29,  // 25: oscal.assessment_results.v1.User.description:type_name -> oscal.common.v1.MarkupMultiline
+	30,  // 26: oscal.assessment_results.v1.User.props:type_name -> oscal.common.v1.Property
+	31,  // 27: oscal.assessment_results.v1.User.links:type_name -> oscal.common.v1.Link
+	29,  // 28: oscal.assessment_results.v1.User.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	25,  // 29: oscal.assessment_results.v1.AssessmentPlatform.uuid:type_name -> oscal.common.v1.UUID
+	29,  // 30: oscal.assessment_results.v1.AssessmentPlatform.description:type_name -> oscal.common.v1.MarkupMultiline
 	8,   // 31: oscal.assessment_results.v1.AssessmentPlatform.uses_components:type_name -> oscal.assessment_results.v1.UsesComponent
-	26,  // 32: oscal.assessment_results.v1.AssessmentPlatform.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	22,  // 33: oscal.assessment_results.v1.UsesComponent.component_uuid:type_name -> oscal.common.v1.UUID
-	27,  // 34: oscal.assessment_results.v1.UsesComponent.props:type_name -> oscal.common.v1.Property
-	28,  // 35: oscal.assessment_results.v1.UsesComponent.links:type_name -> oscal.common.v1.Link
-	30,  // 36: oscal.assessment_results.v1.UsesComponent.responsible_parties:type_name -> oscal.common.v1.ResponsibleParty
-	26,  // 37: oscal.assessment_results.v1.UsesComponent.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	22,  // 38: oscal.assessment_results.v1.Result.uuid:type_name -> oscal.common.v1.UUID
-	29,  // 39: oscal.assessment_results.v1.Result.title:type_name -> oscal.common.v1.MarkupLine
-	26,  // 40: oscal.assessment_results.v1.Result.description:type_name -> oscal.common.v1.MarkupMultiline
-	31,  // 41: oscal.assessment_results.v1.Result.start:type_name -> oscal.common.v1.DateTime
-	31,  // 42: oscal.assessment_results.v1.Result.end:type_name -> oscal.common.v1.DateTime
-	10,  // 43: oscal.assessment_results.v1.Result.findings:type_name -> oscal.assessment_results.v1.Finding
-	19,  // 44: oscal.assessment_results.v1.Result.observations:type_name -> oscal.assessment_results.v1.Observation
-	27,  // 45: oscal.assessment_results.v1.Result.props:type_name -> oscal.common.v1.Property
-	28,  // 46: oscal.assessment_results.v1.Result.links:type_name -> oscal.common.v1.Link
-	26,  // 47: oscal.assessment_results.v1.Result.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	22,  // 48: oscal.assessment_results.v1.Finding.uuid:type_name -> oscal.common.v1.UUID
-	29,  // 49: oscal.assessment_results.v1.Finding.title:type_name -> oscal.common.v1.MarkupLine
-	26,  // 50: oscal.assessment_results.v1.Finding.description:type_name -> oscal.common.v1.MarkupMultiline
-	27,  // 51: oscal.assessment_results.v1.Finding.props:type_name -> oscal.common.v1.Property
-	28,  // 52: oscal.assessment_results.v1.Finding.links:type_name -> oscal.common.v1.Link
-	14,  // 53: oscal.assessment_results.v1.Finding.origins:type_name -> oscal.assessment_results.v1.Origin
-	11,  // 54: oscal.assessment_results.v1.Finding.target:type_name -> oscal.assessment_results.v1.FindingTarget
-	22,  // 55: oscal.assessment_results.v1.Finding.implementation_statement_uuid:type_name -> oscal.common.v1.UUID
-	17,  // 56: oscal.assessment_results.v1.Finding.related_observations:type_name -> oscal.assessment_results.v1.RelatedObservation
-	18,  // 57: oscal.assessment_results.v1.Finding.related_risks:type_name -> oscal.assessment_results.v1.AssociatedRisk
-	26,  // 58: oscal.assessment_results.v1.Finding.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	32,  // 59: oscal.assessment_results.v1.FindingTarget.target_id:type_name -> oscal.common.v1.Token
-	29,  // 60: oscal.assessment_results.v1.FindingTarget.title:type_name -> oscal.common.v1.MarkupLine
-	26,  // 61: oscal.assessment_results.v1.FindingTarget.description:type_name -> oscal.common.v1.MarkupMultiline
-	27,  // 62: oscal.assessment_results.v1.FindingTarget.props:type_name -> oscal.common.v1.Property
-	28,  // 63: oscal.assessment_results.v1.FindingTarget.links:type_name -> oscal.common.v1.Link
-	12,  // 64: oscal.assessment_results.v1.FindingTarget.status:type_name -> oscal.assessment_results.v1.ObjectiveStatus
-	13,  // 65: oscal.assessment_results.v1.FindingTarget.implementation_status:type_name -> oscal.assessment_results.v1.ImplementationStatus
-	26,  // 66: oscal.assessment_results.v1.FindingTarget.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	26,  // 67: oscal.assessment_results.v1.ObjectiveStatus.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	26,  // 68: oscal.assessment_results.v1.ImplementationStatus.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	15,  // 69: oscal.assessment_results.v1.Origin.actors:type_name -> oscal.assessment_results.v1.OriginActor
-	16,  // 70: oscal.assessment_results.v1.Origin.related_tasks:type_name -> oscal.assessment_results.v1.RelatedTask
-	22,  // 71: oscal.assessment_results.v1.OriginActor.actor_uuid:type_name -> oscal.common.v1.UUID
-	29,  // 72: oscal.assessment_results.v1.OriginActor.title:type_name -> oscal.common.v1.MarkupLine
-	27,  // 73: oscal.assessment_results.v1.OriginActor.props:type_name -> oscal.common.v1.Property
-	28,  // 74: oscal.assessment_results.v1.OriginActor.links:type_name -> oscal.common.v1.Link
-	26,  // 75: oscal.assessment_results.v1.OriginActor.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	22,  // 76: oscal.assessment_results.v1.RelatedTask.task_uuid:type_name -> oscal.common.v1.UUID
-	29,  // 77: oscal.assessment_results.v1.RelatedTask.title:type_name -> oscal.common.v1.MarkupLine
-	27,  // 78: oscal.assessment_results.v1.RelatedTask.props:type_name -> oscal.common.v1.Property
-	28,  // 79: oscal.assessment_results.v1.RelatedTask.links:type_name -> oscal.common.v1.Link
-	26,  // 80: oscal.assessment_results.v1.RelatedTask.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	22,  // 81: oscal.assessment_results.v1.RelatedObservation.observation_uuid:type_name -> oscal.common.v1.UUID
-	26,  // 82: oscal.assessment_results.v1.RelatedObservation.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	22,  // 83: oscal.assessment_results.v1.AssociatedRisk.risk_uuid:type_name -> oscal.common.v1.UUID
-	26,  // 84: oscal.assessment_results.v1.AssociatedRisk.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	22,  // 85: oscal.assessment_results.v1.Observation.uuid:type_name -> oscal.common.v1.UUID
-	29,  // 86: oscal.assessment_results.v1.Observation.title:type_name -> oscal.common.v1.MarkupLine
-	26,  // 87: oscal.assessment_results.v1.Observation.description:type_name -> oscal.common.v1.MarkupMultiline
-	27,  // 88: oscal.assessment_results.v1.Observation.props:type_name -> oscal.common.v1.Property
-	28,  // 89: oscal.assessment_results.v1.Observation.links:type_name -> oscal.common.v1.Link
-	14,  // 90: oscal.assessment_results.v1.Observation.origins:type_name -> oscal.assessment_results.v1.Origin
-	20,  // 91: oscal.assessment_results.v1.Observation.subjects:type_name -> oscal.assessment_results.v1.SubjectReference
-	21,  // 92: oscal.assessment_results.v1.Observation.relevant_evidence:type_name -> oscal.assessment_results.v1.RelevantEvidence
-	31,  // 93: oscal.assessment_results.v1.Observation.collected:type_name -> oscal.common.v1.DateTime
-	31,  // 94: oscal.assessment_results.v1.Observation.expires:type_name -> oscal.common.v1.DateTime
-	26,  // 95: oscal.assessment_results.v1.Observation.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	22,  // 96: oscal.assessment_results.v1.SubjectReference.subject_uuid:type_name -> oscal.common.v1.UUID
-	29,  // 97: oscal.assessment_results.v1.SubjectReference.title:type_name -> oscal.common.v1.MarkupLine
-	27,  // 98: oscal.assessment_results.v1.SubjectReference.props:type_name -> oscal.common.v1.Property
-	28,  // 99: oscal.assessment_results.v1.SubjectReference.links:type_name -> oscal.common.v1.Link
-	26,  // 100: oscal.assessment_results.v1.SubjectReference.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	25,  // 101: oscal.assessment_results.v1.RelevantEvidence.href:type_name -> oscal.common.v1.URIReference
-	26,  // 102: oscal.assessment_results.v1.RelevantEvidence.description:type_name -> oscal.common.v1.MarkupMultiline
-	27,  // 103: oscal.assessment_results.v1.RelevantEvidence.props:type_name -> oscal.common.v1.Property
-	28,  // 104: oscal.assessment_results.v1.RelevantEvidence.links:type_name -> oscal.common.v1.Link
-	26,  // 105: oscal.assessment_results.v1.RelevantEvidence.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	106, // [106:106] is the sub-list for method output_type
-	106, // [106:106] is the sub-list for method input_type
-	106, // [106:106] is the sub-list for extension type_name
-	106, // [106:106] is the sub-list for extension extendee
-	0,   // [0:106] is the sub-list for field type_name
+	29,  // 32: oscal.assessment_results.v1.AssessmentPlatform.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	25,  // 33: oscal.assessment_results.v1.UsesComponent.component_uuid:type_name -> oscal.common.v1.UUID
+	30,  // 34: oscal.assessment_results.v1.UsesComponent.props:type_name -> oscal.common.v1.Property
+	31,  // 35: oscal.assessment_results.v1.UsesComponent.links:type_name -> oscal.common.v1.Link
+	33,  // 36: oscal.assessment_results.v1.UsesComponent.responsible_parties:type_name -> oscal.common.v1.ResponsibleParty
+	29,  // 37: oscal.assessment_results.v1.UsesComponent.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	25,  // 38: oscal.assessment_results.v1.Result.uuid:type_name -> oscal.common.v1.UUID
+	32,  // 39: oscal.assessment_results.v1.Result.title:type_name -> oscal.common.v1.MarkupLine
+	29,  // 40: oscal.assessment_results.v1.Result.description:type_name -> oscal.common.v1.MarkupMultiline
+	34,  // 41: oscal.assessment_results.v1.Result.start:type_name -> oscal.common.v1.DateTime
+	34,  // 42: oscal.assessment_results.v1.Result.end:type_name -> oscal.common.v1.DateTime
+	13,  // 43: oscal.assessment_results.v1.Result.findings:type_name -> oscal.assessment_results.v1.Finding
+	22,  // 44: oscal.assessment_results.v1.Result.observations:type_name -> oscal.assessment_results.v1.Observation
+	30,  // 45: oscal.assessment_results.v1.Result.props:type_name -> oscal.common.v1.Property
+	31,  // 46: oscal.assessment_results.v1.Result.links:type_name -> oscal.common.v1.Link
+	29,  // 47: oscal.assessment_results.v1.Result.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	10,  // 48: oscal.assessment_results.v1.Result.reviewed_controls:type_name -> oscal.assessment_results.v1.ReviewedControls
+	11,  // 49: oscal.assessment_results.v1.ReviewedControls.control_selections:type_name -> oscal.assessment_results.v1.ControlSelection
+	12,  // 50: oscal.assessment_results.v1.ReviewedControls.controls:type_name -> oscal.assessment_results.v1.SelectedControl
+	30,  // 51: oscal.assessment_results.v1.ReviewedControls.props:type_name -> oscal.common.v1.Property
+	31,  // 52: oscal.assessment_results.v1.ReviewedControls.links:type_name -> oscal.common.v1.Link
+	29,  // 53: oscal.assessment_results.v1.ReviewedControls.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	29,  // 54: oscal.assessment_results.v1.ControlSelection.description:type_name -> oscal.common.v1.MarkupMultiline
+	12,  // 55: oscal.assessment_results.v1.ControlSelection.include_controls:type_name -> oscal.assessment_results.v1.SelectedControl
+	12,  // 56: oscal.assessment_results.v1.ControlSelection.exclude_controls:type_name -> oscal.assessment_results.v1.SelectedControl
+	30,  // 57: oscal.assessment_results.v1.ControlSelection.props:type_name -> oscal.common.v1.Property
+	31,  // 58: oscal.assessment_results.v1.ControlSelection.links:type_name -> oscal.common.v1.Link
+	29,  // 59: oscal.assessment_results.v1.ControlSelection.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	35,  // 60: oscal.assessment_results.v1.SelectedControl.control_id:type_name -> oscal.common.v1.Token
+	35,  // 61: oscal.assessment_results.v1.SelectedControl.statement_id:type_name -> oscal.common.v1.Token
+	30,  // 62: oscal.assessment_results.v1.SelectedControl.props:type_name -> oscal.common.v1.Property
+	31,  // 63: oscal.assessment_results.v1.SelectedControl.links:type_name -> oscal.common.v1.Link
+	29,  // 64: oscal.assessment_results.v1.SelectedControl.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	25,  // 65: oscal.assessment_results.v1.Finding.uuid:type_name -> oscal.common.v1.UUID
+	32,  // 66: oscal.assessment_results.v1.Finding.title:type_name -> oscal.common.v1.MarkupLine
+	29,  // 67: oscal.assessment_results.v1.Finding.description:type_name -> oscal.common.v1.MarkupMultiline
+	30,  // 68: oscal.assessment_results.v1.Finding.props:type_name -> oscal.common.v1.Property
+	31,  // 69: oscal.assessment_results.v1.Finding.links:type_name -> oscal.common.v1.Link
+	17,  // 70: oscal.assessment_results.v1.Finding.origins:type_name -> oscal.assessment_results.v1.Origin
+	14,  // 71: oscal.assessment_results.v1.Finding.target:type_name -> oscal.assessment_results.v1.FindingTarget
+	25,  // 72: oscal.assessment_results.v1.Finding.implementation_statement_uuid:type_name -> oscal.common.v1.UUID
+	20,  // 73: oscal.assessment_results.v1.Finding.related_observations:type_name -> oscal.assessment_results.v1.RelatedObservation
+	21,  // 74: oscal.assessment_results.v1.Finding.related_risks:type_name -> oscal.assessment_results.v1.AssociatedRisk
+	29,  // 75: oscal.assessment_results.v1.Finding.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	35,  // 76: oscal.assessment_results.v1.FindingTarget.target_id:type_name -> oscal.common.v1.Token
+	32,  // 77: oscal.assessment_results.v1.FindingTarget.title:type_name -> oscal.common.v1.MarkupLine
+	29,  // 78: oscal.assessment_results.v1.FindingTarget.description:type_name -> oscal.common.v1.MarkupMultiline
+	30,  // 79: oscal.assessment_results.v1.FindingTarget.props:type_name -> oscal.common.v1.Property
+	31,  // 80: oscal.assessment_results.v1.FindingTarget.links:type_name -> oscal.common.v1.Link
+	15,  // 81: oscal.assessment_results.v1.FindingTarget.status:type_name -> oscal.assessment_results.v1.ObjectiveStatus
+	16,  // 82: oscal.assessment_results.v1.FindingTarget.implementation_status:type_name -> oscal.assessment_results.v1.ImplementationStatus
+	29,  // 83: oscal.assessment_results.v1.FindingTarget.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	29,  // 84: oscal.assessment_results.v1.ObjectiveStatus.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	29,  // 85: oscal.assessment_results.v1.ImplementationStatus.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	18,  // 86: oscal.assessment_results.v1.Origin.actors:type_name -> oscal.assessment_results.v1.OriginActor
+	19,  // 87: oscal.assessment_results.v1.Origin.related_tasks:type_name -> oscal.assessment_results.v1.RelatedTask
+	25,  // 88: oscal.assessment_results.v1.OriginActor.actor_uuid:type_name -> oscal.common.v1.UUID
+	32,  // 89: oscal.assessment_results.v1.OriginActor.title:type_name -> oscal.common.v1.MarkupLine
+	30,  // 90: oscal.assessment_results.v1.OriginActor.props:type_name -> oscal.common.v1.Property
+	31,  // 91: oscal.assessment_results.v1.OriginActor.links:type_name -> oscal.common.v1.Link
+	29,  // 92: oscal.assessment_results.v1.OriginActor.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	25,  // 93: oscal.assessment_results.v1.RelatedTask.task_uuid:type_name -> oscal.common.v1.UUID
+	32,  // 94: oscal.assessment_results.v1.RelatedTask.title:type_name -> oscal.common.v1.MarkupLine
+	30,  // 95: oscal.assessment_results.v1.RelatedTask.props:type_name -> oscal.common.v1.Property
+	31,  // 96: oscal.assessment_results.v1.RelatedTask.links:type_name -> oscal.common.v1.Link
+	29,  // 97: oscal.assessment_results.v1.RelatedTask.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	25,  // 98: oscal.assessment_results.v1.RelatedObservation.observation_uuid:type_name -> oscal.common.v1.UUID
+	29,  // 99: oscal.assessment_results.v1.RelatedObservation.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	25,  // 100: oscal.assessment_results.v1.AssociatedRisk.risk_uuid:type_name -> oscal.common.v1.UUID
+	29,  // 101: oscal.assessment_results.v1.AssociatedRisk.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	25,  // 102: oscal.assessment_results.v1.Observation.uuid:type_name -> oscal.common.v1.UUID
+	32,  // 103: oscal.assessment_results.v1.Observation.title:type_name -> oscal.common.v1.MarkupLine
+	29,  // 104: oscal.assessment_results.v1.Observation.description:type_name -> oscal.common.v1.MarkupMultiline
+	30,  // 105: oscal.assessment_results.v1.Observation.props:type_name -> oscal.common.v1.Property
+	31,  // 106: oscal.assessment_results.v1.Observation.links:type_name -> oscal.common.v1.Link
+	17,  // 107: oscal.assessment_results.v1.Observation.origins:type_name -> oscal.assessment_results.v1.Origin
+	23,  // 108: oscal.assessment_results.v1.Observation.subjects:type_name -> oscal.assessment_results.v1.SubjectReference
+	24,  // 109: oscal.assessment_results.v1.Observation.relevant_evidence:type_name -> oscal.assessment_results.v1.RelevantEvidence
+	34,  // 110: oscal.assessment_results.v1.Observation.collected:type_name -> oscal.common.v1.DateTime
+	34,  // 111: oscal.assessment_results.v1.Observation.expires:type_name -> oscal.common.v1.DateTime
+	29,  // 112: oscal.assessment_results.v1.Observation.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	25,  // 113: oscal.assessment_results.v1.SubjectReference.subject_uuid:type_name -> oscal.common.v1.UUID
+	32,  // 114: oscal.assessment_results.v1.SubjectReference.title:type_name -> oscal.common.v1.MarkupLine
+	30,  // 115: oscal.assessment_results.v1.SubjectReference.props:type_name -> oscal.common.v1.Property
+	31,  // 116: oscal.assessment_results.v1.SubjectReference.links:type_name -> oscal.common.v1.Link
+	29,  // 117: oscal.assessment_results.v1.SubjectReference.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	28,  // 118: oscal.assessment_results.v1.RelevantEvidence.href:type_name -> oscal.common.v1.URIReference
+	29,  // 119: oscal.assessment_results.v1.RelevantEvidence.description:type_name -> oscal.common.v1.MarkupMultiline
+	30,  // 120: oscal.assessment_results.v1.RelevantEvidence.props:type_name -> oscal.common.v1.Property
+	31,  // 121: oscal.assessment_results.v1.RelevantEvidence.links:type_name -> oscal.common.v1.Link
+	29,  // 122: oscal.assessment_results.v1.RelevantEvidence.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	123, // [123:123] is the sub-list for method output_type
+	123, // [123:123] is the sub-list for method input_type
+	123, // [123:123] is the sub-list for extension type_name
+	123, // [123:123] is the sub-list for extension extendee
+	0,   // [0:123] is the sub-list for field type_name
 }
 
 func init() { file_assessment_results_v1_assessment_results_proto_init() }
@@ -2099,7 +2397,7 @@ func file_assessment_results_v1_assessment_results_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_assessment_results_v1_assessment_results_proto_rawDesc), len(file_assessment_results_v1_assessment_results_proto_rawDesc)),
 			NumEnums:      0,
-			NumMessages:   22,
+			NumMessages:   25,
 			NumExtensions: 0,
 			NumServices:   0,
 		},

@@ -89,6 +89,30 @@
       "title": "Base64",
       "type": "object"
     },
+    "oscal.common.v1.Citation.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Citation represents a bibliographic citation",
+      "properties": {
+        "links": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Link.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "props": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Property.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "text": {
+          "$ref": "#/$defs/oscal.common.v1.MarkupLine.jsonschema.json"
+        }
+      },
+      "title": "Citation",
+      "type": "object"
+    },
     "oscal.common.v1.DateTime.jsonschema.json": {
       "$schema": "https://json-schema.org/draft/2020-12/schema",
       "additionalProperties": false,
@@ -131,6 +155,22 @@
       "title": "Email Address",
       "type": "object"
     },
+    "oscal.common.v1.Hash.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Hash represents a cryptographic hash",
+      "properties": {
+        "algorithm": {
+          "default": "",
+          "type": "string"
+        },
+        "value": {
+          "$ref": "#/$defs/oscal.common.v1.Base64.jsonschema.json"
+        }
+      },
+      "title": "Hash",
+      "type": "object"
+    },
     "oscal.common.v1.Link.jsonschema.json": {
       "$schema": "https://json-schema.org/draft/2020-12/schema",
       "additionalProperties": false,
@@ -167,6 +207,75 @@
         }
       },
       "title": "Link",
+      "type": "object"
+    },
+    "oscal.common.v1.Location.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Location represents a physical or virtual location",
+      "patternProperties": {
+        "^(email_addresses)$": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.EmailAddress.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "^(telephone_numbers)$": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.TelephoneNumber.jsonschema.json"
+          },
+          "type": "array"
+        }
+      },
+      "properties": {
+        "address": {
+          "$ref": "#/$defs/oscal.common.v1.Address.jsonschema.json"
+        },
+        "emailAddresses": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.EmailAddress.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "links": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Link.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "props": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Property.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "remarks": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "telephoneNumbers": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.TelephoneNumber.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "title": {
+          "default": "",
+          "type": "string"
+        },
+        "urls": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.URI.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "uuid": {
+          "$ref": "#/$defs/oscal.common.v1.UUID.jsonschema.json"
+        }
+      },
+      "title": "Location",
       "type": "object"
     },
     "oscal.common.v1.MarkupLine.jsonschema.json": {
@@ -230,6 +339,12 @@
           },
           "type": "array"
         },
+        "locations": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Location.jsonschema.json"
+          },
+          "type": "array"
+        },
         "oscalVersion": {
           "default": "",
           "type": "string"
@@ -287,6 +402,18 @@
           },
           "type": "array"
         },
+        "^(external_ids)$": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.PartyExternalId.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "^(location_uuids)$": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.UUID.jsonschema.json"
+          },
+          "type": "array"
+        },
         "^(responsible_parties)$": {
           "items": {
             "$ref": "#/$defs/oscal.common.v1.ResponsibleParty.jsonschema.json"
@@ -316,9 +443,21 @@
           },
           "type": "array"
         },
+        "externalIds": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.PartyExternalId.jsonschema.json"
+          },
+          "type": "array"
+        },
         "links": {
           "items": {
             "$ref": "#/$defs/oscal.common.v1.Link.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "locationUuids": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.UUID.jsonschema.json"
           },
           "type": "array"
         },
@@ -367,6 +506,22 @@
       "title": "Party",
       "type": "object"
     },
+    "oscal.common.v1.PartyExternalId.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "PartyExternalId represents an external identifier for a party",
+      "properties": {
+        "id": {
+          "default": "",
+          "type": "string"
+        },
+        "scheme": {
+          "$ref": "#/$defs/oscal.common.v1.URI.jsonschema.json"
+        }
+      },
+      "title": "Party External Id",
+      "type": "object"
+    },
     "oscal.common.v1.Property.jsonschema.json": {
       "$schema": "https://json-schema.org/draft/2020-12/schema",
       "additionalProperties": false,
@@ -397,6 +552,9 @@
       "additionalProperties": false,
       "description": "Resource represents an external resource",
       "patternProperties": {
+        "^(citation_obj)$": {
+          "$ref": "#/$defs/oscal.common.v1.Citation.jsonschema.json"
+        },
         "^(document_ids)$": {
           "items": {
             "$ref": "#/$defs/oscal.common.v1.DocumentId.jsonschema.json"
@@ -413,7 +571,11 @@
         },
         "citation": {
           "default": "",
+          "description": "Deprecated: use citation_obj instead. Kept for backward compatibility.",
           "type": "string"
+        },
+        "citationObj": {
+          "$ref": "#/$defs/oscal.common.v1.Citation.jsonschema.json"
         },
         "description": {
           "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.jsonschema.json"
@@ -442,11 +604,15 @@
           },
           "type": "array"
         },
-        "title": {
+        "rlinks": {
           "items": {
-            "type": "string"
+            "$ref": "#/$defs/oscal.common.v1.Rlink.jsonschema.json"
           },
           "type": "array"
+        },
+        "title": {
+          "default": "",
+          "type": "string"
         },
         "uuid": {
           "$ref": "#/$defs/oscal.common.v1.UUID.jsonschema.json"
@@ -497,6 +663,34 @@
         }
       },
       "title": "Responsible Party",
+      "type": "object"
+    },
+    "oscal.common.v1.Rlink.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Rlink represents a resource link",
+      "patternProperties": {
+        "^(media_type)$": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "properties": {
+        "hashes": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Hash.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "href": {
+          "$ref": "#/$defs/oscal.common.v1.URI.jsonschema.json"
+        },
+        "mediaType": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Rlink",
       "type": "object"
     },
     "oscal.common.v1.Role.jsonschema.json": {
@@ -711,10 +905,6 @@
       "additionalProperties": false,
       "description": "ControlImplementation represents control implementation by a component",
       "patternProperties": {
-        "^(control_id)$": {
-          "default": "",
-          "type": "string"
-        },
         "^(implemented_requirements)$": {
           "items": {
             "$ref": "#/$defs/oscal.component_definition.v1.ImplementedRequirement.jsonschema.json"
@@ -729,15 +919,9 @@
         }
       },
       "properties": {
-        "controlId": {
+        "description": {
           "default": "",
           "type": "string"
-        },
-        "description": {
-          "items": {
-            "$ref": "#/$defs/oscal.common.v1.MarkupLine.jsonschema.json"
-          },
-          "type": "array"
         },
         "implementedRequirements": {
           "items": {
@@ -768,6 +952,12 @@
             "$ref": "#/$defs/oscal.component_definition.v1.SetParameter.jsonschema.json"
           },
           "type": "array"
+        },
+        "source": {
+          "$ref": "#/$defs/oscal.common.v1.URIReference.jsonschema.json"
+        },
+        "uuid": {
+          "$ref": "#/$defs/oscal.common.v1.UUID.jsonschema.json"
         }
       },
       "title": "Control Implementation",
@@ -873,10 +1063,8 @@
           "type": "string"
         },
         "description": {
-          "items": {
-            "$ref": "#/$defs/oscal.common.v1.MarkupLine.jsonschema.json"
-          },
-          "type": "array"
+          "default": "",
+          "type": "string"
         },
         "links": {
           "items": {
@@ -901,6 +1089,9 @@
             "$ref": "#/$defs/oscal.component_definition.v1.Statement.jsonschema.json"
           },
           "type": "array"
+        },
+        "uuid": {
+          "$ref": "#/$defs/oscal.common.v1.UUID.jsonschema.json"
         }
       },
       "title": "Implemented Requirement",

@@ -48,7 +48,10 @@ export declare type AssessmentPlan = Message<"oscal.assessment_plan.v1.Assessmen
   reviewedControls?: ReviewedControls | undefined;
 
   /**
-   * @generated from field: repeated oscal.assessment_plan.v1.AssessmentTask assessment_tasks = 7;
+   * Deprecated: use tasks instead. Kept for backward compatibility.
+   *
+   * @generated from field: repeated oscal.assessment_plan.v1.AssessmentTask assessment_tasks = 7 [deprecated = true];
+   * @deprecated
    */
   assessmentTasks: AssessmentTask[];
 
@@ -56,6 +59,11 @@ export declare type AssessmentPlan = Message<"oscal.assessment_plan.v1.Assessmen
    * @generated from field: oscal.common.v1.BackMatter back_matter = 8;
    */
   backMatter?: BackMatter | undefined;
+
+  /**
+   * @generated from field: repeated oscal.assessment_plan.v1.AssessmentTask tasks = 9;
+   */
+  tasks: AssessmentTask[];
 };
 
 /**
@@ -635,7 +643,10 @@ export declare const TermSchema: GenMessage<Term>;
  */
 export declare type ReviewedControls = Message<"oscal.assessment_plan.v1.ReviewedControls"> & {
   /**
-   * @generated from field: string control_selection = 1;
+   * Deprecated: use control_selections instead. Kept for backward compatibility.
+   *
+   * @generated from field: string control_selection = 1 [deprecated = true];
+   * @deprecated
    */
   controlSelection: string;
 
@@ -643,6 +654,26 @@ export declare type ReviewedControls = Message<"oscal.assessment_plan.v1.Reviewe
    * @generated from field: repeated oscal.assessment_plan.v1.ControlSelection controls = 2;
    */
   controls: ControlSelection[];
+
+  /**
+   * @generated from field: repeated oscal.assessment_plan.v1.ControlSelection control_selections = 3;
+   */
+  controlSelections: ControlSelection[];
+
+  /**
+   * @generated from field: repeated oscal.common.v1.Property props = 4;
+   */
+  props: Property[];
+
+  /**
+   * @generated from field: repeated oscal.common.v1.Link links = 5;
+   */
+  links: Link[];
+
+  /**
+   * @generated from field: repeated oscal.common.v1.MarkupMultiline remarks = 6;
+   */
+  remarks: MarkupMultiline[];
 };
 
 /**
@@ -658,12 +689,32 @@ export declare const ReviewedControlsSchema: GenMessage<ReviewedControls>;
  */
 export declare type ControlSelection = Message<"oscal.assessment_plan.v1.ControlSelection"> & {
   /**
-   * @generated from field: oscal.common.v1.Token control_id = 1;
+   * @generated from field: oscal.common.v1.MarkupMultiline description = 1;
    */
-  controlId?: Token | undefined;
+  description?: MarkupMultiline | undefined;
 
   /**
-   * @generated from field: repeated oscal.common.v1.MarkupMultiline remarks = 2;
+   * @generated from field: repeated oscal.assessment_plan.v1.SelectedControl include_controls = 2;
+   */
+  includeControls: SelectedControl[];
+
+  /**
+   * @generated from field: repeated oscal.assessment_plan.v1.SelectedControl exclude_controls = 3;
+   */
+  excludeControls: SelectedControl[];
+
+  /**
+   * @generated from field: repeated oscal.common.v1.Property props = 4;
+   */
+  props: Property[];
+
+  /**
+   * @generated from field: repeated oscal.common.v1.Link links = 5;
+   */
+  links: Link[];
+
+  /**
+   * @generated from field: repeated oscal.common.v1.MarkupMultiline remarks = 6;
    */
   remarks: MarkupMultiline[];
 };
@@ -673,6 +724,44 @@ export declare type ControlSelection = Message<"oscal.assessment_plan.v1.Control
  * Use `create(ControlSelectionSchema)` to create a new message.
  */
 export declare const ControlSelectionSchema: GenMessage<ControlSelection>;
+
+/**
+ * SelectedControl represents a selected control
+ *
+ * @generated from message oscal.assessment_plan.v1.SelectedControl
+ */
+export declare type SelectedControl = Message<"oscal.assessment_plan.v1.SelectedControl"> & {
+  /**
+   * @generated from field: oscal.common.v1.Token control_id = 1;
+   */
+  controlId?: Token | undefined;
+
+  /**
+   * @generated from field: oscal.common.v1.Token statement_id = 2;
+   */
+  statementId?: Token | undefined;
+
+  /**
+   * @generated from field: repeated oscal.common.v1.Property props = 3;
+   */
+  props: Property[];
+
+  /**
+   * @generated from field: repeated oscal.common.v1.Link links = 4;
+   */
+  links: Link[];
+
+  /**
+   * @generated from field: repeated oscal.common.v1.MarkupMultiline remarks = 5;
+   */
+  remarks: MarkupMultiline[];
+};
+
+/**
+ * Describes the message oscal.assessment_plan.v1.SelectedControl.
+ * Use `create(SelectedControlSchema)` to create a new message.
+ */
+export declare const SelectedControlSchema: GenMessage<SelectedControl>;
 
 /**
  * AssessmentTask represents an assessment task

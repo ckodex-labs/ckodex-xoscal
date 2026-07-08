@@ -15,6 +15,30 @@
       "title": "Base64",
       "type": "object"
     },
+    "oscal.common.v1.Citation.schema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Citation represents a bibliographic citation",
+      "properties": {
+        "links": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Link.schema.strict.json"
+          },
+          "type": "array"
+        },
+        "props": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Property.schema.strict.json"
+          },
+          "type": "array"
+        },
+        "text": {
+          "$ref": "#/$defs/oscal.common.v1.MarkupLine.schema.strict.json"
+        }
+      },
+      "title": "Citation",
+      "type": "object"
+    },
     "oscal.common.v1.DocumentId.schema.strict.json": {
       "$schema": "https://json-schema.org/draft/2020-12/schema",
       "additionalProperties": false,
@@ -32,6 +56,24 @@
         "identifier"
       ],
       "title": "Document Id",
+      "type": "object"
+    },
+    "oscal.common.v1.Hash.schema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Hash represents a cryptographic hash",
+      "properties": {
+        "algorithm": {
+          "type": "string"
+        },
+        "value": {
+          "$ref": "#/$defs/oscal.common.v1.Base64.schema.strict.json"
+        }
+      },
+      "required": [
+        "algorithm"
+      ],
+      "title": "Hash",
       "type": "object"
     },
     "oscal.common.v1.Link.schema.strict.json": {
@@ -62,6 +104,21 @@
         "resource_fragment"
       ],
       "title": "Link",
+      "type": "object"
+    },
+    "oscal.common.v1.MarkupLine.schema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "MarkupLine represents a line of markup text (e.g., markdown)",
+      "properties": {
+        "value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "value"
+      ],
+      "title": "Markup Line",
       "type": "object"
     },
     "oscal.common.v1.MarkupMultiline.schema.strict.json": {
@@ -118,7 +175,11 @@
           "type": "array"
         },
         "citation": {
+          "description": "Deprecated: use citation_obj instead. Kept for backward compatibility.",
           "type": "string"
+        },
+        "citation_obj": {
+          "$ref": "#/$defs/oscal.common.v1.Citation.schema.strict.json"
         },
         "description": {
           "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.schema.strict.json"
@@ -147,20 +208,48 @@
           },
           "type": "array"
         },
-        "title": {
+        "rlinks": {
           "items": {
-            "type": "string"
+            "$ref": "#/$defs/oscal.common.v1.Rlink.schema.strict.json"
           },
           "type": "array"
+        },
+        "title": {
+          "type": "string"
         },
         "uuid": {
           "$ref": "#/$defs/oscal.common.v1.UUID.schema.strict.json"
         }
       },
       "required": [
+        "title",
         "citation"
       ],
       "title": "Resource",
+      "type": "object"
+    },
+    "oscal.common.v1.Rlink.schema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Rlink represents a resource link",
+      "properties": {
+        "hashes": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Hash.schema.strict.json"
+          },
+          "type": "array"
+        },
+        "href": {
+          "$ref": "#/$defs/oscal.common.v1.URI.schema.strict.json"
+        },
+        "media_type": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "media_type"
+      ],
+      "title": "Rlink",
       "type": "object"
     },
     "oscal.common.v1.URI.schema.strict.json": {

@@ -4,10 +4,6 @@
   "additionalProperties": false,
   "description": "ControlImplementation represents control implementation by a component",
   "patternProperties": {
-    "^(controlId)$": {
-      "default": "",
-      "type": "string"
-    },
     "^(implementedRequirements)$": {
       "items": {
         "$ref": "oscal.component_definition.v1.ImplementedRequirement.schema.json"
@@ -22,15 +18,9 @@
     }
   },
   "properties": {
-    "control_id": {
+    "description": {
       "default": "",
       "type": "string"
-    },
-    "description": {
-      "items": {
-        "$ref": "oscal.common.v1.MarkupLine.schema.json"
-      },
-      "type": "array"
     },
     "implemented_requirements": {
       "items": {
@@ -61,6 +51,12 @@
         "$ref": "oscal.component_definition.v1.SetParameter.schema.json"
       },
       "type": "array"
+    },
+    "source": {
+      "$ref": "oscal.common.v1.URIReference.schema.json"
+    },
+    "uuid": {
+      "$ref": "oscal.common.v1.UUID.schema.json"
     }
   },
   "title": "Control Implementation",

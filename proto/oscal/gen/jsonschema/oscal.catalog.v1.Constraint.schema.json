@@ -7,6 +7,12 @@
     "description": {
       "default": "",
       "type": "string"
+    },
+    "tests": {
+      "items": {
+        "$ref": "oscal.catalog.v1.Test.schema.json"
+      },
+      "type": "array"
     }
   },
   "title": "Constraint",

@@ -167,9 +167,25 @@ nonisolated struct Oscal_ComponentDefinition_V1_ControlImplementation: Sendable 
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var controlID: String = String()
+  var uuid: Oscal_Common_V1_UUID {
+    get {_uuid ?? Oscal_Common_V1_UUID()}
+    set {_uuid = newValue}
+  }
+  /// Returns true if `uuid` has been explicitly set.
+  var hasUuid: Bool {self._uuid != nil}
+  /// Clears the value of `uuid`. Subsequent reads from it will return its default value.
+  mutating func clearUuid() {self._uuid = nil}
 
-  var description_p: [Oscal_Common_V1_MarkupLine] = []
+  var source: Oscal_Common_V1_URIReference {
+    get {_source ?? Oscal_Common_V1_URIReference()}
+    set {_source = newValue}
+  }
+  /// Returns true if `source` has been explicitly set.
+  var hasSource: Bool {self._source != nil}
+  /// Clears the value of `source`. Subsequent reads from it will return its default value.
+  mutating func clearSource() {self._source = nil}
+
+  var description_p: String = String()
 
   var setParameters: [Oscal_ComponentDefinition_V1_SetParameter] = []
 
@@ -184,6 +200,9 @@ nonisolated struct Oscal_ComponentDefinition_V1_ControlImplementation: Sendable 
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
   init() {}
+
+  fileprivate var _uuid: Oscal_Common_V1_UUID? = nil
+  fileprivate var _source: Oscal_Common_V1_URIReference? = nil
 }
 
 /// SetParameter represents parameter value assignments
@@ -213,9 +232,18 @@ nonisolated struct Oscal_ComponentDefinition_V1_ImplementedRequirement: Sendable
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
+  var uuid: Oscal_Common_V1_UUID {
+    get {_uuid ?? Oscal_Common_V1_UUID()}
+    set {_uuid = newValue}
+  }
+  /// Returns true if `uuid` has been explicitly set.
+  var hasUuid: Bool {self._uuid != nil}
+  /// Clears the value of `uuid`. Subsequent reads from it will return its default value.
+  mutating func clearUuid() {self._uuid = nil}
+
   var controlID: String = String()
 
-  var description_p: [Oscal_Common_V1_MarkupLine] = []
+  var description_p: String = String()
 
   var statements: [Oscal_ComponentDefinition_V1_Statement] = []
 
@@ -228,6 +256,8 @@ nonisolated struct Oscal_ComponentDefinition_V1_ImplementedRequirement: Sendable
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
   init() {}
+
+  fileprivate var _uuid: Oscal_Common_V1_UUID? = nil
 }
 
 /// Statement represents a control implementation statement
@@ -590,7 +620,7 @@ nonisolated extension Oscal_ComponentDefinition_V1_DefinedComponent: SwiftProtob
 
 nonisolated extension Oscal_ComponentDefinition_V1_ControlImplementation: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   static let protoMessageName: String = _protobuf_package + ".ControlImplementation"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{3}control_id\0\u{1}description\0\u{3}set_parameters\0\u{3}implemented_requirements\0\u{1}props\0\u{1}links\0\u{1}remarks\0")
+  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}uuid\0\u{1}source\0\u{1}description\0\u{3}set_parameters\0\u{3}implemented_requirements\0\u{1}props\0\u{1}links\0\u{1}remarks\0")
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
@@ -598,45 +628,54 @@ nonisolated extension Oscal_ComponentDefinition_V1_ControlImplementation: SwiftP
       // allocates stack space for every case branch when no optimizations are
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
       switch fieldNumber {
-      case 1: try { try decoder.decodeSingularStringField(value: &self.controlID) }()
-      case 2: try { try decoder.decodeRepeatedMessageField(value: &self.description_p) }()
-      case 3: try { try decoder.decodeRepeatedMessageField(value: &self.setParameters) }()
-      case 4: try { try decoder.decodeRepeatedMessageField(value: &self.implementedRequirements) }()
-      case 5: try { try decoder.decodeRepeatedMessageField(value: &self.props) }()
-      case 6: try { try decoder.decodeRepeatedMessageField(value: &self.links) }()
-      case 7: try { try decoder.decodeRepeatedMessageField(value: &self.remarks) }()
+      case 1: try { try decoder.decodeSingularMessageField(value: &self._uuid) }()
+      case 2: try { try decoder.decodeSingularMessageField(value: &self._source) }()
+      case 3: try { try decoder.decodeSingularStringField(value: &self.description_p) }()
+      case 4: try { try decoder.decodeRepeatedMessageField(value: &self.setParameters) }()
+      case 5: try { try decoder.decodeRepeatedMessageField(value: &self.implementedRequirements) }()
+      case 6: try { try decoder.decodeRepeatedMessageField(value: &self.props) }()
+      case 7: try { try decoder.decodeRepeatedMessageField(value: &self.links) }()
+      case 8: try { try decoder.decodeRepeatedMessageField(value: &self.remarks) }()
       default: break
       }
     }
   }
 
   func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if !self.controlID.isEmpty {
-      try visitor.visitSingularStringField(value: self.controlID, fieldNumber: 1)
-    }
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
+    try { if let v = self._uuid {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
+    } }()
+    try { if let v = self._source {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
+    } }()
     if !self.description_p.isEmpty {
-      try visitor.visitRepeatedMessageField(value: self.description_p, fieldNumber: 2)
+      try visitor.visitSingularStringField(value: self.description_p, fieldNumber: 3)
     }
     if !self.setParameters.isEmpty {
-      try visitor.visitRepeatedMessageField(value: self.setParameters, fieldNumber: 3)
+      try visitor.visitRepeatedMessageField(value: self.setParameters, fieldNumber: 4)
     }
     if !self.implementedRequirements.isEmpty {
-      try visitor.visitRepeatedMessageField(value: self.implementedRequirements, fieldNumber: 4)
+      try visitor.visitRepeatedMessageField(value: self.implementedRequirements, fieldNumber: 5)
     }
     if !self.props.isEmpty {
-      try visitor.visitRepeatedMessageField(value: self.props, fieldNumber: 5)
+      try visitor.visitRepeatedMessageField(value: self.props, fieldNumber: 6)
     }
     if !self.links.isEmpty {
-      try visitor.visitRepeatedMessageField(value: self.links, fieldNumber: 6)
+      try visitor.visitRepeatedMessageField(value: self.links, fieldNumber: 7)
     }
     if !self.remarks.isEmpty {
-      try visitor.visitRepeatedMessageField(value: self.remarks, fieldNumber: 7)
+      try visitor.visitRepeatedMessageField(value: self.remarks, fieldNumber: 8)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
   static func ==(lhs: Oscal_ComponentDefinition_V1_ControlImplementation, rhs: Oscal_ComponentDefinition_V1_ControlImplementation) -> Bool {
-    if lhs.controlID != rhs.controlID {return false}
+    if lhs._uuid != rhs._uuid {return false}
+    if lhs._source != rhs._source {return false}
     if lhs.description_p != rhs.description_p {return false}
     if lhs.setParameters != rhs.setParameters {return false}
     if lhs.implementedRequirements != rhs.implementedRequirements {return false}
@@ -700,7 +739,7 @@ nonisolated extension Oscal_ComponentDefinition_V1_SetParameter: SwiftProtobuf.M
 
 nonisolated extension Oscal_ComponentDefinition_V1_ImplementedRequirement: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   static let protoMessageName: String = _protobuf_package + ".ImplementedRequirement"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{3}control_id\0\u{1}description\0\u{1}statements\0\u{1}props\0\u{1}links\0\u{1}remarks\0")
+  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}uuid\0\u{3}control_id\0\u{1}description\0\u{1}statements\0\u{1}props\0\u{1}links\0\u{1}remarks\0")
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
@@ -708,40 +747,49 @@ nonisolated extension Oscal_ComponentDefinition_V1_ImplementedRequirement: Swift
       // allocates stack space for every case branch when no optimizations are
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
       switch fieldNumber {
-      case 1: try { try decoder.decodeSingularStringField(value: &self.controlID) }()
-      case 2: try { try decoder.decodeRepeatedMessageField(value: &self.description_p) }()
-      case 3: try { try decoder.decodeRepeatedMessageField(value: &self.statements) }()
-      case 4: try { try decoder.decodeRepeatedMessageField(value: &self.props) }()
-      case 5: try { try decoder.decodeRepeatedMessageField(value: &self.links) }()
-      case 6: try { try decoder.decodeRepeatedMessageField(value: &self.remarks) }()
+      case 1: try { try decoder.decodeSingularMessageField(value: &self._uuid) }()
+      case 2: try { try decoder.decodeSingularStringField(value: &self.controlID) }()
+      case 3: try { try decoder.decodeSingularStringField(value: &self.description_p) }()
+      case 4: try { try decoder.decodeRepeatedMessageField(value: &self.statements) }()
+      case 5: try { try decoder.decodeRepeatedMessageField(value: &self.props) }()
+      case 6: try { try decoder.decodeRepeatedMessageField(value: &self.links) }()
+      case 7: try { try decoder.decodeRepeatedMessageField(value: &self.remarks) }()
       default: break
       }
     }
   }
 
   func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
+    try { if let v = self._uuid {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
+    } }()
     if !self.controlID.isEmpty {
-      try visitor.visitSingularStringField(value: self.controlID, fieldNumber: 1)
+      try visitor.visitSingularStringField(value: self.controlID, fieldNumber: 2)
     }
     if !self.description_p.isEmpty {
-      try visitor.visitRepeatedMessageField(value: self.description_p, fieldNumber: 2)
+      try visitor.visitSingularStringField(value: self.description_p, fieldNumber: 3)
     }
     if !self.statements.isEmpty {
-      try visitor.visitRepeatedMessageField(value: self.statements, fieldNumber: 3)
+      try visitor.visitRepeatedMessageField(value: self.statements, fieldNumber: 4)
     }
     if !self.props.isEmpty {
-      try visitor.visitRepeatedMessageField(value: self.props, fieldNumber: 4)
+      try visitor.visitRepeatedMessageField(value: self.props, fieldNumber: 5)
     }
     if !self.links.isEmpty {
-      try visitor.visitRepeatedMessageField(value: self.links, fieldNumber: 5)
+      try visitor.visitRepeatedMessageField(value: self.links, fieldNumber: 6)
     }
     if !self.remarks.isEmpty {
-      try visitor.visitRepeatedMessageField(value: self.remarks, fieldNumber: 6)
+      try visitor.visitRepeatedMessageField(value: self.remarks, fieldNumber: 7)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
   static func ==(lhs: Oscal_ComponentDefinition_V1_ImplementedRequirement, rhs: Oscal_ComponentDefinition_V1_ImplementedRequirement) -> Bool {
+    if lhs._uuid != rhs._uuid {return false}
     if lhs.controlID != rhs.controlID {return false}
     if lhs.description_p != rhs.description_p {return false}
     if lhs.statements != rhs.statements {return false}

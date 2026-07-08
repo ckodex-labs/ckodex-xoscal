@@ -16031,6 +16031,33 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
      */
     oscal.common.v1.Common.MarkupMultilineOrBuilder getRemarksOrBuilder(
         int index);
+
+    /**
+     * <pre>
+     * reviewed_controls is required by the OSCAL 1.1.2 schema for each result.
+     * </pre>
+     *
+     * <code>.oscal.assessment_results.v1.ReviewedControls reviewed_controls = 11 [json_name = "reviewedControls"];</code>
+     * @return Whether the reviewedControls field is set.
+     */
+    boolean hasReviewedControls();
+    /**
+     * <pre>
+     * reviewed_controls is required by the OSCAL 1.1.2 schema for each result.
+     * </pre>
+     *
+     * <code>.oscal.assessment_results.v1.ReviewedControls reviewed_controls = 11 [json_name = "reviewedControls"];</code>
+     * @return The reviewedControls.
+     */
+    oscal.assessment_results.v1.AssessmentResultsOuterClass.ReviewedControls getReviewedControls();
+    /**
+     * <pre>
+     * reviewed_controls is required by the OSCAL 1.1.2 schema for each result.
+     * </pre>
+     *
+     * <code>.oscal.assessment_results.v1.ReviewedControls reviewed_controls = 11 [json_name = "reviewedControls"];</code>
+     */
+    oscal.assessment_results.v1.AssessmentResultsOuterClass.ReviewedControlsOrBuilder getReviewedControlsOrBuilder();
   }
   /**
    * <pre>
@@ -16419,6 +16446,44 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
       return remarks_.get(index);
     }
 
+    public static final int REVIEWED_CONTROLS_FIELD_NUMBER = 11;
+    private oscal.assessment_results.v1.AssessmentResultsOuterClass.ReviewedControls reviewedControls_;
+    /**
+     * <pre>
+     * reviewed_controls is required by the OSCAL 1.1.2 schema for each result.
+     * </pre>
+     *
+     * <code>.oscal.assessment_results.v1.ReviewedControls reviewed_controls = 11 [json_name = "reviewedControls"];</code>
+     * @return Whether the reviewedControls field is set.
+     */
+    @java.lang.Override
+    public boolean hasReviewedControls() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <pre>
+     * reviewed_controls is required by the OSCAL 1.1.2 schema for each result.
+     * </pre>
+     *
+     * <code>.oscal.assessment_results.v1.ReviewedControls reviewed_controls = 11 [json_name = "reviewedControls"];</code>
+     * @return The reviewedControls.
+     */
+    @java.lang.Override
+    public oscal.assessment_results.v1.AssessmentResultsOuterClass.ReviewedControls getReviewedControls() {
+      return reviewedControls_ == null ? oscal.assessment_results.v1.AssessmentResultsOuterClass.ReviewedControls.getDefaultInstance() : reviewedControls_;
+    }
+    /**
+     * <pre>
+     * reviewed_controls is required by the OSCAL 1.1.2 schema for each result.
+     * </pre>
+     *
+     * <code>.oscal.assessment_results.v1.ReviewedControls reviewed_controls = 11 [json_name = "reviewedControls"];</code>
+     */
+    @java.lang.Override
+    public oscal.assessment_results.v1.AssessmentResultsOuterClass.ReviewedControlsOrBuilder getReviewedControlsOrBuilder() {
+      return reviewedControls_ == null ? oscal.assessment_results.v1.AssessmentResultsOuterClass.ReviewedControls.getDefaultInstance() : reviewedControls_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -16462,6 +16527,9 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
       }
       for (int i = 0; i < remarks_.size(); i++) {
         output.writeMessage(10, remarks_.get(i));
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        output.writeMessage(11, getReviewedControls());
       }
       getUnknownFields().writeTo(output);
     }
@@ -16532,6 +16600,10 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
             }
             size += 1 * count;
           }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(11, getReviewedControls());
+      }
       return size;
     }
     @java.lang.Override
@@ -16591,6 +16663,11 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
           .equals(other.getLinksList())) return false;
       if (!getRemarksList()
           .equals(other.getRemarksList())) return false;
+      if (hasReviewedControls() != other.hasReviewedControls()) return false;
+      if (hasReviewedControls()) {
+        if (!getReviewedControls()
+            .equals(other.getReviewedControls())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -16641,6 +16718,10 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
       if (getRemarksCount() > 0) {
         hash = (37 * hash) + REMARKS_FIELD_NUMBER;
         hash = (53 * hash) + getRemarksList().hashCode();
+      }
+      if (hasReviewedControls()) {
+        hash = (37 * hash) + REVIEWED_CONTROLS_FIELD_NUMBER;
+        hash = (53 * hash) + getReviewedControls().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -16786,6 +16867,7 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
           internalGetPropsFieldBuilder();
           internalGetLinksFieldBuilder();
           internalGetRemarksFieldBuilder();
+          internalGetReviewedControlsFieldBuilder();
         }
       }
       @java.lang.Override
@@ -16852,6 +16934,11 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
           remarksBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000200);
+        reviewedControls_ = null;
+        if (reviewedControlsBuilder_ != null) {
+          reviewedControlsBuilder_.dispose();
+          reviewedControlsBuilder_ = null;
+        }
         return this;
       }
 
@@ -16964,6 +17051,12 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
               ? end_
               : endBuilder_.build();
           to_bitField0_ |= 0x00000010;
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.reviewedControls_ = reviewedControlsBuilder_ == null
+              ? reviewedControls_
+              : reviewedControlsBuilder_.build();
+          to_bitField0_ |= 0x00000020;
         }
         result.bitField0_ |= to_bitField0_;
       }
@@ -17125,6 +17218,9 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
             }
           }
         }
+        if (other.hasReviewedControls()) {
+          mergeReviewedControls(other.getReviewedControls());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -17251,6 +17347,13 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
                 }
                 break;
               } // case 82
+              case 90: {
+                input.readMessage(
+                    internalGetReviewedControlsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000400;
+                break;
+              } // case 90
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -19073,6 +19176,163 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
         return remarksBuilder_;
       }
 
+      private oscal.assessment_results.v1.AssessmentResultsOuterClass.ReviewedControls reviewedControls_;
+      private com.google.protobuf.SingleFieldBuilder<
+          oscal.assessment_results.v1.AssessmentResultsOuterClass.ReviewedControls, oscal.assessment_results.v1.AssessmentResultsOuterClass.ReviewedControls.Builder, oscal.assessment_results.v1.AssessmentResultsOuterClass.ReviewedControlsOrBuilder> reviewedControlsBuilder_;
+      /**
+       * <pre>
+       * reviewed_controls is required by the OSCAL 1.1.2 schema for each result.
+       * </pre>
+       *
+       * <code>.oscal.assessment_results.v1.ReviewedControls reviewed_controls = 11 [json_name = "reviewedControls"];</code>
+       * @return Whether the reviewedControls field is set.
+       */
+      public boolean hasReviewedControls() {
+        return ((bitField0_ & 0x00000400) != 0);
+      }
+      /**
+       * <pre>
+       * reviewed_controls is required by the OSCAL 1.1.2 schema for each result.
+       * </pre>
+       *
+       * <code>.oscal.assessment_results.v1.ReviewedControls reviewed_controls = 11 [json_name = "reviewedControls"];</code>
+       * @return The reviewedControls.
+       */
+      public oscal.assessment_results.v1.AssessmentResultsOuterClass.ReviewedControls getReviewedControls() {
+        if (reviewedControlsBuilder_ == null) {
+          return reviewedControls_ == null ? oscal.assessment_results.v1.AssessmentResultsOuterClass.ReviewedControls.getDefaultInstance() : reviewedControls_;
+        } else {
+          return reviewedControlsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * reviewed_controls is required by the OSCAL 1.1.2 schema for each result.
+       * </pre>
+       *
+       * <code>.oscal.assessment_results.v1.ReviewedControls reviewed_controls = 11 [json_name = "reviewedControls"];</code>
+       */
+      public Builder setReviewedControls(oscal.assessment_results.v1.AssessmentResultsOuterClass.ReviewedControls value) {
+        if (reviewedControlsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          reviewedControls_ = value;
+        } else {
+          reviewedControlsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * reviewed_controls is required by the OSCAL 1.1.2 schema for each result.
+       * </pre>
+       *
+       * <code>.oscal.assessment_results.v1.ReviewedControls reviewed_controls = 11 [json_name = "reviewedControls"];</code>
+       */
+      public Builder setReviewedControls(
+          oscal.assessment_results.v1.AssessmentResultsOuterClass.ReviewedControls.Builder builderForValue) {
+        if (reviewedControlsBuilder_ == null) {
+          reviewedControls_ = builderForValue.build();
+        } else {
+          reviewedControlsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * reviewed_controls is required by the OSCAL 1.1.2 schema for each result.
+       * </pre>
+       *
+       * <code>.oscal.assessment_results.v1.ReviewedControls reviewed_controls = 11 [json_name = "reviewedControls"];</code>
+       */
+      public Builder mergeReviewedControls(oscal.assessment_results.v1.AssessmentResultsOuterClass.ReviewedControls value) {
+        if (reviewedControlsBuilder_ == null) {
+          if (((bitField0_ & 0x00000400) != 0) &&
+            reviewedControls_ != null &&
+            reviewedControls_ != oscal.assessment_results.v1.AssessmentResultsOuterClass.ReviewedControls.getDefaultInstance()) {
+            getReviewedControlsBuilder().mergeFrom(value);
+          } else {
+            reviewedControls_ = value;
+          }
+        } else {
+          reviewedControlsBuilder_.mergeFrom(value);
+        }
+        if (reviewedControls_ != null) {
+          bitField0_ |= 0x00000400;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * reviewed_controls is required by the OSCAL 1.1.2 schema for each result.
+       * </pre>
+       *
+       * <code>.oscal.assessment_results.v1.ReviewedControls reviewed_controls = 11 [json_name = "reviewedControls"];</code>
+       */
+      public Builder clearReviewedControls() {
+        bitField0_ = (bitField0_ & ~0x00000400);
+        reviewedControls_ = null;
+        if (reviewedControlsBuilder_ != null) {
+          reviewedControlsBuilder_.dispose();
+          reviewedControlsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * reviewed_controls is required by the OSCAL 1.1.2 schema for each result.
+       * </pre>
+       *
+       * <code>.oscal.assessment_results.v1.ReviewedControls reviewed_controls = 11 [json_name = "reviewedControls"];</code>
+       */
+      public oscal.assessment_results.v1.AssessmentResultsOuterClass.ReviewedControls.Builder getReviewedControlsBuilder() {
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return internalGetReviewedControlsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * reviewed_controls is required by the OSCAL 1.1.2 schema for each result.
+       * </pre>
+       *
+       * <code>.oscal.assessment_results.v1.ReviewedControls reviewed_controls = 11 [json_name = "reviewedControls"];</code>
+       */
+      public oscal.assessment_results.v1.AssessmentResultsOuterClass.ReviewedControlsOrBuilder getReviewedControlsOrBuilder() {
+        if (reviewedControlsBuilder_ != null) {
+          return reviewedControlsBuilder_.getMessageOrBuilder();
+        } else {
+          return reviewedControls_ == null ?
+              oscal.assessment_results.v1.AssessmentResultsOuterClass.ReviewedControls.getDefaultInstance() : reviewedControls_;
+        }
+      }
+      /**
+       * <pre>
+       * reviewed_controls is required by the OSCAL 1.1.2 schema for each result.
+       * </pre>
+       *
+       * <code>.oscal.assessment_results.v1.ReviewedControls reviewed_controls = 11 [json_name = "reviewedControls"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          oscal.assessment_results.v1.AssessmentResultsOuterClass.ReviewedControls, oscal.assessment_results.v1.AssessmentResultsOuterClass.ReviewedControls.Builder, oscal.assessment_results.v1.AssessmentResultsOuterClass.ReviewedControlsOrBuilder> 
+          internalGetReviewedControlsFieldBuilder() {
+        if (reviewedControlsBuilder_ == null) {
+          reviewedControlsBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              oscal.assessment_results.v1.AssessmentResultsOuterClass.ReviewedControls, oscal.assessment_results.v1.AssessmentResultsOuterClass.ReviewedControls.Builder, oscal.assessment_results.v1.AssessmentResultsOuterClass.ReviewedControlsOrBuilder>(
+                  getReviewedControls(),
+                  getParentForChildren(),
+                  isClean());
+          reviewedControls_ = null;
+        }
+        return reviewedControlsBuilder_;
+      }
+
       // @@protoc_insertion_point(builder_scope:oscal.assessment_results.v1.Result)
     }
 
@@ -19119,6 +19379,6706 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
 
     @java.lang.Override
     public oscal.assessment_results.v1.AssessmentResultsOuterClass.Result getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ReviewedControlsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oscal.assessment_results.v1.ReviewedControls)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .oscal.assessment_results.v1.ControlSelection control_selections = 1 [json_name = "controlSelections"];</code>
+     */
+    java.util.List<oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelection> 
+        getControlSelectionsList();
+    /**
+     * <code>repeated .oscal.assessment_results.v1.ControlSelection control_selections = 1 [json_name = "controlSelections"];</code>
+     */
+    oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelection getControlSelections(int index);
+    /**
+     * <code>repeated .oscal.assessment_results.v1.ControlSelection control_selections = 1 [json_name = "controlSelections"];</code>
+     */
+    int getControlSelectionsCount();
+    /**
+     * <code>repeated .oscal.assessment_results.v1.ControlSelection control_selections = 1 [json_name = "controlSelections"];</code>
+     */
+    java.util.List<? extends oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelectionOrBuilder> 
+        getControlSelectionsOrBuilderList();
+    /**
+     * <code>repeated .oscal.assessment_results.v1.ControlSelection control_selections = 1 [json_name = "controlSelections"];</code>
+     */
+    oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelectionOrBuilder getControlSelectionsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .oscal.assessment_results.v1.SelectedControl controls = 2 [json_name = "controls"];</code>
+     */
+    java.util.List<oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl> 
+        getControlsList();
+    /**
+     * <code>repeated .oscal.assessment_results.v1.SelectedControl controls = 2 [json_name = "controls"];</code>
+     */
+    oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl getControls(int index);
+    /**
+     * <code>repeated .oscal.assessment_results.v1.SelectedControl controls = 2 [json_name = "controls"];</code>
+     */
+    int getControlsCount();
+    /**
+     * <code>repeated .oscal.assessment_results.v1.SelectedControl controls = 2 [json_name = "controls"];</code>
+     */
+    java.util.List<? extends oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControlOrBuilder> 
+        getControlsOrBuilderList();
+    /**
+     * <code>repeated .oscal.assessment_results.v1.SelectedControl controls = 2 [json_name = "controls"];</code>
+     */
+    oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControlOrBuilder getControlsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+     */
+    java.util.List<oscal.common.v1.Common.Property> 
+        getPropsList();
+    /**
+     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+     */
+    oscal.common.v1.Common.Property getProps(int index);
+    /**
+     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+     */
+    int getPropsCount();
+    /**
+     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+     */
+    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+        getPropsOrBuilderList();
+    /**
+     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+     */
+    oscal.common.v1.Common.PropertyOrBuilder getPropsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+     */
+    java.util.List<oscal.common.v1.Common.Link> 
+        getLinksList();
+    /**
+     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+     */
+    oscal.common.v1.Common.Link getLinks(int index);
+    /**
+     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+     */
+    int getLinksCount();
+    /**
+     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+     */
+    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+        getLinksOrBuilderList();
+    /**
+     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+     */
+    oscal.common.v1.Common.LinkOrBuilder getLinksOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+     */
+    java.util.List<oscal.common.v1.Common.MarkupMultiline> 
+        getRemarksList();
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+     */
+    oscal.common.v1.Common.MarkupMultiline getRemarks(int index);
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+     */
+    int getRemarksCount();
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+     */
+    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+        getRemarksOrBuilderList();
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+     */
+    oscal.common.v1.Common.MarkupMultilineOrBuilder getRemarksOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * ReviewedControls represents the reviewed controls for a result
+   * </pre>
+   *
+   * Protobuf type {@code oscal.assessment_results.v1.ReviewedControls}
+   */
+  public static final class ReviewedControls extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:oscal.assessment_results.v1.ReviewedControls)
+      ReviewedControlsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 35,
+        /* patch= */ 1,
+        /* suffix= */ "",
+        "ReviewedControls");
+    }
+    // Use ReviewedControls.newBuilder() to construct.
+    private ReviewedControls(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private ReviewedControls() {
+      controlSelections_ = java.util.Collections.emptyList();
+      controls_ = java.util.Collections.emptyList();
+      props_ = java.util.Collections.emptyList();
+      links_ = java.util.Collections.emptyList();
+      remarks_ = java.util.Collections.emptyList();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return oscal.assessment_results.v1.AssessmentResultsOuterClass.internal_static_oscal_assessment_results_v1_ReviewedControls_descriptor;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+      return oscal.assessment_results.v1.AssessmentResultsOuterClass.internal_static_oscal_assessment_results_v1_ReviewedControls_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return oscal.assessment_results.v1.AssessmentResultsOuterClass.internal_static_oscal_assessment_results_v1_ReviewedControls_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              oscal.assessment_results.v1.AssessmentResultsOuterClass.ReviewedControls.class, oscal.assessment_results.v1.AssessmentResultsOuterClass.ReviewedControls.Builder.class);
+    }
+
+    public static final int CONTROL_SELECTIONS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelection> controlSelections_;
+    /**
+     * <code>repeated .oscal.assessment_results.v1.ControlSelection control_selections = 1 [json_name = "controlSelections"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelection> getControlSelectionsList() {
+      return controlSelections_;
+    }
+    /**
+     * <code>repeated .oscal.assessment_results.v1.ControlSelection control_selections = 1 [json_name = "controlSelections"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelectionOrBuilder> 
+        getControlSelectionsOrBuilderList() {
+      return controlSelections_;
+    }
+    /**
+     * <code>repeated .oscal.assessment_results.v1.ControlSelection control_selections = 1 [json_name = "controlSelections"];</code>
+     */
+    @java.lang.Override
+    public int getControlSelectionsCount() {
+      return controlSelections_.size();
+    }
+    /**
+     * <code>repeated .oscal.assessment_results.v1.ControlSelection control_selections = 1 [json_name = "controlSelections"];</code>
+     */
+    @java.lang.Override
+    public oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelection getControlSelections(int index) {
+      return controlSelections_.get(index);
+    }
+    /**
+     * <code>repeated .oscal.assessment_results.v1.ControlSelection control_selections = 1 [json_name = "controlSelections"];</code>
+     */
+    @java.lang.Override
+    public oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelectionOrBuilder getControlSelectionsOrBuilder(
+        int index) {
+      return controlSelections_.get(index);
+    }
+
+    public static final int CONTROLS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl> controls_;
+    /**
+     * <code>repeated .oscal.assessment_results.v1.SelectedControl controls = 2 [json_name = "controls"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl> getControlsList() {
+      return controls_;
+    }
+    /**
+     * <code>repeated .oscal.assessment_results.v1.SelectedControl controls = 2 [json_name = "controls"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControlOrBuilder> 
+        getControlsOrBuilderList() {
+      return controls_;
+    }
+    /**
+     * <code>repeated .oscal.assessment_results.v1.SelectedControl controls = 2 [json_name = "controls"];</code>
+     */
+    @java.lang.Override
+    public int getControlsCount() {
+      return controls_.size();
+    }
+    /**
+     * <code>repeated .oscal.assessment_results.v1.SelectedControl controls = 2 [json_name = "controls"];</code>
+     */
+    @java.lang.Override
+    public oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl getControls(int index) {
+      return controls_.get(index);
+    }
+    /**
+     * <code>repeated .oscal.assessment_results.v1.SelectedControl controls = 2 [json_name = "controls"];</code>
+     */
+    @java.lang.Override
+    public oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControlOrBuilder getControlsOrBuilder(
+        int index) {
+      return controls_.get(index);
+    }
+
+    public static final int PROPS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<oscal.common.v1.Common.Property> props_;
+    /**
+     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<oscal.common.v1.Common.Property> getPropsList() {
+      return props_;
+    }
+    /**
+     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+        getPropsOrBuilderList() {
+      return props_;
+    }
+    /**
+     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+     */
+    @java.lang.Override
+    public int getPropsCount() {
+      return props_.size();
+    }
+    /**
+     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.Property getProps(int index) {
+      return props_.get(index);
+    }
+    /**
+     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.PropertyOrBuilder getPropsOrBuilder(
+        int index) {
+      return props_.get(index);
+    }
+
+    public static final int LINKS_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private java.util.List<oscal.common.v1.Common.Link> links_;
+    /**
+     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<oscal.common.v1.Common.Link> getLinksList() {
+      return links_;
+    }
+    /**
+     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+        getLinksOrBuilderList() {
+      return links_;
+    }
+    /**
+     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+     */
+    @java.lang.Override
+    public int getLinksCount() {
+      return links_.size();
+    }
+    /**
+     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.Link getLinks(int index) {
+      return links_.get(index);
+    }
+    /**
+     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.LinkOrBuilder getLinksOrBuilder(
+        int index) {
+      return links_.get(index);
+    }
+
+    public static final int REMARKS_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private java.util.List<oscal.common.v1.Common.MarkupMultiline> remarks_;
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<oscal.common.v1.Common.MarkupMultiline> getRemarksList() {
+      return remarks_;
+    }
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+        getRemarksOrBuilderList() {
+      return remarks_;
+    }
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+     */
+    @java.lang.Override
+    public int getRemarksCount() {
+      return remarks_.size();
+    }
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.MarkupMultiline getRemarks(int index) {
+      return remarks_.get(index);
+    }
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.MarkupMultilineOrBuilder getRemarksOrBuilder(
+        int index) {
+      return remarks_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < controlSelections_.size(); i++) {
+        output.writeMessage(1, controlSelections_.get(i));
+      }
+      for (int i = 0; i < controls_.size(); i++) {
+        output.writeMessage(2, controls_.get(i));
+      }
+      for (int i = 0; i < props_.size(); i++) {
+        output.writeMessage(3, props_.get(i));
+      }
+      for (int i = 0; i < links_.size(); i++) {
+        output.writeMessage(4, links_.get(i));
+      }
+      for (int i = 0; i < remarks_.size(); i++) {
+        output.writeMessage(5, remarks_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+    private int computeSerializedSize_0() {
+      int size = 0;
+
+          {
+            final int count = controlSelections_.size();
+            for (int i = 0; i < count; i++) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeMessageSizeNoTag(controlSelections_.get(i));
+            }
+            size += 1 * count;
+          }
+
+          {
+            final int count = controls_.size();
+            for (int i = 0; i < count; i++) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeMessageSizeNoTag(controls_.get(i));
+            }
+            size += 1 * count;
+          }
+
+          {
+            final int count = props_.size();
+            for (int i = 0; i < count; i++) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeMessageSizeNoTag(props_.get(i));
+            }
+            size += 1 * count;
+          }
+
+          {
+            final int count = links_.size();
+            for (int i = 0; i < count; i++) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeMessageSizeNoTag(links_.get(i));
+            }
+            size += 1 * count;
+          }
+
+          {
+            final int count = remarks_.size();
+            for (int i = 0; i < count; i++) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeMessageSizeNoTag(remarks_.get(i));
+            }
+            size += 1 * count;
+          }
+      return size;
+    }
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += computeSerializedSize_0();
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof oscal.assessment_results.v1.AssessmentResultsOuterClass.ReviewedControls)) {
+        return super.equals(obj);
+      }
+      oscal.assessment_results.v1.AssessmentResultsOuterClass.ReviewedControls other = (oscal.assessment_results.v1.AssessmentResultsOuterClass.ReviewedControls) obj;
+
+      if (!getControlSelectionsList()
+          .equals(other.getControlSelectionsList())) return false;
+      if (!getControlsList()
+          .equals(other.getControlsList())) return false;
+      if (!getPropsList()
+          .equals(other.getPropsList())) return false;
+      if (!getLinksList()
+          .equals(other.getLinksList())) return false;
+      if (!getRemarksList()
+          .equals(other.getRemarksList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getControlSelectionsCount() > 0) {
+        hash = (37 * hash) + CONTROL_SELECTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getControlSelectionsList().hashCode();
+      }
+      if (getControlsCount() > 0) {
+        hash = (37 * hash) + CONTROLS_FIELD_NUMBER;
+        hash = (53 * hash) + getControlsList().hashCode();
+      }
+      if (getPropsCount() > 0) {
+        hash = (37 * hash) + PROPS_FIELD_NUMBER;
+        hash = (53 * hash) + getPropsList().hashCode();
+      }
+      if (getLinksCount() > 0) {
+        hash = (37 * hash) + LINKS_FIELD_NUMBER;
+        hash = (53 * hash) + getLinksList().hashCode();
+      }
+      if (getRemarksCount() > 0) {
+        hash = (37 * hash) + REMARKS_FIELD_NUMBER;
+        hash = (53 * hash) + getRemarksList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static oscal.assessment_results.v1.AssessmentResultsOuterClass.ReviewedControls parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.assessment_results.v1.AssessmentResultsOuterClass.ReviewedControls parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.assessment_results.v1.AssessmentResultsOuterClass.ReviewedControls parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.assessment_results.v1.AssessmentResultsOuterClass.ReviewedControls parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.assessment_results.v1.AssessmentResultsOuterClass.ReviewedControls parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.assessment_results.v1.AssessmentResultsOuterClass.ReviewedControls parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.assessment_results.v1.AssessmentResultsOuterClass.ReviewedControls parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static oscal.assessment_results.v1.AssessmentResultsOuterClass.ReviewedControls parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static oscal.assessment_results.v1.AssessmentResultsOuterClass.ReviewedControls parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static oscal.assessment_results.v1.AssessmentResultsOuterClass.ReviewedControls parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static oscal.assessment_results.v1.AssessmentResultsOuterClass.ReviewedControls parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static oscal.assessment_results.v1.AssessmentResultsOuterClass.ReviewedControls parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(oscal.assessment_results.v1.AssessmentResultsOuterClass.ReviewedControls prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * ReviewedControls represents the reviewed controls for a result
+     * </pre>
+     *
+     * Protobuf type {@code oscal.assessment_results.v1.ReviewedControls}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oscal.assessment_results.v1.ReviewedControls)
+        oscal.assessment_results.v1.AssessmentResultsOuterClass.ReviewedControlsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return oscal.assessment_results.v1.AssessmentResultsOuterClass.internal_static_oscal_assessment_results_v1_ReviewedControls_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return oscal.assessment_results.v1.AssessmentResultsOuterClass.internal_static_oscal_assessment_results_v1_ReviewedControls_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                oscal.assessment_results.v1.AssessmentResultsOuterClass.ReviewedControls.class, oscal.assessment_results.v1.AssessmentResultsOuterClass.ReviewedControls.Builder.class);
+      }
+
+      // Construct using oscal.assessment_results.v1.AssessmentResultsOuterClass.ReviewedControls.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (controlSelectionsBuilder_ == null) {
+          controlSelections_ = java.util.Collections.emptyList();
+        } else {
+          controlSelections_ = null;
+          controlSelectionsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        if (controlsBuilder_ == null) {
+          controls_ = java.util.Collections.emptyList();
+        } else {
+          controls_ = null;
+          controlsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        if (propsBuilder_ == null) {
+          props_ = java.util.Collections.emptyList();
+        } else {
+          props_ = null;
+          propsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        if (linksBuilder_ == null) {
+          links_ = java.util.Collections.emptyList();
+        } else {
+          links_ = null;
+          linksBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        if (remarksBuilder_ == null) {
+          remarks_ = java.util.Collections.emptyList();
+        } else {
+          remarks_ = null;
+          remarksBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return oscal.assessment_results.v1.AssessmentResultsOuterClass.internal_static_oscal_assessment_results_v1_ReviewedControls_descriptor;
+      }
+
+      @java.lang.Override
+      public oscal.assessment_results.v1.AssessmentResultsOuterClass.ReviewedControls getDefaultInstanceForType() {
+        return oscal.assessment_results.v1.AssessmentResultsOuterClass.ReviewedControls.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public oscal.assessment_results.v1.AssessmentResultsOuterClass.ReviewedControls build() {
+        oscal.assessment_results.v1.AssessmentResultsOuterClass.ReviewedControls result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public oscal.assessment_results.v1.AssessmentResultsOuterClass.ReviewedControls buildPartial() {
+        oscal.assessment_results.v1.AssessmentResultsOuterClass.ReviewedControls result = new oscal.assessment_results.v1.AssessmentResultsOuterClass.ReviewedControls(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(oscal.assessment_results.v1.AssessmentResultsOuterClass.ReviewedControls result) {
+        if (controlSelectionsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            controlSelections_ = java.util.Collections.unmodifiableList(controlSelections_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.controlSelections_ = controlSelections_;
+        } else {
+          result.controlSelections_ = controlSelectionsBuilder_.build();
+        }
+        if (controlsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            controls_ = java.util.Collections.unmodifiableList(controls_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.controls_ = controls_;
+        } else {
+          result.controls_ = controlsBuilder_.build();
+        }
+        if (propsBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            props_ = java.util.Collections.unmodifiableList(props_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.props_ = props_;
+        } else {
+          result.props_ = propsBuilder_.build();
+        }
+        if (linksBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            links_ = java.util.Collections.unmodifiableList(links_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.links_ = links_;
+        } else {
+          result.links_ = linksBuilder_.build();
+        }
+        if (remarksBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0)) {
+            remarks_ = java.util.Collections.unmodifiableList(remarks_);
+            bitField0_ = (bitField0_ & ~0x00000010);
+          }
+          result.remarks_ = remarks_;
+        } else {
+          result.remarks_ = remarksBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(oscal.assessment_results.v1.AssessmentResultsOuterClass.ReviewedControls result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof oscal.assessment_results.v1.AssessmentResultsOuterClass.ReviewedControls) {
+          return mergeFrom((oscal.assessment_results.v1.AssessmentResultsOuterClass.ReviewedControls)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(oscal.assessment_results.v1.AssessmentResultsOuterClass.ReviewedControls other) {
+        if (other == oscal.assessment_results.v1.AssessmentResultsOuterClass.ReviewedControls.getDefaultInstance()) return this;
+        if (controlSelectionsBuilder_ == null) {
+          if (!other.controlSelections_.isEmpty()) {
+            if (controlSelections_.isEmpty()) {
+              controlSelections_ = other.controlSelections_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureControlSelectionsIsMutable();
+              controlSelections_.addAll(other.controlSelections_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.controlSelections_.isEmpty()) {
+            if (controlSelectionsBuilder_.isEmpty()) {
+              controlSelectionsBuilder_.dispose();
+              controlSelectionsBuilder_ = null;
+              controlSelections_ = other.controlSelections_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              controlSelectionsBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   internalGetControlSelectionsFieldBuilder() : null;
+            } else {
+              controlSelectionsBuilder_.addAllMessages(other.controlSelections_);
+            }
+          }
+        }
+        if (controlsBuilder_ == null) {
+          if (!other.controls_.isEmpty()) {
+            if (controls_.isEmpty()) {
+              controls_ = other.controls_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureControlsIsMutable();
+              controls_.addAll(other.controls_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.controls_.isEmpty()) {
+            if (controlsBuilder_.isEmpty()) {
+              controlsBuilder_.dispose();
+              controlsBuilder_ = null;
+              controls_ = other.controls_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              controlsBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   internalGetControlsFieldBuilder() : null;
+            } else {
+              controlsBuilder_.addAllMessages(other.controls_);
+            }
+          }
+        }
+        if (propsBuilder_ == null) {
+          if (!other.props_.isEmpty()) {
+            if (props_.isEmpty()) {
+              props_ = other.props_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensurePropsIsMutable();
+              props_.addAll(other.props_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.props_.isEmpty()) {
+            if (propsBuilder_.isEmpty()) {
+              propsBuilder_.dispose();
+              propsBuilder_ = null;
+              props_ = other.props_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              propsBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   internalGetPropsFieldBuilder() : null;
+            } else {
+              propsBuilder_.addAllMessages(other.props_);
+            }
+          }
+        }
+        if (linksBuilder_ == null) {
+          if (!other.links_.isEmpty()) {
+            if (links_.isEmpty()) {
+              links_ = other.links_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureLinksIsMutable();
+              links_.addAll(other.links_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.links_.isEmpty()) {
+            if (linksBuilder_.isEmpty()) {
+              linksBuilder_.dispose();
+              linksBuilder_ = null;
+              links_ = other.links_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              linksBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   internalGetLinksFieldBuilder() : null;
+            } else {
+              linksBuilder_.addAllMessages(other.links_);
+            }
+          }
+        }
+        if (remarksBuilder_ == null) {
+          if (!other.remarks_.isEmpty()) {
+            if (remarks_.isEmpty()) {
+              remarks_ = other.remarks_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+            } else {
+              ensureRemarksIsMutable();
+              remarks_.addAll(other.remarks_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.remarks_.isEmpty()) {
+            if (remarksBuilder_.isEmpty()) {
+              remarksBuilder_.dispose();
+              remarksBuilder_ = null;
+              remarks_ = other.remarks_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+              remarksBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   internalGetRemarksFieldBuilder() : null;
+            } else {
+              remarksBuilder_.addAllMessages(other.remarks_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelection m =
+                    input.readMessage(
+                        oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelection.parser(),
+                        extensionRegistry);
+                if (controlSelectionsBuilder_ == null) {
+                  ensureControlSelectionsIsMutable();
+                  controlSelections_.add(m);
+                } else {
+                  controlSelectionsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl m =
+                    input.readMessage(
+                        oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl.parser(),
+                        extensionRegistry);
+                if (controlsBuilder_ == null) {
+                  ensureControlsIsMutable();
+                  controls_.add(m);
+                } else {
+                  controlsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              case 26: {
+                oscal.common.v1.Common.Property m =
+                    input.readMessage(
+                        oscal.common.v1.Common.Property.parser(),
+                        extensionRegistry);
+                if (propsBuilder_ == null) {
+                  ensurePropsIsMutable();
+                  props_.add(m);
+                } else {
+                  propsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              case 34: {
+                oscal.common.v1.Common.Link m =
+                    input.readMessage(
+                        oscal.common.v1.Common.Link.parser(),
+                        extensionRegistry);
+                if (linksBuilder_ == null) {
+                  ensureLinksIsMutable();
+                  links_.add(m);
+                } else {
+                  linksBuilder_.addMessage(m);
+                }
+                break;
+              } // case 34
+              case 42: {
+                oscal.common.v1.Common.MarkupMultiline m =
+                    input.readMessage(
+                        oscal.common.v1.Common.MarkupMultiline.parser(),
+                        extensionRegistry);
+                if (remarksBuilder_ == null) {
+                  ensureRemarksIsMutable();
+                  remarks_.add(m);
+                } else {
+                  remarksBuilder_.addMessage(m);
+                }
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelection> controlSelections_ =
+        java.util.Collections.emptyList();
+      private void ensureControlSelectionsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          controlSelections_ = new java.util.ArrayList<oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelection>(controlSelections_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelection, oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelection.Builder, oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelectionOrBuilder> controlSelectionsBuilder_;
+
+      /**
+       * <code>repeated .oscal.assessment_results.v1.ControlSelection control_selections = 1 [json_name = "controlSelections"];</code>
+       */
+      public java.util.List<oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelection> getControlSelectionsList() {
+        if (controlSelectionsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(controlSelections_);
+        } else {
+          return controlSelectionsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .oscal.assessment_results.v1.ControlSelection control_selections = 1 [json_name = "controlSelections"];</code>
+       */
+      public int getControlSelectionsCount() {
+        if (controlSelectionsBuilder_ == null) {
+          return controlSelections_.size();
+        } else {
+          return controlSelectionsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .oscal.assessment_results.v1.ControlSelection control_selections = 1 [json_name = "controlSelections"];</code>
+       */
+      public oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelection getControlSelections(int index) {
+        if (controlSelectionsBuilder_ == null) {
+          return controlSelections_.get(index);
+        } else {
+          return controlSelectionsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.assessment_results.v1.ControlSelection control_selections = 1 [json_name = "controlSelections"];</code>
+       */
+      public Builder setControlSelections(
+          int index, oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelection value) {
+        if (controlSelectionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureControlSelectionsIsMutable();
+          controlSelections_.set(index, value);
+          onChanged();
+        } else {
+          controlSelectionsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.assessment_results.v1.ControlSelection control_selections = 1 [json_name = "controlSelections"];</code>
+       */
+      public Builder setControlSelections(
+          int index, oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelection.Builder builderForValue) {
+        if (controlSelectionsBuilder_ == null) {
+          ensureControlSelectionsIsMutable();
+          controlSelections_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          controlSelectionsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.assessment_results.v1.ControlSelection control_selections = 1 [json_name = "controlSelections"];</code>
+       */
+      public Builder addControlSelections(oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelection value) {
+        if (controlSelectionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureControlSelectionsIsMutable();
+          controlSelections_.add(value);
+          onChanged();
+        } else {
+          controlSelectionsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.assessment_results.v1.ControlSelection control_selections = 1 [json_name = "controlSelections"];</code>
+       */
+      public Builder addControlSelections(
+          int index, oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelection value) {
+        if (controlSelectionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureControlSelectionsIsMutable();
+          controlSelections_.add(index, value);
+          onChanged();
+        } else {
+          controlSelectionsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.assessment_results.v1.ControlSelection control_selections = 1 [json_name = "controlSelections"];</code>
+       */
+      public Builder addControlSelections(
+          oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelection.Builder builderForValue) {
+        if (controlSelectionsBuilder_ == null) {
+          ensureControlSelectionsIsMutable();
+          controlSelections_.add(builderForValue.build());
+          onChanged();
+        } else {
+          controlSelectionsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.assessment_results.v1.ControlSelection control_selections = 1 [json_name = "controlSelections"];</code>
+       */
+      public Builder addControlSelections(
+          int index, oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelection.Builder builderForValue) {
+        if (controlSelectionsBuilder_ == null) {
+          ensureControlSelectionsIsMutable();
+          controlSelections_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          controlSelectionsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.assessment_results.v1.ControlSelection control_selections = 1 [json_name = "controlSelections"];</code>
+       */
+      public Builder addAllControlSelections(
+          java.lang.Iterable<? extends oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelection> values) {
+        if (controlSelectionsBuilder_ == null) {
+          ensureControlSelectionsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, controlSelections_);
+          onChanged();
+        } else {
+          controlSelectionsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.assessment_results.v1.ControlSelection control_selections = 1 [json_name = "controlSelections"];</code>
+       */
+      public Builder clearControlSelections() {
+        if (controlSelectionsBuilder_ == null) {
+          controlSelections_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          controlSelectionsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.assessment_results.v1.ControlSelection control_selections = 1 [json_name = "controlSelections"];</code>
+       */
+      public Builder removeControlSelections(int index) {
+        if (controlSelectionsBuilder_ == null) {
+          ensureControlSelectionsIsMutable();
+          controlSelections_.remove(index);
+          onChanged();
+        } else {
+          controlSelectionsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.assessment_results.v1.ControlSelection control_selections = 1 [json_name = "controlSelections"];</code>
+       */
+      public oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelection.Builder getControlSelectionsBuilder(
+          int index) {
+        return internalGetControlSelectionsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .oscal.assessment_results.v1.ControlSelection control_selections = 1 [json_name = "controlSelections"];</code>
+       */
+      public oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelectionOrBuilder getControlSelectionsOrBuilder(
+          int index) {
+        if (controlSelectionsBuilder_ == null) {
+          return controlSelections_.get(index);  } else {
+          return controlSelectionsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.assessment_results.v1.ControlSelection control_selections = 1 [json_name = "controlSelections"];</code>
+       */
+      public java.util.List<? extends oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelectionOrBuilder> 
+           getControlSelectionsOrBuilderList() {
+        if (controlSelectionsBuilder_ != null) {
+          return controlSelectionsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(controlSelections_);
+        }
+      }
+      /**
+       * <code>repeated .oscal.assessment_results.v1.ControlSelection control_selections = 1 [json_name = "controlSelections"];</code>
+       */
+      public oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelection.Builder addControlSelectionsBuilder() {
+        return internalGetControlSelectionsFieldBuilder().addBuilder(
+            oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelection.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.assessment_results.v1.ControlSelection control_selections = 1 [json_name = "controlSelections"];</code>
+       */
+      public oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelection.Builder addControlSelectionsBuilder(
+          int index) {
+        return internalGetControlSelectionsFieldBuilder().addBuilder(
+            index, oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelection.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.assessment_results.v1.ControlSelection control_selections = 1 [json_name = "controlSelections"];</code>
+       */
+      public java.util.List<oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelection.Builder> 
+           getControlSelectionsBuilderList() {
+        return internalGetControlSelectionsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelection, oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelection.Builder, oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelectionOrBuilder> 
+          internalGetControlSelectionsFieldBuilder() {
+        if (controlSelectionsBuilder_ == null) {
+          controlSelectionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelection, oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelection.Builder, oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelectionOrBuilder>(
+                  controlSelections_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          controlSelections_ = null;
+        }
+        return controlSelectionsBuilder_;
+      }
+
+      private java.util.List<oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl> controls_ =
+        java.util.Collections.emptyList();
+      private void ensureControlsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          controls_ = new java.util.ArrayList<oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl>(controls_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl, oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl.Builder, oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControlOrBuilder> controlsBuilder_;
+
+      /**
+       * <code>repeated .oscal.assessment_results.v1.SelectedControl controls = 2 [json_name = "controls"];</code>
+       */
+      public java.util.List<oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl> getControlsList() {
+        if (controlsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(controls_);
+        } else {
+          return controlsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .oscal.assessment_results.v1.SelectedControl controls = 2 [json_name = "controls"];</code>
+       */
+      public int getControlsCount() {
+        if (controlsBuilder_ == null) {
+          return controls_.size();
+        } else {
+          return controlsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .oscal.assessment_results.v1.SelectedControl controls = 2 [json_name = "controls"];</code>
+       */
+      public oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl getControls(int index) {
+        if (controlsBuilder_ == null) {
+          return controls_.get(index);
+        } else {
+          return controlsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.assessment_results.v1.SelectedControl controls = 2 [json_name = "controls"];</code>
+       */
+      public Builder setControls(
+          int index, oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl value) {
+        if (controlsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureControlsIsMutable();
+          controls_.set(index, value);
+          onChanged();
+        } else {
+          controlsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.assessment_results.v1.SelectedControl controls = 2 [json_name = "controls"];</code>
+       */
+      public Builder setControls(
+          int index, oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl.Builder builderForValue) {
+        if (controlsBuilder_ == null) {
+          ensureControlsIsMutable();
+          controls_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          controlsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.assessment_results.v1.SelectedControl controls = 2 [json_name = "controls"];</code>
+       */
+      public Builder addControls(oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl value) {
+        if (controlsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureControlsIsMutable();
+          controls_.add(value);
+          onChanged();
+        } else {
+          controlsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.assessment_results.v1.SelectedControl controls = 2 [json_name = "controls"];</code>
+       */
+      public Builder addControls(
+          int index, oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl value) {
+        if (controlsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureControlsIsMutable();
+          controls_.add(index, value);
+          onChanged();
+        } else {
+          controlsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.assessment_results.v1.SelectedControl controls = 2 [json_name = "controls"];</code>
+       */
+      public Builder addControls(
+          oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl.Builder builderForValue) {
+        if (controlsBuilder_ == null) {
+          ensureControlsIsMutable();
+          controls_.add(builderForValue.build());
+          onChanged();
+        } else {
+          controlsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.assessment_results.v1.SelectedControl controls = 2 [json_name = "controls"];</code>
+       */
+      public Builder addControls(
+          int index, oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl.Builder builderForValue) {
+        if (controlsBuilder_ == null) {
+          ensureControlsIsMutable();
+          controls_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          controlsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.assessment_results.v1.SelectedControl controls = 2 [json_name = "controls"];</code>
+       */
+      public Builder addAllControls(
+          java.lang.Iterable<? extends oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl> values) {
+        if (controlsBuilder_ == null) {
+          ensureControlsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, controls_);
+          onChanged();
+        } else {
+          controlsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.assessment_results.v1.SelectedControl controls = 2 [json_name = "controls"];</code>
+       */
+      public Builder clearControls() {
+        if (controlsBuilder_ == null) {
+          controls_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          controlsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.assessment_results.v1.SelectedControl controls = 2 [json_name = "controls"];</code>
+       */
+      public Builder removeControls(int index) {
+        if (controlsBuilder_ == null) {
+          ensureControlsIsMutable();
+          controls_.remove(index);
+          onChanged();
+        } else {
+          controlsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.assessment_results.v1.SelectedControl controls = 2 [json_name = "controls"];</code>
+       */
+      public oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl.Builder getControlsBuilder(
+          int index) {
+        return internalGetControlsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .oscal.assessment_results.v1.SelectedControl controls = 2 [json_name = "controls"];</code>
+       */
+      public oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControlOrBuilder getControlsOrBuilder(
+          int index) {
+        if (controlsBuilder_ == null) {
+          return controls_.get(index);  } else {
+          return controlsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.assessment_results.v1.SelectedControl controls = 2 [json_name = "controls"];</code>
+       */
+      public java.util.List<? extends oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControlOrBuilder> 
+           getControlsOrBuilderList() {
+        if (controlsBuilder_ != null) {
+          return controlsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(controls_);
+        }
+      }
+      /**
+       * <code>repeated .oscal.assessment_results.v1.SelectedControl controls = 2 [json_name = "controls"];</code>
+       */
+      public oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl.Builder addControlsBuilder() {
+        return internalGetControlsFieldBuilder().addBuilder(
+            oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.assessment_results.v1.SelectedControl controls = 2 [json_name = "controls"];</code>
+       */
+      public oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl.Builder addControlsBuilder(
+          int index) {
+        return internalGetControlsFieldBuilder().addBuilder(
+            index, oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.assessment_results.v1.SelectedControl controls = 2 [json_name = "controls"];</code>
+       */
+      public java.util.List<oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl.Builder> 
+           getControlsBuilderList() {
+        return internalGetControlsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl, oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl.Builder, oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControlOrBuilder> 
+          internalGetControlsFieldBuilder() {
+        if (controlsBuilder_ == null) {
+          controlsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl, oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl.Builder, oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControlOrBuilder>(
+                  controls_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          controls_ = null;
+        }
+        return controlsBuilder_;
+      }
+
+      private java.util.List<oscal.common.v1.Common.Property> props_ =
+        java.util.Collections.emptyList();
+      private void ensurePropsIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          props_ = new java.util.ArrayList<oscal.common.v1.Common.Property>(props_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> propsBuilder_;
+
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       */
+      public java.util.List<oscal.common.v1.Common.Property> getPropsList() {
+        if (propsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(props_);
+        } else {
+          return propsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       */
+      public int getPropsCount() {
+        if (propsBuilder_ == null) {
+          return props_.size();
+        } else {
+          return propsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       */
+      public oscal.common.v1.Common.Property getProps(int index) {
+        if (propsBuilder_ == null) {
+          return props_.get(index);
+        } else {
+          return propsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       */
+      public Builder setProps(
+          int index, oscal.common.v1.Common.Property value) {
+        if (propsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePropsIsMutable();
+          props_.set(index, value);
+          onChanged();
+        } else {
+          propsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       */
+      public Builder setProps(
+          int index, oscal.common.v1.Common.Property.Builder builderForValue) {
+        if (propsBuilder_ == null) {
+          ensurePropsIsMutable();
+          props_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          propsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       */
+      public Builder addProps(oscal.common.v1.Common.Property value) {
+        if (propsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePropsIsMutable();
+          props_.add(value);
+          onChanged();
+        } else {
+          propsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       */
+      public Builder addProps(
+          int index, oscal.common.v1.Common.Property value) {
+        if (propsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePropsIsMutable();
+          props_.add(index, value);
+          onChanged();
+        } else {
+          propsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       */
+      public Builder addProps(
+          oscal.common.v1.Common.Property.Builder builderForValue) {
+        if (propsBuilder_ == null) {
+          ensurePropsIsMutable();
+          props_.add(builderForValue.build());
+          onChanged();
+        } else {
+          propsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       */
+      public Builder addProps(
+          int index, oscal.common.v1.Common.Property.Builder builderForValue) {
+        if (propsBuilder_ == null) {
+          ensurePropsIsMutable();
+          props_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          propsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       */
+      public Builder addAllProps(
+          java.lang.Iterable<? extends oscal.common.v1.Common.Property> values) {
+        if (propsBuilder_ == null) {
+          ensurePropsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, props_);
+          onChanged();
+        } else {
+          propsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       */
+      public Builder clearProps() {
+        if (propsBuilder_ == null) {
+          props_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          propsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       */
+      public Builder removeProps(int index) {
+        if (propsBuilder_ == null) {
+          ensurePropsIsMutable();
+          props_.remove(index);
+          onChanged();
+        } else {
+          propsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       */
+      public oscal.common.v1.Common.Property.Builder getPropsBuilder(
+          int index) {
+        return internalGetPropsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       */
+      public oscal.common.v1.Common.PropertyOrBuilder getPropsOrBuilder(
+          int index) {
+        if (propsBuilder_ == null) {
+          return props_.get(index);  } else {
+          return propsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       */
+      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+           getPropsOrBuilderList() {
+        if (propsBuilder_ != null) {
+          return propsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(props_);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       */
+      public oscal.common.v1.Common.Property.Builder addPropsBuilder() {
+        return internalGetPropsFieldBuilder().addBuilder(
+            oscal.common.v1.Common.Property.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       */
+      public oscal.common.v1.Common.Property.Builder addPropsBuilder(
+          int index) {
+        return internalGetPropsFieldBuilder().addBuilder(
+            index, oscal.common.v1.Common.Property.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       */
+      public java.util.List<oscal.common.v1.Common.Property.Builder> 
+           getPropsBuilderList() {
+        return internalGetPropsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> 
+          internalGetPropsFieldBuilder() {
+        if (propsBuilder_ == null) {
+          propsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder>(
+                  props_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          props_ = null;
+        }
+        return propsBuilder_;
+      }
+
+      private java.util.List<oscal.common.v1.Common.Link> links_ =
+        java.util.Collections.emptyList();
+      private void ensureLinksIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          links_ = new java.util.ArrayList<oscal.common.v1.Common.Link>(links_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder> linksBuilder_;
+
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       */
+      public java.util.List<oscal.common.v1.Common.Link> getLinksList() {
+        if (linksBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(links_);
+        } else {
+          return linksBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       */
+      public int getLinksCount() {
+        if (linksBuilder_ == null) {
+          return links_.size();
+        } else {
+          return linksBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       */
+      public oscal.common.v1.Common.Link getLinks(int index) {
+        if (linksBuilder_ == null) {
+          return links_.get(index);
+        } else {
+          return linksBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       */
+      public Builder setLinks(
+          int index, oscal.common.v1.Common.Link value) {
+        if (linksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLinksIsMutable();
+          links_.set(index, value);
+          onChanged();
+        } else {
+          linksBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       */
+      public Builder setLinks(
+          int index, oscal.common.v1.Common.Link.Builder builderForValue) {
+        if (linksBuilder_ == null) {
+          ensureLinksIsMutable();
+          links_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          linksBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       */
+      public Builder addLinks(oscal.common.v1.Common.Link value) {
+        if (linksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLinksIsMutable();
+          links_.add(value);
+          onChanged();
+        } else {
+          linksBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       */
+      public Builder addLinks(
+          int index, oscal.common.v1.Common.Link value) {
+        if (linksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLinksIsMutable();
+          links_.add(index, value);
+          onChanged();
+        } else {
+          linksBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       */
+      public Builder addLinks(
+          oscal.common.v1.Common.Link.Builder builderForValue) {
+        if (linksBuilder_ == null) {
+          ensureLinksIsMutable();
+          links_.add(builderForValue.build());
+          onChanged();
+        } else {
+          linksBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       */
+      public Builder addLinks(
+          int index, oscal.common.v1.Common.Link.Builder builderForValue) {
+        if (linksBuilder_ == null) {
+          ensureLinksIsMutable();
+          links_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          linksBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       */
+      public Builder addAllLinks(
+          java.lang.Iterable<? extends oscal.common.v1.Common.Link> values) {
+        if (linksBuilder_ == null) {
+          ensureLinksIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, links_);
+          onChanged();
+        } else {
+          linksBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       */
+      public Builder clearLinks() {
+        if (linksBuilder_ == null) {
+          links_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          linksBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       */
+      public Builder removeLinks(int index) {
+        if (linksBuilder_ == null) {
+          ensureLinksIsMutable();
+          links_.remove(index);
+          onChanged();
+        } else {
+          linksBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       */
+      public oscal.common.v1.Common.Link.Builder getLinksBuilder(
+          int index) {
+        return internalGetLinksFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       */
+      public oscal.common.v1.Common.LinkOrBuilder getLinksOrBuilder(
+          int index) {
+        if (linksBuilder_ == null) {
+          return links_.get(index);  } else {
+          return linksBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       */
+      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+           getLinksOrBuilderList() {
+        if (linksBuilder_ != null) {
+          return linksBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(links_);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       */
+      public oscal.common.v1.Common.Link.Builder addLinksBuilder() {
+        return internalGetLinksFieldBuilder().addBuilder(
+            oscal.common.v1.Common.Link.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       */
+      public oscal.common.v1.Common.Link.Builder addLinksBuilder(
+          int index) {
+        return internalGetLinksFieldBuilder().addBuilder(
+            index, oscal.common.v1.Common.Link.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       */
+      public java.util.List<oscal.common.v1.Common.Link.Builder> 
+           getLinksBuilderList() {
+        return internalGetLinksFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder> 
+          internalGetLinksFieldBuilder() {
+        if (linksBuilder_ == null) {
+          linksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder>(
+                  links_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          links_ = null;
+        }
+        return linksBuilder_;
+      }
+
+      private java.util.List<oscal.common.v1.Common.MarkupMultiline> remarks_ =
+        java.util.Collections.emptyList();
+      private void ensureRemarksIsMutable() {
+        if (!((bitField0_ & 0x00000010) != 0)) {
+          remarks_ = new java.util.ArrayList<oscal.common.v1.Common.MarkupMultiline>(remarks_);
+          bitField0_ |= 0x00000010;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> remarksBuilder_;
+
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       */
+      public java.util.List<oscal.common.v1.Common.MarkupMultiline> getRemarksList() {
+        if (remarksBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(remarks_);
+        } else {
+          return remarksBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       */
+      public int getRemarksCount() {
+        if (remarksBuilder_ == null) {
+          return remarks_.size();
+        } else {
+          return remarksBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       */
+      public oscal.common.v1.Common.MarkupMultiline getRemarks(int index) {
+        if (remarksBuilder_ == null) {
+          return remarks_.get(index);
+        } else {
+          return remarksBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       */
+      public Builder setRemarks(
+          int index, oscal.common.v1.Common.MarkupMultiline value) {
+        if (remarksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRemarksIsMutable();
+          remarks_.set(index, value);
+          onChanged();
+        } else {
+          remarksBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       */
+      public Builder setRemarks(
+          int index, oscal.common.v1.Common.MarkupMultiline.Builder builderForValue) {
+        if (remarksBuilder_ == null) {
+          ensureRemarksIsMutable();
+          remarks_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          remarksBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       */
+      public Builder addRemarks(oscal.common.v1.Common.MarkupMultiline value) {
+        if (remarksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRemarksIsMutable();
+          remarks_.add(value);
+          onChanged();
+        } else {
+          remarksBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       */
+      public Builder addRemarks(
+          int index, oscal.common.v1.Common.MarkupMultiline value) {
+        if (remarksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRemarksIsMutable();
+          remarks_.add(index, value);
+          onChanged();
+        } else {
+          remarksBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       */
+      public Builder addRemarks(
+          oscal.common.v1.Common.MarkupMultiline.Builder builderForValue) {
+        if (remarksBuilder_ == null) {
+          ensureRemarksIsMutable();
+          remarks_.add(builderForValue.build());
+          onChanged();
+        } else {
+          remarksBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       */
+      public Builder addRemarks(
+          int index, oscal.common.v1.Common.MarkupMultiline.Builder builderForValue) {
+        if (remarksBuilder_ == null) {
+          ensureRemarksIsMutable();
+          remarks_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          remarksBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       */
+      public Builder addAllRemarks(
+          java.lang.Iterable<? extends oscal.common.v1.Common.MarkupMultiline> values) {
+        if (remarksBuilder_ == null) {
+          ensureRemarksIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, remarks_);
+          onChanged();
+        } else {
+          remarksBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       */
+      public Builder clearRemarks() {
+        if (remarksBuilder_ == null) {
+          remarks_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
+          onChanged();
+        } else {
+          remarksBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       */
+      public Builder removeRemarks(int index) {
+        if (remarksBuilder_ == null) {
+          ensureRemarksIsMutable();
+          remarks_.remove(index);
+          onChanged();
+        } else {
+          remarksBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       */
+      public oscal.common.v1.Common.MarkupMultiline.Builder getRemarksBuilder(
+          int index) {
+        return internalGetRemarksFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       */
+      public oscal.common.v1.Common.MarkupMultilineOrBuilder getRemarksOrBuilder(
+          int index) {
+        if (remarksBuilder_ == null) {
+          return remarks_.get(index);  } else {
+          return remarksBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       */
+      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+           getRemarksOrBuilderList() {
+        if (remarksBuilder_ != null) {
+          return remarksBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(remarks_);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       */
+      public oscal.common.v1.Common.MarkupMultiline.Builder addRemarksBuilder() {
+        return internalGetRemarksFieldBuilder().addBuilder(
+            oscal.common.v1.Common.MarkupMultiline.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       */
+      public oscal.common.v1.Common.MarkupMultiline.Builder addRemarksBuilder(
+          int index) {
+        return internalGetRemarksFieldBuilder().addBuilder(
+            index, oscal.common.v1.Common.MarkupMultiline.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       */
+      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder> 
+           getRemarksBuilderList() {
+        return internalGetRemarksFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          internalGetRemarksFieldBuilder() {
+        if (remarksBuilder_ == null) {
+          remarksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>(
+                  remarks_,
+                  ((bitField0_ & 0x00000010) != 0),
+                  getParentForChildren(),
+                  isClean());
+          remarks_ = null;
+        }
+        return remarksBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:oscal.assessment_results.v1.ReviewedControls)
+    }
+
+    // @@protoc_insertion_point(class_scope:oscal.assessment_results.v1.ReviewedControls)
+    private static final oscal.assessment_results.v1.AssessmentResultsOuterClass.ReviewedControls DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new oscal.assessment_results.v1.AssessmentResultsOuterClass.ReviewedControls();
+    }
+
+    public static oscal.assessment_results.v1.AssessmentResultsOuterClass.ReviewedControls getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ReviewedControls>
+        PARSER = new com.google.protobuf.AbstractParser<ReviewedControls>() {
+      @java.lang.Override
+      public ReviewedControls parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ReviewedControls> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ReviewedControls> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public oscal.assessment_results.v1.AssessmentResultsOuterClass.ReviewedControls getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ControlSelectionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oscal.assessment_results.v1.ControlSelection)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.oscal.common.v1.MarkupMultiline description = 1 [json_name = "description"];</code>
+     * @return Whether the description field is set.
+     */
+    boolean hasDescription();
+    /**
+     * <code>.oscal.common.v1.MarkupMultiline description = 1 [json_name = "description"];</code>
+     * @return The description.
+     */
+    oscal.common.v1.Common.MarkupMultiline getDescription();
+    /**
+     * <code>.oscal.common.v1.MarkupMultiline description = 1 [json_name = "description"];</code>
+     */
+    oscal.common.v1.Common.MarkupMultilineOrBuilder getDescriptionOrBuilder();
+
+    /**
+     * <code>repeated .oscal.assessment_results.v1.SelectedControl include_controls = 2 [json_name = "includeControls"];</code>
+     */
+    java.util.List<oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl> 
+        getIncludeControlsList();
+    /**
+     * <code>repeated .oscal.assessment_results.v1.SelectedControl include_controls = 2 [json_name = "includeControls"];</code>
+     */
+    oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl getIncludeControls(int index);
+    /**
+     * <code>repeated .oscal.assessment_results.v1.SelectedControl include_controls = 2 [json_name = "includeControls"];</code>
+     */
+    int getIncludeControlsCount();
+    /**
+     * <code>repeated .oscal.assessment_results.v1.SelectedControl include_controls = 2 [json_name = "includeControls"];</code>
+     */
+    java.util.List<? extends oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControlOrBuilder> 
+        getIncludeControlsOrBuilderList();
+    /**
+     * <code>repeated .oscal.assessment_results.v1.SelectedControl include_controls = 2 [json_name = "includeControls"];</code>
+     */
+    oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControlOrBuilder getIncludeControlsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .oscal.assessment_results.v1.SelectedControl exclude_controls = 3 [json_name = "excludeControls"];</code>
+     */
+    java.util.List<oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl> 
+        getExcludeControlsList();
+    /**
+     * <code>repeated .oscal.assessment_results.v1.SelectedControl exclude_controls = 3 [json_name = "excludeControls"];</code>
+     */
+    oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl getExcludeControls(int index);
+    /**
+     * <code>repeated .oscal.assessment_results.v1.SelectedControl exclude_controls = 3 [json_name = "excludeControls"];</code>
+     */
+    int getExcludeControlsCount();
+    /**
+     * <code>repeated .oscal.assessment_results.v1.SelectedControl exclude_controls = 3 [json_name = "excludeControls"];</code>
+     */
+    java.util.List<? extends oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControlOrBuilder> 
+        getExcludeControlsOrBuilderList();
+    /**
+     * <code>repeated .oscal.assessment_results.v1.SelectedControl exclude_controls = 3 [json_name = "excludeControls"];</code>
+     */
+    oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControlOrBuilder getExcludeControlsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
+     */
+    java.util.List<oscal.common.v1.Common.Property> 
+        getPropsList();
+    /**
+     * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
+     */
+    oscal.common.v1.Common.Property getProps(int index);
+    /**
+     * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
+     */
+    int getPropsCount();
+    /**
+     * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
+     */
+    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+        getPropsOrBuilderList();
+    /**
+     * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
+     */
+    oscal.common.v1.Common.PropertyOrBuilder getPropsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
+     */
+    java.util.List<oscal.common.v1.Common.Link> 
+        getLinksList();
+    /**
+     * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
+     */
+    oscal.common.v1.Common.Link getLinks(int index);
+    /**
+     * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
+     */
+    int getLinksCount();
+    /**
+     * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
+     */
+    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+        getLinksOrBuilderList();
+    /**
+     * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
+     */
+    oscal.common.v1.Common.LinkOrBuilder getLinksOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
+     */
+    java.util.List<oscal.common.v1.Common.MarkupMultiline> 
+        getRemarksList();
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
+     */
+    oscal.common.v1.Common.MarkupMultiline getRemarks(int index);
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
+     */
+    int getRemarksCount();
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
+     */
+    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+        getRemarksOrBuilderList();
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
+     */
+    oscal.common.v1.Common.MarkupMultilineOrBuilder getRemarksOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * ControlSelection represents a selection of controls for review
+   * </pre>
+   *
+   * Protobuf type {@code oscal.assessment_results.v1.ControlSelection}
+   */
+  public static final class ControlSelection extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:oscal.assessment_results.v1.ControlSelection)
+      ControlSelectionOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 35,
+        /* patch= */ 1,
+        /* suffix= */ "",
+        "ControlSelection");
+    }
+    // Use ControlSelection.newBuilder() to construct.
+    private ControlSelection(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private ControlSelection() {
+      includeControls_ = java.util.Collections.emptyList();
+      excludeControls_ = java.util.Collections.emptyList();
+      props_ = java.util.Collections.emptyList();
+      links_ = java.util.Collections.emptyList();
+      remarks_ = java.util.Collections.emptyList();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return oscal.assessment_results.v1.AssessmentResultsOuterClass.internal_static_oscal_assessment_results_v1_ControlSelection_descriptor;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+      return oscal.assessment_results.v1.AssessmentResultsOuterClass.internal_static_oscal_assessment_results_v1_ControlSelection_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return oscal.assessment_results.v1.AssessmentResultsOuterClass.internal_static_oscal_assessment_results_v1_ControlSelection_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelection.class, oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelection.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int DESCRIPTION_FIELD_NUMBER = 1;
+    private oscal.common.v1.Common.MarkupMultiline description_;
+    /**
+     * <code>.oscal.common.v1.MarkupMultiline description = 1 [json_name = "description"];</code>
+     * @return Whether the description field is set.
+     */
+    @java.lang.Override
+    public boolean hasDescription() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.oscal.common.v1.MarkupMultiline description = 1 [json_name = "description"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.MarkupMultiline getDescription() {
+      return description_ == null ? oscal.common.v1.Common.MarkupMultiline.getDefaultInstance() : description_;
+    }
+    /**
+     * <code>.oscal.common.v1.MarkupMultiline description = 1 [json_name = "description"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.MarkupMultilineOrBuilder getDescriptionOrBuilder() {
+      return description_ == null ? oscal.common.v1.Common.MarkupMultiline.getDefaultInstance() : description_;
+    }
+
+    public static final int INCLUDE_CONTROLS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl> includeControls_;
+    /**
+     * <code>repeated .oscal.assessment_results.v1.SelectedControl include_controls = 2 [json_name = "includeControls"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl> getIncludeControlsList() {
+      return includeControls_;
+    }
+    /**
+     * <code>repeated .oscal.assessment_results.v1.SelectedControl include_controls = 2 [json_name = "includeControls"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControlOrBuilder> 
+        getIncludeControlsOrBuilderList() {
+      return includeControls_;
+    }
+    /**
+     * <code>repeated .oscal.assessment_results.v1.SelectedControl include_controls = 2 [json_name = "includeControls"];</code>
+     */
+    @java.lang.Override
+    public int getIncludeControlsCount() {
+      return includeControls_.size();
+    }
+    /**
+     * <code>repeated .oscal.assessment_results.v1.SelectedControl include_controls = 2 [json_name = "includeControls"];</code>
+     */
+    @java.lang.Override
+    public oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl getIncludeControls(int index) {
+      return includeControls_.get(index);
+    }
+    /**
+     * <code>repeated .oscal.assessment_results.v1.SelectedControl include_controls = 2 [json_name = "includeControls"];</code>
+     */
+    @java.lang.Override
+    public oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControlOrBuilder getIncludeControlsOrBuilder(
+        int index) {
+      return includeControls_.get(index);
+    }
+
+    public static final int EXCLUDE_CONTROLS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl> excludeControls_;
+    /**
+     * <code>repeated .oscal.assessment_results.v1.SelectedControl exclude_controls = 3 [json_name = "excludeControls"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl> getExcludeControlsList() {
+      return excludeControls_;
+    }
+    /**
+     * <code>repeated .oscal.assessment_results.v1.SelectedControl exclude_controls = 3 [json_name = "excludeControls"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControlOrBuilder> 
+        getExcludeControlsOrBuilderList() {
+      return excludeControls_;
+    }
+    /**
+     * <code>repeated .oscal.assessment_results.v1.SelectedControl exclude_controls = 3 [json_name = "excludeControls"];</code>
+     */
+    @java.lang.Override
+    public int getExcludeControlsCount() {
+      return excludeControls_.size();
+    }
+    /**
+     * <code>repeated .oscal.assessment_results.v1.SelectedControl exclude_controls = 3 [json_name = "excludeControls"];</code>
+     */
+    @java.lang.Override
+    public oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl getExcludeControls(int index) {
+      return excludeControls_.get(index);
+    }
+    /**
+     * <code>repeated .oscal.assessment_results.v1.SelectedControl exclude_controls = 3 [json_name = "excludeControls"];</code>
+     */
+    @java.lang.Override
+    public oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControlOrBuilder getExcludeControlsOrBuilder(
+        int index) {
+      return excludeControls_.get(index);
+    }
+
+    public static final int PROPS_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private java.util.List<oscal.common.v1.Common.Property> props_;
+    /**
+     * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<oscal.common.v1.Common.Property> getPropsList() {
+      return props_;
+    }
+    /**
+     * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+        getPropsOrBuilderList() {
+      return props_;
+    }
+    /**
+     * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
+     */
+    @java.lang.Override
+    public int getPropsCount() {
+      return props_.size();
+    }
+    /**
+     * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.Property getProps(int index) {
+      return props_.get(index);
+    }
+    /**
+     * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.PropertyOrBuilder getPropsOrBuilder(
+        int index) {
+      return props_.get(index);
+    }
+
+    public static final int LINKS_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private java.util.List<oscal.common.v1.Common.Link> links_;
+    /**
+     * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<oscal.common.v1.Common.Link> getLinksList() {
+      return links_;
+    }
+    /**
+     * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+        getLinksOrBuilderList() {
+      return links_;
+    }
+    /**
+     * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
+     */
+    @java.lang.Override
+    public int getLinksCount() {
+      return links_.size();
+    }
+    /**
+     * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.Link getLinks(int index) {
+      return links_.get(index);
+    }
+    /**
+     * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.LinkOrBuilder getLinksOrBuilder(
+        int index) {
+      return links_.get(index);
+    }
+
+    public static final int REMARKS_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private java.util.List<oscal.common.v1.Common.MarkupMultiline> remarks_;
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<oscal.common.v1.Common.MarkupMultiline> getRemarksList() {
+      return remarks_;
+    }
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+        getRemarksOrBuilderList() {
+      return remarks_;
+    }
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
+     */
+    @java.lang.Override
+    public int getRemarksCount() {
+      return remarks_.size();
+    }
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.MarkupMultiline getRemarks(int index) {
+      return remarks_.get(index);
+    }
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.MarkupMultilineOrBuilder getRemarksOrBuilder(
+        int index) {
+      return remarks_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeMessage(1, getDescription());
+      }
+      for (int i = 0; i < includeControls_.size(); i++) {
+        output.writeMessage(2, includeControls_.get(i));
+      }
+      for (int i = 0; i < excludeControls_.size(); i++) {
+        output.writeMessage(3, excludeControls_.get(i));
+      }
+      for (int i = 0; i < props_.size(); i++) {
+        output.writeMessage(4, props_.get(i));
+      }
+      for (int i = 0; i < links_.size(); i++) {
+        output.writeMessage(5, links_.get(i));
+      }
+      for (int i = 0; i < remarks_.size(); i++) {
+        output.writeMessage(6, remarks_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+    private int computeSerializedSize_0() {
+      int size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getDescription());
+      }
+
+          {
+            final int count = includeControls_.size();
+            for (int i = 0; i < count; i++) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeMessageSizeNoTag(includeControls_.get(i));
+            }
+            size += 1 * count;
+          }
+
+          {
+            final int count = excludeControls_.size();
+            for (int i = 0; i < count; i++) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeMessageSizeNoTag(excludeControls_.get(i));
+            }
+            size += 1 * count;
+          }
+
+          {
+            final int count = props_.size();
+            for (int i = 0; i < count; i++) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeMessageSizeNoTag(props_.get(i));
+            }
+            size += 1 * count;
+          }
+
+          {
+            final int count = links_.size();
+            for (int i = 0; i < count; i++) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeMessageSizeNoTag(links_.get(i));
+            }
+            size += 1 * count;
+          }
+
+          {
+            final int count = remarks_.size();
+            for (int i = 0; i < count; i++) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeMessageSizeNoTag(remarks_.get(i));
+            }
+            size += 1 * count;
+          }
+      return size;
+    }
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += computeSerializedSize_0();
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelection)) {
+        return super.equals(obj);
+      }
+      oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelection other = (oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelection) obj;
+
+      if (hasDescription() != other.hasDescription()) return false;
+      if (hasDescription()) {
+        if (!getDescription()
+            .equals(other.getDescription())) return false;
+      }
+      if (!getIncludeControlsList()
+          .equals(other.getIncludeControlsList())) return false;
+      if (!getExcludeControlsList()
+          .equals(other.getExcludeControlsList())) return false;
+      if (!getPropsList()
+          .equals(other.getPropsList())) return false;
+      if (!getLinksList()
+          .equals(other.getLinksList())) return false;
+      if (!getRemarksList()
+          .equals(other.getRemarksList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasDescription()) {
+        hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+        hash = (53 * hash) + getDescription().hashCode();
+      }
+      if (getIncludeControlsCount() > 0) {
+        hash = (37 * hash) + INCLUDE_CONTROLS_FIELD_NUMBER;
+        hash = (53 * hash) + getIncludeControlsList().hashCode();
+      }
+      if (getExcludeControlsCount() > 0) {
+        hash = (37 * hash) + EXCLUDE_CONTROLS_FIELD_NUMBER;
+        hash = (53 * hash) + getExcludeControlsList().hashCode();
+      }
+      if (getPropsCount() > 0) {
+        hash = (37 * hash) + PROPS_FIELD_NUMBER;
+        hash = (53 * hash) + getPropsList().hashCode();
+      }
+      if (getLinksCount() > 0) {
+        hash = (37 * hash) + LINKS_FIELD_NUMBER;
+        hash = (53 * hash) + getLinksList().hashCode();
+      }
+      if (getRemarksCount() > 0) {
+        hash = (37 * hash) + REMARKS_FIELD_NUMBER;
+        hash = (53 * hash) + getRemarksList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelection parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelection parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelection parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelection parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelection parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelection parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelection parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelection parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelection parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelection parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelection parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelection parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelection prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * ControlSelection represents a selection of controls for review
+     * </pre>
+     *
+     * Protobuf type {@code oscal.assessment_results.v1.ControlSelection}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oscal.assessment_results.v1.ControlSelection)
+        oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelectionOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return oscal.assessment_results.v1.AssessmentResultsOuterClass.internal_static_oscal_assessment_results_v1_ControlSelection_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return oscal.assessment_results.v1.AssessmentResultsOuterClass.internal_static_oscal_assessment_results_v1_ControlSelection_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelection.class, oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelection.Builder.class);
+      }
+
+      // Construct using oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelection.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage
+                .alwaysUseFieldBuilders) {
+          internalGetDescriptionFieldBuilder();
+          internalGetIncludeControlsFieldBuilder();
+          internalGetExcludeControlsFieldBuilder();
+          internalGetPropsFieldBuilder();
+          internalGetLinksFieldBuilder();
+          internalGetRemarksFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        description_ = null;
+        if (descriptionBuilder_ != null) {
+          descriptionBuilder_.dispose();
+          descriptionBuilder_ = null;
+        }
+        if (includeControlsBuilder_ == null) {
+          includeControls_ = java.util.Collections.emptyList();
+        } else {
+          includeControls_ = null;
+          includeControlsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        if (excludeControlsBuilder_ == null) {
+          excludeControls_ = java.util.Collections.emptyList();
+        } else {
+          excludeControls_ = null;
+          excludeControlsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        if (propsBuilder_ == null) {
+          props_ = java.util.Collections.emptyList();
+        } else {
+          props_ = null;
+          propsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        if (linksBuilder_ == null) {
+          links_ = java.util.Collections.emptyList();
+        } else {
+          links_ = null;
+          linksBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        if (remarksBuilder_ == null) {
+          remarks_ = java.util.Collections.emptyList();
+        } else {
+          remarks_ = null;
+          remarksBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000020);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return oscal.assessment_results.v1.AssessmentResultsOuterClass.internal_static_oscal_assessment_results_v1_ControlSelection_descriptor;
+      }
+
+      @java.lang.Override
+      public oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelection getDefaultInstanceForType() {
+        return oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelection.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelection build() {
+        oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelection result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelection buildPartial() {
+        oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelection result = new oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelection(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelection result) {
+        if (includeControlsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            includeControls_ = java.util.Collections.unmodifiableList(includeControls_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.includeControls_ = includeControls_;
+        } else {
+          result.includeControls_ = includeControlsBuilder_.build();
+        }
+        if (excludeControlsBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            excludeControls_ = java.util.Collections.unmodifiableList(excludeControls_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.excludeControls_ = excludeControls_;
+        } else {
+          result.excludeControls_ = excludeControlsBuilder_.build();
+        }
+        if (propsBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            props_ = java.util.Collections.unmodifiableList(props_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.props_ = props_;
+        } else {
+          result.props_ = propsBuilder_.build();
+        }
+        if (linksBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0)) {
+            links_ = java.util.Collections.unmodifiableList(links_);
+            bitField0_ = (bitField0_ & ~0x00000010);
+          }
+          result.links_ = links_;
+        } else {
+          result.links_ = linksBuilder_.build();
+        }
+        if (remarksBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0)) {
+            remarks_ = java.util.Collections.unmodifiableList(remarks_);
+            bitField0_ = (bitField0_ & ~0x00000020);
+          }
+          result.remarks_ = remarks_;
+        } else {
+          result.remarks_ = remarksBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelection result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.description_ = descriptionBuilder_ == null
+              ? description_
+              : descriptionBuilder_.build();
+          to_bitField0_ |= 0x00000001;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelection) {
+          return mergeFrom((oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelection)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelection other) {
+        if (other == oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelection.getDefaultInstance()) return this;
+        if (other.hasDescription()) {
+          mergeDescription(other.getDescription());
+        }
+        if (includeControlsBuilder_ == null) {
+          if (!other.includeControls_.isEmpty()) {
+            if (includeControls_.isEmpty()) {
+              includeControls_ = other.includeControls_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureIncludeControlsIsMutable();
+              includeControls_.addAll(other.includeControls_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.includeControls_.isEmpty()) {
+            if (includeControlsBuilder_.isEmpty()) {
+              includeControlsBuilder_.dispose();
+              includeControlsBuilder_ = null;
+              includeControls_ = other.includeControls_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              includeControlsBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   internalGetIncludeControlsFieldBuilder() : null;
+            } else {
+              includeControlsBuilder_.addAllMessages(other.includeControls_);
+            }
+          }
+        }
+        if (excludeControlsBuilder_ == null) {
+          if (!other.excludeControls_.isEmpty()) {
+            if (excludeControls_.isEmpty()) {
+              excludeControls_ = other.excludeControls_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureExcludeControlsIsMutable();
+              excludeControls_.addAll(other.excludeControls_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.excludeControls_.isEmpty()) {
+            if (excludeControlsBuilder_.isEmpty()) {
+              excludeControlsBuilder_.dispose();
+              excludeControlsBuilder_ = null;
+              excludeControls_ = other.excludeControls_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              excludeControlsBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   internalGetExcludeControlsFieldBuilder() : null;
+            } else {
+              excludeControlsBuilder_.addAllMessages(other.excludeControls_);
+            }
+          }
+        }
+        if (propsBuilder_ == null) {
+          if (!other.props_.isEmpty()) {
+            if (props_.isEmpty()) {
+              props_ = other.props_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensurePropsIsMutable();
+              props_.addAll(other.props_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.props_.isEmpty()) {
+            if (propsBuilder_.isEmpty()) {
+              propsBuilder_.dispose();
+              propsBuilder_ = null;
+              props_ = other.props_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              propsBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   internalGetPropsFieldBuilder() : null;
+            } else {
+              propsBuilder_.addAllMessages(other.props_);
+            }
+          }
+        }
+        if (linksBuilder_ == null) {
+          if (!other.links_.isEmpty()) {
+            if (links_.isEmpty()) {
+              links_ = other.links_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+            } else {
+              ensureLinksIsMutable();
+              links_.addAll(other.links_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.links_.isEmpty()) {
+            if (linksBuilder_.isEmpty()) {
+              linksBuilder_.dispose();
+              linksBuilder_ = null;
+              links_ = other.links_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+              linksBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   internalGetLinksFieldBuilder() : null;
+            } else {
+              linksBuilder_.addAllMessages(other.links_);
+            }
+          }
+        }
+        if (remarksBuilder_ == null) {
+          if (!other.remarks_.isEmpty()) {
+            if (remarks_.isEmpty()) {
+              remarks_ = other.remarks_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+            } else {
+              ensureRemarksIsMutable();
+              remarks_.addAll(other.remarks_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.remarks_.isEmpty()) {
+            if (remarksBuilder_.isEmpty()) {
+              remarksBuilder_.dispose();
+              remarksBuilder_ = null;
+              remarks_ = other.remarks_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+              remarksBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   internalGetRemarksFieldBuilder() : null;
+            } else {
+              remarksBuilder_.addAllMessages(other.remarks_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    internalGetDescriptionFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl m =
+                    input.readMessage(
+                        oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl.parser(),
+                        extensionRegistry);
+                if (includeControlsBuilder_ == null) {
+                  ensureIncludeControlsIsMutable();
+                  includeControls_.add(m);
+                } else {
+                  includeControlsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              case 26: {
+                oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl m =
+                    input.readMessage(
+                        oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl.parser(),
+                        extensionRegistry);
+                if (excludeControlsBuilder_ == null) {
+                  ensureExcludeControlsIsMutable();
+                  excludeControls_.add(m);
+                } else {
+                  excludeControlsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              case 34: {
+                oscal.common.v1.Common.Property m =
+                    input.readMessage(
+                        oscal.common.v1.Common.Property.parser(),
+                        extensionRegistry);
+                if (propsBuilder_ == null) {
+                  ensurePropsIsMutable();
+                  props_.add(m);
+                } else {
+                  propsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 34
+              case 42: {
+                oscal.common.v1.Common.Link m =
+                    input.readMessage(
+                        oscal.common.v1.Common.Link.parser(),
+                        extensionRegistry);
+                if (linksBuilder_ == null) {
+                  ensureLinksIsMutable();
+                  links_.add(m);
+                } else {
+                  linksBuilder_.addMessage(m);
+                }
+                break;
+              } // case 42
+              case 50: {
+                oscal.common.v1.Common.MarkupMultiline m =
+                    input.readMessage(
+                        oscal.common.v1.Common.MarkupMultiline.parser(),
+                        extensionRegistry);
+                if (remarksBuilder_ == null) {
+                  ensureRemarksIsMutable();
+                  remarks_.add(m);
+                } else {
+                  remarksBuilder_.addMessage(m);
+                }
+                break;
+              } // case 50
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private oscal.common.v1.Common.MarkupMultiline description_;
+      private com.google.protobuf.SingleFieldBuilder<
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> descriptionBuilder_;
+      /**
+       * <code>.oscal.common.v1.MarkupMultiline description = 1 [json_name = "description"];</code>
+       * @return Whether the description field is set.
+       */
+      public boolean hasDescription() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.oscal.common.v1.MarkupMultiline description = 1 [json_name = "description"];</code>
+       * @return The description.
+       */
+      public oscal.common.v1.Common.MarkupMultiline getDescription() {
+        if (descriptionBuilder_ == null) {
+          return description_ == null ? oscal.common.v1.Common.MarkupMultiline.getDefaultInstance() : description_;
+        } else {
+          return descriptionBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.oscal.common.v1.MarkupMultiline description = 1 [json_name = "description"];</code>
+       */
+      public Builder setDescription(oscal.common.v1.Common.MarkupMultiline value) {
+        if (descriptionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          description_ = value;
+        } else {
+          descriptionBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.MarkupMultiline description = 1 [json_name = "description"];</code>
+       */
+      public Builder setDescription(
+          oscal.common.v1.Common.MarkupMultiline.Builder builderForValue) {
+        if (descriptionBuilder_ == null) {
+          description_ = builderForValue.build();
+        } else {
+          descriptionBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.MarkupMultiline description = 1 [json_name = "description"];</code>
+       */
+      public Builder mergeDescription(oscal.common.v1.Common.MarkupMultiline value) {
+        if (descriptionBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            description_ != null &&
+            description_ != oscal.common.v1.Common.MarkupMultiline.getDefaultInstance()) {
+            getDescriptionBuilder().mergeFrom(value);
+          } else {
+            description_ = value;
+          }
+        } else {
+          descriptionBuilder_.mergeFrom(value);
+        }
+        if (description_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.MarkupMultiline description = 1 [json_name = "description"];</code>
+       */
+      public Builder clearDescription() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        description_ = null;
+        if (descriptionBuilder_ != null) {
+          descriptionBuilder_.dispose();
+          descriptionBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.MarkupMultiline description = 1 [json_name = "description"];</code>
+       */
+      public oscal.common.v1.Common.MarkupMultiline.Builder getDescriptionBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return internalGetDescriptionFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.oscal.common.v1.MarkupMultiline description = 1 [json_name = "description"];</code>
+       */
+      public oscal.common.v1.Common.MarkupMultilineOrBuilder getDescriptionOrBuilder() {
+        if (descriptionBuilder_ != null) {
+          return descriptionBuilder_.getMessageOrBuilder();
+        } else {
+          return description_ == null ?
+              oscal.common.v1.Common.MarkupMultiline.getDefaultInstance() : description_;
+        }
+      }
+      /**
+       * <code>.oscal.common.v1.MarkupMultiline description = 1 [json_name = "description"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          internalGetDescriptionFieldBuilder() {
+        if (descriptionBuilder_ == null) {
+          descriptionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>(
+                  getDescription(),
+                  getParentForChildren(),
+                  isClean());
+          description_ = null;
+        }
+        return descriptionBuilder_;
+      }
+
+      private java.util.List<oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl> includeControls_ =
+        java.util.Collections.emptyList();
+      private void ensureIncludeControlsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          includeControls_ = new java.util.ArrayList<oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl>(includeControls_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl, oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl.Builder, oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControlOrBuilder> includeControlsBuilder_;
+
+      /**
+       * <code>repeated .oscal.assessment_results.v1.SelectedControl include_controls = 2 [json_name = "includeControls"];</code>
+       */
+      public java.util.List<oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl> getIncludeControlsList() {
+        if (includeControlsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(includeControls_);
+        } else {
+          return includeControlsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .oscal.assessment_results.v1.SelectedControl include_controls = 2 [json_name = "includeControls"];</code>
+       */
+      public int getIncludeControlsCount() {
+        if (includeControlsBuilder_ == null) {
+          return includeControls_.size();
+        } else {
+          return includeControlsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .oscal.assessment_results.v1.SelectedControl include_controls = 2 [json_name = "includeControls"];</code>
+       */
+      public oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl getIncludeControls(int index) {
+        if (includeControlsBuilder_ == null) {
+          return includeControls_.get(index);
+        } else {
+          return includeControlsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.assessment_results.v1.SelectedControl include_controls = 2 [json_name = "includeControls"];</code>
+       */
+      public Builder setIncludeControls(
+          int index, oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl value) {
+        if (includeControlsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureIncludeControlsIsMutable();
+          includeControls_.set(index, value);
+          onChanged();
+        } else {
+          includeControlsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.assessment_results.v1.SelectedControl include_controls = 2 [json_name = "includeControls"];</code>
+       */
+      public Builder setIncludeControls(
+          int index, oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl.Builder builderForValue) {
+        if (includeControlsBuilder_ == null) {
+          ensureIncludeControlsIsMutable();
+          includeControls_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          includeControlsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.assessment_results.v1.SelectedControl include_controls = 2 [json_name = "includeControls"];</code>
+       */
+      public Builder addIncludeControls(oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl value) {
+        if (includeControlsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureIncludeControlsIsMutable();
+          includeControls_.add(value);
+          onChanged();
+        } else {
+          includeControlsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.assessment_results.v1.SelectedControl include_controls = 2 [json_name = "includeControls"];</code>
+       */
+      public Builder addIncludeControls(
+          int index, oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl value) {
+        if (includeControlsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureIncludeControlsIsMutable();
+          includeControls_.add(index, value);
+          onChanged();
+        } else {
+          includeControlsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.assessment_results.v1.SelectedControl include_controls = 2 [json_name = "includeControls"];</code>
+       */
+      public Builder addIncludeControls(
+          oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl.Builder builderForValue) {
+        if (includeControlsBuilder_ == null) {
+          ensureIncludeControlsIsMutable();
+          includeControls_.add(builderForValue.build());
+          onChanged();
+        } else {
+          includeControlsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.assessment_results.v1.SelectedControl include_controls = 2 [json_name = "includeControls"];</code>
+       */
+      public Builder addIncludeControls(
+          int index, oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl.Builder builderForValue) {
+        if (includeControlsBuilder_ == null) {
+          ensureIncludeControlsIsMutable();
+          includeControls_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          includeControlsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.assessment_results.v1.SelectedControl include_controls = 2 [json_name = "includeControls"];</code>
+       */
+      public Builder addAllIncludeControls(
+          java.lang.Iterable<? extends oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl> values) {
+        if (includeControlsBuilder_ == null) {
+          ensureIncludeControlsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, includeControls_);
+          onChanged();
+        } else {
+          includeControlsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.assessment_results.v1.SelectedControl include_controls = 2 [json_name = "includeControls"];</code>
+       */
+      public Builder clearIncludeControls() {
+        if (includeControlsBuilder_ == null) {
+          includeControls_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          includeControlsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.assessment_results.v1.SelectedControl include_controls = 2 [json_name = "includeControls"];</code>
+       */
+      public Builder removeIncludeControls(int index) {
+        if (includeControlsBuilder_ == null) {
+          ensureIncludeControlsIsMutable();
+          includeControls_.remove(index);
+          onChanged();
+        } else {
+          includeControlsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.assessment_results.v1.SelectedControl include_controls = 2 [json_name = "includeControls"];</code>
+       */
+      public oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl.Builder getIncludeControlsBuilder(
+          int index) {
+        return internalGetIncludeControlsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .oscal.assessment_results.v1.SelectedControl include_controls = 2 [json_name = "includeControls"];</code>
+       */
+      public oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControlOrBuilder getIncludeControlsOrBuilder(
+          int index) {
+        if (includeControlsBuilder_ == null) {
+          return includeControls_.get(index);  } else {
+          return includeControlsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.assessment_results.v1.SelectedControl include_controls = 2 [json_name = "includeControls"];</code>
+       */
+      public java.util.List<? extends oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControlOrBuilder> 
+           getIncludeControlsOrBuilderList() {
+        if (includeControlsBuilder_ != null) {
+          return includeControlsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(includeControls_);
+        }
+      }
+      /**
+       * <code>repeated .oscal.assessment_results.v1.SelectedControl include_controls = 2 [json_name = "includeControls"];</code>
+       */
+      public oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl.Builder addIncludeControlsBuilder() {
+        return internalGetIncludeControlsFieldBuilder().addBuilder(
+            oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.assessment_results.v1.SelectedControl include_controls = 2 [json_name = "includeControls"];</code>
+       */
+      public oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl.Builder addIncludeControlsBuilder(
+          int index) {
+        return internalGetIncludeControlsFieldBuilder().addBuilder(
+            index, oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.assessment_results.v1.SelectedControl include_controls = 2 [json_name = "includeControls"];</code>
+       */
+      public java.util.List<oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl.Builder> 
+           getIncludeControlsBuilderList() {
+        return internalGetIncludeControlsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl, oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl.Builder, oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControlOrBuilder> 
+          internalGetIncludeControlsFieldBuilder() {
+        if (includeControlsBuilder_ == null) {
+          includeControlsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl, oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl.Builder, oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControlOrBuilder>(
+                  includeControls_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          includeControls_ = null;
+        }
+        return includeControlsBuilder_;
+      }
+
+      private java.util.List<oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl> excludeControls_ =
+        java.util.Collections.emptyList();
+      private void ensureExcludeControlsIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          excludeControls_ = new java.util.ArrayList<oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl>(excludeControls_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl, oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl.Builder, oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControlOrBuilder> excludeControlsBuilder_;
+
+      /**
+       * <code>repeated .oscal.assessment_results.v1.SelectedControl exclude_controls = 3 [json_name = "excludeControls"];</code>
+       */
+      public java.util.List<oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl> getExcludeControlsList() {
+        if (excludeControlsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(excludeControls_);
+        } else {
+          return excludeControlsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .oscal.assessment_results.v1.SelectedControl exclude_controls = 3 [json_name = "excludeControls"];</code>
+       */
+      public int getExcludeControlsCount() {
+        if (excludeControlsBuilder_ == null) {
+          return excludeControls_.size();
+        } else {
+          return excludeControlsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .oscal.assessment_results.v1.SelectedControl exclude_controls = 3 [json_name = "excludeControls"];</code>
+       */
+      public oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl getExcludeControls(int index) {
+        if (excludeControlsBuilder_ == null) {
+          return excludeControls_.get(index);
+        } else {
+          return excludeControlsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.assessment_results.v1.SelectedControl exclude_controls = 3 [json_name = "excludeControls"];</code>
+       */
+      public Builder setExcludeControls(
+          int index, oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl value) {
+        if (excludeControlsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureExcludeControlsIsMutable();
+          excludeControls_.set(index, value);
+          onChanged();
+        } else {
+          excludeControlsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.assessment_results.v1.SelectedControl exclude_controls = 3 [json_name = "excludeControls"];</code>
+       */
+      public Builder setExcludeControls(
+          int index, oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl.Builder builderForValue) {
+        if (excludeControlsBuilder_ == null) {
+          ensureExcludeControlsIsMutable();
+          excludeControls_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          excludeControlsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.assessment_results.v1.SelectedControl exclude_controls = 3 [json_name = "excludeControls"];</code>
+       */
+      public Builder addExcludeControls(oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl value) {
+        if (excludeControlsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureExcludeControlsIsMutable();
+          excludeControls_.add(value);
+          onChanged();
+        } else {
+          excludeControlsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.assessment_results.v1.SelectedControl exclude_controls = 3 [json_name = "excludeControls"];</code>
+       */
+      public Builder addExcludeControls(
+          int index, oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl value) {
+        if (excludeControlsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureExcludeControlsIsMutable();
+          excludeControls_.add(index, value);
+          onChanged();
+        } else {
+          excludeControlsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.assessment_results.v1.SelectedControl exclude_controls = 3 [json_name = "excludeControls"];</code>
+       */
+      public Builder addExcludeControls(
+          oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl.Builder builderForValue) {
+        if (excludeControlsBuilder_ == null) {
+          ensureExcludeControlsIsMutable();
+          excludeControls_.add(builderForValue.build());
+          onChanged();
+        } else {
+          excludeControlsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.assessment_results.v1.SelectedControl exclude_controls = 3 [json_name = "excludeControls"];</code>
+       */
+      public Builder addExcludeControls(
+          int index, oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl.Builder builderForValue) {
+        if (excludeControlsBuilder_ == null) {
+          ensureExcludeControlsIsMutable();
+          excludeControls_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          excludeControlsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.assessment_results.v1.SelectedControl exclude_controls = 3 [json_name = "excludeControls"];</code>
+       */
+      public Builder addAllExcludeControls(
+          java.lang.Iterable<? extends oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl> values) {
+        if (excludeControlsBuilder_ == null) {
+          ensureExcludeControlsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, excludeControls_);
+          onChanged();
+        } else {
+          excludeControlsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.assessment_results.v1.SelectedControl exclude_controls = 3 [json_name = "excludeControls"];</code>
+       */
+      public Builder clearExcludeControls() {
+        if (excludeControlsBuilder_ == null) {
+          excludeControls_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          excludeControlsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.assessment_results.v1.SelectedControl exclude_controls = 3 [json_name = "excludeControls"];</code>
+       */
+      public Builder removeExcludeControls(int index) {
+        if (excludeControlsBuilder_ == null) {
+          ensureExcludeControlsIsMutable();
+          excludeControls_.remove(index);
+          onChanged();
+        } else {
+          excludeControlsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.assessment_results.v1.SelectedControl exclude_controls = 3 [json_name = "excludeControls"];</code>
+       */
+      public oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl.Builder getExcludeControlsBuilder(
+          int index) {
+        return internalGetExcludeControlsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .oscal.assessment_results.v1.SelectedControl exclude_controls = 3 [json_name = "excludeControls"];</code>
+       */
+      public oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControlOrBuilder getExcludeControlsOrBuilder(
+          int index) {
+        if (excludeControlsBuilder_ == null) {
+          return excludeControls_.get(index);  } else {
+          return excludeControlsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.assessment_results.v1.SelectedControl exclude_controls = 3 [json_name = "excludeControls"];</code>
+       */
+      public java.util.List<? extends oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControlOrBuilder> 
+           getExcludeControlsOrBuilderList() {
+        if (excludeControlsBuilder_ != null) {
+          return excludeControlsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(excludeControls_);
+        }
+      }
+      /**
+       * <code>repeated .oscal.assessment_results.v1.SelectedControl exclude_controls = 3 [json_name = "excludeControls"];</code>
+       */
+      public oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl.Builder addExcludeControlsBuilder() {
+        return internalGetExcludeControlsFieldBuilder().addBuilder(
+            oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.assessment_results.v1.SelectedControl exclude_controls = 3 [json_name = "excludeControls"];</code>
+       */
+      public oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl.Builder addExcludeControlsBuilder(
+          int index) {
+        return internalGetExcludeControlsFieldBuilder().addBuilder(
+            index, oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.assessment_results.v1.SelectedControl exclude_controls = 3 [json_name = "excludeControls"];</code>
+       */
+      public java.util.List<oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl.Builder> 
+           getExcludeControlsBuilderList() {
+        return internalGetExcludeControlsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl, oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl.Builder, oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControlOrBuilder> 
+          internalGetExcludeControlsFieldBuilder() {
+        if (excludeControlsBuilder_ == null) {
+          excludeControlsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl, oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl.Builder, oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControlOrBuilder>(
+                  excludeControls_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          excludeControls_ = null;
+        }
+        return excludeControlsBuilder_;
+      }
+
+      private java.util.List<oscal.common.v1.Common.Property> props_ =
+        java.util.Collections.emptyList();
+      private void ensurePropsIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          props_ = new java.util.ArrayList<oscal.common.v1.Common.Property>(props_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> propsBuilder_;
+
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
+       */
+      public java.util.List<oscal.common.v1.Common.Property> getPropsList() {
+        if (propsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(props_);
+        } else {
+          return propsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
+       */
+      public int getPropsCount() {
+        if (propsBuilder_ == null) {
+          return props_.size();
+        } else {
+          return propsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
+       */
+      public oscal.common.v1.Common.Property getProps(int index) {
+        if (propsBuilder_ == null) {
+          return props_.get(index);
+        } else {
+          return propsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
+       */
+      public Builder setProps(
+          int index, oscal.common.v1.Common.Property value) {
+        if (propsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePropsIsMutable();
+          props_.set(index, value);
+          onChanged();
+        } else {
+          propsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
+       */
+      public Builder setProps(
+          int index, oscal.common.v1.Common.Property.Builder builderForValue) {
+        if (propsBuilder_ == null) {
+          ensurePropsIsMutable();
+          props_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          propsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
+       */
+      public Builder addProps(oscal.common.v1.Common.Property value) {
+        if (propsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePropsIsMutable();
+          props_.add(value);
+          onChanged();
+        } else {
+          propsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
+       */
+      public Builder addProps(
+          int index, oscal.common.v1.Common.Property value) {
+        if (propsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePropsIsMutable();
+          props_.add(index, value);
+          onChanged();
+        } else {
+          propsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
+       */
+      public Builder addProps(
+          oscal.common.v1.Common.Property.Builder builderForValue) {
+        if (propsBuilder_ == null) {
+          ensurePropsIsMutable();
+          props_.add(builderForValue.build());
+          onChanged();
+        } else {
+          propsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
+       */
+      public Builder addProps(
+          int index, oscal.common.v1.Common.Property.Builder builderForValue) {
+        if (propsBuilder_ == null) {
+          ensurePropsIsMutable();
+          props_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          propsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
+       */
+      public Builder addAllProps(
+          java.lang.Iterable<? extends oscal.common.v1.Common.Property> values) {
+        if (propsBuilder_ == null) {
+          ensurePropsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, props_);
+          onChanged();
+        } else {
+          propsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
+       */
+      public Builder clearProps() {
+        if (propsBuilder_ == null) {
+          props_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          propsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
+       */
+      public Builder removeProps(int index) {
+        if (propsBuilder_ == null) {
+          ensurePropsIsMutable();
+          props_.remove(index);
+          onChanged();
+        } else {
+          propsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
+       */
+      public oscal.common.v1.Common.Property.Builder getPropsBuilder(
+          int index) {
+        return internalGetPropsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
+       */
+      public oscal.common.v1.Common.PropertyOrBuilder getPropsOrBuilder(
+          int index) {
+        if (propsBuilder_ == null) {
+          return props_.get(index);  } else {
+          return propsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
+       */
+      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+           getPropsOrBuilderList() {
+        if (propsBuilder_ != null) {
+          return propsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(props_);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
+       */
+      public oscal.common.v1.Common.Property.Builder addPropsBuilder() {
+        return internalGetPropsFieldBuilder().addBuilder(
+            oscal.common.v1.Common.Property.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
+       */
+      public oscal.common.v1.Common.Property.Builder addPropsBuilder(
+          int index) {
+        return internalGetPropsFieldBuilder().addBuilder(
+            index, oscal.common.v1.Common.Property.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
+       */
+      public java.util.List<oscal.common.v1.Common.Property.Builder> 
+           getPropsBuilderList() {
+        return internalGetPropsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> 
+          internalGetPropsFieldBuilder() {
+        if (propsBuilder_ == null) {
+          propsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder>(
+                  props_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          props_ = null;
+        }
+        return propsBuilder_;
+      }
+
+      private java.util.List<oscal.common.v1.Common.Link> links_ =
+        java.util.Collections.emptyList();
+      private void ensureLinksIsMutable() {
+        if (!((bitField0_ & 0x00000010) != 0)) {
+          links_ = new java.util.ArrayList<oscal.common.v1.Common.Link>(links_);
+          bitField0_ |= 0x00000010;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder> linksBuilder_;
+
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
+       */
+      public java.util.List<oscal.common.v1.Common.Link> getLinksList() {
+        if (linksBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(links_);
+        } else {
+          return linksBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
+       */
+      public int getLinksCount() {
+        if (linksBuilder_ == null) {
+          return links_.size();
+        } else {
+          return linksBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
+       */
+      public oscal.common.v1.Common.Link getLinks(int index) {
+        if (linksBuilder_ == null) {
+          return links_.get(index);
+        } else {
+          return linksBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
+       */
+      public Builder setLinks(
+          int index, oscal.common.v1.Common.Link value) {
+        if (linksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLinksIsMutable();
+          links_.set(index, value);
+          onChanged();
+        } else {
+          linksBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
+       */
+      public Builder setLinks(
+          int index, oscal.common.v1.Common.Link.Builder builderForValue) {
+        if (linksBuilder_ == null) {
+          ensureLinksIsMutable();
+          links_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          linksBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
+       */
+      public Builder addLinks(oscal.common.v1.Common.Link value) {
+        if (linksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLinksIsMutable();
+          links_.add(value);
+          onChanged();
+        } else {
+          linksBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
+       */
+      public Builder addLinks(
+          int index, oscal.common.v1.Common.Link value) {
+        if (linksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLinksIsMutable();
+          links_.add(index, value);
+          onChanged();
+        } else {
+          linksBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
+       */
+      public Builder addLinks(
+          oscal.common.v1.Common.Link.Builder builderForValue) {
+        if (linksBuilder_ == null) {
+          ensureLinksIsMutable();
+          links_.add(builderForValue.build());
+          onChanged();
+        } else {
+          linksBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
+       */
+      public Builder addLinks(
+          int index, oscal.common.v1.Common.Link.Builder builderForValue) {
+        if (linksBuilder_ == null) {
+          ensureLinksIsMutable();
+          links_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          linksBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
+       */
+      public Builder addAllLinks(
+          java.lang.Iterable<? extends oscal.common.v1.Common.Link> values) {
+        if (linksBuilder_ == null) {
+          ensureLinksIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, links_);
+          onChanged();
+        } else {
+          linksBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
+       */
+      public Builder clearLinks() {
+        if (linksBuilder_ == null) {
+          links_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
+          onChanged();
+        } else {
+          linksBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
+       */
+      public Builder removeLinks(int index) {
+        if (linksBuilder_ == null) {
+          ensureLinksIsMutable();
+          links_.remove(index);
+          onChanged();
+        } else {
+          linksBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
+       */
+      public oscal.common.v1.Common.Link.Builder getLinksBuilder(
+          int index) {
+        return internalGetLinksFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
+       */
+      public oscal.common.v1.Common.LinkOrBuilder getLinksOrBuilder(
+          int index) {
+        if (linksBuilder_ == null) {
+          return links_.get(index);  } else {
+          return linksBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
+       */
+      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+           getLinksOrBuilderList() {
+        if (linksBuilder_ != null) {
+          return linksBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(links_);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
+       */
+      public oscal.common.v1.Common.Link.Builder addLinksBuilder() {
+        return internalGetLinksFieldBuilder().addBuilder(
+            oscal.common.v1.Common.Link.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
+       */
+      public oscal.common.v1.Common.Link.Builder addLinksBuilder(
+          int index) {
+        return internalGetLinksFieldBuilder().addBuilder(
+            index, oscal.common.v1.Common.Link.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
+       */
+      public java.util.List<oscal.common.v1.Common.Link.Builder> 
+           getLinksBuilderList() {
+        return internalGetLinksFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder> 
+          internalGetLinksFieldBuilder() {
+        if (linksBuilder_ == null) {
+          linksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder>(
+                  links_,
+                  ((bitField0_ & 0x00000010) != 0),
+                  getParentForChildren(),
+                  isClean());
+          links_ = null;
+        }
+        return linksBuilder_;
+      }
+
+      private java.util.List<oscal.common.v1.Common.MarkupMultiline> remarks_ =
+        java.util.Collections.emptyList();
+      private void ensureRemarksIsMutable() {
+        if (!((bitField0_ & 0x00000020) != 0)) {
+          remarks_ = new java.util.ArrayList<oscal.common.v1.Common.MarkupMultiline>(remarks_);
+          bitField0_ |= 0x00000020;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> remarksBuilder_;
+
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
+       */
+      public java.util.List<oscal.common.v1.Common.MarkupMultiline> getRemarksList() {
+        if (remarksBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(remarks_);
+        } else {
+          return remarksBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
+       */
+      public int getRemarksCount() {
+        if (remarksBuilder_ == null) {
+          return remarks_.size();
+        } else {
+          return remarksBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
+       */
+      public oscal.common.v1.Common.MarkupMultiline getRemarks(int index) {
+        if (remarksBuilder_ == null) {
+          return remarks_.get(index);
+        } else {
+          return remarksBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
+       */
+      public Builder setRemarks(
+          int index, oscal.common.v1.Common.MarkupMultiline value) {
+        if (remarksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRemarksIsMutable();
+          remarks_.set(index, value);
+          onChanged();
+        } else {
+          remarksBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
+       */
+      public Builder setRemarks(
+          int index, oscal.common.v1.Common.MarkupMultiline.Builder builderForValue) {
+        if (remarksBuilder_ == null) {
+          ensureRemarksIsMutable();
+          remarks_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          remarksBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
+       */
+      public Builder addRemarks(oscal.common.v1.Common.MarkupMultiline value) {
+        if (remarksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRemarksIsMutable();
+          remarks_.add(value);
+          onChanged();
+        } else {
+          remarksBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
+       */
+      public Builder addRemarks(
+          int index, oscal.common.v1.Common.MarkupMultiline value) {
+        if (remarksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRemarksIsMutable();
+          remarks_.add(index, value);
+          onChanged();
+        } else {
+          remarksBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
+       */
+      public Builder addRemarks(
+          oscal.common.v1.Common.MarkupMultiline.Builder builderForValue) {
+        if (remarksBuilder_ == null) {
+          ensureRemarksIsMutable();
+          remarks_.add(builderForValue.build());
+          onChanged();
+        } else {
+          remarksBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
+       */
+      public Builder addRemarks(
+          int index, oscal.common.v1.Common.MarkupMultiline.Builder builderForValue) {
+        if (remarksBuilder_ == null) {
+          ensureRemarksIsMutable();
+          remarks_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          remarksBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
+       */
+      public Builder addAllRemarks(
+          java.lang.Iterable<? extends oscal.common.v1.Common.MarkupMultiline> values) {
+        if (remarksBuilder_ == null) {
+          ensureRemarksIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, remarks_);
+          onChanged();
+        } else {
+          remarksBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
+       */
+      public Builder clearRemarks() {
+        if (remarksBuilder_ == null) {
+          remarks_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000020);
+          onChanged();
+        } else {
+          remarksBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
+       */
+      public Builder removeRemarks(int index) {
+        if (remarksBuilder_ == null) {
+          ensureRemarksIsMutable();
+          remarks_.remove(index);
+          onChanged();
+        } else {
+          remarksBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
+       */
+      public oscal.common.v1.Common.MarkupMultiline.Builder getRemarksBuilder(
+          int index) {
+        return internalGetRemarksFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
+       */
+      public oscal.common.v1.Common.MarkupMultilineOrBuilder getRemarksOrBuilder(
+          int index) {
+        if (remarksBuilder_ == null) {
+          return remarks_.get(index);  } else {
+          return remarksBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
+       */
+      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+           getRemarksOrBuilderList() {
+        if (remarksBuilder_ != null) {
+          return remarksBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(remarks_);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
+       */
+      public oscal.common.v1.Common.MarkupMultiline.Builder addRemarksBuilder() {
+        return internalGetRemarksFieldBuilder().addBuilder(
+            oscal.common.v1.Common.MarkupMultiline.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
+       */
+      public oscal.common.v1.Common.MarkupMultiline.Builder addRemarksBuilder(
+          int index) {
+        return internalGetRemarksFieldBuilder().addBuilder(
+            index, oscal.common.v1.Common.MarkupMultiline.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
+       */
+      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder> 
+           getRemarksBuilderList() {
+        return internalGetRemarksFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          internalGetRemarksFieldBuilder() {
+        if (remarksBuilder_ == null) {
+          remarksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>(
+                  remarks_,
+                  ((bitField0_ & 0x00000020) != 0),
+                  getParentForChildren(),
+                  isClean());
+          remarks_ = null;
+        }
+        return remarksBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:oscal.assessment_results.v1.ControlSelection)
+    }
+
+    // @@protoc_insertion_point(class_scope:oscal.assessment_results.v1.ControlSelection)
+    private static final oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelection DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelection();
+    }
+
+    public static oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelection getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ControlSelection>
+        PARSER = new com.google.protobuf.AbstractParser<ControlSelection>() {
+      @java.lang.Override
+      public ControlSelection parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ControlSelection> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ControlSelection> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public oscal.assessment_results.v1.AssessmentResultsOuterClass.ControlSelection getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface SelectedControlOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oscal.assessment_results.v1.SelectedControl)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.oscal.common.v1.Token control_id = 1 [json_name = "controlId"];</code>
+     * @return Whether the controlId field is set.
+     */
+    boolean hasControlId();
+    /**
+     * <code>.oscal.common.v1.Token control_id = 1 [json_name = "controlId"];</code>
+     * @return The controlId.
+     */
+    oscal.common.v1.Common.Token getControlId();
+    /**
+     * <code>.oscal.common.v1.Token control_id = 1 [json_name = "controlId"];</code>
+     */
+    oscal.common.v1.Common.TokenOrBuilder getControlIdOrBuilder();
+
+    /**
+     * <code>.oscal.common.v1.Token statement_id = 2 [json_name = "statementId"];</code>
+     * @return Whether the statementId field is set.
+     */
+    boolean hasStatementId();
+    /**
+     * <code>.oscal.common.v1.Token statement_id = 2 [json_name = "statementId"];</code>
+     * @return The statementId.
+     */
+    oscal.common.v1.Common.Token getStatementId();
+    /**
+     * <code>.oscal.common.v1.Token statement_id = 2 [json_name = "statementId"];</code>
+     */
+    oscal.common.v1.Common.TokenOrBuilder getStatementIdOrBuilder();
+
+    /**
+     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+     */
+    java.util.List<oscal.common.v1.Common.Property> 
+        getPropsList();
+    /**
+     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+     */
+    oscal.common.v1.Common.Property getProps(int index);
+    /**
+     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+     */
+    int getPropsCount();
+    /**
+     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+     */
+    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+        getPropsOrBuilderList();
+    /**
+     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+     */
+    oscal.common.v1.Common.PropertyOrBuilder getPropsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+     */
+    java.util.List<oscal.common.v1.Common.Link> 
+        getLinksList();
+    /**
+     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+     */
+    oscal.common.v1.Common.Link getLinks(int index);
+    /**
+     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+     */
+    int getLinksCount();
+    /**
+     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+     */
+    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+        getLinksOrBuilderList();
+    /**
+     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+     */
+    oscal.common.v1.Common.LinkOrBuilder getLinksOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+     */
+    java.util.List<oscal.common.v1.Common.MarkupMultiline> 
+        getRemarksList();
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+     */
+    oscal.common.v1.Common.MarkupMultiline getRemarks(int index);
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+     */
+    int getRemarksCount();
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+     */
+    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+        getRemarksOrBuilderList();
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+     */
+    oscal.common.v1.Common.MarkupMultilineOrBuilder getRemarksOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * SelectedControl represents a selected control
+   * </pre>
+   *
+   * Protobuf type {@code oscal.assessment_results.v1.SelectedControl}
+   */
+  public static final class SelectedControl extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:oscal.assessment_results.v1.SelectedControl)
+      SelectedControlOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 35,
+        /* patch= */ 1,
+        /* suffix= */ "",
+        "SelectedControl");
+    }
+    // Use SelectedControl.newBuilder() to construct.
+    private SelectedControl(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private SelectedControl() {
+      props_ = java.util.Collections.emptyList();
+      links_ = java.util.Collections.emptyList();
+      remarks_ = java.util.Collections.emptyList();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return oscal.assessment_results.v1.AssessmentResultsOuterClass.internal_static_oscal_assessment_results_v1_SelectedControl_descriptor;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+      return oscal.assessment_results.v1.AssessmentResultsOuterClass.internal_static_oscal_assessment_results_v1_SelectedControl_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return oscal.assessment_results.v1.AssessmentResultsOuterClass.internal_static_oscal_assessment_results_v1_SelectedControl_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl.class, oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int CONTROL_ID_FIELD_NUMBER = 1;
+    private oscal.common.v1.Common.Token controlId_;
+    /**
+     * <code>.oscal.common.v1.Token control_id = 1 [json_name = "controlId"];</code>
+     * @return Whether the controlId field is set.
+     */
+    @java.lang.Override
+    public boolean hasControlId() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.oscal.common.v1.Token control_id = 1 [json_name = "controlId"];</code>
+     * @return The controlId.
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.Token getControlId() {
+      return controlId_ == null ? oscal.common.v1.Common.Token.getDefaultInstance() : controlId_;
+    }
+    /**
+     * <code>.oscal.common.v1.Token control_id = 1 [json_name = "controlId"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.TokenOrBuilder getControlIdOrBuilder() {
+      return controlId_ == null ? oscal.common.v1.Common.Token.getDefaultInstance() : controlId_;
+    }
+
+    public static final int STATEMENT_ID_FIELD_NUMBER = 2;
+    private oscal.common.v1.Common.Token statementId_;
+    /**
+     * <code>.oscal.common.v1.Token statement_id = 2 [json_name = "statementId"];</code>
+     * @return Whether the statementId field is set.
+     */
+    @java.lang.Override
+    public boolean hasStatementId() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>.oscal.common.v1.Token statement_id = 2 [json_name = "statementId"];</code>
+     * @return The statementId.
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.Token getStatementId() {
+      return statementId_ == null ? oscal.common.v1.Common.Token.getDefaultInstance() : statementId_;
+    }
+    /**
+     * <code>.oscal.common.v1.Token statement_id = 2 [json_name = "statementId"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.TokenOrBuilder getStatementIdOrBuilder() {
+      return statementId_ == null ? oscal.common.v1.Common.Token.getDefaultInstance() : statementId_;
+    }
+
+    public static final int PROPS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<oscal.common.v1.Common.Property> props_;
+    /**
+     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<oscal.common.v1.Common.Property> getPropsList() {
+      return props_;
+    }
+    /**
+     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+        getPropsOrBuilderList() {
+      return props_;
+    }
+    /**
+     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+     */
+    @java.lang.Override
+    public int getPropsCount() {
+      return props_.size();
+    }
+    /**
+     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.Property getProps(int index) {
+      return props_.get(index);
+    }
+    /**
+     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.PropertyOrBuilder getPropsOrBuilder(
+        int index) {
+      return props_.get(index);
+    }
+
+    public static final int LINKS_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private java.util.List<oscal.common.v1.Common.Link> links_;
+    /**
+     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<oscal.common.v1.Common.Link> getLinksList() {
+      return links_;
+    }
+    /**
+     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+        getLinksOrBuilderList() {
+      return links_;
+    }
+    /**
+     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+     */
+    @java.lang.Override
+    public int getLinksCount() {
+      return links_.size();
+    }
+    /**
+     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.Link getLinks(int index) {
+      return links_.get(index);
+    }
+    /**
+     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.LinkOrBuilder getLinksOrBuilder(
+        int index) {
+      return links_.get(index);
+    }
+
+    public static final int REMARKS_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private java.util.List<oscal.common.v1.Common.MarkupMultiline> remarks_;
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<oscal.common.v1.Common.MarkupMultiline> getRemarksList() {
+      return remarks_;
+    }
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+        getRemarksOrBuilderList() {
+      return remarks_;
+    }
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+     */
+    @java.lang.Override
+    public int getRemarksCount() {
+      return remarks_.size();
+    }
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.MarkupMultiline getRemarks(int index) {
+      return remarks_.get(index);
+    }
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.MarkupMultilineOrBuilder getRemarksOrBuilder(
+        int index) {
+      return remarks_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeMessage(1, getControlId());
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeMessage(2, getStatementId());
+      }
+      for (int i = 0; i < props_.size(); i++) {
+        output.writeMessage(3, props_.get(i));
+      }
+      for (int i = 0; i < links_.size(); i++) {
+        output.writeMessage(4, links_.get(i));
+      }
+      for (int i = 0; i < remarks_.size(); i++) {
+        output.writeMessage(5, remarks_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+    private int computeSerializedSize_0() {
+      int size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getControlId());
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getStatementId());
+      }
+
+          {
+            final int count = props_.size();
+            for (int i = 0; i < count; i++) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeMessageSizeNoTag(props_.get(i));
+            }
+            size += 1 * count;
+          }
+
+          {
+            final int count = links_.size();
+            for (int i = 0; i < count; i++) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeMessageSizeNoTag(links_.get(i));
+            }
+            size += 1 * count;
+          }
+
+          {
+            final int count = remarks_.size();
+            for (int i = 0; i < count; i++) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeMessageSizeNoTag(remarks_.get(i));
+            }
+            size += 1 * count;
+          }
+      return size;
+    }
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += computeSerializedSize_0();
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl)) {
+        return super.equals(obj);
+      }
+      oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl other = (oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl) obj;
+
+      if (hasControlId() != other.hasControlId()) return false;
+      if (hasControlId()) {
+        if (!getControlId()
+            .equals(other.getControlId())) return false;
+      }
+      if (hasStatementId() != other.hasStatementId()) return false;
+      if (hasStatementId()) {
+        if (!getStatementId()
+            .equals(other.getStatementId())) return false;
+      }
+      if (!getPropsList()
+          .equals(other.getPropsList())) return false;
+      if (!getLinksList()
+          .equals(other.getLinksList())) return false;
+      if (!getRemarksList()
+          .equals(other.getRemarksList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasControlId()) {
+        hash = (37 * hash) + CONTROL_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getControlId().hashCode();
+      }
+      if (hasStatementId()) {
+        hash = (37 * hash) + STATEMENT_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getStatementId().hashCode();
+      }
+      if (getPropsCount() > 0) {
+        hash = (37 * hash) + PROPS_FIELD_NUMBER;
+        hash = (53 * hash) + getPropsList().hashCode();
+      }
+      if (getLinksCount() > 0) {
+        hash = (37 * hash) + LINKS_FIELD_NUMBER;
+        hash = (53 * hash) + getLinksList().hashCode();
+      }
+      if (getRemarksCount() > 0) {
+        hash = (37 * hash) + REMARKS_FIELD_NUMBER;
+        hash = (53 * hash) + getRemarksList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * SelectedControl represents a selected control
+     * </pre>
+     *
+     * Protobuf type {@code oscal.assessment_results.v1.SelectedControl}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oscal.assessment_results.v1.SelectedControl)
+        oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControlOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return oscal.assessment_results.v1.AssessmentResultsOuterClass.internal_static_oscal_assessment_results_v1_SelectedControl_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return oscal.assessment_results.v1.AssessmentResultsOuterClass.internal_static_oscal_assessment_results_v1_SelectedControl_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl.class, oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl.Builder.class);
+      }
+
+      // Construct using oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage
+                .alwaysUseFieldBuilders) {
+          internalGetControlIdFieldBuilder();
+          internalGetStatementIdFieldBuilder();
+          internalGetPropsFieldBuilder();
+          internalGetLinksFieldBuilder();
+          internalGetRemarksFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        controlId_ = null;
+        if (controlIdBuilder_ != null) {
+          controlIdBuilder_.dispose();
+          controlIdBuilder_ = null;
+        }
+        statementId_ = null;
+        if (statementIdBuilder_ != null) {
+          statementIdBuilder_.dispose();
+          statementIdBuilder_ = null;
+        }
+        if (propsBuilder_ == null) {
+          props_ = java.util.Collections.emptyList();
+        } else {
+          props_ = null;
+          propsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        if (linksBuilder_ == null) {
+          links_ = java.util.Collections.emptyList();
+        } else {
+          links_ = null;
+          linksBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        if (remarksBuilder_ == null) {
+          remarks_ = java.util.Collections.emptyList();
+        } else {
+          remarks_ = null;
+          remarksBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return oscal.assessment_results.v1.AssessmentResultsOuterClass.internal_static_oscal_assessment_results_v1_SelectedControl_descriptor;
+      }
+
+      @java.lang.Override
+      public oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl getDefaultInstanceForType() {
+        return oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl build() {
+        oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl buildPartial() {
+        oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl result = new oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl result) {
+        if (propsBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            props_ = java.util.Collections.unmodifiableList(props_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.props_ = props_;
+        } else {
+          result.props_ = propsBuilder_.build();
+        }
+        if (linksBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            links_ = java.util.Collections.unmodifiableList(links_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.links_ = links_;
+        } else {
+          result.links_ = linksBuilder_.build();
+        }
+        if (remarksBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0)) {
+            remarks_ = java.util.Collections.unmodifiableList(remarks_);
+            bitField0_ = (bitField0_ & ~0x00000010);
+          }
+          result.remarks_ = remarks_;
+        } else {
+          result.remarks_ = remarksBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.controlId_ = controlIdBuilder_ == null
+              ? controlId_
+              : controlIdBuilder_.build();
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.statementId_ = statementIdBuilder_ == null
+              ? statementId_
+              : statementIdBuilder_.build();
+          to_bitField0_ |= 0x00000002;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl) {
+          return mergeFrom((oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl other) {
+        if (other == oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl.getDefaultInstance()) return this;
+        if (other.hasControlId()) {
+          mergeControlId(other.getControlId());
+        }
+        if (other.hasStatementId()) {
+          mergeStatementId(other.getStatementId());
+        }
+        if (propsBuilder_ == null) {
+          if (!other.props_.isEmpty()) {
+            if (props_.isEmpty()) {
+              props_ = other.props_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensurePropsIsMutable();
+              props_.addAll(other.props_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.props_.isEmpty()) {
+            if (propsBuilder_.isEmpty()) {
+              propsBuilder_.dispose();
+              propsBuilder_ = null;
+              props_ = other.props_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              propsBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   internalGetPropsFieldBuilder() : null;
+            } else {
+              propsBuilder_.addAllMessages(other.props_);
+            }
+          }
+        }
+        if (linksBuilder_ == null) {
+          if (!other.links_.isEmpty()) {
+            if (links_.isEmpty()) {
+              links_ = other.links_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureLinksIsMutable();
+              links_.addAll(other.links_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.links_.isEmpty()) {
+            if (linksBuilder_.isEmpty()) {
+              linksBuilder_.dispose();
+              linksBuilder_ = null;
+              links_ = other.links_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              linksBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   internalGetLinksFieldBuilder() : null;
+            } else {
+              linksBuilder_.addAllMessages(other.links_);
+            }
+          }
+        }
+        if (remarksBuilder_ == null) {
+          if (!other.remarks_.isEmpty()) {
+            if (remarks_.isEmpty()) {
+              remarks_ = other.remarks_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+            } else {
+              ensureRemarksIsMutable();
+              remarks_.addAll(other.remarks_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.remarks_.isEmpty()) {
+            if (remarksBuilder_.isEmpty()) {
+              remarksBuilder_.dispose();
+              remarksBuilder_ = null;
+              remarks_ = other.remarks_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+              remarksBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   internalGetRemarksFieldBuilder() : null;
+            } else {
+              remarksBuilder_.addAllMessages(other.remarks_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    internalGetControlIdFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    internalGetStatementIdFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                oscal.common.v1.Common.Property m =
+                    input.readMessage(
+                        oscal.common.v1.Common.Property.parser(),
+                        extensionRegistry);
+                if (propsBuilder_ == null) {
+                  ensurePropsIsMutable();
+                  props_.add(m);
+                } else {
+                  propsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              case 34: {
+                oscal.common.v1.Common.Link m =
+                    input.readMessage(
+                        oscal.common.v1.Common.Link.parser(),
+                        extensionRegistry);
+                if (linksBuilder_ == null) {
+                  ensureLinksIsMutable();
+                  links_.add(m);
+                } else {
+                  linksBuilder_.addMessage(m);
+                }
+                break;
+              } // case 34
+              case 42: {
+                oscal.common.v1.Common.MarkupMultiline m =
+                    input.readMessage(
+                        oscal.common.v1.Common.MarkupMultiline.parser(),
+                        extensionRegistry);
+                if (remarksBuilder_ == null) {
+                  ensureRemarksIsMutable();
+                  remarks_.add(m);
+                } else {
+                  remarksBuilder_.addMessage(m);
+                }
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private oscal.common.v1.Common.Token controlId_;
+      private com.google.protobuf.SingleFieldBuilder<
+          oscal.common.v1.Common.Token, oscal.common.v1.Common.Token.Builder, oscal.common.v1.Common.TokenOrBuilder> controlIdBuilder_;
+      /**
+       * <code>.oscal.common.v1.Token control_id = 1 [json_name = "controlId"];</code>
+       * @return Whether the controlId field is set.
+       */
+      public boolean hasControlId() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.oscal.common.v1.Token control_id = 1 [json_name = "controlId"];</code>
+       * @return The controlId.
+       */
+      public oscal.common.v1.Common.Token getControlId() {
+        if (controlIdBuilder_ == null) {
+          return controlId_ == null ? oscal.common.v1.Common.Token.getDefaultInstance() : controlId_;
+        } else {
+          return controlIdBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.oscal.common.v1.Token control_id = 1 [json_name = "controlId"];</code>
+       */
+      public Builder setControlId(oscal.common.v1.Common.Token value) {
+        if (controlIdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          controlId_ = value;
+        } else {
+          controlIdBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.Token control_id = 1 [json_name = "controlId"];</code>
+       */
+      public Builder setControlId(
+          oscal.common.v1.Common.Token.Builder builderForValue) {
+        if (controlIdBuilder_ == null) {
+          controlId_ = builderForValue.build();
+        } else {
+          controlIdBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.Token control_id = 1 [json_name = "controlId"];</code>
+       */
+      public Builder mergeControlId(oscal.common.v1.Common.Token value) {
+        if (controlIdBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            controlId_ != null &&
+            controlId_ != oscal.common.v1.Common.Token.getDefaultInstance()) {
+            getControlIdBuilder().mergeFrom(value);
+          } else {
+            controlId_ = value;
+          }
+        } else {
+          controlIdBuilder_.mergeFrom(value);
+        }
+        if (controlId_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.Token control_id = 1 [json_name = "controlId"];</code>
+       */
+      public Builder clearControlId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        controlId_ = null;
+        if (controlIdBuilder_ != null) {
+          controlIdBuilder_.dispose();
+          controlIdBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.Token control_id = 1 [json_name = "controlId"];</code>
+       */
+      public oscal.common.v1.Common.Token.Builder getControlIdBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return internalGetControlIdFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.oscal.common.v1.Token control_id = 1 [json_name = "controlId"];</code>
+       */
+      public oscal.common.v1.Common.TokenOrBuilder getControlIdOrBuilder() {
+        if (controlIdBuilder_ != null) {
+          return controlIdBuilder_.getMessageOrBuilder();
+        } else {
+          return controlId_ == null ?
+              oscal.common.v1.Common.Token.getDefaultInstance() : controlId_;
+        }
+      }
+      /**
+       * <code>.oscal.common.v1.Token control_id = 1 [json_name = "controlId"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          oscal.common.v1.Common.Token, oscal.common.v1.Common.Token.Builder, oscal.common.v1.Common.TokenOrBuilder> 
+          internalGetControlIdFieldBuilder() {
+        if (controlIdBuilder_ == null) {
+          controlIdBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              oscal.common.v1.Common.Token, oscal.common.v1.Common.Token.Builder, oscal.common.v1.Common.TokenOrBuilder>(
+                  getControlId(),
+                  getParentForChildren(),
+                  isClean());
+          controlId_ = null;
+        }
+        return controlIdBuilder_;
+      }
+
+      private oscal.common.v1.Common.Token statementId_;
+      private com.google.protobuf.SingleFieldBuilder<
+          oscal.common.v1.Common.Token, oscal.common.v1.Common.Token.Builder, oscal.common.v1.Common.TokenOrBuilder> statementIdBuilder_;
+      /**
+       * <code>.oscal.common.v1.Token statement_id = 2 [json_name = "statementId"];</code>
+       * @return Whether the statementId field is set.
+       */
+      public boolean hasStatementId() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.oscal.common.v1.Token statement_id = 2 [json_name = "statementId"];</code>
+       * @return The statementId.
+       */
+      public oscal.common.v1.Common.Token getStatementId() {
+        if (statementIdBuilder_ == null) {
+          return statementId_ == null ? oscal.common.v1.Common.Token.getDefaultInstance() : statementId_;
+        } else {
+          return statementIdBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.oscal.common.v1.Token statement_id = 2 [json_name = "statementId"];</code>
+       */
+      public Builder setStatementId(oscal.common.v1.Common.Token value) {
+        if (statementIdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          statementId_ = value;
+        } else {
+          statementIdBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.Token statement_id = 2 [json_name = "statementId"];</code>
+       */
+      public Builder setStatementId(
+          oscal.common.v1.Common.Token.Builder builderForValue) {
+        if (statementIdBuilder_ == null) {
+          statementId_ = builderForValue.build();
+        } else {
+          statementIdBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.Token statement_id = 2 [json_name = "statementId"];</code>
+       */
+      public Builder mergeStatementId(oscal.common.v1.Common.Token value) {
+        if (statementIdBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            statementId_ != null &&
+            statementId_ != oscal.common.v1.Common.Token.getDefaultInstance()) {
+            getStatementIdBuilder().mergeFrom(value);
+          } else {
+            statementId_ = value;
+          }
+        } else {
+          statementIdBuilder_.mergeFrom(value);
+        }
+        if (statementId_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.Token statement_id = 2 [json_name = "statementId"];</code>
+       */
+      public Builder clearStatementId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        statementId_ = null;
+        if (statementIdBuilder_ != null) {
+          statementIdBuilder_.dispose();
+          statementIdBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.Token statement_id = 2 [json_name = "statementId"];</code>
+       */
+      public oscal.common.v1.Common.Token.Builder getStatementIdBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return internalGetStatementIdFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.oscal.common.v1.Token statement_id = 2 [json_name = "statementId"];</code>
+       */
+      public oscal.common.v1.Common.TokenOrBuilder getStatementIdOrBuilder() {
+        if (statementIdBuilder_ != null) {
+          return statementIdBuilder_.getMessageOrBuilder();
+        } else {
+          return statementId_ == null ?
+              oscal.common.v1.Common.Token.getDefaultInstance() : statementId_;
+        }
+      }
+      /**
+       * <code>.oscal.common.v1.Token statement_id = 2 [json_name = "statementId"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          oscal.common.v1.Common.Token, oscal.common.v1.Common.Token.Builder, oscal.common.v1.Common.TokenOrBuilder> 
+          internalGetStatementIdFieldBuilder() {
+        if (statementIdBuilder_ == null) {
+          statementIdBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              oscal.common.v1.Common.Token, oscal.common.v1.Common.Token.Builder, oscal.common.v1.Common.TokenOrBuilder>(
+                  getStatementId(),
+                  getParentForChildren(),
+                  isClean());
+          statementId_ = null;
+        }
+        return statementIdBuilder_;
+      }
+
+      private java.util.List<oscal.common.v1.Common.Property> props_ =
+        java.util.Collections.emptyList();
+      private void ensurePropsIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          props_ = new java.util.ArrayList<oscal.common.v1.Common.Property>(props_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> propsBuilder_;
+
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       */
+      public java.util.List<oscal.common.v1.Common.Property> getPropsList() {
+        if (propsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(props_);
+        } else {
+          return propsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       */
+      public int getPropsCount() {
+        if (propsBuilder_ == null) {
+          return props_.size();
+        } else {
+          return propsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       */
+      public oscal.common.v1.Common.Property getProps(int index) {
+        if (propsBuilder_ == null) {
+          return props_.get(index);
+        } else {
+          return propsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       */
+      public Builder setProps(
+          int index, oscal.common.v1.Common.Property value) {
+        if (propsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePropsIsMutable();
+          props_.set(index, value);
+          onChanged();
+        } else {
+          propsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       */
+      public Builder setProps(
+          int index, oscal.common.v1.Common.Property.Builder builderForValue) {
+        if (propsBuilder_ == null) {
+          ensurePropsIsMutable();
+          props_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          propsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       */
+      public Builder addProps(oscal.common.v1.Common.Property value) {
+        if (propsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePropsIsMutable();
+          props_.add(value);
+          onChanged();
+        } else {
+          propsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       */
+      public Builder addProps(
+          int index, oscal.common.v1.Common.Property value) {
+        if (propsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePropsIsMutable();
+          props_.add(index, value);
+          onChanged();
+        } else {
+          propsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       */
+      public Builder addProps(
+          oscal.common.v1.Common.Property.Builder builderForValue) {
+        if (propsBuilder_ == null) {
+          ensurePropsIsMutable();
+          props_.add(builderForValue.build());
+          onChanged();
+        } else {
+          propsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       */
+      public Builder addProps(
+          int index, oscal.common.v1.Common.Property.Builder builderForValue) {
+        if (propsBuilder_ == null) {
+          ensurePropsIsMutable();
+          props_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          propsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       */
+      public Builder addAllProps(
+          java.lang.Iterable<? extends oscal.common.v1.Common.Property> values) {
+        if (propsBuilder_ == null) {
+          ensurePropsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, props_);
+          onChanged();
+        } else {
+          propsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       */
+      public Builder clearProps() {
+        if (propsBuilder_ == null) {
+          props_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          propsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       */
+      public Builder removeProps(int index) {
+        if (propsBuilder_ == null) {
+          ensurePropsIsMutable();
+          props_.remove(index);
+          onChanged();
+        } else {
+          propsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       */
+      public oscal.common.v1.Common.Property.Builder getPropsBuilder(
+          int index) {
+        return internalGetPropsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       */
+      public oscal.common.v1.Common.PropertyOrBuilder getPropsOrBuilder(
+          int index) {
+        if (propsBuilder_ == null) {
+          return props_.get(index);  } else {
+          return propsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       */
+      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+           getPropsOrBuilderList() {
+        if (propsBuilder_ != null) {
+          return propsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(props_);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       */
+      public oscal.common.v1.Common.Property.Builder addPropsBuilder() {
+        return internalGetPropsFieldBuilder().addBuilder(
+            oscal.common.v1.Common.Property.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       */
+      public oscal.common.v1.Common.Property.Builder addPropsBuilder(
+          int index) {
+        return internalGetPropsFieldBuilder().addBuilder(
+            index, oscal.common.v1.Common.Property.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       */
+      public java.util.List<oscal.common.v1.Common.Property.Builder> 
+           getPropsBuilderList() {
+        return internalGetPropsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> 
+          internalGetPropsFieldBuilder() {
+        if (propsBuilder_ == null) {
+          propsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder>(
+                  props_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          props_ = null;
+        }
+        return propsBuilder_;
+      }
+
+      private java.util.List<oscal.common.v1.Common.Link> links_ =
+        java.util.Collections.emptyList();
+      private void ensureLinksIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          links_ = new java.util.ArrayList<oscal.common.v1.Common.Link>(links_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder> linksBuilder_;
+
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       */
+      public java.util.List<oscal.common.v1.Common.Link> getLinksList() {
+        if (linksBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(links_);
+        } else {
+          return linksBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       */
+      public int getLinksCount() {
+        if (linksBuilder_ == null) {
+          return links_.size();
+        } else {
+          return linksBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       */
+      public oscal.common.v1.Common.Link getLinks(int index) {
+        if (linksBuilder_ == null) {
+          return links_.get(index);
+        } else {
+          return linksBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       */
+      public Builder setLinks(
+          int index, oscal.common.v1.Common.Link value) {
+        if (linksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLinksIsMutable();
+          links_.set(index, value);
+          onChanged();
+        } else {
+          linksBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       */
+      public Builder setLinks(
+          int index, oscal.common.v1.Common.Link.Builder builderForValue) {
+        if (linksBuilder_ == null) {
+          ensureLinksIsMutable();
+          links_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          linksBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       */
+      public Builder addLinks(oscal.common.v1.Common.Link value) {
+        if (linksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLinksIsMutable();
+          links_.add(value);
+          onChanged();
+        } else {
+          linksBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       */
+      public Builder addLinks(
+          int index, oscal.common.v1.Common.Link value) {
+        if (linksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLinksIsMutable();
+          links_.add(index, value);
+          onChanged();
+        } else {
+          linksBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       */
+      public Builder addLinks(
+          oscal.common.v1.Common.Link.Builder builderForValue) {
+        if (linksBuilder_ == null) {
+          ensureLinksIsMutable();
+          links_.add(builderForValue.build());
+          onChanged();
+        } else {
+          linksBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       */
+      public Builder addLinks(
+          int index, oscal.common.v1.Common.Link.Builder builderForValue) {
+        if (linksBuilder_ == null) {
+          ensureLinksIsMutable();
+          links_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          linksBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       */
+      public Builder addAllLinks(
+          java.lang.Iterable<? extends oscal.common.v1.Common.Link> values) {
+        if (linksBuilder_ == null) {
+          ensureLinksIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, links_);
+          onChanged();
+        } else {
+          linksBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       */
+      public Builder clearLinks() {
+        if (linksBuilder_ == null) {
+          links_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          linksBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       */
+      public Builder removeLinks(int index) {
+        if (linksBuilder_ == null) {
+          ensureLinksIsMutable();
+          links_.remove(index);
+          onChanged();
+        } else {
+          linksBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       */
+      public oscal.common.v1.Common.Link.Builder getLinksBuilder(
+          int index) {
+        return internalGetLinksFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       */
+      public oscal.common.v1.Common.LinkOrBuilder getLinksOrBuilder(
+          int index) {
+        if (linksBuilder_ == null) {
+          return links_.get(index);  } else {
+          return linksBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       */
+      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+           getLinksOrBuilderList() {
+        if (linksBuilder_ != null) {
+          return linksBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(links_);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       */
+      public oscal.common.v1.Common.Link.Builder addLinksBuilder() {
+        return internalGetLinksFieldBuilder().addBuilder(
+            oscal.common.v1.Common.Link.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       */
+      public oscal.common.v1.Common.Link.Builder addLinksBuilder(
+          int index) {
+        return internalGetLinksFieldBuilder().addBuilder(
+            index, oscal.common.v1.Common.Link.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       */
+      public java.util.List<oscal.common.v1.Common.Link.Builder> 
+           getLinksBuilderList() {
+        return internalGetLinksFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder> 
+          internalGetLinksFieldBuilder() {
+        if (linksBuilder_ == null) {
+          linksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder>(
+                  links_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          links_ = null;
+        }
+        return linksBuilder_;
+      }
+
+      private java.util.List<oscal.common.v1.Common.MarkupMultiline> remarks_ =
+        java.util.Collections.emptyList();
+      private void ensureRemarksIsMutable() {
+        if (!((bitField0_ & 0x00000010) != 0)) {
+          remarks_ = new java.util.ArrayList<oscal.common.v1.Common.MarkupMultiline>(remarks_);
+          bitField0_ |= 0x00000010;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> remarksBuilder_;
+
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       */
+      public java.util.List<oscal.common.v1.Common.MarkupMultiline> getRemarksList() {
+        if (remarksBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(remarks_);
+        } else {
+          return remarksBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       */
+      public int getRemarksCount() {
+        if (remarksBuilder_ == null) {
+          return remarks_.size();
+        } else {
+          return remarksBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       */
+      public oscal.common.v1.Common.MarkupMultiline getRemarks(int index) {
+        if (remarksBuilder_ == null) {
+          return remarks_.get(index);
+        } else {
+          return remarksBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       */
+      public Builder setRemarks(
+          int index, oscal.common.v1.Common.MarkupMultiline value) {
+        if (remarksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRemarksIsMutable();
+          remarks_.set(index, value);
+          onChanged();
+        } else {
+          remarksBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       */
+      public Builder setRemarks(
+          int index, oscal.common.v1.Common.MarkupMultiline.Builder builderForValue) {
+        if (remarksBuilder_ == null) {
+          ensureRemarksIsMutable();
+          remarks_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          remarksBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       */
+      public Builder addRemarks(oscal.common.v1.Common.MarkupMultiline value) {
+        if (remarksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRemarksIsMutable();
+          remarks_.add(value);
+          onChanged();
+        } else {
+          remarksBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       */
+      public Builder addRemarks(
+          int index, oscal.common.v1.Common.MarkupMultiline value) {
+        if (remarksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRemarksIsMutable();
+          remarks_.add(index, value);
+          onChanged();
+        } else {
+          remarksBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       */
+      public Builder addRemarks(
+          oscal.common.v1.Common.MarkupMultiline.Builder builderForValue) {
+        if (remarksBuilder_ == null) {
+          ensureRemarksIsMutable();
+          remarks_.add(builderForValue.build());
+          onChanged();
+        } else {
+          remarksBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       */
+      public Builder addRemarks(
+          int index, oscal.common.v1.Common.MarkupMultiline.Builder builderForValue) {
+        if (remarksBuilder_ == null) {
+          ensureRemarksIsMutable();
+          remarks_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          remarksBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       */
+      public Builder addAllRemarks(
+          java.lang.Iterable<? extends oscal.common.v1.Common.MarkupMultiline> values) {
+        if (remarksBuilder_ == null) {
+          ensureRemarksIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, remarks_);
+          onChanged();
+        } else {
+          remarksBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       */
+      public Builder clearRemarks() {
+        if (remarksBuilder_ == null) {
+          remarks_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
+          onChanged();
+        } else {
+          remarksBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       */
+      public Builder removeRemarks(int index) {
+        if (remarksBuilder_ == null) {
+          ensureRemarksIsMutable();
+          remarks_.remove(index);
+          onChanged();
+        } else {
+          remarksBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       */
+      public oscal.common.v1.Common.MarkupMultiline.Builder getRemarksBuilder(
+          int index) {
+        return internalGetRemarksFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       */
+      public oscal.common.v1.Common.MarkupMultilineOrBuilder getRemarksOrBuilder(
+          int index) {
+        if (remarksBuilder_ == null) {
+          return remarks_.get(index);  } else {
+          return remarksBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       */
+      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+           getRemarksOrBuilderList() {
+        if (remarksBuilder_ != null) {
+          return remarksBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(remarks_);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       */
+      public oscal.common.v1.Common.MarkupMultiline.Builder addRemarksBuilder() {
+        return internalGetRemarksFieldBuilder().addBuilder(
+            oscal.common.v1.Common.MarkupMultiline.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       */
+      public oscal.common.v1.Common.MarkupMultiline.Builder addRemarksBuilder(
+          int index) {
+        return internalGetRemarksFieldBuilder().addBuilder(
+            index, oscal.common.v1.Common.MarkupMultiline.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       */
+      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder> 
+           getRemarksBuilderList() {
+        return internalGetRemarksFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          internalGetRemarksFieldBuilder() {
+        if (remarksBuilder_ == null) {
+          remarksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>(
+                  remarks_,
+                  ((bitField0_ & 0x00000010) != 0),
+                  getParentForChildren(),
+                  isClean());
+          remarks_ = null;
+        }
+        return remarksBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:oscal.assessment_results.v1.SelectedControl)
+    }
+
+    // @@protoc_insertion_point(class_scope:oscal.assessment_results.v1.SelectedControl)
+    private static final oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl();
+    }
+
+    public static oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SelectedControl>
+        PARSER = new com.google.protobuf.AbstractParser<SelectedControl>() {
+      @java.lang.Override
+      public SelectedControl parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<SelectedControl> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SelectedControl> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public oscal.assessment_results.v1.AssessmentResultsOuterClass.SelectedControl getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -38329,88 +45289,100 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
     oscal.common.v1.Common.UUIDOrBuilder getSubjectUuidOrBuilder();
 
     /**
-     * <code>.oscal.common.v1.MarkupLine title = 2 [json_name = "title"];</code>
+     * <code>string type = 2 [json_name = "type"];</code>
+     * @return The type.
+     */
+    java.lang.String getType();
+    /**
+     * <code>string type = 2 [json_name = "type"];</code>
+     * @return The bytes for type.
+     */
+    com.google.protobuf.ByteString
+        getTypeBytes();
+
+    /**
+     * <code>.oscal.common.v1.MarkupLine title = 3 [json_name = "title"];</code>
      * @return Whether the title field is set.
      */
     boolean hasTitle();
     /**
-     * <code>.oscal.common.v1.MarkupLine title = 2 [json_name = "title"];</code>
+     * <code>.oscal.common.v1.MarkupLine title = 3 [json_name = "title"];</code>
      * @return The title.
      */
     oscal.common.v1.Common.MarkupLine getTitle();
     /**
-     * <code>.oscal.common.v1.MarkupLine title = 2 [json_name = "title"];</code>
+     * <code>.oscal.common.v1.MarkupLine title = 3 [json_name = "title"];</code>
      */
     oscal.common.v1.Common.MarkupLineOrBuilder getTitleOrBuilder();
 
     /**
-     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
      */
     java.util.List<oscal.common.v1.Common.Property> 
         getPropsList();
     /**
-     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
      */
     oscal.common.v1.Common.Property getProps(int index);
     /**
-     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
      */
     int getPropsCount();
     /**
-     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
      */
     java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
         getPropsOrBuilderList();
     /**
-     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
      */
     oscal.common.v1.Common.PropertyOrBuilder getPropsOrBuilder(
         int index);
 
     /**
-     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
      */
     java.util.List<oscal.common.v1.Common.Link> 
         getLinksList();
     /**
-     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
      */
     oscal.common.v1.Common.Link getLinks(int index);
     /**
-     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
      */
     int getLinksCount();
     /**
-     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
      */
     java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
         getLinksOrBuilderList();
     /**
-     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
      */
     oscal.common.v1.Common.LinkOrBuilder getLinksOrBuilder(
         int index);
 
     /**
-     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
      */
     java.util.List<oscal.common.v1.Common.MarkupMultiline> 
         getRemarksList();
     /**
-     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
      */
     oscal.common.v1.Common.MarkupMultiline getRemarks(int index);
     /**
-     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
      */
     int getRemarksCount();
     /**
-     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
      */
     java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
         getRemarksOrBuilderList();
     /**
-     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
      */
     oscal.common.v1.Common.MarkupMultilineOrBuilder getRemarksOrBuilder(
         int index);
@@ -38441,6 +45413,7 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
       super(builder);
     }
     private SubjectReference() {
+      type_ = "";
       props_ = java.util.Collections.emptyList();
       links_ = java.util.Collections.emptyList();
       remarks_ = java.util.Collections.emptyList();
@@ -38491,10 +45464,49 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
       return subjectUuid_ == null ? oscal.common.v1.Common.UUID.getDefaultInstance() : subjectUuid_;
     }
 
-    public static final int TITLE_FIELD_NUMBER = 2;
+    public static final int TYPE_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object type_ = "";
+    /**
+     * <code>string type = 2 [json_name = "type"];</code>
+     * @return The type.
+     */
+    @java.lang.Override
+    public java.lang.String getType() {
+      java.lang.Object ref = type_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        type_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string type = 2 [json_name = "type"];</code>
+     * @return The bytes for type.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTypeBytes() {
+      java.lang.Object ref = type_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        type_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TITLE_FIELD_NUMBER = 3;
     private oscal.common.v1.Common.MarkupLine title_;
     /**
-     * <code>.oscal.common.v1.MarkupLine title = 2 [json_name = "title"];</code>
+     * <code>.oscal.common.v1.MarkupLine title = 3 [json_name = "title"];</code>
      * @return Whether the title field is set.
      */
     @java.lang.Override
@@ -38502,7 +45514,7 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
-     * <code>.oscal.common.v1.MarkupLine title = 2 [json_name = "title"];</code>
+     * <code>.oscal.common.v1.MarkupLine title = 3 [json_name = "title"];</code>
      * @return The title.
      */
     @java.lang.Override
@@ -38510,25 +45522,25 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
       return title_ == null ? oscal.common.v1.Common.MarkupLine.getDefaultInstance() : title_;
     }
     /**
-     * <code>.oscal.common.v1.MarkupLine title = 2 [json_name = "title"];</code>
+     * <code>.oscal.common.v1.MarkupLine title = 3 [json_name = "title"];</code>
      */
     @java.lang.Override
     public oscal.common.v1.Common.MarkupLineOrBuilder getTitleOrBuilder() {
       return title_ == null ? oscal.common.v1.Common.MarkupLine.getDefaultInstance() : title_;
     }
 
-    public static final int PROPS_FIELD_NUMBER = 3;
+    public static final int PROPS_FIELD_NUMBER = 4;
     @SuppressWarnings("serial")
     private java.util.List<oscal.common.v1.Common.Property> props_;
     /**
-     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
      */
     @java.lang.Override
     public java.util.List<oscal.common.v1.Common.Property> getPropsList() {
       return props_;
     }
     /**
-     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
@@ -38536,21 +45548,21 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
       return props_;
     }
     /**
-     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
      */
     @java.lang.Override
     public int getPropsCount() {
       return props_.size();
     }
     /**
-     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
      */
     @java.lang.Override
     public oscal.common.v1.Common.Property getProps(int index) {
       return props_.get(index);
     }
     /**
-     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
      */
     @java.lang.Override
     public oscal.common.v1.Common.PropertyOrBuilder getPropsOrBuilder(
@@ -38558,18 +45570,18 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
       return props_.get(index);
     }
 
-    public static final int LINKS_FIELD_NUMBER = 4;
+    public static final int LINKS_FIELD_NUMBER = 5;
     @SuppressWarnings("serial")
     private java.util.List<oscal.common.v1.Common.Link> links_;
     /**
-     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
      */
     @java.lang.Override
     public java.util.List<oscal.common.v1.Common.Link> getLinksList() {
       return links_;
     }
     /**
-     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
@@ -38577,21 +45589,21 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
       return links_;
     }
     /**
-     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
      */
     @java.lang.Override
     public int getLinksCount() {
       return links_.size();
     }
     /**
-     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
      */
     @java.lang.Override
     public oscal.common.v1.Common.Link getLinks(int index) {
       return links_.get(index);
     }
     /**
-     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
      */
     @java.lang.Override
     public oscal.common.v1.Common.LinkOrBuilder getLinksOrBuilder(
@@ -38599,18 +45611,18 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
       return links_.get(index);
     }
 
-    public static final int REMARKS_FIELD_NUMBER = 5;
+    public static final int REMARKS_FIELD_NUMBER = 6;
     @SuppressWarnings("serial")
     private java.util.List<oscal.common.v1.Common.MarkupMultiline> remarks_;
     /**
-     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
      */
     @java.lang.Override
     public java.util.List<oscal.common.v1.Common.MarkupMultiline> getRemarksList() {
       return remarks_;
     }
     /**
-     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
@@ -38618,21 +45630,21 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
       return remarks_;
     }
     /**
-     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
      */
     @java.lang.Override
     public int getRemarksCount() {
       return remarks_.size();
     }
     /**
-     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
      */
     @java.lang.Override
     public oscal.common.v1.Common.MarkupMultiline getRemarks(int index) {
       return remarks_.get(index);
     }
     /**
-     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
      */
     @java.lang.Override
     public oscal.common.v1.Common.MarkupMultilineOrBuilder getRemarksOrBuilder(
@@ -38657,17 +45669,20 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
       if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getSubjectUuid());
       }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(type_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, type_);
+      }
       if (((bitField0_ & 0x00000002) != 0)) {
-        output.writeMessage(2, getTitle());
+        output.writeMessage(3, getTitle());
       }
       for (int i = 0; i < props_.size(); i++) {
-        output.writeMessage(3, props_.get(i));
+        output.writeMessage(4, props_.get(i));
       }
       for (int i = 0; i < links_.size(); i++) {
-        output.writeMessage(4, links_.get(i));
+        output.writeMessage(5, links_.get(i));
       }
       for (int i = 0; i < remarks_.size(); i++) {
-        output.writeMessage(5, remarks_.get(i));
+        output.writeMessage(6, remarks_.get(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -38677,9 +45692,12 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getSubjectUuid());
       }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(type_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, type_);
+      }
       if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getTitle());
+          .computeMessageSize(3, getTitle());
       }
 
           {
@@ -38737,6 +45755,8 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
         if (!getSubjectUuid()
             .equals(other.getSubjectUuid())) return false;
       }
+      if (!getType()
+          .equals(other.getType())) return false;
       if (hasTitle() != other.hasTitle()) return false;
       if (hasTitle()) {
         if (!getTitle()
@@ -38763,6 +45783,8 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
         hash = (37 * hash) + SUBJECT_UUID_FIELD_NUMBER;
         hash = (53 * hash) + getSubjectUuid().hashCode();
       }
+      hash = (37 * hash) + TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getType().hashCode();
       if (hasTitle()) {
         hash = (37 * hash) + TITLE_FIELD_NUMBER;
         hash = (53 * hash) + getTitle().hashCode();
@@ -38929,6 +45951,7 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
           subjectUuidBuilder_.dispose();
           subjectUuidBuilder_ = null;
         }
+        type_ = "";
         title_ = null;
         if (titleBuilder_ != null) {
           titleBuilder_.dispose();
@@ -38940,21 +45963,21 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
           props_ = null;
           propsBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000008);
         if (linksBuilder_ == null) {
           links_ = java.util.Collections.emptyList();
         } else {
           links_ = null;
           linksBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000010);
         if (remarksBuilder_ == null) {
           remarks_ = java.util.Collections.emptyList();
         } else {
           remarks_ = null;
           remarksBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000020);
         return this;
       }
 
@@ -38989,27 +46012,27 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
 
       private void buildPartialRepeatedFields(oscal.assessment_results.v1.AssessmentResultsOuterClass.SubjectReference result) {
         if (propsBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0)) {
+          if (((bitField0_ & 0x00000008) != 0)) {
             props_ = java.util.Collections.unmodifiableList(props_);
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000008);
           }
           result.props_ = props_;
         } else {
           result.props_ = propsBuilder_.build();
         }
         if (linksBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) != 0)) {
+          if (((bitField0_ & 0x00000010) != 0)) {
             links_ = java.util.Collections.unmodifiableList(links_);
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000010);
           }
           result.links_ = links_;
         } else {
           result.links_ = linksBuilder_.build();
         }
         if (remarksBuilder_ == null) {
-          if (((bitField0_ & 0x00000010) != 0)) {
+          if (((bitField0_ & 0x00000020) != 0)) {
             remarks_ = java.util.Collections.unmodifiableList(remarks_);
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000020);
           }
           result.remarks_ = remarks_;
         } else {
@@ -39027,6 +46050,9 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
           to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.type_ = type_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
           result.title_ = titleBuilder_ == null
               ? title_
               : titleBuilder_.build();
@@ -39050,6 +46076,11 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
         if (other.hasSubjectUuid()) {
           mergeSubjectUuid(other.getSubjectUuid());
         }
+        if (!other.getType().isEmpty()) {
+          type_ = other.type_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         if (other.hasTitle()) {
           mergeTitle(other.getTitle());
         }
@@ -39057,7 +46088,7 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
           if (!other.props_.isEmpty()) {
             if (props_.isEmpty()) {
               props_ = other.props_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000008);
             } else {
               ensurePropsIsMutable();
               props_.addAll(other.props_);
@@ -39070,7 +46101,7 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
               propsBuilder_.dispose();
               propsBuilder_ = null;
               props_ = other.props_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000008);
               propsBuilder_ = 
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetPropsFieldBuilder() : null;
@@ -39083,7 +46114,7 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
           if (!other.links_.isEmpty()) {
             if (links_.isEmpty()) {
               links_ = other.links_;
-              bitField0_ = (bitField0_ & ~0x00000008);
+              bitField0_ = (bitField0_ & ~0x00000010);
             } else {
               ensureLinksIsMutable();
               links_.addAll(other.links_);
@@ -39096,7 +46127,7 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
               linksBuilder_.dispose();
               linksBuilder_ = null;
               links_ = other.links_;
-              bitField0_ = (bitField0_ & ~0x00000008);
+              bitField0_ = (bitField0_ & ~0x00000010);
               linksBuilder_ = 
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetLinksFieldBuilder() : null;
@@ -39109,7 +46140,7 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
           if (!other.remarks_.isEmpty()) {
             if (remarks_.isEmpty()) {
               remarks_ = other.remarks_;
-              bitField0_ = (bitField0_ & ~0x00000010);
+              bitField0_ = (bitField0_ & ~0x00000020);
             } else {
               ensureRemarksIsMutable();
               remarks_.addAll(other.remarks_);
@@ -39122,7 +46153,7 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
               remarksBuilder_.dispose();
               remarksBuilder_ = null;
               remarks_ = other.remarks_;
-              bitField0_ = (bitField0_ & ~0x00000010);
+              bitField0_ = (bitField0_ & ~0x00000020);
               remarksBuilder_ = 
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetRemarksFieldBuilder() : null;
@@ -39165,13 +46196,18 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
                 break;
               } // case 10
               case 18: {
-                input.readMessage(
-                    internalGetTitleFieldBuilder().getBuilder(),
-                    extensionRegistry);
+                type_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
+                input.readMessage(
+                    internalGetTitleFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
                 oscal.common.v1.Common.Property m =
                     input.readMessage(
                         oscal.common.v1.Common.Property.parser(),
@@ -39183,8 +46219,8 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
                   propsBuilder_.addMessage(m);
                 }
                 break;
-              } // case 26
-              case 34: {
+              } // case 34
+              case 42: {
                 oscal.common.v1.Common.Link m =
                     input.readMessage(
                         oscal.common.v1.Common.Link.parser(),
@@ -39196,8 +46232,8 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
                   linksBuilder_.addMessage(m);
                 }
                 break;
-              } // case 34
-              case 42: {
+              } // case 42
+              case 50: {
                 oscal.common.v1.Common.MarkupMultiline m =
                     input.readMessage(
                         oscal.common.v1.Common.MarkupMultiline.parser(),
@@ -39209,7 +46245,7 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
                   remarksBuilder_.addMessage(m);
                 }
                 break;
-              } // case 42
+              } // case 50
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -39348,18 +46384,90 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
         return subjectUuidBuilder_;
       }
 
+      private java.lang.Object type_ = "";
+      /**
+       * <code>string type = 2 [json_name = "type"];</code>
+       * @return The type.
+       */
+      public java.lang.String getType() {
+        java.lang.Object ref = type_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          type_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string type = 2 [json_name = "type"];</code>
+       * @return The bytes for type.
+       */
+      public com.google.protobuf.ByteString
+          getTypeBytes() {
+        java.lang.Object ref = type_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          type_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string type = 2 [json_name = "type"];</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setType(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        type_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string type = 2 [json_name = "type"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearType() {
+        type_ = getDefaultInstance().getType();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string type = 2 [json_name = "type"];</code>
+       * @param value The bytes for type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        type_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
       private oscal.common.v1.Common.MarkupLine title_;
       private com.google.protobuf.SingleFieldBuilder<
           oscal.common.v1.Common.MarkupLine, oscal.common.v1.Common.MarkupLine.Builder, oscal.common.v1.Common.MarkupLineOrBuilder> titleBuilder_;
       /**
-       * <code>.oscal.common.v1.MarkupLine title = 2 [json_name = "title"];</code>
+       * <code>.oscal.common.v1.MarkupLine title = 3 [json_name = "title"];</code>
        * @return Whether the title field is set.
        */
       public boolean hasTitle() {
-        return ((bitField0_ & 0x00000002) != 0);
+        return ((bitField0_ & 0x00000004) != 0);
       }
       /**
-       * <code>.oscal.common.v1.MarkupLine title = 2 [json_name = "title"];</code>
+       * <code>.oscal.common.v1.MarkupLine title = 3 [json_name = "title"];</code>
        * @return The title.
        */
       public oscal.common.v1.Common.MarkupLine getTitle() {
@@ -39370,7 +46478,7 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
         }
       }
       /**
-       * <code>.oscal.common.v1.MarkupLine title = 2 [json_name = "title"];</code>
+       * <code>.oscal.common.v1.MarkupLine title = 3 [json_name = "title"];</code>
        */
       public Builder setTitle(oscal.common.v1.Common.MarkupLine value) {
         if (titleBuilder_ == null) {
@@ -39381,12 +46489,12 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
         } else {
           titleBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
       /**
-       * <code>.oscal.common.v1.MarkupLine title = 2 [json_name = "title"];</code>
+       * <code>.oscal.common.v1.MarkupLine title = 3 [json_name = "title"];</code>
        */
       public Builder setTitle(
           oscal.common.v1.Common.MarkupLine.Builder builderForValue) {
@@ -39395,16 +46503,16 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
         } else {
           titleBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
       /**
-       * <code>.oscal.common.v1.MarkupLine title = 2 [json_name = "title"];</code>
+       * <code>.oscal.common.v1.MarkupLine title = 3 [json_name = "title"];</code>
        */
       public Builder mergeTitle(oscal.common.v1.Common.MarkupLine value) {
         if (titleBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0) &&
+          if (((bitField0_ & 0x00000004) != 0) &&
             title_ != null &&
             title_ != oscal.common.v1.Common.MarkupLine.getDefaultInstance()) {
             getTitleBuilder().mergeFrom(value);
@@ -39415,16 +46523,16 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
           titleBuilder_.mergeFrom(value);
         }
         if (title_ != null) {
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         return this;
       }
       /**
-       * <code>.oscal.common.v1.MarkupLine title = 2 [json_name = "title"];</code>
+       * <code>.oscal.common.v1.MarkupLine title = 3 [json_name = "title"];</code>
        */
       public Builder clearTitle() {
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000004);
         title_ = null;
         if (titleBuilder_ != null) {
           titleBuilder_.dispose();
@@ -39434,15 +46542,15 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
         return this;
       }
       /**
-       * <code>.oscal.common.v1.MarkupLine title = 2 [json_name = "title"];</code>
+       * <code>.oscal.common.v1.MarkupLine title = 3 [json_name = "title"];</code>
        */
       public oscal.common.v1.Common.MarkupLine.Builder getTitleBuilder() {
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000004;
         onChanged();
         return internalGetTitleFieldBuilder().getBuilder();
       }
       /**
-       * <code>.oscal.common.v1.MarkupLine title = 2 [json_name = "title"];</code>
+       * <code>.oscal.common.v1.MarkupLine title = 3 [json_name = "title"];</code>
        */
       public oscal.common.v1.Common.MarkupLineOrBuilder getTitleOrBuilder() {
         if (titleBuilder_ != null) {
@@ -39453,7 +46561,7 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
         }
       }
       /**
-       * <code>.oscal.common.v1.MarkupLine title = 2 [json_name = "title"];</code>
+       * <code>.oscal.common.v1.MarkupLine title = 3 [json_name = "title"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
           oscal.common.v1.Common.MarkupLine, oscal.common.v1.Common.MarkupLine.Builder, oscal.common.v1.Common.MarkupLineOrBuilder> 
@@ -39472,9 +46580,9 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
       private java.util.List<oscal.common.v1.Common.Property> props_ =
         java.util.Collections.emptyList();
       private void ensurePropsIsMutable() {
-        if (!((bitField0_ & 0x00000004) != 0)) {
+        if (!((bitField0_ & 0x00000008) != 0)) {
           props_ = new java.util.ArrayList<oscal.common.v1.Common.Property>(props_);
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000008;
          }
       }
 
@@ -39482,7 +46590,7 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
           oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> propsBuilder_;
 
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
        */
       public java.util.List<oscal.common.v1.Common.Property> getPropsList() {
         if (propsBuilder_ == null) {
@@ -39492,7 +46600,7 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
        */
       public int getPropsCount() {
         if (propsBuilder_ == null) {
@@ -39502,7 +46610,7 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
        */
       public oscal.common.v1.Common.Property getProps(int index) {
         if (propsBuilder_ == null) {
@@ -39512,7 +46620,7 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
        */
       public Builder setProps(
           int index, oscal.common.v1.Common.Property value) {
@@ -39529,7 +46637,7 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
        */
       public Builder setProps(
           int index, oscal.common.v1.Common.Property.Builder builderForValue) {
@@ -39543,7 +46651,7 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
        */
       public Builder addProps(oscal.common.v1.Common.Property value) {
         if (propsBuilder_ == null) {
@@ -39559,7 +46667,7 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
        */
       public Builder addProps(
           int index, oscal.common.v1.Common.Property value) {
@@ -39576,7 +46684,7 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
        */
       public Builder addProps(
           oscal.common.v1.Common.Property.Builder builderForValue) {
@@ -39590,7 +46698,7 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
        */
       public Builder addProps(
           int index, oscal.common.v1.Common.Property.Builder builderForValue) {
@@ -39604,7 +46712,7 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
        */
       public Builder addAllProps(
           java.lang.Iterable<? extends oscal.common.v1.Common.Property> values) {
@@ -39619,12 +46727,12 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
        */
       public Builder clearProps() {
         if (propsBuilder_ == null) {
           props_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000008);
           onChanged();
         } else {
           propsBuilder_.clear();
@@ -39632,7 +46740,7 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
        */
       public Builder removeProps(int index) {
         if (propsBuilder_ == null) {
@@ -39645,14 +46753,14 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
        */
       public oscal.common.v1.Common.Property.Builder getPropsBuilder(
           int index) {
         return internalGetPropsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
        */
       public oscal.common.v1.Common.PropertyOrBuilder getPropsOrBuilder(
           int index) {
@@ -39662,7 +46770,7 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
        */
       public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
            getPropsOrBuilderList() {
@@ -39673,14 +46781,14 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
        */
       public oscal.common.v1.Common.Property.Builder addPropsBuilder() {
         return internalGetPropsFieldBuilder().addBuilder(
             oscal.common.v1.Common.Property.getDefaultInstance());
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
        */
       public oscal.common.v1.Common.Property.Builder addPropsBuilder(
           int index) {
@@ -39688,7 +46796,7 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
             index, oscal.common.v1.Common.Property.getDefaultInstance());
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
        */
       public java.util.List<oscal.common.v1.Common.Property.Builder> 
            getPropsBuilderList() {
@@ -39701,7 +46809,7 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
           propsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
               oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder>(
                   props_,
-                  ((bitField0_ & 0x00000004) != 0),
+                  ((bitField0_ & 0x00000008) != 0),
                   getParentForChildren(),
                   isClean());
           props_ = null;
@@ -39712,9 +46820,9 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
       private java.util.List<oscal.common.v1.Common.Link> links_ =
         java.util.Collections.emptyList();
       private void ensureLinksIsMutable() {
-        if (!((bitField0_ & 0x00000008) != 0)) {
+        if (!((bitField0_ & 0x00000010) != 0)) {
           links_ = new java.util.ArrayList<oscal.common.v1.Common.Link>(links_);
-          bitField0_ |= 0x00000008;
+          bitField0_ |= 0x00000010;
          }
       }
 
@@ -39722,7 +46830,7 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
           oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder> linksBuilder_;
 
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
        */
       public java.util.List<oscal.common.v1.Common.Link> getLinksList() {
         if (linksBuilder_ == null) {
@@ -39732,7 +46840,7 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
        */
       public int getLinksCount() {
         if (linksBuilder_ == null) {
@@ -39742,7 +46850,7 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
        */
       public oscal.common.v1.Common.Link getLinks(int index) {
         if (linksBuilder_ == null) {
@@ -39752,7 +46860,7 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
        */
       public Builder setLinks(
           int index, oscal.common.v1.Common.Link value) {
@@ -39769,7 +46877,7 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
        */
       public Builder setLinks(
           int index, oscal.common.v1.Common.Link.Builder builderForValue) {
@@ -39783,7 +46891,7 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
        */
       public Builder addLinks(oscal.common.v1.Common.Link value) {
         if (linksBuilder_ == null) {
@@ -39799,7 +46907,7 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
        */
       public Builder addLinks(
           int index, oscal.common.v1.Common.Link value) {
@@ -39816,7 +46924,7 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
        */
       public Builder addLinks(
           oscal.common.v1.Common.Link.Builder builderForValue) {
@@ -39830,7 +46938,7 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
        */
       public Builder addLinks(
           int index, oscal.common.v1.Common.Link.Builder builderForValue) {
@@ -39844,7 +46952,7 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
        */
       public Builder addAllLinks(
           java.lang.Iterable<? extends oscal.common.v1.Common.Link> values) {
@@ -39859,12 +46967,12 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
        */
       public Builder clearLinks() {
         if (linksBuilder_ == null) {
           links_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000010);
           onChanged();
         } else {
           linksBuilder_.clear();
@@ -39872,7 +46980,7 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
        */
       public Builder removeLinks(int index) {
         if (linksBuilder_ == null) {
@@ -39885,14 +46993,14 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
        */
       public oscal.common.v1.Common.Link.Builder getLinksBuilder(
           int index) {
         return internalGetLinksFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
        */
       public oscal.common.v1.Common.LinkOrBuilder getLinksOrBuilder(
           int index) {
@@ -39902,7 +47010,7 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
        */
       public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
            getLinksOrBuilderList() {
@@ -39913,14 +47021,14 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
        */
       public oscal.common.v1.Common.Link.Builder addLinksBuilder() {
         return internalGetLinksFieldBuilder().addBuilder(
             oscal.common.v1.Common.Link.getDefaultInstance());
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
        */
       public oscal.common.v1.Common.Link.Builder addLinksBuilder(
           int index) {
@@ -39928,7 +47036,7 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
             index, oscal.common.v1.Common.Link.getDefaultInstance());
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
        */
       public java.util.List<oscal.common.v1.Common.Link.Builder> 
            getLinksBuilderList() {
@@ -39941,7 +47049,7 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
           linksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
               oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder>(
                   links_,
-                  ((bitField0_ & 0x00000008) != 0),
+                  ((bitField0_ & 0x00000010) != 0),
                   getParentForChildren(),
                   isClean());
           links_ = null;
@@ -39952,9 +47060,9 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
       private java.util.List<oscal.common.v1.Common.MarkupMultiline> remarks_ =
         java.util.Collections.emptyList();
       private void ensureRemarksIsMutable() {
-        if (!((bitField0_ & 0x00000010) != 0)) {
+        if (!((bitField0_ & 0x00000020) != 0)) {
           remarks_ = new java.util.ArrayList<oscal.common.v1.Common.MarkupMultiline>(remarks_);
-          bitField0_ |= 0x00000010;
+          bitField0_ |= 0x00000020;
          }
       }
 
@@ -39962,7 +47070,7 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
           oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> remarksBuilder_;
 
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
        */
       public java.util.List<oscal.common.v1.Common.MarkupMultiline> getRemarksList() {
         if (remarksBuilder_ == null) {
@@ -39972,7 +47080,7 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
        */
       public int getRemarksCount() {
         if (remarksBuilder_ == null) {
@@ -39982,7 +47090,7 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
        */
       public oscal.common.v1.Common.MarkupMultiline getRemarks(int index) {
         if (remarksBuilder_ == null) {
@@ -39992,7 +47100,7 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
        */
       public Builder setRemarks(
           int index, oscal.common.v1.Common.MarkupMultiline value) {
@@ -40009,7 +47117,7 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
        */
       public Builder setRemarks(
           int index, oscal.common.v1.Common.MarkupMultiline.Builder builderForValue) {
@@ -40023,7 +47131,7 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
        */
       public Builder addRemarks(oscal.common.v1.Common.MarkupMultiline value) {
         if (remarksBuilder_ == null) {
@@ -40039,7 +47147,7 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
        */
       public Builder addRemarks(
           int index, oscal.common.v1.Common.MarkupMultiline value) {
@@ -40056,7 +47164,7 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
        */
       public Builder addRemarks(
           oscal.common.v1.Common.MarkupMultiline.Builder builderForValue) {
@@ -40070,7 +47178,7 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
        */
       public Builder addRemarks(
           int index, oscal.common.v1.Common.MarkupMultiline.Builder builderForValue) {
@@ -40084,7 +47192,7 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
        */
       public Builder addAllRemarks(
           java.lang.Iterable<? extends oscal.common.v1.Common.MarkupMultiline> values) {
@@ -40099,12 +47207,12 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
        */
       public Builder clearRemarks() {
         if (remarksBuilder_ == null) {
           remarks_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000020);
           onChanged();
         } else {
           remarksBuilder_.clear();
@@ -40112,7 +47220,7 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
        */
       public Builder removeRemarks(int index) {
         if (remarksBuilder_ == null) {
@@ -40125,14 +47233,14 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
        */
       public oscal.common.v1.Common.MarkupMultiline.Builder getRemarksBuilder(
           int index) {
         return internalGetRemarksFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
        */
       public oscal.common.v1.Common.MarkupMultilineOrBuilder getRemarksOrBuilder(
           int index) {
@@ -40142,7 +47250,7 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
        */
       public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
            getRemarksOrBuilderList() {
@@ -40153,14 +47261,14 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
        */
       public oscal.common.v1.Common.MarkupMultiline.Builder addRemarksBuilder() {
         return internalGetRemarksFieldBuilder().addBuilder(
             oscal.common.v1.Common.MarkupMultiline.getDefaultInstance());
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
        */
       public oscal.common.v1.Common.MarkupMultiline.Builder addRemarksBuilder(
           int index) {
@@ -40168,7 +47276,7 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
             index, oscal.common.v1.Common.MarkupMultiline.getDefaultInstance());
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
        */
       public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder> 
            getRemarksBuilderList() {
@@ -40181,7 +47289,7 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
           remarksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
               oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>(
                   remarks_,
-                  ((bitField0_ & 0x00000010) != 0),
+                  ((bitField0_ & 0x00000020) != 0),
                   getParentForChildren(),
                   isClean());
           remarks_ = null;
@@ -42222,6 +49330,21 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_assessment_results_v1_Result_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_oscal_assessment_results_v1_ReviewedControls_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_oscal_assessment_results_v1_ReviewedControls_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_oscal_assessment_results_v1_ControlSelection_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_oscal_assessment_results_v1_ControlSelection_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_oscal_assessment_results_v1_SelectedControl_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_oscal_assessment_results_v1_SelectedControl_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_assessment_results_v1_Finding_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -42356,7 +49479,7 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
       "parties\030\004 \003(\0132!.oscal.common.v1.Responsi" +
       "blePartyR\022responsibleParties\022:\n\007remarks\030" +
       "\005 \003(\0132 .oscal.common.v1.MarkupMultilineR" +
-      "\007remarks\"\262\004\n\006Result\022)\n\004uuid\030\001 \001(\0132\025.osca" +
+      "\007remarks\"\216\005\n\006Result\022)\n\004uuid\030\001 \001(\0132\025.osca" +
       "l.common.v1.UUIDR\004uuid\0221\n\005title\030\002 \001(\0132\033." +
       "oscal.common.v1.MarkupLineR\005title\022B\n\013des" +
       "cription\030\003 \001(\0132 .oscal.common.v1.MarkupM" +
@@ -42370,104 +49493,133 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
       "al.common.v1.PropertyR\005props\022+\n\005links\030\t " +
       "\003(\0132\025.oscal.common.v1.LinkR\005links\022:\n\007rem" +
       "arks\030\n \003(\0132 .oscal.common.v1.MarkupMulti" +
-      "lineR\007remarks\"\331\005\n\007Finding\022)\n\004uuid\030\001 \001(\0132" +
-      "\025.oscal.common.v1.UUIDR\004uuid\0221\n\005title\030\002 " +
-      "\001(\0132\033.oscal.common.v1.MarkupLineR\005title\022" +
-      "B\n\013description\030\003 \001(\0132 .oscal.common.v1.M" +
-      "arkupMultilineR\013description\022/\n\005props\030\004 \003" +
-      "(\0132\031.oscal.common.v1.PropertyR\005props\022+\n\005" +
-      "links\030\005 \003(\0132\025.oscal.common.v1.LinkR\005link" +
-      "s\022=\n\007origins\030\006 \003(\0132#.oscal.assessment_re" +
-      "sults.v1.OriginR\007origins\022B\n\006target\030\007 \001(\013" +
-      "2*.oscal.assessment_results.v1.FindingTa" +
-      "rgetR\006target\022Y\n\035implementation_statement" +
-      "_uuid\030\010 \001(\0132\025.oscal.common.v1.UUIDR\033impl" +
-      "ementationStatementUuid\022b\n\024related_obser" +
-      "vations\030\t \003(\0132/.oscal.assessment_results" +
-      ".v1.RelatedObservationR\023relatedObservati" +
-      "ons\022P\n\rrelated_risks\030\n \003(\0132+.oscal.asses" +
-      "sment_results.v1.AssociatedRiskR\014related" +
-      "Risks\022:\n\007remarks\030\013 \003(\0132 .oscal.common.v1" +
-      ".MarkupMultilineR\007remarks\"\227\004\n\rFindingTar" +
-      "get\022\022\n\004type\030\001 \001(\tR\004type\0223\n\ttarget_id\030\002 \001" +
-      "(\0132\026.oscal.common.v1.TokenR\010targetId\0221\n\005" +
-      "title\030\003 \001(\0132\033.oscal.common.v1.MarkupLine" +
-      "R\005title\022B\n\013description\030\004 \001(\0132 .oscal.com" +
-      "mon.v1.MarkupMultilineR\013description\022/\n\005p" +
-      "rops\030\005 \003(\0132\031.oscal.common.v1.PropertyR\005p" +
-      "rops\022+\n\005links\030\006 \003(\0132\025.oscal.common.v1.Li" +
-      "nkR\005links\022D\n\006status\030\007 \001(\0132,.oscal.assess" +
-      "ment_results.v1.ObjectiveStatusR\006status\022" +
-      "f\n\025implementation_status\030\010 \001(\01321.oscal.a" +
-      "ssessment_results.v1.ImplementationStatu" +
-      "sR\024implementationStatus\022:\n\007remarks\030\t \003(\013" +
-      "2 .oscal.common.v1.MarkupMultilineR\007rema" +
-      "rks\"{\n\017ObjectiveStatus\022\024\n\005state\030\001 \001(\tR\005s" +
-      "tate\022\026\n\006reason\030\002 \001(\tR\006reason\022:\n\007remarks\030" +
-      "\003 \003(\0132 .oscal.common.v1.MarkupMultilineR" +
-      "\007remarks\"h\n\024ImplementationStatus\022\024\n\005stat" +
-      "e\030\001 \001(\tR\005state\022:\n\007remarks\030\002 \001(\0132 .oscal." +
-      "common.v1.MarkupMultilineR\007remarks\"\231\001\n\006O" +
-      "rigin\022@\n\006actors\030\001 \003(\0132(.oscal.assessment" +
-      "_results.v1.OriginActorR\006actors\022M\n\rrelat" +
-      "ed_tasks\030\002 \003(\0132(.oscal.assessment_result" +
-      "s.v1.RelatedTaskR\014relatedTasks\"\220\002\n\013Origi" +
-      "nActor\0224\n\nactor_uuid\030\001 \001(\0132\025.oscal.commo" +
-      "n.v1.UUIDR\tactorUuid\0221\n\005title\030\002 \001(\0132\033.os" +
-      "cal.common.v1.MarkupLineR\005title\022/\n\005props" +
-      "\030\003 \003(\0132\031.oscal.common.v1.PropertyR\005props" +
-      "\022+\n\005links\030\004 \003(\0132\025.oscal.common.v1.LinkR\005" +
-      "links\022:\n\007remarks\030\005 \003(\0132 .oscal.common.v1" +
-      ".MarkupMultilineR\007remarks\"\216\002\n\013RelatedTas" +
-      "k\0222\n\ttask_uuid\030\001 \001(\0132\025.oscal.common.v1.U" +
-      "UIDR\010taskUuid\0221\n\005title\030\002 \001(\0132\033.oscal.com" +
-      "mon.v1.MarkupLineR\005title\022/\n\005props\030\003 \003(\0132" +
-      "\031.oscal.common.v1.PropertyR\005props\022+\n\005lin" +
-      "ks\030\004 \003(\0132\025.oscal.common.v1.LinkR\005links\022:" +
-      "\n\007remarks\030\005 \003(\0132 .oscal.common.v1.Markup" +
-      "MultilineR\007remarks\"\222\001\n\022RelatedObservatio" +
-      "n\022@\n\020observation_uuid\030\001 \001(\0132\025.oscal.comm" +
-      "on.v1.UUIDR\017observationUuid\022:\n\007remarks\030\002" +
-      " \003(\0132 .oscal.common.v1.MarkupMultilineR\007" +
-      "remarks\"\200\001\n\016AssociatedRisk\0222\n\trisk_uuid\030" +
-      "\001 \001(\0132\025.oscal.common.v1.UUIDR\010riskUuid\022:" +
-      "\n\007remarks\030\002 \003(\0132 .oscal.common.v1.Markup" +
-      "MultilineR\007remarks\"\315\005\n\013Observation\022)\n\004uu" +
-      "id\030\001 \001(\0132\025.oscal.common.v1.UUIDR\004uuid\0221\n" +
+      "lineR\007remarks\022Z\n\021reviewed_controls\030\013 \001(\013" +
+      "2-.oscal.assessment_results.v1.ReviewedC" +
+      "ontrolsR\020reviewedControls\"\324\002\n\020ReviewedCo" +
+      "ntrols\022\\\n\022control_selections\030\001 \003(\0132-.osc" +
+      "al.assessment_results.v1.ControlSelectio" +
+      "nR\021controlSelections\022H\n\010controls\030\002 \003(\0132," +
+      ".oscal.assessment_results.v1.SelectedCon" +
+      "trolR\010controls\022/\n\005props\030\003 \003(\0132\031.oscal.co" +
+      "mmon.v1.PropertyR\005props\022+\n\005links\030\004 \003(\0132\025" +
+      ".oscal.common.v1.LinkR\005links\022:\n\007remarks\030" +
+      "\005 \003(\0132 .oscal.common.v1.MarkupMultilineR" +
+      "\007remarks\"\242\003\n\020ControlSelection\022B\n\013descrip" +
+      "tion\030\001 \001(\0132 .oscal.common.v1.MarkupMulti" +
+      "lineR\013description\022W\n\020include_controls\030\002 " +
+      "\003(\0132,.oscal.assessment_results.v1.Select" +
+      "edControlR\017includeControls\022W\n\020exclude_co" +
+      "ntrols\030\003 \003(\0132,.oscal.assessment_results." +
+      "v1.SelectedControlR\017excludeControls\022/\n\005p" +
+      "rops\030\004 \003(\0132\031.oscal.common.v1.PropertyR\005p" +
+      "rops\022+\n\005links\030\005 \003(\0132\025.oscal.common.v1.Li" +
+      "nkR\005links\022:\n\007remarks\030\006 \003(\0132 .oscal.commo" +
+      "n.v1.MarkupMultilineR\007remarks\"\235\002\n\017Select" +
+      "edControl\0225\n\ncontrol_id\030\001 \001(\0132\026.oscal.co" +
+      "mmon.v1.TokenR\tcontrolId\0229\n\014statement_id" +
+      "\030\002 \001(\0132\026.oscal.common.v1.TokenR\013statemen" +
+      "tId\022/\n\005props\030\003 \003(\0132\031.oscal.common.v1.Pro" +
+      "pertyR\005props\022+\n\005links\030\004 \003(\0132\025.oscal.comm" +
+      "on.v1.LinkR\005links\022:\n\007remarks\030\005 \003(\0132 .osc" +
+      "al.common.v1.MarkupMultilineR\007remarks\"\331\005" +
+      "\n\007Finding\022)\n\004uuid\030\001 \001(\0132\025.oscal.common.v" +
+      "1.UUIDR\004uuid\0221\n\005title\030\002 \001(\0132\033.oscal.comm" +
+      "on.v1.MarkupLineR\005title\022B\n\013description\030\003" +
+      " \001(\0132 .oscal.common.v1.MarkupMultilineR\013" +
+      "description\022/\n\005props\030\004 \003(\0132\031.oscal.commo" +
+      "n.v1.PropertyR\005props\022+\n\005links\030\005 \003(\0132\025.os" +
+      "cal.common.v1.LinkR\005links\022=\n\007origins\030\006 \003" +
+      "(\0132#.oscal.assessment_results.v1.OriginR" +
+      "\007origins\022B\n\006target\030\007 \001(\0132*.oscal.assessm" +
+      "ent_results.v1.FindingTargetR\006target\022Y\n\035" +
+      "implementation_statement_uuid\030\010 \001(\0132\025.os" +
+      "cal.common.v1.UUIDR\033implementationStatem" +
+      "entUuid\022b\n\024related_observations\030\t \003(\0132/." +
+      "oscal.assessment_results.v1.RelatedObser" +
+      "vationR\023relatedObservations\022P\n\rrelated_r" +
+      "isks\030\n \003(\0132+.oscal.assessment_results.v1" +
+      ".AssociatedRiskR\014relatedRisks\022:\n\007remarks" +
+      "\030\013 \003(\0132 .oscal.common.v1.MarkupMultiline" +
+      "R\007remarks\"\227\004\n\rFindingTarget\022\022\n\004type\030\001 \001(" +
+      "\tR\004type\0223\n\ttarget_id\030\002 \001(\0132\026.oscal.commo" +
+      "n.v1.TokenR\010targetId\0221\n\005title\030\003 \001(\0132\033.os" +
+      "cal.common.v1.MarkupLineR\005title\022B\n\013descr" +
+      "iption\030\004 \001(\0132 .oscal.common.v1.MarkupMul" +
+      "tilineR\013description\022/\n\005props\030\005 \003(\0132\031.osc" +
+      "al.common.v1.PropertyR\005props\022+\n\005links\030\006 " +
+      "\003(\0132\025.oscal.common.v1.LinkR\005links\022D\n\006sta" +
+      "tus\030\007 \001(\0132,.oscal.assessment_results.v1." +
+      "ObjectiveStatusR\006status\022f\n\025implementatio" +
+      "n_status\030\010 \001(\01321.oscal.assessment_result" +
+      "s.v1.ImplementationStatusR\024implementatio" +
+      "nStatus\022:\n\007remarks\030\t \003(\0132 .oscal.common." +
+      "v1.MarkupMultilineR\007remarks\"{\n\017Objective" +
+      "Status\022\024\n\005state\030\001 \001(\tR\005state\022\026\n\006reason\030\002" +
+      " \001(\tR\006reason\022:\n\007remarks\030\003 \003(\0132 .oscal.co" +
+      "mmon.v1.MarkupMultilineR\007remarks\"h\n\024Impl" +
+      "ementationStatus\022\024\n\005state\030\001 \001(\tR\005state\022:" +
+      "\n\007remarks\030\002 \001(\0132 .oscal.common.v1.Markup" +
+      "MultilineR\007remarks\"\231\001\n\006Origin\022@\n\006actors\030" +
+      "\001 \003(\0132(.oscal.assessment_results.v1.Orig" +
+      "inActorR\006actors\022M\n\rrelated_tasks\030\002 \003(\0132(" +
+      ".oscal.assessment_results.v1.RelatedTask" +
+      "R\014relatedTasks\"\220\002\n\013OriginActor\0224\n\nactor_" +
+      "uuid\030\001 \001(\0132\025.oscal.common.v1.UUIDR\tactor" +
+      "Uuid\0221\n\005title\030\002 \001(\0132\033.oscal.common.v1.Ma" +
+      "rkupLineR\005title\022/\n\005props\030\003 \003(\0132\031.oscal.c" +
+      "ommon.v1.PropertyR\005props\022+\n\005links\030\004 \003(\0132" +
+      "\025.oscal.common.v1.LinkR\005links\022:\n\007remarks" +
+      "\030\005 \003(\0132 .oscal.common.v1.MarkupMultiline" +
+      "R\007remarks\"\216\002\n\013RelatedTask\0222\n\ttask_uuid\030\001" +
+      " \001(\0132\025.oscal.common.v1.UUIDR\010taskUuid\0221\n" +
       "\005title\030\002 \001(\0132\033.oscal.common.v1.MarkupLin" +
-      "eR\005title\022B\n\013description\030\003 \001(\0132 .oscal.co" +
-      "mmon.v1.MarkupMultilineR\013description\022/\n\005" +
-      "props\030\004 \003(\0132\031.oscal.common.v1.PropertyR\005" +
-      "props\022+\n\005links\030\005 \003(\0132\025.oscal.common.v1.L" +
-      "inkR\005links\022\030\n\007methods\030\006 \003(\tR\007methods\022\024\n\005" +
-      "types\030\007 \003(\tR\005types\022=\n\007origins\030\010 \003(\0132#.os" +
-      "cal.assessment_results.v1.OriginR\007origin" +
-      "s\022I\n\010subjects\030\t \003(\0132-.oscal.assessment_r" +
-      "esults.v1.SubjectReferenceR\010subjects\022Z\n\021" +
-      "relevant_evidence\030\n \003(\0132-.oscal.assessme" +
-      "nt_results.v1.RelevantEvidenceR\020relevant" +
-      "Evidence\0227\n\tcollected\030\013 \001(\0132\031.oscal.comm" +
-      "on.v1.DateTimeR\tcollected\0223\n\007expires\030\014 \001" +
-      "(\0132\031.oscal.common.v1.DateTimeR\007expires\022:" +
-      "\n\007remarks\030\r \003(\0132 .oscal.common.v1.Markup" +
-      "MultilineR\007remarks\"\231\002\n\020SubjectReference\022" +
-      "8\n\014subject_uuid\030\001 \001(\0132\025.oscal.common.v1." +
-      "UUIDR\013subjectUuid\0221\n\005title\030\002 \001(\0132\033.oscal" +
-      ".common.v1.MarkupLineR\005title\022/\n\005props\030\003 " +
-      "\003(\0132\031.oscal.common.v1.PropertyR\005props\022+\n" +
-      "\005links\030\004 \003(\0132\025.oscal.common.v1.LinkR\005lin" +
-      "ks\022:\n\007remarks\030\005 \003(\0132 .oscal.common.v1.Ma" +
-      "rkupMultilineR\007remarks\"\243\002\n\020RelevantEvide" +
-      "nce\0221\n\004href\030\001 \001(\0132\035.oscal.common.v1.URIR" +
-      "eferenceR\004href\022B\n\013description\030\002 \001(\0132 .os" +
-      "cal.common.v1.MarkupMultilineR\013descripti" +
-      "on\022/\n\005props\030\003 \003(\0132\031.oscal.common.v1.Prop" +
-      "ertyR\005props\022+\n\005links\030\004 \003(\0132\025.oscal.commo" +
-      "n.v1.LinkR\005links\022:\n\007remarks\030\005 \003(\0132 .osca" +
-      "l.common.v1.MarkupMultilineR\007remarksBRZP" +
-      "github.com/mchorfa/xoscal/proto/oscal/as" +
-      "sessment_results/v1;assessment_resultsv1" +
-      "b\006proto3"
+      "eR\005title\022/\n\005props\030\003 \003(\0132\031.oscal.common.v" +
+      "1.PropertyR\005props\022+\n\005links\030\004 \003(\0132\025.oscal" +
+      ".common.v1.LinkR\005links\022:\n\007remarks\030\005 \003(\0132" +
+      " .oscal.common.v1.MarkupMultilineR\007remar" +
+      "ks\"\222\001\n\022RelatedObservation\022@\n\020observation" +
+      "_uuid\030\001 \001(\0132\025.oscal.common.v1.UUIDR\017obse" +
+      "rvationUuid\022:\n\007remarks\030\002 \003(\0132 .oscal.com" +
+      "mon.v1.MarkupMultilineR\007remarks\"\200\001\n\016Asso" +
+      "ciatedRisk\0222\n\trisk_uuid\030\001 \001(\0132\025.oscal.co" +
+      "mmon.v1.UUIDR\010riskUuid\022:\n\007remarks\030\002 \003(\0132" +
+      " .oscal.common.v1.MarkupMultilineR\007remar" +
+      "ks\"\315\005\n\013Observation\022)\n\004uuid\030\001 \001(\0132\025.oscal" +
+      ".common.v1.UUIDR\004uuid\0221\n\005title\030\002 \001(\0132\033.o" +
+      "scal.common.v1.MarkupLineR\005title\022B\n\013desc" +
+      "ription\030\003 \001(\0132 .oscal.common.v1.MarkupMu" +
+      "ltilineR\013description\022/\n\005props\030\004 \003(\0132\031.os" +
+      "cal.common.v1.PropertyR\005props\022+\n\005links\030\005" +
+      " \003(\0132\025.oscal.common.v1.LinkR\005links\022\030\n\007me" +
+      "thods\030\006 \003(\tR\007methods\022\024\n\005types\030\007 \003(\tR\005typ" +
+      "es\022=\n\007origins\030\010 \003(\0132#.oscal.assessment_r" +
+      "esults.v1.OriginR\007origins\022I\n\010subjects\030\t " +
+      "\003(\0132-.oscal.assessment_results.v1.Subjec" +
+      "tReferenceR\010subjects\022Z\n\021relevant_evidenc" +
+      "e\030\n \003(\0132-.oscal.assessment_results.v1.Re" +
+      "levantEvidenceR\020relevantEvidence\0227\n\tcoll" +
+      "ected\030\013 \001(\0132\031.oscal.common.v1.DateTimeR\t" +
+      "collected\0223\n\007expires\030\014 \001(\0132\031.oscal.commo" +
+      "n.v1.DateTimeR\007expires\022:\n\007remarks\030\r \003(\0132" +
+      " .oscal.common.v1.MarkupMultilineR\007remar" +
+      "ks\"\255\002\n\020SubjectReference\0228\n\014subject_uuid\030" +
+      "\001 \001(\0132\025.oscal.common.v1.UUIDR\013subjectUui" +
+      "d\022\022\n\004type\030\002 \001(\tR\004type\0221\n\005title\030\003 \001(\0132\033.o" +
+      "scal.common.v1.MarkupLineR\005title\022/\n\005prop" +
+      "s\030\004 \003(\0132\031.oscal.common.v1.PropertyR\005prop" +
+      "s\022+\n\005links\030\005 \003(\0132\025.oscal.common.v1.LinkR" +
+      "\005links\022:\n\007remarks\030\006 \003(\0132 .oscal.common.v" +
+      "1.MarkupMultilineR\007remarks\"\243\002\n\020RelevantE" +
+      "vidence\0221\n\004href\030\001 \001(\0132\035.oscal.common.v1." +
+      "URIReferenceR\004href\022B\n\013description\030\002 \001(\0132" +
+      " .oscal.common.v1.MarkupMultilineR\013descr" +
+      "iption\022/\n\005props\030\003 \003(\0132\031.oscal.common.v1." +
+      "PropertyR\005props\022+\n\005links\030\004 \003(\0132\025.oscal.c" +
+      "ommon.v1.LinkR\005links\022:\n\007remarks\030\005 \003(\0132 ." +
+      "oscal.common.v1.MarkupMultilineR\007remarks" +
+      "BRZPgithub.com/mchorfa/xoscal/proto/osca" +
+      "l/assessment_results/v1;assessment_resul" +
+      "tsv1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -42533,75 +49685,93 @@ public final class AssessmentResultsOuterClass extends com.google.protobuf.Gener
     internal_static_oscal_assessment_results_v1_Result_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_assessment_results_v1_Result_descriptor,
-        new java.lang.String[] { "Uuid", "Title", "Description", "Start", "End", "Findings", "Observations", "Props", "Links", "Remarks", });
-    internal_static_oscal_assessment_results_v1_Finding_descriptor =
+        new java.lang.String[] { "Uuid", "Title", "Description", "Start", "End", "Findings", "Observations", "Props", "Links", "Remarks", "ReviewedControls", });
+    internal_static_oscal_assessment_results_v1_ReviewedControls_descriptor =
       getDescriptor().getMessageType(10);
+    internal_static_oscal_assessment_results_v1_ReviewedControls_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_oscal_assessment_results_v1_ReviewedControls_descriptor,
+        new java.lang.String[] { "ControlSelections", "Controls", "Props", "Links", "Remarks", });
+    internal_static_oscal_assessment_results_v1_ControlSelection_descriptor =
+      getDescriptor().getMessageType(11);
+    internal_static_oscal_assessment_results_v1_ControlSelection_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_oscal_assessment_results_v1_ControlSelection_descriptor,
+        new java.lang.String[] { "Description", "IncludeControls", "ExcludeControls", "Props", "Links", "Remarks", });
+    internal_static_oscal_assessment_results_v1_SelectedControl_descriptor =
+      getDescriptor().getMessageType(12);
+    internal_static_oscal_assessment_results_v1_SelectedControl_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_oscal_assessment_results_v1_SelectedControl_descriptor,
+        new java.lang.String[] { "ControlId", "StatementId", "Props", "Links", "Remarks", });
+    internal_static_oscal_assessment_results_v1_Finding_descriptor =
+      getDescriptor().getMessageType(13);
     internal_static_oscal_assessment_results_v1_Finding_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_assessment_results_v1_Finding_descriptor,
         new java.lang.String[] { "Uuid", "Title", "Description", "Props", "Links", "Origins", "Target", "ImplementationStatementUuid", "RelatedObservations", "RelatedRisks", "Remarks", });
     internal_static_oscal_assessment_results_v1_FindingTarget_descriptor =
-      getDescriptor().getMessageType(11);
+      getDescriptor().getMessageType(14);
     internal_static_oscal_assessment_results_v1_FindingTarget_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_assessment_results_v1_FindingTarget_descriptor,
         new java.lang.String[] { "Type", "TargetId", "Title", "Description", "Props", "Links", "Status", "ImplementationStatus", "Remarks", });
     internal_static_oscal_assessment_results_v1_ObjectiveStatus_descriptor =
-      getDescriptor().getMessageType(12);
+      getDescriptor().getMessageType(15);
     internal_static_oscal_assessment_results_v1_ObjectiveStatus_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_assessment_results_v1_ObjectiveStatus_descriptor,
         new java.lang.String[] { "State", "Reason", "Remarks", });
     internal_static_oscal_assessment_results_v1_ImplementationStatus_descriptor =
-      getDescriptor().getMessageType(13);
+      getDescriptor().getMessageType(16);
     internal_static_oscal_assessment_results_v1_ImplementationStatus_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_assessment_results_v1_ImplementationStatus_descriptor,
         new java.lang.String[] { "State", "Remarks", });
     internal_static_oscal_assessment_results_v1_Origin_descriptor =
-      getDescriptor().getMessageType(14);
+      getDescriptor().getMessageType(17);
     internal_static_oscal_assessment_results_v1_Origin_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_assessment_results_v1_Origin_descriptor,
         new java.lang.String[] { "Actors", "RelatedTasks", });
     internal_static_oscal_assessment_results_v1_OriginActor_descriptor =
-      getDescriptor().getMessageType(15);
+      getDescriptor().getMessageType(18);
     internal_static_oscal_assessment_results_v1_OriginActor_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_assessment_results_v1_OriginActor_descriptor,
         new java.lang.String[] { "ActorUuid", "Title", "Props", "Links", "Remarks", });
     internal_static_oscal_assessment_results_v1_RelatedTask_descriptor =
-      getDescriptor().getMessageType(16);
+      getDescriptor().getMessageType(19);
     internal_static_oscal_assessment_results_v1_RelatedTask_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_assessment_results_v1_RelatedTask_descriptor,
         new java.lang.String[] { "TaskUuid", "Title", "Props", "Links", "Remarks", });
     internal_static_oscal_assessment_results_v1_RelatedObservation_descriptor =
-      getDescriptor().getMessageType(17);
+      getDescriptor().getMessageType(20);
     internal_static_oscal_assessment_results_v1_RelatedObservation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_assessment_results_v1_RelatedObservation_descriptor,
         new java.lang.String[] { "ObservationUuid", "Remarks", });
     internal_static_oscal_assessment_results_v1_AssociatedRisk_descriptor =
-      getDescriptor().getMessageType(18);
+      getDescriptor().getMessageType(21);
     internal_static_oscal_assessment_results_v1_AssociatedRisk_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_assessment_results_v1_AssociatedRisk_descriptor,
         new java.lang.String[] { "RiskUuid", "Remarks", });
     internal_static_oscal_assessment_results_v1_Observation_descriptor =
-      getDescriptor().getMessageType(19);
+      getDescriptor().getMessageType(22);
     internal_static_oscal_assessment_results_v1_Observation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_assessment_results_v1_Observation_descriptor,
         new java.lang.String[] { "Uuid", "Title", "Description", "Props", "Links", "Methods", "Types", "Origins", "Subjects", "RelevantEvidence", "Collected", "Expires", "Remarks", });
     internal_static_oscal_assessment_results_v1_SubjectReference_descriptor =
-      getDescriptor().getMessageType(20);
+      getDescriptor().getMessageType(23);
     internal_static_oscal_assessment_results_v1_SubjectReference_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_assessment_results_v1_SubjectReference_descriptor,
-        new java.lang.String[] { "SubjectUuid", "Title", "Props", "Links", "Remarks", });
+        new java.lang.String[] { "SubjectUuid", "Type", "Title", "Props", "Links", "Remarks", });
     internal_static_oscal_assessment_results_v1_RelevantEvidence_descriptor =
-      getDescriptor().getMessageType(21);
+      getDescriptor().getMessageType(24);
     internal_static_oscal_assessment_results_v1_RelevantEvidence_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_assessment_results_v1_RelevantEvidence_descriptor,

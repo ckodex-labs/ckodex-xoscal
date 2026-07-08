@@ -7,12 +7,30 @@
       "properties": {
         "description": {
           "type": "string"
+        },
+        "tests": {
+          "items": {
+            "$ref": "#/$defs/oscal.catalog.v1.Test.schema.strict.json"
+          },
+          "type": "array"
         }
       },
       "required": [
         "description"
       ],
       "title": "Constraint",
+      "type": "object"
+    },
+    "oscal.catalog.v1.Guideline.schema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Guideline represents a parameter guideline",
+      "properties": {
+        "prose": {
+          "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.schema.strict.json"
+        }
+      },
+      "title": "Guideline",
       "type": "object"
     },
     "oscal.catalog.v1.Parameter.schema.strict.json": {
@@ -30,7 +48,14 @@
           "type": "array"
         },
         "guidance": {
-          "$ref": "#/$defs/oscal.common.v1.MarkupLine.schema.strict.json"
+          "$ref": "#/$defs/oscal.common.v1.MarkupLine.schema.strict.json",
+          "description": "Deprecated: use guidelines instead. Kept for backward compatibility."
+        },
+        "guidelines": {
+          "items": {
+            "$ref": "#/$defs/oscal.catalog.v1.Guideline.schema.strict.json"
+          },
+          "type": "array"
         },
         "id": {
           "$ref": "#/$defs/oscal.common.v1.Token.schema.strict.json"
@@ -91,6 +116,27 @@
         "how_many"
       ],
       "title": "Select",
+      "type": "object"
+    },
+    "oscal.catalog.v1.Test.schema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Test represents a constraint test",
+      "properties": {
+        "expression": {
+          "type": "string"
+        },
+        "remarks": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.schema.strict.json"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "expression"
+      ],
+      "title": "Test",
       "type": "object"
     },
     "oscal.common.v1.Link.schema.strict.json": {

@@ -2,15 +2,15 @@ syntax = "proto3";
 
 package oscal.services.v1;
 
-import "catalog/v1/catalog.proto";
-import "profile/v1/profile.proto";
-import "mapping/v1/mapping.proto";
-import "ssp/v1/ssp.proto";
-import "component_definition/v1/component.proto";
 import "assessment_plan/v1/assessment_plan.proto";
 import "assessment_results/v1/assessment_results.proto";
-import "poam/v1/poam.proto";
+import "catalog/v1/catalog.proto";
+import "component_definition/v1/component.proto";
 import "google/api/annotations.proto";
+import "mapping/v1/mapping.proto";
+import "poam/v1/poam.proto";
+import "profile/v1/profile.proto";
+import "ssp/v1/ssp.proto";
 
 option go_package = "github.com/mchorfa/xoscal/proto/oscal/services/v1;servicesv1";
 
@@ -19,104 +19,161 @@ option go_package = "github.com/mchorfa/xoscal/proto/oscal/services/v1;servicesv
 service GovernanceService {
   // --- Entity CRUD ---
   rpc CreateEntity(CreateEntityRequest) returns (CreateEntityResponse) {
-    option (google.api.http) = { post: "/v1/entities" body: "*" };
+    option (google.api.http) = {
+      post: "/v1/entities"
+      body: "*"
+    };
   }
   rpc GetEntity(GetEntityRequest) returns (GetEntityResponse) {
-    option (google.api.http) = { get: "/v1/entities/{urn}" };
+    option (google.api.http) = {get: "/v1/entities/{urn}"};
   }
   rpc UpdateEntity(UpdateEntityRequest) returns (UpdateEntityResponse) {
-    option (google.api.http) = { put: "/v1/entities/{entity.urn}" body: "*" };
+    option (google.api.http) = {
+      put: "/v1/entities/{entity.urn}"
+      body: "*"
+    };
   }
   rpc ListEntities(ListEntitiesRequest) returns (ListEntitiesResponse) {
-    option (google.api.http) = { get: "/v1/entities" };
+    option (google.api.http) = {get: "/v1/entities"};
   }
 
   // --- Snapshots & Releases ---
   rpc CreateSnapshot(CreateSnapshotRequest) returns (CreateSnapshotResponse) {
-    option (google.api.http) = { post: "/v1/snapshots" body: "*" };
+    option (google.api.http) = {
+      post: "/v1/snapshots"
+      body: "*"
+    };
   }
   rpc GetSnapshot(GetSnapshotRequest) returns (GetSnapshotResponse) {
-    option (google.api.http) = { get: "/v1/snapshots/{name}" };
+    option (google.api.http) = {get: "/v1/snapshots/{name}"};
   }
   rpc ListSnapshots(ListSnapshotsRequest) returns (ListSnapshotsResponse) {
-    option (google.api.http) = { get: "/v1/snapshots" };
+    option (google.api.http) = {get: "/v1/snapshots"};
   }
   rpc CreateRelease(CreateReleaseRequest) returns (CreateReleaseResponse) {
-    option (google.api.http) = { post: "/v1/releases" body: "*" };
+    option (google.api.http) = {
+      post: "/v1/releases"
+      body: "*"
+    };
   }
   rpc ListReleases(ListReleasesRequest) returns (ListReleasesResponse) {
-    option (google.api.http) = { get: "/v1/releases" };
+    option (google.api.http) = {get: "/v1/releases"};
   }
 
   // --- Ingestion ---
   rpc IngestRequirements(IngestRequirementsRequest) returns (IngestRequirementsResponse) {
-    option (google.api.http) = { post: "/v1/ingest" body: "*" };
+    option (google.api.http) = {
+      post: "/v1/ingest"
+      body: "*"
+    };
   }
 
   // --- Semantic Search ---
   rpc SemanticSearch(SemanticSearchRequest) returns (SemanticSearchResponse) {
-    option (google.api.http) = { get: "/v1/search" };
+    option (google.api.http) = {get: "/v1/search"};
   }
 
   // --- OSCAL Generation ---
   rpc GenerateCatalog(GenerateCatalogRequest) returns (GenerateCatalogResponse) {
-    option (google.api.http) = { post: "/v1/generate/catalog" body: "*" };
+    option (google.api.http) = {
+      post: "/v1/generate/catalog"
+      body: "*"
+    };
   }
   rpc GenerateProfile(GenerateProfileRequest) returns (GenerateProfileResponse) {
-    option (google.api.http) = { post: "/v1/generate/profile" body: "*" };
+    option (google.api.http) = {
+      post: "/v1/generate/profile"
+      body: "*"
+    };
   }
   rpc GenerateMappings(GenerateMappingsRequest) returns (GenerateMappingsResponse) {
-    option (google.api.http) = { post: "/v1/generate/mappings" body: "*" };
+    option (google.api.http) = {
+      post: "/v1/generate/mappings"
+      body: "*"
+    };
   }
   rpc GenerateSSP(GenerateSSPRequest) returns (GenerateSSPResponse) {
-    option (google.api.http) = { post: "/v1/generate/ssp" body: "*" };
+    option (google.api.http) = {
+      post: "/v1/generate/ssp"
+      body: "*"
+    };
   }
   rpc GenerateComponentDefinition(GenerateComponentDefinitionRequest) returns (GenerateComponentDefinitionResponse) {
-    option (google.api.http) = { post: "/v1/generate/component-definition" body: "*" };
+    option (google.api.http) = {
+      post: "/v1/generate/component-definition"
+      body: "*"
+    };
   }
   rpc GenerateAssessmentPlan(GenerateAssessmentPlanRequest) returns (GenerateAssessmentPlanResponse) {
-    option (google.api.http) = { post: "/v1/generate/assessment-plan" body: "*" };
+    option (google.api.http) = {
+      post: "/v1/generate/assessment-plan"
+      body: "*"
+    };
   }
   rpc GeneratePOAM(GeneratePOAMRequest) returns (GeneratePOAMResponse) {
-    option (google.api.http) = { post: "/v1/generate/poam" body: "*" };
+    option (google.api.http) = {
+      post: "/v1/generate/poam"
+      body: "*"
+    };
   }
   rpc GenerateAssessmentResults(GenerateAssessmentResultsRequest) returns (GenerateAssessmentResultsResponse) {
-    option (google.api.http) = { post: "/v1/generate/assessment-results" body: "*" };
+    option (google.api.http) = {
+      post: "/v1/generate/assessment-results"
+      body: "*"
+    };
   }
 
   // --- Framework Ingestion ---
   rpc BulkIngestFrameworks(BulkIngestFrameworksRequest) returns (BulkIngestFrameworksResponse) {
-    option (google.api.http) = { post: "/v1/ingest/bulk" body: "*" };
+    option (google.api.http) = {
+      post: "/v1/ingest/bulk"
+      body: "*"
+    };
   }
   rpc ListFrameworks(ListFrameworksRequest) returns (ListFrameworksResponse) {
-    option (google.api.http) = { get: "/v1/frameworks" };
+    option (google.api.http) = {get: "/v1/frameworks"};
   }
   rpc GetFramework(GetFrameworkRequest) returns (GetFrameworkResponse) {
-    option (google.api.http) = { get: "/v1/frameworks/{ref_id}" };
+    option (google.api.http) = {get: "/v1/frameworks/{ref_id}"};
   }
 
   // --- Cross-Framework Mappings ---
   rpc GenerateCrossFrameworkMappings(GenerateCrossFrameworkMappingsRequest) returns (GenerateCrossFrameworkMappingsResponse) {
-    option (google.api.http) = { post: "/v1/generate/cross-mappings" body: "*" };
+    option (google.api.http) = {
+      post: "/v1/generate/cross-mappings"
+      body: "*"
+    };
   }
 
   // --- Reconciler ---
   rpc Propose(ProposeRequest) returns (ProposeResponse) {
-    option (google.api.http) = { post: "/v1/propose" body: "*" };
+    option (google.api.http) = {
+      post: "/v1/propose"
+      body: "*"
+    };
   }
   rpc ListConflicts(ListConflictsRequest) returns (ListConflictsResponse) {
-    option (google.api.http) = { get: "/v1/conflicts" };
+    option (google.api.http) = {get: "/v1/conflicts"};
   }
   rpc ResolveConflict(ResolveConflictRequest) returns (ResolveConflictResponse) {
-    option (google.api.http) = { post: "/v1/conflicts/{conflict_urn}/resolve" body: "*" };
+    option (google.api.http) = {
+      post: "/v1/conflicts/{conflict_urn}/resolve"
+      body: "*"
+    };
   }
 
   // --- GitOps ---
   rpc PublishRelease(PublishReleaseRequest) returns (PublishReleaseResponse) {
-    option (google.api.http) = { post: "/v1/gitops/release" body: "*" };
+    option (google.api.http) = {
+      post: "/v1/gitops/release"
+      body: "*"
+    };
   }
   rpc ProposeMappingUpdate(ProposeMappingUpdateRequest) returns (ProposeMappingUpdateResponse) {
-    option (google.api.http) = { post: "/v1/gitops/mapping-pr" body: "*" };
+    option (google.api.http) = {
+      post: "/v1/gitops/mapping-pr"
+      body: "*"
+    };
   }
 }
 

@@ -87,17 +87,17 @@ message EmailAddress {
 message Property {
   string name = 1;
   string value = 2;
-  string class = 3;  // Optional classification
-  string id = 4;    // Optional identifier
+  string class = 3; // Optional classification
+  string id = 4; // Optional identifier
 }
 
 // Link represents a hyperlink with metadata
 message Link {
   URI href = 1;
-  string rel = 2;              // Relationship type
-  string media_type = 3;       // Media type (e.g., application/json)
-  string text = 4;             // Link text
-  string resource_fragment = 5;  // Fragment identifier
+  string rel = 2; // Relationship type
+  string media_type = 3; // Media type (e.g., application/json)
+  string text = 4; // Link text
+  string resource_fragment = 5; // Fragment identifier
 }
 
 // Hash represents a cryptographic hash
@@ -113,6 +113,19 @@ message Address {
   string state = 3;
   string postal_code = 4;
   string country = 5;
+}
+
+// Location represents a physical or virtual location
+message Location {
+  UUID uuid = 1;
+  string title = 2;
+  Address address = 3;
+  repeated EmailAddress email_addresses = 4;
+  repeated TelephoneNumber telephone_numbers = 5;
+  repeated URI urls = 6;
+  repeated Property props = 7;
+  repeated Link links = 8;
+  repeated MarkupMultiline remarks = 9;
 }
 
 // AddrLine represents a line of an address
@@ -157,6 +170,14 @@ message Party {
   repeated Link links = 9;
   repeated ResponsibleParty responsible_parties = 10;
   repeated string remarks = 11;
+  repeated PartyExternalId external_ids = 12;
+  repeated UUID location_uuids = 13;
+}
+
+// PartyExternalId represents an external identifier for a party
+message PartyExternalId {
+  string id = 1;
+  URI scheme = 2;
 }
 
 // DocumentId represents a document identifier
@@ -173,14 +194,31 @@ message BackMatter {
 // Resource represents an external resource
 message Resource {
   UUID uuid = 1;
-  repeated string title = 2;
+  string title = 2;
   MarkupMultiline description = 3;
   repeated Property props = 4;
   repeated Link links = 5;
   repeated Base64 base64 = 6;
   repeated DocumentId document_ids = 7;
   repeated string remarks = 8;
-  string citation = 9;
+  // Deprecated: use citation_obj instead. Kept for backward compatibility.
+  string citation = 9 [deprecated = true];
+  repeated Rlink rlinks = 10;
+  Citation citation_obj = 11;
+}
+
+// Rlink represents a resource link
+message Rlink {
+  URI href = 1;
+  string media_type = 2;
+  repeated Hash hashes = 3;
+}
+
+// Citation represents a bibliographic citation
+message Citation {
+  MarkupLine text = 1;
+  repeated Property props = 2;
+  repeated Link links = 3;
 }
 
 // Metadata represents document metadata shared across all OSCAL models
@@ -197,4 +235,5 @@ message Metadata {
   DocumentId document_id = 10;
   DateTime published = 11;
   MarkupMultiline remarks = 12;
+  repeated Location locations = 13;
 }

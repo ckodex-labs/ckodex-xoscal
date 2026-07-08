@@ -10,6 +10,18 @@
       },
       "type": "array"
     },
+    "^(externalIds)$": {
+      "items": {
+        "$ref": "oscal.common.v1.PartyExternalId.schema.json"
+      },
+      "type": "array"
+    },
+    "^(locationUuids)$": {
+      "items": {
+        "$ref": "oscal.common.v1.UUID.schema.json"
+      },
+      "type": "array"
+    },
     "^(responsibleParties)$": {
       "items": {
         "$ref": "oscal.common.v1.ResponsibleParty.schema.json"
@@ -39,9 +51,21 @@
       },
       "type": "array"
     },
+    "external_ids": {
+      "items": {
+        "$ref": "oscal.common.v1.PartyExternalId.schema.json"
+      },
+      "type": "array"
+    },
     "links": {
       "items": {
         "$ref": "oscal.common.v1.Link.schema.json"
+      },
+      "type": "array"
+    },
+    "location_uuids": {
+      "items": {
+        "$ref": "oscal.common.v1.UUID.schema.json"
       },
       "type": "array"
     },

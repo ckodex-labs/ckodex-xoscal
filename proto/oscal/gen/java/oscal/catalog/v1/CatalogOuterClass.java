@@ -8777,19 +8777,59 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
         int index);
 
     /**
-     * <code>.oscal.common.v1.MarkupLine guidance = 10 [json_name = "guidance"];</code>
+     * <pre>
+     * Deprecated: use guidelines instead. Kept for backward compatibility.
+     * </pre>
+     *
+     * <code>.oscal.common.v1.MarkupLine guidance = 10 [json_name = "guidance", deprecated = true];</code>
+     * @deprecated oscal.catalog.v1.Parameter.guidance is deprecated.
+     *     See catalog/v1/catalog.proto;l=56
      * @return Whether the guidance field is set.
      */
-    boolean hasGuidance();
+    @java.lang.Deprecated boolean hasGuidance();
     /**
-     * <code>.oscal.common.v1.MarkupLine guidance = 10 [json_name = "guidance"];</code>
+     * <pre>
+     * Deprecated: use guidelines instead. Kept for backward compatibility.
+     * </pre>
+     *
+     * <code>.oscal.common.v1.MarkupLine guidance = 10 [json_name = "guidance", deprecated = true];</code>
+     * @deprecated oscal.catalog.v1.Parameter.guidance is deprecated.
+     *     See catalog/v1/catalog.proto;l=56
      * @return The guidance.
      */
-    oscal.common.v1.Common.MarkupLine getGuidance();
+    @java.lang.Deprecated oscal.common.v1.Common.MarkupLine getGuidance();
     /**
-     * <code>.oscal.common.v1.MarkupLine guidance = 10 [json_name = "guidance"];</code>
+     * <pre>
+     * Deprecated: use guidelines instead. Kept for backward compatibility.
+     * </pre>
+     *
+     * <code>.oscal.common.v1.MarkupLine guidance = 10 [json_name = "guidance", deprecated = true];</code>
      */
-    oscal.common.v1.Common.MarkupLineOrBuilder getGuidanceOrBuilder();
+    @java.lang.Deprecated oscal.common.v1.Common.MarkupLineOrBuilder getGuidanceOrBuilder();
+
+    /**
+     * <code>repeated .oscal.catalog.v1.Guideline guidelines = 11 [json_name = "guidelines"];</code>
+     */
+    java.util.List<oscal.catalog.v1.CatalogOuterClass.Guideline> 
+        getGuidelinesList();
+    /**
+     * <code>repeated .oscal.catalog.v1.Guideline guidelines = 11 [json_name = "guidelines"];</code>
+     */
+    oscal.catalog.v1.CatalogOuterClass.Guideline getGuidelines(int index);
+    /**
+     * <code>repeated .oscal.catalog.v1.Guideline guidelines = 11 [json_name = "guidelines"];</code>
+     */
+    int getGuidelinesCount();
+    /**
+     * <code>repeated .oscal.catalog.v1.Guideline guidelines = 11 [json_name = "guidelines"];</code>
+     */
+    java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.GuidelineOrBuilder> 
+        getGuidelinesOrBuilderList();
+    /**
+     * <code>repeated .oscal.catalog.v1.Guideline guidelines = 11 [json_name = "guidelines"];</code>
+     */
+    oscal.catalog.v1.CatalogOuterClass.GuidelineOrBuilder getGuidelinesOrBuilder(
+        int index);
   }
   /**
    * <pre>
@@ -8823,6 +8863,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
       links_ = java.util.Collections.emptyList();
       remarks_ = java.util.Collections.emptyList();
       constraints_ = java.util.Collections.emptyList();
+      guidelines_ = java.util.Collections.emptyList();
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
@@ -9169,27 +9210,84 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
     public static final int GUIDANCE_FIELD_NUMBER = 10;
     private oscal.common.v1.Common.MarkupLine guidance_;
     /**
-     * <code>.oscal.common.v1.MarkupLine guidance = 10 [json_name = "guidance"];</code>
+     * <pre>
+     * Deprecated: use guidelines instead. Kept for backward compatibility.
+     * </pre>
+     *
+     * <code>.oscal.common.v1.MarkupLine guidance = 10 [json_name = "guidance", deprecated = true];</code>
+     * @deprecated oscal.catalog.v1.Parameter.guidance is deprecated.
+     *     See catalog/v1/catalog.proto;l=56
      * @return Whether the guidance field is set.
      */
     @java.lang.Override
-    public boolean hasGuidance() {
+    @java.lang.Deprecated public boolean hasGuidance() {
       return ((bitField0_ & 0x00000008) != 0);
     }
     /**
-     * <code>.oscal.common.v1.MarkupLine guidance = 10 [json_name = "guidance"];</code>
+     * <pre>
+     * Deprecated: use guidelines instead. Kept for backward compatibility.
+     * </pre>
+     *
+     * <code>.oscal.common.v1.MarkupLine guidance = 10 [json_name = "guidance", deprecated = true];</code>
+     * @deprecated oscal.catalog.v1.Parameter.guidance is deprecated.
+     *     See catalog/v1/catalog.proto;l=56
      * @return The guidance.
      */
     @java.lang.Override
-    public oscal.common.v1.Common.MarkupLine getGuidance() {
+    @java.lang.Deprecated public oscal.common.v1.Common.MarkupLine getGuidance() {
       return guidance_ == null ? oscal.common.v1.Common.MarkupLine.getDefaultInstance() : guidance_;
     }
     /**
-     * <code>.oscal.common.v1.MarkupLine guidance = 10 [json_name = "guidance"];</code>
+     * <pre>
+     * Deprecated: use guidelines instead. Kept for backward compatibility.
+     * </pre>
+     *
+     * <code>.oscal.common.v1.MarkupLine guidance = 10 [json_name = "guidance", deprecated = true];</code>
      */
     @java.lang.Override
-    public oscal.common.v1.Common.MarkupLineOrBuilder getGuidanceOrBuilder() {
+    @java.lang.Deprecated public oscal.common.v1.Common.MarkupLineOrBuilder getGuidanceOrBuilder() {
       return guidance_ == null ? oscal.common.v1.Common.MarkupLine.getDefaultInstance() : guidance_;
+    }
+
+    public static final int GUIDELINES_FIELD_NUMBER = 11;
+    @SuppressWarnings("serial")
+    private java.util.List<oscal.catalog.v1.CatalogOuterClass.Guideline> guidelines_;
+    /**
+     * <code>repeated .oscal.catalog.v1.Guideline guidelines = 11 [json_name = "guidelines"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<oscal.catalog.v1.CatalogOuterClass.Guideline> getGuidelinesList() {
+      return guidelines_;
+    }
+    /**
+     * <code>repeated .oscal.catalog.v1.Guideline guidelines = 11 [json_name = "guidelines"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.GuidelineOrBuilder> 
+        getGuidelinesOrBuilderList() {
+      return guidelines_;
+    }
+    /**
+     * <code>repeated .oscal.catalog.v1.Guideline guidelines = 11 [json_name = "guidelines"];</code>
+     */
+    @java.lang.Override
+    public int getGuidelinesCount() {
+      return guidelines_.size();
+    }
+    /**
+     * <code>repeated .oscal.catalog.v1.Guideline guidelines = 11 [json_name = "guidelines"];</code>
+     */
+    @java.lang.Override
+    public oscal.catalog.v1.CatalogOuterClass.Guideline getGuidelines(int index) {
+      return guidelines_.get(index);
+    }
+    /**
+     * <code>repeated .oscal.catalog.v1.Guideline guidelines = 11 [json_name = "guidelines"];</code>
+     */
+    @java.lang.Override
+    public oscal.catalog.v1.CatalogOuterClass.GuidelineOrBuilder getGuidelinesOrBuilder(
+        int index) {
+      return guidelines_.get(index);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -9235,6 +9333,9 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
       }
       if (((bitField0_ & 0x00000008) != 0)) {
         output.writeMessage(10, getGuidance());
+      }
+      for (int i = 0; i < guidelines_.size(); i++) {
+        output.writeMessage(11, guidelines_.get(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -9304,6 +9405,15 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, getGuidance());
       }
+
+          {
+            final int count = guidelines_.size();
+            for (int i = 0; i < count; i++) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeMessageSizeNoTag(guidelines_.get(i));
+            }
+            size += 1 * count;
+          }
       return size;
     }
     @java.lang.Override
@@ -9360,6 +9470,8 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
         if (!getGuidance()
             .equals(other.getGuidance())) return false;
       }
+      if (!getGuidelinesList()
+          .equals(other.getGuidelinesList())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -9408,6 +9520,10 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
       if (hasGuidance()) {
         hash = (37 * hash) + GUIDANCE_FIELD_NUMBER;
         hash = (53 * hash) + getGuidance().hashCode();
+      }
+      if (getGuidelinesCount() > 0) {
+        hash = (37 * hash) + GUIDELINES_FIELD_NUMBER;
+        hash = (53 * hash) + getGuidelinesList().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -9552,6 +9668,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
           internalGetRemarksFieldBuilder();
           internalGetConstraintsFieldBuilder();
           internalGetGuidanceFieldBuilder();
+          internalGetGuidelinesFieldBuilder();
         }
       }
       @java.lang.Override
@@ -9614,6 +9731,13 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
           guidanceBuilder_.dispose();
           guidanceBuilder_ = null;
         }
+        if (guidelinesBuilder_ == null) {
+          guidelines_ = java.util.Collections.emptyList();
+        } else {
+          guidelines_ = null;
+          guidelinesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000400);
         return this;
       }
 
@@ -9691,6 +9815,15 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
           result.constraints_ = constraints_;
         } else {
           result.constraints_ = constraintsBuilder_.build();
+        }
+        if (guidelinesBuilder_ == null) {
+          if (((bitField0_ & 0x00000400) != 0)) {
+            guidelines_ = java.util.Collections.unmodifiableList(guidelines_);
+            bitField0_ = (bitField0_ & ~0x00000400);
+          }
+          result.guidelines_ = guidelines_;
+        } else {
+          result.guidelines_ = guidelinesBuilder_.build();
         }
       }
 
@@ -9886,6 +10019,32 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
         if (other.hasGuidance()) {
           mergeGuidance(other.getGuidance());
         }
+        if (guidelinesBuilder_ == null) {
+          if (!other.guidelines_.isEmpty()) {
+            if (guidelines_.isEmpty()) {
+              guidelines_ = other.guidelines_;
+              bitField0_ = (bitField0_ & ~0x00000400);
+            } else {
+              ensureGuidelinesIsMutable();
+              guidelines_.addAll(other.guidelines_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.guidelines_.isEmpty()) {
+            if (guidelinesBuilder_.isEmpty()) {
+              guidelinesBuilder_.dispose();
+              guidelinesBuilder_ = null;
+              guidelines_ = other.guidelines_;
+              bitField0_ = (bitField0_ & ~0x00000400);
+              guidelinesBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   internalGetGuidelinesFieldBuilder() : null;
+            } else {
+              guidelinesBuilder_.addAllMessages(other.guidelines_);
+            }
+          }
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -10010,6 +10169,19 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
                 bitField0_ |= 0x00000200;
                 break;
               } // case 82
+              case 90: {
+                oscal.catalog.v1.CatalogOuterClass.Guideline m =
+                    input.readMessage(
+                        oscal.catalog.v1.CatalogOuterClass.Guideline.parser(),
+                        extensionRegistry);
+                if (guidelinesBuilder_ == null) {
+                  ensureGuidelinesIsMutable();
+                  guidelines_.add(m);
+                } else {
+                  guidelinesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 90
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -11666,17 +11838,29 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
       private com.google.protobuf.SingleFieldBuilder<
           oscal.common.v1.Common.MarkupLine, oscal.common.v1.Common.MarkupLine.Builder, oscal.common.v1.Common.MarkupLineOrBuilder> guidanceBuilder_;
       /**
-       * <code>.oscal.common.v1.MarkupLine guidance = 10 [json_name = "guidance"];</code>
+       * <pre>
+       * Deprecated: use guidelines instead. Kept for backward compatibility.
+       * </pre>
+       *
+       * <code>.oscal.common.v1.MarkupLine guidance = 10 [json_name = "guidance", deprecated = true];</code>
+       * @deprecated oscal.catalog.v1.Parameter.guidance is deprecated.
+       *     See catalog/v1/catalog.proto;l=56
        * @return Whether the guidance field is set.
        */
-      public boolean hasGuidance() {
+      @java.lang.Deprecated public boolean hasGuidance() {
         return ((bitField0_ & 0x00000200) != 0);
       }
       /**
-       * <code>.oscal.common.v1.MarkupLine guidance = 10 [json_name = "guidance"];</code>
+       * <pre>
+       * Deprecated: use guidelines instead. Kept for backward compatibility.
+       * </pre>
+       *
+       * <code>.oscal.common.v1.MarkupLine guidance = 10 [json_name = "guidance", deprecated = true];</code>
+       * @deprecated oscal.catalog.v1.Parameter.guidance is deprecated.
+       *     See catalog/v1/catalog.proto;l=56
        * @return The guidance.
        */
-      public oscal.common.v1.Common.MarkupLine getGuidance() {
+      @java.lang.Deprecated public oscal.common.v1.Common.MarkupLine getGuidance() {
         if (guidanceBuilder_ == null) {
           return guidance_ == null ? oscal.common.v1.Common.MarkupLine.getDefaultInstance() : guidance_;
         } else {
@@ -11684,9 +11868,13 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>.oscal.common.v1.MarkupLine guidance = 10 [json_name = "guidance"];</code>
+       * <pre>
+       * Deprecated: use guidelines instead. Kept for backward compatibility.
+       * </pre>
+       *
+       * <code>.oscal.common.v1.MarkupLine guidance = 10 [json_name = "guidance", deprecated = true];</code>
        */
-      public Builder setGuidance(oscal.common.v1.Common.MarkupLine value) {
+      @java.lang.Deprecated public Builder setGuidance(oscal.common.v1.Common.MarkupLine value) {
         if (guidanceBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -11700,9 +11888,13 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>.oscal.common.v1.MarkupLine guidance = 10 [json_name = "guidance"];</code>
+       * <pre>
+       * Deprecated: use guidelines instead. Kept for backward compatibility.
+       * </pre>
+       *
+       * <code>.oscal.common.v1.MarkupLine guidance = 10 [json_name = "guidance", deprecated = true];</code>
        */
-      public Builder setGuidance(
+      @java.lang.Deprecated public Builder setGuidance(
           oscal.common.v1.Common.MarkupLine.Builder builderForValue) {
         if (guidanceBuilder_ == null) {
           guidance_ = builderForValue.build();
@@ -11714,9 +11906,13 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>.oscal.common.v1.MarkupLine guidance = 10 [json_name = "guidance"];</code>
+       * <pre>
+       * Deprecated: use guidelines instead. Kept for backward compatibility.
+       * </pre>
+       *
+       * <code>.oscal.common.v1.MarkupLine guidance = 10 [json_name = "guidance", deprecated = true];</code>
        */
-      public Builder mergeGuidance(oscal.common.v1.Common.MarkupLine value) {
+      @java.lang.Deprecated public Builder mergeGuidance(oscal.common.v1.Common.MarkupLine value) {
         if (guidanceBuilder_ == null) {
           if (((bitField0_ & 0x00000200) != 0) &&
             guidance_ != null &&
@@ -11735,9 +11931,13 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>.oscal.common.v1.MarkupLine guidance = 10 [json_name = "guidance"];</code>
+       * <pre>
+       * Deprecated: use guidelines instead. Kept for backward compatibility.
+       * </pre>
+       *
+       * <code>.oscal.common.v1.MarkupLine guidance = 10 [json_name = "guidance", deprecated = true];</code>
        */
-      public Builder clearGuidance() {
+      @java.lang.Deprecated public Builder clearGuidance() {
         bitField0_ = (bitField0_ & ~0x00000200);
         guidance_ = null;
         if (guidanceBuilder_ != null) {
@@ -11748,17 +11948,25 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>.oscal.common.v1.MarkupLine guidance = 10 [json_name = "guidance"];</code>
+       * <pre>
+       * Deprecated: use guidelines instead. Kept for backward compatibility.
+       * </pre>
+       *
+       * <code>.oscal.common.v1.MarkupLine guidance = 10 [json_name = "guidance", deprecated = true];</code>
        */
-      public oscal.common.v1.Common.MarkupLine.Builder getGuidanceBuilder() {
+      @java.lang.Deprecated public oscal.common.v1.Common.MarkupLine.Builder getGuidanceBuilder() {
         bitField0_ |= 0x00000200;
         onChanged();
         return internalGetGuidanceFieldBuilder().getBuilder();
       }
       /**
-       * <code>.oscal.common.v1.MarkupLine guidance = 10 [json_name = "guidance"];</code>
+       * <pre>
+       * Deprecated: use guidelines instead. Kept for backward compatibility.
+       * </pre>
+       *
+       * <code>.oscal.common.v1.MarkupLine guidance = 10 [json_name = "guidance", deprecated = true];</code>
        */
-      public oscal.common.v1.Common.MarkupLineOrBuilder getGuidanceOrBuilder() {
+      @java.lang.Deprecated public oscal.common.v1.Common.MarkupLineOrBuilder getGuidanceOrBuilder() {
         if (guidanceBuilder_ != null) {
           return guidanceBuilder_.getMessageOrBuilder();
         } else {
@@ -11767,7 +11975,11 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>.oscal.common.v1.MarkupLine guidance = 10 [json_name = "guidance"];</code>
+       * <pre>
+       * Deprecated: use guidelines instead. Kept for backward compatibility.
+       * </pre>
+       *
+       * <code>.oscal.common.v1.MarkupLine guidance = 10 [json_name = "guidance", deprecated = true];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
           oscal.common.v1.Common.MarkupLine, oscal.common.v1.Common.MarkupLine.Builder, oscal.common.v1.Common.MarkupLineOrBuilder> 
@@ -11781,6 +11993,246 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
           guidance_ = null;
         }
         return guidanceBuilder_;
+      }
+
+      private java.util.List<oscal.catalog.v1.CatalogOuterClass.Guideline> guidelines_ =
+        java.util.Collections.emptyList();
+      private void ensureGuidelinesIsMutable() {
+        if (!((bitField0_ & 0x00000400) != 0)) {
+          guidelines_ = new java.util.ArrayList<oscal.catalog.v1.CatalogOuterClass.Guideline>(guidelines_);
+          bitField0_ |= 0x00000400;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.catalog.v1.CatalogOuterClass.Guideline, oscal.catalog.v1.CatalogOuterClass.Guideline.Builder, oscal.catalog.v1.CatalogOuterClass.GuidelineOrBuilder> guidelinesBuilder_;
+
+      /**
+       * <code>repeated .oscal.catalog.v1.Guideline guidelines = 11 [json_name = "guidelines"];</code>
+       */
+      public java.util.List<oscal.catalog.v1.CatalogOuterClass.Guideline> getGuidelinesList() {
+        if (guidelinesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(guidelines_);
+        } else {
+          return guidelinesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .oscal.catalog.v1.Guideline guidelines = 11 [json_name = "guidelines"];</code>
+       */
+      public int getGuidelinesCount() {
+        if (guidelinesBuilder_ == null) {
+          return guidelines_.size();
+        } else {
+          return guidelinesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .oscal.catalog.v1.Guideline guidelines = 11 [json_name = "guidelines"];</code>
+       */
+      public oscal.catalog.v1.CatalogOuterClass.Guideline getGuidelines(int index) {
+        if (guidelinesBuilder_ == null) {
+          return guidelines_.get(index);
+        } else {
+          return guidelinesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.catalog.v1.Guideline guidelines = 11 [json_name = "guidelines"];</code>
+       */
+      public Builder setGuidelines(
+          int index, oscal.catalog.v1.CatalogOuterClass.Guideline value) {
+        if (guidelinesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureGuidelinesIsMutable();
+          guidelines_.set(index, value);
+          onChanged();
+        } else {
+          guidelinesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.catalog.v1.Guideline guidelines = 11 [json_name = "guidelines"];</code>
+       */
+      public Builder setGuidelines(
+          int index, oscal.catalog.v1.CatalogOuterClass.Guideline.Builder builderForValue) {
+        if (guidelinesBuilder_ == null) {
+          ensureGuidelinesIsMutable();
+          guidelines_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          guidelinesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.catalog.v1.Guideline guidelines = 11 [json_name = "guidelines"];</code>
+       */
+      public Builder addGuidelines(oscal.catalog.v1.CatalogOuterClass.Guideline value) {
+        if (guidelinesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureGuidelinesIsMutable();
+          guidelines_.add(value);
+          onChanged();
+        } else {
+          guidelinesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.catalog.v1.Guideline guidelines = 11 [json_name = "guidelines"];</code>
+       */
+      public Builder addGuidelines(
+          int index, oscal.catalog.v1.CatalogOuterClass.Guideline value) {
+        if (guidelinesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureGuidelinesIsMutable();
+          guidelines_.add(index, value);
+          onChanged();
+        } else {
+          guidelinesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.catalog.v1.Guideline guidelines = 11 [json_name = "guidelines"];</code>
+       */
+      public Builder addGuidelines(
+          oscal.catalog.v1.CatalogOuterClass.Guideline.Builder builderForValue) {
+        if (guidelinesBuilder_ == null) {
+          ensureGuidelinesIsMutable();
+          guidelines_.add(builderForValue.build());
+          onChanged();
+        } else {
+          guidelinesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.catalog.v1.Guideline guidelines = 11 [json_name = "guidelines"];</code>
+       */
+      public Builder addGuidelines(
+          int index, oscal.catalog.v1.CatalogOuterClass.Guideline.Builder builderForValue) {
+        if (guidelinesBuilder_ == null) {
+          ensureGuidelinesIsMutable();
+          guidelines_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          guidelinesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.catalog.v1.Guideline guidelines = 11 [json_name = "guidelines"];</code>
+       */
+      public Builder addAllGuidelines(
+          java.lang.Iterable<? extends oscal.catalog.v1.CatalogOuterClass.Guideline> values) {
+        if (guidelinesBuilder_ == null) {
+          ensureGuidelinesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, guidelines_);
+          onChanged();
+        } else {
+          guidelinesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.catalog.v1.Guideline guidelines = 11 [json_name = "guidelines"];</code>
+       */
+      public Builder clearGuidelines() {
+        if (guidelinesBuilder_ == null) {
+          guidelines_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000400);
+          onChanged();
+        } else {
+          guidelinesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.catalog.v1.Guideline guidelines = 11 [json_name = "guidelines"];</code>
+       */
+      public Builder removeGuidelines(int index) {
+        if (guidelinesBuilder_ == null) {
+          ensureGuidelinesIsMutable();
+          guidelines_.remove(index);
+          onChanged();
+        } else {
+          guidelinesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.catalog.v1.Guideline guidelines = 11 [json_name = "guidelines"];</code>
+       */
+      public oscal.catalog.v1.CatalogOuterClass.Guideline.Builder getGuidelinesBuilder(
+          int index) {
+        return internalGetGuidelinesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .oscal.catalog.v1.Guideline guidelines = 11 [json_name = "guidelines"];</code>
+       */
+      public oscal.catalog.v1.CatalogOuterClass.GuidelineOrBuilder getGuidelinesOrBuilder(
+          int index) {
+        if (guidelinesBuilder_ == null) {
+          return guidelines_.get(index);  } else {
+          return guidelinesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.catalog.v1.Guideline guidelines = 11 [json_name = "guidelines"];</code>
+       */
+      public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.GuidelineOrBuilder> 
+           getGuidelinesOrBuilderList() {
+        if (guidelinesBuilder_ != null) {
+          return guidelinesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(guidelines_);
+        }
+      }
+      /**
+       * <code>repeated .oscal.catalog.v1.Guideline guidelines = 11 [json_name = "guidelines"];</code>
+       */
+      public oscal.catalog.v1.CatalogOuterClass.Guideline.Builder addGuidelinesBuilder() {
+        return internalGetGuidelinesFieldBuilder().addBuilder(
+            oscal.catalog.v1.CatalogOuterClass.Guideline.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.catalog.v1.Guideline guidelines = 11 [json_name = "guidelines"];</code>
+       */
+      public oscal.catalog.v1.CatalogOuterClass.Guideline.Builder addGuidelinesBuilder(
+          int index) {
+        return internalGetGuidelinesFieldBuilder().addBuilder(
+            index, oscal.catalog.v1.CatalogOuterClass.Guideline.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.catalog.v1.Guideline guidelines = 11 [json_name = "guidelines"];</code>
+       */
+      public java.util.List<oscal.catalog.v1.CatalogOuterClass.Guideline.Builder> 
+           getGuidelinesBuilderList() {
+        return internalGetGuidelinesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.catalog.v1.CatalogOuterClass.Guideline, oscal.catalog.v1.CatalogOuterClass.Guideline.Builder, oscal.catalog.v1.CatalogOuterClass.GuidelineOrBuilder> 
+          internalGetGuidelinesFieldBuilder() {
+        if (guidelinesBuilder_ == null) {
+          guidelinesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              oscal.catalog.v1.CatalogOuterClass.Guideline, oscal.catalog.v1.CatalogOuterClass.Guideline.Builder, oscal.catalog.v1.CatalogOuterClass.GuidelineOrBuilder>(
+                  guidelines_,
+                  ((bitField0_ & 0x00000400) != 0),
+                  getParentForChildren(),
+                  isClean());
+          guidelines_ = null;
+        }
+        return guidelinesBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:oscal.catalog.v1.Parameter)
@@ -11829,6 +12281,593 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
 
     @java.lang.Override
     public oscal.catalog.v1.CatalogOuterClass.Parameter getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GuidelineOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oscal.catalog.v1.Guideline)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.oscal.common.v1.MarkupMultiline prose = 1 [json_name = "prose"];</code>
+     * @return Whether the prose field is set.
+     */
+    boolean hasProse();
+    /**
+     * <code>.oscal.common.v1.MarkupMultiline prose = 1 [json_name = "prose"];</code>
+     * @return The prose.
+     */
+    oscal.common.v1.Common.MarkupMultiline getProse();
+    /**
+     * <code>.oscal.common.v1.MarkupMultiline prose = 1 [json_name = "prose"];</code>
+     */
+    oscal.common.v1.Common.MarkupMultilineOrBuilder getProseOrBuilder();
+  }
+  /**
+   * <pre>
+   * Guideline represents a parameter guideline
+   * </pre>
+   *
+   * Protobuf type {@code oscal.catalog.v1.Guideline}
+   */
+  public static final class Guideline extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:oscal.catalog.v1.Guideline)
+      GuidelineOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 35,
+        /* patch= */ 1,
+        /* suffix= */ "",
+        "Guideline");
+    }
+    // Use Guideline.newBuilder() to construct.
+    private Guideline(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private Guideline() {
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return oscal.catalog.v1.CatalogOuterClass.internal_static_oscal_catalog_v1_Guideline_descriptor;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+      return oscal.catalog.v1.CatalogOuterClass.internal_static_oscal_catalog_v1_Guideline_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return oscal.catalog.v1.CatalogOuterClass.internal_static_oscal_catalog_v1_Guideline_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              oscal.catalog.v1.CatalogOuterClass.Guideline.class, oscal.catalog.v1.CatalogOuterClass.Guideline.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int PROSE_FIELD_NUMBER = 1;
+    private oscal.common.v1.Common.MarkupMultiline prose_;
+    /**
+     * <code>.oscal.common.v1.MarkupMultiline prose = 1 [json_name = "prose"];</code>
+     * @return Whether the prose field is set.
+     */
+    @java.lang.Override
+    public boolean hasProse() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.oscal.common.v1.MarkupMultiline prose = 1 [json_name = "prose"];</code>
+     * @return The prose.
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.MarkupMultiline getProse() {
+      return prose_ == null ? oscal.common.v1.Common.MarkupMultiline.getDefaultInstance() : prose_;
+    }
+    /**
+     * <code>.oscal.common.v1.MarkupMultiline prose = 1 [json_name = "prose"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.MarkupMultilineOrBuilder getProseOrBuilder() {
+      return prose_ == null ? oscal.common.v1.Common.MarkupMultiline.getDefaultInstance() : prose_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeMessage(1, getProse());
+      }
+      getUnknownFields().writeTo(output);
+    }
+    private int computeSerializedSize_0() {
+      int size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getProse());
+      }
+      return size;
+    }
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += computeSerializedSize_0();
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof oscal.catalog.v1.CatalogOuterClass.Guideline)) {
+        return super.equals(obj);
+      }
+      oscal.catalog.v1.CatalogOuterClass.Guideline other = (oscal.catalog.v1.CatalogOuterClass.Guideline) obj;
+
+      if (hasProse() != other.hasProse()) return false;
+      if (hasProse()) {
+        if (!getProse()
+            .equals(other.getProse())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasProse()) {
+        hash = (37 * hash) + PROSE_FIELD_NUMBER;
+        hash = (53 * hash) + getProse().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static oscal.catalog.v1.CatalogOuterClass.Guideline parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.catalog.v1.CatalogOuterClass.Guideline parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.catalog.v1.CatalogOuterClass.Guideline parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.catalog.v1.CatalogOuterClass.Guideline parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.catalog.v1.CatalogOuterClass.Guideline parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.catalog.v1.CatalogOuterClass.Guideline parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.catalog.v1.CatalogOuterClass.Guideline parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static oscal.catalog.v1.CatalogOuterClass.Guideline parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static oscal.catalog.v1.CatalogOuterClass.Guideline parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static oscal.catalog.v1.CatalogOuterClass.Guideline parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static oscal.catalog.v1.CatalogOuterClass.Guideline parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static oscal.catalog.v1.CatalogOuterClass.Guideline parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(oscal.catalog.v1.CatalogOuterClass.Guideline prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Guideline represents a parameter guideline
+     * </pre>
+     *
+     * Protobuf type {@code oscal.catalog.v1.Guideline}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oscal.catalog.v1.Guideline)
+        oscal.catalog.v1.CatalogOuterClass.GuidelineOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return oscal.catalog.v1.CatalogOuterClass.internal_static_oscal_catalog_v1_Guideline_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return oscal.catalog.v1.CatalogOuterClass.internal_static_oscal_catalog_v1_Guideline_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                oscal.catalog.v1.CatalogOuterClass.Guideline.class, oscal.catalog.v1.CatalogOuterClass.Guideline.Builder.class);
+      }
+
+      // Construct using oscal.catalog.v1.CatalogOuterClass.Guideline.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage
+                .alwaysUseFieldBuilders) {
+          internalGetProseFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        prose_ = null;
+        if (proseBuilder_ != null) {
+          proseBuilder_.dispose();
+          proseBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return oscal.catalog.v1.CatalogOuterClass.internal_static_oscal_catalog_v1_Guideline_descriptor;
+      }
+
+      @java.lang.Override
+      public oscal.catalog.v1.CatalogOuterClass.Guideline getDefaultInstanceForType() {
+        return oscal.catalog.v1.CatalogOuterClass.Guideline.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public oscal.catalog.v1.CatalogOuterClass.Guideline build() {
+        oscal.catalog.v1.CatalogOuterClass.Guideline result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public oscal.catalog.v1.CatalogOuterClass.Guideline buildPartial() {
+        oscal.catalog.v1.CatalogOuterClass.Guideline result = new oscal.catalog.v1.CatalogOuterClass.Guideline(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(oscal.catalog.v1.CatalogOuterClass.Guideline result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.prose_ = proseBuilder_ == null
+              ? prose_
+              : proseBuilder_.build();
+          to_bitField0_ |= 0x00000001;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof oscal.catalog.v1.CatalogOuterClass.Guideline) {
+          return mergeFrom((oscal.catalog.v1.CatalogOuterClass.Guideline)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(oscal.catalog.v1.CatalogOuterClass.Guideline other) {
+        if (other == oscal.catalog.v1.CatalogOuterClass.Guideline.getDefaultInstance()) return this;
+        if (other.hasProse()) {
+          mergeProse(other.getProse());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    internalGetProseFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private oscal.common.v1.Common.MarkupMultiline prose_;
+      private com.google.protobuf.SingleFieldBuilder<
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> proseBuilder_;
+      /**
+       * <code>.oscal.common.v1.MarkupMultiline prose = 1 [json_name = "prose"];</code>
+       * @return Whether the prose field is set.
+       */
+      public boolean hasProse() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.oscal.common.v1.MarkupMultiline prose = 1 [json_name = "prose"];</code>
+       * @return The prose.
+       */
+      public oscal.common.v1.Common.MarkupMultiline getProse() {
+        if (proseBuilder_ == null) {
+          return prose_ == null ? oscal.common.v1.Common.MarkupMultiline.getDefaultInstance() : prose_;
+        } else {
+          return proseBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.oscal.common.v1.MarkupMultiline prose = 1 [json_name = "prose"];</code>
+       */
+      public Builder setProse(oscal.common.v1.Common.MarkupMultiline value) {
+        if (proseBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          prose_ = value;
+        } else {
+          proseBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.MarkupMultiline prose = 1 [json_name = "prose"];</code>
+       */
+      public Builder setProse(
+          oscal.common.v1.Common.MarkupMultiline.Builder builderForValue) {
+        if (proseBuilder_ == null) {
+          prose_ = builderForValue.build();
+        } else {
+          proseBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.MarkupMultiline prose = 1 [json_name = "prose"];</code>
+       */
+      public Builder mergeProse(oscal.common.v1.Common.MarkupMultiline value) {
+        if (proseBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            prose_ != null &&
+            prose_ != oscal.common.v1.Common.MarkupMultiline.getDefaultInstance()) {
+            getProseBuilder().mergeFrom(value);
+          } else {
+            prose_ = value;
+          }
+        } else {
+          proseBuilder_.mergeFrom(value);
+        }
+        if (prose_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.MarkupMultiline prose = 1 [json_name = "prose"];</code>
+       */
+      public Builder clearProse() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        prose_ = null;
+        if (proseBuilder_ != null) {
+          proseBuilder_.dispose();
+          proseBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.MarkupMultiline prose = 1 [json_name = "prose"];</code>
+       */
+      public oscal.common.v1.Common.MarkupMultiline.Builder getProseBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return internalGetProseFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.oscal.common.v1.MarkupMultiline prose = 1 [json_name = "prose"];</code>
+       */
+      public oscal.common.v1.Common.MarkupMultilineOrBuilder getProseOrBuilder() {
+        if (proseBuilder_ != null) {
+          return proseBuilder_.getMessageOrBuilder();
+        } else {
+          return prose_ == null ?
+              oscal.common.v1.Common.MarkupMultiline.getDefaultInstance() : prose_;
+        }
+      }
+      /**
+       * <code>.oscal.common.v1.MarkupMultiline prose = 1 [json_name = "prose"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          internalGetProseFieldBuilder() {
+        if (proseBuilder_ == null) {
+          proseBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>(
+                  getProse(),
+                  getParentForChildren(),
+                  isClean());
+          prose_ = null;
+        }
+        return proseBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:oscal.catalog.v1.Guideline)
+    }
+
+    // @@protoc_insertion_point(class_scope:oscal.catalog.v1.Guideline)
+    private static final oscal.catalog.v1.CatalogOuterClass.Guideline DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new oscal.catalog.v1.CatalogOuterClass.Guideline();
+    }
+
+    public static oscal.catalog.v1.CatalogOuterClass.Guideline getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Guideline>
+        PARSER = new com.google.protobuf.AbstractParser<Guideline>() {
+      @java.lang.Override
+      public Guideline parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Guideline> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Guideline> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public oscal.catalog.v1.CatalogOuterClass.Guideline getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -12684,6 +13723,30 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
+
+    /**
+     * <code>repeated .oscal.catalog.v1.Test tests = 2 [json_name = "tests"];</code>
+     */
+    java.util.List<oscal.catalog.v1.CatalogOuterClass.Test> 
+        getTestsList();
+    /**
+     * <code>repeated .oscal.catalog.v1.Test tests = 2 [json_name = "tests"];</code>
+     */
+    oscal.catalog.v1.CatalogOuterClass.Test getTests(int index);
+    /**
+     * <code>repeated .oscal.catalog.v1.Test tests = 2 [json_name = "tests"];</code>
+     */
+    int getTestsCount();
+    /**
+     * <code>repeated .oscal.catalog.v1.Test tests = 2 [json_name = "tests"];</code>
+     */
+    java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.TestOrBuilder> 
+        getTestsOrBuilderList();
+    /**
+     * <code>repeated .oscal.catalog.v1.Test tests = 2 [json_name = "tests"];</code>
+     */
+    oscal.catalog.v1.CatalogOuterClass.TestOrBuilder getTestsOrBuilder(
+        int index);
   }
   /**
    * <pre>
@@ -12712,6 +13775,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
     }
     private Constraint() {
       description_ = "";
+      tests_ = java.util.Collections.emptyList();
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
@@ -12771,6 +13835,47 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
       }
     }
 
+    public static final int TESTS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<oscal.catalog.v1.CatalogOuterClass.Test> tests_;
+    /**
+     * <code>repeated .oscal.catalog.v1.Test tests = 2 [json_name = "tests"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<oscal.catalog.v1.CatalogOuterClass.Test> getTestsList() {
+      return tests_;
+    }
+    /**
+     * <code>repeated .oscal.catalog.v1.Test tests = 2 [json_name = "tests"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.TestOrBuilder> 
+        getTestsOrBuilderList() {
+      return tests_;
+    }
+    /**
+     * <code>repeated .oscal.catalog.v1.Test tests = 2 [json_name = "tests"];</code>
+     */
+    @java.lang.Override
+    public int getTestsCount() {
+      return tests_.size();
+    }
+    /**
+     * <code>repeated .oscal.catalog.v1.Test tests = 2 [json_name = "tests"];</code>
+     */
+    @java.lang.Override
+    public oscal.catalog.v1.CatalogOuterClass.Test getTests(int index) {
+      return tests_.get(index);
+    }
+    /**
+     * <code>repeated .oscal.catalog.v1.Test tests = 2 [json_name = "tests"];</code>
+     */
+    @java.lang.Override
+    public oscal.catalog.v1.CatalogOuterClass.TestOrBuilder getTestsOrBuilder(
+        int index) {
+      return tests_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -12788,6 +13893,9 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessage.writeString(output, 1, description_);
       }
+      for (int i = 0; i < tests_.size(); i++) {
+        output.writeMessage(2, tests_.get(i));
+      }
       getUnknownFields().writeTo(output);
     }
     private int computeSerializedSize_0() {
@@ -12795,6 +13903,15 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessage.computeStringSize(1, description_);
       }
+
+          {
+            final int count = tests_.size();
+            for (int i = 0; i < count; i++) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeMessageSizeNoTag(tests_.get(i));
+            }
+            size += 1 * count;
+          }
       return size;
     }
     @java.lang.Override
@@ -12821,6 +13938,8 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
 
       if (!getDescription()
           .equals(other.getDescription())) return false;
+      if (!getTestsList()
+          .equals(other.getTestsList())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -12834,6 +13953,10 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
       hash = (53 * hash) + getDescription().hashCode();
+      if (getTestsCount() > 0) {
+        hash = (37 * hash) + TESTS_FIELD_NUMBER;
+        hash = (53 * hash) + getTestsList().hashCode();
+      }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -12970,6 +14093,13 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
         super.clear();
         bitField0_ = 0;
         description_ = "";
+        if (testsBuilder_ == null) {
+          tests_ = java.util.Collections.emptyList();
+        } else {
+          tests_ = null;
+          testsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -12996,9 +14126,22 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
       @java.lang.Override
       public oscal.catalog.v1.CatalogOuterClass.Constraint buildPartial() {
         oscal.catalog.v1.CatalogOuterClass.Constraint result = new oscal.catalog.v1.CatalogOuterClass.Constraint(this);
+        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartialRepeatedFields(oscal.catalog.v1.CatalogOuterClass.Constraint result) {
+        if (testsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            tests_ = java.util.Collections.unmodifiableList(tests_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.tests_ = tests_;
+        } else {
+          result.tests_ = testsBuilder_.build();
+        }
       }
 
       private void buildPartial0(oscal.catalog.v1.CatalogOuterClass.Constraint result) {
@@ -13024,6 +14167,32 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
           description_ = other.description_;
           bitField0_ |= 0x00000001;
           onChanged();
+        }
+        if (testsBuilder_ == null) {
+          if (!other.tests_.isEmpty()) {
+            if (tests_.isEmpty()) {
+              tests_ = other.tests_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureTestsIsMutable();
+              tests_.addAll(other.tests_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.tests_.isEmpty()) {
+            if (testsBuilder_.isEmpty()) {
+              testsBuilder_.dispose();
+              testsBuilder_ = null;
+              tests_ = other.tests_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              testsBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   internalGetTestsFieldBuilder() : null;
+            } else {
+              testsBuilder_.addAllMessages(other.tests_);
+            }
+          }
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -13056,6 +14225,19 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
                 bitField0_ |= 0x00000001;
                 break;
               } // case 10
+              case 18: {
+                oscal.catalog.v1.CatalogOuterClass.Test m =
+                    input.readMessage(
+                        oscal.catalog.v1.CatalogOuterClass.Test.parser(),
+                        extensionRegistry);
+                if (testsBuilder_ == null) {
+                  ensureTestsIsMutable();
+                  tests_.add(m);
+                } else {
+                  testsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -13145,6 +14327,246 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
         return this;
       }
 
+      private java.util.List<oscal.catalog.v1.CatalogOuterClass.Test> tests_ =
+        java.util.Collections.emptyList();
+      private void ensureTestsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          tests_ = new java.util.ArrayList<oscal.catalog.v1.CatalogOuterClass.Test>(tests_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.catalog.v1.CatalogOuterClass.Test, oscal.catalog.v1.CatalogOuterClass.Test.Builder, oscal.catalog.v1.CatalogOuterClass.TestOrBuilder> testsBuilder_;
+
+      /**
+       * <code>repeated .oscal.catalog.v1.Test tests = 2 [json_name = "tests"];</code>
+       */
+      public java.util.List<oscal.catalog.v1.CatalogOuterClass.Test> getTestsList() {
+        if (testsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(tests_);
+        } else {
+          return testsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .oscal.catalog.v1.Test tests = 2 [json_name = "tests"];</code>
+       */
+      public int getTestsCount() {
+        if (testsBuilder_ == null) {
+          return tests_.size();
+        } else {
+          return testsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .oscal.catalog.v1.Test tests = 2 [json_name = "tests"];</code>
+       */
+      public oscal.catalog.v1.CatalogOuterClass.Test getTests(int index) {
+        if (testsBuilder_ == null) {
+          return tests_.get(index);
+        } else {
+          return testsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.catalog.v1.Test tests = 2 [json_name = "tests"];</code>
+       */
+      public Builder setTests(
+          int index, oscal.catalog.v1.CatalogOuterClass.Test value) {
+        if (testsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTestsIsMutable();
+          tests_.set(index, value);
+          onChanged();
+        } else {
+          testsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.catalog.v1.Test tests = 2 [json_name = "tests"];</code>
+       */
+      public Builder setTests(
+          int index, oscal.catalog.v1.CatalogOuterClass.Test.Builder builderForValue) {
+        if (testsBuilder_ == null) {
+          ensureTestsIsMutable();
+          tests_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          testsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.catalog.v1.Test tests = 2 [json_name = "tests"];</code>
+       */
+      public Builder addTests(oscal.catalog.v1.CatalogOuterClass.Test value) {
+        if (testsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTestsIsMutable();
+          tests_.add(value);
+          onChanged();
+        } else {
+          testsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.catalog.v1.Test tests = 2 [json_name = "tests"];</code>
+       */
+      public Builder addTests(
+          int index, oscal.catalog.v1.CatalogOuterClass.Test value) {
+        if (testsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTestsIsMutable();
+          tests_.add(index, value);
+          onChanged();
+        } else {
+          testsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.catalog.v1.Test tests = 2 [json_name = "tests"];</code>
+       */
+      public Builder addTests(
+          oscal.catalog.v1.CatalogOuterClass.Test.Builder builderForValue) {
+        if (testsBuilder_ == null) {
+          ensureTestsIsMutable();
+          tests_.add(builderForValue.build());
+          onChanged();
+        } else {
+          testsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.catalog.v1.Test tests = 2 [json_name = "tests"];</code>
+       */
+      public Builder addTests(
+          int index, oscal.catalog.v1.CatalogOuterClass.Test.Builder builderForValue) {
+        if (testsBuilder_ == null) {
+          ensureTestsIsMutable();
+          tests_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          testsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.catalog.v1.Test tests = 2 [json_name = "tests"];</code>
+       */
+      public Builder addAllTests(
+          java.lang.Iterable<? extends oscal.catalog.v1.CatalogOuterClass.Test> values) {
+        if (testsBuilder_ == null) {
+          ensureTestsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, tests_);
+          onChanged();
+        } else {
+          testsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.catalog.v1.Test tests = 2 [json_name = "tests"];</code>
+       */
+      public Builder clearTests() {
+        if (testsBuilder_ == null) {
+          tests_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          testsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.catalog.v1.Test tests = 2 [json_name = "tests"];</code>
+       */
+      public Builder removeTests(int index) {
+        if (testsBuilder_ == null) {
+          ensureTestsIsMutable();
+          tests_.remove(index);
+          onChanged();
+        } else {
+          testsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.catalog.v1.Test tests = 2 [json_name = "tests"];</code>
+       */
+      public oscal.catalog.v1.CatalogOuterClass.Test.Builder getTestsBuilder(
+          int index) {
+        return internalGetTestsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .oscal.catalog.v1.Test tests = 2 [json_name = "tests"];</code>
+       */
+      public oscal.catalog.v1.CatalogOuterClass.TestOrBuilder getTestsOrBuilder(
+          int index) {
+        if (testsBuilder_ == null) {
+          return tests_.get(index);  } else {
+          return testsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.catalog.v1.Test tests = 2 [json_name = "tests"];</code>
+       */
+      public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.TestOrBuilder> 
+           getTestsOrBuilderList() {
+        if (testsBuilder_ != null) {
+          return testsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(tests_);
+        }
+      }
+      /**
+       * <code>repeated .oscal.catalog.v1.Test tests = 2 [json_name = "tests"];</code>
+       */
+      public oscal.catalog.v1.CatalogOuterClass.Test.Builder addTestsBuilder() {
+        return internalGetTestsFieldBuilder().addBuilder(
+            oscal.catalog.v1.CatalogOuterClass.Test.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.catalog.v1.Test tests = 2 [json_name = "tests"];</code>
+       */
+      public oscal.catalog.v1.CatalogOuterClass.Test.Builder addTestsBuilder(
+          int index) {
+        return internalGetTestsFieldBuilder().addBuilder(
+            index, oscal.catalog.v1.CatalogOuterClass.Test.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.catalog.v1.Test tests = 2 [json_name = "tests"];</code>
+       */
+      public java.util.List<oscal.catalog.v1.CatalogOuterClass.Test.Builder> 
+           getTestsBuilderList() {
+        return internalGetTestsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.catalog.v1.CatalogOuterClass.Test, oscal.catalog.v1.CatalogOuterClass.Test.Builder, oscal.catalog.v1.CatalogOuterClass.TestOrBuilder> 
+          internalGetTestsFieldBuilder() {
+        if (testsBuilder_ == null) {
+          testsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              oscal.catalog.v1.CatalogOuterClass.Test, oscal.catalog.v1.CatalogOuterClass.Test.Builder, oscal.catalog.v1.CatalogOuterClass.TestOrBuilder>(
+                  tests_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          tests_ = null;
+        }
+        return testsBuilder_;
+      }
+
       // @@protoc_insertion_point(builder_scope:oscal.catalog.v1.Constraint)
     }
 
@@ -13191,6 +14613,916 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
 
     @java.lang.Override
     public oscal.catalog.v1.CatalogOuterClass.Constraint getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface TestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oscal.catalog.v1.Test)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string expression = 1 [json_name = "expression"];</code>
+     * @return The expression.
+     */
+    java.lang.String getExpression();
+    /**
+     * <code>string expression = 1 [json_name = "expression"];</code>
+     * @return The bytes for expression.
+     */
+    com.google.protobuf.ByteString
+        getExpressionBytes();
+
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
+     */
+    java.util.List<oscal.common.v1.Common.MarkupMultiline> 
+        getRemarksList();
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
+     */
+    oscal.common.v1.Common.MarkupMultiline getRemarks(int index);
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
+     */
+    int getRemarksCount();
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
+     */
+    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+        getRemarksOrBuilderList();
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
+     */
+    oscal.common.v1.Common.MarkupMultilineOrBuilder getRemarksOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * Test represents a constraint test
+   * </pre>
+   *
+   * Protobuf type {@code oscal.catalog.v1.Test}
+   */
+  public static final class Test extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:oscal.catalog.v1.Test)
+      TestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 35,
+        /* patch= */ 1,
+        /* suffix= */ "",
+        "Test");
+    }
+    // Use Test.newBuilder() to construct.
+    private Test(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private Test() {
+      expression_ = "";
+      remarks_ = java.util.Collections.emptyList();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return oscal.catalog.v1.CatalogOuterClass.internal_static_oscal_catalog_v1_Test_descriptor;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+      return oscal.catalog.v1.CatalogOuterClass.internal_static_oscal_catalog_v1_Test_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return oscal.catalog.v1.CatalogOuterClass.internal_static_oscal_catalog_v1_Test_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              oscal.catalog.v1.CatalogOuterClass.Test.class, oscal.catalog.v1.CatalogOuterClass.Test.Builder.class);
+    }
+
+    public static final int EXPRESSION_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object expression_ = "";
+    /**
+     * <code>string expression = 1 [json_name = "expression"];</code>
+     * @return The expression.
+     */
+    @java.lang.Override
+    public java.lang.String getExpression() {
+      java.lang.Object ref = expression_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        expression_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string expression = 1 [json_name = "expression"];</code>
+     * @return The bytes for expression.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getExpressionBytes() {
+      java.lang.Object ref = expression_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        expression_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REMARKS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<oscal.common.v1.Common.MarkupMultiline> remarks_;
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<oscal.common.v1.Common.MarkupMultiline> getRemarksList() {
+      return remarks_;
+    }
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+        getRemarksOrBuilderList() {
+      return remarks_;
+    }
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
+     */
+    @java.lang.Override
+    public int getRemarksCount() {
+      return remarks_.size();
+    }
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.MarkupMultiline getRemarks(int index) {
+      return remarks_.get(index);
+    }
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.MarkupMultilineOrBuilder getRemarksOrBuilder(
+        int index) {
+      return remarks_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(expression_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, expression_);
+      }
+      for (int i = 0; i < remarks_.size(); i++) {
+        output.writeMessage(2, remarks_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+    private int computeSerializedSize_0() {
+      int size = 0;
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(expression_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, expression_);
+      }
+
+          {
+            final int count = remarks_.size();
+            for (int i = 0; i < count; i++) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeMessageSizeNoTag(remarks_.get(i));
+            }
+            size += 1 * count;
+          }
+      return size;
+    }
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += computeSerializedSize_0();
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof oscal.catalog.v1.CatalogOuterClass.Test)) {
+        return super.equals(obj);
+      }
+      oscal.catalog.v1.CatalogOuterClass.Test other = (oscal.catalog.v1.CatalogOuterClass.Test) obj;
+
+      if (!getExpression()
+          .equals(other.getExpression())) return false;
+      if (!getRemarksList()
+          .equals(other.getRemarksList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + EXPRESSION_FIELD_NUMBER;
+      hash = (53 * hash) + getExpression().hashCode();
+      if (getRemarksCount() > 0) {
+        hash = (37 * hash) + REMARKS_FIELD_NUMBER;
+        hash = (53 * hash) + getRemarksList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static oscal.catalog.v1.CatalogOuterClass.Test parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.catalog.v1.CatalogOuterClass.Test parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.catalog.v1.CatalogOuterClass.Test parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.catalog.v1.CatalogOuterClass.Test parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.catalog.v1.CatalogOuterClass.Test parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.catalog.v1.CatalogOuterClass.Test parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.catalog.v1.CatalogOuterClass.Test parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static oscal.catalog.v1.CatalogOuterClass.Test parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static oscal.catalog.v1.CatalogOuterClass.Test parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static oscal.catalog.v1.CatalogOuterClass.Test parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static oscal.catalog.v1.CatalogOuterClass.Test parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static oscal.catalog.v1.CatalogOuterClass.Test parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(oscal.catalog.v1.CatalogOuterClass.Test prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Test represents a constraint test
+     * </pre>
+     *
+     * Protobuf type {@code oscal.catalog.v1.Test}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oscal.catalog.v1.Test)
+        oscal.catalog.v1.CatalogOuterClass.TestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return oscal.catalog.v1.CatalogOuterClass.internal_static_oscal_catalog_v1_Test_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return oscal.catalog.v1.CatalogOuterClass.internal_static_oscal_catalog_v1_Test_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                oscal.catalog.v1.CatalogOuterClass.Test.class, oscal.catalog.v1.CatalogOuterClass.Test.Builder.class);
+      }
+
+      // Construct using oscal.catalog.v1.CatalogOuterClass.Test.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        expression_ = "";
+        if (remarksBuilder_ == null) {
+          remarks_ = java.util.Collections.emptyList();
+        } else {
+          remarks_ = null;
+          remarksBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return oscal.catalog.v1.CatalogOuterClass.internal_static_oscal_catalog_v1_Test_descriptor;
+      }
+
+      @java.lang.Override
+      public oscal.catalog.v1.CatalogOuterClass.Test getDefaultInstanceForType() {
+        return oscal.catalog.v1.CatalogOuterClass.Test.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public oscal.catalog.v1.CatalogOuterClass.Test build() {
+        oscal.catalog.v1.CatalogOuterClass.Test result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public oscal.catalog.v1.CatalogOuterClass.Test buildPartial() {
+        oscal.catalog.v1.CatalogOuterClass.Test result = new oscal.catalog.v1.CatalogOuterClass.Test(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(oscal.catalog.v1.CatalogOuterClass.Test result) {
+        if (remarksBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            remarks_ = java.util.Collections.unmodifiableList(remarks_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.remarks_ = remarks_;
+        } else {
+          result.remarks_ = remarksBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(oscal.catalog.v1.CatalogOuterClass.Test result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.expression_ = expression_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof oscal.catalog.v1.CatalogOuterClass.Test) {
+          return mergeFrom((oscal.catalog.v1.CatalogOuterClass.Test)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(oscal.catalog.v1.CatalogOuterClass.Test other) {
+        if (other == oscal.catalog.v1.CatalogOuterClass.Test.getDefaultInstance()) return this;
+        if (!other.getExpression().isEmpty()) {
+          expression_ = other.expression_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (remarksBuilder_ == null) {
+          if (!other.remarks_.isEmpty()) {
+            if (remarks_.isEmpty()) {
+              remarks_ = other.remarks_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureRemarksIsMutable();
+              remarks_.addAll(other.remarks_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.remarks_.isEmpty()) {
+            if (remarksBuilder_.isEmpty()) {
+              remarksBuilder_.dispose();
+              remarksBuilder_ = null;
+              remarks_ = other.remarks_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              remarksBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   internalGetRemarksFieldBuilder() : null;
+            } else {
+              remarksBuilder_.addAllMessages(other.remarks_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                expression_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                oscal.common.v1.Common.MarkupMultiline m =
+                    input.readMessage(
+                        oscal.common.v1.Common.MarkupMultiline.parser(),
+                        extensionRegistry);
+                if (remarksBuilder_ == null) {
+                  ensureRemarksIsMutable();
+                  remarks_.add(m);
+                } else {
+                  remarksBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object expression_ = "";
+      /**
+       * <code>string expression = 1 [json_name = "expression"];</code>
+       * @return The expression.
+       */
+      public java.lang.String getExpression() {
+        java.lang.Object ref = expression_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          expression_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string expression = 1 [json_name = "expression"];</code>
+       * @return The bytes for expression.
+       */
+      public com.google.protobuf.ByteString
+          getExpressionBytes() {
+        java.lang.Object ref = expression_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          expression_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string expression = 1 [json_name = "expression"];</code>
+       * @param value The expression to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExpression(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        expression_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string expression = 1 [json_name = "expression"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExpression() {
+        expression_ = getDefaultInstance().getExpression();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string expression = 1 [json_name = "expression"];</code>
+       * @param value The bytes for expression to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExpressionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        expression_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<oscal.common.v1.Common.MarkupMultiline> remarks_ =
+        java.util.Collections.emptyList();
+      private void ensureRemarksIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          remarks_ = new java.util.ArrayList<oscal.common.v1.Common.MarkupMultiline>(remarks_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> remarksBuilder_;
+
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
+       */
+      public java.util.List<oscal.common.v1.Common.MarkupMultiline> getRemarksList() {
+        if (remarksBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(remarks_);
+        } else {
+          return remarksBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
+       */
+      public int getRemarksCount() {
+        if (remarksBuilder_ == null) {
+          return remarks_.size();
+        } else {
+          return remarksBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
+       */
+      public oscal.common.v1.Common.MarkupMultiline getRemarks(int index) {
+        if (remarksBuilder_ == null) {
+          return remarks_.get(index);
+        } else {
+          return remarksBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
+       */
+      public Builder setRemarks(
+          int index, oscal.common.v1.Common.MarkupMultiline value) {
+        if (remarksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRemarksIsMutable();
+          remarks_.set(index, value);
+          onChanged();
+        } else {
+          remarksBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
+       */
+      public Builder setRemarks(
+          int index, oscal.common.v1.Common.MarkupMultiline.Builder builderForValue) {
+        if (remarksBuilder_ == null) {
+          ensureRemarksIsMutable();
+          remarks_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          remarksBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
+       */
+      public Builder addRemarks(oscal.common.v1.Common.MarkupMultiline value) {
+        if (remarksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRemarksIsMutable();
+          remarks_.add(value);
+          onChanged();
+        } else {
+          remarksBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
+       */
+      public Builder addRemarks(
+          int index, oscal.common.v1.Common.MarkupMultiline value) {
+        if (remarksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRemarksIsMutable();
+          remarks_.add(index, value);
+          onChanged();
+        } else {
+          remarksBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
+       */
+      public Builder addRemarks(
+          oscal.common.v1.Common.MarkupMultiline.Builder builderForValue) {
+        if (remarksBuilder_ == null) {
+          ensureRemarksIsMutable();
+          remarks_.add(builderForValue.build());
+          onChanged();
+        } else {
+          remarksBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
+       */
+      public Builder addRemarks(
+          int index, oscal.common.v1.Common.MarkupMultiline.Builder builderForValue) {
+        if (remarksBuilder_ == null) {
+          ensureRemarksIsMutable();
+          remarks_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          remarksBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
+       */
+      public Builder addAllRemarks(
+          java.lang.Iterable<? extends oscal.common.v1.Common.MarkupMultiline> values) {
+        if (remarksBuilder_ == null) {
+          ensureRemarksIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, remarks_);
+          onChanged();
+        } else {
+          remarksBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
+       */
+      public Builder clearRemarks() {
+        if (remarksBuilder_ == null) {
+          remarks_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          remarksBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
+       */
+      public Builder removeRemarks(int index) {
+        if (remarksBuilder_ == null) {
+          ensureRemarksIsMutable();
+          remarks_.remove(index);
+          onChanged();
+        } else {
+          remarksBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
+       */
+      public oscal.common.v1.Common.MarkupMultiline.Builder getRemarksBuilder(
+          int index) {
+        return internalGetRemarksFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
+       */
+      public oscal.common.v1.Common.MarkupMultilineOrBuilder getRemarksOrBuilder(
+          int index) {
+        if (remarksBuilder_ == null) {
+          return remarks_.get(index);  } else {
+          return remarksBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
+       */
+      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+           getRemarksOrBuilderList() {
+        if (remarksBuilder_ != null) {
+          return remarksBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(remarks_);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
+       */
+      public oscal.common.v1.Common.MarkupMultiline.Builder addRemarksBuilder() {
+        return internalGetRemarksFieldBuilder().addBuilder(
+            oscal.common.v1.Common.MarkupMultiline.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
+       */
+      public oscal.common.v1.Common.MarkupMultiline.Builder addRemarksBuilder(
+          int index) {
+        return internalGetRemarksFieldBuilder().addBuilder(
+            index, oscal.common.v1.Common.MarkupMultiline.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
+       */
+      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder> 
+           getRemarksBuilderList() {
+        return internalGetRemarksFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          internalGetRemarksFieldBuilder() {
+        if (remarksBuilder_ == null) {
+          remarksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>(
+                  remarks_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          remarks_ = null;
+        }
+        return remarksBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:oscal.catalog.v1.Test)
+    }
+
+    // @@protoc_insertion_point(class_scope:oscal.catalog.v1.Test)
+    private static final oscal.catalog.v1.CatalogOuterClass.Test DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new oscal.catalog.v1.CatalogOuterClass.Test();
+    }
+
+    public static oscal.catalog.v1.CatalogOuterClass.Test getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Test>
+        PARSER = new com.google.protobuf.AbstractParser<Test>() {
+      @java.lang.Override
+      public Test parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Test> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Test> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public oscal.catalog.v1.CatalogOuterClass.Test getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -16388,6 +18720,11 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_catalog_v1_Parameter_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_oscal_catalog_v1_Guideline_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_oscal_catalog_v1_Guideline_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_catalog_v1_Select_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -16397,6 +18734,11 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
   private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_catalog_v1_Constraint_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_oscal_catalog_v1_Test_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_oscal_catalog_v1_Test_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_catalog_v1_Part_descriptor;
   private static final 
@@ -16442,7 +18784,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
       "\007 \003(\0132\031.oscal.common.v1.PropertyR\005props\022" +
       "+\n\005links\030\010 \003(\0132\025.oscal.common.v1.LinkR\005l" +
       "inks\022:\n\007remarks\030\t \003(\0132 .oscal.common.v1." +
-      "MarkupMultilineR\007remarks\"\366\003\n\tParameter\022&" +
+      "MarkupMultilineR\007remarks\"\267\004\n\tParameter\022&" +
       "\n\002id\030\001 \001(\0132\026.oscal.common.v1.TokenR\002id\022\024" +
       "\n\005class\030\002 \001(\tR\005class\0221\n\005label\030\003 \001(\0132\033.os" +
       "cal.common.v1.MarkupLineR\005label\0223\n\006value" +
@@ -16453,12 +18795,19 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
       ".oscal.common.v1.LinkR\005links\022:\n\007remarks\030" +
       "\010 \003(\0132 .oscal.common.v1.MarkupMultilineR" +
       "\007remarks\022>\n\013constraints\030\t \003(\0132\034.oscal.ca" +
-      "talog.v1.ConstraintR\013constraints\0227\n\010guid" +
-      "ance\030\n \001(\0132\033.oscal.common.v1.MarkupLineR" +
-      "\010guidance\"Z\n\006Select\0225\n\007choices\030\001 \003(\0132\033.o" +
-      "scal.common.v1.MarkupLineR\007choices\022\031\n\010ho" +
-      "w_many\030\002 \001(\010R\007howMany\".\n\nConstraint\022 \n\013d" +
-      "escription\030\001 \001(\tR\013description\"\233\003\n\004Part\022&" +
+      "talog.v1.ConstraintR\013constraints\022;\n\010guid" +
+      "ance\030\n \001(\0132\033.oscal.common.v1.MarkupLineB" +
+      "\002\030\001R\010guidance\022;\n\nguidelines\030\013 \003(\0132\033.osca" +
+      "l.catalog.v1.GuidelineR\nguidelines\"C\n\tGu" +
+      "ideline\0226\n\005prose\030\001 \001(\0132 .oscal.common.v1" +
+      ".MarkupMultilineR\005prose\"Z\n\006Select\0225\n\007cho" +
+      "ices\030\001 \003(\0132\033.oscal.common.v1.MarkupLineR" +
+      "\007choices\022\031\n\010how_many\030\002 \001(\010R\007howMany\"\\\n\nC" +
+      "onstraint\022 \n\013description\030\001 \001(\tR\013descript" +
+      "ion\022,\n\005tests\030\002 \003(\0132\026.oscal.catalog.v1.Te" +
+      "stR\005tests\"b\n\004Test\022\036\n\nexpression\030\001 \001(\tR\ne" +
+      "xpression\022:\n\007remarks\030\002 \003(\0132 .oscal.commo" +
+      "n.v1.MarkupMultilineR\007remarks\"\233\003\n\004Part\022&" +
       "\n\002id\030\001 \001(\0132\026.oscal.common.v1.TokenR\002id\022\022" +
       "\n\004name\030\002 \001(\tR\004name\022\016\n\002ns\030\003 \001(\tR\002ns\022\024\n\005cl" +
       "ass\030\004 \001(\tR\005class\0221\n\005title\030\005 \001(\0132\033.oscal." +
@@ -16500,21 +18849,33 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
     internal_static_oscal_catalog_v1_Parameter_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_catalog_v1_Parameter_descriptor,
-        new java.lang.String[] { "Id", "Class_", "Label", "Values", "Select", "Props", "Links", "Remarks", "Constraints", "Guidance", });
-    internal_static_oscal_catalog_v1_Select_descriptor =
+        new java.lang.String[] { "Id", "Class_", "Label", "Values", "Select", "Props", "Links", "Remarks", "Constraints", "Guidance", "Guidelines", });
+    internal_static_oscal_catalog_v1_Guideline_descriptor =
       getDescriptor().getMessageType(4);
+    internal_static_oscal_catalog_v1_Guideline_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_oscal_catalog_v1_Guideline_descriptor,
+        new java.lang.String[] { "Prose", });
+    internal_static_oscal_catalog_v1_Select_descriptor =
+      getDescriptor().getMessageType(5);
     internal_static_oscal_catalog_v1_Select_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_catalog_v1_Select_descriptor,
         new java.lang.String[] { "Choices", "HowMany", });
     internal_static_oscal_catalog_v1_Constraint_descriptor =
-      getDescriptor().getMessageType(5);
+      getDescriptor().getMessageType(6);
     internal_static_oscal_catalog_v1_Constraint_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_catalog_v1_Constraint_descriptor,
-        new java.lang.String[] { "Description", });
+        new java.lang.String[] { "Description", "Tests", });
+    internal_static_oscal_catalog_v1_Test_descriptor =
+      getDescriptor().getMessageType(7);
+    internal_static_oscal_catalog_v1_Test_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_oscal_catalog_v1_Test_descriptor,
+        new java.lang.String[] { "Expression", "Remarks", });
     internal_static_oscal_catalog_v1_Part_descriptor =
-      getDescriptor().getMessageType(6);
+      getDescriptor().getMessageType(8);
     internal_static_oscal_catalog_v1_Part_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_catalog_v1_Part_descriptor,

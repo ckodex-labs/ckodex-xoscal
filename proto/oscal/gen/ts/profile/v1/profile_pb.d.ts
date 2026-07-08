@@ -290,7 +290,10 @@ export declare type Modify = Message<"oscal.profile.v1.Modify"> & {
   setParameters: SetParameters[];
 
   /**
-   * @generated from field: repeated oscal.profile.v1.AlterControls alter_controls = 2;
+   * Deprecated: use alters instead. Kept for backward compatibility.
+   *
+   * @generated from field: repeated oscal.profile.v1.AlterControls alter_controls = 2 [deprecated = true];
+   * @deprecated
    */
   alterControls: AlterControls[];
 
@@ -313,6 +316,11 @@ export declare type Modify = Message<"oscal.profile.v1.Modify"> & {
    * @generated from field: repeated oscal.common.v1.MarkupMultiline remarks = 6;
    */
   remarks: MarkupMultiline[];
+
+  /**
+   * @generated from field: repeated oscal.profile.v1.Alter alters = 7;
+   */
+  alters: Alter[];
 };
 
 /**
@@ -485,7 +493,10 @@ export declare const RemoveSchema: GenMessage<Remove>;
  */
 export declare type Add = Message<"oscal.profile.v1.Add"> & {
   /**
-   * @generated from field: string item_name = 1;
+   * Deprecated: not in OSCAL schema. Kept for backward compatibility.
+   *
+   * @generated from field: string item_name = 1 [deprecated = true];
+   * @deprecated
    */
   itemName: string;
 
@@ -515,14 +526,14 @@ export declare type Add = Message<"oscal.profile.v1.Add"> & {
   params: Parameter[];
 
   /**
-   * @generated from field: repeated string with_ids = 7;
+   * @generated from field: string by_id = 7;
    */
-  withIds: string[];
+  byId: string;
 
   /**
-   * @generated from field: repeated string with_class = 8;
+   * @generated from field: string title = 8;
    */
-  withClass: string[];
+  title: string;
 };
 
 /**

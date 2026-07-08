@@ -89,6 +89,30 @@
       "title": "Base64",
       "type": "object"
     },
+    "oscal.common.v1.Citation.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Citation represents a bibliographic citation",
+      "properties": {
+        "links": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Link.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "props": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Property.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "text": {
+          "$ref": "#/$defs/oscal.common.v1.MarkupLine.jsonschema.json"
+        }
+      },
+      "title": "Citation",
+      "type": "object"
+    },
     "oscal.common.v1.DateTime.jsonschema.json": {
       "$schema": "https://json-schema.org/draft/2020-12/schema",
       "additionalProperties": false,
@@ -131,6 +155,22 @@
       "title": "Email Address",
       "type": "object"
     },
+    "oscal.common.v1.Hash.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Hash represents a cryptographic hash",
+      "properties": {
+        "algorithm": {
+          "default": "",
+          "type": "string"
+        },
+        "value": {
+          "$ref": "#/$defs/oscal.common.v1.Base64.jsonschema.json"
+        }
+      },
+      "title": "Hash",
+      "type": "object"
+    },
     "oscal.common.v1.Link.jsonschema.json": {
       "$schema": "https://json-schema.org/draft/2020-12/schema",
       "additionalProperties": false,
@@ -167,6 +207,75 @@
         }
       },
       "title": "Link",
+      "type": "object"
+    },
+    "oscal.common.v1.Location.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Location represents a physical or virtual location",
+      "patternProperties": {
+        "^(email_addresses)$": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.EmailAddress.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "^(telephone_numbers)$": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.TelephoneNumber.jsonschema.json"
+          },
+          "type": "array"
+        }
+      },
+      "properties": {
+        "address": {
+          "$ref": "#/$defs/oscal.common.v1.Address.jsonschema.json"
+        },
+        "emailAddresses": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.EmailAddress.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "links": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Link.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "props": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Property.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "remarks": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "telephoneNumbers": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.TelephoneNumber.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "title": {
+          "default": "",
+          "type": "string"
+        },
+        "urls": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.URI.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "uuid": {
+          "$ref": "#/$defs/oscal.common.v1.UUID.jsonschema.json"
+        }
+      },
+      "title": "Location",
       "type": "object"
     },
     "oscal.common.v1.MarkupLine.jsonschema.json": {
@@ -230,6 +339,12 @@
           },
           "type": "array"
         },
+        "locations": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Location.jsonschema.json"
+          },
+          "type": "array"
+        },
         "oscalVersion": {
           "default": "",
           "type": "string"
@@ -287,6 +402,18 @@
           },
           "type": "array"
         },
+        "^(external_ids)$": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.PartyExternalId.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "^(location_uuids)$": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.UUID.jsonschema.json"
+          },
+          "type": "array"
+        },
         "^(responsible_parties)$": {
           "items": {
             "$ref": "#/$defs/oscal.common.v1.ResponsibleParty.jsonschema.json"
@@ -316,9 +443,21 @@
           },
           "type": "array"
         },
+        "externalIds": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.PartyExternalId.jsonschema.json"
+          },
+          "type": "array"
+        },
         "links": {
           "items": {
             "$ref": "#/$defs/oscal.common.v1.Link.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "locationUuids": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.UUID.jsonschema.json"
           },
           "type": "array"
         },
@@ -367,6 +506,22 @@
       "title": "Party",
       "type": "object"
     },
+    "oscal.common.v1.PartyExternalId.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "PartyExternalId represents an external identifier for a party",
+      "properties": {
+        "id": {
+          "default": "",
+          "type": "string"
+        },
+        "scheme": {
+          "$ref": "#/$defs/oscal.common.v1.URI.jsonschema.json"
+        }
+      },
+      "title": "Party External Id",
+      "type": "object"
+    },
     "oscal.common.v1.Property.jsonschema.json": {
       "$schema": "https://json-schema.org/draft/2020-12/schema",
       "additionalProperties": false,
@@ -397,6 +552,9 @@
       "additionalProperties": false,
       "description": "Resource represents an external resource",
       "patternProperties": {
+        "^(citation_obj)$": {
+          "$ref": "#/$defs/oscal.common.v1.Citation.jsonschema.json"
+        },
         "^(document_ids)$": {
           "items": {
             "$ref": "#/$defs/oscal.common.v1.DocumentId.jsonschema.json"
@@ -413,7 +571,11 @@
         },
         "citation": {
           "default": "",
+          "description": "Deprecated: use citation_obj instead. Kept for backward compatibility.",
           "type": "string"
+        },
+        "citationObj": {
+          "$ref": "#/$defs/oscal.common.v1.Citation.jsonschema.json"
         },
         "description": {
           "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.jsonschema.json"
@@ -442,11 +604,15 @@
           },
           "type": "array"
         },
-        "title": {
+        "rlinks": {
           "items": {
-            "type": "string"
+            "$ref": "#/$defs/oscal.common.v1.Rlink.jsonschema.json"
           },
           "type": "array"
+        },
+        "title": {
+          "default": "",
+          "type": "string"
         },
         "uuid": {
           "$ref": "#/$defs/oscal.common.v1.UUID.jsonschema.json"
@@ -497,6 +663,34 @@
         }
       },
       "title": "Responsible Party",
+      "type": "object"
+    },
+    "oscal.common.v1.Rlink.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Rlink represents a resource link",
+      "patternProperties": {
+        "^(media_type)$": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "properties": {
+        "hashes": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Hash.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "href": {
+          "$ref": "#/$defs/oscal.common.v1.URI.jsonschema.json"
+        },
+        "mediaType": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Rlink",
       "type": "object"
     },
     "oscal.common.v1.Role.jsonschema.json": {
@@ -812,6 +1006,59 @@
       "title": "Mitigating Factor",
       "type": "object"
     },
+    "oscal.poam.v1.Origin.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Origin represents the origin of a POAM item",
+      "properties": {
+        "actors": {
+          "items": {
+            "$ref": "#/$defs/oscal.poam.v1.OriginActor.jsonschema.json"
+          },
+          "type": "array"
+        }
+      },
+      "title": "Origin",
+      "type": "object"
+    },
+    "oscal.poam.v1.OriginActor.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "OriginActor represents an originating actor",
+      "patternProperties": {
+        "^(actor_uuid)$": {
+          "$ref": "#/$defs/oscal.common.v1.UUID.jsonschema.json"
+        }
+      },
+      "properties": {
+        "actorUuid": {
+          "$ref": "#/$defs/oscal.common.v1.UUID.jsonschema.json"
+        },
+        "links": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Link.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "props": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Property.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "remarks": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "title": {
+          "$ref": "#/$defs/oscal.common.v1.MarkupLine.jsonschema.json"
+        }
+      },
+      "title": "Origin Actor",
+      "type": "object"
+    },
     "oscal.poam.v1.PlanOfActionAndMilestones.jsonschema.json": {
       "$schema": "https://json-schema.org/draft/2020-12/schema",
       "additionalProperties": false,
@@ -825,6 +1072,13 @@
         },
         "^(local_definitions)$": {
           "$ref": "#/$defs/oscal.poam.v1.LocalDefinitions.jsonschema.json"
+        },
+        "^(poam_items)$": {
+          "description": "poam_items is the OSCAL schema-required top-level array of POAM items.",
+          "items": {
+            "$ref": "#/$defs/oscal.poam.v1.PoamItem.jsonschema.json"
+          },
+          "type": "array"
         }
       },
       "properties": {
@@ -840,7 +1094,15 @@
         "metadata": {
           "$ref": "#/$defs/oscal.common.v1.Metadata.jsonschema.json"
         },
+        "poamItems": {
+          "description": "poam_items is the OSCAL schema-required top-level array of POAM items.",
+          "items": {
+            "$ref": "#/$defs/oscal.poam.v1.PoamItem.jsonschema.json"
+          },
+          "type": "array"
+        },
         "risks": {
+          "description": "Deprecated: use poam_items instead. Kept for backward compatibility.",
           "items": {
             "$ref": "#/$defs/oscal.poam.v1.Risk.jsonschema.json"
           },
@@ -851,6 +1113,103 @@
         }
       },
       "title": "Plan Of Action And Milestones",
+      "type": "object"
+    },
+    "oscal.poam.v1.PoamItem.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "PoamItem represents a POAM item as defined by the OSCAL 1.1.2 schema.\n Unlike Risk, poam-item is a simpler container with title, description,\n and references to findings/observations/risks.",
+      "patternProperties": {
+        "^(related_findings)$": {
+          "items": {
+            "$ref": "#/$defs/oscal.poam.v1.RelatedFinding.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "^(related_observations)$": {
+          "items": {
+            "$ref": "#/$defs/oscal.poam.v1.RelatedObservation.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "^(related_risks)$": {
+          "items": {
+            "$ref": "#/$defs/oscal.poam.v1.RelatedRisk.jsonschema.json"
+          },
+          "type": "array"
+        }
+      },
+      "properties": {
+        "description": {
+          "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.jsonschema.json"
+        },
+        "links": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Link.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "origins": {
+          "items": {
+            "$ref": "#/$defs/oscal.poam.v1.Origin.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "props": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Property.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "relatedFindings": {
+          "items": {
+            "$ref": "#/$defs/oscal.poam.v1.RelatedFinding.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "relatedObservations": {
+          "items": {
+            "$ref": "#/$defs/oscal.poam.v1.RelatedObservation.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "relatedRisks": {
+          "items": {
+            "$ref": "#/$defs/oscal.poam.v1.RelatedRisk.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "remarks": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "title": {
+          "$ref": "#/$defs/oscal.common.v1.MarkupLine.jsonschema.json"
+        },
+        "uuid": {
+          "$ref": "#/$defs/oscal.common.v1.UUID.jsonschema.json"
+        }
+      },
+      "title": "Poam Item",
+      "type": "object"
+    },
+    "oscal.poam.v1.RelatedFinding.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "RelatedFinding represents a related finding",
+      "patternProperties": {
+        "^(finding_uuid)$": {
+          "$ref": "#/$defs/oscal.common.v1.UUID.jsonschema.json"
+        }
+      },
+      "properties": {
+        "findingUuid": {
+          "$ref": "#/$defs/oscal.common.v1.UUID.jsonschema.json"
+        }
+      },
+      "title": "Related Finding",
       "type": "object"
     },
     "oscal.poam.v1.RelatedObservation.jsonschema.json": {
@@ -921,6 +1280,23 @@
         }
       },
       "title": "Related Response",
+      "type": "object"
+    },
+    "oscal.poam.v1.RelatedRisk.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "RelatedRisk represents a related risk",
+      "patternProperties": {
+        "^(risk_uuid)$": {
+          "$ref": "#/$defs/oscal.common.v1.UUID.jsonschema.json"
+        }
+      },
+      "properties": {
+        "riskUuid": {
+          "$ref": "#/$defs/oscal.common.v1.UUID.jsonschema.json"
+        }
+      },
+      "title": "Related Risk",
       "type": "object"
     },
     "oscal.poam.v1.RelatedTask.jsonschema.json": {

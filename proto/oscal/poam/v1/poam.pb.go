@@ -29,10 +29,15 @@ type PlanOfActionAndMilestones struct {
 	Metadata         *v1.Metadata           `protobuf:"bytes,2,opt,name=metadata,proto3" json:"metadata,omitempty"`
 	ImportSsp        *ImportSsp             `protobuf:"bytes,3,opt,name=import_ssp,json=importSsp,proto3" json:"import_ssp,omitempty"`
 	LocalDefinitions *LocalDefinitions      `protobuf:"bytes,4,opt,name=local_definitions,json=localDefinitions,proto3" json:"local_definitions,omitempty"`
-	Risks            []*Risk                `protobuf:"bytes,5,rep,name=risks,proto3" json:"risks,omitempty"`
-	BackMatter       *v1.BackMatter         `protobuf:"bytes,6,opt,name=back_matter,json=backMatter,proto3" json:"back_matter,omitempty"`
-	unknownFields    protoimpl.UnknownFields
-	sizeCache        protoimpl.SizeCache
+	// Deprecated: use poam_items instead. Kept for backward compatibility.
+	//
+	// Deprecated: Marked as deprecated in poam/v1/poam.proto.
+	Risks      []*Risk        `protobuf:"bytes,5,rep,name=risks,proto3" json:"risks,omitempty"`
+	BackMatter *v1.BackMatter `protobuf:"bytes,6,opt,name=back_matter,json=backMatter,proto3" json:"back_matter,omitempty"`
+	// poam_items is the OSCAL schema-required top-level array of POAM items.
+	PoamItems     []*PoamItem `protobuf:"bytes,7,rep,name=poam_items,json=poamItems,proto3" json:"poam_items,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
 }
 
 func (x *PlanOfActionAndMilestones) Reset() {
@@ -93,6 +98,7 @@ func (x *PlanOfActionAndMilestones) GetLocalDefinitions() *LocalDefinitions {
 	return nil
 }
 
+// Deprecated: Marked as deprecated in poam/v1/poam.proto.
 func (x *PlanOfActionAndMilestones) GetRisks() []*Risk {
 	if x != nil {
 		return x.Risks
@@ -103,6 +109,13 @@ func (x *PlanOfActionAndMilestones) GetRisks() []*Risk {
 func (x *PlanOfActionAndMilestones) GetBackMatter() *v1.BackMatter {
 	if x != nil {
 		return x.BackMatter
+	}
+	return nil
+}
+
+func (x *PlanOfActionAndMilestones) GetPoamItems() []*PoamItem {
+	if x != nil {
+		return x.PoamItems
 	}
 	return nil
 }
@@ -484,6 +497,337 @@ func (x *User) GetRemarks() []*v1.MarkupMultiline {
 	return nil
 }
 
+// PoamItem represents a POAM item as defined by the OSCAL 1.1.2 schema.
+// Unlike Risk, poam-item is a simpler container with title, description,
+// and references to findings/observations/risks.
+type PoamItem struct {
+	state               protoimpl.MessageState `protogen:"open.v1"`
+	Uuid                *v1.UUID               `protobuf:"bytes,1,opt,name=uuid,proto3" json:"uuid,omitempty"`
+	Title               *v1.MarkupLine         `protobuf:"bytes,2,opt,name=title,proto3" json:"title,omitempty"`
+	Description         *v1.MarkupMultiline    `protobuf:"bytes,3,opt,name=description,proto3" json:"description,omitempty"`
+	Props               []*v1.Property         `protobuf:"bytes,4,rep,name=props,proto3" json:"props,omitempty"`
+	Links               []*v1.Link             `protobuf:"bytes,5,rep,name=links,proto3" json:"links,omitempty"`
+	Origins             []*Origin              `protobuf:"bytes,6,rep,name=origins,proto3" json:"origins,omitempty"`
+	RelatedFindings     []*RelatedFinding      `protobuf:"bytes,7,rep,name=related_findings,json=relatedFindings,proto3" json:"related_findings,omitempty"`
+	RelatedObservations []*RelatedObservation  `protobuf:"bytes,8,rep,name=related_observations,json=relatedObservations,proto3" json:"related_observations,omitempty"`
+	RelatedRisks        []*RelatedRisk         `protobuf:"bytes,9,rep,name=related_risks,json=relatedRisks,proto3" json:"related_risks,omitempty"`
+	Remarks             []*v1.MarkupMultiline  `protobuf:"bytes,10,rep,name=remarks,proto3" json:"remarks,omitempty"`
+	unknownFields       protoimpl.UnknownFields
+	sizeCache           protoimpl.SizeCache
+}
+
+func (x *PoamItem) Reset() {
+	*x = PoamItem{}
+	mi := &file_poam_v1_poam_proto_msgTypes[6]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *PoamItem) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*PoamItem) ProtoMessage() {}
+
+func (x *PoamItem) ProtoReflect() protoreflect.Message {
+	mi := &file_poam_v1_poam_proto_msgTypes[6]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use PoamItem.ProtoReflect.Descriptor instead.
+func (*PoamItem) Descriptor() ([]byte, []int) {
+	return file_poam_v1_poam_proto_rawDescGZIP(), []int{6}
+}
+
+func (x *PoamItem) GetUuid() *v1.UUID {
+	if x != nil {
+		return x.Uuid
+	}
+	return nil
+}
+
+func (x *PoamItem) GetTitle() *v1.MarkupLine {
+	if x != nil {
+		return x.Title
+	}
+	return nil
+}
+
+func (x *PoamItem) GetDescription() *v1.MarkupMultiline {
+	if x != nil {
+		return x.Description
+	}
+	return nil
+}
+
+func (x *PoamItem) GetProps() []*v1.Property {
+	if x != nil {
+		return x.Props
+	}
+	return nil
+}
+
+func (x *PoamItem) GetLinks() []*v1.Link {
+	if x != nil {
+		return x.Links
+	}
+	return nil
+}
+
+func (x *PoamItem) GetOrigins() []*Origin {
+	if x != nil {
+		return x.Origins
+	}
+	return nil
+}
+
+func (x *PoamItem) GetRelatedFindings() []*RelatedFinding {
+	if x != nil {
+		return x.RelatedFindings
+	}
+	return nil
+}
+
+func (x *PoamItem) GetRelatedObservations() []*RelatedObservation {
+	if x != nil {
+		return x.RelatedObservations
+	}
+	return nil
+}
+
+func (x *PoamItem) GetRelatedRisks() []*RelatedRisk {
+	if x != nil {
+		return x.RelatedRisks
+	}
+	return nil
+}
+
+func (x *PoamItem) GetRemarks() []*v1.MarkupMultiline {
+	if x != nil {
+		return x.Remarks
+	}
+	return nil
+}
+
+// Origin represents the origin of a POAM item
+type Origin struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	Actors        []*OriginActor         `protobuf:"bytes,1,rep,name=actors,proto3" json:"actors,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *Origin) Reset() {
+	*x = Origin{}
+	mi := &file_poam_v1_poam_proto_msgTypes[7]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *Origin) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*Origin) ProtoMessage() {}
+
+func (x *Origin) ProtoReflect() protoreflect.Message {
+	mi := &file_poam_v1_poam_proto_msgTypes[7]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use Origin.ProtoReflect.Descriptor instead.
+func (*Origin) Descriptor() ([]byte, []int) {
+	return file_poam_v1_poam_proto_rawDescGZIP(), []int{7}
+}
+
+func (x *Origin) GetActors() []*OriginActor {
+	if x != nil {
+		return x.Actors
+	}
+	return nil
+}
+
+// OriginActor represents an originating actor
+type OriginActor struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	ActorUuid     *v1.UUID               `protobuf:"bytes,1,opt,name=actor_uuid,json=actorUuid,proto3" json:"actor_uuid,omitempty"`
+	Title         *v1.MarkupLine         `protobuf:"bytes,2,opt,name=title,proto3" json:"title,omitempty"`
+	Props         []*v1.Property         `protobuf:"bytes,3,rep,name=props,proto3" json:"props,omitempty"`
+	Links         []*v1.Link             `protobuf:"bytes,4,rep,name=links,proto3" json:"links,omitempty"`
+	Remarks       []*v1.MarkupMultiline  `protobuf:"bytes,5,rep,name=remarks,proto3" json:"remarks,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *OriginActor) Reset() {
+	*x = OriginActor{}
+	mi := &file_poam_v1_poam_proto_msgTypes[8]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *OriginActor) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*OriginActor) ProtoMessage() {}
+
+func (x *OriginActor) ProtoReflect() protoreflect.Message {
+	mi := &file_poam_v1_poam_proto_msgTypes[8]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use OriginActor.ProtoReflect.Descriptor instead.
+func (*OriginActor) Descriptor() ([]byte, []int) {
+	return file_poam_v1_poam_proto_rawDescGZIP(), []int{8}
+}
+
+func (x *OriginActor) GetActorUuid() *v1.UUID {
+	if x != nil {
+		return x.ActorUuid
+	}
+	return nil
+}
+
+func (x *OriginActor) GetTitle() *v1.MarkupLine {
+	if x != nil {
+		return x.Title
+	}
+	return nil
+}
+
+func (x *OriginActor) GetProps() []*v1.Property {
+	if x != nil {
+		return x.Props
+	}
+	return nil
+}
+
+func (x *OriginActor) GetLinks() []*v1.Link {
+	if x != nil {
+		return x.Links
+	}
+	return nil
+}
+
+func (x *OriginActor) GetRemarks() []*v1.MarkupMultiline {
+	if x != nil {
+		return x.Remarks
+	}
+	return nil
+}
+
+// RelatedFinding represents a related finding
+type RelatedFinding struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	FindingUuid   *v1.UUID               `protobuf:"bytes,1,opt,name=finding_uuid,json=findingUuid,proto3" json:"finding_uuid,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *RelatedFinding) Reset() {
+	*x = RelatedFinding{}
+	mi := &file_poam_v1_poam_proto_msgTypes[9]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *RelatedFinding) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*RelatedFinding) ProtoMessage() {}
+
+func (x *RelatedFinding) ProtoReflect() protoreflect.Message {
+	mi := &file_poam_v1_poam_proto_msgTypes[9]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use RelatedFinding.ProtoReflect.Descriptor instead.
+func (*RelatedFinding) Descriptor() ([]byte, []int) {
+	return file_poam_v1_poam_proto_rawDescGZIP(), []int{9}
+}
+
+func (x *RelatedFinding) GetFindingUuid() *v1.UUID {
+	if x != nil {
+		return x.FindingUuid
+	}
+	return nil
+}
+
+// RelatedRisk represents a related risk
+type RelatedRisk struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	RiskUuid      *v1.UUID               `protobuf:"bytes,1,opt,name=risk_uuid,json=riskUuid,proto3" json:"risk_uuid,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *RelatedRisk) Reset() {
+	*x = RelatedRisk{}
+	mi := &file_poam_v1_poam_proto_msgTypes[10]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *RelatedRisk) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*RelatedRisk) ProtoMessage() {}
+
+func (x *RelatedRisk) ProtoReflect() protoreflect.Message {
+	mi := &file_poam_v1_poam_proto_msgTypes[10]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use RelatedRisk.ProtoReflect.Descriptor instead.
+func (*RelatedRisk) Descriptor() ([]byte, []int) {
+	return file_poam_v1_poam_proto_rawDescGZIP(), []int{10}
+}
+
+func (x *RelatedRisk) GetRiskUuid() *v1.UUID {
+	if x != nil {
+		return x.RiskUuid
+	}
+	return nil
+}
+
 // Risk represents a risk
 type Risk struct {
 	state               protoimpl.MessageState `protogen:"open.v1"`
@@ -506,7 +850,7 @@ type Risk struct {
 
 func (x *Risk) Reset() {
 	*x = Risk{}
-	mi := &file_poam_v1_poam_proto_msgTypes[6]
+	mi := &file_poam_v1_poam_proto_msgTypes[11]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -518,7 +862,7 @@ func (x *Risk) String() string {
 func (*Risk) ProtoMessage() {}
 
 func (x *Risk) ProtoReflect() protoreflect.Message {
-	mi := &file_poam_v1_poam_proto_msgTypes[6]
+	mi := &file_poam_v1_poam_proto_msgTypes[11]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -531,7 +875,7 @@ func (x *Risk) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Risk.ProtoReflect.Descriptor instead.
 func (*Risk) Descriptor() ([]byte, []int) {
-	return file_poam_v1_poam_proto_rawDescGZIP(), []int{6}
+	return file_poam_v1_poam_proto_rawDescGZIP(), []int{11}
 }
 
 func (x *Risk) GetUuid() *v1.UUID {
@@ -636,7 +980,7 @@ type RiskStatus struct {
 
 func (x *RiskStatus) Reset() {
 	*x = RiskStatus{}
-	mi := &file_poam_v1_poam_proto_msgTypes[7]
+	mi := &file_poam_v1_poam_proto_msgTypes[12]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -648,7 +992,7 @@ func (x *RiskStatus) String() string {
 func (*RiskStatus) ProtoMessage() {}
 
 func (x *RiskStatus) ProtoReflect() protoreflect.Message {
-	mi := &file_poam_v1_poam_proto_msgTypes[7]
+	mi := &file_poam_v1_poam_proto_msgTypes[12]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -661,7 +1005,7 @@ func (x *RiskStatus) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use RiskStatus.ProtoReflect.Descriptor instead.
 func (*RiskStatus) Descriptor() ([]byte, []int) {
-	return file_poam_v1_poam_proto_rawDescGZIP(), []int{7}
+	return file_poam_v1_poam_proto_rawDescGZIP(), []int{12}
 }
 
 func (x *RiskStatus) GetState() string {
@@ -693,7 +1037,7 @@ type MitigatingFactor struct {
 
 func (x *MitigatingFactor) Reset() {
 	*x = MitigatingFactor{}
-	mi := &file_poam_v1_poam_proto_msgTypes[8]
+	mi := &file_poam_v1_poam_proto_msgTypes[13]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -705,7 +1049,7 @@ func (x *MitigatingFactor) String() string {
 func (*MitigatingFactor) ProtoMessage() {}
 
 func (x *MitigatingFactor) ProtoReflect() protoreflect.Message {
-	mi := &file_poam_v1_poam_proto_msgTypes[8]
+	mi := &file_poam_v1_poam_proto_msgTypes[13]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -718,7 +1062,7 @@ func (x *MitigatingFactor) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use MitigatingFactor.ProtoReflect.Descriptor instead.
 func (*MitigatingFactor) Descriptor() ([]byte, []int) {
-	return file_poam_v1_poam_proto_rawDescGZIP(), []int{8}
+	return file_poam_v1_poam_proto_rawDescGZIP(), []int{13}
 }
 
 func (x *MitigatingFactor) GetUuid() *v1.UUID {
@@ -777,7 +1121,7 @@ type SubjectReference struct {
 
 func (x *SubjectReference) Reset() {
 	*x = SubjectReference{}
-	mi := &file_poam_v1_poam_proto_msgTypes[9]
+	mi := &file_poam_v1_poam_proto_msgTypes[14]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -789,7 +1133,7 @@ func (x *SubjectReference) String() string {
 func (*SubjectReference) ProtoMessage() {}
 
 func (x *SubjectReference) ProtoReflect() protoreflect.Message {
-	mi := &file_poam_v1_poam_proto_msgTypes[9]
+	mi := &file_poam_v1_poam_proto_msgTypes[14]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -802,7 +1146,7 @@ func (x *SubjectReference) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SubjectReference.ProtoReflect.Descriptor instead.
 func (*SubjectReference) Descriptor() ([]byte, []int) {
-	return file_poam_v1_poam_proto_rawDescGZIP(), []int{9}
+	return file_poam_v1_poam_proto_rawDescGZIP(), []int{14}
 }
 
 func (x *SubjectReference) GetSubjectUuid() *v1.UUID {
@@ -860,7 +1204,7 @@ type Response struct {
 
 func (x *Response) Reset() {
 	*x = Response{}
-	mi := &file_poam_v1_poam_proto_msgTypes[10]
+	mi := &file_poam_v1_poam_proto_msgTypes[15]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -872,7 +1216,7 @@ func (x *Response) String() string {
 func (*Response) ProtoMessage() {}
 
 func (x *Response) ProtoReflect() protoreflect.Message {
-	mi := &file_poam_v1_poam_proto_msgTypes[10]
+	mi := &file_poam_v1_poam_proto_msgTypes[15]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -885,7 +1229,7 @@ func (x *Response) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Response.ProtoReflect.Descriptor instead.
 func (*Response) Descriptor() ([]byte, []int) {
-	return file_poam_v1_poam_proto_rawDescGZIP(), []int{10}
+	return file_poam_v1_poam_proto_rawDescGZIP(), []int{15}
 }
 
 func (x *Response) GetUuid() *v1.UUID {
@@ -976,7 +1320,7 @@ type ResponseStatus struct {
 
 func (x *ResponseStatus) Reset() {
 	*x = ResponseStatus{}
-	mi := &file_poam_v1_poam_proto_msgTypes[11]
+	mi := &file_poam_v1_poam_proto_msgTypes[16]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -988,7 +1332,7 @@ func (x *ResponseStatus) String() string {
 func (*ResponseStatus) ProtoMessage() {}
 
 func (x *ResponseStatus) ProtoReflect() protoreflect.Message {
-	mi := &file_poam_v1_poam_proto_msgTypes[11]
+	mi := &file_poam_v1_poam_proto_msgTypes[16]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1001,7 +1345,7 @@ func (x *ResponseStatus) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ResponseStatus.ProtoReflect.Descriptor instead.
 func (*ResponseStatus) Descriptor() ([]byte, []int) {
-	return file_poam_v1_poam_proto_rawDescGZIP(), []int{11}
+	return file_poam_v1_poam_proto_rawDescGZIP(), []int{16}
 }
 
 func (x *ResponseStatus) GetState() string {
@@ -1031,7 +1375,7 @@ type ResponsibleRole struct {
 
 func (x *ResponsibleRole) Reset() {
 	*x = ResponsibleRole{}
-	mi := &file_poam_v1_poam_proto_msgTypes[12]
+	mi := &file_poam_v1_poam_proto_msgTypes[17]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1043,7 +1387,7 @@ func (x *ResponsibleRole) String() string {
 func (*ResponsibleRole) ProtoMessage() {}
 
 func (x *ResponsibleRole) ProtoReflect() protoreflect.Message {
-	mi := &file_poam_v1_poam_proto_msgTypes[12]
+	mi := &file_poam_v1_poam_proto_msgTypes[17]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1056,7 +1400,7 @@ func (x *ResponsibleRole) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ResponsibleRole.ProtoReflect.Descriptor instead.
 func (*ResponsibleRole) Descriptor() ([]byte, []int) {
-	return file_poam_v1_poam_proto_rawDescGZIP(), []int{12}
+	return file_poam_v1_poam_proto_rawDescGZIP(), []int{17}
 }
 
 func (x *ResponsibleRole) GetRoleId() *v1.Token {
@@ -1101,7 +1445,7 @@ type RelatedTask struct {
 
 func (x *RelatedTask) Reset() {
 	*x = RelatedTask{}
-	mi := &file_poam_v1_poam_proto_msgTypes[13]
+	mi := &file_poam_v1_poam_proto_msgTypes[18]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1113,7 +1457,7 @@ func (x *RelatedTask) String() string {
 func (*RelatedTask) ProtoMessage() {}
 
 func (x *RelatedTask) ProtoReflect() protoreflect.Message {
-	mi := &file_poam_v1_poam_proto_msgTypes[13]
+	mi := &file_poam_v1_poam_proto_msgTypes[18]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1126,7 +1470,7 @@ func (x *RelatedTask) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use RelatedTask.ProtoReflect.Descriptor instead.
 func (*RelatedTask) Descriptor() ([]byte, []int) {
-	return file_poam_v1_poam_proto_rawDescGZIP(), []int{13}
+	return file_poam_v1_poam_proto_rawDescGZIP(), []int{18}
 }
 
 func (x *RelatedTask) GetTaskUuid() *v1.UUID {
@@ -1174,7 +1518,7 @@ type RiskLog struct {
 
 func (x *RiskLog) Reset() {
 	*x = RiskLog{}
-	mi := &file_poam_v1_poam_proto_msgTypes[14]
+	mi := &file_poam_v1_poam_proto_msgTypes[19]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1186,7 +1530,7 @@ func (x *RiskLog) String() string {
 func (*RiskLog) ProtoMessage() {}
 
 func (x *RiskLog) ProtoReflect() protoreflect.Message {
-	mi := &file_poam_v1_poam_proto_msgTypes[14]
+	mi := &file_poam_v1_poam_proto_msgTypes[19]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1199,7 +1543,7 @@ func (x *RiskLog) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use RiskLog.ProtoReflect.Descriptor instead.
 func (*RiskLog) Descriptor() ([]byte, []int) {
-	return file_poam_v1_poam_proto_rawDescGZIP(), []int{14}
+	return file_poam_v1_poam_proto_rawDescGZIP(), []int{19}
 }
 
 func (x *RiskLog) GetEntries() []*RiskLogEntry {
@@ -1229,7 +1573,7 @@ type RiskLogEntry struct {
 
 func (x *RiskLogEntry) Reset() {
 	*x = RiskLogEntry{}
-	mi := &file_poam_v1_poam_proto_msgTypes[15]
+	mi := &file_poam_v1_poam_proto_msgTypes[20]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1241,7 +1585,7 @@ func (x *RiskLogEntry) String() string {
 func (*RiskLogEntry) ProtoMessage() {}
 
 func (x *RiskLogEntry) ProtoReflect() protoreflect.Message {
-	mi := &file_poam_v1_poam_proto_msgTypes[15]
+	mi := &file_poam_v1_poam_proto_msgTypes[20]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1254,7 +1598,7 @@ func (x *RiskLogEntry) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use RiskLogEntry.ProtoReflect.Descriptor instead.
 func (*RiskLogEntry) Descriptor() ([]byte, []int) {
-	return file_poam_v1_poam_proto_rawDescGZIP(), []int{15}
+	return file_poam_v1_poam_proto_rawDescGZIP(), []int{20}
 }
 
 func (x *RiskLogEntry) GetUuid() *v1.UUID {
@@ -1348,7 +1692,7 @@ type LoggedBy struct {
 
 func (x *LoggedBy) Reset() {
 	*x = LoggedBy{}
-	mi := &file_poam_v1_poam_proto_msgTypes[16]
+	mi := &file_poam_v1_poam_proto_msgTypes[21]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1360,7 +1704,7 @@ func (x *LoggedBy) String() string {
 func (*LoggedBy) ProtoMessage() {}
 
 func (x *LoggedBy) ProtoReflect() protoreflect.Message {
-	mi := &file_poam_v1_poam_proto_msgTypes[16]
+	mi := &file_poam_v1_poam_proto_msgTypes[21]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1373,7 +1717,7 @@ func (x *LoggedBy) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use LoggedBy.ProtoReflect.Descriptor instead.
 func (*LoggedBy) Descriptor() ([]byte, []int) {
-	return file_poam_v1_poam_proto_rawDescGZIP(), []int{16}
+	return file_poam_v1_poam_proto_rawDescGZIP(), []int{21}
 }
 
 func (x *LoggedBy) GetPartyUuid() *v1.UUID {
@@ -1425,7 +1769,7 @@ type RelatedResponse struct {
 
 func (x *RelatedResponse) Reset() {
 	*x = RelatedResponse{}
-	mi := &file_poam_v1_poam_proto_msgTypes[17]
+	mi := &file_poam_v1_poam_proto_msgTypes[22]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1437,7 +1781,7 @@ func (x *RelatedResponse) String() string {
 func (*RelatedResponse) ProtoMessage() {}
 
 func (x *RelatedResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_poam_v1_poam_proto_msgTypes[17]
+	mi := &file_poam_v1_poam_proto_msgTypes[22]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1450,7 +1794,7 @@ func (x *RelatedResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use RelatedResponse.ProtoReflect.Descriptor instead.
 func (*RelatedResponse) Descriptor() ([]byte, []int) {
-	return file_poam_v1_poam_proto_rawDescGZIP(), []int{17}
+	return file_poam_v1_poam_proto_rawDescGZIP(), []int{22}
 }
 
 func (x *RelatedResponse) GetResponseUuid() *v1.UUID {
@@ -1499,7 +1843,7 @@ type RelatedObservation struct {
 
 func (x *RelatedObservation) Reset() {
 	*x = RelatedObservation{}
-	mi := &file_poam_v1_poam_proto_msgTypes[18]
+	mi := &file_poam_v1_poam_proto_msgTypes[23]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1511,7 +1855,7 @@ func (x *RelatedObservation) String() string {
 func (*RelatedObservation) ProtoMessage() {}
 
 func (x *RelatedObservation) ProtoReflect() protoreflect.Message {
-	mi := &file_poam_v1_poam_proto_msgTypes[18]
+	mi := &file_poam_v1_poam_proto_msgTypes[23]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1524,7 +1868,7 @@ func (x *RelatedObservation) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use RelatedObservation.ProtoReflect.Descriptor instead.
 func (*RelatedObservation) Descriptor() ([]byte, []int) {
-	return file_poam_v1_poam_proto_rawDescGZIP(), []int{18}
+	return file_poam_v1_poam_proto_rawDescGZIP(), []int{23}
 }
 
 func (x *RelatedObservation) GetObservationUuid() *v1.UUID {
@@ -1545,16 +1889,18 @@ var File_poam_v1_poam_proto protoreflect.FileDescriptor
 
 const file_poam_v1_poam_proto_rawDesc = "" +
 	"\n" +
-	"\x12poam/v1/poam.proto\x12\roscal.poam.v1\x1a\x16common/v1/common.proto\"\xed\x02\n" +
+	"\x12poam/v1/poam.proto\x12\roscal.poam.v1\x1a\x16common/v1/common.proto\"\xa9\x03\n" +
 	"\x19PlanOfActionAndMilestones\x12)\n" +
 	"\x04uuid\x18\x01 \x01(\v2\x15.oscal.common.v1.UUIDR\x04uuid\x125\n" +
 	"\bmetadata\x18\x02 \x01(\v2\x19.oscal.common.v1.MetadataR\bmetadata\x127\n" +
 	"\n" +
 	"import_ssp\x18\x03 \x01(\v2\x18.oscal.poam.v1.ImportSspR\timportSsp\x12L\n" +
-	"\x11local_definitions\x18\x04 \x01(\v2\x1f.oscal.poam.v1.LocalDefinitionsR\x10localDefinitions\x12)\n" +
-	"\x05risks\x18\x05 \x03(\v2\x13.oscal.poam.v1.RiskR\x05risks\x12<\n" +
+	"\x11local_definitions\x18\x04 \x01(\v2\x1f.oscal.poam.v1.LocalDefinitionsR\x10localDefinitions\x12-\n" +
+	"\x05risks\x18\x05 \x03(\v2\x13.oscal.poam.v1.RiskB\x02\x18\x01R\x05risks\x12<\n" +
 	"\vback_matter\x18\x06 \x01(\v2\x1b.oscal.common.v1.BackMatterR\n" +
-	"backMatter\"z\n" +
+	"backMatter\x126\n" +
+	"\n" +
+	"poam_items\x18\a \x03(\v2\x17.oscal.poam.v1.PoamItemR\tpoamItems\"z\n" +
 	"\tImportSsp\x121\n" +
 	"\x04href\x18\x01 \x01(\v2\x1d.oscal.common.v1.URIReferenceR\x04href\x12:\n" +
 	"\aremarks\x18\x02 \x03(\v2 .oscal.common.v1.MarkupMultilineR\aremarks\"\xbe\x01\n" +
@@ -1586,7 +1932,32 @@ const file_poam_v1_poam_proto_rawDesc = "" +
 	"\vdescription\x18\x04 \x01(\v2 .oscal.common.v1.MarkupMultilineR\vdescription\x12/\n" +
 	"\x05props\x18\x05 \x03(\v2\x19.oscal.common.v1.PropertyR\x05props\x12+\n" +
 	"\x05links\x18\x06 \x03(\v2\x15.oscal.common.v1.LinkR\x05links\x12:\n" +
-	"\aremarks\x18\a \x03(\v2 .oscal.common.v1.MarkupMultilineR\aremarks\"\x82\x06\n" +
+	"\aremarks\x18\a \x03(\v2 .oscal.common.v1.MarkupMultilineR\aremarks\"\xd8\x04\n" +
+	"\bPoamItem\x12)\n" +
+	"\x04uuid\x18\x01 \x01(\v2\x15.oscal.common.v1.UUIDR\x04uuid\x121\n" +
+	"\x05title\x18\x02 \x01(\v2\x1b.oscal.common.v1.MarkupLineR\x05title\x12B\n" +
+	"\vdescription\x18\x03 \x01(\v2 .oscal.common.v1.MarkupMultilineR\vdescription\x12/\n" +
+	"\x05props\x18\x04 \x03(\v2\x19.oscal.common.v1.PropertyR\x05props\x12+\n" +
+	"\x05links\x18\x05 \x03(\v2\x15.oscal.common.v1.LinkR\x05links\x12/\n" +
+	"\aorigins\x18\x06 \x03(\v2\x15.oscal.poam.v1.OriginR\aorigins\x12H\n" +
+	"\x10related_findings\x18\a \x03(\v2\x1d.oscal.poam.v1.RelatedFindingR\x0frelatedFindings\x12T\n" +
+	"\x14related_observations\x18\b \x03(\v2!.oscal.poam.v1.RelatedObservationR\x13relatedObservations\x12?\n" +
+	"\rrelated_risks\x18\t \x03(\v2\x1a.oscal.poam.v1.RelatedRiskR\frelatedRisks\x12:\n" +
+	"\aremarks\x18\n" +
+	" \x03(\v2 .oscal.common.v1.MarkupMultilineR\aremarks\"<\n" +
+	"\x06Origin\x122\n" +
+	"\x06actors\x18\x01 \x03(\v2\x1a.oscal.poam.v1.OriginActorR\x06actors\"\x90\x02\n" +
+	"\vOriginActor\x124\n" +
+	"\n" +
+	"actor_uuid\x18\x01 \x01(\v2\x15.oscal.common.v1.UUIDR\tactorUuid\x121\n" +
+	"\x05title\x18\x02 \x01(\v2\x1b.oscal.common.v1.MarkupLineR\x05title\x12/\n" +
+	"\x05props\x18\x03 \x03(\v2\x19.oscal.common.v1.PropertyR\x05props\x12+\n" +
+	"\x05links\x18\x04 \x03(\v2\x15.oscal.common.v1.LinkR\x05links\x12:\n" +
+	"\aremarks\x18\x05 \x03(\v2 .oscal.common.v1.MarkupMultilineR\aremarks\"J\n" +
+	"\x0eRelatedFinding\x128\n" +
+	"\ffinding_uuid\x18\x01 \x01(\v2\x15.oscal.common.v1.UUIDR\vfindingUuid\"A\n" +
+	"\vRelatedRisk\x122\n" +
+	"\trisk_uuid\x18\x01 \x01(\v2\x15.oscal.common.v1.UUIDR\briskUuid\"\x82\x06\n" +
 	"\x04Risk\x12)\n" +
 	"\x04uuid\x18\x01 \x01(\v2\x15.oscal.common.v1.UUIDR\x04uuid\x121\n" +
 	"\x05title\x18\x02 \x01(\v2\x1b.oscal.common.v1.MarkupLineR\x05title\x12B\n" +
@@ -1691,7 +2062,7 @@ func file_poam_v1_poam_proto_rawDescGZIP() []byte {
 	return file_poam_v1_poam_proto_rawDescData
 }
 
-var file_poam_v1_poam_proto_msgTypes = make([]protoimpl.MessageInfo, 19)
+var file_poam_v1_poam_proto_msgTypes = make([]protoimpl.MessageInfo, 24)
 var file_poam_v1_poam_proto_goTypes = []any{
 	(*PlanOfActionAndMilestones)(nil), // 0: oscal.poam.v1.PlanOfActionAndMilestones
 	(*ImportSsp)(nil),                 // 1: oscal.poam.v1.ImportSsp
@@ -1699,131 +2070,155 @@ var file_poam_v1_poam_proto_goTypes = []any{
 	(*Component)(nil),                 // 3: oscal.poam.v1.Component
 	(*InventoryItem)(nil),             // 4: oscal.poam.v1.InventoryItem
 	(*User)(nil),                      // 5: oscal.poam.v1.User
-	(*Risk)(nil),                      // 6: oscal.poam.v1.Risk
-	(*RiskStatus)(nil),                // 7: oscal.poam.v1.RiskStatus
-	(*MitigatingFactor)(nil),          // 8: oscal.poam.v1.MitigatingFactor
-	(*SubjectReference)(nil),          // 9: oscal.poam.v1.SubjectReference
-	(*Response)(nil),                  // 10: oscal.poam.v1.Response
-	(*ResponseStatus)(nil),            // 11: oscal.poam.v1.ResponseStatus
-	(*ResponsibleRole)(nil),           // 12: oscal.poam.v1.ResponsibleRole
-	(*RelatedTask)(nil),               // 13: oscal.poam.v1.RelatedTask
-	(*RiskLog)(nil),                   // 14: oscal.poam.v1.RiskLog
-	(*RiskLogEntry)(nil),              // 15: oscal.poam.v1.RiskLogEntry
-	(*LoggedBy)(nil),                  // 16: oscal.poam.v1.LoggedBy
-	(*RelatedResponse)(nil),           // 17: oscal.poam.v1.RelatedResponse
-	(*RelatedObservation)(nil),        // 18: oscal.poam.v1.RelatedObservation
-	(*v1.UUID)(nil),                   // 19: oscal.common.v1.UUID
-	(*v1.Metadata)(nil),               // 20: oscal.common.v1.Metadata
-	(*v1.BackMatter)(nil),             // 21: oscal.common.v1.BackMatter
-	(*v1.URIReference)(nil),           // 22: oscal.common.v1.URIReference
-	(*v1.MarkupMultiline)(nil),        // 23: oscal.common.v1.MarkupMultiline
-	(*v1.Property)(nil),               // 24: oscal.common.v1.Property
-	(*v1.Link)(nil),                   // 25: oscal.common.v1.Link
-	(*v1.MarkupLine)(nil),             // 26: oscal.common.v1.MarkupLine
-	(*v1.DateTime)(nil),               // 27: oscal.common.v1.DateTime
-	(*v1.Token)(nil),                  // 28: oscal.common.v1.Token
+	(*PoamItem)(nil),                  // 6: oscal.poam.v1.PoamItem
+	(*Origin)(nil),                    // 7: oscal.poam.v1.Origin
+	(*OriginActor)(nil),               // 8: oscal.poam.v1.OriginActor
+	(*RelatedFinding)(nil),            // 9: oscal.poam.v1.RelatedFinding
+	(*RelatedRisk)(nil),               // 10: oscal.poam.v1.RelatedRisk
+	(*Risk)(nil),                      // 11: oscal.poam.v1.Risk
+	(*RiskStatus)(nil),                // 12: oscal.poam.v1.RiskStatus
+	(*MitigatingFactor)(nil),          // 13: oscal.poam.v1.MitigatingFactor
+	(*SubjectReference)(nil),          // 14: oscal.poam.v1.SubjectReference
+	(*Response)(nil),                  // 15: oscal.poam.v1.Response
+	(*ResponseStatus)(nil),            // 16: oscal.poam.v1.ResponseStatus
+	(*ResponsibleRole)(nil),           // 17: oscal.poam.v1.ResponsibleRole
+	(*RelatedTask)(nil),               // 18: oscal.poam.v1.RelatedTask
+	(*RiskLog)(nil),                   // 19: oscal.poam.v1.RiskLog
+	(*RiskLogEntry)(nil),              // 20: oscal.poam.v1.RiskLogEntry
+	(*LoggedBy)(nil),                  // 21: oscal.poam.v1.LoggedBy
+	(*RelatedResponse)(nil),           // 22: oscal.poam.v1.RelatedResponse
+	(*RelatedObservation)(nil),        // 23: oscal.poam.v1.RelatedObservation
+	(*v1.UUID)(nil),                   // 24: oscal.common.v1.UUID
+	(*v1.Metadata)(nil),               // 25: oscal.common.v1.Metadata
+	(*v1.BackMatter)(nil),             // 26: oscal.common.v1.BackMatter
+	(*v1.URIReference)(nil),           // 27: oscal.common.v1.URIReference
+	(*v1.MarkupMultiline)(nil),        // 28: oscal.common.v1.MarkupMultiline
+	(*v1.Property)(nil),               // 29: oscal.common.v1.Property
+	(*v1.Link)(nil),                   // 30: oscal.common.v1.Link
+	(*v1.MarkupLine)(nil),             // 31: oscal.common.v1.MarkupLine
+	(*v1.DateTime)(nil),               // 32: oscal.common.v1.DateTime
+	(*v1.Token)(nil),                  // 33: oscal.common.v1.Token
 }
 var file_poam_v1_poam_proto_depIdxs = []int32{
-	19, // 0: oscal.poam.v1.PlanOfActionAndMilestones.uuid:type_name -> oscal.common.v1.UUID
-	20, // 1: oscal.poam.v1.PlanOfActionAndMilestones.metadata:type_name -> oscal.common.v1.Metadata
-	1,  // 2: oscal.poam.v1.PlanOfActionAndMilestones.import_ssp:type_name -> oscal.poam.v1.ImportSsp
-	2,  // 3: oscal.poam.v1.PlanOfActionAndMilestones.local_definitions:type_name -> oscal.poam.v1.LocalDefinitions
-	6,  // 4: oscal.poam.v1.PlanOfActionAndMilestones.risks:type_name -> oscal.poam.v1.Risk
-	21, // 5: oscal.poam.v1.PlanOfActionAndMilestones.back_matter:type_name -> oscal.common.v1.BackMatter
-	22, // 6: oscal.poam.v1.ImportSsp.href:type_name -> oscal.common.v1.URIReference
-	23, // 7: oscal.poam.v1.ImportSsp.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	3,  // 8: oscal.poam.v1.LocalDefinitions.components:type_name -> oscal.poam.v1.Component
-	4,  // 9: oscal.poam.v1.LocalDefinitions.inventory_items:type_name -> oscal.poam.v1.InventoryItem
-	5,  // 10: oscal.poam.v1.LocalDefinitions.users:type_name -> oscal.poam.v1.User
-	19, // 11: oscal.poam.v1.Component.uuid:type_name -> oscal.common.v1.UUID
-	24, // 12: oscal.poam.v1.Component.props:type_name -> oscal.common.v1.Property
-	25, // 13: oscal.poam.v1.Component.links:type_name -> oscal.common.v1.Link
-	23, // 14: oscal.poam.v1.Component.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	19, // 15: oscal.poam.v1.InventoryItem.uuid:type_name -> oscal.common.v1.UUID
-	26, // 16: oscal.poam.v1.InventoryItem.description:type_name -> oscal.common.v1.MarkupLine
-	24, // 17: oscal.poam.v1.InventoryItem.props:type_name -> oscal.common.v1.Property
-	25, // 18: oscal.poam.v1.InventoryItem.links:type_name -> oscal.common.v1.Link
-	23, // 19: oscal.poam.v1.InventoryItem.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	19, // 20: oscal.poam.v1.User.uuid:type_name -> oscal.common.v1.UUID
-	23, // 21: oscal.poam.v1.User.description:type_name -> oscal.common.v1.MarkupMultiline
-	24, // 22: oscal.poam.v1.User.props:type_name -> oscal.common.v1.Property
-	25, // 23: oscal.poam.v1.User.links:type_name -> oscal.common.v1.Link
-	23, // 24: oscal.poam.v1.User.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	19, // 25: oscal.poam.v1.Risk.uuid:type_name -> oscal.common.v1.UUID
-	26, // 26: oscal.poam.v1.Risk.title:type_name -> oscal.common.v1.MarkupLine
-	23, // 27: oscal.poam.v1.Risk.description:type_name -> oscal.common.v1.MarkupMultiline
-	23, // 28: oscal.poam.v1.Risk.statement:type_name -> oscal.common.v1.MarkupMultiline
-	7,  // 29: oscal.poam.v1.Risk.status:type_name -> oscal.poam.v1.RiskStatus
-	8,  // 30: oscal.poam.v1.Risk.mitigating_factors:type_name -> oscal.poam.v1.MitigatingFactor
-	27, // 31: oscal.poam.v1.Risk.deadline:type_name -> oscal.common.v1.DateTime
-	10, // 32: oscal.poam.v1.Risk.remediations:type_name -> oscal.poam.v1.Response
-	14, // 33: oscal.poam.v1.Risk.risk_log:type_name -> oscal.poam.v1.RiskLog
-	18, // 34: oscal.poam.v1.Risk.related_observations:type_name -> oscal.poam.v1.RelatedObservation
-	24, // 35: oscal.poam.v1.Risk.props:type_name -> oscal.common.v1.Property
-	25, // 36: oscal.poam.v1.Risk.links:type_name -> oscal.common.v1.Link
-	23, // 37: oscal.poam.v1.Risk.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	23, // 38: oscal.poam.v1.RiskStatus.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	19, // 39: oscal.poam.v1.MitigatingFactor.uuid:type_name -> oscal.common.v1.UUID
-	19, // 40: oscal.poam.v1.MitigatingFactor.implementation_uuid:type_name -> oscal.common.v1.UUID
-	23, // 41: oscal.poam.v1.MitigatingFactor.description:type_name -> oscal.common.v1.MarkupMultiline
-	24, // 42: oscal.poam.v1.MitigatingFactor.props:type_name -> oscal.common.v1.Property
-	25, // 43: oscal.poam.v1.MitigatingFactor.links:type_name -> oscal.common.v1.Link
-	9,  // 44: oscal.poam.v1.MitigatingFactor.subjects:type_name -> oscal.poam.v1.SubjectReference
-	19, // 45: oscal.poam.v1.SubjectReference.subject_uuid:type_name -> oscal.common.v1.UUID
-	26, // 46: oscal.poam.v1.SubjectReference.title:type_name -> oscal.common.v1.MarkupLine
-	24, // 47: oscal.poam.v1.SubjectReference.props:type_name -> oscal.common.v1.Property
-	25, // 48: oscal.poam.v1.SubjectReference.links:type_name -> oscal.common.v1.Link
-	23, // 49: oscal.poam.v1.SubjectReference.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	19, // 50: oscal.poam.v1.Response.uuid:type_name -> oscal.common.v1.UUID
-	26, // 51: oscal.poam.v1.Response.title:type_name -> oscal.common.v1.MarkupLine
-	23, // 52: oscal.poam.v1.Response.description:type_name -> oscal.common.v1.MarkupMultiline
-	27, // 53: oscal.poam.v1.Response.deadline:type_name -> oscal.common.v1.DateTime
-	11, // 54: oscal.poam.v1.Response.status:type_name -> oscal.poam.v1.ResponseStatus
-	12, // 55: oscal.poam.v1.Response.responsible_roles:type_name -> oscal.poam.v1.ResponsibleRole
-	13, // 56: oscal.poam.v1.Response.related_tasks:type_name -> oscal.poam.v1.RelatedTask
-	9,  // 57: oscal.poam.v1.Response.subjects:type_name -> oscal.poam.v1.SubjectReference
-	24, // 58: oscal.poam.v1.Response.props:type_name -> oscal.common.v1.Property
-	25, // 59: oscal.poam.v1.Response.links:type_name -> oscal.common.v1.Link
-	23, // 60: oscal.poam.v1.Response.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	23, // 61: oscal.poam.v1.ResponseStatus.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	28, // 62: oscal.poam.v1.ResponsibleRole.role_id:type_name -> oscal.common.v1.Token
-	19, // 63: oscal.poam.v1.ResponsibleRole.party_uuids:type_name -> oscal.common.v1.UUID
-	24, // 64: oscal.poam.v1.ResponsibleRole.props:type_name -> oscal.common.v1.Property
-	23, // 65: oscal.poam.v1.ResponsibleRole.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	19, // 66: oscal.poam.v1.RelatedTask.task_uuid:type_name -> oscal.common.v1.UUID
-	26, // 67: oscal.poam.v1.RelatedTask.title:type_name -> oscal.common.v1.MarkupLine
-	24, // 68: oscal.poam.v1.RelatedTask.props:type_name -> oscal.common.v1.Property
-	25, // 69: oscal.poam.v1.RelatedTask.links:type_name -> oscal.common.v1.Link
-	23, // 70: oscal.poam.v1.RelatedTask.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	15, // 71: oscal.poam.v1.RiskLog.entries:type_name -> oscal.poam.v1.RiskLogEntry
-	19, // 72: oscal.poam.v1.RiskLogEntry.uuid:type_name -> oscal.common.v1.UUID
-	26, // 73: oscal.poam.v1.RiskLogEntry.title:type_name -> oscal.common.v1.MarkupLine
-	23, // 74: oscal.poam.v1.RiskLogEntry.description:type_name -> oscal.common.v1.MarkupMultiline
-	27, // 75: oscal.poam.v1.RiskLogEntry.start:type_name -> oscal.common.v1.DateTime
-	27, // 76: oscal.poam.v1.RiskLogEntry.end:type_name -> oscal.common.v1.DateTime
-	24, // 77: oscal.poam.v1.RiskLogEntry.props:type_name -> oscal.common.v1.Property
-	25, // 78: oscal.poam.v1.RiskLogEntry.links:type_name -> oscal.common.v1.Link
-	16, // 79: oscal.poam.v1.RiskLogEntry.logged_by:type_name -> oscal.poam.v1.LoggedBy
-	7,  // 80: oscal.poam.v1.RiskLogEntry.status_change:type_name -> oscal.poam.v1.RiskStatus
-	17, // 81: oscal.poam.v1.RiskLogEntry.related_responses:type_name -> oscal.poam.v1.RelatedResponse
-	23, // 82: oscal.poam.v1.RiskLogEntry.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	19, // 83: oscal.poam.v1.LoggedBy.party_uuid:type_name -> oscal.common.v1.UUID
-	26, // 84: oscal.poam.v1.LoggedBy.title:type_name -> oscal.common.v1.MarkupLine
-	24, // 85: oscal.poam.v1.LoggedBy.props:type_name -> oscal.common.v1.Property
-	25, // 86: oscal.poam.v1.LoggedBy.links:type_name -> oscal.common.v1.Link
-	23, // 87: oscal.poam.v1.LoggedBy.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	19, // 88: oscal.poam.v1.RelatedResponse.response_uuid:type_name -> oscal.common.v1.UUID
-	24, // 89: oscal.poam.v1.RelatedResponse.props:type_name -> oscal.common.v1.Property
-	25, // 90: oscal.poam.v1.RelatedResponse.links:type_name -> oscal.common.v1.Link
-	13, // 91: oscal.poam.v1.RelatedResponse.related_tasks:type_name -> oscal.poam.v1.RelatedTask
-	23, // 92: oscal.poam.v1.RelatedResponse.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	19, // 93: oscal.poam.v1.RelatedObservation.observation_uuid:type_name -> oscal.common.v1.UUID
-	23, // 94: oscal.poam.v1.RelatedObservation.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	95, // [95:95] is the sub-list for method output_type
-	95, // [95:95] is the sub-list for method input_type
-	95, // [95:95] is the sub-list for extension type_name
-	95, // [95:95] is the sub-list for extension extendee
-	0,  // [0:95] is the sub-list for field type_name
+	24,  // 0: oscal.poam.v1.PlanOfActionAndMilestones.uuid:type_name -> oscal.common.v1.UUID
+	25,  // 1: oscal.poam.v1.PlanOfActionAndMilestones.metadata:type_name -> oscal.common.v1.Metadata
+	1,   // 2: oscal.poam.v1.PlanOfActionAndMilestones.import_ssp:type_name -> oscal.poam.v1.ImportSsp
+	2,   // 3: oscal.poam.v1.PlanOfActionAndMilestones.local_definitions:type_name -> oscal.poam.v1.LocalDefinitions
+	11,  // 4: oscal.poam.v1.PlanOfActionAndMilestones.risks:type_name -> oscal.poam.v1.Risk
+	26,  // 5: oscal.poam.v1.PlanOfActionAndMilestones.back_matter:type_name -> oscal.common.v1.BackMatter
+	6,   // 6: oscal.poam.v1.PlanOfActionAndMilestones.poam_items:type_name -> oscal.poam.v1.PoamItem
+	27,  // 7: oscal.poam.v1.ImportSsp.href:type_name -> oscal.common.v1.URIReference
+	28,  // 8: oscal.poam.v1.ImportSsp.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	3,   // 9: oscal.poam.v1.LocalDefinitions.components:type_name -> oscal.poam.v1.Component
+	4,   // 10: oscal.poam.v1.LocalDefinitions.inventory_items:type_name -> oscal.poam.v1.InventoryItem
+	5,   // 11: oscal.poam.v1.LocalDefinitions.users:type_name -> oscal.poam.v1.User
+	24,  // 12: oscal.poam.v1.Component.uuid:type_name -> oscal.common.v1.UUID
+	29,  // 13: oscal.poam.v1.Component.props:type_name -> oscal.common.v1.Property
+	30,  // 14: oscal.poam.v1.Component.links:type_name -> oscal.common.v1.Link
+	28,  // 15: oscal.poam.v1.Component.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	24,  // 16: oscal.poam.v1.InventoryItem.uuid:type_name -> oscal.common.v1.UUID
+	31,  // 17: oscal.poam.v1.InventoryItem.description:type_name -> oscal.common.v1.MarkupLine
+	29,  // 18: oscal.poam.v1.InventoryItem.props:type_name -> oscal.common.v1.Property
+	30,  // 19: oscal.poam.v1.InventoryItem.links:type_name -> oscal.common.v1.Link
+	28,  // 20: oscal.poam.v1.InventoryItem.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	24,  // 21: oscal.poam.v1.User.uuid:type_name -> oscal.common.v1.UUID
+	28,  // 22: oscal.poam.v1.User.description:type_name -> oscal.common.v1.MarkupMultiline
+	29,  // 23: oscal.poam.v1.User.props:type_name -> oscal.common.v1.Property
+	30,  // 24: oscal.poam.v1.User.links:type_name -> oscal.common.v1.Link
+	28,  // 25: oscal.poam.v1.User.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	24,  // 26: oscal.poam.v1.PoamItem.uuid:type_name -> oscal.common.v1.UUID
+	31,  // 27: oscal.poam.v1.PoamItem.title:type_name -> oscal.common.v1.MarkupLine
+	28,  // 28: oscal.poam.v1.PoamItem.description:type_name -> oscal.common.v1.MarkupMultiline
+	29,  // 29: oscal.poam.v1.PoamItem.props:type_name -> oscal.common.v1.Property
+	30,  // 30: oscal.poam.v1.PoamItem.links:type_name -> oscal.common.v1.Link
+	7,   // 31: oscal.poam.v1.PoamItem.origins:type_name -> oscal.poam.v1.Origin
+	9,   // 32: oscal.poam.v1.PoamItem.related_findings:type_name -> oscal.poam.v1.RelatedFinding
+	23,  // 33: oscal.poam.v1.PoamItem.related_observations:type_name -> oscal.poam.v1.RelatedObservation
+	10,  // 34: oscal.poam.v1.PoamItem.related_risks:type_name -> oscal.poam.v1.RelatedRisk
+	28,  // 35: oscal.poam.v1.PoamItem.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	8,   // 36: oscal.poam.v1.Origin.actors:type_name -> oscal.poam.v1.OriginActor
+	24,  // 37: oscal.poam.v1.OriginActor.actor_uuid:type_name -> oscal.common.v1.UUID
+	31,  // 38: oscal.poam.v1.OriginActor.title:type_name -> oscal.common.v1.MarkupLine
+	29,  // 39: oscal.poam.v1.OriginActor.props:type_name -> oscal.common.v1.Property
+	30,  // 40: oscal.poam.v1.OriginActor.links:type_name -> oscal.common.v1.Link
+	28,  // 41: oscal.poam.v1.OriginActor.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	24,  // 42: oscal.poam.v1.RelatedFinding.finding_uuid:type_name -> oscal.common.v1.UUID
+	24,  // 43: oscal.poam.v1.RelatedRisk.risk_uuid:type_name -> oscal.common.v1.UUID
+	24,  // 44: oscal.poam.v1.Risk.uuid:type_name -> oscal.common.v1.UUID
+	31,  // 45: oscal.poam.v1.Risk.title:type_name -> oscal.common.v1.MarkupLine
+	28,  // 46: oscal.poam.v1.Risk.description:type_name -> oscal.common.v1.MarkupMultiline
+	28,  // 47: oscal.poam.v1.Risk.statement:type_name -> oscal.common.v1.MarkupMultiline
+	12,  // 48: oscal.poam.v1.Risk.status:type_name -> oscal.poam.v1.RiskStatus
+	13,  // 49: oscal.poam.v1.Risk.mitigating_factors:type_name -> oscal.poam.v1.MitigatingFactor
+	32,  // 50: oscal.poam.v1.Risk.deadline:type_name -> oscal.common.v1.DateTime
+	15,  // 51: oscal.poam.v1.Risk.remediations:type_name -> oscal.poam.v1.Response
+	19,  // 52: oscal.poam.v1.Risk.risk_log:type_name -> oscal.poam.v1.RiskLog
+	23,  // 53: oscal.poam.v1.Risk.related_observations:type_name -> oscal.poam.v1.RelatedObservation
+	29,  // 54: oscal.poam.v1.Risk.props:type_name -> oscal.common.v1.Property
+	30,  // 55: oscal.poam.v1.Risk.links:type_name -> oscal.common.v1.Link
+	28,  // 56: oscal.poam.v1.Risk.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	28,  // 57: oscal.poam.v1.RiskStatus.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	24,  // 58: oscal.poam.v1.MitigatingFactor.uuid:type_name -> oscal.common.v1.UUID
+	24,  // 59: oscal.poam.v1.MitigatingFactor.implementation_uuid:type_name -> oscal.common.v1.UUID
+	28,  // 60: oscal.poam.v1.MitigatingFactor.description:type_name -> oscal.common.v1.MarkupMultiline
+	29,  // 61: oscal.poam.v1.MitigatingFactor.props:type_name -> oscal.common.v1.Property
+	30,  // 62: oscal.poam.v1.MitigatingFactor.links:type_name -> oscal.common.v1.Link
+	14,  // 63: oscal.poam.v1.MitigatingFactor.subjects:type_name -> oscal.poam.v1.SubjectReference
+	24,  // 64: oscal.poam.v1.SubjectReference.subject_uuid:type_name -> oscal.common.v1.UUID
+	31,  // 65: oscal.poam.v1.SubjectReference.title:type_name -> oscal.common.v1.MarkupLine
+	29,  // 66: oscal.poam.v1.SubjectReference.props:type_name -> oscal.common.v1.Property
+	30,  // 67: oscal.poam.v1.SubjectReference.links:type_name -> oscal.common.v1.Link
+	28,  // 68: oscal.poam.v1.SubjectReference.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	24,  // 69: oscal.poam.v1.Response.uuid:type_name -> oscal.common.v1.UUID
+	31,  // 70: oscal.poam.v1.Response.title:type_name -> oscal.common.v1.MarkupLine
+	28,  // 71: oscal.poam.v1.Response.description:type_name -> oscal.common.v1.MarkupMultiline
+	32,  // 72: oscal.poam.v1.Response.deadline:type_name -> oscal.common.v1.DateTime
+	16,  // 73: oscal.poam.v1.Response.status:type_name -> oscal.poam.v1.ResponseStatus
+	17,  // 74: oscal.poam.v1.Response.responsible_roles:type_name -> oscal.poam.v1.ResponsibleRole
+	18,  // 75: oscal.poam.v1.Response.related_tasks:type_name -> oscal.poam.v1.RelatedTask
+	14,  // 76: oscal.poam.v1.Response.subjects:type_name -> oscal.poam.v1.SubjectReference
+	29,  // 77: oscal.poam.v1.Response.props:type_name -> oscal.common.v1.Property
+	30,  // 78: oscal.poam.v1.Response.links:type_name -> oscal.common.v1.Link
+	28,  // 79: oscal.poam.v1.Response.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	28,  // 80: oscal.poam.v1.ResponseStatus.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	33,  // 81: oscal.poam.v1.ResponsibleRole.role_id:type_name -> oscal.common.v1.Token
+	24,  // 82: oscal.poam.v1.ResponsibleRole.party_uuids:type_name -> oscal.common.v1.UUID
+	29,  // 83: oscal.poam.v1.ResponsibleRole.props:type_name -> oscal.common.v1.Property
+	28,  // 84: oscal.poam.v1.ResponsibleRole.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	24,  // 85: oscal.poam.v1.RelatedTask.task_uuid:type_name -> oscal.common.v1.UUID
+	31,  // 86: oscal.poam.v1.RelatedTask.title:type_name -> oscal.common.v1.MarkupLine
+	29,  // 87: oscal.poam.v1.RelatedTask.props:type_name -> oscal.common.v1.Property
+	30,  // 88: oscal.poam.v1.RelatedTask.links:type_name -> oscal.common.v1.Link
+	28,  // 89: oscal.poam.v1.RelatedTask.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	20,  // 90: oscal.poam.v1.RiskLog.entries:type_name -> oscal.poam.v1.RiskLogEntry
+	24,  // 91: oscal.poam.v1.RiskLogEntry.uuid:type_name -> oscal.common.v1.UUID
+	31,  // 92: oscal.poam.v1.RiskLogEntry.title:type_name -> oscal.common.v1.MarkupLine
+	28,  // 93: oscal.poam.v1.RiskLogEntry.description:type_name -> oscal.common.v1.MarkupMultiline
+	32,  // 94: oscal.poam.v1.RiskLogEntry.start:type_name -> oscal.common.v1.DateTime
+	32,  // 95: oscal.poam.v1.RiskLogEntry.end:type_name -> oscal.common.v1.DateTime
+	29,  // 96: oscal.poam.v1.RiskLogEntry.props:type_name -> oscal.common.v1.Property
+	30,  // 97: oscal.poam.v1.RiskLogEntry.links:type_name -> oscal.common.v1.Link
+	21,  // 98: oscal.poam.v1.RiskLogEntry.logged_by:type_name -> oscal.poam.v1.LoggedBy
+	12,  // 99: oscal.poam.v1.RiskLogEntry.status_change:type_name -> oscal.poam.v1.RiskStatus
+	22,  // 100: oscal.poam.v1.RiskLogEntry.related_responses:type_name -> oscal.poam.v1.RelatedResponse
+	28,  // 101: oscal.poam.v1.RiskLogEntry.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	24,  // 102: oscal.poam.v1.LoggedBy.party_uuid:type_name -> oscal.common.v1.UUID
+	31,  // 103: oscal.poam.v1.LoggedBy.title:type_name -> oscal.common.v1.MarkupLine
+	29,  // 104: oscal.poam.v1.LoggedBy.props:type_name -> oscal.common.v1.Property
+	30,  // 105: oscal.poam.v1.LoggedBy.links:type_name -> oscal.common.v1.Link
+	28,  // 106: oscal.poam.v1.LoggedBy.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	24,  // 107: oscal.poam.v1.RelatedResponse.response_uuid:type_name -> oscal.common.v1.UUID
+	29,  // 108: oscal.poam.v1.RelatedResponse.props:type_name -> oscal.common.v1.Property
+	30,  // 109: oscal.poam.v1.RelatedResponse.links:type_name -> oscal.common.v1.Link
+	18,  // 110: oscal.poam.v1.RelatedResponse.related_tasks:type_name -> oscal.poam.v1.RelatedTask
+	28,  // 111: oscal.poam.v1.RelatedResponse.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	24,  // 112: oscal.poam.v1.RelatedObservation.observation_uuid:type_name -> oscal.common.v1.UUID
+	28,  // 113: oscal.poam.v1.RelatedObservation.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	114, // [114:114] is the sub-list for method output_type
+	114, // [114:114] is the sub-list for method input_type
+	114, // [114:114] is the sub-list for extension type_name
+	114, // [114:114] is the sub-list for extension extendee
+	0,   // [0:114] is the sub-list for field type_name
 }
 
 func init() { file_poam_v1_poam_proto_init() }
@@ -1837,7 +2232,7 @@ func file_poam_v1_poam_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_poam_v1_poam_proto_rawDesc), len(file_poam_v1_poam_proto_rawDesc)),
 			NumEnums:      0,
-			NumMessages:   19,
+			NumMessages:   24,
 			NumExtensions: 0,
 			NumServices:   0,
 		},

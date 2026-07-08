@@ -11,7 +11,11 @@
       "type": "array"
     },
     "citation": {
+      "description": "Deprecated: use citation_obj instead. Kept for backward compatibility.",
       "type": "string"
+    },
+    "citation_obj": {
+      "$ref": "oscal.common.v1.Citation.schema.strict.json"
     },
     "description": {
       "$ref": "oscal.common.v1.MarkupMultiline.schema.strict.json"
@@ -40,17 +44,21 @@
       },
       "type": "array"
     },
-    "title": {
+    "rlinks": {
       "items": {
-        "type": "string"
+        "$ref": "oscal.common.v1.Rlink.schema.strict.json"
       },
       "type": "array"
+    },
+    "title": {
+      "type": "string"
     },
     "uuid": {
       "$ref": "oscal.common.v1.UUID.schema.strict.json"
     }
   },
   "required": [
+    "title",
     "citation"
   ],
   "title": "Resource",

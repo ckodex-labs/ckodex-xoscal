@@ -162,37 +162,42 @@ export declare const DefinedComponentSchema: GenMessage<DefinedComponent>;
  */
 export declare type ControlImplementation = Message<"oscal.component_definition.v1.ControlImplementation"> & {
   /**
-   * @generated from field: string control_id = 1;
+   * @generated from field: oscal.common.v1.UUID uuid = 1;
    */
-  controlId: string;
+  uuid?: UUID | undefined;
 
   /**
-   * @generated from field: repeated oscal.common.v1.MarkupLine description = 2;
+   * @generated from field: oscal.common.v1.URIReference source = 2;
    */
-  description: MarkupLine[];
+  source?: URIReference | undefined;
 
   /**
-   * @generated from field: repeated oscal.component_definition.v1.SetParameter set_parameters = 3;
+   * @generated from field: string description = 3;
+   */
+  description: string;
+
+  /**
+   * @generated from field: repeated oscal.component_definition.v1.SetParameter set_parameters = 4;
    */
   setParameters: SetParameter[];
 
   /**
-   * @generated from field: repeated oscal.component_definition.v1.ImplementedRequirement implemented_requirements = 4;
+   * @generated from field: repeated oscal.component_definition.v1.ImplementedRequirement implemented_requirements = 5;
    */
   implementedRequirements: ImplementedRequirement[];
 
   /**
-   * @generated from field: repeated oscal.common.v1.Property props = 5;
+   * @generated from field: repeated oscal.common.v1.Property props = 6;
    */
   props: Property[];
 
   /**
-   * @generated from field: repeated oscal.common.v1.Link links = 6;
+   * @generated from field: repeated oscal.common.v1.Link links = 7;
    */
   links: Link[];
 
   /**
-   * @generated from field: repeated oscal.common.v1.MarkupMultiline remarks = 7;
+   * @generated from field: repeated oscal.common.v1.MarkupMultiline remarks = 8;
    */
   remarks: MarkupMultiline[];
 };
@@ -248,32 +253,37 @@ export declare const SetParameterSchema: GenMessage<SetParameter>;
  */
 export declare type ImplementedRequirement = Message<"oscal.component_definition.v1.ImplementedRequirement"> & {
   /**
-   * @generated from field: string control_id = 1;
+   * @generated from field: oscal.common.v1.UUID uuid = 1;
+   */
+  uuid?: UUID | undefined;
+
+  /**
+   * @generated from field: string control_id = 2;
    */
   controlId: string;
 
   /**
-   * @generated from field: repeated oscal.common.v1.MarkupLine description = 2;
+   * @generated from field: string description = 3;
    */
-  description: MarkupLine[];
+  description: string;
 
   /**
-   * @generated from field: repeated oscal.component_definition.v1.Statement statements = 3;
+   * @generated from field: repeated oscal.component_definition.v1.Statement statements = 4;
    */
   statements: Statement[];
 
   /**
-   * @generated from field: repeated oscal.common.v1.Property props = 4;
+   * @generated from field: repeated oscal.common.v1.Property props = 5;
    */
   props: Property[];
 
   /**
-   * @generated from field: repeated oscal.common.v1.Link links = 5;
+   * @generated from field: repeated oscal.common.v1.Link links = 6;
    */
   links: Link[];
 
   /**
-   * @generated from field: repeated oscal.common.v1.MarkupMultiline remarks = 6;
+   * @generated from field: repeated oscal.common.v1.MarkupMultiline remarks = 7;
    */
   remarks: MarkupMultiline[];
 };

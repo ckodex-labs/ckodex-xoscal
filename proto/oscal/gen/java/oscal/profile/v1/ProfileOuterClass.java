@@ -13208,27 +13208,47 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
         int index);
 
     /**
-     * <code>repeated .oscal.profile.v1.AlterControls alter_controls = 2 [json_name = "alterControls"];</code>
+     * <pre>
+     * Deprecated: use alters instead. Kept for backward compatibility.
+     * </pre>
+     *
+     * <code>repeated .oscal.profile.v1.AlterControls alter_controls = 2 [json_name = "alterControls", deprecated = true];</code>
      */
-    java.util.List<oscal.profile.v1.ProfileOuterClass.AlterControls> 
+    @java.lang.Deprecated java.util.List<oscal.profile.v1.ProfileOuterClass.AlterControls> 
         getAlterControlsList();
     /**
-     * <code>repeated .oscal.profile.v1.AlterControls alter_controls = 2 [json_name = "alterControls"];</code>
+     * <pre>
+     * Deprecated: use alters instead. Kept for backward compatibility.
+     * </pre>
+     *
+     * <code>repeated .oscal.profile.v1.AlterControls alter_controls = 2 [json_name = "alterControls", deprecated = true];</code>
      */
-    oscal.profile.v1.ProfileOuterClass.AlterControls getAlterControls(int index);
+    @java.lang.Deprecated oscal.profile.v1.ProfileOuterClass.AlterControls getAlterControls(int index);
     /**
-     * <code>repeated .oscal.profile.v1.AlterControls alter_controls = 2 [json_name = "alterControls"];</code>
+     * <pre>
+     * Deprecated: use alters instead. Kept for backward compatibility.
+     * </pre>
+     *
+     * <code>repeated .oscal.profile.v1.AlterControls alter_controls = 2 [json_name = "alterControls", deprecated = true];</code>
      */
-    int getAlterControlsCount();
+    @java.lang.Deprecated int getAlterControlsCount();
     /**
-     * <code>repeated .oscal.profile.v1.AlterControls alter_controls = 2 [json_name = "alterControls"];</code>
+     * <pre>
+     * Deprecated: use alters instead. Kept for backward compatibility.
+     * </pre>
+     *
+     * <code>repeated .oscal.profile.v1.AlterControls alter_controls = 2 [json_name = "alterControls", deprecated = true];</code>
      */
-    java.util.List<? extends oscal.profile.v1.ProfileOuterClass.AlterControlsOrBuilder> 
+    @java.lang.Deprecated java.util.List<? extends oscal.profile.v1.ProfileOuterClass.AlterControlsOrBuilder> 
         getAlterControlsOrBuilderList();
     /**
-     * <code>repeated .oscal.profile.v1.AlterControls alter_controls = 2 [json_name = "alterControls"];</code>
+     * <pre>
+     * Deprecated: use alters instead. Kept for backward compatibility.
+     * </pre>
+     *
+     * <code>repeated .oscal.profile.v1.AlterControls alter_controls = 2 [json_name = "alterControls", deprecated = true];</code>
      */
-    oscal.profile.v1.ProfileOuterClass.AlterControlsOrBuilder getAlterControlsOrBuilder(
+    @java.lang.Deprecated oscal.profile.v1.ProfileOuterClass.AlterControlsOrBuilder getAlterControlsOrBuilder(
         int index);
 
     /**
@@ -13326,6 +13346,30 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
      */
     oscal.common.v1.Common.MarkupMultilineOrBuilder getRemarksOrBuilder(
         int index);
+
+    /**
+     * <code>repeated .oscal.profile.v1.Alter alters = 7 [json_name = "alters"];</code>
+     */
+    java.util.List<oscal.profile.v1.ProfileOuterClass.Alter> 
+        getAltersList();
+    /**
+     * <code>repeated .oscal.profile.v1.Alter alters = 7 [json_name = "alters"];</code>
+     */
+    oscal.profile.v1.ProfileOuterClass.Alter getAlters(int index);
+    /**
+     * <code>repeated .oscal.profile.v1.Alter alters = 7 [json_name = "alters"];</code>
+     */
+    int getAltersCount();
+    /**
+     * <code>repeated .oscal.profile.v1.Alter alters = 7 [json_name = "alters"];</code>
+     */
+    java.util.List<? extends oscal.profile.v1.ProfileOuterClass.AlterOrBuilder> 
+        getAltersOrBuilderList();
+    /**
+     * <code>repeated .oscal.profile.v1.Alter alters = 7 [json_name = "alters"];</code>
+     */
+    oscal.profile.v1.ProfileOuterClass.AlterOrBuilder getAltersOrBuilder(
+        int index);
   }
   /**
    * <pre>
@@ -13359,6 +13403,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       props_ = java.util.Collections.emptyList();
       links_ = java.util.Collections.emptyList();
       remarks_ = java.util.Collections.emptyList();
+      alters_ = java.util.Collections.emptyList();
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
@@ -13424,39 +13469,59 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     @SuppressWarnings("serial")
     private java.util.List<oscal.profile.v1.ProfileOuterClass.AlterControls> alterControls_;
     /**
-     * <code>repeated .oscal.profile.v1.AlterControls alter_controls = 2 [json_name = "alterControls"];</code>
+     * <pre>
+     * Deprecated: use alters instead. Kept for backward compatibility.
+     * </pre>
+     *
+     * <code>repeated .oscal.profile.v1.AlterControls alter_controls = 2 [json_name = "alterControls", deprecated = true];</code>
      */
     @java.lang.Override
-    public java.util.List<oscal.profile.v1.ProfileOuterClass.AlterControls> getAlterControlsList() {
+    @java.lang.Deprecated public java.util.List<oscal.profile.v1.ProfileOuterClass.AlterControls> getAlterControlsList() {
       return alterControls_;
     }
     /**
-     * <code>repeated .oscal.profile.v1.AlterControls alter_controls = 2 [json_name = "alterControls"];</code>
+     * <pre>
+     * Deprecated: use alters instead. Kept for backward compatibility.
+     * </pre>
+     *
+     * <code>repeated .oscal.profile.v1.AlterControls alter_controls = 2 [json_name = "alterControls", deprecated = true];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.profile.v1.ProfileOuterClass.AlterControlsOrBuilder> 
+    @java.lang.Deprecated public java.util.List<? extends oscal.profile.v1.ProfileOuterClass.AlterControlsOrBuilder> 
         getAlterControlsOrBuilderList() {
       return alterControls_;
     }
     /**
-     * <code>repeated .oscal.profile.v1.AlterControls alter_controls = 2 [json_name = "alterControls"];</code>
+     * <pre>
+     * Deprecated: use alters instead. Kept for backward compatibility.
+     * </pre>
+     *
+     * <code>repeated .oscal.profile.v1.AlterControls alter_controls = 2 [json_name = "alterControls", deprecated = true];</code>
      */
     @java.lang.Override
-    public int getAlterControlsCount() {
+    @java.lang.Deprecated public int getAlterControlsCount() {
       return alterControls_.size();
     }
     /**
-     * <code>repeated .oscal.profile.v1.AlterControls alter_controls = 2 [json_name = "alterControls"];</code>
+     * <pre>
+     * Deprecated: use alters instead. Kept for backward compatibility.
+     * </pre>
+     *
+     * <code>repeated .oscal.profile.v1.AlterControls alter_controls = 2 [json_name = "alterControls", deprecated = true];</code>
      */
     @java.lang.Override
-    public oscal.profile.v1.ProfileOuterClass.AlterControls getAlterControls(int index) {
+    @java.lang.Deprecated public oscal.profile.v1.ProfileOuterClass.AlterControls getAlterControls(int index) {
       return alterControls_.get(index);
     }
     /**
-     * <code>repeated .oscal.profile.v1.AlterControls alter_controls = 2 [json_name = "alterControls"];</code>
+     * <pre>
+     * Deprecated: use alters instead. Kept for backward compatibility.
+     * </pre>
+     *
+     * <code>repeated .oscal.profile.v1.AlterControls alter_controls = 2 [json_name = "alterControls", deprecated = true];</code>
      */
     @java.lang.Override
-    public oscal.profile.v1.ProfileOuterClass.AlterControlsOrBuilder getAlterControlsOrBuilder(
+    @java.lang.Deprecated public oscal.profile.v1.ProfileOuterClass.AlterControlsOrBuilder getAlterControlsOrBuilder(
         int index) {
       return alterControls_.get(index);
     }
@@ -13625,6 +13690,47 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       return remarks_.get(index);
     }
 
+    public static final int ALTERS_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private java.util.List<oscal.profile.v1.ProfileOuterClass.Alter> alters_;
+    /**
+     * <code>repeated .oscal.profile.v1.Alter alters = 7 [json_name = "alters"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<oscal.profile.v1.ProfileOuterClass.Alter> getAltersList() {
+      return alters_;
+    }
+    /**
+     * <code>repeated .oscal.profile.v1.Alter alters = 7 [json_name = "alters"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends oscal.profile.v1.ProfileOuterClass.AlterOrBuilder> 
+        getAltersOrBuilderList() {
+      return alters_;
+    }
+    /**
+     * <code>repeated .oscal.profile.v1.Alter alters = 7 [json_name = "alters"];</code>
+     */
+    @java.lang.Override
+    public int getAltersCount() {
+      return alters_.size();
+    }
+    /**
+     * <code>repeated .oscal.profile.v1.Alter alters = 7 [json_name = "alters"];</code>
+     */
+    @java.lang.Override
+    public oscal.profile.v1.ProfileOuterClass.Alter getAlters(int index) {
+      return alters_.get(index);
+    }
+    /**
+     * <code>repeated .oscal.profile.v1.Alter alters = 7 [json_name = "alters"];</code>
+     */
+    @java.lang.Override
+    public oscal.profile.v1.ProfileOuterClass.AlterOrBuilder getAltersOrBuilder(
+        int index) {
+      return alters_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -13656,6 +13762,9 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       }
       for (int i = 0; i < remarks_.size(); i++) {
         output.writeMessage(6, remarks_.get(i));
+      }
+      for (int i = 0; i < alters_.size(); i++) {
+        output.writeMessage(7, alters_.get(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -13715,6 +13824,15 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
             }
             size += 1 * count;
           }
+
+          {
+            final int count = alters_.size();
+            for (int i = 0; i < count; i++) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeMessageSizeNoTag(alters_.get(i));
+            }
+            size += 1 * count;
+          }
       return size;
     }
     @java.lang.Override
@@ -13751,6 +13869,8 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
           .equals(other.getLinksList())) return false;
       if (!getRemarksList()
           .equals(other.getRemarksList())) return false;
+      if (!getAltersList()
+          .equals(other.getAltersList())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -13785,6 +13905,10 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       if (getRemarksCount() > 0) {
         hash = (37 * hash) + REMARKS_FIELD_NUMBER;
         hash = (53 * hash) + getRemarksList().hashCode();
+      }
+      if (getAltersCount() > 0) {
+        hash = (37 * hash) + ALTERS_FIELD_NUMBER;
+        hash = (53 * hash) + getAltersList().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -13963,6 +14087,13 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
           remarksBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000020);
+        if (altersBuilder_ == null) {
+          alters_ = java.util.Collections.emptyList();
+        } else {
+          alters_ = null;
+          altersBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000040);
         return this;
       }
 
@@ -14049,6 +14180,15 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
           result.remarks_ = remarks_;
         } else {
           result.remarks_ = remarksBuilder_.build();
+        }
+        if (altersBuilder_ == null) {
+          if (((bitField0_ & 0x00000040) != 0)) {
+            alters_ = java.util.Collections.unmodifiableList(alters_);
+            bitField0_ = (bitField0_ & ~0x00000040);
+          }
+          result.alters_ = alters_;
+        } else {
+          result.alters_ = altersBuilder_.build();
         }
       }
 
@@ -14224,6 +14364,32 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
             }
           }
         }
+        if (altersBuilder_ == null) {
+          if (!other.alters_.isEmpty()) {
+            if (alters_.isEmpty()) {
+              alters_ = other.alters_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+            } else {
+              ensureAltersIsMutable();
+              alters_.addAll(other.alters_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.alters_.isEmpty()) {
+            if (altersBuilder_.isEmpty()) {
+              altersBuilder_.dispose();
+              altersBuilder_ = null;
+              alters_ = other.alters_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+              altersBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   internalGetAltersFieldBuilder() : null;
+            } else {
+              altersBuilder_.addAllMessages(other.alters_);
+            }
+          }
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -14328,6 +14494,19 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
                 }
                 break;
               } // case 50
+              case 58: {
+                oscal.profile.v1.ProfileOuterClass.Alter m =
+                    input.readMessage(
+                        oscal.profile.v1.ProfileOuterClass.Alter.parser(),
+                        extensionRegistry);
+                if (altersBuilder_ == null) {
+                  ensureAltersIsMutable();
+                  alters_.add(m);
+                } else {
+                  altersBuilder_.addMessage(m);
+                }
+                break;
+              } // case 58
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -14598,9 +14777,13 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
           oscal.profile.v1.ProfileOuterClass.AlterControls, oscal.profile.v1.ProfileOuterClass.AlterControls.Builder, oscal.profile.v1.ProfileOuterClass.AlterControlsOrBuilder> alterControlsBuilder_;
 
       /**
-       * <code>repeated .oscal.profile.v1.AlterControls alter_controls = 2 [json_name = "alterControls"];</code>
+       * <pre>
+       * Deprecated: use alters instead. Kept for backward compatibility.
+       * </pre>
+       *
+       * <code>repeated .oscal.profile.v1.AlterControls alter_controls = 2 [json_name = "alterControls", deprecated = true];</code>
        */
-      public java.util.List<oscal.profile.v1.ProfileOuterClass.AlterControls> getAlterControlsList() {
+      @java.lang.Deprecated public java.util.List<oscal.profile.v1.ProfileOuterClass.AlterControls> getAlterControlsList() {
         if (alterControlsBuilder_ == null) {
           return java.util.Collections.unmodifiableList(alterControls_);
         } else {
@@ -14608,9 +14791,13 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.profile.v1.AlterControls alter_controls = 2 [json_name = "alterControls"];</code>
+       * <pre>
+       * Deprecated: use alters instead. Kept for backward compatibility.
+       * </pre>
+       *
+       * <code>repeated .oscal.profile.v1.AlterControls alter_controls = 2 [json_name = "alterControls", deprecated = true];</code>
        */
-      public int getAlterControlsCount() {
+      @java.lang.Deprecated public int getAlterControlsCount() {
         if (alterControlsBuilder_ == null) {
           return alterControls_.size();
         } else {
@@ -14618,9 +14805,13 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.profile.v1.AlterControls alter_controls = 2 [json_name = "alterControls"];</code>
+       * <pre>
+       * Deprecated: use alters instead. Kept for backward compatibility.
+       * </pre>
+       *
+       * <code>repeated .oscal.profile.v1.AlterControls alter_controls = 2 [json_name = "alterControls", deprecated = true];</code>
        */
-      public oscal.profile.v1.ProfileOuterClass.AlterControls getAlterControls(int index) {
+      @java.lang.Deprecated public oscal.profile.v1.ProfileOuterClass.AlterControls getAlterControls(int index) {
         if (alterControlsBuilder_ == null) {
           return alterControls_.get(index);
         } else {
@@ -14628,9 +14819,13 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.profile.v1.AlterControls alter_controls = 2 [json_name = "alterControls"];</code>
+       * <pre>
+       * Deprecated: use alters instead. Kept for backward compatibility.
+       * </pre>
+       *
+       * <code>repeated .oscal.profile.v1.AlterControls alter_controls = 2 [json_name = "alterControls", deprecated = true];</code>
        */
-      public Builder setAlterControls(
+      @java.lang.Deprecated public Builder setAlterControls(
           int index, oscal.profile.v1.ProfileOuterClass.AlterControls value) {
         if (alterControlsBuilder_ == null) {
           if (value == null) {
@@ -14645,9 +14840,13 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.profile.v1.AlterControls alter_controls = 2 [json_name = "alterControls"];</code>
+       * <pre>
+       * Deprecated: use alters instead. Kept for backward compatibility.
+       * </pre>
+       *
+       * <code>repeated .oscal.profile.v1.AlterControls alter_controls = 2 [json_name = "alterControls", deprecated = true];</code>
        */
-      public Builder setAlterControls(
+      @java.lang.Deprecated public Builder setAlterControls(
           int index, oscal.profile.v1.ProfileOuterClass.AlterControls.Builder builderForValue) {
         if (alterControlsBuilder_ == null) {
           ensureAlterControlsIsMutable();
@@ -14659,9 +14858,13 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.profile.v1.AlterControls alter_controls = 2 [json_name = "alterControls"];</code>
+       * <pre>
+       * Deprecated: use alters instead. Kept for backward compatibility.
+       * </pre>
+       *
+       * <code>repeated .oscal.profile.v1.AlterControls alter_controls = 2 [json_name = "alterControls", deprecated = true];</code>
        */
-      public Builder addAlterControls(oscal.profile.v1.ProfileOuterClass.AlterControls value) {
+      @java.lang.Deprecated public Builder addAlterControls(oscal.profile.v1.ProfileOuterClass.AlterControls value) {
         if (alterControlsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -14675,9 +14878,13 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.profile.v1.AlterControls alter_controls = 2 [json_name = "alterControls"];</code>
+       * <pre>
+       * Deprecated: use alters instead. Kept for backward compatibility.
+       * </pre>
+       *
+       * <code>repeated .oscal.profile.v1.AlterControls alter_controls = 2 [json_name = "alterControls", deprecated = true];</code>
        */
-      public Builder addAlterControls(
+      @java.lang.Deprecated public Builder addAlterControls(
           int index, oscal.profile.v1.ProfileOuterClass.AlterControls value) {
         if (alterControlsBuilder_ == null) {
           if (value == null) {
@@ -14692,9 +14899,13 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.profile.v1.AlterControls alter_controls = 2 [json_name = "alterControls"];</code>
+       * <pre>
+       * Deprecated: use alters instead. Kept for backward compatibility.
+       * </pre>
+       *
+       * <code>repeated .oscal.profile.v1.AlterControls alter_controls = 2 [json_name = "alterControls", deprecated = true];</code>
        */
-      public Builder addAlterControls(
+      @java.lang.Deprecated public Builder addAlterControls(
           oscal.profile.v1.ProfileOuterClass.AlterControls.Builder builderForValue) {
         if (alterControlsBuilder_ == null) {
           ensureAlterControlsIsMutable();
@@ -14706,9 +14917,13 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.profile.v1.AlterControls alter_controls = 2 [json_name = "alterControls"];</code>
+       * <pre>
+       * Deprecated: use alters instead. Kept for backward compatibility.
+       * </pre>
+       *
+       * <code>repeated .oscal.profile.v1.AlterControls alter_controls = 2 [json_name = "alterControls", deprecated = true];</code>
        */
-      public Builder addAlterControls(
+      @java.lang.Deprecated public Builder addAlterControls(
           int index, oscal.profile.v1.ProfileOuterClass.AlterControls.Builder builderForValue) {
         if (alterControlsBuilder_ == null) {
           ensureAlterControlsIsMutable();
@@ -14720,9 +14935,13 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.profile.v1.AlterControls alter_controls = 2 [json_name = "alterControls"];</code>
+       * <pre>
+       * Deprecated: use alters instead. Kept for backward compatibility.
+       * </pre>
+       *
+       * <code>repeated .oscal.profile.v1.AlterControls alter_controls = 2 [json_name = "alterControls", deprecated = true];</code>
        */
-      public Builder addAllAlterControls(
+      @java.lang.Deprecated public Builder addAllAlterControls(
           java.lang.Iterable<? extends oscal.profile.v1.ProfileOuterClass.AlterControls> values) {
         if (alterControlsBuilder_ == null) {
           ensureAlterControlsIsMutable();
@@ -14735,9 +14954,13 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.profile.v1.AlterControls alter_controls = 2 [json_name = "alterControls"];</code>
+       * <pre>
+       * Deprecated: use alters instead. Kept for backward compatibility.
+       * </pre>
+       *
+       * <code>repeated .oscal.profile.v1.AlterControls alter_controls = 2 [json_name = "alterControls", deprecated = true];</code>
        */
-      public Builder clearAlterControls() {
+      @java.lang.Deprecated public Builder clearAlterControls() {
         if (alterControlsBuilder_ == null) {
           alterControls_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000002);
@@ -14748,9 +14971,13 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.profile.v1.AlterControls alter_controls = 2 [json_name = "alterControls"];</code>
+       * <pre>
+       * Deprecated: use alters instead. Kept for backward compatibility.
+       * </pre>
+       *
+       * <code>repeated .oscal.profile.v1.AlterControls alter_controls = 2 [json_name = "alterControls", deprecated = true];</code>
        */
-      public Builder removeAlterControls(int index) {
+      @java.lang.Deprecated public Builder removeAlterControls(int index) {
         if (alterControlsBuilder_ == null) {
           ensureAlterControlsIsMutable();
           alterControls_.remove(index);
@@ -14761,16 +14988,24 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.profile.v1.AlterControls alter_controls = 2 [json_name = "alterControls"];</code>
+       * <pre>
+       * Deprecated: use alters instead. Kept for backward compatibility.
+       * </pre>
+       *
+       * <code>repeated .oscal.profile.v1.AlterControls alter_controls = 2 [json_name = "alterControls", deprecated = true];</code>
        */
-      public oscal.profile.v1.ProfileOuterClass.AlterControls.Builder getAlterControlsBuilder(
+      @java.lang.Deprecated public oscal.profile.v1.ProfileOuterClass.AlterControls.Builder getAlterControlsBuilder(
           int index) {
         return internalGetAlterControlsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .oscal.profile.v1.AlterControls alter_controls = 2 [json_name = "alterControls"];</code>
+       * <pre>
+       * Deprecated: use alters instead. Kept for backward compatibility.
+       * </pre>
+       *
+       * <code>repeated .oscal.profile.v1.AlterControls alter_controls = 2 [json_name = "alterControls", deprecated = true];</code>
        */
-      public oscal.profile.v1.ProfileOuterClass.AlterControlsOrBuilder getAlterControlsOrBuilder(
+      @java.lang.Deprecated public oscal.profile.v1.ProfileOuterClass.AlterControlsOrBuilder getAlterControlsOrBuilder(
           int index) {
         if (alterControlsBuilder_ == null) {
           return alterControls_.get(index);  } else {
@@ -14778,9 +15013,13 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.profile.v1.AlterControls alter_controls = 2 [json_name = "alterControls"];</code>
+       * <pre>
+       * Deprecated: use alters instead. Kept for backward compatibility.
+       * </pre>
+       *
+       * <code>repeated .oscal.profile.v1.AlterControls alter_controls = 2 [json_name = "alterControls", deprecated = true];</code>
        */
-      public java.util.List<? extends oscal.profile.v1.ProfileOuterClass.AlterControlsOrBuilder> 
+      @java.lang.Deprecated public java.util.List<? extends oscal.profile.v1.ProfileOuterClass.AlterControlsOrBuilder> 
            getAlterControlsOrBuilderList() {
         if (alterControlsBuilder_ != null) {
           return alterControlsBuilder_.getMessageOrBuilderList();
@@ -14789,24 +15028,36 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.profile.v1.AlterControls alter_controls = 2 [json_name = "alterControls"];</code>
+       * <pre>
+       * Deprecated: use alters instead. Kept for backward compatibility.
+       * </pre>
+       *
+       * <code>repeated .oscal.profile.v1.AlterControls alter_controls = 2 [json_name = "alterControls", deprecated = true];</code>
        */
-      public oscal.profile.v1.ProfileOuterClass.AlterControls.Builder addAlterControlsBuilder() {
+      @java.lang.Deprecated public oscal.profile.v1.ProfileOuterClass.AlterControls.Builder addAlterControlsBuilder() {
         return internalGetAlterControlsFieldBuilder().addBuilder(
             oscal.profile.v1.ProfileOuterClass.AlterControls.getDefaultInstance());
       }
       /**
-       * <code>repeated .oscal.profile.v1.AlterControls alter_controls = 2 [json_name = "alterControls"];</code>
+       * <pre>
+       * Deprecated: use alters instead. Kept for backward compatibility.
+       * </pre>
+       *
+       * <code>repeated .oscal.profile.v1.AlterControls alter_controls = 2 [json_name = "alterControls", deprecated = true];</code>
        */
-      public oscal.profile.v1.ProfileOuterClass.AlterControls.Builder addAlterControlsBuilder(
+      @java.lang.Deprecated public oscal.profile.v1.ProfileOuterClass.AlterControls.Builder addAlterControlsBuilder(
           int index) {
         return internalGetAlterControlsFieldBuilder().addBuilder(
             index, oscal.profile.v1.ProfileOuterClass.AlterControls.getDefaultInstance());
       }
       /**
-       * <code>repeated .oscal.profile.v1.AlterControls alter_controls = 2 [json_name = "alterControls"];</code>
+       * <pre>
+       * Deprecated: use alters instead. Kept for backward compatibility.
+       * </pre>
+       *
+       * <code>repeated .oscal.profile.v1.AlterControls alter_controls = 2 [json_name = "alterControls", deprecated = true];</code>
        */
-      public java.util.List<oscal.profile.v1.ProfileOuterClass.AlterControls.Builder> 
+      @java.lang.Deprecated public java.util.List<oscal.profile.v1.ProfileOuterClass.AlterControls.Builder> 
            getAlterControlsBuilderList() {
         return internalGetAlterControlsFieldBuilder().getBuilderList();
       }
@@ -15783,6 +16034,246 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
           remarks_ = null;
         }
         return remarksBuilder_;
+      }
+
+      private java.util.List<oscal.profile.v1.ProfileOuterClass.Alter> alters_ =
+        java.util.Collections.emptyList();
+      private void ensureAltersIsMutable() {
+        if (!((bitField0_ & 0x00000040) != 0)) {
+          alters_ = new java.util.ArrayList<oscal.profile.v1.ProfileOuterClass.Alter>(alters_);
+          bitField0_ |= 0x00000040;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.profile.v1.ProfileOuterClass.Alter, oscal.profile.v1.ProfileOuterClass.Alter.Builder, oscal.profile.v1.ProfileOuterClass.AlterOrBuilder> altersBuilder_;
+
+      /**
+       * <code>repeated .oscal.profile.v1.Alter alters = 7 [json_name = "alters"];</code>
+       */
+      public java.util.List<oscal.profile.v1.ProfileOuterClass.Alter> getAltersList() {
+        if (altersBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(alters_);
+        } else {
+          return altersBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .oscal.profile.v1.Alter alters = 7 [json_name = "alters"];</code>
+       */
+      public int getAltersCount() {
+        if (altersBuilder_ == null) {
+          return alters_.size();
+        } else {
+          return altersBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .oscal.profile.v1.Alter alters = 7 [json_name = "alters"];</code>
+       */
+      public oscal.profile.v1.ProfileOuterClass.Alter getAlters(int index) {
+        if (altersBuilder_ == null) {
+          return alters_.get(index);
+        } else {
+          return altersBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.profile.v1.Alter alters = 7 [json_name = "alters"];</code>
+       */
+      public Builder setAlters(
+          int index, oscal.profile.v1.ProfileOuterClass.Alter value) {
+        if (altersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAltersIsMutable();
+          alters_.set(index, value);
+          onChanged();
+        } else {
+          altersBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.profile.v1.Alter alters = 7 [json_name = "alters"];</code>
+       */
+      public Builder setAlters(
+          int index, oscal.profile.v1.ProfileOuterClass.Alter.Builder builderForValue) {
+        if (altersBuilder_ == null) {
+          ensureAltersIsMutable();
+          alters_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          altersBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.profile.v1.Alter alters = 7 [json_name = "alters"];</code>
+       */
+      public Builder addAlters(oscal.profile.v1.ProfileOuterClass.Alter value) {
+        if (altersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAltersIsMutable();
+          alters_.add(value);
+          onChanged();
+        } else {
+          altersBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.profile.v1.Alter alters = 7 [json_name = "alters"];</code>
+       */
+      public Builder addAlters(
+          int index, oscal.profile.v1.ProfileOuterClass.Alter value) {
+        if (altersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAltersIsMutable();
+          alters_.add(index, value);
+          onChanged();
+        } else {
+          altersBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.profile.v1.Alter alters = 7 [json_name = "alters"];</code>
+       */
+      public Builder addAlters(
+          oscal.profile.v1.ProfileOuterClass.Alter.Builder builderForValue) {
+        if (altersBuilder_ == null) {
+          ensureAltersIsMutable();
+          alters_.add(builderForValue.build());
+          onChanged();
+        } else {
+          altersBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.profile.v1.Alter alters = 7 [json_name = "alters"];</code>
+       */
+      public Builder addAlters(
+          int index, oscal.profile.v1.ProfileOuterClass.Alter.Builder builderForValue) {
+        if (altersBuilder_ == null) {
+          ensureAltersIsMutable();
+          alters_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          altersBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.profile.v1.Alter alters = 7 [json_name = "alters"];</code>
+       */
+      public Builder addAllAlters(
+          java.lang.Iterable<? extends oscal.profile.v1.ProfileOuterClass.Alter> values) {
+        if (altersBuilder_ == null) {
+          ensureAltersIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, alters_);
+          onChanged();
+        } else {
+          altersBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.profile.v1.Alter alters = 7 [json_name = "alters"];</code>
+       */
+      public Builder clearAlters() {
+        if (altersBuilder_ == null) {
+          alters_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000040);
+          onChanged();
+        } else {
+          altersBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.profile.v1.Alter alters = 7 [json_name = "alters"];</code>
+       */
+      public Builder removeAlters(int index) {
+        if (altersBuilder_ == null) {
+          ensureAltersIsMutable();
+          alters_.remove(index);
+          onChanged();
+        } else {
+          altersBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.profile.v1.Alter alters = 7 [json_name = "alters"];</code>
+       */
+      public oscal.profile.v1.ProfileOuterClass.Alter.Builder getAltersBuilder(
+          int index) {
+        return internalGetAltersFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .oscal.profile.v1.Alter alters = 7 [json_name = "alters"];</code>
+       */
+      public oscal.profile.v1.ProfileOuterClass.AlterOrBuilder getAltersOrBuilder(
+          int index) {
+        if (altersBuilder_ == null) {
+          return alters_.get(index);  } else {
+          return altersBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.profile.v1.Alter alters = 7 [json_name = "alters"];</code>
+       */
+      public java.util.List<? extends oscal.profile.v1.ProfileOuterClass.AlterOrBuilder> 
+           getAltersOrBuilderList() {
+        if (altersBuilder_ != null) {
+          return altersBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(alters_);
+        }
+      }
+      /**
+       * <code>repeated .oscal.profile.v1.Alter alters = 7 [json_name = "alters"];</code>
+       */
+      public oscal.profile.v1.ProfileOuterClass.Alter.Builder addAltersBuilder() {
+        return internalGetAltersFieldBuilder().addBuilder(
+            oscal.profile.v1.ProfileOuterClass.Alter.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.profile.v1.Alter alters = 7 [json_name = "alters"];</code>
+       */
+      public oscal.profile.v1.ProfileOuterClass.Alter.Builder addAltersBuilder(
+          int index) {
+        return internalGetAltersFieldBuilder().addBuilder(
+            index, oscal.profile.v1.ProfileOuterClass.Alter.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.profile.v1.Alter alters = 7 [json_name = "alters"];</code>
+       */
+      public java.util.List<oscal.profile.v1.ProfileOuterClass.Alter.Builder> 
+           getAltersBuilderList() {
+        return internalGetAltersFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.profile.v1.ProfileOuterClass.Alter, oscal.profile.v1.ProfileOuterClass.Alter.Builder, oscal.profile.v1.ProfileOuterClass.AlterOrBuilder> 
+          internalGetAltersFieldBuilder() {
+        if (altersBuilder_ == null) {
+          altersBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              oscal.profile.v1.ProfileOuterClass.Alter, oscal.profile.v1.ProfileOuterClass.Alter.Builder, oscal.profile.v1.ProfileOuterClass.AlterOrBuilder>(
+                  alters_,
+                  ((bitField0_ & 0x00000040) != 0),
+                  getParentForChildren(),
+                  isClean());
+          alters_ = null;
+        }
+        return altersBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:oscal.profile.v1.Modify)
@@ -23538,15 +24029,27 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string item_name = 1 [json_name = "itemName"];</code>
+     * <pre>
+     * Deprecated: not in OSCAL schema. Kept for backward compatibility.
+     * </pre>
+     *
+     * <code>string item_name = 1 [json_name = "itemName", deprecated = true];</code>
+     * @deprecated oscal.profile.v1.Add.item_name is deprecated.
+     *     See profile/v1/profile.proto;l=124
      * @return The itemName.
      */
-    java.lang.String getItemName();
+    @java.lang.Deprecated java.lang.String getItemName();
     /**
-     * <code>string item_name = 1 [json_name = "itemName"];</code>
+     * <pre>
+     * Deprecated: not in OSCAL schema. Kept for backward compatibility.
+     * </pre>
+     *
+     * <code>string item_name = 1 [json_name = "itemName", deprecated = true];</code>
+     * @deprecated oscal.profile.v1.Add.item_name is deprecated.
+     *     See profile/v1/profile.proto;l=124
      * @return The bytes for itemName.
      */
-    com.google.protobuf.ByteString
+    @java.lang.Deprecated com.google.protobuf.ByteString
         getItemNameBytes();
 
     /**
@@ -23658,54 +24161,28 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
         int index);
 
     /**
-     * <code>repeated string with_ids = 7 [json_name = "withIds"];</code>
-     * @return A list containing the withIds.
+     * <code>string by_id = 7 [json_name = "byId"];</code>
+     * @return The byId.
      */
-    java.util.List<java.lang.String>
-        getWithIdsList();
+    java.lang.String getById();
     /**
-     * <code>repeated string with_ids = 7 [json_name = "withIds"];</code>
-     * @return The count of withIds.
-     */
-    int getWithIdsCount();
-    /**
-     * <code>repeated string with_ids = 7 [json_name = "withIds"];</code>
-     * @param index The index of the element to return.
-     * @return The withIds at the given index.
-     */
-    java.lang.String getWithIds(int index);
-    /**
-     * <code>repeated string with_ids = 7 [json_name = "withIds"];</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the withIds at the given index.
+     * <code>string by_id = 7 [json_name = "byId"];</code>
+     * @return The bytes for byId.
      */
     com.google.protobuf.ByteString
-        getWithIdsBytes(int index);
+        getByIdBytes();
 
     /**
-     * <code>repeated string with_class = 8 [json_name = "withClass"];</code>
-     * @return A list containing the withClass.
+     * <code>string title = 8 [json_name = "title"];</code>
+     * @return The title.
      */
-    java.util.List<java.lang.String>
-        getWithClassList();
+    java.lang.String getTitle();
     /**
-     * <code>repeated string with_class = 8 [json_name = "withClass"];</code>
-     * @return The count of withClass.
-     */
-    int getWithClassCount();
-    /**
-     * <code>repeated string with_class = 8 [json_name = "withClass"];</code>
-     * @param index The index of the element to return.
-     * @return The withClass at the given index.
-     */
-    java.lang.String getWithClass(int index);
-    /**
-     * <code>repeated string with_class = 8 [json_name = "withClass"];</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the withClass at the given index.
+     * <code>string title = 8 [json_name = "title"];</code>
+     * @return The bytes for title.
      */
     com.google.protobuf.ByteString
-        getWithClassBytes(int index);
+        getTitleBytes();
   }
   /**
    * <pre>
@@ -23739,10 +24216,8 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       props_ = java.util.Collections.emptyList();
       links_ = java.util.Collections.emptyList();
       params_ = java.util.Collections.emptyList();
-      withIds_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
-      withClass_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
+      byId_ = "";
+      title_ = "";
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
@@ -23767,11 +24242,17 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     @SuppressWarnings("serial")
     private volatile java.lang.Object itemName_ = "";
     /**
-     * <code>string item_name = 1 [json_name = "itemName"];</code>
+     * <pre>
+     * Deprecated: not in OSCAL schema. Kept for backward compatibility.
+     * </pre>
+     *
+     * <code>string item_name = 1 [json_name = "itemName", deprecated = true];</code>
+     * @deprecated oscal.profile.v1.Add.item_name is deprecated.
+     *     See profile/v1/profile.proto;l=124
      * @return The itemName.
      */
     @java.lang.Override
-    public java.lang.String getItemName() {
+    @java.lang.Deprecated public java.lang.String getItemName() {
       java.lang.Object ref = itemName_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
@@ -23784,11 +24265,17 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       }
     }
     /**
-     * <code>string item_name = 1 [json_name = "itemName"];</code>
+     * <pre>
+     * Deprecated: not in OSCAL schema. Kept for backward compatibility.
+     * </pre>
+     *
+     * <code>string item_name = 1 [json_name = "itemName", deprecated = true];</code>
+     * @deprecated oscal.profile.v1.Add.item_name is deprecated.
+     *     See profile/v1/profile.proto;l=124
      * @return The bytes for itemName.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getItemNameBytes() {
       java.lang.Object ref = itemName_;
       if (ref instanceof java.lang.String) {
@@ -24005,78 +24492,82 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       return params_.get(index);
     }
 
-    public static final int WITH_IDS_FIELD_NUMBER = 7;
+    public static final int BY_ID_FIELD_NUMBER = 7;
     @SuppressWarnings("serial")
-    private com.google.protobuf.LazyStringArrayList withIds_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
+    private volatile java.lang.Object byId_ = "";
     /**
-     * <code>repeated string with_ids = 7 [json_name = "withIds"];</code>
-     * @return A list containing the withIds.
+     * <code>string by_id = 7 [json_name = "byId"];</code>
+     * @return The byId.
      */
-    public com.google.protobuf.ProtocolStringList
-        getWithIdsList() {
-      return withIds_;
+    @java.lang.Override
+    public java.lang.String getById() {
+      java.lang.Object ref = byId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        byId_ = s;
+        return s;
+      }
     }
     /**
-     * <code>repeated string with_ids = 7 [json_name = "withIds"];</code>
-     * @return The count of withIds.
+     * <code>string by_id = 7 [json_name = "byId"];</code>
+     * @return The bytes for byId.
      */
-    public int getWithIdsCount() {
-      return withIds_.size();
-    }
-    /**
-     * <code>repeated string with_ids = 7 [json_name = "withIds"];</code>
-     * @param index The index of the element to return.
-     * @return The withIds at the given index.
-     */
-    public java.lang.String getWithIds(int index) {
-      return withIds_.get(index);
-    }
-    /**
-     * <code>repeated string with_ids = 7 [json_name = "withIds"];</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the withIds at the given index.
-     */
+    @java.lang.Override
     public com.google.protobuf.ByteString
-        getWithIdsBytes(int index) {
-      return withIds_.getByteString(index);
+        getByIdBytes() {
+      java.lang.Object ref = byId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        byId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
-    public static final int WITH_CLASS_FIELD_NUMBER = 8;
+    public static final int TITLE_FIELD_NUMBER = 8;
     @SuppressWarnings("serial")
-    private com.google.protobuf.LazyStringArrayList withClass_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
+    private volatile java.lang.Object title_ = "";
     /**
-     * <code>repeated string with_class = 8 [json_name = "withClass"];</code>
-     * @return A list containing the withClass.
+     * <code>string title = 8 [json_name = "title"];</code>
+     * @return The title.
      */
-    public com.google.protobuf.ProtocolStringList
-        getWithClassList() {
-      return withClass_;
+    @java.lang.Override
+    public java.lang.String getTitle() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        title_ = s;
+        return s;
+      }
     }
     /**
-     * <code>repeated string with_class = 8 [json_name = "withClass"];</code>
-     * @return The count of withClass.
+     * <code>string title = 8 [json_name = "title"];</code>
+     * @return The bytes for title.
      */
-    public int getWithClassCount() {
-      return withClass_.size();
-    }
-    /**
-     * <code>repeated string with_class = 8 [json_name = "withClass"];</code>
-     * @param index The index of the element to return.
-     * @return The withClass at the given index.
-     */
-    public java.lang.String getWithClass(int index) {
-      return withClass_.get(index);
-    }
-    /**
-     * <code>repeated string with_class = 8 [json_name = "withClass"];</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the withClass at the given index.
-     */
+    @java.lang.Override
     public com.google.protobuf.ByteString
-        getWithClassBytes(int index) {
-      return withClass_.getByteString(index);
+        getTitleBytes() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        title_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     private byte memoizedIsInitialized = -1;
@@ -24111,11 +24602,11 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       for (int i = 0; i < params_.size(); i++) {
         output.writeMessage(6, params_.get(i));
       }
-      for (int i = 0; i < withIds_.size(); i++) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 7, withIds_.getRaw(i));
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(byId_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 7, byId_);
       }
-      for (int i = 0; i < withClass_.size(); i++) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 8, withClass_.getRaw(i));
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(title_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 8, title_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -24163,21 +24654,11 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
             }
             size += 1 * count;
           }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < withIds_.size(); i++) {
-          dataSize += computeStringSizeNoTag(withIds_.getRaw(i));
-        }
-        size += dataSize;
-        size += 1 * getWithIdsList().size();
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(byId_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(7, byId_);
       }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < withClass_.size(); i++) {
-          dataSize += computeStringSizeNoTag(withClass_.getRaw(i));
-        }
-        size += dataSize;
-        size += 1 * getWithClassList().size();
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(title_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(8, title_);
       }
       return size;
     }
@@ -24215,10 +24696,10 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
           .equals(other.getLinksList())) return false;
       if (!getParamsList()
           .equals(other.getParamsList())) return false;
-      if (!getWithIdsList()
-          .equals(other.getWithIdsList())) return false;
-      if (!getWithClassList()
-          .equals(other.getWithClassList())) return false;
+      if (!getById()
+          .equals(other.getById())) return false;
+      if (!getTitle()
+          .equals(other.getTitle())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -24250,14 +24731,10 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
         hash = (37 * hash) + PARAMS_FIELD_NUMBER;
         hash = (53 * hash) + getParamsList().hashCode();
       }
-      if (getWithIdsCount() > 0) {
-        hash = (37 * hash) + WITH_IDS_FIELD_NUMBER;
-        hash = (53 * hash) + getWithIdsList().hashCode();
-      }
-      if (getWithClassCount() > 0) {
-        hash = (37 * hash) + WITH_CLASS_FIELD_NUMBER;
-        hash = (53 * hash) + getWithClassList().hashCode();
-      }
+      hash = (37 * hash) + BY_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getById().hashCode();
+      hash = (37 * hash) + TITLE_FIELD_NUMBER;
+      hash = (53 * hash) + getTitle().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -24423,10 +24900,8 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
           paramsBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000020);
-        withIds_ =
-            com.google.protobuf.LazyStringArrayList.emptyList();
-        withClass_ =
-            com.google.protobuf.LazyStringArrayList.emptyList();
+        byId_ = "";
+        title_ = "";
         return this;
       }
 
@@ -24507,12 +24982,10 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
           result.position_ = position_;
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
-          withIds_.makeImmutable();
-          result.withIds_ = withIds_;
+          result.byId_ = byId_;
         }
         if (((from_bitField0_ & 0x00000080) != 0)) {
-          withClass_.makeImmutable();
-          result.withClass_ = withClass_;
+          result.title_ = title_;
         }
       }
 
@@ -24642,24 +25115,14 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
             }
           }
         }
-        if (!other.withIds_.isEmpty()) {
-          if (withIds_.isEmpty()) {
-            withIds_ = other.withIds_;
-            bitField0_ |= 0x00000040;
-          } else {
-            ensureWithIdsIsMutable();
-            withIds_.addAll(other.withIds_);
-          }
+        if (!other.getById().isEmpty()) {
+          byId_ = other.byId_;
+          bitField0_ |= 0x00000040;
           onChanged();
         }
-        if (!other.withClass_.isEmpty()) {
-          if (withClass_.isEmpty()) {
-            withClass_ = other.withClass_;
-            bitField0_ |= 0x00000080;
-          } else {
-            ensureWithClassIsMutable();
-            withClass_.addAll(other.withClass_);
-          }
+        if (!other.getTitle().isEmpty()) {
+          title_ = other.title_;
+          bitField0_ |= 0x00000080;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -24751,13 +25214,13 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
                 break;
               } // case 50
               case 58: {
-                ensureWithIdsIsMutable();
-                withIds_.add(input.readStringRequireUtf8());
+                byId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000040;
                 break;
               } // case 58
               case 66: {
-                ensureWithClassIsMutable();
-                withClass_.add(input.readStringRequireUtf8());
+                title_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000080;
                 break;
               } // case 66
               default: {
@@ -24779,10 +25242,16 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
 
       private java.lang.Object itemName_ = "";
       /**
-       * <code>string item_name = 1 [json_name = "itemName"];</code>
+       * <pre>
+       * Deprecated: not in OSCAL schema. Kept for backward compatibility.
+       * </pre>
+       *
+       * <code>string item_name = 1 [json_name = "itemName", deprecated = true];</code>
+       * @deprecated oscal.profile.v1.Add.item_name is deprecated.
+       *     See profile/v1/profile.proto;l=124
        * @return The itemName.
        */
-      public java.lang.String getItemName() {
+      @java.lang.Deprecated public java.lang.String getItemName() {
         java.lang.Object ref = itemName_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
@@ -24795,10 +25264,16 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>string item_name = 1 [json_name = "itemName"];</code>
+       * <pre>
+       * Deprecated: not in OSCAL schema. Kept for backward compatibility.
+       * </pre>
+       *
+       * <code>string item_name = 1 [json_name = "itemName", deprecated = true];</code>
+       * @deprecated oscal.profile.v1.Add.item_name is deprecated.
+       *     See profile/v1/profile.proto;l=124
        * @return The bytes for itemName.
        */
-      public com.google.protobuf.ByteString
+      @java.lang.Deprecated public com.google.protobuf.ByteString
           getItemNameBytes() {
         java.lang.Object ref = itemName_;
         if (ref instanceof String) {
@@ -24812,11 +25287,17 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>string item_name = 1 [json_name = "itemName"];</code>
+       * <pre>
+       * Deprecated: not in OSCAL schema. Kept for backward compatibility.
+       * </pre>
+       *
+       * <code>string item_name = 1 [json_name = "itemName", deprecated = true];</code>
+       * @deprecated oscal.profile.v1.Add.item_name is deprecated.
+       *     See profile/v1/profile.proto;l=124
        * @param value The itemName to set.
        * @return This builder for chaining.
        */
-      public Builder setItemName(
+      @java.lang.Deprecated public Builder setItemName(
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         itemName_ = value;
@@ -24825,21 +25306,33 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>string item_name = 1 [json_name = "itemName"];</code>
+       * <pre>
+       * Deprecated: not in OSCAL schema. Kept for backward compatibility.
+       * </pre>
+       *
+       * <code>string item_name = 1 [json_name = "itemName", deprecated = true];</code>
+       * @deprecated oscal.profile.v1.Add.item_name is deprecated.
+       *     See profile/v1/profile.proto;l=124
        * @return This builder for chaining.
        */
-      public Builder clearItemName() {
+      @java.lang.Deprecated public Builder clearItemName() {
         itemName_ = getDefaultInstance().getItemName();
         bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
       /**
-       * <code>string item_name = 1 [json_name = "itemName"];</code>
+       * <pre>
+       * Deprecated: not in OSCAL schema. Kept for backward compatibility.
+       * </pre>
+       *
+       * <code>string item_name = 1 [json_name = "itemName", deprecated = true];</code>
+       * @deprecated oscal.profile.v1.Add.item_name is deprecated.
+       *     See profile/v1/profile.proto;l=124
        * @param value The bytes for itemName to set.
        * @return This builder for chaining.
        */
-      public Builder setItemNameBytes(
+      @java.lang.Deprecated public Builder setItemNameBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
@@ -25881,223 +26374,145 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
         return paramsBuilder_;
       }
 
-      private com.google.protobuf.LazyStringArrayList withIds_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
-      private void ensureWithIdsIsMutable() {
-        if (!withIds_.isModifiable()) {
-          withIds_ = new com.google.protobuf.LazyStringArrayList(withIds_);
+      private java.lang.Object byId_ = "";
+      /**
+       * <code>string by_id = 7 [json_name = "byId"];</code>
+       * @return The byId.
+       */
+      public java.lang.String getById() {
+        java.lang.Object ref = byId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          byId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
         }
-        bitField0_ |= 0x00000040;
       }
       /**
-       * <code>repeated string with_ids = 7 [json_name = "withIds"];</code>
-       * @return A list containing the withIds.
-       */
-      public com.google.protobuf.ProtocolStringList
-          getWithIdsList() {
-        withIds_.makeImmutable();
-        return withIds_;
-      }
-      /**
-       * <code>repeated string with_ids = 7 [json_name = "withIds"];</code>
-       * @return The count of withIds.
-       */
-      public int getWithIdsCount() {
-        return withIds_.size();
-      }
-      /**
-       * <code>repeated string with_ids = 7 [json_name = "withIds"];</code>
-       * @param index The index of the element to return.
-       * @return The withIds at the given index.
-       */
-      public java.lang.String getWithIds(int index) {
-        return withIds_.get(index);
-      }
-      /**
-       * <code>repeated string with_ids = 7 [json_name = "withIds"];</code>
-       * @param index The index of the value to return.
-       * @return The bytes of the withIds at the given index.
+       * <code>string by_id = 7 [json_name = "byId"];</code>
+       * @return The bytes for byId.
        */
       public com.google.protobuf.ByteString
-          getWithIdsBytes(int index) {
-        return withIds_.getByteString(index);
+          getByIdBytes() {
+        java.lang.Object ref = byId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          byId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
       }
       /**
-       * <code>repeated string with_ids = 7 [json_name = "withIds"];</code>
-       * @param index The index to set the value at.
-       * @param value The withIds to set.
+       * <code>string by_id = 7 [json_name = "byId"];</code>
+       * @param value The byId to set.
        * @return This builder for chaining.
        */
-      public Builder setWithIds(
-          int index, java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        ensureWithIdsIsMutable();
-        withIds_.set(index, value);
-        bitField0_ |= 0x00000040;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string with_ids = 7 [json_name = "withIds"];</code>
-       * @param value The withIds to add.
-       * @return This builder for chaining.
-       */
-      public Builder addWithIds(
+      public Builder setById(
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
-        ensureWithIdsIsMutable();
-        withIds_.add(value);
+        byId_ = value;
         bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
       /**
-       * <code>repeated string with_ids = 7 [json_name = "withIds"];</code>
-       * @param values The withIds to add.
+       * <code>string by_id = 7 [json_name = "byId"];</code>
        * @return This builder for chaining.
        */
-      public Builder addAllWithIds(
-          java.lang.Iterable<java.lang.String> values) {
-        ensureWithIdsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, withIds_);
-        bitField0_ |= 0x00000040;
+      public Builder clearById() {
+        byId_ = getDefaultInstance().getById();
+        bitField0_ = (bitField0_ & ~0x00000040);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated string with_ids = 7 [json_name = "withIds"];</code>
+       * <code>string by_id = 7 [json_name = "byId"];</code>
+       * @param value The bytes for byId to set.
        * @return This builder for chaining.
        */
-      public Builder clearWithIds() {
-        withIds_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000040);;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string with_ids = 7 [json_name = "withIds"];</code>
-       * @param value The bytes of the withIds to add.
-       * @return This builder for chaining.
-       */
-      public Builder addWithIdsBytes(
+      public Builder setByIdBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
-        ensureWithIdsIsMutable();
-        withIds_.add(value);
+        byId_ = value;
         bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
 
-      private com.google.protobuf.LazyStringArrayList withClass_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
-      private void ensureWithClassIsMutable() {
-        if (!withClass_.isModifiable()) {
-          withClass_ = new com.google.protobuf.LazyStringArrayList(withClass_);
+      private java.lang.Object title_ = "";
+      /**
+       * <code>string title = 8 [json_name = "title"];</code>
+       * @return The title.
+       */
+      public java.lang.String getTitle() {
+        java.lang.Object ref = title_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          title_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
         }
-        bitField0_ |= 0x00000080;
       }
       /**
-       * <code>repeated string with_class = 8 [json_name = "withClass"];</code>
-       * @return A list containing the withClass.
-       */
-      public com.google.protobuf.ProtocolStringList
-          getWithClassList() {
-        withClass_.makeImmutable();
-        return withClass_;
-      }
-      /**
-       * <code>repeated string with_class = 8 [json_name = "withClass"];</code>
-       * @return The count of withClass.
-       */
-      public int getWithClassCount() {
-        return withClass_.size();
-      }
-      /**
-       * <code>repeated string with_class = 8 [json_name = "withClass"];</code>
-       * @param index The index of the element to return.
-       * @return The withClass at the given index.
-       */
-      public java.lang.String getWithClass(int index) {
-        return withClass_.get(index);
-      }
-      /**
-       * <code>repeated string with_class = 8 [json_name = "withClass"];</code>
-       * @param index The index of the value to return.
-       * @return The bytes of the withClass at the given index.
+       * <code>string title = 8 [json_name = "title"];</code>
+       * @return The bytes for title.
        */
       public com.google.protobuf.ByteString
-          getWithClassBytes(int index) {
-        return withClass_.getByteString(index);
+          getTitleBytes() {
+        java.lang.Object ref = title_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          title_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
       }
       /**
-       * <code>repeated string with_class = 8 [json_name = "withClass"];</code>
-       * @param index The index to set the value at.
-       * @param value The withClass to set.
+       * <code>string title = 8 [json_name = "title"];</code>
+       * @param value The title to set.
        * @return This builder for chaining.
        */
-      public Builder setWithClass(
-          int index, java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        ensureWithClassIsMutable();
-        withClass_.set(index, value);
-        bitField0_ |= 0x00000080;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string with_class = 8 [json_name = "withClass"];</code>
-       * @param value The withClass to add.
-       * @return This builder for chaining.
-       */
-      public Builder addWithClass(
+      public Builder setTitle(
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
-        ensureWithClassIsMutable();
-        withClass_.add(value);
+        title_ = value;
         bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
       /**
-       * <code>repeated string with_class = 8 [json_name = "withClass"];</code>
-       * @param values The withClass to add.
+       * <code>string title = 8 [json_name = "title"];</code>
        * @return This builder for chaining.
        */
-      public Builder addAllWithClass(
-          java.lang.Iterable<java.lang.String> values) {
-        ensureWithClassIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, withClass_);
-        bitField0_ |= 0x00000080;
+      public Builder clearTitle() {
+        title_ = getDefaultInstance().getTitle();
+        bitField0_ = (bitField0_ & ~0x00000080);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated string with_class = 8 [json_name = "withClass"];</code>
+       * <code>string title = 8 [json_name = "title"];</code>
+       * @param value The bytes for title to set.
        * @return This builder for chaining.
        */
-      public Builder clearWithClass() {
-        withClass_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000080);;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string with_class = 8 [json_name = "withClass"];</code>
-       * @param value The bytes of the withClass to add.
-       * @return This builder for chaining.
-       */
-      public Builder addWithClassBytes(
+      public Builder setTitleBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
-        ensureWithClassIsMutable();
-        withClass_.add(value);
+        title_ = value;
         bitField0_ |= 0x00000080;
         onChanged();
         return this;
@@ -28559,8 +28974,8 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
   static {
     java.lang.String[] descriptorData = {
       "\n\030profile/v1/profile.proto\022\020oscal.profil" +
-      "e.v1\032\026common/v1/common.proto\032\030catalog/v1" +
-      "/catalog.proto\"\276\002\n\007Profile\022)\n\004uuid\030\001 \001(\013" +
+      "e.v1\032\030catalog/v1/catalog.proto\032\026common/v" +
+      "1/common.proto\"\276\002\n\007Profile\022)\n\004uuid\030\001 \001(\013" +
       "2\025.oscal.common.v1.UUIDR\004uuid\0225\n\010metadat" +
       "a\030\002 \001(\0132\031.oscal.common.v1.MetadataR\010meta" +
       "data\0222\n\007imports\030\003 \003(\0132\030.oscal.profile.v1" +
@@ -28605,62 +29020,63 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       "ommon.v1.MarkupMultilineR\007remarks\"g\n\007Com" +
       "bine\022\026\n\006method\030\001 \001(\tR\006method\022\022\n\004flat\030\002 \001" +
       "(\010R\004flat\0220\n\005as_is\030\003 \003(\0132\033.oscal.common.v" +
-      "1.MarkupLineR\004asIs\"\364\002\n\006Modify\022F\n\016set_par" +
+      "1.MarkupLineR\004asIs\"\251\003\n\006Modify\022F\n\016set_par" +
       "ameters\030\001 \003(\0132\037.oscal.profile.v1.SetPara" +
-      "metersR\rsetParameters\022F\n\016alter_controls\030" +
-      "\002 \003(\0132\037.oscal.profile.v1.AlterControlsR\r" +
-      "alterControls\022@\n\014add_controls\030\003 \003(\0132\035.os" +
-      "cal.profile.v1.AddControlsR\013addControls\022" +
+      "metersR\rsetParameters\022J\n\016alter_controls\030" +
+      "\002 \003(\0132\037.oscal.profile.v1.AlterControlsB\002" +
+      "\030\001R\ralterControls\022@\n\014add_controls\030\003 \003(\0132" +
+      "\035.oscal.profile.v1.AddControlsR\013addContr" +
+      "ols\022/\n\005props\030\004 \003(\0132\031.oscal.common.v1.Pro" +
+      "pertyR\005props\022+\n\005links\030\005 \003(\0132\025.oscal.comm" +
+      "on.v1.LinkR\005links\022:\n\007remarks\030\006 \003(\0132 .osc" +
+      "al.common.v1.MarkupMultilineR\007remarks\022/\n" +
+      "\006alters\030\007 \003(\0132\027.oscal.profile.v1.AlterR\006" +
+      "alters\"\230\002\n\rSetParameters\0223\n\006params\030\001 \003(\013" +
+      "2\033.oscal.catalog.v1.ParameterR\006params\022\031\n" +
+      "\010with_ids\030\002 \003(\tR\007withIds\022\035\n\nwith_class\030\003" +
+      " \003(\tR\twithClass\022/\n\005props\030\004 \003(\0132\031.oscal.c" +
+      "ommon.v1.PropertyR\005props\022+\n\005links\030\005 \003(\0132" +
+      "\025.oscal.common.v1.LinkR\005links\022:\n\007remarks" +
+      "\030\006 \003(\0132 .oscal.common.v1.MarkupMultiline" +
+      "R\007remarks\"\255\002\n\rAlterControls\022H\n\023control_a" +
+      "lterations\030\001 \003(\0132\027.oscal.profile.v1.Alte" +
+      "rR\022controlAlterations\022\031\n\010with_ids\030\002 \003(\tR" +
+      "\007withIds\022\035\n\nwith_class\030\003 \003(\tR\twithClass\022" +
       "/\n\005props\030\004 \003(\0132\031.oscal.common.v1.Propert" +
       "yR\005props\022+\n\005links\030\005 \003(\0132\025.oscal.common.v" +
       "1.LinkR\005links\022:\n\007remarks\030\006 \003(\0132 .oscal.c" +
-      "ommon.v1.MarkupMultilineR\007remarks\"\230\002\n\rSe" +
-      "tParameters\0223\n\006params\030\001 \003(\0132\033.oscal.cata" +
-      "log.v1.ParameterR\006params\022\031\n\010with_ids\030\002 \003" +
-      "(\tR\007withIds\022\035\n\nwith_class\030\003 \003(\tR\twithCla" +
-      "ss\022/\n\005props\030\004 \003(\0132\031.oscal.common.v1.Prop" +
-      "ertyR\005props\022+\n\005links\030\005 \003(\0132\025.oscal.commo" +
-      "n.v1.LinkR\005links\022:\n\007remarks\030\006 \003(\0132 .osca" +
-      "l.common.v1.MarkupMultilineR\007remarks\"\255\002\n" +
-      "\rAlterControls\022H\n\023control_alterations\030\001 " +
-      "\003(\0132\027.oscal.profile.v1.AlterR\022controlAlt" +
-      "erations\022\031\n\010with_ids\030\002 \003(\tR\007withIds\022\035\n\nw" +
-      "ith_class\030\003 \003(\tR\twithClass\022/\n\005props\030\004 \003(" +
-      "\0132\031.oscal.common.v1.PropertyR\005props\022+\n\005l" +
-      "inks\030\005 \003(\0132\025.oscal.common.v1.LinkR\005links" +
-      "\022:\n\007remarks\030\006 \003(\0132 .oscal.common.v1.Mark" +
-      "upMultilineR\007remarks\"\301\001\n\005Alter\022\035\n\ncontro" +
-      "l_id\030\001 \001(\tR\tcontrolId\0222\n\007removes\030\002 \003(\0132\030" +
-      ".oscal.profile.v1.RemoveR\007removes\022)\n\004add" +
-      "s\030\003 \003(\0132\025.oscal.profile.v1.AddR\004adds\022:\n\007" +
-      "remarks\030\004 \003(\0132 .oscal.common.v1.MarkupMu" +
-      "ltilineR\007remarks\"\225\001\n\006Remove\022\033\n\titem_name" +
-      "\030\001 \001(\tR\010itemName\022\031\n\010with_ids\030\002 \003(\tR\007with" +
-      "Ids\022\035\n\nwith_class\030\003 \003(\tR\twithClass\022\033\n\twi" +
-      "th_name\030\004 \003(\tR\010withName\022\027\n\007with_ns\030\005 \003(\t" +
-      "R\006withNs\"\271\002\n\003Add\022\033\n\titem_name\030\001 \001(\tR\010ite" +
-      "mName\022\032\n\010position\030\002 \001(\tR\010position\022,\n\005par" +
-      "ts\030\003 \003(\0132\026.oscal.catalog.v1.PartR\005parts\022" +
-      "/\n\005props\030\004 \003(\0132\031.oscal.common.v1.Propert" +
-      "yR\005props\022+\n\005links\030\005 \003(\0132\025.oscal.common.v" +
-      "1.LinkR\005links\0223\n\006params\030\006 \003(\0132\033.oscal.ca" +
-      "talog.v1.ParameterR\006params\022\031\n\010with_ids\030\007" +
-      " \003(\tR\007withIds\022\035\n\nwith_class\030\010 \003(\tR\twithC" +
-      "lass\"\230\002\n\013AddControls\0225\n\010controls\030\001 \003(\0132\031" +
-      ".oscal.catalog.v1.ControlR\010controls\022\031\n\010w" +
-      "ith_ids\030\002 \003(\tR\007withIds\022\035\n\nwith_class\030\003 \003" +
-      "(\tR\twithClass\022/\n\005props\030\004 \003(\0132\031.oscal.com" +
-      "mon.v1.PropertyR\005props\022+\n\005links\030\005 \003(\0132\025." +
-      "oscal.common.v1.LinkR\005links\022:\n\007remarks\030\006" +
-      " \003(\0132 .oscal.common.v1.MarkupMultilineR\007" +
-      "remarksB<Z:github.com/mchorfa/xoscal/pro" +
-      "to/oscal/profile/v1;profilev1b\006proto3"
+      "ommon.v1.MarkupMultilineR\007remarks\"\301\001\n\005Al" +
+      "ter\022\035\n\ncontrol_id\030\001 \001(\tR\tcontrolId\0222\n\007re" +
+      "moves\030\002 \003(\0132\030.oscal.profile.v1.RemoveR\007r" +
+      "emoves\022)\n\004adds\030\003 \003(\0132\025.oscal.profile.v1." +
+      "AddR\004adds\022:\n\007remarks\030\004 \003(\0132 .oscal.commo" +
+      "n.v1.MarkupMultilineR\007remarks\"\225\001\n\006Remove" +
+      "\022\033\n\titem_name\030\001 \001(\tR\010itemName\022\031\n\010with_id" +
+      "s\030\002 \003(\tR\007withIds\022\035\n\nwith_class\030\003 \003(\tR\twi" +
+      "thClass\022\033\n\twith_name\030\004 \003(\tR\010withName\022\027\n\007" +
+      "with_ns\030\005 \003(\tR\006withNs\"\256\002\n\003Add\022\037\n\titem_na" +
+      "me\030\001 \001(\tB\002\030\001R\010itemName\022\032\n\010position\030\002 \001(\t" +
+      "R\010position\022,\n\005parts\030\003 \003(\0132\026.oscal.catalo" +
+      "g.v1.PartR\005parts\022/\n\005props\030\004 \003(\0132\031.oscal." +
+      "common.v1.PropertyR\005props\022+\n\005links\030\005 \003(\013" +
+      "2\025.oscal.common.v1.LinkR\005links\0223\n\006params" +
+      "\030\006 \003(\0132\033.oscal.catalog.v1.ParameterR\006par" +
+      "ams\022\023\n\005by_id\030\007 \001(\tR\004byId\022\024\n\005title\030\010 \001(\tR" +
+      "\005title\"\230\002\n\013AddControls\0225\n\010controls\030\001 \003(\013" +
+      "2\031.oscal.catalog.v1.ControlR\010controls\022\031\n" +
+      "\010with_ids\030\002 \003(\tR\007withIds\022\035\n\nwith_class\030\003" +
+      " \003(\tR\twithClass\022/\n\005props\030\004 \003(\0132\031.oscal.c" +
+      "ommon.v1.PropertyR\005props\022+\n\005links\030\005 \003(\0132" +
+      "\025.oscal.common.v1.LinkR\005links\022:\n\007remarks" +
+      "\030\006 \003(\0132 .oscal.common.v1.MarkupMultiline" +
+      "R\007remarksB<Z:github.com/mchorfa/xoscal/p" +
+      "roto/oscal/profile/v1;profilev1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          oscal.common.v1.Common.getDescriptor(),
           oscal.catalog.v1.CatalogOuterClass.getDescriptor(),
+          oscal.common.v1.Common.getDescriptor(),
         });
     internal_static_oscal_profile_v1_Profile_descriptor =
       getDescriptor().getMessageType(0);
@@ -28709,7 +29125,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     internal_static_oscal_profile_v1_Modify_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_profile_v1_Modify_descriptor,
-        new java.lang.String[] { "SetParameters", "AlterControls", "AddControls", "Props", "Links", "Remarks", });
+        new java.lang.String[] { "SetParameters", "AlterControls", "AddControls", "Props", "Links", "Remarks", "Alters", });
     internal_static_oscal_profile_v1_SetParameters_descriptor =
       getDescriptor().getMessageType(8);
     internal_static_oscal_profile_v1_SetParameters_fieldAccessorTable = new
@@ -28739,7 +29155,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     internal_static_oscal_profile_v1_Add_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_profile_v1_Add_descriptor,
-        new java.lang.String[] { "ItemName", "Position", "Parts", "Props", "Links", "Params", "WithIds", "WithClass", });
+        new java.lang.String[] { "ItemName", "Position", "Parts", "Props", "Links", "Params", "ById", "Title", });
     internal_static_oscal_profile_v1_AddControls_descriptor =
       getDescriptor().getMessageType(13);
     internal_static_oscal_profile_v1_AddControls_fieldAccessorTable = new
@@ -28747,8 +29163,8 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
         internal_static_oscal_profile_v1_AddControls_descriptor,
         new java.lang.String[] { "Controls", "WithIds", "WithClass", "Props", "Links", "Remarks", });
     descriptor.resolveAllFeaturesImmutable();
-    oscal.common.v1.Common.getDescriptor();
     oscal.catalog.v1.CatalogOuterClass.getDescriptor();
+    oscal.common.v1.Common.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

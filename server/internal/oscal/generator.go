@@ -17,6 +17,7 @@ import (
 	profilev1 "github.com/mchorfa/xoscal/proto/oscal/profile/v1"
 	sspv1 "github.com/mchorfa/xoscal/proto/oscal/ssp/v1"
 	"github.com/mchorfa/xoscal/server/internal/kg"
+	"google.golang.org/protobuf/types/known/timestamppb"
 )
 
 // Generator converts KG snapshots into OSCAL protobuf artifacts.
@@ -192,11 +193,18 @@ func (g *Generator) GenerateProfile(ctx context.Context, snapshotName string, fr
 					Prose: []*commonv1.MarkupMultiline{{Value: p.Value}},
 				})
 			}
+			guidance := extractGuidance(req.Text)
+			if guidance == "" {
+				guidance = req.Text
+			}
 			alter := &profilev1.Alter{
 				ControlId: req.Citation,
 				Adds: []*profilev1.Add{{
-					ItemName: "prop",
-					Parts:    addParts,
+					Props: []*commonv1.Property{{
+						Name:  "guidance",
+						Value: guidance,
+					}},
+					Parts: addParts,
 				}},
 			}
 			alterations = append(alterations, alter)
@@ -247,9 +255,7 @@ func (g *Generator) GenerateProfile(ctx context.Context, snapshotName string, fr
 		}},
 		Modify: &profilev1.Modify{
 			SetParameters: setParams,
-			AlterControls: []*profilev1.AlterControls{{
-				ControlAlterations: alterations,
-			}},
+			Alters:        alterations,
 		},
 	}
 
@@ -380,11 +386,13 @@ func (g *Generator) GenerateComponentDefinition(ctx context.Context, snapshotNam
 		var controlImplementations []*componentv1.ControlImplementation
 		if req.Citation != "" {
 			controlImplementations = append(controlImplementations, &componentv1.ControlImplementation{
-				ControlId:   req.Citation,
-				Description: []*commonv1.MarkupLine{{Value: req.Text}},
+				Uuid:        newUUID(uuidNamespace, fmt.Sprintf("ctrlimpl-%s", req.Citation)),
+				Source:      &commonv1.URIReference{Value: fmt.Sprintf("catalog-%s-%s", framework, snapshotName)},
+				Description: req.Text,
 				ImplementedRequirements: []*componentv1.ImplementedRequirement{{
+					Uuid:        newUUID(uuidNamespace, fmt.Sprintf("implreq-%s", req.Citation)),
 					ControlId:   req.Citation,
-					Description: []*commonv1.MarkupLine{{Value: req.Text}},
+					Description: req.Text,
 				}},
 			})
 		}
@@ -475,9 +483,11 @@ func (g *Generator) GenerateAssessmentPlan(ctx context.Context, snapshotName str
 			Href: &commonv1.URIReference{Value: fmt.Sprintf("ssp-%s-%s", framework, snapshotName)},
 		},
 		ReviewedControls: &assessment_planv1.ReviewedControls{
-			ControlSelection: fmt.Sprintf("Controls reviewed for %s", framework),
+			ControlSelections: []*assessment_planv1.ControlSelection{{
+				Description: &commonv1.MarkupMultiline{Value: fmt.Sprintf("Controls reviewed for %s", framework)},
+			}},
 		},
-		AssessmentTasks: tasks,
+		Tasks:           tasks,
 		BackMatter:      buildBackMatter(framework, snapshotName),
 	}, nil
 }
@@ -490,6 +500,7 @@ func (g *Generator) GeneratePOAM(ctx context.Context, snapshotName string, frame
 	}
 
 	var risks []*poamv1.Risk
+	var poamItems []*poamv1.PoamItem
 	for _, e := range entities {
 		if e.Type != "reg:Requirement" {
 			continue
@@ -506,6 +517,12 @@ func (g *Generator) GeneratePOAM(ctx context.Context, snapshotName string, frame
 			Title:       &commonv1.MarkupLine{Value: fmt.Sprintf("Risk: %s", req.Title)},
 			Description: &commonv1.MarkupMultiline{Value: req.Text},
 			Status:      &poamv1.RiskStatus{State: "open"},
+		}
+		// Build the POAM item (OSCAL 1.1.2 poam-item: title, description, refs).
+		poamItem := &poamv1.PoamItem{
+			Uuid:        risk.Uuid,
+			Title:       risk.Title,
+			Description: risk.Description,
 		}
 		// Add remediation task for high-risk requirements.
 		if strings.ToLower(req.RiskLevel) == "high" {
@@ -527,6 +544,7 @@ func (g *Generator) GeneratePOAM(ctx context.Context, snapshotName string, frame
 			risk.Remediations = append(risk.Remediations, resp)
 		}
 		risks = append(risks, risk)
+		poamItems = append(poamItems, poamItem)
 	}
 
 	return &poamv1.PlanOfActionAndMilestones{
@@ -539,6 +557,7 @@ func (g *Generator) GeneratePOAM(ctx context.Context, snapshotName string, frame
 			Href: &commonv1.URIReference{Value: fmt.Sprintf("ssp-%s-%s", framework, snapshotName)},
 		},
 		Risks:      risks,
+		PoamItems:  poamItems,
 		BackMatter: buildBackMatter(framework, snapshotName),
 	}, nil
 }
@@ -566,8 +585,11 @@ func (g *Generator) GenerateAssessmentResults(ctx context.Context, snapshotName,
 		observations = append(observations, &assessment_resultsv1.Observation{
 			Uuid:        newUUID(uuidNamespace, fmt.Sprintf("obs-%s", req.Citation)),
 			Description: &commonv1.MarkupMultiline{Value: req.Text},
+			Methods:     []string{"INTERVIEW"},
+			Collected:   &commonv1.DateTime{Value: timestamppb.Now()},
 			Subjects: []*assessment_resultsv1.SubjectReference{{
 				SubjectUuid: newUUID(uuidNamespace, fmt.Sprintf("ctrl-%s", req.Citation)),
+				Type:        "component",
 				Title:       &commonv1.MarkupLine{Value: req.Title},
 			}},
 		})
@@ -579,9 +601,10 @@ func (g *Generator) GenerateAssessmentResults(ctx context.Context, snapshotName,
 			Title:       &commonv1.MarkupLine{Value: fmt.Sprintf("Finding for %s", req.Title)},
 			Description: &commonv1.MarkupMultiline{Value: req.Text},
 			Target: &assessment_resultsv1.FindingTarget{
-				Type:     "control-objective",
+				Type:     "objective-id",
 				TargetId: &commonv1.Token{Value: req.Citation},
 				Title:    &commonv1.MarkupLine{Value: req.Title},
+				Status:   &assessment_resultsv1.ObjectiveStatus{State: "not-satisfied"},
 			},
 		})
 	}
@@ -592,12 +615,21 @@ func (g *Generator) GenerateAssessmentResults(ctx context.Context, snapshotName,
 			Title:   fmt.Sprintf("%s Assessment Results", framework),
 			Version: snapshotName,
 		},
+		ImportAp: &assessment_resultsv1.ImportAp{
+			Href: &commonv1.URIReference{Value: fmt.Sprintf("ap-%s-%s", framework, snapshotName)},
+		},
 		Results: []*assessment_resultsv1.Result{{
 			Uuid:         newUUID(uuidNamespace, fmt.Sprintf("result-%s-%s", framework, snapshotName)),
 			Title:        &commonv1.MarkupLine{Value: fmt.Sprintf("Assessment of %s", framework)},
 			Description:  &commonv1.MarkupMultiline{Value: fmt.Sprintf("Assessment results for %s framework", framework)},
+			Start:        &commonv1.DateTime{Value: timestamppb.Now()},
 			Findings:     findings,
 			Observations: observations,
+			ReviewedControls: &assessment_resultsv1.ReviewedControls{
+				ControlSelections: []*assessment_resultsv1.ControlSelection{{
+					Description: &commonv1.MarkupMultiline{Value: fmt.Sprintf("All controls in %s framework", framework)},
+				}},
+			},
 		}},
 		BackMatter: buildBackMatter(framework, snapshotName),
 	}, nil
@@ -649,7 +681,7 @@ func buildBackMatter(framework, snapshotName string) *commonv1.BackMatter {
 	return &commonv1.BackMatter{
 		Resources: []*commonv1.Resource{{
 			Uuid:  newUUID(uuidNamespace, fmt.Sprintf("resource-%s-%s", framework, snapshotName)),
-			Title: []string{fmt.Sprintf("%s Framework Reference", framework)},
+			Title: fmt.Sprintf("%s Framework Reference", framework),
 			Description: &commonv1.MarkupMultiline{
 				Value: fmt.Sprintf("Source framework metadata for %s snapshot %s", framework, snapshotName),
 			},

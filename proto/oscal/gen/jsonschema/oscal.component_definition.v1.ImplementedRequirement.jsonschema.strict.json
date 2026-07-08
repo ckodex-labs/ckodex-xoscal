@@ -8,10 +8,7 @@
       "type": "string"
     },
     "description": {
-      "items": {
-        "$ref": "oscal.common.v1.MarkupLine.jsonschema.strict.json"
-      },
-      "type": "array"
+      "type": "string"
     },
     "links": {
       "items": {
@@ -36,10 +33,14 @@
         "$ref": "oscal.component_definition.v1.Statement.jsonschema.strict.json"
       },
       "type": "array"
+    },
+    "uuid": {
+      "$ref": "oscal.common.v1.UUID.jsonschema.strict.json"
     }
   },
   "required": [
-    "controlId"
+    "controlId",
+    "description"
   ],
   "title": "Implemented Requirement",
   "type": "object"

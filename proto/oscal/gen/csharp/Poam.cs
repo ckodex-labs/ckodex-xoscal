@@ -25,145 +25,175 @@ namespace Oscal.Poam.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChJwb2FtL3YxL3BvYW0ucHJvdG8SDW9zY2FsLnBvYW0udjEaFmNvbW1vbi92",
-            "MS9jb21tb24ucHJvdG8i7QIKGVBsYW5PZkFjdGlvbkFuZE1pbGVzdG9uZXMS",
+            "MS9jb21tb24ucHJvdG8iqQMKGVBsYW5PZkFjdGlvbkFuZE1pbGVzdG9uZXMS",
             "KQoEdXVpZBgBIAEoCzIVLm9zY2FsLmNvbW1vbi52MS5VVUlEUgR1dWlkEjUK",
             "CG1ldGFkYXRhGAIgASgLMhkub3NjYWwuY29tbW9uLnYxLk1ldGFkYXRhUght",
             "ZXRhZGF0YRI3CgppbXBvcnRfc3NwGAMgASgLMhgub3NjYWwucG9hbS52MS5J",
             "bXBvcnRTc3BSCWltcG9ydFNzcBJMChFsb2NhbF9kZWZpbml0aW9ucxgEIAEo",
             "CzIfLm9zY2FsLnBvYW0udjEuTG9jYWxEZWZpbml0aW9uc1IQbG9jYWxEZWZp",
-            "bml0aW9ucxIpCgVyaXNrcxgFIAMoCzITLm9zY2FsLnBvYW0udjEuUmlza1IF",
-            "cmlza3MSPAoLYmFja19tYXR0ZXIYBiABKAsyGy5vc2NhbC5jb21tb24udjEu",
-            "QmFja01hdHRlclIKYmFja01hdHRlciJ6CglJbXBvcnRTc3ASMQoEaHJlZhgB",
-            "IAEoCzIdLm9zY2FsLmNvbW1vbi52MS5VUklSZWZlcmVuY2VSBGhyZWYSOgoH",
-            "cmVtYXJrcxgCIAMoCzIgLm9zY2FsLmNvbW1vbi52MS5NYXJrdXBNdWx0aWxp",
-            "bmVSB3JlbWFya3MivgEKEExvY2FsRGVmaW5pdGlvbnMSOAoKY29tcG9uZW50",
-            "cxgBIAMoCzIYLm9zY2FsLnBvYW0udjEuQ29tcG9uZW50Ugpjb21wb25lbnRz",
-            "EkUKD2ludmVudG9yeV9pdGVtcxgCIAMoCzIcLm9zY2FsLnBvYW0udjEuSW52",
-            "ZW50b3J5SXRlbVIOaW52ZW50b3J5SXRlbXMSKQoFdXNlcnMYAyADKAsyEy5v",
-            "c2NhbC5wb2FtLnYxLlVzZXJSBXVzZXJzIpwCCglDb21wb25lbnQSKQoEdXVp",
-            "ZBgBIAEoCzIVLm9zY2FsLmNvbW1vbi52MS5VVUlEUgR1dWlkEhIKBHR5cGUY",
-            "AiABKAlSBHR5cGUSFAoFdGl0bGUYAyABKAlSBXRpdGxlEiAKC2Rlc2NyaXB0",
-            "aW9uGAQgASgJUgtkZXNjcmlwdGlvbhIvCgVwcm9wcxgFIAMoCzIZLm9zY2Fs",
-            "LmNvbW1vbi52MS5Qcm9wZXJ0eVIFcHJvcHMSKwoFbGlua3MYBiADKAsyFS5v",
-            "c2NhbC5jb21tb24udjEuTGlua1IFbGlua3MSOgoHcmVtYXJrcxgHIAMoCzIg",
-            "Lm9zY2FsLmNvbW1vbi52MS5NYXJrdXBNdWx0aWxpbmVSB3JlbWFya3MikwIK",
-            "DUludmVudG9yeUl0ZW0SKQoEdXVpZBgBIAEoCzIVLm9zY2FsLmNvbW1vbi52",
-            "MS5VVUlEUgR1dWlkEj0KC2Rlc2NyaXB0aW9uGAIgASgLMhsub3NjYWwuY29t",
-            "bW9uLnYxLk1hcmt1cExpbmVSC2Rlc2NyaXB0aW9uEi8KBXByb3BzGAMgAygL",
-            "Mhkub3NjYWwuY29tbW9uLnYxLlByb3BlcnR5UgVwcm9wcxIrCgVsaW5rcxgE",
-            "IAMoCzIVLm9zY2FsLmNvbW1vbi52MS5MaW5rUgVsaW5rcxI6CgdyZW1hcmtz",
-            "GAUgAygLMiAub3NjYWwuY29tbW9uLnYxLk1hcmt1cE11bHRpbGluZVIHcmVt",
-            "YXJrcyLEAgoEVXNlchIpCgR1dWlkGAEgASgLMhUub3NjYWwuY29tbW9uLnYx",
-            "LlVVSURSBHV1aWQSFAoFdGl0bGUYAiABKAlSBXRpdGxlEh0KCnNob3J0X25h",
-            "bWUYAyABKAlSCXNob3J0TmFtZRJCCgtkZXNjcmlwdGlvbhgEIAEoCzIgLm9z",
-            "Y2FsLmNvbW1vbi52MS5NYXJrdXBNdWx0aWxpbmVSC2Rlc2NyaXB0aW9uEi8K",
-            "BXByb3BzGAUgAygLMhkub3NjYWwuY29tbW9uLnYxLlByb3BlcnR5UgVwcm9w",
-            "cxIrCgVsaW5rcxgGIAMoCzIVLm9zY2FsLmNvbW1vbi52MS5MaW5rUgVsaW5r",
-            "cxI6CgdyZW1hcmtzGAcgAygLMiAub3NjYWwuY29tbW9uLnYxLk1hcmt1cE11",
-            "bHRpbGluZVIHcmVtYXJrcyKCBgoEUmlzaxIpCgR1dWlkGAEgASgLMhUub3Nj",
-            "YWwuY29tbW9uLnYxLlVVSURSBHV1aWQSMQoFdGl0bGUYAiABKAsyGy5vc2Nh",
-            "bC5jb21tb24udjEuTWFya3VwTGluZVIFdGl0bGUSQgoLZGVzY3JpcHRpb24Y",
-            "AyABKAsyIC5vc2NhbC5jb21tb24udjEuTWFya3VwTXVsdGlsaW5lUgtkZXNj",
-            "cmlwdGlvbhI+CglzdGF0ZW1lbnQYBCABKAsyIC5vc2NhbC5jb21tb24udjEu",
-            "TWFya3VwTXVsdGlsaW5lUglzdGF0ZW1lbnQSMQoGc3RhdHVzGAUgASgLMhku",
-            "b3NjYWwucG9hbS52MS5SaXNrU3RhdHVzUgZzdGF0dXMSTgoSbWl0aWdhdGlu",
-            "Z19mYWN0b3JzGAYgAygLMh8ub3NjYWwucG9hbS52MS5NaXRpZ2F0aW5nRmFj",
-            "dG9yUhFtaXRpZ2F0aW5nRmFjdG9ycxI1CghkZWFkbGluZRgHIAEoCzIZLm9z",
-            "Y2FsLmNvbW1vbi52MS5EYXRlVGltZVIIZGVhZGxpbmUSOwoMcmVtZWRpYXRp",
-            "b25zGAggAygLMhcub3NjYWwucG9hbS52MS5SZXNwb25zZVIMcmVtZWRpYXRp",
-            "b25zEjEKCHJpc2tfbG9nGAkgASgLMhYub3NjYWwucG9hbS52MS5SaXNrTG9n",
-            "UgdyaXNrTG9nElQKFHJlbGF0ZWRfb2JzZXJ2YXRpb25zGAogAygLMiEub3Nj",
-            "YWwucG9hbS52MS5SZWxhdGVkT2JzZXJ2YXRpb25SE3JlbGF0ZWRPYnNlcnZh",
-            "dGlvbnMSLwoFcHJvcHMYCyADKAsyGS5vc2NhbC5jb21tb24udjEuUHJvcGVy",
-            "dHlSBXByb3BzEisKBWxpbmtzGAwgAygLMhUub3NjYWwuY29tbW9uLnYxLkxp",
-            "bmtSBWxpbmtzEjoKB3JlbWFya3MYDSADKAsyIC5vc2NhbC5jb21tb24udjEu",
-            "TWFya3VwTXVsdGlsaW5lUgdyZW1hcmtzIl4KClJpc2tTdGF0dXMSFAoFc3Rh",
-            "dGUYASABKAlSBXN0YXRlEjoKB3JlbWFya3MYAiADKAsyIC5vc2NhbC5jb21t",
-            "b24udjEuTWFya3VwTXVsdGlsaW5lUgdyZW1hcmtzIuQCChBNaXRpZ2F0aW5n",
-            "RmFjdG9yEikKBHV1aWQYASABKAsyFS5vc2NhbC5jb21tb24udjEuVVVJRFIE",
-            "dXVpZBJGChNpbXBsZW1lbnRhdGlvbl91dWlkGAIgASgLMhUub3NjYWwuY29t",
-            "bW9uLnYxLlVVSURSEmltcGxlbWVudGF0aW9uVXVpZBJCCgtkZXNjcmlwdGlv",
-            "bhgDIAEoCzIgLm9zY2FsLmNvbW1vbi52MS5NYXJrdXBNdWx0aWxpbmVSC2Rl",
-            "c2NyaXB0aW9uEi8KBXByb3BzGAQgAygLMhkub3NjYWwuY29tbW9uLnYxLlBy",
-            "b3BlcnR5UgVwcm9wcxIrCgVsaW5rcxgFIAMoCzIVLm9zY2FsLmNvbW1vbi52",
-            "MS5MaW5rUgVsaW5rcxI7CghzdWJqZWN0cxgGIAMoCzIfLm9zY2FsLnBvYW0u",
-            "djEuU3ViamVjdFJlZmVyZW5jZVIIc3ViamVjdHMimQIKEFN1YmplY3RSZWZl",
-            "cmVuY2USOAoMc3ViamVjdF91dWlkGAEgASgLMhUub3NjYWwuY29tbW9uLnYx",
-            "LlVVSURSC3N1YmplY3RVdWlkEjEKBXRpdGxlGAIgASgLMhsub3NjYWwuY29t",
-            "bW9uLnYxLk1hcmt1cExpbmVSBXRpdGxlEi8KBXByb3BzGAMgAygLMhkub3Nj",
-            "YWwuY29tbW9uLnYxLlByb3BlcnR5UgVwcm9wcxIrCgVsaW5rcxgEIAMoCzIV",
-            "Lm9zY2FsLmNvbW1vbi52MS5MaW5rUgVsaW5rcxI6CgdyZW1hcmtzGAUgAygL",
-            "MiAub3NjYWwuY29tbW9uLnYxLk1hcmt1cE11bHRpbGluZVIHcmVtYXJrcyL/",
-            "BAoIUmVzcG9uc2USKQoEdXVpZBgBIAEoCzIVLm9zY2FsLmNvbW1vbi52MS5V",
-            "VUlEUgR1dWlkEjEKBXRpdGxlGAIgASgLMhsub3NjYWwuY29tbW9uLnYxLk1h",
-            "cmt1cExpbmVSBXRpdGxlEkIKC2Rlc2NyaXB0aW9uGAMgASgLMiAub3NjYWwu",
-            "Y29tbW9uLnYxLk1hcmt1cE11bHRpbGluZVILZGVzY3JpcHRpb24SNQoIZGVh",
-            "ZGxpbmUYBCABKAsyGS5vc2NhbC5jb21tb24udjEuRGF0ZVRpbWVSCGRlYWRs",
-            "aW5lEjUKBnN0YXR1cxgFIAEoCzIdLm9zY2FsLnBvYW0udjEuUmVzcG9uc2VT",
-            "dGF0dXNSBnN0YXR1cxJLChFyZXNwb25zaWJsZV9yb2xlcxgGIAMoCzIeLm9z",
-            "Y2FsLnBvYW0udjEuUmVzcG9uc2libGVSb2xlUhByZXNwb25zaWJsZVJvbGVz",
-            "Ej8KDXJlbGF0ZWRfdGFza3MYByADKAsyGi5vc2NhbC5wb2FtLnYxLlJlbGF0",
-            "ZWRUYXNrUgxyZWxhdGVkVGFza3MSOwoIc3ViamVjdHMYCCADKAsyHy5vc2Nh",
-            "bC5wb2FtLnYxLlN1YmplY3RSZWZlcmVuY2VSCHN1YmplY3RzEi8KBXByb3Bz",
-            "GAkgAygLMhkub3NjYWwuY29tbW9uLnYxLlByb3BlcnR5UgVwcm9wcxIrCgVs",
-            "aW5rcxgKIAMoCzIVLm9zY2FsLmNvbW1vbi52MS5MaW5rUgVsaW5rcxI6Cgdy",
-            "ZW1hcmtzGAsgAygLMiAub3NjYWwuY29tbW9uLnYxLk1hcmt1cE11bHRpbGlu",
-            "ZVIHcmVtYXJrcyJiCg5SZXNwb25zZVN0YXR1cxIUCgVzdGF0ZRgBIAEoCVIF",
-            "c3RhdGUSOgoHcmVtYXJrcxgCIAMoCzIgLm9zY2FsLmNvbW1vbi52MS5NYXJr",
-            "dXBNdWx0aWxpbmVSB3JlbWFya3Mi5wEKD1Jlc3BvbnNpYmxlUm9sZRIvCgdy",
-            "b2xlX2lkGAEgASgLMhYub3NjYWwuY29tbW9uLnYxLlRva2VuUgZyb2xlSWQS",
-            "NgoLcGFydHlfdXVpZHMYAiADKAsyFS5vc2NhbC5jb21tb24udjEuVVVJRFIK",
-            "cGFydHlVdWlkcxIvCgVwcm9wcxgDIAMoCzIZLm9zY2FsLmNvbW1vbi52MS5Q",
-            "cm9wZXJ0eVIFcHJvcHMSOgoHcmVtYXJrcxgEIAMoCzIgLm9zY2FsLmNvbW1v",
-            "bi52MS5NYXJrdXBNdWx0aWxpbmVSB3JlbWFya3MijgIKC1JlbGF0ZWRUYXNr",
-            "EjIKCXRhc2tfdXVpZBgBIAEoCzIVLm9zY2FsLmNvbW1vbi52MS5VVUlEUgh0",
-            "YXNrVXVpZBIxCgV0aXRsZRgCIAEoCzIbLm9zY2FsLmNvbW1vbi52MS5NYXJr",
-            "dXBMaW5lUgV0aXRsZRIvCgVwcm9wcxgDIAMoCzIZLm9zY2FsLmNvbW1vbi52",
-            "MS5Qcm9wZXJ0eVIFcHJvcHMSKwoFbGlua3MYBCADKAsyFS5vc2NhbC5jb21t",
-            "b24udjEuTGlua1IFbGlua3MSOgoHcmVtYXJrcxgFIAMoCzIgLm9zY2FsLmNv",
-            "bW1vbi52MS5NYXJrdXBNdWx0aWxpbmVSB3JlbWFya3MiQAoHUmlza0xvZxI1",
-            "CgdlbnRyaWVzGAEgAygLMhsub3NjYWwucG9hbS52MS5SaXNrTG9nRW50cnlS",
-            "B2VudHJpZXMi6wQKDFJpc2tMb2dFbnRyeRIpCgR1dWlkGAEgASgLMhUub3Nj",
-            "YWwuY29tbW9uLnYxLlVVSURSBHV1aWQSMQoFdGl0bGUYAiABKAsyGy5vc2Nh",
-            "bC5jb21tb24udjEuTWFya3VwTGluZVIFdGl0bGUSQgoLZGVzY3JpcHRpb24Y",
-            "AyABKAsyIC5vc2NhbC5jb21tb24udjEuTWFya3VwTXVsdGlsaW5lUgtkZXNj",
-            "cmlwdGlvbhIvCgVzdGFydBgEIAEoCzIZLm9zY2FsLmNvbW1vbi52MS5EYXRl",
-            "VGltZVIFc3RhcnQSKwoDZW5kGAUgASgLMhkub3NjYWwuY29tbW9uLnYxLkRh",
-            "dGVUaW1lUgNlbmQSLwoFcHJvcHMYBiADKAsyGS5vc2NhbC5jb21tb24udjEu",
-            "UHJvcGVydHlSBXByb3BzEisKBWxpbmtzGAcgAygLMhUub3NjYWwuY29tbW9u",
-            "LnYxLkxpbmtSBWxpbmtzEjQKCWxvZ2dlZF9ieRgIIAMoCzIXLm9zY2FsLnBv",
-            "YW0udjEuTG9nZ2VkQnlSCGxvZ2dlZEJ5Ej4KDXN0YXR1c19jaGFuZ2UYCSAB",
-            "KAsyGS5vc2NhbC5wb2FtLnYxLlJpc2tTdGF0dXNSDHN0YXR1c0NoYW5nZRJL",
-            "ChFyZWxhdGVkX3Jlc3BvbnNlcxgKIAMoCzIeLm9zY2FsLnBvYW0udjEuUmVs",
-            "YXRlZFJlc3BvbnNlUhByZWxhdGVkUmVzcG9uc2VzEjoKB3JlbWFya3MYCyAD",
-            "KAsyIC5vc2NhbC5jb21tb24udjEuTWFya3VwTXVsdGlsaW5lUgdyZW1hcmtz",
-            "Io0CCghMb2dnZWRCeRI0CgpwYXJ0eV91dWlkGAEgASgLMhUub3NjYWwuY29t",
-            "bW9uLnYxLlVVSURSCXBhcnR5VXVpZBIxCgV0aXRsZRgCIAEoCzIbLm9zY2Fs",
-            "LmNvbW1vbi52MS5NYXJrdXBMaW5lUgV0aXRsZRIvCgVwcm9wcxgDIAMoCzIZ",
-            "Lm9zY2FsLmNvbW1vbi52MS5Qcm9wZXJ0eVIFcHJvcHMSKwoFbGlua3MYBCAD",
-            "KAsyFS5vc2NhbC5jb21tb24udjEuTGlua1IFbGlua3MSOgoHcmVtYXJrcxgF",
+            "bml0aW9ucxItCgVyaXNrcxgFIAMoCzITLm9zY2FsLnBvYW0udjEuUmlza0IC",
+            "GAFSBXJpc2tzEjwKC2JhY2tfbWF0dGVyGAYgASgLMhsub3NjYWwuY29tbW9u",
+            "LnYxLkJhY2tNYXR0ZXJSCmJhY2tNYXR0ZXISNgoKcG9hbV9pdGVtcxgHIAMo",
+            "CzIXLm9zY2FsLnBvYW0udjEuUG9hbUl0ZW1SCXBvYW1JdGVtcyJ6CglJbXBv",
+            "cnRTc3ASMQoEaHJlZhgBIAEoCzIdLm9zY2FsLmNvbW1vbi52MS5VUklSZWZl",
+            "cmVuY2VSBGhyZWYSOgoHcmVtYXJrcxgCIAMoCzIgLm9zY2FsLmNvbW1vbi52",
+            "MS5NYXJrdXBNdWx0aWxpbmVSB3JlbWFya3MivgEKEExvY2FsRGVmaW5pdGlv",
+            "bnMSOAoKY29tcG9uZW50cxgBIAMoCzIYLm9zY2FsLnBvYW0udjEuQ29tcG9u",
+            "ZW50Ugpjb21wb25lbnRzEkUKD2ludmVudG9yeV9pdGVtcxgCIAMoCzIcLm9z",
+            "Y2FsLnBvYW0udjEuSW52ZW50b3J5SXRlbVIOaW52ZW50b3J5SXRlbXMSKQoF",
+            "dXNlcnMYAyADKAsyEy5vc2NhbC5wb2FtLnYxLlVzZXJSBXVzZXJzIpwCCglD",
+            "b21wb25lbnQSKQoEdXVpZBgBIAEoCzIVLm9zY2FsLmNvbW1vbi52MS5VVUlE",
+            "UgR1dWlkEhIKBHR5cGUYAiABKAlSBHR5cGUSFAoFdGl0bGUYAyABKAlSBXRp",
+            "dGxlEiAKC2Rlc2NyaXB0aW9uGAQgASgJUgtkZXNjcmlwdGlvbhIvCgVwcm9w",
+            "cxgFIAMoCzIZLm9zY2FsLmNvbW1vbi52MS5Qcm9wZXJ0eVIFcHJvcHMSKwoF",
+            "bGlua3MYBiADKAsyFS5vc2NhbC5jb21tb24udjEuTGlua1IFbGlua3MSOgoH",
+            "cmVtYXJrcxgHIAMoCzIgLm9zY2FsLmNvbW1vbi52MS5NYXJrdXBNdWx0aWxp",
+            "bmVSB3JlbWFya3MikwIKDUludmVudG9yeUl0ZW0SKQoEdXVpZBgBIAEoCzIV",
+            "Lm9zY2FsLmNvbW1vbi52MS5VVUlEUgR1dWlkEj0KC2Rlc2NyaXB0aW9uGAIg",
+            "ASgLMhsub3NjYWwuY29tbW9uLnYxLk1hcmt1cExpbmVSC2Rlc2NyaXB0aW9u",
+            "Ei8KBXByb3BzGAMgAygLMhkub3NjYWwuY29tbW9uLnYxLlByb3BlcnR5UgVw",
+            "cm9wcxIrCgVsaW5rcxgEIAMoCzIVLm9zY2FsLmNvbW1vbi52MS5MaW5rUgVs",
+            "aW5rcxI6CgdyZW1hcmtzGAUgAygLMiAub3NjYWwuY29tbW9uLnYxLk1hcmt1",
+            "cE11bHRpbGluZVIHcmVtYXJrcyLEAgoEVXNlchIpCgR1dWlkGAEgASgLMhUu",
+            "b3NjYWwuY29tbW9uLnYxLlVVSURSBHV1aWQSFAoFdGl0bGUYAiABKAlSBXRp",
+            "dGxlEh0KCnNob3J0X25hbWUYAyABKAlSCXNob3J0TmFtZRJCCgtkZXNjcmlw",
+            "dGlvbhgEIAEoCzIgLm9zY2FsLmNvbW1vbi52MS5NYXJrdXBNdWx0aWxpbmVS",
+            "C2Rlc2NyaXB0aW9uEi8KBXByb3BzGAUgAygLMhkub3NjYWwuY29tbW9uLnYx",
+            "LlByb3BlcnR5UgVwcm9wcxIrCgVsaW5rcxgGIAMoCzIVLm9zY2FsLmNvbW1v",
+            "bi52MS5MaW5rUgVsaW5rcxI6CgdyZW1hcmtzGAcgAygLMiAub3NjYWwuY29t",
+            "bW9uLnYxLk1hcmt1cE11bHRpbGluZVIHcmVtYXJrcyLYBAoIUG9hbUl0ZW0S",
+            "KQoEdXVpZBgBIAEoCzIVLm9zY2FsLmNvbW1vbi52MS5VVUlEUgR1dWlkEjEK",
+            "BXRpdGxlGAIgASgLMhsub3NjYWwuY29tbW9uLnYxLk1hcmt1cExpbmVSBXRp",
+            "dGxlEkIKC2Rlc2NyaXB0aW9uGAMgASgLMiAub3NjYWwuY29tbW9uLnYxLk1h",
+            "cmt1cE11bHRpbGluZVILZGVzY3JpcHRpb24SLwoFcHJvcHMYBCADKAsyGS5v",
+            "c2NhbC5jb21tb24udjEuUHJvcGVydHlSBXByb3BzEisKBWxpbmtzGAUgAygL",
+            "MhUub3NjYWwuY29tbW9uLnYxLkxpbmtSBWxpbmtzEi8KB29yaWdpbnMYBiAD",
+            "KAsyFS5vc2NhbC5wb2FtLnYxLk9yaWdpblIHb3JpZ2lucxJIChByZWxhdGVk",
+            "X2ZpbmRpbmdzGAcgAygLMh0ub3NjYWwucG9hbS52MS5SZWxhdGVkRmluZGlu",
+            "Z1IPcmVsYXRlZEZpbmRpbmdzElQKFHJlbGF0ZWRfb2JzZXJ2YXRpb25zGAgg",
+            "AygLMiEub3NjYWwucG9hbS52MS5SZWxhdGVkT2JzZXJ2YXRpb25SE3JlbGF0",
+            "ZWRPYnNlcnZhdGlvbnMSPwoNcmVsYXRlZF9yaXNrcxgJIAMoCzIaLm9zY2Fs",
+            "LnBvYW0udjEuUmVsYXRlZFJpc2tSDHJlbGF0ZWRSaXNrcxI6CgdyZW1hcmtz",
+            "GAogAygLMiAub3NjYWwuY29tbW9uLnYxLk1hcmt1cE11bHRpbGluZVIHcmVt",
+            "YXJrcyI8CgZPcmlnaW4SMgoGYWN0b3JzGAEgAygLMhoub3NjYWwucG9hbS52",
+            "MS5PcmlnaW5BY3RvclIGYWN0b3JzIpACCgtPcmlnaW5BY3RvchI0CgphY3Rv",
+            "cl91dWlkGAEgASgLMhUub3NjYWwuY29tbW9uLnYxLlVVSURSCWFjdG9yVXVp",
+            "ZBIxCgV0aXRsZRgCIAEoCzIbLm9zY2FsLmNvbW1vbi52MS5NYXJrdXBMaW5l",
+            "UgV0aXRsZRIvCgVwcm9wcxgDIAMoCzIZLm9zY2FsLmNvbW1vbi52MS5Qcm9w",
+            "ZXJ0eVIFcHJvcHMSKwoFbGlua3MYBCADKAsyFS5vc2NhbC5jb21tb24udjEu",
+            "TGlua1IFbGlua3MSOgoHcmVtYXJrcxgFIAMoCzIgLm9zY2FsLmNvbW1vbi52",
+            "MS5NYXJrdXBNdWx0aWxpbmVSB3JlbWFya3MiSgoOUmVsYXRlZEZpbmRpbmcS",
+            "OAoMZmluZGluZ191dWlkGAEgASgLMhUub3NjYWwuY29tbW9uLnYxLlVVSURS",
+            "C2ZpbmRpbmdVdWlkIkEKC1JlbGF0ZWRSaXNrEjIKCXJpc2tfdXVpZBgBIAEo",
+            "CzIVLm9zY2FsLmNvbW1vbi52MS5VVUlEUghyaXNrVXVpZCKCBgoEUmlzaxIp",
+            "CgR1dWlkGAEgASgLMhUub3NjYWwuY29tbW9uLnYxLlVVSURSBHV1aWQSMQoF",
+            "dGl0bGUYAiABKAsyGy5vc2NhbC5jb21tb24udjEuTWFya3VwTGluZVIFdGl0",
+            "bGUSQgoLZGVzY3JpcHRpb24YAyABKAsyIC5vc2NhbC5jb21tb24udjEuTWFy",
+            "a3VwTXVsdGlsaW5lUgtkZXNjcmlwdGlvbhI+CglzdGF0ZW1lbnQYBCABKAsy",
+            "IC5vc2NhbC5jb21tb24udjEuTWFya3VwTXVsdGlsaW5lUglzdGF0ZW1lbnQS",
+            "MQoGc3RhdHVzGAUgASgLMhkub3NjYWwucG9hbS52MS5SaXNrU3RhdHVzUgZz",
+            "dGF0dXMSTgoSbWl0aWdhdGluZ19mYWN0b3JzGAYgAygLMh8ub3NjYWwucG9h",
+            "bS52MS5NaXRpZ2F0aW5nRmFjdG9yUhFtaXRpZ2F0aW5nRmFjdG9ycxI1Cghk",
+            "ZWFkbGluZRgHIAEoCzIZLm9zY2FsLmNvbW1vbi52MS5EYXRlVGltZVIIZGVh",
+            "ZGxpbmUSOwoMcmVtZWRpYXRpb25zGAggAygLMhcub3NjYWwucG9hbS52MS5S",
+            "ZXNwb25zZVIMcmVtZWRpYXRpb25zEjEKCHJpc2tfbG9nGAkgASgLMhYub3Nj",
+            "YWwucG9hbS52MS5SaXNrTG9nUgdyaXNrTG9nElQKFHJlbGF0ZWRfb2JzZXJ2",
+            "YXRpb25zGAogAygLMiEub3NjYWwucG9hbS52MS5SZWxhdGVkT2JzZXJ2YXRp",
+            "b25SE3JlbGF0ZWRPYnNlcnZhdGlvbnMSLwoFcHJvcHMYCyADKAsyGS5vc2Nh",
+            "bC5jb21tb24udjEuUHJvcGVydHlSBXByb3BzEisKBWxpbmtzGAwgAygLMhUu",
+            "b3NjYWwuY29tbW9uLnYxLkxpbmtSBWxpbmtzEjoKB3JlbWFya3MYDSADKAsy",
+            "IC5vc2NhbC5jb21tb24udjEuTWFya3VwTXVsdGlsaW5lUgdyZW1hcmtzIl4K",
+            "ClJpc2tTdGF0dXMSFAoFc3RhdGUYASABKAlSBXN0YXRlEjoKB3JlbWFya3MY",
+            "AiADKAsyIC5vc2NhbC5jb21tb24udjEuTWFya3VwTXVsdGlsaW5lUgdyZW1h",
+            "cmtzIuQCChBNaXRpZ2F0aW5nRmFjdG9yEikKBHV1aWQYASABKAsyFS5vc2Nh",
+            "bC5jb21tb24udjEuVVVJRFIEdXVpZBJGChNpbXBsZW1lbnRhdGlvbl91dWlk",
+            "GAIgASgLMhUub3NjYWwuY29tbW9uLnYxLlVVSURSEmltcGxlbWVudGF0aW9u",
+            "VXVpZBJCCgtkZXNjcmlwdGlvbhgDIAEoCzIgLm9zY2FsLmNvbW1vbi52MS5N",
+            "YXJrdXBNdWx0aWxpbmVSC2Rlc2NyaXB0aW9uEi8KBXByb3BzGAQgAygLMhku",
+            "b3NjYWwuY29tbW9uLnYxLlByb3BlcnR5UgVwcm9wcxIrCgVsaW5rcxgFIAMo",
+            "CzIVLm9zY2FsLmNvbW1vbi52MS5MaW5rUgVsaW5rcxI7CghzdWJqZWN0cxgG",
+            "IAMoCzIfLm9zY2FsLnBvYW0udjEuU3ViamVjdFJlZmVyZW5jZVIIc3ViamVj",
+            "dHMimQIKEFN1YmplY3RSZWZlcmVuY2USOAoMc3ViamVjdF91dWlkGAEgASgL",
+            "MhUub3NjYWwuY29tbW9uLnYxLlVVSURSC3N1YmplY3RVdWlkEjEKBXRpdGxl",
+            "GAIgASgLMhsub3NjYWwuY29tbW9uLnYxLk1hcmt1cExpbmVSBXRpdGxlEi8K",
+            "BXByb3BzGAMgAygLMhkub3NjYWwuY29tbW9uLnYxLlByb3BlcnR5UgVwcm9w",
+            "cxIrCgVsaW5rcxgEIAMoCzIVLm9zY2FsLmNvbW1vbi52MS5MaW5rUgVsaW5r",
+            "cxI6CgdyZW1hcmtzGAUgAygLMiAub3NjYWwuY29tbW9uLnYxLk1hcmt1cE11",
+            "bHRpbGluZVIHcmVtYXJrcyL/BAoIUmVzcG9uc2USKQoEdXVpZBgBIAEoCzIV",
+            "Lm9zY2FsLmNvbW1vbi52MS5VVUlEUgR1dWlkEjEKBXRpdGxlGAIgASgLMhsu",
+            "b3NjYWwuY29tbW9uLnYxLk1hcmt1cExpbmVSBXRpdGxlEkIKC2Rlc2NyaXB0",
+            "aW9uGAMgASgLMiAub3NjYWwuY29tbW9uLnYxLk1hcmt1cE11bHRpbGluZVIL",
+            "ZGVzY3JpcHRpb24SNQoIZGVhZGxpbmUYBCABKAsyGS5vc2NhbC5jb21tb24u",
+            "djEuRGF0ZVRpbWVSCGRlYWRsaW5lEjUKBnN0YXR1cxgFIAEoCzIdLm9zY2Fs",
+            "LnBvYW0udjEuUmVzcG9uc2VTdGF0dXNSBnN0YXR1cxJLChFyZXNwb25zaWJs",
+            "ZV9yb2xlcxgGIAMoCzIeLm9zY2FsLnBvYW0udjEuUmVzcG9uc2libGVSb2xl",
+            "UhByZXNwb25zaWJsZVJvbGVzEj8KDXJlbGF0ZWRfdGFza3MYByADKAsyGi5v",
+            "c2NhbC5wb2FtLnYxLlJlbGF0ZWRUYXNrUgxyZWxhdGVkVGFza3MSOwoIc3Vi",
+            "amVjdHMYCCADKAsyHy5vc2NhbC5wb2FtLnYxLlN1YmplY3RSZWZlcmVuY2VS",
+            "CHN1YmplY3RzEi8KBXByb3BzGAkgAygLMhkub3NjYWwuY29tbW9uLnYxLlBy",
+            "b3BlcnR5UgVwcm9wcxIrCgVsaW5rcxgKIAMoCzIVLm9zY2FsLmNvbW1vbi52",
+            "MS5MaW5rUgVsaW5rcxI6CgdyZW1hcmtzGAsgAygLMiAub3NjYWwuY29tbW9u",
+            "LnYxLk1hcmt1cE11bHRpbGluZVIHcmVtYXJrcyJiCg5SZXNwb25zZVN0YXR1",
+            "cxIUCgVzdGF0ZRgBIAEoCVIFc3RhdGUSOgoHcmVtYXJrcxgCIAMoCzIgLm9z",
+            "Y2FsLmNvbW1vbi52MS5NYXJrdXBNdWx0aWxpbmVSB3JlbWFya3Mi5wEKD1Jl",
+            "c3BvbnNpYmxlUm9sZRIvCgdyb2xlX2lkGAEgASgLMhYub3NjYWwuY29tbW9u",
+            "LnYxLlRva2VuUgZyb2xlSWQSNgoLcGFydHlfdXVpZHMYAiADKAsyFS5vc2Nh",
+            "bC5jb21tb24udjEuVVVJRFIKcGFydHlVdWlkcxIvCgVwcm9wcxgDIAMoCzIZ",
+            "Lm9zY2FsLmNvbW1vbi52MS5Qcm9wZXJ0eVIFcHJvcHMSOgoHcmVtYXJrcxgE",
             "IAMoCzIgLm9zY2FsLmNvbW1vbi52MS5NYXJrdXBNdWx0aWxpbmVSB3JlbWFy",
-            "a3MiqAIKD1JlbGF0ZWRSZXNwb25zZRI6Cg1yZXNwb25zZV91dWlkGAEgASgL",
-            "MhUub3NjYWwuY29tbW9uLnYxLlVVSURSDHJlc3BvbnNlVXVpZBIvCgVwcm9w",
-            "cxgCIAMoCzIZLm9zY2FsLmNvbW1vbi52MS5Qcm9wZXJ0eVIFcHJvcHMSKwoF",
-            "bGlua3MYAyADKAsyFS5vc2NhbC5jb21tb24udjEuTGlua1IFbGlua3MSPwoN",
-            "cmVsYXRlZF90YXNrcxgEIAMoCzIaLm9zY2FsLnBvYW0udjEuUmVsYXRlZFRh",
-            "c2tSDHJlbGF0ZWRUYXNrcxI6CgdyZW1hcmtzGAUgAygLMiAub3NjYWwuY29t",
-            "bW9uLnYxLk1hcmt1cE11bHRpbGluZVIHcmVtYXJrcyKSAQoSUmVsYXRlZE9i",
-            "c2VydmF0aW9uEkAKEG9ic2VydmF0aW9uX3V1aWQYASABKAsyFS5vc2NhbC5j",
-            "b21tb24udjEuVVVJRFIPb2JzZXJ2YXRpb25VdWlkEjoKB3JlbWFya3MYAiAD",
-            "KAsyIC5vc2NhbC5jb21tb24udjEuTWFya3VwTXVsdGlsaW5lUgdyZW1hcmtz",
-            "QjZaNGdpdGh1Yi5jb20vbWNob3JmYS94b3NjYWwvcHJvdG8vb3NjYWwvcG9h",
-            "bS92MTtwb2FtdjFiBnByb3RvMw=="));
+            "a3MijgIKC1JlbGF0ZWRUYXNrEjIKCXRhc2tfdXVpZBgBIAEoCzIVLm9zY2Fs",
+            "LmNvbW1vbi52MS5VVUlEUgh0YXNrVXVpZBIxCgV0aXRsZRgCIAEoCzIbLm9z",
+            "Y2FsLmNvbW1vbi52MS5NYXJrdXBMaW5lUgV0aXRsZRIvCgVwcm9wcxgDIAMo",
+            "CzIZLm9zY2FsLmNvbW1vbi52MS5Qcm9wZXJ0eVIFcHJvcHMSKwoFbGlua3MY",
+            "BCADKAsyFS5vc2NhbC5jb21tb24udjEuTGlua1IFbGlua3MSOgoHcmVtYXJr",
+            "cxgFIAMoCzIgLm9zY2FsLmNvbW1vbi52MS5NYXJrdXBNdWx0aWxpbmVSB3Jl",
+            "bWFya3MiQAoHUmlza0xvZxI1CgdlbnRyaWVzGAEgAygLMhsub3NjYWwucG9h",
+            "bS52MS5SaXNrTG9nRW50cnlSB2VudHJpZXMi6wQKDFJpc2tMb2dFbnRyeRIp",
+            "CgR1dWlkGAEgASgLMhUub3NjYWwuY29tbW9uLnYxLlVVSURSBHV1aWQSMQoF",
+            "dGl0bGUYAiABKAsyGy5vc2NhbC5jb21tb24udjEuTWFya3VwTGluZVIFdGl0",
+            "bGUSQgoLZGVzY3JpcHRpb24YAyABKAsyIC5vc2NhbC5jb21tb24udjEuTWFy",
+            "a3VwTXVsdGlsaW5lUgtkZXNjcmlwdGlvbhIvCgVzdGFydBgEIAEoCzIZLm9z",
+            "Y2FsLmNvbW1vbi52MS5EYXRlVGltZVIFc3RhcnQSKwoDZW5kGAUgASgLMhku",
+            "b3NjYWwuY29tbW9uLnYxLkRhdGVUaW1lUgNlbmQSLwoFcHJvcHMYBiADKAsy",
+            "GS5vc2NhbC5jb21tb24udjEuUHJvcGVydHlSBXByb3BzEisKBWxpbmtzGAcg",
+            "AygLMhUub3NjYWwuY29tbW9uLnYxLkxpbmtSBWxpbmtzEjQKCWxvZ2dlZF9i",
+            "eRgIIAMoCzIXLm9zY2FsLnBvYW0udjEuTG9nZ2VkQnlSCGxvZ2dlZEJ5Ej4K",
+            "DXN0YXR1c19jaGFuZ2UYCSABKAsyGS5vc2NhbC5wb2FtLnYxLlJpc2tTdGF0",
+            "dXNSDHN0YXR1c0NoYW5nZRJLChFyZWxhdGVkX3Jlc3BvbnNlcxgKIAMoCzIe",
+            "Lm9zY2FsLnBvYW0udjEuUmVsYXRlZFJlc3BvbnNlUhByZWxhdGVkUmVzcG9u",
+            "c2VzEjoKB3JlbWFya3MYCyADKAsyIC5vc2NhbC5jb21tb24udjEuTWFya3Vw",
+            "TXVsdGlsaW5lUgdyZW1hcmtzIo0CCghMb2dnZWRCeRI0CgpwYXJ0eV91dWlk",
+            "GAEgASgLMhUub3NjYWwuY29tbW9uLnYxLlVVSURSCXBhcnR5VXVpZBIxCgV0",
+            "aXRsZRgCIAEoCzIbLm9zY2FsLmNvbW1vbi52MS5NYXJrdXBMaW5lUgV0aXRs",
+            "ZRIvCgVwcm9wcxgDIAMoCzIZLm9zY2FsLmNvbW1vbi52MS5Qcm9wZXJ0eVIF",
+            "cHJvcHMSKwoFbGlua3MYBCADKAsyFS5vc2NhbC5jb21tb24udjEuTGlua1IF",
+            "bGlua3MSOgoHcmVtYXJrcxgFIAMoCzIgLm9zY2FsLmNvbW1vbi52MS5NYXJr",
+            "dXBNdWx0aWxpbmVSB3JlbWFya3MiqAIKD1JlbGF0ZWRSZXNwb25zZRI6Cg1y",
+            "ZXNwb25zZV91dWlkGAEgASgLMhUub3NjYWwuY29tbW9uLnYxLlVVSURSDHJl",
+            "c3BvbnNlVXVpZBIvCgVwcm9wcxgCIAMoCzIZLm9zY2FsLmNvbW1vbi52MS5Q",
+            "cm9wZXJ0eVIFcHJvcHMSKwoFbGlua3MYAyADKAsyFS5vc2NhbC5jb21tb24u",
+            "djEuTGlua1IFbGlua3MSPwoNcmVsYXRlZF90YXNrcxgEIAMoCzIaLm9zY2Fs",
+            "LnBvYW0udjEuUmVsYXRlZFRhc2tSDHJlbGF0ZWRUYXNrcxI6CgdyZW1hcmtz",
+            "GAUgAygLMiAub3NjYWwuY29tbW9uLnYxLk1hcmt1cE11bHRpbGluZVIHcmVt",
+            "YXJrcyKSAQoSUmVsYXRlZE9ic2VydmF0aW9uEkAKEG9ic2VydmF0aW9uX3V1",
+            "aWQYASABKAsyFS5vc2NhbC5jb21tb24udjEuVVVJRFIPb2JzZXJ2YXRpb25V",
+            "dWlkEjoKB3JlbWFya3MYAiADKAsyIC5vc2NhbC5jb21tb24udjEuTWFya3Vw",
+            "TXVsdGlsaW5lUgdyZW1hcmtzQjZaNGdpdGh1Yi5jb20vbWNob3JmYS94b3Nj",
+            "YWwvcHJvdG8vb3NjYWwvcG9hbS92MTtwb2FtdjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Oscal.Common.V1.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Oscal.Poam.V1.PlanOfActionAndMilestones), global::Oscal.Poam.V1.PlanOfActionAndMilestones.Parser, new[]{ "Uuid", "Metadata", "ImportSsp", "LocalDefinitions", "Risks", "BackMatter" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Oscal.Poam.V1.PlanOfActionAndMilestones), global::Oscal.Poam.V1.PlanOfActionAndMilestones.Parser, new[]{ "Uuid", "Metadata", "ImportSsp", "LocalDefinitions", "Risks", "BackMatter", "PoamItems" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Oscal.Poam.V1.ImportSsp), global::Oscal.Poam.V1.ImportSsp.Parser, new[]{ "Href", "Remarks" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Oscal.Poam.V1.LocalDefinitions), global::Oscal.Poam.V1.LocalDefinitions.Parser, new[]{ "Components", "InventoryItems", "Users" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Oscal.Poam.V1.Component), global::Oscal.Poam.V1.Component.Parser, new[]{ "Uuid", "Type", "Title", "Description", "Props", "Links", "Remarks" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Oscal.Poam.V1.InventoryItem), global::Oscal.Poam.V1.InventoryItem.Parser, new[]{ "Uuid", "Description", "Props", "Links", "Remarks" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Oscal.Poam.V1.User), global::Oscal.Poam.V1.User.Parser, new[]{ "Uuid", "Title", "ShortName", "Description", "Props", "Links", "Remarks" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Oscal.Poam.V1.PoamItem), global::Oscal.Poam.V1.PoamItem.Parser, new[]{ "Uuid", "Title", "Description", "Props", "Links", "Origins", "RelatedFindings", "RelatedObservations", "RelatedRisks", "Remarks" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Oscal.Poam.V1.Origin), global::Oscal.Poam.V1.Origin.Parser, new[]{ "Actors" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Oscal.Poam.V1.OriginActor), global::Oscal.Poam.V1.OriginActor.Parser, new[]{ "ActorUuid", "Title", "Props", "Links", "Remarks" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Oscal.Poam.V1.RelatedFinding), global::Oscal.Poam.V1.RelatedFinding.Parser, new[]{ "FindingUuid" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Oscal.Poam.V1.RelatedRisk), global::Oscal.Poam.V1.RelatedRisk.Parser, new[]{ "RiskUuid" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Oscal.Poam.V1.Risk), global::Oscal.Poam.V1.Risk.Parser, new[]{ "Uuid", "Title", "Description", "Statement", "Status", "MitigatingFactors", "Deadline", "Remediations", "RiskLog", "RelatedObservations", "Props", "Links", "Remarks" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Oscal.Poam.V1.RiskStatus), global::Oscal.Poam.V1.RiskStatus.Parser, new[]{ "State", "Remarks" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Oscal.Poam.V1.MitigatingFactor), global::Oscal.Poam.V1.MitigatingFactor.Parser, new[]{ "Uuid", "ImplementationUuid", "Description", "Props", "Links", "Subjects" }, null, null, null, null),
@@ -227,6 +257,7 @@ namespace Oscal.Poam.V1 {
       localDefinitions_ = other.localDefinitions_ != null ? other.localDefinitions_.Clone() : null;
       risks_ = other.risks_.Clone();
       backMatter_ = other.backMatter_ != null ? other.backMatter_.Clone() : null;
+      poamItems_ = other.poamItems_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -289,6 +320,10 @@ namespace Oscal.Poam.V1 {
     private static readonly pb::FieldCodec<global::Oscal.Poam.V1.Risk> _repeated_risks_codec
         = pb::FieldCodec.ForMessage(42, global::Oscal.Poam.V1.Risk.Parser);
     private readonly pbc::RepeatedField<global::Oscal.Poam.V1.Risk> risks_ = new pbc::RepeatedField<global::Oscal.Poam.V1.Risk>();
+    /// <summary>
+    /// Deprecated: use poam_items instead. Kept for backward compatibility.
+    /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Oscal.Poam.V1.Risk> Risks {
@@ -305,6 +340,20 @@ namespace Oscal.Poam.V1 {
       set {
         backMatter_ = value;
       }
+    }
+
+    /// <summary>Field number for the "poam_items" field.</summary>
+    public const int PoamItemsFieldNumber = 7;
+    private static readonly pb::FieldCodec<global::Oscal.Poam.V1.PoamItem> _repeated_poamItems_codec
+        = pb::FieldCodec.ForMessage(58, global::Oscal.Poam.V1.PoamItem.Parser);
+    private readonly pbc::RepeatedField<global::Oscal.Poam.V1.PoamItem> poamItems_ = new pbc::RepeatedField<global::Oscal.Poam.V1.PoamItem>();
+    /// <summary>
+    /// poam_items is the OSCAL schema-required top-level array of POAM items.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Oscal.Poam.V1.PoamItem> PoamItems {
+      get { return poamItems_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -328,6 +377,7 @@ namespace Oscal.Poam.V1 {
       if (!object.Equals(LocalDefinitions, other.LocalDefinitions)) return false;
       if(!risks_.Equals(other.risks_)) return false;
       if (!object.Equals(BackMatter, other.BackMatter)) return false;
+      if(!poamItems_.Equals(other.poamItems_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -341,6 +391,7 @@ namespace Oscal.Poam.V1 {
       if (localDefinitions_ != null) hash ^= LocalDefinitions.GetHashCode();
       hash ^= risks_.GetHashCode();
       if (backMatter_ != null) hash ^= BackMatter.GetHashCode();
+      hash ^= poamItems_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -380,6 +431,7 @@ namespace Oscal.Poam.V1 {
         output.WriteRawTag(50);
         output.WriteMessage(BackMatter);
       }
+      poamItems_.WriteTo(output, _repeated_poamItems_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -411,6 +463,7 @@ namespace Oscal.Poam.V1 {
         output.WriteRawTag(50);
         output.WriteMessage(BackMatter);
       }
+      poamItems_.WriteTo(ref output, _repeated_poamItems_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -437,6 +490,7 @@ namespace Oscal.Poam.V1 {
       if (backMatter_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(BackMatter);
       }
+      size += poamItems_.CalculateSize(_repeated_poamItems_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -480,6 +534,7 @@ namespace Oscal.Poam.V1 {
         }
         BackMatter.MergeFrom(other.BackMatter);
       }
+      poamItems_.Add(other.poamItems_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -538,6 +593,10 @@ namespace Oscal.Poam.V1 {
             input.ReadMessage(BackMatter);
             break;
           }
+          case 58: {
+            poamItems_.AddEntriesFrom(input, _repeated_poamItems_codec);
+            break;
+          }
         }
       }
     #endif
@@ -594,6 +653,10 @@ namespace Oscal.Poam.V1 {
               BackMatter = new global::Oscal.Common.V1.BackMatter();
             }
             input.ReadMessage(BackMatter);
+            break;
+          }
+          case 58: {
+            poamItems_.AddEntriesFrom(ref input, _repeated_poamItems_codec);
             break;
           }
         }
@@ -2223,6 +2286,1436 @@ namespace Oscal.Poam.V1 {
   }
 
   /// <summary>
+  /// PoamItem represents a POAM item as defined by the OSCAL 1.1.2 schema.
+  /// Unlike Risk, poam-item is a simpler container with title, description,
+  /// and references to findings/observations/risks.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class PoamItem : pb::IMessage<PoamItem>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<PoamItem> _parser = new pb::MessageParser<PoamItem>(() => new PoamItem());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<PoamItem> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Oscal.Poam.V1.PoamReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PoamItem() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PoamItem(PoamItem other) : this() {
+      uuid_ = other.uuid_ != null ? other.uuid_.Clone() : null;
+      title_ = other.title_ != null ? other.title_.Clone() : null;
+      description_ = other.description_ != null ? other.description_.Clone() : null;
+      props_ = other.props_.Clone();
+      links_ = other.links_.Clone();
+      origins_ = other.origins_.Clone();
+      relatedFindings_ = other.relatedFindings_.Clone();
+      relatedObservations_ = other.relatedObservations_.Clone();
+      relatedRisks_ = other.relatedRisks_.Clone();
+      remarks_ = other.remarks_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PoamItem Clone() {
+      return new PoamItem(this);
+    }
+
+    /// <summary>Field number for the "uuid" field.</summary>
+    public const int UuidFieldNumber = 1;
+    private global::Oscal.Common.V1.UUID uuid_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Oscal.Common.V1.UUID Uuid {
+      get { return uuid_; }
+      set {
+        uuid_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "title" field.</summary>
+    public const int TitleFieldNumber = 2;
+    private global::Oscal.Common.V1.MarkupLine title_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Oscal.Common.V1.MarkupLine Title {
+      get { return title_; }
+      set {
+        title_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "description" field.</summary>
+    public const int DescriptionFieldNumber = 3;
+    private global::Oscal.Common.V1.MarkupMultiline description_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Oscal.Common.V1.MarkupMultiline Description {
+      get { return description_; }
+      set {
+        description_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "props" field.</summary>
+    public const int PropsFieldNumber = 4;
+    private static readonly pb::FieldCodec<global::Oscal.Common.V1.Property> _repeated_props_codec
+        = pb::FieldCodec.ForMessage(34, global::Oscal.Common.V1.Property.Parser);
+    private readonly pbc::RepeatedField<global::Oscal.Common.V1.Property> props_ = new pbc::RepeatedField<global::Oscal.Common.V1.Property>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Oscal.Common.V1.Property> Props {
+      get { return props_; }
+    }
+
+    /// <summary>Field number for the "links" field.</summary>
+    public const int LinksFieldNumber = 5;
+    private static readonly pb::FieldCodec<global::Oscal.Common.V1.Link> _repeated_links_codec
+        = pb::FieldCodec.ForMessage(42, global::Oscal.Common.V1.Link.Parser);
+    private readonly pbc::RepeatedField<global::Oscal.Common.V1.Link> links_ = new pbc::RepeatedField<global::Oscal.Common.V1.Link>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Oscal.Common.V1.Link> Links {
+      get { return links_; }
+    }
+
+    /// <summary>Field number for the "origins" field.</summary>
+    public const int OriginsFieldNumber = 6;
+    private static readonly pb::FieldCodec<global::Oscal.Poam.V1.Origin> _repeated_origins_codec
+        = pb::FieldCodec.ForMessage(50, global::Oscal.Poam.V1.Origin.Parser);
+    private readonly pbc::RepeatedField<global::Oscal.Poam.V1.Origin> origins_ = new pbc::RepeatedField<global::Oscal.Poam.V1.Origin>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Oscal.Poam.V1.Origin> Origins {
+      get { return origins_; }
+    }
+
+    /// <summary>Field number for the "related_findings" field.</summary>
+    public const int RelatedFindingsFieldNumber = 7;
+    private static readonly pb::FieldCodec<global::Oscal.Poam.V1.RelatedFinding> _repeated_relatedFindings_codec
+        = pb::FieldCodec.ForMessage(58, global::Oscal.Poam.V1.RelatedFinding.Parser);
+    private readonly pbc::RepeatedField<global::Oscal.Poam.V1.RelatedFinding> relatedFindings_ = new pbc::RepeatedField<global::Oscal.Poam.V1.RelatedFinding>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Oscal.Poam.V1.RelatedFinding> RelatedFindings {
+      get { return relatedFindings_; }
+    }
+
+    /// <summary>Field number for the "related_observations" field.</summary>
+    public const int RelatedObservationsFieldNumber = 8;
+    private static readonly pb::FieldCodec<global::Oscal.Poam.V1.RelatedObservation> _repeated_relatedObservations_codec
+        = pb::FieldCodec.ForMessage(66, global::Oscal.Poam.V1.RelatedObservation.Parser);
+    private readonly pbc::RepeatedField<global::Oscal.Poam.V1.RelatedObservation> relatedObservations_ = new pbc::RepeatedField<global::Oscal.Poam.V1.RelatedObservation>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Oscal.Poam.V1.RelatedObservation> RelatedObservations {
+      get { return relatedObservations_; }
+    }
+
+    /// <summary>Field number for the "related_risks" field.</summary>
+    public const int RelatedRisksFieldNumber = 9;
+    private static readonly pb::FieldCodec<global::Oscal.Poam.V1.RelatedRisk> _repeated_relatedRisks_codec
+        = pb::FieldCodec.ForMessage(74, global::Oscal.Poam.V1.RelatedRisk.Parser);
+    private readonly pbc::RepeatedField<global::Oscal.Poam.V1.RelatedRisk> relatedRisks_ = new pbc::RepeatedField<global::Oscal.Poam.V1.RelatedRisk>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Oscal.Poam.V1.RelatedRisk> RelatedRisks {
+      get { return relatedRisks_; }
+    }
+
+    /// <summary>Field number for the "remarks" field.</summary>
+    public const int RemarksFieldNumber = 10;
+    private static readonly pb::FieldCodec<global::Oscal.Common.V1.MarkupMultiline> _repeated_remarks_codec
+        = pb::FieldCodec.ForMessage(82, global::Oscal.Common.V1.MarkupMultiline.Parser);
+    private readonly pbc::RepeatedField<global::Oscal.Common.V1.MarkupMultiline> remarks_ = new pbc::RepeatedField<global::Oscal.Common.V1.MarkupMultiline>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Oscal.Common.V1.MarkupMultiline> Remarks {
+      get { return remarks_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as PoamItem);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(PoamItem other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Uuid, other.Uuid)) return false;
+      if (!object.Equals(Title, other.Title)) return false;
+      if (!object.Equals(Description, other.Description)) return false;
+      if(!props_.Equals(other.props_)) return false;
+      if(!links_.Equals(other.links_)) return false;
+      if(!origins_.Equals(other.origins_)) return false;
+      if(!relatedFindings_.Equals(other.relatedFindings_)) return false;
+      if(!relatedObservations_.Equals(other.relatedObservations_)) return false;
+      if(!relatedRisks_.Equals(other.relatedRisks_)) return false;
+      if(!remarks_.Equals(other.remarks_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (uuid_ != null) hash ^= Uuid.GetHashCode();
+      if (title_ != null) hash ^= Title.GetHashCode();
+      if (description_ != null) hash ^= Description.GetHashCode();
+      hash ^= props_.GetHashCode();
+      hash ^= links_.GetHashCode();
+      hash ^= origins_.GetHashCode();
+      hash ^= relatedFindings_.GetHashCode();
+      hash ^= relatedObservations_.GetHashCode();
+      hash ^= relatedRisks_.GetHashCode();
+      hash ^= remarks_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (uuid_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Uuid);
+      }
+      if (title_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Title);
+      }
+      if (description_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Description);
+      }
+      props_.WriteTo(output, _repeated_props_codec);
+      links_.WriteTo(output, _repeated_links_codec);
+      origins_.WriteTo(output, _repeated_origins_codec);
+      relatedFindings_.WriteTo(output, _repeated_relatedFindings_codec);
+      relatedObservations_.WriteTo(output, _repeated_relatedObservations_codec);
+      relatedRisks_.WriteTo(output, _repeated_relatedRisks_codec);
+      remarks_.WriteTo(output, _repeated_remarks_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (uuid_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Uuid);
+      }
+      if (title_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Title);
+      }
+      if (description_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Description);
+      }
+      props_.WriteTo(ref output, _repeated_props_codec);
+      links_.WriteTo(ref output, _repeated_links_codec);
+      origins_.WriteTo(ref output, _repeated_origins_codec);
+      relatedFindings_.WriteTo(ref output, _repeated_relatedFindings_codec);
+      relatedObservations_.WriteTo(ref output, _repeated_relatedObservations_codec);
+      relatedRisks_.WriteTo(ref output, _repeated_relatedRisks_codec);
+      remarks_.WriteTo(ref output, _repeated_remarks_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (uuid_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Uuid);
+      }
+      if (title_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Title);
+      }
+      if (description_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Description);
+      }
+      size += props_.CalculateSize(_repeated_props_codec);
+      size += links_.CalculateSize(_repeated_links_codec);
+      size += origins_.CalculateSize(_repeated_origins_codec);
+      size += relatedFindings_.CalculateSize(_repeated_relatedFindings_codec);
+      size += relatedObservations_.CalculateSize(_repeated_relatedObservations_codec);
+      size += relatedRisks_.CalculateSize(_repeated_relatedRisks_codec);
+      size += remarks_.CalculateSize(_repeated_remarks_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(PoamItem other) {
+      if (other == null) {
+        return;
+      }
+      if (other.uuid_ != null) {
+        if (uuid_ == null) {
+          Uuid = new global::Oscal.Common.V1.UUID();
+        }
+        Uuid.MergeFrom(other.Uuid);
+      }
+      if (other.title_ != null) {
+        if (title_ == null) {
+          Title = new global::Oscal.Common.V1.MarkupLine();
+        }
+        Title.MergeFrom(other.Title);
+      }
+      if (other.description_ != null) {
+        if (description_ == null) {
+          Description = new global::Oscal.Common.V1.MarkupMultiline();
+        }
+        Description.MergeFrom(other.Description);
+      }
+      props_.Add(other.props_);
+      links_.Add(other.links_);
+      origins_.Add(other.origins_);
+      relatedFindings_.Add(other.relatedFindings_);
+      relatedObservations_.Add(other.relatedObservations_);
+      relatedRisks_.Add(other.relatedRisks_);
+      remarks_.Add(other.remarks_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (uuid_ == null) {
+              Uuid = new global::Oscal.Common.V1.UUID();
+            }
+            input.ReadMessage(Uuid);
+            break;
+          }
+          case 18: {
+            if (title_ == null) {
+              Title = new global::Oscal.Common.V1.MarkupLine();
+            }
+            input.ReadMessage(Title);
+            break;
+          }
+          case 26: {
+            if (description_ == null) {
+              Description = new global::Oscal.Common.V1.MarkupMultiline();
+            }
+            input.ReadMessage(Description);
+            break;
+          }
+          case 34: {
+            props_.AddEntriesFrom(input, _repeated_props_codec);
+            break;
+          }
+          case 42: {
+            links_.AddEntriesFrom(input, _repeated_links_codec);
+            break;
+          }
+          case 50: {
+            origins_.AddEntriesFrom(input, _repeated_origins_codec);
+            break;
+          }
+          case 58: {
+            relatedFindings_.AddEntriesFrom(input, _repeated_relatedFindings_codec);
+            break;
+          }
+          case 66: {
+            relatedObservations_.AddEntriesFrom(input, _repeated_relatedObservations_codec);
+            break;
+          }
+          case 74: {
+            relatedRisks_.AddEntriesFrom(input, _repeated_relatedRisks_codec);
+            break;
+          }
+          case 82: {
+            remarks_.AddEntriesFrom(input, _repeated_remarks_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (uuid_ == null) {
+              Uuid = new global::Oscal.Common.V1.UUID();
+            }
+            input.ReadMessage(Uuid);
+            break;
+          }
+          case 18: {
+            if (title_ == null) {
+              Title = new global::Oscal.Common.V1.MarkupLine();
+            }
+            input.ReadMessage(Title);
+            break;
+          }
+          case 26: {
+            if (description_ == null) {
+              Description = new global::Oscal.Common.V1.MarkupMultiline();
+            }
+            input.ReadMessage(Description);
+            break;
+          }
+          case 34: {
+            props_.AddEntriesFrom(ref input, _repeated_props_codec);
+            break;
+          }
+          case 42: {
+            links_.AddEntriesFrom(ref input, _repeated_links_codec);
+            break;
+          }
+          case 50: {
+            origins_.AddEntriesFrom(ref input, _repeated_origins_codec);
+            break;
+          }
+          case 58: {
+            relatedFindings_.AddEntriesFrom(ref input, _repeated_relatedFindings_codec);
+            break;
+          }
+          case 66: {
+            relatedObservations_.AddEntriesFrom(ref input, _repeated_relatedObservations_codec);
+            break;
+          }
+          case 74: {
+            relatedRisks_.AddEntriesFrom(ref input, _repeated_relatedRisks_codec);
+            break;
+          }
+          case 82: {
+            remarks_.AddEntriesFrom(ref input, _repeated_remarks_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Origin represents the origin of a POAM item
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class Origin : pb::IMessage<Origin>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<Origin> _parser = new pb::MessageParser<Origin>(() => new Origin());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<Origin> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Oscal.Poam.V1.PoamReflection.Descriptor.MessageTypes[7]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Origin() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Origin(Origin other) : this() {
+      actors_ = other.actors_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Origin Clone() {
+      return new Origin(this);
+    }
+
+    /// <summary>Field number for the "actors" field.</summary>
+    public const int ActorsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Oscal.Poam.V1.OriginActor> _repeated_actors_codec
+        = pb::FieldCodec.ForMessage(10, global::Oscal.Poam.V1.OriginActor.Parser);
+    private readonly pbc::RepeatedField<global::Oscal.Poam.V1.OriginActor> actors_ = new pbc::RepeatedField<global::Oscal.Poam.V1.OriginActor>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Oscal.Poam.V1.OriginActor> Actors {
+      get { return actors_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as Origin);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(Origin other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!actors_.Equals(other.actors_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= actors_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      actors_.WriteTo(output, _repeated_actors_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      actors_.WriteTo(ref output, _repeated_actors_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += actors_.CalculateSize(_repeated_actors_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(Origin other) {
+      if (other == null) {
+        return;
+      }
+      actors_.Add(other.actors_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            actors_.AddEntriesFrom(input, _repeated_actors_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            actors_.AddEntriesFrom(ref input, _repeated_actors_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// OriginActor represents an originating actor
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class OriginActor : pb::IMessage<OriginActor>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<OriginActor> _parser = new pb::MessageParser<OriginActor>(() => new OriginActor());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<OriginActor> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Oscal.Poam.V1.PoamReflection.Descriptor.MessageTypes[8]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public OriginActor() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public OriginActor(OriginActor other) : this() {
+      actorUuid_ = other.actorUuid_ != null ? other.actorUuid_.Clone() : null;
+      title_ = other.title_ != null ? other.title_.Clone() : null;
+      props_ = other.props_.Clone();
+      links_ = other.links_.Clone();
+      remarks_ = other.remarks_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public OriginActor Clone() {
+      return new OriginActor(this);
+    }
+
+    /// <summary>Field number for the "actor_uuid" field.</summary>
+    public const int ActorUuidFieldNumber = 1;
+    private global::Oscal.Common.V1.UUID actorUuid_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Oscal.Common.V1.UUID ActorUuid {
+      get { return actorUuid_; }
+      set {
+        actorUuid_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "title" field.</summary>
+    public const int TitleFieldNumber = 2;
+    private global::Oscal.Common.V1.MarkupLine title_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Oscal.Common.V1.MarkupLine Title {
+      get { return title_; }
+      set {
+        title_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "props" field.</summary>
+    public const int PropsFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::Oscal.Common.V1.Property> _repeated_props_codec
+        = pb::FieldCodec.ForMessage(26, global::Oscal.Common.V1.Property.Parser);
+    private readonly pbc::RepeatedField<global::Oscal.Common.V1.Property> props_ = new pbc::RepeatedField<global::Oscal.Common.V1.Property>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Oscal.Common.V1.Property> Props {
+      get { return props_; }
+    }
+
+    /// <summary>Field number for the "links" field.</summary>
+    public const int LinksFieldNumber = 4;
+    private static readonly pb::FieldCodec<global::Oscal.Common.V1.Link> _repeated_links_codec
+        = pb::FieldCodec.ForMessage(34, global::Oscal.Common.V1.Link.Parser);
+    private readonly pbc::RepeatedField<global::Oscal.Common.V1.Link> links_ = new pbc::RepeatedField<global::Oscal.Common.V1.Link>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Oscal.Common.V1.Link> Links {
+      get { return links_; }
+    }
+
+    /// <summary>Field number for the "remarks" field.</summary>
+    public const int RemarksFieldNumber = 5;
+    private static readonly pb::FieldCodec<global::Oscal.Common.V1.MarkupMultiline> _repeated_remarks_codec
+        = pb::FieldCodec.ForMessage(42, global::Oscal.Common.V1.MarkupMultiline.Parser);
+    private readonly pbc::RepeatedField<global::Oscal.Common.V1.MarkupMultiline> remarks_ = new pbc::RepeatedField<global::Oscal.Common.V1.MarkupMultiline>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Oscal.Common.V1.MarkupMultiline> Remarks {
+      get { return remarks_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as OriginActor);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(OriginActor other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(ActorUuid, other.ActorUuid)) return false;
+      if (!object.Equals(Title, other.Title)) return false;
+      if(!props_.Equals(other.props_)) return false;
+      if(!links_.Equals(other.links_)) return false;
+      if(!remarks_.Equals(other.remarks_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (actorUuid_ != null) hash ^= ActorUuid.GetHashCode();
+      if (title_ != null) hash ^= Title.GetHashCode();
+      hash ^= props_.GetHashCode();
+      hash ^= links_.GetHashCode();
+      hash ^= remarks_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (actorUuid_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(ActorUuid);
+      }
+      if (title_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Title);
+      }
+      props_.WriteTo(output, _repeated_props_codec);
+      links_.WriteTo(output, _repeated_links_codec);
+      remarks_.WriteTo(output, _repeated_remarks_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (actorUuid_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(ActorUuid);
+      }
+      if (title_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Title);
+      }
+      props_.WriteTo(ref output, _repeated_props_codec);
+      links_.WriteTo(ref output, _repeated_links_codec);
+      remarks_.WriteTo(ref output, _repeated_remarks_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (actorUuid_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ActorUuid);
+      }
+      if (title_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Title);
+      }
+      size += props_.CalculateSize(_repeated_props_codec);
+      size += links_.CalculateSize(_repeated_links_codec);
+      size += remarks_.CalculateSize(_repeated_remarks_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(OriginActor other) {
+      if (other == null) {
+        return;
+      }
+      if (other.actorUuid_ != null) {
+        if (actorUuid_ == null) {
+          ActorUuid = new global::Oscal.Common.V1.UUID();
+        }
+        ActorUuid.MergeFrom(other.ActorUuid);
+      }
+      if (other.title_ != null) {
+        if (title_ == null) {
+          Title = new global::Oscal.Common.V1.MarkupLine();
+        }
+        Title.MergeFrom(other.Title);
+      }
+      props_.Add(other.props_);
+      links_.Add(other.links_);
+      remarks_.Add(other.remarks_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (actorUuid_ == null) {
+              ActorUuid = new global::Oscal.Common.V1.UUID();
+            }
+            input.ReadMessage(ActorUuid);
+            break;
+          }
+          case 18: {
+            if (title_ == null) {
+              Title = new global::Oscal.Common.V1.MarkupLine();
+            }
+            input.ReadMessage(Title);
+            break;
+          }
+          case 26: {
+            props_.AddEntriesFrom(input, _repeated_props_codec);
+            break;
+          }
+          case 34: {
+            links_.AddEntriesFrom(input, _repeated_links_codec);
+            break;
+          }
+          case 42: {
+            remarks_.AddEntriesFrom(input, _repeated_remarks_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (actorUuid_ == null) {
+              ActorUuid = new global::Oscal.Common.V1.UUID();
+            }
+            input.ReadMessage(ActorUuid);
+            break;
+          }
+          case 18: {
+            if (title_ == null) {
+              Title = new global::Oscal.Common.V1.MarkupLine();
+            }
+            input.ReadMessage(Title);
+            break;
+          }
+          case 26: {
+            props_.AddEntriesFrom(ref input, _repeated_props_codec);
+            break;
+          }
+          case 34: {
+            links_.AddEntriesFrom(ref input, _repeated_links_codec);
+            break;
+          }
+          case 42: {
+            remarks_.AddEntriesFrom(ref input, _repeated_remarks_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// RelatedFinding represents a related finding
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class RelatedFinding : pb::IMessage<RelatedFinding>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<RelatedFinding> _parser = new pb::MessageParser<RelatedFinding>(() => new RelatedFinding());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<RelatedFinding> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Oscal.Poam.V1.PoamReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RelatedFinding() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RelatedFinding(RelatedFinding other) : this() {
+      findingUuid_ = other.findingUuid_ != null ? other.findingUuid_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RelatedFinding Clone() {
+      return new RelatedFinding(this);
+    }
+
+    /// <summary>Field number for the "finding_uuid" field.</summary>
+    public const int FindingUuidFieldNumber = 1;
+    private global::Oscal.Common.V1.UUID findingUuid_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Oscal.Common.V1.UUID FindingUuid {
+      get { return findingUuid_; }
+      set {
+        findingUuid_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as RelatedFinding);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(RelatedFinding other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(FindingUuid, other.FindingUuid)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (findingUuid_ != null) hash ^= FindingUuid.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (findingUuid_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(FindingUuid);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (findingUuid_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(FindingUuid);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (findingUuid_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FindingUuid);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(RelatedFinding other) {
+      if (other == null) {
+        return;
+      }
+      if (other.findingUuid_ != null) {
+        if (findingUuid_ == null) {
+          FindingUuid = new global::Oscal.Common.V1.UUID();
+        }
+        FindingUuid.MergeFrom(other.FindingUuid);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (findingUuid_ == null) {
+              FindingUuid = new global::Oscal.Common.V1.UUID();
+            }
+            input.ReadMessage(FindingUuid);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (findingUuid_ == null) {
+              FindingUuid = new global::Oscal.Common.V1.UUID();
+            }
+            input.ReadMessage(FindingUuid);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// RelatedRisk represents a related risk
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class RelatedRisk : pb::IMessage<RelatedRisk>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<RelatedRisk> _parser = new pb::MessageParser<RelatedRisk>(() => new RelatedRisk());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<RelatedRisk> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Oscal.Poam.V1.PoamReflection.Descriptor.MessageTypes[10]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RelatedRisk() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RelatedRisk(RelatedRisk other) : this() {
+      riskUuid_ = other.riskUuid_ != null ? other.riskUuid_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RelatedRisk Clone() {
+      return new RelatedRisk(this);
+    }
+
+    /// <summary>Field number for the "risk_uuid" field.</summary>
+    public const int RiskUuidFieldNumber = 1;
+    private global::Oscal.Common.V1.UUID riskUuid_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Oscal.Common.V1.UUID RiskUuid {
+      get { return riskUuid_; }
+      set {
+        riskUuid_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as RelatedRisk);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(RelatedRisk other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(RiskUuid, other.RiskUuid)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (riskUuid_ != null) hash ^= RiskUuid.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (riskUuid_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(RiskUuid);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (riskUuid_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(RiskUuid);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (riskUuid_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RiskUuid);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(RelatedRisk other) {
+      if (other == null) {
+        return;
+      }
+      if (other.riskUuid_ != null) {
+        if (riskUuid_ == null) {
+          RiskUuid = new global::Oscal.Common.V1.UUID();
+        }
+        RiskUuid.MergeFrom(other.RiskUuid);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (riskUuid_ == null) {
+              RiskUuid = new global::Oscal.Common.V1.UUID();
+            }
+            input.ReadMessage(RiskUuid);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (riskUuid_ == null) {
+              RiskUuid = new global::Oscal.Common.V1.UUID();
+            }
+            input.ReadMessage(RiskUuid);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Risk represents a risk
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -2240,7 +3733,7 @@ namespace Oscal.Poam.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Oscal.Poam.V1.PoamReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Oscal.Poam.V1.PoamReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2882,7 +4375,7 @@ namespace Oscal.Poam.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Oscal.Poam.V1.PoamReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Oscal.Poam.V1.PoamReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3109,7 +4602,7 @@ namespace Oscal.Poam.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Oscal.Poam.V1.PoamReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Oscal.Poam.V1.PoamReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3489,7 +4982,7 @@ namespace Oscal.Poam.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Oscal.Poam.V1.PoamReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Oscal.Poam.V1.PoamReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3823,7 +5316,7 @@ namespace Oscal.Poam.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Oscal.Poam.V1.PoamReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Oscal.Poam.V1.PoamReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4373,7 +5866,7 @@ namespace Oscal.Poam.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Oscal.Poam.V1.PoamReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Oscal.Poam.V1.PoamReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4600,7 +6093,7 @@ namespace Oscal.Poam.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Oscal.Poam.V1.PoamReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Oscal.Poam.V1.PoamReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4888,7 +6381,7 @@ namespace Oscal.Poam.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Oscal.Poam.V1.PoamReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Oscal.Poam.V1.PoamReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5222,7 +6715,7 @@ namespace Oscal.Poam.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Oscal.Poam.V1.PoamReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Oscal.Poam.V1.PoamReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5412,7 +6905,7 @@ namespace Oscal.Poam.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Oscal.Poam.V1.PoamReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Oscal.Poam.V1.PoamReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5982,7 +7475,7 @@ namespace Oscal.Poam.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Oscal.Poam.V1.PoamReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Oscal.Poam.V1.PoamReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6316,7 +7809,7 @@ namespace Oscal.Poam.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Oscal.Poam.V1.PoamReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Oscal.Poam.V1.PoamReflection.Descriptor.MessageTypes[22]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6630,7 +8123,7 @@ namespace Oscal.Poam.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Oscal.Poam.V1.PoamReflection.Descriptor.MessageTypes[18]; }
+      get { return global::Oscal.Poam.V1.PoamReflection.Descriptor.MessageTypes[23]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

@@ -38,7 +38,10 @@ export declare type PlanOfActionAndMilestones = Message<"oscal.poam.v1.PlanOfAct
   localDefinitions?: LocalDefinitions | undefined;
 
   /**
-   * @generated from field: repeated oscal.poam.v1.Risk risks = 5;
+   * Deprecated: use poam_items instead. Kept for backward compatibility.
+   *
+   * @generated from field: repeated oscal.poam.v1.Risk risks = 5 [deprecated = true];
+   * @deprecated
    */
   risks: Risk[];
 
@@ -46,6 +49,13 @@ export declare type PlanOfActionAndMilestones = Message<"oscal.poam.v1.PlanOfAct
    * @generated from field: oscal.common.v1.BackMatter back_matter = 6;
    */
   backMatter?: BackMatter | undefined;
+
+  /**
+   * poam_items is the OSCAL schema-required top-level array of POAM items.
+   *
+   * @generated from field: repeated oscal.poam.v1.PoamItem poam_items = 7;
+   */
+  poamItems: PoamItem[];
 };
 
 /**
@@ -238,6 +248,163 @@ export declare type User = Message<"oscal.poam.v1.User"> & {
  * Use `create(UserSchema)` to create a new message.
  */
 export declare const UserSchema: GenMessage<User>;
+
+/**
+ * PoamItem represents a POAM item as defined by the OSCAL 1.1.2 schema.
+ * Unlike Risk, poam-item is a simpler container with title, description,
+ * and references to findings/observations/risks.
+ *
+ * @generated from message oscal.poam.v1.PoamItem
+ */
+export declare type PoamItem = Message<"oscal.poam.v1.PoamItem"> & {
+  /**
+   * @generated from field: oscal.common.v1.UUID uuid = 1;
+   */
+  uuid?: UUID | undefined;
+
+  /**
+   * @generated from field: oscal.common.v1.MarkupLine title = 2;
+   */
+  title?: MarkupLine | undefined;
+
+  /**
+   * @generated from field: oscal.common.v1.MarkupMultiline description = 3;
+   */
+  description?: MarkupMultiline | undefined;
+
+  /**
+   * @generated from field: repeated oscal.common.v1.Property props = 4;
+   */
+  props: Property[];
+
+  /**
+   * @generated from field: repeated oscal.common.v1.Link links = 5;
+   */
+  links: Link[];
+
+  /**
+   * @generated from field: repeated oscal.poam.v1.Origin origins = 6;
+   */
+  origins: Origin[];
+
+  /**
+   * @generated from field: repeated oscal.poam.v1.RelatedFinding related_findings = 7;
+   */
+  relatedFindings: RelatedFinding[];
+
+  /**
+   * @generated from field: repeated oscal.poam.v1.RelatedObservation related_observations = 8;
+   */
+  relatedObservations: RelatedObservation[];
+
+  /**
+   * @generated from field: repeated oscal.poam.v1.RelatedRisk related_risks = 9;
+   */
+  relatedRisks: RelatedRisk[];
+
+  /**
+   * @generated from field: repeated oscal.common.v1.MarkupMultiline remarks = 10;
+   */
+  remarks: MarkupMultiline[];
+};
+
+/**
+ * Describes the message oscal.poam.v1.PoamItem.
+ * Use `create(PoamItemSchema)` to create a new message.
+ */
+export declare const PoamItemSchema: GenMessage<PoamItem>;
+
+/**
+ * Origin represents the origin of a POAM item
+ *
+ * @generated from message oscal.poam.v1.Origin
+ */
+export declare type Origin = Message<"oscal.poam.v1.Origin"> & {
+  /**
+   * @generated from field: repeated oscal.poam.v1.OriginActor actors = 1;
+   */
+  actors: OriginActor[];
+};
+
+/**
+ * Describes the message oscal.poam.v1.Origin.
+ * Use `create(OriginSchema)` to create a new message.
+ */
+export declare const OriginSchema: GenMessage<Origin>;
+
+/**
+ * OriginActor represents an originating actor
+ *
+ * @generated from message oscal.poam.v1.OriginActor
+ */
+export declare type OriginActor = Message<"oscal.poam.v1.OriginActor"> & {
+  /**
+   * @generated from field: oscal.common.v1.UUID actor_uuid = 1;
+   */
+  actorUuid?: UUID | undefined;
+
+  /**
+   * @generated from field: oscal.common.v1.MarkupLine title = 2;
+   */
+  title?: MarkupLine | undefined;
+
+  /**
+   * @generated from field: repeated oscal.common.v1.Property props = 3;
+   */
+  props: Property[];
+
+  /**
+   * @generated from field: repeated oscal.common.v1.Link links = 4;
+   */
+  links: Link[];
+
+  /**
+   * @generated from field: repeated oscal.common.v1.MarkupMultiline remarks = 5;
+   */
+  remarks: MarkupMultiline[];
+};
+
+/**
+ * Describes the message oscal.poam.v1.OriginActor.
+ * Use `create(OriginActorSchema)` to create a new message.
+ */
+export declare const OriginActorSchema: GenMessage<OriginActor>;
+
+/**
+ * RelatedFinding represents a related finding
+ *
+ * @generated from message oscal.poam.v1.RelatedFinding
+ */
+export declare type RelatedFinding = Message<"oscal.poam.v1.RelatedFinding"> & {
+  /**
+   * @generated from field: oscal.common.v1.UUID finding_uuid = 1;
+   */
+  findingUuid?: UUID | undefined;
+};
+
+/**
+ * Describes the message oscal.poam.v1.RelatedFinding.
+ * Use `create(RelatedFindingSchema)` to create a new message.
+ */
+export declare const RelatedFindingSchema: GenMessage<RelatedFinding>;
+
+/**
+ * RelatedRisk represents a related risk
+ *
+ * @generated from message oscal.poam.v1.RelatedRisk
+ */
+export declare type RelatedRisk = Message<"oscal.poam.v1.RelatedRisk"> & {
+  /**
+   * @generated from field: oscal.common.v1.UUID risk_uuid = 1;
+   */
+  riskUuid?: UUID | undefined;
+};
+
+/**
+ * Describes the message oscal.poam.v1.RelatedRisk.
+ * Use `create(RelatedRiskSchema)` to create a new message.
+ */
+export declare const RelatedRiskSchema: GenMessage<RelatedRisk>;
 
 /**
  * Risk represents a risk

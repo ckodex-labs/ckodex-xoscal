@@ -226,8 +226,14 @@
         },
         "title": {
           "$ref": "#/$defs/oscal.common.v1.MarkupLine.jsonschema.strict.json"
+        },
+        "type": {
+          "type": "string"
         }
       },
+      "required": [
+        "type"
+      ],
       "title": "Subject Reference",
       "type": "object"
     },

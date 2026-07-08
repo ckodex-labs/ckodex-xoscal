@@ -1238,7 +1238,7 @@ const SDKS = [
   {name:"ts.zip", lang:"TypeScript · @bufbuild/es (protobuf only)", digest:"sha256:fa39ab70a432d121cebed98f045486b491e0eab92c79350c67d18183aec827f2", signed:true, rekor:"cosign keyless"},
   {name:"swift.zip", lang:"Swift · protobuf + Connect RPC", digest:"sha256:25d6f822ea4b2f446ad705c24c9382d005cc6a3426dd7a332cf908feebef42b7", signed:true, rekor:"cosign keyless"}
 ];
-const FRAMEWORKS = [
+const FRAMEWORKS_FALLBACK = [
   {name:"nist-csf-2.0 / catalog.json", lang:"NIST CSF 2.0 · USA", digest:"sha256:86d35d222828c5025265908a0f55de35de97fd356c69578a248e6720f1adf089", signed:true, rekor:"cosign keyless"},
   {name:"dora / catalog.json", lang:"DORA · EU", digest:"sha256:214c93aba34ec83329c76f6daf88b92981258497b00409561ce80ecd4bc9dbb0", signed:true, rekor:"cosign keyless"},
   {name:"fedramp-rev5 / catalog.json", lang:"FedRAMP Rev5 · USA", digest:"sha256:47edbf039c822ee86b41dc37b4b00789227ad8780b21a32bc174620a409623f4", signed:true, rekor:"cosign keyless"},
@@ -1266,8 +1266,19 @@ function dlCard(x){
 }
 document.getElementById("release-artifacts").innerHTML = RELEASE_ARTIFACTS.map(dlCard).join("");
 document.getElementById("sdks").innerHTML = SDKS.map(dlCard).join("");
-document.getElementById("frameworks").innerHTML = FRAMEWORKS.map(dlCard).join("");
 document.getElementById("prov").innerHTML = PROV.map(dlCard).join("");
+
+// Fetch frameworks dynamically from downloads.json (built by Dagger Site).
+// Falls back to hardcoded data if the fetch fails (e.g. local file:// preview).
+fetch("./downloads.json").then(r=>r.json()).then(d=>{
+  const fwRows = (d.frameworks||[]).map(x=>({
+    name:x.name, lang:x.lang||x.path, digest:x.digest, signed:true, rekor:"cosign keyless", url:x.path
+  }));
+  document.getElementById("frameworks").innerHTML =
+    (fwRows.length ? fwRows : FRAMEWORKS_FALLBACK).map(dlCard).join("");
+}).catch(()=>{
+  document.getElementById("frameworks").innerHTML = FRAMEWORKS_FALLBACK.map(dlCard).join("");
+});
 
 // ── Evidence Cartography card system ──
 // Card anatomy: identity (type, id, title, source, scope) · state (claim, proof, freshness, validation)

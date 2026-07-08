@@ -2,16 +2,16 @@ syntax = "proto3";
 
 package oscal.services.v1;
 
-import "common/v1/common.proto";
-import "catalog/v1/catalog.proto";
-import "profile/v1/profile.proto";
-import "component_definition/v1/component.proto";
-import "ssp/v1/ssp.proto";
 import "assessment_plan/v1/assessment_plan.proto";
 import "assessment_results/v1/assessment_results.proto";
-import "poam/v1/poam.proto";
-import "mapping/v1/mapping.proto";
+import "catalog/v1/catalog.proto";
+import "common/v1/common.proto";
+import "component_definition/v1/component.proto";
 import "google/api/annotations.proto";
+import "mapping/v1/mapping.proto";
+import "poam/v1/poam.proto";
+import "profile/v1/profile.proto";
+import "ssp/v1/ssp.proto";
 
 option go_package = "github.com/mchorfa/xoscal/proto/oscal/services/v1;servicesv1";
 
@@ -19,143 +19,191 @@ option go_package = "github.com/mchorfa/xoscal/proto/oscal/services/v1;servicesv
 service OscalService {
   // Catalog operations
   rpc GetCatalog(GetCatalogRequest) returns (GetCatalogResponse) {
-    option (google.api.http) = { get: "/v1/catalogs/{uuid.value}" };
+    option (google.api.http) = {get: "/v1/catalogs/{uuid.value}"};
   }
   rpc ListCatalogs(ListCatalogsRequest) returns (ListCatalogsResponse) {
-    option (google.api.http) = { get: "/v1/catalogs" };
+    option (google.api.http) = {get: "/v1/catalogs"};
   }
   rpc CreateCatalog(CreateCatalogRequest) returns (CreateCatalogResponse) {
-    option (google.api.http) = { post: "/v1/catalogs" body: "*" };
+    option (google.api.http) = {
+      post: "/v1/catalogs"
+      body: "*"
+    };
   }
   rpc UpdateCatalog(UpdateCatalogRequest) returns (UpdateCatalogResponse) {
-    option (google.api.http) = { put: "/v1/catalogs/{uuid.value}" body: "*" };
+    option (google.api.http) = {
+      put: "/v1/catalogs/{uuid.value}"
+      body: "*"
+    };
   }
   rpc DeleteCatalog(DeleteCatalogRequest) returns (DeleteCatalogResponse) {
-    option (google.api.http) = { delete: "/v1/catalogs/{uuid.value}" };
+    option (google.api.http) = {delete: "/v1/catalogs/{uuid.value}"};
   }
 
   // Profile operations
   rpc GetProfile(GetProfileRequest) returns (GetProfileResponse) {
-    option (google.api.http) = { get: "/v1/profiles/{uuid.value}" };
+    option (google.api.http) = {get: "/v1/profiles/{uuid.value}"};
   }
   rpc ListProfiles(ListProfilesRequest) returns (ListProfilesResponse) {
-    option (google.api.http) = { get: "/v1/profiles" };
+    option (google.api.http) = {get: "/v1/profiles"};
   }
   rpc CreateProfile(CreateProfileRequest) returns (CreateProfileResponse) {
-    option (google.api.http) = { post: "/v1/profiles" body: "*" };
+    option (google.api.http) = {
+      post: "/v1/profiles"
+      body: "*"
+    };
   }
   rpc UpdateProfile(UpdateProfileRequest) returns (UpdateProfileResponse) {
-    option (google.api.http) = { put: "/v1/profiles/{uuid.value}" body: "*" };
+    option (google.api.http) = {
+      put: "/v1/profiles/{uuid.value}"
+      body: "*"
+    };
   }
   rpc DeleteProfile(DeleteProfileRequest) returns (DeleteProfileResponse) {
-    option (google.api.http) = { delete: "/v1/profiles/{uuid.value}" };
+    option (google.api.http) = {delete: "/v1/profiles/{uuid.value}"};
   }
 
   // Component Definition operations
   rpc GetComponentDefinition(GetComponentDefinitionRequest) returns (GetComponentDefinitionResponse) {
-    option (google.api.http) = { get: "/v1/component-definitions/{uuid.value}" };
+    option (google.api.http) = {get: "/v1/component-definitions/{uuid.value}"};
   }
   rpc ListComponentDefinitions(ListComponentDefinitionsRequest) returns (ListComponentDefinitionsResponse) {
-    option (google.api.http) = { get: "/v1/component-definitions" };
+    option (google.api.http) = {get: "/v1/component-definitions"};
   }
   rpc CreateComponentDefinition(CreateComponentDefinitionRequest) returns (CreateComponentDefinitionResponse) {
-    option (google.api.http) = { post: "/v1/component-definitions" body: "*" };
+    option (google.api.http) = {
+      post: "/v1/component-definitions"
+      body: "*"
+    };
   }
   rpc UpdateComponentDefinition(UpdateComponentDefinitionRequest) returns (UpdateComponentDefinitionResponse) {
-    option (google.api.http) = { put: "/v1/component-definitions/{uuid.value}" body: "*" };
+    option (google.api.http) = {
+      put: "/v1/component-definitions/{uuid.value}"
+      body: "*"
+    };
   }
   rpc DeleteComponentDefinition(DeleteComponentDefinitionRequest) returns (DeleteComponentDefinitionResponse) {
-    option (google.api.http) = { delete: "/v1/component-definitions/{uuid.value}" };
+    option (google.api.http) = {delete: "/v1/component-definitions/{uuid.value}"};
   }
 
   // SSP operations
   rpc GetSsp(GetSspRequest) returns (GetSspResponse) {
-    option (google.api.http) = { get: "/v1/ssps/{uuid.value}" };
+    option (google.api.http) = {get: "/v1/ssps/{uuid.value}"};
   }
   rpc ListSsps(ListSspsRequest) returns (ListSspsResponse) {
-    option (google.api.http) = { get: "/v1/ssps" };
+    option (google.api.http) = {get: "/v1/ssps"};
   }
   rpc CreateSsp(CreateSspRequest) returns (CreateSspResponse) {
-    option (google.api.http) = { post: "/v1/ssps" body: "*" };
+    option (google.api.http) = {
+      post: "/v1/ssps"
+      body: "*"
+    };
   }
   rpc UpdateSsp(UpdateSspRequest) returns (UpdateSspResponse) {
-    option (google.api.http) = { put: "/v1/ssps/{uuid.value}" body: "*" };
+    option (google.api.http) = {
+      put: "/v1/ssps/{uuid.value}"
+      body: "*"
+    };
   }
   rpc DeleteSsp(DeleteSspRequest) returns (DeleteSspResponse) {
-    option (google.api.http) = { delete: "/v1/ssps/{uuid.value}" };
+    option (google.api.http) = {delete: "/v1/ssps/{uuid.value}"};
   }
 
   // Assessment Plan operations
   rpc GetAssessmentPlan(GetAssessmentPlanRequest) returns (GetAssessmentPlanResponse) {
-    option (google.api.http) = { get: "/v1/assessment-plans/{uuid.value}" };
+    option (google.api.http) = {get: "/v1/assessment-plans/{uuid.value}"};
   }
   rpc ListAssessmentPlans(ListAssessmentPlansRequest) returns (ListAssessmentPlansResponse) {
-    option (google.api.http) = { get: "/v1/assessment-plans" };
+    option (google.api.http) = {get: "/v1/assessment-plans"};
   }
   rpc CreateAssessmentPlan(CreateAssessmentPlanRequest) returns (CreateAssessmentPlanResponse) {
-    option (google.api.http) = { post: "/v1/assessment-plans" body: "*" };
+    option (google.api.http) = {
+      post: "/v1/assessment-plans"
+      body: "*"
+    };
   }
   rpc UpdateAssessmentPlan(UpdateAssessmentPlanRequest) returns (UpdateAssessmentPlanResponse) {
-    option (google.api.http) = { put: "/v1/assessment-plans/{uuid.value}" body: "*" };
+    option (google.api.http) = {
+      put: "/v1/assessment-plans/{uuid.value}"
+      body: "*"
+    };
   }
   rpc DeleteAssessmentPlan(DeleteAssessmentPlanRequest) returns (DeleteAssessmentPlanResponse) {
-    option (google.api.http) = { delete: "/v1/assessment-plans/{uuid.value}" };
+    option (google.api.http) = {delete: "/v1/assessment-plans/{uuid.value}"};
   }
 
   // Assessment Results operations
   rpc GetAssessmentResults(GetAssessmentResultsRequest) returns (GetAssessmentResultsResponse) {
-    option (google.api.http) = { get: "/v1/assessment-results/{uuid.value}" };
+    option (google.api.http) = {get: "/v1/assessment-results/{uuid.value}"};
   }
   rpc ListAssessmentResults(ListAssessmentResultsRequest) returns (ListAssessmentResultsResponse) {
-    option (google.api.http) = { get: "/v1/assessment-results" };
+    option (google.api.http) = {get: "/v1/assessment-results"};
   }
   rpc CreateAssessmentResults(CreateAssessmentResultsRequest) returns (CreateAssessmentResultsResponse) {
-    option (google.api.http) = { post: "/v1/assessment-results" body: "*" };
+    option (google.api.http) = {
+      post: "/v1/assessment-results"
+      body: "*"
+    };
   }
   rpc UpdateAssessmentResults(UpdateAssessmentResultsRequest) returns (UpdateAssessmentResultsResponse) {
-    option (google.api.http) = { put: "/v1/assessment-results/{uuid.value}" body: "*" };
+    option (google.api.http) = {
+      put: "/v1/assessment-results/{uuid.value}"
+      body: "*"
+    };
   }
   rpc DeleteAssessmentResults(DeleteAssessmentResultsRequest) returns (DeleteAssessmentResultsResponse) {
-    option (google.api.http) = { delete: "/v1/assessment-results/{uuid.value}" };
+    option (google.api.http) = {delete: "/v1/assessment-results/{uuid.value}"};
   }
 
   // POA&M operations
   rpc GetPoam(GetPoamRequest) returns (GetPoamResponse) {
-    option (google.api.http) = { get: "/v1/poams/{uuid.value}" };
+    option (google.api.http) = {get: "/v1/poams/{uuid.value}"};
   }
   rpc ListPoams(ListPoamsRequest) returns (ListPoamsResponse) {
-    option (google.api.http) = { get: "/v1/poams" };
+    option (google.api.http) = {get: "/v1/poams"};
   }
   rpc CreatePoam(CreatePoamRequest) returns (CreatePoamResponse) {
-    option (google.api.http) = { post: "/v1/poams" body: "*" };
+    option (google.api.http) = {
+      post: "/v1/poams"
+      body: "*"
+    };
   }
   rpc UpdatePoam(UpdatePoamRequest) returns (UpdatePoamResponse) {
-    option (google.api.http) = { put: "/v1/poams/{uuid.value}" body: "*" };
+    option (google.api.http) = {
+      put: "/v1/poams/{uuid.value}"
+      body: "*"
+    };
   }
   rpc DeletePoam(DeletePoamRequest) returns (DeletePoamResponse) {
-    option (google.api.http) = { delete: "/v1/poams/{uuid.value}" };
+    option (google.api.http) = {delete: "/v1/poams/{uuid.value}"};
   }
 
   // Mapping operations
   rpc GetMapping(GetMappingRequest) returns (GetMappingResponse) {
-    option (google.api.http) = { get: "/v1/mappings/{uuid.value}" };
+    option (google.api.http) = {get: "/v1/mappings/{uuid.value}"};
   }
   rpc ListMappings(ListMappingsRequest) returns (ListMappingsResponse) {
-    option (google.api.http) = { get: "/v1/mappings" };
+    option (google.api.http) = {get: "/v1/mappings"};
   }
   rpc CreateMapping(CreateMappingRequest) returns (CreateMappingResponse) {
-    option (google.api.http) = { post: "/v1/mappings" body: "*" };
+    option (google.api.http) = {
+      post: "/v1/mappings"
+      body: "*"
+    };
   }
   rpc UpdateMapping(UpdateMappingRequest) returns (UpdateMappingResponse) {
-    option (google.api.http) = { put: "/v1/mappings/{uuid.value}" body: "*" };
+    option (google.api.http) = {
+      put: "/v1/mappings/{uuid.value}"
+      body: "*"
+    };
   }
   rpc DeleteMapping(DeleteMappingRequest) returns (DeleteMappingResponse) {
-    option (google.api.http) = { delete: "/v1/mappings/{uuid.value}" };
+    option (google.api.http) = {delete: "/v1/mappings/{uuid.value}"};
   }
 
   // Search operations
   rpc Search(SearchRequest) returns (SearchResponse) {
-    option (google.api.http) = { get: "/v1/search" };
+    option (google.api.http) = {get: "/v1/search"};
   }
 }
 

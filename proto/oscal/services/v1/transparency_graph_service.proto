@@ -12,43 +12,64 @@ option go_package = "github.com/mchorfa/xoscal/proto/oscal/services/v1;servicesv
 // with structured proof-state verification for xOSCAL.
 service TransparencyGraphService {
   rpc ProjectEdge(ProjectEdgeRequest) returns (ProjectEdgeResponse) {
-    option (google.api.http) = { post: "/v1/graph/edges" body: "*" };
+    option (google.api.http) = {
+      post: "/v1/graph/edges"
+      body: "*"
+    };
   }
   rpc GetEdge(GetEdgeRequest) returns (GetEdgeResponse) {
-    option (google.api.http) = { get: "/v1/graph/edges/{edge_id}" };
+    option (google.api.http) = {get: "/v1/graph/edges/{edge_id}"};
   }
   rpc ListEdges(ListEdgesRequest) returns (ListEdgesResponse) {
-    option (google.api.http) = { get: "/v1/graph/edges" };
+    option (google.api.http) = {get: "/v1/graph/edges"};
   }
   rpc DeleteEdge(DeleteEdgeRequest) returns (DeleteEdgeResponse) {
-    option (google.api.http) = { delete: "/v1/graph/edges/{edge_id}" };
+    option (google.api.http) = {delete: "/v1/graph/edges/{edge_id}"};
   }
 
   rpc GetNode(GetNodeRequest) returns (GetNodeResponse) {
-    option (google.api.http) = { get: "/v1/graph/nodes/{node_id}" };
+    option (google.api.http) = {get: "/v1/graph/nodes/{node_id}"};
   }
   rpc ListNodes(ListNodesRequest) returns (ListNodesResponse) {
-    option (google.api.http) = { get: "/v1/graph/nodes" };
+    option (google.api.http) = {get: "/v1/graph/nodes"};
   }
 
   rpc Traverse(TraverseRequest) returns (TraverseResponse) {
-    option (google.api.http) = { post: "/v1/graph/traverse" body: "*" };
+    option (google.api.http) = {
+      post: "/v1/graph/traverse"
+      body: "*"
+    };
   }
   rpc ShortestPath(ShortestPathRequest) returns (ShortestPathResponse) {
-    option (google.api.http) = { post: "/v1/graph/shortest-path" body: "*" };
+    option (google.api.http) = {
+      post: "/v1/graph/shortest-path"
+      body: "*"
+    };
   }
   rpc ImpactRadius(ImpactRadiusRequest) returns (ImpactRadiusResponse) {
-    option (google.api.http) = { post: "/v1/graph/impact-radius" body: "*" };
+    option (google.api.http) = {
+      post: "/v1/graph/impact-radius"
+      body: "*"
+    };
   }
 
   rpc ExplainClaim(ExplainClaimRequest) returns (ExplainClaimResponse) {
-    option (google.api.http) = { post: "/v1/graph/explain" body: "*" };
+    option (google.api.http) = {
+      post: "/v1/graph/explain"
+      body: "*"
+    };
   }
   rpc ComputeTrustState(ComputeTrustStateRequest) returns (ComputeTrustStateResponse) {
-    option (google.api.http) = { post: "/v1/graph/trust-state" body: "*" };
+    option (google.api.http) = {
+      post: "/v1/graph/trust-state"
+      body: "*"
+    };
   }
   rpc VerifyClosure(VerifyClosureRequest) returns (VerifyClosureResponse) {
-    option (google.api.http) = { post: "/v1/graph/verify-closure" body: "*" };
+    option (google.api.http) = {
+      post: "/v1/graph/verify-closure"
+      body: "*"
+    };
   }
 }
 

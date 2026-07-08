@@ -102,6 +102,27 @@
       "title": "UUID",
       "type": "object"
     },
+    "oscal.ssp.v1.Status.schema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Status represents system status",
+      "properties": {
+        "remarks": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.schema.strict.json"
+          },
+          "type": "array"
+        },
+        "state": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "state"
+      ],
+      "title": "Status",
+      "type": "object"
+    },
     "oscal.ssp.v1.SystemComponent.schema.strict.json": {
       "$schema": "https://json-schema.org/draft/2020-12/schema",
       "additionalProperties": false,
@@ -127,6 +148,9 @@
             "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.schema.strict.json"
           },
           "type": "array"
+        },
+        "status": {
+          "$ref": "#/$defs/oscal.ssp.v1.Status.schema.strict.json"
         },
         "title": {
           "type": "string"

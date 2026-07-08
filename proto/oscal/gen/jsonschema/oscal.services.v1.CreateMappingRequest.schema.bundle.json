@@ -141,6 +141,75 @@
       "title": "Link",
       "type": "object"
     },
+    "oscal.common.v1.Location.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Location represents a physical or virtual location",
+      "patternProperties": {
+        "^(emailAddresses)$": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.EmailAddress.schema.json"
+          },
+          "type": "array"
+        },
+        "^(telephoneNumbers)$": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.TelephoneNumber.schema.json"
+          },
+          "type": "array"
+        }
+      },
+      "properties": {
+        "address": {
+          "$ref": "#/$defs/oscal.common.v1.Address.schema.json"
+        },
+        "email_addresses": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.EmailAddress.schema.json"
+          },
+          "type": "array"
+        },
+        "links": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Link.schema.json"
+          },
+          "type": "array"
+        },
+        "props": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Property.schema.json"
+          },
+          "type": "array"
+        },
+        "remarks": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.schema.json"
+          },
+          "type": "array"
+        },
+        "telephone_numbers": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.TelephoneNumber.schema.json"
+          },
+          "type": "array"
+        },
+        "title": {
+          "default": "",
+          "type": "string"
+        },
+        "urls": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.URI.schema.json"
+          },
+          "type": "array"
+        },
+        "uuid": {
+          "$ref": "#/$defs/oscal.common.v1.UUID.schema.json"
+        }
+      },
+      "title": "Location",
+      "type": "object"
+    },
     "oscal.common.v1.MarkupLine.schema.json": {
       "$schema": "https://json-schema.org/draft/2020-12/schema",
       "additionalProperties": false,
@@ -202,6 +271,12 @@
           },
           "type": "array"
         },
+        "locations": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Location.schema.json"
+          },
+          "type": "array"
+        },
         "oscal_version": {
           "default": "",
           "type": "string"
@@ -259,6 +334,18 @@
           },
           "type": "array"
         },
+        "^(externalIds)$": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.PartyExternalId.schema.json"
+          },
+          "type": "array"
+        },
+        "^(locationUuids)$": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.UUID.schema.json"
+          },
+          "type": "array"
+        },
         "^(responsibleParties)$": {
           "items": {
             "$ref": "#/$defs/oscal.common.v1.ResponsibleParty.schema.json"
@@ -288,9 +375,21 @@
           },
           "type": "array"
         },
+        "external_ids": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.PartyExternalId.schema.json"
+          },
+          "type": "array"
+        },
         "links": {
           "items": {
             "$ref": "#/$defs/oscal.common.v1.Link.schema.json"
+          },
+          "type": "array"
+        },
+        "location_uuids": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.UUID.schema.json"
           },
           "type": "array"
         },
@@ -337,6 +436,22 @@
         }
       },
       "title": "Party",
+      "type": "object"
+    },
+    "oscal.common.v1.PartyExternalId.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "PartyExternalId represents an external identifier for a party",
+      "properties": {
+        "id": {
+          "default": "",
+          "type": "string"
+        },
+        "scheme": {
+          "$ref": "#/$defs/oscal.common.v1.URI.schema.json"
+        }
+      },
+      "title": "Party External Id",
       "type": "object"
     },
     "oscal.common.v1.Property.schema.json": {

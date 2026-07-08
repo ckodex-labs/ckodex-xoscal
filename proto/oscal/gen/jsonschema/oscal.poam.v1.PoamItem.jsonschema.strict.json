@@ -2,25 +2,55 @@
   "$id": "oscal.poam.v1.PoamItem.jsonschema.strict.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "additionalProperties": false,
-  "description": "PoamItem represents a plan of action and milestones item",
+  "description": "PoamItem represents a POAM item as defined by the OSCAL 1.1.2 schema.\n Unlike Risk, poam-item is a simpler container with title, description,\n and references to findings/observations/risks.",
   "properties": {
-    "backMatter": {
-      "$ref": "oscal.common.v1.BackMatter.jsonschema.strict.json"
+    "description": {
+      "$ref": "oscal.common.v1.MarkupMultiline.jsonschema.strict.json"
     },
-    "importSsp": {
-      "$ref": "oscal.poam.v1.ImportSsp.jsonschema.strict.json"
-    },
-    "localDefinitions": {
-      "$ref": "oscal.poam.v1.LocalDefinitions.jsonschema.strict.json"
-    },
-    "metadata": {
-      "$ref": "oscal.common.v1.Metadata.jsonschema.strict.json"
-    },
-    "risks": {
+    "links": {
       "items": {
-        "$ref": "oscal.poam.v1.Risk.jsonschema.strict.json"
+        "$ref": "oscal.common.v1.Link.jsonschema.strict.json"
       },
       "type": "array"
+    },
+    "origins": {
+      "items": {
+        "$ref": "oscal.poam.v1.Origin.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "props": {
+      "items": {
+        "$ref": "oscal.common.v1.Property.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "relatedFindings": {
+      "items": {
+        "$ref": "oscal.poam.v1.RelatedFinding.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "relatedObservations": {
+      "items": {
+        "$ref": "oscal.poam.v1.RelatedObservation.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "relatedRisks": {
+      "items": {
+        "$ref": "oscal.poam.v1.RelatedRisk.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "remarks": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupMultiline.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "title": {
+      "$ref": "oscal.common.v1.MarkupLine.jsonschema.strict.json"
     },
     "uuid": {
       "$ref": "oscal.common.v1.UUID.jsonschema.strict.json"

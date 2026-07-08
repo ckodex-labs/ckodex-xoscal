@@ -176,6 +176,7 @@ message SystemComponent {
   repeated oscal.common.v1.Property props = 6;
   repeated oscal.common.v1.Link links = 7;
   repeated oscal.common.v1.MarkupMultiline remarks = 8;
+  Status status = 9;
 }
 
 // InventoryItem represents an inventory item
@@ -197,8 +198,11 @@ message ControlImplementation {
 // SetParameter represents a set parameter
 message SetParameter {
   oscal.common.v1.Token param_id = 1;
-  string value = 2;
+  // Deprecated: use values instead. Kept for backward compatibility.
+  string value = 2 [deprecated = true];
   repeated oscal.common.v1.MarkupMultiline remarks = 3;
+  // values is the OSCAL schema-required array of parameter values.
+  repeated oscal.common.v1.MarkupLine values = 4;
 }
 
 // ImplementedRequirement represents an implemented requirement

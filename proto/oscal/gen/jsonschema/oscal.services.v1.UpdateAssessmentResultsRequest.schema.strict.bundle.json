@@ -128,6 +128,48 @@
       "title": "Component",
       "type": "object"
     },
+    "oscal.assessment_results.v1.ControlSelection.schema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "ControlSelection represents a selection of controls for review",
+      "properties": {
+        "description": {
+          "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.schema.strict.json"
+        },
+        "exclude_controls": {
+          "items": {
+            "$ref": "#/$defs/oscal.assessment_results.v1.SelectedControl.schema.strict.json"
+          },
+          "type": "array"
+        },
+        "include_controls": {
+          "items": {
+            "$ref": "#/$defs/oscal.assessment_results.v1.SelectedControl.schema.strict.json"
+          },
+          "type": "array"
+        },
+        "links": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Link.schema.strict.json"
+          },
+          "type": "array"
+        },
+        "props": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Property.schema.strict.json"
+          },
+          "type": "array"
+        },
+        "remarks": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.schema.strict.json"
+          },
+          "type": "array"
+        }
+      },
+      "title": "Control Selection",
+      "type": "object"
+    },
     "oscal.assessment_results.v1.Finding.schema.strict.json": {
       "$schema": "https://json-schema.org/draft/2020-12/schema",
       "additionalProperties": false,
@@ -632,6 +674,10 @@
           },
           "type": "array"
         },
+        "reviewed_controls": {
+          "$ref": "#/$defs/oscal.assessment_results.v1.ReviewedControls.schema.strict.json",
+          "description": "reviewed_controls is required by the OSCAL 1.1.2 schema for each result."
+        },
         "start": {
           "$ref": "#/$defs/oscal.common.v1.DateTime.schema.strict.json"
         },
@@ -643,6 +689,78 @@
         }
       },
       "title": "Result",
+      "type": "object"
+    },
+    "oscal.assessment_results.v1.ReviewedControls.schema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "ReviewedControls represents the reviewed controls for a result",
+      "properties": {
+        "control_selections": {
+          "items": {
+            "$ref": "#/$defs/oscal.assessment_results.v1.ControlSelection.schema.strict.json"
+          },
+          "type": "array"
+        },
+        "controls": {
+          "items": {
+            "$ref": "#/$defs/oscal.assessment_results.v1.SelectedControl.schema.strict.json"
+          },
+          "type": "array"
+        },
+        "links": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Link.schema.strict.json"
+          },
+          "type": "array"
+        },
+        "props": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Property.schema.strict.json"
+          },
+          "type": "array"
+        },
+        "remarks": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.schema.strict.json"
+          },
+          "type": "array"
+        }
+      },
+      "title": "Reviewed Controls",
+      "type": "object"
+    },
+    "oscal.assessment_results.v1.SelectedControl.schema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "SelectedControl represents a selected control",
+      "properties": {
+        "control_id": {
+          "$ref": "#/$defs/oscal.common.v1.Token.schema.strict.json"
+        },
+        "links": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Link.schema.strict.json"
+          },
+          "type": "array"
+        },
+        "props": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Property.schema.strict.json"
+          },
+          "type": "array"
+        },
+        "remarks": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.schema.strict.json"
+          },
+          "type": "array"
+        },
+        "statement_id": {
+          "$ref": "#/$defs/oscal.common.v1.Token.schema.strict.json"
+        }
+      },
+      "title": "Selected Control",
       "type": "object"
     },
     "oscal.assessment_results.v1.SubjectReference.schema.strict.json": {
@@ -673,8 +791,14 @@
         },
         "title": {
           "$ref": "#/$defs/oscal.common.v1.MarkupLine.schema.strict.json"
+        },
+        "type": {
+          "type": "string"
         }
       },
+      "required": [
+        "type"
+      ],
       "title": "Subject Reference",
       "type": "object"
     },
@@ -832,6 +956,30 @@
       "title": "Base64",
       "type": "object"
     },
+    "oscal.common.v1.Citation.schema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Citation represents a bibliographic citation",
+      "properties": {
+        "links": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Link.schema.strict.json"
+          },
+          "type": "array"
+        },
+        "props": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Property.schema.strict.json"
+          },
+          "type": "array"
+        },
+        "text": {
+          "$ref": "#/$defs/oscal.common.v1.MarkupLine.schema.strict.json"
+        }
+      },
+      "title": "Citation",
+      "type": "object"
+    },
     "oscal.common.v1.DateTime.schema.strict.json": {
       "$schema": "https://json-schema.org/draft/2020-12/schema",
       "additionalProperties": false,
@@ -878,6 +1026,24 @@
       "title": "Email Address",
       "type": "object"
     },
+    "oscal.common.v1.Hash.schema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Hash represents a cryptographic hash",
+      "properties": {
+        "algorithm": {
+          "type": "string"
+        },
+        "value": {
+          "$ref": "#/$defs/oscal.common.v1.Base64.schema.strict.json"
+        }
+      },
+      "required": [
+        "algorithm"
+      ],
+      "title": "Hash",
+      "type": "object"
+    },
     "oscal.common.v1.Link.schema.strict.json": {
       "$schema": "https://json-schema.org/draft/2020-12/schema",
       "additionalProperties": false,
@@ -906,6 +1072,63 @@
         "resource_fragment"
       ],
       "title": "Link",
+      "type": "object"
+    },
+    "oscal.common.v1.Location.schema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Location represents a physical or virtual location",
+      "properties": {
+        "address": {
+          "$ref": "#/$defs/oscal.common.v1.Address.schema.strict.json"
+        },
+        "email_addresses": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.EmailAddress.schema.strict.json"
+          },
+          "type": "array"
+        },
+        "links": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Link.schema.strict.json"
+          },
+          "type": "array"
+        },
+        "props": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Property.schema.strict.json"
+          },
+          "type": "array"
+        },
+        "remarks": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.schema.strict.json"
+          },
+          "type": "array"
+        },
+        "telephone_numbers": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.TelephoneNumber.schema.strict.json"
+          },
+          "type": "array"
+        },
+        "title": {
+          "type": "string"
+        },
+        "urls": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.URI.schema.strict.json"
+          },
+          "type": "array"
+        },
+        "uuid": {
+          "$ref": "#/$defs/oscal.common.v1.UUID.schema.strict.json"
+        }
+      },
+      "required": [
+        "title"
+      ],
+      "title": "Location",
       "type": "object"
     },
     "oscal.common.v1.MarkupLine.schema.strict.json": {
@@ -952,6 +1175,12 @@
         "links": {
           "items": {
             "$ref": "#/$defs/oscal.common.v1.Link.schema.strict.json"
+          },
+          "type": "array"
+        },
+        "locations": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Location.schema.strict.json"
           },
           "type": "array"
         },
@@ -1017,9 +1246,21 @@
           },
           "type": "array"
         },
+        "external_ids": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.PartyExternalId.schema.strict.json"
+          },
+          "type": "array"
+        },
         "links": {
           "items": {
             "$ref": "#/$defs/oscal.common.v1.Link.schema.strict.json"
+          },
+          "type": "array"
+        },
+        "location_uuids": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.UUID.schema.strict.json"
           },
           "type": "array"
         },
@@ -1070,6 +1311,24 @@
       "title": "Party",
       "type": "object"
     },
+    "oscal.common.v1.PartyExternalId.schema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "PartyExternalId represents an external identifier for a party",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "scheme": {
+          "$ref": "#/$defs/oscal.common.v1.URI.schema.strict.json"
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "title": "Party External Id",
+      "type": "object"
+    },
     "oscal.common.v1.Property.schema.strict.json": {
       "$schema": "https://json-schema.org/draft/2020-12/schema",
       "additionalProperties": false,
@@ -1109,7 +1368,11 @@
           "type": "array"
         },
         "citation": {
+          "description": "Deprecated: use citation_obj instead. Kept for backward compatibility.",
           "type": "string"
+        },
+        "citation_obj": {
+          "$ref": "#/$defs/oscal.common.v1.Citation.schema.strict.json"
         },
         "description": {
           "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.schema.strict.json"
@@ -1138,17 +1401,21 @@
           },
           "type": "array"
         },
-        "title": {
+        "rlinks": {
           "items": {
-            "type": "string"
+            "$ref": "#/$defs/oscal.common.v1.Rlink.schema.strict.json"
           },
           "type": "array"
+        },
+        "title": {
+          "type": "string"
         },
         "uuid": {
           "$ref": "#/$defs/oscal.common.v1.UUID.schema.strict.json"
         }
       },
       "required": [
+        "title",
         "citation"
       ],
       "title": "Resource",
@@ -1185,6 +1452,30 @@
         }
       },
       "title": "Responsible Party",
+      "type": "object"
+    },
+    "oscal.common.v1.Rlink.schema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Rlink represents a resource link",
+      "properties": {
+        "hashes": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Hash.schema.strict.json"
+          },
+          "type": "array"
+        },
+        "href": {
+          "$ref": "#/$defs/oscal.common.v1.URI.schema.strict.json"
+        },
+        "media_type": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "media_type"
+      ],
+      "title": "Rlink",
       "type": "object"
     },
     "oscal.common.v1.Role.schema.strict.json": {

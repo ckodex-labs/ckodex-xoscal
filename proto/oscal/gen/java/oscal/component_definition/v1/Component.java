@@ -7525,157 +7525,163 @@ public final class Component extends com.google.protobuf.GeneratedFile {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string control_id = 1 [json_name = "controlId"];</code>
-     * @return The controlId.
+     * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
+     * @return Whether the uuid field is set.
      */
-    java.lang.String getControlId();
+    boolean hasUuid();
     /**
-     * <code>string control_id = 1 [json_name = "controlId"];</code>
-     * @return The bytes for controlId.
+     * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
+     * @return The uuid.
+     */
+    oscal.common.v1.Common.UUID getUuid();
+    /**
+     * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
+     */
+    oscal.common.v1.Common.UUIDOrBuilder getUuidOrBuilder();
+
+    /**
+     * <code>.oscal.common.v1.URIReference source = 2 [json_name = "source"];</code>
+     * @return Whether the source field is set.
+     */
+    boolean hasSource();
+    /**
+     * <code>.oscal.common.v1.URIReference source = 2 [json_name = "source"];</code>
+     * @return The source.
+     */
+    oscal.common.v1.Common.URIReference getSource();
+    /**
+     * <code>.oscal.common.v1.URIReference source = 2 [json_name = "source"];</code>
+     */
+    oscal.common.v1.Common.URIReferenceOrBuilder getSourceOrBuilder();
+
+    /**
+     * <code>string description = 3 [json_name = "description"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 3 [json_name = "description"];</code>
+     * @return The bytes for description.
      */
     com.google.protobuf.ByteString
-        getControlIdBytes();
+        getDescriptionBytes();
 
     /**
-     * <code>repeated .oscal.common.v1.MarkupLine description = 2 [json_name = "description"];</code>
-     */
-    java.util.List<oscal.common.v1.Common.MarkupLine> 
-        getDescriptionList();
-    /**
-     * <code>repeated .oscal.common.v1.MarkupLine description = 2 [json_name = "description"];</code>
-     */
-    oscal.common.v1.Common.MarkupLine getDescription(int index);
-    /**
-     * <code>repeated .oscal.common.v1.MarkupLine description = 2 [json_name = "description"];</code>
-     */
-    int getDescriptionCount();
-    /**
-     * <code>repeated .oscal.common.v1.MarkupLine description = 2 [json_name = "description"];</code>
-     */
-    java.util.List<? extends oscal.common.v1.Common.MarkupLineOrBuilder> 
-        getDescriptionOrBuilderList();
-    /**
-     * <code>repeated .oscal.common.v1.MarkupLine description = 2 [json_name = "description"];</code>
-     */
-    oscal.common.v1.Common.MarkupLineOrBuilder getDescriptionOrBuilder(
-        int index);
-
-    /**
-     * <code>repeated .oscal.component_definition.v1.SetParameter set_parameters = 3 [json_name = "setParameters"];</code>
+     * <code>repeated .oscal.component_definition.v1.SetParameter set_parameters = 4 [json_name = "setParameters"];</code>
      */
     java.util.List<oscal.component_definition.v1.Component.SetParameter> 
         getSetParametersList();
     /**
-     * <code>repeated .oscal.component_definition.v1.SetParameter set_parameters = 3 [json_name = "setParameters"];</code>
+     * <code>repeated .oscal.component_definition.v1.SetParameter set_parameters = 4 [json_name = "setParameters"];</code>
      */
     oscal.component_definition.v1.Component.SetParameter getSetParameters(int index);
     /**
-     * <code>repeated .oscal.component_definition.v1.SetParameter set_parameters = 3 [json_name = "setParameters"];</code>
+     * <code>repeated .oscal.component_definition.v1.SetParameter set_parameters = 4 [json_name = "setParameters"];</code>
      */
     int getSetParametersCount();
     /**
-     * <code>repeated .oscal.component_definition.v1.SetParameter set_parameters = 3 [json_name = "setParameters"];</code>
+     * <code>repeated .oscal.component_definition.v1.SetParameter set_parameters = 4 [json_name = "setParameters"];</code>
      */
     java.util.List<? extends oscal.component_definition.v1.Component.SetParameterOrBuilder> 
         getSetParametersOrBuilderList();
     /**
-     * <code>repeated .oscal.component_definition.v1.SetParameter set_parameters = 3 [json_name = "setParameters"];</code>
+     * <code>repeated .oscal.component_definition.v1.SetParameter set_parameters = 4 [json_name = "setParameters"];</code>
      */
     oscal.component_definition.v1.Component.SetParameterOrBuilder getSetParametersOrBuilder(
         int index);
 
     /**
-     * <code>repeated .oscal.component_definition.v1.ImplementedRequirement implemented_requirements = 4 [json_name = "implementedRequirements"];</code>
+     * <code>repeated .oscal.component_definition.v1.ImplementedRequirement implemented_requirements = 5 [json_name = "implementedRequirements"];</code>
      */
     java.util.List<oscal.component_definition.v1.Component.ImplementedRequirement> 
         getImplementedRequirementsList();
     /**
-     * <code>repeated .oscal.component_definition.v1.ImplementedRequirement implemented_requirements = 4 [json_name = "implementedRequirements"];</code>
+     * <code>repeated .oscal.component_definition.v1.ImplementedRequirement implemented_requirements = 5 [json_name = "implementedRequirements"];</code>
      */
     oscal.component_definition.v1.Component.ImplementedRequirement getImplementedRequirements(int index);
     /**
-     * <code>repeated .oscal.component_definition.v1.ImplementedRequirement implemented_requirements = 4 [json_name = "implementedRequirements"];</code>
+     * <code>repeated .oscal.component_definition.v1.ImplementedRequirement implemented_requirements = 5 [json_name = "implementedRequirements"];</code>
      */
     int getImplementedRequirementsCount();
     /**
-     * <code>repeated .oscal.component_definition.v1.ImplementedRequirement implemented_requirements = 4 [json_name = "implementedRequirements"];</code>
+     * <code>repeated .oscal.component_definition.v1.ImplementedRequirement implemented_requirements = 5 [json_name = "implementedRequirements"];</code>
      */
     java.util.List<? extends oscal.component_definition.v1.Component.ImplementedRequirementOrBuilder> 
         getImplementedRequirementsOrBuilderList();
     /**
-     * <code>repeated .oscal.component_definition.v1.ImplementedRequirement implemented_requirements = 4 [json_name = "implementedRequirements"];</code>
+     * <code>repeated .oscal.component_definition.v1.ImplementedRequirement implemented_requirements = 5 [json_name = "implementedRequirements"];</code>
      */
     oscal.component_definition.v1.Component.ImplementedRequirementOrBuilder getImplementedRequirementsOrBuilder(
         int index);
 
     /**
-     * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 6 [json_name = "props"];</code>
      */
     java.util.List<oscal.common.v1.Common.Property> 
         getPropsList();
     /**
-     * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 6 [json_name = "props"];</code>
      */
     oscal.common.v1.Common.Property getProps(int index);
     /**
-     * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 6 [json_name = "props"];</code>
      */
     int getPropsCount();
     /**
-     * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 6 [json_name = "props"];</code>
      */
     java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
         getPropsOrBuilderList();
     /**
-     * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 6 [json_name = "props"];</code>
      */
     oscal.common.v1.Common.PropertyOrBuilder getPropsOrBuilder(
         int index);
 
     /**
-     * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 7 [json_name = "links"];</code>
      */
     java.util.List<oscal.common.v1.Common.Link> 
         getLinksList();
     /**
-     * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 7 [json_name = "links"];</code>
      */
     oscal.common.v1.Common.Link getLinks(int index);
     /**
-     * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 7 [json_name = "links"];</code>
      */
     int getLinksCount();
     /**
-     * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 7 [json_name = "links"];</code>
      */
     java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
         getLinksOrBuilderList();
     /**
-     * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 7 [json_name = "links"];</code>
      */
     oscal.common.v1.Common.LinkOrBuilder getLinksOrBuilder(
         int index);
 
     /**
-     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 8 [json_name = "remarks"];</code>
      */
     java.util.List<oscal.common.v1.Common.MarkupMultiline> 
         getRemarksList();
     /**
-     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 8 [json_name = "remarks"];</code>
      */
     oscal.common.v1.Common.MarkupMultiline getRemarks(int index);
     /**
-     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 8 [json_name = "remarks"];</code>
      */
     int getRemarksCount();
     /**
-     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 8 [json_name = "remarks"];</code>
      */
     java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
         getRemarksOrBuilderList();
     /**
-     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 8 [json_name = "remarks"];</code>
      */
     oscal.common.v1.Common.MarkupMultilineOrBuilder getRemarksOrBuilder(
         int index);
@@ -7706,8 +7712,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
       super(builder);
     }
     private ControlImplementation() {
-      controlId_ = "";
-      description_ = java.util.Collections.emptyList();
+      description_ = "";
       setParameters_ = java.util.Collections.emptyList();
       implementedRequirements_ = java.util.Collections.emptyList();
       props_ = java.util.Collections.emptyList();
@@ -7733,98 +7738,110 @@ public final class Component extends com.google.protobuf.GeneratedFile {
               oscal.component_definition.v1.Component.ControlImplementation.class, oscal.component_definition.v1.Component.ControlImplementation.Builder.class);
     }
 
-    public static final int CONTROL_ID_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object controlId_ = "";
+    private int bitField0_;
+    public static final int UUID_FIELD_NUMBER = 1;
+    private oscal.common.v1.Common.UUID uuid_;
     /**
-     * <code>string control_id = 1 [json_name = "controlId"];</code>
-     * @return The controlId.
+     * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
+     * @return Whether the uuid field is set.
      */
     @java.lang.Override
-    public java.lang.String getControlId() {
-      java.lang.Object ref = controlId_;
+    public boolean hasUuid() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
+     * @return The uuid.
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.UUID getUuid() {
+      return uuid_ == null ? oscal.common.v1.Common.UUID.getDefaultInstance() : uuid_;
+    }
+    /**
+     * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.UUIDOrBuilder getUuidOrBuilder() {
+      return uuid_ == null ? oscal.common.v1.Common.UUID.getDefaultInstance() : uuid_;
+    }
+
+    public static final int SOURCE_FIELD_NUMBER = 2;
+    private oscal.common.v1.Common.URIReference source_;
+    /**
+     * <code>.oscal.common.v1.URIReference source = 2 [json_name = "source"];</code>
+     * @return Whether the source field is set.
+     */
+    @java.lang.Override
+    public boolean hasSource() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>.oscal.common.v1.URIReference source = 2 [json_name = "source"];</code>
+     * @return The source.
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.URIReference getSource() {
+      return source_ == null ? oscal.common.v1.Common.URIReference.getDefaultInstance() : source_;
+    }
+    /**
+     * <code>.oscal.common.v1.URIReference source = 2 [json_name = "source"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.URIReferenceOrBuilder getSourceOrBuilder() {
+      return source_ == null ? oscal.common.v1.Common.URIReference.getDefaultInstance() : source_;
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <code>string description = 3 [json_name = "description"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        controlId_ = s;
+        description_ = s;
         return s;
       }
     }
     /**
-     * <code>string control_id = 1 [json_name = "controlId"];</code>
-     * @return The bytes for controlId.
+     * <code>string description = 3 [json_name = "description"];</code>
+     * @return The bytes for description.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getControlIdBytes() {
-      java.lang.Object ref = controlId_;
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        controlId_ = b;
+        description_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
 
-    public static final int DESCRIPTION_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
-    private java.util.List<oscal.common.v1.Common.MarkupLine> description_;
-    /**
-     * <code>repeated .oscal.common.v1.MarkupLine description = 2 [json_name = "description"];</code>
-     */
-    @java.lang.Override
-    public java.util.List<oscal.common.v1.Common.MarkupLine> getDescriptionList() {
-      return description_;
-    }
-    /**
-     * <code>repeated .oscal.common.v1.MarkupLine description = 2 [json_name = "description"];</code>
-     */
-    @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.MarkupLineOrBuilder> 
-        getDescriptionOrBuilderList() {
-      return description_;
-    }
-    /**
-     * <code>repeated .oscal.common.v1.MarkupLine description = 2 [json_name = "description"];</code>
-     */
-    @java.lang.Override
-    public int getDescriptionCount() {
-      return description_.size();
-    }
-    /**
-     * <code>repeated .oscal.common.v1.MarkupLine description = 2 [json_name = "description"];</code>
-     */
-    @java.lang.Override
-    public oscal.common.v1.Common.MarkupLine getDescription(int index) {
-      return description_.get(index);
-    }
-    /**
-     * <code>repeated .oscal.common.v1.MarkupLine description = 2 [json_name = "description"];</code>
-     */
-    @java.lang.Override
-    public oscal.common.v1.Common.MarkupLineOrBuilder getDescriptionOrBuilder(
-        int index) {
-      return description_.get(index);
-    }
-
-    public static final int SET_PARAMETERS_FIELD_NUMBER = 3;
+    public static final int SET_PARAMETERS_FIELD_NUMBER = 4;
     @SuppressWarnings("serial")
     private java.util.List<oscal.component_definition.v1.Component.SetParameter> setParameters_;
     /**
-     * <code>repeated .oscal.component_definition.v1.SetParameter set_parameters = 3 [json_name = "setParameters"];</code>
+     * <code>repeated .oscal.component_definition.v1.SetParameter set_parameters = 4 [json_name = "setParameters"];</code>
      */
     @java.lang.Override
     public java.util.List<oscal.component_definition.v1.Component.SetParameter> getSetParametersList() {
       return setParameters_;
     }
     /**
-     * <code>repeated .oscal.component_definition.v1.SetParameter set_parameters = 3 [json_name = "setParameters"];</code>
+     * <code>repeated .oscal.component_definition.v1.SetParameter set_parameters = 4 [json_name = "setParameters"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends oscal.component_definition.v1.Component.SetParameterOrBuilder> 
@@ -7832,21 +7849,21 @@ public final class Component extends com.google.protobuf.GeneratedFile {
       return setParameters_;
     }
     /**
-     * <code>repeated .oscal.component_definition.v1.SetParameter set_parameters = 3 [json_name = "setParameters"];</code>
+     * <code>repeated .oscal.component_definition.v1.SetParameter set_parameters = 4 [json_name = "setParameters"];</code>
      */
     @java.lang.Override
     public int getSetParametersCount() {
       return setParameters_.size();
     }
     /**
-     * <code>repeated .oscal.component_definition.v1.SetParameter set_parameters = 3 [json_name = "setParameters"];</code>
+     * <code>repeated .oscal.component_definition.v1.SetParameter set_parameters = 4 [json_name = "setParameters"];</code>
      */
     @java.lang.Override
     public oscal.component_definition.v1.Component.SetParameter getSetParameters(int index) {
       return setParameters_.get(index);
     }
     /**
-     * <code>repeated .oscal.component_definition.v1.SetParameter set_parameters = 3 [json_name = "setParameters"];</code>
+     * <code>repeated .oscal.component_definition.v1.SetParameter set_parameters = 4 [json_name = "setParameters"];</code>
      */
     @java.lang.Override
     public oscal.component_definition.v1.Component.SetParameterOrBuilder getSetParametersOrBuilder(
@@ -7854,18 +7871,18 @@ public final class Component extends com.google.protobuf.GeneratedFile {
       return setParameters_.get(index);
     }
 
-    public static final int IMPLEMENTED_REQUIREMENTS_FIELD_NUMBER = 4;
+    public static final int IMPLEMENTED_REQUIREMENTS_FIELD_NUMBER = 5;
     @SuppressWarnings("serial")
     private java.util.List<oscal.component_definition.v1.Component.ImplementedRequirement> implementedRequirements_;
     /**
-     * <code>repeated .oscal.component_definition.v1.ImplementedRequirement implemented_requirements = 4 [json_name = "implementedRequirements"];</code>
+     * <code>repeated .oscal.component_definition.v1.ImplementedRequirement implemented_requirements = 5 [json_name = "implementedRequirements"];</code>
      */
     @java.lang.Override
     public java.util.List<oscal.component_definition.v1.Component.ImplementedRequirement> getImplementedRequirementsList() {
       return implementedRequirements_;
     }
     /**
-     * <code>repeated .oscal.component_definition.v1.ImplementedRequirement implemented_requirements = 4 [json_name = "implementedRequirements"];</code>
+     * <code>repeated .oscal.component_definition.v1.ImplementedRequirement implemented_requirements = 5 [json_name = "implementedRequirements"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends oscal.component_definition.v1.Component.ImplementedRequirementOrBuilder> 
@@ -7873,21 +7890,21 @@ public final class Component extends com.google.protobuf.GeneratedFile {
       return implementedRequirements_;
     }
     /**
-     * <code>repeated .oscal.component_definition.v1.ImplementedRequirement implemented_requirements = 4 [json_name = "implementedRequirements"];</code>
+     * <code>repeated .oscal.component_definition.v1.ImplementedRequirement implemented_requirements = 5 [json_name = "implementedRequirements"];</code>
      */
     @java.lang.Override
     public int getImplementedRequirementsCount() {
       return implementedRequirements_.size();
     }
     /**
-     * <code>repeated .oscal.component_definition.v1.ImplementedRequirement implemented_requirements = 4 [json_name = "implementedRequirements"];</code>
+     * <code>repeated .oscal.component_definition.v1.ImplementedRequirement implemented_requirements = 5 [json_name = "implementedRequirements"];</code>
      */
     @java.lang.Override
     public oscal.component_definition.v1.Component.ImplementedRequirement getImplementedRequirements(int index) {
       return implementedRequirements_.get(index);
     }
     /**
-     * <code>repeated .oscal.component_definition.v1.ImplementedRequirement implemented_requirements = 4 [json_name = "implementedRequirements"];</code>
+     * <code>repeated .oscal.component_definition.v1.ImplementedRequirement implemented_requirements = 5 [json_name = "implementedRequirements"];</code>
      */
     @java.lang.Override
     public oscal.component_definition.v1.Component.ImplementedRequirementOrBuilder getImplementedRequirementsOrBuilder(
@@ -7895,18 +7912,18 @@ public final class Component extends com.google.protobuf.GeneratedFile {
       return implementedRequirements_.get(index);
     }
 
-    public static final int PROPS_FIELD_NUMBER = 5;
+    public static final int PROPS_FIELD_NUMBER = 6;
     @SuppressWarnings("serial")
     private java.util.List<oscal.common.v1.Common.Property> props_;
     /**
-     * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 6 [json_name = "props"];</code>
      */
     @java.lang.Override
     public java.util.List<oscal.common.v1.Common.Property> getPropsList() {
       return props_;
     }
     /**
-     * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 6 [json_name = "props"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
@@ -7914,21 +7931,21 @@ public final class Component extends com.google.protobuf.GeneratedFile {
       return props_;
     }
     /**
-     * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 6 [json_name = "props"];</code>
      */
     @java.lang.Override
     public int getPropsCount() {
       return props_.size();
     }
     /**
-     * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 6 [json_name = "props"];</code>
      */
     @java.lang.Override
     public oscal.common.v1.Common.Property getProps(int index) {
       return props_.get(index);
     }
     /**
-     * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 6 [json_name = "props"];</code>
      */
     @java.lang.Override
     public oscal.common.v1.Common.PropertyOrBuilder getPropsOrBuilder(
@@ -7936,18 +7953,18 @@ public final class Component extends com.google.protobuf.GeneratedFile {
       return props_.get(index);
     }
 
-    public static final int LINKS_FIELD_NUMBER = 6;
+    public static final int LINKS_FIELD_NUMBER = 7;
     @SuppressWarnings("serial")
     private java.util.List<oscal.common.v1.Common.Link> links_;
     /**
-     * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 7 [json_name = "links"];</code>
      */
     @java.lang.Override
     public java.util.List<oscal.common.v1.Common.Link> getLinksList() {
       return links_;
     }
     /**
-     * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 7 [json_name = "links"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
@@ -7955,21 +7972,21 @@ public final class Component extends com.google.protobuf.GeneratedFile {
       return links_;
     }
     /**
-     * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 7 [json_name = "links"];</code>
      */
     @java.lang.Override
     public int getLinksCount() {
       return links_.size();
     }
     /**
-     * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 7 [json_name = "links"];</code>
      */
     @java.lang.Override
     public oscal.common.v1.Common.Link getLinks(int index) {
       return links_.get(index);
     }
     /**
-     * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 7 [json_name = "links"];</code>
      */
     @java.lang.Override
     public oscal.common.v1.Common.LinkOrBuilder getLinksOrBuilder(
@@ -7977,18 +7994,18 @@ public final class Component extends com.google.protobuf.GeneratedFile {
       return links_.get(index);
     }
 
-    public static final int REMARKS_FIELD_NUMBER = 7;
+    public static final int REMARKS_FIELD_NUMBER = 8;
     @SuppressWarnings("serial")
     private java.util.List<oscal.common.v1.Common.MarkupMultiline> remarks_;
     /**
-     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 8 [json_name = "remarks"];</code>
      */
     @java.lang.Override
     public java.util.List<oscal.common.v1.Common.MarkupMultiline> getRemarksList() {
       return remarks_;
     }
     /**
-     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 8 [json_name = "remarks"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
@@ -7996,21 +8013,21 @@ public final class Component extends com.google.protobuf.GeneratedFile {
       return remarks_;
     }
     /**
-     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 8 [json_name = "remarks"];</code>
      */
     @java.lang.Override
     public int getRemarksCount() {
       return remarks_.size();
     }
     /**
-     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 8 [json_name = "remarks"];</code>
      */
     @java.lang.Override
     public oscal.common.v1.Common.MarkupMultiline getRemarks(int index) {
       return remarks_.get(index);
     }
     /**
-     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 8 [json_name = "remarks"];</code>
      */
     @java.lang.Override
     public oscal.common.v1.Common.MarkupMultilineOrBuilder getRemarksOrBuilder(
@@ -8032,43 +8049,45 @@ public final class Component extends com.google.protobuf.GeneratedFile {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(controlId_)) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 1, controlId_);
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeMessage(1, getUuid());
       }
-      for (int i = 0; i < description_.size(); i++) {
-        output.writeMessage(2, description_.get(i));
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeMessage(2, getSource());
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 3, description_);
       }
       for (int i = 0; i < setParameters_.size(); i++) {
-        output.writeMessage(3, setParameters_.get(i));
+        output.writeMessage(4, setParameters_.get(i));
       }
       for (int i = 0; i < implementedRequirements_.size(); i++) {
-        output.writeMessage(4, implementedRequirements_.get(i));
+        output.writeMessage(5, implementedRequirements_.get(i));
       }
       for (int i = 0; i < props_.size(); i++) {
-        output.writeMessage(5, props_.get(i));
+        output.writeMessage(6, props_.get(i));
       }
       for (int i = 0; i < links_.size(); i++) {
-        output.writeMessage(6, links_.get(i));
+        output.writeMessage(7, links_.get(i));
       }
       for (int i = 0; i < remarks_.size(); i++) {
-        output.writeMessage(7, remarks_.get(i));
+        output.writeMessage(8, remarks_.get(i));
       }
       getUnknownFields().writeTo(output);
     }
     private int computeSerializedSize_0() {
       int size = 0;
-      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(controlId_)) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, controlId_);
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getUuid());
       }
-
-          {
-            final int count = description_.size();
-            for (int i = 0; i < count; i++) {
-              size += com.google.protobuf.CodedOutputStream
-                .computeMessageSizeNoTag(description_.get(i));
-            }
-            size += 1 * count;
-          }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getSource());
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(3, description_);
+      }
 
           {
             final int count = setParameters_.size();
@@ -8138,10 +8157,18 @@ public final class Component extends com.google.protobuf.GeneratedFile {
       }
       oscal.component_definition.v1.Component.ControlImplementation other = (oscal.component_definition.v1.Component.ControlImplementation) obj;
 
-      if (!getControlId()
-          .equals(other.getControlId())) return false;
-      if (!getDescriptionList()
-          .equals(other.getDescriptionList())) return false;
+      if (hasUuid() != other.hasUuid()) return false;
+      if (hasUuid()) {
+        if (!getUuid()
+            .equals(other.getUuid())) return false;
+      }
+      if (hasSource() != other.hasSource()) return false;
+      if (hasSource()) {
+        if (!getSource()
+            .equals(other.getSource())) return false;
+      }
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
       if (!getSetParametersList()
           .equals(other.getSetParametersList())) return false;
       if (!getImplementedRequirementsList()
@@ -8163,12 +8190,16 @@ public final class Component extends com.google.protobuf.GeneratedFile {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + CONTROL_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getControlId().hashCode();
-      if (getDescriptionCount() > 0) {
-        hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
-        hash = (53 * hash) + getDescriptionList().hashCode();
+      if (hasUuid()) {
+        hash = (37 * hash) + UUID_FIELD_NUMBER;
+        hash = (53 * hash) + getUuid().hashCode();
       }
+      if (hasSource()) {
+        hash = (37 * hash) + SOURCE_FIELD_NUMBER;
+        hash = (53 * hash) + getSource().hashCode();
+      }
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
       if (getSetParametersCount() > 0) {
         hash = (37 * hash) + SET_PARAMETERS_FIELD_NUMBER;
         hash = (53 * hash) + getSetParametersList().hashCode();
@@ -8312,61 +8343,76 @@ public final class Component extends com.google.protobuf.GeneratedFile {
 
       // Construct using oscal.component_definition.v1.Component.ControlImplementation.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage
+                .alwaysUseFieldBuilders) {
+          internalGetUuidFieldBuilder();
+          internalGetSourceFieldBuilder();
+          internalGetSetParametersFieldBuilder();
+          internalGetImplementedRequirementsFieldBuilder();
+          internalGetPropsFieldBuilder();
+          internalGetLinksFieldBuilder();
+          internalGetRemarksFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        controlId_ = "";
-        if (descriptionBuilder_ == null) {
-          description_ = java.util.Collections.emptyList();
-        } else {
-          description_ = null;
-          descriptionBuilder_.clear();
+        uuid_ = null;
+        if (uuidBuilder_ != null) {
+          uuidBuilder_.dispose();
+          uuidBuilder_ = null;
         }
-        bitField0_ = (bitField0_ & ~0x00000002);
+        source_ = null;
+        if (sourceBuilder_ != null) {
+          sourceBuilder_.dispose();
+          sourceBuilder_ = null;
+        }
+        description_ = "";
         if (setParametersBuilder_ == null) {
           setParameters_ = java.util.Collections.emptyList();
         } else {
           setParameters_ = null;
           setParametersBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000008);
         if (implementedRequirementsBuilder_ == null) {
           implementedRequirements_ = java.util.Collections.emptyList();
         } else {
           implementedRequirements_ = null;
           implementedRequirementsBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000010);
         if (propsBuilder_ == null) {
           props_ = java.util.Collections.emptyList();
         } else {
           props_ = null;
           propsBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000020);
         if (linksBuilder_ == null) {
           links_ = java.util.Collections.emptyList();
         } else {
           links_ = null;
           linksBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000040);
         if (remarksBuilder_ == null) {
           remarks_ = java.util.Collections.emptyList();
         } else {
           remarks_ = null;
           remarksBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000080);
         return this;
       }
 
@@ -8400,55 +8446,46 @@ public final class Component extends com.google.protobuf.GeneratedFile {
       }
 
       private void buildPartialRepeatedFields(oscal.component_definition.v1.Component.ControlImplementation result) {
-        if (descriptionBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0)) {
-            description_ = java.util.Collections.unmodifiableList(description_);
-            bitField0_ = (bitField0_ & ~0x00000002);
-          }
-          result.description_ = description_;
-        } else {
-          result.description_ = descriptionBuilder_.build();
-        }
         if (setParametersBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0)) {
+          if (((bitField0_ & 0x00000008) != 0)) {
             setParameters_ = java.util.Collections.unmodifiableList(setParameters_);
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000008);
           }
           result.setParameters_ = setParameters_;
         } else {
           result.setParameters_ = setParametersBuilder_.build();
         }
         if (implementedRequirementsBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) != 0)) {
+          if (((bitField0_ & 0x00000010) != 0)) {
             implementedRequirements_ = java.util.Collections.unmodifiableList(implementedRequirements_);
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000010);
           }
           result.implementedRequirements_ = implementedRequirements_;
         } else {
           result.implementedRequirements_ = implementedRequirementsBuilder_.build();
         }
         if (propsBuilder_ == null) {
-          if (((bitField0_ & 0x00000010) != 0)) {
+          if (((bitField0_ & 0x00000020) != 0)) {
             props_ = java.util.Collections.unmodifiableList(props_);
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000020);
           }
           result.props_ = props_;
         } else {
           result.props_ = propsBuilder_.build();
         }
         if (linksBuilder_ == null) {
-          if (((bitField0_ & 0x00000020) != 0)) {
+          if (((bitField0_ & 0x00000040) != 0)) {
             links_ = java.util.Collections.unmodifiableList(links_);
-            bitField0_ = (bitField0_ & ~0x00000020);
+            bitField0_ = (bitField0_ & ~0x00000040);
           }
           result.links_ = links_;
         } else {
           result.links_ = linksBuilder_.build();
         }
         if (remarksBuilder_ == null) {
-          if (((bitField0_ & 0x00000040) != 0)) {
+          if (((bitField0_ & 0x00000080) != 0)) {
             remarks_ = java.util.Collections.unmodifiableList(remarks_);
-            bitField0_ = (bitField0_ & ~0x00000040);
+            bitField0_ = (bitField0_ & ~0x00000080);
           }
           result.remarks_ = remarks_;
         } else {
@@ -8458,9 +8495,23 @@ public final class Component extends com.google.protobuf.GeneratedFile {
 
       private void buildPartial0(oscal.component_definition.v1.Component.ControlImplementation result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.controlId_ = controlId_;
+          result.uuid_ = uuidBuilder_ == null
+              ? uuid_
+              : uuidBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.source_ = sourceBuilder_ == null
+              ? source_
+              : sourceBuilder_.build();
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.description_ = description_;
+        }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -8475,42 +8526,22 @@ public final class Component extends com.google.protobuf.GeneratedFile {
 
       public Builder mergeFrom(oscal.component_definition.v1.Component.ControlImplementation other) {
         if (other == oscal.component_definition.v1.Component.ControlImplementation.getDefaultInstance()) return this;
-        if (!other.getControlId().isEmpty()) {
-          controlId_ = other.controlId_;
-          bitField0_ |= 0x00000001;
-          onChanged();
+        if (other.hasUuid()) {
+          mergeUuid(other.getUuid());
         }
-        if (descriptionBuilder_ == null) {
-          if (!other.description_.isEmpty()) {
-            if (description_.isEmpty()) {
-              description_ = other.description_;
-              bitField0_ = (bitField0_ & ~0x00000002);
-            } else {
-              ensureDescriptionIsMutable();
-              description_.addAll(other.description_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.description_.isEmpty()) {
-            if (descriptionBuilder_.isEmpty()) {
-              descriptionBuilder_.dispose();
-              descriptionBuilder_ = null;
-              description_ = other.description_;
-              bitField0_ = (bitField0_ & ~0x00000002);
-              descriptionBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
-                   internalGetDescriptionFieldBuilder() : null;
-            } else {
-              descriptionBuilder_.addAllMessages(other.description_);
-            }
-          }
+        if (other.hasSource()) {
+          mergeSource(other.getSource());
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000004;
+          onChanged();
         }
         if (setParametersBuilder_ == null) {
           if (!other.setParameters_.isEmpty()) {
             if (setParameters_.isEmpty()) {
               setParameters_ = other.setParameters_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000008);
             } else {
               ensureSetParametersIsMutable();
               setParameters_.addAll(other.setParameters_);
@@ -8523,7 +8554,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
               setParametersBuilder_.dispose();
               setParametersBuilder_ = null;
               setParameters_ = other.setParameters_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000008);
               setParametersBuilder_ = 
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetSetParametersFieldBuilder() : null;
@@ -8536,7 +8567,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
           if (!other.implementedRequirements_.isEmpty()) {
             if (implementedRequirements_.isEmpty()) {
               implementedRequirements_ = other.implementedRequirements_;
-              bitField0_ = (bitField0_ & ~0x00000008);
+              bitField0_ = (bitField0_ & ~0x00000010);
             } else {
               ensureImplementedRequirementsIsMutable();
               implementedRequirements_.addAll(other.implementedRequirements_);
@@ -8549,7 +8580,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
               implementedRequirementsBuilder_.dispose();
               implementedRequirementsBuilder_ = null;
               implementedRequirements_ = other.implementedRequirements_;
-              bitField0_ = (bitField0_ & ~0x00000008);
+              bitField0_ = (bitField0_ & ~0x00000010);
               implementedRequirementsBuilder_ = 
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetImplementedRequirementsFieldBuilder() : null;
@@ -8562,7 +8593,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
           if (!other.props_.isEmpty()) {
             if (props_.isEmpty()) {
               props_ = other.props_;
-              bitField0_ = (bitField0_ & ~0x00000010);
+              bitField0_ = (bitField0_ & ~0x00000020);
             } else {
               ensurePropsIsMutable();
               props_.addAll(other.props_);
@@ -8575,7 +8606,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
               propsBuilder_.dispose();
               propsBuilder_ = null;
               props_ = other.props_;
-              bitField0_ = (bitField0_ & ~0x00000010);
+              bitField0_ = (bitField0_ & ~0x00000020);
               propsBuilder_ = 
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetPropsFieldBuilder() : null;
@@ -8588,7 +8619,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
           if (!other.links_.isEmpty()) {
             if (links_.isEmpty()) {
               links_ = other.links_;
-              bitField0_ = (bitField0_ & ~0x00000020);
+              bitField0_ = (bitField0_ & ~0x00000040);
             } else {
               ensureLinksIsMutable();
               links_.addAll(other.links_);
@@ -8601,7 +8632,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
               linksBuilder_.dispose();
               linksBuilder_ = null;
               links_ = other.links_;
-              bitField0_ = (bitField0_ & ~0x00000020);
+              bitField0_ = (bitField0_ & ~0x00000040);
               linksBuilder_ = 
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetLinksFieldBuilder() : null;
@@ -8614,7 +8645,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
           if (!other.remarks_.isEmpty()) {
             if (remarks_.isEmpty()) {
               remarks_ = other.remarks_;
-              bitField0_ = (bitField0_ & ~0x00000040);
+              bitField0_ = (bitField0_ & ~0x00000080);
             } else {
               ensureRemarksIsMutable();
               remarks_.addAll(other.remarks_);
@@ -8627,7 +8658,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
               remarksBuilder_.dispose();
               remarksBuilder_ = null;
               remarks_ = other.remarks_;
-              bitField0_ = (bitField0_ & ~0x00000040);
+              bitField0_ = (bitField0_ & ~0x00000080);
               remarksBuilder_ = 
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetRemarksFieldBuilder() : null;
@@ -8663,24 +8694,25 @@ public final class Component extends com.google.protobuf.GeneratedFile {
                 done = true;
                 break;
               case 10: {
-                controlId_ = input.readStringRequireUtf8();
+                input.readMessage(
+                    internalGetUuidFieldBuilder().getBuilder(),
+                    extensionRegistry);
                 bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
-                oscal.common.v1.Common.MarkupLine m =
-                    input.readMessage(
-                        oscal.common.v1.Common.MarkupLine.parser(),
-                        extensionRegistry);
-                if (descriptionBuilder_ == null) {
-                  ensureDescriptionIsMutable();
-                  description_.add(m);
-                } else {
-                  descriptionBuilder_.addMessage(m);
-                }
+                input.readMessage(
+                    internalGetSourceFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
                 oscal.component_definition.v1.Component.SetParameter m =
                     input.readMessage(
                         oscal.component_definition.v1.Component.SetParameter.parser(),
@@ -8692,8 +8724,8 @@ public final class Component extends com.google.protobuf.GeneratedFile {
                   setParametersBuilder_.addMessage(m);
                 }
                 break;
-              } // case 26
-              case 34: {
+              } // case 34
+              case 42: {
                 oscal.component_definition.v1.Component.ImplementedRequirement m =
                     input.readMessage(
                         oscal.component_definition.v1.Component.ImplementedRequirement.parser(),
@@ -8705,8 +8737,8 @@ public final class Component extends com.google.protobuf.GeneratedFile {
                   implementedRequirementsBuilder_.addMessage(m);
                 }
                 break;
-              } // case 34
-              case 42: {
+              } // case 42
+              case 50: {
                 oscal.common.v1.Common.Property m =
                     input.readMessage(
                         oscal.common.v1.Common.Property.parser(),
@@ -8718,8 +8750,8 @@ public final class Component extends com.google.protobuf.GeneratedFile {
                   propsBuilder_.addMessage(m);
                 }
                 break;
-              } // case 42
-              case 50: {
+              } // case 50
+              case 58: {
                 oscal.common.v1.Common.Link m =
                     input.readMessage(
                         oscal.common.v1.Common.Link.parser(),
@@ -8731,8 +8763,8 @@ public final class Component extends com.google.protobuf.GeneratedFile {
                   linksBuilder_.addMessage(m);
                 }
                 break;
-              } // case 50
-              case 58: {
+              } // case 58
+              case 66: {
                 oscal.common.v1.Common.MarkupMultiline m =
                     input.readMessage(
                         oscal.common.v1.Common.MarkupMultiline.parser(),
@@ -8744,7 +8776,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
                   remarksBuilder_.addMessage(m);
                 }
                 break;
-              } // case 58
+              } // case 66
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -8762,324 +8794,326 @@ public final class Component extends com.google.protobuf.GeneratedFile {
       }
       private int bitField0_;
 
-      private java.lang.Object controlId_ = "";
+      private oscal.common.v1.Common.UUID uuid_;
+      private com.google.protobuf.SingleFieldBuilder<
+          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder> uuidBuilder_;
       /**
-       * <code>string control_id = 1 [json_name = "controlId"];</code>
-       * @return The controlId.
+       * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
+       * @return Whether the uuid field is set.
        */
-      public java.lang.String getControlId() {
-        java.lang.Object ref = controlId_;
+      public boolean hasUuid() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
+       * @return The uuid.
+       */
+      public oscal.common.v1.Common.UUID getUuid() {
+        if (uuidBuilder_ == null) {
+          return uuid_ == null ? oscal.common.v1.Common.UUID.getDefaultInstance() : uuid_;
+        } else {
+          return uuidBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
+       */
+      public Builder setUuid(oscal.common.v1.Common.UUID value) {
+        if (uuidBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          uuid_ = value;
+        } else {
+          uuidBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
+       */
+      public Builder setUuid(
+          oscal.common.v1.Common.UUID.Builder builderForValue) {
+        if (uuidBuilder_ == null) {
+          uuid_ = builderForValue.build();
+        } else {
+          uuidBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
+       */
+      public Builder mergeUuid(oscal.common.v1.Common.UUID value) {
+        if (uuidBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            uuid_ != null &&
+            uuid_ != oscal.common.v1.Common.UUID.getDefaultInstance()) {
+            getUuidBuilder().mergeFrom(value);
+          } else {
+            uuid_ = value;
+          }
+        } else {
+          uuidBuilder_.mergeFrom(value);
+        }
+        if (uuid_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
+       */
+      public Builder clearUuid() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        uuid_ = null;
+        if (uuidBuilder_ != null) {
+          uuidBuilder_.dispose();
+          uuidBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
+       */
+      public oscal.common.v1.Common.UUID.Builder getUuidBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return internalGetUuidFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
+       */
+      public oscal.common.v1.Common.UUIDOrBuilder getUuidOrBuilder() {
+        if (uuidBuilder_ != null) {
+          return uuidBuilder_.getMessageOrBuilder();
+        } else {
+          return uuid_ == null ?
+              oscal.common.v1.Common.UUID.getDefaultInstance() : uuid_;
+        }
+      }
+      /**
+       * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder> 
+          internalGetUuidFieldBuilder() {
+        if (uuidBuilder_ == null) {
+          uuidBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder>(
+                  getUuid(),
+                  getParentForChildren(),
+                  isClean());
+          uuid_ = null;
+        }
+        return uuidBuilder_;
+      }
+
+      private oscal.common.v1.Common.URIReference source_;
+      private com.google.protobuf.SingleFieldBuilder<
+          oscal.common.v1.Common.URIReference, oscal.common.v1.Common.URIReference.Builder, oscal.common.v1.Common.URIReferenceOrBuilder> sourceBuilder_;
+      /**
+       * <code>.oscal.common.v1.URIReference source = 2 [json_name = "source"];</code>
+       * @return Whether the source field is set.
+       */
+      public boolean hasSource() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.oscal.common.v1.URIReference source = 2 [json_name = "source"];</code>
+       * @return The source.
+       */
+      public oscal.common.v1.Common.URIReference getSource() {
+        if (sourceBuilder_ == null) {
+          return source_ == null ? oscal.common.v1.Common.URIReference.getDefaultInstance() : source_;
+        } else {
+          return sourceBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.oscal.common.v1.URIReference source = 2 [json_name = "source"];</code>
+       */
+      public Builder setSource(oscal.common.v1.Common.URIReference value) {
+        if (sourceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          source_ = value;
+        } else {
+          sourceBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.URIReference source = 2 [json_name = "source"];</code>
+       */
+      public Builder setSource(
+          oscal.common.v1.Common.URIReference.Builder builderForValue) {
+        if (sourceBuilder_ == null) {
+          source_ = builderForValue.build();
+        } else {
+          sourceBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.URIReference source = 2 [json_name = "source"];</code>
+       */
+      public Builder mergeSource(oscal.common.v1.Common.URIReference value) {
+        if (sourceBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            source_ != null &&
+            source_ != oscal.common.v1.Common.URIReference.getDefaultInstance()) {
+            getSourceBuilder().mergeFrom(value);
+          } else {
+            source_ = value;
+          }
+        } else {
+          sourceBuilder_.mergeFrom(value);
+        }
+        if (source_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.URIReference source = 2 [json_name = "source"];</code>
+       */
+      public Builder clearSource() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        source_ = null;
+        if (sourceBuilder_ != null) {
+          sourceBuilder_.dispose();
+          sourceBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.URIReference source = 2 [json_name = "source"];</code>
+       */
+      public oscal.common.v1.Common.URIReference.Builder getSourceBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return internalGetSourceFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.oscal.common.v1.URIReference source = 2 [json_name = "source"];</code>
+       */
+      public oscal.common.v1.Common.URIReferenceOrBuilder getSourceOrBuilder() {
+        if (sourceBuilder_ != null) {
+          return sourceBuilder_.getMessageOrBuilder();
+        } else {
+          return source_ == null ?
+              oscal.common.v1.Common.URIReference.getDefaultInstance() : source_;
+        }
+      }
+      /**
+       * <code>.oscal.common.v1.URIReference source = 2 [json_name = "source"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          oscal.common.v1.Common.URIReference, oscal.common.v1.Common.URIReference.Builder, oscal.common.v1.Common.URIReferenceOrBuilder> 
+          internalGetSourceFieldBuilder() {
+        if (sourceBuilder_ == null) {
+          sourceBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              oscal.common.v1.Common.URIReference, oscal.common.v1.Common.URIReference.Builder, oscal.common.v1.Common.URIReferenceOrBuilder>(
+                  getSource(),
+                  getParentForChildren(),
+                  isClean());
+          source_ = null;
+        }
+        return sourceBuilder_;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          controlId_ = s;
+          description_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string control_id = 1 [json_name = "controlId"];</code>
-       * @return The bytes for controlId.
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
-          getControlIdBytes() {
-        java.lang.Object ref = controlId_;
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          controlId_ = b;
+          description_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string control_id = 1 [json_name = "controlId"];</code>
-       * @param value The controlId to set.
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @param value The description to set.
        * @return This builder for chaining.
        */
-      public Builder setControlId(
+      public Builder setDescription(
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
-        controlId_ = value;
-        bitField0_ |= 0x00000001;
+        description_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
       /**
-       * <code>string control_id = 1 [json_name = "controlId"];</code>
+       * <code>string description = 3 [json_name = "description"];</code>
        * @return This builder for chaining.
        */
-      public Builder clearControlId() {
-        controlId_ = getDefaultInstance().getControlId();
-        bitField0_ = (bitField0_ & ~0x00000001);
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
       /**
-       * <code>string control_id = 1 [json_name = "controlId"];</code>
-       * @param value The bytes for controlId to set.
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
        * @return This builder for chaining.
        */
-      public Builder setControlIdBytes(
+      public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
-        controlId_ = value;
-        bitField0_ |= 0x00000001;
+        description_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
-      }
-
-      private java.util.List<oscal.common.v1.Common.MarkupLine> description_ =
-        java.util.Collections.emptyList();
-      private void ensureDescriptionIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
-          description_ = new java.util.ArrayList<oscal.common.v1.Common.MarkupLine>(description_);
-          bitField0_ |= 0x00000002;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.MarkupLine, oscal.common.v1.Common.MarkupLine.Builder, oscal.common.v1.Common.MarkupLineOrBuilder> descriptionBuilder_;
-
-      /**
-       * <code>repeated .oscal.common.v1.MarkupLine description = 2 [json_name = "description"];</code>
-       */
-      public java.util.List<oscal.common.v1.Common.MarkupLine> getDescriptionList() {
-        if (descriptionBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(description_);
-        } else {
-          return descriptionBuilder_.getMessageList();
-        }
-      }
-      /**
-       * <code>repeated .oscal.common.v1.MarkupLine description = 2 [json_name = "description"];</code>
-       */
-      public int getDescriptionCount() {
-        if (descriptionBuilder_ == null) {
-          return description_.size();
-        } else {
-          return descriptionBuilder_.getCount();
-        }
-      }
-      /**
-       * <code>repeated .oscal.common.v1.MarkupLine description = 2 [json_name = "description"];</code>
-       */
-      public oscal.common.v1.Common.MarkupLine getDescription(int index) {
-        if (descriptionBuilder_ == null) {
-          return description_.get(index);
-        } else {
-          return descriptionBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <code>repeated .oscal.common.v1.MarkupLine description = 2 [json_name = "description"];</code>
-       */
-      public Builder setDescription(
-          int index, oscal.common.v1.Common.MarkupLine value) {
-        if (descriptionBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureDescriptionIsMutable();
-          description_.set(index, value);
-          onChanged();
-        } else {
-          descriptionBuilder_.setMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .oscal.common.v1.MarkupLine description = 2 [json_name = "description"];</code>
-       */
-      public Builder setDescription(
-          int index, oscal.common.v1.Common.MarkupLine.Builder builderForValue) {
-        if (descriptionBuilder_ == null) {
-          ensureDescriptionIsMutable();
-          description_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          descriptionBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .oscal.common.v1.MarkupLine description = 2 [json_name = "description"];</code>
-       */
-      public Builder addDescription(oscal.common.v1.Common.MarkupLine value) {
-        if (descriptionBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureDescriptionIsMutable();
-          description_.add(value);
-          onChanged();
-        } else {
-          descriptionBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .oscal.common.v1.MarkupLine description = 2 [json_name = "description"];</code>
-       */
-      public Builder addDescription(
-          int index, oscal.common.v1.Common.MarkupLine value) {
-        if (descriptionBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureDescriptionIsMutable();
-          description_.add(index, value);
-          onChanged();
-        } else {
-          descriptionBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .oscal.common.v1.MarkupLine description = 2 [json_name = "description"];</code>
-       */
-      public Builder addDescription(
-          oscal.common.v1.Common.MarkupLine.Builder builderForValue) {
-        if (descriptionBuilder_ == null) {
-          ensureDescriptionIsMutable();
-          description_.add(builderForValue.build());
-          onChanged();
-        } else {
-          descriptionBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .oscal.common.v1.MarkupLine description = 2 [json_name = "description"];</code>
-       */
-      public Builder addDescription(
-          int index, oscal.common.v1.Common.MarkupLine.Builder builderForValue) {
-        if (descriptionBuilder_ == null) {
-          ensureDescriptionIsMutable();
-          description_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          descriptionBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .oscal.common.v1.MarkupLine description = 2 [json_name = "description"];</code>
-       */
-      public Builder addAllDescription(
-          java.lang.Iterable<? extends oscal.common.v1.Common.MarkupLine> values) {
-        if (descriptionBuilder_ == null) {
-          ensureDescriptionIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, description_);
-          onChanged();
-        } else {
-          descriptionBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .oscal.common.v1.MarkupLine description = 2 [json_name = "description"];</code>
-       */
-      public Builder clearDescription() {
-        if (descriptionBuilder_ == null) {
-          description_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
-          onChanged();
-        } else {
-          descriptionBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .oscal.common.v1.MarkupLine description = 2 [json_name = "description"];</code>
-       */
-      public Builder removeDescription(int index) {
-        if (descriptionBuilder_ == null) {
-          ensureDescriptionIsMutable();
-          description_.remove(index);
-          onChanged();
-        } else {
-          descriptionBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .oscal.common.v1.MarkupLine description = 2 [json_name = "description"];</code>
-       */
-      public oscal.common.v1.Common.MarkupLine.Builder getDescriptionBuilder(
-          int index) {
-        return internalGetDescriptionFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .oscal.common.v1.MarkupLine description = 2 [json_name = "description"];</code>
-       */
-      public oscal.common.v1.Common.MarkupLineOrBuilder getDescriptionOrBuilder(
-          int index) {
-        if (descriptionBuilder_ == null) {
-          return description_.get(index);  } else {
-          return descriptionBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .oscal.common.v1.MarkupLine description = 2 [json_name = "description"];</code>
-       */
-      public java.util.List<? extends oscal.common.v1.Common.MarkupLineOrBuilder> 
-           getDescriptionOrBuilderList() {
-        if (descriptionBuilder_ != null) {
-          return descriptionBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(description_);
-        }
-      }
-      /**
-       * <code>repeated .oscal.common.v1.MarkupLine description = 2 [json_name = "description"];</code>
-       */
-      public oscal.common.v1.Common.MarkupLine.Builder addDescriptionBuilder() {
-        return internalGetDescriptionFieldBuilder().addBuilder(
-            oscal.common.v1.Common.MarkupLine.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .oscal.common.v1.MarkupLine description = 2 [json_name = "description"];</code>
-       */
-      public oscal.common.v1.Common.MarkupLine.Builder addDescriptionBuilder(
-          int index) {
-        return internalGetDescriptionFieldBuilder().addBuilder(
-            index, oscal.common.v1.Common.MarkupLine.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .oscal.common.v1.MarkupLine description = 2 [json_name = "description"];</code>
-       */
-      public java.util.List<oscal.common.v1.Common.MarkupLine.Builder> 
-           getDescriptionBuilderList() {
-        return internalGetDescriptionFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.MarkupLine, oscal.common.v1.Common.MarkupLine.Builder, oscal.common.v1.Common.MarkupLineOrBuilder> 
-          internalGetDescriptionFieldBuilder() {
-        if (descriptionBuilder_ == null) {
-          descriptionBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-              oscal.common.v1.Common.MarkupLine, oscal.common.v1.Common.MarkupLine.Builder, oscal.common.v1.Common.MarkupLineOrBuilder>(
-                  description_,
-                  ((bitField0_ & 0x00000002) != 0),
-                  getParentForChildren(),
-                  isClean());
-          description_ = null;
-        }
-        return descriptionBuilder_;
       }
 
       private java.util.List<oscal.component_definition.v1.Component.SetParameter> setParameters_ =
         java.util.Collections.emptyList();
       private void ensureSetParametersIsMutable() {
-        if (!((bitField0_ & 0x00000004) != 0)) {
+        if (!((bitField0_ & 0x00000008) != 0)) {
           setParameters_ = new java.util.ArrayList<oscal.component_definition.v1.Component.SetParameter>(setParameters_);
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000008;
          }
       }
 
@@ -9087,7 +9121,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
           oscal.component_definition.v1.Component.SetParameter, oscal.component_definition.v1.Component.SetParameter.Builder, oscal.component_definition.v1.Component.SetParameterOrBuilder> setParametersBuilder_;
 
       /**
-       * <code>repeated .oscal.component_definition.v1.SetParameter set_parameters = 3 [json_name = "setParameters"];</code>
+       * <code>repeated .oscal.component_definition.v1.SetParameter set_parameters = 4 [json_name = "setParameters"];</code>
        */
       public java.util.List<oscal.component_definition.v1.Component.SetParameter> getSetParametersList() {
         if (setParametersBuilder_ == null) {
@@ -9097,7 +9131,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.component_definition.v1.SetParameter set_parameters = 3 [json_name = "setParameters"];</code>
+       * <code>repeated .oscal.component_definition.v1.SetParameter set_parameters = 4 [json_name = "setParameters"];</code>
        */
       public int getSetParametersCount() {
         if (setParametersBuilder_ == null) {
@@ -9107,7 +9141,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.component_definition.v1.SetParameter set_parameters = 3 [json_name = "setParameters"];</code>
+       * <code>repeated .oscal.component_definition.v1.SetParameter set_parameters = 4 [json_name = "setParameters"];</code>
        */
       public oscal.component_definition.v1.Component.SetParameter getSetParameters(int index) {
         if (setParametersBuilder_ == null) {
@@ -9117,7 +9151,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.component_definition.v1.SetParameter set_parameters = 3 [json_name = "setParameters"];</code>
+       * <code>repeated .oscal.component_definition.v1.SetParameter set_parameters = 4 [json_name = "setParameters"];</code>
        */
       public Builder setSetParameters(
           int index, oscal.component_definition.v1.Component.SetParameter value) {
@@ -9134,7 +9168,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.component_definition.v1.SetParameter set_parameters = 3 [json_name = "setParameters"];</code>
+       * <code>repeated .oscal.component_definition.v1.SetParameter set_parameters = 4 [json_name = "setParameters"];</code>
        */
       public Builder setSetParameters(
           int index, oscal.component_definition.v1.Component.SetParameter.Builder builderForValue) {
@@ -9148,7 +9182,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.component_definition.v1.SetParameter set_parameters = 3 [json_name = "setParameters"];</code>
+       * <code>repeated .oscal.component_definition.v1.SetParameter set_parameters = 4 [json_name = "setParameters"];</code>
        */
       public Builder addSetParameters(oscal.component_definition.v1.Component.SetParameter value) {
         if (setParametersBuilder_ == null) {
@@ -9164,7 +9198,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.component_definition.v1.SetParameter set_parameters = 3 [json_name = "setParameters"];</code>
+       * <code>repeated .oscal.component_definition.v1.SetParameter set_parameters = 4 [json_name = "setParameters"];</code>
        */
       public Builder addSetParameters(
           int index, oscal.component_definition.v1.Component.SetParameter value) {
@@ -9181,7 +9215,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.component_definition.v1.SetParameter set_parameters = 3 [json_name = "setParameters"];</code>
+       * <code>repeated .oscal.component_definition.v1.SetParameter set_parameters = 4 [json_name = "setParameters"];</code>
        */
       public Builder addSetParameters(
           oscal.component_definition.v1.Component.SetParameter.Builder builderForValue) {
@@ -9195,7 +9229,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.component_definition.v1.SetParameter set_parameters = 3 [json_name = "setParameters"];</code>
+       * <code>repeated .oscal.component_definition.v1.SetParameter set_parameters = 4 [json_name = "setParameters"];</code>
        */
       public Builder addSetParameters(
           int index, oscal.component_definition.v1.Component.SetParameter.Builder builderForValue) {
@@ -9209,7 +9243,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.component_definition.v1.SetParameter set_parameters = 3 [json_name = "setParameters"];</code>
+       * <code>repeated .oscal.component_definition.v1.SetParameter set_parameters = 4 [json_name = "setParameters"];</code>
        */
       public Builder addAllSetParameters(
           java.lang.Iterable<? extends oscal.component_definition.v1.Component.SetParameter> values) {
@@ -9224,12 +9258,12 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.component_definition.v1.SetParameter set_parameters = 3 [json_name = "setParameters"];</code>
+       * <code>repeated .oscal.component_definition.v1.SetParameter set_parameters = 4 [json_name = "setParameters"];</code>
        */
       public Builder clearSetParameters() {
         if (setParametersBuilder_ == null) {
           setParameters_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000008);
           onChanged();
         } else {
           setParametersBuilder_.clear();
@@ -9237,7 +9271,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.component_definition.v1.SetParameter set_parameters = 3 [json_name = "setParameters"];</code>
+       * <code>repeated .oscal.component_definition.v1.SetParameter set_parameters = 4 [json_name = "setParameters"];</code>
        */
       public Builder removeSetParameters(int index) {
         if (setParametersBuilder_ == null) {
@@ -9250,14 +9284,14 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.component_definition.v1.SetParameter set_parameters = 3 [json_name = "setParameters"];</code>
+       * <code>repeated .oscal.component_definition.v1.SetParameter set_parameters = 4 [json_name = "setParameters"];</code>
        */
       public oscal.component_definition.v1.Component.SetParameter.Builder getSetParametersBuilder(
           int index) {
         return internalGetSetParametersFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .oscal.component_definition.v1.SetParameter set_parameters = 3 [json_name = "setParameters"];</code>
+       * <code>repeated .oscal.component_definition.v1.SetParameter set_parameters = 4 [json_name = "setParameters"];</code>
        */
       public oscal.component_definition.v1.Component.SetParameterOrBuilder getSetParametersOrBuilder(
           int index) {
@@ -9267,7 +9301,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.component_definition.v1.SetParameter set_parameters = 3 [json_name = "setParameters"];</code>
+       * <code>repeated .oscal.component_definition.v1.SetParameter set_parameters = 4 [json_name = "setParameters"];</code>
        */
       public java.util.List<? extends oscal.component_definition.v1.Component.SetParameterOrBuilder> 
            getSetParametersOrBuilderList() {
@@ -9278,14 +9312,14 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.component_definition.v1.SetParameter set_parameters = 3 [json_name = "setParameters"];</code>
+       * <code>repeated .oscal.component_definition.v1.SetParameter set_parameters = 4 [json_name = "setParameters"];</code>
        */
       public oscal.component_definition.v1.Component.SetParameter.Builder addSetParametersBuilder() {
         return internalGetSetParametersFieldBuilder().addBuilder(
             oscal.component_definition.v1.Component.SetParameter.getDefaultInstance());
       }
       /**
-       * <code>repeated .oscal.component_definition.v1.SetParameter set_parameters = 3 [json_name = "setParameters"];</code>
+       * <code>repeated .oscal.component_definition.v1.SetParameter set_parameters = 4 [json_name = "setParameters"];</code>
        */
       public oscal.component_definition.v1.Component.SetParameter.Builder addSetParametersBuilder(
           int index) {
@@ -9293,7 +9327,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
             index, oscal.component_definition.v1.Component.SetParameter.getDefaultInstance());
       }
       /**
-       * <code>repeated .oscal.component_definition.v1.SetParameter set_parameters = 3 [json_name = "setParameters"];</code>
+       * <code>repeated .oscal.component_definition.v1.SetParameter set_parameters = 4 [json_name = "setParameters"];</code>
        */
       public java.util.List<oscal.component_definition.v1.Component.SetParameter.Builder> 
            getSetParametersBuilderList() {
@@ -9306,7 +9340,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
           setParametersBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
               oscal.component_definition.v1.Component.SetParameter, oscal.component_definition.v1.Component.SetParameter.Builder, oscal.component_definition.v1.Component.SetParameterOrBuilder>(
                   setParameters_,
-                  ((bitField0_ & 0x00000004) != 0),
+                  ((bitField0_ & 0x00000008) != 0),
                   getParentForChildren(),
                   isClean());
           setParameters_ = null;
@@ -9317,9 +9351,9 @@ public final class Component extends com.google.protobuf.GeneratedFile {
       private java.util.List<oscal.component_definition.v1.Component.ImplementedRequirement> implementedRequirements_ =
         java.util.Collections.emptyList();
       private void ensureImplementedRequirementsIsMutable() {
-        if (!((bitField0_ & 0x00000008) != 0)) {
+        if (!((bitField0_ & 0x00000010) != 0)) {
           implementedRequirements_ = new java.util.ArrayList<oscal.component_definition.v1.Component.ImplementedRequirement>(implementedRequirements_);
-          bitField0_ |= 0x00000008;
+          bitField0_ |= 0x00000010;
          }
       }
 
@@ -9327,7 +9361,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
           oscal.component_definition.v1.Component.ImplementedRequirement, oscal.component_definition.v1.Component.ImplementedRequirement.Builder, oscal.component_definition.v1.Component.ImplementedRequirementOrBuilder> implementedRequirementsBuilder_;
 
       /**
-       * <code>repeated .oscal.component_definition.v1.ImplementedRequirement implemented_requirements = 4 [json_name = "implementedRequirements"];</code>
+       * <code>repeated .oscal.component_definition.v1.ImplementedRequirement implemented_requirements = 5 [json_name = "implementedRequirements"];</code>
        */
       public java.util.List<oscal.component_definition.v1.Component.ImplementedRequirement> getImplementedRequirementsList() {
         if (implementedRequirementsBuilder_ == null) {
@@ -9337,7 +9371,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.component_definition.v1.ImplementedRequirement implemented_requirements = 4 [json_name = "implementedRequirements"];</code>
+       * <code>repeated .oscal.component_definition.v1.ImplementedRequirement implemented_requirements = 5 [json_name = "implementedRequirements"];</code>
        */
       public int getImplementedRequirementsCount() {
         if (implementedRequirementsBuilder_ == null) {
@@ -9347,7 +9381,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.component_definition.v1.ImplementedRequirement implemented_requirements = 4 [json_name = "implementedRequirements"];</code>
+       * <code>repeated .oscal.component_definition.v1.ImplementedRequirement implemented_requirements = 5 [json_name = "implementedRequirements"];</code>
        */
       public oscal.component_definition.v1.Component.ImplementedRequirement getImplementedRequirements(int index) {
         if (implementedRequirementsBuilder_ == null) {
@@ -9357,7 +9391,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.component_definition.v1.ImplementedRequirement implemented_requirements = 4 [json_name = "implementedRequirements"];</code>
+       * <code>repeated .oscal.component_definition.v1.ImplementedRequirement implemented_requirements = 5 [json_name = "implementedRequirements"];</code>
        */
       public Builder setImplementedRequirements(
           int index, oscal.component_definition.v1.Component.ImplementedRequirement value) {
@@ -9374,7 +9408,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.component_definition.v1.ImplementedRequirement implemented_requirements = 4 [json_name = "implementedRequirements"];</code>
+       * <code>repeated .oscal.component_definition.v1.ImplementedRequirement implemented_requirements = 5 [json_name = "implementedRequirements"];</code>
        */
       public Builder setImplementedRequirements(
           int index, oscal.component_definition.v1.Component.ImplementedRequirement.Builder builderForValue) {
@@ -9388,7 +9422,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.component_definition.v1.ImplementedRequirement implemented_requirements = 4 [json_name = "implementedRequirements"];</code>
+       * <code>repeated .oscal.component_definition.v1.ImplementedRequirement implemented_requirements = 5 [json_name = "implementedRequirements"];</code>
        */
       public Builder addImplementedRequirements(oscal.component_definition.v1.Component.ImplementedRequirement value) {
         if (implementedRequirementsBuilder_ == null) {
@@ -9404,7 +9438,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.component_definition.v1.ImplementedRequirement implemented_requirements = 4 [json_name = "implementedRequirements"];</code>
+       * <code>repeated .oscal.component_definition.v1.ImplementedRequirement implemented_requirements = 5 [json_name = "implementedRequirements"];</code>
        */
       public Builder addImplementedRequirements(
           int index, oscal.component_definition.v1.Component.ImplementedRequirement value) {
@@ -9421,7 +9455,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.component_definition.v1.ImplementedRequirement implemented_requirements = 4 [json_name = "implementedRequirements"];</code>
+       * <code>repeated .oscal.component_definition.v1.ImplementedRequirement implemented_requirements = 5 [json_name = "implementedRequirements"];</code>
        */
       public Builder addImplementedRequirements(
           oscal.component_definition.v1.Component.ImplementedRequirement.Builder builderForValue) {
@@ -9435,7 +9469,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.component_definition.v1.ImplementedRequirement implemented_requirements = 4 [json_name = "implementedRequirements"];</code>
+       * <code>repeated .oscal.component_definition.v1.ImplementedRequirement implemented_requirements = 5 [json_name = "implementedRequirements"];</code>
        */
       public Builder addImplementedRequirements(
           int index, oscal.component_definition.v1.Component.ImplementedRequirement.Builder builderForValue) {
@@ -9449,7 +9483,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.component_definition.v1.ImplementedRequirement implemented_requirements = 4 [json_name = "implementedRequirements"];</code>
+       * <code>repeated .oscal.component_definition.v1.ImplementedRequirement implemented_requirements = 5 [json_name = "implementedRequirements"];</code>
        */
       public Builder addAllImplementedRequirements(
           java.lang.Iterable<? extends oscal.component_definition.v1.Component.ImplementedRequirement> values) {
@@ -9464,12 +9498,12 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.component_definition.v1.ImplementedRequirement implemented_requirements = 4 [json_name = "implementedRequirements"];</code>
+       * <code>repeated .oscal.component_definition.v1.ImplementedRequirement implemented_requirements = 5 [json_name = "implementedRequirements"];</code>
        */
       public Builder clearImplementedRequirements() {
         if (implementedRequirementsBuilder_ == null) {
           implementedRequirements_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000010);
           onChanged();
         } else {
           implementedRequirementsBuilder_.clear();
@@ -9477,7 +9511,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.component_definition.v1.ImplementedRequirement implemented_requirements = 4 [json_name = "implementedRequirements"];</code>
+       * <code>repeated .oscal.component_definition.v1.ImplementedRequirement implemented_requirements = 5 [json_name = "implementedRequirements"];</code>
        */
       public Builder removeImplementedRequirements(int index) {
         if (implementedRequirementsBuilder_ == null) {
@@ -9490,14 +9524,14 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.component_definition.v1.ImplementedRequirement implemented_requirements = 4 [json_name = "implementedRequirements"];</code>
+       * <code>repeated .oscal.component_definition.v1.ImplementedRequirement implemented_requirements = 5 [json_name = "implementedRequirements"];</code>
        */
       public oscal.component_definition.v1.Component.ImplementedRequirement.Builder getImplementedRequirementsBuilder(
           int index) {
         return internalGetImplementedRequirementsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .oscal.component_definition.v1.ImplementedRequirement implemented_requirements = 4 [json_name = "implementedRequirements"];</code>
+       * <code>repeated .oscal.component_definition.v1.ImplementedRequirement implemented_requirements = 5 [json_name = "implementedRequirements"];</code>
        */
       public oscal.component_definition.v1.Component.ImplementedRequirementOrBuilder getImplementedRequirementsOrBuilder(
           int index) {
@@ -9507,7 +9541,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.component_definition.v1.ImplementedRequirement implemented_requirements = 4 [json_name = "implementedRequirements"];</code>
+       * <code>repeated .oscal.component_definition.v1.ImplementedRequirement implemented_requirements = 5 [json_name = "implementedRequirements"];</code>
        */
       public java.util.List<? extends oscal.component_definition.v1.Component.ImplementedRequirementOrBuilder> 
            getImplementedRequirementsOrBuilderList() {
@@ -9518,14 +9552,14 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.component_definition.v1.ImplementedRequirement implemented_requirements = 4 [json_name = "implementedRequirements"];</code>
+       * <code>repeated .oscal.component_definition.v1.ImplementedRequirement implemented_requirements = 5 [json_name = "implementedRequirements"];</code>
        */
       public oscal.component_definition.v1.Component.ImplementedRequirement.Builder addImplementedRequirementsBuilder() {
         return internalGetImplementedRequirementsFieldBuilder().addBuilder(
             oscal.component_definition.v1.Component.ImplementedRequirement.getDefaultInstance());
       }
       /**
-       * <code>repeated .oscal.component_definition.v1.ImplementedRequirement implemented_requirements = 4 [json_name = "implementedRequirements"];</code>
+       * <code>repeated .oscal.component_definition.v1.ImplementedRequirement implemented_requirements = 5 [json_name = "implementedRequirements"];</code>
        */
       public oscal.component_definition.v1.Component.ImplementedRequirement.Builder addImplementedRequirementsBuilder(
           int index) {
@@ -9533,7 +9567,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
             index, oscal.component_definition.v1.Component.ImplementedRequirement.getDefaultInstance());
       }
       /**
-       * <code>repeated .oscal.component_definition.v1.ImplementedRequirement implemented_requirements = 4 [json_name = "implementedRequirements"];</code>
+       * <code>repeated .oscal.component_definition.v1.ImplementedRequirement implemented_requirements = 5 [json_name = "implementedRequirements"];</code>
        */
       public java.util.List<oscal.component_definition.v1.Component.ImplementedRequirement.Builder> 
            getImplementedRequirementsBuilderList() {
@@ -9546,7 +9580,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
           implementedRequirementsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
               oscal.component_definition.v1.Component.ImplementedRequirement, oscal.component_definition.v1.Component.ImplementedRequirement.Builder, oscal.component_definition.v1.Component.ImplementedRequirementOrBuilder>(
                   implementedRequirements_,
-                  ((bitField0_ & 0x00000008) != 0),
+                  ((bitField0_ & 0x00000010) != 0),
                   getParentForChildren(),
                   isClean());
           implementedRequirements_ = null;
@@ -9557,9 +9591,9 @@ public final class Component extends com.google.protobuf.GeneratedFile {
       private java.util.List<oscal.common.v1.Common.Property> props_ =
         java.util.Collections.emptyList();
       private void ensurePropsIsMutable() {
-        if (!((bitField0_ & 0x00000010) != 0)) {
+        if (!((bitField0_ & 0x00000020) != 0)) {
           props_ = new java.util.ArrayList<oscal.common.v1.Common.Property>(props_);
-          bitField0_ |= 0x00000010;
+          bitField0_ |= 0x00000020;
          }
       }
 
@@ -9567,7 +9601,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
           oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> propsBuilder_;
 
       /**
-       * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 6 [json_name = "props"];</code>
        */
       public java.util.List<oscal.common.v1.Common.Property> getPropsList() {
         if (propsBuilder_ == null) {
@@ -9577,7 +9611,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 6 [json_name = "props"];</code>
        */
       public int getPropsCount() {
         if (propsBuilder_ == null) {
@@ -9587,7 +9621,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 6 [json_name = "props"];</code>
        */
       public oscal.common.v1.Common.Property getProps(int index) {
         if (propsBuilder_ == null) {
@@ -9597,7 +9631,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 6 [json_name = "props"];</code>
        */
       public Builder setProps(
           int index, oscal.common.v1.Common.Property value) {
@@ -9614,7 +9648,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 6 [json_name = "props"];</code>
        */
       public Builder setProps(
           int index, oscal.common.v1.Common.Property.Builder builderForValue) {
@@ -9628,7 +9662,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 6 [json_name = "props"];</code>
        */
       public Builder addProps(oscal.common.v1.Common.Property value) {
         if (propsBuilder_ == null) {
@@ -9644,7 +9678,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 6 [json_name = "props"];</code>
        */
       public Builder addProps(
           int index, oscal.common.v1.Common.Property value) {
@@ -9661,7 +9695,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 6 [json_name = "props"];</code>
        */
       public Builder addProps(
           oscal.common.v1.Common.Property.Builder builderForValue) {
@@ -9675,7 +9709,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 6 [json_name = "props"];</code>
        */
       public Builder addProps(
           int index, oscal.common.v1.Common.Property.Builder builderForValue) {
@@ -9689,7 +9723,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 6 [json_name = "props"];</code>
        */
       public Builder addAllProps(
           java.lang.Iterable<? extends oscal.common.v1.Common.Property> values) {
@@ -9704,12 +9738,12 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 6 [json_name = "props"];</code>
        */
       public Builder clearProps() {
         if (propsBuilder_ == null) {
           props_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000020);
           onChanged();
         } else {
           propsBuilder_.clear();
@@ -9717,7 +9751,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 6 [json_name = "props"];</code>
        */
       public Builder removeProps(int index) {
         if (propsBuilder_ == null) {
@@ -9730,14 +9764,14 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 6 [json_name = "props"];</code>
        */
       public oscal.common.v1.Common.Property.Builder getPropsBuilder(
           int index) {
         return internalGetPropsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 6 [json_name = "props"];</code>
        */
       public oscal.common.v1.Common.PropertyOrBuilder getPropsOrBuilder(
           int index) {
@@ -9747,7 +9781,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 6 [json_name = "props"];</code>
        */
       public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
            getPropsOrBuilderList() {
@@ -9758,14 +9792,14 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 6 [json_name = "props"];</code>
        */
       public oscal.common.v1.Common.Property.Builder addPropsBuilder() {
         return internalGetPropsFieldBuilder().addBuilder(
             oscal.common.v1.Common.Property.getDefaultInstance());
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 6 [json_name = "props"];</code>
        */
       public oscal.common.v1.Common.Property.Builder addPropsBuilder(
           int index) {
@@ -9773,7 +9807,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
             index, oscal.common.v1.Common.Property.getDefaultInstance());
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 6 [json_name = "props"];</code>
        */
       public java.util.List<oscal.common.v1.Common.Property.Builder> 
            getPropsBuilderList() {
@@ -9786,7 +9820,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
           propsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
               oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder>(
                   props_,
-                  ((bitField0_ & 0x00000010) != 0),
+                  ((bitField0_ & 0x00000020) != 0),
                   getParentForChildren(),
                   isClean());
           props_ = null;
@@ -9797,9 +9831,9 @@ public final class Component extends com.google.protobuf.GeneratedFile {
       private java.util.List<oscal.common.v1.Common.Link> links_ =
         java.util.Collections.emptyList();
       private void ensureLinksIsMutable() {
-        if (!((bitField0_ & 0x00000020) != 0)) {
+        if (!((bitField0_ & 0x00000040) != 0)) {
           links_ = new java.util.ArrayList<oscal.common.v1.Common.Link>(links_);
-          bitField0_ |= 0x00000020;
+          bitField0_ |= 0x00000040;
          }
       }
 
@@ -9807,7 +9841,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
           oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder> linksBuilder_;
 
       /**
-       * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 7 [json_name = "links"];</code>
        */
       public java.util.List<oscal.common.v1.Common.Link> getLinksList() {
         if (linksBuilder_ == null) {
@@ -9817,7 +9851,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 7 [json_name = "links"];</code>
        */
       public int getLinksCount() {
         if (linksBuilder_ == null) {
@@ -9827,7 +9861,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 7 [json_name = "links"];</code>
        */
       public oscal.common.v1.Common.Link getLinks(int index) {
         if (linksBuilder_ == null) {
@@ -9837,7 +9871,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 7 [json_name = "links"];</code>
        */
       public Builder setLinks(
           int index, oscal.common.v1.Common.Link value) {
@@ -9854,7 +9888,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 7 [json_name = "links"];</code>
        */
       public Builder setLinks(
           int index, oscal.common.v1.Common.Link.Builder builderForValue) {
@@ -9868,7 +9902,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 7 [json_name = "links"];</code>
        */
       public Builder addLinks(oscal.common.v1.Common.Link value) {
         if (linksBuilder_ == null) {
@@ -9884,7 +9918,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 7 [json_name = "links"];</code>
        */
       public Builder addLinks(
           int index, oscal.common.v1.Common.Link value) {
@@ -9901,7 +9935,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 7 [json_name = "links"];</code>
        */
       public Builder addLinks(
           oscal.common.v1.Common.Link.Builder builderForValue) {
@@ -9915,7 +9949,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 7 [json_name = "links"];</code>
        */
       public Builder addLinks(
           int index, oscal.common.v1.Common.Link.Builder builderForValue) {
@@ -9929,7 +9963,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 7 [json_name = "links"];</code>
        */
       public Builder addAllLinks(
           java.lang.Iterable<? extends oscal.common.v1.Common.Link> values) {
@@ -9944,12 +9978,12 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 7 [json_name = "links"];</code>
        */
       public Builder clearLinks() {
         if (linksBuilder_ == null) {
           links_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00000040);
           onChanged();
         } else {
           linksBuilder_.clear();
@@ -9957,7 +9991,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 7 [json_name = "links"];</code>
        */
       public Builder removeLinks(int index) {
         if (linksBuilder_ == null) {
@@ -9970,14 +10004,14 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 7 [json_name = "links"];</code>
        */
       public oscal.common.v1.Common.Link.Builder getLinksBuilder(
           int index) {
         return internalGetLinksFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 7 [json_name = "links"];</code>
        */
       public oscal.common.v1.Common.LinkOrBuilder getLinksOrBuilder(
           int index) {
@@ -9987,7 +10021,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 7 [json_name = "links"];</code>
        */
       public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
            getLinksOrBuilderList() {
@@ -9998,14 +10032,14 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 7 [json_name = "links"];</code>
        */
       public oscal.common.v1.Common.Link.Builder addLinksBuilder() {
         return internalGetLinksFieldBuilder().addBuilder(
             oscal.common.v1.Common.Link.getDefaultInstance());
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 7 [json_name = "links"];</code>
        */
       public oscal.common.v1.Common.Link.Builder addLinksBuilder(
           int index) {
@@ -10013,7 +10047,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
             index, oscal.common.v1.Common.Link.getDefaultInstance());
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 7 [json_name = "links"];</code>
        */
       public java.util.List<oscal.common.v1.Common.Link.Builder> 
            getLinksBuilderList() {
@@ -10026,7 +10060,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
           linksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
               oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder>(
                   links_,
-                  ((bitField0_ & 0x00000020) != 0),
+                  ((bitField0_ & 0x00000040) != 0),
                   getParentForChildren(),
                   isClean());
           links_ = null;
@@ -10037,9 +10071,9 @@ public final class Component extends com.google.protobuf.GeneratedFile {
       private java.util.List<oscal.common.v1.Common.MarkupMultiline> remarks_ =
         java.util.Collections.emptyList();
       private void ensureRemarksIsMutable() {
-        if (!((bitField0_ & 0x00000040) != 0)) {
+        if (!((bitField0_ & 0x00000080) != 0)) {
           remarks_ = new java.util.ArrayList<oscal.common.v1.Common.MarkupMultiline>(remarks_);
-          bitField0_ |= 0x00000040;
+          bitField0_ |= 0x00000080;
          }
       }
 
@@ -10047,7 +10081,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
           oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> remarksBuilder_;
 
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 8 [json_name = "remarks"];</code>
        */
       public java.util.List<oscal.common.v1.Common.MarkupMultiline> getRemarksList() {
         if (remarksBuilder_ == null) {
@@ -10057,7 +10091,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 8 [json_name = "remarks"];</code>
        */
       public int getRemarksCount() {
         if (remarksBuilder_ == null) {
@@ -10067,7 +10101,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 8 [json_name = "remarks"];</code>
        */
       public oscal.common.v1.Common.MarkupMultiline getRemarks(int index) {
         if (remarksBuilder_ == null) {
@@ -10077,7 +10111,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 8 [json_name = "remarks"];</code>
        */
       public Builder setRemarks(
           int index, oscal.common.v1.Common.MarkupMultiline value) {
@@ -10094,7 +10128,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 8 [json_name = "remarks"];</code>
        */
       public Builder setRemarks(
           int index, oscal.common.v1.Common.MarkupMultiline.Builder builderForValue) {
@@ -10108,7 +10142,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 8 [json_name = "remarks"];</code>
        */
       public Builder addRemarks(oscal.common.v1.Common.MarkupMultiline value) {
         if (remarksBuilder_ == null) {
@@ -10124,7 +10158,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 8 [json_name = "remarks"];</code>
        */
       public Builder addRemarks(
           int index, oscal.common.v1.Common.MarkupMultiline value) {
@@ -10141,7 +10175,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 8 [json_name = "remarks"];</code>
        */
       public Builder addRemarks(
           oscal.common.v1.Common.MarkupMultiline.Builder builderForValue) {
@@ -10155,7 +10189,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 8 [json_name = "remarks"];</code>
        */
       public Builder addRemarks(
           int index, oscal.common.v1.Common.MarkupMultiline.Builder builderForValue) {
@@ -10169,7 +10203,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 8 [json_name = "remarks"];</code>
        */
       public Builder addAllRemarks(
           java.lang.Iterable<? extends oscal.common.v1.Common.MarkupMultiline> values) {
@@ -10184,12 +10218,12 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 8 [json_name = "remarks"];</code>
        */
       public Builder clearRemarks() {
         if (remarksBuilder_ == null) {
           remarks_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000040);
+          bitField0_ = (bitField0_ & ~0x00000080);
           onChanged();
         } else {
           remarksBuilder_.clear();
@@ -10197,7 +10231,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 8 [json_name = "remarks"];</code>
        */
       public Builder removeRemarks(int index) {
         if (remarksBuilder_ == null) {
@@ -10210,14 +10244,14 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 8 [json_name = "remarks"];</code>
        */
       public oscal.common.v1.Common.MarkupMultiline.Builder getRemarksBuilder(
           int index) {
         return internalGetRemarksFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 8 [json_name = "remarks"];</code>
        */
       public oscal.common.v1.Common.MarkupMultilineOrBuilder getRemarksOrBuilder(
           int index) {
@@ -10227,7 +10261,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 8 [json_name = "remarks"];</code>
        */
       public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
            getRemarksOrBuilderList() {
@@ -10238,14 +10272,14 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 8 [json_name = "remarks"];</code>
        */
       public oscal.common.v1.Common.MarkupMultiline.Builder addRemarksBuilder() {
         return internalGetRemarksFieldBuilder().addBuilder(
             oscal.common.v1.Common.MarkupMultiline.getDefaultInstance());
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 8 [json_name = "remarks"];</code>
        */
       public oscal.common.v1.Common.MarkupMultiline.Builder addRemarksBuilder(
           int index) {
@@ -10253,7 +10287,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
             index, oscal.common.v1.Common.MarkupMultiline.getDefaultInstance());
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 8 [json_name = "remarks"];</code>
        */
       public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder> 
            getRemarksBuilderList() {
@@ -10266,7 +10300,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
           remarksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
               oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>(
                   remarks_,
-                  ((bitField0_ & 0x00000040) != 0),
+                  ((bitField0_ & 0x00000080) != 0),
                   getParentForChildren(),
                   isClean());
           remarks_ = null;
@@ -12377,133 +12411,136 @@ public final class Component extends com.google.protobuf.GeneratedFile {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string control_id = 1 [json_name = "controlId"];</code>
+     * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
+     * @return Whether the uuid field is set.
+     */
+    boolean hasUuid();
+    /**
+     * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
+     * @return The uuid.
+     */
+    oscal.common.v1.Common.UUID getUuid();
+    /**
+     * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
+     */
+    oscal.common.v1.Common.UUIDOrBuilder getUuidOrBuilder();
+
+    /**
+     * <code>string control_id = 2 [json_name = "controlId"];</code>
      * @return The controlId.
      */
     java.lang.String getControlId();
     /**
-     * <code>string control_id = 1 [json_name = "controlId"];</code>
+     * <code>string control_id = 2 [json_name = "controlId"];</code>
      * @return The bytes for controlId.
      */
     com.google.protobuf.ByteString
         getControlIdBytes();
 
     /**
-     * <code>repeated .oscal.common.v1.MarkupLine description = 2 [json_name = "description"];</code>
+     * <code>string description = 3 [json_name = "description"];</code>
+     * @return The description.
      */
-    java.util.List<oscal.common.v1.Common.MarkupLine> 
-        getDescriptionList();
+    java.lang.String getDescription();
     /**
-     * <code>repeated .oscal.common.v1.MarkupLine description = 2 [json_name = "description"];</code>
+     * <code>string description = 3 [json_name = "description"];</code>
+     * @return The bytes for description.
      */
-    oscal.common.v1.Common.MarkupLine getDescription(int index);
-    /**
-     * <code>repeated .oscal.common.v1.MarkupLine description = 2 [json_name = "description"];</code>
-     */
-    int getDescriptionCount();
-    /**
-     * <code>repeated .oscal.common.v1.MarkupLine description = 2 [json_name = "description"];</code>
-     */
-    java.util.List<? extends oscal.common.v1.Common.MarkupLineOrBuilder> 
-        getDescriptionOrBuilderList();
-    /**
-     * <code>repeated .oscal.common.v1.MarkupLine description = 2 [json_name = "description"];</code>
-     */
-    oscal.common.v1.Common.MarkupLineOrBuilder getDescriptionOrBuilder(
-        int index);
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
 
     /**
-     * <code>repeated .oscal.component_definition.v1.Statement statements = 3 [json_name = "statements"];</code>
+     * <code>repeated .oscal.component_definition.v1.Statement statements = 4 [json_name = "statements"];</code>
      */
     java.util.List<oscal.component_definition.v1.Component.Statement> 
         getStatementsList();
     /**
-     * <code>repeated .oscal.component_definition.v1.Statement statements = 3 [json_name = "statements"];</code>
+     * <code>repeated .oscal.component_definition.v1.Statement statements = 4 [json_name = "statements"];</code>
      */
     oscal.component_definition.v1.Component.Statement getStatements(int index);
     /**
-     * <code>repeated .oscal.component_definition.v1.Statement statements = 3 [json_name = "statements"];</code>
+     * <code>repeated .oscal.component_definition.v1.Statement statements = 4 [json_name = "statements"];</code>
      */
     int getStatementsCount();
     /**
-     * <code>repeated .oscal.component_definition.v1.Statement statements = 3 [json_name = "statements"];</code>
+     * <code>repeated .oscal.component_definition.v1.Statement statements = 4 [json_name = "statements"];</code>
      */
     java.util.List<? extends oscal.component_definition.v1.Component.StatementOrBuilder> 
         getStatementsOrBuilderList();
     /**
-     * <code>repeated .oscal.component_definition.v1.Statement statements = 3 [json_name = "statements"];</code>
+     * <code>repeated .oscal.component_definition.v1.Statement statements = 4 [json_name = "statements"];</code>
      */
     oscal.component_definition.v1.Component.StatementOrBuilder getStatementsOrBuilder(
         int index);
 
     /**
-     * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
      */
     java.util.List<oscal.common.v1.Common.Property> 
         getPropsList();
     /**
-     * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
      */
     oscal.common.v1.Common.Property getProps(int index);
     /**
-     * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
      */
     int getPropsCount();
     /**
-     * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
      */
     java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
         getPropsOrBuilderList();
     /**
-     * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
      */
     oscal.common.v1.Common.PropertyOrBuilder getPropsOrBuilder(
         int index);
 
     /**
-     * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
      */
     java.util.List<oscal.common.v1.Common.Link> 
         getLinksList();
     /**
-     * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
      */
     oscal.common.v1.Common.Link getLinks(int index);
     /**
-     * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
      */
     int getLinksCount();
     /**
-     * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
      */
     java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
         getLinksOrBuilderList();
     /**
-     * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
      */
     oscal.common.v1.Common.LinkOrBuilder getLinksOrBuilder(
         int index);
 
     /**
-     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
      */
     java.util.List<oscal.common.v1.Common.MarkupMultiline> 
         getRemarksList();
     /**
-     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
      */
     oscal.common.v1.Common.MarkupMultiline getRemarks(int index);
     /**
-     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
      */
     int getRemarksCount();
     /**
-     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
      */
     java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
         getRemarksOrBuilderList();
     /**
-     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
      */
     oscal.common.v1.Common.MarkupMultilineOrBuilder getRemarksOrBuilder(
         int index);
@@ -12535,7 +12572,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
     }
     private ImplementedRequirement() {
       controlId_ = "";
-      description_ = java.util.Collections.emptyList();
+      description_ = "";
       statements_ = java.util.Collections.emptyList();
       props_ = java.util.Collections.emptyList();
       links_ = java.util.Collections.emptyList();
@@ -12560,11 +12597,38 @@ public final class Component extends com.google.protobuf.GeneratedFile {
               oscal.component_definition.v1.Component.ImplementedRequirement.class, oscal.component_definition.v1.Component.ImplementedRequirement.Builder.class);
     }
 
-    public static final int CONTROL_ID_FIELD_NUMBER = 1;
+    private int bitField0_;
+    public static final int UUID_FIELD_NUMBER = 1;
+    private oscal.common.v1.Common.UUID uuid_;
+    /**
+     * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
+     * @return Whether the uuid field is set.
+     */
+    @java.lang.Override
+    public boolean hasUuid() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
+     * @return The uuid.
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.UUID getUuid() {
+      return uuid_ == null ? oscal.common.v1.Common.UUID.getDefaultInstance() : uuid_;
+    }
+    /**
+     * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.UUIDOrBuilder getUuidOrBuilder() {
+      return uuid_ == null ? oscal.common.v1.Common.UUID.getDefaultInstance() : uuid_;
+    }
+
+    public static final int CONTROL_ID_FIELD_NUMBER = 2;
     @SuppressWarnings("serial")
     private volatile java.lang.Object controlId_ = "";
     /**
-     * <code>string control_id = 1 [json_name = "controlId"];</code>
+     * <code>string control_id = 2 [json_name = "controlId"];</code>
      * @return The controlId.
      */
     @java.lang.Override
@@ -12581,7 +12645,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
       }
     }
     /**
-     * <code>string control_id = 1 [json_name = "controlId"];</code>
+     * <code>string control_id = 2 [json_name = "controlId"];</code>
      * @return The bytes for controlId.
      */
     @java.lang.Override
@@ -12599,59 +12663,57 @@ public final class Component extends com.google.protobuf.GeneratedFile {
       }
     }
 
-    public static final int DESCRIPTION_FIELD_NUMBER = 2;
+    public static final int DESCRIPTION_FIELD_NUMBER = 3;
     @SuppressWarnings("serial")
-    private java.util.List<oscal.common.v1.Common.MarkupLine> description_;
+    private volatile java.lang.Object description_ = "";
     /**
-     * <code>repeated .oscal.common.v1.MarkupLine description = 2 [json_name = "description"];</code>
+     * <code>string description = 3 [json_name = "description"];</code>
+     * @return The description.
      */
     @java.lang.Override
-    public java.util.List<oscal.common.v1.Common.MarkupLine> getDescriptionList() {
-      return description_;
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
     }
     /**
-     * <code>repeated .oscal.common.v1.MarkupLine description = 2 [json_name = "description"];</code>
+     * <code>string description = 3 [json_name = "description"];</code>
+     * @return The bytes for description.
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.MarkupLineOrBuilder> 
-        getDescriptionOrBuilderList() {
-      return description_;
-    }
-    /**
-     * <code>repeated .oscal.common.v1.MarkupLine description = 2 [json_name = "description"];</code>
-     */
-    @java.lang.Override
-    public int getDescriptionCount() {
-      return description_.size();
-    }
-    /**
-     * <code>repeated .oscal.common.v1.MarkupLine description = 2 [json_name = "description"];</code>
-     */
-    @java.lang.Override
-    public oscal.common.v1.Common.MarkupLine getDescription(int index) {
-      return description_.get(index);
-    }
-    /**
-     * <code>repeated .oscal.common.v1.MarkupLine description = 2 [json_name = "description"];</code>
-     */
-    @java.lang.Override
-    public oscal.common.v1.Common.MarkupLineOrBuilder getDescriptionOrBuilder(
-        int index) {
-      return description_.get(index);
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
-    public static final int STATEMENTS_FIELD_NUMBER = 3;
+    public static final int STATEMENTS_FIELD_NUMBER = 4;
     @SuppressWarnings("serial")
     private java.util.List<oscal.component_definition.v1.Component.Statement> statements_;
     /**
-     * <code>repeated .oscal.component_definition.v1.Statement statements = 3 [json_name = "statements"];</code>
+     * <code>repeated .oscal.component_definition.v1.Statement statements = 4 [json_name = "statements"];</code>
      */
     @java.lang.Override
     public java.util.List<oscal.component_definition.v1.Component.Statement> getStatementsList() {
       return statements_;
     }
     /**
-     * <code>repeated .oscal.component_definition.v1.Statement statements = 3 [json_name = "statements"];</code>
+     * <code>repeated .oscal.component_definition.v1.Statement statements = 4 [json_name = "statements"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends oscal.component_definition.v1.Component.StatementOrBuilder> 
@@ -12659,21 +12721,21 @@ public final class Component extends com.google.protobuf.GeneratedFile {
       return statements_;
     }
     /**
-     * <code>repeated .oscal.component_definition.v1.Statement statements = 3 [json_name = "statements"];</code>
+     * <code>repeated .oscal.component_definition.v1.Statement statements = 4 [json_name = "statements"];</code>
      */
     @java.lang.Override
     public int getStatementsCount() {
       return statements_.size();
     }
     /**
-     * <code>repeated .oscal.component_definition.v1.Statement statements = 3 [json_name = "statements"];</code>
+     * <code>repeated .oscal.component_definition.v1.Statement statements = 4 [json_name = "statements"];</code>
      */
     @java.lang.Override
     public oscal.component_definition.v1.Component.Statement getStatements(int index) {
       return statements_.get(index);
     }
     /**
-     * <code>repeated .oscal.component_definition.v1.Statement statements = 3 [json_name = "statements"];</code>
+     * <code>repeated .oscal.component_definition.v1.Statement statements = 4 [json_name = "statements"];</code>
      */
     @java.lang.Override
     public oscal.component_definition.v1.Component.StatementOrBuilder getStatementsOrBuilder(
@@ -12681,18 +12743,18 @@ public final class Component extends com.google.protobuf.GeneratedFile {
       return statements_.get(index);
     }
 
-    public static final int PROPS_FIELD_NUMBER = 4;
+    public static final int PROPS_FIELD_NUMBER = 5;
     @SuppressWarnings("serial")
     private java.util.List<oscal.common.v1.Common.Property> props_;
     /**
-     * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
      */
     @java.lang.Override
     public java.util.List<oscal.common.v1.Common.Property> getPropsList() {
       return props_;
     }
     /**
-     * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
@@ -12700,21 +12762,21 @@ public final class Component extends com.google.protobuf.GeneratedFile {
       return props_;
     }
     /**
-     * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
      */
     @java.lang.Override
     public int getPropsCount() {
       return props_.size();
     }
     /**
-     * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
      */
     @java.lang.Override
     public oscal.common.v1.Common.Property getProps(int index) {
       return props_.get(index);
     }
     /**
-     * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
      */
     @java.lang.Override
     public oscal.common.v1.Common.PropertyOrBuilder getPropsOrBuilder(
@@ -12722,18 +12784,18 @@ public final class Component extends com.google.protobuf.GeneratedFile {
       return props_.get(index);
     }
 
-    public static final int LINKS_FIELD_NUMBER = 5;
+    public static final int LINKS_FIELD_NUMBER = 6;
     @SuppressWarnings("serial")
     private java.util.List<oscal.common.v1.Common.Link> links_;
     /**
-     * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
      */
     @java.lang.Override
     public java.util.List<oscal.common.v1.Common.Link> getLinksList() {
       return links_;
     }
     /**
-     * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
@@ -12741,21 +12803,21 @@ public final class Component extends com.google.protobuf.GeneratedFile {
       return links_;
     }
     /**
-     * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
      */
     @java.lang.Override
     public int getLinksCount() {
       return links_.size();
     }
     /**
-     * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
      */
     @java.lang.Override
     public oscal.common.v1.Common.Link getLinks(int index) {
       return links_.get(index);
     }
     /**
-     * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
      */
     @java.lang.Override
     public oscal.common.v1.Common.LinkOrBuilder getLinksOrBuilder(
@@ -12763,18 +12825,18 @@ public final class Component extends com.google.protobuf.GeneratedFile {
       return links_.get(index);
     }
 
-    public static final int REMARKS_FIELD_NUMBER = 6;
+    public static final int REMARKS_FIELD_NUMBER = 7;
     @SuppressWarnings("serial")
     private java.util.List<oscal.common.v1.Common.MarkupMultiline> remarks_;
     /**
-     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
      */
     @java.lang.Override
     public java.util.List<oscal.common.v1.Common.MarkupMultiline> getRemarksList() {
       return remarks_;
     }
     /**
-     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
@@ -12782,21 +12844,21 @@ public final class Component extends com.google.protobuf.GeneratedFile {
       return remarks_;
     }
     /**
-     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
      */
     @java.lang.Override
     public int getRemarksCount() {
       return remarks_.size();
     }
     /**
-     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
      */
     @java.lang.Override
     public oscal.common.v1.Common.MarkupMultiline getRemarks(int index) {
       return remarks_.get(index);
     }
     /**
-     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
      */
     @java.lang.Override
     public oscal.common.v1.Common.MarkupMultilineOrBuilder getRemarksOrBuilder(
@@ -12818,40 +12880,41 @@ public final class Component extends com.google.protobuf.GeneratedFile {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(controlId_)) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 1, controlId_);
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeMessage(1, getUuid());
       }
-      for (int i = 0; i < description_.size(); i++) {
-        output.writeMessage(2, description_.get(i));
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(controlId_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, controlId_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 3, description_);
       }
       for (int i = 0; i < statements_.size(); i++) {
-        output.writeMessage(3, statements_.get(i));
+        output.writeMessage(4, statements_.get(i));
       }
       for (int i = 0; i < props_.size(); i++) {
-        output.writeMessage(4, props_.get(i));
+        output.writeMessage(5, props_.get(i));
       }
       for (int i = 0; i < links_.size(); i++) {
-        output.writeMessage(5, links_.get(i));
+        output.writeMessage(6, links_.get(i));
       }
       for (int i = 0; i < remarks_.size(); i++) {
-        output.writeMessage(6, remarks_.get(i));
+        output.writeMessage(7, remarks_.get(i));
       }
       getUnknownFields().writeTo(output);
     }
     private int computeSerializedSize_0() {
       int size = 0;
-      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(controlId_)) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, controlId_);
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getUuid());
       }
-
-          {
-            final int count = description_.size();
-            for (int i = 0; i < count; i++) {
-              size += com.google.protobuf.CodedOutputStream
-                .computeMessageSizeNoTag(description_.get(i));
-            }
-            size += 1 * count;
-          }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(controlId_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, controlId_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(3, description_);
+      }
 
           {
             final int count = statements_.size();
@@ -12912,10 +12975,15 @@ public final class Component extends com.google.protobuf.GeneratedFile {
       }
       oscal.component_definition.v1.Component.ImplementedRequirement other = (oscal.component_definition.v1.Component.ImplementedRequirement) obj;
 
+      if (hasUuid() != other.hasUuid()) return false;
+      if (hasUuid()) {
+        if (!getUuid()
+            .equals(other.getUuid())) return false;
+      }
       if (!getControlId()
           .equals(other.getControlId())) return false;
-      if (!getDescriptionList()
-          .equals(other.getDescriptionList())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
       if (!getStatementsList()
           .equals(other.getStatementsList())) return false;
       if (!getPropsList()
@@ -12935,12 +13003,14 @@ public final class Component extends com.google.protobuf.GeneratedFile {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasUuid()) {
+        hash = (37 * hash) + UUID_FIELD_NUMBER;
+        hash = (53 * hash) + getUuid().hashCode();
+      }
       hash = (37 * hash) + CONTROL_ID_FIELD_NUMBER;
       hash = (53 * hash) + getControlId().hashCode();
-      if (getDescriptionCount() > 0) {
-        hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
-        hash = (53 * hash) + getDescriptionList().hashCode();
-      }
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
       if (getStatementsCount() > 0) {
         hash = (37 * hash) + STATEMENTS_FIELD_NUMBER;
         hash = (53 * hash) + getStatementsList().hashCode();
@@ -13080,54 +13150,63 @@ public final class Component extends com.google.protobuf.GeneratedFile {
 
       // Construct using oscal.component_definition.v1.Component.ImplementedRequirement.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage
+                .alwaysUseFieldBuilders) {
+          internalGetUuidFieldBuilder();
+          internalGetStatementsFieldBuilder();
+          internalGetPropsFieldBuilder();
+          internalGetLinksFieldBuilder();
+          internalGetRemarksFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        controlId_ = "";
-        if (descriptionBuilder_ == null) {
-          description_ = java.util.Collections.emptyList();
-        } else {
-          description_ = null;
-          descriptionBuilder_.clear();
+        uuid_ = null;
+        if (uuidBuilder_ != null) {
+          uuidBuilder_.dispose();
+          uuidBuilder_ = null;
         }
-        bitField0_ = (bitField0_ & ~0x00000002);
+        controlId_ = "";
+        description_ = "";
         if (statementsBuilder_ == null) {
           statements_ = java.util.Collections.emptyList();
         } else {
           statements_ = null;
           statementsBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000008);
         if (propsBuilder_ == null) {
           props_ = java.util.Collections.emptyList();
         } else {
           props_ = null;
           propsBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000010);
         if (linksBuilder_ == null) {
           links_ = java.util.Collections.emptyList();
         } else {
           links_ = null;
           linksBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000020);
         if (remarksBuilder_ == null) {
           remarks_ = java.util.Collections.emptyList();
         } else {
           remarks_ = null;
           remarksBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000040);
         return this;
       }
 
@@ -13161,46 +13240,37 @@ public final class Component extends com.google.protobuf.GeneratedFile {
       }
 
       private void buildPartialRepeatedFields(oscal.component_definition.v1.Component.ImplementedRequirement result) {
-        if (descriptionBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0)) {
-            description_ = java.util.Collections.unmodifiableList(description_);
-            bitField0_ = (bitField0_ & ~0x00000002);
-          }
-          result.description_ = description_;
-        } else {
-          result.description_ = descriptionBuilder_.build();
-        }
         if (statementsBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0)) {
+          if (((bitField0_ & 0x00000008) != 0)) {
             statements_ = java.util.Collections.unmodifiableList(statements_);
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000008);
           }
           result.statements_ = statements_;
         } else {
           result.statements_ = statementsBuilder_.build();
         }
         if (propsBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) != 0)) {
+          if (((bitField0_ & 0x00000010) != 0)) {
             props_ = java.util.Collections.unmodifiableList(props_);
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000010);
           }
           result.props_ = props_;
         } else {
           result.props_ = propsBuilder_.build();
         }
         if (linksBuilder_ == null) {
-          if (((bitField0_ & 0x00000010) != 0)) {
+          if (((bitField0_ & 0x00000020) != 0)) {
             links_ = java.util.Collections.unmodifiableList(links_);
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000020);
           }
           result.links_ = links_;
         } else {
           result.links_ = linksBuilder_.build();
         }
         if (remarksBuilder_ == null) {
-          if (((bitField0_ & 0x00000020) != 0)) {
+          if (((bitField0_ & 0x00000040) != 0)) {
             remarks_ = java.util.Collections.unmodifiableList(remarks_);
-            bitField0_ = (bitField0_ & ~0x00000020);
+            bitField0_ = (bitField0_ & ~0x00000040);
           }
           result.remarks_ = remarks_;
         } else {
@@ -13210,9 +13280,20 @@ public final class Component extends com.google.protobuf.GeneratedFile {
 
       private void buildPartial0(oscal.component_definition.v1.Component.ImplementedRequirement result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.uuid_ = uuidBuilder_ == null
+              ? uuid_
+              : uuidBuilder_.build();
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
           result.controlId_ = controlId_;
         }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.description_ = description_;
+        }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -13227,42 +13308,24 @@ public final class Component extends com.google.protobuf.GeneratedFile {
 
       public Builder mergeFrom(oscal.component_definition.v1.Component.ImplementedRequirement other) {
         if (other == oscal.component_definition.v1.Component.ImplementedRequirement.getDefaultInstance()) return this;
+        if (other.hasUuid()) {
+          mergeUuid(other.getUuid());
+        }
         if (!other.getControlId().isEmpty()) {
           controlId_ = other.controlId_;
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
-        if (descriptionBuilder_ == null) {
-          if (!other.description_.isEmpty()) {
-            if (description_.isEmpty()) {
-              description_ = other.description_;
-              bitField0_ = (bitField0_ & ~0x00000002);
-            } else {
-              ensureDescriptionIsMutable();
-              description_.addAll(other.description_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.description_.isEmpty()) {
-            if (descriptionBuilder_.isEmpty()) {
-              descriptionBuilder_.dispose();
-              descriptionBuilder_ = null;
-              description_ = other.description_;
-              bitField0_ = (bitField0_ & ~0x00000002);
-              descriptionBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
-                   internalGetDescriptionFieldBuilder() : null;
-            } else {
-              descriptionBuilder_.addAllMessages(other.description_);
-            }
-          }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000004;
+          onChanged();
         }
         if (statementsBuilder_ == null) {
           if (!other.statements_.isEmpty()) {
             if (statements_.isEmpty()) {
               statements_ = other.statements_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000008);
             } else {
               ensureStatementsIsMutable();
               statements_.addAll(other.statements_);
@@ -13275,7 +13338,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
               statementsBuilder_.dispose();
               statementsBuilder_ = null;
               statements_ = other.statements_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000008);
               statementsBuilder_ = 
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetStatementsFieldBuilder() : null;
@@ -13288,7 +13351,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
           if (!other.props_.isEmpty()) {
             if (props_.isEmpty()) {
               props_ = other.props_;
-              bitField0_ = (bitField0_ & ~0x00000008);
+              bitField0_ = (bitField0_ & ~0x00000010);
             } else {
               ensurePropsIsMutable();
               props_.addAll(other.props_);
@@ -13301,7 +13364,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
               propsBuilder_.dispose();
               propsBuilder_ = null;
               props_ = other.props_;
-              bitField0_ = (bitField0_ & ~0x00000008);
+              bitField0_ = (bitField0_ & ~0x00000010);
               propsBuilder_ = 
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetPropsFieldBuilder() : null;
@@ -13314,7 +13377,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
           if (!other.links_.isEmpty()) {
             if (links_.isEmpty()) {
               links_ = other.links_;
-              bitField0_ = (bitField0_ & ~0x00000010);
+              bitField0_ = (bitField0_ & ~0x00000020);
             } else {
               ensureLinksIsMutable();
               links_.addAll(other.links_);
@@ -13327,7 +13390,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
               linksBuilder_.dispose();
               linksBuilder_ = null;
               links_ = other.links_;
-              bitField0_ = (bitField0_ & ~0x00000010);
+              bitField0_ = (bitField0_ & ~0x00000020);
               linksBuilder_ = 
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetLinksFieldBuilder() : null;
@@ -13340,7 +13403,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
           if (!other.remarks_.isEmpty()) {
             if (remarks_.isEmpty()) {
               remarks_ = other.remarks_;
-              bitField0_ = (bitField0_ & ~0x00000020);
+              bitField0_ = (bitField0_ & ~0x00000040);
             } else {
               ensureRemarksIsMutable();
               remarks_.addAll(other.remarks_);
@@ -13353,7 +13416,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
               remarksBuilder_.dispose();
               remarksBuilder_ = null;
               remarks_ = other.remarks_;
-              bitField0_ = (bitField0_ & ~0x00000020);
+              bitField0_ = (bitField0_ & ~0x00000040);
               remarksBuilder_ = 
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetRemarksFieldBuilder() : null;
@@ -13389,24 +13452,23 @@ public final class Component extends com.google.protobuf.GeneratedFile {
                 done = true;
                 break;
               case 10: {
-                controlId_ = input.readStringRequireUtf8();
+                input.readMessage(
+                    internalGetUuidFieldBuilder().getBuilder(),
+                    extensionRegistry);
                 bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
-                oscal.common.v1.Common.MarkupLine m =
-                    input.readMessage(
-                        oscal.common.v1.Common.MarkupLine.parser(),
-                        extensionRegistry);
-                if (descriptionBuilder_ == null) {
-                  ensureDescriptionIsMutable();
-                  description_.add(m);
-                } else {
-                  descriptionBuilder_.addMessage(m);
-                }
+                controlId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
                 oscal.component_definition.v1.Component.Statement m =
                     input.readMessage(
                         oscal.component_definition.v1.Component.Statement.parser(),
@@ -13418,8 +13480,8 @@ public final class Component extends com.google.protobuf.GeneratedFile {
                   statementsBuilder_.addMessage(m);
                 }
                 break;
-              } // case 26
-              case 34: {
+              } // case 34
+              case 42: {
                 oscal.common.v1.Common.Property m =
                     input.readMessage(
                         oscal.common.v1.Common.Property.parser(),
@@ -13431,8 +13493,8 @@ public final class Component extends com.google.protobuf.GeneratedFile {
                   propsBuilder_.addMessage(m);
                 }
                 break;
-              } // case 34
-              case 42: {
+              } // case 42
+              case 50: {
                 oscal.common.v1.Common.Link m =
                     input.readMessage(
                         oscal.common.v1.Common.Link.parser(),
@@ -13444,8 +13506,8 @@ public final class Component extends com.google.protobuf.GeneratedFile {
                   linksBuilder_.addMessage(m);
                 }
                 break;
-              } // case 42
-              case 50: {
+              } // case 50
+              case 58: {
                 oscal.common.v1.Common.MarkupMultiline m =
                     input.readMessage(
                         oscal.common.v1.Common.MarkupMultiline.parser(),
@@ -13457,7 +13519,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
                   remarksBuilder_.addMessage(m);
                 }
                 break;
-              } // case 50
+              } // case 58
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -13475,9 +13537,130 @@ public final class Component extends com.google.protobuf.GeneratedFile {
       }
       private int bitField0_;
 
+      private oscal.common.v1.Common.UUID uuid_;
+      private com.google.protobuf.SingleFieldBuilder<
+          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder> uuidBuilder_;
+      /**
+       * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
+       * @return Whether the uuid field is set.
+       */
+      public boolean hasUuid() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
+       * @return The uuid.
+       */
+      public oscal.common.v1.Common.UUID getUuid() {
+        if (uuidBuilder_ == null) {
+          return uuid_ == null ? oscal.common.v1.Common.UUID.getDefaultInstance() : uuid_;
+        } else {
+          return uuidBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
+       */
+      public Builder setUuid(oscal.common.v1.Common.UUID value) {
+        if (uuidBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          uuid_ = value;
+        } else {
+          uuidBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
+       */
+      public Builder setUuid(
+          oscal.common.v1.Common.UUID.Builder builderForValue) {
+        if (uuidBuilder_ == null) {
+          uuid_ = builderForValue.build();
+        } else {
+          uuidBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
+       */
+      public Builder mergeUuid(oscal.common.v1.Common.UUID value) {
+        if (uuidBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            uuid_ != null &&
+            uuid_ != oscal.common.v1.Common.UUID.getDefaultInstance()) {
+            getUuidBuilder().mergeFrom(value);
+          } else {
+            uuid_ = value;
+          }
+        } else {
+          uuidBuilder_.mergeFrom(value);
+        }
+        if (uuid_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
+       */
+      public Builder clearUuid() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        uuid_ = null;
+        if (uuidBuilder_ != null) {
+          uuidBuilder_.dispose();
+          uuidBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
+       */
+      public oscal.common.v1.Common.UUID.Builder getUuidBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return internalGetUuidFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
+       */
+      public oscal.common.v1.Common.UUIDOrBuilder getUuidOrBuilder() {
+        if (uuidBuilder_ != null) {
+          return uuidBuilder_.getMessageOrBuilder();
+        } else {
+          return uuid_ == null ?
+              oscal.common.v1.Common.UUID.getDefaultInstance() : uuid_;
+        }
+      }
+      /**
+       * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder> 
+          internalGetUuidFieldBuilder() {
+        if (uuidBuilder_ == null) {
+          uuidBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder>(
+                  getUuid(),
+                  getParentForChildren(),
+                  isClean());
+          uuid_ = null;
+        }
+        return uuidBuilder_;
+      }
+
       private java.lang.Object controlId_ = "";
       /**
-       * <code>string control_id = 1 [json_name = "controlId"];</code>
+       * <code>string control_id = 2 [json_name = "controlId"];</code>
        * @return The controlId.
        */
       public java.lang.String getControlId() {
@@ -13493,7 +13676,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>string control_id = 1 [json_name = "controlId"];</code>
+       * <code>string control_id = 2 [json_name = "controlId"];</code>
        * @return The bytes for controlId.
        */
       public com.google.protobuf.ByteString
@@ -13510,7 +13693,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>string control_id = 1 [json_name = "controlId"];</code>
+       * <code>string control_id = 2 [json_name = "controlId"];</code>
        * @param value The controlId to set.
        * @return This builder for chaining.
        */
@@ -13518,22 +13701,22 @@ public final class Component extends com.google.protobuf.GeneratedFile {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         controlId_ = value;
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
       /**
-       * <code>string control_id = 1 [json_name = "controlId"];</code>
+       * <code>string control_id = 2 [json_name = "controlId"];</code>
        * @return This builder for chaining.
        */
       public Builder clearControlId() {
         controlId_ = getDefaultInstance().getControlId();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
       /**
-       * <code>string control_id = 1 [json_name = "controlId"];</code>
+       * <code>string control_id = 2 [json_name = "controlId"];</code>
        * @param value The bytes for controlId to set.
        * @return This builder for chaining.
        */
@@ -13542,257 +13725,89 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         controlId_ = value;
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
 
-      private java.util.List<oscal.common.v1.Common.MarkupLine> description_ =
-        java.util.Collections.emptyList();
-      private void ensureDescriptionIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
-          description_ = new java.util.ArrayList<oscal.common.v1.Common.MarkupLine>(description_);
-          bitField0_ |= 0x00000002;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.MarkupLine, oscal.common.v1.Common.MarkupLine.Builder, oscal.common.v1.Common.MarkupLineOrBuilder> descriptionBuilder_;
-
+      private java.lang.Object description_ = "";
       /**
-       * <code>repeated .oscal.common.v1.MarkupLine description = 2 [json_name = "description"];</code>
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @return The description.
        */
-      public java.util.List<oscal.common.v1.Common.MarkupLine> getDescriptionList() {
-        if (descriptionBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(description_);
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
         } else {
-          return descriptionBuilder_.getMessageList();
+          return (java.lang.String) ref;
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupLine description = 2 [json_name = "description"];</code>
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @return The bytes for description.
        */
-      public int getDescriptionCount() {
-        if (descriptionBuilder_ == null) {
-          return description_.size();
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
         } else {
-          return descriptionBuilder_.getCount();
+          return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupLine description = 2 [json_name = "description"];</code>
-       */
-      public oscal.common.v1.Common.MarkupLine getDescription(int index) {
-        if (descriptionBuilder_ == null) {
-          return description_.get(index);
-        } else {
-          return descriptionBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <code>repeated .oscal.common.v1.MarkupLine description = 2 [json_name = "description"];</code>
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
        */
       public Builder setDescription(
-          int index, oscal.common.v1.Common.MarkupLine value) {
-        if (descriptionBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureDescriptionIsMutable();
-          description_.set(index, value);
-          onChanged();
-        } else {
-          descriptionBuilder_.setMessage(index, value);
-        }
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupLine description = 2 [json_name = "description"];</code>
-       */
-      public Builder setDescription(
-          int index, oscal.common.v1.Common.MarkupLine.Builder builderForValue) {
-        if (descriptionBuilder_ == null) {
-          ensureDescriptionIsMutable();
-          description_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          descriptionBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .oscal.common.v1.MarkupLine description = 2 [json_name = "description"];</code>
-       */
-      public Builder addDescription(oscal.common.v1.Common.MarkupLine value) {
-        if (descriptionBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureDescriptionIsMutable();
-          description_.add(value);
-          onChanged();
-        } else {
-          descriptionBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .oscal.common.v1.MarkupLine description = 2 [json_name = "description"];</code>
-       */
-      public Builder addDescription(
-          int index, oscal.common.v1.Common.MarkupLine value) {
-        if (descriptionBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureDescriptionIsMutable();
-          description_.add(index, value);
-          onChanged();
-        } else {
-          descriptionBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .oscal.common.v1.MarkupLine description = 2 [json_name = "description"];</code>
-       */
-      public Builder addDescription(
-          oscal.common.v1.Common.MarkupLine.Builder builderForValue) {
-        if (descriptionBuilder_ == null) {
-          ensureDescriptionIsMutable();
-          description_.add(builderForValue.build());
-          onChanged();
-        } else {
-          descriptionBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .oscal.common.v1.MarkupLine description = 2 [json_name = "description"];</code>
-       */
-      public Builder addDescription(
-          int index, oscal.common.v1.Common.MarkupLine.Builder builderForValue) {
-        if (descriptionBuilder_ == null) {
-          ensureDescriptionIsMutable();
-          description_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          descriptionBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .oscal.common.v1.MarkupLine description = 2 [json_name = "description"];</code>
-       */
-      public Builder addAllDescription(
-          java.lang.Iterable<? extends oscal.common.v1.Common.MarkupLine> values) {
-        if (descriptionBuilder_ == null) {
-          ensureDescriptionIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, description_);
-          onChanged();
-        } else {
-          descriptionBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .oscal.common.v1.MarkupLine description = 2 [json_name = "description"];</code>
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @return This builder for chaining.
        */
       public Builder clearDescription() {
-        if (descriptionBuilder_ == null) {
-          description_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
-          onChanged();
-        } else {
-          descriptionBuilder_.clear();
-        }
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupLine description = 2 [json_name = "description"];</code>
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
        */
-      public Builder removeDescription(int index) {
-        if (descriptionBuilder_ == null) {
-          ensureDescriptionIsMutable();
-          description_.remove(index);
-          onChanged();
-        } else {
-          descriptionBuilder_.remove(index);
-        }
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
-      }
-      /**
-       * <code>repeated .oscal.common.v1.MarkupLine description = 2 [json_name = "description"];</code>
-       */
-      public oscal.common.v1.Common.MarkupLine.Builder getDescriptionBuilder(
-          int index) {
-        return internalGetDescriptionFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .oscal.common.v1.MarkupLine description = 2 [json_name = "description"];</code>
-       */
-      public oscal.common.v1.Common.MarkupLineOrBuilder getDescriptionOrBuilder(
-          int index) {
-        if (descriptionBuilder_ == null) {
-          return description_.get(index);  } else {
-          return descriptionBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .oscal.common.v1.MarkupLine description = 2 [json_name = "description"];</code>
-       */
-      public java.util.List<? extends oscal.common.v1.Common.MarkupLineOrBuilder> 
-           getDescriptionOrBuilderList() {
-        if (descriptionBuilder_ != null) {
-          return descriptionBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(description_);
-        }
-      }
-      /**
-       * <code>repeated .oscal.common.v1.MarkupLine description = 2 [json_name = "description"];</code>
-       */
-      public oscal.common.v1.Common.MarkupLine.Builder addDescriptionBuilder() {
-        return internalGetDescriptionFieldBuilder().addBuilder(
-            oscal.common.v1.Common.MarkupLine.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .oscal.common.v1.MarkupLine description = 2 [json_name = "description"];</code>
-       */
-      public oscal.common.v1.Common.MarkupLine.Builder addDescriptionBuilder(
-          int index) {
-        return internalGetDescriptionFieldBuilder().addBuilder(
-            index, oscal.common.v1.Common.MarkupLine.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .oscal.common.v1.MarkupLine description = 2 [json_name = "description"];</code>
-       */
-      public java.util.List<oscal.common.v1.Common.MarkupLine.Builder> 
-           getDescriptionBuilderList() {
-        return internalGetDescriptionFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.MarkupLine, oscal.common.v1.Common.MarkupLine.Builder, oscal.common.v1.Common.MarkupLineOrBuilder> 
-          internalGetDescriptionFieldBuilder() {
-        if (descriptionBuilder_ == null) {
-          descriptionBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-              oscal.common.v1.Common.MarkupLine, oscal.common.v1.Common.MarkupLine.Builder, oscal.common.v1.Common.MarkupLineOrBuilder>(
-                  description_,
-                  ((bitField0_ & 0x00000002) != 0),
-                  getParentForChildren(),
-                  isClean());
-          description_ = null;
-        }
-        return descriptionBuilder_;
       }
 
       private java.util.List<oscal.component_definition.v1.Component.Statement> statements_ =
         java.util.Collections.emptyList();
       private void ensureStatementsIsMutable() {
-        if (!((bitField0_ & 0x00000004) != 0)) {
+        if (!((bitField0_ & 0x00000008) != 0)) {
           statements_ = new java.util.ArrayList<oscal.component_definition.v1.Component.Statement>(statements_);
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000008;
          }
       }
 
@@ -13800,7 +13815,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
           oscal.component_definition.v1.Component.Statement, oscal.component_definition.v1.Component.Statement.Builder, oscal.component_definition.v1.Component.StatementOrBuilder> statementsBuilder_;
 
       /**
-       * <code>repeated .oscal.component_definition.v1.Statement statements = 3 [json_name = "statements"];</code>
+       * <code>repeated .oscal.component_definition.v1.Statement statements = 4 [json_name = "statements"];</code>
        */
       public java.util.List<oscal.component_definition.v1.Component.Statement> getStatementsList() {
         if (statementsBuilder_ == null) {
@@ -13810,7 +13825,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.component_definition.v1.Statement statements = 3 [json_name = "statements"];</code>
+       * <code>repeated .oscal.component_definition.v1.Statement statements = 4 [json_name = "statements"];</code>
        */
       public int getStatementsCount() {
         if (statementsBuilder_ == null) {
@@ -13820,7 +13835,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.component_definition.v1.Statement statements = 3 [json_name = "statements"];</code>
+       * <code>repeated .oscal.component_definition.v1.Statement statements = 4 [json_name = "statements"];</code>
        */
       public oscal.component_definition.v1.Component.Statement getStatements(int index) {
         if (statementsBuilder_ == null) {
@@ -13830,7 +13845,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.component_definition.v1.Statement statements = 3 [json_name = "statements"];</code>
+       * <code>repeated .oscal.component_definition.v1.Statement statements = 4 [json_name = "statements"];</code>
        */
       public Builder setStatements(
           int index, oscal.component_definition.v1.Component.Statement value) {
@@ -13847,7 +13862,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.component_definition.v1.Statement statements = 3 [json_name = "statements"];</code>
+       * <code>repeated .oscal.component_definition.v1.Statement statements = 4 [json_name = "statements"];</code>
        */
       public Builder setStatements(
           int index, oscal.component_definition.v1.Component.Statement.Builder builderForValue) {
@@ -13861,7 +13876,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.component_definition.v1.Statement statements = 3 [json_name = "statements"];</code>
+       * <code>repeated .oscal.component_definition.v1.Statement statements = 4 [json_name = "statements"];</code>
        */
       public Builder addStatements(oscal.component_definition.v1.Component.Statement value) {
         if (statementsBuilder_ == null) {
@@ -13877,7 +13892,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.component_definition.v1.Statement statements = 3 [json_name = "statements"];</code>
+       * <code>repeated .oscal.component_definition.v1.Statement statements = 4 [json_name = "statements"];</code>
        */
       public Builder addStatements(
           int index, oscal.component_definition.v1.Component.Statement value) {
@@ -13894,7 +13909,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.component_definition.v1.Statement statements = 3 [json_name = "statements"];</code>
+       * <code>repeated .oscal.component_definition.v1.Statement statements = 4 [json_name = "statements"];</code>
        */
       public Builder addStatements(
           oscal.component_definition.v1.Component.Statement.Builder builderForValue) {
@@ -13908,7 +13923,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.component_definition.v1.Statement statements = 3 [json_name = "statements"];</code>
+       * <code>repeated .oscal.component_definition.v1.Statement statements = 4 [json_name = "statements"];</code>
        */
       public Builder addStatements(
           int index, oscal.component_definition.v1.Component.Statement.Builder builderForValue) {
@@ -13922,7 +13937,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.component_definition.v1.Statement statements = 3 [json_name = "statements"];</code>
+       * <code>repeated .oscal.component_definition.v1.Statement statements = 4 [json_name = "statements"];</code>
        */
       public Builder addAllStatements(
           java.lang.Iterable<? extends oscal.component_definition.v1.Component.Statement> values) {
@@ -13937,12 +13952,12 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.component_definition.v1.Statement statements = 3 [json_name = "statements"];</code>
+       * <code>repeated .oscal.component_definition.v1.Statement statements = 4 [json_name = "statements"];</code>
        */
       public Builder clearStatements() {
         if (statementsBuilder_ == null) {
           statements_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000008);
           onChanged();
         } else {
           statementsBuilder_.clear();
@@ -13950,7 +13965,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.component_definition.v1.Statement statements = 3 [json_name = "statements"];</code>
+       * <code>repeated .oscal.component_definition.v1.Statement statements = 4 [json_name = "statements"];</code>
        */
       public Builder removeStatements(int index) {
         if (statementsBuilder_ == null) {
@@ -13963,14 +13978,14 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.component_definition.v1.Statement statements = 3 [json_name = "statements"];</code>
+       * <code>repeated .oscal.component_definition.v1.Statement statements = 4 [json_name = "statements"];</code>
        */
       public oscal.component_definition.v1.Component.Statement.Builder getStatementsBuilder(
           int index) {
         return internalGetStatementsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .oscal.component_definition.v1.Statement statements = 3 [json_name = "statements"];</code>
+       * <code>repeated .oscal.component_definition.v1.Statement statements = 4 [json_name = "statements"];</code>
        */
       public oscal.component_definition.v1.Component.StatementOrBuilder getStatementsOrBuilder(
           int index) {
@@ -13980,7 +13995,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.component_definition.v1.Statement statements = 3 [json_name = "statements"];</code>
+       * <code>repeated .oscal.component_definition.v1.Statement statements = 4 [json_name = "statements"];</code>
        */
       public java.util.List<? extends oscal.component_definition.v1.Component.StatementOrBuilder> 
            getStatementsOrBuilderList() {
@@ -13991,14 +14006,14 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.component_definition.v1.Statement statements = 3 [json_name = "statements"];</code>
+       * <code>repeated .oscal.component_definition.v1.Statement statements = 4 [json_name = "statements"];</code>
        */
       public oscal.component_definition.v1.Component.Statement.Builder addStatementsBuilder() {
         return internalGetStatementsFieldBuilder().addBuilder(
             oscal.component_definition.v1.Component.Statement.getDefaultInstance());
       }
       /**
-       * <code>repeated .oscal.component_definition.v1.Statement statements = 3 [json_name = "statements"];</code>
+       * <code>repeated .oscal.component_definition.v1.Statement statements = 4 [json_name = "statements"];</code>
        */
       public oscal.component_definition.v1.Component.Statement.Builder addStatementsBuilder(
           int index) {
@@ -14006,7 +14021,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
             index, oscal.component_definition.v1.Component.Statement.getDefaultInstance());
       }
       /**
-       * <code>repeated .oscal.component_definition.v1.Statement statements = 3 [json_name = "statements"];</code>
+       * <code>repeated .oscal.component_definition.v1.Statement statements = 4 [json_name = "statements"];</code>
        */
       public java.util.List<oscal.component_definition.v1.Component.Statement.Builder> 
            getStatementsBuilderList() {
@@ -14019,7 +14034,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
           statementsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
               oscal.component_definition.v1.Component.Statement, oscal.component_definition.v1.Component.Statement.Builder, oscal.component_definition.v1.Component.StatementOrBuilder>(
                   statements_,
-                  ((bitField0_ & 0x00000004) != 0),
+                  ((bitField0_ & 0x00000008) != 0),
                   getParentForChildren(),
                   isClean());
           statements_ = null;
@@ -14030,9 +14045,9 @@ public final class Component extends com.google.protobuf.GeneratedFile {
       private java.util.List<oscal.common.v1.Common.Property> props_ =
         java.util.Collections.emptyList();
       private void ensurePropsIsMutable() {
-        if (!((bitField0_ & 0x00000008) != 0)) {
+        if (!((bitField0_ & 0x00000010) != 0)) {
           props_ = new java.util.ArrayList<oscal.common.v1.Common.Property>(props_);
-          bitField0_ |= 0x00000008;
+          bitField0_ |= 0x00000010;
          }
       }
 
@@ -14040,7 +14055,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
           oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> propsBuilder_;
 
       /**
-       * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
        */
       public java.util.List<oscal.common.v1.Common.Property> getPropsList() {
         if (propsBuilder_ == null) {
@@ -14050,7 +14065,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
        */
       public int getPropsCount() {
         if (propsBuilder_ == null) {
@@ -14060,7 +14075,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
        */
       public oscal.common.v1.Common.Property getProps(int index) {
         if (propsBuilder_ == null) {
@@ -14070,7 +14085,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
        */
       public Builder setProps(
           int index, oscal.common.v1.Common.Property value) {
@@ -14087,7 +14102,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
        */
       public Builder setProps(
           int index, oscal.common.v1.Common.Property.Builder builderForValue) {
@@ -14101,7 +14116,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
        */
       public Builder addProps(oscal.common.v1.Common.Property value) {
         if (propsBuilder_ == null) {
@@ -14117,7 +14132,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
        */
       public Builder addProps(
           int index, oscal.common.v1.Common.Property value) {
@@ -14134,7 +14149,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
        */
       public Builder addProps(
           oscal.common.v1.Common.Property.Builder builderForValue) {
@@ -14148,7 +14163,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
        */
       public Builder addProps(
           int index, oscal.common.v1.Common.Property.Builder builderForValue) {
@@ -14162,7 +14177,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
        */
       public Builder addAllProps(
           java.lang.Iterable<? extends oscal.common.v1.Common.Property> values) {
@@ -14177,12 +14192,12 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
        */
       public Builder clearProps() {
         if (propsBuilder_ == null) {
           props_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000010);
           onChanged();
         } else {
           propsBuilder_.clear();
@@ -14190,7 +14205,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
        */
       public Builder removeProps(int index) {
         if (propsBuilder_ == null) {
@@ -14203,14 +14218,14 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
        */
       public oscal.common.v1.Common.Property.Builder getPropsBuilder(
           int index) {
         return internalGetPropsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
        */
       public oscal.common.v1.Common.PropertyOrBuilder getPropsOrBuilder(
           int index) {
@@ -14220,7 +14235,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
        */
       public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
            getPropsOrBuilderList() {
@@ -14231,14 +14246,14 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
        */
       public oscal.common.v1.Common.Property.Builder addPropsBuilder() {
         return internalGetPropsFieldBuilder().addBuilder(
             oscal.common.v1.Common.Property.getDefaultInstance());
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
        */
       public oscal.common.v1.Common.Property.Builder addPropsBuilder(
           int index) {
@@ -14246,7 +14261,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
             index, oscal.common.v1.Common.Property.getDefaultInstance());
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
        */
       public java.util.List<oscal.common.v1.Common.Property.Builder> 
            getPropsBuilderList() {
@@ -14259,7 +14274,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
           propsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
               oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder>(
                   props_,
-                  ((bitField0_ & 0x00000008) != 0),
+                  ((bitField0_ & 0x00000010) != 0),
                   getParentForChildren(),
                   isClean());
           props_ = null;
@@ -14270,9 +14285,9 @@ public final class Component extends com.google.protobuf.GeneratedFile {
       private java.util.List<oscal.common.v1.Common.Link> links_ =
         java.util.Collections.emptyList();
       private void ensureLinksIsMutable() {
-        if (!((bitField0_ & 0x00000010) != 0)) {
+        if (!((bitField0_ & 0x00000020) != 0)) {
           links_ = new java.util.ArrayList<oscal.common.v1.Common.Link>(links_);
-          bitField0_ |= 0x00000010;
+          bitField0_ |= 0x00000020;
          }
       }
 
@@ -14280,7 +14295,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
           oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder> linksBuilder_;
 
       /**
-       * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
        */
       public java.util.List<oscal.common.v1.Common.Link> getLinksList() {
         if (linksBuilder_ == null) {
@@ -14290,7 +14305,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
        */
       public int getLinksCount() {
         if (linksBuilder_ == null) {
@@ -14300,7 +14315,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
        */
       public oscal.common.v1.Common.Link getLinks(int index) {
         if (linksBuilder_ == null) {
@@ -14310,7 +14325,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
        */
       public Builder setLinks(
           int index, oscal.common.v1.Common.Link value) {
@@ -14327,7 +14342,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
        */
       public Builder setLinks(
           int index, oscal.common.v1.Common.Link.Builder builderForValue) {
@@ -14341,7 +14356,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
        */
       public Builder addLinks(oscal.common.v1.Common.Link value) {
         if (linksBuilder_ == null) {
@@ -14357,7 +14372,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
        */
       public Builder addLinks(
           int index, oscal.common.v1.Common.Link value) {
@@ -14374,7 +14389,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
        */
       public Builder addLinks(
           oscal.common.v1.Common.Link.Builder builderForValue) {
@@ -14388,7 +14403,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
        */
       public Builder addLinks(
           int index, oscal.common.v1.Common.Link.Builder builderForValue) {
@@ -14402,7 +14417,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
        */
       public Builder addAllLinks(
           java.lang.Iterable<? extends oscal.common.v1.Common.Link> values) {
@@ -14417,12 +14432,12 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
        */
       public Builder clearLinks() {
         if (linksBuilder_ == null) {
           links_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000020);
           onChanged();
         } else {
           linksBuilder_.clear();
@@ -14430,7 +14445,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
        */
       public Builder removeLinks(int index) {
         if (linksBuilder_ == null) {
@@ -14443,14 +14458,14 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
        */
       public oscal.common.v1.Common.Link.Builder getLinksBuilder(
           int index) {
         return internalGetLinksFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
        */
       public oscal.common.v1.Common.LinkOrBuilder getLinksOrBuilder(
           int index) {
@@ -14460,7 +14475,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
        */
       public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
            getLinksOrBuilderList() {
@@ -14471,14 +14486,14 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
        */
       public oscal.common.v1.Common.Link.Builder addLinksBuilder() {
         return internalGetLinksFieldBuilder().addBuilder(
             oscal.common.v1.Common.Link.getDefaultInstance());
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
        */
       public oscal.common.v1.Common.Link.Builder addLinksBuilder(
           int index) {
@@ -14486,7 +14501,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
             index, oscal.common.v1.Common.Link.getDefaultInstance());
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
        */
       public java.util.List<oscal.common.v1.Common.Link.Builder> 
            getLinksBuilderList() {
@@ -14499,7 +14514,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
           linksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
               oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder>(
                   links_,
-                  ((bitField0_ & 0x00000010) != 0),
+                  ((bitField0_ & 0x00000020) != 0),
                   getParentForChildren(),
                   isClean());
           links_ = null;
@@ -14510,9 +14525,9 @@ public final class Component extends com.google.protobuf.GeneratedFile {
       private java.util.List<oscal.common.v1.Common.MarkupMultiline> remarks_ =
         java.util.Collections.emptyList();
       private void ensureRemarksIsMutable() {
-        if (!((bitField0_ & 0x00000020) != 0)) {
+        if (!((bitField0_ & 0x00000040) != 0)) {
           remarks_ = new java.util.ArrayList<oscal.common.v1.Common.MarkupMultiline>(remarks_);
-          bitField0_ |= 0x00000020;
+          bitField0_ |= 0x00000040;
          }
       }
 
@@ -14520,7 +14535,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
           oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> remarksBuilder_;
 
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
        */
       public java.util.List<oscal.common.v1.Common.MarkupMultiline> getRemarksList() {
         if (remarksBuilder_ == null) {
@@ -14530,7 +14545,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
        */
       public int getRemarksCount() {
         if (remarksBuilder_ == null) {
@@ -14540,7 +14555,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
        */
       public oscal.common.v1.Common.MarkupMultiline getRemarks(int index) {
         if (remarksBuilder_ == null) {
@@ -14550,7 +14565,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
        */
       public Builder setRemarks(
           int index, oscal.common.v1.Common.MarkupMultiline value) {
@@ -14567,7 +14582,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
        */
       public Builder setRemarks(
           int index, oscal.common.v1.Common.MarkupMultiline.Builder builderForValue) {
@@ -14581,7 +14596,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
        */
       public Builder addRemarks(oscal.common.v1.Common.MarkupMultiline value) {
         if (remarksBuilder_ == null) {
@@ -14597,7 +14612,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
        */
       public Builder addRemarks(
           int index, oscal.common.v1.Common.MarkupMultiline value) {
@@ -14614,7 +14629,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
        */
       public Builder addRemarks(
           oscal.common.v1.Common.MarkupMultiline.Builder builderForValue) {
@@ -14628,7 +14643,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
        */
       public Builder addRemarks(
           int index, oscal.common.v1.Common.MarkupMultiline.Builder builderForValue) {
@@ -14642,7 +14657,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
        */
       public Builder addAllRemarks(
           java.lang.Iterable<? extends oscal.common.v1.Common.MarkupMultiline> values) {
@@ -14657,12 +14672,12 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
        */
       public Builder clearRemarks() {
         if (remarksBuilder_ == null) {
           remarks_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00000040);
           onChanged();
         } else {
           remarksBuilder_.clear();
@@ -14670,7 +14685,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
        */
       public Builder removeRemarks(int index) {
         if (remarksBuilder_ == null) {
@@ -14683,14 +14698,14 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
        */
       public oscal.common.v1.Common.MarkupMultiline.Builder getRemarksBuilder(
           int index) {
         return internalGetRemarksFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
        */
       public oscal.common.v1.Common.MarkupMultilineOrBuilder getRemarksOrBuilder(
           int index) {
@@ -14700,7 +14715,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
        */
       public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
            getRemarksOrBuilderList() {
@@ -14711,14 +14726,14 @@ public final class Component extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
        */
       public oscal.common.v1.Common.MarkupMultiline.Builder addRemarksBuilder() {
         return internalGetRemarksFieldBuilder().addBuilder(
             oscal.common.v1.Common.MarkupMultiline.getDefaultInstance());
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
        */
       public oscal.common.v1.Common.MarkupMultiline.Builder addRemarksBuilder(
           int index) {
@@ -14726,7 +14741,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
             index, oscal.common.v1.Common.MarkupMultiline.getDefaultInstance());
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
        */
       public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder> 
            getRemarksBuilderList() {
@@ -14739,7 +14754,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
           remarksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
               oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>(
                   remarks_,
-                  ((bitField0_ & 0x00000020) != 0),
+                  ((bitField0_ & 0x00000040) != 0),
                   getParentForChildren(),
                   isClean());
           remarks_ = null;
@@ -25006,71 +25021,72 @@ public final class Component extends com.google.protobuf.GeneratedFile {
       "s\030\n \003(\0132/.oscal.component_definition.v1." +
       "ResponsiblePartyR\022responsibleParties\022*\n\021" +
       "supply_chain_type\030\013 \003(\tR\017supplyChainType" +
-      "\"\325\003\n\025ControlImplementation\022\035\n\ncontrol_id" +
-      "\030\001 \001(\tR\tcontrolId\022=\n\013description\030\002 \003(\0132\033" +
-      ".oscal.common.v1.MarkupLineR\013description" +
-      "\022R\n\016set_parameters\030\003 \003(\0132+.oscal.compone" +
-      "nt_definition.v1.SetParameterR\rsetParame" +
-      "ters\022p\n\030implemented_requirements\030\004 \003(\01325" +
-      ".oscal.component_definition.v1.Implement" +
-      "edRequirementR\027implementedRequirements\022/" +
-      "\n\005props\030\005 \003(\0132\031.oscal.common.v1.Property" +
-      "R\005props\022+\n\005links\030\006 \003(\0132\025.oscal.common.v1" +
-      ".LinkR\005links\022:\n\007remarks\030\007 \003(\0132 .oscal.co" +
-      "mmon.v1.MarkupMultilineR\007remarks\"\370\001\n\014Set" +
-      "Parameter\022\031\n\010param_id\030\001 \001(\tR\007paramId\0223\n\006" +
-      "values\030\002 \003(\0132\033.oscal.common.v1.MarkupLin" +
-      "eR\006values\022/\n\005props\030\003 \003(\0132\031.oscal.common." +
-      "v1.PropertyR\005props\022+\n\005links\030\004 \003(\0132\025.osca" +
-      "l.common.v1.LinkR\005links\022:\n\007remarks\030\005 \003(\013" +
-      "2 .oscal.common.v1.MarkupMultilineR\007rema" +
-      "rks\"\332\002\n\026ImplementedRequirement\022\035\n\ncontro" +
-      "l_id\030\001 \001(\tR\tcontrolId\022=\n\013description\030\002 \003" +
-      "(\0132\033.oscal.common.v1.MarkupLineR\013descrip" +
-      "tion\022H\n\nstatements\030\003 \003(\0132(.oscal.compone" +
-      "nt_definition.v1.StatementR\nstatements\022/" +
-      "\n\005props\030\004 \003(\0132\031.oscal.common.v1.Property" +
-      "R\005props\022+\n\005links\030\005 \003(\0132\025.oscal.common.v1" +
-      ".LinkR\005links\022:\n\007remarks\030\006 \003(\0132 .oscal.co" +
-      "mmon.v1.MarkupMultilineR\007remarks\"\352\002\n\tSta" +
-      "tement\022!\n\014statement_id\030\001 \001(\tR\013statementI" +
-      "d\022\022\n\004uuid\030\002 \001(\tR\004uuid\022=\n\013description\030\003 \003" +
-      "(\0132\033.oscal.common.v1.MarkupLineR\013descrip" +
-      "tion\022/\n\005props\030\004 \003(\0132\031.oscal.common.v1.Pr" +
-      "opertyR\005props\022+\n\005links\030\005 \003(\0132\025.oscal.com" +
-      "mon.v1.LinkR\005links\022:\n\007remarks\030\006 \003(\0132 .os" +
-      "cal.common.v1.MarkupMultilineR\007remarks\022M" +
-      "\n\rby_components\030\007 \003(\0132(.oscal.component_" +
-      "definition.v1.StatementR\014byComponents\"\375\002" +
-      "\n\010Protocol\022)\n\004uuid\030\001 \001(\0132\025.oscal.common." +
-      "v1.UUIDR\004uuid\022\022\n\004name\030\002 \001(\tR\004name\0221\n\005tit" +
-      "le\030\003 \003(\0132\033.oscal.common.v1.MarkupLineR\005t" +
-      "itle\022B\n\013description\030\004 \003(\0132 .oscal.common" +
-      ".v1.MarkupMultilineR\013description\022!\n\014port" +
-      "_numbers\030\005 \003(\tR\013portNumbers\022/\n\005props\030\006 \003" +
-      "(\0132\031.oscal.common.v1.PropertyR\005props\022+\n\005" +
-      "links\030\007 \003(\0132\025.oscal.common.v1.LinkR\005link" +
-      "s\022:\n\007remarks\030\010 \003(\0132 .oscal.common.v1.Mar" +
-      "kupMultilineR\007remarks\"\375\001\n\020ResponsiblePar" +
-      "ty\022\027\n\007role_id\030\001 \001(\tR\006roleId\0226\n\013party_uui" +
-      "ds\030\002 \003(\0132\025.oscal.common.v1.UUIDR\npartyUu" +
-      "ids\022/\n\005props\030\003 \003(\0132\031.oscal.common.v1.Pro" +
-      "pertyR\005props\022+\n\005links\030\004 \003(\0132\025.oscal.comm" +
-      "on.v1.LinkR\005links\022:\n\007remarks\030\005 \003(\0132 .osc" +
-      "al.common.v1.MarkupMultilineR\007remarks\"\230\003" +
-      "\n\nCapability\022)\n\004uuid\030\001 \001(\0132\025.oscal.commo" +
-      "n.v1.UUIDR\004uuid\022\022\n\004name\030\002 \001(\tR\004name\022B\n\013d" +
-      "escription\030\003 \003(\0132 .oscal.common.v1.Marku" +
-      "pMultilineR\013description\022m\n\027control_imple" +
-      "mentations\030\004 \003(\01324.oscal.component_defin" +
-      "ition.v1.ControlImplementationR\026controlI" +
-      "mplementations\022/\n\005props\030\005 \003(\0132\031.oscal.co" +
-      "mmon.v1.PropertyR\005props\022+\n\005links\030\006 \003(\0132\025" +
-      ".oscal.common.v1.LinkR\005links\022:\n\007remarks\030" +
-      "\007 \003(\0132 .oscal.common.v1.MarkupMultilineR" +
-      "\007remarksBUZSgithub.com/mchorfa/xoscal/pr" +
-      "oto/oscal/component_definition/v1;compon" +
-      "entdefinitionv1b\006proto3"
+      "\"\373\003\n\025ControlImplementation\022)\n\004uuid\030\001 \001(\013" +
+      "2\025.oscal.common.v1.UUIDR\004uuid\0225\n\006source\030" +
+      "\002 \001(\0132\035.oscal.common.v1.URIReferenceR\006so" +
+      "urce\022 \n\013description\030\003 \001(\tR\013description\022R" +
+      "\n\016set_parameters\030\004 \003(\0132+.oscal.component" +
+      "_definition.v1.SetParameterR\rsetParamete" +
+      "rs\022p\n\030implemented_requirements\030\005 \003(\01325.o" +
+      "scal.component_definition.v1.Implemented" +
+      "RequirementR\027implementedRequirements\022/\n\005" +
+      "props\030\006 \003(\0132\031.oscal.common.v1.PropertyR\005" +
+      "props\022+\n\005links\030\007 \003(\0132\025.oscal.common.v1.L" +
+      "inkR\005links\022:\n\007remarks\030\010 \003(\0132 .oscal.comm" +
+      "on.v1.MarkupMultilineR\007remarks\"\370\001\n\014SetPa" +
+      "rameter\022\031\n\010param_id\030\001 \001(\tR\007paramId\0223\n\006va" +
+      "lues\030\002 \003(\0132\033.oscal.common.v1.MarkupLineR" +
+      "\006values\022/\n\005props\030\003 \003(\0132\031.oscal.common.v1" +
+      ".PropertyR\005props\022+\n\005links\030\004 \003(\0132\025.oscal." +
+      "common.v1.LinkR\005links\022:\n\007remarks\030\005 \003(\0132 " +
+      ".oscal.common.v1.MarkupMultilineR\007remark" +
+      "s\"\350\002\n\026ImplementedRequirement\022)\n\004uuid\030\001 \001" +
+      "(\0132\025.oscal.common.v1.UUIDR\004uuid\022\035\n\ncontr" +
+      "ol_id\030\002 \001(\tR\tcontrolId\022 \n\013description\030\003 " +
+      "\001(\tR\013description\022H\n\nstatements\030\004 \003(\0132(.o" +
+      "scal.component_definition.v1.StatementR\n" +
+      "statements\022/\n\005props\030\005 \003(\0132\031.oscal.common" +
+      ".v1.PropertyR\005props\022+\n\005links\030\006 \003(\0132\025.osc" +
+      "al.common.v1.LinkR\005links\022:\n\007remarks\030\007 \003(" +
+      "\0132 .oscal.common.v1.MarkupMultilineR\007rem" +
+      "arks\"\352\002\n\tStatement\022!\n\014statement_id\030\001 \001(\t" +
+      "R\013statementId\022\022\n\004uuid\030\002 \001(\tR\004uuid\022=\n\013des" +
+      "cription\030\003 \003(\0132\033.oscal.common.v1.MarkupL" +
+      "ineR\013description\022/\n\005props\030\004 \003(\0132\031.oscal." +
+      "common.v1.PropertyR\005props\022+\n\005links\030\005 \003(\013" +
+      "2\025.oscal.common.v1.LinkR\005links\022:\n\007remark" +
+      "s\030\006 \003(\0132 .oscal.common.v1.MarkupMultilin" +
+      "eR\007remarks\022M\n\rby_components\030\007 \003(\0132(.osca" +
+      "l.component_definition.v1.StatementR\014byC" +
+      "omponents\"\375\002\n\010Protocol\022)\n\004uuid\030\001 \001(\0132\025.o" +
+      "scal.common.v1.UUIDR\004uuid\022\022\n\004name\030\002 \001(\tR" +
+      "\004name\0221\n\005title\030\003 \003(\0132\033.oscal.common.v1.M" +
+      "arkupLineR\005title\022B\n\013description\030\004 \003(\0132 ." +
+      "oscal.common.v1.MarkupMultilineR\013descrip" +
+      "tion\022!\n\014port_numbers\030\005 \003(\tR\013portNumbers\022" +
+      "/\n\005props\030\006 \003(\0132\031.oscal.common.v1.Propert" +
+      "yR\005props\022+\n\005links\030\007 \003(\0132\025.oscal.common.v" +
+      "1.LinkR\005links\022:\n\007remarks\030\010 \003(\0132 .oscal.c" +
+      "ommon.v1.MarkupMultilineR\007remarks\"\375\001\n\020Re" +
+      "sponsibleParty\022\027\n\007role_id\030\001 \001(\tR\006roleId\022" +
+      "6\n\013party_uuids\030\002 \003(\0132\025.oscal.common.v1.U" +
+      "UIDR\npartyUuids\022/\n\005props\030\003 \003(\0132\031.oscal.c" +
+      "ommon.v1.PropertyR\005props\022+\n\005links\030\004 \003(\0132" +
+      "\025.oscal.common.v1.LinkR\005links\022:\n\007remarks" +
+      "\030\005 \003(\0132 .oscal.common.v1.MarkupMultiline" +
+      "R\007remarks\"\230\003\n\nCapability\022)\n\004uuid\030\001 \001(\0132\025" +
+      ".oscal.common.v1.UUIDR\004uuid\022\022\n\004name\030\002 \001(" +
+      "\tR\004name\022B\n\013description\030\003 \003(\0132 .oscal.com" +
+      "mon.v1.MarkupMultilineR\013description\022m\n\027c" +
+      "ontrol_implementations\030\004 \003(\01324.oscal.com" +
+      "ponent_definition.v1.ControlImplementati" +
+      "onR\026controlImplementations\022/\n\005props\030\005 \003(" +
+      "\0132\031.oscal.common.v1.PropertyR\005props\022+\n\005l" +
+      "inks\030\006 \003(\0132\025.oscal.common.v1.LinkR\005links" +
+      "\022:\n\007remarks\030\007 \003(\0132 .oscal.common.v1.Mark" +
+      "upMultilineR\007remarksBUZSgithub.com/mchor" +
+      "fa/xoscal/proto/oscal/component_definiti" +
+      "on/v1;componentdefinitionv1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -25100,7 +25116,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
     internal_static_oscal_component_definition_v1_ControlImplementation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_component_definition_v1_ControlImplementation_descriptor,
-        new java.lang.String[] { "ControlId", "Description", "SetParameters", "ImplementedRequirements", "Props", "Links", "Remarks", });
+        new java.lang.String[] { "Uuid", "Source", "Description", "SetParameters", "ImplementedRequirements", "Props", "Links", "Remarks", });
     internal_static_oscal_component_definition_v1_SetParameter_descriptor =
       getDescriptor().getMessageType(4);
     internal_static_oscal_component_definition_v1_SetParameter_fieldAccessorTable = new
@@ -25112,7 +25128,7 @@ public final class Component extends com.google.protobuf.GeneratedFile {
     internal_static_oscal_component_definition_v1_ImplementedRequirement_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_component_definition_v1_ImplementedRequirement_descriptor,
-        new java.lang.String[] { "ControlId", "Description", "Statements", "Props", "Links", "Remarks", });
+        new java.lang.String[] { "Uuid", "ControlId", "Description", "Statements", "Props", "Links", "Remarks", });
     internal_static_oscal_component_definition_v1_Statement_descriptor =
       getDescriptor().getMessageType(6);
     internal_static_oscal_component_definition_v1_Statement_fieldAccessorTable = new

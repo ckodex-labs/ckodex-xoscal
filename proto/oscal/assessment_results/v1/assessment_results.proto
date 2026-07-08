@@ -97,6 +97,36 @@ message Result {
   repeated oscal.common.v1.Property props = 8;
   repeated oscal.common.v1.Link links = 9;
   repeated oscal.common.v1.MarkupMultiline remarks = 10;
+  // reviewed_controls is required by the OSCAL 1.1.2 schema for each result.
+  ReviewedControls reviewed_controls = 11;
+}
+
+// ReviewedControls represents the reviewed controls for a result
+message ReviewedControls {
+  repeated ControlSelection control_selections = 1;
+  repeated SelectedControl controls = 2;
+  repeated oscal.common.v1.Property props = 3;
+  repeated oscal.common.v1.Link links = 4;
+  repeated oscal.common.v1.MarkupMultiline remarks = 5;
+}
+
+// ControlSelection represents a selection of controls for review
+message ControlSelection {
+  oscal.common.v1.MarkupMultiline description = 1;
+  repeated SelectedControl include_controls = 2;
+  repeated SelectedControl exclude_controls = 3;
+  repeated oscal.common.v1.Property props = 4;
+  repeated oscal.common.v1.Link links = 5;
+  repeated oscal.common.v1.MarkupMultiline remarks = 6;
+}
+
+// SelectedControl represents a selected control
+message SelectedControl {
+  oscal.common.v1.Token control_id = 1;
+  oscal.common.v1.Token statement_id = 2;
+  repeated oscal.common.v1.Property props = 3;
+  repeated oscal.common.v1.Link links = 4;
+  repeated oscal.common.v1.MarkupMultiline remarks = 5;
 }
 
 // Finding represents a finding
@@ -196,10 +226,11 @@ message Observation {
 // SubjectReference represents a subject reference
 message SubjectReference {
   oscal.common.v1.UUID subject_uuid = 1;
-  oscal.common.v1.MarkupLine title = 2;
-  repeated oscal.common.v1.Property props = 3;
-  repeated oscal.common.v1.Link links = 4;
-  repeated oscal.common.v1.MarkupMultiline remarks = 5;
+  string type = 2;
+  oscal.common.v1.MarkupLine title = 3;
+  repeated oscal.common.v1.Property props = 4;
+  repeated oscal.common.v1.Link links = 5;
+  repeated oscal.common.v1.MarkupMultiline remarks = 6;
 }
 
 // RelevantEvidence represents relevant evidence

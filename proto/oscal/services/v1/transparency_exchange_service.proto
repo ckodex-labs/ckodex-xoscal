@@ -11,30 +11,45 @@ option go_package = "github.com/mchorfa/xoscal/proto/oscal/services/v1;servicesv
 // and xBOM evidence exchange for xOSCAL.
 service TransparencyExchangeService {
   rpc CreateClaim(CreateClaimRequest) returns (CreateClaimResponse) {
-    option (google.api.http) = { post: "/v1/transparency/claims" body: "*" };
+    option (google.api.http) = {
+      post: "/v1/transparency/claims"
+      body: "*"
+    };
   }
   rpc GetClaim(GetClaimRequest) returns (GetClaimResponse) {
-    option (google.api.http) = { get: "/v1/transparency/claims/{claim_id}" };
+    option (google.api.http) = {get: "/v1/transparency/claims/{claim_id}"};
   }
   rpc ListClaims(ListClaimsRequest) returns (ListClaimsResponse) {
-    option (google.api.http) = { get: "/v1/transparency/claims" };
+    option (google.api.http) = {get: "/v1/transparency/claims"};
   }
   rpc VerifyClaim(VerifyClaimRequest) returns (VerifyClaimResponse) {
-    option (google.api.http) = { post: "/v1/transparency/claims/{claim_id}/verify" body: "*" };
+    option (google.api.http) = {
+      post: "/v1/transparency/claims/{claim_id}/verify"
+      body: "*"
+    };
   }
 
   rpc UploadEvidence(UploadEvidenceRequest) returns (UploadEvidenceResponse) {
-    option (google.api.http) = { post: "/v1/transparency/evidence" body: "*" };
+    option (google.api.http) = {
+      post: "/v1/transparency/evidence"
+      body: "*"
+    };
   }
   rpc GetEvidence(GetEvidenceRequest) returns (GetEvidenceResponse) {
-    option (google.api.http) = { get: "/v1/transparency/evidence/{evidence_id}" };
+    option (google.api.http) = {get: "/v1/transparency/evidence/{evidence_id}"};
   }
   rpc VerifyEvidence(VerifyEvidenceRequest) returns (VerifyEvidenceResponse) {
-    option (google.api.http) = { post: "/v1/transparency/evidence/{evidence_id}/verify" body: "*" };
+    option (google.api.http) = {
+      post: "/v1/transparency/evidence/{evidence_id}/verify"
+      body: "*"
+    };
   }
 
   rpc SyncClaims(SyncClaimsRequest) returns (SyncClaimsResponse) {
-    option (google.api.http) = { post: "/v1/transparency/sync" body: "*" };
+    option (google.api.http) = {
+      post: "/v1/transparency/sync"
+      body: "*"
+    };
   }
 }
 
@@ -226,13 +241,13 @@ message SyncClaimsResponse {
 // ---- ProofState message (shared) ----
 
 message ProofState {
-  string discovery = 1;       // candidate | discovered
-  string graph = 2;             // unresolved | graph_resolved
-  string claim = 3;             // unbound | claim_bound
-  string source = 4;            // unbound | source_bound | rejected
-  string signature = 5;       // unverified | signature_verified | invalid
-  string transparency = 6;      // unverified | inclusion_verified | missing | invalid
-  string witness_json = 7;    // JSON blob for WitnessSubState
-  string state = 8;             // unverified | current_state_verified | superseded
-  string policy = 9;            // unevaluated | policy_admissible | policy_inadmissible | stale_policy
+  string discovery = 1; // candidate | discovered
+  string graph = 2; // unresolved | graph_resolved
+  string claim = 3; // unbound | claim_bound
+  string source = 4; // unbound | source_bound | rejected
+  string signature = 5; // unverified | signature_verified | invalid
+  string transparency = 6; // unverified | inclusion_verified | missing | invalid
+  string witness_json = 7; // JSON blob for WitnessSubState
+  string state = 8; // unverified | current_state_verified | superseded
+  string policy = 9; // unevaluated | policy_admissible | policy_inadmissible | stale_policy
 }

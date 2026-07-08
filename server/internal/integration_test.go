@@ -87,8 +87,8 @@ func TestEndToEnd(t *testing.T) {
 	if all.AssessmentPlan == nil {
 		t.Error("assessment-plan is nil")
 	}
-	if len(all.AssessmentPlan.AssessmentTasks) != 2 {
-		t.Errorf("assessment tasks = %d, want 2", len(all.AssessmentPlan.AssessmentTasks))
+	if len(all.AssessmentPlan.Tasks) != 2 {
+		t.Errorf("assessment tasks = %d, want 2", len(all.AssessmentPlan.Tasks))
 	}
 	if all.POAM == nil {
 		t.Error("poam is nil")

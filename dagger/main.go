@@ -189,6 +189,21 @@ func (m *Xoscal) OscalFrameworks(source *dagger.Directory) *dagger.Directory {
 		Directory("/out")
 }
 
+// OscalSchemaValidation builds and runs xoscal-validate-schema against every
+// framework catalog produced by OscalFrameworks. Fails if any catalog does
+// not conform to the official OSCAL 1.1.2 JSON schema.
+func (m *Xoscal) OscalSchemaValidation(source *dagger.Directory, frameworks *dagger.Directory) *dagger.Container {
+	return m.base(source).
+		WithExec([]string{"go", "build", "-o", "/bin/validate-schema", "./server/cmd/xoscal-validate-schema"}).
+		WithDirectory("/frameworks", frameworks).
+		WithExec([]string{"sh", "-c",
+			"fail=0; for f in /frameworks/*/catalog.json; do " +
+				"[ -f \"$f\" ] || continue; " +
+				"if ! /bin/validate-schema -file \"$f\" -kind catalog; then " +
+				"echo \"FAIL: $f\" >&2; fail=1; fi; done; " +
+				"if [ $fail -eq 0 ]; then echo 'oscal-schema-ok' > /tmp/schema.ok; else exit 3; fi"})
+}
+
 // provenanceManifest digests the proto set and each SDK zip and renders
 // provenance.json. Signing fields are left empty here (no cosign/rekor in this
 // build stage), so every record is honestly signed:false until Release wires them.
@@ -486,9 +501,10 @@ func (m *Xoscal) Snapshot(source *dagger.Directory, githubToken *dagger.Secret) 
 		Directory("/src/dist")
 }
 
-// All runs lint, test, race, security, proto-drift, and spec-registry checks in parallel branches.
+// All runs lint, test, race, security, proto-drift, spec-registry, and
+// OSCAL schema validation checks in parallel branches.
 // Each branch shares the cached base container. The returned directory
-// contains outputs from all four parallel checks.
+// contains outputs from all parallel checks.
 func (m *Xoscal) All(source *dagger.Directory) *dagger.Directory {
 	lint := m.Lint(source)
 	test := m.Test(source)
@@ -496,6 +512,7 @@ func (m *Xoscal) All(source *dagger.Directory) *dagger.Directory {
 	sec := m.Security(source)
 	proto := m.ProtoCheck(source)
 	specreg := m.SpecRegistryCheck(source)
+	schemaval := m.OscalSchemaValidation(source, m.OscalFrameworks(source))
 
 	return dag.Directory().
 		WithFile("lint.ok", lint.File("/tmp/lint.ok")).
@@ -503,5 +520,6 @@ func (m *Xoscal) All(source *dagger.Directory) *dagger.Directory {
 		WithFile("race.ok", race.File("/tmp/race.ok")).
 		WithFile("proto.ok", proto.File("/tmp/proto.ok")).
 		WithFile("specreg.ok", specreg.File("/tmp/specreg.ok")).
+		WithFile("schema.ok", schemaval.File("/tmp/schema.ok")).
 		WithFile("gosec-results.sarif", sec)
 }

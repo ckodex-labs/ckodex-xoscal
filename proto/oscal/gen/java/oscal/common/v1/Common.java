@@ -12072,6 +12072,3225 @@ public final class Common extends com.google.protobuf.GeneratedFile {
 
   }
 
+  public interface LocationOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oscal.common.v1.Location)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
+     * @return Whether the uuid field is set.
+     */
+    boolean hasUuid();
+    /**
+     * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
+     * @return The uuid.
+     */
+    oscal.common.v1.Common.UUID getUuid();
+    /**
+     * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
+     */
+    oscal.common.v1.Common.UUIDOrBuilder getUuidOrBuilder();
+
+    /**
+     * <code>string title = 2 [json_name = "title"];</code>
+     * @return The title.
+     */
+    java.lang.String getTitle();
+    /**
+     * <code>string title = 2 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    com.google.protobuf.ByteString
+        getTitleBytes();
+
+    /**
+     * <code>.oscal.common.v1.Address address = 3 [json_name = "address"];</code>
+     * @return Whether the address field is set.
+     */
+    boolean hasAddress();
+    /**
+     * <code>.oscal.common.v1.Address address = 3 [json_name = "address"];</code>
+     * @return The address.
+     */
+    oscal.common.v1.Common.Address getAddress();
+    /**
+     * <code>.oscal.common.v1.Address address = 3 [json_name = "address"];</code>
+     */
+    oscal.common.v1.Common.AddressOrBuilder getAddressOrBuilder();
+
+    /**
+     * <code>repeated .oscal.common.v1.EmailAddress email_addresses = 4 [json_name = "emailAddresses"];</code>
+     */
+    java.util.List<oscal.common.v1.Common.EmailAddress> 
+        getEmailAddressesList();
+    /**
+     * <code>repeated .oscal.common.v1.EmailAddress email_addresses = 4 [json_name = "emailAddresses"];</code>
+     */
+    oscal.common.v1.Common.EmailAddress getEmailAddresses(int index);
+    /**
+     * <code>repeated .oscal.common.v1.EmailAddress email_addresses = 4 [json_name = "emailAddresses"];</code>
+     */
+    int getEmailAddressesCount();
+    /**
+     * <code>repeated .oscal.common.v1.EmailAddress email_addresses = 4 [json_name = "emailAddresses"];</code>
+     */
+    java.util.List<? extends oscal.common.v1.Common.EmailAddressOrBuilder> 
+        getEmailAddressesOrBuilderList();
+    /**
+     * <code>repeated .oscal.common.v1.EmailAddress email_addresses = 4 [json_name = "emailAddresses"];</code>
+     */
+    oscal.common.v1.Common.EmailAddressOrBuilder getEmailAddressesOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .oscal.common.v1.TelephoneNumber telephone_numbers = 5 [json_name = "telephoneNumbers"];</code>
+     */
+    java.util.List<oscal.common.v1.Common.TelephoneNumber> 
+        getTelephoneNumbersList();
+    /**
+     * <code>repeated .oscal.common.v1.TelephoneNumber telephone_numbers = 5 [json_name = "telephoneNumbers"];</code>
+     */
+    oscal.common.v1.Common.TelephoneNumber getTelephoneNumbers(int index);
+    /**
+     * <code>repeated .oscal.common.v1.TelephoneNumber telephone_numbers = 5 [json_name = "telephoneNumbers"];</code>
+     */
+    int getTelephoneNumbersCount();
+    /**
+     * <code>repeated .oscal.common.v1.TelephoneNumber telephone_numbers = 5 [json_name = "telephoneNumbers"];</code>
+     */
+    java.util.List<? extends oscal.common.v1.Common.TelephoneNumberOrBuilder> 
+        getTelephoneNumbersOrBuilderList();
+    /**
+     * <code>repeated .oscal.common.v1.TelephoneNumber telephone_numbers = 5 [json_name = "telephoneNumbers"];</code>
+     */
+    oscal.common.v1.Common.TelephoneNumberOrBuilder getTelephoneNumbersOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .oscal.common.v1.URI urls = 6 [json_name = "urls"];</code>
+     */
+    java.util.List<oscal.common.v1.Common.URI> 
+        getUrlsList();
+    /**
+     * <code>repeated .oscal.common.v1.URI urls = 6 [json_name = "urls"];</code>
+     */
+    oscal.common.v1.Common.URI getUrls(int index);
+    /**
+     * <code>repeated .oscal.common.v1.URI urls = 6 [json_name = "urls"];</code>
+     */
+    int getUrlsCount();
+    /**
+     * <code>repeated .oscal.common.v1.URI urls = 6 [json_name = "urls"];</code>
+     */
+    java.util.List<? extends oscal.common.v1.Common.URIOrBuilder> 
+        getUrlsOrBuilderList();
+    /**
+     * <code>repeated .oscal.common.v1.URI urls = 6 [json_name = "urls"];</code>
+     */
+    oscal.common.v1.Common.URIOrBuilder getUrlsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .oscal.common.v1.Property props = 7 [json_name = "props"];</code>
+     */
+    java.util.List<oscal.common.v1.Common.Property> 
+        getPropsList();
+    /**
+     * <code>repeated .oscal.common.v1.Property props = 7 [json_name = "props"];</code>
+     */
+    oscal.common.v1.Common.Property getProps(int index);
+    /**
+     * <code>repeated .oscal.common.v1.Property props = 7 [json_name = "props"];</code>
+     */
+    int getPropsCount();
+    /**
+     * <code>repeated .oscal.common.v1.Property props = 7 [json_name = "props"];</code>
+     */
+    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+        getPropsOrBuilderList();
+    /**
+     * <code>repeated .oscal.common.v1.Property props = 7 [json_name = "props"];</code>
+     */
+    oscal.common.v1.Common.PropertyOrBuilder getPropsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .oscal.common.v1.Link links = 8 [json_name = "links"];</code>
+     */
+    java.util.List<oscal.common.v1.Common.Link> 
+        getLinksList();
+    /**
+     * <code>repeated .oscal.common.v1.Link links = 8 [json_name = "links"];</code>
+     */
+    oscal.common.v1.Common.Link getLinks(int index);
+    /**
+     * <code>repeated .oscal.common.v1.Link links = 8 [json_name = "links"];</code>
+     */
+    int getLinksCount();
+    /**
+     * <code>repeated .oscal.common.v1.Link links = 8 [json_name = "links"];</code>
+     */
+    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+        getLinksOrBuilderList();
+    /**
+     * <code>repeated .oscal.common.v1.Link links = 8 [json_name = "links"];</code>
+     */
+    oscal.common.v1.Common.LinkOrBuilder getLinksOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 9 [json_name = "remarks"];</code>
+     */
+    java.util.List<oscal.common.v1.Common.MarkupMultiline> 
+        getRemarksList();
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 9 [json_name = "remarks"];</code>
+     */
+    oscal.common.v1.Common.MarkupMultiline getRemarks(int index);
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 9 [json_name = "remarks"];</code>
+     */
+    int getRemarksCount();
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 9 [json_name = "remarks"];</code>
+     */
+    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+        getRemarksOrBuilderList();
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 9 [json_name = "remarks"];</code>
+     */
+    oscal.common.v1.Common.MarkupMultilineOrBuilder getRemarksOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * Location represents a physical or virtual location
+   * </pre>
+   *
+   * Protobuf type {@code oscal.common.v1.Location}
+   */
+  public static final class Location extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:oscal.common.v1.Location)
+      LocationOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 35,
+        /* patch= */ 1,
+        /* suffix= */ "",
+        "Location");
+    }
+    // Use Location.newBuilder() to construct.
+    private Location(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private Location() {
+      title_ = "";
+      emailAddresses_ = java.util.Collections.emptyList();
+      telephoneNumbers_ = java.util.Collections.emptyList();
+      urls_ = java.util.Collections.emptyList();
+      props_ = java.util.Collections.emptyList();
+      links_ = java.util.Collections.emptyList();
+      remarks_ = java.util.Collections.emptyList();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return oscal.common.v1.Common.internal_static_oscal_common_v1_Location_descriptor;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+      return oscal.common.v1.Common.internal_static_oscal_common_v1_Location_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return oscal.common.v1.Common.internal_static_oscal_common_v1_Location_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              oscal.common.v1.Common.Location.class, oscal.common.v1.Common.Location.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int UUID_FIELD_NUMBER = 1;
+    private oscal.common.v1.Common.UUID uuid_;
+    /**
+     * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
+     * @return Whether the uuid field is set.
+     */
+    @java.lang.Override
+    public boolean hasUuid() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
+     * @return The uuid.
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.UUID getUuid() {
+      return uuid_ == null ? oscal.common.v1.Common.UUID.getDefaultInstance() : uuid_;
+    }
+    /**
+     * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.UUIDOrBuilder getUuidOrBuilder() {
+      return uuid_ == null ? oscal.common.v1.Common.UUID.getDefaultInstance() : uuid_;
+    }
+
+    public static final int TITLE_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object title_ = "";
+    /**
+     * <code>string title = 2 [json_name = "title"];</code>
+     * @return The title.
+     */
+    @java.lang.Override
+    public java.lang.String getTitle() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        title_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string title = 2 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTitleBytes() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        title_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 3;
+    private oscal.common.v1.Common.Address address_;
+    /**
+     * <code>.oscal.common.v1.Address address = 3 [json_name = "address"];</code>
+     * @return Whether the address field is set.
+     */
+    @java.lang.Override
+    public boolean hasAddress() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>.oscal.common.v1.Address address = 3 [json_name = "address"];</code>
+     * @return The address.
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.Address getAddress() {
+      return address_ == null ? oscal.common.v1.Common.Address.getDefaultInstance() : address_;
+    }
+    /**
+     * <code>.oscal.common.v1.Address address = 3 [json_name = "address"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.AddressOrBuilder getAddressOrBuilder() {
+      return address_ == null ? oscal.common.v1.Common.Address.getDefaultInstance() : address_;
+    }
+
+    public static final int EMAIL_ADDRESSES_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private java.util.List<oscal.common.v1.Common.EmailAddress> emailAddresses_;
+    /**
+     * <code>repeated .oscal.common.v1.EmailAddress email_addresses = 4 [json_name = "emailAddresses"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<oscal.common.v1.Common.EmailAddress> getEmailAddressesList() {
+      return emailAddresses_;
+    }
+    /**
+     * <code>repeated .oscal.common.v1.EmailAddress email_addresses = 4 [json_name = "emailAddresses"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends oscal.common.v1.Common.EmailAddressOrBuilder> 
+        getEmailAddressesOrBuilderList() {
+      return emailAddresses_;
+    }
+    /**
+     * <code>repeated .oscal.common.v1.EmailAddress email_addresses = 4 [json_name = "emailAddresses"];</code>
+     */
+    @java.lang.Override
+    public int getEmailAddressesCount() {
+      return emailAddresses_.size();
+    }
+    /**
+     * <code>repeated .oscal.common.v1.EmailAddress email_addresses = 4 [json_name = "emailAddresses"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.EmailAddress getEmailAddresses(int index) {
+      return emailAddresses_.get(index);
+    }
+    /**
+     * <code>repeated .oscal.common.v1.EmailAddress email_addresses = 4 [json_name = "emailAddresses"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.EmailAddressOrBuilder getEmailAddressesOrBuilder(
+        int index) {
+      return emailAddresses_.get(index);
+    }
+
+    public static final int TELEPHONE_NUMBERS_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private java.util.List<oscal.common.v1.Common.TelephoneNumber> telephoneNumbers_;
+    /**
+     * <code>repeated .oscal.common.v1.TelephoneNumber telephone_numbers = 5 [json_name = "telephoneNumbers"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<oscal.common.v1.Common.TelephoneNumber> getTelephoneNumbersList() {
+      return telephoneNumbers_;
+    }
+    /**
+     * <code>repeated .oscal.common.v1.TelephoneNumber telephone_numbers = 5 [json_name = "telephoneNumbers"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends oscal.common.v1.Common.TelephoneNumberOrBuilder> 
+        getTelephoneNumbersOrBuilderList() {
+      return telephoneNumbers_;
+    }
+    /**
+     * <code>repeated .oscal.common.v1.TelephoneNumber telephone_numbers = 5 [json_name = "telephoneNumbers"];</code>
+     */
+    @java.lang.Override
+    public int getTelephoneNumbersCount() {
+      return telephoneNumbers_.size();
+    }
+    /**
+     * <code>repeated .oscal.common.v1.TelephoneNumber telephone_numbers = 5 [json_name = "telephoneNumbers"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.TelephoneNumber getTelephoneNumbers(int index) {
+      return telephoneNumbers_.get(index);
+    }
+    /**
+     * <code>repeated .oscal.common.v1.TelephoneNumber telephone_numbers = 5 [json_name = "telephoneNumbers"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.TelephoneNumberOrBuilder getTelephoneNumbersOrBuilder(
+        int index) {
+      return telephoneNumbers_.get(index);
+    }
+
+    public static final int URLS_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private java.util.List<oscal.common.v1.Common.URI> urls_;
+    /**
+     * <code>repeated .oscal.common.v1.URI urls = 6 [json_name = "urls"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<oscal.common.v1.Common.URI> getUrlsList() {
+      return urls_;
+    }
+    /**
+     * <code>repeated .oscal.common.v1.URI urls = 6 [json_name = "urls"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends oscal.common.v1.Common.URIOrBuilder> 
+        getUrlsOrBuilderList() {
+      return urls_;
+    }
+    /**
+     * <code>repeated .oscal.common.v1.URI urls = 6 [json_name = "urls"];</code>
+     */
+    @java.lang.Override
+    public int getUrlsCount() {
+      return urls_.size();
+    }
+    /**
+     * <code>repeated .oscal.common.v1.URI urls = 6 [json_name = "urls"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.URI getUrls(int index) {
+      return urls_.get(index);
+    }
+    /**
+     * <code>repeated .oscal.common.v1.URI urls = 6 [json_name = "urls"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.URIOrBuilder getUrlsOrBuilder(
+        int index) {
+      return urls_.get(index);
+    }
+
+    public static final int PROPS_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private java.util.List<oscal.common.v1.Common.Property> props_;
+    /**
+     * <code>repeated .oscal.common.v1.Property props = 7 [json_name = "props"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<oscal.common.v1.Common.Property> getPropsList() {
+      return props_;
+    }
+    /**
+     * <code>repeated .oscal.common.v1.Property props = 7 [json_name = "props"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+        getPropsOrBuilderList() {
+      return props_;
+    }
+    /**
+     * <code>repeated .oscal.common.v1.Property props = 7 [json_name = "props"];</code>
+     */
+    @java.lang.Override
+    public int getPropsCount() {
+      return props_.size();
+    }
+    /**
+     * <code>repeated .oscal.common.v1.Property props = 7 [json_name = "props"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.Property getProps(int index) {
+      return props_.get(index);
+    }
+    /**
+     * <code>repeated .oscal.common.v1.Property props = 7 [json_name = "props"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.PropertyOrBuilder getPropsOrBuilder(
+        int index) {
+      return props_.get(index);
+    }
+
+    public static final int LINKS_FIELD_NUMBER = 8;
+    @SuppressWarnings("serial")
+    private java.util.List<oscal.common.v1.Common.Link> links_;
+    /**
+     * <code>repeated .oscal.common.v1.Link links = 8 [json_name = "links"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<oscal.common.v1.Common.Link> getLinksList() {
+      return links_;
+    }
+    /**
+     * <code>repeated .oscal.common.v1.Link links = 8 [json_name = "links"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+        getLinksOrBuilderList() {
+      return links_;
+    }
+    /**
+     * <code>repeated .oscal.common.v1.Link links = 8 [json_name = "links"];</code>
+     */
+    @java.lang.Override
+    public int getLinksCount() {
+      return links_.size();
+    }
+    /**
+     * <code>repeated .oscal.common.v1.Link links = 8 [json_name = "links"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.Link getLinks(int index) {
+      return links_.get(index);
+    }
+    /**
+     * <code>repeated .oscal.common.v1.Link links = 8 [json_name = "links"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.LinkOrBuilder getLinksOrBuilder(
+        int index) {
+      return links_.get(index);
+    }
+
+    public static final int REMARKS_FIELD_NUMBER = 9;
+    @SuppressWarnings("serial")
+    private java.util.List<oscal.common.v1.Common.MarkupMultiline> remarks_;
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 9 [json_name = "remarks"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<oscal.common.v1.Common.MarkupMultiline> getRemarksList() {
+      return remarks_;
+    }
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 9 [json_name = "remarks"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+        getRemarksOrBuilderList() {
+      return remarks_;
+    }
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 9 [json_name = "remarks"];</code>
+     */
+    @java.lang.Override
+    public int getRemarksCount() {
+      return remarks_.size();
+    }
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 9 [json_name = "remarks"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.MarkupMultiline getRemarks(int index) {
+      return remarks_.get(index);
+    }
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 9 [json_name = "remarks"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.MarkupMultilineOrBuilder getRemarksOrBuilder(
+        int index) {
+      return remarks_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeMessage(1, getUuid());
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(title_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, title_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeMessage(3, getAddress());
+      }
+      for (int i = 0; i < emailAddresses_.size(); i++) {
+        output.writeMessage(4, emailAddresses_.get(i));
+      }
+      for (int i = 0; i < telephoneNumbers_.size(); i++) {
+        output.writeMessage(5, telephoneNumbers_.get(i));
+      }
+      for (int i = 0; i < urls_.size(); i++) {
+        output.writeMessage(6, urls_.get(i));
+      }
+      for (int i = 0; i < props_.size(); i++) {
+        output.writeMessage(7, props_.get(i));
+      }
+      for (int i = 0; i < links_.size(); i++) {
+        output.writeMessage(8, links_.get(i));
+      }
+      for (int i = 0; i < remarks_.size(); i++) {
+        output.writeMessage(9, remarks_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+    private int computeSerializedSize_0() {
+      int size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getUuid());
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(title_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, title_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getAddress());
+      }
+
+          {
+            final int count = emailAddresses_.size();
+            for (int i = 0; i < count; i++) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeMessageSizeNoTag(emailAddresses_.get(i));
+            }
+            size += 1 * count;
+          }
+
+          {
+            final int count = telephoneNumbers_.size();
+            for (int i = 0; i < count; i++) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeMessageSizeNoTag(telephoneNumbers_.get(i));
+            }
+            size += 1 * count;
+          }
+
+          {
+            final int count = urls_.size();
+            for (int i = 0; i < count; i++) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeMessageSizeNoTag(urls_.get(i));
+            }
+            size += 1 * count;
+          }
+
+          {
+            final int count = props_.size();
+            for (int i = 0; i < count; i++) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeMessageSizeNoTag(props_.get(i));
+            }
+            size += 1 * count;
+          }
+
+          {
+            final int count = links_.size();
+            for (int i = 0; i < count; i++) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeMessageSizeNoTag(links_.get(i));
+            }
+            size += 1 * count;
+          }
+
+          {
+            final int count = remarks_.size();
+            for (int i = 0; i < count; i++) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeMessageSizeNoTag(remarks_.get(i));
+            }
+            size += 1 * count;
+          }
+      return size;
+    }
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += computeSerializedSize_0();
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof oscal.common.v1.Common.Location)) {
+        return super.equals(obj);
+      }
+      oscal.common.v1.Common.Location other = (oscal.common.v1.Common.Location) obj;
+
+      if (hasUuid() != other.hasUuid()) return false;
+      if (hasUuid()) {
+        if (!getUuid()
+            .equals(other.getUuid())) return false;
+      }
+      if (!getTitle()
+          .equals(other.getTitle())) return false;
+      if (hasAddress() != other.hasAddress()) return false;
+      if (hasAddress()) {
+        if (!getAddress()
+            .equals(other.getAddress())) return false;
+      }
+      if (!getEmailAddressesList()
+          .equals(other.getEmailAddressesList())) return false;
+      if (!getTelephoneNumbersList()
+          .equals(other.getTelephoneNumbersList())) return false;
+      if (!getUrlsList()
+          .equals(other.getUrlsList())) return false;
+      if (!getPropsList()
+          .equals(other.getPropsList())) return false;
+      if (!getLinksList()
+          .equals(other.getLinksList())) return false;
+      if (!getRemarksList()
+          .equals(other.getRemarksList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasUuid()) {
+        hash = (37 * hash) + UUID_FIELD_NUMBER;
+        hash = (53 * hash) + getUuid().hashCode();
+      }
+      hash = (37 * hash) + TITLE_FIELD_NUMBER;
+      hash = (53 * hash) + getTitle().hashCode();
+      if (hasAddress()) {
+        hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+        hash = (53 * hash) + getAddress().hashCode();
+      }
+      if (getEmailAddressesCount() > 0) {
+        hash = (37 * hash) + EMAIL_ADDRESSES_FIELD_NUMBER;
+        hash = (53 * hash) + getEmailAddressesList().hashCode();
+      }
+      if (getTelephoneNumbersCount() > 0) {
+        hash = (37 * hash) + TELEPHONE_NUMBERS_FIELD_NUMBER;
+        hash = (53 * hash) + getTelephoneNumbersList().hashCode();
+      }
+      if (getUrlsCount() > 0) {
+        hash = (37 * hash) + URLS_FIELD_NUMBER;
+        hash = (53 * hash) + getUrlsList().hashCode();
+      }
+      if (getPropsCount() > 0) {
+        hash = (37 * hash) + PROPS_FIELD_NUMBER;
+        hash = (53 * hash) + getPropsList().hashCode();
+      }
+      if (getLinksCount() > 0) {
+        hash = (37 * hash) + LINKS_FIELD_NUMBER;
+        hash = (53 * hash) + getLinksList().hashCode();
+      }
+      if (getRemarksCount() > 0) {
+        hash = (37 * hash) + REMARKS_FIELD_NUMBER;
+        hash = (53 * hash) + getRemarksList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static oscal.common.v1.Common.Location parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.common.v1.Common.Location parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.common.v1.Common.Location parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.common.v1.Common.Location parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.common.v1.Common.Location parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.common.v1.Common.Location parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.common.v1.Common.Location parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static oscal.common.v1.Common.Location parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static oscal.common.v1.Common.Location parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static oscal.common.v1.Common.Location parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static oscal.common.v1.Common.Location parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static oscal.common.v1.Common.Location parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(oscal.common.v1.Common.Location prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Location represents a physical or virtual location
+     * </pre>
+     *
+     * Protobuf type {@code oscal.common.v1.Location}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oscal.common.v1.Location)
+        oscal.common.v1.Common.LocationOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return oscal.common.v1.Common.internal_static_oscal_common_v1_Location_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return oscal.common.v1.Common.internal_static_oscal_common_v1_Location_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                oscal.common.v1.Common.Location.class, oscal.common.v1.Common.Location.Builder.class);
+      }
+
+      // Construct using oscal.common.v1.Common.Location.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage
+                .alwaysUseFieldBuilders) {
+          internalGetUuidFieldBuilder();
+          internalGetAddressFieldBuilder();
+          internalGetEmailAddressesFieldBuilder();
+          internalGetTelephoneNumbersFieldBuilder();
+          internalGetUrlsFieldBuilder();
+          internalGetPropsFieldBuilder();
+          internalGetLinksFieldBuilder();
+          internalGetRemarksFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        uuid_ = null;
+        if (uuidBuilder_ != null) {
+          uuidBuilder_.dispose();
+          uuidBuilder_ = null;
+        }
+        title_ = "";
+        address_ = null;
+        if (addressBuilder_ != null) {
+          addressBuilder_.dispose();
+          addressBuilder_ = null;
+        }
+        if (emailAddressesBuilder_ == null) {
+          emailAddresses_ = java.util.Collections.emptyList();
+        } else {
+          emailAddresses_ = null;
+          emailAddressesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        if (telephoneNumbersBuilder_ == null) {
+          telephoneNumbers_ = java.util.Collections.emptyList();
+        } else {
+          telephoneNumbers_ = null;
+          telephoneNumbersBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        if (urlsBuilder_ == null) {
+          urls_ = java.util.Collections.emptyList();
+        } else {
+          urls_ = null;
+          urlsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000020);
+        if (propsBuilder_ == null) {
+          props_ = java.util.Collections.emptyList();
+        } else {
+          props_ = null;
+          propsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000040);
+        if (linksBuilder_ == null) {
+          links_ = java.util.Collections.emptyList();
+        } else {
+          links_ = null;
+          linksBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000080);
+        if (remarksBuilder_ == null) {
+          remarks_ = java.util.Collections.emptyList();
+        } else {
+          remarks_ = null;
+          remarksBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000100);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return oscal.common.v1.Common.internal_static_oscal_common_v1_Location_descriptor;
+      }
+
+      @java.lang.Override
+      public oscal.common.v1.Common.Location getDefaultInstanceForType() {
+        return oscal.common.v1.Common.Location.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public oscal.common.v1.Common.Location build() {
+        oscal.common.v1.Common.Location result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public oscal.common.v1.Common.Location buildPartial() {
+        oscal.common.v1.Common.Location result = new oscal.common.v1.Common.Location(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(oscal.common.v1.Common.Location result) {
+        if (emailAddressesBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            emailAddresses_ = java.util.Collections.unmodifiableList(emailAddresses_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.emailAddresses_ = emailAddresses_;
+        } else {
+          result.emailAddresses_ = emailAddressesBuilder_.build();
+        }
+        if (telephoneNumbersBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0)) {
+            telephoneNumbers_ = java.util.Collections.unmodifiableList(telephoneNumbers_);
+            bitField0_ = (bitField0_ & ~0x00000010);
+          }
+          result.telephoneNumbers_ = telephoneNumbers_;
+        } else {
+          result.telephoneNumbers_ = telephoneNumbersBuilder_.build();
+        }
+        if (urlsBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0)) {
+            urls_ = java.util.Collections.unmodifiableList(urls_);
+            bitField0_ = (bitField0_ & ~0x00000020);
+          }
+          result.urls_ = urls_;
+        } else {
+          result.urls_ = urlsBuilder_.build();
+        }
+        if (propsBuilder_ == null) {
+          if (((bitField0_ & 0x00000040) != 0)) {
+            props_ = java.util.Collections.unmodifiableList(props_);
+            bitField0_ = (bitField0_ & ~0x00000040);
+          }
+          result.props_ = props_;
+        } else {
+          result.props_ = propsBuilder_.build();
+        }
+        if (linksBuilder_ == null) {
+          if (((bitField0_ & 0x00000080) != 0)) {
+            links_ = java.util.Collections.unmodifiableList(links_);
+            bitField0_ = (bitField0_ & ~0x00000080);
+          }
+          result.links_ = links_;
+        } else {
+          result.links_ = linksBuilder_.build();
+        }
+        if (remarksBuilder_ == null) {
+          if (((bitField0_ & 0x00000100) != 0)) {
+            remarks_ = java.util.Collections.unmodifiableList(remarks_);
+            bitField0_ = (bitField0_ & ~0x00000100);
+          }
+          result.remarks_ = remarks_;
+        } else {
+          result.remarks_ = remarksBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(oscal.common.v1.Common.Location result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.uuid_ = uuidBuilder_ == null
+              ? uuid_
+              : uuidBuilder_.build();
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.title_ = title_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.address_ = addressBuilder_ == null
+              ? address_
+              : addressBuilder_.build();
+          to_bitField0_ |= 0x00000002;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof oscal.common.v1.Common.Location) {
+          return mergeFrom((oscal.common.v1.Common.Location)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(oscal.common.v1.Common.Location other) {
+        if (other == oscal.common.v1.Common.Location.getDefaultInstance()) return this;
+        if (other.hasUuid()) {
+          mergeUuid(other.getUuid());
+        }
+        if (!other.getTitle().isEmpty()) {
+          title_ = other.title_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.hasAddress()) {
+          mergeAddress(other.getAddress());
+        }
+        if (emailAddressesBuilder_ == null) {
+          if (!other.emailAddresses_.isEmpty()) {
+            if (emailAddresses_.isEmpty()) {
+              emailAddresses_ = other.emailAddresses_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureEmailAddressesIsMutable();
+              emailAddresses_.addAll(other.emailAddresses_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.emailAddresses_.isEmpty()) {
+            if (emailAddressesBuilder_.isEmpty()) {
+              emailAddressesBuilder_.dispose();
+              emailAddressesBuilder_ = null;
+              emailAddresses_ = other.emailAddresses_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              emailAddressesBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   internalGetEmailAddressesFieldBuilder() : null;
+            } else {
+              emailAddressesBuilder_.addAllMessages(other.emailAddresses_);
+            }
+          }
+        }
+        if (telephoneNumbersBuilder_ == null) {
+          if (!other.telephoneNumbers_.isEmpty()) {
+            if (telephoneNumbers_.isEmpty()) {
+              telephoneNumbers_ = other.telephoneNumbers_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+            } else {
+              ensureTelephoneNumbersIsMutable();
+              telephoneNumbers_.addAll(other.telephoneNumbers_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.telephoneNumbers_.isEmpty()) {
+            if (telephoneNumbersBuilder_.isEmpty()) {
+              telephoneNumbersBuilder_.dispose();
+              telephoneNumbersBuilder_ = null;
+              telephoneNumbers_ = other.telephoneNumbers_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+              telephoneNumbersBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   internalGetTelephoneNumbersFieldBuilder() : null;
+            } else {
+              telephoneNumbersBuilder_.addAllMessages(other.telephoneNumbers_);
+            }
+          }
+        }
+        if (urlsBuilder_ == null) {
+          if (!other.urls_.isEmpty()) {
+            if (urls_.isEmpty()) {
+              urls_ = other.urls_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+            } else {
+              ensureUrlsIsMutable();
+              urls_.addAll(other.urls_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.urls_.isEmpty()) {
+            if (urlsBuilder_.isEmpty()) {
+              urlsBuilder_.dispose();
+              urlsBuilder_ = null;
+              urls_ = other.urls_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+              urlsBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   internalGetUrlsFieldBuilder() : null;
+            } else {
+              urlsBuilder_.addAllMessages(other.urls_);
+            }
+          }
+        }
+        if (propsBuilder_ == null) {
+          if (!other.props_.isEmpty()) {
+            if (props_.isEmpty()) {
+              props_ = other.props_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+            } else {
+              ensurePropsIsMutable();
+              props_.addAll(other.props_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.props_.isEmpty()) {
+            if (propsBuilder_.isEmpty()) {
+              propsBuilder_.dispose();
+              propsBuilder_ = null;
+              props_ = other.props_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+              propsBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   internalGetPropsFieldBuilder() : null;
+            } else {
+              propsBuilder_.addAllMessages(other.props_);
+            }
+          }
+        }
+        if (linksBuilder_ == null) {
+          if (!other.links_.isEmpty()) {
+            if (links_.isEmpty()) {
+              links_ = other.links_;
+              bitField0_ = (bitField0_ & ~0x00000080);
+            } else {
+              ensureLinksIsMutable();
+              links_.addAll(other.links_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.links_.isEmpty()) {
+            if (linksBuilder_.isEmpty()) {
+              linksBuilder_.dispose();
+              linksBuilder_ = null;
+              links_ = other.links_;
+              bitField0_ = (bitField0_ & ~0x00000080);
+              linksBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   internalGetLinksFieldBuilder() : null;
+            } else {
+              linksBuilder_.addAllMessages(other.links_);
+            }
+          }
+        }
+        if (remarksBuilder_ == null) {
+          if (!other.remarks_.isEmpty()) {
+            if (remarks_.isEmpty()) {
+              remarks_ = other.remarks_;
+              bitField0_ = (bitField0_ & ~0x00000100);
+            } else {
+              ensureRemarksIsMutable();
+              remarks_.addAll(other.remarks_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.remarks_.isEmpty()) {
+            if (remarksBuilder_.isEmpty()) {
+              remarksBuilder_.dispose();
+              remarksBuilder_ = null;
+              remarks_ = other.remarks_;
+              bitField0_ = (bitField0_ & ~0x00000100);
+              remarksBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   internalGetRemarksFieldBuilder() : null;
+            } else {
+              remarksBuilder_.addAllMessages(other.remarks_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    internalGetUuidFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                title_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    internalGetAddressFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                oscal.common.v1.Common.EmailAddress m =
+                    input.readMessage(
+                        oscal.common.v1.Common.EmailAddress.parser(),
+                        extensionRegistry);
+                if (emailAddressesBuilder_ == null) {
+                  ensureEmailAddressesIsMutable();
+                  emailAddresses_.add(m);
+                } else {
+                  emailAddressesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 34
+              case 42: {
+                oscal.common.v1.Common.TelephoneNumber m =
+                    input.readMessage(
+                        oscal.common.v1.Common.TelephoneNumber.parser(),
+                        extensionRegistry);
+                if (telephoneNumbersBuilder_ == null) {
+                  ensureTelephoneNumbersIsMutable();
+                  telephoneNumbers_.add(m);
+                } else {
+                  telephoneNumbersBuilder_.addMessage(m);
+                }
+                break;
+              } // case 42
+              case 50: {
+                oscal.common.v1.Common.URI m =
+                    input.readMessage(
+                        oscal.common.v1.Common.URI.parser(),
+                        extensionRegistry);
+                if (urlsBuilder_ == null) {
+                  ensureUrlsIsMutable();
+                  urls_.add(m);
+                } else {
+                  urlsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 50
+              case 58: {
+                oscal.common.v1.Common.Property m =
+                    input.readMessage(
+                        oscal.common.v1.Common.Property.parser(),
+                        extensionRegistry);
+                if (propsBuilder_ == null) {
+                  ensurePropsIsMutable();
+                  props_.add(m);
+                } else {
+                  propsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 58
+              case 66: {
+                oscal.common.v1.Common.Link m =
+                    input.readMessage(
+                        oscal.common.v1.Common.Link.parser(),
+                        extensionRegistry);
+                if (linksBuilder_ == null) {
+                  ensureLinksIsMutable();
+                  links_.add(m);
+                } else {
+                  linksBuilder_.addMessage(m);
+                }
+                break;
+              } // case 66
+              case 74: {
+                oscal.common.v1.Common.MarkupMultiline m =
+                    input.readMessage(
+                        oscal.common.v1.Common.MarkupMultiline.parser(),
+                        extensionRegistry);
+                if (remarksBuilder_ == null) {
+                  ensureRemarksIsMutable();
+                  remarks_.add(m);
+                } else {
+                  remarksBuilder_.addMessage(m);
+                }
+                break;
+              } // case 74
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private oscal.common.v1.Common.UUID uuid_;
+      private com.google.protobuf.SingleFieldBuilder<
+          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder> uuidBuilder_;
+      /**
+       * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
+       * @return Whether the uuid field is set.
+       */
+      public boolean hasUuid() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
+       * @return The uuid.
+       */
+      public oscal.common.v1.Common.UUID getUuid() {
+        if (uuidBuilder_ == null) {
+          return uuid_ == null ? oscal.common.v1.Common.UUID.getDefaultInstance() : uuid_;
+        } else {
+          return uuidBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
+       */
+      public Builder setUuid(oscal.common.v1.Common.UUID value) {
+        if (uuidBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          uuid_ = value;
+        } else {
+          uuidBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
+       */
+      public Builder setUuid(
+          oscal.common.v1.Common.UUID.Builder builderForValue) {
+        if (uuidBuilder_ == null) {
+          uuid_ = builderForValue.build();
+        } else {
+          uuidBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
+       */
+      public Builder mergeUuid(oscal.common.v1.Common.UUID value) {
+        if (uuidBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            uuid_ != null &&
+            uuid_ != oscal.common.v1.Common.UUID.getDefaultInstance()) {
+            getUuidBuilder().mergeFrom(value);
+          } else {
+            uuid_ = value;
+          }
+        } else {
+          uuidBuilder_.mergeFrom(value);
+        }
+        if (uuid_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
+       */
+      public Builder clearUuid() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        uuid_ = null;
+        if (uuidBuilder_ != null) {
+          uuidBuilder_.dispose();
+          uuidBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
+       */
+      public oscal.common.v1.Common.UUID.Builder getUuidBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return internalGetUuidFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
+       */
+      public oscal.common.v1.Common.UUIDOrBuilder getUuidOrBuilder() {
+        if (uuidBuilder_ != null) {
+          return uuidBuilder_.getMessageOrBuilder();
+        } else {
+          return uuid_ == null ?
+              oscal.common.v1.Common.UUID.getDefaultInstance() : uuid_;
+        }
+      }
+      /**
+       * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder> 
+          internalGetUuidFieldBuilder() {
+        if (uuidBuilder_ == null) {
+          uuidBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder>(
+                  getUuid(),
+                  getParentForChildren(),
+                  isClean());
+          uuid_ = null;
+        }
+        return uuidBuilder_;
+      }
+
+      private java.lang.Object title_ = "";
+      /**
+       * <code>string title = 2 [json_name = "title"];</code>
+       * @return The title.
+       */
+      public java.lang.String getTitle() {
+        java.lang.Object ref = title_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          title_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string title = 2 [json_name = "title"];</code>
+       * @return The bytes for title.
+       */
+      public com.google.protobuf.ByteString
+          getTitleBytes() {
+        java.lang.Object ref = title_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          title_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string title = 2 [json_name = "title"];</code>
+       * @param value The title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitle(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        title_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 2 [json_name = "title"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTitle() {
+        title_ = getDefaultInstance().getTitle();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 2 [json_name = "title"];</code>
+       * @param value The bytes for title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        title_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private oscal.common.v1.Common.Address address_;
+      private com.google.protobuf.SingleFieldBuilder<
+          oscal.common.v1.Common.Address, oscal.common.v1.Common.Address.Builder, oscal.common.v1.Common.AddressOrBuilder> addressBuilder_;
+      /**
+       * <code>.oscal.common.v1.Address address = 3 [json_name = "address"];</code>
+       * @return Whether the address field is set.
+       */
+      public boolean hasAddress() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.oscal.common.v1.Address address = 3 [json_name = "address"];</code>
+       * @return The address.
+       */
+      public oscal.common.v1.Common.Address getAddress() {
+        if (addressBuilder_ == null) {
+          return address_ == null ? oscal.common.v1.Common.Address.getDefaultInstance() : address_;
+        } else {
+          return addressBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.oscal.common.v1.Address address = 3 [json_name = "address"];</code>
+       */
+      public Builder setAddress(oscal.common.v1.Common.Address value) {
+        if (addressBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          address_ = value;
+        } else {
+          addressBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.Address address = 3 [json_name = "address"];</code>
+       */
+      public Builder setAddress(
+          oscal.common.v1.Common.Address.Builder builderForValue) {
+        if (addressBuilder_ == null) {
+          address_ = builderForValue.build();
+        } else {
+          addressBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.Address address = 3 [json_name = "address"];</code>
+       */
+      public Builder mergeAddress(oscal.common.v1.Common.Address value) {
+        if (addressBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            address_ != null &&
+            address_ != oscal.common.v1.Common.Address.getDefaultInstance()) {
+            getAddressBuilder().mergeFrom(value);
+          } else {
+            address_ = value;
+          }
+        } else {
+          addressBuilder_.mergeFrom(value);
+        }
+        if (address_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.Address address = 3 [json_name = "address"];</code>
+       */
+      public Builder clearAddress() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        address_ = null;
+        if (addressBuilder_ != null) {
+          addressBuilder_.dispose();
+          addressBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.Address address = 3 [json_name = "address"];</code>
+       */
+      public oscal.common.v1.Common.Address.Builder getAddressBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return internalGetAddressFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.oscal.common.v1.Address address = 3 [json_name = "address"];</code>
+       */
+      public oscal.common.v1.Common.AddressOrBuilder getAddressOrBuilder() {
+        if (addressBuilder_ != null) {
+          return addressBuilder_.getMessageOrBuilder();
+        } else {
+          return address_ == null ?
+              oscal.common.v1.Common.Address.getDefaultInstance() : address_;
+        }
+      }
+      /**
+       * <code>.oscal.common.v1.Address address = 3 [json_name = "address"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          oscal.common.v1.Common.Address, oscal.common.v1.Common.Address.Builder, oscal.common.v1.Common.AddressOrBuilder> 
+          internalGetAddressFieldBuilder() {
+        if (addressBuilder_ == null) {
+          addressBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              oscal.common.v1.Common.Address, oscal.common.v1.Common.Address.Builder, oscal.common.v1.Common.AddressOrBuilder>(
+                  getAddress(),
+                  getParentForChildren(),
+                  isClean());
+          address_ = null;
+        }
+        return addressBuilder_;
+      }
+
+      private java.util.List<oscal.common.v1.Common.EmailAddress> emailAddresses_ =
+        java.util.Collections.emptyList();
+      private void ensureEmailAddressesIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          emailAddresses_ = new java.util.ArrayList<oscal.common.v1.Common.EmailAddress>(emailAddresses_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.common.v1.Common.EmailAddress, oscal.common.v1.Common.EmailAddress.Builder, oscal.common.v1.Common.EmailAddressOrBuilder> emailAddressesBuilder_;
+
+      /**
+       * <code>repeated .oscal.common.v1.EmailAddress email_addresses = 4 [json_name = "emailAddresses"];</code>
+       */
+      public java.util.List<oscal.common.v1.Common.EmailAddress> getEmailAddressesList() {
+        if (emailAddressesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(emailAddresses_);
+        } else {
+          return emailAddressesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.EmailAddress email_addresses = 4 [json_name = "emailAddresses"];</code>
+       */
+      public int getEmailAddressesCount() {
+        if (emailAddressesBuilder_ == null) {
+          return emailAddresses_.size();
+        } else {
+          return emailAddressesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.EmailAddress email_addresses = 4 [json_name = "emailAddresses"];</code>
+       */
+      public oscal.common.v1.Common.EmailAddress getEmailAddresses(int index) {
+        if (emailAddressesBuilder_ == null) {
+          return emailAddresses_.get(index);
+        } else {
+          return emailAddressesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.EmailAddress email_addresses = 4 [json_name = "emailAddresses"];</code>
+       */
+      public Builder setEmailAddresses(
+          int index, oscal.common.v1.Common.EmailAddress value) {
+        if (emailAddressesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEmailAddressesIsMutable();
+          emailAddresses_.set(index, value);
+          onChanged();
+        } else {
+          emailAddressesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.EmailAddress email_addresses = 4 [json_name = "emailAddresses"];</code>
+       */
+      public Builder setEmailAddresses(
+          int index, oscal.common.v1.Common.EmailAddress.Builder builderForValue) {
+        if (emailAddressesBuilder_ == null) {
+          ensureEmailAddressesIsMutable();
+          emailAddresses_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          emailAddressesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.EmailAddress email_addresses = 4 [json_name = "emailAddresses"];</code>
+       */
+      public Builder addEmailAddresses(oscal.common.v1.Common.EmailAddress value) {
+        if (emailAddressesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEmailAddressesIsMutable();
+          emailAddresses_.add(value);
+          onChanged();
+        } else {
+          emailAddressesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.EmailAddress email_addresses = 4 [json_name = "emailAddresses"];</code>
+       */
+      public Builder addEmailAddresses(
+          int index, oscal.common.v1.Common.EmailAddress value) {
+        if (emailAddressesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEmailAddressesIsMutable();
+          emailAddresses_.add(index, value);
+          onChanged();
+        } else {
+          emailAddressesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.EmailAddress email_addresses = 4 [json_name = "emailAddresses"];</code>
+       */
+      public Builder addEmailAddresses(
+          oscal.common.v1.Common.EmailAddress.Builder builderForValue) {
+        if (emailAddressesBuilder_ == null) {
+          ensureEmailAddressesIsMutable();
+          emailAddresses_.add(builderForValue.build());
+          onChanged();
+        } else {
+          emailAddressesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.EmailAddress email_addresses = 4 [json_name = "emailAddresses"];</code>
+       */
+      public Builder addEmailAddresses(
+          int index, oscal.common.v1.Common.EmailAddress.Builder builderForValue) {
+        if (emailAddressesBuilder_ == null) {
+          ensureEmailAddressesIsMutable();
+          emailAddresses_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          emailAddressesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.EmailAddress email_addresses = 4 [json_name = "emailAddresses"];</code>
+       */
+      public Builder addAllEmailAddresses(
+          java.lang.Iterable<? extends oscal.common.v1.Common.EmailAddress> values) {
+        if (emailAddressesBuilder_ == null) {
+          ensureEmailAddressesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, emailAddresses_);
+          onChanged();
+        } else {
+          emailAddressesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.EmailAddress email_addresses = 4 [json_name = "emailAddresses"];</code>
+       */
+      public Builder clearEmailAddresses() {
+        if (emailAddressesBuilder_ == null) {
+          emailAddresses_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          emailAddressesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.EmailAddress email_addresses = 4 [json_name = "emailAddresses"];</code>
+       */
+      public Builder removeEmailAddresses(int index) {
+        if (emailAddressesBuilder_ == null) {
+          ensureEmailAddressesIsMutable();
+          emailAddresses_.remove(index);
+          onChanged();
+        } else {
+          emailAddressesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.EmailAddress email_addresses = 4 [json_name = "emailAddresses"];</code>
+       */
+      public oscal.common.v1.Common.EmailAddress.Builder getEmailAddressesBuilder(
+          int index) {
+        return internalGetEmailAddressesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .oscal.common.v1.EmailAddress email_addresses = 4 [json_name = "emailAddresses"];</code>
+       */
+      public oscal.common.v1.Common.EmailAddressOrBuilder getEmailAddressesOrBuilder(
+          int index) {
+        if (emailAddressesBuilder_ == null) {
+          return emailAddresses_.get(index);  } else {
+          return emailAddressesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.EmailAddress email_addresses = 4 [json_name = "emailAddresses"];</code>
+       */
+      public java.util.List<? extends oscal.common.v1.Common.EmailAddressOrBuilder> 
+           getEmailAddressesOrBuilderList() {
+        if (emailAddressesBuilder_ != null) {
+          return emailAddressesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(emailAddresses_);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.EmailAddress email_addresses = 4 [json_name = "emailAddresses"];</code>
+       */
+      public oscal.common.v1.Common.EmailAddress.Builder addEmailAddressesBuilder() {
+        return internalGetEmailAddressesFieldBuilder().addBuilder(
+            oscal.common.v1.Common.EmailAddress.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.common.v1.EmailAddress email_addresses = 4 [json_name = "emailAddresses"];</code>
+       */
+      public oscal.common.v1.Common.EmailAddress.Builder addEmailAddressesBuilder(
+          int index) {
+        return internalGetEmailAddressesFieldBuilder().addBuilder(
+            index, oscal.common.v1.Common.EmailAddress.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.common.v1.EmailAddress email_addresses = 4 [json_name = "emailAddresses"];</code>
+       */
+      public java.util.List<oscal.common.v1.Common.EmailAddress.Builder> 
+           getEmailAddressesBuilderList() {
+        return internalGetEmailAddressesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.common.v1.Common.EmailAddress, oscal.common.v1.Common.EmailAddress.Builder, oscal.common.v1.Common.EmailAddressOrBuilder> 
+          internalGetEmailAddressesFieldBuilder() {
+        if (emailAddressesBuilder_ == null) {
+          emailAddressesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              oscal.common.v1.Common.EmailAddress, oscal.common.v1.Common.EmailAddress.Builder, oscal.common.v1.Common.EmailAddressOrBuilder>(
+                  emailAddresses_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          emailAddresses_ = null;
+        }
+        return emailAddressesBuilder_;
+      }
+
+      private java.util.List<oscal.common.v1.Common.TelephoneNumber> telephoneNumbers_ =
+        java.util.Collections.emptyList();
+      private void ensureTelephoneNumbersIsMutable() {
+        if (!((bitField0_ & 0x00000010) != 0)) {
+          telephoneNumbers_ = new java.util.ArrayList<oscal.common.v1.Common.TelephoneNumber>(telephoneNumbers_);
+          bitField0_ |= 0x00000010;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.common.v1.Common.TelephoneNumber, oscal.common.v1.Common.TelephoneNumber.Builder, oscal.common.v1.Common.TelephoneNumberOrBuilder> telephoneNumbersBuilder_;
+
+      /**
+       * <code>repeated .oscal.common.v1.TelephoneNumber telephone_numbers = 5 [json_name = "telephoneNumbers"];</code>
+       */
+      public java.util.List<oscal.common.v1.Common.TelephoneNumber> getTelephoneNumbersList() {
+        if (telephoneNumbersBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(telephoneNumbers_);
+        } else {
+          return telephoneNumbersBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.TelephoneNumber telephone_numbers = 5 [json_name = "telephoneNumbers"];</code>
+       */
+      public int getTelephoneNumbersCount() {
+        if (telephoneNumbersBuilder_ == null) {
+          return telephoneNumbers_.size();
+        } else {
+          return telephoneNumbersBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.TelephoneNumber telephone_numbers = 5 [json_name = "telephoneNumbers"];</code>
+       */
+      public oscal.common.v1.Common.TelephoneNumber getTelephoneNumbers(int index) {
+        if (telephoneNumbersBuilder_ == null) {
+          return telephoneNumbers_.get(index);
+        } else {
+          return telephoneNumbersBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.TelephoneNumber telephone_numbers = 5 [json_name = "telephoneNumbers"];</code>
+       */
+      public Builder setTelephoneNumbers(
+          int index, oscal.common.v1.Common.TelephoneNumber value) {
+        if (telephoneNumbersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTelephoneNumbersIsMutable();
+          telephoneNumbers_.set(index, value);
+          onChanged();
+        } else {
+          telephoneNumbersBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.TelephoneNumber telephone_numbers = 5 [json_name = "telephoneNumbers"];</code>
+       */
+      public Builder setTelephoneNumbers(
+          int index, oscal.common.v1.Common.TelephoneNumber.Builder builderForValue) {
+        if (telephoneNumbersBuilder_ == null) {
+          ensureTelephoneNumbersIsMutable();
+          telephoneNumbers_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          telephoneNumbersBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.TelephoneNumber telephone_numbers = 5 [json_name = "telephoneNumbers"];</code>
+       */
+      public Builder addTelephoneNumbers(oscal.common.v1.Common.TelephoneNumber value) {
+        if (telephoneNumbersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTelephoneNumbersIsMutable();
+          telephoneNumbers_.add(value);
+          onChanged();
+        } else {
+          telephoneNumbersBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.TelephoneNumber telephone_numbers = 5 [json_name = "telephoneNumbers"];</code>
+       */
+      public Builder addTelephoneNumbers(
+          int index, oscal.common.v1.Common.TelephoneNumber value) {
+        if (telephoneNumbersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTelephoneNumbersIsMutable();
+          telephoneNumbers_.add(index, value);
+          onChanged();
+        } else {
+          telephoneNumbersBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.TelephoneNumber telephone_numbers = 5 [json_name = "telephoneNumbers"];</code>
+       */
+      public Builder addTelephoneNumbers(
+          oscal.common.v1.Common.TelephoneNumber.Builder builderForValue) {
+        if (telephoneNumbersBuilder_ == null) {
+          ensureTelephoneNumbersIsMutable();
+          telephoneNumbers_.add(builderForValue.build());
+          onChanged();
+        } else {
+          telephoneNumbersBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.TelephoneNumber telephone_numbers = 5 [json_name = "telephoneNumbers"];</code>
+       */
+      public Builder addTelephoneNumbers(
+          int index, oscal.common.v1.Common.TelephoneNumber.Builder builderForValue) {
+        if (telephoneNumbersBuilder_ == null) {
+          ensureTelephoneNumbersIsMutable();
+          telephoneNumbers_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          telephoneNumbersBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.TelephoneNumber telephone_numbers = 5 [json_name = "telephoneNumbers"];</code>
+       */
+      public Builder addAllTelephoneNumbers(
+          java.lang.Iterable<? extends oscal.common.v1.Common.TelephoneNumber> values) {
+        if (telephoneNumbersBuilder_ == null) {
+          ensureTelephoneNumbersIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, telephoneNumbers_);
+          onChanged();
+        } else {
+          telephoneNumbersBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.TelephoneNumber telephone_numbers = 5 [json_name = "telephoneNumbers"];</code>
+       */
+      public Builder clearTelephoneNumbers() {
+        if (telephoneNumbersBuilder_ == null) {
+          telephoneNumbers_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
+          onChanged();
+        } else {
+          telephoneNumbersBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.TelephoneNumber telephone_numbers = 5 [json_name = "telephoneNumbers"];</code>
+       */
+      public Builder removeTelephoneNumbers(int index) {
+        if (telephoneNumbersBuilder_ == null) {
+          ensureTelephoneNumbersIsMutable();
+          telephoneNumbers_.remove(index);
+          onChanged();
+        } else {
+          telephoneNumbersBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.TelephoneNumber telephone_numbers = 5 [json_name = "telephoneNumbers"];</code>
+       */
+      public oscal.common.v1.Common.TelephoneNumber.Builder getTelephoneNumbersBuilder(
+          int index) {
+        return internalGetTelephoneNumbersFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .oscal.common.v1.TelephoneNumber telephone_numbers = 5 [json_name = "telephoneNumbers"];</code>
+       */
+      public oscal.common.v1.Common.TelephoneNumberOrBuilder getTelephoneNumbersOrBuilder(
+          int index) {
+        if (telephoneNumbersBuilder_ == null) {
+          return telephoneNumbers_.get(index);  } else {
+          return telephoneNumbersBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.TelephoneNumber telephone_numbers = 5 [json_name = "telephoneNumbers"];</code>
+       */
+      public java.util.List<? extends oscal.common.v1.Common.TelephoneNumberOrBuilder> 
+           getTelephoneNumbersOrBuilderList() {
+        if (telephoneNumbersBuilder_ != null) {
+          return telephoneNumbersBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(telephoneNumbers_);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.TelephoneNumber telephone_numbers = 5 [json_name = "telephoneNumbers"];</code>
+       */
+      public oscal.common.v1.Common.TelephoneNumber.Builder addTelephoneNumbersBuilder() {
+        return internalGetTelephoneNumbersFieldBuilder().addBuilder(
+            oscal.common.v1.Common.TelephoneNumber.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.common.v1.TelephoneNumber telephone_numbers = 5 [json_name = "telephoneNumbers"];</code>
+       */
+      public oscal.common.v1.Common.TelephoneNumber.Builder addTelephoneNumbersBuilder(
+          int index) {
+        return internalGetTelephoneNumbersFieldBuilder().addBuilder(
+            index, oscal.common.v1.Common.TelephoneNumber.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.common.v1.TelephoneNumber telephone_numbers = 5 [json_name = "telephoneNumbers"];</code>
+       */
+      public java.util.List<oscal.common.v1.Common.TelephoneNumber.Builder> 
+           getTelephoneNumbersBuilderList() {
+        return internalGetTelephoneNumbersFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.common.v1.Common.TelephoneNumber, oscal.common.v1.Common.TelephoneNumber.Builder, oscal.common.v1.Common.TelephoneNumberOrBuilder> 
+          internalGetTelephoneNumbersFieldBuilder() {
+        if (telephoneNumbersBuilder_ == null) {
+          telephoneNumbersBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              oscal.common.v1.Common.TelephoneNumber, oscal.common.v1.Common.TelephoneNumber.Builder, oscal.common.v1.Common.TelephoneNumberOrBuilder>(
+                  telephoneNumbers_,
+                  ((bitField0_ & 0x00000010) != 0),
+                  getParentForChildren(),
+                  isClean());
+          telephoneNumbers_ = null;
+        }
+        return telephoneNumbersBuilder_;
+      }
+
+      private java.util.List<oscal.common.v1.Common.URI> urls_ =
+        java.util.Collections.emptyList();
+      private void ensureUrlsIsMutable() {
+        if (!((bitField0_ & 0x00000020) != 0)) {
+          urls_ = new java.util.ArrayList<oscal.common.v1.Common.URI>(urls_);
+          bitField0_ |= 0x00000020;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.common.v1.Common.URI, oscal.common.v1.Common.URI.Builder, oscal.common.v1.Common.URIOrBuilder> urlsBuilder_;
+
+      /**
+       * <code>repeated .oscal.common.v1.URI urls = 6 [json_name = "urls"];</code>
+       */
+      public java.util.List<oscal.common.v1.Common.URI> getUrlsList() {
+        if (urlsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(urls_);
+        } else {
+          return urlsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.URI urls = 6 [json_name = "urls"];</code>
+       */
+      public int getUrlsCount() {
+        if (urlsBuilder_ == null) {
+          return urls_.size();
+        } else {
+          return urlsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.URI urls = 6 [json_name = "urls"];</code>
+       */
+      public oscal.common.v1.Common.URI getUrls(int index) {
+        if (urlsBuilder_ == null) {
+          return urls_.get(index);
+        } else {
+          return urlsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.URI urls = 6 [json_name = "urls"];</code>
+       */
+      public Builder setUrls(
+          int index, oscal.common.v1.Common.URI value) {
+        if (urlsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUrlsIsMutable();
+          urls_.set(index, value);
+          onChanged();
+        } else {
+          urlsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.URI urls = 6 [json_name = "urls"];</code>
+       */
+      public Builder setUrls(
+          int index, oscal.common.v1.Common.URI.Builder builderForValue) {
+        if (urlsBuilder_ == null) {
+          ensureUrlsIsMutable();
+          urls_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          urlsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.URI urls = 6 [json_name = "urls"];</code>
+       */
+      public Builder addUrls(oscal.common.v1.Common.URI value) {
+        if (urlsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUrlsIsMutable();
+          urls_.add(value);
+          onChanged();
+        } else {
+          urlsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.URI urls = 6 [json_name = "urls"];</code>
+       */
+      public Builder addUrls(
+          int index, oscal.common.v1.Common.URI value) {
+        if (urlsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUrlsIsMutable();
+          urls_.add(index, value);
+          onChanged();
+        } else {
+          urlsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.URI urls = 6 [json_name = "urls"];</code>
+       */
+      public Builder addUrls(
+          oscal.common.v1.Common.URI.Builder builderForValue) {
+        if (urlsBuilder_ == null) {
+          ensureUrlsIsMutable();
+          urls_.add(builderForValue.build());
+          onChanged();
+        } else {
+          urlsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.URI urls = 6 [json_name = "urls"];</code>
+       */
+      public Builder addUrls(
+          int index, oscal.common.v1.Common.URI.Builder builderForValue) {
+        if (urlsBuilder_ == null) {
+          ensureUrlsIsMutable();
+          urls_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          urlsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.URI urls = 6 [json_name = "urls"];</code>
+       */
+      public Builder addAllUrls(
+          java.lang.Iterable<? extends oscal.common.v1.Common.URI> values) {
+        if (urlsBuilder_ == null) {
+          ensureUrlsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, urls_);
+          onChanged();
+        } else {
+          urlsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.URI urls = 6 [json_name = "urls"];</code>
+       */
+      public Builder clearUrls() {
+        if (urlsBuilder_ == null) {
+          urls_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000020);
+          onChanged();
+        } else {
+          urlsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.URI urls = 6 [json_name = "urls"];</code>
+       */
+      public Builder removeUrls(int index) {
+        if (urlsBuilder_ == null) {
+          ensureUrlsIsMutable();
+          urls_.remove(index);
+          onChanged();
+        } else {
+          urlsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.URI urls = 6 [json_name = "urls"];</code>
+       */
+      public oscal.common.v1.Common.URI.Builder getUrlsBuilder(
+          int index) {
+        return internalGetUrlsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .oscal.common.v1.URI urls = 6 [json_name = "urls"];</code>
+       */
+      public oscal.common.v1.Common.URIOrBuilder getUrlsOrBuilder(
+          int index) {
+        if (urlsBuilder_ == null) {
+          return urls_.get(index);  } else {
+          return urlsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.URI urls = 6 [json_name = "urls"];</code>
+       */
+      public java.util.List<? extends oscal.common.v1.Common.URIOrBuilder> 
+           getUrlsOrBuilderList() {
+        if (urlsBuilder_ != null) {
+          return urlsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(urls_);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.URI urls = 6 [json_name = "urls"];</code>
+       */
+      public oscal.common.v1.Common.URI.Builder addUrlsBuilder() {
+        return internalGetUrlsFieldBuilder().addBuilder(
+            oscal.common.v1.Common.URI.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.common.v1.URI urls = 6 [json_name = "urls"];</code>
+       */
+      public oscal.common.v1.Common.URI.Builder addUrlsBuilder(
+          int index) {
+        return internalGetUrlsFieldBuilder().addBuilder(
+            index, oscal.common.v1.Common.URI.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.common.v1.URI urls = 6 [json_name = "urls"];</code>
+       */
+      public java.util.List<oscal.common.v1.Common.URI.Builder> 
+           getUrlsBuilderList() {
+        return internalGetUrlsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.common.v1.Common.URI, oscal.common.v1.Common.URI.Builder, oscal.common.v1.Common.URIOrBuilder> 
+          internalGetUrlsFieldBuilder() {
+        if (urlsBuilder_ == null) {
+          urlsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              oscal.common.v1.Common.URI, oscal.common.v1.Common.URI.Builder, oscal.common.v1.Common.URIOrBuilder>(
+                  urls_,
+                  ((bitField0_ & 0x00000020) != 0),
+                  getParentForChildren(),
+                  isClean());
+          urls_ = null;
+        }
+        return urlsBuilder_;
+      }
+
+      private java.util.List<oscal.common.v1.Common.Property> props_ =
+        java.util.Collections.emptyList();
+      private void ensurePropsIsMutable() {
+        if (!((bitField0_ & 0x00000040) != 0)) {
+          props_ = new java.util.ArrayList<oscal.common.v1.Common.Property>(props_);
+          bitField0_ |= 0x00000040;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> propsBuilder_;
+
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 7 [json_name = "props"];</code>
+       */
+      public java.util.List<oscal.common.v1.Common.Property> getPropsList() {
+        if (propsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(props_);
+        } else {
+          return propsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 7 [json_name = "props"];</code>
+       */
+      public int getPropsCount() {
+        if (propsBuilder_ == null) {
+          return props_.size();
+        } else {
+          return propsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 7 [json_name = "props"];</code>
+       */
+      public oscal.common.v1.Common.Property getProps(int index) {
+        if (propsBuilder_ == null) {
+          return props_.get(index);
+        } else {
+          return propsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 7 [json_name = "props"];</code>
+       */
+      public Builder setProps(
+          int index, oscal.common.v1.Common.Property value) {
+        if (propsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePropsIsMutable();
+          props_.set(index, value);
+          onChanged();
+        } else {
+          propsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 7 [json_name = "props"];</code>
+       */
+      public Builder setProps(
+          int index, oscal.common.v1.Common.Property.Builder builderForValue) {
+        if (propsBuilder_ == null) {
+          ensurePropsIsMutable();
+          props_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          propsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 7 [json_name = "props"];</code>
+       */
+      public Builder addProps(oscal.common.v1.Common.Property value) {
+        if (propsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePropsIsMutable();
+          props_.add(value);
+          onChanged();
+        } else {
+          propsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 7 [json_name = "props"];</code>
+       */
+      public Builder addProps(
+          int index, oscal.common.v1.Common.Property value) {
+        if (propsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePropsIsMutable();
+          props_.add(index, value);
+          onChanged();
+        } else {
+          propsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 7 [json_name = "props"];</code>
+       */
+      public Builder addProps(
+          oscal.common.v1.Common.Property.Builder builderForValue) {
+        if (propsBuilder_ == null) {
+          ensurePropsIsMutable();
+          props_.add(builderForValue.build());
+          onChanged();
+        } else {
+          propsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 7 [json_name = "props"];</code>
+       */
+      public Builder addProps(
+          int index, oscal.common.v1.Common.Property.Builder builderForValue) {
+        if (propsBuilder_ == null) {
+          ensurePropsIsMutable();
+          props_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          propsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 7 [json_name = "props"];</code>
+       */
+      public Builder addAllProps(
+          java.lang.Iterable<? extends oscal.common.v1.Common.Property> values) {
+        if (propsBuilder_ == null) {
+          ensurePropsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, props_);
+          onChanged();
+        } else {
+          propsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 7 [json_name = "props"];</code>
+       */
+      public Builder clearProps() {
+        if (propsBuilder_ == null) {
+          props_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000040);
+          onChanged();
+        } else {
+          propsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 7 [json_name = "props"];</code>
+       */
+      public Builder removeProps(int index) {
+        if (propsBuilder_ == null) {
+          ensurePropsIsMutable();
+          props_.remove(index);
+          onChanged();
+        } else {
+          propsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 7 [json_name = "props"];</code>
+       */
+      public oscal.common.v1.Common.Property.Builder getPropsBuilder(
+          int index) {
+        return internalGetPropsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 7 [json_name = "props"];</code>
+       */
+      public oscal.common.v1.Common.PropertyOrBuilder getPropsOrBuilder(
+          int index) {
+        if (propsBuilder_ == null) {
+          return props_.get(index);  } else {
+          return propsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 7 [json_name = "props"];</code>
+       */
+      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+           getPropsOrBuilderList() {
+        if (propsBuilder_ != null) {
+          return propsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(props_);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 7 [json_name = "props"];</code>
+       */
+      public oscal.common.v1.Common.Property.Builder addPropsBuilder() {
+        return internalGetPropsFieldBuilder().addBuilder(
+            oscal.common.v1.Common.Property.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 7 [json_name = "props"];</code>
+       */
+      public oscal.common.v1.Common.Property.Builder addPropsBuilder(
+          int index) {
+        return internalGetPropsFieldBuilder().addBuilder(
+            index, oscal.common.v1.Common.Property.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 7 [json_name = "props"];</code>
+       */
+      public java.util.List<oscal.common.v1.Common.Property.Builder> 
+           getPropsBuilderList() {
+        return internalGetPropsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> 
+          internalGetPropsFieldBuilder() {
+        if (propsBuilder_ == null) {
+          propsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder>(
+                  props_,
+                  ((bitField0_ & 0x00000040) != 0),
+                  getParentForChildren(),
+                  isClean());
+          props_ = null;
+        }
+        return propsBuilder_;
+      }
+
+      private java.util.List<oscal.common.v1.Common.Link> links_ =
+        java.util.Collections.emptyList();
+      private void ensureLinksIsMutable() {
+        if (!((bitField0_ & 0x00000080) != 0)) {
+          links_ = new java.util.ArrayList<oscal.common.v1.Common.Link>(links_);
+          bitField0_ |= 0x00000080;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder> linksBuilder_;
+
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 8 [json_name = "links"];</code>
+       */
+      public java.util.List<oscal.common.v1.Common.Link> getLinksList() {
+        if (linksBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(links_);
+        } else {
+          return linksBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 8 [json_name = "links"];</code>
+       */
+      public int getLinksCount() {
+        if (linksBuilder_ == null) {
+          return links_.size();
+        } else {
+          return linksBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 8 [json_name = "links"];</code>
+       */
+      public oscal.common.v1.Common.Link getLinks(int index) {
+        if (linksBuilder_ == null) {
+          return links_.get(index);
+        } else {
+          return linksBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 8 [json_name = "links"];</code>
+       */
+      public Builder setLinks(
+          int index, oscal.common.v1.Common.Link value) {
+        if (linksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLinksIsMutable();
+          links_.set(index, value);
+          onChanged();
+        } else {
+          linksBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 8 [json_name = "links"];</code>
+       */
+      public Builder setLinks(
+          int index, oscal.common.v1.Common.Link.Builder builderForValue) {
+        if (linksBuilder_ == null) {
+          ensureLinksIsMutable();
+          links_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          linksBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 8 [json_name = "links"];</code>
+       */
+      public Builder addLinks(oscal.common.v1.Common.Link value) {
+        if (linksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLinksIsMutable();
+          links_.add(value);
+          onChanged();
+        } else {
+          linksBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 8 [json_name = "links"];</code>
+       */
+      public Builder addLinks(
+          int index, oscal.common.v1.Common.Link value) {
+        if (linksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLinksIsMutable();
+          links_.add(index, value);
+          onChanged();
+        } else {
+          linksBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 8 [json_name = "links"];</code>
+       */
+      public Builder addLinks(
+          oscal.common.v1.Common.Link.Builder builderForValue) {
+        if (linksBuilder_ == null) {
+          ensureLinksIsMutable();
+          links_.add(builderForValue.build());
+          onChanged();
+        } else {
+          linksBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 8 [json_name = "links"];</code>
+       */
+      public Builder addLinks(
+          int index, oscal.common.v1.Common.Link.Builder builderForValue) {
+        if (linksBuilder_ == null) {
+          ensureLinksIsMutable();
+          links_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          linksBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 8 [json_name = "links"];</code>
+       */
+      public Builder addAllLinks(
+          java.lang.Iterable<? extends oscal.common.v1.Common.Link> values) {
+        if (linksBuilder_ == null) {
+          ensureLinksIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, links_);
+          onChanged();
+        } else {
+          linksBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 8 [json_name = "links"];</code>
+       */
+      public Builder clearLinks() {
+        if (linksBuilder_ == null) {
+          links_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000080);
+          onChanged();
+        } else {
+          linksBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 8 [json_name = "links"];</code>
+       */
+      public Builder removeLinks(int index) {
+        if (linksBuilder_ == null) {
+          ensureLinksIsMutable();
+          links_.remove(index);
+          onChanged();
+        } else {
+          linksBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 8 [json_name = "links"];</code>
+       */
+      public oscal.common.v1.Common.Link.Builder getLinksBuilder(
+          int index) {
+        return internalGetLinksFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 8 [json_name = "links"];</code>
+       */
+      public oscal.common.v1.Common.LinkOrBuilder getLinksOrBuilder(
+          int index) {
+        if (linksBuilder_ == null) {
+          return links_.get(index);  } else {
+          return linksBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 8 [json_name = "links"];</code>
+       */
+      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+           getLinksOrBuilderList() {
+        if (linksBuilder_ != null) {
+          return linksBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(links_);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 8 [json_name = "links"];</code>
+       */
+      public oscal.common.v1.Common.Link.Builder addLinksBuilder() {
+        return internalGetLinksFieldBuilder().addBuilder(
+            oscal.common.v1.Common.Link.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 8 [json_name = "links"];</code>
+       */
+      public oscal.common.v1.Common.Link.Builder addLinksBuilder(
+          int index) {
+        return internalGetLinksFieldBuilder().addBuilder(
+            index, oscal.common.v1.Common.Link.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 8 [json_name = "links"];</code>
+       */
+      public java.util.List<oscal.common.v1.Common.Link.Builder> 
+           getLinksBuilderList() {
+        return internalGetLinksFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder> 
+          internalGetLinksFieldBuilder() {
+        if (linksBuilder_ == null) {
+          linksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder>(
+                  links_,
+                  ((bitField0_ & 0x00000080) != 0),
+                  getParentForChildren(),
+                  isClean());
+          links_ = null;
+        }
+        return linksBuilder_;
+      }
+
+      private java.util.List<oscal.common.v1.Common.MarkupMultiline> remarks_ =
+        java.util.Collections.emptyList();
+      private void ensureRemarksIsMutable() {
+        if (!((bitField0_ & 0x00000100) != 0)) {
+          remarks_ = new java.util.ArrayList<oscal.common.v1.Common.MarkupMultiline>(remarks_);
+          bitField0_ |= 0x00000100;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> remarksBuilder_;
+
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 9 [json_name = "remarks"];</code>
+       */
+      public java.util.List<oscal.common.v1.Common.MarkupMultiline> getRemarksList() {
+        if (remarksBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(remarks_);
+        } else {
+          return remarksBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 9 [json_name = "remarks"];</code>
+       */
+      public int getRemarksCount() {
+        if (remarksBuilder_ == null) {
+          return remarks_.size();
+        } else {
+          return remarksBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 9 [json_name = "remarks"];</code>
+       */
+      public oscal.common.v1.Common.MarkupMultiline getRemarks(int index) {
+        if (remarksBuilder_ == null) {
+          return remarks_.get(index);
+        } else {
+          return remarksBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 9 [json_name = "remarks"];</code>
+       */
+      public Builder setRemarks(
+          int index, oscal.common.v1.Common.MarkupMultiline value) {
+        if (remarksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRemarksIsMutable();
+          remarks_.set(index, value);
+          onChanged();
+        } else {
+          remarksBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 9 [json_name = "remarks"];</code>
+       */
+      public Builder setRemarks(
+          int index, oscal.common.v1.Common.MarkupMultiline.Builder builderForValue) {
+        if (remarksBuilder_ == null) {
+          ensureRemarksIsMutable();
+          remarks_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          remarksBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 9 [json_name = "remarks"];</code>
+       */
+      public Builder addRemarks(oscal.common.v1.Common.MarkupMultiline value) {
+        if (remarksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRemarksIsMutable();
+          remarks_.add(value);
+          onChanged();
+        } else {
+          remarksBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 9 [json_name = "remarks"];</code>
+       */
+      public Builder addRemarks(
+          int index, oscal.common.v1.Common.MarkupMultiline value) {
+        if (remarksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRemarksIsMutable();
+          remarks_.add(index, value);
+          onChanged();
+        } else {
+          remarksBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 9 [json_name = "remarks"];</code>
+       */
+      public Builder addRemarks(
+          oscal.common.v1.Common.MarkupMultiline.Builder builderForValue) {
+        if (remarksBuilder_ == null) {
+          ensureRemarksIsMutable();
+          remarks_.add(builderForValue.build());
+          onChanged();
+        } else {
+          remarksBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 9 [json_name = "remarks"];</code>
+       */
+      public Builder addRemarks(
+          int index, oscal.common.v1.Common.MarkupMultiline.Builder builderForValue) {
+        if (remarksBuilder_ == null) {
+          ensureRemarksIsMutable();
+          remarks_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          remarksBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 9 [json_name = "remarks"];</code>
+       */
+      public Builder addAllRemarks(
+          java.lang.Iterable<? extends oscal.common.v1.Common.MarkupMultiline> values) {
+        if (remarksBuilder_ == null) {
+          ensureRemarksIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, remarks_);
+          onChanged();
+        } else {
+          remarksBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 9 [json_name = "remarks"];</code>
+       */
+      public Builder clearRemarks() {
+        if (remarksBuilder_ == null) {
+          remarks_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000100);
+          onChanged();
+        } else {
+          remarksBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 9 [json_name = "remarks"];</code>
+       */
+      public Builder removeRemarks(int index) {
+        if (remarksBuilder_ == null) {
+          ensureRemarksIsMutable();
+          remarks_.remove(index);
+          onChanged();
+        } else {
+          remarksBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 9 [json_name = "remarks"];</code>
+       */
+      public oscal.common.v1.Common.MarkupMultiline.Builder getRemarksBuilder(
+          int index) {
+        return internalGetRemarksFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 9 [json_name = "remarks"];</code>
+       */
+      public oscal.common.v1.Common.MarkupMultilineOrBuilder getRemarksOrBuilder(
+          int index) {
+        if (remarksBuilder_ == null) {
+          return remarks_.get(index);  } else {
+          return remarksBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 9 [json_name = "remarks"];</code>
+       */
+      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+           getRemarksOrBuilderList() {
+        if (remarksBuilder_ != null) {
+          return remarksBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(remarks_);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 9 [json_name = "remarks"];</code>
+       */
+      public oscal.common.v1.Common.MarkupMultiline.Builder addRemarksBuilder() {
+        return internalGetRemarksFieldBuilder().addBuilder(
+            oscal.common.v1.Common.MarkupMultiline.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 9 [json_name = "remarks"];</code>
+       */
+      public oscal.common.v1.Common.MarkupMultiline.Builder addRemarksBuilder(
+          int index) {
+        return internalGetRemarksFieldBuilder().addBuilder(
+            index, oscal.common.v1.Common.MarkupMultiline.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 9 [json_name = "remarks"];</code>
+       */
+      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder> 
+           getRemarksBuilderList() {
+        return internalGetRemarksFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          internalGetRemarksFieldBuilder() {
+        if (remarksBuilder_ == null) {
+          remarksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>(
+                  remarks_,
+                  ((bitField0_ & 0x00000100) != 0),
+                  getParentForChildren(),
+                  isClean());
+          remarks_ = null;
+        }
+        return remarksBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:oscal.common.v1.Location)
+    }
+
+    // @@protoc_insertion_point(class_scope:oscal.common.v1.Location)
+    private static final oscal.common.v1.Common.Location DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new oscal.common.v1.Common.Location();
+    }
+
+    public static oscal.common.v1.Common.Location getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Location>
+        PARSER = new com.google.protobuf.AbstractParser<Location>() {
+      @java.lang.Override
+      public Location parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Location> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Location> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public oscal.common.v1.Common.Location getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface AddrLineOrBuilder extends
       // @@protoc_insertion_point(interface_extends:oscal.common.v1.AddrLine)
       com.google.protobuf.MessageOrBuilder {
@@ -17191,6 +20410,54 @@ public final class Common extends com.google.protobuf.GeneratedFile {
      */
     com.google.protobuf.ByteString
         getRemarksBytes(int index);
+
+    /**
+     * <code>repeated .oscal.common.v1.PartyExternalId external_ids = 12 [json_name = "externalIds"];</code>
+     */
+    java.util.List<oscal.common.v1.Common.PartyExternalId> 
+        getExternalIdsList();
+    /**
+     * <code>repeated .oscal.common.v1.PartyExternalId external_ids = 12 [json_name = "externalIds"];</code>
+     */
+    oscal.common.v1.Common.PartyExternalId getExternalIds(int index);
+    /**
+     * <code>repeated .oscal.common.v1.PartyExternalId external_ids = 12 [json_name = "externalIds"];</code>
+     */
+    int getExternalIdsCount();
+    /**
+     * <code>repeated .oscal.common.v1.PartyExternalId external_ids = 12 [json_name = "externalIds"];</code>
+     */
+    java.util.List<? extends oscal.common.v1.Common.PartyExternalIdOrBuilder> 
+        getExternalIdsOrBuilderList();
+    /**
+     * <code>repeated .oscal.common.v1.PartyExternalId external_ids = 12 [json_name = "externalIds"];</code>
+     */
+    oscal.common.v1.Common.PartyExternalIdOrBuilder getExternalIdsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .oscal.common.v1.UUID location_uuids = 13 [json_name = "locationUuids"];</code>
+     */
+    java.util.List<oscal.common.v1.Common.UUID> 
+        getLocationUuidsList();
+    /**
+     * <code>repeated .oscal.common.v1.UUID location_uuids = 13 [json_name = "locationUuids"];</code>
+     */
+    oscal.common.v1.Common.UUID getLocationUuids(int index);
+    /**
+     * <code>repeated .oscal.common.v1.UUID location_uuids = 13 [json_name = "locationUuids"];</code>
+     */
+    int getLocationUuidsCount();
+    /**
+     * <code>repeated .oscal.common.v1.UUID location_uuids = 13 [json_name = "locationUuids"];</code>
+     */
+    java.util.List<? extends oscal.common.v1.Common.UUIDOrBuilder> 
+        getLocationUuidsOrBuilderList();
+    /**
+     * <code>repeated .oscal.common.v1.UUID location_uuids = 13 [json_name = "locationUuids"];</code>
+     */
+    oscal.common.v1.Common.UUIDOrBuilder getLocationUuidsOrBuilder(
+        int index);
   }
   /**
    * <pre>
@@ -17229,6 +20496,8 @@ public final class Common extends com.google.protobuf.GeneratedFile {
       responsibleParties_ = java.util.Collections.emptyList();
       remarks_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
+      externalIds_ = java.util.Collections.emptyList();
+      locationUuids_ = java.util.Collections.emptyList();
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
@@ -17659,6 +20928,88 @@ public final class Common extends com.google.protobuf.GeneratedFile {
       return remarks_.getByteString(index);
     }
 
+    public static final int EXTERNAL_IDS_FIELD_NUMBER = 12;
+    @SuppressWarnings("serial")
+    private java.util.List<oscal.common.v1.Common.PartyExternalId> externalIds_;
+    /**
+     * <code>repeated .oscal.common.v1.PartyExternalId external_ids = 12 [json_name = "externalIds"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<oscal.common.v1.Common.PartyExternalId> getExternalIdsList() {
+      return externalIds_;
+    }
+    /**
+     * <code>repeated .oscal.common.v1.PartyExternalId external_ids = 12 [json_name = "externalIds"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends oscal.common.v1.Common.PartyExternalIdOrBuilder> 
+        getExternalIdsOrBuilderList() {
+      return externalIds_;
+    }
+    /**
+     * <code>repeated .oscal.common.v1.PartyExternalId external_ids = 12 [json_name = "externalIds"];</code>
+     */
+    @java.lang.Override
+    public int getExternalIdsCount() {
+      return externalIds_.size();
+    }
+    /**
+     * <code>repeated .oscal.common.v1.PartyExternalId external_ids = 12 [json_name = "externalIds"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.PartyExternalId getExternalIds(int index) {
+      return externalIds_.get(index);
+    }
+    /**
+     * <code>repeated .oscal.common.v1.PartyExternalId external_ids = 12 [json_name = "externalIds"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.PartyExternalIdOrBuilder getExternalIdsOrBuilder(
+        int index) {
+      return externalIds_.get(index);
+    }
+
+    public static final int LOCATION_UUIDS_FIELD_NUMBER = 13;
+    @SuppressWarnings("serial")
+    private java.util.List<oscal.common.v1.Common.UUID> locationUuids_;
+    /**
+     * <code>repeated .oscal.common.v1.UUID location_uuids = 13 [json_name = "locationUuids"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<oscal.common.v1.Common.UUID> getLocationUuidsList() {
+      return locationUuids_;
+    }
+    /**
+     * <code>repeated .oscal.common.v1.UUID location_uuids = 13 [json_name = "locationUuids"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends oscal.common.v1.Common.UUIDOrBuilder> 
+        getLocationUuidsOrBuilderList() {
+      return locationUuids_;
+    }
+    /**
+     * <code>repeated .oscal.common.v1.UUID location_uuids = 13 [json_name = "locationUuids"];</code>
+     */
+    @java.lang.Override
+    public int getLocationUuidsCount() {
+      return locationUuids_.size();
+    }
+    /**
+     * <code>repeated .oscal.common.v1.UUID location_uuids = 13 [json_name = "locationUuids"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.UUID getLocationUuids(int index) {
+      return locationUuids_.get(index);
+    }
+    /**
+     * <code>repeated .oscal.common.v1.UUID location_uuids = 13 [json_name = "locationUuids"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.UUIDOrBuilder getLocationUuidsOrBuilder(
+        int index) {
+      return locationUuids_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -17705,6 +21056,12 @@ public final class Common extends com.google.protobuf.GeneratedFile {
       }
       for (int i = 0; i < remarks_.size(); i++) {
         com.google.protobuf.GeneratedMessage.writeString(output, 11, remarks_.getRaw(i));
+      }
+      for (int i = 0; i < externalIds_.size(); i++) {
+        output.writeMessage(12, externalIds_.get(i));
+      }
+      for (int i = 0; i < locationUuids_.size(); i++) {
+        output.writeMessage(13, locationUuids_.get(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -17785,6 +21142,24 @@ public final class Common extends com.google.protobuf.GeneratedFile {
         size += dataSize;
         size += 1 * getRemarksList().size();
       }
+
+          {
+            final int count = externalIds_.size();
+            for (int i = 0; i < count; i++) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeMessageSizeNoTag(externalIds_.get(i));
+            }
+            size += 1 * count;
+          }
+
+          {
+            final int count = locationUuids_.size();
+            for (int i = 0; i < count; i++) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeMessageSizeNoTag(locationUuids_.get(i));
+            }
+            size += 1 * count;
+          }
       return size;
     }
     @java.lang.Override
@@ -17837,6 +21212,10 @@ public final class Common extends com.google.protobuf.GeneratedFile {
           .equals(other.getResponsiblePartiesList())) return false;
       if (!getRemarksList()
           .equals(other.getRemarksList())) return false;
+      if (!getExternalIdsList()
+          .equals(other.getExternalIdsList())) return false;
+      if (!getLocationUuidsList()
+          .equals(other.getLocationUuidsList())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -17887,6 +21266,14 @@ public final class Common extends com.google.protobuf.GeneratedFile {
       if (getRemarksCount() > 0) {
         hash = (37 * hash) + REMARKS_FIELD_NUMBER;
         hash = (53 * hash) + getRemarksList().hashCode();
+      }
+      if (getExternalIdsCount() > 0) {
+        hash = (37 * hash) + EXTERNAL_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getExternalIdsList().hashCode();
+      }
+      if (getLocationUuidsCount() > 0) {
+        hash = (37 * hash) + LOCATION_UUIDS_FIELD_NUMBER;
+        hash = (53 * hash) + getLocationUuidsList().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -18029,6 +21416,8 @@ public final class Common extends com.google.protobuf.GeneratedFile {
           internalGetPropsFieldBuilder();
           internalGetLinksFieldBuilder();
           internalGetResponsiblePartiesFieldBuilder();
+          internalGetExternalIdsFieldBuilder();
+          internalGetLocationUuidsFieldBuilder();
         }
       }
       @java.lang.Override
@@ -18086,6 +21475,20 @@ public final class Common extends com.google.protobuf.GeneratedFile {
         bitField0_ = (bitField0_ & ~0x00000200);
         remarks_ =
             com.google.protobuf.LazyStringArrayList.emptyList();
+        if (externalIdsBuilder_ == null) {
+          externalIds_ = java.util.Collections.emptyList();
+        } else {
+          externalIds_ = null;
+          externalIdsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000800);
+        if (locationUuidsBuilder_ == null) {
+          locationUuids_ = java.util.Collections.emptyList();
+        } else {
+          locationUuids_ = null;
+          locationUuidsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00001000);
         return this;
       }
 
@@ -18163,6 +21566,24 @@ public final class Common extends com.google.protobuf.GeneratedFile {
           result.responsibleParties_ = responsibleParties_;
         } else {
           result.responsibleParties_ = responsiblePartiesBuilder_.build();
+        }
+        if (externalIdsBuilder_ == null) {
+          if (((bitField0_ & 0x00000800) != 0)) {
+            externalIds_ = java.util.Collections.unmodifiableList(externalIds_);
+            bitField0_ = (bitField0_ & ~0x00000800);
+          }
+          result.externalIds_ = externalIds_;
+        } else {
+          result.externalIds_ = externalIdsBuilder_.build();
+        }
+        if (locationUuidsBuilder_ == null) {
+          if (((bitField0_ & 0x00001000) != 0)) {
+            locationUuids_ = java.util.Collections.unmodifiableList(locationUuids_);
+            bitField0_ = (bitField0_ & ~0x00001000);
+          }
+          result.locationUuids_ = locationUuids_;
+        } else {
+          result.locationUuids_ = locationUuidsBuilder_.build();
         }
       }
 
@@ -18376,6 +21797,58 @@ public final class Common extends com.google.protobuf.GeneratedFile {
           }
           onChanged();
         }
+        if (externalIdsBuilder_ == null) {
+          if (!other.externalIds_.isEmpty()) {
+            if (externalIds_.isEmpty()) {
+              externalIds_ = other.externalIds_;
+              bitField0_ = (bitField0_ & ~0x00000800);
+            } else {
+              ensureExternalIdsIsMutable();
+              externalIds_.addAll(other.externalIds_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.externalIds_.isEmpty()) {
+            if (externalIdsBuilder_.isEmpty()) {
+              externalIdsBuilder_.dispose();
+              externalIdsBuilder_ = null;
+              externalIds_ = other.externalIds_;
+              bitField0_ = (bitField0_ & ~0x00000800);
+              externalIdsBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   internalGetExternalIdsFieldBuilder() : null;
+            } else {
+              externalIdsBuilder_.addAllMessages(other.externalIds_);
+            }
+          }
+        }
+        if (locationUuidsBuilder_ == null) {
+          if (!other.locationUuids_.isEmpty()) {
+            if (locationUuids_.isEmpty()) {
+              locationUuids_ = other.locationUuids_;
+              bitField0_ = (bitField0_ & ~0x00001000);
+            } else {
+              ensureLocationUuidsIsMutable();
+              locationUuids_.addAll(other.locationUuids_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.locationUuids_.isEmpty()) {
+            if (locationUuidsBuilder_.isEmpty()) {
+              locationUuidsBuilder_.dispose();
+              locationUuidsBuilder_ = null;
+              locationUuids_ = other.locationUuids_;
+              bitField0_ = (bitField0_ & ~0x00001000);
+              locationUuidsBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   internalGetLocationUuidsFieldBuilder() : null;
+            } else {
+              locationUuidsBuilder_.addAllMessages(other.locationUuids_);
+            }
+          }
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -18501,6 +21974,32 @@ public final class Common extends com.google.protobuf.GeneratedFile {
                 remarks_.add(input.readStringRequireUtf8());
                 break;
               } // case 90
+              case 98: {
+                oscal.common.v1.Common.PartyExternalId m =
+                    input.readMessage(
+                        oscal.common.v1.Common.PartyExternalId.parser(),
+                        extensionRegistry);
+                if (externalIdsBuilder_ == null) {
+                  ensureExternalIdsIsMutable();
+                  externalIds_.add(m);
+                } else {
+                  externalIdsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 98
+              case 106: {
+                oscal.common.v1.Common.UUID m =
+                    input.readMessage(
+                        oscal.common.v1.Common.UUID.parser(),
+                        extensionRegistry);
+                if (locationUuidsBuilder_ == null) {
+                  ensureLocationUuidsIsMutable();
+                  locationUuids_.add(m);
+                } else {
+                  locationUuidsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 106
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -20326,6 +23825,486 @@ public final class Common extends com.google.protobuf.GeneratedFile {
         return this;
       }
 
+      private java.util.List<oscal.common.v1.Common.PartyExternalId> externalIds_ =
+        java.util.Collections.emptyList();
+      private void ensureExternalIdsIsMutable() {
+        if (!((bitField0_ & 0x00000800) != 0)) {
+          externalIds_ = new java.util.ArrayList<oscal.common.v1.Common.PartyExternalId>(externalIds_);
+          bitField0_ |= 0x00000800;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.common.v1.Common.PartyExternalId, oscal.common.v1.Common.PartyExternalId.Builder, oscal.common.v1.Common.PartyExternalIdOrBuilder> externalIdsBuilder_;
+
+      /**
+       * <code>repeated .oscal.common.v1.PartyExternalId external_ids = 12 [json_name = "externalIds"];</code>
+       */
+      public java.util.List<oscal.common.v1.Common.PartyExternalId> getExternalIdsList() {
+        if (externalIdsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(externalIds_);
+        } else {
+          return externalIdsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.PartyExternalId external_ids = 12 [json_name = "externalIds"];</code>
+       */
+      public int getExternalIdsCount() {
+        if (externalIdsBuilder_ == null) {
+          return externalIds_.size();
+        } else {
+          return externalIdsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.PartyExternalId external_ids = 12 [json_name = "externalIds"];</code>
+       */
+      public oscal.common.v1.Common.PartyExternalId getExternalIds(int index) {
+        if (externalIdsBuilder_ == null) {
+          return externalIds_.get(index);
+        } else {
+          return externalIdsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.PartyExternalId external_ids = 12 [json_name = "externalIds"];</code>
+       */
+      public Builder setExternalIds(
+          int index, oscal.common.v1.Common.PartyExternalId value) {
+        if (externalIdsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureExternalIdsIsMutable();
+          externalIds_.set(index, value);
+          onChanged();
+        } else {
+          externalIdsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.PartyExternalId external_ids = 12 [json_name = "externalIds"];</code>
+       */
+      public Builder setExternalIds(
+          int index, oscal.common.v1.Common.PartyExternalId.Builder builderForValue) {
+        if (externalIdsBuilder_ == null) {
+          ensureExternalIdsIsMutable();
+          externalIds_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          externalIdsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.PartyExternalId external_ids = 12 [json_name = "externalIds"];</code>
+       */
+      public Builder addExternalIds(oscal.common.v1.Common.PartyExternalId value) {
+        if (externalIdsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureExternalIdsIsMutable();
+          externalIds_.add(value);
+          onChanged();
+        } else {
+          externalIdsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.PartyExternalId external_ids = 12 [json_name = "externalIds"];</code>
+       */
+      public Builder addExternalIds(
+          int index, oscal.common.v1.Common.PartyExternalId value) {
+        if (externalIdsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureExternalIdsIsMutable();
+          externalIds_.add(index, value);
+          onChanged();
+        } else {
+          externalIdsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.PartyExternalId external_ids = 12 [json_name = "externalIds"];</code>
+       */
+      public Builder addExternalIds(
+          oscal.common.v1.Common.PartyExternalId.Builder builderForValue) {
+        if (externalIdsBuilder_ == null) {
+          ensureExternalIdsIsMutable();
+          externalIds_.add(builderForValue.build());
+          onChanged();
+        } else {
+          externalIdsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.PartyExternalId external_ids = 12 [json_name = "externalIds"];</code>
+       */
+      public Builder addExternalIds(
+          int index, oscal.common.v1.Common.PartyExternalId.Builder builderForValue) {
+        if (externalIdsBuilder_ == null) {
+          ensureExternalIdsIsMutable();
+          externalIds_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          externalIdsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.PartyExternalId external_ids = 12 [json_name = "externalIds"];</code>
+       */
+      public Builder addAllExternalIds(
+          java.lang.Iterable<? extends oscal.common.v1.Common.PartyExternalId> values) {
+        if (externalIdsBuilder_ == null) {
+          ensureExternalIdsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, externalIds_);
+          onChanged();
+        } else {
+          externalIdsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.PartyExternalId external_ids = 12 [json_name = "externalIds"];</code>
+       */
+      public Builder clearExternalIds() {
+        if (externalIdsBuilder_ == null) {
+          externalIds_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000800);
+          onChanged();
+        } else {
+          externalIdsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.PartyExternalId external_ids = 12 [json_name = "externalIds"];</code>
+       */
+      public Builder removeExternalIds(int index) {
+        if (externalIdsBuilder_ == null) {
+          ensureExternalIdsIsMutable();
+          externalIds_.remove(index);
+          onChanged();
+        } else {
+          externalIdsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.PartyExternalId external_ids = 12 [json_name = "externalIds"];</code>
+       */
+      public oscal.common.v1.Common.PartyExternalId.Builder getExternalIdsBuilder(
+          int index) {
+        return internalGetExternalIdsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .oscal.common.v1.PartyExternalId external_ids = 12 [json_name = "externalIds"];</code>
+       */
+      public oscal.common.v1.Common.PartyExternalIdOrBuilder getExternalIdsOrBuilder(
+          int index) {
+        if (externalIdsBuilder_ == null) {
+          return externalIds_.get(index);  } else {
+          return externalIdsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.PartyExternalId external_ids = 12 [json_name = "externalIds"];</code>
+       */
+      public java.util.List<? extends oscal.common.v1.Common.PartyExternalIdOrBuilder> 
+           getExternalIdsOrBuilderList() {
+        if (externalIdsBuilder_ != null) {
+          return externalIdsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(externalIds_);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.PartyExternalId external_ids = 12 [json_name = "externalIds"];</code>
+       */
+      public oscal.common.v1.Common.PartyExternalId.Builder addExternalIdsBuilder() {
+        return internalGetExternalIdsFieldBuilder().addBuilder(
+            oscal.common.v1.Common.PartyExternalId.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.common.v1.PartyExternalId external_ids = 12 [json_name = "externalIds"];</code>
+       */
+      public oscal.common.v1.Common.PartyExternalId.Builder addExternalIdsBuilder(
+          int index) {
+        return internalGetExternalIdsFieldBuilder().addBuilder(
+            index, oscal.common.v1.Common.PartyExternalId.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.common.v1.PartyExternalId external_ids = 12 [json_name = "externalIds"];</code>
+       */
+      public java.util.List<oscal.common.v1.Common.PartyExternalId.Builder> 
+           getExternalIdsBuilderList() {
+        return internalGetExternalIdsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.common.v1.Common.PartyExternalId, oscal.common.v1.Common.PartyExternalId.Builder, oscal.common.v1.Common.PartyExternalIdOrBuilder> 
+          internalGetExternalIdsFieldBuilder() {
+        if (externalIdsBuilder_ == null) {
+          externalIdsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              oscal.common.v1.Common.PartyExternalId, oscal.common.v1.Common.PartyExternalId.Builder, oscal.common.v1.Common.PartyExternalIdOrBuilder>(
+                  externalIds_,
+                  ((bitField0_ & 0x00000800) != 0),
+                  getParentForChildren(),
+                  isClean());
+          externalIds_ = null;
+        }
+        return externalIdsBuilder_;
+      }
+
+      private java.util.List<oscal.common.v1.Common.UUID> locationUuids_ =
+        java.util.Collections.emptyList();
+      private void ensureLocationUuidsIsMutable() {
+        if (!((bitField0_ & 0x00001000) != 0)) {
+          locationUuids_ = new java.util.ArrayList<oscal.common.v1.Common.UUID>(locationUuids_);
+          bitField0_ |= 0x00001000;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder> locationUuidsBuilder_;
+
+      /**
+       * <code>repeated .oscal.common.v1.UUID location_uuids = 13 [json_name = "locationUuids"];</code>
+       */
+      public java.util.List<oscal.common.v1.Common.UUID> getLocationUuidsList() {
+        if (locationUuidsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(locationUuids_);
+        } else {
+          return locationUuidsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.UUID location_uuids = 13 [json_name = "locationUuids"];</code>
+       */
+      public int getLocationUuidsCount() {
+        if (locationUuidsBuilder_ == null) {
+          return locationUuids_.size();
+        } else {
+          return locationUuidsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.UUID location_uuids = 13 [json_name = "locationUuids"];</code>
+       */
+      public oscal.common.v1.Common.UUID getLocationUuids(int index) {
+        if (locationUuidsBuilder_ == null) {
+          return locationUuids_.get(index);
+        } else {
+          return locationUuidsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.UUID location_uuids = 13 [json_name = "locationUuids"];</code>
+       */
+      public Builder setLocationUuids(
+          int index, oscal.common.v1.Common.UUID value) {
+        if (locationUuidsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLocationUuidsIsMutable();
+          locationUuids_.set(index, value);
+          onChanged();
+        } else {
+          locationUuidsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.UUID location_uuids = 13 [json_name = "locationUuids"];</code>
+       */
+      public Builder setLocationUuids(
+          int index, oscal.common.v1.Common.UUID.Builder builderForValue) {
+        if (locationUuidsBuilder_ == null) {
+          ensureLocationUuidsIsMutable();
+          locationUuids_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          locationUuidsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.UUID location_uuids = 13 [json_name = "locationUuids"];</code>
+       */
+      public Builder addLocationUuids(oscal.common.v1.Common.UUID value) {
+        if (locationUuidsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLocationUuidsIsMutable();
+          locationUuids_.add(value);
+          onChanged();
+        } else {
+          locationUuidsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.UUID location_uuids = 13 [json_name = "locationUuids"];</code>
+       */
+      public Builder addLocationUuids(
+          int index, oscal.common.v1.Common.UUID value) {
+        if (locationUuidsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLocationUuidsIsMutable();
+          locationUuids_.add(index, value);
+          onChanged();
+        } else {
+          locationUuidsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.UUID location_uuids = 13 [json_name = "locationUuids"];</code>
+       */
+      public Builder addLocationUuids(
+          oscal.common.v1.Common.UUID.Builder builderForValue) {
+        if (locationUuidsBuilder_ == null) {
+          ensureLocationUuidsIsMutable();
+          locationUuids_.add(builderForValue.build());
+          onChanged();
+        } else {
+          locationUuidsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.UUID location_uuids = 13 [json_name = "locationUuids"];</code>
+       */
+      public Builder addLocationUuids(
+          int index, oscal.common.v1.Common.UUID.Builder builderForValue) {
+        if (locationUuidsBuilder_ == null) {
+          ensureLocationUuidsIsMutable();
+          locationUuids_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          locationUuidsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.UUID location_uuids = 13 [json_name = "locationUuids"];</code>
+       */
+      public Builder addAllLocationUuids(
+          java.lang.Iterable<? extends oscal.common.v1.Common.UUID> values) {
+        if (locationUuidsBuilder_ == null) {
+          ensureLocationUuidsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, locationUuids_);
+          onChanged();
+        } else {
+          locationUuidsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.UUID location_uuids = 13 [json_name = "locationUuids"];</code>
+       */
+      public Builder clearLocationUuids() {
+        if (locationUuidsBuilder_ == null) {
+          locationUuids_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00001000);
+          onChanged();
+        } else {
+          locationUuidsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.UUID location_uuids = 13 [json_name = "locationUuids"];</code>
+       */
+      public Builder removeLocationUuids(int index) {
+        if (locationUuidsBuilder_ == null) {
+          ensureLocationUuidsIsMutable();
+          locationUuids_.remove(index);
+          onChanged();
+        } else {
+          locationUuidsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.UUID location_uuids = 13 [json_name = "locationUuids"];</code>
+       */
+      public oscal.common.v1.Common.UUID.Builder getLocationUuidsBuilder(
+          int index) {
+        return internalGetLocationUuidsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .oscal.common.v1.UUID location_uuids = 13 [json_name = "locationUuids"];</code>
+       */
+      public oscal.common.v1.Common.UUIDOrBuilder getLocationUuidsOrBuilder(
+          int index) {
+        if (locationUuidsBuilder_ == null) {
+          return locationUuids_.get(index);  } else {
+          return locationUuidsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.UUID location_uuids = 13 [json_name = "locationUuids"];</code>
+       */
+      public java.util.List<? extends oscal.common.v1.Common.UUIDOrBuilder> 
+           getLocationUuidsOrBuilderList() {
+        if (locationUuidsBuilder_ != null) {
+          return locationUuidsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(locationUuids_);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.UUID location_uuids = 13 [json_name = "locationUuids"];</code>
+       */
+      public oscal.common.v1.Common.UUID.Builder addLocationUuidsBuilder() {
+        return internalGetLocationUuidsFieldBuilder().addBuilder(
+            oscal.common.v1.Common.UUID.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.common.v1.UUID location_uuids = 13 [json_name = "locationUuids"];</code>
+       */
+      public oscal.common.v1.Common.UUID.Builder addLocationUuidsBuilder(
+          int index) {
+        return internalGetLocationUuidsFieldBuilder().addBuilder(
+            index, oscal.common.v1.Common.UUID.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.common.v1.UUID location_uuids = 13 [json_name = "locationUuids"];</code>
+       */
+      public java.util.List<oscal.common.v1.Common.UUID.Builder> 
+           getLocationUuidsBuilderList() {
+        return internalGetLocationUuidsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder> 
+          internalGetLocationUuidsFieldBuilder() {
+        if (locationUuidsBuilder_ == null) {
+          locationUuidsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder>(
+                  locationUuids_,
+                  ((bitField0_ & 0x00001000) != 0),
+                  getParentForChildren(),
+                  isClean());
+          locationUuids_ = null;
+        }
+        return locationUuidsBuilder_;
+      }
+
       // @@protoc_insertion_point(builder_scope:oscal.common.v1.Party)
     }
 
@@ -20372,6 +24351,741 @@ public final class Common extends com.google.protobuf.GeneratedFile {
 
     @java.lang.Override
     public oscal.common.v1.Common.Party getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PartyExternalIdOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oscal.common.v1.PartyExternalId)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <code>.oscal.common.v1.URI scheme = 2 [json_name = "scheme"];</code>
+     * @return Whether the scheme field is set.
+     */
+    boolean hasScheme();
+    /**
+     * <code>.oscal.common.v1.URI scheme = 2 [json_name = "scheme"];</code>
+     * @return The scheme.
+     */
+    oscal.common.v1.Common.URI getScheme();
+    /**
+     * <code>.oscal.common.v1.URI scheme = 2 [json_name = "scheme"];</code>
+     */
+    oscal.common.v1.Common.URIOrBuilder getSchemeOrBuilder();
+  }
+  /**
+   * <pre>
+   * PartyExternalId represents an external identifier for a party
+   * </pre>
+   *
+   * Protobuf type {@code oscal.common.v1.PartyExternalId}
+   */
+  public static final class PartyExternalId extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:oscal.common.v1.PartyExternalId)
+      PartyExternalIdOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 35,
+        /* patch= */ 1,
+        /* suffix= */ "",
+        "PartyExternalId");
+    }
+    // Use PartyExternalId.newBuilder() to construct.
+    private PartyExternalId(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private PartyExternalId() {
+      id_ = "";
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return oscal.common.v1.Common.internal_static_oscal_common_v1_PartyExternalId_descriptor;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+      return oscal.common.v1.Common.internal_static_oscal_common_v1_PartyExternalId_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return oscal.common.v1.Common.internal_static_oscal_common_v1_PartyExternalId_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              oscal.common.v1.Common.PartyExternalId.class, oscal.common.v1.Common.PartyExternalId.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SCHEME_FIELD_NUMBER = 2;
+    private oscal.common.v1.Common.URI scheme_;
+    /**
+     * <code>.oscal.common.v1.URI scheme = 2 [json_name = "scheme"];</code>
+     * @return Whether the scheme field is set.
+     */
+    @java.lang.Override
+    public boolean hasScheme() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.oscal.common.v1.URI scheme = 2 [json_name = "scheme"];</code>
+     * @return The scheme.
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.URI getScheme() {
+      return scheme_ == null ? oscal.common.v1.Common.URI.getDefaultInstance() : scheme_;
+    }
+    /**
+     * <code>.oscal.common.v1.URI scheme = 2 [json_name = "scheme"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.URIOrBuilder getSchemeOrBuilder() {
+      return scheme_ == null ? oscal.common.v1.Common.URI.getDefaultInstance() : scheme_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(id_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, id_);
+      }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeMessage(2, getScheme());
+      }
+      getUnknownFields().writeTo(output);
+    }
+    private int computeSerializedSize_0() {
+      int size = 0;
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(id_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, id_);
+      }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getScheme());
+      }
+      return size;
+    }
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += computeSerializedSize_0();
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof oscal.common.v1.Common.PartyExternalId)) {
+        return super.equals(obj);
+      }
+      oscal.common.v1.Common.PartyExternalId other = (oscal.common.v1.Common.PartyExternalId) obj;
+
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (hasScheme() != other.hasScheme()) return false;
+      if (hasScheme()) {
+        if (!getScheme()
+            .equals(other.getScheme())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      if (hasScheme()) {
+        hash = (37 * hash) + SCHEME_FIELD_NUMBER;
+        hash = (53 * hash) + getScheme().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static oscal.common.v1.Common.PartyExternalId parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.common.v1.Common.PartyExternalId parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.common.v1.Common.PartyExternalId parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.common.v1.Common.PartyExternalId parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.common.v1.Common.PartyExternalId parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.common.v1.Common.PartyExternalId parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.common.v1.Common.PartyExternalId parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static oscal.common.v1.Common.PartyExternalId parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static oscal.common.v1.Common.PartyExternalId parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static oscal.common.v1.Common.PartyExternalId parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static oscal.common.v1.Common.PartyExternalId parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static oscal.common.v1.Common.PartyExternalId parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(oscal.common.v1.Common.PartyExternalId prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * PartyExternalId represents an external identifier for a party
+     * </pre>
+     *
+     * Protobuf type {@code oscal.common.v1.PartyExternalId}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oscal.common.v1.PartyExternalId)
+        oscal.common.v1.Common.PartyExternalIdOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return oscal.common.v1.Common.internal_static_oscal_common_v1_PartyExternalId_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return oscal.common.v1.Common.internal_static_oscal_common_v1_PartyExternalId_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                oscal.common.v1.Common.PartyExternalId.class, oscal.common.v1.Common.PartyExternalId.Builder.class);
+      }
+
+      // Construct using oscal.common.v1.Common.PartyExternalId.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage
+                .alwaysUseFieldBuilders) {
+          internalGetSchemeFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        id_ = "";
+        scheme_ = null;
+        if (schemeBuilder_ != null) {
+          schemeBuilder_.dispose();
+          schemeBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return oscal.common.v1.Common.internal_static_oscal_common_v1_PartyExternalId_descriptor;
+      }
+
+      @java.lang.Override
+      public oscal.common.v1.Common.PartyExternalId getDefaultInstanceForType() {
+        return oscal.common.v1.Common.PartyExternalId.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public oscal.common.v1.Common.PartyExternalId build() {
+        oscal.common.v1.Common.PartyExternalId result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public oscal.common.v1.Common.PartyExternalId buildPartial() {
+        oscal.common.v1.Common.PartyExternalId result = new oscal.common.v1.Common.PartyExternalId(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(oscal.common.v1.Common.PartyExternalId result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.scheme_ = schemeBuilder_ == null
+              ? scheme_
+              : schemeBuilder_.build();
+          to_bitField0_ |= 0x00000001;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof oscal.common.v1.Common.PartyExternalId) {
+          return mergeFrom((oscal.common.v1.Common.PartyExternalId)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(oscal.common.v1.Common.PartyExternalId other) {
+        if (other == oscal.common.v1.Common.PartyExternalId.getDefaultInstance()) return this;
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasScheme()) {
+          mergeScheme(other.getScheme());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                id_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    internalGetSchemeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object id_ = "";
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private oscal.common.v1.Common.URI scheme_;
+      private com.google.protobuf.SingleFieldBuilder<
+          oscal.common.v1.Common.URI, oscal.common.v1.Common.URI.Builder, oscal.common.v1.Common.URIOrBuilder> schemeBuilder_;
+      /**
+       * <code>.oscal.common.v1.URI scheme = 2 [json_name = "scheme"];</code>
+       * @return Whether the scheme field is set.
+       */
+      public boolean hasScheme() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.oscal.common.v1.URI scheme = 2 [json_name = "scheme"];</code>
+       * @return The scheme.
+       */
+      public oscal.common.v1.Common.URI getScheme() {
+        if (schemeBuilder_ == null) {
+          return scheme_ == null ? oscal.common.v1.Common.URI.getDefaultInstance() : scheme_;
+        } else {
+          return schemeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.oscal.common.v1.URI scheme = 2 [json_name = "scheme"];</code>
+       */
+      public Builder setScheme(oscal.common.v1.Common.URI value) {
+        if (schemeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          scheme_ = value;
+        } else {
+          schemeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.URI scheme = 2 [json_name = "scheme"];</code>
+       */
+      public Builder setScheme(
+          oscal.common.v1.Common.URI.Builder builderForValue) {
+        if (schemeBuilder_ == null) {
+          scheme_ = builderForValue.build();
+        } else {
+          schemeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.URI scheme = 2 [json_name = "scheme"];</code>
+       */
+      public Builder mergeScheme(oscal.common.v1.Common.URI value) {
+        if (schemeBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            scheme_ != null &&
+            scheme_ != oscal.common.v1.Common.URI.getDefaultInstance()) {
+            getSchemeBuilder().mergeFrom(value);
+          } else {
+            scheme_ = value;
+          }
+        } else {
+          schemeBuilder_.mergeFrom(value);
+        }
+        if (scheme_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.URI scheme = 2 [json_name = "scheme"];</code>
+       */
+      public Builder clearScheme() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        scheme_ = null;
+        if (schemeBuilder_ != null) {
+          schemeBuilder_.dispose();
+          schemeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.URI scheme = 2 [json_name = "scheme"];</code>
+       */
+      public oscal.common.v1.Common.URI.Builder getSchemeBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return internalGetSchemeFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.oscal.common.v1.URI scheme = 2 [json_name = "scheme"];</code>
+       */
+      public oscal.common.v1.Common.URIOrBuilder getSchemeOrBuilder() {
+        if (schemeBuilder_ != null) {
+          return schemeBuilder_.getMessageOrBuilder();
+        } else {
+          return scheme_ == null ?
+              oscal.common.v1.Common.URI.getDefaultInstance() : scheme_;
+        }
+      }
+      /**
+       * <code>.oscal.common.v1.URI scheme = 2 [json_name = "scheme"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          oscal.common.v1.Common.URI, oscal.common.v1.Common.URI.Builder, oscal.common.v1.Common.URIOrBuilder> 
+          internalGetSchemeFieldBuilder() {
+        if (schemeBuilder_ == null) {
+          schemeBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              oscal.common.v1.Common.URI, oscal.common.v1.Common.URI.Builder, oscal.common.v1.Common.URIOrBuilder>(
+                  getScheme(),
+                  getParentForChildren(),
+                  isClean());
+          scheme_ = null;
+        }
+        return schemeBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:oscal.common.v1.PartyExternalId)
+    }
+
+    // @@protoc_insertion_point(class_scope:oscal.common.v1.PartyExternalId)
+    private static final oscal.common.v1.Common.PartyExternalId DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new oscal.common.v1.Common.PartyExternalId();
+    }
+
+    public static oscal.common.v1.Common.PartyExternalId getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PartyExternalId>
+        PARSER = new com.google.protobuf.AbstractParser<PartyExternalId>() {
+      @java.lang.Override
+      public PartyExternalId parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<PartyExternalId> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PartyExternalId> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public oscal.common.v1.Common.PartyExternalId getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -21834,29 +26548,16 @@ public final class Common extends com.google.protobuf.GeneratedFile {
     oscal.common.v1.Common.UUIDOrBuilder getUuidOrBuilder();
 
     /**
-     * <code>repeated string title = 2 [json_name = "title"];</code>
-     * @return A list containing the title.
+     * <code>string title = 2 [json_name = "title"];</code>
+     * @return The title.
      */
-    java.util.List<java.lang.String>
-        getTitleList();
+    java.lang.String getTitle();
     /**
-     * <code>repeated string title = 2 [json_name = "title"];</code>
-     * @return The count of title.
-     */
-    int getTitleCount();
-    /**
-     * <code>repeated string title = 2 [json_name = "title"];</code>
-     * @param index The index of the element to return.
-     * @return The title at the given index.
-     */
-    java.lang.String getTitle(int index);
-    /**
-     * <code>repeated string title = 2 [json_name = "title"];</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the title at the given index.
+     * <code>string title = 2 [json_name = "title"];</code>
+     * @return The bytes for title.
      */
     com.google.protobuf.ByteString
-        getTitleBytes(int index);
+        getTitleBytes();
 
     /**
      * <code>.oscal.common.v1.MarkupMultiline description = 3 [json_name = "description"];</code>
@@ -21995,16 +26696,67 @@ public final class Common extends com.google.protobuf.GeneratedFile {
         getRemarksBytes(int index);
 
     /**
-     * <code>string citation = 9 [json_name = "citation"];</code>
+     * <pre>
+     * Deprecated: use citation_obj instead. Kept for backward compatibility.
+     * </pre>
+     *
+     * <code>string citation = 9 [json_name = "citation", deprecated = true];</code>
+     * @deprecated oscal.common.v1.Resource.citation is deprecated.
+     *     See common/v1/common.proto;l=204
      * @return The citation.
      */
-    java.lang.String getCitation();
+    @java.lang.Deprecated java.lang.String getCitation();
     /**
-     * <code>string citation = 9 [json_name = "citation"];</code>
+     * <pre>
+     * Deprecated: use citation_obj instead. Kept for backward compatibility.
+     * </pre>
+     *
+     * <code>string citation = 9 [json_name = "citation", deprecated = true];</code>
+     * @deprecated oscal.common.v1.Resource.citation is deprecated.
+     *     See common/v1/common.proto;l=204
      * @return The bytes for citation.
      */
-    com.google.protobuf.ByteString
+    @java.lang.Deprecated com.google.protobuf.ByteString
         getCitationBytes();
+
+    /**
+     * <code>repeated .oscal.common.v1.Rlink rlinks = 10 [json_name = "rlinks"];</code>
+     */
+    java.util.List<oscal.common.v1.Common.Rlink> 
+        getRlinksList();
+    /**
+     * <code>repeated .oscal.common.v1.Rlink rlinks = 10 [json_name = "rlinks"];</code>
+     */
+    oscal.common.v1.Common.Rlink getRlinks(int index);
+    /**
+     * <code>repeated .oscal.common.v1.Rlink rlinks = 10 [json_name = "rlinks"];</code>
+     */
+    int getRlinksCount();
+    /**
+     * <code>repeated .oscal.common.v1.Rlink rlinks = 10 [json_name = "rlinks"];</code>
+     */
+    java.util.List<? extends oscal.common.v1.Common.RlinkOrBuilder> 
+        getRlinksOrBuilderList();
+    /**
+     * <code>repeated .oscal.common.v1.Rlink rlinks = 10 [json_name = "rlinks"];</code>
+     */
+    oscal.common.v1.Common.RlinkOrBuilder getRlinksOrBuilder(
+        int index);
+
+    /**
+     * <code>.oscal.common.v1.Citation citation_obj = 11 [json_name = "citationObj"];</code>
+     * @return Whether the citationObj field is set.
+     */
+    boolean hasCitationObj();
+    /**
+     * <code>.oscal.common.v1.Citation citation_obj = 11 [json_name = "citationObj"];</code>
+     * @return The citationObj.
+     */
+    oscal.common.v1.Common.Citation getCitationObj();
+    /**
+     * <code>.oscal.common.v1.Citation citation_obj = 11 [json_name = "citationObj"];</code>
+     */
+    oscal.common.v1.Common.CitationOrBuilder getCitationObjOrBuilder();
   }
   /**
    * <pre>
@@ -22032,8 +26784,7 @@ public final class Common extends com.google.protobuf.GeneratedFile {
       super(builder);
     }
     private Resource() {
-      title_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
+      title_ = "";
       props_ = java.util.Collections.emptyList();
       links_ = java.util.Collections.emptyList();
       base64_ = java.util.Collections.emptyList();
@@ -22041,6 +26792,7 @@ public final class Common extends com.google.protobuf.GeneratedFile {
       remarks_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
       citation_ = "";
+      rlinks_ = java.util.Collections.emptyList();
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
@@ -22090,39 +26842,41 @@ public final class Common extends com.google.protobuf.GeneratedFile {
 
     public static final int TITLE_FIELD_NUMBER = 2;
     @SuppressWarnings("serial")
-    private com.google.protobuf.LazyStringArrayList title_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
+    private volatile java.lang.Object title_ = "";
     /**
-     * <code>repeated string title = 2 [json_name = "title"];</code>
-     * @return A list containing the title.
+     * <code>string title = 2 [json_name = "title"];</code>
+     * @return The title.
      */
-    public com.google.protobuf.ProtocolStringList
-        getTitleList() {
-      return title_;
+    @java.lang.Override
+    public java.lang.String getTitle() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        title_ = s;
+        return s;
+      }
     }
     /**
-     * <code>repeated string title = 2 [json_name = "title"];</code>
-     * @return The count of title.
+     * <code>string title = 2 [json_name = "title"];</code>
+     * @return The bytes for title.
      */
-    public int getTitleCount() {
-      return title_.size();
-    }
-    /**
-     * <code>repeated string title = 2 [json_name = "title"];</code>
-     * @param index The index of the element to return.
-     * @return The title at the given index.
-     */
-    public java.lang.String getTitle(int index) {
-      return title_.get(index);
-    }
-    /**
-     * <code>repeated string title = 2 [json_name = "title"];</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the title at the given index.
-     */
+    @java.lang.Override
     public com.google.protobuf.ByteString
-        getTitleBytes(int index) {
-      return title_.getByteString(index);
+        getTitleBytes() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        title_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int DESCRIPTION_FIELD_NUMBER = 3;
@@ -22356,11 +27110,17 @@ public final class Common extends com.google.protobuf.GeneratedFile {
     @SuppressWarnings("serial")
     private volatile java.lang.Object citation_ = "";
     /**
-     * <code>string citation = 9 [json_name = "citation"];</code>
+     * <pre>
+     * Deprecated: use citation_obj instead. Kept for backward compatibility.
+     * </pre>
+     *
+     * <code>string citation = 9 [json_name = "citation", deprecated = true];</code>
+     * @deprecated oscal.common.v1.Resource.citation is deprecated.
+     *     See common/v1/common.proto;l=204
      * @return The citation.
      */
     @java.lang.Override
-    public java.lang.String getCitation() {
+    @java.lang.Deprecated public java.lang.String getCitation() {
       java.lang.Object ref = citation_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
@@ -22373,11 +27133,17 @@ public final class Common extends com.google.protobuf.GeneratedFile {
       }
     }
     /**
-     * <code>string citation = 9 [json_name = "citation"];</code>
+     * <pre>
+     * Deprecated: use citation_obj instead. Kept for backward compatibility.
+     * </pre>
+     *
+     * <code>string citation = 9 [json_name = "citation", deprecated = true];</code>
+     * @deprecated oscal.common.v1.Resource.citation is deprecated.
+     *     See common/v1/common.proto;l=204
      * @return The bytes for citation.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getCitationBytes() {
       java.lang.Object ref = citation_;
       if (ref instanceof java.lang.String) {
@@ -22389,6 +27155,73 @@ public final class Common extends com.google.protobuf.GeneratedFile {
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
+    }
+
+    public static final int RLINKS_FIELD_NUMBER = 10;
+    @SuppressWarnings("serial")
+    private java.util.List<oscal.common.v1.Common.Rlink> rlinks_;
+    /**
+     * <code>repeated .oscal.common.v1.Rlink rlinks = 10 [json_name = "rlinks"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<oscal.common.v1.Common.Rlink> getRlinksList() {
+      return rlinks_;
+    }
+    /**
+     * <code>repeated .oscal.common.v1.Rlink rlinks = 10 [json_name = "rlinks"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends oscal.common.v1.Common.RlinkOrBuilder> 
+        getRlinksOrBuilderList() {
+      return rlinks_;
+    }
+    /**
+     * <code>repeated .oscal.common.v1.Rlink rlinks = 10 [json_name = "rlinks"];</code>
+     */
+    @java.lang.Override
+    public int getRlinksCount() {
+      return rlinks_.size();
+    }
+    /**
+     * <code>repeated .oscal.common.v1.Rlink rlinks = 10 [json_name = "rlinks"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.Rlink getRlinks(int index) {
+      return rlinks_.get(index);
+    }
+    /**
+     * <code>repeated .oscal.common.v1.Rlink rlinks = 10 [json_name = "rlinks"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.RlinkOrBuilder getRlinksOrBuilder(
+        int index) {
+      return rlinks_.get(index);
+    }
+
+    public static final int CITATION_OBJ_FIELD_NUMBER = 11;
+    private oscal.common.v1.Common.Citation citationObj_;
+    /**
+     * <code>.oscal.common.v1.Citation citation_obj = 11 [json_name = "citationObj"];</code>
+     * @return Whether the citationObj field is set.
+     */
+    @java.lang.Override
+    public boolean hasCitationObj() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>.oscal.common.v1.Citation citation_obj = 11 [json_name = "citationObj"];</code>
+     * @return The citationObj.
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.Citation getCitationObj() {
+      return citationObj_ == null ? oscal.common.v1.Common.Citation.getDefaultInstance() : citationObj_;
+    }
+    /**
+     * <code>.oscal.common.v1.Citation citation_obj = 11 [json_name = "citationObj"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.CitationOrBuilder getCitationObjOrBuilder() {
+      return citationObj_ == null ? oscal.common.v1.Common.Citation.getDefaultInstance() : citationObj_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -22408,8 +27241,8 @@ public final class Common extends com.google.protobuf.GeneratedFile {
       if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getUuid());
       }
-      for (int i = 0; i < title_.size(); i++) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 2, title_.getRaw(i));
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(title_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, title_);
       }
       if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(3, getDescription());
@@ -22432,6 +27265,12 @@ public final class Common extends com.google.protobuf.GeneratedFile {
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(citation_)) {
         com.google.protobuf.GeneratedMessage.writeString(output, 9, citation_);
       }
+      for (int i = 0; i < rlinks_.size(); i++) {
+        output.writeMessage(10, rlinks_.get(i));
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeMessage(11, getCitationObj());
+      }
       getUnknownFields().writeTo(output);
     }
     private int computeSerializedSize_0() {
@@ -22440,13 +27279,8 @@ public final class Common extends com.google.protobuf.GeneratedFile {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getUuid());
       }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < title_.size(); i++) {
-          dataSize += computeStringSizeNoTag(title_.getRaw(i));
-        }
-        size += dataSize;
-        size += 1 * getTitleList().size();
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(title_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, title_);
       }
       if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
@@ -22499,6 +27333,19 @@ public final class Common extends com.google.protobuf.GeneratedFile {
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(citation_)) {
         size += com.google.protobuf.GeneratedMessage.computeStringSize(9, citation_);
       }
+
+          {
+            final int count = rlinks_.size();
+            for (int i = 0; i < count; i++) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeMessageSizeNoTag(rlinks_.get(i));
+            }
+            size += 1 * count;
+          }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(11, getCitationObj());
+      }
       return size;
     }
     @java.lang.Override
@@ -22528,8 +27375,8 @@ public final class Common extends com.google.protobuf.GeneratedFile {
         if (!getUuid()
             .equals(other.getUuid())) return false;
       }
-      if (!getTitleList()
-          .equals(other.getTitleList())) return false;
+      if (!getTitle()
+          .equals(other.getTitle())) return false;
       if (hasDescription() != other.hasDescription()) return false;
       if (hasDescription()) {
         if (!getDescription()
@@ -22547,6 +27394,13 @@ public final class Common extends com.google.protobuf.GeneratedFile {
           .equals(other.getRemarksList())) return false;
       if (!getCitation()
           .equals(other.getCitation())) return false;
+      if (!getRlinksList()
+          .equals(other.getRlinksList())) return false;
+      if (hasCitationObj() != other.hasCitationObj()) return false;
+      if (hasCitationObj()) {
+        if (!getCitationObj()
+            .equals(other.getCitationObj())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -22562,10 +27416,8 @@ public final class Common extends com.google.protobuf.GeneratedFile {
         hash = (37 * hash) + UUID_FIELD_NUMBER;
         hash = (53 * hash) + getUuid().hashCode();
       }
-      if (getTitleCount() > 0) {
-        hash = (37 * hash) + TITLE_FIELD_NUMBER;
-        hash = (53 * hash) + getTitleList().hashCode();
-      }
+      hash = (37 * hash) + TITLE_FIELD_NUMBER;
+      hash = (53 * hash) + getTitle().hashCode();
       if (hasDescription()) {
         hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
         hash = (53 * hash) + getDescription().hashCode();
@@ -22592,6 +27444,14 @@ public final class Common extends com.google.protobuf.GeneratedFile {
       }
       hash = (37 * hash) + CITATION_FIELD_NUMBER;
       hash = (53 * hash) + getCitation().hashCode();
+      if (getRlinksCount() > 0) {
+        hash = (37 * hash) + RLINKS_FIELD_NUMBER;
+        hash = (53 * hash) + getRlinksList().hashCode();
+      }
+      if (hasCitationObj()) {
+        hash = (37 * hash) + CITATION_OBJ_FIELD_NUMBER;
+        hash = (53 * hash) + getCitationObj().hashCode();
+      }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -22732,6 +27592,8 @@ public final class Common extends com.google.protobuf.GeneratedFile {
           internalGetLinksFieldBuilder();
           internalGetBase64FieldBuilder();
           internalGetDocumentIdsFieldBuilder();
+          internalGetRlinksFieldBuilder();
+          internalGetCitationObjFieldBuilder();
         }
       }
       @java.lang.Override
@@ -22743,8 +27605,7 @@ public final class Common extends com.google.protobuf.GeneratedFile {
           uuidBuilder_.dispose();
           uuidBuilder_ = null;
         }
-        title_ =
-            com.google.protobuf.LazyStringArrayList.emptyList();
+        title_ = "";
         description_ = null;
         if (descriptionBuilder_ != null) {
           descriptionBuilder_.dispose();
@@ -22781,6 +27642,18 @@ public final class Common extends com.google.protobuf.GeneratedFile {
         remarks_ =
             com.google.protobuf.LazyStringArrayList.emptyList();
         citation_ = "";
+        if (rlinksBuilder_ == null) {
+          rlinks_ = java.util.Collections.emptyList();
+        } else {
+          rlinks_ = null;
+          rlinksBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000200);
+        citationObj_ = null;
+        if (citationObjBuilder_ != null) {
+          citationObjBuilder_.dispose();
+          citationObjBuilder_ = null;
+        }
         return this;
       }
 
@@ -22850,6 +27723,15 @@ public final class Common extends com.google.protobuf.GeneratedFile {
         } else {
           result.documentIds_ = documentIdsBuilder_.build();
         }
+        if (rlinksBuilder_ == null) {
+          if (((bitField0_ & 0x00000200) != 0)) {
+            rlinks_ = java.util.Collections.unmodifiableList(rlinks_);
+            bitField0_ = (bitField0_ & ~0x00000200);
+          }
+          result.rlinks_ = rlinks_;
+        } else {
+          result.rlinks_ = rlinksBuilder_.build();
+        }
       }
 
       private void buildPartial0(oscal.common.v1.Common.Resource result) {
@@ -22862,7 +27744,6 @@ public final class Common extends com.google.protobuf.GeneratedFile {
           to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
-          title_.makeImmutable();
           result.title_ = title_;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
@@ -22877,6 +27758,12 @@ public final class Common extends com.google.protobuf.GeneratedFile {
         }
         if (((from_bitField0_ & 0x00000100) != 0)) {
           result.citation_ = citation_;
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.citationObj_ = citationObjBuilder_ == null
+              ? citationObj_
+              : citationObjBuilder_.build();
+          to_bitField0_ |= 0x00000004;
         }
         result.bitField0_ |= to_bitField0_;
       }
@@ -22896,14 +27783,9 @@ public final class Common extends com.google.protobuf.GeneratedFile {
         if (other.hasUuid()) {
           mergeUuid(other.getUuid());
         }
-        if (!other.title_.isEmpty()) {
-          if (title_.isEmpty()) {
-            title_ = other.title_;
-            bitField0_ |= 0x00000002;
-          } else {
-            ensureTitleIsMutable();
-            title_.addAll(other.title_);
-          }
+        if (!other.getTitle().isEmpty()) {
+          title_ = other.title_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (other.hasDescription()) {
@@ -23028,6 +27910,35 @@ public final class Common extends com.google.protobuf.GeneratedFile {
           bitField0_ |= 0x00000100;
           onChanged();
         }
+        if (rlinksBuilder_ == null) {
+          if (!other.rlinks_.isEmpty()) {
+            if (rlinks_.isEmpty()) {
+              rlinks_ = other.rlinks_;
+              bitField0_ = (bitField0_ & ~0x00000200);
+            } else {
+              ensureRlinksIsMutable();
+              rlinks_.addAll(other.rlinks_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.rlinks_.isEmpty()) {
+            if (rlinksBuilder_.isEmpty()) {
+              rlinksBuilder_.dispose();
+              rlinksBuilder_ = null;
+              rlinks_ = other.rlinks_;
+              bitField0_ = (bitField0_ & ~0x00000200);
+              rlinksBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   internalGetRlinksFieldBuilder() : null;
+            } else {
+              rlinksBuilder_.addAllMessages(other.rlinks_);
+            }
+          }
+        }
+        if (other.hasCitationObj()) {
+          mergeCitationObj(other.getCitationObj());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -23062,8 +27973,8 @@ public final class Common extends com.google.protobuf.GeneratedFile {
                 break;
               } // case 10
               case 18: {
-                ensureTitleIsMutable();
-                title_.add(input.readStringRequireUtf8());
+                title_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
@@ -23135,6 +28046,26 @@ public final class Common extends com.google.protobuf.GeneratedFile {
                 bitField0_ |= 0x00000100;
                 break;
               } // case 74
+              case 82: {
+                oscal.common.v1.Common.Rlink m =
+                    input.readMessage(
+                        oscal.common.v1.Common.Rlink.parser(),
+                        extensionRegistry);
+                if (rlinksBuilder_ == null) {
+                  ensureRlinksIsMutable();
+                  rlinks_.add(m);
+                } else {
+                  rlinksBuilder_.addMessage(m);
+                }
+                break;
+              } // case 82
+              case 90: {
+                input.readMessage(
+                    internalGetCitationObjFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000400;
+                break;
+              } // case 90
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -23273,112 +28204,73 @@ public final class Common extends com.google.protobuf.GeneratedFile {
         return uuidBuilder_;
       }
 
-      private com.google.protobuf.LazyStringArrayList title_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
-      private void ensureTitleIsMutable() {
-        if (!title_.isModifiable()) {
-          title_ = new com.google.protobuf.LazyStringArrayList(title_);
+      private java.lang.Object title_ = "";
+      /**
+       * <code>string title = 2 [json_name = "title"];</code>
+       * @return The title.
+       */
+      public java.lang.String getTitle() {
+        java.lang.Object ref = title_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          title_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
         }
-        bitField0_ |= 0x00000002;
       }
       /**
-       * <code>repeated string title = 2 [json_name = "title"];</code>
-       * @return A list containing the title.
-       */
-      public com.google.protobuf.ProtocolStringList
-          getTitleList() {
-        title_.makeImmutable();
-        return title_;
-      }
-      /**
-       * <code>repeated string title = 2 [json_name = "title"];</code>
-       * @return The count of title.
-       */
-      public int getTitleCount() {
-        return title_.size();
-      }
-      /**
-       * <code>repeated string title = 2 [json_name = "title"];</code>
-       * @param index The index of the element to return.
-       * @return The title at the given index.
-       */
-      public java.lang.String getTitle(int index) {
-        return title_.get(index);
-      }
-      /**
-       * <code>repeated string title = 2 [json_name = "title"];</code>
-       * @param index The index of the value to return.
-       * @return The bytes of the title at the given index.
+       * <code>string title = 2 [json_name = "title"];</code>
+       * @return The bytes for title.
        */
       public com.google.protobuf.ByteString
-          getTitleBytes(int index) {
-        return title_.getByteString(index);
+          getTitleBytes() {
+        java.lang.Object ref = title_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          title_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
       }
       /**
-       * <code>repeated string title = 2 [json_name = "title"];</code>
-       * @param index The index to set the value at.
+       * <code>string title = 2 [json_name = "title"];</code>
        * @param value The title to set.
        * @return This builder for chaining.
        */
       public Builder setTitle(
-          int index, java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        ensureTitleIsMutable();
-        title_.set(index, value);
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string title = 2 [json_name = "title"];</code>
-       * @param value The title to add.
-       * @return This builder for chaining.
-       */
-      public Builder addTitle(
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
-        ensureTitleIsMutable();
-        title_.add(value);
+        title_ = value;
         bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
       /**
-       * <code>repeated string title = 2 [json_name = "title"];</code>
-       * @param values The title to add.
-       * @return This builder for chaining.
-       */
-      public Builder addAllTitle(
-          java.lang.Iterable<java.lang.String> values) {
-        ensureTitleIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, title_);
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string title = 2 [json_name = "title"];</code>
+       * <code>string title = 2 [json_name = "title"];</code>
        * @return This builder for chaining.
        */
       public Builder clearTitle() {
-        title_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);;
+        title_ = getDefaultInstance().getTitle();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated string title = 2 [json_name = "title"];</code>
-       * @param value The bytes of the title to add.
+       * <code>string title = 2 [json_name = "title"];</code>
+       * @param value The bytes for title to set.
        * @return This builder for chaining.
        */
-      public Builder addTitleBytes(
+      public Builder setTitleBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
-        ensureTitleIsMutable();
-        title_.add(value);
+        title_ = value;
         bitField0_ |= 0x00000002;
         onChanged();
         return this;
@@ -24578,10 +29470,16 @@ public final class Common extends com.google.protobuf.GeneratedFile {
 
       private java.lang.Object citation_ = "";
       /**
-       * <code>string citation = 9 [json_name = "citation"];</code>
+       * <pre>
+       * Deprecated: use citation_obj instead. Kept for backward compatibility.
+       * </pre>
+       *
+       * <code>string citation = 9 [json_name = "citation", deprecated = true];</code>
+       * @deprecated oscal.common.v1.Resource.citation is deprecated.
+       *     See common/v1/common.proto;l=204
        * @return The citation.
        */
-      public java.lang.String getCitation() {
+      @java.lang.Deprecated public java.lang.String getCitation() {
         java.lang.Object ref = citation_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
@@ -24594,10 +29492,16 @@ public final class Common extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>string citation = 9 [json_name = "citation"];</code>
+       * <pre>
+       * Deprecated: use citation_obj instead. Kept for backward compatibility.
+       * </pre>
+       *
+       * <code>string citation = 9 [json_name = "citation", deprecated = true];</code>
+       * @deprecated oscal.common.v1.Resource.citation is deprecated.
+       *     See common/v1/common.proto;l=204
        * @return The bytes for citation.
        */
-      public com.google.protobuf.ByteString
+      @java.lang.Deprecated public com.google.protobuf.ByteString
           getCitationBytes() {
         java.lang.Object ref = citation_;
         if (ref instanceof String) {
@@ -24611,11 +29515,17 @@ public final class Common extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>string citation = 9 [json_name = "citation"];</code>
+       * <pre>
+       * Deprecated: use citation_obj instead. Kept for backward compatibility.
+       * </pre>
+       *
+       * <code>string citation = 9 [json_name = "citation", deprecated = true];</code>
+       * @deprecated oscal.common.v1.Resource.citation is deprecated.
+       *     See common/v1/common.proto;l=204
        * @param value The citation to set.
        * @return This builder for chaining.
        */
-      public Builder setCitation(
+      @java.lang.Deprecated public Builder setCitation(
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         citation_ = value;
@@ -24624,21 +29534,33 @@ public final class Common extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>string citation = 9 [json_name = "citation"];</code>
+       * <pre>
+       * Deprecated: use citation_obj instead. Kept for backward compatibility.
+       * </pre>
+       *
+       * <code>string citation = 9 [json_name = "citation", deprecated = true];</code>
+       * @deprecated oscal.common.v1.Resource.citation is deprecated.
+       *     See common/v1/common.proto;l=204
        * @return This builder for chaining.
        */
-      public Builder clearCitation() {
+      @java.lang.Deprecated public Builder clearCitation() {
         citation_ = getDefaultInstance().getCitation();
         bitField0_ = (bitField0_ & ~0x00000100);
         onChanged();
         return this;
       }
       /**
-       * <code>string citation = 9 [json_name = "citation"];</code>
+       * <pre>
+       * Deprecated: use citation_obj instead. Kept for backward compatibility.
+       * </pre>
+       *
+       * <code>string citation = 9 [json_name = "citation", deprecated = true];</code>
+       * @deprecated oscal.common.v1.Resource.citation is deprecated.
+       *     See common/v1/common.proto;l=204
        * @param value The bytes for citation to set.
        * @return This builder for chaining.
        */
-      public Builder setCitationBytes(
+      @java.lang.Deprecated public Builder setCitationBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
@@ -24646,6 +29568,367 @@ public final class Common extends com.google.protobuf.GeneratedFile {
         bitField0_ |= 0x00000100;
         onChanged();
         return this;
+      }
+
+      private java.util.List<oscal.common.v1.Common.Rlink> rlinks_ =
+        java.util.Collections.emptyList();
+      private void ensureRlinksIsMutable() {
+        if (!((bitField0_ & 0x00000200) != 0)) {
+          rlinks_ = new java.util.ArrayList<oscal.common.v1.Common.Rlink>(rlinks_);
+          bitField0_ |= 0x00000200;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.common.v1.Common.Rlink, oscal.common.v1.Common.Rlink.Builder, oscal.common.v1.Common.RlinkOrBuilder> rlinksBuilder_;
+
+      /**
+       * <code>repeated .oscal.common.v1.Rlink rlinks = 10 [json_name = "rlinks"];</code>
+       */
+      public java.util.List<oscal.common.v1.Common.Rlink> getRlinksList() {
+        if (rlinksBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(rlinks_);
+        } else {
+          return rlinksBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Rlink rlinks = 10 [json_name = "rlinks"];</code>
+       */
+      public int getRlinksCount() {
+        if (rlinksBuilder_ == null) {
+          return rlinks_.size();
+        } else {
+          return rlinksBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Rlink rlinks = 10 [json_name = "rlinks"];</code>
+       */
+      public oscal.common.v1.Common.Rlink getRlinks(int index) {
+        if (rlinksBuilder_ == null) {
+          return rlinks_.get(index);
+        } else {
+          return rlinksBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Rlink rlinks = 10 [json_name = "rlinks"];</code>
+       */
+      public Builder setRlinks(
+          int index, oscal.common.v1.Common.Rlink value) {
+        if (rlinksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRlinksIsMutable();
+          rlinks_.set(index, value);
+          onChanged();
+        } else {
+          rlinksBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Rlink rlinks = 10 [json_name = "rlinks"];</code>
+       */
+      public Builder setRlinks(
+          int index, oscal.common.v1.Common.Rlink.Builder builderForValue) {
+        if (rlinksBuilder_ == null) {
+          ensureRlinksIsMutable();
+          rlinks_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          rlinksBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Rlink rlinks = 10 [json_name = "rlinks"];</code>
+       */
+      public Builder addRlinks(oscal.common.v1.Common.Rlink value) {
+        if (rlinksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRlinksIsMutable();
+          rlinks_.add(value);
+          onChanged();
+        } else {
+          rlinksBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Rlink rlinks = 10 [json_name = "rlinks"];</code>
+       */
+      public Builder addRlinks(
+          int index, oscal.common.v1.Common.Rlink value) {
+        if (rlinksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRlinksIsMutable();
+          rlinks_.add(index, value);
+          onChanged();
+        } else {
+          rlinksBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Rlink rlinks = 10 [json_name = "rlinks"];</code>
+       */
+      public Builder addRlinks(
+          oscal.common.v1.Common.Rlink.Builder builderForValue) {
+        if (rlinksBuilder_ == null) {
+          ensureRlinksIsMutable();
+          rlinks_.add(builderForValue.build());
+          onChanged();
+        } else {
+          rlinksBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Rlink rlinks = 10 [json_name = "rlinks"];</code>
+       */
+      public Builder addRlinks(
+          int index, oscal.common.v1.Common.Rlink.Builder builderForValue) {
+        if (rlinksBuilder_ == null) {
+          ensureRlinksIsMutable();
+          rlinks_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          rlinksBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Rlink rlinks = 10 [json_name = "rlinks"];</code>
+       */
+      public Builder addAllRlinks(
+          java.lang.Iterable<? extends oscal.common.v1.Common.Rlink> values) {
+        if (rlinksBuilder_ == null) {
+          ensureRlinksIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, rlinks_);
+          onChanged();
+        } else {
+          rlinksBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Rlink rlinks = 10 [json_name = "rlinks"];</code>
+       */
+      public Builder clearRlinks() {
+        if (rlinksBuilder_ == null) {
+          rlinks_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000200);
+          onChanged();
+        } else {
+          rlinksBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Rlink rlinks = 10 [json_name = "rlinks"];</code>
+       */
+      public Builder removeRlinks(int index) {
+        if (rlinksBuilder_ == null) {
+          ensureRlinksIsMutable();
+          rlinks_.remove(index);
+          onChanged();
+        } else {
+          rlinksBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Rlink rlinks = 10 [json_name = "rlinks"];</code>
+       */
+      public oscal.common.v1.Common.Rlink.Builder getRlinksBuilder(
+          int index) {
+        return internalGetRlinksFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Rlink rlinks = 10 [json_name = "rlinks"];</code>
+       */
+      public oscal.common.v1.Common.RlinkOrBuilder getRlinksOrBuilder(
+          int index) {
+        if (rlinksBuilder_ == null) {
+          return rlinks_.get(index);  } else {
+          return rlinksBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Rlink rlinks = 10 [json_name = "rlinks"];</code>
+       */
+      public java.util.List<? extends oscal.common.v1.Common.RlinkOrBuilder> 
+           getRlinksOrBuilderList() {
+        if (rlinksBuilder_ != null) {
+          return rlinksBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(rlinks_);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Rlink rlinks = 10 [json_name = "rlinks"];</code>
+       */
+      public oscal.common.v1.Common.Rlink.Builder addRlinksBuilder() {
+        return internalGetRlinksFieldBuilder().addBuilder(
+            oscal.common.v1.Common.Rlink.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Rlink rlinks = 10 [json_name = "rlinks"];</code>
+       */
+      public oscal.common.v1.Common.Rlink.Builder addRlinksBuilder(
+          int index) {
+        return internalGetRlinksFieldBuilder().addBuilder(
+            index, oscal.common.v1.Common.Rlink.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Rlink rlinks = 10 [json_name = "rlinks"];</code>
+       */
+      public java.util.List<oscal.common.v1.Common.Rlink.Builder> 
+           getRlinksBuilderList() {
+        return internalGetRlinksFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.common.v1.Common.Rlink, oscal.common.v1.Common.Rlink.Builder, oscal.common.v1.Common.RlinkOrBuilder> 
+          internalGetRlinksFieldBuilder() {
+        if (rlinksBuilder_ == null) {
+          rlinksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              oscal.common.v1.Common.Rlink, oscal.common.v1.Common.Rlink.Builder, oscal.common.v1.Common.RlinkOrBuilder>(
+                  rlinks_,
+                  ((bitField0_ & 0x00000200) != 0),
+                  getParentForChildren(),
+                  isClean());
+          rlinks_ = null;
+        }
+        return rlinksBuilder_;
+      }
+
+      private oscal.common.v1.Common.Citation citationObj_;
+      private com.google.protobuf.SingleFieldBuilder<
+          oscal.common.v1.Common.Citation, oscal.common.v1.Common.Citation.Builder, oscal.common.v1.Common.CitationOrBuilder> citationObjBuilder_;
+      /**
+       * <code>.oscal.common.v1.Citation citation_obj = 11 [json_name = "citationObj"];</code>
+       * @return Whether the citationObj field is set.
+       */
+      public boolean hasCitationObj() {
+        return ((bitField0_ & 0x00000400) != 0);
+      }
+      /**
+       * <code>.oscal.common.v1.Citation citation_obj = 11 [json_name = "citationObj"];</code>
+       * @return The citationObj.
+       */
+      public oscal.common.v1.Common.Citation getCitationObj() {
+        if (citationObjBuilder_ == null) {
+          return citationObj_ == null ? oscal.common.v1.Common.Citation.getDefaultInstance() : citationObj_;
+        } else {
+          return citationObjBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.oscal.common.v1.Citation citation_obj = 11 [json_name = "citationObj"];</code>
+       */
+      public Builder setCitationObj(oscal.common.v1.Common.Citation value) {
+        if (citationObjBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          citationObj_ = value;
+        } else {
+          citationObjBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.Citation citation_obj = 11 [json_name = "citationObj"];</code>
+       */
+      public Builder setCitationObj(
+          oscal.common.v1.Common.Citation.Builder builderForValue) {
+        if (citationObjBuilder_ == null) {
+          citationObj_ = builderForValue.build();
+        } else {
+          citationObjBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.Citation citation_obj = 11 [json_name = "citationObj"];</code>
+       */
+      public Builder mergeCitationObj(oscal.common.v1.Common.Citation value) {
+        if (citationObjBuilder_ == null) {
+          if (((bitField0_ & 0x00000400) != 0) &&
+            citationObj_ != null &&
+            citationObj_ != oscal.common.v1.Common.Citation.getDefaultInstance()) {
+            getCitationObjBuilder().mergeFrom(value);
+          } else {
+            citationObj_ = value;
+          }
+        } else {
+          citationObjBuilder_.mergeFrom(value);
+        }
+        if (citationObj_ != null) {
+          bitField0_ |= 0x00000400;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.Citation citation_obj = 11 [json_name = "citationObj"];</code>
+       */
+      public Builder clearCitationObj() {
+        bitField0_ = (bitField0_ & ~0x00000400);
+        citationObj_ = null;
+        if (citationObjBuilder_ != null) {
+          citationObjBuilder_.dispose();
+          citationObjBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.Citation citation_obj = 11 [json_name = "citationObj"];</code>
+       */
+      public oscal.common.v1.Common.Citation.Builder getCitationObjBuilder() {
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return internalGetCitationObjFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.oscal.common.v1.Citation citation_obj = 11 [json_name = "citationObj"];</code>
+       */
+      public oscal.common.v1.Common.CitationOrBuilder getCitationObjOrBuilder() {
+        if (citationObjBuilder_ != null) {
+          return citationObjBuilder_.getMessageOrBuilder();
+        } else {
+          return citationObj_ == null ?
+              oscal.common.v1.Common.Citation.getDefaultInstance() : citationObj_;
+        }
+      }
+      /**
+       * <code>.oscal.common.v1.Citation citation_obj = 11 [json_name = "citationObj"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          oscal.common.v1.Common.Citation, oscal.common.v1.Common.Citation.Builder, oscal.common.v1.Common.CitationOrBuilder> 
+          internalGetCitationObjFieldBuilder() {
+        if (citationObjBuilder_ == null) {
+          citationObjBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              oscal.common.v1.Common.Citation, oscal.common.v1.Common.Citation.Builder, oscal.common.v1.Common.CitationOrBuilder>(
+                  getCitationObj(),
+                  getParentForChildren(),
+                  isClean());
+          citationObj_ = null;
+        }
+        return citationObjBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:oscal.common.v1.Resource)
@@ -24694,6 +29977,2476 @@ public final class Common extends com.google.protobuf.GeneratedFile {
 
     @java.lang.Override
     public oscal.common.v1.Common.Resource getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RlinkOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oscal.common.v1.Rlink)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.oscal.common.v1.URI href = 1 [json_name = "href"];</code>
+     * @return Whether the href field is set.
+     */
+    boolean hasHref();
+    /**
+     * <code>.oscal.common.v1.URI href = 1 [json_name = "href"];</code>
+     * @return The href.
+     */
+    oscal.common.v1.Common.URI getHref();
+    /**
+     * <code>.oscal.common.v1.URI href = 1 [json_name = "href"];</code>
+     */
+    oscal.common.v1.Common.URIOrBuilder getHrefOrBuilder();
+
+    /**
+     * <code>string media_type = 2 [json_name = "mediaType"];</code>
+     * @return The mediaType.
+     */
+    java.lang.String getMediaType();
+    /**
+     * <code>string media_type = 2 [json_name = "mediaType"];</code>
+     * @return The bytes for mediaType.
+     */
+    com.google.protobuf.ByteString
+        getMediaTypeBytes();
+
+    /**
+     * <code>repeated .oscal.common.v1.Hash hashes = 3 [json_name = "hashes"];</code>
+     */
+    java.util.List<oscal.common.v1.Common.Hash> 
+        getHashesList();
+    /**
+     * <code>repeated .oscal.common.v1.Hash hashes = 3 [json_name = "hashes"];</code>
+     */
+    oscal.common.v1.Common.Hash getHashes(int index);
+    /**
+     * <code>repeated .oscal.common.v1.Hash hashes = 3 [json_name = "hashes"];</code>
+     */
+    int getHashesCount();
+    /**
+     * <code>repeated .oscal.common.v1.Hash hashes = 3 [json_name = "hashes"];</code>
+     */
+    java.util.List<? extends oscal.common.v1.Common.HashOrBuilder> 
+        getHashesOrBuilderList();
+    /**
+     * <code>repeated .oscal.common.v1.Hash hashes = 3 [json_name = "hashes"];</code>
+     */
+    oscal.common.v1.Common.HashOrBuilder getHashesOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * Rlink represents a resource link
+   * </pre>
+   *
+   * Protobuf type {@code oscal.common.v1.Rlink}
+   */
+  public static final class Rlink extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:oscal.common.v1.Rlink)
+      RlinkOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 35,
+        /* patch= */ 1,
+        /* suffix= */ "",
+        "Rlink");
+    }
+    // Use Rlink.newBuilder() to construct.
+    private Rlink(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private Rlink() {
+      mediaType_ = "";
+      hashes_ = java.util.Collections.emptyList();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return oscal.common.v1.Common.internal_static_oscal_common_v1_Rlink_descriptor;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+      return oscal.common.v1.Common.internal_static_oscal_common_v1_Rlink_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return oscal.common.v1.Common.internal_static_oscal_common_v1_Rlink_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              oscal.common.v1.Common.Rlink.class, oscal.common.v1.Common.Rlink.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int HREF_FIELD_NUMBER = 1;
+    private oscal.common.v1.Common.URI href_;
+    /**
+     * <code>.oscal.common.v1.URI href = 1 [json_name = "href"];</code>
+     * @return Whether the href field is set.
+     */
+    @java.lang.Override
+    public boolean hasHref() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.oscal.common.v1.URI href = 1 [json_name = "href"];</code>
+     * @return The href.
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.URI getHref() {
+      return href_ == null ? oscal.common.v1.Common.URI.getDefaultInstance() : href_;
+    }
+    /**
+     * <code>.oscal.common.v1.URI href = 1 [json_name = "href"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.URIOrBuilder getHrefOrBuilder() {
+      return href_ == null ? oscal.common.v1.Common.URI.getDefaultInstance() : href_;
+    }
+
+    public static final int MEDIA_TYPE_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object mediaType_ = "";
+    /**
+     * <code>string media_type = 2 [json_name = "mediaType"];</code>
+     * @return The mediaType.
+     */
+    @java.lang.Override
+    public java.lang.String getMediaType() {
+      java.lang.Object ref = mediaType_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        mediaType_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string media_type = 2 [json_name = "mediaType"];</code>
+     * @return The bytes for mediaType.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMediaTypeBytes() {
+      java.lang.Object ref = mediaType_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        mediaType_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int HASHES_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<oscal.common.v1.Common.Hash> hashes_;
+    /**
+     * <code>repeated .oscal.common.v1.Hash hashes = 3 [json_name = "hashes"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<oscal.common.v1.Common.Hash> getHashesList() {
+      return hashes_;
+    }
+    /**
+     * <code>repeated .oscal.common.v1.Hash hashes = 3 [json_name = "hashes"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends oscal.common.v1.Common.HashOrBuilder> 
+        getHashesOrBuilderList() {
+      return hashes_;
+    }
+    /**
+     * <code>repeated .oscal.common.v1.Hash hashes = 3 [json_name = "hashes"];</code>
+     */
+    @java.lang.Override
+    public int getHashesCount() {
+      return hashes_.size();
+    }
+    /**
+     * <code>repeated .oscal.common.v1.Hash hashes = 3 [json_name = "hashes"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.Hash getHashes(int index) {
+      return hashes_.get(index);
+    }
+    /**
+     * <code>repeated .oscal.common.v1.Hash hashes = 3 [json_name = "hashes"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.HashOrBuilder getHashesOrBuilder(
+        int index) {
+      return hashes_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeMessage(1, getHref());
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(mediaType_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, mediaType_);
+      }
+      for (int i = 0; i < hashes_.size(); i++) {
+        output.writeMessage(3, hashes_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+    private int computeSerializedSize_0() {
+      int size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getHref());
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(mediaType_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, mediaType_);
+      }
+
+          {
+            final int count = hashes_.size();
+            for (int i = 0; i < count; i++) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeMessageSizeNoTag(hashes_.get(i));
+            }
+            size += 1 * count;
+          }
+      return size;
+    }
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += computeSerializedSize_0();
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof oscal.common.v1.Common.Rlink)) {
+        return super.equals(obj);
+      }
+      oscal.common.v1.Common.Rlink other = (oscal.common.v1.Common.Rlink) obj;
+
+      if (hasHref() != other.hasHref()) return false;
+      if (hasHref()) {
+        if (!getHref()
+            .equals(other.getHref())) return false;
+      }
+      if (!getMediaType()
+          .equals(other.getMediaType())) return false;
+      if (!getHashesList()
+          .equals(other.getHashesList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasHref()) {
+        hash = (37 * hash) + HREF_FIELD_NUMBER;
+        hash = (53 * hash) + getHref().hashCode();
+      }
+      hash = (37 * hash) + MEDIA_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getMediaType().hashCode();
+      if (getHashesCount() > 0) {
+        hash = (37 * hash) + HASHES_FIELD_NUMBER;
+        hash = (53 * hash) + getHashesList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static oscal.common.v1.Common.Rlink parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.common.v1.Common.Rlink parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.common.v1.Common.Rlink parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.common.v1.Common.Rlink parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.common.v1.Common.Rlink parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.common.v1.Common.Rlink parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.common.v1.Common.Rlink parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static oscal.common.v1.Common.Rlink parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static oscal.common.v1.Common.Rlink parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static oscal.common.v1.Common.Rlink parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static oscal.common.v1.Common.Rlink parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static oscal.common.v1.Common.Rlink parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(oscal.common.v1.Common.Rlink prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Rlink represents a resource link
+     * </pre>
+     *
+     * Protobuf type {@code oscal.common.v1.Rlink}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oscal.common.v1.Rlink)
+        oscal.common.v1.Common.RlinkOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return oscal.common.v1.Common.internal_static_oscal_common_v1_Rlink_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return oscal.common.v1.Common.internal_static_oscal_common_v1_Rlink_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                oscal.common.v1.Common.Rlink.class, oscal.common.v1.Common.Rlink.Builder.class);
+      }
+
+      // Construct using oscal.common.v1.Common.Rlink.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage
+                .alwaysUseFieldBuilders) {
+          internalGetHrefFieldBuilder();
+          internalGetHashesFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        href_ = null;
+        if (hrefBuilder_ != null) {
+          hrefBuilder_.dispose();
+          hrefBuilder_ = null;
+        }
+        mediaType_ = "";
+        if (hashesBuilder_ == null) {
+          hashes_ = java.util.Collections.emptyList();
+        } else {
+          hashes_ = null;
+          hashesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return oscal.common.v1.Common.internal_static_oscal_common_v1_Rlink_descriptor;
+      }
+
+      @java.lang.Override
+      public oscal.common.v1.Common.Rlink getDefaultInstanceForType() {
+        return oscal.common.v1.Common.Rlink.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public oscal.common.v1.Common.Rlink build() {
+        oscal.common.v1.Common.Rlink result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public oscal.common.v1.Common.Rlink buildPartial() {
+        oscal.common.v1.Common.Rlink result = new oscal.common.v1.Common.Rlink(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(oscal.common.v1.Common.Rlink result) {
+        if (hashesBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            hashes_ = java.util.Collections.unmodifiableList(hashes_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.hashes_ = hashes_;
+        } else {
+          result.hashes_ = hashesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(oscal.common.v1.Common.Rlink result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.href_ = hrefBuilder_ == null
+              ? href_
+              : hrefBuilder_.build();
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.mediaType_ = mediaType_;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof oscal.common.v1.Common.Rlink) {
+          return mergeFrom((oscal.common.v1.Common.Rlink)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(oscal.common.v1.Common.Rlink other) {
+        if (other == oscal.common.v1.Common.Rlink.getDefaultInstance()) return this;
+        if (other.hasHref()) {
+          mergeHref(other.getHref());
+        }
+        if (!other.getMediaType().isEmpty()) {
+          mediaType_ = other.mediaType_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (hashesBuilder_ == null) {
+          if (!other.hashes_.isEmpty()) {
+            if (hashes_.isEmpty()) {
+              hashes_ = other.hashes_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureHashesIsMutable();
+              hashes_.addAll(other.hashes_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.hashes_.isEmpty()) {
+            if (hashesBuilder_.isEmpty()) {
+              hashesBuilder_.dispose();
+              hashesBuilder_ = null;
+              hashes_ = other.hashes_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              hashesBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   internalGetHashesFieldBuilder() : null;
+            } else {
+              hashesBuilder_.addAllMessages(other.hashes_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    internalGetHrefFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                mediaType_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                oscal.common.v1.Common.Hash m =
+                    input.readMessage(
+                        oscal.common.v1.Common.Hash.parser(),
+                        extensionRegistry);
+                if (hashesBuilder_ == null) {
+                  ensureHashesIsMutable();
+                  hashes_.add(m);
+                } else {
+                  hashesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private oscal.common.v1.Common.URI href_;
+      private com.google.protobuf.SingleFieldBuilder<
+          oscal.common.v1.Common.URI, oscal.common.v1.Common.URI.Builder, oscal.common.v1.Common.URIOrBuilder> hrefBuilder_;
+      /**
+       * <code>.oscal.common.v1.URI href = 1 [json_name = "href"];</code>
+       * @return Whether the href field is set.
+       */
+      public boolean hasHref() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.oscal.common.v1.URI href = 1 [json_name = "href"];</code>
+       * @return The href.
+       */
+      public oscal.common.v1.Common.URI getHref() {
+        if (hrefBuilder_ == null) {
+          return href_ == null ? oscal.common.v1.Common.URI.getDefaultInstance() : href_;
+        } else {
+          return hrefBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.oscal.common.v1.URI href = 1 [json_name = "href"];</code>
+       */
+      public Builder setHref(oscal.common.v1.Common.URI value) {
+        if (hrefBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          href_ = value;
+        } else {
+          hrefBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.URI href = 1 [json_name = "href"];</code>
+       */
+      public Builder setHref(
+          oscal.common.v1.Common.URI.Builder builderForValue) {
+        if (hrefBuilder_ == null) {
+          href_ = builderForValue.build();
+        } else {
+          hrefBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.URI href = 1 [json_name = "href"];</code>
+       */
+      public Builder mergeHref(oscal.common.v1.Common.URI value) {
+        if (hrefBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            href_ != null &&
+            href_ != oscal.common.v1.Common.URI.getDefaultInstance()) {
+            getHrefBuilder().mergeFrom(value);
+          } else {
+            href_ = value;
+          }
+        } else {
+          hrefBuilder_.mergeFrom(value);
+        }
+        if (href_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.URI href = 1 [json_name = "href"];</code>
+       */
+      public Builder clearHref() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        href_ = null;
+        if (hrefBuilder_ != null) {
+          hrefBuilder_.dispose();
+          hrefBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.URI href = 1 [json_name = "href"];</code>
+       */
+      public oscal.common.v1.Common.URI.Builder getHrefBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return internalGetHrefFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.oscal.common.v1.URI href = 1 [json_name = "href"];</code>
+       */
+      public oscal.common.v1.Common.URIOrBuilder getHrefOrBuilder() {
+        if (hrefBuilder_ != null) {
+          return hrefBuilder_.getMessageOrBuilder();
+        } else {
+          return href_ == null ?
+              oscal.common.v1.Common.URI.getDefaultInstance() : href_;
+        }
+      }
+      /**
+       * <code>.oscal.common.v1.URI href = 1 [json_name = "href"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          oscal.common.v1.Common.URI, oscal.common.v1.Common.URI.Builder, oscal.common.v1.Common.URIOrBuilder> 
+          internalGetHrefFieldBuilder() {
+        if (hrefBuilder_ == null) {
+          hrefBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              oscal.common.v1.Common.URI, oscal.common.v1.Common.URI.Builder, oscal.common.v1.Common.URIOrBuilder>(
+                  getHref(),
+                  getParentForChildren(),
+                  isClean());
+          href_ = null;
+        }
+        return hrefBuilder_;
+      }
+
+      private java.lang.Object mediaType_ = "";
+      /**
+       * <code>string media_type = 2 [json_name = "mediaType"];</code>
+       * @return The mediaType.
+       */
+      public java.lang.String getMediaType() {
+        java.lang.Object ref = mediaType_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          mediaType_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string media_type = 2 [json_name = "mediaType"];</code>
+       * @return The bytes for mediaType.
+       */
+      public com.google.protobuf.ByteString
+          getMediaTypeBytes() {
+        java.lang.Object ref = mediaType_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          mediaType_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string media_type = 2 [json_name = "mediaType"];</code>
+       * @param value The mediaType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMediaType(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        mediaType_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string media_type = 2 [json_name = "mediaType"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMediaType() {
+        mediaType_ = getDefaultInstance().getMediaType();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string media_type = 2 [json_name = "mediaType"];</code>
+       * @param value The bytes for mediaType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMediaTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        mediaType_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<oscal.common.v1.Common.Hash> hashes_ =
+        java.util.Collections.emptyList();
+      private void ensureHashesIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          hashes_ = new java.util.ArrayList<oscal.common.v1.Common.Hash>(hashes_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.common.v1.Common.Hash, oscal.common.v1.Common.Hash.Builder, oscal.common.v1.Common.HashOrBuilder> hashesBuilder_;
+
+      /**
+       * <code>repeated .oscal.common.v1.Hash hashes = 3 [json_name = "hashes"];</code>
+       */
+      public java.util.List<oscal.common.v1.Common.Hash> getHashesList() {
+        if (hashesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(hashes_);
+        } else {
+          return hashesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Hash hashes = 3 [json_name = "hashes"];</code>
+       */
+      public int getHashesCount() {
+        if (hashesBuilder_ == null) {
+          return hashes_.size();
+        } else {
+          return hashesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Hash hashes = 3 [json_name = "hashes"];</code>
+       */
+      public oscal.common.v1.Common.Hash getHashes(int index) {
+        if (hashesBuilder_ == null) {
+          return hashes_.get(index);
+        } else {
+          return hashesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Hash hashes = 3 [json_name = "hashes"];</code>
+       */
+      public Builder setHashes(
+          int index, oscal.common.v1.Common.Hash value) {
+        if (hashesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureHashesIsMutable();
+          hashes_.set(index, value);
+          onChanged();
+        } else {
+          hashesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Hash hashes = 3 [json_name = "hashes"];</code>
+       */
+      public Builder setHashes(
+          int index, oscal.common.v1.Common.Hash.Builder builderForValue) {
+        if (hashesBuilder_ == null) {
+          ensureHashesIsMutable();
+          hashes_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          hashesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Hash hashes = 3 [json_name = "hashes"];</code>
+       */
+      public Builder addHashes(oscal.common.v1.Common.Hash value) {
+        if (hashesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureHashesIsMutable();
+          hashes_.add(value);
+          onChanged();
+        } else {
+          hashesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Hash hashes = 3 [json_name = "hashes"];</code>
+       */
+      public Builder addHashes(
+          int index, oscal.common.v1.Common.Hash value) {
+        if (hashesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureHashesIsMutable();
+          hashes_.add(index, value);
+          onChanged();
+        } else {
+          hashesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Hash hashes = 3 [json_name = "hashes"];</code>
+       */
+      public Builder addHashes(
+          oscal.common.v1.Common.Hash.Builder builderForValue) {
+        if (hashesBuilder_ == null) {
+          ensureHashesIsMutable();
+          hashes_.add(builderForValue.build());
+          onChanged();
+        } else {
+          hashesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Hash hashes = 3 [json_name = "hashes"];</code>
+       */
+      public Builder addHashes(
+          int index, oscal.common.v1.Common.Hash.Builder builderForValue) {
+        if (hashesBuilder_ == null) {
+          ensureHashesIsMutable();
+          hashes_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          hashesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Hash hashes = 3 [json_name = "hashes"];</code>
+       */
+      public Builder addAllHashes(
+          java.lang.Iterable<? extends oscal.common.v1.Common.Hash> values) {
+        if (hashesBuilder_ == null) {
+          ensureHashesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, hashes_);
+          onChanged();
+        } else {
+          hashesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Hash hashes = 3 [json_name = "hashes"];</code>
+       */
+      public Builder clearHashes() {
+        if (hashesBuilder_ == null) {
+          hashes_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          hashesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Hash hashes = 3 [json_name = "hashes"];</code>
+       */
+      public Builder removeHashes(int index) {
+        if (hashesBuilder_ == null) {
+          ensureHashesIsMutable();
+          hashes_.remove(index);
+          onChanged();
+        } else {
+          hashesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Hash hashes = 3 [json_name = "hashes"];</code>
+       */
+      public oscal.common.v1.Common.Hash.Builder getHashesBuilder(
+          int index) {
+        return internalGetHashesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Hash hashes = 3 [json_name = "hashes"];</code>
+       */
+      public oscal.common.v1.Common.HashOrBuilder getHashesOrBuilder(
+          int index) {
+        if (hashesBuilder_ == null) {
+          return hashes_.get(index);  } else {
+          return hashesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Hash hashes = 3 [json_name = "hashes"];</code>
+       */
+      public java.util.List<? extends oscal.common.v1.Common.HashOrBuilder> 
+           getHashesOrBuilderList() {
+        if (hashesBuilder_ != null) {
+          return hashesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(hashes_);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Hash hashes = 3 [json_name = "hashes"];</code>
+       */
+      public oscal.common.v1.Common.Hash.Builder addHashesBuilder() {
+        return internalGetHashesFieldBuilder().addBuilder(
+            oscal.common.v1.Common.Hash.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Hash hashes = 3 [json_name = "hashes"];</code>
+       */
+      public oscal.common.v1.Common.Hash.Builder addHashesBuilder(
+          int index) {
+        return internalGetHashesFieldBuilder().addBuilder(
+            index, oscal.common.v1.Common.Hash.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Hash hashes = 3 [json_name = "hashes"];</code>
+       */
+      public java.util.List<oscal.common.v1.Common.Hash.Builder> 
+           getHashesBuilderList() {
+        return internalGetHashesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.common.v1.Common.Hash, oscal.common.v1.Common.Hash.Builder, oscal.common.v1.Common.HashOrBuilder> 
+          internalGetHashesFieldBuilder() {
+        if (hashesBuilder_ == null) {
+          hashesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              oscal.common.v1.Common.Hash, oscal.common.v1.Common.Hash.Builder, oscal.common.v1.Common.HashOrBuilder>(
+                  hashes_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          hashes_ = null;
+        }
+        return hashesBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:oscal.common.v1.Rlink)
+    }
+
+    // @@protoc_insertion_point(class_scope:oscal.common.v1.Rlink)
+    private static final oscal.common.v1.Common.Rlink DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new oscal.common.v1.Common.Rlink();
+    }
+
+    public static oscal.common.v1.Common.Rlink getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Rlink>
+        PARSER = new com.google.protobuf.AbstractParser<Rlink>() {
+      @java.lang.Override
+      public Rlink parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Rlink> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Rlink> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public oscal.common.v1.Common.Rlink getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CitationOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oscal.common.v1.Citation)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.oscal.common.v1.MarkupLine text = 1 [json_name = "text"];</code>
+     * @return Whether the text field is set.
+     */
+    boolean hasText();
+    /**
+     * <code>.oscal.common.v1.MarkupLine text = 1 [json_name = "text"];</code>
+     * @return The text.
+     */
+    oscal.common.v1.Common.MarkupLine getText();
+    /**
+     * <code>.oscal.common.v1.MarkupLine text = 1 [json_name = "text"];</code>
+     */
+    oscal.common.v1.Common.MarkupLineOrBuilder getTextOrBuilder();
+
+    /**
+     * <code>repeated .oscal.common.v1.Property props = 2 [json_name = "props"];</code>
+     */
+    java.util.List<oscal.common.v1.Common.Property> 
+        getPropsList();
+    /**
+     * <code>repeated .oscal.common.v1.Property props = 2 [json_name = "props"];</code>
+     */
+    oscal.common.v1.Common.Property getProps(int index);
+    /**
+     * <code>repeated .oscal.common.v1.Property props = 2 [json_name = "props"];</code>
+     */
+    int getPropsCount();
+    /**
+     * <code>repeated .oscal.common.v1.Property props = 2 [json_name = "props"];</code>
+     */
+    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+        getPropsOrBuilderList();
+    /**
+     * <code>repeated .oscal.common.v1.Property props = 2 [json_name = "props"];</code>
+     */
+    oscal.common.v1.Common.PropertyOrBuilder getPropsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .oscal.common.v1.Link links = 3 [json_name = "links"];</code>
+     */
+    java.util.List<oscal.common.v1.Common.Link> 
+        getLinksList();
+    /**
+     * <code>repeated .oscal.common.v1.Link links = 3 [json_name = "links"];</code>
+     */
+    oscal.common.v1.Common.Link getLinks(int index);
+    /**
+     * <code>repeated .oscal.common.v1.Link links = 3 [json_name = "links"];</code>
+     */
+    int getLinksCount();
+    /**
+     * <code>repeated .oscal.common.v1.Link links = 3 [json_name = "links"];</code>
+     */
+    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+        getLinksOrBuilderList();
+    /**
+     * <code>repeated .oscal.common.v1.Link links = 3 [json_name = "links"];</code>
+     */
+    oscal.common.v1.Common.LinkOrBuilder getLinksOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * Citation represents a bibliographic citation
+   * </pre>
+   *
+   * Protobuf type {@code oscal.common.v1.Citation}
+   */
+  public static final class Citation extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:oscal.common.v1.Citation)
+      CitationOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 35,
+        /* patch= */ 1,
+        /* suffix= */ "",
+        "Citation");
+    }
+    // Use Citation.newBuilder() to construct.
+    private Citation(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private Citation() {
+      props_ = java.util.Collections.emptyList();
+      links_ = java.util.Collections.emptyList();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return oscal.common.v1.Common.internal_static_oscal_common_v1_Citation_descriptor;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+      return oscal.common.v1.Common.internal_static_oscal_common_v1_Citation_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return oscal.common.v1.Common.internal_static_oscal_common_v1_Citation_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              oscal.common.v1.Common.Citation.class, oscal.common.v1.Common.Citation.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int TEXT_FIELD_NUMBER = 1;
+    private oscal.common.v1.Common.MarkupLine text_;
+    /**
+     * <code>.oscal.common.v1.MarkupLine text = 1 [json_name = "text"];</code>
+     * @return Whether the text field is set.
+     */
+    @java.lang.Override
+    public boolean hasText() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.oscal.common.v1.MarkupLine text = 1 [json_name = "text"];</code>
+     * @return The text.
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.MarkupLine getText() {
+      return text_ == null ? oscal.common.v1.Common.MarkupLine.getDefaultInstance() : text_;
+    }
+    /**
+     * <code>.oscal.common.v1.MarkupLine text = 1 [json_name = "text"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.MarkupLineOrBuilder getTextOrBuilder() {
+      return text_ == null ? oscal.common.v1.Common.MarkupLine.getDefaultInstance() : text_;
+    }
+
+    public static final int PROPS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<oscal.common.v1.Common.Property> props_;
+    /**
+     * <code>repeated .oscal.common.v1.Property props = 2 [json_name = "props"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<oscal.common.v1.Common.Property> getPropsList() {
+      return props_;
+    }
+    /**
+     * <code>repeated .oscal.common.v1.Property props = 2 [json_name = "props"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+        getPropsOrBuilderList() {
+      return props_;
+    }
+    /**
+     * <code>repeated .oscal.common.v1.Property props = 2 [json_name = "props"];</code>
+     */
+    @java.lang.Override
+    public int getPropsCount() {
+      return props_.size();
+    }
+    /**
+     * <code>repeated .oscal.common.v1.Property props = 2 [json_name = "props"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.Property getProps(int index) {
+      return props_.get(index);
+    }
+    /**
+     * <code>repeated .oscal.common.v1.Property props = 2 [json_name = "props"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.PropertyOrBuilder getPropsOrBuilder(
+        int index) {
+      return props_.get(index);
+    }
+
+    public static final int LINKS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<oscal.common.v1.Common.Link> links_;
+    /**
+     * <code>repeated .oscal.common.v1.Link links = 3 [json_name = "links"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<oscal.common.v1.Common.Link> getLinksList() {
+      return links_;
+    }
+    /**
+     * <code>repeated .oscal.common.v1.Link links = 3 [json_name = "links"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+        getLinksOrBuilderList() {
+      return links_;
+    }
+    /**
+     * <code>repeated .oscal.common.v1.Link links = 3 [json_name = "links"];</code>
+     */
+    @java.lang.Override
+    public int getLinksCount() {
+      return links_.size();
+    }
+    /**
+     * <code>repeated .oscal.common.v1.Link links = 3 [json_name = "links"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.Link getLinks(int index) {
+      return links_.get(index);
+    }
+    /**
+     * <code>repeated .oscal.common.v1.Link links = 3 [json_name = "links"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.LinkOrBuilder getLinksOrBuilder(
+        int index) {
+      return links_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeMessage(1, getText());
+      }
+      for (int i = 0; i < props_.size(); i++) {
+        output.writeMessage(2, props_.get(i));
+      }
+      for (int i = 0; i < links_.size(); i++) {
+        output.writeMessage(3, links_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+    private int computeSerializedSize_0() {
+      int size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getText());
+      }
+
+          {
+            final int count = props_.size();
+            for (int i = 0; i < count; i++) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeMessageSizeNoTag(props_.get(i));
+            }
+            size += 1 * count;
+          }
+
+          {
+            final int count = links_.size();
+            for (int i = 0; i < count; i++) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeMessageSizeNoTag(links_.get(i));
+            }
+            size += 1 * count;
+          }
+      return size;
+    }
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += computeSerializedSize_0();
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof oscal.common.v1.Common.Citation)) {
+        return super.equals(obj);
+      }
+      oscal.common.v1.Common.Citation other = (oscal.common.v1.Common.Citation) obj;
+
+      if (hasText() != other.hasText()) return false;
+      if (hasText()) {
+        if (!getText()
+            .equals(other.getText())) return false;
+      }
+      if (!getPropsList()
+          .equals(other.getPropsList())) return false;
+      if (!getLinksList()
+          .equals(other.getLinksList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasText()) {
+        hash = (37 * hash) + TEXT_FIELD_NUMBER;
+        hash = (53 * hash) + getText().hashCode();
+      }
+      if (getPropsCount() > 0) {
+        hash = (37 * hash) + PROPS_FIELD_NUMBER;
+        hash = (53 * hash) + getPropsList().hashCode();
+      }
+      if (getLinksCount() > 0) {
+        hash = (37 * hash) + LINKS_FIELD_NUMBER;
+        hash = (53 * hash) + getLinksList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static oscal.common.v1.Common.Citation parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.common.v1.Common.Citation parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.common.v1.Common.Citation parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.common.v1.Common.Citation parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.common.v1.Common.Citation parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.common.v1.Common.Citation parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.common.v1.Common.Citation parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static oscal.common.v1.Common.Citation parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static oscal.common.v1.Common.Citation parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static oscal.common.v1.Common.Citation parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static oscal.common.v1.Common.Citation parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static oscal.common.v1.Common.Citation parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(oscal.common.v1.Common.Citation prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Citation represents a bibliographic citation
+     * </pre>
+     *
+     * Protobuf type {@code oscal.common.v1.Citation}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oscal.common.v1.Citation)
+        oscal.common.v1.Common.CitationOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return oscal.common.v1.Common.internal_static_oscal_common_v1_Citation_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return oscal.common.v1.Common.internal_static_oscal_common_v1_Citation_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                oscal.common.v1.Common.Citation.class, oscal.common.v1.Common.Citation.Builder.class);
+      }
+
+      // Construct using oscal.common.v1.Common.Citation.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage
+                .alwaysUseFieldBuilders) {
+          internalGetTextFieldBuilder();
+          internalGetPropsFieldBuilder();
+          internalGetLinksFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        text_ = null;
+        if (textBuilder_ != null) {
+          textBuilder_.dispose();
+          textBuilder_ = null;
+        }
+        if (propsBuilder_ == null) {
+          props_ = java.util.Collections.emptyList();
+        } else {
+          props_ = null;
+          propsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        if (linksBuilder_ == null) {
+          links_ = java.util.Collections.emptyList();
+        } else {
+          links_ = null;
+          linksBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return oscal.common.v1.Common.internal_static_oscal_common_v1_Citation_descriptor;
+      }
+
+      @java.lang.Override
+      public oscal.common.v1.Common.Citation getDefaultInstanceForType() {
+        return oscal.common.v1.Common.Citation.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public oscal.common.v1.Common.Citation build() {
+        oscal.common.v1.Common.Citation result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public oscal.common.v1.Common.Citation buildPartial() {
+        oscal.common.v1.Common.Citation result = new oscal.common.v1.Common.Citation(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(oscal.common.v1.Common.Citation result) {
+        if (propsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            props_ = java.util.Collections.unmodifiableList(props_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.props_ = props_;
+        } else {
+          result.props_ = propsBuilder_.build();
+        }
+        if (linksBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            links_ = java.util.Collections.unmodifiableList(links_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.links_ = links_;
+        } else {
+          result.links_ = linksBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(oscal.common.v1.Common.Citation result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.text_ = textBuilder_ == null
+              ? text_
+              : textBuilder_.build();
+          to_bitField0_ |= 0x00000001;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof oscal.common.v1.Common.Citation) {
+          return mergeFrom((oscal.common.v1.Common.Citation)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(oscal.common.v1.Common.Citation other) {
+        if (other == oscal.common.v1.Common.Citation.getDefaultInstance()) return this;
+        if (other.hasText()) {
+          mergeText(other.getText());
+        }
+        if (propsBuilder_ == null) {
+          if (!other.props_.isEmpty()) {
+            if (props_.isEmpty()) {
+              props_ = other.props_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensurePropsIsMutable();
+              props_.addAll(other.props_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.props_.isEmpty()) {
+            if (propsBuilder_.isEmpty()) {
+              propsBuilder_.dispose();
+              propsBuilder_ = null;
+              props_ = other.props_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              propsBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   internalGetPropsFieldBuilder() : null;
+            } else {
+              propsBuilder_.addAllMessages(other.props_);
+            }
+          }
+        }
+        if (linksBuilder_ == null) {
+          if (!other.links_.isEmpty()) {
+            if (links_.isEmpty()) {
+              links_ = other.links_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureLinksIsMutable();
+              links_.addAll(other.links_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.links_.isEmpty()) {
+            if (linksBuilder_.isEmpty()) {
+              linksBuilder_.dispose();
+              linksBuilder_ = null;
+              links_ = other.links_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              linksBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   internalGetLinksFieldBuilder() : null;
+            } else {
+              linksBuilder_.addAllMessages(other.links_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    internalGetTextFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                oscal.common.v1.Common.Property m =
+                    input.readMessage(
+                        oscal.common.v1.Common.Property.parser(),
+                        extensionRegistry);
+                if (propsBuilder_ == null) {
+                  ensurePropsIsMutable();
+                  props_.add(m);
+                } else {
+                  propsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              case 26: {
+                oscal.common.v1.Common.Link m =
+                    input.readMessage(
+                        oscal.common.v1.Common.Link.parser(),
+                        extensionRegistry);
+                if (linksBuilder_ == null) {
+                  ensureLinksIsMutable();
+                  links_.add(m);
+                } else {
+                  linksBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private oscal.common.v1.Common.MarkupLine text_;
+      private com.google.protobuf.SingleFieldBuilder<
+          oscal.common.v1.Common.MarkupLine, oscal.common.v1.Common.MarkupLine.Builder, oscal.common.v1.Common.MarkupLineOrBuilder> textBuilder_;
+      /**
+       * <code>.oscal.common.v1.MarkupLine text = 1 [json_name = "text"];</code>
+       * @return Whether the text field is set.
+       */
+      public boolean hasText() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.oscal.common.v1.MarkupLine text = 1 [json_name = "text"];</code>
+       * @return The text.
+       */
+      public oscal.common.v1.Common.MarkupLine getText() {
+        if (textBuilder_ == null) {
+          return text_ == null ? oscal.common.v1.Common.MarkupLine.getDefaultInstance() : text_;
+        } else {
+          return textBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.oscal.common.v1.MarkupLine text = 1 [json_name = "text"];</code>
+       */
+      public Builder setText(oscal.common.v1.Common.MarkupLine value) {
+        if (textBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          text_ = value;
+        } else {
+          textBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.MarkupLine text = 1 [json_name = "text"];</code>
+       */
+      public Builder setText(
+          oscal.common.v1.Common.MarkupLine.Builder builderForValue) {
+        if (textBuilder_ == null) {
+          text_ = builderForValue.build();
+        } else {
+          textBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.MarkupLine text = 1 [json_name = "text"];</code>
+       */
+      public Builder mergeText(oscal.common.v1.Common.MarkupLine value) {
+        if (textBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            text_ != null &&
+            text_ != oscal.common.v1.Common.MarkupLine.getDefaultInstance()) {
+            getTextBuilder().mergeFrom(value);
+          } else {
+            text_ = value;
+          }
+        } else {
+          textBuilder_.mergeFrom(value);
+        }
+        if (text_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.MarkupLine text = 1 [json_name = "text"];</code>
+       */
+      public Builder clearText() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        text_ = null;
+        if (textBuilder_ != null) {
+          textBuilder_.dispose();
+          textBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.MarkupLine text = 1 [json_name = "text"];</code>
+       */
+      public oscal.common.v1.Common.MarkupLine.Builder getTextBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return internalGetTextFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.oscal.common.v1.MarkupLine text = 1 [json_name = "text"];</code>
+       */
+      public oscal.common.v1.Common.MarkupLineOrBuilder getTextOrBuilder() {
+        if (textBuilder_ != null) {
+          return textBuilder_.getMessageOrBuilder();
+        } else {
+          return text_ == null ?
+              oscal.common.v1.Common.MarkupLine.getDefaultInstance() : text_;
+        }
+      }
+      /**
+       * <code>.oscal.common.v1.MarkupLine text = 1 [json_name = "text"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          oscal.common.v1.Common.MarkupLine, oscal.common.v1.Common.MarkupLine.Builder, oscal.common.v1.Common.MarkupLineOrBuilder> 
+          internalGetTextFieldBuilder() {
+        if (textBuilder_ == null) {
+          textBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              oscal.common.v1.Common.MarkupLine, oscal.common.v1.Common.MarkupLine.Builder, oscal.common.v1.Common.MarkupLineOrBuilder>(
+                  getText(),
+                  getParentForChildren(),
+                  isClean());
+          text_ = null;
+        }
+        return textBuilder_;
+      }
+
+      private java.util.List<oscal.common.v1.Common.Property> props_ =
+        java.util.Collections.emptyList();
+      private void ensurePropsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          props_ = new java.util.ArrayList<oscal.common.v1.Common.Property>(props_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> propsBuilder_;
+
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 2 [json_name = "props"];</code>
+       */
+      public java.util.List<oscal.common.v1.Common.Property> getPropsList() {
+        if (propsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(props_);
+        } else {
+          return propsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 2 [json_name = "props"];</code>
+       */
+      public int getPropsCount() {
+        if (propsBuilder_ == null) {
+          return props_.size();
+        } else {
+          return propsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 2 [json_name = "props"];</code>
+       */
+      public oscal.common.v1.Common.Property getProps(int index) {
+        if (propsBuilder_ == null) {
+          return props_.get(index);
+        } else {
+          return propsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 2 [json_name = "props"];</code>
+       */
+      public Builder setProps(
+          int index, oscal.common.v1.Common.Property value) {
+        if (propsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePropsIsMutable();
+          props_.set(index, value);
+          onChanged();
+        } else {
+          propsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 2 [json_name = "props"];</code>
+       */
+      public Builder setProps(
+          int index, oscal.common.v1.Common.Property.Builder builderForValue) {
+        if (propsBuilder_ == null) {
+          ensurePropsIsMutable();
+          props_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          propsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 2 [json_name = "props"];</code>
+       */
+      public Builder addProps(oscal.common.v1.Common.Property value) {
+        if (propsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePropsIsMutable();
+          props_.add(value);
+          onChanged();
+        } else {
+          propsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 2 [json_name = "props"];</code>
+       */
+      public Builder addProps(
+          int index, oscal.common.v1.Common.Property value) {
+        if (propsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePropsIsMutable();
+          props_.add(index, value);
+          onChanged();
+        } else {
+          propsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 2 [json_name = "props"];</code>
+       */
+      public Builder addProps(
+          oscal.common.v1.Common.Property.Builder builderForValue) {
+        if (propsBuilder_ == null) {
+          ensurePropsIsMutable();
+          props_.add(builderForValue.build());
+          onChanged();
+        } else {
+          propsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 2 [json_name = "props"];</code>
+       */
+      public Builder addProps(
+          int index, oscal.common.v1.Common.Property.Builder builderForValue) {
+        if (propsBuilder_ == null) {
+          ensurePropsIsMutable();
+          props_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          propsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 2 [json_name = "props"];</code>
+       */
+      public Builder addAllProps(
+          java.lang.Iterable<? extends oscal.common.v1.Common.Property> values) {
+        if (propsBuilder_ == null) {
+          ensurePropsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, props_);
+          onChanged();
+        } else {
+          propsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 2 [json_name = "props"];</code>
+       */
+      public Builder clearProps() {
+        if (propsBuilder_ == null) {
+          props_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          propsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 2 [json_name = "props"];</code>
+       */
+      public Builder removeProps(int index) {
+        if (propsBuilder_ == null) {
+          ensurePropsIsMutable();
+          props_.remove(index);
+          onChanged();
+        } else {
+          propsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 2 [json_name = "props"];</code>
+       */
+      public oscal.common.v1.Common.Property.Builder getPropsBuilder(
+          int index) {
+        return internalGetPropsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 2 [json_name = "props"];</code>
+       */
+      public oscal.common.v1.Common.PropertyOrBuilder getPropsOrBuilder(
+          int index) {
+        if (propsBuilder_ == null) {
+          return props_.get(index);  } else {
+          return propsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 2 [json_name = "props"];</code>
+       */
+      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+           getPropsOrBuilderList() {
+        if (propsBuilder_ != null) {
+          return propsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(props_);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 2 [json_name = "props"];</code>
+       */
+      public oscal.common.v1.Common.Property.Builder addPropsBuilder() {
+        return internalGetPropsFieldBuilder().addBuilder(
+            oscal.common.v1.Common.Property.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 2 [json_name = "props"];</code>
+       */
+      public oscal.common.v1.Common.Property.Builder addPropsBuilder(
+          int index) {
+        return internalGetPropsFieldBuilder().addBuilder(
+            index, oscal.common.v1.Common.Property.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 2 [json_name = "props"];</code>
+       */
+      public java.util.List<oscal.common.v1.Common.Property.Builder> 
+           getPropsBuilderList() {
+        return internalGetPropsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> 
+          internalGetPropsFieldBuilder() {
+        if (propsBuilder_ == null) {
+          propsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder>(
+                  props_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          props_ = null;
+        }
+        return propsBuilder_;
+      }
+
+      private java.util.List<oscal.common.v1.Common.Link> links_ =
+        java.util.Collections.emptyList();
+      private void ensureLinksIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          links_ = new java.util.ArrayList<oscal.common.v1.Common.Link>(links_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder> linksBuilder_;
+
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 3 [json_name = "links"];</code>
+       */
+      public java.util.List<oscal.common.v1.Common.Link> getLinksList() {
+        if (linksBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(links_);
+        } else {
+          return linksBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 3 [json_name = "links"];</code>
+       */
+      public int getLinksCount() {
+        if (linksBuilder_ == null) {
+          return links_.size();
+        } else {
+          return linksBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 3 [json_name = "links"];</code>
+       */
+      public oscal.common.v1.Common.Link getLinks(int index) {
+        if (linksBuilder_ == null) {
+          return links_.get(index);
+        } else {
+          return linksBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 3 [json_name = "links"];</code>
+       */
+      public Builder setLinks(
+          int index, oscal.common.v1.Common.Link value) {
+        if (linksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLinksIsMutable();
+          links_.set(index, value);
+          onChanged();
+        } else {
+          linksBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 3 [json_name = "links"];</code>
+       */
+      public Builder setLinks(
+          int index, oscal.common.v1.Common.Link.Builder builderForValue) {
+        if (linksBuilder_ == null) {
+          ensureLinksIsMutable();
+          links_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          linksBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 3 [json_name = "links"];</code>
+       */
+      public Builder addLinks(oscal.common.v1.Common.Link value) {
+        if (linksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLinksIsMutable();
+          links_.add(value);
+          onChanged();
+        } else {
+          linksBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 3 [json_name = "links"];</code>
+       */
+      public Builder addLinks(
+          int index, oscal.common.v1.Common.Link value) {
+        if (linksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLinksIsMutable();
+          links_.add(index, value);
+          onChanged();
+        } else {
+          linksBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 3 [json_name = "links"];</code>
+       */
+      public Builder addLinks(
+          oscal.common.v1.Common.Link.Builder builderForValue) {
+        if (linksBuilder_ == null) {
+          ensureLinksIsMutable();
+          links_.add(builderForValue.build());
+          onChanged();
+        } else {
+          linksBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 3 [json_name = "links"];</code>
+       */
+      public Builder addLinks(
+          int index, oscal.common.v1.Common.Link.Builder builderForValue) {
+        if (linksBuilder_ == null) {
+          ensureLinksIsMutable();
+          links_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          linksBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 3 [json_name = "links"];</code>
+       */
+      public Builder addAllLinks(
+          java.lang.Iterable<? extends oscal.common.v1.Common.Link> values) {
+        if (linksBuilder_ == null) {
+          ensureLinksIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, links_);
+          onChanged();
+        } else {
+          linksBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 3 [json_name = "links"];</code>
+       */
+      public Builder clearLinks() {
+        if (linksBuilder_ == null) {
+          links_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          linksBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 3 [json_name = "links"];</code>
+       */
+      public Builder removeLinks(int index) {
+        if (linksBuilder_ == null) {
+          ensureLinksIsMutable();
+          links_.remove(index);
+          onChanged();
+        } else {
+          linksBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 3 [json_name = "links"];</code>
+       */
+      public oscal.common.v1.Common.Link.Builder getLinksBuilder(
+          int index) {
+        return internalGetLinksFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 3 [json_name = "links"];</code>
+       */
+      public oscal.common.v1.Common.LinkOrBuilder getLinksOrBuilder(
+          int index) {
+        if (linksBuilder_ == null) {
+          return links_.get(index);  } else {
+          return linksBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 3 [json_name = "links"];</code>
+       */
+      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+           getLinksOrBuilderList() {
+        if (linksBuilder_ != null) {
+          return linksBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(links_);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 3 [json_name = "links"];</code>
+       */
+      public oscal.common.v1.Common.Link.Builder addLinksBuilder() {
+        return internalGetLinksFieldBuilder().addBuilder(
+            oscal.common.v1.Common.Link.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 3 [json_name = "links"];</code>
+       */
+      public oscal.common.v1.Common.Link.Builder addLinksBuilder(
+          int index) {
+        return internalGetLinksFieldBuilder().addBuilder(
+            index, oscal.common.v1.Common.Link.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 3 [json_name = "links"];</code>
+       */
+      public java.util.List<oscal.common.v1.Common.Link.Builder> 
+           getLinksBuilderList() {
+        return internalGetLinksFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder> 
+          internalGetLinksFieldBuilder() {
+        if (linksBuilder_ == null) {
+          linksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder>(
+                  links_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          links_ = null;
+        }
+        return linksBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:oscal.common.v1.Citation)
+    }
+
+    // @@protoc_insertion_point(class_scope:oscal.common.v1.Citation)
+    private static final oscal.common.v1.Common.Citation DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new oscal.common.v1.Common.Citation();
+    }
+
+    public static oscal.common.v1.Common.Citation getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Citation>
+        PARSER = new com.google.protobuf.AbstractParser<Citation>() {
+      @java.lang.Override
+      public Citation parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Citation> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Citation> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public oscal.common.v1.Common.Citation getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -24918,6 +32671,30 @@ public final class Common extends com.google.protobuf.GeneratedFile {
      * <code>.oscal.common.v1.MarkupMultiline remarks = 12 [json_name = "remarks"];</code>
      */
     oscal.common.v1.Common.MarkupMultilineOrBuilder getRemarksOrBuilder();
+
+    /**
+     * <code>repeated .oscal.common.v1.Location locations = 13 [json_name = "locations"];</code>
+     */
+    java.util.List<oscal.common.v1.Common.Location> 
+        getLocationsList();
+    /**
+     * <code>repeated .oscal.common.v1.Location locations = 13 [json_name = "locations"];</code>
+     */
+    oscal.common.v1.Common.Location getLocations(int index);
+    /**
+     * <code>repeated .oscal.common.v1.Location locations = 13 [json_name = "locations"];</code>
+     */
+    int getLocationsCount();
+    /**
+     * <code>repeated .oscal.common.v1.Location locations = 13 [json_name = "locations"];</code>
+     */
+    java.util.List<? extends oscal.common.v1.Common.LocationOrBuilder> 
+        getLocationsOrBuilderList();
+    /**
+     * <code>repeated .oscal.common.v1.Location locations = 13 [json_name = "locations"];</code>
+     */
+    oscal.common.v1.Common.LocationOrBuilder getLocationsOrBuilder(
+        int index);
   }
   /**
    * <pre>
@@ -24953,6 +32730,7 @@ public final class Common extends com.google.protobuf.GeneratedFile {
       roles_ = java.util.Collections.emptyList();
       parties_ = java.util.Collections.emptyList();
       responsibleParties_ = java.util.Collections.emptyList();
+      locations_ = java.util.Collections.emptyList();
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
@@ -25400,6 +33178,47 @@ public final class Common extends com.google.protobuf.GeneratedFile {
       return remarks_ == null ? oscal.common.v1.Common.MarkupMultiline.getDefaultInstance() : remarks_;
     }
 
+    public static final int LOCATIONS_FIELD_NUMBER = 13;
+    @SuppressWarnings("serial")
+    private java.util.List<oscal.common.v1.Common.Location> locations_;
+    /**
+     * <code>repeated .oscal.common.v1.Location locations = 13 [json_name = "locations"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<oscal.common.v1.Common.Location> getLocationsList() {
+      return locations_;
+    }
+    /**
+     * <code>repeated .oscal.common.v1.Location locations = 13 [json_name = "locations"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends oscal.common.v1.Common.LocationOrBuilder> 
+        getLocationsOrBuilderList() {
+      return locations_;
+    }
+    /**
+     * <code>repeated .oscal.common.v1.Location locations = 13 [json_name = "locations"];</code>
+     */
+    @java.lang.Override
+    public int getLocationsCount() {
+      return locations_.size();
+    }
+    /**
+     * <code>repeated .oscal.common.v1.Location locations = 13 [json_name = "locations"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.Location getLocations(int index) {
+      return locations_.get(index);
+    }
+    /**
+     * <code>repeated .oscal.common.v1.Location locations = 13 [json_name = "locations"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.LocationOrBuilder getLocationsOrBuilder(
+        int index) {
+      return locations_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -25449,6 +33268,9 @@ public final class Common extends com.google.protobuf.GeneratedFile {
       }
       if (((bitField0_ & 0x00000008) != 0)) {
         output.writeMessage(12, getRemarks());
+      }
+      for (int i = 0; i < locations_.size(); i++) {
+        output.writeMessage(13, locations_.get(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -25524,6 +33346,15 @@ public final class Common extends com.google.protobuf.GeneratedFile {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(12, getRemarks());
       }
+
+          {
+            final int count = locations_.size();
+            for (int i = 0; i < count; i++) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeMessageSizeNoTag(locations_.get(i));
+            }
+            size += 1 * count;
+          }
       return size;
     }
     @java.lang.Override
@@ -25584,6 +33415,8 @@ public final class Common extends com.google.protobuf.GeneratedFile {
         if (!getRemarks()
             .equals(other.getRemarks())) return false;
       }
+      if (!getLocationsList()
+          .equals(other.getLocationsList())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -25636,6 +33469,10 @@ public final class Common extends com.google.protobuf.GeneratedFile {
       if (hasRemarks()) {
         hash = (37 * hash) + REMARKS_FIELD_NUMBER;
         hash = (53 * hash) + getRemarks().hashCode();
+      }
+      if (getLocationsCount() > 0) {
+        hash = (37 * hash) + LOCATIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getLocationsList().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -25780,6 +33617,7 @@ public final class Common extends com.google.protobuf.GeneratedFile {
           internalGetDocumentIdFieldBuilder();
           internalGetPublishedFieldBuilder();
           internalGetRemarksFieldBuilder();
+          internalGetLocationsFieldBuilder();
         }
       }
       @java.lang.Override
@@ -25844,6 +33682,13 @@ public final class Common extends com.google.protobuf.GeneratedFile {
           remarksBuilder_.dispose();
           remarksBuilder_ = null;
         }
+        if (locationsBuilder_ == null) {
+          locations_ = java.util.Collections.emptyList();
+        } else {
+          locations_ = null;
+          locationsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00001000);
         return this;
       }
 
@@ -25921,6 +33766,15 @@ public final class Common extends com.google.protobuf.GeneratedFile {
           result.responsibleParties_ = responsibleParties_;
         } else {
           result.responsibleParties_ = responsiblePartiesBuilder_.build();
+        }
+        if (locationsBuilder_ == null) {
+          if (((bitField0_ & 0x00001000) != 0)) {
+            locations_ = java.util.Collections.unmodifiableList(locations_);
+            bitField0_ = (bitField0_ & ~0x00001000);
+          }
+          result.locations_ = locations_;
+        } else {
+          result.locations_ = locationsBuilder_.build();
         }
       }
 
@@ -26132,6 +33986,32 @@ public final class Common extends com.google.protobuf.GeneratedFile {
         if (other.hasRemarks()) {
           mergeRemarks(other.getRemarks());
         }
+        if (locationsBuilder_ == null) {
+          if (!other.locations_.isEmpty()) {
+            if (locations_.isEmpty()) {
+              locations_ = other.locations_;
+              bitField0_ = (bitField0_ & ~0x00001000);
+            } else {
+              ensureLocationsIsMutable();
+              locations_.addAll(other.locations_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.locations_.isEmpty()) {
+            if (locationsBuilder_.isEmpty()) {
+              locationsBuilder_.dispose();
+              locationsBuilder_ = null;
+              locations_ = other.locations_;
+              bitField0_ = (bitField0_ & ~0x00001000);
+              locationsBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   internalGetLocationsFieldBuilder() : null;
+            } else {
+              locationsBuilder_.addAllMessages(other.locations_);
+            }
+          }
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -26266,6 +34146,19 @@ public final class Common extends com.google.protobuf.GeneratedFile {
                 bitField0_ |= 0x00000800;
                 break;
               } // case 98
+              case 106: {
+                oscal.common.v1.Common.Location m =
+                    input.readMessage(
+                        oscal.common.v1.Common.Location.parser(),
+                        extensionRegistry);
+                if (locationsBuilder_ == null) {
+                  ensureLocationsIsMutable();
+                  locations_.add(m);
+                } else {
+                  locationsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 106
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -28183,6 +36076,246 @@ public final class Common extends com.google.protobuf.GeneratedFile {
         return remarksBuilder_;
       }
 
+      private java.util.List<oscal.common.v1.Common.Location> locations_ =
+        java.util.Collections.emptyList();
+      private void ensureLocationsIsMutable() {
+        if (!((bitField0_ & 0x00001000) != 0)) {
+          locations_ = new java.util.ArrayList<oscal.common.v1.Common.Location>(locations_);
+          bitField0_ |= 0x00001000;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.common.v1.Common.Location, oscal.common.v1.Common.Location.Builder, oscal.common.v1.Common.LocationOrBuilder> locationsBuilder_;
+
+      /**
+       * <code>repeated .oscal.common.v1.Location locations = 13 [json_name = "locations"];</code>
+       */
+      public java.util.List<oscal.common.v1.Common.Location> getLocationsList() {
+        if (locationsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(locations_);
+        } else {
+          return locationsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Location locations = 13 [json_name = "locations"];</code>
+       */
+      public int getLocationsCount() {
+        if (locationsBuilder_ == null) {
+          return locations_.size();
+        } else {
+          return locationsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Location locations = 13 [json_name = "locations"];</code>
+       */
+      public oscal.common.v1.Common.Location getLocations(int index) {
+        if (locationsBuilder_ == null) {
+          return locations_.get(index);
+        } else {
+          return locationsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Location locations = 13 [json_name = "locations"];</code>
+       */
+      public Builder setLocations(
+          int index, oscal.common.v1.Common.Location value) {
+        if (locationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLocationsIsMutable();
+          locations_.set(index, value);
+          onChanged();
+        } else {
+          locationsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Location locations = 13 [json_name = "locations"];</code>
+       */
+      public Builder setLocations(
+          int index, oscal.common.v1.Common.Location.Builder builderForValue) {
+        if (locationsBuilder_ == null) {
+          ensureLocationsIsMutable();
+          locations_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          locationsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Location locations = 13 [json_name = "locations"];</code>
+       */
+      public Builder addLocations(oscal.common.v1.Common.Location value) {
+        if (locationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLocationsIsMutable();
+          locations_.add(value);
+          onChanged();
+        } else {
+          locationsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Location locations = 13 [json_name = "locations"];</code>
+       */
+      public Builder addLocations(
+          int index, oscal.common.v1.Common.Location value) {
+        if (locationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLocationsIsMutable();
+          locations_.add(index, value);
+          onChanged();
+        } else {
+          locationsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Location locations = 13 [json_name = "locations"];</code>
+       */
+      public Builder addLocations(
+          oscal.common.v1.Common.Location.Builder builderForValue) {
+        if (locationsBuilder_ == null) {
+          ensureLocationsIsMutable();
+          locations_.add(builderForValue.build());
+          onChanged();
+        } else {
+          locationsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Location locations = 13 [json_name = "locations"];</code>
+       */
+      public Builder addLocations(
+          int index, oscal.common.v1.Common.Location.Builder builderForValue) {
+        if (locationsBuilder_ == null) {
+          ensureLocationsIsMutable();
+          locations_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          locationsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Location locations = 13 [json_name = "locations"];</code>
+       */
+      public Builder addAllLocations(
+          java.lang.Iterable<? extends oscal.common.v1.Common.Location> values) {
+        if (locationsBuilder_ == null) {
+          ensureLocationsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, locations_);
+          onChanged();
+        } else {
+          locationsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Location locations = 13 [json_name = "locations"];</code>
+       */
+      public Builder clearLocations() {
+        if (locationsBuilder_ == null) {
+          locations_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00001000);
+          onChanged();
+        } else {
+          locationsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Location locations = 13 [json_name = "locations"];</code>
+       */
+      public Builder removeLocations(int index) {
+        if (locationsBuilder_ == null) {
+          ensureLocationsIsMutable();
+          locations_.remove(index);
+          onChanged();
+        } else {
+          locationsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Location locations = 13 [json_name = "locations"];</code>
+       */
+      public oscal.common.v1.Common.Location.Builder getLocationsBuilder(
+          int index) {
+        return internalGetLocationsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Location locations = 13 [json_name = "locations"];</code>
+       */
+      public oscal.common.v1.Common.LocationOrBuilder getLocationsOrBuilder(
+          int index) {
+        if (locationsBuilder_ == null) {
+          return locations_.get(index);  } else {
+          return locationsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Location locations = 13 [json_name = "locations"];</code>
+       */
+      public java.util.List<? extends oscal.common.v1.Common.LocationOrBuilder> 
+           getLocationsOrBuilderList() {
+        if (locationsBuilder_ != null) {
+          return locationsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(locations_);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Location locations = 13 [json_name = "locations"];</code>
+       */
+      public oscal.common.v1.Common.Location.Builder addLocationsBuilder() {
+        return internalGetLocationsFieldBuilder().addBuilder(
+            oscal.common.v1.Common.Location.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Location locations = 13 [json_name = "locations"];</code>
+       */
+      public oscal.common.v1.Common.Location.Builder addLocationsBuilder(
+          int index) {
+        return internalGetLocationsFieldBuilder().addBuilder(
+            index, oscal.common.v1.Common.Location.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Location locations = 13 [json_name = "locations"];</code>
+       */
+      public java.util.List<oscal.common.v1.Common.Location.Builder> 
+           getLocationsBuilderList() {
+        return internalGetLocationsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.common.v1.Common.Location, oscal.common.v1.Common.Location.Builder, oscal.common.v1.Common.LocationOrBuilder> 
+          internalGetLocationsFieldBuilder() {
+        if (locationsBuilder_ == null) {
+          locationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              oscal.common.v1.Common.Location, oscal.common.v1.Common.Location.Builder, oscal.common.v1.Common.LocationOrBuilder>(
+                  locations_,
+                  ((bitField0_ & 0x00001000) != 0),
+                  getParentForChildren(),
+                  isClean());
+          locations_ = null;
+        }
+        return locationsBuilder_;
+      }
+
       // @@protoc_insertion_point(builder_scope:oscal.common.v1.Metadata)
     }
 
@@ -28330,6 +36463,11 @@ public final class Common extends com.google.protobuf.GeneratedFile {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_common_v1_Address_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_oscal_common_v1_Location_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_oscal_common_v1_Location_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_common_v1_AddrLine_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -28355,6 +36493,11 @@ public final class Common extends com.google.protobuf.GeneratedFile {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_common_v1_Party_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_oscal_common_v1_PartyExternalId_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_oscal_common_v1_PartyExternalId_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_common_v1_DocumentId_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -28369,6 +36512,16 @@ public final class Common extends com.google.protobuf.GeneratedFile {
   private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_common_v1_Resource_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_oscal_common_v1_Rlink_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_oscal_common_v1_Rlink_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_oscal_common_v1_Citation_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_oscal_common_v1_Citation_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_common_v1_Metadata_descriptor;
   private static final 
@@ -28411,67 +36564,96 @@ public final class Common extends com.google.protobuf.GeneratedFile {
       "\031.oscal.common.v1.AddrLineR\taddrLines\022\022\n" +
       "\004city\030\002 \001(\tR\004city\022\024\n\005state\030\003 \001(\tR\005state\022" +
       "\037\n\013postal_code\030\004 \001(\tR\npostalCode\022\030\n\007coun" +
-      "try\030\005 \001(\tR\007country\"=\n\010AddrLine\0221\n\005value\030" +
-      "\001 \001(\0132\033.oscal.common.v1.MarkupLineR\005valu" +
-      "e\"\'\n\017TelephoneNumber\022\024\n\005value\030\001 \001(\tR\005val" +
-      "ue\"\205\002\n\004Role\022&\n\002id\030\001 \001(\0132\026.oscal.common.v" +
-      "1.TokenR\002id\022\024\n\005title\030\002 \001(\tR\005title\022\035\n\nsho" +
-      "rt_name\030\003 \001(\tR\tshortName\022B\n\013description\030" +
-      "\004 \001(\0132 .oscal.common.v1.MarkupMultilineR" +
-      "\013description\022/\n\005props\030\005 \003(\0132\031.oscal.comm" +
-      "on.v1.PropertyR\005props\022+\n\005links\030\006 \003(\0132\025.o" +
-      "scal.common.v1.LinkR\005links\"\225\002\n\020Responsib" +
-      "leParty\022/\n\007role_id\030\001 \001(\0132\026.oscal.common." +
-      "v1.TokenR\006roleId\0226\n\013party_uuids\030\002 \003(\0132\025." +
-      "oscal.common.v1.UUIDR\npartyUuids\022/\n\005prop" +
-      "s\030\003 \003(\0132\031.oscal.common.v1.PropertyR\005prop" +
-      "s\022+\n\005links\030\004 \003(\0132\025.oscal.common.v1.LinkR" +
-      "\005links\022:\n\007remarks\030\005 \001(\0132 .oscal.common.v" +
-      "1.MarkupMultilineR\007remarks\"\222\004\n\005Party\022)\n\004" +
-      "uuid\030\001 \001(\0132\025.oscal.common.v1.UUIDR\004uuid\022" +
-      "\022\n\004type\030\002 \001(\tR\004type\022\022\n\004name\030\003 \001(\tR\004name\022" +
-      "\037\n\013short_names\030\004 \003(\tR\nshortNames\0222\n\007addr" +
-      "ess\030\005 \001(\0132\030.oscal.common.v1.AddressR\007add" +
-      "ress\022F\n\017email_addresses\030\006 \003(\0132\035.oscal.co" +
-      "mmon.v1.EmailAddressR\016emailAddresses\022M\n\021" +
-      "telephone_numbers\030\007 \003(\0132 .oscal.common.v" +
-      "1.TelephoneNumberR\020telephoneNumbers\022/\n\005p" +
-      "rops\030\010 \003(\0132\031.oscal.common.v1.PropertyR\005p" +
-      "rops\022+\n\005links\030\t \003(\0132\025.oscal.common.v1.Li" +
-      "nkR\005links\022R\n\023responsible_parties\030\n \003(\0132!" +
-      ".oscal.common.v1.ResponsiblePartyR\022respo" +
-      "nsibleParties\022\030\n\007remarks\030\013 \003(\tR\007remarks\"" +
-      "D\n\nDocumentId\022\026\n\006scheme\030\001 \001(\tR\006scheme\022\036\n" +
-      "\nidentifier\030\002 \001(\tR\nidentifier\"E\n\nBackMat" +
-      "ter\0227\n\tresources\030\001 \003(\0132\031.oscal.common.v1" +
-      ".ResourceR\tresources\"\224\003\n\010Resource\022)\n\004uui" +
-      "d\030\001 \001(\0132\025.oscal.common.v1.UUIDR\004uuid\022\024\n\005" +
-      "title\030\002 \003(\tR\005title\022B\n\013description\030\003 \001(\0132" +
-      " .oscal.common.v1.MarkupMultilineR\013descr" +
-      "iption\022/\n\005props\030\004 \003(\0132\031.oscal.common.v1." +
-      "PropertyR\005props\022+\n\005links\030\005 \003(\0132\025.oscal.c" +
-      "ommon.v1.LinkR\005links\022/\n\006base64\030\006 \003(\0132\027.o" +
-      "scal.common.v1.Base64R\006base64\022>\n\014documen" +
-      "t_ids\030\007 \003(\0132\033.oscal.common.v1.DocumentId" +
-      "R\013documentIds\022\030\n\007remarks\030\010 \003(\tR\007remarks\022" +
-      "\032\n\010citation\030\t \001(\tR\010citation\"\343\004\n\010Metadata" +
-      "\022\024\n\005title\030\001 \001(\tR\005title\022>\n\rlast_modified\030" +
-      "\002 \001(\0132\031.oscal.common.v1.DateTimeR\014lastMo" +
-      "dified\022\030\n\007version\030\003 \001(\tR\007version\022#\n\rosca" +
-      "l_version\030\004 \001(\tR\014oscalVersion\022/\n\005props\030\005" +
+      "try\030\005 \001(\tR\007country\"\332\003\n\010Location\022)\n\004uuid\030" +
+      "\001 \001(\0132\025.oscal.common.v1.UUIDR\004uuid\022\024\n\005ti" +
+      "tle\030\002 \001(\tR\005title\0222\n\007address\030\003 \001(\0132\030.osca" +
+      "l.common.v1.AddressR\007address\022F\n\017email_ad" +
+      "dresses\030\004 \003(\0132\035.oscal.common.v1.EmailAdd" +
+      "ressR\016emailAddresses\022M\n\021telephone_number" +
+      "s\030\005 \003(\0132 .oscal.common.v1.TelephoneNumbe" +
+      "rR\020telephoneNumbers\022(\n\004urls\030\006 \003(\0132\024.osca" +
+      "l.common.v1.URIR\004urls\022/\n\005props\030\007 \003(\0132\031.o" +
+      "scal.common.v1.PropertyR\005props\022+\n\005links\030" +
+      "\010 \003(\0132\025.oscal.common.v1.LinkR\005links\022:\n\007r" +
+      "emarks\030\t \003(\0132 .oscal.common.v1.MarkupMul" +
+      "tilineR\007remarks\"=\n\010AddrLine\0221\n\005value\030\001 \001" +
+      "(\0132\033.oscal.common.v1.MarkupLineR\005value\"\'" +
+      "\n\017TelephoneNumber\022\024\n\005value\030\001 \001(\tR\005value\"" +
+      "\205\002\n\004Role\022&\n\002id\030\001 \001(\0132\026.oscal.common.v1.T" +
+      "okenR\002id\022\024\n\005title\030\002 \001(\tR\005title\022\035\n\nshort_" +
+      "name\030\003 \001(\tR\tshortName\022B\n\013description\030\004 \001" +
+      "(\0132 .oscal.common.v1.MarkupMultilineR\013de" +
+      "scription\022/\n\005props\030\005 \003(\0132\031.oscal.common." +
+      "v1.PropertyR\005props\022+\n\005links\030\006 \003(\0132\025.osca" +
+      "l.common.v1.LinkR\005links\"\225\002\n\020ResponsibleP" +
+      "arty\022/\n\007role_id\030\001 \001(\0132\026.oscal.common.v1." +
+      "TokenR\006roleId\0226\n\013party_uuids\030\002 \003(\0132\025.osc" +
+      "al.common.v1.UUIDR\npartyUuids\022/\n\005props\030\003" +
       " \003(\0132\031.oscal.common.v1.PropertyR\005props\022+" +
-      "\n\005links\030\006 \003(\0132\025.oscal.common.v1.LinkR\005li" +
-      "nks\022+\n\005roles\030\007 \003(\0132\025.oscal.common.v1.Rol" +
-      "eR\005roles\0220\n\007parties\030\010 \003(\0132\026.oscal.common" +
-      ".v1.PartyR\007parties\022R\n\023responsible_partie" +
-      "s\030\t \003(\0132!.oscal.common.v1.ResponsiblePar" +
-      "tyR\022responsibleParties\022<\n\013document_id\030\n " +
-      "\001(\0132\033.oscal.common.v1.DocumentIdR\ndocume" +
-      "ntId\0227\n\tpublished\030\013 \001(\0132\031.oscal.common.v" +
-      "1.DateTimeR\tpublished\022:\n\007remarks\030\014 \001(\0132 " +
-      ".oscal.common.v1.MarkupMultilineR\007remark" +
-      "sB:Z8github.com/mchorfa/xoscal/proto/osc" +
-      "al/common/v1;commonv1b\006proto3"
+      "\n\005links\030\004 \003(\0132\025.oscal.common.v1.LinkR\005li" +
+      "nks\022:\n\007remarks\030\005 \001(\0132 .oscal.common.v1.M" +
+      "arkupMultilineR\007remarks\"\225\005\n\005Party\022)\n\004uui" +
+      "d\030\001 \001(\0132\025.oscal.common.v1.UUIDR\004uuid\022\022\n\004" +
+      "type\030\002 \001(\tR\004type\022\022\n\004name\030\003 \001(\tR\004name\022\037\n\013" +
+      "short_names\030\004 \003(\tR\nshortNames\0222\n\007address" +
+      "\030\005 \001(\0132\030.oscal.common.v1.AddressR\007addres" +
+      "s\022F\n\017email_addresses\030\006 \003(\0132\035.oscal.commo" +
+      "n.v1.EmailAddressR\016emailAddresses\022M\n\021tel" +
+      "ephone_numbers\030\007 \003(\0132 .oscal.common.v1.T" +
+      "elephoneNumberR\020telephoneNumbers\022/\n\005prop" +
+      "s\030\010 \003(\0132\031.oscal.common.v1.PropertyR\005prop" +
+      "s\022+\n\005links\030\t \003(\0132\025.oscal.common.v1.LinkR" +
+      "\005links\022R\n\023responsible_parties\030\n \003(\0132!.os" +
+      "cal.common.v1.ResponsiblePartyR\022responsi" +
+      "bleParties\022\030\n\007remarks\030\013 \003(\tR\007remarks\022C\n\014" +
+      "external_ids\030\014 \003(\0132 .oscal.common.v1.Par" +
+      "tyExternalIdR\013externalIds\022<\n\016location_uu" +
+      "ids\030\r \003(\0132\025.oscal.common.v1.UUIDR\rlocati" +
+      "onUuids\"O\n\017PartyExternalId\022\016\n\002id\030\001 \001(\tR\002" +
+      "id\022,\n\006scheme\030\002 \001(\0132\024.oscal.common.v1.URI" +
+      "R\006scheme\"D\n\nDocumentId\022\026\n\006scheme\030\001 \001(\tR\006" +
+      "scheme\022\036\n\nidentifier\030\002 \001(\tR\nidentifier\"E" +
+      "\n\nBackMatter\0227\n\tresources\030\001 \003(\0132\031.oscal." +
+      "common.v1.ResourceR\tresources\"\206\004\n\010Resour" +
+      "ce\022)\n\004uuid\030\001 \001(\0132\025.oscal.common.v1.UUIDR" +
+      "\004uuid\022\024\n\005title\030\002 \001(\tR\005title\022B\n\013descripti" +
+      "on\030\003 \001(\0132 .oscal.common.v1.MarkupMultili" +
+      "neR\013description\022/\n\005props\030\004 \003(\0132\031.oscal.c" +
+      "ommon.v1.PropertyR\005props\022+\n\005links\030\005 \003(\0132" +
+      "\025.oscal.common.v1.LinkR\005links\022/\n\006base64\030" +
+      "\006 \003(\0132\027.oscal.common.v1.Base64R\006base64\022>" +
+      "\n\014document_ids\030\007 \003(\0132\033.oscal.common.v1.D" +
+      "ocumentIdR\013documentIds\022\030\n\007remarks\030\010 \003(\tR" +
+      "\007remarks\022\036\n\010citation\030\t \001(\tB\002\030\001R\010citation" +
+      "\022.\n\006rlinks\030\n \003(\0132\026.oscal.common.v1.Rlink" +
+      "R\006rlinks\022<\n\014citation_obj\030\013 \001(\0132\031.oscal.c" +
+      "ommon.v1.CitationR\013citationObj\"\177\n\005Rlink\022" +
+      "(\n\004href\030\001 \001(\0132\024.oscal.common.v1.URIR\004hre" +
+      "f\022\035\n\nmedia_type\030\002 \001(\tR\tmediaType\022-\n\006hash" +
+      "es\030\003 \003(\0132\025.oscal.common.v1.HashR\006hashes\"" +
+      "\231\001\n\010Citation\022/\n\004text\030\001 \001(\0132\033.oscal.commo" +
+      "n.v1.MarkupLineR\004text\022/\n\005props\030\002 \003(\0132\031.o" +
+      "scal.common.v1.PropertyR\005props\022+\n\005links\030" +
+      "\003 \003(\0132\025.oscal.common.v1.LinkR\005links\"\234\005\n\010" +
+      "Metadata\022\024\n\005title\030\001 \001(\tR\005title\022>\n\rlast_m" +
+      "odified\030\002 \001(\0132\031.oscal.common.v1.DateTime" +
+      "R\014lastModified\022\030\n\007version\030\003 \001(\tR\007version" +
+      "\022#\n\roscal_version\030\004 \001(\tR\014oscalVersion\022/\n" +
+      "\005props\030\005 \003(\0132\031.oscal.common.v1.PropertyR" +
+      "\005props\022+\n\005links\030\006 \003(\0132\025.oscal.common.v1." +
+      "LinkR\005links\022+\n\005roles\030\007 \003(\0132\025.oscal.commo" +
+      "n.v1.RoleR\005roles\0220\n\007parties\030\010 \003(\0132\026.osca" +
+      "l.common.v1.PartyR\007parties\022R\n\023responsibl" +
+      "e_parties\030\t \003(\0132!.oscal.common.v1.Respon" +
+      "siblePartyR\022responsibleParties\022<\n\013docume" +
+      "nt_id\030\n \001(\0132\033.oscal.common.v1.DocumentId" +
+      "R\ndocumentId\0227\n\tpublished\030\013 \001(\0132\031.oscal." +
+      "common.v1.DateTimeR\tpublished\022:\n\007remarks" +
+      "\030\014 \001(\0132 .oscal.common.v1.MarkupMultiline" +
+      "R\007remarks\0227\n\tlocations\030\r \003(\0132\031.oscal.com" +
+      "mon.v1.LocationR\tlocationsB:Z8github.com" +
+      "/mchorfa/xoscal/proto/oscal/common/v1;co" +
+      "mmonv1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -28592,60 +36774,84 @@ public final class Common extends com.google.protobuf.GeneratedFile {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_common_v1_Address_descriptor,
         new java.lang.String[] { "AddrLines", "City", "State", "PostalCode", "Country", });
-    internal_static_oscal_common_v1_AddrLine_descriptor =
+    internal_static_oscal_common_v1_Location_descriptor =
       getDescriptor().getMessageType(19);
+    internal_static_oscal_common_v1_Location_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_oscal_common_v1_Location_descriptor,
+        new java.lang.String[] { "Uuid", "Title", "Address", "EmailAddresses", "TelephoneNumbers", "Urls", "Props", "Links", "Remarks", });
+    internal_static_oscal_common_v1_AddrLine_descriptor =
+      getDescriptor().getMessageType(20);
     internal_static_oscal_common_v1_AddrLine_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_common_v1_AddrLine_descriptor,
         new java.lang.String[] { "Value", });
     internal_static_oscal_common_v1_TelephoneNumber_descriptor =
-      getDescriptor().getMessageType(20);
+      getDescriptor().getMessageType(21);
     internal_static_oscal_common_v1_TelephoneNumber_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_common_v1_TelephoneNumber_descriptor,
         new java.lang.String[] { "Value", });
     internal_static_oscal_common_v1_Role_descriptor =
-      getDescriptor().getMessageType(21);
+      getDescriptor().getMessageType(22);
     internal_static_oscal_common_v1_Role_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_common_v1_Role_descriptor,
         new java.lang.String[] { "Id", "Title", "ShortName", "Description", "Props", "Links", });
     internal_static_oscal_common_v1_ResponsibleParty_descriptor =
-      getDescriptor().getMessageType(22);
+      getDescriptor().getMessageType(23);
     internal_static_oscal_common_v1_ResponsibleParty_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_common_v1_ResponsibleParty_descriptor,
         new java.lang.String[] { "RoleId", "PartyUuids", "Props", "Links", "Remarks", });
     internal_static_oscal_common_v1_Party_descriptor =
-      getDescriptor().getMessageType(23);
+      getDescriptor().getMessageType(24);
     internal_static_oscal_common_v1_Party_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_common_v1_Party_descriptor,
-        new java.lang.String[] { "Uuid", "Type", "Name", "ShortNames", "Address", "EmailAddresses", "TelephoneNumbers", "Props", "Links", "ResponsibleParties", "Remarks", });
+        new java.lang.String[] { "Uuid", "Type", "Name", "ShortNames", "Address", "EmailAddresses", "TelephoneNumbers", "Props", "Links", "ResponsibleParties", "Remarks", "ExternalIds", "LocationUuids", });
+    internal_static_oscal_common_v1_PartyExternalId_descriptor =
+      getDescriptor().getMessageType(25);
+    internal_static_oscal_common_v1_PartyExternalId_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_oscal_common_v1_PartyExternalId_descriptor,
+        new java.lang.String[] { "Id", "Scheme", });
     internal_static_oscal_common_v1_DocumentId_descriptor =
-      getDescriptor().getMessageType(24);
+      getDescriptor().getMessageType(26);
     internal_static_oscal_common_v1_DocumentId_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_common_v1_DocumentId_descriptor,
         new java.lang.String[] { "Scheme", "Identifier", });
     internal_static_oscal_common_v1_BackMatter_descriptor =
-      getDescriptor().getMessageType(25);
+      getDescriptor().getMessageType(27);
     internal_static_oscal_common_v1_BackMatter_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_common_v1_BackMatter_descriptor,
         new java.lang.String[] { "Resources", });
     internal_static_oscal_common_v1_Resource_descriptor =
-      getDescriptor().getMessageType(26);
+      getDescriptor().getMessageType(28);
     internal_static_oscal_common_v1_Resource_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_common_v1_Resource_descriptor,
-        new java.lang.String[] { "Uuid", "Title", "Description", "Props", "Links", "Base64", "DocumentIds", "Remarks", "Citation", });
+        new java.lang.String[] { "Uuid", "Title", "Description", "Props", "Links", "Base64", "DocumentIds", "Remarks", "Citation", "Rlinks", "CitationObj", });
+    internal_static_oscal_common_v1_Rlink_descriptor =
+      getDescriptor().getMessageType(29);
+    internal_static_oscal_common_v1_Rlink_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_oscal_common_v1_Rlink_descriptor,
+        new java.lang.String[] { "Href", "MediaType", "Hashes", });
+    internal_static_oscal_common_v1_Citation_descriptor =
+      getDescriptor().getMessageType(30);
+    internal_static_oscal_common_v1_Citation_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_oscal_common_v1_Citation_descriptor,
+        new java.lang.String[] { "Text", "Props", "Links", });
     internal_static_oscal_common_v1_Metadata_descriptor =
-      getDescriptor().getMessageType(27);
+      getDescriptor().getMessageType(31);
     internal_static_oscal_common_v1_Metadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_common_v1_Metadata_descriptor,
-        new java.lang.String[] { "Title", "LastModified", "Version", "OscalVersion", "Props", "Links", "Roles", "Parties", "ResponsibleParties", "DocumentId", "Published", "Remarks", });
+        new java.lang.String[] { "Title", "LastModified", "Version", "OscalVersion", "Props", "Links", "Roles", "Parties", "ResponsibleParties", "DocumentId", "Published", "Remarks", "Locations", });
     descriptor.resolveAllFeaturesImmutable();
     com.google.protobuf.TimestampProto.getDescriptor();
   }

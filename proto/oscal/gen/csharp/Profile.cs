@@ -25,7 +25,7 @@ namespace Oscal.Profile.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Chhwcm9maWxlL3YxL3Byb2ZpbGUucHJvdG8SEG9zY2FsLnByb2ZpbGUudjEa",
-            "FmNvbW1vbi92MS9jb21tb24ucHJvdG8aGGNhdGFsb2cvdjEvY2F0YWxvZy5w",
+            "GGNhdGFsb2cvdjEvY2F0YWxvZy5wcm90bxoWY29tbW9uL3YxL2NvbW1vbi5w",
             "cm90byK+AgoHUHJvZmlsZRIpCgR1dWlkGAEgASgLMhUub3NjYWwuY29tbW9u",
             "LnYxLlVVSURSBHV1aWQSNQoIbWV0YWRhdGEYAiABKAsyGS5vc2NhbC5jb21t",
             "b24udjEuTWV0YWRhdGFSCG1ldGFkYXRhEjIKB2ltcG9ydHMYAyADKAsyGC5v",
@@ -66,53 +66,54 @@ namespace Oscal.Profile.V1 {
             "Y2FsLmNvbW1vbi52MS5NYXJrdXBNdWx0aWxpbmVSB3JlbWFya3MiZwoHQ29t",
             "YmluZRIWCgZtZXRob2QYASABKAlSBm1ldGhvZBISCgRmbGF0GAIgASgIUgRm",
             "bGF0EjAKBWFzX2lzGAMgAygLMhsub3NjYWwuY29tbW9uLnYxLk1hcmt1cExp",
-            "bmVSBGFzSXMi9AIKBk1vZGlmeRJGCg5zZXRfcGFyYW1ldGVycxgBIAMoCzIf",
+            "bmVSBGFzSXMiqQMKBk1vZGlmeRJGCg5zZXRfcGFyYW1ldGVycxgBIAMoCzIf",
             "Lm9zY2FsLnByb2ZpbGUudjEuU2V0UGFyYW1ldGVyc1INc2V0UGFyYW1ldGVy",
-            "cxJGCg5hbHRlcl9jb250cm9scxgCIAMoCzIfLm9zY2FsLnByb2ZpbGUudjEu",
-            "QWx0ZXJDb250cm9sc1INYWx0ZXJDb250cm9scxJACgxhZGRfY29udHJvbHMY",
-            "AyADKAsyHS5vc2NhbC5wcm9maWxlLnYxLkFkZENvbnRyb2xzUgthZGRDb250",
-            "cm9scxIvCgVwcm9wcxgEIAMoCzIZLm9zY2FsLmNvbW1vbi52MS5Qcm9wZXJ0",
-            "eVIFcHJvcHMSKwoFbGlua3MYBSADKAsyFS5vc2NhbC5jb21tb24udjEuTGlu",
-            "a1IFbGlua3MSOgoHcmVtYXJrcxgGIAMoCzIgLm9zY2FsLmNvbW1vbi52MS5N",
-            "YXJrdXBNdWx0aWxpbmVSB3JlbWFya3MimAIKDVNldFBhcmFtZXRlcnMSMwoG",
-            "cGFyYW1zGAEgAygLMhsub3NjYWwuY2F0YWxvZy52MS5QYXJhbWV0ZXJSBnBh",
-            "cmFtcxIZCgh3aXRoX2lkcxgCIAMoCVIHd2l0aElkcxIdCgp3aXRoX2NsYXNz",
-            "GAMgAygJUgl3aXRoQ2xhc3MSLwoFcHJvcHMYBCADKAsyGS5vc2NhbC5jb21t",
-            "b24udjEuUHJvcGVydHlSBXByb3BzEisKBWxpbmtzGAUgAygLMhUub3NjYWwu",
-            "Y29tbW9uLnYxLkxpbmtSBWxpbmtzEjoKB3JlbWFya3MYBiADKAsyIC5vc2Nh",
-            "bC5jb21tb24udjEuTWFya3VwTXVsdGlsaW5lUgdyZW1hcmtzIq0CCg1BbHRl",
-            "ckNvbnRyb2xzEkgKE2NvbnRyb2xfYWx0ZXJhdGlvbnMYASADKAsyFy5vc2Nh",
-            "bC5wcm9maWxlLnYxLkFsdGVyUhJjb250cm9sQWx0ZXJhdGlvbnMSGQoId2l0",
-            "aF9pZHMYAiADKAlSB3dpdGhJZHMSHQoKd2l0aF9jbGFzcxgDIAMoCVIJd2l0",
-            "aENsYXNzEi8KBXByb3BzGAQgAygLMhkub3NjYWwuY29tbW9uLnYxLlByb3Bl",
-            "cnR5UgVwcm9wcxIrCgVsaW5rcxgFIAMoCzIVLm9zY2FsLmNvbW1vbi52MS5M",
-            "aW5rUgVsaW5rcxI6CgdyZW1hcmtzGAYgAygLMiAub3NjYWwuY29tbW9uLnYx",
-            "Lk1hcmt1cE11bHRpbGluZVIHcmVtYXJrcyLBAQoFQWx0ZXISHQoKY29udHJv",
-            "bF9pZBgBIAEoCVIJY29udHJvbElkEjIKB3JlbW92ZXMYAiADKAsyGC5vc2Nh",
-            "bC5wcm9maWxlLnYxLlJlbW92ZVIHcmVtb3ZlcxIpCgRhZGRzGAMgAygLMhUu",
-            "b3NjYWwucHJvZmlsZS52MS5BZGRSBGFkZHMSOgoHcmVtYXJrcxgEIAMoCzIg",
-            "Lm9zY2FsLmNvbW1vbi52MS5NYXJrdXBNdWx0aWxpbmVSB3JlbWFya3MilQEK",
-            "BlJlbW92ZRIbCglpdGVtX25hbWUYASABKAlSCGl0ZW1OYW1lEhkKCHdpdGhf",
-            "aWRzGAIgAygJUgd3aXRoSWRzEh0KCndpdGhfY2xhc3MYAyADKAlSCXdpdGhD",
-            "bGFzcxIbCgl3aXRoX25hbWUYBCADKAlSCHdpdGhOYW1lEhcKB3dpdGhfbnMY",
-            "BSADKAlSBndpdGhOcyK5AgoDQWRkEhsKCWl0ZW1fbmFtZRgBIAEoCVIIaXRl",
-            "bU5hbWUSGgoIcG9zaXRpb24YAiABKAlSCHBvc2l0aW9uEiwKBXBhcnRzGAMg",
-            "AygLMhYub3NjYWwuY2F0YWxvZy52MS5QYXJ0UgVwYXJ0cxIvCgVwcm9wcxgE",
-            "IAMoCzIZLm9zY2FsLmNvbW1vbi52MS5Qcm9wZXJ0eVIFcHJvcHMSKwoFbGlu",
-            "a3MYBSADKAsyFS5vc2NhbC5jb21tb24udjEuTGlua1IFbGlua3MSMwoGcGFy",
-            "YW1zGAYgAygLMhsub3NjYWwuY2F0YWxvZy52MS5QYXJhbWV0ZXJSBnBhcmFt",
-            "cxIZCgh3aXRoX2lkcxgHIAMoCVIHd2l0aElkcxIdCgp3aXRoX2NsYXNzGAgg",
-            "AygJUgl3aXRoQ2xhc3MimAIKC0FkZENvbnRyb2xzEjUKCGNvbnRyb2xzGAEg",
-            "AygLMhkub3NjYWwuY2F0YWxvZy52MS5Db250cm9sUghjb250cm9scxIZCgh3",
-            "aXRoX2lkcxgCIAMoCVIHd2l0aElkcxIdCgp3aXRoX2NsYXNzGAMgAygJUgl3",
-            "aXRoQ2xhc3MSLwoFcHJvcHMYBCADKAsyGS5vc2NhbC5jb21tb24udjEuUHJv",
+            "cxJKCg5hbHRlcl9jb250cm9scxgCIAMoCzIfLm9zY2FsLnByb2ZpbGUudjEu",
+            "QWx0ZXJDb250cm9sc0ICGAFSDWFsdGVyQ29udHJvbHMSQAoMYWRkX2NvbnRy",
+            "b2xzGAMgAygLMh0ub3NjYWwucHJvZmlsZS52MS5BZGRDb250cm9sc1ILYWRk",
+            "Q29udHJvbHMSLwoFcHJvcHMYBCADKAsyGS5vc2NhbC5jb21tb24udjEuUHJv",
             "cGVydHlSBXByb3BzEisKBWxpbmtzGAUgAygLMhUub3NjYWwuY29tbW9uLnYx",
             "LkxpbmtSBWxpbmtzEjoKB3JlbWFya3MYBiADKAsyIC5vc2NhbC5jb21tb24u",
-            "djEuTWFya3VwTXVsdGlsaW5lUgdyZW1hcmtzQjxaOmdpdGh1Yi5jb20vbWNo",
-            "b3JmYS94b3NjYWwvcHJvdG8vb3NjYWwvcHJvZmlsZS92MTtwcm9maWxldjFi",
-            "BnByb3RvMw=="));
+            "djEuTWFya3VwTXVsdGlsaW5lUgdyZW1hcmtzEi8KBmFsdGVycxgHIAMoCzIX",
+            "Lm9zY2FsLnByb2ZpbGUudjEuQWx0ZXJSBmFsdGVycyKYAgoNU2V0UGFyYW1l",
+            "dGVycxIzCgZwYXJhbXMYASADKAsyGy5vc2NhbC5jYXRhbG9nLnYxLlBhcmFt",
+            "ZXRlclIGcGFyYW1zEhkKCHdpdGhfaWRzGAIgAygJUgd3aXRoSWRzEh0KCndp",
+            "dGhfY2xhc3MYAyADKAlSCXdpdGhDbGFzcxIvCgVwcm9wcxgEIAMoCzIZLm9z",
+            "Y2FsLmNvbW1vbi52MS5Qcm9wZXJ0eVIFcHJvcHMSKwoFbGlua3MYBSADKAsy",
+            "FS5vc2NhbC5jb21tb24udjEuTGlua1IFbGlua3MSOgoHcmVtYXJrcxgGIAMo",
+            "CzIgLm9zY2FsLmNvbW1vbi52MS5NYXJrdXBNdWx0aWxpbmVSB3JlbWFya3Mi",
+            "rQIKDUFsdGVyQ29udHJvbHMSSAoTY29udHJvbF9hbHRlcmF0aW9ucxgBIAMo",
+            "CzIXLm9zY2FsLnByb2ZpbGUudjEuQWx0ZXJSEmNvbnRyb2xBbHRlcmF0aW9u",
+            "cxIZCgh3aXRoX2lkcxgCIAMoCVIHd2l0aElkcxIdCgp3aXRoX2NsYXNzGAMg",
+            "AygJUgl3aXRoQ2xhc3MSLwoFcHJvcHMYBCADKAsyGS5vc2NhbC5jb21tb24u",
+            "djEuUHJvcGVydHlSBXByb3BzEisKBWxpbmtzGAUgAygLMhUub3NjYWwuY29t",
+            "bW9uLnYxLkxpbmtSBWxpbmtzEjoKB3JlbWFya3MYBiADKAsyIC5vc2NhbC5j",
+            "b21tb24udjEuTWFya3VwTXVsdGlsaW5lUgdyZW1hcmtzIsEBCgVBbHRlchId",
+            "Cgpjb250cm9sX2lkGAEgASgJUgljb250cm9sSWQSMgoHcmVtb3ZlcxgCIAMo",
+            "CzIYLm9zY2FsLnByb2ZpbGUudjEuUmVtb3ZlUgdyZW1vdmVzEikKBGFkZHMY",
+            "AyADKAsyFS5vc2NhbC5wcm9maWxlLnYxLkFkZFIEYWRkcxI6CgdyZW1hcmtz",
+            "GAQgAygLMiAub3NjYWwuY29tbW9uLnYxLk1hcmt1cE11bHRpbGluZVIHcmVt",
+            "YXJrcyKVAQoGUmVtb3ZlEhsKCWl0ZW1fbmFtZRgBIAEoCVIIaXRlbU5hbWUS",
+            "GQoId2l0aF9pZHMYAiADKAlSB3dpdGhJZHMSHQoKd2l0aF9jbGFzcxgDIAMo",
+            "CVIJd2l0aENsYXNzEhsKCXdpdGhfbmFtZRgEIAMoCVIId2l0aE5hbWUSFwoH",
+            "d2l0aF9ucxgFIAMoCVIGd2l0aE5zIq4CCgNBZGQSHwoJaXRlbV9uYW1lGAEg",
+            "ASgJQgIYAVIIaXRlbU5hbWUSGgoIcG9zaXRpb24YAiABKAlSCHBvc2l0aW9u",
+            "EiwKBXBhcnRzGAMgAygLMhYub3NjYWwuY2F0YWxvZy52MS5QYXJ0UgVwYXJ0",
+            "cxIvCgVwcm9wcxgEIAMoCzIZLm9zY2FsLmNvbW1vbi52MS5Qcm9wZXJ0eVIF",
+            "cHJvcHMSKwoFbGlua3MYBSADKAsyFS5vc2NhbC5jb21tb24udjEuTGlua1IF",
+            "bGlua3MSMwoGcGFyYW1zGAYgAygLMhsub3NjYWwuY2F0YWxvZy52MS5QYXJh",
+            "bWV0ZXJSBnBhcmFtcxITCgVieV9pZBgHIAEoCVIEYnlJZBIUCgV0aXRsZRgI",
+            "IAEoCVIFdGl0bGUimAIKC0FkZENvbnRyb2xzEjUKCGNvbnRyb2xzGAEgAygL",
+            "Mhkub3NjYWwuY2F0YWxvZy52MS5Db250cm9sUghjb250cm9scxIZCgh3aXRo",
+            "X2lkcxgCIAMoCVIHd2l0aElkcxIdCgp3aXRoX2NsYXNzGAMgAygJUgl3aXRo",
+            "Q2xhc3MSLwoFcHJvcHMYBCADKAsyGS5vc2NhbC5jb21tb24udjEuUHJvcGVy",
+            "dHlSBXByb3BzEisKBWxpbmtzGAUgAygLMhUub3NjYWwuY29tbW9uLnYxLkxp",
+            "bmtSBWxpbmtzEjoKB3JlbWFya3MYBiADKAsyIC5vc2NhbC5jb21tb24udjEu",
+            "TWFya3VwTXVsdGlsaW5lUgdyZW1hcmtzQjxaOmdpdGh1Yi5jb20vbWNob3Jm",
+            "YS94b3NjYWwvcHJvdG8vb3NjYWwvcHJvZmlsZS92MTtwcm9maWxldjFiBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Oscal.Common.V1.CommonReflection.Descriptor, global::Oscal.Catalog.V1.CatalogReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Oscal.Catalog.V1.CatalogReflection.Descriptor, global::Oscal.Common.V1.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Oscal.Profile.V1.Profile), global::Oscal.Profile.V1.Profile.Parser, new[]{ "Uuid", "Metadata", "Imports", "Merge", "Modify", "BackMatter" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Oscal.Profile.V1.Import), global::Oscal.Profile.V1.Import.Parser, new[]{ "Href", "IncludeAll", "ExcludeControls", "Custom", "Props", "Links", "Remarks" }, null, null, null, null),
@@ -121,12 +122,12 @@ namespace Oscal.Profile.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Oscal.Profile.V1.Custom), global::Oscal.Profile.V1.Custom.Parser, new[]{ "WithIds", "WithClass", "Props", "Links", "Remarks" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Oscal.Profile.V1.Merge), global::Oscal.Profile.V1.Merge.Parser, new[]{ "Custom", "Combine", "Props", "Links", "Remarks" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Oscal.Profile.V1.Combine), global::Oscal.Profile.V1.Combine.Parser, new[]{ "Method", "Flat", "AsIs" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Oscal.Profile.V1.Modify), global::Oscal.Profile.V1.Modify.Parser, new[]{ "SetParameters", "AlterControls", "AddControls", "Props", "Links", "Remarks" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Oscal.Profile.V1.Modify), global::Oscal.Profile.V1.Modify.Parser, new[]{ "SetParameters", "AlterControls", "AddControls", "Props", "Links", "Remarks", "Alters" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Oscal.Profile.V1.SetParameters), global::Oscal.Profile.V1.SetParameters.Parser, new[]{ "Params", "WithIds", "WithClass", "Props", "Links", "Remarks" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Oscal.Profile.V1.AlterControls), global::Oscal.Profile.V1.AlterControls.Parser, new[]{ "ControlAlterations", "WithIds", "WithClass", "Props", "Links", "Remarks" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Oscal.Profile.V1.Alter), global::Oscal.Profile.V1.Alter.Parser, new[]{ "ControlId", "Removes", "Adds", "Remarks" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Oscal.Profile.V1.Remove), global::Oscal.Profile.V1.Remove.Parser, new[]{ "ItemName", "WithIds", "WithClass", "WithName", "WithNs" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Oscal.Profile.V1.Add), global::Oscal.Profile.V1.Add.Parser, new[]{ "ItemName", "Position", "Parts", "Props", "Links", "Params", "WithIds", "WithClass" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Oscal.Profile.V1.Add), global::Oscal.Profile.V1.Add.Parser, new[]{ "ItemName", "Position", "Parts", "Props", "Links", "Params", "ById", "Title" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Oscal.Profile.V1.AddControls), global::Oscal.Profile.V1.AddControls.Parser, new[]{ "Controls", "WithIds", "WithClass", "Props", "Links", "Remarks" }, null, null, null, null)
           }));
     }
@@ -2458,6 +2459,7 @@ namespace Oscal.Profile.V1 {
       props_ = other.props_.Clone();
       links_ = other.links_.Clone();
       remarks_ = other.remarks_.Clone();
+      alters_ = other.alters_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2483,6 +2485,10 @@ namespace Oscal.Profile.V1 {
     private static readonly pb::FieldCodec<global::Oscal.Profile.V1.AlterControls> _repeated_alterControls_codec
         = pb::FieldCodec.ForMessage(18, global::Oscal.Profile.V1.AlterControls.Parser);
     private readonly pbc::RepeatedField<global::Oscal.Profile.V1.AlterControls> alterControls_ = new pbc::RepeatedField<global::Oscal.Profile.V1.AlterControls>();
+    /// <summary>
+    /// Deprecated: use alters instead. Kept for backward compatibility.
+    /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Oscal.Profile.V1.AlterControls> AlterControls {
@@ -2533,6 +2539,17 @@ namespace Oscal.Profile.V1 {
       get { return remarks_; }
     }
 
+    /// <summary>Field number for the "alters" field.</summary>
+    public const int AltersFieldNumber = 7;
+    private static readonly pb::FieldCodec<global::Oscal.Profile.V1.Alter> _repeated_alters_codec
+        = pb::FieldCodec.ForMessage(58, global::Oscal.Profile.V1.Alter.Parser);
+    private readonly pbc::RepeatedField<global::Oscal.Profile.V1.Alter> alters_ = new pbc::RepeatedField<global::Oscal.Profile.V1.Alter>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Oscal.Profile.V1.Alter> Alters {
+      get { return alters_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2554,6 +2571,7 @@ namespace Oscal.Profile.V1 {
       if(!props_.Equals(other.props_)) return false;
       if(!links_.Equals(other.links_)) return false;
       if(!remarks_.Equals(other.remarks_)) return false;
+      if(!alters_.Equals(other.alters_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2567,6 +2585,7 @@ namespace Oscal.Profile.V1 {
       hash ^= props_.GetHashCode();
       hash ^= links_.GetHashCode();
       hash ^= remarks_.GetHashCode();
+      hash ^= alters_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2591,6 +2610,7 @@ namespace Oscal.Profile.V1 {
       props_.WriteTo(output, _repeated_props_codec);
       links_.WriteTo(output, _repeated_links_codec);
       remarks_.WriteTo(output, _repeated_remarks_codec);
+      alters_.WriteTo(output, _repeated_alters_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2607,6 +2627,7 @@ namespace Oscal.Profile.V1 {
       props_.WriteTo(ref output, _repeated_props_codec);
       links_.WriteTo(ref output, _repeated_links_codec);
       remarks_.WriteTo(ref output, _repeated_remarks_codec);
+      alters_.WriteTo(ref output, _repeated_alters_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2623,6 +2644,7 @@ namespace Oscal.Profile.V1 {
       size += props_.CalculateSize(_repeated_props_codec);
       size += links_.CalculateSize(_repeated_links_codec);
       size += remarks_.CalculateSize(_repeated_remarks_codec);
+      size += alters_.CalculateSize(_repeated_alters_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -2641,6 +2663,7 @@ namespace Oscal.Profile.V1 {
       props_.Add(other.props_);
       links_.Add(other.links_);
       remarks_.Add(other.remarks_);
+      alters_.Add(other.alters_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -2684,6 +2707,10 @@ namespace Oscal.Profile.V1 {
             remarks_.AddEntriesFrom(input, _repeated_remarks_codec);
             break;
           }
+          case 58: {
+            alters_.AddEntriesFrom(input, _repeated_alters_codec);
+            break;
+          }
         }
       }
     #endif
@@ -2725,6 +2752,10 @@ namespace Oscal.Profile.V1 {
           }
           case 50: {
             remarks_.AddEntriesFrom(ref input, _repeated_remarks_codec);
+            break;
+          }
+          case 58: {
+            alters_.AddEntriesFrom(ref input, _repeated_alters_codec);
             break;
           }
         }
@@ -4002,8 +4033,8 @@ namespace Oscal.Profile.V1 {
       props_ = other.props_.Clone();
       links_ = other.links_.Clone();
       params_ = other.params_.Clone();
-      withIds_ = other.withIds_.Clone();
-      withClass_ = other.withClass_.Clone();
+      byId_ = other.byId_;
+      title_ = other.title_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4016,6 +4047,10 @@ namespace Oscal.Profile.V1 {
     /// <summary>Field number for the "item_name" field.</summary>
     public const int ItemNameFieldNumber = 1;
     private string itemName_ = "";
+    /// <summary>
+    /// Deprecated: not in OSCAL schema. Kept for backward compatibility.
+    /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ItemName {
@@ -4081,26 +4116,28 @@ namespace Oscal.Profile.V1 {
       get { return params_; }
     }
 
-    /// <summary>Field number for the "with_ids" field.</summary>
-    public const int WithIdsFieldNumber = 7;
-    private static readonly pb::FieldCodec<string> _repeated_withIds_codec
-        = pb::FieldCodec.ForString(58);
-    private readonly pbc::RepeatedField<string> withIds_ = new pbc::RepeatedField<string>();
+    /// <summary>Field number for the "by_id" field.</summary>
+    public const int ByIdFieldNumber = 7;
+    private string byId_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<string> WithIds {
-      get { return withIds_; }
+    public string ById {
+      get { return byId_; }
+      set {
+        byId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
     }
 
-    /// <summary>Field number for the "with_class" field.</summary>
-    public const int WithClassFieldNumber = 8;
-    private static readonly pb::FieldCodec<string> _repeated_withClass_codec
-        = pb::FieldCodec.ForString(66);
-    private readonly pbc::RepeatedField<string> withClass_ = new pbc::RepeatedField<string>();
+    /// <summary>Field number for the "title" field.</summary>
+    public const int TitleFieldNumber = 8;
+    private string title_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<string> WithClass {
-      get { return withClass_; }
+    public string Title {
+      get { return title_; }
+      set {
+        title_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4124,8 +4161,8 @@ namespace Oscal.Profile.V1 {
       if(!props_.Equals(other.props_)) return false;
       if(!links_.Equals(other.links_)) return false;
       if(!params_.Equals(other.params_)) return false;
-      if(!withIds_.Equals(other.withIds_)) return false;
-      if(!withClass_.Equals(other.withClass_)) return false;
+      if (ById != other.ById) return false;
+      if (Title != other.Title) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -4139,8 +4176,8 @@ namespace Oscal.Profile.V1 {
       hash ^= props_.GetHashCode();
       hash ^= links_.GetHashCode();
       hash ^= params_.GetHashCode();
-      hash ^= withIds_.GetHashCode();
-      hash ^= withClass_.GetHashCode();
+      if (ById.Length != 0) hash ^= ById.GetHashCode();
+      if (Title.Length != 0) hash ^= Title.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4171,8 +4208,14 @@ namespace Oscal.Profile.V1 {
       props_.WriteTo(output, _repeated_props_codec);
       links_.WriteTo(output, _repeated_links_codec);
       params_.WriteTo(output, _repeated_params_codec);
-      withIds_.WriteTo(output, _repeated_withIds_codec);
-      withClass_.WriteTo(output, _repeated_withClass_codec);
+      if (ById.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(ById);
+      }
+      if (Title.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(Title);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4195,8 +4238,14 @@ namespace Oscal.Profile.V1 {
       props_.WriteTo(ref output, _repeated_props_codec);
       links_.WriteTo(ref output, _repeated_links_codec);
       params_.WriteTo(ref output, _repeated_params_codec);
-      withIds_.WriteTo(ref output, _repeated_withIds_codec);
-      withClass_.WriteTo(ref output, _repeated_withClass_codec);
+      if (ById.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(ById);
+      }
+      if (Title.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(Title);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4217,8 +4266,12 @@ namespace Oscal.Profile.V1 {
       size += props_.CalculateSize(_repeated_props_codec);
       size += links_.CalculateSize(_repeated_links_codec);
       size += params_.CalculateSize(_repeated_params_codec);
-      size += withIds_.CalculateSize(_repeated_withIds_codec);
-      size += withClass_.CalculateSize(_repeated_withClass_codec);
+      if (ById.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ById);
+      }
+      if (Title.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Title);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -4241,8 +4294,12 @@ namespace Oscal.Profile.V1 {
       props_.Add(other.props_);
       links_.Add(other.links_);
       params_.Add(other.params_);
-      withIds_.Add(other.withIds_);
-      withClass_.Add(other.withClass_);
+      if (other.ById.Length != 0) {
+        ById = other.ById;
+      }
+      if (other.Title.Length != 0) {
+        Title = other.Title;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -4287,11 +4344,11 @@ namespace Oscal.Profile.V1 {
             break;
           }
           case 58: {
-            withIds_.AddEntriesFrom(input, _repeated_withIds_codec);
+            ById = input.ReadString();
             break;
           }
           case 66: {
-            withClass_.AddEntriesFrom(input, _repeated_withClass_codec);
+            Title = input.ReadString();
             break;
           }
         }
@@ -4338,11 +4395,11 @@ namespace Oscal.Profile.V1 {
             break;
           }
           case 58: {
-            withIds_.AddEntriesFrom(ref input, _repeated_withIds_codec);
+            ById = input.ReadString();
             break;
           }
           case 66: {
-            withClass_.AddEntriesFrom(ref input, _repeated_withClass_codec);
+            Title = input.ReadString();
             break;
           }
         }

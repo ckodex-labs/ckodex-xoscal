@@ -6,17 +6,49 @@
   "patternProperties": {
     "^(controlSelection)$": {
       "default": "",
+      "description": "Deprecated: use control_selections instead. Kept for backward compatibility.",
       "type": "string"
+    },
+    "^(controlSelections)$": {
+      "items": {
+        "$ref": "oscal.assessment_plan.v1.ControlSelection.schema.json"
+      },
+      "type": "array"
     }
   },
   "properties": {
     "control_selection": {
       "default": "",
+      "description": "Deprecated: use control_selections instead. Kept for backward compatibility.",
       "type": "string"
+    },
+    "control_selections": {
+      "items": {
+        "$ref": "oscal.assessment_plan.v1.ControlSelection.schema.json"
+      },
+      "type": "array"
     },
     "controls": {
       "items": {
         "$ref": "oscal.assessment_plan.v1.ControlSelection.schema.json"
+      },
+      "type": "array"
+    },
+    "links": {
+      "items": {
+        "$ref": "oscal.common.v1.Link.schema.json"
+      },
+      "type": "array"
+    },
+    "props": {
+      "items": {
+        "$ref": "oscal.common.v1.Property.schema.json"
+      },
+      "type": "array"
+    },
+    "remarks": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupMultiline.schema.json"
       },
       "type": "array"
     }

@@ -14,8 +14,10 @@ message AssessmentPlan {
   LocalDefinitions local_definitions = 4;
   Terms terms = 5;
   ReviewedControls reviewed_controls = 6;
-  repeated AssessmentTask assessment_tasks = 7;
+  // Deprecated: use tasks instead. Kept for backward compatibility.
+  repeated AssessmentTask assessment_tasks = 7 [deprecated = true];
   oscal.common.v1.BackMatter back_matter = 8;
+  repeated AssessmentTask tasks = 9;
 }
 
 // ImportSsp represents an imported system security plan
@@ -151,14 +153,32 @@ message Term {
 
 // ReviewedControls represents reviewed controls
 message ReviewedControls {
-  string control_selection = 1;
+  // Deprecated: use control_selections instead. Kept for backward compatibility.
+  string control_selection = 1 [deprecated = true];
   repeated ControlSelection controls = 2;
+  repeated ControlSelection control_selections = 3;
+  repeated oscal.common.v1.Property props = 4;
+  repeated oscal.common.v1.Link links = 5;
+  repeated oscal.common.v1.MarkupMultiline remarks = 6;
 }
 
 // ControlSelection represents a control selection
 message ControlSelection {
+  oscal.common.v1.MarkupMultiline description = 1;
+  repeated SelectedControl include_controls = 2;
+  repeated SelectedControl exclude_controls = 3;
+  repeated oscal.common.v1.Property props = 4;
+  repeated oscal.common.v1.Link links = 5;
+  repeated oscal.common.v1.MarkupMultiline remarks = 6;
+}
+
+// SelectedControl represents a selected control
+message SelectedControl {
   oscal.common.v1.Token control_id = 1;
-  repeated oscal.common.v1.MarkupMultiline remarks = 2;
+  oscal.common.v1.Token statement_id = 2;
+  repeated oscal.common.v1.Property props = 3;
+  repeated oscal.common.v1.Link links = 4;
+  repeated oscal.common.v1.MarkupMultiline remarks = 5;
 }
 
 // AssessmentTask represents an assessment task

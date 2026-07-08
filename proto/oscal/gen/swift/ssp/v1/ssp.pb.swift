@@ -726,11 +726,21 @@ nonisolated struct Oscal_Ssp_V1_SystemComponent: Sendable {
 
   var remarks: [Oscal_Common_V1_MarkupMultiline] = []
 
+  var status: Oscal_Ssp_V1_Status {
+    get {_status ?? Oscal_Ssp_V1_Status()}
+    set {_status = newValue}
+  }
+  /// Returns true if `status` has been explicitly set.
+  var hasStatus: Bool {self._status != nil}
+  /// Clears the value of `status`. Subsequent reads from it will return its default value.
+  mutating func clearStatus() {self._status = nil}
+
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
   init() {}
 
   fileprivate var _uuid: Oscal_Common_V1_UUID? = nil
+  fileprivate var _status: Oscal_Ssp_V1_Status? = nil
 }
 
 /// InventoryItem represents an inventory item
@@ -812,9 +822,15 @@ nonisolated struct Oscal_Ssp_V1_SetParameter: Sendable {
   /// Clears the value of `paramID`. Subsequent reads from it will return its default value.
   mutating func clearParamID() {self._paramID = nil}
 
+  /// Deprecated: use values instead. Kept for backward compatibility.
+  ///
+  /// NOTE: This field was marked as deprecated in the .proto file.
   var value: String = String()
 
   var remarks: [Oscal_Common_V1_MarkupMultiline] = []
+
+  /// values is the OSCAL schema-required array of parameter values.
+  var values: [Oscal_Common_V1_MarkupLine] = []
 
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
@@ -2382,7 +2398,7 @@ nonisolated extension Oscal_Ssp_V1_SystemUser: SwiftProtobuf.Message, SwiftProto
 
 nonisolated extension Oscal_Ssp_V1_SystemComponent: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   static let protoMessageName: String = _protobuf_package + ".SystemComponent"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{2}\u{2}uuid\0\u{1}type\0\u{1}title\0\u{1}description\0\u{1}props\0\u{1}links\0\u{1}remarks\0")
+  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{2}\u{2}uuid\0\u{1}type\0\u{1}title\0\u{1}description\0\u{1}props\0\u{1}links\0\u{1}remarks\0\u{1}status\0")
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
@@ -2397,6 +2413,7 @@ nonisolated extension Oscal_Ssp_V1_SystemComponent: SwiftProtobuf.Message, Swift
       case 6: try { try decoder.decodeRepeatedMessageField(value: &self.props) }()
       case 7: try { try decoder.decodeRepeatedMessageField(value: &self.links) }()
       case 8: try { try decoder.decodeRepeatedMessageField(value: &self.remarks) }()
+      case 9: try { try decoder.decodeSingularMessageField(value: &self._status) }()
       default: break
       }
     }
@@ -2428,6 +2445,9 @@ nonisolated extension Oscal_Ssp_V1_SystemComponent: SwiftProtobuf.Message, Swift
     if !self.remarks.isEmpty {
       try visitor.visitRepeatedMessageField(value: self.remarks, fieldNumber: 8)
     }
+    try { if let v = self._status {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 9)
+    } }()
     try unknownFields.traverse(visitor: &visitor)
   }
 
@@ -2439,6 +2459,7 @@ nonisolated extension Oscal_Ssp_V1_SystemComponent: SwiftProtobuf.Message, Swift
     if lhs.props != rhs.props {return false}
     if lhs.links != rhs.links {return false}
     if lhs.remarks != rhs.remarks {return false}
+    if lhs._status != rhs._status {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -2544,7 +2565,7 @@ nonisolated extension Oscal_Ssp_V1_ControlImplementation: SwiftProtobuf.Message,
 
 nonisolated extension Oscal_Ssp_V1_SetParameter: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   static let protoMessageName: String = _protobuf_package + ".SetParameter"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{3}param_id\0\u{1}value\0\u{1}remarks\0")
+  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{3}param_id\0\u{1}value\0\u{1}remarks\0\u{1}values\0")
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
@@ -2555,6 +2576,7 @@ nonisolated extension Oscal_Ssp_V1_SetParameter: SwiftProtobuf.Message, SwiftPro
       case 1: try { try decoder.decodeSingularMessageField(value: &self._paramID) }()
       case 2: try { try decoder.decodeSingularStringField(value: &self.value) }()
       case 3: try { try decoder.decodeRepeatedMessageField(value: &self.remarks) }()
+      case 4: try { try decoder.decodeRepeatedMessageField(value: &self.values) }()
       default: break
       }
     }
@@ -2574,6 +2596,9 @@ nonisolated extension Oscal_Ssp_V1_SetParameter: SwiftProtobuf.Message, SwiftPro
     if !self.remarks.isEmpty {
       try visitor.visitRepeatedMessageField(value: self.remarks, fieldNumber: 3)
     }
+    if !self.values.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.values, fieldNumber: 4)
+    }
     try unknownFields.traverse(visitor: &visitor)
   }
 
@@ -2581,6 +2606,7 @@ nonisolated extension Oscal_Ssp_V1_SetParameter: SwiftProtobuf.Message, SwiftPro
     if lhs._paramID != rhs._paramID {return false}
     if lhs.value != rhs.value {return false}
     if lhs.remarks != rhs.remarks {return false}
+    if lhs.values != rhs.values {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

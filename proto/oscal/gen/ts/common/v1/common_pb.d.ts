@@ -426,6 +426,64 @@ export declare type Address = Message<"oscal.common.v1.Address"> & {
 export declare const AddressSchema: GenMessage<Address>;
 
 /**
+ * Location represents a physical or virtual location
+ *
+ * @generated from message oscal.common.v1.Location
+ */
+export declare type Location = Message<"oscal.common.v1.Location"> & {
+  /**
+   * @generated from field: oscal.common.v1.UUID uuid = 1;
+   */
+  uuid?: UUID | undefined;
+
+  /**
+   * @generated from field: string title = 2;
+   */
+  title: string;
+
+  /**
+   * @generated from field: oscal.common.v1.Address address = 3;
+   */
+  address?: Address | undefined;
+
+  /**
+   * @generated from field: repeated oscal.common.v1.EmailAddress email_addresses = 4;
+   */
+  emailAddresses: EmailAddress[];
+
+  /**
+   * @generated from field: repeated oscal.common.v1.TelephoneNumber telephone_numbers = 5;
+   */
+  telephoneNumbers: TelephoneNumber[];
+
+  /**
+   * @generated from field: repeated oscal.common.v1.URI urls = 6;
+   */
+  urls: URI[];
+
+  /**
+   * @generated from field: repeated oscal.common.v1.Property props = 7;
+   */
+  props: Property[];
+
+  /**
+   * @generated from field: repeated oscal.common.v1.Link links = 8;
+   */
+  links: Link[];
+
+  /**
+   * @generated from field: repeated oscal.common.v1.MarkupMultiline remarks = 9;
+   */
+  remarks: MarkupMultiline[];
+};
+
+/**
+ * Describes the message oscal.common.v1.Location.
+ * Use `create(LocationSchema)` to create a new message.
+ */
+export declare const LocationSchema: GenMessage<Location>;
+
+/**
  * AddrLine represents a line of an address
  *
  * @generated from message oscal.common.v1.AddrLine
@@ -602,6 +660,16 @@ export declare type Party = Message<"oscal.common.v1.Party"> & {
    * @generated from field: repeated string remarks = 11;
    */
   remarks: string[];
+
+  /**
+   * @generated from field: repeated oscal.common.v1.PartyExternalId external_ids = 12;
+   */
+  externalIds: PartyExternalId[];
+
+  /**
+   * @generated from field: repeated oscal.common.v1.UUID location_uuids = 13;
+   */
+  locationUuids: UUID[];
 };
 
 /**
@@ -609,6 +677,29 @@ export declare type Party = Message<"oscal.common.v1.Party"> & {
  * Use `create(PartySchema)` to create a new message.
  */
 export declare const PartySchema: GenMessage<Party>;
+
+/**
+ * PartyExternalId represents an external identifier for a party
+ *
+ * @generated from message oscal.common.v1.PartyExternalId
+ */
+export declare type PartyExternalId = Message<"oscal.common.v1.PartyExternalId"> & {
+  /**
+   * @generated from field: string id = 1;
+   */
+  id: string;
+
+  /**
+   * @generated from field: oscal.common.v1.URI scheme = 2;
+   */
+  scheme?: URI | undefined;
+};
+
+/**
+ * Describes the message oscal.common.v1.PartyExternalId.
+ * Use `create(PartyExternalIdSchema)` to create a new message.
+ */
+export declare const PartyExternalIdSchema: GenMessage<PartyExternalId>;
 
 /**
  * DocumentId represents a document identifier
@@ -663,9 +754,9 @@ export declare type Resource = Message<"oscal.common.v1.Resource"> & {
   uuid?: UUID | undefined;
 
   /**
-   * @generated from field: repeated string title = 2;
+   * @generated from field: string title = 2;
    */
-  title: string[];
+  title: string;
 
   /**
    * @generated from field: oscal.common.v1.MarkupMultiline description = 3;
@@ -698,9 +789,22 @@ export declare type Resource = Message<"oscal.common.v1.Resource"> & {
   remarks: string[];
 
   /**
-   * @generated from field: string citation = 9;
+   * Deprecated: use citation_obj instead. Kept for backward compatibility.
+   *
+   * @generated from field: string citation = 9 [deprecated = true];
+   * @deprecated
    */
   citation: string;
+
+  /**
+   * @generated from field: repeated oscal.common.v1.Rlink rlinks = 10;
+   */
+  rlinks: Rlink[];
+
+  /**
+   * @generated from field: oscal.common.v1.Citation citation_obj = 11;
+   */
+  citationObj?: Citation | undefined;
 };
 
 /**
@@ -708,6 +812,62 @@ export declare type Resource = Message<"oscal.common.v1.Resource"> & {
  * Use `create(ResourceSchema)` to create a new message.
  */
 export declare const ResourceSchema: GenMessage<Resource>;
+
+/**
+ * Rlink represents a resource link
+ *
+ * @generated from message oscal.common.v1.Rlink
+ */
+export declare type Rlink = Message<"oscal.common.v1.Rlink"> & {
+  /**
+   * @generated from field: oscal.common.v1.URI href = 1;
+   */
+  href?: URI | undefined;
+
+  /**
+   * @generated from field: string media_type = 2;
+   */
+  mediaType: string;
+
+  /**
+   * @generated from field: repeated oscal.common.v1.Hash hashes = 3;
+   */
+  hashes: Hash[];
+};
+
+/**
+ * Describes the message oscal.common.v1.Rlink.
+ * Use `create(RlinkSchema)` to create a new message.
+ */
+export declare const RlinkSchema: GenMessage<Rlink>;
+
+/**
+ * Citation represents a bibliographic citation
+ *
+ * @generated from message oscal.common.v1.Citation
+ */
+export declare type Citation = Message<"oscal.common.v1.Citation"> & {
+  /**
+   * @generated from field: oscal.common.v1.MarkupLine text = 1;
+   */
+  text?: MarkupLine | undefined;
+
+  /**
+   * @generated from field: repeated oscal.common.v1.Property props = 2;
+   */
+  props: Property[];
+
+  /**
+   * @generated from field: repeated oscal.common.v1.Link links = 3;
+   */
+  links: Link[];
+};
+
+/**
+ * Describes the message oscal.common.v1.Citation.
+ * Use `create(CitationSchema)` to create a new message.
+ */
+export declare const CitationSchema: GenMessage<Citation>;
 
 /**
  * Metadata represents document metadata shared across all OSCAL models
@@ -774,6 +934,11 @@ export declare type Metadata = Message<"oscal.common.v1.Metadata"> & {
    * @generated from field: oscal.common.v1.MarkupMultiline remarks = 12;
    */
   remarks?: MarkupMultiline | undefined;
+
+  /**
+   * @generated from field: repeated oscal.common.v1.Location locations = 13;
+   */
+  locations: Location[];
 };
 
 /**

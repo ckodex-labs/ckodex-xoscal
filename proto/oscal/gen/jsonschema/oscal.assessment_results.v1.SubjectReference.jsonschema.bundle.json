@@ -33,6 +33,10 @@
         },
         "title": {
           "$ref": "#/$defs/oscal.common.v1.MarkupLine.jsonschema.json"
+        },
+        "type": {
+          "default": "",
+          "type": "string"
         }
       },
       "title": "Subject Reference",

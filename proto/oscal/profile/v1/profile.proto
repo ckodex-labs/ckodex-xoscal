@@ -2,8 +2,8 @@ syntax = "proto3";
 
 package oscal.profile.v1;
 
-import "common/v1/common.proto";
 import "catalog/v1/catalog.proto";
+import "common/v1/common.proto";
 
 option go_package = "github.com/mchorfa/xoscal/proto/oscal/profile/v1;profilev1";
 
@@ -73,11 +73,13 @@ message Combine {
 // Modify represents modifications to controls
 message Modify {
   repeated SetParameters set_parameters = 1;
-  repeated AlterControls alter_controls = 2;
+  // Deprecated: use alters instead. Kept for backward compatibility.
+  repeated AlterControls alter_controls = 2 [deprecated = true];
   repeated AddControls add_controls = 3;
   repeated oscal.common.v1.Property props = 4;
   repeated oscal.common.v1.Link links = 5;
   repeated oscal.common.v1.MarkupMultiline remarks = 6;
+  repeated Alter alters = 7;
 }
 
 // SetParameters represents parameter value assignments
@@ -119,14 +121,15 @@ message Remove {
 
 // Add represents addition of control content
 message Add {
-  string item_name = 1;
+  // Deprecated: not in OSCAL schema. Kept for backward compatibility.
+  string item_name = 1 [deprecated = true];
   string position = 2;
   repeated oscal.catalog.v1.Part parts = 3;
   repeated oscal.common.v1.Property props = 4;
   repeated oscal.common.v1.Link links = 5;
   repeated oscal.catalog.v1.Parameter params = 6;
-  repeated string with_ids = 7;
-  repeated string with_class = 8;
+  string by_id = 7;
+  string title = 8;
 }
 
 // AddControls represents addition of new controls

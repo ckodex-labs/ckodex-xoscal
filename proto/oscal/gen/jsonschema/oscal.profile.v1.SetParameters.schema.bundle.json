@@ -8,9 +8,27 @@
         "description": {
           "default": "",
           "type": "string"
+        },
+        "tests": {
+          "items": {
+            "$ref": "#/$defs/oscal.catalog.v1.Test.schema.json"
+          },
+          "type": "array"
         }
       },
       "title": "Constraint",
+      "type": "object"
+    },
+    "oscal.catalog.v1.Guideline.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Guideline represents a parameter guideline",
+      "properties": {
+        "prose": {
+          "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.schema.json"
+        }
+      },
+      "title": "Guideline",
       "type": "object"
     },
     "oscal.catalog.v1.Parameter.schema.json": {
@@ -29,7 +47,14 @@
           "type": "array"
         },
         "guidance": {
-          "$ref": "#/$defs/oscal.common.v1.MarkupLine.schema.json"
+          "$ref": "#/$defs/oscal.common.v1.MarkupLine.schema.json",
+          "description": "Deprecated: use guidelines instead. Kept for backward compatibility."
+        },
+        "guidelines": {
+          "items": {
+            "$ref": "#/$defs/oscal.catalog.v1.Guideline.schema.json"
+          },
+          "type": "array"
         },
         "id": {
           "$ref": "#/$defs/oscal.common.v1.Token.schema.json"
@@ -91,6 +116,25 @@
         }
       },
       "title": "Select",
+      "type": "object"
+    },
+    "oscal.catalog.v1.Test.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Test represents a constraint test",
+      "properties": {
+        "expression": {
+          "default": "",
+          "type": "string"
+        },
+        "remarks": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.schema.json"
+          },
+          "type": "array"
+        }
+      },
+      "title": "Test",
       "type": "object"
     },
     "oscal.common.v1.Link.schema.json": {

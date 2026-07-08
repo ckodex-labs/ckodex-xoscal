@@ -973,6 +973,115 @@ func (x *Address) GetCountry() string {
 	return ""
 }
 
+// Location represents a physical or virtual location
+type Location struct {
+	state            protoimpl.MessageState `protogen:"open.v1"`
+	Uuid             *UUID                  `protobuf:"bytes,1,opt,name=uuid,proto3" json:"uuid,omitempty"`
+	Title            string                 `protobuf:"bytes,2,opt,name=title,proto3" json:"title,omitempty"`
+	Address          *Address               `protobuf:"bytes,3,opt,name=address,proto3" json:"address,omitempty"`
+	EmailAddresses   []*EmailAddress        `protobuf:"bytes,4,rep,name=email_addresses,json=emailAddresses,proto3" json:"email_addresses,omitempty"`
+	TelephoneNumbers []*TelephoneNumber     `protobuf:"bytes,5,rep,name=telephone_numbers,json=telephoneNumbers,proto3" json:"telephone_numbers,omitempty"`
+	Urls             []*URI                 `protobuf:"bytes,6,rep,name=urls,proto3" json:"urls,omitempty"`
+	Props            []*Property            `protobuf:"bytes,7,rep,name=props,proto3" json:"props,omitempty"`
+	Links            []*Link                `protobuf:"bytes,8,rep,name=links,proto3" json:"links,omitempty"`
+	Remarks          []*MarkupMultiline     `protobuf:"bytes,9,rep,name=remarks,proto3" json:"remarks,omitempty"`
+	unknownFields    protoimpl.UnknownFields
+	sizeCache        protoimpl.SizeCache
+}
+
+func (x *Location) Reset() {
+	*x = Location{}
+	mi := &file_common_v1_common_proto_msgTypes[19]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *Location) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*Location) ProtoMessage() {}
+
+func (x *Location) ProtoReflect() protoreflect.Message {
+	mi := &file_common_v1_common_proto_msgTypes[19]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use Location.ProtoReflect.Descriptor instead.
+func (*Location) Descriptor() ([]byte, []int) {
+	return file_common_v1_common_proto_rawDescGZIP(), []int{19}
+}
+
+func (x *Location) GetUuid() *UUID {
+	if x != nil {
+		return x.Uuid
+	}
+	return nil
+}
+
+func (x *Location) GetTitle() string {
+	if x != nil {
+		return x.Title
+	}
+	return ""
+}
+
+func (x *Location) GetAddress() *Address {
+	if x != nil {
+		return x.Address
+	}
+	return nil
+}
+
+func (x *Location) GetEmailAddresses() []*EmailAddress {
+	if x != nil {
+		return x.EmailAddresses
+	}
+	return nil
+}
+
+func (x *Location) GetTelephoneNumbers() []*TelephoneNumber {
+	if x != nil {
+		return x.TelephoneNumbers
+	}
+	return nil
+}
+
+func (x *Location) GetUrls() []*URI {
+	if x != nil {
+		return x.Urls
+	}
+	return nil
+}
+
+func (x *Location) GetProps() []*Property {
+	if x != nil {
+		return x.Props
+	}
+	return nil
+}
+
+func (x *Location) GetLinks() []*Link {
+	if x != nil {
+		return x.Links
+	}
+	return nil
+}
+
+func (x *Location) GetRemarks() []*MarkupMultiline {
+	if x != nil {
+		return x.Remarks
+	}
+	return nil
+}
+
 // AddrLine represents a line of an address
 type AddrLine struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
@@ -983,7 +1092,7 @@ type AddrLine struct {
 
 func (x *AddrLine) Reset() {
 	*x = AddrLine{}
-	mi := &file_common_v1_common_proto_msgTypes[19]
+	mi := &file_common_v1_common_proto_msgTypes[20]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -995,7 +1104,7 @@ func (x *AddrLine) String() string {
 func (*AddrLine) ProtoMessage() {}
 
 func (x *AddrLine) ProtoReflect() protoreflect.Message {
-	mi := &file_common_v1_common_proto_msgTypes[19]
+	mi := &file_common_v1_common_proto_msgTypes[20]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1008,7 +1117,7 @@ func (x *AddrLine) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use AddrLine.ProtoReflect.Descriptor instead.
 func (*AddrLine) Descriptor() ([]byte, []int) {
-	return file_common_v1_common_proto_rawDescGZIP(), []int{19}
+	return file_common_v1_common_proto_rawDescGZIP(), []int{20}
 }
 
 func (x *AddrLine) GetValue() *MarkupLine {
@@ -1028,7 +1137,7 @@ type TelephoneNumber struct {
 
 func (x *TelephoneNumber) Reset() {
 	*x = TelephoneNumber{}
-	mi := &file_common_v1_common_proto_msgTypes[20]
+	mi := &file_common_v1_common_proto_msgTypes[21]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1040,7 +1149,7 @@ func (x *TelephoneNumber) String() string {
 func (*TelephoneNumber) ProtoMessage() {}
 
 func (x *TelephoneNumber) ProtoReflect() protoreflect.Message {
-	mi := &file_common_v1_common_proto_msgTypes[20]
+	mi := &file_common_v1_common_proto_msgTypes[21]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1053,7 +1162,7 @@ func (x *TelephoneNumber) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use TelephoneNumber.ProtoReflect.Descriptor instead.
 func (*TelephoneNumber) Descriptor() ([]byte, []int) {
-	return file_common_v1_common_proto_rawDescGZIP(), []int{20}
+	return file_common_v1_common_proto_rawDescGZIP(), []int{21}
 }
 
 func (x *TelephoneNumber) GetValue() string {
@@ -1078,7 +1187,7 @@ type Role struct {
 
 func (x *Role) Reset() {
 	*x = Role{}
-	mi := &file_common_v1_common_proto_msgTypes[21]
+	mi := &file_common_v1_common_proto_msgTypes[22]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1090,7 +1199,7 @@ func (x *Role) String() string {
 func (*Role) ProtoMessage() {}
 
 func (x *Role) ProtoReflect() protoreflect.Message {
-	mi := &file_common_v1_common_proto_msgTypes[21]
+	mi := &file_common_v1_common_proto_msgTypes[22]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1103,7 +1212,7 @@ func (x *Role) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Role.ProtoReflect.Descriptor instead.
 func (*Role) Descriptor() ([]byte, []int) {
-	return file_common_v1_common_proto_rawDescGZIP(), []int{21}
+	return file_common_v1_common_proto_rawDescGZIP(), []int{22}
 }
 
 func (x *Role) GetId() *Token {
@@ -1162,7 +1271,7 @@ type ResponsibleParty struct {
 
 func (x *ResponsibleParty) Reset() {
 	*x = ResponsibleParty{}
-	mi := &file_common_v1_common_proto_msgTypes[22]
+	mi := &file_common_v1_common_proto_msgTypes[23]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1174,7 +1283,7 @@ func (x *ResponsibleParty) String() string {
 func (*ResponsibleParty) ProtoMessage() {}
 
 func (x *ResponsibleParty) ProtoReflect() protoreflect.Message {
-	mi := &file_common_v1_common_proto_msgTypes[22]
+	mi := &file_common_v1_common_proto_msgTypes[23]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1187,7 +1296,7 @@ func (x *ResponsibleParty) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ResponsibleParty.ProtoReflect.Descriptor instead.
 func (*ResponsibleParty) Descriptor() ([]byte, []int) {
-	return file_common_v1_common_proto_rawDescGZIP(), []int{22}
+	return file_common_v1_common_proto_rawDescGZIP(), []int{23}
 }
 
 func (x *ResponsibleParty) GetRoleId() *Token {
@@ -1239,13 +1348,15 @@ type Party struct {
 	Links              []*Link                `protobuf:"bytes,9,rep,name=links,proto3" json:"links,omitempty"`
 	ResponsibleParties []*ResponsibleParty    `protobuf:"bytes,10,rep,name=responsible_parties,json=responsibleParties,proto3" json:"responsible_parties,omitempty"`
 	Remarks            []string               `protobuf:"bytes,11,rep,name=remarks,proto3" json:"remarks,omitempty"`
+	ExternalIds        []*PartyExternalId     `protobuf:"bytes,12,rep,name=external_ids,json=externalIds,proto3" json:"external_ids,omitempty"`
+	LocationUuids      []*UUID                `protobuf:"bytes,13,rep,name=location_uuids,json=locationUuids,proto3" json:"location_uuids,omitempty"`
 	unknownFields      protoimpl.UnknownFields
 	sizeCache          protoimpl.SizeCache
 }
 
 func (x *Party) Reset() {
 	*x = Party{}
-	mi := &file_common_v1_common_proto_msgTypes[23]
+	mi := &file_common_v1_common_proto_msgTypes[24]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1257,7 +1368,7 @@ func (x *Party) String() string {
 func (*Party) ProtoMessage() {}
 
 func (x *Party) ProtoReflect() protoreflect.Message {
-	mi := &file_common_v1_common_proto_msgTypes[23]
+	mi := &file_common_v1_common_proto_msgTypes[24]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1270,7 +1381,7 @@ func (x *Party) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Party.ProtoReflect.Descriptor instead.
 func (*Party) Descriptor() ([]byte, []int) {
-	return file_common_v1_common_proto_rawDescGZIP(), []int{23}
+	return file_common_v1_common_proto_rawDescGZIP(), []int{24}
 }
 
 func (x *Party) GetUuid() *UUID {
@@ -1350,6 +1461,73 @@ func (x *Party) GetRemarks() []string {
 	return nil
 }
 
+func (x *Party) GetExternalIds() []*PartyExternalId {
+	if x != nil {
+		return x.ExternalIds
+	}
+	return nil
+}
+
+func (x *Party) GetLocationUuids() []*UUID {
+	if x != nil {
+		return x.LocationUuids
+	}
+	return nil
+}
+
+// PartyExternalId represents an external identifier for a party
+type PartyExternalId struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	Id            string                 `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	Scheme        *URI                   `protobuf:"bytes,2,opt,name=scheme,proto3" json:"scheme,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *PartyExternalId) Reset() {
+	*x = PartyExternalId{}
+	mi := &file_common_v1_common_proto_msgTypes[25]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *PartyExternalId) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*PartyExternalId) ProtoMessage() {}
+
+func (x *PartyExternalId) ProtoReflect() protoreflect.Message {
+	mi := &file_common_v1_common_proto_msgTypes[25]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use PartyExternalId.ProtoReflect.Descriptor instead.
+func (*PartyExternalId) Descriptor() ([]byte, []int) {
+	return file_common_v1_common_proto_rawDescGZIP(), []int{25}
+}
+
+func (x *PartyExternalId) GetId() string {
+	if x != nil {
+		return x.Id
+	}
+	return ""
+}
+
+func (x *PartyExternalId) GetScheme() *URI {
+	if x != nil {
+		return x.Scheme
+	}
+	return nil
+}
+
 // DocumentId represents a document identifier
 type DocumentId struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
@@ -1361,7 +1539,7 @@ type DocumentId struct {
 
 func (x *DocumentId) Reset() {
 	*x = DocumentId{}
-	mi := &file_common_v1_common_proto_msgTypes[24]
+	mi := &file_common_v1_common_proto_msgTypes[26]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1373,7 +1551,7 @@ func (x *DocumentId) String() string {
 func (*DocumentId) ProtoMessage() {}
 
 func (x *DocumentId) ProtoReflect() protoreflect.Message {
-	mi := &file_common_v1_common_proto_msgTypes[24]
+	mi := &file_common_v1_common_proto_msgTypes[26]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1386,7 +1564,7 @@ func (x *DocumentId) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use DocumentId.ProtoReflect.Descriptor instead.
 func (*DocumentId) Descriptor() ([]byte, []int) {
-	return file_common_v1_common_proto_rawDescGZIP(), []int{24}
+	return file_common_v1_common_proto_rawDescGZIP(), []int{26}
 }
 
 func (x *DocumentId) GetScheme() string {
@@ -1413,7 +1591,7 @@ type BackMatter struct {
 
 func (x *BackMatter) Reset() {
 	*x = BackMatter{}
-	mi := &file_common_v1_common_proto_msgTypes[25]
+	mi := &file_common_v1_common_proto_msgTypes[27]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1425,7 +1603,7 @@ func (x *BackMatter) String() string {
 func (*BackMatter) ProtoMessage() {}
 
 func (x *BackMatter) ProtoReflect() protoreflect.Message {
-	mi := &file_common_v1_common_proto_msgTypes[25]
+	mi := &file_common_v1_common_proto_msgTypes[27]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1438,7 +1616,7 @@ func (x *BackMatter) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use BackMatter.ProtoReflect.Descriptor instead.
 func (*BackMatter) Descriptor() ([]byte, []int) {
-	return file_common_v1_common_proto_rawDescGZIP(), []int{25}
+	return file_common_v1_common_proto_rawDescGZIP(), []int{27}
 }
 
 func (x *BackMatter) GetResources() []*Resource {
@@ -1450,23 +1628,28 @@ func (x *BackMatter) GetResources() []*Resource {
 
 // Resource represents an external resource
 type Resource struct {
-	state         protoimpl.MessageState `protogen:"open.v1"`
-	Uuid          *UUID                  `protobuf:"bytes,1,opt,name=uuid,proto3" json:"uuid,omitempty"`
-	Title         []string               `protobuf:"bytes,2,rep,name=title,proto3" json:"title,omitempty"`
-	Description   *MarkupMultiline       `protobuf:"bytes,3,opt,name=description,proto3" json:"description,omitempty"`
-	Props         []*Property            `protobuf:"bytes,4,rep,name=props,proto3" json:"props,omitempty"`
-	Links         []*Link                `protobuf:"bytes,5,rep,name=links,proto3" json:"links,omitempty"`
-	Base64        []*Base64              `protobuf:"bytes,6,rep,name=base64,proto3" json:"base64,omitempty"`
-	DocumentIds   []*DocumentId          `protobuf:"bytes,7,rep,name=document_ids,json=documentIds,proto3" json:"document_ids,omitempty"`
-	Remarks       []string               `protobuf:"bytes,8,rep,name=remarks,proto3" json:"remarks,omitempty"`
-	Citation      string                 `protobuf:"bytes,9,opt,name=citation,proto3" json:"citation,omitempty"`
+	state       protoimpl.MessageState `protogen:"open.v1"`
+	Uuid        *UUID                  `protobuf:"bytes,1,opt,name=uuid,proto3" json:"uuid,omitempty"`
+	Title       string                 `protobuf:"bytes,2,opt,name=title,proto3" json:"title,omitempty"`
+	Description *MarkupMultiline       `protobuf:"bytes,3,opt,name=description,proto3" json:"description,omitempty"`
+	Props       []*Property            `protobuf:"bytes,4,rep,name=props,proto3" json:"props,omitempty"`
+	Links       []*Link                `protobuf:"bytes,5,rep,name=links,proto3" json:"links,omitempty"`
+	Base64      []*Base64              `protobuf:"bytes,6,rep,name=base64,proto3" json:"base64,omitempty"`
+	DocumentIds []*DocumentId          `protobuf:"bytes,7,rep,name=document_ids,json=documentIds,proto3" json:"document_ids,omitempty"`
+	Remarks     []string               `protobuf:"bytes,8,rep,name=remarks,proto3" json:"remarks,omitempty"`
+	// Deprecated: use citation_obj instead. Kept for backward compatibility.
+	//
+	// Deprecated: Marked as deprecated in common/v1/common.proto.
+	Citation      string    `protobuf:"bytes,9,opt,name=citation,proto3" json:"citation,omitempty"`
+	Rlinks        []*Rlink  `protobuf:"bytes,10,rep,name=rlinks,proto3" json:"rlinks,omitempty"`
+	CitationObj   *Citation `protobuf:"bytes,11,opt,name=citation_obj,json=citationObj,proto3" json:"citation_obj,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
 
 func (x *Resource) Reset() {
 	*x = Resource{}
-	mi := &file_common_v1_common_proto_msgTypes[26]
+	mi := &file_common_v1_common_proto_msgTypes[28]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1478,7 +1661,7 @@ func (x *Resource) String() string {
 func (*Resource) ProtoMessage() {}
 
 func (x *Resource) ProtoReflect() protoreflect.Message {
-	mi := &file_common_v1_common_proto_msgTypes[26]
+	mi := &file_common_v1_common_proto_msgTypes[28]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1491,7 +1674,7 @@ func (x *Resource) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Resource.ProtoReflect.Descriptor instead.
 func (*Resource) Descriptor() ([]byte, []int) {
-	return file_common_v1_common_proto_rawDescGZIP(), []int{26}
+	return file_common_v1_common_proto_rawDescGZIP(), []int{28}
 }
 
 func (x *Resource) GetUuid() *UUID {
@@ -1501,11 +1684,11 @@ func (x *Resource) GetUuid() *UUID {
 	return nil
 }
 
-func (x *Resource) GetTitle() []string {
+func (x *Resource) GetTitle() string {
 	if x != nil {
 		return x.Title
 	}
-	return nil
+	return ""
 }
 
 func (x *Resource) GetDescription() *MarkupMultiline {
@@ -1550,11 +1733,148 @@ func (x *Resource) GetRemarks() []string {
 	return nil
 }
 
+// Deprecated: Marked as deprecated in common/v1/common.proto.
 func (x *Resource) GetCitation() string {
 	if x != nil {
 		return x.Citation
 	}
 	return ""
+}
+
+func (x *Resource) GetRlinks() []*Rlink {
+	if x != nil {
+		return x.Rlinks
+	}
+	return nil
+}
+
+func (x *Resource) GetCitationObj() *Citation {
+	if x != nil {
+		return x.CitationObj
+	}
+	return nil
+}
+
+// Rlink represents a resource link
+type Rlink struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	Href          *URI                   `protobuf:"bytes,1,opt,name=href,proto3" json:"href,omitempty"`
+	MediaType     string                 `protobuf:"bytes,2,opt,name=media_type,json=mediaType,proto3" json:"media_type,omitempty"`
+	Hashes        []*Hash                `protobuf:"bytes,3,rep,name=hashes,proto3" json:"hashes,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *Rlink) Reset() {
+	*x = Rlink{}
+	mi := &file_common_v1_common_proto_msgTypes[29]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *Rlink) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*Rlink) ProtoMessage() {}
+
+func (x *Rlink) ProtoReflect() protoreflect.Message {
+	mi := &file_common_v1_common_proto_msgTypes[29]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use Rlink.ProtoReflect.Descriptor instead.
+func (*Rlink) Descriptor() ([]byte, []int) {
+	return file_common_v1_common_proto_rawDescGZIP(), []int{29}
+}
+
+func (x *Rlink) GetHref() *URI {
+	if x != nil {
+		return x.Href
+	}
+	return nil
+}
+
+func (x *Rlink) GetMediaType() string {
+	if x != nil {
+		return x.MediaType
+	}
+	return ""
+}
+
+func (x *Rlink) GetHashes() []*Hash {
+	if x != nil {
+		return x.Hashes
+	}
+	return nil
+}
+
+// Citation represents a bibliographic citation
+type Citation struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	Text          *MarkupLine            `protobuf:"bytes,1,opt,name=text,proto3" json:"text,omitempty"`
+	Props         []*Property            `protobuf:"bytes,2,rep,name=props,proto3" json:"props,omitempty"`
+	Links         []*Link                `protobuf:"bytes,3,rep,name=links,proto3" json:"links,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *Citation) Reset() {
+	*x = Citation{}
+	mi := &file_common_v1_common_proto_msgTypes[30]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *Citation) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*Citation) ProtoMessage() {}
+
+func (x *Citation) ProtoReflect() protoreflect.Message {
+	mi := &file_common_v1_common_proto_msgTypes[30]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use Citation.ProtoReflect.Descriptor instead.
+func (*Citation) Descriptor() ([]byte, []int) {
+	return file_common_v1_common_proto_rawDescGZIP(), []int{30}
+}
+
+func (x *Citation) GetText() *MarkupLine {
+	if x != nil {
+		return x.Text
+	}
+	return nil
+}
+
+func (x *Citation) GetProps() []*Property {
+	if x != nil {
+		return x.Props
+	}
+	return nil
+}
+
+func (x *Citation) GetLinks() []*Link {
+	if x != nil {
+		return x.Links
+	}
+	return nil
 }
 
 // Metadata represents document metadata shared across all OSCAL models
@@ -1572,13 +1892,14 @@ type Metadata struct {
 	DocumentId         *DocumentId            `protobuf:"bytes,10,opt,name=document_id,json=documentId,proto3" json:"document_id,omitempty"`
 	Published          *DateTime              `protobuf:"bytes,11,opt,name=published,proto3" json:"published,omitempty"`
 	Remarks            *MarkupMultiline       `protobuf:"bytes,12,opt,name=remarks,proto3" json:"remarks,omitempty"`
+	Locations          []*Location            `protobuf:"bytes,13,rep,name=locations,proto3" json:"locations,omitempty"`
 	unknownFields      protoimpl.UnknownFields
 	sizeCache          protoimpl.SizeCache
 }
 
 func (x *Metadata) Reset() {
 	*x = Metadata{}
-	mi := &file_common_v1_common_proto_msgTypes[27]
+	mi := &file_common_v1_common_proto_msgTypes[31]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1590,7 +1911,7 @@ func (x *Metadata) String() string {
 func (*Metadata) ProtoMessage() {}
 
 func (x *Metadata) ProtoReflect() protoreflect.Message {
-	mi := &file_common_v1_common_proto_msgTypes[27]
+	mi := &file_common_v1_common_proto_msgTypes[31]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1603,7 +1924,7 @@ func (x *Metadata) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Metadata.ProtoReflect.Descriptor instead.
 func (*Metadata) Descriptor() ([]byte, []int) {
-	return file_common_v1_common_proto_rawDescGZIP(), []int{27}
+	return file_common_v1_common_proto_rawDescGZIP(), []int{31}
 }
 
 func (x *Metadata) GetTitle() string {
@@ -1690,6 +2011,13 @@ func (x *Metadata) GetRemarks() *MarkupMultiline {
 	return nil
 }
 
+func (x *Metadata) GetLocations() []*Location {
+	if x != nil {
+		return x.Locations
+	}
+	return nil
+}
+
 var File_common_v1_common_proto protoreflect.FileDescriptor
 
 const file_common_v1_common_proto_rawDesc = "" +
@@ -1748,7 +2076,17 @@ const file_common_v1_common_proto_rawDesc = "" +
 	"\x05state\x18\x03 \x01(\tR\x05state\x12\x1f\n" +
 	"\vpostal_code\x18\x04 \x01(\tR\n" +
 	"postalCode\x12\x18\n" +
-	"\acountry\x18\x05 \x01(\tR\acountry\"=\n" +
+	"\acountry\x18\x05 \x01(\tR\acountry\"\xda\x03\n" +
+	"\bLocation\x12)\n" +
+	"\x04uuid\x18\x01 \x01(\v2\x15.oscal.common.v1.UUIDR\x04uuid\x12\x14\n" +
+	"\x05title\x18\x02 \x01(\tR\x05title\x122\n" +
+	"\aaddress\x18\x03 \x01(\v2\x18.oscal.common.v1.AddressR\aaddress\x12F\n" +
+	"\x0femail_addresses\x18\x04 \x03(\v2\x1d.oscal.common.v1.EmailAddressR\x0eemailAddresses\x12M\n" +
+	"\x11telephone_numbers\x18\x05 \x03(\v2 .oscal.common.v1.TelephoneNumberR\x10telephoneNumbers\x12(\n" +
+	"\x04urls\x18\x06 \x03(\v2\x14.oscal.common.v1.URIR\x04urls\x12/\n" +
+	"\x05props\x18\a \x03(\v2\x19.oscal.common.v1.PropertyR\x05props\x12+\n" +
+	"\x05links\x18\b \x03(\v2\x15.oscal.common.v1.LinkR\x05links\x12:\n" +
+	"\aremarks\x18\t \x03(\v2 .oscal.common.v1.MarkupMultilineR\aremarks\"=\n" +
 	"\bAddrLine\x121\n" +
 	"\x05value\x18\x01 \x01(\v2\x1b.oscal.common.v1.MarkupLineR\x05value\"'\n" +
 	"\x0fTelephoneNumber\x12\x14\n" +
@@ -1767,7 +2105,7 @@ const file_common_v1_common_proto_rawDesc = "" +
 	"partyUuids\x12/\n" +
 	"\x05props\x18\x03 \x03(\v2\x19.oscal.common.v1.PropertyR\x05props\x12+\n" +
 	"\x05links\x18\x04 \x03(\v2\x15.oscal.common.v1.LinkR\x05links\x12:\n" +
-	"\aremarks\x18\x05 \x01(\v2 .oscal.common.v1.MarkupMultilineR\aremarks\"\x92\x04\n" +
+	"\aremarks\x18\x05 \x01(\v2 .oscal.common.v1.MarkupMultilineR\aremarks\"\x95\x05\n" +
 	"\x05Party\x12)\n" +
 	"\x04uuid\x18\x01 \x01(\v2\x15.oscal.common.v1.UUIDR\x04uuid\x12\x12\n" +
 	"\x04type\x18\x02 \x01(\tR\x04type\x12\x12\n" +
@@ -1781,7 +2119,12 @@ const file_common_v1_common_proto_rawDesc = "" +
 	"\x05links\x18\t \x03(\v2\x15.oscal.common.v1.LinkR\x05links\x12R\n" +
 	"\x13responsible_parties\x18\n" +
 	" \x03(\v2!.oscal.common.v1.ResponsiblePartyR\x12responsibleParties\x12\x18\n" +
-	"\aremarks\x18\v \x03(\tR\aremarks\"D\n" +
+	"\aremarks\x18\v \x03(\tR\aremarks\x12C\n" +
+	"\fexternal_ids\x18\f \x03(\v2 .oscal.common.v1.PartyExternalIdR\vexternalIds\x12<\n" +
+	"\x0elocation_uuids\x18\r \x03(\v2\x15.oscal.common.v1.UUIDR\rlocationUuids\"O\n" +
+	"\x0fPartyExternalId\x12\x0e\n" +
+	"\x02id\x18\x01 \x01(\tR\x02id\x12,\n" +
+	"\x06scheme\x18\x02 \x01(\v2\x14.oscal.common.v1.URIR\x06scheme\"D\n" +
 	"\n" +
 	"DocumentId\x12\x16\n" +
 	"\x06scheme\x18\x01 \x01(\tR\x06scheme\x12\x1e\n" +
@@ -1790,17 +2133,29 @@ const file_common_v1_common_proto_rawDesc = "" +
 	"identifier\"E\n" +
 	"\n" +
 	"BackMatter\x127\n" +
-	"\tresources\x18\x01 \x03(\v2\x19.oscal.common.v1.ResourceR\tresources\"\x94\x03\n" +
+	"\tresources\x18\x01 \x03(\v2\x19.oscal.common.v1.ResourceR\tresources\"\x86\x04\n" +
 	"\bResource\x12)\n" +
 	"\x04uuid\x18\x01 \x01(\v2\x15.oscal.common.v1.UUIDR\x04uuid\x12\x14\n" +
-	"\x05title\x18\x02 \x03(\tR\x05title\x12B\n" +
+	"\x05title\x18\x02 \x01(\tR\x05title\x12B\n" +
 	"\vdescription\x18\x03 \x01(\v2 .oscal.common.v1.MarkupMultilineR\vdescription\x12/\n" +
 	"\x05props\x18\x04 \x03(\v2\x19.oscal.common.v1.PropertyR\x05props\x12+\n" +
 	"\x05links\x18\x05 \x03(\v2\x15.oscal.common.v1.LinkR\x05links\x12/\n" +
 	"\x06base64\x18\x06 \x03(\v2\x17.oscal.common.v1.Base64R\x06base64\x12>\n" +
 	"\fdocument_ids\x18\a \x03(\v2\x1b.oscal.common.v1.DocumentIdR\vdocumentIds\x12\x18\n" +
-	"\aremarks\x18\b \x03(\tR\aremarks\x12\x1a\n" +
-	"\bcitation\x18\t \x01(\tR\bcitation\"\xe3\x04\n" +
+	"\aremarks\x18\b \x03(\tR\aremarks\x12\x1e\n" +
+	"\bcitation\x18\t \x01(\tB\x02\x18\x01R\bcitation\x12.\n" +
+	"\x06rlinks\x18\n" +
+	" \x03(\v2\x16.oscal.common.v1.RlinkR\x06rlinks\x12<\n" +
+	"\fcitation_obj\x18\v \x01(\v2\x19.oscal.common.v1.CitationR\vcitationObj\"\x7f\n" +
+	"\x05Rlink\x12(\n" +
+	"\x04href\x18\x01 \x01(\v2\x14.oscal.common.v1.URIR\x04href\x12\x1d\n" +
+	"\n" +
+	"media_type\x18\x02 \x01(\tR\tmediaType\x12-\n" +
+	"\x06hashes\x18\x03 \x03(\v2\x15.oscal.common.v1.HashR\x06hashes\"\x99\x01\n" +
+	"\bCitation\x12/\n" +
+	"\x04text\x18\x01 \x01(\v2\x1b.oscal.common.v1.MarkupLineR\x04text\x12/\n" +
+	"\x05props\x18\x02 \x03(\v2\x19.oscal.common.v1.PropertyR\x05props\x12+\n" +
+	"\x05links\x18\x03 \x03(\v2\x15.oscal.common.v1.LinkR\x05links\"\x9c\x05\n" +
 	"\bMetadata\x12\x14\n" +
 	"\x05title\x18\x01 \x01(\tR\x05title\x12>\n" +
 	"\rlast_modified\x18\x02 \x01(\v2\x19.oscal.common.v1.DateTimeR\flastModified\x12\x18\n" +
@@ -1815,7 +2170,8 @@ const file_common_v1_common_proto_rawDesc = "" +
 	" \x01(\v2\x1b.oscal.common.v1.DocumentIdR\n" +
 	"documentId\x127\n" +
 	"\tpublished\x18\v \x01(\v2\x19.oscal.common.v1.DateTimeR\tpublished\x12:\n" +
-	"\aremarks\x18\f \x01(\v2 .oscal.common.v1.MarkupMultilineR\aremarksB:Z8github.com/mchorfa/xoscal/proto/oscal/common/v1;commonv1b\x06proto3"
+	"\aremarks\x18\f \x01(\v2 .oscal.common.v1.MarkupMultilineR\aremarks\x127\n" +
+	"\tlocations\x18\r \x03(\v2\x19.oscal.common.v1.LocationR\tlocationsB:Z8github.com/mchorfa/xoscal/proto/oscal/common/v1;commonv1b\x06proto3"
 
 var (
 	file_common_v1_common_proto_rawDescOnce sync.Once
@@ -1829,7 +2185,7 @@ func file_common_v1_common_proto_rawDescGZIP() []byte {
 	return file_common_v1_common_proto_rawDescData
 }
 
-var file_common_v1_common_proto_msgTypes = make([]protoimpl.MessageInfo, 28)
+var file_common_v1_common_proto_msgTypes = make([]protoimpl.MessageInfo, 32)
 var file_common_v1_common_proto_goTypes = []any{
 	(*UUID)(nil),                  // 0: oscal.common.v1.UUID
 	(*Token)(nil),                 // 1: oscal.common.v1.Token
@@ -1850,60 +2206,83 @@ var file_common_v1_common_proto_goTypes = []any{
 	(*Link)(nil),                  // 16: oscal.common.v1.Link
 	(*Hash)(nil),                  // 17: oscal.common.v1.Hash
 	(*Address)(nil),               // 18: oscal.common.v1.Address
-	(*AddrLine)(nil),              // 19: oscal.common.v1.AddrLine
-	(*TelephoneNumber)(nil),       // 20: oscal.common.v1.TelephoneNumber
-	(*Role)(nil),                  // 21: oscal.common.v1.Role
-	(*ResponsibleParty)(nil),      // 22: oscal.common.v1.ResponsibleParty
-	(*Party)(nil),                 // 23: oscal.common.v1.Party
-	(*DocumentId)(nil),            // 24: oscal.common.v1.DocumentId
-	(*BackMatter)(nil),            // 25: oscal.common.v1.BackMatter
-	(*Resource)(nil),              // 26: oscal.common.v1.Resource
-	(*Metadata)(nil),              // 27: oscal.common.v1.Metadata
-	(*timestamppb.Timestamp)(nil), // 28: google.protobuf.Timestamp
+	(*Location)(nil),              // 19: oscal.common.v1.Location
+	(*AddrLine)(nil),              // 20: oscal.common.v1.AddrLine
+	(*TelephoneNumber)(nil),       // 21: oscal.common.v1.TelephoneNumber
+	(*Role)(nil),                  // 22: oscal.common.v1.Role
+	(*ResponsibleParty)(nil),      // 23: oscal.common.v1.ResponsibleParty
+	(*Party)(nil),                 // 24: oscal.common.v1.Party
+	(*PartyExternalId)(nil),       // 25: oscal.common.v1.PartyExternalId
+	(*DocumentId)(nil),            // 26: oscal.common.v1.DocumentId
+	(*BackMatter)(nil),            // 27: oscal.common.v1.BackMatter
+	(*Resource)(nil),              // 28: oscal.common.v1.Resource
+	(*Rlink)(nil),                 // 29: oscal.common.v1.Rlink
+	(*Citation)(nil),              // 30: oscal.common.v1.Citation
+	(*Metadata)(nil),              // 31: oscal.common.v1.Metadata
+	(*timestamppb.Timestamp)(nil), // 32: google.protobuf.Timestamp
 }
 var file_common_v1_common_proto_depIdxs = []int32{
-	28, // 0: oscal.common.v1.DateTime.value:type_name -> google.protobuf.Timestamp
+	32, // 0: oscal.common.v1.DateTime.value:type_name -> google.protobuf.Timestamp
 	2,  // 1: oscal.common.v1.Link.href:type_name -> oscal.common.v1.URI
 	8,  // 2: oscal.common.v1.Hash.value:type_name -> oscal.common.v1.Base64
-	19, // 3: oscal.common.v1.Address.addr_lines:type_name -> oscal.common.v1.AddrLine
-	6,  // 4: oscal.common.v1.AddrLine.value:type_name -> oscal.common.v1.MarkupLine
-	1,  // 5: oscal.common.v1.Role.id:type_name -> oscal.common.v1.Token
-	7,  // 6: oscal.common.v1.Role.description:type_name -> oscal.common.v1.MarkupMultiline
-	15, // 7: oscal.common.v1.Role.props:type_name -> oscal.common.v1.Property
-	16, // 8: oscal.common.v1.Role.links:type_name -> oscal.common.v1.Link
-	1,  // 9: oscal.common.v1.ResponsibleParty.role_id:type_name -> oscal.common.v1.Token
-	0,  // 10: oscal.common.v1.ResponsibleParty.party_uuids:type_name -> oscal.common.v1.UUID
-	15, // 11: oscal.common.v1.ResponsibleParty.props:type_name -> oscal.common.v1.Property
-	16, // 12: oscal.common.v1.ResponsibleParty.links:type_name -> oscal.common.v1.Link
-	7,  // 13: oscal.common.v1.ResponsibleParty.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	0,  // 14: oscal.common.v1.Party.uuid:type_name -> oscal.common.v1.UUID
-	18, // 15: oscal.common.v1.Party.address:type_name -> oscal.common.v1.Address
-	14, // 16: oscal.common.v1.Party.email_addresses:type_name -> oscal.common.v1.EmailAddress
-	20, // 17: oscal.common.v1.Party.telephone_numbers:type_name -> oscal.common.v1.TelephoneNumber
-	15, // 18: oscal.common.v1.Party.props:type_name -> oscal.common.v1.Property
-	16, // 19: oscal.common.v1.Party.links:type_name -> oscal.common.v1.Link
-	22, // 20: oscal.common.v1.Party.responsible_parties:type_name -> oscal.common.v1.ResponsibleParty
-	26, // 21: oscal.common.v1.BackMatter.resources:type_name -> oscal.common.v1.Resource
-	0,  // 22: oscal.common.v1.Resource.uuid:type_name -> oscal.common.v1.UUID
-	7,  // 23: oscal.common.v1.Resource.description:type_name -> oscal.common.v1.MarkupMultiline
-	15, // 24: oscal.common.v1.Resource.props:type_name -> oscal.common.v1.Property
-	16, // 25: oscal.common.v1.Resource.links:type_name -> oscal.common.v1.Link
-	8,  // 26: oscal.common.v1.Resource.base64:type_name -> oscal.common.v1.Base64
-	24, // 27: oscal.common.v1.Resource.document_ids:type_name -> oscal.common.v1.DocumentId
-	4,  // 28: oscal.common.v1.Metadata.last_modified:type_name -> oscal.common.v1.DateTime
-	15, // 29: oscal.common.v1.Metadata.props:type_name -> oscal.common.v1.Property
-	16, // 30: oscal.common.v1.Metadata.links:type_name -> oscal.common.v1.Link
-	21, // 31: oscal.common.v1.Metadata.roles:type_name -> oscal.common.v1.Role
-	23, // 32: oscal.common.v1.Metadata.parties:type_name -> oscal.common.v1.Party
-	22, // 33: oscal.common.v1.Metadata.responsible_parties:type_name -> oscal.common.v1.ResponsibleParty
-	24, // 34: oscal.common.v1.Metadata.document_id:type_name -> oscal.common.v1.DocumentId
-	4,  // 35: oscal.common.v1.Metadata.published:type_name -> oscal.common.v1.DateTime
-	7,  // 36: oscal.common.v1.Metadata.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	37, // [37:37] is the sub-list for method output_type
-	37, // [37:37] is the sub-list for method input_type
-	37, // [37:37] is the sub-list for extension type_name
-	37, // [37:37] is the sub-list for extension extendee
-	0,  // [0:37] is the sub-list for field type_name
+	20, // 3: oscal.common.v1.Address.addr_lines:type_name -> oscal.common.v1.AddrLine
+	0,  // 4: oscal.common.v1.Location.uuid:type_name -> oscal.common.v1.UUID
+	18, // 5: oscal.common.v1.Location.address:type_name -> oscal.common.v1.Address
+	14, // 6: oscal.common.v1.Location.email_addresses:type_name -> oscal.common.v1.EmailAddress
+	21, // 7: oscal.common.v1.Location.telephone_numbers:type_name -> oscal.common.v1.TelephoneNumber
+	2,  // 8: oscal.common.v1.Location.urls:type_name -> oscal.common.v1.URI
+	15, // 9: oscal.common.v1.Location.props:type_name -> oscal.common.v1.Property
+	16, // 10: oscal.common.v1.Location.links:type_name -> oscal.common.v1.Link
+	7,  // 11: oscal.common.v1.Location.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	6,  // 12: oscal.common.v1.AddrLine.value:type_name -> oscal.common.v1.MarkupLine
+	1,  // 13: oscal.common.v1.Role.id:type_name -> oscal.common.v1.Token
+	7,  // 14: oscal.common.v1.Role.description:type_name -> oscal.common.v1.MarkupMultiline
+	15, // 15: oscal.common.v1.Role.props:type_name -> oscal.common.v1.Property
+	16, // 16: oscal.common.v1.Role.links:type_name -> oscal.common.v1.Link
+	1,  // 17: oscal.common.v1.ResponsibleParty.role_id:type_name -> oscal.common.v1.Token
+	0,  // 18: oscal.common.v1.ResponsibleParty.party_uuids:type_name -> oscal.common.v1.UUID
+	15, // 19: oscal.common.v1.ResponsibleParty.props:type_name -> oscal.common.v1.Property
+	16, // 20: oscal.common.v1.ResponsibleParty.links:type_name -> oscal.common.v1.Link
+	7,  // 21: oscal.common.v1.ResponsibleParty.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	0,  // 22: oscal.common.v1.Party.uuid:type_name -> oscal.common.v1.UUID
+	18, // 23: oscal.common.v1.Party.address:type_name -> oscal.common.v1.Address
+	14, // 24: oscal.common.v1.Party.email_addresses:type_name -> oscal.common.v1.EmailAddress
+	21, // 25: oscal.common.v1.Party.telephone_numbers:type_name -> oscal.common.v1.TelephoneNumber
+	15, // 26: oscal.common.v1.Party.props:type_name -> oscal.common.v1.Property
+	16, // 27: oscal.common.v1.Party.links:type_name -> oscal.common.v1.Link
+	23, // 28: oscal.common.v1.Party.responsible_parties:type_name -> oscal.common.v1.ResponsibleParty
+	25, // 29: oscal.common.v1.Party.external_ids:type_name -> oscal.common.v1.PartyExternalId
+	0,  // 30: oscal.common.v1.Party.location_uuids:type_name -> oscal.common.v1.UUID
+	2,  // 31: oscal.common.v1.PartyExternalId.scheme:type_name -> oscal.common.v1.URI
+	28, // 32: oscal.common.v1.BackMatter.resources:type_name -> oscal.common.v1.Resource
+	0,  // 33: oscal.common.v1.Resource.uuid:type_name -> oscal.common.v1.UUID
+	7,  // 34: oscal.common.v1.Resource.description:type_name -> oscal.common.v1.MarkupMultiline
+	15, // 35: oscal.common.v1.Resource.props:type_name -> oscal.common.v1.Property
+	16, // 36: oscal.common.v1.Resource.links:type_name -> oscal.common.v1.Link
+	8,  // 37: oscal.common.v1.Resource.base64:type_name -> oscal.common.v1.Base64
+	26, // 38: oscal.common.v1.Resource.document_ids:type_name -> oscal.common.v1.DocumentId
+	29, // 39: oscal.common.v1.Resource.rlinks:type_name -> oscal.common.v1.Rlink
+	30, // 40: oscal.common.v1.Resource.citation_obj:type_name -> oscal.common.v1.Citation
+	2,  // 41: oscal.common.v1.Rlink.href:type_name -> oscal.common.v1.URI
+	17, // 42: oscal.common.v1.Rlink.hashes:type_name -> oscal.common.v1.Hash
+	6,  // 43: oscal.common.v1.Citation.text:type_name -> oscal.common.v1.MarkupLine
+	15, // 44: oscal.common.v1.Citation.props:type_name -> oscal.common.v1.Property
+	16, // 45: oscal.common.v1.Citation.links:type_name -> oscal.common.v1.Link
+	4,  // 46: oscal.common.v1.Metadata.last_modified:type_name -> oscal.common.v1.DateTime
+	15, // 47: oscal.common.v1.Metadata.props:type_name -> oscal.common.v1.Property
+	16, // 48: oscal.common.v1.Metadata.links:type_name -> oscal.common.v1.Link
+	22, // 49: oscal.common.v1.Metadata.roles:type_name -> oscal.common.v1.Role
+	24, // 50: oscal.common.v1.Metadata.parties:type_name -> oscal.common.v1.Party
+	23, // 51: oscal.common.v1.Metadata.responsible_parties:type_name -> oscal.common.v1.ResponsibleParty
+	26, // 52: oscal.common.v1.Metadata.document_id:type_name -> oscal.common.v1.DocumentId
+	4,  // 53: oscal.common.v1.Metadata.published:type_name -> oscal.common.v1.DateTime
+	7,  // 54: oscal.common.v1.Metadata.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	19, // 55: oscal.common.v1.Metadata.locations:type_name -> oscal.common.v1.Location
+	56, // [56:56] is the sub-list for method output_type
+	56, // [56:56] is the sub-list for method input_type
+	56, // [56:56] is the sub-list for extension type_name
+	56, // [56:56] is the sub-list for extension extendee
+	0,  // [0:56] is the sub-list for field type_name
 }
 
 func init() { file_common_v1_common_proto_init() }
@@ -1917,7 +2296,7 @@ func file_common_v1_common_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_common_v1_common_proto_rawDesc), len(file_common_v1_common_proto_rawDesc)),
 			NumEnums:      0,
-			NumMessages:   28,
+			NumMessages:   32,
 			NumExtensions: 0,
 			NumServices:   0,
 		},

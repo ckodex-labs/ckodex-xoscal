@@ -25,13 +25,13 @@ namespace Oscal.Services.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch9zZXJ2aWNlcy92MS9vc2NhbF9zZXJ2aWNlLnByb3RvEhFvc2NhbC5zZXJ2",
-            "aWNlcy52MRoWY29tbW9uL3YxL2NvbW1vbi5wcm90bxoYY2F0YWxvZy92MS9j",
-            "YXRhbG9nLnByb3RvGhhwcm9maWxlL3YxL3Byb2ZpbGUucHJvdG8aJ2NvbXBv",
-            "bmVudF9kZWZpbml0aW9uL3YxL2NvbXBvbmVudC5wcm90bxoQc3NwL3YxL3Nz",
-            "cC5wcm90bxooYXNzZXNzbWVudF9wbGFuL3YxL2Fzc2Vzc21lbnRfcGxhbi5w",
+            "aWNlcy52MRooYXNzZXNzbWVudF9wbGFuL3YxL2Fzc2Vzc21lbnRfcGxhbi5w",
             "cm90bxouYXNzZXNzbWVudF9yZXN1bHRzL3YxL2Fzc2Vzc21lbnRfcmVzdWx0",
-            "cy5wcm90bxoScG9hbS92MS9wb2FtLnByb3RvGhhtYXBwaW5nL3YxL21hcHBp",
-            "bmcucHJvdG8aHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8iPgoRR2V0",
+            "cy5wcm90bxoYY2F0YWxvZy92MS9jYXRhbG9nLnByb3RvGhZjb21tb24vdjEv",
+            "Y29tbW9uLnByb3RvGidjb21wb25lbnRfZGVmaW5pdGlvbi92MS9jb21wb25l",
+            "bnQucHJvdG8aHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8aGG1hcHBp",
+            "bmcvdjEvbWFwcGluZy5wcm90bxoScG9hbS92MS9wb2FtLnByb3RvGhhwcm9m",
+            "aWxlL3YxL3Byb2ZpbGUucHJvdG8aEHNzcC92MS9zc3AucHJvdG8iPgoRR2V0",
             "Q2F0YWxvZ1JlcXVlc3QSKQoEdXVpZBgBIAEoCzIVLm9zY2FsLmNvbW1vbi52",
             "MS5VVUlEUgR1dWlkIkkKEkdldENhdGFsb2dSZXNwb25zZRIzCgdjYXRhbG9n",
             "GAEgASgLMhkub3NjYWwuY2F0YWxvZy52MS5DYXRhbG9nUgdjYXRhbG9nImkK",
@@ -343,7 +343,7 @@ namespace Oscal.Services.V1 {
             "EgovdjEvc2VhcmNoQj5aPGdpdGh1Yi5jb20vbWNob3JmYS94b3NjYWwvcHJv",
             "dG8vb3NjYWwvc2VydmljZXMvdjE7c2VydmljZXN2MWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Oscal.Common.V1.CommonReflection.Descriptor, global::Oscal.Catalog.V1.CatalogReflection.Descriptor, global::Oscal.Profile.V1.ProfileReflection.Descriptor, global::Oscal.ComponentDefinition.V1.ComponentReflection.Descriptor, global::Oscal.Ssp.V1.SspReflection.Descriptor, global::Oscal.AssessmentPlan.V1.AssessmentPlanReflection.Descriptor, global::Oscal.AssessmentResults.V1.AssessmentResultsReflection.Descriptor, global::Oscal.Poam.V1.PoamReflection.Descriptor, global::Oscal.Mapping.V1.MappingReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Oscal.AssessmentPlan.V1.AssessmentPlanReflection.Descriptor, global::Oscal.AssessmentResults.V1.AssessmentResultsReflection.Descriptor, global::Oscal.Catalog.V1.CatalogReflection.Descriptor, global::Oscal.Common.V1.CommonReflection.Descriptor, global::Oscal.ComponentDefinition.V1.ComponentReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Oscal.Mapping.V1.MappingReflection.Descriptor, global::Oscal.Poam.V1.PoamReflection.Descriptor, global::Oscal.Profile.V1.ProfileReflection.Descriptor, global::Oscal.Ssp.V1.SspReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Oscal.Services.V1.GetCatalogRequest), global::Oscal.Services.V1.GetCatalogRequest.Parser, new[]{ "Uuid" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Oscal.Services.V1.GetCatalogResponse), global::Oscal.Services.V1.GetCatalogResponse.Parser, new[]{ "Catalog" }, null, null, null, null),

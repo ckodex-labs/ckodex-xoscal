@@ -327,17 +327,21 @@ func (x *Control) GetRemarks() []*v1.MarkupMultiline {
 
 // Parameter represents a control parameter
 type Parameter struct {
-	state         protoimpl.MessageState `protogen:"open.v1"`
-	Id            *v1.Token              `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
-	Class         string                 `protobuf:"bytes,2,opt,name=class,proto3" json:"class,omitempty"`
-	Label         *v1.MarkupLine         `protobuf:"bytes,3,opt,name=label,proto3" json:"label,omitempty"`
-	Values        []*v1.MarkupLine       `protobuf:"bytes,4,rep,name=values,proto3" json:"values,omitempty"`
-	Select        *Select                `protobuf:"bytes,5,opt,name=select,proto3" json:"select,omitempty"`
-	Props         []*v1.Property         `protobuf:"bytes,6,rep,name=props,proto3" json:"props,omitempty"`
-	Links         []*v1.Link             `protobuf:"bytes,7,rep,name=links,proto3" json:"links,omitempty"`
-	Remarks       []*v1.MarkupMultiline  `protobuf:"bytes,8,rep,name=remarks,proto3" json:"remarks,omitempty"`
-	Constraints   []*Constraint          `protobuf:"bytes,9,rep,name=constraints,proto3" json:"constraints,omitempty"`
-	Guidance      *v1.MarkupLine         `protobuf:"bytes,10,opt,name=guidance,proto3" json:"guidance,omitempty"`
+	state       protoimpl.MessageState `protogen:"open.v1"`
+	Id          *v1.Token              `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	Class       string                 `protobuf:"bytes,2,opt,name=class,proto3" json:"class,omitempty"`
+	Label       *v1.MarkupLine         `protobuf:"bytes,3,opt,name=label,proto3" json:"label,omitempty"`
+	Values      []*v1.MarkupLine       `protobuf:"bytes,4,rep,name=values,proto3" json:"values,omitempty"`
+	Select      *Select                `protobuf:"bytes,5,opt,name=select,proto3" json:"select,omitempty"`
+	Props       []*v1.Property         `protobuf:"bytes,6,rep,name=props,proto3" json:"props,omitempty"`
+	Links       []*v1.Link             `protobuf:"bytes,7,rep,name=links,proto3" json:"links,omitempty"`
+	Remarks     []*v1.MarkupMultiline  `protobuf:"bytes,8,rep,name=remarks,proto3" json:"remarks,omitempty"`
+	Constraints []*Constraint          `protobuf:"bytes,9,rep,name=constraints,proto3" json:"constraints,omitempty"`
+	// Deprecated: use guidelines instead. Kept for backward compatibility.
+	//
+	// Deprecated: Marked as deprecated in catalog/v1/catalog.proto.
+	Guidance      *v1.MarkupLine `protobuf:"bytes,10,opt,name=guidance,proto3" json:"guidance,omitempty"`
+	Guidelines    []*Guideline   `protobuf:"bytes,11,rep,name=guidelines,proto3" json:"guidelines,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -435,9 +439,62 @@ func (x *Parameter) GetConstraints() []*Constraint {
 	return nil
 }
 
+// Deprecated: Marked as deprecated in catalog/v1/catalog.proto.
 func (x *Parameter) GetGuidance() *v1.MarkupLine {
 	if x != nil {
 		return x.Guidance
+	}
+	return nil
+}
+
+func (x *Parameter) GetGuidelines() []*Guideline {
+	if x != nil {
+		return x.Guidelines
+	}
+	return nil
+}
+
+// Guideline represents a parameter guideline
+type Guideline struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	Prose         *v1.MarkupMultiline    `protobuf:"bytes,1,opt,name=prose,proto3" json:"prose,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *Guideline) Reset() {
+	*x = Guideline{}
+	mi := &file_catalog_v1_catalog_proto_msgTypes[4]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *Guideline) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*Guideline) ProtoMessage() {}
+
+func (x *Guideline) ProtoReflect() protoreflect.Message {
+	mi := &file_catalog_v1_catalog_proto_msgTypes[4]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use Guideline.ProtoReflect.Descriptor instead.
+func (*Guideline) Descriptor() ([]byte, []int) {
+	return file_catalog_v1_catalog_proto_rawDescGZIP(), []int{4}
+}
+
+func (x *Guideline) GetProse() *v1.MarkupMultiline {
+	if x != nil {
+		return x.Prose
 	}
 	return nil
 }
@@ -453,7 +510,7 @@ type Select struct {
 
 func (x *Select) Reset() {
 	*x = Select{}
-	mi := &file_catalog_v1_catalog_proto_msgTypes[4]
+	mi := &file_catalog_v1_catalog_proto_msgTypes[5]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -465,7 +522,7 @@ func (x *Select) String() string {
 func (*Select) ProtoMessage() {}
 
 func (x *Select) ProtoReflect() protoreflect.Message {
-	mi := &file_catalog_v1_catalog_proto_msgTypes[4]
+	mi := &file_catalog_v1_catalog_proto_msgTypes[5]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -478,7 +535,7 @@ func (x *Select) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Select.ProtoReflect.Descriptor instead.
 func (*Select) Descriptor() ([]byte, []int) {
-	return file_catalog_v1_catalog_proto_rawDescGZIP(), []int{4}
+	return file_catalog_v1_catalog_proto_rawDescGZIP(), []int{5}
 }
 
 func (x *Select) GetChoices() []*v1.MarkupLine {
@@ -499,13 +556,14 @@ func (x *Select) GetHowMany() bool {
 type Constraint struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	Description   string                 `protobuf:"bytes,1,opt,name=description,proto3" json:"description,omitempty"`
+	Tests         []*Test                `protobuf:"bytes,2,rep,name=tests,proto3" json:"tests,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
 
 func (x *Constraint) Reset() {
 	*x = Constraint{}
-	mi := &file_catalog_v1_catalog_proto_msgTypes[5]
+	mi := &file_catalog_v1_catalog_proto_msgTypes[6]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -517,7 +575,7 @@ func (x *Constraint) String() string {
 func (*Constraint) ProtoMessage() {}
 
 func (x *Constraint) ProtoReflect() protoreflect.Message {
-	mi := &file_catalog_v1_catalog_proto_msgTypes[5]
+	mi := &file_catalog_v1_catalog_proto_msgTypes[6]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -530,7 +588,7 @@ func (x *Constraint) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Constraint.ProtoReflect.Descriptor instead.
 func (*Constraint) Descriptor() ([]byte, []int) {
-	return file_catalog_v1_catalog_proto_rawDescGZIP(), []int{5}
+	return file_catalog_v1_catalog_proto_rawDescGZIP(), []int{6}
 }
 
 func (x *Constraint) GetDescription() string {
@@ -538,6 +596,66 @@ func (x *Constraint) GetDescription() string {
 		return x.Description
 	}
 	return ""
+}
+
+func (x *Constraint) GetTests() []*Test {
+	if x != nil {
+		return x.Tests
+	}
+	return nil
+}
+
+// Test represents a constraint test
+type Test struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	Expression    string                 `protobuf:"bytes,1,opt,name=expression,proto3" json:"expression,omitempty"`
+	Remarks       []*v1.MarkupMultiline  `protobuf:"bytes,2,rep,name=remarks,proto3" json:"remarks,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *Test) Reset() {
+	*x = Test{}
+	mi := &file_catalog_v1_catalog_proto_msgTypes[7]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *Test) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*Test) ProtoMessage() {}
+
+func (x *Test) ProtoReflect() protoreflect.Message {
+	mi := &file_catalog_v1_catalog_proto_msgTypes[7]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use Test.ProtoReflect.Descriptor instead.
+func (*Test) Descriptor() ([]byte, []int) {
+	return file_catalog_v1_catalog_proto_rawDescGZIP(), []int{7}
+}
+
+func (x *Test) GetExpression() string {
+	if x != nil {
+		return x.Expression
+	}
+	return ""
+}
+
+func (x *Test) GetRemarks() []*v1.MarkupMultiline {
+	if x != nil {
+		return x.Remarks
+	}
+	return nil
 }
 
 // Part represents a part of a control (e.g., statement, objective)
@@ -559,7 +677,7 @@ type Part struct {
 
 func (x *Part) Reset() {
 	*x = Part{}
-	mi := &file_catalog_v1_catalog_proto_msgTypes[6]
+	mi := &file_catalog_v1_catalog_proto_msgTypes[8]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -571,7 +689,7 @@ func (x *Part) String() string {
 func (*Part) ProtoMessage() {}
 
 func (x *Part) ProtoReflect() protoreflect.Message {
-	mi := &file_catalog_v1_catalog_proto_msgTypes[6]
+	mi := &file_catalog_v1_catalog_proto_msgTypes[8]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -584,7 +702,7 @@ func (x *Part) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Part.ProtoReflect.Descriptor instead.
 func (*Part) Descriptor() ([]byte, []int) {
-	return file_catalog_v1_catalog_proto_rawDescGZIP(), []int{6}
+	return file_catalog_v1_catalog_proto_rawDescGZIP(), []int{8}
 }
 
 func (x *Part) GetId() *v1.Token {
@@ -689,7 +807,7 @@ const file_catalog_v1_catalog_proto_rawDesc = "" +
 	"\bcontrols\x18\x06 \x03(\v2\x19.oscal.catalog.v1.ControlR\bcontrols\x12/\n" +
 	"\x05props\x18\a \x03(\v2\x19.oscal.common.v1.PropertyR\x05props\x12+\n" +
 	"\x05links\x18\b \x03(\v2\x15.oscal.common.v1.LinkR\x05links\x12:\n" +
-	"\aremarks\x18\t \x03(\v2 .oscal.common.v1.MarkupMultilineR\aremarks\"\xf6\x03\n" +
+	"\aremarks\x18\t \x03(\v2 .oscal.common.v1.MarkupMultilineR\aremarks\"\xb7\x04\n" +
 	"\tParameter\x12&\n" +
 	"\x02id\x18\x01 \x01(\v2\x16.oscal.common.v1.TokenR\x02id\x12\x14\n" +
 	"\x05class\x18\x02 \x01(\tR\x05class\x121\n" +
@@ -699,15 +817,26 @@ const file_catalog_v1_catalog_proto_rawDesc = "" +
 	"\x05props\x18\x06 \x03(\v2\x19.oscal.common.v1.PropertyR\x05props\x12+\n" +
 	"\x05links\x18\a \x03(\v2\x15.oscal.common.v1.LinkR\x05links\x12:\n" +
 	"\aremarks\x18\b \x03(\v2 .oscal.common.v1.MarkupMultilineR\aremarks\x12>\n" +
-	"\vconstraints\x18\t \x03(\v2\x1c.oscal.catalog.v1.ConstraintR\vconstraints\x127\n" +
+	"\vconstraints\x18\t \x03(\v2\x1c.oscal.catalog.v1.ConstraintR\vconstraints\x12;\n" +
 	"\bguidance\x18\n" +
-	" \x01(\v2\x1b.oscal.common.v1.MarkupLineR\bguidance\"Z\n" +
+	" \x01(\v2\x1b.oscal.common.v1.MarkupLineB\x02\x18\x01R\bguidance\x12;\n" +
+	"\n" +
+	"guidelines\x18\v \x03(\v2\x1b.oscal.catalog.v1.GuidelineR\n" +
+	"guidelines\"C\n" +
+	"\tGuideline\x126\n" +
+	"\x05prose\x18\x01 \x01(\v2 .oscal.common.v1.MarkupMultilineR\x05prose\"Z\n" +
 	"\x06Select\x125\n" +
 	"\achoices\x18\x01 \x03(\v2\x1b.oscal.common.v1.MarkupLineR\achoices\x12\x19\n" +
-	"\bhow_many\x18\x02 \x01(\bR\ahowMany\".\n" +
+	"\bhow_many\x18\x02 \x01(\bR\ahowMany\"\\\n" +
 	"\n" +
 	"Constraint\x12 \n" +
-	"\vdescription\x18\x01 \x01(\tR\vdescription\"\x9b\x03\n" +
+	"\vdescription\x18\x01 \x01(\tR\vdescription\x12,\n" +
+	"\x05tests\x18\x02 \x03(\v2\x16.oscal.catalog.v1.TestR\x05tests\"b\n" +
+	"\x04Test\x12\x1e\n" +
+	"\n" +
+	"expression\x18\x01 \x01(\tR\n" +
+	"expression\x12:\n" +
+	"\aremarks\x18\x02 \x03(\v2 .oscal.common.v1.MarkupMultilineR\aremarks\"\x9b\x03\n" +
 	"\x04Part\x12&\n" +
 	"\x02id\x18\x01 \x01(\v2\x16.oscal.common.v1.TokenR\x02id\x12\x12\n" +
 	"\x04name\x18\x02 \x01(\tR\x04name\x12\x0e\n" +
@@ -733,69 +862,75 @@ func file_catalog_v1_catalog_proto_rawDescGZIP() []byte {
 	return file_catalog_v1_catalog_proto_rawDescData
 }
 
-var file_catalog_v1_catalog_proto_msgTypes = make([]protoimpl.MessageInfo, 7)
+var file_catalog_v1_catalog_proto_msgTypes = make([]protoimpl.MessageInfo, 9)
 var file_catalog_v1_catalog_proto_goTypes = []any{
 	(*Catalog)(nil),            // 0: oscal.catalog.v1.Catalog
 	(*Group)(nil),              // 1: oscal.catalog.v1.Group
 	(*Control)(nil),            // 2: oscal.catalog.v1.Control
 	(*Parameter)(nil),          // 3: oscal.catalog.v1.Parameter
-	(*Select)(nil),             // 4: oscal.catalog.v1.Select
-	(*Constraint)(nil),         // 5: oscal.catalog.v1.Constraint
-	(*Part)(nil),               // 6: oscal.catalog.v1.Part
-	(*v1.UUID)(nil),            // 7: oscal.common.v1.UUID
-	(*v1.Metadata)(nil),        // 8: oscal.common.v1.Metadata
-	(*v1.BackMatter)(nil),      // 9: oscal.common.v1.BackMatter
-	(*v1.Token)(nil),           // 10: oscal.common.v1.Token
-	(*v1.MarkupLine)(nil),      // 11: oscal.common.v1.MarkupLine
-	(*v1.Property)(nil),        // 12: oscal.common.v1.Property
-	(*v1.Link)(nil),            // 13: oscal.common.v1.Link
-	(*v1.MarkupMultiline)(nil), // 14: oscal.common.v1.MarkupMultiline
+	(*Guideline)(nil),          // 4: oscal.catalog.v1.Guideline
+	(*Select)(nil),             // 5: oscal.catalog.v1.Select
+	(*Constraint)(nil),         // 6: oscal.catalog.v1.Constraint
+	(*Test)(nil),               // 7: oscal.catalog.v1.Test
+	(*Part)(nil),               // 8: oscal.catalog.v1.Part
+	(*v1.UUID)(nil),            // 9: oscal.common.v1.UUID
+	(*v1.Metadata)(nil),        // 10: oscal.common.v1.Metadata
+	(*v1.BackMatter)(nil),      // 11: oscal.common.v1.BackMatter
+	(*v1.Token)(nil),           // 12: oscal.common.v1.Token
+	(*v1.MarkupLine)(nil),      // 13: oscal.common.v1.MarkupLine
+	(*v1.Property)(nil),        // 14: oscal.common.v1.Property
+	(*v1.Link)(nil),            // 15: oscal.common.v1.Link
+	(*v1.MarkupMultiline)(nil), // 16: oscal.common.v1.MarkupMultiline
 }
 var file_catalog_v1_catalog_proto_depIdxs = []int32{
-	7,  // 0: oscal.catalog.v1.Catalog.uuid:type_name -> oscal.common.v1.UUID
-	8,  // 1: oscal.catalog.v1.Catalog.metadata:type_name -> oscal.common.v1.Metadata
+	9,  // 0: oscal.catalog.v1.Catalog.uuid:type_name -> oscal.common.v1.UUID
+	10, // 1: oscal.catalog.v1.Catalog.metadata:type_name -> oscal.common.v1.Metadata
 	3,  // 2: oscal.catalog.v1.Catalog.params:type_name -> oscal.catalog.v1.Parameter
 	2,  // 3: oscal.catalog.v1.Catalog.controls:type_name -> oscal.catalog.v1.Control
 	1,  // 4: oscal.catalog.v1.Catalog.groups:type_name -> oscal.catalog.v1.Group
-	9,  // 5: oscal.catalog.v1.Catalog.back_matter:type_name -> oscal.common.v1.BackMatter
-	10, // 6: oscal.catalog.v1.Group.id:type_name -> oscal.common.v1.Token
-	11, // 7: oscal.catalog.v1.Group.title:type_name -> oscal.common.v1.MarkupLine
+	11, // 5: oscal.catalog.v1.Catalog.back_matter:type_name -> oscal.common.v1.BackMatter
+	12, // 6: oscal.catalog.v1.Group.id:type_name -> oscal.common.v1.Token
+	13, // 7: oscal.catalog.v1.Group.title:type_name -> oscal.common.v1.MarkupLine
 	3,  // 8: oscal.catalog.v1.Group.params:type_name -> oscal.catalog.v1.Parameter
 	2,  // 9: oscal.catalog.v1.Group.controls:type_name -> oscal.catalog.v1.Control
 	1,  // 10: oscal.catalog.v1.Group.groups:type_name -> oscal.catalog.v1.Group
-	12, // 11: oscal.catalog.v1.Group.props:type_name -> oscal.common.v1.Property
-	13, // 12: oscal.catalog.v1.Group.links:type_name -> oscal.common.v1.Link
-	14, // 13: oscal.catalog.v1.Group.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	10, // 14: oscal.catalog.v1.Control.id:type_name -> oscal.common.v1.Token
-	11, // 15: oscal.catalog.v1.Control.title:type_name -> oscal.common.v1.MarkupLine
+	14, // 11: oscal.catalog.v1.Group.props:type_name -> oscal.common.v1.Property
+	15, // 12: oscal.catalog.v1.Group.links:type_name -> oscal.common.v1.Link
+	16, // 13: oscal.catalog.v1.Group.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	12, // 14: oscal.catalog.v1.Control.id:type_name -> oscal.common.v1.Token
+	13, // 15: oscal.catalog.v1.Control.title:type_name -> oscal.common.v1.MarkupLine
 	3,  // 16: oscal.catalog.v1.Control.params:type_name -> oscal.catalog.v1.Parameter
-	6,  // 17: oscal.catalog.v1.Control.parts:type_name -> oscal.catalog.v1.Part
+	8,  // 17: oscal.catalog.v1.Control.parts:type_name -> oscal.catalog.v1.Part
 	2,  // 18: oscal.catalog.v1.Control.controls:type_name -> oscal.catalog.v1.Control
-	12, // 19: oscal.catalog.v1.Control.props:type_name -> oscal.common.v1.Property
-	13, // 20: oscal.catalog.v1.Control.links:type_name -> oscal.common.v1.Link
-	14, // 21: oscal.catalog.v1.Control.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	10, // 22: oscal.catalog.v1.Parameter.id:type_name -> oscal.common.v1.Token
-	11, // 23: oscal.catalog.v1.Parameter.label:type_name -> oscal.common.v1.MarkupLine
-	11, // 24: oscal.catalog.v1.Parameter.values:type_name -> oscal.common.v1.MarkupLine
-	4,  // 25: oscal.catalog.v1.Parameter.select:type_name -> oscal.catalog.v1.Select
-	12, // 26: oscal.catalog.v1.Parameter.props:type_name -> oscal.common.v1.Property
-	13, // 27: oscal.catalog.v1.Parameter.links:type_name -> oscal.common.v1.Link
-	14, // 28: oscal.catalog.v1.Parameter.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	5,  // 29: oscal.catalog.v1.Parameter.constraints:type_name -> oscal.catalog.v1.Constraint
-	11, // 30: oscal.catalog.v1.Parameter.guidance:type_name -> oscal.common.v1.MarkupLine
-	11, // 31: oscal.catalog.v1.Select.choices:type_name -> oscal.common.v1.MarkupLine
-	10, // 32: oscal.catalog.v1.Part.id:type_name -> oscal.common.v1.Token
-	11, // 33: oscal.catalog.v1.Part.title:type_name -> oscal.common.v1.MarkupLine
-	12, // 34: oscal.catalog.v1.Part.props:type_name -> oscal.common.v1.Property
-	13, // 35: oscal.catalog.v1.Part.links:type_name -> oscal.common.v1.Link
-	6,  // 36: oscal.catalog.v1.Part.parts:type_name -> oscal.catalog.v1.Part
-	14, // 37: oscal.catalog.v1.Part.prose:type_name -> oscal.common.v1.MarkupMultiline
-	14, // 38: oscal.catalog.v1.Part.remarks:type_name -> oscal.common.v1.MarkupMultiline
-	39, // [39:39] is the sub-list for method output_type
-	39, // [39:39] is the sub-list for method input_type
-	39, // [39:39] is the sub-list for extension type_name
-	39, // [39:39] is the sub-list for extension extendee
-	0,  // [0:39] is the sub-list for field type_name
+	14, // 19: oscal.catalog.v1.Control.props:type_name -> oscal.common.v1.Property
+	15, // 20: oscal.catalog.v1.Control.links:type_name -> oscal.common.v1.Link
+	16, // 21: oscal.catalog.v1.Control.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	12, // 22: oscal.catalog.v1.Parameter.id:type_name -> oscal.common.v1.Token
+	13, // 23: oscal.catalog.v1.Parameter.label:type_name -> oscal.common.v1.MarkupLine
+	13, // 24: oscal.catalog.v1.Parameter.values:type_name -> oscal.common.v1.MarkupLine
+	5,  // 25: oscal.catalog.v1.Parameter.select:type_name -> oscal.catalog.v1.Select
+	14, // 26: oscal.catalog.v1.Parameter.props:type_name -> oscal.common.v1.Property
+	15, // 27: oscal.catalog.v1.Parameter.links:type_name -> oscal.common.v1.Link
+	16, // 28: oscal.catalog.v1.Parameter.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	6,  // 29: oscal.catalog.v1.Parameter.constraints:type_name -> oscal.catalog.v1.Constraint
+	13, // 30: oscal.catalog.v1.Parameter.guidance:type_name -> oscal.common.v1.MarkupLine
+	4,  // 31: oscal.catalog.v1.Parameter.guidelines:type_name -> oscal.catalog.v1.Guideline
+	16, // 32: oscal.catalog.v1.Guideline.prose:type_name -> oscal.common.v1.MarkupMultiline
+	13, // 33: oscal.catalog.v1.Select.choices:type_name -> oscal.common.v1.MarkupLine
+	7,  // 34: oscal.catalog.v1.Constraint.tests:type_name -> oscal.catalog.v1.Test
+	16, // 35: oscal.catalog.v1.Test.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	12, // 36: oscal.catalog.v1.Part.id:type_name -> oscal.common.v1.Token
+	13, // 37: oscal.catalog.v1.Part.title:type_name -> oscal.common.v1.MarkupLine
+	14, // 38: oscal.catalog.v1.Part.props:type_name -> oscal.common.v1.Property
+	15, // 39: oscal.catalog.v1.Part.links:type_name -> oscal.common.v1.Link
+	8,  // 40: oscal.catalog.v1.Part.parts:type_name -> oscal.catalog.v1.Part
+	16, // 41: oscal.catalog.v1.Part.prose:type_name -> oscal.common.v1.MarkupMultiline
+	16, // 42: oscal.catalog.v1.Part.remarks:type_name -> oscal.common.v1.MarkupMultiline
+	43, // [43:43] is the sub-list for method output_type
+	43, // [43:43] is the sub-list for method input_type
+	43, // [43:43] is the sub-list for extension type_name
+	43, // [43:43] is the sub-list for extension extendee
+	0,  // [0:43] is the sub-list for field type_name
 }
 
 func init() { file_catalog_v1_catalog_proto_init() }
@@ -809,7 +944,7 @@ func file_catalog_v1_catalog_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_catalog_v1_catalog_proto_rawDesc), len(file_catalog_v1_catalog_proto_rawDesc)),
 			NumEnums:      0,
-			NumMessages:   7,
+			NumMessages:   9,
 			NumExtensions: 0,
 			NumServices:   0,
 		},

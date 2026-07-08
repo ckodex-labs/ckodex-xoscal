@@ -3144,7 +3144,7 @@ var File_services_v1_governance_service_proto protoreflect.FileDescriptor
 
 const file_services_v1_governance_service_proto_rawDesc = "" +
 	"\n" +
-	"$services/v1/governance_service.proto\x12\x11oscal.services.v1\x1a\x18catalog/v1/catalog.proto\x1a\x18profile/v1/profile.proto\x1a\x18mapping/v1/mapping.proto\x1a\x10ssp/v1/ssp.proto\x1a'component_definition/v1/component.proto\x1a(assessment_plan/v1/assessment_plan.proto\x1a.assessment_results/v1/assessment_results.proto\x1a\x12poam/v1/poam.proto\x1a\x1cgoogle/api/annotations.proto\"z\n" +
+	"$services/v1/governance_service.proto\x12\x11oscal.services.v1\x1a(assessment_plan/v1/assessment_plan.proto\x1a.assessment_results/v1/assessment_results.proto\x1a\x18catalog/v1/catalog.proto\x1a'component_definition/v1/component.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x18mapping/v1/mapping.proto\x1a\x12poam/v1/poam.proto\x1a\x18profile/v1/profile.proto\x1a\x10ssp/v1/ssp.proto\"z\n" +
 	"\x06Entity\x12\x10\n" +
 	"\x03urn\x18\x01 \x01(\tR\x03urn\x12\x12\n" +
 	"\x04type\x18\x02 \x01(\tR\x04type\x12\x18\n" +
