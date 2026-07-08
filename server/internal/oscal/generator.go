@@ -35,6 +35,43 @@ func newUUID(ns uuid.UUID, name string) *commonv1.UUID {
 	return &commonv1.UUID{Value: u.String()}
 }
 
+// sanitizeToken ensures a value conforms to the OSCAL Token datatype
+// (NCName: must start with a letter or underscore, followed by letters,
+// digits, dots, hyphens, or underscores). Invalid characters are replaced
+// with underscores; values starting with a digit are prefixed with "_".
+func sanitizeToken(s string) string {
+	if s == "" {
+		return s
+	}
+	var b strings.Builder
+	for i, r := range s {
+		switch {
+		case (r >= 'a' && r <= 'z') || (r >= 'A' && r <= 'Z'):
+			b.WriteRune(r)
+		case r >= '0' && r <= '9':
+			if i == 0 {
+				b.WriteByte('_')
+			}
+			b.WriteRune(r)
+		case r == '.' || r == '-' || r == '_':
+			b.WriteRune(r)
+		default:
+			// Replace spaces, parentheses, plus signs, etc. with underscore.
+			b.WriteByte('_')
+		}
+	}
+	result := b.String()
+	// Ensure it doesn't start with a digit (already handled above, but
+	// double-check in case the first char was replaced).
+	if len(result) > 0 {
+		first := result[0]
+		if first >= '0' && first <= '9' {
+			result = "_" + result
+		}
+	}
+	return result
+}
+
 var uuidNamespace = uuid.MustParse("6ba7b810-9dad-11d1-80b4-00c04fd430c8") // DNS namespace
 
 // GenerateCatalog builds an OSCAL Catalog from a snapshot of requirements.
@@ -81,35 +118,45 @@ func (g *Generator) GenerateCatalog(ctx context.Context, snapshotName string, fr
 	}
 
 	buildControl := func(req kg.Requirement) *catalogv1.Control {
+		// Skip controls with no citation — they cannot have a valid OSCAL id.
+		if req.Citation == "" {
+			return nil
+		}
+		// Fallback: use citation as title when name is empty (common for
+		// leaf requirement nodes that only have ref_id + description).
+		title := req.Title
+		if title == "" {
+			title = req.Citation
+		}
 		ctrl := &catalogv1.Control{
-			Id:    &commonv1.Token{Value: req.Citation},
-			Title: &commonv1.MarkupLine{Value: req.Title},
+			Id:    &commonv1.Token{Value: sanitizeToken(req.Citation)},
+			Title: &commonv1.MarkupLine{Value: title},
 			Props: requirementToProps(req),
 			Parts: []*catalogv1.Part{
-				{Id: &commonv1.Token{Value: req.Citation + "-stmt"}, Name: "statement", Prose: []*commonv1.MarkupMultiline{{Value: req.Text}}},
+				{Id: &commonv1.Token{Value: sanitizeToken(req.Citation) + "-stmt"}, Name: "statement", Prose: []*commonv1.MarkupMultiline{{Value: req.Text}}},
 			},
 		}
 		// Add parameters for requirements with sections/subsections.
 		if req.Section != "" {
 			ctrl.Params = append(ctrl.Params, &catalogv1.Parameter{
-				Id: &commonv1.Token{Value: req.Citation + "-param"},
+				Id: &commonv1.Token{Value: sanitizeToken(req.Citation) + "-param"},
 				Label: &commonv1.MarkupLine{
-					Value: fmt.Sprintf("Parameter for %s", req.Title),
+					Value: fmt.Sprintf("Parameter for %s", title),
 				},
 			})
 		}
 		if req.Subsection != "" {
 			ctrl.Params = append(ctrl.Params, &catalogv1.Parameter{
-				Id: &commonv1.Token{Value: req.Citation + "-subparam"},
+				Id: &commonv1.Token{Value: sanitizeToken(req.Citation) + "-subparam"},
 				Label: &commonv1.MarkupLine{
-					Value: fmt.Sprintf("Sub-parameter for %s", req.Title),
+					Value: fmt.Sprintf("Sub-parameter for %s", title),
 				},
 			})
 		}
 		// Add guidance part if text contains guidance-like sentences.
 		if guidance := extractGuidance(req.Text); guidance != "" {
 			ctrl.Parts = append(ctrl.Parts, &catalogv1.Part{
-				Id:    &commonv1.Token{Value: req.Citation + "-guidance"},
+				Id:    &commonv1.Token{Value: sanitizeToken(req.Citation) + "-guidance"},
 				Name:  "guidance",
 				Prose: []*commonv1.MarkupMultiline{{Value: guidance}},
 			})
@@ -123,17 +170,39 @@ func (g *Generator) GenerateCatalog(ctx context.Context, snapshotName string, fr
 		if !ok {
 			return nil
 		}
+		// Fallback: use ref_id as title when node name is empty.
+		groupTitle := n.req.NodeName
+		if groupTitle == "" {
+			groupTitle = n.req.NodeRefID
+		}
 		g := &catalogv1.Group{
-			Id:    &commonv1.Token{Value: n.req.NodeRefID},
-			Title: &commonv1.MarkupLine{Value: n.req.NodeName},
+			Id:    &commonv1.Token{Value: sanitizeToken(n.req.NodeRefID)},
+			Title: &commonv1.MarkupLine{Value: groupTitle},
 		}
 		if n.req.Assessable {
-			g.Controls = append(g.Controls, buildControl(n.req))
+			if c := buildControl(n.req); c != nil {
+				g.Controls = append(g.Controls, c)
+			}
 		}
 		for _, childURN := range n.children {
-			if childGroup := buildGroup(childURN); childGroup != nil {
+			childNode, ok := byURN[childURN]
+			if !ok {
+				continue
+			}
+			// Assessable leaf nodes (no children) become controls
+			// directly in the parent group, avoiding wrapper groups
+			// with single controls.
+			if childNode.req.Assessable && len(childNode.children) == 0 {
+				if c := buildControl(childNode.req); c != nil {
+					g.Controls = append(g.Controls, c)
+				}
+			} else if childGroup := buildGroup(childURN); childGroup != nil {
 				g.Groups = append(g.Groups, childGroup)
 			}
+		}
+		// Return nil if group has no controls and no subgroups (empty group).
+		if len(g.Controls) == 0 && len(g.Groups) == 0 {
+			return nil
 		}
 		return g
 	}
@@ -141,8 +210,14 @@ func (g *Generator) GenerateCatalog(ctx context.Context, snapshotName string, fr
 	var groups []*catalogv1.Group
 	var controls []*catalogv1.Control
 	for _, urn := range roots {
-		if n, ok := byURN[urn]; ok && n.req.Assessable {
-			controls = append(controls, buildControl(n.req))
+		n, ok := byURN[urn]
+		if !ok {
+			continue
+		}
+		if n.req.Assessable && len(n.children) == 0 {
+			if c := buildControl(n.req); c != nil {
+				controls = append(controls, c)
+			}
 		} else {
 			if g := buildGroup(urn); g != nil {
 				groups = append(groups, g)
@@ -182,13 +257,13 @@ func (g *Generator) GenerateProfile(ctx context.Context, snapshotName string, fr
 		if req.Framework != framework {
 			continue
 		}
-		allControls = append(allControls, req.Citation)
+		allControls = append(allControls, sanitizeToken(req.Citation))
 		props := requirementToProps(req)
 		if len(props) > 0 {
 			var addParts []*catalogv1.Part
 			for _, p := range props {
 				addParts = append(addParts, &catalogv1.Part{
-					Id:    &commonv1.Token{Value: req.Citation + "-" + p.Name},
+					Id:    &commonv1.Token{Value: sanitizeToken(req.Citation) + "-" + p.Name},
 					Name:  p.Name,
 					Prose: []*commonv1.MarkupMultiline{{Value: p.Value}},
 				})
@@ -198,7 +273,7 @@ func (g *Generator) GenerateProfile(ctx context.Context, snapshotName string, fr
 				guidance = req.Text
 			}
 			alter := &profilev1.Alter{
-				ControlId: req.Citation,
+				ControlId: sanitizeToken(req.Citation),
 				Adds: []*profilev1.Add{{
 					Props: []*commonv1.Property{{
 						Name:  "guidance",
@@ -230,9 +305,9 @@ func (g *Generator) GenerateProfile(ctx context.Context, snapshotName string, fr
 		}
 		if req.Section != "" {
 			setParams = append(setParams, &profilev1.SetParameters{
-				WithIds: []string{req.Citation},
+				WithIds: []string{sanitizeToken(req.Citation)},
 				Params: []*catalogv1.Parameter{{
-					Id: &commonv1.Token{Value: req.Citation + "-param"},
+					Id: &commonv1.Token{Value: sanitizeToken(req.Citation) + "-param"},
 					Label: &commonv1.MarkupLine{
 						Value: fmt.Sprintf("Parameter for %s", req.Title),
 					},
@@ -291,17 +366,17 @@ func (g *Generator) GenerateSSP(ctx context.Context, snapshotName string, framew
 		})
 		implReq := &sspv1.ImplementedRequirement{
 			Uuid:      newUUID(uuidNamespace, fmt.Sprintf("impl-%s", req.Citation)),
-			ControlId: &commonv1.Token{Value: req.Citation},
+			ControlId: &commonv1.Token{Value: sanitizeToken(req.Citation)},
 			Props:     requirementToProps(req),
 			Statements: []*sspv1.Statement{{
 				Uuid:        newUUID(uuidNamespace, fmt.Sprintf("stmt-%s", req.Citation)),
-				StatementId: &commonv1.Token{Value: req.Citation + "-stmt"},
+				StatementId: &commonv1.Token{Value: sanitizeToken(req.Citation) + "-stmt"},
 			}},
 		}
 		// Add set-parameters for requirements with sections.
 		if req.Section != "" {
 			implReq.SetParameters = append(implReq.SetParameters, &sspv1.SetParameter{
-				ParamId: &commonv1.Token{Value: req.Citation + "-param"},
+				ParamId: &commonv1.Token{Value: sanitizeToken(req.Citation) + "-param"},
 				Value:   req.Section,
 			})
 		}
@@ -391,7 +466,7 @@ func (g *Generator) GenerateComponentDefinition(ctx context.Context, snapshotNam
 				Description: req.Text,
 				ImplementedRequirements: []*componentv1.ImplementedRequirement{{
 					Uuid:        newUUID(uuidNamespace, fmt.Sprintf("implreq-%s", req.Citation)),
-					ControlId:   req.Citation,
+					ControlId:   sanitizeToken(req.Citation),
 					Description: req.Text,
 				}},
 			})
@@ -602,7 +677,7 @@ func (g *Generator) GenerateAssessmentResults(ctx context.Context, snapshotName,
 			Description: &commonv1.MarkupMultiline{Value: req.Text},
 			Target: &assessment_resultsv1.FindingTarget{
 				Type:     "objective-id",
-				TargetId: &commonv1.Token{Value: req.Citation},
+				TargetId: &commonv1.Token{Value: sanitizeToken(req.Citation)},
 				Title:    &commonv1.MarkupLine{Value: req.Title},
 				Status:   &assessment_resultsv1.ObjectiveStatus{State: "not-satisfied"},
 			},
