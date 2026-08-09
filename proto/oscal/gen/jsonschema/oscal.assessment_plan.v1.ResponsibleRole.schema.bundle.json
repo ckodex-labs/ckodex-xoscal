@@ -71,6 +71,10 @@
           "default": "",
           "type": "string"
         },
+        "ns": {
+          "default": "",
+          "type": "string"
+        },
         "value": {
           "default": "",
           "type": "string"

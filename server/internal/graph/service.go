@@ -154,7 +154,7 @@ func (s *GraphServer) Traverse(ctx context.Context, req *servicesv1.TraverseRequ
 			}
 
 			result = append(result, &servicesv1.PathSegment{
-				Depth: int32(current.depth + 1),
+				Depth: boundedInt32(current.depth + 1),
 				Edge:  edgeToProto(e),
 				Node:  nodeToProto(toNode),
 			})
@@ -341,7 +341,7 @@ func (s *GraphServer) VerifyClosure(ctx context.Context, req *servicesv1.VerifyC
 		Verdict:      len(resp.Edges) > 0,
 		TrustState:   "incomplete",
 		Diagnostics:  []string{"verify-closure placeholder"},
-		EdgesChecked: int32(len(resp.Edges)),
+		EdgesChecked: boundedInt32(len(resp.Edges)),
 		EdgesFailed:  0,
 	}, nil
 }
@@ -383,11 +383,7 @@ func edgeToProto(e *Edge) *servicesv1.GraphEdge {
 
 func parseProofState(jsonStr string) *servicesv1.ProofState {
 	if jsonStr == "" {
-		return &servicesv1.ProofState{
-			Discovery: "candidate", Graph: "unresolved", Claim: "unbound",
-			Source: "unbound", Signature: "unverified", Transparency: "unverified",
-			WitnessJson: `{"status":"unverified"}`, State: "unverified", Policy: "unevaluated",
-		}
+		return defaultProofState()
 	}
 	var ps struct {
 		Discovery    string `json:"discovery"`
@@ -400,7 +396,9 @@ func parseProofState(jsonStr string) *servicesv1.ProofState {
 		State        string `json:"state"`
 		Policy       string `json:"policy"`
 	}
-	json.Unmarshal([]byte(jsonStr), &ps)
+	if err := json.Unmarshal([]byte(jsonStr), &ps); err != nil {
+		return defaultProofState()
+	}
 	return &servicesv1.ProofState{
 		Discovery: ps.Discovery, Graph: ps.Graph, Claim: ps.Claim,
 		Source: ps.Source, Signature: ps.Signature, Transparency: ps.Transparency,
@@ -408,7 +406,31 @@ func parseProofState(jsonStr string) *servicesv1.ProofState {
 	}
 }
 
+func defaultProofState() *servicesv1.ProofState {
+	return &servicesv1.ProofState{
+		Discovery: "candidate", Graph: "unresolved", Claim: "unbound",
+		Source: "unbound", Signature: "unverified", Transparency: "unverified",
+		WitnessJson: `{"status":"unverified"}`, State: "unverified", Policy: "unevaluated",
+	}
+}
+
+const graphMaxInt32Value = 1<<31 - 1
+
+func boundedInt32(value int) int32 {
+	if value > graphMaxInt32Value {
+		return graphMaxInt32Value
+	}
+	if value < -graphMaxInt32Value-1 {
+		return -graphMaxInt32Value - 1
+	}
+	// #nosec G115 -- the bounds above prove that value fits in int32.
+	return int32(value)
+}
+
 func toJSON(v interface{}) string {
-	b, _ := json.Marshal(v)
+	b, err := json.Marshal(v)
+	if err != nil {
+		return ""
+	}
 	return string(b)
 }

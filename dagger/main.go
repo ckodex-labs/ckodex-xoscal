@@ -204,6 +204,33 @@ func (m *Xoscal) OscalSchemaValidation(source *dagger.Directory, frameworks *dag
 				"if [ $fail -eq 0 ]; then echo 'oscal-schema-ok' > /tmp/schema.ok; else exit 3; fi"})
 }
 
+// OscalConstraintValidation builds and runs xoscal-validate-constraints against
+// every framework catalog. This is tier-2 validation: full Metaschema constraint
+// checking via oscal-cli (allowed-values, has-cardinality, index-has-key,
+// is-unique, matches). Non-blocking — violations are reported but do not fail
+// the pipeline. Requires JDK + oscal-cli, installed in-container.
+func (m *Xoscal) OscalConstraintValidation(source *dagger.Directory, frameworks *dagger.Directory) *dagger.Container {
+	const oscalCLIVersion = "1.0.3"
+	return m.base(source).
+		WithExec([]string{"apt-get", "install", "-y", "--no-install-recommends", "openjdk-17-jre-headless", "unzip"}).
+		WithExec([]string{"sh", "-c",
+			fmt.Sprintf(
+				"curl -fsSL -o /tmp/oscal-cli.zip "+
+					"https://repo1.maven.org/maven2/gov/nist/secauto/oscal/tools/oscal-cli/cli-core/%s/cli-core-%s-oscal-cli.zip && "+
+					"unzip -q -o /tmp/oscal-cli.zip -d /opt/oscal-cli && "+
+					"chmod +x /opt/oscal-cli/bin/oscal-cli",
+				oscalCLIVersion, oscalCLIVersion)}).
+		WithExec([]string{"go", "build", "-o", "/bin/validate-constraints", "./server/cmd/xoscal-validate-constraints"}).
+		WithDirectory("/frameworks", frameworks).
+		WithExec([]string{"sh", "-c",
+			"fail=0; for f in /frameworks/*/catalog.json; do " +
+				"[ -f \"$f\" ] || continue; " +
+				"if ! /bin/validate-constraints -file \"$f\" -kind catalog -oscal-cli /opt/oscal-cli/bin/oscal-cli; then " +
+				"echo \"CONSTRAINT FAIL: $f\" >&2; fail=1; fi; done; " +
+				"if [ $fail -eq 0 ]; then echo 'oscal-constraints-ok' > /tmp/constraints.ok; " +
+				"else echo 'oscal-constraints-warn (non-blocking)' > /tmp/constraints.ok; fi"})
+}
+
 // provenanceManifest digests the proto set and each SDK zip and renders
 // provenance.json. Signing fields are left empty here (no cosign/rekor in this
 // build stage), so every record is honestly signed:false until Release wires them.
@@ -393,7 +420,7 @@ func (m *Xoscal) Security(source *dagger.Directory) *dagger.File {
 		WithDirectory("/src", source).
 		WithWorkdir("/src").
 		WithExec([]string{"govulncheck", "./..."}).
-		WithExec([]string{"gosec", "-fmt", "sarif", "-out", "gosec-results.sarif", "-exclude-dir=proto", "-no-fail", "./..."}).
+		WithExec([]string{"gosec", "-concurrency=2", "-fmt", "sarif", "-out", "gosec-results.sarif", "-exclude-dir=proto", "-no-fail", "./server/..."}).
 		File("/src/gosec-results.sarif")
 }
 
@@ -501,18 +528,21 @@ func (m *Xoscal) Snapshot(source *dagger.Directory, githubToken *dagger.Secret) 
 		Directory("/src/dist")
 }
 
-// All runs lint, test, race, security, proto-drift, spec-registry, and
-// OSCAL schema validation checks in parallel branches.
+// All runs lint, test, race, security, proto-drift, spec-registry,
+// OSCAL schema validation (tier 1, blocking), and OSCAL Metaschema constraint
+// validation (tier 2, non-blocking) checks in parallel branches.
 // Each branch shares the cached base container. The returned directory
 // contains outputs from all parallel checks.
 func (m *Xoscal) All(source *dagger.Directory) *dagger.Directory {
+	fw := m.OscalFrameworks(source)
 	lint := m.Lint(source)
 	test := m.Test(source)
 	race := m.TestRace(source)
 	sec := m.Security(source)
 	proto := m.ProtoCheck(source)
 	specreg := m.SpecRegistryCheck(source)
-	schemaval := m.OscalSchemaValidation(source, m.OscalFrameworks(source))
+	schemaval := m.OscalSchemaValidation(source, fw)
+	constraints := m.OscalConstraintValidation(source, fw)
 
 	return dag.Directory().
 		WithFile("lint.ok", lint.File("/tmp/lint.ok")).
@@ -521,5 +551,6 @@ func (m *Xoscal) All(source *dagger.Directory) *dagger.Directory {
 		WithFile("proto.ok", proto.File("/tmp/proto.ok")).
 		WithFile("specreg.ok", specreg.File("/tmp/specreg.ok")).
 		WithFile("schema.ok", schemaval.File("/tmp/schema.ok")).
+		WithFile("constraints.ok", constraints.File("/tmp/constraints.ok")).
 		WithFile("gosec-results.sarif", sec)
 }

@@ -46,7 +46,7 @@ func NewGitHubFetcher(owner, repo, path string) *GitHubFetcher {
 	}
 
 	cacheDir := filepath.Join("data", "cache")
-	_ = os.MkdirAll(cacheDir, 0755)
+	_ = os.MkdirAll(cacheDir, 0750)
 
 	return &GitHubFetcher{
 		owner:      owner,
@@ -134,6 +134,7 @@ func (f *GitHubFetcher) fetchViaContentsAPI(ctx context.Context, patterns []stri
 // Retries on transient network errors and 5xx responses with exponential backoff.
 func (f *GitHubFetcher) download(ctx context.Context, repoPath, sha string) ([]byte, error) {
 	cacheFile := filepath.Join(f.cacheDir, fmt.Sprintf("%s_%s.yaml", strings.ReplaceAll(repoPath, "/", "_"), sha[:7]))
+	// #nosec G304 -- cacheFile is derived under the configured cache directory from the repository path and commit SHA.
 	if cached, err := os.ReadFile(cacheFile); err == nil {
 		return cached, nil
 	}
@@ -165,10 +166,16 @@ func (f *GitHubFetcher) download(ctx context.Context, repoPath, sha string) ([]b
 			continue
 		}
 		body, err := io.ReadAll(resp.Body)
-		resp.Body.Close()
+		closeErr := resp.Body.Close()
 		if err != nil {
 			if attempt == maxRetries {
 				return nil, fmt.Errorf("read body %s: %w", repoPath, err)
+			}
+			continue
+		}
+		if closeErr != nil {
+			if attempt == maxRetries {
+				return nil, fmt.Errorf("close response body %s: %w", repoPath, closeErr)
 			}
 			continue
 		}
@@ -181,7 +188,7 @@ func (f *GitHubFetcher) download(ctx context.Context, repoPath, sha string) ([]b
 		}
 		return nil, fmt.Errorf("HTTP %d for %s", resp.StatusCode, url)
 	}
-	_ = os.WriteFile(cacheFile, data, 0644)
+	_ = os.WriteFile(cacheFile, data, 0600)
 	return data, nil
 }
 

@@ -98,13 +98,11 @@ func NewSQLiteStore(dsn string, pool dbutil.PoolConfig) (Store, error) {
 		return nil, fmt.Errorf("open sqlite: %w", err)
 	}
 	if err := dbutil.Configure(db, dsn, pool); err != nil {
-		db.Close()
-		return nil, err
+		return nil, closeDatabase(err, db)
 	}
 	s := &SQLiteStore{db: db}
 	if err := s.migrate(); err != nil {
-		db.Close()
-		return nil, fmt.Errorf("migrate: %w", err)
+		return nil, closeDatabase(fmt.Errorf("migrate: %w", err), db)
 	}
 	return s, nil
 }
@@ -214,7 +212,9 @@ func list[T proto.Message](ctx context.Context, db *sql.DB, table string, filter
 	}
 	var offset int
 	if pageToken != "" {
-		fmt.Sscanf(pageToken, "%d", &offset)
+		if _, err := fmt.Sscanf(pageToken, "%d", &offset); err != nil {
+			return nil, "", fmt.Errorf("invalid page token: %w", err)
+		}
 	}
 
 	var rows *sql.Rows
@@ -493,7 +493,9 @@ func (s *SQLiteStore) Search(ctx context.Context, query string, modelTypes []str
 	}
 	var offset int
 	if pageToken != "" {
-		fmt.Sscanf(pageToken, "%d", &offset)
+		if _, err := fmt.Sscanf(pageToken, "%d", &offset); err != nil {
+			return nil, "", fmt.Errorf("invalid page token: %w", err)
+		}
 	}
 
 	allTypes := []string{"catalogs", "profiles", "component_definitions", "ssps", "assessment_plans", "assessment_results", "poams", "mappings"}
@@ -539,7 +541,9 @@ func (s *SQLiteStore) Search(ctx context.Context, query string, modelTypes []str
 			var r SearchResult
 			var version string
 			if err := rows.Scan(&r.UUID, &r.Title, &version); err != nil {
-				rows.Close()
+				if closeErr := rows.Close(); closeErr != nil {
+					return nil, "", fmt.Errorf("scan %s: %w (close: %v)", table, err, closeErr)
+				}
 				return nil, "", fmt.Errorf("scan %s: %w", table, err)
 			}
 			r.ModelType = strings.TrimSuffix(table, "s")
@@ -551,7 +555,12 @@ func (s *SQLiteStore) Search(ctx context.Context, query string, modelTypes []str
 			r.Score = 1.0 // placeholder until semantic search is implemented
 			allResults = append(allResults, r)
 		}
-		rows.Close()
+		if err := rows.Close(); err != nil {
+			return nil, "", fmt.Errorf("close search rows for %s: %w", table, err)
+		}
+		if err := rows.Err(); err != nil {
+			return nil, "", fmt.Errorf("search rows %s: %w", table, err)
+		}
 	}
 
 	nextToken := ""
@@ -560,4 +569,11 @@ func (s *SQLiteStore) Search(ctx context.Context, query string, modelTypes []str
 		allResults = allResults[:pageSize]
 	}
 	return allResults, nextToken, nil
+}
+
+func closeDatabase(primary error, db *sql.DB) error {
+	if closeErr := db.Close(); closeErr != nil {
+		return fmt.Errorf("%w (close database: %v)", primary, closeErr)
+	}
+	return primary
 }

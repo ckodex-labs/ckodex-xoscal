@@ -151,6 +151,7 @@ func main() {
 	for route, relPath := range openAPIFiles {
 		path := relPath
 		http.HandleFunc(route, func(w http.ResponseWriter, r *http.Request) {
+			// #nosec G304 -- path is selected from the static OpenAPI route map above.
 			data, err := os.ReadFile(path)
 			if err != nil {
 				http.Error(w, "not found", http.StatusNotFound)

@@ -35,6 +35,7 @@ func main() {
 }
 
 func run(manifestPath, outDir, dsn string) error {
+	// #nosec G304 -- manifestPath is the explicit operator-selected input manifest.
 	raw, err := os.ReadFile(manifestPath)
 	if err != nil {
 		return fmt.Errorf("read manifest: %w", err)
@@ -81,15 +82,15 @@ func run(manifestPath, outDir, dsn string) error {
 			return fmt.Errorf("export %s: %w", refID, err)
 		}
 		dir := filepath.Join(outDir, refID)
-		if err := os.MkdirAll(dir, 0o755); err != nil {
+		if err := os.MkdirAll(dir, 0o750); err != nil {
 			return fmt.Errorf("mkdir %s: %w", dir, err)
 		}
 		catPath := filepath.Join(dir, "catalog.json")
-		if err := os.WriteFile(catPath, data, 0o644); err != nil {
+		if err := os.WriteFile(catPath, data, 0o600); err != nil {
 			return fmt.Errorf("write %s: %w", catPath, err)
 		}
 		sum := sha256.Sum256(data)
-		if err := os.WriteFile(catPath+".sha256", []byte("sha256:"+hex.EncodeToString(sum[:])+"\n"), 0o644); err != nil {
+		if err := os.WriteFile(catPath+".sha256", []byte("sha256:"+hex.EncodeToString(sum[:])+"\n"), 0o600); err != nil {
 			return fmt.Errorf("write sidecar: %w", err)
 		}
 	}

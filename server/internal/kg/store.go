@@ -38,19 +38,23 @@ func NewSQLiteStore(dsn string, pool dbutil.PoolConfig) (Store, error) {
 		return nil, fmt.Errorf("open sqlite: %w", err)
 	}
 	if err := dbutil.Configure(db, dsn, pool); err != nil {
-		db.Close()
-		return nil, err
+		return nil, closeDatabase(err, db)
 	}
 	if _, err := db.Exec("PRAGMA foreign_keys = ON"); err != nil {
-		db.Close()
-		return nil, fmt.Errorf("enable foreign keys: %w", err)
+		return nil, closeDatabase(fmt.Errorf("enable foreign keys: %w", err), db)
 	}
 	s := &SQLiteStore{db: db}
 	if err := s.migrate(); err != nil {
-		db.Close()
-		return nil, fmt.Errorf("migrate: %w", err)
+		return nil, closeDatabase(fmt.Errorf("migrate: %w", err), db)
 	}
 	return s, nil
+}
+
+func closeDatabase(primary error, db *sql.DB) error {
+	if closeErr := db.Close(); closeErr != nil {
+		return fmt.Errorf("%w (close database: %v)", primary, closeErr)
+	}
+	return primary
 }
 
 func (s *SQLiteStore) migrate() error {

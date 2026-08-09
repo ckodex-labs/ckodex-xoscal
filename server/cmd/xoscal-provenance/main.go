@@ -22,6 +22,7 @@ func main() {
 }
 
 func run(in, out string) error {
+	// #nosec G304 -- in is the explicit artifact manifest path selected by the CLI operator.
 	raw, err := os.ReadFile(in)
 	if err != nil {
 		return fmt.Errorf("read artifacts: %w", err)
@@ -34,7 +35,8 @@ func run(in, out string) error {
 	if err != nil {
 		return fmt.Errorf("build manifest: %w", err)
 	}
-	if err := os.WriteFile(out, data, 0o644); err != nil {
+	// #nosec G304,G306 -- out is the explicit provenance destination selected by the CLI operator.
+	if err := os.WriteFile(out, data, 0o600); err != nil {
 		return fmt.Errorf("write %s: %w", out, err)
 	}
 	return nil

@@ -371,7 +371,7 @@ func claimToProto(c *Claim) *servicesv1.Claim {
 		ExtensionsJson: c.ExtensionsJSON,
 	}
 	var subject map[string]string
-	json.Unmarshal([]byte(c.SubjectJSON), &subject)
+	decodeJSON(c.SubjectJSON, &subject)
 	claim.Subject = &servicesv1.Reference{
 		Kind:   subject["kind"],
 		Id:     subject["id"],
@@ -380,7 +380,7 @@ func claimToProto(c *Claim) *servicesv1.Claim {
 		BomRef: subject["bom_ref"],
 	}
 	var predicate map[string]string
-	json.Unmarshal([]byte(c.PredicateJSON), &predicate)
+	decodeJSON(c.PredicateJSON, &predicate)
 	claim.Predicate = &servicesv1.Predicate{
 		Relation:  predicate["relation"],
 		Direction: predicate["direction"],
@@ -388,7 +388,7 @@ func claimToProto(c *Claim) *servicesv1.Claim {
 	}
 	if c.ObjectJSON != "" {
 		var obj map[string]string
-		json.Unmarshal([]byte(c.ObjectJSON), &obj)
+		decodeJSON(c.ObjectJSON, &obj)
 		claim.ObjectOpt = &servicesv1.Claim_Object{
 			Object: &servicesv1.Reference{
 				Kind:   obj["kind"],
@@ -400,7 +400,7 @@ func claimToProto(c *Claim) *servicesv1.Claim {
 		}
 	}
 	var issuer map[string]string
-	json.Unmarshal([]byte(c.IssuerJSON), &issuer)
+	decodeJSON(c.IssuerJSON, &issuer)
 	claim.Issuer = &servicesv1.Identity{
 		Kind:    issuer["kind"],
 		Id:      issuer["id"],
@@ -415,21 +415,21 @@ func claimToProto(c *Claim) *servicesv1.Claim {
 	}
 	claim.ObservedTime = timestamppb.New(c.ObservedTime)
 	var refs []struct{ Ref, Digest, MediaType, BomKind string }
-	json.Unmarshal([]byte(c.SourceRefsJSON), &refs)
+	decodeJSON(c.SourceRefsJSON, &refs)
 	for _, r := range refs {
 		claim.SourceRefs = append(claim.SourceRefs, &servicesv1.EvidenceRef{
 			Ref: r.Ref, Digest: r.Digest, MediaType: r.MediaType, BomKind: r.BomKind,
 		})
 	}
 	var proofs []struct{ Type, Ref, Digest string }
-	json.Unmarshal([]byte(c.ProofRefsJSON), &proofs)
+	decodeJSON(c.ProofRefsJSON, &proofs)
 	for _, p := range proofs {
 		claim.ProofRefs = append(claim.ProofRefs, &servicesv1.ProofRef{
 			Type: p.Type, Ref: p.Ref, Digest: p.Digest,
 		})
 	}
 	var policies []struct{ Type, Ref, Digest string }
-	json.Unmarshal([]byte(c.PolicyRefsJSON), &policies)
+	decodeJSON(c.PolicyRefsJSON, &policies)
 	for _, p := range policies {
 		claim.PolicyRefs = append(claim.PolicyRefs, &servicesv1.PolicyRef{
 			Type: p.Type, Ref: p.Ref, Digest: p.Digest,
@@ -481,11 +481,13 @@ func evidenceToProto(ev *Evidence) *servicesv1.Evidence {
 		ExtensionsJson: ev.ExtensionsJSON,
 	}
 	var storage map[string]interface{}
-	json.Unmarshal([]byte(ev.StorageJSON), &storage)
+	decodeJSON(ev.StorageJSON, &storage)
 	s := &servicesv1.Storage{}
 	if uris, ok := storage["uris"].([]interface{}); ok {
 		for _, u := range uris {
-			s.Uris = append(s.Uris, u.(string))
+			if uri, ok := u.(string); ok {
+				s.Uris = append(s.Uris, uri)
+			}
 		}
 	}
 	if fp, ok := storage["fetch_policy"].(string); ok {
@@ -517,7 +519,21 @@ func proofStateToProto(ps proofState) *servicesv1.ProofState {
 	}
 }
 
+// decodeJSON keeps malformed optional persistence fields from becoming a
+// panic during response conversion; callers receive the target's zero value.
+func decodeJSON(data string, target any) {
+	if data == "" {
+		return
+	}
+	if err := json.Unmarshal([]byte(data), target); err != nil {
+		return
+	}
+}
+
 func toJSON(v interface{}) string {
-	b, _ := json.Marshal(v)
+	b, err := json.Marshal(v)
+	if err != nil {
+		return ""
+	}
 	return string(b)
 }

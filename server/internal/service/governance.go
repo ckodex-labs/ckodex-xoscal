@@ -101,7 +101,7 @@ func (s *GovernanceServer) CreateSnapshot(ctx context.Context, req *servicesv1.C
 	}
 	return &servicesv1.CreateSnapshotResponse{
 		Name:        ss.Name,
-		EntityCount: int32(ss.EntityCount),
+		EntityCount: boundedInt32(ss.EntityCount),
 	}, nil
 }
 
@@ -171,17 +171,19 @@ func (s *GovernanceServer) IngestRequirements(ctx context.Context, req *services
 
 	// Index ingested entities for semantic search.
 	for _, e := range res.Entities {
-		_ = s.vectorStore.Index(ctx, embedding.Document{
+		if err := s.vectorStore.Index(ctx, embedding.Document{
 			UUID:      e.URN,
 			ModelType: e.Type,
 			Framework: req.Framework,
 			Content:   string(e.Payload),
-		})
+		}); err != nil {
+			return nil, status.Errorf(codes.Internal, "index ingested entity %s: %v", e.URN, err)
+		}
 	}
 
 	return &servicesv1.IngestRequirementsResponse{
-		Created:   int32(len(res.Entities)),
-		Conflicts: int32(len(res.Conflicts)),
+		Created:   boundedInt32(len(res.Entities)),
+		Conflicts: boundedInt32(len(res.Conflicts)),
 	}, nil
 }
 
@@ -304,21 +306,21 @@ func (s *GovernanceServer) BulkIngestFrameworks(ctx context.Context, req *servic
 	}
 
 	var summaries []*servicesv1.FrameworkSummary
-	var totalConflicts int32
+	var totalConflicts int
 	for _, fr := range res.Frameworks {
 		summaries = append(summaries, &servicesv1.FrameworkSummary{
 			RefId:           fr.RefID,
 			Name:            fr.RefID,
-			NodeCount:       int32(fr.NodesCreated),
-			AssessableCount: int32(fr.AssessableCount),
+			NodeCount:       boundedInt32(fr.NodesCreated),
+			AssessableCount: boundedInt32(fr.AssessableCount),
 		})
-		totalConflicts += int32(fr.Conflicts)
+		totalConflicts += fr.Conflicts
 	}
 
 	return &servicesv1.BulkIngestFrameworksResponse{
 		Frameworks:     summaries,
-		TotalNodes:     int32(res.TotalNodes),
-		TotalConflicts: totalConflicts,
+		TotalNodes:     boundedInt32(res.TotalNodes),
+		TotalConflicts: boundedInt32(totalConflicts),
 	}, nil
 }
 
@@ -421,7 +423,7 @@ func (s *GovernanceServer) ProposeMappingUpdate(ctx context.Context, req *servic
 	}
 	return &servicesv1.ProposeMappingUpdateResponse{
 		PullRequestUrl:    prURL,
-		PullRequestNumber: int32(prNumber),
+		PullRequestNumber: boundedInt32(prNumber),
 	}, nil
 }
 
@@ -443,8 +445,8 @@ func (s *GovernanceServer) Propose(ctx context.Context, req *servicesv1.ProposeR
 	}
 	conflicts = append(conflicts, batchConflicts...)
 	return &servicesv1.ProposeResponse{
-		Accepted:  int32(len(proposals) - len(conflicts)),
-		Conflicts: int32(len(conflicts)),
+		Accepted:  boundedInt32(len(proposals) - len(conflicts)),
+		Conflicts: boundedInt32(len(conflicts)),
 	}, nil
 }
 
@@ -455,7 +457,10 @@ func (s *GovernanceServer) ListConflicts(ctx context.Context, req *servicesv1.Li
 	}
 	var out []*servicesv1.Entity
 	for _, c := range conflicts {
-		raw, _ := json.Marshal(c)
+		raw, err := json.Marshal(c)
+		if err != nil {
+			return nil, status.Errorf(codes.Internal, "marshal conflict %s: %v", c.ID, err)
+		}
 		out = append(out, &servicesv1.Entity{
 			Urn:     c.ID,
 			Type:    string(c.Type),
@@ -499,4 +504,19 @@ func toProtoEntity(e *kg.Entity) *servicesv1.Entity {
 		Status:  string(e.Status),
 		Payload: string(e.Payload),
 	}
+}
+
+const maxInt32Value = 1<<31 - 1
+
+// boundedInt32 converts a count or identifier only after constraining it to
+// the range representable by the protobuf int32 field.
+func boundedInt32(value int) int32 {
+	if value > maxInt32Value {
+		return maxInt32Value
+	}
+	if value < -maxInt32Value-1 {
+		return -maxInt32Value - 1
+	}
+	// #nosec G115 -- the bounds above prove that value fits in int32.
+	return int32(value)
 }

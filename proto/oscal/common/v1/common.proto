@@ -89,6 +89,7 @@ message Property {
   string value = 2;
   string class = 3; // Optional classification
   string id = 4; // Optional identifier
+  string ns = 5; // Optional namespace URI (required for non-standard prop names)
 }
 
 // Link represents a hyperlink with metadata

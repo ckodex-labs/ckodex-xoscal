@@ -42,15 +42,20 @@ func NewSQLiteVectorStore(dsn string, pool dbutil.PoolConfig) (VectorStore, erro
 		return nil, fmt.Errorf("open sqlite: %w", err)
 	}
 	if err := dbutil.Configure(db, dsn, pool); err != nil {
-		db.Close()
-		return nil, err
+		return nil, closeDatabase(err, db)
 	}
 	vs := &SQLiteVectorStore{db: db}
 	if err := vs.migrate(); err != nil {
-		db.Close()
-		return nil, fmt.Errorf("migrate: %w", err)
+		return nil, closeDatabase(fmt.Errorf("migrate: %w", err), db)
 	}
 	return vs, nil
+}
+
+func closeDatabase(primary error, db *sql.DB) error {
+	if closeErr := db.Close(); closeErr != nil {
+		return fmt.Errorf("%w (close database: %v)", primary, closeErr)
+	}
+	return primary
 }
 
 func (s *SQLiteVectorStore) migrate() error {

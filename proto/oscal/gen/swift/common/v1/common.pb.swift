@@ -240,6 +240,9 @@ nonisolated struct Oscal_Common_V1_Property: Sendable {
   /// Optional identifier
   var id: String = String()
 
+  /// Optional namespace URI (required for non-standard prop names)
+  var ns: String = String()
+
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
   init() {}
@@ -1264,7 +1267,7 @@ nonisolated extension Oscal_Common_V1_EmailAddress: SwiftProtobuf.Message, Swift
 
 nonisolated extension Oscal_Common_V1_Property: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   static let protoMessageName: String = _protobuf_package + ".Property"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}name\0\u{1}value\0\u{1}class\0\u{1}id\0")
+  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}name\0\u{1}value\0\u{1}class\0\u{1}id\0\u{1}ns\0")
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
@@ -1276,6 +1279,7 @@ nonisolated extension Oscal_Common_V1_Property: SwiftProtobuf.Message, SwiftProt
       case 2: try { try decoder.decodeSingularStringField(value: &self.value) }()
       case 3: try { try decoder.decodeSingularStringField(value: &self.`class`) }()
       case 4: try { try decoder.decodeSingularStringField(value: &self.id) }()
+      case 5: try { try decoder.decodeSingularStringField(value: &self.ns) }()
       default: break
       }
     }
@@ -1294,6 +1298,9 @@ nonisolated extension Oscal_Common_V1_Property: SwiftProtobuf.Message, SwiftProt
     if !self.id.isEmpty {
       try visitor.visitSingularStringField(value: self.id, fieldNumber: 4)
     }
+    if !self.ns.isEmpty {
+      try visitor.visitSingularStringField(value: self.ns, fieldNumber: 5)
+    }
     try unknownFields.traverse(visitor: &visitor)
   }
 
@@ -1302,6 +1309,7 @@ nonisolated extension Oscal_Common_V1_Property: SwiftProtobuf.Message, SwiftProt
     if lhs.value != rhs.value {return false}
     if lhs.`class` != rhs.`class` {return false}
     if lhs.id != rhs.id {return false}
+    if lhs.ns != rhs.ns {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

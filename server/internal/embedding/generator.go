@@ -54,7 +54,11 @@ func deterministicVector(text string, dim int) []float32 {
 	}
 	for i := 0; i < dim; i++ {
 		seed = seed*1103515245 + 12345
-		v[i] = float32(int32(seed)>>16) / 32768.0
+		value := float64(seed >> 16)
+		if seed&0x80000000 != 0 {
+			value -= 65536
+		}
+		v[i] = float32(value / 32768.0)
 	}
 	return v
 }

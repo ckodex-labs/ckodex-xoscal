@@ -704,6 +704,7 @@ type Property struct {
 	Value         string                 `protobuf:"bytes,2,opt,name=value,proto3" json:"value,omitempty"`
 	Class         string                 `protobuf:"bytes,3,opt,name=class,proto3" json:"class,omitempty"` // Optional classification
 	Id            string                 `protobuf:"bytes,4,opt,name=id,proto3" json:"id,omitempty"`       // Optional identifier
+	Ns            string                 `protobuf:"bytes,5,opt,name=ns,proto3" json:"ns,omitempty"`       // Optional namespace URI (required for non-standard prop names)
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -762,6 +763,13 @@ func (x *Property) GetClass() string {
 func (x *Property) GetId() string {
 	if x != nil {
 		return x.Id
+	}
+	return ""
+}
+
+func (x *Property) GetNs() string {
+	if x != nil {
+		return x.Ns
 	}
 	return ""
 }
@@ -2053,12 +2061,13 @@ const file_common_v1_common_proto_rawDesc = "" +
 	"\aBoolean\x12\x14\n" +
 	"\x05value\x18\x01 \x01(\bR\x05value\"$\n" +
 	"\fEmailAddress\x12\x14\n" +
-	"\x05value\x18\x01 \x01(\tR\x05value\"Z\n" +
+	"\x05value\x18\x01 \x01(\tR\x05value\"j\n" +
 	"\bProperty\x12\x12\n" +
 	"\x04name\x18\x01 \x01(\tR\x04name\x12\x14\n" +
 	"\x05value\x18\x02 \x01(\tR\x05value\x12\x14\n" +
 	"\x05class\x18\x03 \x01(\tR\x05class\x12\x0e\n" +
-	"\x02id\x18\x04 \x01(\tR\x02id\"\xa2\x01\n" +
+	"\x02id\x18\x04 \x01(\tR\x02id\x12\x0e\n" +
+	"\x02ns\x18\x05 \x01(\tR\x02ns\"\xa2\x01\n" +
 	"\x04Link\x12(\n" +
 	"\x04href\x18\x01 \x01(\v2\x14.oscal.common.v1.URIR\x04href\x12\x10\n" +
 	"\x03rel\x18\x02 \x01(\tR\x03rel\x12\x1d\n" +

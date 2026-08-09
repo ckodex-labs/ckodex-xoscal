@@ -7684,6 +7684,26 @@ public final class Common extends com.google.protobuf.GeneratedFile {
      */
     com.google.protobuf.ByteString
         getIdBytes();
+
+    /**
+     * <pre>
+     * Optional namespace URI (required for non-standard prop names)
+     * </pre>
+     *
+     * <code>string ns = 5 [json_name = "ns"];</code>
+     * @return The ns.
+     */
+    java.lang.String getNs();
+    /**
+     * <pre>
+     * Optional namespace URI (required for non-standard prop names)
+     * </pre>
+     *
+     * <code>string ns = 5 [json_name = "ns"];</code>
+     * @return The bytes for ns.
+     */
+    com.google.protobuf.ByteString
+        getNsBytes();
   }
   /**
    * <pre>
@@ -7715,6 +7735,7 @@ public final class Common extends com.google.protobuf.GeneratedFile {
       value_ = "";
       class__ = "";
       id_ = "";
+      ns_ = "";
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
@@ -7907,6 +7928,53 @@ public final class Common extends com.google.protobuf.GeneratedFile {
       }
     }
 
+    public static final int NS_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object ns_ = "";
+    /**
+     * <pre>
+     * Optional namespace URI (required for non-standard prop names)
+     * </pre>
+     *
+     * <code>string ns = 5 [json_name = "ns"];</code>
+     * @return The ns.
+     */
+    @java.lang.Override
+    public java.lang.String getNs() {
+      java.lang.Object ref = ns_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        ns_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Optional namespace URI (required for non-standard prop names)
+     * </pre>
+     *
+     * <code>string ns = 5 [json_name = "ns"];</code>
+     * @return The bytes for ns.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNsBytes() {
+      java.lang.Object ref = ns_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        ns_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -7933,6 +8001,9 @@ public final class Common extends com.google.protobuf.GeneratedFile {
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessage.writeString(output, 4, id_);
       }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(ns_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 5, ns_);
+      }
       getUnknownFields().writeTo(output);
     }
     private int computeSerializedSize_0() {
@@ -7948,6 +8019,9 @@ public final class Common extends com.google.protobuf.GeneratedFile {
       }
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessage.computeStringSize(4, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(ns_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(5, ns_);
       }
       return size;
     }
@@ -7981,6 +8055,8 @@ public final class Common extends com.google.protobuf.GeneratedFile {
           .equals(other.getClass_())) return false;
       if (!getId()
           .equals(other.getId())) return false;
+      if (!getNs()
+          .equals(other.getNs())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -8000,6 +8076,8 @@ public final class Common extends com.google.protobuf.GeneratedFile {
       hash = (53 * hash) + getClass_().hashCode();
       hash = (37 * hash) + ID_FIELD_NUMBER;
       hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + NS_FIELD_NUMBER;
+      hash = (53 * hash) + getNs().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -8139,6 +8217,7 @@ public final class Common extends com.google.protobuf.GeneratedFile {
         value_ = "";
         class__ = "";
         id_ = "";
+        ns_ = "";
         return this;
       }
 
@@ -8184,6 +8263,9 @@ public final class Common extends com.google.protobuf.GeneratedFile {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.id_ = id_;
         }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.ns_ = ns_;
+        }
       }
 
       @java.lang.Override
@@ -8216,6 +8298,11 @@ public final class Common extends com.google.protobuf.GeneratedFile {
         if (!other.getId().isEmpty()) {
           id_ = other.id_;
           bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getNs().isEmpty()) {
+          ns_ = other.ns_;
+          bitField0_ |= 0x00000010;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -8264,6 +8351,11 @@ public final class Common extends com.google.protobuf.GeneratedFile {
                 bitField0_ |= 0x00000008;
                 break;
               } // case 34
+              case 42: {
+                ns_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -8605,6 +8697,98 @@ public final class Common extends com.google.protobuf.GeneratedFile {
         checkByteStringIsUtf8(value);
         id_ = value;
         bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object ns_ = "";
+      /**
+       * <pre>
+       * Optional namespace URI (required for non-standard prop names)
+       * </pre>
+       *
+       * <code>string ns = 5 [json_name = "ns"];</code>
+       * @return The ns.
+       */
+      public java.lang.String getNs() {
+        java.lang.Object ref = ns_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          ns_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Optional namespace URI (required for non-standard prop names)
+       * </pre>
+       *
+       * <code>string ns = 5 [json_name = "ns"];</code>
+       * @return The bytes for ns.
+       */
+      public com.google.protobuf.ByteString
+          getNsBytes() {
+        java.lang.Object ref = ns_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          ns_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Optional namespace URI (required for non-standard prop names)
+       * </pre>
+       *
+       * <code>string ns = 5 [json_name = "ns"];</code>
+       * @param value The ns to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNs(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ns_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional namespace URI (required for non-standard prop names)
+       * </pre>
+       *
+       * <code>string ns = 5 [json_name = "ns"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNs() {
+        ns_ = getDefaultInstance().getNs();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional namespace URI (required for non-standard prop names)
+       * </pre>
+       *
+       * <code>string ns = 5 [json_name = "ns"];</code>
+       * @param value The bytes for ns to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ns_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -26702,7 +26886,7 @@ public final class Common extends com.google.protobuf.GeneratedFile {
      *
      * <code>string citation = 9 [json_name = "citation", deprecated = true];</code>
      * @deprecated oscal.common.v1.Resource.citation is deprecated.
-     *     See common/v1/common.proto;l=204
+     *     See common/v1/common.proto;l=205
      * @return The citation.
      */
     @java.lang.Deprecated java.lang.String getCitation();
@@ -26713,7 +26897,7 @@ public final class Common extends com.google.protobuf.GeneratedFile {
      *
      * <code>string citation = 9 [json_name = "citation", deprecated = true];</code>
      * @deprecated oscal.common.v1.Resource.citation is deprecated.
-     *     See common/v1/common.proto;l=204
+     *     See common/v1/common.proto;l=205
      * @return The bytes for citation.
      */
     @java.lang.Deprecated com.google.protobuf.ByteString
@@ -27116,7 +27300,7 @@ public final class Common extends com.google.protobuf.GeneratedFile {
      *
      * <code>string citation = 9 [json_name = "citation", deprecated = true];</code>
      * @deprecated oscal.common.v1.Resource.citation is deprecated.
-     *     See common/v1/common.proto;l=204
+     *     See common/v1/common.proto;l=205
      * @return The citation.
      */
     @java.lang.Override
@@ -27139,7 +27323,7 @@ public final class Common extends com.google.protobuf.GeneratedFile {
      *
      * <code>string citation = 9 [json_name = "citation", deprecated = true];</code>
      * @deprecated oscal.common.v1.Resource.citation is deprecated.
-     *     See common/v1/common.proto;l=204
+     *     See common/v1/common.proto;l=205
      * @return The bytes for citation.
      */
     @java.lang.Override
@@ -29476,7 +29660,7 @@ public final class Common extends com.google.protobuf.GeneratedFile {
        *
        * <code>string citation = 9 [json_name = "citation", deprecated = true];</code>
        * @deprecated oscal.common.v1.Resource.citation is deprecated.
-       *     See common/v1/common.proto;l=204
+       *     See common/v1/common.proto;l=205
        * @return The citation.
        */
       @java.lang.Deprecated public java.lang.String getCitation() {
@@ -29498,7 +29682,7 @@ public final class Common extends com.google.protobuf.GeneratedFile {
        *
        * <code>string citation = 9 [json_name = "citation", deprecated = true];</code>
        * @deprecated oscal.common.v1.Resource.citation is deprecated.
-       *     See common/v1/common.proto;l=204
+       *     See common/v1/common.proto;l=205
        * @return The bytes for citation.
        */
       @java.lang.Deprecated public com.google.protobuf.ByteString
@@ -29521,7 +29705,7 @@ public final class Common extends com.google.protobuf.GeneratedFile {
        *
        * <code>string citation = 9 [json_name = "citation", deprecated = true];</code>
        * @deprecated oscal.common.v1.Resource.citation is deprecated.
-       *     See common/v1/common.proto;l=204
+       *     See common/v1/common.proto;l=205
        * @param value The citation to set.
        * @return This builder for chaining.
        */
@@ -29540,7 +29724,7 @@ public final class Common extends com.google.protobuf.GeneratedFile {
        *
        * <code>string citation = 9 [json_name = "citation", deprecated = true];</code>
        * @deprecated oscal.common.v1.Resource.citation is deprecated.
-       *     See common/v1/common.proto;l=204
+       *     See common/v1/common.proto;l=205
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearCitation() {
@@ -29556,7 +29740,7 @@ public final class Common extends com.google.protobuf.GeneratedFile {
        *
        * <code>string citation = 9 [json_name = "citation", deprecated = true];</code>
        * @deprecated oscal.common.v1.Resource.citation is deprecated.
-       *     See common/v1/common.proto;l=204
+       *     See common/v1/common.proto;l=205
        * @param value The bytes for citation to set.
        * @return This builder for chaining.
        */
@@ -36551,109 +36735,109 @@ public final class Common extends com.google.protobuf.GeneratedFile {
       "\"\'\n\017PositiveInteger\022\024\n\005value\030\001 \001(\003R\005valu" +
       "e\"\037\n\007Decimal\022\024\n\005value\030\001 \001(\001R\005value\"\037\n\007Bo" +
       "olean\022\024\n\005value\030\001 \001(\010R\005value\"$\n\014EmailAddr" +
-      "ess\022\024\n\005value\030\001 \001(\tR\005value\"Z\n\010Property\022\022\n" +
+      "ess\022\024\n\005value\030\001 \001(\tR\005value\"j\n\010Property\022\022\n" +
       "\004name\030\001 \001(\tR\004name\022\024\n\005value\030\002 \001(\tR\005value\022" +
-      "\024\n\005class\030\003 \001(\tR\005class\022\016\n\002id\030\004 \001(\tR\002id\"\242\001" +
-      "\n\004Link\022(\n\004href\030\001 \001(\0132\024.oscal.common.v1.U" +
-      "RIR\004href\022\020\n\003rel\030\002 \001(\tR\003rel\022\035\n\nmedia_type" +
-      "\030\003 \001(\tR\tmediaType\022\022\n\004text\030\004 \001(\tR\004text\022+\n" +
-      "\021resource_fragment\030\005 \001(\tR\020resourceFragme" +
-      "nt\"S\n\004Hash\022\034\n\talgorithm\030\001 \001(\tR\talgorithm" +
-      "\022-\n\005value\030\002 \001(\0132\027.oscal.common.v1.Base64" +
-      "R\005value\"\250\001\n\007Address\0228\n\naddr_lines\030\001 \003(\0132" +
-      "\031.oscal.common.v1.AddrLineR\taddrLines\022\022\n" +
-      "\004city\030\002 \001(\tR\004city\022\024\n\005state\030\003 \001(\tR\005state\022" +
-      "\037\n\013postal_code\030\004 \001(\tR\npostalCode\022\030\n\007coun" +
-      "try\030\005 \001(\tR\007country\"\332\003\n\010Location\022)\n\004uuid\030" +
-      "\001 \001(\0132\025.oscal.common.v1.UUIDR\004uuid\022\024\n\005ti" +
-      "tle\030\002 \001(\tR\005title\0222\n\007address\030\003 \001(\0132\030.osca" +
-      "l.common.v1.AddressR\007address\022F\n\017email_ad" +
-      "dresses\030\004 \003(\0132\035.oscal.common.v1.EmailAdd" +
-      "ressR\016emailAddresses\022M\n\021telephone_number" +
-      "s\030\005 \003(\0132 .oscal.common.v1.TelephoneNumbe" +
-      "rR\020telephoneNumbers\022(\n\004urls\030\006 \003(\0132\024.osca" +
-      "l.common.v1.URIR\004urls\022/\n\005props\030\007 \003(\0132\031.o" +
-      "scal.common.v1.PropertyR\005props\022+\n\005links\030" +
-      "\010 \003(\0132\025.oscal.common.v1.LinkR\005links\022:\n\007r" +
-      "emarks\030\t \003(\0132 .oscal.common.v1.MarkupMul" +
-      "tilineR\007remarks\"=\n\010AddrLine\0221\n\005value\030\001 \001" +
-      "(\0132\033.oscal.common.v1.MarkupLineR\005value\"\'" +
-      "\n\017TelephoneNumber\022\024\n\005value\030\001 \001(\tR\005value\"" +
-      "\205\002\n\004Role\022&\n\002id\030\001 \001(\0132\026.oscal.common.v1.T" +
-      "okenR\002id\022\024\n\005title\030\002 \001(\tR\005title\022\035\n\nshort_" +
-      "name\030\003 \001(\tR\tshortName\022B\n\013description\030\004 \001" +
-      "(\0132 .oscal.common.v1.MarkupMultilineR\013de" +
-      "scription\022/\n\005props\030\005 \003(\0132\031.oscal.common." +
-      "v1.PropertyR\005props\022+\n\005links\030\006 \003(\0132\025.osca" +
-      "l.common.v1.LinkR\005links\"\225\002\n\020ResponsibleP" +
-      "arty\022/\n\007role_id\030\001 \001(\0132\026.oscal.common.v1." +
-      "TokenR\006roleId\0226\n\013party_uuids\030\002 \003(\0132\025.osc" +
-      "al.common.v1.UUIDR\npartyUuids\022/\n\005props\030\003" +
-      " \003(\0132\031.oscal.common.v1.PropertyR\005props\022+" +
-      "\n\005links\030\004 \003(\0132\025.oscal.common.v1.LinkR\005li" +
-      "nks\022:\n\007remarks\030\005 \001(\0132 .oscal.common.v1.M" +
-      "arkupMultilineR\007remarks\"\225\005\n\005Party\022)\n\004uui" +
-      "d\030\001 \001(\0132\025.oscal.common.v1.UUIDR\004uuid\022\022\n\004" +
-      "type\030\002 \001(\tR\004type\022\022\n\004name\030\003 \001(\tR\004name\022\037\n\013" +
-      "short_names\030\004 \003(\tR\nshortNames\0222\n\007address" +
-      "\030\005 \001(\0132\030.oscal.common.v1.AddressR\007addres" +
-      "s\022F\n\017email_addresses\030\006 \003(\0132\035.oscal.commo" +
-      "n.v1.EmailAddressR\016emailAddresses\022M\n\021tel" +
-      "ephone_numbers\030\007 \003(\0132 .oscal.common.v1.T" +
-      "elephoneNumberR\020telephoneNumbers\022/\n\005prop" +
-      "s\030\010 \003(\0132\031.oscal.common.v1.PropertyR\005prop" +
-      "s\022+\n\005links\030\t \003(\0132\025.oscal.common.v1.LinkR" +
-      "\005links\022R\n\023responsible_parties\030\n \003(\0132!.os" +
-      "cal.common.v1.ResponsiblePartyR\022responsi" +
-      "bleParties\022\030\n\007remarks\030\013 \003(\tR\007remarks\022C\n\014" +
-      "external_ids\030\014 \003(\0132 .oscal.common.v1.Par" +
-      "tyExternalIdR\013externalIds\022<\n\016location_uu" +
-      "ids\030\r \003(\0132\025.oscal.common.v1.UUIDR\rlocati" +
-      "onUuids\"O\n\017PartyExternalId\022\016\n\002id\030\001 \001(\tR\002" +
-      "id\022,\n\006scheme\030\002 \001(\0132\024.oscal.common.v1.URI" +
-      "R\006scheme\"D\n\nDocumentId\022\026\n\006scheme\030\001 \001(\tR\006" +
-      "scheme\022\036\n\nidentifier\030\002 \001(\tR\nidentifier\"E" +
-      "\n\nBackMatter\0227\n\tresources\030\001 \003(\0132\031.oscal." +
-      "common.v1.ResourceR\tresources\"\206\004\n\010Resour" +
-      "ce\022)\n\004uuid\030\001 \001(\0132\025.oscal.common.v1.UUIDR" +
-      "\004uuid\022\024\n\005title\030\002 \001(\tR\005title\022B\n\013descripti" +
-      "on\030\003 \001(\0132 .oscal.common.v1.MarkupMultili" +
-      "neR\013description\022/\n\005props\030\004 \003(\0132\031.oscal.c" +
-      "ommon.v1.PropertyR\005props\022+\n\005links\030\005 \003(\0132" +
-      "\025.oscal.common.v1.LinkR\005links\022/\n\006base64\030" +
-      "\006 \003(\0132\027.oscal.common.v1.Base64R\006base64\022>" +
-      "\n\014document_ids\030\007 \003(\0132\033.oscal.common.v1.D" +
-      "ocumentIdR\013documentIds\022\030\n\007remarks\030\010 \003(\tR" +
-      "\007remarks\022\036\n\010citation\030\t \001(\tB\002\030\001R\010citation" +
-      "\022.\n\006rlinks\030\n \003(\0132\026.oscal.common.v1.Rlink" +
-      "R\006rlinks\022<\n\014citation_obj\030\013 \001(\0132\031.oscal.c" +
-      "ommon.v1.CitationR\013citationObj\"\177\n\005Rlink\022" +
-      "(\n\004href\030\001 \001(\0132\024.oscal.common.v1.URIR\004hre" +
-      "f\022\035\n\nmedia_type\030\002 \001(\tR\tmediaType\022-\n\006hash" +
-      "es\030\003 \003(\0132\025.oscal.common.v1.HashR\006hashes\"" +
-      "\231\001\n\010Citation\022/\n\004text\030\001 \001(\0132\033.oscal.commo" +
-      "n.v1.MarkupLineR\004text\022/\n\005props\030\002 \003(\0132\031.o" +
-      "scal.common.v1.PropertyR\005props\022+\n\005links\030" +
-      "\003 \003(\0132\025.oscal.common.v1.LinkR\005links\"\234\005\n\010" +
-      "Metadata\022\024\n\005title\030\001 \001(\tR\005title\022>\n\rlast_m" +
-      "odified\030\002 \001(\0132\031.oscal.common.v1.DateTime" +
-      "R\014lastModified\022\030\n\007version\030\003 \001(\tR\007version" +
-      "\022#\n\roscal_version\030\004 \001(\tR\014oscalVersion\022/\n" +
-      "\005props\030\005 \003(\0132\031.oscal.common.v1.PropertyR" +
-      "\005props\022+\n\005links\030\006 \003(\0132\025.oscal.common.v1." +
-      "LinkR\005links\022+\n\005roles\030\007 \003(\0132\025.oscal.commo" +
-      "n.v1.RoleR\005roles\0220\n\007parties\030\010 \003(\0132\026.osca" +
-      "l.common.v1.PartyR\007parties\022R\n\023responsibl" +
-      "e_parties\030\t \003(\0132!.oscal.common.v1.Respon" +
-      "siblePartyR\022responsibleParties\022<\n\013docume" +
-      "nt_id\030\n \001(\0132\033.oscal.common.v1.DocumentId" +
-      "R\ndocumentId\0227\n\tpublished\030\013 \001(\0132\031.oscal." +
-      "common.v1.DateTimeR\tpublished\022:\n\007remarks" +
-      "\030\014 \001(\0132 .oscal.common.v1.MarkupMultiline" +
-      "R\007remarks\0227\n\tlocations\030\r \003(\0132\031.oscal.com" +
-      "mon.v1.LocationR\tlocationsB:Z8github.com" +
-      "/mchorfa/xoscal/proto/oscal/common/v1;co" +
-      "mmonv1b\006proto3"
+      "\024\n\005class\030\003 \001(\tR\005class\022\016\n\002id\030\004 \001(\tR\002id\022\016\n" +
+      "\002ns\030\005 \001(\tR\002ns\"\242\001\n\004Link\022(\n\004href\030\001 \001(\0132\024.o" +
+      "scal.common.v1.URIR\004href\022\020\n\003rel\030\002 \001(\tR\003r" +
+      "el\022\035\n\nmedia_type\030\003 \001(\tR\tmediaType\022\022\n\004tex" +
+      "t\030\004 \001(\tR\004text\022+\n\021resource_fragment\030\005 \001(\t" +
+      "R\020resourceFragment\"S\n\004Hash\022\034\n\talgorithm\030" +
+      "\001 \001(\tR\talgorithm\022-\n\005value\030\002 \001(\0132\027.oscal." +
+      "common.v1.Base64R\005value\"\250\001\n\007Address\0228\n\na" +
+      "ddr_lines\030\001 \003(\0132\031.oscal.common.v1.AddrLi" +
+      "neR\taddrLines\022\022\n\004city\030\002 \001(\tR\004city\022\024\n\005sta" +
+      "te\030\003 \001(\tR\005state\022\037\n\013postal_code\030\004 \001(\tR\npo" +
+      "stalCode\022\030\n\007country\030\005 \001(\tR\007country\"\332\003\n\010L" +
+      "ocation\022)\n\004uuid\030\001 \001(\0132\025.oscal.common.v1." +
+      "UUIDR\004uuid\022\024\n\005title\030\002 \001(\tR\005title\0222\n\007addr" +
+      "ess\030\003 \001(\0132\030.oscal.common.v1.AddressR\007add" +
+      "ress\022F\n\017email_addresses\030\004 \003(\0132\035.oscal.co" +
+      "mmon.v1.EmailAddressR\016emailAddresses\022M\n\021" +
+      "telephone_numbers\030\005 \003(\0132 .oscal.common.v" +
+      "1.TelephoneNumberR\020telephoneNumbers\022(\n\004u" +
+      "rls\030\006 \003(\0132\024.oscal.common.v1.URIR\004urls\022/\n" +
+      "\005props\030\007 \003(\0132\031.oscal.common.v1.PropertyR" +
+      "\005props\022+\n\005links\030\010 \003(\0132\025.oscal.common.v1." +
+      "LinkR\005links\022:\n\007remarks\030\t \003(\0132 .oscal.com" +
+      "mon.v1.MarkupMultilineR\007remarks\"=\n\010AddrL" +
+      "ine\0221\n\005value\030\001 \001(\0132\033.oscal.common.v1.Mar" +
+      "kupLineR\005value\"\'\n\017TelephoneNumber\022\024\n\005val" +
+      "ue\030\001 \001(\tR\005value\"\205\002\n\004Role\022&\n\002id\030\001 \001(\0132\026.o" +
+      "scal.common.v1.TokenR\002id\022\024\n\005title\030\002 \001(\tR" +
+      "\005title\022\035\n\nshort_name\030\003 \001(\tR\tshortName\022B\n" +
+      "\013description\030\004 \001(\0132 .oscal.common.v1.Mar" +
+      "kupMultilineR\013description\022/\n\005props\030\005 \003(\013" +
+      "2\031.oscal.common.v1.PropertyR\005props\022+\n\005li" +
+      "nks\030\006 \003(\0132\025.oscal.common.v1.LinkR\005links\"" +
+      "\225\002\n\020ResponsibleParty\022/\n\007role_id\030\001 \001(\0132\026." +
+      "oscal.common.v1.TokenR\006roleId\0226\n\013party_u" +
+      "uids\030\002 \003(\0132\025.oscal.common.v1.UUIDR\nparty" +
+      "Uuids\022/\n\005props\030\003 \003(\0132\031.oscal.common.v1.P" +
+      "ropertyR\005props\022+\n\005links\030\004 \003(\0132\025.oscal.co" +
+      "mmon.v1.LinkR\005links\022:\n\007remarks\030\005 \001(\0132 .o" +
+      "scal.common.v1.MarkupMultilineR\007remarks\"" +
+      "\225\005\n\005Party\022)\n\004uuid\030\001 \001(\0132\025.oscal.common.v" +
+      "1.UUIDR\004uuid\022\022\n\004type\030\002 \001(\tR\004type\022\022\n\004name" +
+      "\030\003 \001(\tR\004name\022\037\n\013short_names\030\004 \003(\tR\nshort" +
+      "Names\0222\n\007address\030\005 \001(\0132\030.oscal.common.v1" +
+      ".AddressR\007address\022F\n\017email_addresses\030\006 \003" +
+      "(\0132\035.oscal.common.v1.EmailAddressR\016email" +
+      "Addresses\022M\n\021telephone_numbers\030\007 \003(\0132 .o" +
+      "scal.common.v1.TelephoneNumberR\020telephon" +
+      "eNumbers\022/\n\005props\030\010 \003(\0132\031.oscal.common.v" +
+      "1.PropertyR\005props\022+\n\005links\030\t \003(\0132\025.oscal" +
+      ".common.v1.LinkR\005links\022R\n\023responsible_pa" +
+      "rties\030\n \003(\0132!.oscal.common.v1.Responsibl" +
+      "ePartyR\022responsibleParties\022\030\n\007remarks\030\013 " +
+      "\003(\tR\007remarks\022C\n\014external_ids\030\014 \003(\0132 .osc" +
+      "al.common.v1.PartyExternalIdR\013externalId" +
+      "s\022<\n\016location_uuids\030\r \003(\0132\025.oscal.common" +
+      ".v1.UUIDR\rlocationUuids\"O\n\017PartyExternal" +
+      "Id\022\016\n\002id\030\001 \001(\tR\002id\022,\n\006scheme\030\002 \001(\0132\024.osc" +
+      "al.common.v1.URIR\006scheme\"D\n\nDocumentId\022\026" +
+      "\n\006scheme\030\001 \001(\tR\006scheme\022\036\n\nidentifier\030\002 \001" +
+      "(\tR\nidentifier\"E\n\nBackMatter\0227\n\tresource" +
+      "s\030\001 \003(\0132\031.oscal.common.v1.ResourceR\treso" +
+      "urces\"\206\004\n\010Resource\022)\n\004uuid\030\001 \001(\0132\025.oscal" +
+      ".common.v1.UUIDR\004uuid\022\024\n\005title\030\002 \001(\tR\005ti" +
+      "tle\022B\n\013description\030\003 \001(\0132 .oscal.common." +
+      "v1.MarkupMultilineR\013description\022/\n\005props" +
+      "\030\004 \003(\0132\031.oscal.common.v1.PropertyR\005props" +
+      "\022+\n\005links\030\005 \003(\0132\025.oscal.common.v1.LinkR\005" +
+      "links\022/\n\006base64\030\006 \003(\0132\027.oscal.common.v1." +
+      "Base64R\006base64\022>\n\014document_ids\030\007 \003(\0132\033.o" +
+      "scal.common.v1.DocumentIdR\013documentIds\022\030" +
+      "\n\007remarks\030\010 \003(\tR\007remarks\022\036\n\010citation\030\t \001" +
+      "(\tB\002\030\001R\010citation\022.\n\006rlinks\030\n \003(\0132\026.oscal" +
+      ".common.v1.RlinkR\006rlinks\022<\n\014citation_obj" +
+      "\030\013 \001(\0132\031.oscal.common.v1.CitationR\013citat" +
+      "ionObj\"\177\n\005Rlink\022(\n\004href\030\001 \001(\0132\024.oscal.co" +
+      "mmon.v1.URIR\004href\022\035\n\nmedia_type\030\002 \001(\tR\tm" +
+      "ediaType\022-\n\006hashes\030\003 \003(\0132\025.oscal.common." +
+      "v1.HashR\006hashes\"\231\001\n\010Citation\022/\n\004text\030\001 \001" +
+      "(\0132\033.oscal.common.v1.MarkupLineR\004text\022/\n" +
+      "\005props\030\002 \003(\0132\031.oscal.common.v1.PropertyR" +
+      "\005props\022+\n\005links\030\003 \003(\0132\025.oscal.common.v1." +
+      "LinkR\005links\"\234\005\n\010Metadata\022\024\n\005title\030\001 \001(\tR" +
+      "\005title\022>\n\rlast_modified\030\002 \001(\0132\031.oscal.co" +
+      "mmon.v1.DateTimeR\014lastModified\022\030\n\007versio" +
+      "n\030\003 \001(\tR\007version\022#\n\roscal_version\030\004 \001(\tR" +
+      "\014oscalVersion\022/\n\005props\030\005 \003(\0132\031.oscal.com" +
+      "mon.v1.PropertyR\005props\022+\n\005links\030\006 \003(\0132\025." +
+      "oscal.common.v1.LinkR\005links\022+\n\005roles\030\007 \003" +
+      "(\0132\025.oscal.common.v1.RoleR\005roles\0220\n\007part" +
+      "ies\030\010 \003(\0132\026.oscal.common.v1.PartyR\007parti" +
+      "es\022R\n\023responsible_parties\030\t \003(\0132!.oscal." +
+      "common.v1.ResponsiblePartyR\022responsibleP" +
+      "arties\022<\n\013document_id\030\n \001(\0132\033.oscal.comm" +
+      "on.v1.DocumentIdR\ndocumentId\0227\n\tpublishe" +
+      "d\030\013 \001(\0132\031.oscal.common.v1.DateTimeR\tpubl" +
+      "ished\022:\n\007remarks\030\014 \001(\0132 .oscal.common.v1" +
+      ".MarkupMultilineR\007remarks\0227\n\tlocations\030\r" +
+      " \003(\0132\031.oscal.common.v1.LocationR\tlocatio" +
+      "nsB:Z8github.com/mchorfa/xoscal/proto/os" +
+      "cal/common/v1;commonv1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -36755,7 +36939,7 @@ public final class Common extends com.google.protobuf.GeneratedFile {
     internal_static_oscal_common_v1_Property_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_common_v1_Property_descriptor,
-        new java.lang.String[] { "Name", "Value", "Class_", "Id", });
+        new java.lang.String[] { "Name", "Value", "Class_", "Id", "Ns", });
     internal_static_oscal_common_v1_Link_descriptor =
       getDescriptor().getMessageType(16);
     internal_static_oscal_common_v1_Link_fieldAccessorTable = new

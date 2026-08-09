@@ -731,27 +731,38 @@ func extractGuidance(text string) string {
 }
 
 // requirementToProps extracts data-driven OSCAL properties from a requirement.
+// Custom prop names use a namespace to avoid violating Metaschema allowed-values
+// constraints on control/prop @name (which restricts to alt-identifier, label,
+// marking, sort-id, status in the default namespace).
+const xoscalPropNamespace = "https://ckodex.io/ns/xoscal/props"
+
 func requirementToProps(req kg.Requirement) []*commonv1.Property {
 	var props []*commonv1.Property
 	if req.Role != "" {
-		props = append(props, &commonv1.Property{Name: "role", Value: req.Role})
+		props = append(props, &commonv1.Property{Name: "role", Value: req.Role, Ns: xoscalPropNamespace})
 	}
 	if req.RiskLevel != "" {
-		props = append(props, &commonv1.Property{Name: "risk-level", Value: req.RiskLevel})
+		props = append(props, &commonv1.Property{Name: "risk-level", Value: req.RiskLevel, Ns: xoscalPropNamespace})
 	}
 	if req.Lifecycle != "" {
-		props = append(props, &commonv1.Property{Name: "lifecycle", Value: req.Lifecycle})
+		props = append(props, &commonv1.Property{Name: "lifecycle", Value: req.Lifecycle, Ns: xoscalPropNamespace})
 	}
 	if len(req.ImplementationGroups) > 0 {
 		props = append(props, &commonv1.Property{
 			Name:  "implementation-groups",
 			Value: fmt.Sprintf("%v", req.ImplementationGroups),
+			Ns:    xoscalPropNamespace,
 		})
 	}
 	return props
 }
 
 // buildBackMatter creates a BackMatter with a resource linking to the framework.
+// The resource includes an rlink (required by the Metaschema cardinality constraint
+// for rlink|base64) and uses only prop names from the allowed-values set
+// (marking, published, type, version) per the OSCAL 1.1.2 Metaschema constraints.
+const frameworkSourceBaseURL = "https://raw.githubusercontent.com/intuitem/ciso-assistant-community/main/backend/library/libraries"
+
 func buildBackMatter(framework, snapshotName string) *commonv1.BackMatter {
 	return &commonv1.BackMatter{
 		Resources: []*commonv1.Resource{{
@@ -761,9 +772,12 @@ func buildBackMatter(framework, snapshotName string) *commonv1.BackMatter {
 				Value: fmt.Sprintf("Source framework metadata for %s snapshot %s", framework, snapshotName),
 			},
 			Props: []*commonv1.Property{
-				{Name: "framework", Value: framework},
-				{Name: "snapshot", Value: snapshotName},
+				{Name: "type", Value: "standard"},
+				{Name: "version", Value: snapshotName},
 			},
+			Rlinks: []*commonv1.Rlink{{
+				Href: &commonv1.URI{Value: fmt.Sprintf("%s/%s.yaml", frameworkSourceBaseURL, framework)},
+			}},
 		}},
 	}
 }

@@ -10,7 +10,7 @@ import (
 	"log/slog"
 	"net"
 	"net/http"
-	_ "net/http/pprof"
+	"net/http/pprof"
 	"os"
 	"os/signal"
 	"syscall"
@@ -78,7 +78,21 @@ func main() {
 	if cfg.Server.EnablePProf {
 		go func() {
 			logger.Info("pprof server listening", slog.String("addr", cfg.Server.PProfAddr))
-			if err := http.ListenAndServe(cfg.Server.PProfAddr, nil); err != nil {
+			mux := http.NewServeMux()
+			mux.HandleFunc("/debug/pprof/", pprof.Index)
+			mux.HandleFunc("/debug/pprof/cmdline", pprof.Cmdline)
+			mux.HandleFunc("/debug/pprof/profile", pprof.Profile)
+			mux.HandleFunc("/debug/pprof/symbol", pprof.Symbol)
+			mux.HandleFunc("/debug/pprof/trace", pprof.Trace)
+			pprofServer := &http.Server{
+				Addr:              cfg.Server.PProfAddr,
+				Handler:           mux,
+				ReadHeaderTimeout: 5 * time.Second,
+				ReadTimeout:       15 * time.Second,
+				WriteTimeout:      15 * time.Second,
+				IdleTimeout:       60 * time.Second,
+			}
+			if err := pprofServer.ListenAndServe(); err != nil {
 				logger.Error("pprof server failed", slog.String("error", err.Error()))
 			}
 		}()
@@ -272,8 +286,10 @@ func loadTLSCredentials(certPath, keyPath, clientCAPath string) (credentials.Tra
 	}
 	tlsConfig := &tls.Config{
 		Certificates: []tls.Certificate{cert},
+		MinVersion:   tls.VersionTLS12,
 	}
 	if clientCAPath != "" {
+		// #nosec G304 -- clientCAPath is an explicit operator-configured TLS trust-store path.
 		caCert, err := os.ReadFile(clientCAPath)
 		if err != nil {
 			return nil, err

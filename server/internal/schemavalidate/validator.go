@@ -91,7 +91,9 @@ func NewValidator() (*Validator, error) {
 			// Build a standalone schema for this model
 			modelSchema := buildModelSchema(root, defs, bm, key)
 			compiler := jsonschema.NewCompiler()
-			compiler.AddResource(key+"_schema.json", modelSchema)
+			if err := compiler.AddResource(key+"_schema.json", modelSchema); err != nil {
+				return nil, fmt.Errorf("add schema resource for %s: %w", key, err)
+			}
 			compiled, err := compiler.Compile(key + "_schema.json")
 			if err != nil {
 				return nil, fmt.Errorf("compile schema for %s: %w", key, err)

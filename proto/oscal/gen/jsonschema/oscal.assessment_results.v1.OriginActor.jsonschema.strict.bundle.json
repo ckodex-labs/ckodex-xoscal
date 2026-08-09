@@ -107,6 +107,9 @@
         "name": {
           "type": "string"
         },
+        "ns": {
+          "type": "string"
+        },
         "value": {
           "type": "string"
         }
@@ -115,7 +118,8 @@
         "name",
         "value",
         "class",
-        "id"
+        "id",
+        "ns"
       ],
       "title": "Property",
       "type": "object"

@@ -34,6 +34,7 @@ func main() {
 }
 
 func run(mode, registryPath, version string) (int, error) {
+	// #nosec G304 -- registryPath is the explicit registry path selected by the CLI operator.
 	raw, err := os.ReadFile(registryPath)
 	if err != nil {
 		return 1, fmt.Errorf("read registry: %w", err)
@@ -70,7 +71,8 @@ func populate(reg *specregistry.Registry, path, version string) (int, error) {
 	if err != nil {
 		return 1, err
 	}
-	if err := os.WriteFile(path, out, 0o644); err != nil {
+	// #nosec G304,G306 -- path is the explicit registry destination selected by the CLI operator.
+	if err := os.WriteFile(path, out, 0o600); err != nil {
 		return 1, fmt.Errorf("write registry: %w", err)
 	}
 	fmt.Printf("populated %d models for OSCAL v%s\n", len(reg.Models), version)

@@ -1,51 +1,36 @@
-# OSCAL spec integrity registry.
-#
-# Per-model upstream OSCAL schema hashes bound to the protos that implement them.
-# Keeps the protos provably lock-step with a pinned OSCAL release: `verify`
-# re-fetches each model's schema and compares to schema_sha256; a mismatch is
-# per-model drift (re-tag or silent upstream change).
-#
-# Boundary (honest): this pins the exact upstream schema BYTES and detects
-# upstream change per model. It does NOT prove a proto semantically conforms to
-# its schema — that stays the oscal-schema-reconciler agent + buf. The registry
-# is the trigger/anchor ("model X drifted -> re-verify proto X").
-#
-# common.proto is intentionally excluded (shared types, no upstream OSCAL model).
-# schema_sha256 fields are empty until `xoscal-spec-registry -mode populate` runs
-# against a pinned release (network required; runs in CI/engine, not the sandbox).
 version: "1.0"
-oscal_version: "1.2.2"
-generated_at: ""
+oscal_version: 1.2.2
+generated_at: "2026-08-09T23:15:54Z"
 models:
-  - model: catalog
-    schema_asset: oscal_catalog_schema.json
-    schema_sha256: ""
-    proto: proto/oscal/catalog/v1/catalog.proto
-  - model: profile
-    schema_asset: oscal_profile_schema.json
-    schema_sha256: ""
-    proto: proto/oscal/profile/v1/profile.proto
-  - model: ssp
-    schema_asset: oscal_ssp_schema.json
-    schema_sha256: ""
-    proto: proto/oscal/ssp/v1/ssp.proto
-  - model: component-definition
-    schema_asset: oscal_component_schema.json
-    schema_sha256: ""
-    proto: proto/oscal/component_definition/v1/component.proto
-  - model: assessment-plan
-    schema_asset: oscal_assessment-plan_schema.json
-    schema_sha256: ""
-    proto: proto/oscal/assessment_plan/v1/assessment_plan.proto
-  - model: assessment-results
-    schema_asset: oscal_assessment-results_schema.json
-    schema_sha256: ""
-    proto: proto/oscal/assessment_results/v1/assessment_results.proto
-  - model: poam
-    schema_asset: oscal_poam_schema.json
-    schema_sha256: ""
-    proto: proto/oscal/poam/v1/poam.proto
-  - model: mapping
-    schema_asset: oscal_mapping_schema.json
-    schema_sha256: ""
-    proto: proto/oscal/mapping/v1/mapping.proto
+    - model: catalog
+      schema_asset: oscal_catalog_schema.json
+      schema_sha256: sha256:fdc559f5dff6848b1ebbe1898a69cc08263479f7c796e2f056412059e7489d0c
+      proto: proto/oscal/catalog/v1/catalog.proto
+    - model: profile
+      schema_asset: oscal_profile_schema.json
+      schema_sha256: sha256:04329bd68032f48825f712f79576b3fd00e129e59d3597beb56ed72c17277f66
+      proto: proto/oscal/profile/v1/profile.proto
+    - model: ssp
+      schema_asset: oscal_ssp_schema.json
+      schema_sha256: sha256:d7f9bf67101829083472a8f058a5b5ef078e09b3f699ac0c4dbe33a5b0671b6a
+      proto: proto/oscal/ssp/v1/ssp.proto
+    - model: component-definition
+      schema_asset: oscal_component_schema.json
+      schema_sha256: sha256:3b6e0765c44037c4d1bfb2cdb972713917d3eca73e566c0e6c6881a565638830
+      proto: proto/oscal/component_definition/v1/component.proto
+    - model: assessment-plan
+      schema_asset: oscal_assessment-plan_schema.json
+      schema_sha256: sha256:ba265f05982969142cbc3c6ed6bb99e0880081ceb366c152e44fe7e2b08aa125
+      proto: proto/oscal/assessment_plan/v1/assessment_plan.proto
+    - model: assessment-results
+      schema_asset: oscal_assessment-results_schema.json
+      schema_sha256: sha256:d4e1e7e17c6662814882810ad64075266964ee1a575759ce3955302fd74edcd9
+      proto: proto/oscal/assessment_results/v1/assessment_results.proto
+    - model: poam
+      schema_asset: oscal_poam_schema.json
+      schema_sha256: sha256:c8f2ce52b3c71299bb0c9e1cd950d48dc79d9f52920c543ac30b3c3f08c2e152
+      proto: proto/oscal/poam/v1/poam.proto
+    - model: mapping
+      schema_asset: oscal_mapping_schema.json
+      schema_sha256: sha256:45b4f909f72e17fbe8476e2a7f3d9f64ec42dc26ab2fe2d56c6b44fc57346022
+      proto: proto/oscal/mapping/v1/mapping.proto

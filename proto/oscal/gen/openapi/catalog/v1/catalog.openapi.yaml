@@ -721,6 +721,10 @@ components:
           type: string
           title: id
           description: Optional identifier
+        ns:
+          type: string
+          title: ns
+          description: Optional namespace URI (required for non-standard prop names)
       title: Property
       additionalProperties: false
       description: Property represents a key-value property with optional classification
