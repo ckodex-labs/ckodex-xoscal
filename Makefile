@@ -1,4 +1,4 @@
-.PHONY: all build build-release test test-race coverage proto lint fmt security docker clean tidy dagger-dev dagger-all dagger-test dagger-lint dagger-security dagger-image site site-serve
+.PHONY: all build build-release test test-race coverage proto lint design-lint site-smoke site-verify fmt security docker clean tidy dagger-dev dagger-all dagger-test dagger-lint dagger-security dagger-image site site-serve
 
 BINARY := xoscal-server
 IMAGE  := xoscal-server
@@ -30,6 +30,13 @@ lint:
 	buf lint
 	go vet ./...
 	gofmt -d .
+	python3 scripts/design-lint.py
+
+design-lint:
+	python3 scripts/design-lint.py
+
+site-smoke:
+	python3 scripts/site-smoke.py --root site
 
 fmt:
 	gofmt -w .
@@ -80,6 +87,9 @@ dagger-release: dagger-dev
 
 site: dagger-dev ## Build the portal site to ./_site (real data; needs engine + network)
 	dagger call site --source=. export --path=_site
+
+site-verify: site design-lint ## Build the site, then exercise the exported static surface
+	python3 scripts/site-smoke.py --root _site
 
 site-serve: dagger-dev ## Build and serve the portal at http://localhost:8080 (Ctrl-C to stop)
 	dagger call serve --source=. up --ports 8080:8080

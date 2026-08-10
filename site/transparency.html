@@ -1,63 +1,78 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8">
+<!doctype html>
+<html lang="en" data-theme="ledger">
+<head>
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>xOSCAL — Transparency</title><link rel="stylesheet" href="ds3.css"></head>
-<body><header><h1>Supply-chain Transparency</h1>
-<nav><a href="portal.html">Portal</a><a href="docs.html">API Docs</a>
-<a href="downloads.html">Downloads</a><a href="sbom-validation.html">SBOM Validation</a><a href="index.html">Home</a></nav></header>
-<main id="cards"></main>
-
-<section class="ck-quiet">
-  <h2>SLSA L3 Provenance vs Published Assets</h2>
-  <p>The SLSA L3 provenance (<code>provenance.intoto.jsonl</code>) covers <strong>all
-  14 files</strong> in the goreleaser <code>dist/</code> directory — the full build
-  context. Only <strong>9 user-facing artifacts</strong> are published as GitHub
-  release assets. The remaining 5 are goreleaser internal metadata files
-  (<code>CHANGELOG.md</code>, <code>artifacts.json</code>, <code>config.yaml</code>,
-  <code>digests.txt</code>, <code>metadata.json</code>) that document the build
-  process but are not intended for download. This gap is intentional: provenance
-  covers the build, release publishes the product.</p>
-  <h3>Three SBOMs</h3>
-  <table style="width:100%;border-collapse:collapse;font-size:13px">
-    <tr style="border-bottom:1px solid var(--ck-fg-3)">
-      <th style="text-align:left;padding:6px 0">SBOM</th>
-      <th style="text-align:left;padding:6px 0">Format</th>
-      <th style="text-align:left;padding:6px 0">Tool</th>
-      <th style="text-align:left;padding:6px 0">Scope</th>
-      <th style="text-align:left;padding:6px 0">Validated</th>
-    </tr>
-    <tr style="border-bottom:1px solid var(--ck-fg-3)">
-      <td style="padding:6px 0">Binary SBOM</td>
-      <td style="padding:6px 0">CycloneDX</td>
-      <td style="padding:6px 0">syft</td>
-      <td style="padding:6px 0">xoscal-server binary</td>
-      <td style="padding:6px 0"><span class="ck-proof">◆ sbom-tools → OSCAL</span></td>
-    </tr>
-    <tr style="border-bottom:1px solid var(--ck-fg-3)">
-      <td style="padding:6px 0">Archive SBOMs (×4)</td>
-      <td style="padding:6px 0">SPDX 2.3</td>
-      <td style="padding:6px 0">goreleaser (syft)</td>
-      <td style="padding:6px 0">per-platform tar.gz archives</td>
-      <td style="padding:6px 0"><span class="unsigned">○ not validated</span></td>
-    </tr>
-    <tr>
-      <td style="padding:6px 0">Image SBOM</td>
-      <td style="padding:6px 0">CycloneDX</td>
-      <td style="padding:6px 0">anchore/sbom-action</td>
-      <td style="padding:6px 0">container image (multi-arch)</td>
-      <td style="padding:6px 0"><span class="unsigned">○ not validated</span></td>
-    </tr>
-  </table>
-</section>
-
+<title>xOSCAL — Transparency</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="ck-skip" href="#main">skip to main content</a>
+<div class="ck-shell ck-shell--document">
+  <header class="ck-shell__header">
+    <a class="ck-site-brand" href="index.html" aria-label="xOSCAL home">XOSCAL</a>
+    <nav class="ck-site-nav" aria-label="Primary">
+      <a href="portal.html">Portal</a><a href="docs.html">API Docs</a>
+      <a href="transparency.html" aria-current="page">Transparency</a><a href="downloads.html">Downloads</a>
+      <a href="sbom-validation.html">SBOM Validation</a><a href="index.html">Home</a>
+    </nav>
+  </header>
+  <main id="main" class="ck-shell__main">
+    <div class="ck-measure ck-stack">
+      <div>
+        <p class="ck-label ck-page-kicker">disclosure ledger</p>
+        <h1 class="ck-page-title">Supply-chain Transparency</h1>
+      </div>
+      <div id="cards" class="ck-data-grid" aria-live="polite"><p class="ck-loading">Loading provenance manifest</p></div>
+      <section class="ck-quiet ck-padded" aria-labelledby="coverage-heading">
+        <h2 id="coverage-heading">Provenance coverage and published assets</h2>
+        <p>The generated provenance manifest describes the build context. Published assets are a separate exchange surface; this page keeps those scopes distinct and displays only the state supplied by the manifest.</p>
+        <h3>SBOM records</h3>
+        <table class="ck-table">
+          <thead><tr><th scope="col">SBOM</th><th scope="col">Format</th><th scope="col">Tool</th><th scope="col">Scope</th><th scope="col">State</th></tr></thead>
+          <tbody>
+            <tr><td>Binary SBOM</td><td>CycloneDX</td><td>syft</td><td>xoscal-server binary</td><td><span class="ck-chip ck-chip--observed">⊢ observed</span></td></tr>
+            <tr><td>Archive SBOMs</td><td>SPDX 2.3</td><td>goreleaser</td><td>per-platform archives</td><td><span class="ck-chip ck-chip--claimed">○ not validated here</span></td></tr>
+            <tr><td>Image SBOM</td><td>CycloneDX</td><td>anchore/sbom-action</td><td>container image</td><td><span class="ck-chip ck-chip--claimed">○ not validated here</span></td></tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+  </main>
+  <aside class="ck-shell__margin" aria-label="Evidence Margin">
+    <div class="ck-stack ck-stack--tight">
+      <div class="ck-margin__head"><h2>Evidence Margin</h2></div>
+      <div class="ck-receipt"><span class="ck-receipt__rule"></span><div><div class="ck-receipt__event">provenance manifest fetched</div><div class="ck-receipt__detail">⊢ observed — provenance.json</div></div></div>
+      <div class="ck-receipt"><span class="ck-receipt__rule"></span><div><div class="ck-receipt__event">signature state projected</div><div class="ck-receipt__detail">violet only when manifest says signed</div></div></div>
+      <span class="ck-chip ck-chip--observed">⊢ observed</span>
+    </div>
+  </aside>
+  <footer class="ck-shell__footer ck-authority ck-authority--internal" aria-label="Authority Footer">
+    <span class="ck-authority__zone ck-authority__zone--start"><span class="ck-authority__k">boundary</span><span class="ck-authority__v">local / public preview</span></span>
+    <span class="ck-authority__invariant">mode changes deployment, not governance semantics</span>
+    <span class="ck-authority__zone ck-authority__zone--end"><span class="ck-authority__k">handling</span><span class="ck-authority__v">internal</span></span>
+  </footer>
+</div>
 <script>
-fetch("./provenance.json").then(r=>r.json()).then(rows=>{
-  document.getElementById("cards").innerHTML = rows.map(a=>{
-    const cls = a.signed ? "ck-quiet ck-sealed" : "ck-quiet";
-    const mark = a.signed
-      ? `<span class="ck-proof">◆ attested · cosign+rekor #${a.rekor_id}</span>`
-      : `<span class="unsigned">○ unsigned</span>`;
-    return `<div class="${cls}"><strong>${a.name}</strong> ${mark}
-      <div class="ck-hash">${a.digest}</div></div>`;
-  }).join("");
+const escapeHTML = value => String(value ?? "").replace(/[&<>\"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;", "'":"&#39;"}[c]));
+const digestView = value => {
+  const digest = String(value || "");
+  if (!digest) return '<span class="ck-chip ck-chip--claimed">○ digest not supplied</span>';
+  if (!/^sha256:[0-9a-f]{16,}$/i.test(digest)) return `<span class="ck-hash ck-hash--unprefixed">${escapeHTML(digest)}</span>`;
+  return `<button type="button" class="ck-hash" data-digest="${escapeHTML(digest)}" title="Copy digest">${escapeHTML(digest)}</button>`;
+};
+fetch("./provenance.json").then(response => response.json()).then(rows => {
+  document.getElementById("cards").innerHTML = rows.map(item => {
+    const signed = item.signed === true;
+    const state = signed ? '<span class="ck-chip ck-chip--attested">◆ attested — cosign+rekor</span>' : '<span class="ck-chip ck-chip--claimed">○ unsigned</span>';
+    return `<article class="${signed ? "ck-quiet ck-sealed" : "ck-quiet ck-padded"}"><strong>${escapeHTML(item.name)}</strong> ${state}<div class="ck-caption">${digestView(item.digest)}</div></article>`;
+  }).join("") || '<p class="ck-caption">No provenance entries observed.</p>';
 });
-</script></body></html>
+document.addEventListener("click", event => {
+  const button = event.target.closest("[data-digest]");
+  if (!button || !navigator.clipboard) return;
+  navigator.clipboard.writeText(button.dataset.digest).then(() => { button.dataset.done = "true"; button.textContent = "copied"; });
+});
+</script>
+</body>
+</html>

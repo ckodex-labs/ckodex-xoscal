@@ -97,13 +97,13 @@ func (m *Xoscal) toolBase() *dagger.Container {
 		WithMountedCache("/var/cache/apt", aptCache, dagger.ContainerWithMountedCacheOpts{Sharing: dagger.CacheSharingModePrivate}).
 		WithMountedCache("/var/lib/apt/lists", aptLists, dagger.ContainerWithMountedCacheOpts{Sharing: dagger.CacheSharingModePrivate}).
 		WithExec([]string{"apt-get", "update"}).
-		WithExec([]string{"apt-get", "install", "-y", "--no-install-recommends", "ca-certificates", "git", "curl"}).
+		WithExec([]string{"apt-get", "install", "-y", "--no-install-recommends", "ca-certificates", "git", "curl", "python3"}).
 		WithExec([]string{"sh", "-c", "curl -fsSL https://github.com/bufbuild/buf/releases/download/v1.71.0/buf-$(uname -s)-$(uname -m) -o /usr/local/bin/buf && chmod +x /usr/local/bin/buf"}).
 		WithExec([]string{"go", "install", "golang.org/x/vuln/cmd/govulncheck@latest"}).
 		WithExec([]string{"go", "install", "github.com/securego/gosec/v2/cmd/gosec@latest"})
 }
 
-// Lint runs buf, go vet, and gofmt checks.
+// Lint runs code, proto, and static-site design checks.
 func (m *Xoscal) Lint(source *dagger.Directory) *dagger.Container {
 	c := m.toolBase().
 		WithDirectory("/src", source).
@@ -111,6 +111,7 @@ func (m *Xoscal) Lint(source *dagger.Directory) *dagger.Container {
 		WithExec([]string{"buf", "lint"})
 	c = c.WithExec([]string{"go", "vet", "./..."})
 	c = c.WithExec([]string{"sh", "-c", "gofmt -d . | tee /tmp/gofmt.diff; test -s /tmp/gofmt.diff && exit 1 || true"})
+	c = c.WithExec([]string{"python3", "scripts/design-lint.py"})
 	return c.WithExec([]string{"sh", "-c", "echo 'lint-ok' > /tmp/lint.ok"})
 }
 
@@ -212,7 +213,7 @@ func (m *Xoscal) OscalSchemaValidation(source *dagger.Directory, frameworks *dag
 func (m *Xoscal) OscalConstraintValidation(source *dagger.Directory, frameworks *dagger.Directory) *dagger.Container {
 	const oscalCLIVersion = "1.0.3"
 	return m.base(source).
-		WithExec([]string{"apt-get", "install", "-y", "--no-install-recommends", "openjdk-17-jre-headless", "unzip"}).
+		WithExec([]string{"sh", "-c", "apt-get update && apt-get install -y --no-install-recommends openjdk-17-jre-headless unzip"}).
 		WithExec([]string{"sh", "-c",
 			fmt.Sprintf(
 				"curl -fsSL -o /tmp/oscal-cli.zip "+
@@ -389,7 +390,8 @@ func (m *Xoscal) Site(source *dagger.Directory,
 		WithExec([]string{"sh", "-c",
 			"sha=$(git -C /src rev-parse --short HEAD 2>/dev/null || echo dev); " +
 				"for f in /out/*.html; do " +
-				"sed -i \"s/\\(ds3\\.css\\)\\([\\\"']\\)/\\1?v=$sha\\2/g; " +
+				"sed -i \"s/\\(styles\\.css\\)\\([\\\"']\\)/\\1?v=$sha\\2/g; " +
+				"s/\\(ds3\\.css\\)\\([\\\"']\\)/\\1?v=$sha\\2/g; " +
 				"s/\\(scalar\\.js\\)\\([\\\"']\\)/\\1?v=$sha\\2/g\" \"$f\"; " +
 				"done"}).
 		Directory("/out")

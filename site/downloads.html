@@ -1,48 +1,87 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8">
+<!doctype html>
+<html lang="en" data-theme="ledger">
+<head>
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>xOSCAL — Downloads</title><link rel="stylesheet" href="ds3.css"></head>
-<body><header><h1>Downloads</h1>
-<nav><a href="portal.html">Portal</a><a href="docs.html">API Docs</a>
-<a href="transparency.html">Transparency</a><a href="sbom-validation.html">SBOM Validation</a><a href="index.html">Home</a></nav></header>
-<main>
-<h2>Release — Binaries &amp; Container</h2>
-<p>Release artifacts published via goreleaser with SLSA L3 provenance and cosign-signed container image.
-All archives include per-archive SBOMs. <strong>These are signed and downloadable.</strong></p>
-<div id="release"></div>
-
-<h2>SDK Clients</h2><div id="sdks"></div>
-<h2>OSCAL Frameworks</h2><div id="frameworks"></div>
-</main>
+<title>xOSCAL — Downloads</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="ck-skip" href="#main">skip to main content</a>
+<div class="ck-shell ck-shell--document">
+  <header class="ck-shell__header">
+    <a class="ck-site-brand" href="index.html" aria-label="xOSCAL home">XOSCAL</a>
+    <nav class="ck-site-nav" aria-label="Primary">
+      <a href="portal.html">Portal</a><a href="docs.html">API Docs</a>
+      <a href="transparency.html">Transparency</a><a href="downloads.html" aria-current="page">Downloads</a>
+      <a href="sbom-validation.html">SBOM Validation</a><a href="index.html">Home</a>
+    </nav>
+  </header>
+  <main id="main" class="ck-shell__main">
+    <div class="ck-measure ck-stack">
+      <div>
+        <p class="ck-label ck-page-kicker">artifact exchange</p>
+        <h1 class="ck-page-title">Downloads</h1>
+      </div>
+      <p class="ck-site-note">The release manifest is build-generated. This page renders observed names, paths, sizes, and digests; signature state is not inferred from a download link.</p>
+      <section aria-labelledby="release-heading" class="ck-stack ck-stack--tight">
+        <h2 id="release-heading">Release — binaries and container</h2>
+        <div id="release" class="ck-data-grid" aria-live="polite"><p class="ck-loading">Loading release manifest</p></div>
+      </section>
+      <section aria-labelledby="sdk-heading" class="ck-stack ck-stack--tight">
+        <h2 id="sdk-heading">SDK clients</h2><div id="sdks" class="ck-data-grid" aria-live="polite"><p class="ck-loading">Loading SDK index</p></div>
+      </section>
+      <section aria-labelledby="framework-heading" class="ck-stack ck-stack--tight">
+        <h2 id="framework-heading">OSCAL frameworks</h2><div id="frameworks" class="ck-data-grid" aria-live="polite"><p class="ck-loading">Loading framework index</p></div>
+      </section>
+    </div>
+  </main>
+  <aside class="ck-shell__margin" aria-label="Evidence Margin">
+    <div class="ck-stack ck-stack--tight">
+      <div class="ck-margin__head"><h2>Evidence Margin</h2></div>
+      <div class="ck-receipt"><span class="ck-receipt__rule"></span><div><div class="ck-receipt__event">release manifest fetched</div><div class="ck-receipt__detail">⊢ observed — release-assets.json</div></div></div>
+      <div class="ck-receipt"><span class="ck-receipt__rule"></span><div><div class="ck-receipt__event">digest projection</div><div class="ck-receipt__detail">digest shown only when supplied</div></div></div>
+      <span class="ck-chip ck-chip--observed">⊢ observed</span>
+    </div>
+  </aside>
+  <footer class="ck-shell__footer ck-authority ck-authority--internal" aria-label="Authority Footer">
+    <span class="ck-authority__zone ck-authority__zone--start"><span class="ck-authority__k">boundary</span><span class="ck-authority__v">local / public preview</span></span>
+    <span class="ck-authority__invariant">mode changes deployment, not governance semantics</span>
+    <span class="ck-authority__zone ck-authority__zone--end"><span class="ck-authority__k">handling</span><span class="ck-authority__v">internal</span></span>
+  </footer>
+</div>
 <script>
-// Fallback data (used if release-assets.json fetch fails)
-const FALLBACK_URL = "https://github.com/ckodex-labs/ckodex-xoscal/releases/download/v0.1.0";
-const FALLBACK = [
-  {name:"ckodex-xoscal_0.1.0_Linux_x86_64.tar.gz", url:FALLBACK_URL+"/ckodex-xoscal_0.1.0_Linux_x86_64.tar.gz", size:0, digest:""},
-  {name:"ckodex-xoscal_0.1.0_Linux_arm64.tar.gz", url:FALLBACK_URL+"/ckodex-xoscal_0.1.0_Linux_arm64.tar.gz", size:0, digest:""},
-  {name:"ckodex-xoscal_0.1.0_Darwin_x86_64.tar.gz", url:FALLBACK_URL+"/ckodex-xoscal_0.1.0_Darwin_x86_64.tar.gz", size:0, digest:""},
-  {name:"ckodex-xoscal_0.1.0_Darwin_arm64.tar.gz", url:FALLBACK_URL+"/ckodex-xoscal_0.1.0_Darwin_arm64.tar.gz", size:0, digest:""},
-  {name:"checksums.txt", url:FALLBACK_URL+"/checksums.txt", size:0, digest:""},
-  {name:"provenance.intoto.jsonl", url:FALLBACK_URL+"/provenance.intoto.jsonl", size:0, digest:""},
-  {name:"sbom-assessment-results.json", url:FALLBACK_URL+"/sbom-assessment-results.json", size:0, digest:""}
-];
-function fmtSize(b){if(!b)return"";if(b<1024)return b+" B";if(b<1048576)return(b/1024).toFixed(1)+" KB";return(b/1048576).toFixed(1)+" MB"}
-const relRow = x => `<div class="ck-quiet"><a href="${x.url}" rel="noopener">${x.name}</a>
-  <div class="ck-desc">${fmtSize(x.size)} · ${x.digest || "see checksums.txt"}</div></div>`;
-
-// Try to fetch release-assets.json (generated at build time by Dagger).
-// Falls back to hardcoded data if the fetch fails.
-fetch("./release-assets.json").then(r=>r.ok?r.json():Promise.reject()).then(assets=>{
-  // Add container image (not a GitHub release asset)
-  assets.push({name:"ghcr.io/ckodex-labs/ckodex-xoscal (latest)", url:"https://github.com/ckodex-labs/ckodex-xoscal/pkgs/container/ckodex-xoscal", size:0, digest:"cosign keyless (OIDC)"});
+const escapeHTML = value => String(value ?? "").replace(/[&<>\"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;", "'":"&#39;"}[c]));
+const digestView = value => {
+  const digest = String(value || "");
+  if (!digest) return '<span class="ck-inline-status ck-inline-status--tone">○ digest not supplied</span>';
+  if (!/^sha256:[0-9a-f]{16,}$/i.test(digest)) return `<span class="ck-hash ck-hash--unprefixed">${escapeHTML(digest)}</span>`;
+  return `<button type="button" class="ck-hash" data-digest="${escapeHTML(digest)}" title="Copy digest">${escapeHTML(digest)}</button>`;
+};
+const fmtSize = bytes => {
+  const b = Number(bytes || 0);
+  if (!b) return "size unavailable";
+  if (b < 1024) return `${b} B`;
+  if (b < 1048576) return `${(b / 1024).toFixed(1)} KB`;
+  return `${(b / 1048576).toFixed(1)} MB`;
+};
+const relRow = item => `<div class="ck-quiet"><a href="${escapeHTML(item.url || item.path || "")}" rel="noopener">${escapeHTML(item.name)}</a><div class="ck-caption">${fmtSize(item.size)} — ${digestView(item.digest)}</div></div>`;
+const indexRow = item => `<div class="ck-quiet"><a href="${escapeHTML(item.path || "")}">${escapeHTML(item.name)}</a><div class="ck-caption">${digestView(item.digest)}</div></div>`;
+fetch("./release-assets.json").then(response => response.ok ? response.json() : Promise.reject()).then(assets => {
+  assets.push({name:"ghcr.io/ckodex-labs/ckodex-xoscal", url:"https://github.com/ckodex-labs/ckodex-xoscal/pkgs/container/ckodex-xoscal", size:0, digest:""});
   document.getElementById("release").innerHTML = assets.map(relRow).join("");
-}).catch(()=>{
-  document.getElementById("release").innerHTML = FALLBACK.map(relRow).join("");
+}).catch(() => {
+  document.getElementById("release").innerHTML = '<div class="ck-quiet"><span class="ck-inline-status ck-inline-status--tone">○ manifest unavailable</span><p class="ck-caption">No fallback release is displayed because an absent manifest cannot establish artifact identity.</p></div>';
 });
-
-fetch("./downloads.json").then(r=>r.json()).then(d=>{
-  const row = x => `<div class="ck-quiet"><a href="${x.path}">${x.name}</a>
-    <div class="ck-hash">${x.digest}</div></div>`;
-  document.getElementById("sdks").innerHTML = d.sdks.map(row).join("");
-  document.getElementById("frameworks").innerHTML = d.frameworks.map(row).join("");
+fetch("./downloads.json").then(response => response.json()).then(data => {
+  document.getElementById("sdks").innerHTML = (data.sdks || []).map(indexRow).join("") || '<p class="ck-caption">No SDK entries observed.</p>';
+  document.getElementById("frameworks").innerHTML = (data.frameworks || []).map(indexRow).join("") || '<p class="ck-caption">No framework entries observed.</p>';
 });
-</script></body></html>
+document.addEventListener("click", event => {
+  const button = event.target.closest("[data-digest]");
+  if (!button || !navigator.clipboard) return;
+  navigator.clipboard.writeText(button.dataset.digest).then(() => { button.dataset.done = "true"; button.textContent = "copied"; });
+});
+</script>
+</body>
+</html>
