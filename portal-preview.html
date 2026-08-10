@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>XOSCAL — Governed Assurance Room (Sample)</title>
 <link rel="stylesheet" href="site/styles.css">
+<link rel="icon" href="site/assets/logos/mark-a2-favicon.svg" type="image/svg+xml">
 <style>
   /* ════════════════════════════════════════════════════════════════
      XOSCAL — DS-3 Evidence Editorial
@@ -13,7 +14,7 @@
      ════════════════════════════════════════════════════════════════ */
   :root{
     --paper:#F6F1E8; --ink:#211B14; --tone:#5A5048;
-    --rust:#A04A26; --proof:#6D28D9; --alarm:#B91C1C;
+    --rust:#B4532A; --proof:#6D28D9; --alarm:#B91C1C;
     --surface:#fff; --hairline:#D9D2C4; --rule:#E8E1D2;
     --serif:"Instrument Serif",Georgia,serif;
     --sans:"Geist",system-ui,-apple-system,sans-serif;
@@ -312,8 +313,8 @@
     cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:5px;
     transition:background .12s,border-color .12s,color .12s}
   .act:hover{background:var(--paper);border-color:var(--ink)}
-  .act.primary{background:var(--ink);color:var(--paper);border-color:var(--ink)}
-  .act.primary:hover{background:var(--rust);border-color:var(--rust);color:var(--paper)}
+  .act.primary{background:var(--rust);color:var(--paper);border-color:var(--rust)}
+  .act.primary:hover{filter:brightness(1.07);background:var(--rust);border-color:var(--rust);color:var(--paper)}
   .act.export{color:var(--tone);border-style:dashed}
   .act.export:hover{color:var(--ink);border-style:solid;border-color:var(--ink)}
   .act .glyph{font-size:13px;line-height:1;flex:none}
@@ -568,20 +569,23 @@
 <a class="ck-skip" href="#main">skip to main content</a>
 
 <header class="top">
-  <div class="wordmark"><span class="x">X</span>OSCAL</div>
+  <a class="wordmark" href="site/index.html" aria-label="xOSCAL home">
+    <img class="wordmark__mark" src="site/assets/logos/mark-a2-favicon.svg" alt="" width="24" height="24">
+    <span aria-hidden="true"><span class="x">X</span>OSCAL</span>
+  </a>
   <div class="top-controls">
     <nav class="surfaces" id="nav">
-      <button data-view="room" class="active">Assurance Room</button>
-      <button data-view="exchange">Exchange</button>
-      <button data-view="downloads">Downloads</button>
-      <button data-view="cartography">Cartography</button>
-      <button data-view="personas">Personas</button>
-      <button data-view="pipeline">Pipeline</button>
+      <button data-view="room" class="active" aria-controls="view-room" aria-pressed="true">Assurance Room</button>
+      <button data-view="exchange" aria-controls="view-exchange" aria-pressed="false">Exchange</button>
+      <button data-view="downloads" aria-controls="view-downloads" aria-pressed="false">Downloads</button>
+      <button data-view="cartography" aria-controls="view-cartography" aria-pressed="false">Cartography</button>
+      <button data-view="personas" aria-controls="view-personas" aria-pressed="false">Personas</button>
+      <button data-view="pipeline" aria-controls="view-pipeline" aria-pressed="false">Pipeline</button>
     </nav>
     <div class="toggle" title="Theme">
-      <button data-theme="ledger" class="on">Ledger</button>
-      <button data-theme="vault">Vault</button>
-      <button data-theme="hc">HC</button>
+      <button data-theme="ledger" class="on" aria-pressed="true">Ledger</button>
+      <button data-theme="vault" aria-pressed="false">Vault</button>
+      <button data-theme="hc" aria-pressed="false">HC</button>
     </div>
   </div>
 </header>
@@ -2070,7 +2074,11 @@ const VIEW_LABELS = {
 };
 function switchView(name, opts){
   opts = opts || {};
-  document.querySelectorAll('#nav button').forEach(x=>x.classList.remove('active'));
+  document.querySelectorAll('#nav button').forEach(x=>{
+    const selected = x.dataset.view === name;
+    x.classList.toggle('active', selected);
+    x.setAttribute('aria-pressed', String(selected));
+  });
   const btn = document.querySelector(`#nav button[data-view="${name}"]`);
   if(btn) btn.classList.add('active');
   document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));
@@ -2114,6 +2122,7 @@ document.addEventListener('keydown',e=>{
     document.documentElement.setAttribute('data-theme',next);
     document.querySelectorAll('.toggle[title="Theme"] button').forEach(x=>{
       x.classList.toggle('on', x.dataset.theme===next);
+      x.setAttribute('aria-pressed', String(x.dataset.theme===next));
     });
   }
 });
@@ -2121,17 +2130,28 @@ document.addEventListener('keydown',e=>{
 // ── Theme toggle ──
 document.querySelectorAll('.toggle[title="Theme"] button').forEach(b=>{
   b.addEventListener('click',()=>{
-    document.querySelectorAll('.toggle[title="Theme"] button').forEach(x=>x.classList.remove('on'));
-    b.classList.add('on');
+    document.querySelectorAll('.toggle[title="Theme"] button').forEach(x=>{
+      const selected = x === b;
+      x.classList.toggle('on', selected);
+      x.setAttribute('aria-pressed', String(selected));
+    });
     document.documentElement.setAttribute('data-theme', b.dataset.theme);
   });
 });
 
 // ── Claim selection ──
 document.querySelectorAll('.claims .claim').forEach(c=>{
-  c.addEventListener('click',()=>{
+  const selectClaim = ()=>{
     document.querySelectorAll('.claims .claim.sel').forEach(s=>s.classList.remove('sel'));
+    document.querySelectorAll('.claims .claim').forEach(s=>s.setAttribute('aria-pressed', String(s === c)));
     c.classList.add('sel');
+  };
+  c.setAttribute('role','button');
+  c.setAttribute('tabindex','0');
+  c.setAttribute('aria-pressed', String(c.classList.contains('sel')));
+  c.addEventListener('click',selectClaim);
+  c.addEventListener('keydown',event=>{
+    if(event.key==='Enter'||event.key===' '){event.preventDefault();selectClaim();}
   });
 });
 
@@ -2145,13 +2165,20 @@ const SURFACE_MAP = [
   {match:/Pipeline|Dagger|CI|workflow|Release|Pages|Reconcile|gate|evidence producer/i, view:'pipeline'},
 ];
 document.querySelectorAll('.journey .jsurface').forEach(s=>{
+  s.setAttribute('role','button');
+  s.setAttribute('tabindex','0');
+  s.setAttribute('aria-label', `Open ${s.textContent.trim()}`);
   s.style.cursor = 'pointer';
   s.title = 'click to open surface';
-  s.addEventListener('click',()=>{
+  const openSurface = ()=>{
     const txt = s.textContent;
     for(const m of SURFACE_MAP){
       if(m.match.test(txt)){ switchView(m.view); return; }
     }
+  };
+  s.addEventListener('click',openSurface);
+  s.addEventListener('keydown',event=>{
+    if(event.key==='Enter'||event.key===' '){event.preventDefault();openSurface();}
   });
 });
 

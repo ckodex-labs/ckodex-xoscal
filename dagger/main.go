@@ -103,7 +103,7 @@ func (m *Xoscal) toolBase() *dagger.Container {
 		WithExec([]string{"go", "install", "github.com/securego/gosec/v2/cmd/gosec@latest"})
 }
 
-// Lint runs code, proto, and static-site design checks.
+// Lint runs code, proto, design, and accessibility checks.
 func (m *Xoscal) Lint(source *dagger.Directory) *dagger.Container {
 	c := m.toolBase().
 		WithDirectory("/src", source).
@@ -112,6 +112,7 @@ func (m *Xoscal) Lint(source *dagger.Directory) *dagger.Container {
 	c = c.WithExec([]string{"go", "vet", "./..."})
 	c = c.WithExec([]string{"sh", "-c", "gofmt -d . | tee /tmp/gofmt.diff; test -s /tmp/gofmt.diff && exit 1 || true"})
 	c = c.WithExec([]string{"python3", "scripts/design-lint.py"})
+	c = c.WithExec([]string{"python3", "scripts/a11y-lint.py"})
 	return c.WithExec([]string{"sh", "-c", "echo 'lint-ok' > /tmp/lint.ok"})
 }
 

@@ -1488,14 +1488,31 @@ body {
   display: inline-flex;
   align-items: baseline;
   gap: var(--ck-sp-2);
+  min-height: 44px;
+  min-width: 44px;
+  align-items: center;
+  padding: 6px 8px;
+  border: 1px solid transparent;
   border-bottom: 0;
   color: var(--ck-fg-1);
   font-family: var(--ck-ff-mono);
   font-size: var(--ck-fs-code);
   font-weight: 700;
   letter-spacing: .12em;
+  text-decoration: none;
 }
 .ck-site-brand:hover { color: var(--ck-accent); }
+.ck-site-brand:focus-visible {
+  outline: none;
+  border-color: var(--ck-accent);
+  box-shadow: var(--ck-ring-focus);
+}
+.ck-site-brand__mark {
+  display: block;
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
+}
 .ck-site-nav {
   display: flex;
   align-items: center;
@@ -1504,6 +1521,12 @@ body {
   font-family: var(--ck-ff-mono);
   font-size: var(--ck-fs-micro);
   font-variant-ligatures: none;
+}
+.ck-site-nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 8px 2px;
 }
 .ck-site-nav a[aria-current="page"] {
   border-bottom: 2px solid var(--ck-fg-1);
@@ -1544,7 +1567,25 @@ body {
 .ck-portal-evidence { display: grid; gap: var(--ck-sp-3); margin-top: var(--ck-sp-6); }
 .ck-portal-evidence .ck-quiet { padding: var(--ck-sp-3); }
 .ck-portal-evidence .ck-label { display: block; margin-bottom: var(--ck-sp-1); }
-.ck-action-unwired { color: var(--ck-fg-3) !important; border-color: var(--ck-hairline) !important; border-bottom-style: dashed !important; cursor: not-allowed; }
+.ck-action-unwired {
+  background: var(--surface, var(--ck-bg-1)) !important;
+  color: var(--tone, var(--ck-fg-3)) !important;
+  border-color: var(--hairline, var(--ck-hairline)) !important;
+  border-style: dashed !important;
+  cursor: not-allowed;
+}
+.card-filter button, .persona-filter button, .pipe-filter button { min-height: 44px; }
+.claims .claim { min-height: 44px; }
+.claims .claim:focus-visible, .journey li .jsurface:focus-visible {
+  outline: none;
+  box-shadow: var(--ck-ring-focus);
+}
+.journey li .jsurface {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 4px 0;
+}
 .ck-shell__main > h1, .ck-shell__main > h2, .ck-shell__main > h3 { color: var(--ck-fg-1); }
 .ck-shell__main p { max-width: 78ch; }
 .ck-skip { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
@@ -1568,14 +1609,33 @@ header.top {
   background: var(--ck-bg-0) !important;
   border-bottom: 1px solid var(--ck-hairline) !important;
 }
-.wordmark { color: var(--ck-fg-1) !important; font-family: var(--ck-ff-mono) !important; font-weight: 700; letter-spacing: .12em !important; }
+.wordmark {
+  display: inline-flex !important;
+  align-items: center;
+  gap: var(--ck-sp-2);
+  min-height: 44px;
+  min-width: 44px;
+  padding: 6px 8px;
+  border: 1px solid transparent;
+  color: var(--ck-fg-1) !important;
+  font-family: var(--ck-ff-mono) !important;
+  font-weight: 700;
+  letter-spacing: .12em !important;
+  text-decoration: none;
+}
+.wordmark:focus-visible {
+  outline: none;
+  border-color: var(--ck-accent);
+  box-shadow: var(--ck-ring-focus);
+}
+.wordmark__mark { display: block; width: 24px; height: 24px; flex: 0 0 24px; }
 .wordmark .x { color: var(--ck-accent) !important; }
 .top-controls { gap: var(--ck-sp-5) !important; }
 nav.surfaces { gap: var(--ck-sp-4) !important; }
-nav.surfaces button { color: var(--ck-fg-1) !important; font-family: var(--ck-ff-mono) !important; font-size: var(--ck-fs-micro) !important; }
+nav.surfaces button { min-height: 44px !important; padding: 8px 4px !important; color: var(--ck-fg-1) !important; font-family: var(--ck-ff-mono) !important; font-size: var(--ck-fs-micro) !important; }
 nav.surfaces button.active, nav.surfaces button:hover { color: var(--ck-accent) !important; border-bottom-color: var(--ck-accent) !important; }
 .toggle { border-color: var(--ck-hairline) !important; }
-.toggle button { background: var(--ck-bg-1) !important; color: var(--ck-fg-3) !important; font-family: var(--ck-ff-mono) !important; }
+.toggle button { min-width: 44px !important; min-height: 44px !important; padding: 8px 10px !important; background: var(--ck-bg-1) !important; color: var(--ck-fg-3) !important; font-family: var(--ck-ff-mono) !important; }
 .toggle button.on { background: var(--ck-fg-1) !important; color: var(--ck-bg-0) !important; }
 .shell.ck-portal-main {
   display: grid !important;
