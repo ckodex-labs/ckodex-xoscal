@@ -55,7 +55,6 @@ jobs:
         uses: dagger/dagger-for-github@057a749131c864e4a719e6773baf0d1447ef998f # v7
         with:
           version: "v0.21.7"
-          install-only: true
 
       - name: Validate binary SBOM with sbom-tools (oscal-json output)
         run: |
@@ -230,7 +229,6 @@ jobs:
         uses: dagger/dagger-for-github@057a749131c864e4a719e6773baf0d1447ef998f # v7
         with:
           version: "v0.21.7"
-          install-only: true
 
       - name: Build SDK bundles
         run: |
