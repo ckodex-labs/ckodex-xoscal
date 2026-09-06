@@ -5,7 +5,9 @@ metadata:
   labels:
     app: xoscal-server
 spec:
-  replicas: 3
+  # SQLite uses a ReadWriteOnce volume; beta runs one writer until an external
+  # transactional database is configured.
+  replicas: 1
   selector:
     matchLabels:
       app: xoscal-server
@@ -47,6 +49,12 @@ spec:
               mountPath: /data
             - name: config
               mountPath: /etc/xoscal
+            - name: tls
+              mountPath: /etc/xoscal/tls
+              readOnly: true
+            - name: auth
+              mountPath: /etc/xoscal/auth
+              readOnly: true
           securityContext:
             allowPrivilegeEscalation: false
             readOnlyRootFilesystem: true
@@ -83,6 +91,12 @@ spec:
         - name: config
           configMap:
             name: xoscal-server-config
+        - name: tls
+          secret:
+            secretName: xoscal-server-tls
+        - name: auth
+          secret:
+            secretName: xoscal-server-auth
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim

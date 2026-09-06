@@ -1,9 +1,12 @@
-.PHONY: all build build-release test test-race coverage proto lint design-lint a11y-lint site-smoke site-verify fmt security docker clean tidy dagger-dev dagger-all dagger-test dagger-lint dagger-security dagger-image site site-serve
+.PHONY: all build build-release test test-race coverage proto lint design-lint a11y-lint k8s-beta-check site-smoke site-verify fmt security docker clean tidy oscal-check oscal-update dagger-dev dagger-all dagger-test dagger-lint dagger-security dagger-image site site-serve
 
 BINARY := xoscal-server
 IMAGE  := xoscal-server
 VERSION := $(shell git describe --tags --always 2>/dev/null || echo dev)
 LDFLAGS := -ldflags="-s -w -X main.version=$(VERSION)"
+GO_TOOLCHAIN := go1.25.13
+GOVULNCHECK_VERSION := v1.7.0
+GOSEC_VERSION := v2.28.0
 
 all: build
 
@@ -39,6 +42,9 @@ design-lint:
 a11y-lint:
 	python3 scripts/a11y-lint.py
 
+k8s-beta-check:
+	go test ./server/internal/k8scontract
+
 site-smoke:
 	python3 scripts/site-smoke.py --root site
 
@@ -46,13 +52,13 @@ fmt:
 	gofmt -w .
 
 security:
-	which govulncheck >/dev/null 2>&1 || go install golang.org/x/vuln/cmd/govulncheck@latest
-	govulncheck ./...
-	which gosec >/dev/null 2>&1 || go install github.com/securego/gosec/v2/cmd/gosec@latest
+	GOTOOLCHAIN=$(GO_TOOLCHAIN) go install golang.org/x/vuln/cmd/govulncheck@$(GOVULNCHECK_VERSION)
+	GOTOOLCHAIN=$(GO_TOOLCHAIN) govulncheck ./...
+	GOTOOLCHAIN=$(GO_TOOLCHAIN) go install github.com/securego/gosec/v2/cmd/gosec@$(GOSEC_VERSION)
 	# govulncheck is the blocking dependency gate; gosec emits the SARIF report
 	# while excluding generated protobufs and tolerating analyzer-only failures.
 	# Limit analyzer concurrency so the report is stable in constrained CI runners.
-	gosec -concurrency=2 -fmt sarif -out gosec-results.sarif -exclude-dir=proto -no-fail ./server/...
+	GOTOOLCHAIN=$(GO_TOOLCHAIN) gosec -concurrency=2 -fmt sarif -out gosec-results.sarif -exclude-dir=proto -no-fail ./server/...
 
 docker:
 	docker build -t $(IMAGE):$(VERSION) .
@@ -62,6 +68,13 @@ clean:
 
 tidy:
 	go mod tidy
+
+oscal-check:
+	./scripts/reconcile/poll-feeds.sh oscal
+	./scripts/reconcile/update-oscal.sh --version latest --check
+
+oscal-update:
+	./scripts/reconcile/update-oscal.sh --version "$${OSCAL_VERSION:-latest}"
 
 # --- Dagger pipeline targets ---
 

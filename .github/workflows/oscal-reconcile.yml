@@ -1,113 +1,163 @@
 name: OSCAL Reconcile
 
-# Scheduled RSS-driven drift detection between upstream OSCAL / framework
-# sources and the hand-authored protos. Detection is automated; the actual
-# proto reconciliation is gated behind a human-reviewed draft PR (DAL 3,
-# never auto-merged) per CKODEX governance.
-
+# Polls the official release feed, verifies release-asset digests, and opens a
+# reviewable draft PR. The deterministic update logic lives in the repository
+# script; this workflow only schedules, gates, and delivers its output.
 on:
   schedule:
-    - cron: "0 6 * * 1" # weekly, Monday 06:00 UTC
-  workflow_dispatch: {} # manual trigger for on-demand checks
+    - cron: "17 */6 * * *" # every six hours, offset from the top of the hour
+  workflow_dispatch: {}
 
 permissions:
   contents: write
   pull-requests: write
 
+concurrency:
+  group: oscal-reconcile
+  cancel-in-progress: false
+
 jobs:
-  detect-drift:
+  reconcile:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          fetch-depth: 0
 
-      - name: Install yq (mikefarah)
+      - name: Set up Go
+        uses: actions/setup-go@40f1582b2485089dde7abd97c1529aa768e1baff # v5
+        with:
+          go-version: "1.25.13"
+          cache: true
+
+      - name: Install pinned yq
         run: |
-          sudo curl -fsSL -o /usr/local/bin/yq \
-            https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64
-          sudo chmod +x /usr/local/bin/yq
-          yq --version
+          go install github.com/mikefarah/yq/v4@v4.47.2
+          echo "$(go env GOPATH)/bin" >> "$GITHUB_PATH"
 
-      - name: Poll feeds for drift
+      - name: Poll OSCAL release feed
         id: poll
         run: |
           set +e
-          report=$(./scripts/reconcile/poll-feeds.sh)
+          ./scripts/reconcile/poll-feeds.sh oscal > release-poll.json
           code=$?
           set -e
-          printf '%s\n' "$report" > reconcile-report.json
+          cat release-poll.json
           echo "exit_code=$code" >> "$GITHUB_OUTPUT"
-          echo "--- drift report ---"
-          cat reconcile-report.json
-          # 0 = in sync, 3 = drift, anything else = operational failure
+          echo "latest=$(jq -r '.sources[0].latest' release-poll.json)" >> "$GITHUB_OUTPUT"
           if [ "$code" -ne 0 ] && [ "$code" -ne 3 ]; then
-            echo "poller failed (exit $code)" >&2
+            echo "OSCAL release poll failed (exit $code)" >&2
             exit "$code"
           fi
 
-      - name: Set up Go
-        uses: actions/setup-go@v5
-        with:
-          go-version: "1.25"
-
-      - name: Verify OSCAL spec lock-step
+      - name: Verify pinned release assets are unchanged
         env:
-          GH_TOKEN: ${{ github.token }}
           GITHUB_TOKEN: ${{ github.token }}
         run: |
           go run ./server/cmd/xoscal-spec-registry -mode verify \
-            -registry data/oscal/spec-registry.yaml > spec-verify.json || code=$?
+            -registry data/oscal/spec-registry.yaml > spec-verify.json
           cat spec-verify.json
-          # exit 3 = per-model schema drift; surface it but let the existing
-          # drift handling open the PR (do not hard-fail the scheduled run).
-          if [ "${code:-0}" -ne 0 ] && [ "${code:-0}" -ne 3 ]; then echo "spec verify operational error (exit ${code:-0})" >&2; exit 1; fi
 
-      - name: Summarize
-        run: |
-          {
-            echo "## OSCAL Reconcile — drift report"
-            echo '```json'
-            cat reconcile-report.json
-            echo '```'
-          } >> "$GITHUB_STEP_SUMMARY"
-
-      - name: Open reconcile draft PR on drift
+      - name: Check for an existing update PR
         if: steps.poll.outputs.exit_code == '3'
+        id: existing
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          latest="${{ steps.poll.outputs.latest }}"
+          count=$(gh pr list --state open --search "OSCAL v${latest} in:title" --json number --jq 'length')
+          if [ "$count" -gt 0 ]; then
+            echo "found=true" >> "$GITHUB_OUTPUT"
+            echo "An OSCAL v${latest} update PR is already open."
+          else
+            echo "found=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Verify and materialize the release
+        if: steps.poll.outputs.exit_code == '3' && steps.existing.outputs.found != 'true'
+        id: update
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          set +e
+          ./scripts/reconcile/update-oscal.sh --version "${{ steps.poll.outputs.latest }}"
+          code=$?
+          set -e
+          echo "exit_code=$code" >> "$GITHUB_OUTPUT"
+          if [ "$code" -ne 0 ] && [ "$code" -ne 4 ]; then
+            echo "OSCAL updater failed (exit $code)" >&2
+            exit "$code"
+          fi
+
+      - name: Open gated draft PR
+        if: steps.poll.outputs.exit_code == '3' && steps.existing.outputs.found != 'true'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
-          # Branch keyed to the drift fingerprint so re-runs reuse, not duplicate.
-          fp=$(jq -r '[.sources[] | select(.status=="drift") | "\(.source):\(.latest)"] | join("_")' reconcile-report.json)
-          branch="oscal-reconcile/${fp//[^a-zA-Z0-9._-]/-}"
+          latest="${{ steps.poll.outputs.latest }}"
+          update_code="${{ steps.update.outputs.exit_code }}"
+          branch="ckodex/oscal-v${latest}-${GITHUB_RUN_ID}"
 
-          if gh pr list --head "$branch" --state open --json number | jq -e 'length > 0' >/dev/null; then
-            echo "Reconcile PR already open for $branch — skipping."
-            exit 0
-          fi
-
-          git config user.name  "oscal-reconcile-bot"
+          git config user.name "oscal-reconcile-bot"
           git config user.email "oscal-reconcile-bot@users.noreply.github.com"
           git checkout -b "$branch"
+          # The updater starts from a clean checkout, so tracked modifications
+          # are exactly its deterministic version-reference and lock updates.
+          git add -u
           git add reconcile-report.json
-          git commit -m "chore(oscal): detected upstream drift ($fp)"
+          if [ -e "server/internal/schemavalidate/schemas/v${latest}" ]; then
+            git add "server/internal/schemavalidate/schemas/v${latest}"
+          fi
+
+          if git diff --cached --quiet; then
+            echo "No update files were produced; refusing an empty PR." >&2
+            exit 1
+          fi
+
+          git commit -m "chore(oscal): reconcile v${latest}"
           git push -u origin "$branch"
 
-          # YAML strips the block's common indent, so heredoc body lands at
-          # column 0 — markdown renders as checkboxes, not an indented code block.
-          cat > pr-body.md <<'BODY'
-          Automated upstream-drift detection found a delta between a tracked source
-          and `data/oscal/upstream.lock.yaml`. See `reconcile-report.json` in this PR.
+          if [ "$update_code" = "4" ]; then
+            outcome="The release changes protobuf-relevant schema shape. Automation verified the release and stopped before modifying the wire contract."
+            checklist="- [ ] Reconcile protobuf fields additively\n- [ ] Run buf lint and buf breaking\n- [ ] Regenerate affected SDKs\n- [ ] Run OSCAL conformance tests\n- [ ] Re-run the updater with --allow-structural after review"
+          else
+            outcome="The release changed constraints, vocabularies, or documentation without changing protobuf-relevant schema shape. Verified schemas, digests, version pins, and the spec registry were updated."
+            checklist="- [x] Verify official release-asset SHA-256 digests\n- [x] Verify buf lint and buf breaking\n- [x] Run OSCAL schema/conformance tests\n- [ ] Human review and merge"
+          fi
 
-          This PR is a **handoff**, not a completed reconciliation. To reconcile:
-
-          - [ ] Run `/oscal-reconcile` (oscal-schema-reconciler agent) on this branch
-          - [ ] Review proposed additive proto edits (buf-breaking must pass)
-          - [ ] Regenerate SDKs (`make proto`)
-          - [ ] Update affected downstream skills/docs listed by the agent
-          - [ ] Bump `data/oscal/upstream.lock.yaml` (parity: verified, fill sha + reconciled_at)
-          - [ ] Mark PR ready; human approves (DAL 3, no auto-merge)
-          BODY
+          {
+            echo "Automated OSCAL reconciliation for **v${latest}**."
+            echo
+            echo "$outcome"
+            echo
+            printf '%b\n' "$checklist"
+            echo
+            echo "Evidence: \`reconcile-report.json\`, \`data/oscal/spec-registry.yaml\`, and the versioned schema manifest."
+            echo
+            echo "This workflow never auto-merges."
+          } > pr-body.md
 
           gh pr create --draft --head "$branch" --base main \
-            --title "chore(oscal): reconcile upstream drift — $fp" \
+            --title "chore(oscal): reconcile OSCAL v${latest}" \
             --body-file pr-body.md
+
+      - name: Summarize
+        if: always()
+        run: |
+          {
+            echo "## OSCAL reconcile"
+            echo
+            echo "Poll exit: ${{ steps.poll.outputs.exit_code }}"
+            echo "Latest: ${{ steps.poll.outputs.latest }}"
+            echo "Updater exit: ${{ steps.update.outputs.exit_code }}"
+            if [ -f reconcile-report.json ]; then
+              echo '```json'
+              cat reconcile-report.json
+              echo '```'
+            else
+              echo '```json'
+              cat release-poll.json
+              echo '```'
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"

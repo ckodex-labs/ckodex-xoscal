@@ -14,9 +14,10 @@ data:
       enable_reflection: false
       enable_pprof: false
       shutdown_timeout: "30s"
-      tls_cert_path: ""
-      tls_key_path: ""
+      tls_cert_path: "/etc/xoscal/tls/tls.crt"
+      tls_key_path: "/etc/xoscal/tls/tls.key"
       tls_client_ca_path: ""
+      require_tls: true
     store:
       dsn: "/data/oscal.db"
       max_open_conn: 10
@@ -31,4 +32,5 @@ data:
     security:
       rate_limit_rps: 100
       rate_limit_burst: 200
-      auth_mode: "none"
+      auth_mode: "token"
+      auth_token_file: "/etc/xoscal/auth/token"

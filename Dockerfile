@@ -2,7 +2,7 @@
 ARG LANCEDB=false
 
 # Build stage
-FROM golang:1.25-bookworm AS builder
+FROM golang:1.25-bookworm@sha256:e401dae1bf814e29204a8cb7915682e1780951e609ca0dd8865ee1937f510c48 AS builder
 ARG LANCEDB
 WORKDIR /app
 
@@ -35,10 +35,13 @@ RUN if [ "$LANCEDB" = "true" ]; then \
     CGO_ENABLED=0 go build -ldflags="-s -w -X main.version=$(git describe --tags --always 2>/dev/null || echo dev)" -o /bin/xoscal-server ./server/cmd/xoscal-server; \
     fi
 
+RUN CGO_ENABLED=0 go build -ldflags="-s -w" -o /bin/xoscal-backup ./server/cmd/xoscal-backup
+
 # Runtime stage: base image includes glibc required by CGO-linked LanceDB binaries
-FROM gcr.io/distroless/base-debian12:nonroot
+FROM gcr.io/distroless/base-debian12:nonroot@sha256:b12529fbbd0bb15eea8905f69d83148679e0b4d7d434c8808100792029b1caae
 WORKDIR /data
 COPY --from=builder /bin/xoscal-server /xoscal-server
+COPY --from=builder /bin/xoscal-backup /xoscal-backup
 COPY --from=builder /app/k8s/server/configmap.yaml /etc/xoscal/config.yaml
 EXPOSE 50051 9090
 ENTRYPOINT ["/xoscal-server"]

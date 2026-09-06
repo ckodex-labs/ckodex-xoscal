@@ -50,7 +50,8 @@ func deterministicVector(text string, dim int) []float32 {
 	v := make([]float32, dim)
 	var seed uint32 = 0
 	for _, c := range text {
-		seed = seed*31 + uint32(c)
+		// Go string iteration yields valid, non-negative Unicode code points.
+		seed = seed*31 + uint32(c) // #nosec G115 -- c is bounded by unicode.MaxRune.
 	}
 	for i := 0; i < dim; i++ {
 		seed = seed*1103515245 + 12345

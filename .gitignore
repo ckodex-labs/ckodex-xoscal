@@ -20,6 +20,7 @@ go.work
 /xoscal-gateway
 /xoscal-generate
 /xoscal-validate-schema
+/xoscal-validate-constraints
 /xoscal-export-frameworks
 go.work.sum
 # Go test cache

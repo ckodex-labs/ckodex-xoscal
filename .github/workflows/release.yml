@@ -18,12 +18,12 @@ jobs:
       packages: write
       id-token: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
           fetch-depth: 0
 
       - name: Run Dagger Release (GoReleaser)
-        uses: dagger/dagger-for-github@v7
+        uses: dagger/dagger-for-github@057a749131c864e4a719e6773baf0d1447ef998f # v7
         with:
           version: "v0.21.7"
           args: release --source=. --github-token=env:GITHUB_TOKEN export --path=./dist
@@ -34,10 +34,10 @@ jobs:
         id: hashes
         run: |
           cd dist
-          echo "hashes=$(sha256sum * | base64 -w0)" >> "$GITHUB_OUTPUT"
+          echo "hashes=$(sha256sum -- * | base64 -w0)" >> "$GITHUB_OUTPUT"
 
       - name: Upload dist
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
           name: dist
           path: dist/
@@ -49,10 +49,10 @@ jobs:
       contents: write
       id-token: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
 
       - name: Setup Dagger
-        uses: dagger/dagger-for-github@v7
+        uses: dagger/dagger-for-github@057a749131c864e4a719e6773baf0d1447ef998f # v7
         with:
           version: "v0.21.7"
           install-only: true
@@ -62,23 +62,23 @@ jobs:
           dagger call sbom-validation --source=. export --path=./sbom-assessment-results.json
 
       - name: Download image SBOM
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
         with:
           name: image-sbom
           path: .
 
-      - name: Setup Rust toolchain
-        uses: dtolnay/rust-toolchain@stable
-
-      - name: Validate image SBOM with sbom-tools
+      - name: Install pinned sbom-tools
         run: |
-          # Install sbom-tools via cargo (same source as Dagger)
-          cargo install sbom-tools --git https://github.com/sbom-tool/sbom-tools --locked
+          set -eu
+          archive=/tmp/sbom-tools-linux-x86_64.tar.gz
+          curl -fsSL "https://github.com/sbom-tool/sbom-tools/releases/download/v0.2.0/sbom-tools-linux-x86_64.tar.gz" -o "$archive"
+          printf '%s  %s\n' "0f93406da9643a8ea3afe4fb56c7418fb74d29ecaa0af49b260dc4b2ff597956" "$archive" | sha256sum -c -
+          tar -xzf "$archive" -C /usr/local/bin sbom-tools
           sbom-tools validate image-sbom.cyclonedx.json --standard ntia -o oscal-json -O image-sbom-assessment-results.json || true
           test -s image-sbom-assessment-results.json
 
       - name: Upload SBOM validation results
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
           name: sbom-validation
           path: |
@@ -86,7 +86,7 @@ jobs:
             image-sbom-assessment-results.json
 
       - name: Attach to GitHub release
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@3bb12739c298aeb8a4eeaf626c5b8d85266b0e65 # v2
         with:
           files: |
             sbom-assessment-results.json
@@ -98,7 +98,7 @@ jobs:
       actions: read
       id-token: write
       contents: write
-    uses: slsa-framework/slsa-github-generator/.github/workflows/generator_generic_slsa3.yml@v2.0.0
+    uses: slsa-framework/slsa-github-generator/.github/workflows/generator_generic_slsa3.yml@5a775b367a56d5bd118a224a811bba288150a563 # v2.0.0
     with:
       base64-subjects: "${{ needs.goreleaser.outputs.hashes }}"
       upload-assets: true
@@ -110,23 +110,25 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
 
       - name: Download dist artifacts
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
         with:
           name: dist
           path: dist
 
       - name: Download provenance
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
         with:
           name: provenance.intoto.jsonl
           path: .
 
       - name: Install slsa-verifier
         run: |
+          set -eu
           curl -fsSL "https://github.com/slsa-framework/slsa-verifier/releases/download/v2.7.0/slsa-verifier-linux-amd64" -o /usr/local/bin/slsa-verifier
+          printf '%s  %s\n' "499befb675efcca9001afe6e5156891b91e71f9c07ab120a8943979f85cc82e6" /usr/local/bin/slsa-verifier | sha256sum -c -
           chmod +x /usr/local/bin/slsa-verifier
           slsa-verifier version
 
@@ -147,20 +149,20 @@ jobs:
       id-token: write
       security-events: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
 
       - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
+        uses: docker/setup-buildx-action@8d2750c68a42422c14e847fe6c8ac0403b4cbd6f # v3
 
       - name: Log in to GHCR
-        uses: docker/login-action@v3
+        uses: docker/login-action@c94ce9fb468520275223c153574b00df6fe4bcc9 # v3
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build and push multi-arch image
-        uses: docker/build-push-action@v6
+        uses: docker/build-push-action@10e90e3645eae34f1e60eeb005ba3a3d33f178e8 # v6
         with:
           context: .
           push: true
@@ -170,7 +172,7 @@ jobs:
             ghcr.io/${{ github.repository }}:latest
 
       - name: Install Cosign
-        uses: sigstore/cosign-installer@v3
+        uses: sigstore/cosign-installer@6f9f17788090df1f26f669e9d70d6ae9567deba6 # v4.1.2
 
       - name: Sign image with Cosign (keyless)
         run: |
@@ -185,23 +187,23 @@ jobs:
             ghcr.io/${{ github.repository }}:${{ github.ref_name }}
 
       - name: Scan image with Trivy
-        uses: aquasecurity/trivy-action@master
+        uses: aquasecurity/trivy-action@a9c7b0f06e461e9d4b4d1711f154ee024b8d7ab8 # v0.36.0
         with:
           image-ref: ghcr.io/${{ github.repository }}:${{ github.ref_name }}
           format: sarif
           output: trivy-results.sarif
-          exit-code: "0"
+          exit-code: "1"
           severity: CRITICAL
           ignore-unfixed: true
 
       - name: Upload Trivy SARIF
-        uses: github/codeql-action/upload-sarif@v4
+        uses: github/codeql-action/upload-sarif@988661ebb5e81487b3fb31b2185d2856c0a10679 # v4
         if: always()
         with:
           sarif_file: trivy-results.sarif
 
       - name: Generate image SBOM
-        uses: anchore/sbom-action@v0
+        uses: anchore/sbom-action@e22c389904149dbc22b58101806040fa8d37a610 # v0.24.0
         with:
           image: ghcr.io/${{ github.repository }}:${{ github.ref_name }}
           format: cyclonedx-json
@@ -210,7 +212,7 @@ jobs:
           upload-release-assets: false
 
       - name: Upload image SBOM
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
           name: image-sbom
           path: image-sbom.cyclonedx.json
@@ -222,10 +224,10 @@ jobs:
       contents: write
       id-token: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
 
       - name: Setup Dagger
-        uses: dagger/dagger-for-github@v7
+        uses: dagger/dagger-for-github@057a749131c864e4a719e6773baf0d1447ef998f # v7
         with:
           version: "v0.21.7"
           install-only: true
@@ -259,14 +261,15 @@ jobs:
             [ -f "$f" ] || continue
             echo "Validating $f..."
             if ! /tmp/validate-schema -file "$f" -kind catalog; then
-              echo "FAIL: $f does not conform to OSCAL 1.1.2 schema"
+              oscal_version=$(tr -d '[:space:]' < server/internal/oscalversion/VERSION)
+              echo "FAIL: $f does not conform to OSCAL $oscal_version schema"
               fail=1
             fi
           done
           if [ $fail -ne 0 ]; then exit 1; fi
 
       - name: Install Cosign
-        uses: sigstore/cosign-installer@v3
+        uses: sigstore/cosign-installer@6f9f17788090df1f26f669e9d70d6ae9567deba6 # v4.1.2
 
       - name: Sign each SDK zip (keyless)
         run: |
@@ -288,13 +291,13 @@ jobs:
           done
 
       - name: Upload signatures
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
           name: artifact-signatures
           path: signatures/
 
       - name: Attach SDKs + frameworks + signatures to release
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@3bb12739c298aeb8a4eeaf626c5b8d85266b0e65 # v2
         with:
           files: |
             sdks/*.zip

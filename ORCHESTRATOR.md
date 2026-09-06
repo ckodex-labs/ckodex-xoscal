@@ -2,7 +2,7 @@
 
 This file is the repository-bound execution contract for work in
 `ckodex-oscalify`. It adapts the generic orchestrator prompt to the actual
-checkout: a Go gRPC service, an OSCAL 1.1.2 artifact pipeline, a Dagger build
+checkout: a Go gRPC service, an OSCAL 1.2.3 artifact pipeline, a Dagger build
 graph, and a static GitHub Pages portal.
 
 ## 0. Runtime context
@@ -13,7 +13,7 @@ repository: ckodex-oscalify
 workspace_boundary: local checkout; preserve unrelated user changes
 artifact_of_record: git diff and committed tree
 primary_runtime: Go 1.24+ service and Dagger SDK pipeline
-data_contract: OSCAL 1.1.2 JSON schema plus Metaschema constraints
+data_contract: OSCAL 1.2.3 JSON Schema; pinned oscal-cli 1.1.2 Metaschema checks are non-blocking
 presentation_runtime: static HTML/CSS/JavaScript under site/
 portal_entrypoints:
   live_build: site/portal.html assembled by dagger call site

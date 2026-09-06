@@ -7,6 +7,11 @@ A Go gRPC server for managing OSCAL (Open Security Controls Assessment Language)
 Proto docs, supply-chain transparency, SDK clients, and OSCAL framework
 downloads are published to GitHub Pages (built by `dagger call site`).
 
+The review-only beta boundary is documented in
+[docs/BETA-RELEASE-NOTES.md](docs/BETA-RELEASE-NOTES.md). The Live Review
+surface is available at `review.html` when the gateway is running; it requires
+a configured API and does not substitute sample data when the API is absent.
+
 - Live local preview (real data, needs the Dagger engine + network):
   `make site-serve` → http://localhost:8080
 - Standalone preview (sample data, no server, no build): open
