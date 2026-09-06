@@ -1,0 +1,23 @@
+schema_version: graph-conformance-v1
+suite: transparency-graph
+vectors:
+  - id: CV-GRAPH-001
+    name: deterministic_projection_identity
+    requirement: A claim projection derives stable endpoint identities and preserves relation, claim, and evidence bindings.
+    verification: server/internal/graph/service_test.go::TestGraphProjectionUsesClaimIdentityAndTrustState
+  - id: CV-GRAPH-002
+    name: atomic_projection
+    requirement: A failed edge write leaves no endpoint nodes or audit event behind.
+    verification: server/internal/graph/store_test.go::TestStore_NodeEdgeLifecycle
+  - id: CV-GRAPH-003
+    name: append_only_projection_audit
+    requirement: Every successful projection emits one hash-chained event and update/delete mutation is rejected.
+    verification: server/internal/graph/store_test.go::TestStore_ProjectionAuditIsAppendOnly
+  - id: CV-GRAPH-004
+    name: chain_integrity_gate
+    requirement: Projection audit history is exposed only when the global event chain verifies.
+    verification: server/internal/graph/service_test.go::TestGraphProjectionAuditChainGate
+  - id: CV-GRAPH-005
+    name: fail_closed_closure
+    requirement: A closure containing a non-verified edge never returns a positive verdict.
+    verification: server/internal/graph/service_test.go::TestGraphProjectionUsesClaimIdentityAndTrustState

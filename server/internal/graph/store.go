@@ -4,6 +4,8 @@ import (
 	"context"
 	"database/sql"
 	"fmt"
+	"strconv"
+	"strings"
 	"time"
 
 	_ "modernc.org/sqlite"
@@ -12,12 +14,15 @@ import (
 // Store persists graph nodes and edges for the transparency graph.
 type Store interface {
 	CreateNode(ctx context.Context, node *Node) error
+	CreateProjection(ctx context.Context, from, to *Node, edge *Edge) (*ProjectionEvent, error)
+	ListProjectionEvents(ctx context.Context, claimID, edgeID string) ([]*ProjectionEvent, error)
+	VerifyProjectionChain(ctx context.Context) error
 	GetNode(ctx context.Context, id string) (*Node, error)
-	ListNodes(ctx context.Context, kind, labelFilter string, createdAfter time.Time, limit int) ([]*Node, error)
+	ListNodes(ctx context.Context, kind, labelFilter string, createdAfter time.Time, limit int, pageToken string) ([]*Node, string, error)
 
 	CreateEdge(ctx context.Context, edge *Edge) error
 	GetEdge(ctx context.Context, id string) (*Edge, error)
-	ListEdges(ctx context.Context, fromNode, toNode, relation, trustState string, validAfter time.Time, limit int) ([]*Edge, error)
+	ListEdges(ctx context.Context, fromNode, toNode, relation, trustState string, validAfter time.Time, limit int, pageToken string) ([]*Edge, string, error)
 	DeleteEdge(ctx context.Context, id string) error
 
 	ListEdgesFrom(ctx context.Context, nodeID string, relations []string, minTrustState string, limit int) ([]*Edge, error)
@@ -105,6 +110,33 @@ CREATE INDEX IF NOT EXISTS idx_edges_to ON kg_graph_edges(to_node);
 CREATE INDEX IF NOT EXISTS idx_edges_relation ON kg_graph_edges(relation);
 CREATE INDEX IF NOT EXISTS idx_edges_trust ON kg_graph_edges(trust_state);
 CREATE INDEX IF NOT EXISTS idx_edges_valid ON kg_graph_edges(valid_from, valid_to);
+
+CREATE TABLE IF NOT EXISTS graph_projection_events (
+	sequence INTEGER PRIMARY KEY,
+	event_id TEXT NOT NULL UNIQUE,
+	edge_id TEXT NOT NULL,
+	claim_id TEXT NOT NULL,
+	from_node TEXT NOT NULL,
+	to_node TEXT NOT NULL,
+	relation TEXT NOT NULL,
+	evidence_digest TEXT NOT NULL,
+	trust_state TEXT NOT NULL,
+	previous_hash TEXT NOT NULL,
+	event_hash TEXT NOT NULL,
+	projected_at DATETIME NOT NULL
+);
+CREATE INDEX IF NOT EXISTS idx_graph_projection_events_claim ON graph_projection_events(claim_id, sequence);
+CREATE INDEX IF NOT EXISTS idx_graph_projection_events_edge ON graph_projection_events(edge_id, sequence);
+CREATE TRIGGER IF NOT EXISTS graph_projection_events_no_update
+BEFORE UPDATE ON graph_projection_events
+BEGIN
+	SELECT RAISE(ABORT, 'graph_projection_events are append-only');
+END;
+CREATE TRIGGER IF NOT EXISTS graph_projection_events_no_delete
+BEFORE DELETE ON graph_projection_events
+BEGIN
+	SELECT RAISE(ABORT, 'graph_projection_events are append-only');
+END;
 `
 	if _, err := s.db.Exec(schema); err != nil {
 		return fmt.Errorf("exec schema: %w", err)
@@ -113,70 +145,6 @@ CREATE INDEX IF NOT EXISTS idx_edges_valid ON kg_graph_edges(valid_from, valid_t
 }
 
 func (s *SQLiteStore) Close() error { return s.db.Close() }
-
-func (s *SQLiteStore) CreateNode(ctx context.Context, node *Node) error {
-	_, err := s.db.ExecContext(ctx,
-		`INSERT INTO kg_graph_nodes(id, kind, urn, labels_json, created_at) VALUES (?, ?, ?, ?, ?)`,
-		node.ID, node.Kind, node.URN, node.LabelsJSON, node.CreatedAt,
-	)
-	if err != nil {
-		return fmt.Errorf("insert node: %w", err)
-	}
-	return nil
-}
-
-func (s *SQLiteStore) GetNode(ctx context.Context, id string) (*Node, error) {
-	row := s.db.QueryRowContext(ctx,
-		`SELECT id, kind, urn, labels_json, created_at FROM kg_graph_nodes WHERE id = ?`, id)
-	var n Node
-	var labels sql.NullString
-	if err := row.Scan(&n.ID, &n.Kind, &n.URN, &labels, &n.CreatedAt); err != nil {
-		if err == sql.ErrNoRows {
-			return nil, sql.ErrNoRows
-		}
-		return nil, fmt.Errorf("scan node: %w", err)
-	}
-	if labels.Valid {
-		n.LabelsJSON = labels.String
-	}
-	return &n, nil
-}
-
-func (s *SQLiteStore) ListNodes(ctx context.Context, kind, labelFilter string, createdAfter time.Time, limit int) ([]*Node, error) {
-	query := `SELECT id, kind, urn, labels_json, created_at FROM kg_graph_nodes WHERE 1=1`
-	args := []interface{}{}
-	if kind != "" {
-		query += ` AND kind = ?`
-		args = append(args, kind)
-	}
-	if !createdAfter.IsZero() {
-		query += ` AND created_at >= ?`
-		args = append(args, createdAfter)
-	}
-	query += ` ORDER BY created_at DESC`
-	if limit > 0 {
-		query += ` LIMIT ?`
-		args = append(args, limit)
-	}
-	rows, err := s.db.QueryContext(ctx, query, args...)
-	if err != nil {
-		return nil, fmt.Errorf("list nodes: %w", err)
-	}
-	defer rows.Close()
-	var out []*Node
-	for rows.Next() {
-		var n Node
-		var labels sql.NullString
-		if err := rows.Scan(&n.ID, &n.Kind, &n.URN, &labels, &n.CreatedAt); err != nil {
-			return nil, fmt.Errorf("scan node: %w", err)
-		}
-		if labels.Valid {
-			n.LabelsJSON = labels.String
-		}
-		out = append(out, &n)
-	}
-	return out, rows.Err()
-}
 
 func (s *SQLiteStore) CreateEdge(ctx context.Context, edge *Edge) error {
 	_, err := s.db.ExecContext(ctx,
@@ -201,7 +169,14 @@ func (s *SQLiteStore) GetEdge(ctx context.Context, id string) (*Edge, error) {
 	return scanEdge(row)
 }
 
-func (s *SQLiteStore) ListEdges(ctx context.Context, fromNode, toNode, relation, trustState string, validAfter time.Time, limit int) ([]*Edge, error) {
+func (s *SQLiteStore) ListEdges(ctx context.Context, fromNode, toNode, relation, trustState string, validAfter time.Time, limit int, pageToken string) ([]*Edge, string, error) {
+	if limit <= 0 {
+		limit = 50
+	}
+	offset, err := parsePageToken(pageToken)
+	if err != nil {
+		return nil, "", err
+	}
 	query := `SELECT id, from_node, to_node, relation, qualifier, claim_id, evidence_digest,
 		proof_state_json, valid_from, valid_to, trust_state, weight, extensions_json
 		FROM kg_graph_edges WHERE 1=1`
@@ -226,44 +201,68 @@ func (s *SQLiteStore) ListEdges(ctx context.Context, fromNode, toNode, relation,
 		query += ` AND valid_from >= ?`
 		args = append(args, validAfter)
 	}
-	query += ` ORDER BY valid_from DESC`
-	if limit > 0 {
-		query += ` LIMIT ?`
-		args = append(args, limit)
-	}
+	query += ` ORDER BY valid_from DESC, id DESC LIMIT ? OFFSET ?`
+	args = append(args, limit+1, offset)
 	rows, err := s.db.QueryContext(ctx, query, args...)
 	if err != nil {
-		return nil, fmt.Errorf("list edges: %w", err)
+		return nil, "", fmt.Errorf("list edges: %w", err)
 	}
 	defer rows.Close()
 	var out []*Edge
+	hasMore := false
 	for rows.Next() {
 		e, err := scanEdge(rows)
 		if err != nil {
-			return nil, err
+			return nil, "", err
+		}
+		if len(out) == limit {
+			hasMore = true
+			break
 		}
 		out = append(out, e)
 	}
-	return out, rows.Err()
+	if err := rows.Err(); err != nil {
+		return nil, "", err
+	}
+	nextToken := ""
+	if hasMore {
+		nextToken = strconv.Itoa(offset + limit)
+	}
+	return out, nextToken, nil
 }
 
 func (s *SQLiteStore) DeleteEdge(ctx context.Context, id string) error {
-	_, err := s.db.ExecContext(ctx, `DELETE FROM kg_graph_edges WHERE id = ?`, id)
-	return err
+	result, err := s.db.ExecContext(ctx, `DELETE FROM kg_graph_edges WHERE id = ?`, id)
+	if err != nil {
+		return err
+	}
+	if affected, _ := result.RowsAffected(); affected == 0 {
+		return sql.ErrNoRows
+	}
+	return nil
 }
 
 func (s *SQLiteStore) ListEdgesFrom(ctx context.Context, nodeID string, relations []string, minTrustState string, limit int) ([]*Edge, error) {
+	trustRank, err := minTrustRank(minTrustState)
+	if err != nil {
+		return nil, err
+	}
 	query := `SELECT id, from_node, to_node, relation, qualifier, claim_id, evidence_digest,
 		proof_state_json, valid_from, valid_to, trust_state, weight, extensions_json
 		FROM kg_graph_edges WHERE from_node = ?`
 	args := []interface{}{nodeID}
+	if minTrustState != "" {
+		query += ` AND CASE trust_state WHEN 'rejected' THEN -1 WHEN 'candidate' THEN 0 WHEN 'incomplete' THEN 1 WHEN 'verified' THEN 2 ELSE -1 END >= ?`
+		args = append(args, trustRank)
+	}
 	if len(relations) > 0 {
+		// #nosec G202 -- only the numeric placeholder count is concatenated; relation values remain bound parameters.
 		query += ` AND relation IN (` + placeholders(len(relations)) + `)`
 		for _, r := range relations {
 			args = append(args, r)
 		}
 	}
-	query += ` ORDER BY weight ASC`
+	query += ` ORDER BY weight ASC, id ASC`
 	if limit > 0 {
 		query += ` LIMIT ?`
 		args = append(args, limit)
@@ -285,17 +284,26 @@ func (s *SQLiteStore) ListEdgesFrom(ctx context.Context, nodeID string, relation
 }
 
 func (s *SQLiteStore) ListEdgesTo(ctx context.Context, nodeID string, relations []string, minTrustState string, limit int) ([]*Edge, error) {
+	trustRank, err := minTrustRank(minTrustState)
+	if err != nil {
+		return nil, err
+	}
 	query := `SELECT id, from_node, to_node, relation, qualifier, claim_id, evidence_digest,
 		proof_state_json, valid_from, valid_to, trust_state, weight, extensions_json
 		FROM kg_graph_edges WHERE to_node = ?`
 	args := []interface{}{nodeID}
+	if minTrustState != "" {
+		query += ` AND CASE trust_state WHEN 'rejected' THEN -1 WHEN 'candidate' THEN 0 WHEN 'incomplete' THEN 1 WHEN 'verified' THEN 2 ELSE -1 END >= ?`
+		args = append(args, trustRank)
+	}
 	if len(relations) > 0 {
+		// #nosec G202 -- only the numeric placeholder count is concatenated; relation values remain bound parameters.
 		query += ` AND relation IN (` + placeholders(len(relations)) + `)`
 		for _, r := range relations {
 			args = append(args, r)
 		}
 	}
-	query += ` ORDER BY weight ASC`
+	query += ` ORDER BY weight ASC, id ASC`
 	if limit > 0 {
 		query += ` LIMIT ?`
 		args = append(args, limit)
@@ -356,4 +364,30 @@ func placeholders(n int) string {
 		out += ",?"
 	}
 	return out
+}
+
+func minTrustRank(state string) (int, error) {
+	switch strings.ToLower(state) {
+	case "":
+		return 0, nil
+	case "candidate":
+		return 0, nil
+	case "incomplete":
+		return 1, nil
+	case "verified":
+		return 2, nil
+	default:
+		return 0, fmt.Errorf("invalid minimum trust state %q", state)
+	}
+}
+
+func parsePageToken(token string) (int, error) {
+	if token == "" {
+		return 0, nil
+	}
+	offset, err := strconv.Atoi(token)
+	if err != nil || offset < 0 {
+		return 0, fmt.Errorf("invalid page token")
+	}
+	return offset, nil
 }
