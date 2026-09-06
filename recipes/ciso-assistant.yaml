@@ -8,6 +8,7 @@ source: intuitem/ciso-assistant-community
 
 # GitHub exposes a commits Atom feed per branch.
 feed: https://github.com/intuitem/ciso-assistant-community/commits/main.atom
+feed_field: id
 
 # Each commit feed entry <id> ends with the 40-char SHA; capture it.
 version_extract: '([0-9a-f]{40})'
