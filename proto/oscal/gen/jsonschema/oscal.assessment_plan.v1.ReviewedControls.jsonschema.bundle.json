@@ -11,6 +11,9 @@
           },
           "type": "array"
         },
+        "^(include_all)$": {
+          "$ref": "#/$defs/oscal.assessment_plan.v1.IncludeAll.jsonschema.json"
+        },
         "^(include_controls)$": {
           "items": {
             "$ref": "#/$defs/oscal.assessment_plan.v1.SelectedControl.jsonschema.json"
@@ -27,6 +30,9 @@
             "$ref": "#/$defs/oscal.assessment_plan.v1.SelectedControl.jsonschema.json"
           },
           "type": "array"
+        },
+        "includeAll": {
+          "$ref": "#/$defs/oscal.assessment_plan.v1.IncludeAll.jsonschema.json"
         },
         "includeControls": {
           "items": {
@@ -54,6 +60,14 @@
         }
       },
       "title": "Control Selection",
+      "type": "object"
+    },
+    "oscal.assessment_plan.v1.IncludeAll.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "IncludeAll is OSCAL's empty marker object for selecting every control.",
+      "properties": {},
+      "title": "Include All",
       "type": "object"
     },
     "oscal.assessment_plan.v1.ReviewedControls.jsonschema.json": {

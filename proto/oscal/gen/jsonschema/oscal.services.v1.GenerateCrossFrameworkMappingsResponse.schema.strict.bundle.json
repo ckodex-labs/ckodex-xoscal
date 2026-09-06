@@ -1,5 +1,32 @@
 {
   "$defs": {
+    "oscal.common.v1.Decimal.schema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Decimal represents a decimal value",
+      "properties": {
+        "value": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "enum": [
+                "Infinity",
+                "-Infinity",
+                "NaN"
+              ],
+              "type": "string"
+            }
+          ]
+        }
+      },
+      "required": [
+        "value"
+      ],
+      "title": "Decimal",
+      "type": "object"
+    },
     "oscal.common.v1.Link.schema.strict.json": {
       "$schema": "https://json-schema.org/draft/2020-12/schema",
       "additionalProperties": false,
@@ -124,8 +151,11 @@
     "oscal.mapping.v1.ConfidenceScore.schema.strict.json": {
       "$schema": "https://json-schema.org/draft/2020-12/schema",
       "additionalProperties": false,
-      "description": "ConfidenceScore represents a confidence score",
+      "description": "ConfidenceScore is either a category or a percentage from 0 through 1.\n Fields 1-5 are retained for wire compatibility with the prototype model.",
       "properties": {
+        "category": {
+          "type": "string"
+        },
         "links": {
           "items": {
             "$ref": "#/$defs/oscal.common.v1.Link.schema.strict.json"
@@ -134,6 +164,9 @@
         },
         "method": {
           "type": "string"
+        },
+        "percentage": {
+          "$ref": "#/$defs/oscal.common.v1.Decimal.schema.strict.json"
         },
         "props": {
           "items": {
@@ -165,7 +198,8 @@
       },
       "required": [
         "value",
-        "method"
+        "method",
+        "category"
       ],
       "title": "Confidence Score",
       "type": "object"
@@ -173,8 +207,11 @@
     "oscal.mapping.v1.Coverage.schema.strict.json": {
       "$schema": "https://json-schema.org/draft/2020-12/schema",
       "additionalProperties": false,
-      "description": "Coverage represents coverage information",
+      "description": "Coverage records target coverage and the method used to derive it.\n Fields 1-5 are retained for wire compatibility with the prototype model.",
       "properties": {
+        "generation_method": {
+          "type": "string"
+        },
         "links": {
           "items": {
             "$ref": "#/$defs/oscal.common.v1.Link.schema.strict.json"
@@ -196,6 +233,9 @@
           },
           "type": "array"
         },
+        "target_coverage": {
+          "$ref": "#/$defs/oscal.common.v1.Decimal.schema.strict.json"
+        },
         "value": {
           "anyOf": [
             {
@@ -214,7 +254,8 @@
       },
       "required": [
         "value",
-        "method"
+        "method",
+        "generation_method"
       ],
       "title": "Coverage",
       "type": "object"
@@ -326,8 +367,14 @@
     "oscal.mapping.v1.QualifierItem.schema.strict.json": {
       "$schema": "https://json-schema.org/draft/2020-12/schema",
       "additionalProperties": false,
-      "description": "QualifierItem represents a qualifier item",
+      "description": "QualifierItem represents an OSCAL relationship qualifier. Fields 1-4 are\n retained for wire compatibility with the pre-release mapping prototype.",
       "properties": {
+        "category": {
+          "type": "string"
+        },
+        "description": {
+          "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.schema.strict.json"
+        },
         "id_ref": {
           "type": "string"
         },
@@ -336,6 +383,9 @@
             "$ref": "#/$defs/oscal.common.v1.Link.schema.strict.json"
           },
           "type": "array"
+        },
+        "predicate": {
+          "type": "string"
         },
         "props": {
           "items": {
@@ -349,13 +399,19 @@
           },
           "type": "array"
         },
+        "subject": {
+          "type": "string"
+        },
         "type": {
           "type": "string"
         }
       },
       "required": [
         "type",
-        "id_ref"
+        "id_ref",
+        "subject",
+        "predicate",
+        "category"
       ],
       "title": "Qualifier Item",
       "type": "object"

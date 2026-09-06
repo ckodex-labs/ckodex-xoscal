@@ -13,6 +13,9 @@
       },
       "type": "array"
     },
+    "include_all": {
+      "$ref": "oscal.assessment_plan.v1.IncludeAll.schema.strict.json"
+    },
     "include_controls": {
       "items": {
         "$ref": "oscal.assessment_plan.v1.SelectedControl.schema.strict.json"

@@ -140,6 +140,130 @@ public final class TransparencyExchangeServiceGrpc {
     return getVerifyClaimMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsRequest,
+      oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsResponse> getListVerificationEventsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListVerificationEvents",
+      requestType = oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsRequest.class,
+      responseType = oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsRequest,
+      oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsResponse> getListVerificationEventsMethod() {
+    io.grpc.MethodDescriptor<oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsRequest, oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsResponse> getListVerificationEventsMethod;
+    if ((getListVerificationEventsMethod = TransparencyExchangeServiceGrpc.getListVerificationEventsMethod) == null) {
+      synchronized (TransparencyExchangeServiceGrpc.class) {
+        if ((getListVerificationEventsMethod = TransparencyExchangeServiceGrpc.getListVerificationEventsMethod) == null) {
+          TransparencyExchangeServiceGrpc.getListVerificationEventsMethod = getListVerificationEventsMethod =
+              io.grpc.MethodDescriptor.<oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsRequest, oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListVerificationEvents"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new TransparencyExchangeServiceMethodDescriptorSupplier("ListVerificationEvents"))
+              .build();
+        }
+      }
+    }
+    return getListVerificationEventsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptRequest,
+      oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptResponse> getExportClaimReceiptMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ExportClaimReceipt",
+      requestType = oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptRequest.class,
+      responseType = oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptRequest,
+      oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptResponse> getExportClaimReceiptMethod() {
+    io.grpc.MethodDescriptor<oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptRequest, oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptResponse> getExportClaimReceiptMethod;
+    if ((getExportClaimReceiptMethod = TransparencyExchangeServiceGrpc.getExportClaimReceiptMethod) == null) {
+      synchronized (TransparencyExchangeServiceGrpc.class) {
+        if ((getExportClaimReceiptMethod = TransparencyExchangeServiceGrpc.getExportClaimReceiptMethod) == null) {
+          TransparencyExchangeServiceGrpc.getExportClaimReceiptMethod = getExportClaimReceiptMethod =
+              io.grpc.MethodDescriptor.<oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptRequest, oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ExportClaimReceipt"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new TransparencyExchangeServiceMethodDescriptorSupplier("ExportClaimReceipt"))
+              .build();
+        }
+      }
+    }
+    return getExportClaimReceiptMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportRequest,
+      oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportResponse> getPreflightImportMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "PreflightImport",
+      requestType = oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportRequest.class,
+      responseType = oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportRequest,
+      oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportResponse> getPreflightImportMethod() {
+    io.grpc.MethodDescriptor<oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportRequest, oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportResponse> getPreflightImportMethod;
+    if ((getPreflightImportMethod = TransparencyExchangeServiceGrpc.getPreflightImportMethod) == null) {
+      synchronized (TransparencyExchangeServiceGrpc.class) {
+        if ((getPreflightImportMethod = TransparencyExchangeServiceGrpc.getPreflightImportMethod) == null) {
+          TransparencyExchangeServiceGrpc.getPreflightImportMethod = getPreflightImportMethod =
+              io.grpc.MethodDescriptor.<oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportRequest, oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "PreflightImport"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new TransparencyExchangeServiceMethodDescriptorSupplier("PreflightImport"))
+              .build();
+        }
+      }
+    }
+    return getPreflightImportMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchRequest,
+      oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchResponse> getImportBatchMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ImportBatch",
+      requestType = oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchRequest.class,
+      responseType = oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchRequest,
+      oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchResponse> getImportBatchMethod() {
+    io.grpc.MethodDescriptor<oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchRequest, oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchResponse> getImportBatchMethod;
+    if ((getImportBatchMethod = TransparencyExchangeServiceGrpc.getImportBatchMethod) == null) {
+      synchronized (TransparencyExchangeServiceGrpc.class) {
+        if ((getImportBatchMethod = TransparencyExchangeServiceGrpc.getImportBatchMethod) == null) {
+          TransparencyExchangeServiceGrpc.getImportBatchMethod = getImportBatchMethod =
+              io.grpc.MethodDescriptor.<oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchRequest, oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ImportBatch"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new TransparencyExchangeServiceMethodDescriptorSupplier("ImportBatch"))
+              .build();
+        }
+      }
+    }
+    return getImportBatchMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<oscal.services.v1.TransparencyExchangeServiceOuterClass.UploadEvidenceRequest,
       oscal.services.v1.TransparencyExchangeServiceOuterClass.UploadEvidenceResponse> getUploadEvidenceMethod;
 
@@ -361,6 +485,34 @@ public final class TransparencyExchangeServiceGrpc {
 
     /**
      */
+    default void listVerificationEvents(oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsRequest request,
+        io.grpc.stub.StreamObserver<oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListVerificationEventsMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void exportClaimReceipt(oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptRequest request,
+        io.grpc.stub.StreamObserver<oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getExportClaimReceiptMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void preflightImport(oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportRequest request,
+        io.grpc.stub.StreamObserver<oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getPreflightImportMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void importBatch(oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchRequest request,
+        io.grpc.stub.StreamObserver<oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getImportBatchMethod(), responseObserver);
+    }
+
+    /**
+     */
     default void uploadEvidence(oscal.services.v1.TransparencyExchangeServiceOuterClass.UploadEvidenceRequest request,
         io.grpc.stub.StreamObserver<oscal.services.v1.TransparencyExchangeServiceOuterClass.UploadEvidenceResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUploadEvidenceMethod(), responseObserver);
@@ -457,6 +609,38 @@ public final class TransparencyExchangeServiceGrpc {
 
     /**
      */
+    public void listVerificationEvents(oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsRequest request,
+        io.grpc.stub.StreamObserver<oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListVerificationEventsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void exportClaimReceipt(oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptRequest request,
+        io.grpc.stub.StreamObserver<oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getExportClaimReceiptMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void preflightImport(oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportRequest request,
+        io.grpc.stub.StreamObserver<oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getPreflightImportMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void importBatch(oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchRequest request,
+        io.grpc.stub.StreamObserver<oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getImportBatchMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
     public void uploadEvidence(oscal.services.v1.TransparencyExchangeServiceOuterClass.UploadEvidenceRequest request,
         io.grpc.stub.StreamObserver<oscal.services.v1.TransparencyExchangeServiceOuterClass.UploadEvidenceResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -538,6 +722,34 @@ public final class TransparencyExchangeServiceGrpc {
 
     /**
      */
+    public oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsResponse listVerificationEvents(oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getListVerificationEventsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptResponse exportClaimReceipt(oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getExportClaimReceiptMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportResponse preflightImport(oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getPreflightImportMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchResponse importBatch(oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getImportBatchMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
     public oscal.services.v1.TransparencyExchangeServiceOuterClass.UploadEvidenceResponse uploadEvidence(oscal.services.v1.TransparencyExchangeServiceOuterClass.UploadEvidenceRequest request) throws io.grpc.StatusException {
       return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getUploadEvidenceMethod(), getCallOptions(), request);
@@ -611,6 +823,34 @@ public final class TransparencyExchangeServiceGrpc {
     public oscal.services.v1.TransparencyExchangeServiceOuterClass.VerifyClaimResponse verifyClaim(oscal.services.v1.TransparencyExchangeServiceOuterClass.VerifyClaimRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getVerifyClaimMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsResponse listVerificationEvents(oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListVerificationEventsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptResponse exportClaimReceipt(oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getExportClaimReceiptMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportResponse preflightImport(oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getPreflightImportMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchResponse importBatch(oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getImportBatchMethod(), getCallOptions(), request);
     }
 
     /**
@@ -696,6 +936,38 @@ public final class TransparencyExchangeServiceGrpc {
 
     /**
      */
+    public com.google.common.util.concurrent.ListenableFuture<oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsResponse> listVerificationEvents(
+        oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListVerificationEventsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptResponse> exportClaimReceipt(
+        oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getExportClaimReceiptMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportResponse> preflightImport(
+        oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getPreflightImportMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchResponse> importBatch(
+        oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getImportBatchMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
     public com.google.common.util.concurrent.ListenableFuture<oscal.services.v1.TransparencyExchangeServiceOuterClass.UploadEvidenceResponse> uploadEvidence(
         oscal.services.v1.TransparencyExchangeServiceOuterClass.UploadEvidenceRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -731,10 +1003,14 @@ public final class TransparencyExchangeServiceGrpc {
   private static final int METHODID_GET_CLAIM = 1;
   private static final int METHODID_LIST_CLAIMS = 2;
   private static final int METHODID_VERIFY_CLAIM = 3;
-  private static final int METHODID_UPLOAD_EVIDENCE = 4;
-  private static final int METHODID_GET_EVIDENCE = 5;
-  private static final int METHODID_VERIFY_EVIDENCE = 6;
-  private static final int METHODID_SYNC_CLAIMS = 7;
+  private static final int METHODID_LIST_VERIFICATION_EVENTS = 4;
+  private static final int METHODID_EXPORT_CLAIM_RECEIPT = 5;
+  private static final int METHODID_PREFLIGHT_IMPORT = 6;
+  private static final int METHODID_IMPORT_BATCH = 7;
+  private static final int METHODID_UPLOAD_EVIDENCE = 8;
+  private static final int METHODID_GET_EVIDENCE = 9;
+  private static final int METHODID_VERIFY_EVIDENCE = 10;
+  private static final int METHODID_SYNC_CLAIMS = 11;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -768,6 +1044,22 @@ public final class TransparencyExchangeServiceGrpc {
         case METHODID_VERIFY_CLAIM:
           serviceImpl.verifyClaim((oscal.services.v1.TransparencyExchangeServiceOuterClass.VerifyClaimRequest) request,
               (io.grpc.stub.StreamObserver<oscal.services.v1.TransparencyExchangeServiceOuterClass.VerifyClaimResponse>) responseObserver);
+          break;
+        case METHODID_LIST_VERIFICATION_EVENTS:
+          serviceImpl.listVerificationEvents((oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsRequest) request,
+              (io.grpc.stub.StreamObserver<oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsResponse>) responseObserver);
+          break;
+        case METHODID_EXPORT_CLAIM_RECEIPT:
+          serviceImpl.exportClaimReceipt((oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptRequest) request,
+              (io.grpc.stub.StreamObserver<oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptResponse>) responseObserver);
+          break;
+        case METHODID_PREFLIGHT_IMPORT:
+          serviceImpl.preflightImport((oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportRequest) request,
+              (io.grpc.stub.StreamObserver<oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportResponse>) responseObserver);
+          break;
+        case METHODID_IMPORT_BATCH:
+          serviceImpl.importBatch((oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchRequest) request,
+              (io.grpc.stub.StreamObserver<oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchResponse>) responseObserver);
           break;
         case METHODID_UPLOAD_EVIDENCE:
           serviceImpl.uploadEvidence((oscal.services.v1.TransparencyExchangeServiceOuterClass.UploadEvidenceRequest) request,
@@ -831,6 +1123,34 @@ public final class TransparencyExchangeServiceGrpc {
               oscal.services.v1.TransparencyExchangeServiceOuterClass.VerifyClaimRequest,
               oscal.services.v1.TransparencyExchangeServiceOuterClass.VerifyClaimResponse>(
                 service, METHODID_VERIFY_CLAIM)))
+        .addMethod(
+          getListVerificationEventsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsRequest,
+              oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsResponse>(
+                service, METHODID_LIST_VERIFICATION_EVENTS)))
+        .addMethod(
+          getExportClaimReceiptMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptRequest,
+              oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptResponse>(
+                service, METHODID_EXPORT_CLAIM_RECEIPT)))
+        .addMethod(
+          getPreflightImportMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportRequest,
+              oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportResponse>(
+                service, METHODID_PREFLIGHT_IMPORT)))
+        .addMethod(
+          getImportBatchMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchRequest,
+              oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchResponse>(
+                service, METHODID_IMPORT_BATCH)))
         .addMethod(
           getUploadEvidenceMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -911,6 +1231,10 @@ public final class TransparencyExchangeServiceGrpc {
               .addMethod(getGetClaimMethod())
               .addMethod(getListClaimsMethod())
               .addMethod(getVerifyClaimMethod())
+              .addMethod(getListVerificationEventsMethod())
+              .addMethod(getExportClaimReceiptMethod())
+              .addMethod(getPreflightImportMethod())
+              .addMethod(getImportBatchMethod())
               .addMethod(getUploadEvidenceMethod())
               .addMethod(getGetEvidenceMethod())
               .addMethod(getVerifyEvidenceMethod())

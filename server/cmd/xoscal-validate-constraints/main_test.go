@@ -24,6 +24,7 @@ func TestResolveRootKeyAutoDetect(t *testing.T) {
 		{"assessment-plan", "assessment-plan"},
 		{"assessment-results", "assessment-results"},
 		{"plan-of-action-and-milestones", "plan-of-action-and-milestones"},
+		{"mapping-collection", "mapping-collection"},
 	}
 	for _, tt := range tests {
 		t.Run(tt.rootKey, func(t *testing.T) {
@@ -52,6 +53,7 @@ func TestResolveRootKeyExplicitKind(t *testing.T) {
 		{"system-security-plan", "system-security-plan"},
 		{"poam", "plan-of-action-and-milestones"},
 		{"ar", "assessment-results"},
+		{"mapping", "mapping-collection"},
 	}
 	for _, tt := range tests {
 		t.Run(tt.kind, func(t *testing.T) {
@@ -120,6 +122,7 @@ func TestKindFromRootKey(t *testing.T) {
 		{"assessment-plan", schemavalidate.KindAssessmentPlan},
 		{"assessment-results", schemavalidate.KindAssessmentResults},
 		{"plan-of-action-and-milestones", schemavalidate.KindPOAM},
+		{"mapping-collection", schemavalidate.KindMapping},
 	}
 	for _, tt := range tests {
 		t.Run(tt.rootKey, func(t *testing.T) {
@@ -131,14 +134,6 @@ func TestKindFromRootKey(t *testing.T) {
 				t.Errorf("kindFromRootKey(%q) = %+v, want %+v", tt.rootKey, got, tt.want)
 			}
 		})
-	}
-}
-
-// TestKindFromRootKeyMappingNotSupported verifies that mapping-collection
-// (a 1.2 model) is not in the embedded 1.1.2 schema validator.
-func TestKindFromRootKeyMappingNotSupported(t *testing.T) {
-	if _, err := kindFromRootKey("mapping-collection"); err == nil {
-		t.Fatal("expected error for mapping-collection (not in 1.1.2 schemas), got nil")
 	}
 }
 
@@ -243,7 +238,7 @@ func TestValidateFileSchemaPreCheckCatchesBadJSON(t *testing.T) {
 	}
 
 	// Write a structurally-invalid catalog (missing required title).
-	badCatalog := `{"catalog":{"uuid":"123e4567-e89b-42d3-a456-426614174000","metadata":{"last-modified":"2026-01-01T00:00:00Z","version":"1.0","oscal-version":"1.1.2"}}}`
+	badCatalog := `{"catalog":{"uuid":"123e4567-e89b-42d3-a456-426614174000","metadata":{"last-modified":"2026-01-01T00:00:00Z","version":"1.0","oscal-version":"1.2.3"}}}`
 	dir := t.TempDir()
 	path := filepath.Join(dir, "bad.json")
 	if err := os.WriteFile(path, []byte(badCatalog), 0644); err != nil {
@@ -276,7 +271,7 @@ func TestValidateFileSchemaPreCheckPassesThenOSCALCLIFails(t *testing.T) {
 
 	// Schema-valid but constraint-invalid: a prop with no ns using a custom
 	// name not in the allowed-values for this context.
-	constraintBad := `{"catalog":{"uuid":"123e4567-e89b-42d3-a456-426614174000","metadata":{"title":"Test","last-modified":"2026-01-01T00:00:00Z","version":"1.0","oscal-version":"1.1.2"},"controls":[{"id":"c-1","title":"C1","props":[{"name":"bogus-not-allowed","value":"x"}],"parts":[{"id":"c-1-stmt","name":"statement","prose":"Text."}]}]}}`
+	constraintBad := `{"catalog":{"uuid":"123e4567-e89b-42d3-a456-426614174000","metadata":{"title":"Test","last-modified":"2026-01-01T00:00:00Z","version":"1.0","oscal-version":"1.2.3"},"controls":[{"id":"c-1","title":"C1","props":[{"name":"bogus-not-allowed","value":"x"}],"parts":[{"id":"c-1-stmt","name":"statement","prose":"Text."}]}]}}`
 	dir := t.TempDir()
 	path := filepath.Join(dir, "constraint_bad.json")
 	if err := os.WriteFile(path, []byte(constraintBad), 0644); err != nil {

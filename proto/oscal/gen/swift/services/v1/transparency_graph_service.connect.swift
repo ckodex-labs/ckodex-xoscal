@@ -17,6 +17,9 @@ internal protocol Oscal_Services_V1_TransparencyGraphServiceClientInterface: Sen
     func `projectEdge`(request: Oscal_Services_V1_ProjectEdgeRequest, headers: Connect.Headers) async -> ResponseMessage<Oscal_Services_V1_ProjectEdgeResponse>
 
     @available(iOS 13, *)
+    func `listProjectionEvents`(request: Oscal_Services_V1_ListProjectionEventsRequest, headers: Connect.Headers) async -> ResponseMessage<Oscal_Services_V1_ListProjectionEventsResponse>
+
+    @available(iOS 13, *)
     func `getEdge`(request: Oscal_Services_V1_GetEdgeRequest, headers: Connect.Headers) async -> ResponseMessage<Oscal_Services_V1_GetEdgeResponse>
 
     @available(iOS 13, *)
@@ -61,6 +64,11 @@ internal final class Oscal_Services_V1_TransparencyGraphServiceClient: Oscal_Ser
     @available(iOS 13, *)
     internal func `projectEdge`(request: Oscal_Services_V1_ProjectEdgeRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Oscal_Services_V1_ProjectEdgeResponse> {
         return await self.client.unary(path: "/oscal.services.v1.TransparencyGraphService/ProjectEdge", idempotencyLevel: .unknown, request: request, headers: headers)
+    }
+
+    @available(iOS 13, *)
+    internal func `listProjectionEvents`(request: Oscal_Services_V1_ListProjectionEventsRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Oscal_Services_V1_ListProjectionEventsResponse> {
+        return await self.client.unary(path: "/oscal.services.v1.TransparencyGraphService/ListProjectionEvents", idempotencyLevel: .unknown, request: request, headers: headers)
     }
 
     @available(iOS 13, *)
@@ -121,6 +129,7 @@ internal final class Oscal_Services_V1_TransparencyGraphServiceClient: Oscal_Ser
     internal enum Metadata {
         internal enum Methods {
             internal static let projectEdge = Connect.MethodSpec(name: "ProjectEdge", service: "oscal.services.v1.TransparencyGraphService", type: .unary)
+            internal static let listProjectionEvents = Connect.MethodSpec(name: "ListProjectionEvents", service: "oscal.services.v1.TransparencyGraphService", type: .unary)
             internal static let getEdge = Connect.MethodSpec(name: "GetEdge", service: "oscal.services.v1.TransparencyGraphService", type: .unary)
             internal static let listEdges = Connect.MethodSpec(name: "ListEdges", service: "oscal.services.v1.TransparencyGraphService", type: .unary)
             internal static let deleteEdge = Connect.MethodSpec(name: "DeleteEdge", service: "oscal.services.v1.TransparencyGraphService", type: .unary)

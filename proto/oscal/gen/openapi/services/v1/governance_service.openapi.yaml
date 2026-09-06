@@ -1008,6 +1008,9 @@ components:
           items:
             $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
           title: remarks
+        includeAll:
+          title: include_all
+          $ref: '#/components/schemas/oscal.assessment_plan.v1.IncludeAll'
       title: ControlSelection
       additionalProperties: false
       description: ControlSelection represents a control selection
@@ -1025,6 +1028,11 @@ components:
       title: ImportSsp
       additionalProperties: false
       description: ImportSsp represents an imported system security plan
+    oscal.assessment_plan.v1.IncludeAll:
+      type: object
+      title: IncludeAll
+      additionalProperties: false
+      description: IncludeAll is OSCAL's empty marker object for selecting every control.
     oscal.assessment_plan.v1.InventoryItem:
       type: object
       properties:
@@ -1566,6 +1574,9 @@ components:
           items:
             $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
           title: remarks
+        includeAll:
+          title: include_all
+          $ref: '#/components/schemas/oscal.assessment_results.v1.IncludeAll'
       title: ControlSelection
       additionalProperties: false
       description: ControlSelection represents a selection of controls for review
@@ -1699,6 +1710,11 @@ components:
       title: ImportSsp
       additionalProperties: false
       description: ImportSsp represents an imported system security plan
+    oscal.assessment_results.v1.IncludeAll:
+      type: object
+      title: IncludeAll
+      additionalProperties: false
+      description: IncludeAll is OSCAL's empty marker object for selecting every control.
     oscal.assessment_results.v1.InventoryItem:
       type: object
       properties:
@@ -1986,7 +2002,7 @@ components:
           title: remarks
         reviewedControls:
           title: reviewed_controls
-          description: reviewed_controls is required by the OSCAL 1.1.2 schema for each result.
+          description: reviewed_controls is required by the pinned OSCAL schema for each result.
           $ref: '#/components/schemas/oscal.assessment_results.v1.ReviewedControls'
       title: Result
       additionalProperties: false
@@ -2501,6 +2517,16 @@ components:
       title: DateTime
       additionalProperties: false
       description: DateTime represents a date-time with timezone (RFC3339)
+    oscal.common.v1.Decimal:
+      type: object
+      properties:
+        value:
+          type: number
+          title: value
+          format: double
+      title: Decimal
+      additionalProperties: false
+      description: Decimal represents a decimal value
     oscal.common.v1.DocumentId:
       type: object
       properties:
@@ -3311,27 +3337,40 @@ components:
           type: number
           title: value
           format: double
+          deprecated: true
         method:
           type: string
           title: method
+          deprecated: true
         props:
           type: array
           items:
             $ref: '#/components/schemas/oscal.common.v1.Property'
           title: props
+          deprecated: true
         links:
           type: array
           items:
             $ref: '#/components/schemas/oscal.common.v1.Link'
           title: links
+          deprecated: true
         remarks:
           type: array
           items:
             $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
           title: remarks
+          deprecated: true
+        category:
+          type: string
+          title: category
+        percentage:
+          title: percentage
+          $ref: '#/components/schemas/oscal.common.v1.Decimal'
       title: ConfidenceScore
       additionalProperties: false
-      description: ConfidenceScore represents a confidence score
+      description: |-
+        ConfidenceScore is either a category or a percentage from 0 through 1.
+         Fields 1-5 are retained for wire compatibility with the prototype model.
     oscal.mapping.v1.Coverage:
       type: object
       properties:
@@ -3339,27 +3378,40 @@ components:
           type: number
           title: value
           format: double
+          deprecated: true
         method:
           type: string
           title: method
+          deprecated: true
         props:
           type: array
           items:
             $ref: '#/components/schemas/oscal.common.v1.Property'
           title: props
+          deprecated: true
         links:
           type: array
           items:
             $ref: '#/components/schemas/oscal.common.v1.Link'
           title: links
+          deprecated: true
         remarks:
           type: array
           items:
             $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
           title: remarks
+          deprecated: true
+        generationMethod:
+          type: string
+          title: generation_method
+        targetCoverage:
+          title: target_coverage
+          $ref: '#/components/schemas/oscal.common.v1.Decimal'
       title: Coverage
       additionalProperties: false
-      description: Coverage represents coverage information
+      description: |-
+        Coverage records target coverage and the method used to derive it.
+         Fields 1-5 are retained for wire compatibility with the prototype model.
     oscal.mapping.v1.Map:
       type: object
       properties:
@@ -3447,27 +3499,45 @@ components:
         type:
           type: string
           title: type
+          deprecated: true
         idRef:
           type: string
           title: id_ref
+          deprecated: true
         props:
           type: array
           items:
             $ref: '#/components/schemas/oscal.common.v1.Property'
           title: props
+          deprecated: true
         links:
           type: array
           items:
             $ref: '#/components/schemas/oscal.common.v1.Link'
           title: links
+          deprecated: true
         remarks:
           type: array
           items:
             $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
           title: remarks
+        subject:
+          type: string
+          title: subject
+        predicate:
+          type: string
+          title: predicate
+        category:
+          type: string
+          title: category
+        description:
+          title: description
+          $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
       title: QualifierItem
       additionalProperties: false
-      description: QualifierItem represents a qualifier item
+      description: |-
+        QualifierItem represents an OSCAL relationship qualifier. Fields 1-4 are
+         retained for wire compatibility with the pre-release mapping prototype.
     oscal.poam.v1.Component:
       type: object
       properties:
@@ -3742,7 +3812,7 @@ components:
       title: PoamItem
       additionalProperties: false
       description: |-
-        PoamItem represents a POAM item as defined by the OSCAL 1.1.2 schema.
+        PoamItem represents a POAM item as defined by the pinned OSCAL schema.
          Unlike Risk, poam-item is a simpler container with title, description,
          and references to findings/observations/risks.
     oscal.poam.v1.RelatedFinding:

@@ -2286,7 +2286,7 @@ namespace Oscal.Poam.V1 {
   }
 
   /// <summary>
-  /// PoamItem represents a POAM item as defined by the OSCAL 1.1.2 schema.
+  /// PoamItem represents a POAM item as defined by the pinned OSCAL schema.
   /// Unlike Risk, poam-item is a simpler container with title, description,
   /// and references to findings/observations/risks.
   /// </summary>

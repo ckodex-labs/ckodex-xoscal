@@ -61,233 +61,325 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
     oscal.common.v1.Common.MetadataOrBuilder getMetadataOrBuilder();
 
     /**
-     * <code>string matching_rationale = 3 [json_name = "matchingRationale"];</code>
+     * <code>string matching_rationale = 3 [json_name = "matchingRationale", deprecated = true];</code>
+     * @deprecated oscal.mapping.v1.MappingCollection.matching_rationale is deprecated.
+     *     See mapping/v1/mapping.proto;l=14
      * @return The matchingRationale.
      */
-    java.lang.String getMatchingRationale();
+    @java.lang.Deprecated java.lang.String getMatchingRationale();
     /**
-     * <code>string matching_rationale = 3 [json_name = "matchingRationale"];</code>
+     * <code>string matching_rationale = 3 [json_name = "matchingRationale", deprecated = true];</code>
+     * @deprecated oscal.mapping.v1.MappingCollection.matching_rationale is deprecated.
+     *     See mapping/v1/mapping.proto;l=14
      * @return The bytes for matchingRationale.
      */
-    com.google.protobuf.ByteString
+    @java.lang.Deprecated com.google.protobuf.ByteString
         getMatchingRationaleBytes();
 
     /**
-     * <code>string status = 4 [json_name = "status"];</code>
+     * <code>string status = 4 [json_name = "status", deprecated = true];</code>
+     * @deprecated oscal.mapping.v1.MappingCollection.status is deprecated.
+     *     See mapping/v1/mapping.proto;l=15
      * @return The status.
      */
-    java.lang.String getStatus();
+    @java.lang.Deprecated java.lang.String getStatus();
     /**
-     * <code>string status = 4 [json_name = "status"];</code>
+     * <code>string status = 4 [json_name = "status", deprecated = true];</code>
+     * @deprecated oscal.mapping.v1.MappingCollection.status is deprecated.
+     *     See mapping/v1/mapping.proto;l=15
      * @return The bytes for status.
      */
-    com.google.protobuf.ByteString
+    @java.lang.Deprecated com.google.protobuf.ByteString
         getStatusBytes();
 
     /**
-     * <code>.oscal.mapping.v1.MappingResourceReference source_resource = 5 [json_name = "sourceResource"];</code>
+     * <code>.oscal.mapping.v1.MappingResourceReference source_resource = 5 [json_name = "sourceResource", deprecated = true];</code>
+     * @deprecated oscal.mapping.v1.MappingCollection.source_resource is deprecated.
+     *     See mapping/v1/mapping.proto;l=16
      * @return Whether the sourceResource field is set.
      */
-    boolean hasSourceResource();
+    @java.lang.Deprecated boolean hasSourceResource();
     /**
-     * <code>.oscal.mapping.v1.MappingResourceReference source_resource = 5 [json_name = "sourceResource"];</code>
+     * <code>.oscal.mapping.v1.MappingResourceReference source_resource = 5 [json_name = "sourceResource", deprecated = true];</code>
+     * @deprecated oscal.mapping.v1.MappingCollection.source_resource is deprecated.
+     *     See mapping/v1/mapping.proto;l=16
      * @return The sourceResource.
      */
-    oscal.mapping.v1.Mapping.MappingResourceReference getSourceResource();
+    @java.lang.Deprecated oscal.mapping.v1.Mapping.MappingResourceReference getSourceResource();
     /**
-     * <code>.oscal.mapping.v1.MappingResourceReference source_resource = 5 [json_name = "sourceResource"];</code>
+     * <code>.oscal.mapping.v1.MappingResourceReference source_resource = 5 [json_name = "sourceResource", deprecated = true];</code>
      */
-    oscal.mapping.v1.Mapping.MappingResourceReferenceOrBuilder getSourceResourceOrBuilder();
+    @java.lang.Deprecated oscal.mapping.v1.Mapping.MappingResourceReferenceOrBuilder getSourceResourceOrBuilder();
 
     /**
-     * <code>.oscal.mapping.v1.MappingResourceReference target_resource = 6 [json_name = "targetResource"];</code>
+     * <code>.oscal.mapping.v1.MappingResourceReference target_resource = 6 [json_name = "targetResource", deprecated = true];</code>
+     * @deprecated oscal.mapping.v1.MappingCollection.target_resource is deprecated.
+     *     See mapping/v1/mapping.proto;l=17
      * @return Whether the targetResource field is set.
      */
-    boolean hasTargetResource();
+    @java.lang.Deprecated boolean hasTargetResource();
     /**
-     * <code>.oscal.mapping.v1.MappingResourceReference target_resource = 6 [json_name = "targetResource"];</code>
+     * <code>.oscal.mapping.v1.MappingResourceReference target_resource = 6 [json_name = "targetResource", deprecated = true];</code>
+     * @deprecated oscal.mapping.v1.MappingCollection.target_resource is deprecated.
+     *     See mapping/v1/mapping.proto;l=17
      * @return The targetResource.
      */
-    oscal.mapping.v1.Mapping.MappingResourceReference getTargetResource();
+    @java.lang.Deprecated oscal.mapping.v1.Mapping.MappingResourceReference getTargetResource();
     /**
-     * <code>.oscal.mapping.v1.MappingResourceReference target_resource = 6 [json_name = "targetResource"];</code>
+     * <code>.oscal.mapping.v1.MappingResourceReference target_resource = 6 [json_name = "targetResource", deprecated = true];</code>
      */
-    oscal.mapping.v1.Mapping.MappingResourceReferenceOrBuilder getTargetResourceOrBuilder();
+    @java.lang.Deprecated oscal.mapping.v1.Mapping.MappingResourceReferenceOrBuilder getTargetResourceOrBuilder();
 
     /**
-     * <code>repeated .oscal.mapping.v1.Map maps = 7 [json_name = "maps"];</code>
+     * <code>repeated .oscal.mapping.v1.Map maps = 7 [json_name = "maps", deprecated = true];</code>
      */
-    java.util.List<oscal.mapping.v1.Mapping.Map> 
+    @java.lang.Deprecated java.util.List<oscal.mapping.v1.Mapping.Map>
         getMapsList();
     /**
-     * <code>repeated .oscal.mapping.v1.Map maps = 7 [json_name = "maps"];</code>
+     * <code>repeated .oscal.mapping.v1.Map maps = 7 [json_name = "maps", deprecated = true];</code>
      */
-    oscal.mapping.v1.Mapping.Map getMaps(int index);
+    @java.lang.Deprecated oscal.mapping.v1.Mapping.Map getMaps(int index);
     /**
-     * <code>repeated .oscal.mapping.v1.Map maps = 7 [json_name = "maps"];</code>
+     * <code>repeated .oscal.mapping.v1.Map maps = 7 [json_name = "maps", deprecated = true];</code>
      */
-    int getMapsCount();
+    @java.lang.Deprecated int getMapsCount();
     /**
-     * <code>repeated .oscal.mapping.v1.Map maps = 7 [json_name = "maps"];</code>
+     * <code>repeated .oscal.mapping.v1.Map maps = 7 [json_name = "maps", deprecated = true];</code>
      */
-    java.util.List<? extends oscal.mapping.v1.Mapping.MapOrBuilder> 
+    @java.lang.Deprecated java.util.List<? extends oscal.mapping.v1.Mapping.MapOrBuilder>
         getMapsOrBuilderList();
     /**
-     * <code>repeated .oscal.mapping.v1.Map maps = 7 [json_name = "maps"];</code>
+     * <code>repeated .oscal.mapping.v1.Map maps = 7 [json_name = "maps", deprecated = true];</code>
      */
-    oscal.mapping.v1.Mapping.MapOrBuilder getMapsOrBuilder(
+    @java.lang.Deprecated oscal.mapping.v1.Mapping.MapOrBuilder getMapsOrBuilder(
         int index);
 
     /**
-     * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props", deprecated = true];</code>
      */
-    java.util.List<oscal.common.v1.Common.Property> 
+    @java.lang.Deprecated java.util.List<oscal.common.v1.Common.Property>
         getPropsList();
     /**
-     * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props", deprecated = true];</code>
      */
-    oscal.common.v1.Common.Property getProps(int index);
+    @java.lang.Deprecated oscal.common.v1.Common.Property getProps(int index);
     /**
-     * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props", deprecated = true];</code>
      */
-    int getPropsCount();
+    @java.lang.Deprecated int getPropsCount();
     /**
-     * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props", deprecated = true];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    @java.lang.Deprecated java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList();
     /**
-     * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props", deprecated = true];</code>
      */
-    oscal.common.v1.Common.PropertyOrBuilder getPropsOrBuilder(
+    @java.lang.Deprecated oscal.common.v1.Common.PropertyOrBuilder getPropsOrBuilder(
         int index);
 
     /**
-     * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links", deprecated = true];</code>
      */
-    java.util.List<oscal.common.v1.Common.Link> 
+    @java.lang.Deprecated java.util.List<oscal.common.v1.Common.Link>
         getLinksList();
     /**
-     * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links", deprecated = true];</code>
      */
-    oscal.common.v1.Common.Link getLinks(int index);
+    @java.lang.Deprecated oscal.common.v1.Common.Link getLinks(int index);
     /**
-     * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links", deprecated = true];</code>
      */
-    int getLinksCount();
+    @java.lang.Deprecated int getLinksCount();
     /**
-     * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links", deprecated = true];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    @java.lang.Deprecated java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList();
     /**
-     * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links", deprecated = true];</code>
      */
-    oscal.common.v1.Common.LinkOrBuilder getLinksOrBuilder(
+    @java.lang.Deprecated oscal.common.v1.Common.LinkOrBuilder getLinksOrBuilder(
         int index);
 
     /**
-     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks"];</code>
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks", deprecated = true];</code>
      */
-    java.util.List<oscal.common.v1.Common.MarkupMultiline> 
+    @java.lang.Deprecated java.util.List<oscal.common.v1.Common.MarkupMultiline>
         getRemarksList();
     /**
-     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks"];</code>
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks", deprecated = true];</code>
      */
-    oscal.common.v1.Common.MarkupMultiline getRemarks(int index);
+    @java.lang.Deprecated oscal.common.v1.Common.MarkupMultiline getRemarks(int index);
     /**
-     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks"];</code>
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks", deprecated = true];</code>
      */
-    int getRemarksCount();
+    @java.lang.Deprecated int getRemarksCount();
     /**
-     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks"];</code>
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks", deprecated = true];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    @java.lang.Deprecated java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList();
     /**
-     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks"];</code>
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks", deprecated = true];</code>
      */
-    oscal.common.v1.Common.MarkupMultilineOrBuilder getRemarksOrBuilder(
+    @java.lang.Deprecated oscal.common.v1.Common.MarkupMultilineOrBuilder getRemarksOrBuilder(
         int index);
 
     /**
-     * <code>.oscal.mapping.v1.MappingDescription mapping_description = 11 [json_name = "mappingDescription"];</code>
+     * <code>.oscal.mapping.v1.MappingDescription mapping_description = 11 [json_name = "mappingDescription", deprecated = true];</code>
+     * @deprecated oscal.mapping.v1.MappingCollection.mapping_description is deprecated.
+     *     See mapping/v1/mapping.proto;l=22
      * @return Whether the mappingDescription field is set.
      */
-    boolean hasMappingDescription();
+    @java.lang.Deprecated boolean hasMappingDescription();
     /**
-     * <code>.oscal.mapping.v1.MappingDescription mapping_description = 11 [json_name = "mappingDescription"];</code>
+     * <code>.oscal.mapping.v1.MappingDescription mapping_description = 11 [json_name = "mappingDescription", deprecated = true];</code>
+     * @deprecated oscal.mapping.v1.MappingCollection.mapping_description is deprecated.
+     *     See mapping/v1/mapping.proto;l=22
      * @return The mappingDescription.
      */
-    oscal.mapping.v1.Mapping.MappingDescription getMappingDescription();
+    @java.lang.Deprecated oscal.mapping.v1.Mapping.MappingDescription getMappingDescription();
     /**
-     * <code>.oscal.mapping.v1.MappingDescription mapping_description = 11 [json_name = "mappingDescription"];</code>
+     * <code>.oscal.mapping.v1.MappingDescription mapping_description = 11 [json_name = "mappingDescription", deprecated = true];</code>
      */
-    oscal.mapping.v1.Mapping.MappingDescriptionOrBuilder getMappingDescriptionOrBuilder();
+    @java.lang.Deprecated oscal.mapping.v1.Mapping.MappingDescriptionOrBuilder getMappingDescriptionOrBuilder();
 
     /**
-     * <code>.oscal.mapping.v1.GapSummary source_gap_summary = 12 [json_name = "sourceGapSummary"];</code>
+     * <code>.oscal.mapping.v1.GapSummary source_gap_summary = 12 [json_name = "sourceGapSummary", deprecated = true];</code>
+     * @deprecated oscal.mapping.v1.MappingCollection.source_gap_summary is deprecated.
+     *     See mapping/v1/mapping.proto;l=23
      * @return Whether the sourceGapSummary field is set.
      */
-    boolean hasSourceGapSummary();
+    @java.lang.Deprecated boolean hasSourceGapSummary();
     /**
-     * <code>.oscal.mapping.v1.GapSummary source_gap_summary = 12 [json_name = "sourceGapSummary"];</code>
+     * <code>.oscal.mapping.v1.GapSummary source_gap_summary = 12 [json_name = "sourceGapSummary", deprecated = true];</code>
+     * @deprecated oscal.mapping.v1.MappingCollection.source_gap_summary is deprecated.
+     *     See mapping/v1/mapping.proto;l=23
      * @return The sourceGapSummary.
      */
-    oscal.mapping.v1.Mapping.GapSummary getSourceGapSummary();
+    @java.lang.Deprecated oscal.mapping.v1.Mapping.GapSummary getSourceGapSummary();
     /**
-     * <code>.oscal.mapping.v1.GapSummary source_gap_summary = 12 [json_name = "sourceGapSummary"];</code>
+     * <code>.oscal.mapping.v1.GapSummary source_gap_summary = 12 [json_name = "sourceGapSummary", deprecated = true];</code>
      */
-    oscal.mapping.v1.Mapping.GapSummaryOrBuilder getSourceGapSummaryOrBuilder();
+    @java.lang.Deprecated oscal.mapping.v1.Mapping.GapSummaryOrBuilder getSourceGapSummaryOrBuilder();
 
     /**
-     * <code>.oscal.mapping.v1.GapSummary target_gap_summary = 13 [json_name = "targetGapSummary"];</code>
+     * <code>.oscal.mapping.v1.GapSummary target_gap_summary = 13 [json_name = "targetGapSummary", deprecated = true];</code>
+     * @deprecated oscal.mapping.v1.MappingCollection.target_gap_summary is deprecated.
+     *     See mapping/v1/mapping.proto;l=24
      * @return Whether the targetGapSummary field is set.
      */
-    boolean hasTargetGapSummary();
+    @java.lang.Deprecated boolean hasTargetGapSummary();
     /**
-     * <code>.oscal.mapping.v1.GapSummary target_gap_summary = 13 [json_name = "targetGapSummary"];</code>
+     * <code>.oscal.mapping.v1.GapSummary target_gap_summary = 13 [json_name = "targetGapSummary", deprecated = true];</code>
+     * @deprecated oscal.mapping.v1.MappingCollection.target_gap_summary is deprecated.
+     *     See mapping/v1/mapping.proto;l=24
      * @return The targetGapSummary.
      */
-    oscal.mapping.v1.Mapping.GapSummary getTargetGapSummary();
+    @java.lang.Deprecated oscal.mapping.v1.Mapping.GapSummary getTargetGapSummary();
     /**
-     * <code>.oscal.mapping.v1.GapSummary target_gap_summary = 13 [json_name = "targetGapSummary"];</code>
+     * <code>.oscal.mapping.v1.GapSummary target_gap_summary = 13 [json_name = "targetGapSummary", deprecated = true];</code>
      */
-    oscal.mapping.v1.Mapping.GapSummaryOrBuilder getTargetGapSummaryOrBuilder();
+    @java.lang.Deprecated oscal.mapping.v1.Mapping.GapSummaryOrBuilder getTargetGapSummaryOrBuilder();
 
     /**
-     * <code>.oscal.mapping.v1.ConfidenceScore confidence_score = 14 [json_name = "confidenceScore"];</code>
+     * <code>.oscal.mapping.v1.ConfidenceScore confidence_score = 14 [json_name = "confidenceScore", deprecated = true];</code>
+     * @deprecated oscal.mapping.v1.MappingCollection.confidence_score is deprecated.
+     *     See mapping/v1/mapping.proto;l=25
      * @return Whether the confidenceScore field is set.
      */
-    boolean hasConfidenceScore();
+    @java.lang.Deprecated boolean hasConfidenceScore();
     /**
-     * <code>.oscal.mapping.v1.ConfidenceScore confidence_score = 14 [json_name = "confidenceScore"];</code>
+     * <code>.oscal.mapping.v1.ConfidenceScore confidence_score = 14 [json_name = "confidenceScore", deprecated = true];</code>
+     * @deprecated oscal.mapping.v1.MappingCollection.confidence_score is deprecated.
+     *     See mapping/v1/mapping.proto;l=25
      * @return The confidenceScore.
      */
-    oscal.mapping.v1.Mapping.ConfidenceScore getConfidenceScore();
+    @java.lang.Deprecated oscal.mapping.v1.Mapping.ConfidenceScore getConfidenceScore();
     /**
-     * <code>.oscal.mapping.v1.ConfidenceScore confidence_score = 14 [json_name = "confidenceScore"];</code>
+     * <code>.oscal.mapping.v1.ConfidenceScore confidence_score = 14 [json_name = "confidenceScore", deprecated = true];</code>
      */
-    oscal.mapping.v1.Mapping.ConfidenceScoreOrBuilder getConfidenceScoreOrBuilder();
+    @java.lang.Deprecated oscal.mapping.v1.Mapping.ConfidenceScoreOrBuilder getConfidenceScoreOrBuilder();
 
     /**
-     * <code>.oscal.mapping.v1.Coverage coverage = 15 [json_name = "coverage"];</code>
+     * <code>.oscal.mapping.v1.Coverage coverage = 15 [json_name = "coverage", deprecated = true];</code>
+     * @deprecated oscal.mapping.v1.MappingCollection.coverage is deprecated.
+     *     See mapping/v1/mapping.proto;l=26
      * @return Whether the coverage field is set.
      */
-    boolean hasCoverage();
+    @java.lang.Deprecated boolean hasCoverage();
     /**
-     * <code>.oscal.mapping.v1.Coverage coverage = 15 [json_name = "coverage"];</code>
+     * <code>.oscal.mapping.v1.Coverage coverage = 15 [json_name = "coverage", deprecated = true];</code>
+     * @deprecated oscal.mapping.v1.MappingCollection.coverage is deprecated.
+     *     See mapping/v1/mapping.proto;l=26
      * @return The coverage.
      */
-    oscal.mapping.v1.Mapping.Coverage getCoverage();
+    @java.lang.Deprecated oscal.mapping.v1.Mapping.Coverage getCoverage();
     /**
-     * <code>.oscal.mapping.v1.Coverage coverage = 15 [json_name = "coverage"];</code>
+     * <code>.oscal.mapping.v1.Coverage coverage = 15 [json_name = "coverage", deprecated = true];</code>
      */
-    oscal.mapping.v1.Mapping.CoverageOrBuilder getCoverageOrBuilder();
+    @java.lang.Deprecated oscal.mapping.v1.Mapping.CoverageOrBuilder getCoverageOrBuilder();
+
+    /**
+     * <code>.oscal.mapping.v1.MappingProvenance provenance = 16 [json_name = "provenance"];</code>
+     * @return Whether the provenance field is set.
+     */
+    boolean hasProvenance();
+    /**
+     * <code>.oscal.mapping.v1.MappingProvenance provenance = 16 [json_name = "provenance"];</code>
+     * @return The provenance.
+     */
+    oscal.mapping.v1.Mapping.MappingProvenance getProvenance();
+    /**
+     * <code>.oscal.mapping.v1.MappingProvenance provenance = 16 [json_name = "provenance"];</code>
+     */
+    oscal.mapping.v1.Mapping.MappingProvenanceOrBuilder getProvenanceOrBuilder();
+
+    /**
+     * <code>repeated .oscal.mapping.v1.ControlMapping mappings = 17 [json_name = "mappings"];</code>
+     */
+    java.util.List<oscal.mapping.v1.Mapping.ControlMapping>
+        getMappingsList();
+    /**
+     * <code>repeated .oscal.mapping.v1.ControlMapping mappings = 17 [json_name = "mappings"];</code>
+     */
+    oscal.mapping.v1.Mapping.ControlMapping getMappings(int index);
+    /**
+     * <code>repeated .oscal.mapping.v1.ControlMapping mappings = 17 [json_name = "mappings"];</code>
+     */
+    int getMappingsCount();
+    /**
+     * <code>repeated .oscal.mapping.v1.ControlMapping mappings = 17 [json_name = "mappings"];</code>
+     */
+    java.util.List<? extends oscal.mapping.v1.Mapping.ControlMappingOrBuilder>
+        getMappingsOrBuilderList();
+    /**
+     * <code>repeated .oscal.mapping.v1.ControlMapping mappings = 17 [json_name = "mappings"];</code>
+     */
+    oscal.mapping.v1.Mapping.ControlMappingOrBuilder getMappingsOrBuilder(
+        int index);
+
+    /**
+     * <code>.oscal.common.v1.BackMatter back_matter = 18 [json_name = "backMatter"];</code>
+     * @return Whether the backMatter field is set.
+     */
+    boolean hasBackMatter();
+    /**
+     * <code>.oscal.common.v1.BackMatter back_matter = 18 [json_name = "backMatter"];</code>
+     * @return The backMatter.
+     */
+    oscal.common.v1.Common.BackMatter getBackMatter();
+    /**
+     * <code>.oscal.common.v1.BackMatter back_matter = 18 [json_name = "backMatter"];</code>
+     */
+    oscal.common.v1.Common.BackMatterOrBuilder getBackMatterOrBuilder();
   }
   /**
    * <pre>
-   * MappingCollection represents a collection of mappings
+   * MappingCollection is the OSCAL 1.2 mapping-collection document root.
+   * Fields 3-15 predate the released Mapping model and are retained only for
+   * wire compatibility; new code uses provenance, mappings, and back_matter.
    * </pre>
    *
    * Protobuf type {@code oscal.mapping.v1.MappingCollection}
@@ -317,6 +409,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
       props_ = java.util.Collections.emptyList();
       links_ = java.util.Collections.emptyList();
       remarks_ = java.util.Collections.emptyList();
+      mappings_ = java.util.Collections.emptyList();
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
@@ -394,16 +487,18 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
     @SuppressWarnings("serial")
     private volatile java.lang.Object matchingRationale_ = "";
     /**
-     * <code>string matching_rationale = 3 [json_name = "matchingRationale"];</code>
+     * <code>string matching_rationale = 3 [json_name = "matchingRationale", deprecated = true];</code>
+     * @deprecated oscal.mapping.v1.MappingCollection.matching_rationale is deprecated.
+     *     See mapping/v1/mapping.proto;l=14
      * @return The matchingRationale.
      */
     @java.lang.Override
-    public java.lang.String getMatchingRationale() {
+    @java.lang.Deprecated public java.lang.String getMatchingRationale() {
       java.lang.Object ref = matchingRationale_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         matchingRationale_ = s;
@@ -411,15 +506,17 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
       }
     }
     /**
-     * <code>string matching_rationale = 3 [json_name = "matchingRationale"];</code>
+     * <code>string matching_rationale = 3 [json_name = "matchingRationale", deprecated = true];</code>
+     * @deprecated oscal.mapping.v1.MappingCollection.matching_rationale is deprecated.
+     *     See mapping/v1/mapping.proto;l=14
      * @return The bytes for matchingRationale.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getMatchingRationaleBytes() {
       java.lang.Object ref = matchingRationale_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         matchingRationale_ = b;
@@ -433,16 +530,18 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
     @SuppressWarnings("serial")
     private volatile java.lang.Object status_ = "";
     /**
-     * <code>string status = 4 [json_name = "status"];</code>
+     * <code>string status = 4 [json_name = "status", deprecated = true];</code>
+     * @deprecated oscal.mapping.v1.MappingCollection.status is deprecated.
+     *     See mapping/v1/mapping.proto;l=15
      * @return The status.
      */
     @java.lang.Override
-    public java.lang.String getStatus() {
+    @java.lang.Deprecated public java.lang.String getStatus() {
       java.lang.Object ref = status_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         status_ = s;
@@ -450,15 +549,17 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
       }
     }
     /**
-     * <code>string status = 4 [json_name = "status"];</code>
+     * <code>string status = 4 [json_name = "status", deprecated = true];</code>
+     * @deprecated oscal.mapping.v1.MappingCollection.status is deprecated.
+     *     See mapping/v1/mapping.proto;l=15
      * @return The bytes for status.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getStatusBytes() {
       java.lang.Object ref = status_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         status_ = b;
@@ -471,52 +572,60 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
     public static final int SOURCE_RESOURCE_FIELD_NUMBER = 5;
     private oscal.mapping.v1.Mapping.MappingResourceReference sourceResource_;
     /**
-     * <code>.oscal.mapping.v1.MappingResourceReference source_resource = 5 [json_name = "sourceResource"];</code>
+     * <code>.oscal.mapping.v1.MappingResourceReference source_resource = 5 [json_name = "sourceResource", deprecated = true];</code>
+     * @deprecated oscal.mapping.v1.MappingCollection.source_resource is deprecated.
+     *     See mapping/v1/mapping.proto;l=16
      * @return Whether the sourceResource field is set.
      */
     @java.lang.Override
-    public boolean hasSourceResource() {
+    @java.lang.Deprecated public boolean hasSourceResource() {
       return ((bitField0_ & 0x00000004) != 0);
     }
     /**
-     * <code>.oscal.mapping.v1.MappingResourceReference source_resource = 5 [json_name = "sourceResource"];</code>
+     * <code>.oscal.mapping.v1.MappingResourceReference source_resource = 5 [json_name = "sourceResource", deprecated = true];</code>
+     * @deprecated oscal.mapping.v1.MappingCollection.source_resource is deprecated.
+     *     See mapping/v1/mapping.proto;l=16
      * @return The sourceResource.
      */
     @java.lang.Override
-    public oscal.mapping.v1.Mapping.MappingResourceReference getSourceResource() {
+    @java.lang.Deprecated public oscal.mapping.v1.Mapping.MappingResourceReference getSourceResource() {
       return sourceResource_ == null ? oscal.mapping.v1.Mapping.MappingResourceReference.getDefaultInstance() : sourceResource_;
     }
     /**
-     * <code>.oscal.mapping.v1.MappingResourceReference source_resource = 5 [json_name = "sourceResource"];</code>
+     * <code>.oscal.mapping.v1.MappingResourceReference source_resource = 5 [json_name = "sourceResource", deprecated = true];</code>
      */
     @java.lang.Override
-    public oscal.mapping.v1.Mapping.MappingResourceReferenceOrBuilder getSourceResourceOrBuilder() {
+    @java.lang.Deprecated public oscal.mapping.v1.Mapping.MappingResourceReferenceOrBuilder getSourceResourceOrBuilder() {
       return sourceResource_ == null ? oscal.mapping.v1.Mapping.MappingResourceReference.getDefaultInstance() : sourceResource_;
     }
 
     public static final int TARGET_RESOURCE_FIELD_NUMBER = 6;
     private oscal.mapping.v1.Mapping.MappingResourceReference targetResource_;
     /**
-     * <code>.oscal.mapping.v1.MappingResourceReference target_resource = 6 [json_name = "targetResource"];</code>
+     * <code>.oscal.mapping.v1.MappingResourceReference target_resource = 6 [json_name = "targetResource", deprecated = true];</code>
+     * @deprecated oscal.mapping.v1.MappingCollection.target_resource is deprecated.
+     *     See mapping/v1/mapping.proto;l=17
      * @return Whether the targetResource field is set.
      */
     @java.lang.Override
-    public boolean hasTargetResource() {
+    @java.lang.Deprecated public boolean hasTargetResource() {
       return ((bitField0_ & 0x00000008) != 0);
     }
     /**
-     * <code>.oscal.mapping.v1.MappingResourceReference target_resource = 6 [json_name = "targetResource"];</code>
+     * <code>.oscal.mapping.v1.MappingResourceReference target_resource = 6 [json_name = "targetResource", deprecated = true];</code>
+     * @deprecated oscal.mapping.v1.MappingCollection.target_resource is deprecated.
+     *     See mapping/v1/mapping.proto;l=17
      * @return The targetResource.
      */
     @java.lang.Override
-    public oscal.mapping.v1.Mapping.MappingResourceReference getTargetResource() {
+    @java.lang.Deprecated public oscal.mapping.v1.Mapping.MappingResourceReference getTargetResource() {
       return targetResource_ == null ? oscal.mapping.v1.Mapping.MappingResourceReference.getDefaultInstance() : targetResource_;
     }
     /**
-     * <code>.oscal.mapping.v1.MappingResourceReference target_resource = 6 [json_name = "targetResource"];</code>
+     * <code>.oscal.mapping.v1.MappingResourceReference target_resource = 6 [json_name = "targetResource", deprecated = true];</code>
      */
     @java.lang.Override
-    public oscal.mapping.v1.Mapping.MappingResourceReferenceOrBuilder getTargetResourceOrBuilder() {
+    @java.lang.Deprecated public oscal.mapping.v1.Mapping.MappingResourceReferenceOrBuilder getTargetResourceOrBuilder() {
       return targetResource_ == null ? oscal.mapping.v1.Mapping.MappingResourceReference.getDefaultInstance() : targetResource_;
     }
 
@@ -524,39 +633,39 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
     @SuppressWarnings("serial")
     private java.util.List<oscal.mapping.v1.Mapping.Map> maps_;
     /**
-     * <code>repeated .oscal.mapping.v1.Map maps = 7 [json_name = "maps"];</code>
+     * <code>repeated .oscal.mapping.v1.Map maps = 7 [json_name = "maps", deprecated = true];</code>
      */
     @java.lang.Override
-    public java.util.List<oscal.mapping.v1.Mapping.Map> getMapsList() {
+    @java.lang.Deprecated public java.util.List<oscal.mapping.v1.Mapping.Map> getMapsList() {
       return maps_;
     }
     /**
-     * <code>repeated .oscal.mapping.v1.Map maps = 7 [json_name = "maps"];</code>
+     * <code>repeated .oscal.mapping.v1.Map maps = 7 [json_name = "maps", deprecated = true];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.mapping.v1.Mapping.MapOrBuilder> 
+    @java.lang.Deprecated public java.util.List<? extends oscal.mapping.v1.Mapping.MapOrBuilder>
         getMapsOrBuilderList() {
       return maps_;
     }
     /**
-     * <code>repeated .oscal.mapping.v1.Map maps = 7 [json_name = "maps"];</code>
+     * <code>repeated .oscal.mapping.v1.Map maps = 7 [json_name = "maps", deprecated = true];</code>
      */
     @java.lang.Override
-    public int getMapsCount() {
+    @java.lang.Deprecated public int getMapsCount() {
       return maps_.size();
     }
     /**
-     * <code>repeated .oscal.mapping.v1.Map maps = 7 [json_name = "maps"];</code>
+     * <code>repeated .oscal.mapping.v1.Map maps = 7 [json_name = "maps", deprecated = true];</code>
      */
     @java.lang.Override
-    public oscal.mapping.v1.Mapping.Map getMaps(int index) {
+    @java.lang.Deprecated public oscal.mapping.v1.Mapping.Map getMaps(int index) {
       return maps_.get(index);
     }
     /**
-     * <code>repeated .oscal.mapping.v1.Map maps = 7 [json_name = "maps"];</code>
+     * <code>repeated .oscal.mapping.v1.Map maps = 7 [json_name = "maps", deprecated = true];</code>
      */
     @java.lang.Override
-    public oscal.mapping.v1.Mapping.MapOrBuilder getMapsOrBuilder(
+    @java.lang.Deprecated public oscal.mapping.v1.Mapping.MapOrBuilder getMapsOrBuilder(
         int index) {
       return maps_.get(index);
     }
@@ -565,39 +674,39 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
     @SuppressWarnings("serial")
     private java.util.List<oscal.common.v1.Common.Property> props_;
     /**
-     * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props", deprecated = true];</code>
      */
     @java.lang.Override
-    public java.util.List<oscal.common.v1.Common.Property> getPropsList() {
+    @java.lang.Deprecated public java.util.List<oscal.common.v1.Common.Property> getPropsList() {
       return props_;
     }
     /**
-     * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props", deprecated = true];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    @java.lang.Deprecated public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList() {
       return props_;
     }
     /**
-     * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props", deprecated = true];</code>
      */
     @java.lang.Override
-    public int getPropsCount() {
+    @java.lang.Deprecated public int getPropsCount() {
       return props_.size();
     }
     /**
-     * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props", deprecated = true];</code>
      */
     @java.lang.Override
-    public oscal.common.v1.Common.Property getProps(int index) {
+    @java.lang.Deprecated public oscal.common.v1.Common.Property getProps(int index) {
       return props_.get(index);
     }
     /**
-     * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props", deprecated = true];</code>
      */
     @java.lang.Override
-    public oscal.common.v1.Common.PropertyOrBuilder getPropsOrBuilder(
+    @java.lang.Deprecated public oscal.common.v1.Common.PropertyOrBuilder getPropsOrBuilder(
         int index) {
       return props_.get(index);
     }
@@ -606,39 +715,39 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
     @SuppressWarnings("serial")
     private java.util.List<oscal.common.v1.Common.Link> links_;
     /**
-     * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links", deprecated = true];</code>
      */
     @java.lang.Override
-    public java.util.List<oscal.common.v1.Common.Link> getLinksList() {
+    @java.lang.Deprecated public java.util.List<oscal.common.v1.Common.Link> getLinksList() {
       return links_;
     }
     /**
-     * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links", deprecated = true];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    @java.lang.Deprecated public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList() {
       return links_;
     }
     /**
-     * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links", deprecated = true];</code>
      */
     @java.lang.Override
-    public int getLinksCount() {
+    @java.lang.Deprecated public int getLinksCount() {
       return links_.size();
     }
     /**
-     * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links", deprecated = true];</code>
      */
     @java.lang.Override
-    public oscal.common.v1.Common.Link getLinks(int index) {
+    @java.lang.Deprecated public oscal.common.v1.Common.Link getLinks(int index) {
       return links_.get(index);
     }
     /**
-     * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links", deprecated = true];</code>
      */
     @java.lang.Override
-    public oscal.common.v1.Common.LinkOrBuilder getLinksOrBuilder(
+    @java.lang.Deprecated public oscal.common.v1.Common.LinkOrBuilder getLinksOrBuilder(
         int index) {
       return links_.get(index);
     }
@@ -647,39 +756,39 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
     @SuppressWarnings("serial")
     private java.util.List<oscal.common.v1.Common.MarkupMultiline> remarks_;
     /**
-     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks"];</code>
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks", deprecated = true];</code>
      */
     @java.lang.Override
-    public java.util.List<oscal.common.v1.Common.MarkupMultiline> getRemarksList() {
+    @java.lang.Deprecated public java.util.List<oscal.common.v1.Common.MarkupMultiline> getRemarksList() {
       return remarks_;
     }
     /**
-     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks"];</code>
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks", deprecated = true];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    @java.lang.Deprecated public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList() {
       return remarks_;
     }
     /**
-     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks"];</code>
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks", deprecated = true];</code>
      */
     @java.lang.Override
-    public int getRemarksCount() {
+    @java.lang.Deprecated public int getRemarksCount() {
       return remarks_.size();
     }
     /**
-     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks"];</code>
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks", deprecated = true];</code>
      */
     @java.lang.Override
-    public oscal.common.v1.Common.MarkupMultiline getRemarks(int index) {
+    @java.lang.Deprecated public oscal.common.v1.Common.MarkupMultiline getRemarks(int index) {
       return remarks_.get(index);
     }
     /**
-     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks"];</code>
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks", deprecated = true];</code>
      */
     @java.lang.Override
-    public oscal.common.v1.Common.MarkupMultilineOrBuilder getRemarksOrBuilder(
+    @java.lang.Deprecated public oscal.common.v1.Common.MarkupMultilineOrBuilder getRemarksOrBuilder(
         int index) {
       return remarks_.get(index);
     }
@@ -687,131 +796,244 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
     public static final int MAPPING_DESCRIPTION_FIELD_NUMBER = 11;
     private oscal.mapping.v1.Mapping.MappingDescription mappingDescription_;
     /**
-     * <code>.oscal.mapping.v1.MappingDescription mapping_description = 11 [json_name = "mappingDescription"];</code>
+     * <code>.oscal.mapping.v1.MappingDescription mapping_description = 11 [json_name = "mappingDescription", deprecated = true];</code>
+     * @deprecated oscal.mapping.v1.MappingCollection.mapping_description is deprecated.
+     *     See mapping/v1/mapping.proto;l=22
      * @return Whether the mappingDescription field is set.
      */
     @java.lang.Override
-    public boolean hasMappingDescription() {
+    @java.lang.Deprecated public boolean hasMappingDescription() {
       return ((bitField0_ & 0x00000010) != 0);
     }
     /**
-     * <code>.oscal.mapping.v1.MappingDescription mapping_description = 11 [json_name = "mappingDescription"];</code>
+     * <code>.oscal.mapping.v1.MappingDescription mapping_description = 11 [json_name = "mappingDescription", deprecated = true];</code>
+     * @deprecated oscal.mapping.v1.MappingCollection.mapping_description is deprecated.
+     *     See mapping/v1/mapping.proto;l=22
      * @return The mappingDescription.
      */
     @java.lang.Override
-    public oscal.mapping.v1.Mapping.MappingDescription getMappingDescription() {
+    @java.lang.Deprecated public oscal.mapping.v1.Mapping.MappingDescription getMappingDescription() {
       return mappingDescription_ == null ? oscal.mapping.v1.Mapping.MappingDescription.getDefaultInstance() : mappingDescription_;
     }
     /**
-     * <code>.oscal.mapping.v1.MappingDescription mapping_description = 11 [json_name = "mappingDescription"];</code>
+     * <code>.oscal.mapping.v1.MappingDescription mapping_description = 11 [json_name = "mappingDescription", deprecated = true];</code>
      */
     @java.lang.Override
-    public oscal.mapping.v1.Mapping.MappingDescriptionOrBuilder getMappingDescriptionOrBuilder() {
+    @java.lang.Deprecated public oscal.mapping.v1.Mapping.MappingDescriptionOrBuilder getMappingDescriptionOrBuilder() {
       return mappingDescription_ == null ? oscal.mapping.v1.Mapping.MappingDescription.getDefaultInstance() : mappingDescription_;
     }
 
     public static final int SOURCE_GAP_SUMMARY_FIELD_NUMBER = 12;
     private oscal.mapping.v1.Mapping.GapSummary sourceGapSummary_;
     /**
-     * <code>.oscal.mapping.v1.GapSummary source_gap_summary = 12 [json_name = "sourceGapSummary"];</code>
+     * <code>.oscal.mapping.v1.GapSummary source_gap_summary = 12 [json_name = "sourceGapSummary", deprecated = true];</code>
+     * @deprecated oscal.mapping.v1.MappingCollection.source_gap_summary is deprecated.
+     *     See mapping/v1/mapping.proto;l=23
      * @return Whether the sourceGapSummary field is set.
      */
     @java.lang.Override
-    public boolean hasSourceGapSummary() {
+    @java.lang.Deprecated public boolean hasSourceGapSummary() {
       return ((bitField0_ & 0x00000020) != 0);
     }
     /**
-     * <code>.oscal.mapping.v1.GapSummary source_gap_summary = 12 [json_name = "sourceGapSummary"];</code>
+     * <code>.oscal.mapping.v1.GapSummary source_gap_summary = 12 [json_name = "sourceGapSummary", deprecated = true];</code>
+     * @deprecated oscal.mapping.v1.MappingCollection.source_gap_summary is deprecated.
+     *     See mapping/v1/mapping.proto;l=23
      * @return The sourceGapSummary.
      */
     @java.lang.Override
-    public oscal.mapping.v1.Mapping.GapSummary getSourceGapSummary() {
+    @java.lang.Deprecated public oscal.mapping.v1.Mapping.GapSummary getSourceGapSummary() {
       return sourceGapSummary_ == null ? oscal.mapping.v1.Mapping.GapSummary.getDefaultInstance() : sourceGapSummary_;
     }
     /**
-     * <code>.oscal.mapping.v1.GapSummary source_gap_summary = 12 [json_name = "sourceGapSummary"];</code>
+     * <code>.oscal.mapping.v1.GapSummary source_gap_summary = 12 [json_name = "sourceGapSummary", deprecated = true];</code>
      */
     @java.lang.Override
-    public oscal.mapping.v1.Mapping.GapSummaryOrBuilder getSourceGapSummaryOrBuilder() {
+    @java.lang.Deprecated public oscal.mapping.v1.Mapping.GapSummaryOrBuilder getSourceGapSummaryOrBuilder() {
       return sourceGapSummary_ == null ? oscal.mapping.v1.Mapping.GapSummary.getDefaultInstance() : sourceGapSummary_;
     }
 
     public static final int TARGET_GAP_SUMMARY_FIELD_NUMBER = 13;
     private oscal.mapping.v1.Mapping.GapSummary targetGapSummary_;
     /**
-     * <code>.oscal.mapping.v1.GapSummary target_gap_summary = 13 [json_name = "targetGapSummary"];</code>
+     * <code>.oscal.mapping.v1.GapSummary target_gap_summary = 13 [json_name = "targetGapSummary", deprecated = true];</code>
+     * @deprecated oscal.mapping.v1.MappingCollection.target_gap_summary is deprecated.
+     *     See mapping/v1/mapping.proto;l=24
      * @return Whether the targetGapSummary field is set.
      */
     @java.lang.Override
-    public boolean hasTargetGapSummary() {
+    @java.lang.Deprecated public boolean hasTargetGapSummary() {
       return ((bitField0_ & 0x00000040) != 0);
     }
     /**
-     * <code>.oscal.mapping.v1.GapSummary target_gap_summary = 13 [json_name = "targetGapSummary"];</code>
+     * <code>.oscal.mapping.v1.GapSummary target_gap_summary = 13 [json_name = "targetGapSummary", deprecated = true];</code>
+     * @deprecated oscal.mapping.v1.MappingCollection.target_gap_summary is deprecated.
+     *     See mapping/v1/mapping.proto;l=24
      * @return The targetGapSummary.
      */
     @java.lang.Override
-    public oscal.mapping.v1.Mapping.GapSummary getTargetGapSummary() {
+    @java.lang.Deprecated public oscal.mapping.v1.Mapping.GapSummary getTargetGapSummary() {
       return targetGapSummary_ == null ? oscal.mapping.v1.Mapping.GapSummary.getDefaultInstance() : targetGapSummary_;
     }
     /**
-     * <code>.oscal.mapping.v1.GapSummary target_gap_summary = 13 [json_name = "targetGapSummary"];</code>
+     * <code>.oscal.mapping.v1.GapSummary target_gap_summary = 13 [json_name = "targetGapSummary", deprecated = true];</code>
      */
     @java.lang.Override
-    public oscal.mapping.v1.Mapping.GapSummaryOrBuilder getTargetGapSummaryOrBuilder() {
+    @java.lang.Deprecated public oscal.mapping.v1.Mapping.GapSummaryOrBuilder getTargetGapSummaryOrBuilder() {
       return targetGapSummary_ == null ? oscal.mapping.v1.Mapping.GapSummary.getDefaultInstance() : targetGapSummary_;
     }
 
     public static final int CONFIDENCE_SCORE_FIELD_NUMBER = 14;
     private oscal.mapping.v1.Mapping.ConfidenceScore confidenceScore_;
     /**
-     * <code>.oscal.mapping.v1.ConfidenceScore confidence_score = 14 [json_name = "confidenceScore"];</code>
+     * <code>.oscal.mapping.v1.ConfidenceScore confidence_score = 14 [json_name = "confidenceScore", deprecated = true];</code>
+     * @deprecated oscal.mapping.v1.MappingCollection.confidence_score is deprecated.
+     *     See mapping/v1/mapping.proto;l=25
      * @return Whether the confidenceScore field is set.
      */
     @java.lang.Override
-    public boolean hasConfidenceScore() {
+    @java.lang.Deprecated public boolean hasConfidenceScore() {
       return ((bitField0_ & 0x00000080) != 0);
     }
     /**
-     * <code>.oscal.mapping.v1.ConfidenceScore confidence_score = 14 [json_name = "confidenceScore"];</code>
+     * <code>.oscal.mapping.v1.ConfidenceScore confidence_score = 14 [json_name = "confidenceScore", deprecated = true];</code>
+     * @deprecated oscal.mapping.v1.MappingCollection.confidence_score is deprecated.
+     *     See mapping/v1/mapping.proto;l=25
      * @return The confidenceScore.
      */
     @java.lang.Override
-    public oscal.mapping.v1.Mapping.ConfidenceScore getConfidenceScore() {
+    @java.lang.Deprecated public oscal.mapping.v1.Mapping.ConfidenceScore getConfidenceScore() {
       return confidenceScore_ == null ? oscal.mapping.v1.Mapping.ConfidenceScore.getDefaultInstance() : confidenceScore_;
     }
     /**
-     * <code>.oscal.mapping.v1.ConfidenceScore confidence_score = 14 [json_name = "confidenceScore"];</code>
+     * <code>.oscal.mapping.v1.ConfidenceScore confidence_score = 14 [json_name = "confidenceScore", deprecated = true];</code>
      */
     @java.lang.Override
-    public oscal.mapping.v1.Mapping.ConfidenceScoreOrBuilder getConfidenceScoreOrBuilder() {
+    @java.lang.Deprecated public oscal.mapping.v1.Mapping.ConfidenceScoreOrBuilder getConfidenceScoreOrBuilder() {
       return confidenceScore_ == null ? oscal.mapping.v1.Mapping.ConfidenceScore.getDefaultInstance() : confidenceScore_;
     }
 
     public static final int COVERAGE_FIELD_NUMBER = 15;
     private oscal.mapping.v1.Mapping.Coverage coverage_;
     /**
-     * <code>.oscal.mapping.v1.Coverage coverage = 15 [json_name = "coverage"];</code>
+     * <code>.oscal.mapping.v1.Coverage coverage = 15 [json_name = "coverage", deprecated = true];</code>
+     * @deprecated oscal.mapping.v1.MappingCollection.coverage is deprecated.
+     *     See mapping/v1/mapping.proto;l=26
      * @return Whether the coverage field is set.
      */
     @java.lang.Override
-    public boolean hasCoverage() {
+    @java.lang.Deprecated public boolean hasCoverage() {
       return ((bitField0_ & 0x00000100) != 0);
     }
     /**
-     * <code>.oscal.mapping.v1.Coverage coverage = 15 [json_name = "coverage"];</code>
+     * <code>.oscal.mapping.v1.Coverage coverage = 15 [json_name = "coverage", deprecated = true];</code>
+     * @deprecated oscal.mapping.v1.MappingCollection.coverage is deprecated.
+     *     See mapping/v1/mapping.proto;l=26
      * @return The coverage.
      */
     @java.lang.Override
-    public oscal.mapping.v1.Mapping.Coverage getCoverage() {
+    @java.lang.Deprecated public oscal.mapping.v1.Mapping.Coverage getCoverage() {
       return coverage_ == null ? oscal.mapping.v1.Mapping.Coverage.getDefaultInstance() : coverage_;
     }
     /**
-     * <code>.oscal.mapping.v1.Coverage coverage = 15 [json_name = "coverage"];</code>
+     * <code>.oscal.mapping.v1.Coverage coverage = 15 [json_name = "coverage", deprecated = true];</code>
      */
     @java.lang.Override
-    public oscal.mapping.v1.Mapping.CoverageOrBuilder getCoverageOrBuilder() {
+    @java.lang.Deprecated public oscal.mapping.v1.Mapping.CoverageOrBuilder getCoverageOrBuilder() {
       return coverage_ == null ? oscal.mapping.v1.Mapping.Coverage.getDefaultInstance() : coverage_;
+    }
+
+    public static final int PROVENANCE_FIELD_NUMBER = 16;
+    private oscal.mapping.v1.Mapping.MappingProvenance provenance_;
+    /**
+     * <code>.oscal.mapping.v1.MappingProvenance provenance = 16 [json_name = "provenance"];</code>
+     * @return Whether the provenance field is set.
+     */
+    @java.lang.Override
+    public boolean hasProvenance() {
+      return ((bitField0_ & 0x00000200) != 0);
+    }
+    /**
+     * <code>.oscal.mapping.v1.MappingProvenance provenance = 16 [json_name = "provenance"];</code>
+     * @return The provenance.
+     */
+    @java.lang.Override
+    public oscal.mapping.v1.Mapping.MappingProvenance getProvenance() {
+      return provenance_ == null ? oscal.mapping.v1.Mapping.MappingProvenance.getDefaultInstance() : provenance_;
+    }
+    /**
+     * <code>.oscal.mapping.v1.MappingProvenance provenance = 16 [json_name = "provenance"];</code>
+     */
+    @java.lang.Override
+    public oscal.mapping.v1.Mapping.MappingProvenanceOrBuilder getProvenanceOrBuilder() {
+      return provenance_ == null ? oscal.mapping.v1.Mapping.MappingProvenance.getDefaultInstance() : provenance_;
+    }
+
+    public static final int MAPPINGS_FIELD_NUMBER = 17;
+    @SuppressWarnings("serial")
+    private java.util.List<oscal.mapping.v1.Mapping.ControlMapping> mappings_;
+    /**
+     * <code>repeated .oscal.mapping.v1.ControlMapping mappings = 17 [json_name = "mappings"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<oscal.mapping.v1.Mapping.ControlMapping> getMappingsList() {
+      return mappings_;
+    }
+    /**
+     * <code>repeated .oscal.mapping.v1.ControlMapping mappings = 17 [json_name = "mappings"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends oscal.mapping.v1.Mapping.ControlMappingOrBuilder>
+        getMappingsOrBuilderList() {
+      return mappings_;
+    }
+    /**
+     * <code>repeated .oscal.mapping.v1.ControlMapping mappings = 17 [json_name = "mappings"];</code>
+     */
+    @java.lang.Override
+    public int getMappingsCount() {
+      return mappings_.size();
+    }
+    /**
+     * <code>repeated .oscal.mapping.v1.ControlMapping mappings = 17 [json_name = "mappings"];</code>
+     */
+    @java.lang.Override
+    public oscal.mapping.v1.Mapping.ControlMapping getMappings(int index) {
+      return mappings_.get(index);
+    }
+    /**
+     * <code>repeated .oscal.mapping.v1.ControlMapping mappings = 17 [json_name = "mappings"];</code>
+     */
+    @java.lang.Override
+    public oscal.mapping.v1.Mapping.ControlMappingOrBuilder getMappingsOrBuilder(
+        int index) {
+      return mappings_.get(index);
+    }
+
+    public static final int BACK_MATTER_FIELD_NUMBER = 18;
+    private oscal.common.v1.Common.BackMatter backMatter_;
+    /**
+     * <code>.oscal.common.v1.BackMatter back_matter = 18 [json_name = "backMatter"];</code>
+     * @return Whether the backMatter field is set.
+     */
+    @java.lang.Override
+    public boolean hasBackMatter() {
+      return ((bitField0_ & 0x00000400) != 0);
+    }
+    /**
+     * <code>.oscal.common.v1.BackMatter back_matter = 18 [json_name = "backMatter"];</code>
+     * @return The backMatter.
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.BackMatter getBackMatter() {
+      return backMatter_ == null ? oscal.common.v1.Common.BackMatter.getDefaultInstance() : backMatter_;
+    }
+    /**
+     * <code>.oscal.common.v1.BackMatter back_matter = 18 [json_name = "backMatter"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.BackMatterOrBuilder getBackMatterOrBuilder() {
+      return backMatter_ == null ? oscal.common.v1.Common.BackMatter.getDefaultInstance() : backMatter_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -872,6 +1094,15 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
       }
       if (((bitField0_ & 0x00000100) != 0)) {
         output.writeMessage(15, getCoverage());
+      }
+      if (((bitField0_ & 0x00000200) != 0)) {
+        output.writeMessage(16, getProvenance());
+      }
+      for (int i = 0; i < mappings_.size(); i++) {
+        output.writeMessage(17, mappings_.get(i));
+      }
+      if (((bitField0_ & 0x00000400) != 0)) {
+        output.writeMessage(18, getBackMatter());
       }
       getUnknownFields().writeTo(output);
     }
@@ -955,6 +1186,23 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(15, getCoverage());
       }
+      if (((bitField0_ & 0x00000200) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(16, getProvenance());
+      }
+
+          {
+            final int count = mappings_.size();
+            for (int i = 0; i < count; i++) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeMessageSizeNoTag(mappings_.get(i));
+            }
+            size += 2 * count;
+          }
+      if (((bitField0_ & 0x00000400) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(18, getBackMatter());
+      }
       return size;
     }
     @java.lang.Override
@@ -1036,6 +1284,18 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         if (!getCoverage()
             .equals(other.getCoverage())) return false;
       }
+      if (hasProvenance() != other.hasProvenance()) return false;
+      if (hasProvenance()) {
+        if (!getProvenance()
+            .equals(other.getProvenance())) return false;
+      }
+      if (!getMappingsList()
+          .equals(other.getMappingsList())) return false;
+      if (hasBackMatter() != other.hasBackMatter()) return false;
+      if (hasBackMatter()) {
+        if (!getBackMatter()
+            .equals(other.getBackMatter())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -1102,6 +1362,18 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
       if (hasCoverage()) {
         hash = (37 * hash) + COVERAGE_FIELD_NUMBER;
         hash = (53 * hash) + getCoverage().hashCode();
+      }
+      if (hasProvenance()) {
+        hash = (37 * hash) + PROVENANCE_FIELD_NUMBER;
+        hash = (53 * hash) + getProvenance().hashCode();
+      }
+      if (getMappingsCount() > 0) {
+        hash = (37 * hash) + MAPPINGS_FIELD_NUMBER;
+        hash = (53 * hash) + getMappingsList().hashCode();
+      }
+      if (hasBackMatter()) {
+        hash = (37 * hash) + BACK_MATTER_FIELD_NUMBER;
+        hash = (53 * hash) + getBackMatter().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -1202,7 +1474,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
     }
     /**
      * <pre>
-     * MappingCollection represents a collection of mappings
+     * MappingCollection is the OSCAL 1.2 mapping-collection document root.
+     * Fields 3-15 predate the released Mapping model and are retained only for
+     * wire compatibility; new code uses provenance, mappings, and back_matter.
      * </pre>
      *
      * Protobuf type {@code oscal.mapping.v1.MappingCollection}
@@ -1250,6 +1524,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
           internalGetTargetGapSummaryFieldBuilder();
           internalGetConfidenceScoreFieldBuilder();
           internalGetCoverageFieldBuilder();
+          internalGetProvenanceFieldBuilder();
+          internalGetMappingsFieldBuilder();
+          internalGetBackMatterFieldBuilder();
         }
       }
       @java.lang.Override
@@ -1331,6 +1608,23 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
           coverageBuilder_.dispose();
           coverageBuilder_ = null;
         }
+        provenance_ = null;
+        if (provenanceBuilder_ != null) {
+          provenanceBuilder_.dispose();
+          provenanceBuilder_ = null;
+        }
+        if (mappingsBuilder_ == null) {
+          mappings_ = java.util.Collections.emptyList();
+        } else {
+          mappings_ = null;
+          mappingsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00010000);
+        backMatter_ = null;
+        if (backMatterBuilder_ != null) {
+          backMatterBuilder_.dispose();
+          backMatterBuilder_ = null;
+        }
         return this;
       }
 
@@ -1400,6 +1694,15 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         } else {
           result.remarks_ = remarksBuilder_.build();
         }
+        if (mappingsBuilder_ == null) {
+          if (((bitField0_ & 0x00010000) != 0)) {
+            mappings_ = java.util.Collections.unmodifiableList(mappings_);
+            bitField0_ = (bitField0_ & ~0x00010000);
+          }
+          result.mappings_ = mappings_;
+        } else {
+          result.mappings_ = mappingsBuilder_.build();
+        }
       }
 
       private void buildPartial0(oscal.mapping.v1.Mapping.MappingCollection result) {
@@ -1465,6 +1768,18 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
               : coverageBuilder_.build();
           to_bitField0_ |= 0x00000100;
         }
+        if (((from_bitField0_ & 0x00008000) != 0)) {
+          result.provenance_ = provenanceBuilder_ == null
+              ? provenance_
+              : provenanceBuilder_.build();
+          to_bitField0_ |= 0x00000200;
+        }
+        if (((from_bitField0_ & 0x00020000) != 0)) {
+          result.backMatter_ = backMatterBuilder_ == null
+              ? backMatter_
+              : backMatterBuilder_.build();
+          to_bitField0_ |= 0x00000400;
+        }
         result.bitField0_ |= to_bitField0_;
       }
 
@@ -1520,7 +1835,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
               mapsBuilder_ = null;
               maps_ = other.maps_;
               bitField0_ = (bitField0_ & ~0x00000040);
-              mapsBuilder_ = 
+              mapsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetMapsFieldBuilder() : null;
             } else {
@@ -1546,7 +1861,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
               propsBuilder_ = null;
               props_ = other.props_;
               bitField0_ = (bitField0_ & ~0x00000080);
-              propsBuilder_ = 
+              propsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetPropsFieldBuilder() : null;
             } else {
@@ -1572,7 +1887,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
               linksBuilder_ = null;
               links_ = other.links_;
               bitField0_ = (bitField0_ & ~0x00000100);
-              linksBuilder_ = 
+              linksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetLinksFieldBuilder() : null;
             } else {
@@ -1598,7 +1913,4602 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
               remarksBuilder_ = null;
               remarks_ = other.remarks_;
               bitField0_ = (bitField0_ & ~0x00000200);
-              remarksBuilder_ = 
+              remarksBuilder_ =
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   internalGetRemarksFieldBuilder() : null;
+            } else {
+              remarksBuilder_.addAllMessages(other.remarks_);
+            }
+          }
+        }
+        if (other.hasMappingDescription()) {
+          mergeMappingDescription(other.getMappingDescription());
+        }
+        if (other.hasSourceGapSummary()) {
+          mergeSourceGapSummary(other.getSourceGapSummary());
+        }
+        if (other.hasTargetGapSummary()) {
+          mergeTargetGapSummary(other.getTargetGapSummary());
+        }
+        if (other.hasConfidenceScore()) {
+          mergeConfidenceScore(other.getConfidenceScore());
+        }
+        if (other.hasCoverage()) {
+          mergeCoverage(other.getCoverage());
+        }
+        if (other.hasProvenance()) {
+          mergeProvenance(other.getProvenance());
+        }
+        if (mappingsBuilder_ == null) {
+          if (!other.mappings_.isEmpty()) {
+            if (mappings_.isEmpty()) {
+              mappings_ = other.mappings_;
+              bitField0_ = (bitField0_ & ~0x00010000);
+            } else {
+              ensureMappingsIsMutable();
+              mappings_.addAll(other.mappings_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.mappings_.isEmpty()) {
+            if (mappingsBuilder_.isEmpty()) {
+              mappingsBuilder_.dispose();
+              mappingsBuilder_ = null;
+              mappings_ = other.mappings_;
+              bitField0_ = (bitField0_ & ~0x00010000);
+              mappingsBuilder_ =
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   internalGetMappingsFieldBuilder() : null;
+            } else {
+              mappingsBuilder_.addAllMessages(other.mappings_);
+            }
+          }
+        }
+        if (other.hasBackMatter()) {
+          mergeBackMatter(other.getBackMatter());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    internalGetUuidFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    internalGetMetadataFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                matchingRationale_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                status_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                input.readMessage(
+                    internalGetSourceResourceFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                input.readMessage(
+                    internalGetTargetResourceFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                oscal.mapping.v1.Mapping.Map m =
+                    input.readMessage(
+                        oscal.mapping.v1.Mapping.Map.parser(),
+                        extensionRegistry);
+                if (mapsBuilder_ == null) {
+                  ensureMapsIsMutable();
+                  maps_.add(m);
+                } else {
+                  mapsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 58
+              case 66: {
+                oscal.common.v1.Common.Property m =
+                    input.readMessage(
+                        oscal.common.v1.Common.Property.parser(),
+                        extensionRegistry);
+                if (propsBuilder_ == null) {
+                  ensurePropsIsMutable();
+                  props_.add(m);
+                } else {
+                  propsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 66
+              case 74: {
+                oscal.common.v1.Common.Link m =
+                    input.readMessage(
+                        oscal.common.v1.Common.Link.parser(),
+                        extensionRegistry);
+                if (linksBuilder_ == null) {
+                  ensureLinksIsMutable();
+                  links_.add(m);
+                } else {
+                  linksBuilder_.addMessage(m);
+                }
+                break;
+              } // case 74
+              case 82: {
+                oscal.common.v1.Common.MarkupMultiline m =
+                    input.readMessage(
+                        oscal.common.v1.Common.MarkupMultiline.parser(),
+                        extensionRegistry);
+                if (remarksBuilder_ == null) {
+                  ensureRemarksIsMutable();
+                  remarks_.add(m);
+                } else {
+                  remarksBuilder_.addMessage(m);
+                }
+                break;
+              } // case 82
+              case 90: {
+                input.readMessage(
+                    internalGetMappingDescriptionFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000400;
+                break;
+              } // case 90
+              case 98: {
+                input.readMessage(
+                    internalGetSourceGapSummaryFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000800;
+                break;
+              } // case 98
+              case 106: {
+                input.readMessage(
+                    internalGetTargetGapSummaryFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00001000;
+                break;
+              } // case 106
+              case 114: {
+                input.readMessage(
+                    internalGetConfidenceScoreFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00002000;
+                break;
+              } // case 114
+              case 122: {
+                input.readMessage(
+                    internalGetCoverageFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00004000;
+                break;
+              } // case 122
+              case 130: {
+                input.readMessage(
+                    internalGetProvenanceFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00008000;
+                break;
+              } // case 130
+              case 138: {
+                oscal.mapping.v1.Mapping.ControlMapping m =
+                    input.readMessage(
+                        oscal.mapping.v1.Mapping.ControlMapping.parser(),
+                        extensionRegistry);
+                if (mappingsBuilder_ == null) {
+                  ensureMappingsIsMutable();
+                  mappings_.add(m);
+                } else {
+                  mappingsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 138
+              case 146: {
+                input.readMessage(
+                    internalGetBackMatterFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00020000;
+                break;
+              } // case 146
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private oscal.common.v1.Common.UUID uuid_;
+      private com.google.protobuf.SingleFieldBuilder<
+          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder> uuidBuilder_;
+      /**
+       * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
+       * @return Whether the uuid field is set.
+       */
+      public boolean hasUuid() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
+       * @return The uuid.
+       */
+      public oscal.common.v1.Common.UUID getUuid() {
+        if (uuidBuilder_ == null) {
+          return uuid_ == null ? oscal.common.v1.Common.UUID.getDefaultInstance() : uuid_;
+        } else {
+          return uuidBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
+       */
+      public Builder setUuid(oscal.common.v1.Common.UUID value) {
+        if (uuidBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          uuid_ = value;
+        } else {
+          uuidBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
+       */
+      public Builder setUuid(
+          oscal.common.v1.Common.UUID.Builder builderForValue) {
+        if (uuidBuilder_ == null) {
+          uuid_ = builderForValue.build();
+        } else {
+          uuidBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
+       */
+      public Builder mergeUuid(oscal.common.v1.Common.UUID value) {
+        if (uuidBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            uuid_ != null &&
+            uuid_ != oscal.common.v1.Common.UUID.getDefaultInstance()) {
+            getUuidBuilder().mergeFrom(value);
+          } else {
+            uuid_ = value;
+          }
+        } else {
+          uuidBuilder_.mergeFrom(value);
+        }
+        if (uuid_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
+       */
+      public Builder clearUuid() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        uuid_ = null;
+        if (uuidBuilder_ != null) {
+          uuidBuilder_.dispose();
+          uuidBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
+       */
+      public oscal.common.v1.Common.UUID.Builder getUuidBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return internalGetUuidFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
+       */
+      public oscal.common.v1.Common.UUIDOrBuilder getUuidOrBuilder() {
+        if (uuidBuilder_ != null) {
+          return uuidBuilder_.getMessageOrBuilder();
+        } else {
+          return uuid_ == null ?
+              oscal.common.v1.Common.UUID.getDefaultInstance() : uuid_;
+        }
+      }
+      /**
+       * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder>
+          internalGetUuidFieldBuilder() {
+        if (uuidBuilder_ == null) {
+          uuidBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder>(
+                  getUuid(),
+                  getParentForChildren(),
+                  isClean());
+          uuid_ = null;
+        }
+        return uuidBuilder_;
+      }
+
+      private oscal.common.v1.Common.Metadata metadata_;
+      private com.google.protobuf.SingleFieldBuilder<
+          oscal.common.v1.Common.Metadata, oscal.common.v1.Common.Metadata.Builder, oscal.common.v1.Common.MetadataOrBuilder> metadataBuilder_;
+      /**
+       * <code>.oscal.common.v1.Metadata metadata = 2 [json_name = "metadata"];</code>
+       * @return Whether the metadata field is set.
+       */
+      public boolean hasMetadata() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.oscal.common.v1.Metadata metadata = 2 [json_name = "metadata"];</code>
+       * @return The metadata.
+       */
+      public oscal.common.v1.Common.Metadata getMetadata() {
+        if (metadataBuilder_ == null) {
+          return metadata_ == null ? oscal.common.v1.Common.Metadata.getDefaultInstance() : metadata_;
+        } else {
+          return metadataBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.oscal.common.v1.Metadata metadata = 2 [json_name = "metadata"];</code>
+       */
+      public Builder setMetadata(oscal.common.v1.Common.Metadata value) {
+        if (metadataBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          metadata_ = value;
+        } else {
+          metadataBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.Metadata metadata = 2 [json_name = "metadata"];</code>
+       */
+      public Builder setMetadata(
+          oscal.common.v1.Common.Metadata.Builder builderForValue) {
+        if (metadataBuilder_ == null) {
+          metadata_ = builderForValue.build();
+        } else {
+          metadataBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.Metadata metadata = 2 [json_name = "metadata"];</code>
+       */
+      public Builder mergeMetadata(oscal.common.v1.Common.Metadata value) {
+        if (metadataBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            metadata_ != null &&
+            metadata_ != oscal.common.v1.Common.Metadata.getDefaultInstance()) {
+            getMetadataBuilder().mergeFrom(value);
+          } else {
+            metadata_ = value;
+          }
+        } else {
+          metadataBuilder_.mergeFrom(value);
+        }
+        if (metadata_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.Metadata metadata = 2 [json_name = "metadata"];</code>
+       */
+      public Builder clearMetadata() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        metadata_ = null;
+        if (metadataBuilder_ != null) {
+          metadataBuilder_.dispose();
+          metadataBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.Metadata metadata = 2 [json_name = "metadata"];</code>
+       */
+      public oscal.common.v1.Common.Metadata.Builder getMetadataBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return internalGetMetadataFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.oscal.common.v1.Metadata metadata = 2 [json_name = "metadata"];</code>
+       */
+      public oscal.common.v1.Common.MetadataOrBuilder getMetadataOrBuilder() {
+        if (metadataBuilder_ != null) {
+          return metadataBuilder_.getMessageOrBuilder();
+        } else {
+          return metadata_ == null ?
+              oscal.common.v1.Common.Metadata.getDefaultInstance() : metadata_;
+        }
+      }
+      /**
+       * <code>.oscal.common.v1.Metadata metadata = 2 [json_name = "metadata"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          oscal.common.v1.Common.Metadata, oscal.common.v1.Common.Metadata.Builder, oscal.common.v1.Common.MetadataOrBuilder>
+          internalGetMetadataFieldBuilder() {
+        if (metadataBuilder_ == null) {
+          metadataBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              oscal.common.v1.Common.Metadata, oscal.common.v1.Common.Metadata.Builder, oscal.common.v1.Common.MetadataOrBuilder>(
+                  getMetadata(),
+                  getParentForChildren(),
+                  isClean());
+          metadata_ = null;
+        }
+        return metadataBuilder_;
+      }
+
+      private java.lang.Object matchingRationale_ = "";
+      /**
+       * <code>string matching_rationale = 3 [json_name = "matchingRationale", deprecated = true];</code>
+       * @deprecated oscal.mapping.v1.MappingCollection.matching_rationale is deprecated.
+       *     See mapping/v1/mapping.proto;l=14
+       * @return The matchingRationale.
+       */
+      @java.lang.Deprecated public java.lang.String getMatchingRationale() {
+        java.lang.Object ref = matchingRationale_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          matchingRationale_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string matching_rationale = 3 [json_name = "matchingRationale", deprecated = true];</code>
+       * @deprecated oscal.mapping.v1.MappingCollection.matching_rationale is deprecated.
+       *     See mapping/v1/mapping.proto;l=14
+       * @return The bytes for matchingRationale.
+       */
+      @java.lang.Deprecated public com.google.protobuf.ByteString
+          getMatchingRationaleBytes() {
+        java.lang.Object ref = matchingRationale_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          matchingRationale_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string matching_rationale = 3 [json_name = "matchingRationale", deprecated = true];</code>
+       * @deprecated oscal.mapping.v1.MappingCollection.matching_rationale is deprecated.
+       *     See mapping/v1/mapping.proto;l=14
+       * @param value The matchingRationale to set.
+       * @return This builder for chaining.
+       */
+      @java.lang.Deprecated public Builder setMatchingRationale(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        matchingRationale_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string matching_rationale = 3 [json_name = "matchingRationale", deprecated = true];</code>
+       * @deprecated oscal.mapping.v1.MappingCollection.matching_rationale is deprecated.
+       *     See mapping/v1/mapping.proto;l=14
+       * @return This builder for chaining.
+       */
+      @java.lang.Deprecated public Builder clearMatchingRationale() {
+        matchingRationale_ = getDefaultInstance().getMatchingRationale();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string matching_rationale = 3 [json_name = "matchingRationale", deprecated = true];</code>
+       * @deprecated oscal.mapping.v1.MappingCollection.matching_rationale is deprecated.
+       *     See mapping/v1/mapping.proto;l=14
+       * @param value The bytes for matchingRationale to set.
+       * @return This builder for chaining.
+       */
+      @java.lang.Deprecated public Builder setMatchingRationaleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        matchingRationale_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object status_ = "";
+      /**
+       * <code>string status = 4 [json_name = "status", deprecated = true];</code>
+       * @deprecated oscal.mapping.v1.MappingCollection.status is deprecated.
+       *     See mapping/v1/mapping.proto;l=15
+       * @return The status.
+       */
+      @java.lang.Deprecated public java.lang.String getStatus() {
+        java.lang.Object ref = status_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          status_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string status = 4 [json_name = "status", deprecated = true];</code>
+       * @deprecated oscal.mapping.v1.MappingCollection.status is deprecated.
+       *     See mapping/v1/mapping.proto;l=15
+       * @return The bytes for status.
+       */
+      @java.lang.Deprecated public com.google.protobuf.ByteString
+          getStatusBytes() {
+        java.lang.Object ref = status_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          status_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string status = 4 [json_name = "status", deprecated = true];</code>
+       * @deprecated oscal.mapping.v1.MappingCollection.status is deprecated.
+       *     See mapping/v1/mapping.proto;l=15
+       * @param value The status to set.
+       * @return This builder for chaining.
+       */
+      @java.lang.Deprecated public Builder setStatus(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        status_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string status = 4 [json_name = "status", deprecated = true];</code>
+       * @deprecated oscal.mapping.v1.MappingCollection.status is deprecated.
+       *     See mapping/v1/mapping.proto;l=15
+       * @return This builder for chaining.
+       */
+      @java.lang.Deprecated public Builder clearStatus() {
+        status_ = getDefaultInstance().getStatus();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string status = 4 [json_name = "status", deprecated = true];</code>
+       * @deprecated oscal.mapping.v1.MappingCollection.status is deprecated.
+       *     See mapping/v1/mapping.proto;l=15
+       * @param value The bytes for status to set.
+       * @return This builder for chaining.
+       */
+      @java.lang.Deprecated public Builder setStatusBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        status_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private oscal.mapping.v1.Mapping.MappingResourceReference sourceResource_;
+      private com.google.protobuf.SingleFieldBuilder<
+          oscal.mapping.v1.Mapping.MappingResourceReference, oscal.mapping.v1.Mapping.MappingResourceReference.Builder, oscal.mapping.v1.Mapping.MappingResourceReferenceOrBuilder> sourceResourceBuilder_;
+      /**
+       * <code>.oscal.mapping.v1.MappingResourceReference source_resource = 5 [json_name = "sourceResource", deprecated = true];</code>
+       * @deprecated oscal.mapping.v1.MappingCollection.source_resource is deprecated.
+       *     See mapping/v1/mapping.proto;l=16
+       * @return Whether the sourceResource field is set.
+       */
+      @java.lang.Deprecated public boolean hasSourceResource() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <code>.oscal.mapping.v1.MappingResourceReference source_resource = 5 [json_name = "sourceResource", deprecated = true];</code>
+       * @deprecated oscal.mapping.v1.MappingCollection.source_resource is deprecated.
+       *     See mapping/v1/mapping.proto;l=16
+       * @return The sourceResource.
+       */
+      @java.lang.Deprecated public oscal.mapping.v1.Mapping.MappingResourceReference getSourceResource() {
+        if (sourceResourceBuilder_ == null) {
+          return sourceResource_ == null ? oscal.mapping.v1.Mapping.MappingResourceReference.getDefaultInstance() : sourceResource_;
+        } else {
+          return sourceResourceBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.oscal.mapping.v1.MappingResourceReference source_resource = 5 [json_name = "sourceResource", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder setSourceResource(oscal.mapping.v1.Mapping.MappingResourceReference value) {
+        if (sourceResourceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          sourceResource_ = value;
+        } else {
+          sourceResourceBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.mapping.v1.MappingResourceReference source_resource = 5 [json_name = "sourceResource", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder setSourceResource(
+          oscal.mapping.v1.Mapping.MappingResourceReference.Builder builderForValue) {
+        if (sourceResourceBuilder_ == null) {
+          sourceResource_ = builderForValue.build();
+        } else {
+          sourceResourceBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.mapping.v1.MappingResourceReference source_resource = 5 [json_name = "sourceResource", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder mergeSourceResource(oscal.mapping.v1.Mapping.MappingResourceReference value) {
+        if (sourceResourceBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0) &&
+            sourceResource_ != null &&
+            sourceResource_ != oscal.mapping.v1.Mapping.MappingResourceReference.getDefaultInstance()) {
+            getSourceResourceBuilder().mergeFrom(value);
+          } else {
+            sourceResource_ = value;
+          }
+        } else {
+          sourceResourceBuilder_.mergeFrom(value);
+        }
+        if (sourceResource_ != null) {
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>.oscal.mapping.v1.MappingResourceReference source_resource = 5 [json_name = "sourceResource", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder clearSourceResource() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        sourceResource_ = null;
+        if (sourceResourceBuilder_ != null) {
+          sourceResourceBuilder_.dispose();
+          sourceResourceBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.mapping.v1.MappingResourceReference source_resource = 5 [json_name = "sourceResource", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public oscal.mapping.v1.Mapping.MappingResourceReference.Builder getSourceResourceBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return internalGetSourceResourceFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.oscal.mapping.v1.MappingResourceReference source_resource = 5 [json_name = "sourceResource", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public oscal.mapping.v1.Mapping.MappingResourceReferenceOrBuilder getSourceResourceOrBuilder() {
+        if (sourceResourceBuilder_ != null) {
+          return sourceResourceBuilder_.getMessageOrBuilder();
+        } else {
+          return sourceResource_ == null ?
+              oscal.mapping.v1.Mapping.MappingResourceReference.getDefaultInstance() : sourceResource_;
+        }
+      }
+      /**
+       * <code>.oscal.mapping.v1.MappingResourceReference source_resource = 5 [json_name = "sourceResource", deprecated = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          oscal.mapping.v1.Mapping.MappingResourceReference, oscal.mapping.v1.Mapping.MappingResourceReference.Builder, oscal.mapping.v1.Mapping.MappingResourceReferenceOrBuilder>
+          internalGetSourceResourceFieldBuilder() {
+        if (sourceResourceBuilder_ == null) {
+          sourceResourceBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              oscal.mapping.v1.Mapping.MappingResourceReference, oscal.mapping.v1.Mapping.MappingResourceReference.Builder, oscal.mapping.v1.Mapping.MappingResourceReferenceOrBuilder>(
+                  getSourceResource(),
+                  getParentForChildren(),
+                  isClean());
+          sourceResource_ = null;
+        }
+        return sourceResourceBuilder_;
+      }
+
+      private oscal.mapping.v1.Mapping.MappingResourceReference targetResource_;
+      private com.google.protobuf.SingleFieldBuilder<
+          oscal.mapping.v1.Mapping.MappingResourceReference, oscal.mapping.v1.Mapping.MappingResourceReference.Builder, oscal.mapping.v1.Mapping.MappingResourceReferenceOrBuilder> targetResourceBuilder_;
+      /**
+       * <code>.oscal.mapping.v1.MappingResourceReference target_resource = 6 [json_name = "targetResource", deprecated = true];</code>
+       * @deprecated oscal.mapping.v1.MappingCollection.target_resource is deprecated.
+       *     See mapping/v1/mapping.proto;l=17
+       * @return Whether the targetResource field is set.
+       */
+      @java.lang.Deprecated public boolean hasTargetResource() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <code>.oscal.mapping.v1.MappingResourceReference target_resource = 6 [json_name = "targetResource", deprecated = true];</code>
+       * @deprecated oscal.mapping.v1.MappingCollection.target_resource is deprecated.
+       *     See mapping/v1/mapping.proto;l=17
+       * @return The targetResource.
+       */
+      @java.lang.Deprecated public oscal.mapping.v1.Mapping.MappingResourceReference getTargetResource() {
+        if (targetResourceBuilder_ == null) {
+          return targetResource_ == null ? oscal.mapping.v1.Mapping.MappingResourceReference.getDefaultInstance() : targetResource_;
+        } else {
+          return targetResourceBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.oscal.mapping.v1.MappingResourceReference target_resource = 6 [json_name = "targetResource", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder setTargetResource(oscal.mapping.v1.Mapping.MappingResourceReference value) {
+        if (targetResourceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          targetResource_ = value;
+        } else {
+          targetResourceBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.mapping.v1.MappingResourceReference target_resource = 6 [json_name = "targetResource", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder setTargetResource(
+          oscal.mapping.v1.Mapping.MappingResourceReference.Builder builderForValue) {
+        if (targetResourceBuilder_ == null) {
+          targetResource_ = builderForValue.build();
+        } else {
+          targetResourceBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.mapping.v1.MappingResourceReference target_resource = 6 [json_name = "targetResource", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder mergeTargetResource(oscal.mapping.v1.Mapping.MappingResourceReference value) {
+        if (targetResourceBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0) &&
+            targetResource_ != null &&
+            targetResource_ != oscal.mapping.v1.Mapping.MappingResourceReference.getDefaultInstance()) {
+            getTargetResourceBuilder().mergeFrom(value);
+          } else {
+            targetResource_ = value;
+          }
+        } else {
+          targetResourceBuilder_.mergeFrom(value);
+        }
+        if (targetResource_ != null) {
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>.oscal.mapping.v1.MappingResourceReference target_resource = 6 [json_name = "targetResource", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder clearTargetResource() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        targetResource_ = null;
+        if (targetResourceBuilder_ != null) {
+          targetResourceBuilder_.dispose();
+          targetResourceBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.mapping.v1.MappingResourceReference target_resource = 6 [json_name = "targetResource", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public oscal.mapping.v1.Mapping.MappingResourceReference.Builder getTargetResourceBuilder() {
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return internalGetTargetResourceFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.oscal.mapping.v1.MappingResourceReference target_resource = 6 [json_name = "targetResource", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public oscal.mapping.v1.Mapping.MappingResourceReferenceOrBuilder getTargetResourceOrBuilder() {
+        if (targetResourceBuilder_ != null) {
+          return targetResourceBuilder_.getMessageOrBuilder();
+        } else {
+          return targetResource_ == null ?
+              oscal.mapping.v1.Mapping.MappingResourceReference.getDefaultInstance() : targetResource_;
+        }
+      }
+      /**
+       * <code>.oscal.mapping.v1.MappingResourceReference target_resource = 6 [json_name = "targetResource", deprecated = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          oscal.mapping.v1.Mapping.MappingResourceReference, oscal.mapping.v1.Mapping.MappingResourceReference.Builder, oscal.mapping.v1.Mapping.MappingResourceReferenceOrBuilder>
+          internalGetTargetResourceFieldBuilder() {
+        if (targetResourceBuilder_ == null) {
+          targetResourceBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              oscal.mapping.v1.Mapping.MappingResourceReference, oscal.mapping.v1.Mapping.MappingResourceReference.Builder, oscal.mapping.v1.Mapping.MappingResourceReferenceOrBuilder>(
+                  getTargetResource(),
+                  getParentForChildren(),
+                  isClean());
+          targetResource_ = null;
+        }
+        return targetResourceBuilder_;
+      }
+
+      private java.util.List<oscal.mapping.v1.Mapping.Map> maps_ =
+        java.util.Collections.emptyList();
+      private void ensureMapsIsMutable() {
+        if (!((bitField0_ & 0x00000040) != 0)) {
+          maps_ = new java.util.ArrayList<oscal.mapping.v1.Mapping.Map>(maps_);
+          bitField0_ |= 0x00000040;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.mapping.v1.Mapping.Map, oscal.mapping.v1.Mapping.Map.Builder, oscal.mapping.v1.Mapping.MapOrBuilder> mapsBuilder_;
+
+      /**
+       * <code>repeated .oscal.mapping.v1.Map maps = 7 [json_name = "maps", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public java.util.List<oscal.mapping.v1.Mapping.Map> getMapsList() {
+        if (mapsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(maps_);
+        } else {
+          return mapsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .oscal.mapping.v1.Map maps = 7 [json_name = "maps", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public int getMapsCount() {
+        if (mapsBuilder_ == null) {
+          return maps_.size();
+        } else {
+          return mapsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .oscal.mapping.v1.Map maps = 7 [json_name = "maps", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public oscal.mapping.v1.Mapping.Map getMaps(int index) {
+        if (mapsBuilder_ == null) {
+          return maps_.get(index);
+        } else {
+          return mapsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.mapping.v1.Map maps = 7 [json_name = "maps", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder setMaps(
+          int index, oscal.mapping.v1.Mapping.Map value) {
+        if (mapsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMapsIsMutable();
+          maps_.set(index, value);
+          onChanged();
+        } else {
+          mapsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.mapping.v1.Map maps = 7 [json_name = "maps", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder setMaps(
+          int index, oscal.mapping.v1.Mapping.Map.Builder builderForValue) {
+        if (mapsBuilder_ == null) {
+          ensureMapsIsMutable();
+          maps_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          mapsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.mapping.v1.Map maps = 7 [json_name = "maps", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder addMaps(oscal.mapping.v1.Mapping.Map value) {
+        if (mapsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMapsIsMutable();
+          maps_.add(value);
+          onChanged();
+        } else {
+          mapsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.mapping.v1.Map maps = 7 [json_name = "maps", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder addMaps(
+          int index, oscal.mapping.v1.Mapping.Map value) {
+        if (mapsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMapsIsMutable();
+          maps_.add(index, value);
+          onChanged();
+        } else {
+          mapsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.mapping.v1.Map maps = 7 [json_name = "maps", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder addMaps(
+          oscal.mapping.v1.Mapping.Map.Builder builderForValue) {
+        if (mapsBuilder_ == null) {
+          ensureMapsIsMutable();
+          maps_.add(builderForValue.build());
+          onChanged();
+        } else {
+          mapsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.mapping.v1.Map maps = 7 [json_name = "maps", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder addMaps(
+          int index, oscal.mapping.v1.Mapping.Map.Builder builderForValue) {
+        if (mapsBuilder_ == null) {
+          ensureMapsIsMutable();
+          maps_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          mapsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.mapping.v1.Map maps = 7 [json_name = "maps", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder addAllMaps(
+          java.lang.Iterable<? extends oscal.mapping.v1.Mapping.Map> values) {
+        if (mapsBuilder_ == null) {
+          ensureMapsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, maps_);
+          onChanged();
+        } else {
+          mapsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.mapping.v1.Map maps = 7 [json_name = "maps", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder clearMaps() {
+        if (mapsBuilder_ == null) {
+          maps_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000040);
+          onChanged();
+        } else {
+          mapsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.mapping.v1.Map maps = 7 [json_name = "maps", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder removeMaps(int index) {
+        if (mapsBuilder_ == null) {
+          ensureMapsIsMutable();
+          maps_.remove(index);
+          onChanged();
+        } else {
+          mapsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.mapping.v1.Map maps = 7 [json_name = "maps", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public oscal.mapping.v1.Mapping.Map.Builder getMapsBuilder(
+          int index) {
+        return internalGetMapsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .oscal.mapping.v1.Map maps = 7 [json_name = "maps", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public oscal.mapping.v1.Mapping.MapOrBuilder getMapsOrBuilder(
+          int index) {
+        if (mapsBuilder_ == null) {
+          return maps_.get(index);  } else {
+          return mapsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.mapping.v1.Map maps = 7 [json_name = "maps", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public java.util.List<? extends oscal.mapping.v1.Mapping.MapOrBuilder>
+           getMapsOrBuilderList() {
+        if (mapsBuilder_ != null) {
+          return mapsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(maps_);
+        }
+      }
+      /**
+       * <code>repeated .oscal.mapping.v1.Map maps = 7 [json_name = "maps", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public oscal.mapping.v1.Mapping.Map.Builder addMapsBuilder() {
+        return internalGetMapsFieldBuilder().addBuilder(
+            oscal.mapping.v1.Mapping.Map.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.mapping.v1.Map maps = 7 [json_name = "maps", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public oscal.mapping.v1.Mapping.Map.Builder addMapsBuilder(
+          int index) {
+        return internalGetMapsFieldBuilder().addBuilder(
+            index, oscal.mapping.v1.Mapping.Map.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.mapping.v1.Map maps = 7 [json_name = "maps", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public java.util.List<oscal.mapping.v1.Mapping.Map.Builder>
+           getMapsBuilderList() {
+        return internalGetMapsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.mapping.v1.Mapping.Map, oscal.mapping.v1.Mapping.Map.Builder, oscal.mapping.v1.Mapping.MapOrBuilder>
+          internalGetMapsFieldBuilder() {
+        if (mapsBuilder_ == null) {
+          mapsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              oscal.mapping.v1.Mapping.Map, oscal.mapping.v1.Mapping.Map.Builder, oscal.mapping.v1.Mapping.MapOrBuilder>(
+                  maps_,
+                  ((bitField0_ & 0x00000040) != 0),
+                  getParentForChildren(),
+                  isClean());
+          maps_ = null;
+        }
+        return mapsBuilder_;
+      }
+
+      private java.util.List<oscal.common.v1.Common.Property> props_ =
+        java.util.Collections.emptyList();
+      private void ensurePropsIsMutable() {
+        if (!((bitField0_ & 0x00000080) != 0)) {
+          props_ = new java.util.ArrayList<oscal.common.v1.Common.Property>(props_);
+          bitField0_ |= 0x00000080;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> propsBuilder_;
+
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public java.util.List<oscal.common.v1.Common.Property> getPropsList() {
+        if (propsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(props_);
+        } else {
+          return propsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public int getPropsCount() {
+        if (propsBuilder_ == null) {
+          return props_.size();
+        } else {
+          return propsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public oscal.common.v1.Common.Property getProps(int index) {
+        if (propsBuilder_ == null) {
+          return props_.get(index);
+        } else {
+          return propsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder setProps(
+          int index, oscal.common.v1.Common.Property value) {
+        if (propsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePropsIsMutable();
+          props_.set(index, value);
+          onChanged();
+        } else {
+          propsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder setProps(
+          int index, oscal.common.v1.Common.Property.Builder builderForValue) {
+        if (propsBuilder_ == null) {
+          ensurePropsIsMutable();
+          props_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          propsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder addProps(oscal.common.v1.Common.Property value) {
+        if (propsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePropsIsMutable();
+          props_.add(value);
+          onChanged();
+        } else {
+          propsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder addProps(
+          int index, oscal.common.v1.Common.Property value) {
+        if (propsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePropsIsMutable();
+          props_.add(index, value);
+          onChanged();
+        } else {
+          propsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder addProps(
+          oscal.common.v1.Common.Property.Builder builderForValue) {
+        if (propsBuilder_ == null) {
+          ensurePropsIsMutable();
+          props_.add(builderForValue.build());
+          onChanged();
+        } else {
+          propsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder addProps(
+          int index, oscal.common.v1.Common.Property.Builder builderForValue) {
+        if (propsBuilder_ == null) {
+          ensurePropsIsMutable();
+          props_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          propsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder addAllProps(
+          java.lang.Iterable<? extends oscal.common.v1.Common.Property> values) {
+        if (propsBuilder_ == null) {
+          ensurePropsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, props_);
+          onChanged();
+        } else {
+          propsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder clearProps() {
+        if (propsBuilder_ == null) {
+          props_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000080);
+          onChanged();
+        } else {
+          propsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder removeProps(int index) {
+        if (propsBuilder_ == null) {
+          ensurePropsIsMutable();
+          props_.remove(index);
+          onChanged();
+        } else {
+          propsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public oscal.common.v1.Common.Property.Builder getPropsBuilder(
+          int index) {
+        return internalGetPropsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public oscal.common.v1.Common.PropertyOrBuilder getPropsOrBuilder(
+          int index) {
+        if (propsBuilder_ == null) {
+          return props_.get(index);  } else {
+          return propsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
+           getPropsOrBuilderList() {
+        if (propsBuilder_ != null) {
+          return propsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(props_);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public oscal.common.v1.Common.Property.Builder addPropsBuilder() {
+        return internalGetPropsFieldBuilder().addBuilder(
+            oscal.common.v1.Common.Property.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public oscal.common.v1.Common.Property.Builder addPropsBuilder(
+          int index) {
+        return internalGetPropsFieldBuilder().addBuilder(
+            index, oscal.common.v1.Common.Property.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public java.util.List<oscal.common.v1.Common.Property.Builder>
+           getPropsBuilderList() {
+        return internalGetPropsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder>
+          internalGetPropsFieldBuilder() {
+        if (propsBuilder_ == null) {
+          propsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder>(
+                  props_,
+                  ((bitField0_ & 0x00000080) != 0),
+                  getParentForChildren(),
+                  isClean());
+          props_ = null;
+        }
+        return propsBuilder_;
+      }
+
+      private java.util.List<oscal.common.v1.Common.Link> links_ =
+        java.util.Collections.emptyList();
+      private void ensureLinksIsMutable() {
+        if (!((bitField0_ & 0x00000100) != 0)) {
+          links_ = new java.util.ArrayList<oscal.common.v1.Common.Link>(links_);
+          bitField0_ |= 0x00000100;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder> linksBuilder_;
+
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public java.util.List<oscal.common.v1.Common.Link> getLinksList() {
+        if (linksBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(links_);
+        } else {
+          return linksBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public int getLinksCount() {
+        if (linksBuilder_ == null) {
+          return links_.size();
+        } else {
+          return linksBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public oscal.common.v1.Common.Link getLinks(int index) {
+        if (linksBuilder_ == null) {
+          return links_.get(index);
+        } else {
+          return linksBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder setLinks(
+          int index, oscal.common.v1.Common.Link value) {
+        if (linksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLinksIsMutable();
+          links_.set(index, value);
+          onChanged();
+        } else {
+          linksBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder setLinks(
+          int index, oscal.common.v1.Common.Link.Builder builderForValue) {
+        if (linksBuilder_ == null) {
+          ensureLinksIsMutable();
+          links_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          linksBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder addLinks(oscal.common.v1.Common.Link value) {
+        if (linksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLinksIsMutable();
+          links_.add(value);
+          onChanged();
+        } else {
+          linksBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder addLinks(
+          int index, oscal.common.v1.Common.Link value) {
+        if (linksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLinksIsMutable();
+          links_.add(index, value);
+          onChanged();
+        } else {
+          linksBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder addLinks(
+          oscal.common.v1.Common.Link.Builder builderForValue) {
+        if (linksBuilder_ == null) {
+          ensureLinksIsMutable();
+          links_.add(builderForValue.build());
+          onChanged();
+        } else {
+          linksBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder addLinks(
+          int index, oscal.common.v1.Common.Link.Builder builderForValue) {
+        if (linksBuilder_ == null) {
+          ensureLinksIsMutable();
+          links_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          linksBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder addAllLinks(
+          java.lang.Iterable<? extends oscal.common.v1.Common.Link> values) {
+        if (linksBuilder_ == null) {
+          ensureLinksIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, links_);
+          onChanged();
+        } else {
+          linksBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder clearLinks() {
+        if (linksBuilder_ == null) {
+          links_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000100);
+          onChanged();
+        } else {
+          linksBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder removeLinks(int index) {
+        if (linksBuilder_ == null) {
+          ensureLinksIsMutable();
+          links_.remove(index);
+          onChanged();
+        } else {
+          linksBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public oscal.common.v1.Common.Link.Builder getLinksBuilder(
+          int index) {
+        return internalGetLinksFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public oscal.common.v1.Common.LinkOrBuilder getLinksOrBuilder(
+          int index) {
+        if (linksBuilder_ == null) {
+          return links_.get(index);  } else {
+          return linksBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
+           getLinksOrBuilderList() {
+        if (linksBuilder_ != null) {
+          return linksBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(links_);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public oscal.common.v1.Common.Link.Builder addLinksBuilder() {
+        return internalGetLinksFieldBuilder().addBuilder(
+            oscal.common.v1.Common.Link.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public oscal.common.v1.Common.Link.Builder addLinksBuilder(
+          int index) {
+        return internalGetLinksFieldBuilder().addBuilder(
+            index, oscal.common.v1.Common.Link.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public java.util.List<oscal.common.v1.Common.Link.Builder>
+           getLinksBuilderList() {
+        return internalGetLinksFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder>
+          internalGetLinksFieldBuilder() {
+        if (linksBuilder_ == null) {
+          linksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder>(
+                  links_,
+                  ((bitField0_ & 0x00000100) != 0),
+                  getParentForChildren(),
+                  isClean());
+          links_ = null;
+        }
+        return linksBuilder_;
+      }
+
+      private java.util.List<oscal.common.v1.Common.MarkupMultiline> remarks_ =
+        java.util.Collections.emptyList();
+      private void ensureRemarksIsMutable() {
+        if (!((bitField0_ & 0x00000200) != 0)) {
+          remarks_ = new java.util.ArrayList<oscal.common.v1.Common.MarkupMultiline>(remarks_);
+          bitField0_ |= 0x00000200;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> remarksBuilder_;
+
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public java.util.List<oscal.common.v1.Common.MarkupMultiline> getRemarksList() {
+        if (remarksBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(remarks_);
+        } else {
+          return remarksBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public int getRemarksCount() {
+        if (remarksBuilder_ == null) {
+          return remarks_.size();
+        } else {
+          return remarksBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public oscal.common.v1.Common.MarkupMultiline getRemarks(int index) {
+        if (remarksBuilder_ == null) {
+          return remarks_.get(index);
+        } else {
+          return remarksBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder setRemarks(
+          int index, oscal.common.v1.Common.MarkupMultiline value) {
+        if (remarksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRemarksIsMutable();
+          remarks_.set(index, value);
+          onChanged();
+        } else {
+          remarksBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder setRemarks(
+          int index, oscal.common.v1.Common.MarkupMultiline.Builder builderForValue) {
+        if (remarksBuilder_ == null) {
+          ensureRemarksIsMutable();
+          remarks_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          remarksBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder addRemarks(oscal.common.v1.Common.MarkupMultiline value) {
+        if (remarksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRemarksIsMutable();
+          remarks_.add(value);
+          onChanged();
+        } else {
+          remarksBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder addRemarks(
+          int index, oscal.common.v1.Common.MarkupMultiline value) {
+        if (remarksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRemarksIsMutable();
+          remarks_.add(index, value);
+          onChanged();
+        } else {
+          remarksBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder addRemarks(
+          oscal.common.v1.Common.MarkupMultiline.Builder builderForValue) {
+        if (remarksBuilder_ == null) {
+          ensureRemarksIsMutable();
+          remarks_.add(builderForValue.build());
+          onChanged();
+        } else {
+          remarksBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder addRemarks(
+          int index, oscal.common.v1.Common.MarkupMultiline.Builder builderForValue) {
+        if (remarksBuilder_ == null) {
+          ensureRemarksIsMutable();
+          remarks_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          remarksBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder addAllRemarks(
+          java.lang.Iterable<? extends oscal.common.v1.Common.MarkupMultiline> values) {
+        if (remarksBuilder_ == null) {
+          ensureRemarksIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, remarks_);
+          onChanged();
+        } else {
+          remarksBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder clearRemarks() {
+        if (remarksBuilder_ == null) {
+          remarks_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000200);
+          onChanged();
+        } else {
+          remarksBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder removeRemarks(int index) {
+        if (remarksBuilder_ == null) {
+          ensureRemarksIsMutable();
+          remarks_.remove(index);
+          onChanged();
+        } else {
+          remarksBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public oscal.common.v1.Common.MarkupMultiline.Builder getRemarksBuilder(
+          int index) {
+        return internalGetRemarksFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public oscal.common.v1.Common.MarkupMultilineOrBuilder getRemarksOrBuilder(
+          int index) {
+        if (remarksBuilder_ == null) {
+          return remarks_.get(index);  } else {
+          return remarksBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
+           getRemarksOrBuilderList() {
+        if (remarksBuilder_ != null) {
+          return remarksBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(remarks_);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public oscal.common.v1.Common.MarkupMultiline.Builder addRemarksBuilder() {
+        return internalGetRemarksFieldBuilder().addBuilder(
+            oscal.common.v1.Common.MarkupMultiline.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public oscal.common.v1.Common.MarkupMultiline.Builder addRemarksBuilder(
+          int index) {
+        return internalGetRemarksFieldBuilder().addBuilder(
+            index, oscal.common.v1.Common.MarkupMultiline.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder>
+           getRemarksBuilderList() {
+        return internalGetRemarksFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
+          internalGetRemarksFieldBuilder() {
+        if (remarksBuilder_ == null) {
+          remarksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>(
+                  remarks_,
+                  ((bitField0_ & 0x00000200) != 0),
+                  getParentForChildren(),
+                  isClean());
+          remarks_ = null;
+        }
+        return remarksBuilder_;
+      }
+
+      private oscal.mapping.v1.Mapping.MappingDescription mappingDescription_;
+      private com.google.protobuf.SingleFieldBuilder<
+          oscal.mapping.v1.Mapping.MappingDescription, oscal.mapping.v1.Mapping.MappingDescription.Builder, oscal.mapping.v1.Mapping.MappingDescriptionOrBuilder> mappingDescriptionBuilder_;
+      /**
+       * <code>.oscal.mapping.v1.MappingDescription mapping_description = 11 [json_name = "mappingDescription", deprecated = true];</code>
+       * @deprecated oscal.mapping.v1.MappingCollection.mapping_description is deprecated.
+       *     See mapping/v1/mapping.proto;l=22
+       * @return Whether the mappingDescription field is set.
+       */
+      @java.lang.Deprecated public boolean hasMappingDescription() {
+        return ((bitField0_ & 0x00000400) != 0);
+      }
+      /**
+       * <code>.oscal.mapping.v1.MappingDescription mapping_description = 11 [json_name = "mappingDescription", deprecated = true];</code>
+       * @deprecated oscal.mapping.v1.MappingCollection.mapping_description is deprecated.
+       *     See mapping/v1/mapping.proto;l=22
+       * @return The mappingDescription.
+       */
+      @java.lang.Deprecated public oscal.mapping.v1.Mapping.MappingDescription getMappingDescription() {
+        if (mappingDescriptionBuilder_ == null) {
+          return mappingDescription_ == null ? oscal.mapping.v1.Mapping.MappingDescription.getDefaultInstance() : mappingDescription_;
+        } else {
+          return mappingDescriptionBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.oscal.mapping.v1.MappingDescription mapping_description = 11 [json_name = "mappingDescription", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder setMappingDescription(oscal.mapping.v1.Mapping.MappingDescription value) {
+        if (mappingDescriptionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          mappingDescription_ = value;
+        } else {
+          mappingDescriptionBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.mapping.v1.MappingDescription mapping_description = 11 [json_name = "mappingDescription", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder setMappingDescription(
+          oscal.mapping.v1.Mapping.MappingDescription.Builder builderForValue) {
+        if (mappingDescriptionBuilder_ == null) {
+          mappingDescription_ = builderForValue.build();
+        } else {
+          mappingDescriptionBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.mapping.v1.MappingDescription mapping_description = 11 [json_name = "mappingDescription", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder mergeMappingDescription(oscal.mapping.v1.Mapping.MappingDescription value) {
+        if (mappingDescriptionBuilder_ == null) {
+          if (((bitField0_ & 0x00000400) != 0) &&
+            mappingDescription_ != null &&
+            mappingDescription_ != oscal.mapping.v1.Mapping.MappingDescription.getDefaultInstance()) {
+            getMappingDescriptionBuilder().mergeFrom(value);
+          } else {
+            mappingDescription_ = value;
+          }
+        } else {
+          mappingDescriptionBuilder_.mergeFrom(value);
+        }
+        if (mappingDescription_ != null) {
+          bitField0_ |= 0x00000400;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>.oscal.mapping.v1.MappingDescription mapping_description = 11 [json_name = "mappingDescription", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder clearMappingDescription() {
+        bitField0_ = (bitField0_ & ~0x00000400);
+        mappingDescription_ = null;
+        if (mappingDescriptionBuilder_ != null) {
+          mappingDescriptionBuilder_.dispose();
+          mappingDescriptionBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.mapping.v1.MappingDescription mapping_description = 11 [json_name = "mappingDescription", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public oscal.mapping.v1.Mapping.MappingDescription.Builder getMappingDescriptionBuilder() {
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return internalGetMappingDescriptionFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.oscal.mapping.v1.MappingDescription mapping_description = 11 [json_name = "mappingDescription", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public oscal.mapping.v1.Mapping.MappingDescriptionOrBuilder getMappingDescriptionOrBuilder() {
+        if (mappingDescriptionBuilder_ != null) {
+          return mappingDescriptionBuilder_.getMessageOrBuilder();
+        } else {
+          return mappingDescription_ == null ?
+              oscal.mapping.v1.Mapping.MappingDescription.getDefaultInstance() : mappingDescription_;
+        }
+      }
+      /**
+       * <code>.oscal.mapping.v1.MappingDescription mapping_description = 11 [json_name = "mappingDescription", deprecated = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          oscal.mapping.v1.Mapping.MappingDescription, oscal.mapping.v1.Mapping.MappingDescription.Builder, oscal.mapping.v1.Mapping.MappingDescriptionOrBuilder>
+          internalGetMappingDescriptionFieldBuilder() {
+        if (mappingDescriptionBuilder_ == null) {
+          mappingDescriptionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              oscal.mapping.v1.Mapping.MappingDescription, oscal.mapping.v1.Mapping.MappingDescription.Builder, oscal.mapping.v1.Mapping.MappingDescriptionOrBuilder>(
+                  getMappingDescription(),
+                  getParentForChildren(),
+                  isClean());
+          mappingDescription_ = null;
+        }
+        return mappingDescriptionBuilder_;
+      }
+
+      private oscal.mapping.v1.Mapping.GapSummary sourceGapSummary_;
+      private com.google.protobuf.SingleFieldBuilder<
+          oscal.mapping.v1.Mapping.GapSummary, oscal.mapping.v1.Mapping.GapSummary.Builder, oscal.mapping.v1.Mapping.GapSummaryOrBuilder> sourceGapSummaryBuilder_;
+      /**
+       * <code>.oscal.mapping.v1.GapSummary source_gap_summary = 12 [json_name = "sourceGapSummary", deprecated = true];</code>
+       * @deprecated oscal.mapping.v1.MappingCollection.source_gap_summary is deprecated.
+       *     See mapping/v1/mapping.proto;l=23
+       * @return Whether the sourceGapSummary field is set.
+       */
+      @java.lang.Deprecated public boolean hasSourceGapSummary() {
+        return ((bitField0_ & 0x00000800) != 0);
+      }
+      /**
+       * <code>.oscal.mapping.v1.GapSummary source_gap_summary = 12 [json_name = "sourceGapSummary", deprecated = true];</code>
+       * @deprecated oscal.mapping.v1.MappingCollection.source_gap_summary is deprecated.
+       *     See mapping/v1/mapping.proto;l=23
+       * @return The sourceGapSummary.
+       */
+      @java.lang.Deprecated public oscal.mapping.v1.Mapping.GapSummary getSourceGapSummary() {
+        if (sourceGapSummaryBuilder_ == null) {
+          return sourceGapSummary_ == null ? oscal.mapping.v1.Mapping.GapSummary.getDefaultInstance() : sourceGapSummary_;
+        } else {
+          return sourceGapSummaryBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.oscal.mapping.v1.GapSummary source_gap_summary = 12 [json_name = "sourceGapSummary", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder setSourceGapSummary(oscal.mapping.v1.Mapping.GapSummary value) {
+        if (sourceGapSummaryBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          sourceGapSummary_ = value;
+        } else {
+          sourceGapSummaryBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000800;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.mapping.v1.GapSummary source_gap_summary = 12 [json_name = "sourceGapSummary", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder setSourceGapSummary(
+          oscal.mapping.v1.Mapping.GapSummary.Builder builderForValue) {
+        if (sourceGapSummaryBuilder_ == null) {
+          sourceGapSummary_ = builderForValue.build();
+        } else {
+          sourceGapSummaryBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000800;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.mapping.v1.GapSummary source_gap_summary = 12 [json_name = "sourceGapSummary", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder mergeSourceGapSummary(oscal.mapping.v1.Mapping.GapSummary value) {
+        if (sourceGapSummaryBuilder_ == null) {
+          if (((bitField0_ & 0x00000800) != 0) &&
+            sourceGapSummary_ != null &&
+            sourceGapSummary_ != oscal.mapping.v1.Mapping.GapSummary.getDefaultInstance()) {
+            getSourceGapSummaryBuilder().mergeFrom(value);
+          } else {
+            sourceGapSummary_ = value;
+          }
+        } else {
+          sourceGapSummaryBuilder_.mergeFrom(value);
+        }
+        if (sourceGapSummary_ != null) {
+          bitField0_ |= 0x00000800;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>.oscal.mapping.v1.GapSummary source_gap_summary = 12 [json_name = "sourceGapSummary", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder clearSourceGapSummary() {
+        bitField0_ = (bitField0_ & ~0x00000800);
+        sourceGapSummary_ = null;
+        if (sourceGapSummaryBuilder_ != null) {
+          sourceGapSummaryBuilder_.dispose();
+          sourceGapSummaryBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.mapping.v1.GapSummary source_gap_summary = 12 [json_name = "sourceGapSummary", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public oscal.mapping.v1.Mapping.GapSummary.Builder getSourceGapSummaryBuilder() {
+        bitField0_ |= 0x00000800;
+        onChanged();
+        return internalGetSourceGapSummaryFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.oscal.mapping.v1.GapSummary source_gap_summary = 12 [json_name = "sourceGapSummary", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public oscal.mapping.v1.Mapping.GapSummaryOrBuilder getSourceGapSummaryOrBuilder() {
+        if (sourceGapSummaryBuilder_ != null) {
+          return sourceGapSummaryBuilder_.getMessageOrBuilder();
+        } else {
+          return sourceGapSummary_ == null ?
+              oscal.mapping.v1.Mapping.GapSummary.getDefaultInstance() : sourceGapSummary_;
+        }
+      }
+      /**
+       * <code>.oscal.mapping.v1.GapSummary source_gap_summary = 12 [json_name = "sourceGapSummary", deprecated = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          oscal.mapping.v1.Mapping.GapSummary, oscal.mapping.v1.Mapping.GapSummary.Builder, oscal.mapping.v1.Mapping.GapSummaryOrBuilder>
+          internalGetSourceGapSummaryFieldBuilder() {
+        if (sourceGapSummaryBuilder_ == null) {
+          sourceGapSummaryBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              oscal.mapping.v1.Mapping.GapSummary, oscal.mapping.v1.Mapping.GapSummary.Builder, oscal.mapping.v1.Mapping.GapSummaryOrBuilder>(
+                  getSourceGapSummary(),
+                  getParentForChildren(),
+                  isClean());
+          sourceGapSummary_ = null;
+        }
+        return sourceGapSummaryBuilder_;
+      }
+
+      private oscal.mapping.v1.Mapping.GapSummary targetGapSummary_;
+      private com.google.protobuf.SingleFieldBuilder<
+          oscal.mapping.v1.Mapping.GapSummary, oscal.mapping.v1.Mapping.GapSummary.Builder, oscal.mapping.v1.Mapping.GapSummaryOrBuilder> targetGapSummaryBuilder_;
+      /**
+       * <code>.oscal.mapping.v1.GapSummary target_gap_summary = 13 [json_name = "targetGapSummary", deprecated = true];</code>
+       * @deprecated oscal.mapping.v1.MappingCollection.target_gap_summary is deprecated.
+       *     See mapping/v1/mapping.proto;l=24
+       * @return Whether the targetGapSummary field is set.
+       */
+      @java.lang.Deprecated public boolean hasTargetGapSummary() {
+        return ((bitField0_ & 0x00001000) != 0);
+      }
+      /**
+       * <code>.oscal.mapping.v1.GapSummary target_gap_summary = 13 [json_name = "targetGapSummary", deprecated = true];</code>
+       * @deprecated oscal.mapping.v1.MappingCollection.target_gap_summary is deprecated.
+       *     See mapping/v1/mapping.proto;l=24
+       * @return The targetGapSummary.
+       */
+      @java.lang.Deprecated public oscal.mapping.v1.Mapping.GapSummary getTargetGapSummary() {
+        if (targetGapSummaryBuilder_ == null) {
+          return targetGapSummary_ == null ? oscal.mapping.v1.Mapping.GapSummary.getDefaultInstance() : targetGapSummary_;
+        } else {
+          return targetGapSummaryBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.oscal.mapping.v1.GapSummary target_gap_summary = 13 [json_name = "targetGapSummary", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder setTargetGapSummary(oscal.mapping.v1.Mapping.GapSummary value) {
+        if (targetGapSummaryBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          targetGapSummary_ = value;
+        } else {
+          targetGapSummaryBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00001000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.mapping.v1.GapSummary target_gap_summary = 13 [json_name = "targetGapSummary", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder setTargetGapSummary(
+          oscal.mapping.v1.Mapping.GapSummary.Builder builderForValue) {
+        if (targetGapSummaryBuilder_ == null) {
+          targetGapSummary_ = builderForValue.build();
+        } else {
+          targetGapSummaryBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00001000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.mapping.v1.GapSummary target_gap_summary = 13 [json_name = "targetGapSummary", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder mergeTargetGapSummary(oscal.mapping.v1.Mapping.GapSummary value) {
+        if (targetGapSummaryBuilder_ == null) {
+          if (((bitField0_ & 0x00001000) != 0) &&
+            targetGapSummary_ != null &&
+            targetGapSummary_ != oscal.mapping.v1.Mapping.GapSummary.getDefaultInstance()) {
+            getTargetGapSummaryBuilder().mergeFrom(value);
+          } else {
+            targetGapSummary_ = value;
+          }
+        } else {
+          targetGapSummaryBuilder_.mergeFrom(value);
+        }
+        if (targetGapSummary_ != null) {
+          bitField0_ |= 0x00001000;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>.oscal.mapping.v1.GapSummary target_gap_summary = 13 [json_name = "targetGapSummary", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder clearTargetGapSummary() {
+        bitField0_ = (bitField0_ & ~0x00001000);
+        targetGapSummary_ = null;
+        if (targetGapSummaryBuilder_ != null) {
+          targetGapSummaryBuilder_.dispose();
+          targetGapSummaryBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.mapping.v1.GapSummary target_gap_summary = 13 [json_name = "targetGapSummary", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public oscal.mapping.v1.Mapping.GapSummary.Builder getTargetGapSummaryBuilder() {
+        bitField0_ |= 0x00001000;
+        onChanged();
+        return internalGetTargetGapSummaryFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.oscal.mapping.v1.GapSummary target_gap_summary = 13 [json_name = "targetGapSummary", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public oscal.mapping.v1.Mapping.GapSummaryOrBuilder getTargetGapSummaryOrBuilder() {
+        if (targetGapSummaryBuilder_ != null) {
+          return targetGapSummaryBuilder_.getMessageOrBuilder();
+        } else {
+          return targetGapSummary_ == null ?
+              oscal.mapping.v1.Mapping.GapSummary.getDefaultInstance() : targetGapSummary_;
+        }
+      }
+      /**
+       * <code>.oscal.mapping.v1.GapSummary target_gap_summary = 13 [json_name = "targetGapSummary", deprecated = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          oscal.mapping.v1.Mapping.GapSummary, oscal.mapping.v1.Mapping.GapSummary.Builder, oscal.mapping.v1.Mapping.GapSummaryOrBuilder>
+          internalGetTargetGapSummaryFieldBuilder() {
+        if (targetGapSummaryBuilder_ == null) {
+          targetGapSummaryBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              oscal.mapping.v1.Mapping.GapSummary, oscal.mapping.v1.Mapping.GapSummary.Builder, oscal.mapping.v1.Mapping.GapSummaryOrBuilder>(
+                  getTargetGapSummary(),
+                  getParentForChildren(),
+                  isClean());
+          targetGapSummary_ = null;
+        }
+        return targetGapSummaryBuilder_;
+      }
+
+      private oscal.mapping.v1.Mapping.ConfidenceScore confidenceScore_;
+      private com.google.protobuf.SingleFieldBuilder<
+          oscal.mapping.v1.Mapping.ConfidenceScore, oscal.mapping.v1.Mapping.ConfidenceScore.Builder, oscal.mapping.v1.Mapping.ConfidenceScoreOrBuilder> confidenceScoreBuilder_;
+      /**
+       * <code>.oscal.mapping.v1.ConfidenceScore confidence_score = 14 [json_name = "confidenceScore", deprecated = true];</code>
+       * @deprecated oscal.mapping.v1.MappingCollection.confidence_score is deprecated.
+       *     See mapping/v1/mapping.proto;l=25
+       * @return Whether the confidenceScore field is set.
+       */
+      @java.lang.Deprecated public boolean hasConfidenceScore() {
+        return ((bitField0_ & 0x00002000) != 0);
+      }
+      /**
+       * <code>.oscal.mapping.v1.ConfidenceScore confidence_score = 14 [json_name = "confidenceScore", deprecated = true];</code>
+       * @deprecated oscal.mapping.v1.MappingCollection.confidence_score is deprecated.
+       *     See mapping/v1/mapping.proto;l=25
+       * @return The confidenceScore.
+       */
+      @java.lang.Deprecated public oscal.mapping.v1.Mapping.ConfidenceScore getConfidenceScore() {
+        if (confidenceScoreBuilder_ == null) {
+          return confidenceScore_ == null ? oscal.mapping.v1.Mapping.ConfidenceScore.getDefaultInstance() : confidenceScore_;
+        } else {
+          return confidenceScoreBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.oscal.mapping.v1.ConfidenceScore confidence_score = 14 [json_name = "confidenceScore", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder setConfidenceScore(oscal.mapping.v1.Mapping.ConfidenceScore value) {
+        if (confidenceScoreBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          confidenceScore_ = value;
+        } else {
+          confidenceScoreBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00002000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.mapping.v1.ConfidenceScore confidence_score = 14 [json_name = "confidenceScore", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder setConfidenceScore(
+          oscal.mapping.v1.Mapping.ConfidenceScore.Builder builderForValue) {
+        if (confidenceScoreBuilder_ == null) {
+          confidenceScore_ = builderForValue.build();
+        } else {
+          confidenceScoreBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00002000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.mapping.v1.ConfidenceScore confidence_score = 14 [json_name = "confidenceScore", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder mergeConfidenceScore(oscal.mapping.v1.Mapping.ConfidenceScore value) {
+        if (confidenceScoreBuilder_ == null) {
+          if (((bitField0_ & 0x00002000) != 0) &&
+            confidenceScore_ != null &&
+            confidenceScore_ != oscal.mapping.v1.Mapping.ConfidenceScore.getDefaultInstance()) {
+            getConfidenceScoreBuilder().mergeFrom(value);
+          } else {
+            confidenceScore_ = value;
+          }
+        } else {
+          confidenceScoreBuilder_.mergeFrom(value);
+        }
+        if (confidenceScore_ != null) {
+          bitField0_ |= 0x00002000;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>.oscal.mapping.v1.ConfidenceScore confidence_score = 14 [json_name = "confidenceScore", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder clearConfidenceScore() {
+        bitField0_ = (bitField0_ & ~0x00002000);
+        confidenceScore_ = null;
+        if (confidenceScoreBuilder_ != null) {
+          confidenceScoreBuilder_.dispose();
+          confidenceScoreBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.mapping.v1.ConfidenceScore confidence_score = 14 [json_name = "confidenceScore", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public oscal.mapping.v1.Mapping.ConfidenceScore.Builder getConfidenceScoreBuilder() {
+        bitField0_ |= 0x00002000;
+        onChanged();
+        return internalGetConfidenceScoreFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.oscal.mapping.v1.ConfidenceScore confidence_score = 14 [json_name = "confidenceScore", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public oscal.mapping.v1.Mapping.ConfidenceScoreOrBuilder getConfidenceScoreOrBuilder() {
+        if (confidenceScoreBuilder_ != null) {
+          return confidenceScoreBuilder_.getMessageOrBuilder();
+        } else {
+          return confidenceScore_ == null ?
+              oscal.mapping.v1.Mapping.ConfidenceScore.getDefaultInstance() : confidenceScore_;
+        }
+      }
+      /**
+       * <code>.oscal.mapping.v1.ConfidenceScore confidence_score = 14 [json_name = "confidenceScore", deprecated = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          oscal.mapping.v1.Mapping.ConfidenceScore, oscal.mapping.v1.Mapping.ConfidenceScore.Builder, oscal.mapping.v1.Mapping.ConfidenceScoreOrBuilder>
+          internalGetConfidenceScoreFieldBuilder() {
+        if (confidenceScoreBuilder_ == null) {
+          confidenceScoreBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              oscal.mapping.v1.Mapping.ConfidenceScore, oscal.mapping.v1.Mapping.ConfidenceScore.Builder, oscal.mapping.v1.Mapping.ConfidenceScoreOrBuilder>(
+                  getConfidenceScore(),
+                  getParentForChildren(),
+                  isClean());
+          confidenceScore_ = null;
+        }
+        return confidenceScoreBuilder_;
+      }
+
+      private oscal.mapping.v1.Mapping.Coverage coverage_;
+      private com.google.protobuf.SingleFieldBuilder<
+          oscal.mapping.v1.Mapping.Coverage, oscal.mapping.v1.Mapping.Coverage.Builder, oscal.mapping.v1.Mapping.CoverageOrBuilder> coverageBuilder_;
+      /**
+       * <code>.oscal.mapping.v1.Coverage coverage = 15 [json_name = "coverage", deprecated = true];</code>
+       * @deprecated oscal.mapping.v1.MappingCollection.coverage is deprecated.
+       *     See mapping/v1/mapping.proto;l=26
+       * @return Whether the coverage field is set.
+       */
+      @java.lang.Deprecated public boolean hasCoverage() {
+        return ((bitField0_ & 0x00004000) != 0);
+      }
+      /**
+       * <code>.oscal.mapping.v1.Coverage coverage = 15 [json_name = "coverage", deprecated = true];</code>
+       * @deprecated oscal.mapping.v1.MappingCollection.coverage is deprecated.
+       *     See mapping/v1/mapping.proto;l=26
+       * @return The coverage.
+       */
+      @java.lang.Deprecated public oscal.mapping.v1.Mapping.Coverage getCoverage() {
+        if (coverageBuilder_ == null) {
+          return coverage_ == null ? oscal.mapping.v1.Mapping.Coverage.getDefaultInstance() : coverage_;
+        } else {
+          return coverageBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.oscal.mapping.v1.Coverage coverage = 15 [json_name = "coverage", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder setCoverage(oscal.mapping.v1.Mapping.Coverage value) {
+        if (coverageBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          coverage_ = value;
+        } else {
+          coverageBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00004000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.mapping.v1.Coverage coverage = 15 [json_name = "coverage", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder setCoverage(
+          oscal.mapping.v1.Mapping.Coverage.Builder builderForValue) {
+        if (coverageBuilder_ == null) {
+          coverage_ = builderForValue.build();
+        } else {
+          coverageBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00004000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.mapping.v1.Coverage coverage = 15 [json_name = "coverage", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder mergeCoverage(oscal.mapping.v1.Mapping.Coverage value) {
+        if (coverageBuilder_ == null) {
+          if (((bitField0_ & 0x00004000) != 0) &&
+            coverage_ != null &&
+            coverage_ != oscal.mapping.v1.Mapping.Coverage.getDefaultInstance()) {
+            getCoverageBuilder().mergeFrom(value);
+          } else {
+            coverage_ = value;
+          }
+        } else {
+          coverageBuilder_.mergeFrom(value);
+        }
+        if (coverage_ != null) {
+          bitField0_ |= 0x00004000;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>.oscal.mapping.v1.Coverage coverage = 15 [json_name = "coverage", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder clearCoverage() {
+        bitField0_ = (bitField0_ & ~0x00004000);
+        coverage_ = null;
+        if (coverageBuilder_ != null) {
+          coverageBuilder_.dispose();
+          coverageBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.mapping.v1.Coverage coverage = 15 [json_name = "coverage", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public oscal.mapping.v1.Mapping.Coverage.Builder getCoverageBuilder() {
+        bitField0_ |= 0x00004000;
+        onChanged();
+        return internalGetCoverageFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.oscal.mapping.v1.Coverage coverage = 15 [json_name = "coverage", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public oscal.mapping.v1.Mapping.CoverageOrBuilder getCoverageOrBuilder() {
+        if (coverageBuilder_ != null) {
+          return coverageBuilder_.getMessageOrBuilder();
+        } else {
+          return coverage_ == null ?
+              oscal.mapping.v1.Mapping.Coverage.getDefaultInstance() : coverage_;
+        }
+      }
+      /**
+       * <code>.oscal.mapping.v1.Coverage coverage = 15 [json_name = "coverage", deprecated = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          oscal.mapping.v1.Mapping.Coverage, oscal.mapping.v1.Mapping.Coverage.Builder, oscal.mapping.v1.Mapping.CoverageOrBuilder>
+          internalGetCoverageFieldBuilder() {
+        if (coverageBuilder_ == null) {
+          coverageBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              oscal.mapping.v1.Mapping.Coverage, oscal.mapping.v1.Mapping.Coverage.Builder, oscal.mapping.v1.Mapping.CoverageOrBuilder>(
+                  getCoverage(),
+                  getParentForChildren(),
+                  isClean());
+          coverage_ = null;
+        }
+        return coverageBuilder_;
+      }
+
+      private oscal.mapping.v1.Mapping.MappingProvenance provenance_;
+      private com.google.protobuf.SingleFieldBuilder<
+          oscal.mapping.v1.Mapping.MappingProvenance, oscal.mapping.v1.Mapping.MappingProvenance.Builder, oscal.mapping.v1.Mapping.MappingProvenanceOrBuilder> provenanceBuilder_;
+      /**
+       * <code>.oscal.mapping.v1.MappingProvenance provenance = 16 [json_name = "provenance"];</code>
+       * @return Whether the provenance field is set.
+       */
+      public boolean hasProvenance() {
+        return ((bitField0_ & 0x00008000) != 0);
+      }
+      /**
+       * <code>.oscal.mapping.v1.MappingProvenance provenance = 16 [json_name = "provenance"];</code>
+       * @return The provenance.
+       */
+      public oscal.mapping.v1.Mapping.MappingProvenance getProvenance() {
+        if (provenanceBuilder_ == null) {
+          return provenance_ == null ? oscal.mapping.v1.Mapping.MappingProvenance.getDefaultInstance() : provenance_;
+        } else {
+          return provenanceBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.oscal.mapping.v1.MappingProvenance provenance = 16 [json_name = "provenance"];</code>
+       */
+      public Builder setProvenance(oscal.mapping.v1.Mapping.MappingProvenance value) {
+        if (provenanceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          provenance_ = value;
+        } else {
+          provenanceBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00008000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.mapping.v1.MappingProvenance provenance = 16 [json_name = "provenance"];</code>
+       */
+      public Builder setProvenance(
+          oscal.mapping.v1.Mapping.MappingProvenance.Builder builderForValue) {
+        if (provenanceBuilder_ == null) {
+          provenance_ = builderForValue.build();
+        } else {
+          provenanceBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00008000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.mapping.v1.MappingProvenance provenance = 16 [json_name = "provenance"];</code>
+       */
+      public Builder mergeProvenance(oscal.mapping.v1.Mapping.MappingProvenance value) {
+        if (provenanceBuilder_ == null) {
+          if (((bitField0_ & 0x00008000) != 0) &&
+            provenance_ != null &&
+            provenance_ != oscal.mapping.v1.Mapping.MappingProvenance.getDefaultInstance()) {
+            getProvenanceBuilder().mergeFrom(value);
+          } else {
+            provenance_ = value;
+          }
+        } else {
+          provenanceBuilder_.mergeFrom(value);
+        }
+        if (provenance_ != null) {
+          bitField0_ |= 0x00008000;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>.oscal.mapping.v1.MappingProvenance provenance = 16 [json_name = "provenance"];</code>
+       */
+      public Builder clearProvenance() {
+        bitField0_ = (bitField0_ & ~0x00008000);
+        provenance_ = null;
+        if (provenanceBuilder_ != null) {
+          provenanceBuilder_.dispose();
+          provenanceBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.mapping.v1.MappingProvenance provenance = 16 [json_name = "provenance"];</code>
+       */
+      public oscal.mapping.v1.Mapping.MappingProvenance.Builder getProvenanceBuilder() {
+        bitField0_ |= 0x00008000;
+        onChanged();
+        return internalGetProvenanceFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.oscal.mapping.v1.MappingProvenance provenance = 16 [json_name = "provenance"];</code>
+       */
+      public oscal.mapping.v1.Mapping.MappingProvenanceOrBuilder getProvenanceOrBuilder() {
+        if (provenanceBuilder_ != null) {
+          return provenanceBuilder_.getMessageOrBuilder();
+        } else {
+          return provenance_ == null ?
+              oscal.mapping.v1.Mapping.MappingProvenance.getDefaultInstance() : provenance_;
+        }
+      }
+      /**
+       * <code>.oscal.mapping.v1.MappingProvenance provenance = 16 [json_name = "provenance"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          oscal.mapping.v1.Mapping.MappingProvenance, oscal.mapping.v1.Mapping.MappingProvenance.Builder, oscal.mapping.v1.Mapping.MappingProvenanceOrBuilder>
+          internalGetProvenanceFieldBuilder() {
+        if (provenanceBuilder_ == null) {
+          provenanceBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              oscal.mapping.v1.Mapping.MappingProvenance, oscal.mapping.v1.Mapping.MappingProvenance.Builder, oscal.mapping.v1.Mapping.MappingProvenanceOrBuilder>(
+                  getProvenance(),
+                  getParentForChildren(),
+                  isClean());
+          provenance_ = null;
+        }
+        return provenanceBuilder_;
+      }
+
+      private java.util.List<oscal.mapping.v1.Mapping.ControlMapping> mappings_ =
+        java.util.Collections.emptyList();
+      private void ensureMappingsIsMutable() {
+        if (!((bitField0_ & 0x00010000) != 0)) {
+          mappings_ = new java.util.ArrayList<oscal.mapping.v1.Mapping.ControlMapping>(mappings_);
+          bitField0_ |= 0x00010000;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.mapping.v1.Mapping.ControlMapping, oscal.mapping.v1.Mapping.ControlMapping.Builder, oscal.mapping.v1.Mapping.ControlMappingOrBuilder> mappingsBuilder_;
+
+      /**
+       * <code>repeated .oscal.mapping.v1.ControlMapping mappings = 17 [json_name = "mappings"];</code>
+       */
+      public java.util.List<oscal.mapping.v1.Mapping.ControlMapping> getMappingsList() {
+        if (mappingsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(mappings_);
+        } else {
+          return mappingsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .oscal.mapping.v1.ControlMapping mappings = 17 [json_name = "mappings"];</code>
+       */
+      public int getMappingsCount() {
+        if (mappingsBuilder_ == null) {
+          return mappings_.size();
+        } else {
+          return mappingsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .oscal.mapping.v1.ControlMapping mappings = 17 [json_name = "mappings"];</code>
+       */
+      public oscal.mapping.v1.Mapping.ControlMapping getMappings(int index) {
+        if (mappingsBuilder_ == null) {
+          return mappings_.get(index);
+        } else {
+          return mappingsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.mapping.v1.ControlMapping mappings = 17 [json_name = "mappings"];</code>
+       */
+      public Builder setMappings(
+          int index, oscal.mapping.v1.Mapping.ControlMapping value) {
+        if (mappingsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMappingsIsMutable();
+          mappings_.set(index, value);
+          onChanged();
+        } else {
+          mappingsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.mapping.v1.ControlMapping mappings = 17 [json_name = "mappings"];</code>
+       */
+      public Builder setMappings(
+          int index, oscal.mapping.v1.Mapping.ControlMapping.Builder builderForValue) {
+        if (mappingsBuilder_ == null) {
+          ensureMappingsIsMutable();
+          mappings_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          mappingsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.mapping.v1.ControlMapping mappings = 17 [json_name = "mappings"];</code>
+       */
+      public Builder addMappings(oscal.mapping.v1.Mapping.ControlMapping value) {
+        if (mappingsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMappingsIsMutable();
+          mappings_.add(value);
+          onChanged();
+        } else {
+          mappingsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.mapping.v1.ControlMapping mappings = 17 [json_name = "mappings"];</code>
+       */
+      public Builder addMappings(
+          int index, oscal.mapping.v1.Mapping.ControlMapping value) {
+        if (mappingsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMappingsIsMutable();
+          mappings_.add(index, value);
+          onChanged();
+        } else {
+          mappingsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.mapping.v1.ControlMapping mappings = 17 [json_name = "mappings"];</code>
+       */
+      public Builder addMappings(
+          oscal.mapping.v1.Mapping.ControlMapping.Builder builderForValue) {
+        if (mappingsBuilder_ == null) {
+          ensureMappingsIsMutable();
+          mappings_.add(builderForValue.build());
+          onChanged();
+        } else {
+          mappingsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.mapping.v1.ControlMapping mappings = 17 [json_name = "mappings"];</code>
+       */
+      public Builder addMappings(
+          int index, oscal.mapping.v1.Mapping.ControlMapping.Builder builderForValue) {
+        if (mappingsBuilder_ == null) {
+          ensureMappingsIsMutable();
+          mappings_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          mappingsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.mapping.v1.ControlMapping mappings = 17 [json_name = "mappings"];</code>
+       */
+      public Builder addAllMappings(
+          java.lang.Iterable<? extends oscal.mapping.v1.Mapping.ControlMapping> values) {
+        if (mappingsBuilder_ == null) {
+          ensureMappingsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, mappings_);
+          onChanged();
+        } else {
+          mappingsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.mapping.v1.ControlMapping mappings = 17 [json_name = "mappings"];</code>
+       */
+      public Builder clearMappings() {
+        if (mappingsBuilder_ == null) {
+          mappings_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00010000);
+          onChanged();
+        } else {
+          mappingsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.mapping.v1.ControlMapping mappings = 17 [json_name = "mappings"];</code>
+       */
+      public Builder removeMappings(int index) {
+        if (mappingsBuilder_ == null) {
+          ensureMappingsIsMutable();
+          mappings_.remove(index);
+          onChanged();
+        } else {
+          mappingsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.mapping.v1.ControlMapping mappings = 17 [json_name = "mappings"];</code>
+       */
+      public oscal.mapping.v1.Mapping.ControlMapping.Builder getMappingsBuilder(
+          int index) {
+        return internalGetMappingsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .oscal.mapping.v1.ControlMapping mappings = 17 [json_name = "mappings"];</code>
+       */
+      public oscal.mapping.v1.Mapping.ControlMappingOrBuilder getMappingsOrBuilder(
+          int index) {
+        if (mappingsBuilder_ == null) {
+          return mappings_.get(index);  } else {
+          return mappingsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.mapping.v1.ControlMapping mappings = 17 [json_name = "mappings"];</code>
+       */
+      public java.util.List<? extends oscal.mapping.v1.Mapping.ControlMappingOrBuilder>
+           getMappingsOrBuilderList() {
+        if (mappingsBuilder_ != null) {
+          return mappingsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(mappings_);
+        }
+      }
+      /**
+       * <code>repeated .oscal.mapping.v1.ControlMapping mappings = 17 [json_name = "mappings"];</code>
+       */
+      public oscal.mapping.v1.Mapping.ControlMapping.Builder addMappingsBuilder() {
+        return internalGetMappingsFieldBuilder().addBuilder(
+            oscal.mapping.v1.Mapping.ControlMapping.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.mapping.v1.ControlMapping mappings = 17 [json_name = "mappings"];</code>
+       */
+      public oscal.mapping.v1.Mapping.ControlMapping.Builder addMappingsBuilder(
+          int index) {
+        return internalGetMappingsFieldBuilder().addBuilder(
+            index, oscal.mapping.v1.Mapping.ControlMapping.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.mapping.v1.ControlMapping mappings = 17 [json_name = "mappings"];</code>
+       */
+      public java.util.List<oscal.mapping.v1.Mapping.ControlMapping.Builder>
+           getMappingsBuilderList() {
+        return internalGetMappingsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.mapping.v1.Mapping.ControlMapping, oscal.mapping.v1.Mapping.ControlMapping.Builder, oscal.mapping.v1.Mapping.ControlMappingOrBuilder>
+          internalGetMappingsFieldBuilder() {
+        if (mappingsBuilder_ == null) {
+          mappingsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              oscal.mapping.v1.Mapping.ControlMapping, oscal.mapping.v1.Mapping.ControlMapping.Builder, oscal.mapping.v1.Mapping.ControlMappingOrBuilder>(
+                  mappings_,
+                  ((bitField0_ & 0x00010000) != 0),
+                  getParentForChildren(),
+                  isClean());
+          mappings_ = null;
+        }
+        return mappingsBuilder_;
+      }
+
+      private oscal.common.v1.Common.BackMatter backMatter_;
+      private com.google.protobuf.SingleFieldBuilder<
+          oscal.common.v1.Common.BackMatter, oscal.common.v1.Common.BackMatter.Builder, oscal.common.v1.Common.BackMatterOrBuilder> backMatterBuilder_;
+      /**
+       * <code>.oscal.common.v1.BackMatter back_matter = 18 [json_name = "backMatter"];</code>
+       * @return Whether the backMatter field is set.
+       */
+      public boolean hasBackMatter() {
+        return ((bitField0_ & 0x00020000) != 0);
+      }
+      /**
+       * <code>.oscal.common.v1.BackMatter back_matter = 18 [json_name = "backMatter"];</code>
+       * @return The backMatter.
+       */
+      public oscal.common.v1.Common.BackMatter getBackMatter() {
+        if (backMatterBuilder_ == null) {
+          return backMatter_ == null ? oscal.common.v1.Common.BackMatter.getDefaultInstance() : backMatter_;
+        } else {
+          return backMatterBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.oscal.common.v1.BackMatter back_matter = 18 [json_name = "backMatter"];</code>
+       */
+      public Builder setBackMatter(oscal.common.v1.Common.BackMatter value) {
+        if (backMatterBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          backMatter_ = value;
+        } else {
+          backMatterBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00020000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.BackMatter back_matter = 18 [json_name = "backMatter"];</code>
+       */
+      public Builder setBackMatter(
+          oscal.common.v1.Common.BackMatter.Builder builderForValue) {
+        if (backMatterBuilder_ == null) {
+          backMatter_ = builderForValue.build();
+        } else {
+          backMatterBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00020000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.BackMatter back_matter = 18 [json_name = "backMatter"];</code>
+       */
+      public Builder mergeBackMatter(oscal.common.v1.Common.BackMatter value) {
+        if (backMatterBuilder_ == null) {
+          if (((bitField0_ & 0x00020000) != 0) &&
+            backMatter_ != null &&
+            backMatter_ != oscal.common.v1.Common.BackMatter.getDefaultInstance()) {
+            getBackMatterBuilder().mergeFrom(value);
+          } else {
+            backMatter_ = value;
+          }
+        } else {
+          backMatterBuilder_.mergeFrom(value);
+        }
+        if (backMatter_ != null) {
+          bitField0_ |= 0x00020000;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.BackMatter back_matter = 18 [json_name = "backMatter"];</code>
+       */
+      public Builder clearBackMatter() {
+        bitField0_ = (bitField0_ & ~0x00020000);
+        backMatter_ = null;
+        if (backMatterBuilder_ != null) {
+          backMatterBuilder_.dispose();
+          backMatterBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.BackMatter back_matter = 18 [json_name = "backMatter"];</code>
+       */
+      public oscal.common.v1.Common.BackMatter.Builder getBackMatterBuilder() {
+        bitField0_ |= 0x00020000;
+        onChanged();
+        return internalGetBackMatterFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.oscal.common.v1.BackMatter back_matter = 18 [json_name = "backMatter"];</code>
+       */
+      public oscal.common.v1.Common.BackMatterOrBuilder getBackMatterOrBuilder() {
+        if (backMatterBuilder_ != null) {
+          return backMatterBuilder_.getMessageOrBuilder();
+        } else {
+          return backMatter_ == null ?
+              oscal.common.v1.Common.BackMatter.getDefaultInstance() : backMatter_;
+        }
+      }
+      /**
+       * <code>.oscal.common.v1.BackMatter back_matter = 18 [json_name = "backMatter"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          oscal.common.v1.Common.BackMatter, oscal.common.v1.Common.BackMatter.Builder, oscal.common.v1.Common.BackMatterOrBuilder>
+          internalGetBackMatterFieldBuilder() {
+        if (backMatterBuilder_ == null) {
+          backMatterBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              oscal.common.v1.Common.BackMatter, oscal.common.v1.Common.BackMatter.Builder, oscal.common.v1.Common.BackMatterOrBuilder>(
+                  getBackMatter(),
+                  getParentForChildren(),
+                  isClean());
+          backMatter_ = null;
+        }
+        return backMatterBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:oscal.mapping.v1.MappingCollection)
+    }
+
+    // @@protoc_insertion_point(class_scope:oscal.mapping.v1.MappingCollection)
+    private static final oscal.mapping.v1.Mapping.MappingCollection DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new oscal.mapping.v1.Mapping.MappingCollection();
+    }
+
+    public static oscal.mapping.v1.Mapping.MappingCollection getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MappingCollection>
+        PARSER = new com.google.protobuf.AbstractParser<MappingCollection>() {
+      @java.lang.Override
+      public MappingCollection parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MappingCollection> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MappingCollection> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public oscal.mapping.v1.Mapping.MappingCollection getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ControlMappingOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oscal.mapping.v1.ControlMapping)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
+     * @return Whether the uuid field is set.
+     */
+    boolean hasUuid();
+    /**
+     * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
+     * @return The uuid.
+     */
+    oscal.common.v1.Common.UUID getUuid();
+    /**
+     * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
+     */
+    oscal.common.v1.Common.UUIDOrBuilder getUuidOrBuilder();
+
+    /**
+     * <code>string method = 2 [json_name = "method"];</code>
+     * @return The method.
+     */
+    java.lang.String getMethod();
+    /**
+     * <code>string method = 2 [json_name = "method"];</code>
+     * @return The bytes for method.
+     */
+    com.google.protobuf.ByteString
+        getMethodBytes();
+
+    /**
+     * <code>string matching_rationale = 3 [json_name = "matchingRationale"];</code>
+     * @return The matchingRationale.
+     */
+    java.lang.String getMatchingRationale();
+    /**
+     * <code>string matching_rationale = 3 [json_name = "matchingRationale"];</code>
+     * @return The bytes for matchingRationale.
+     */
+    com.google.protobuf.ByteString
+        getMatchingRationaleBytes();
+
+    /**
+     * <code>string status = 4 [json_name = "status"];</code>
+     * @return The status.
+     */
+    java.lang.String getStatus();
+    /**
+     * <code>string status = 4 [json_name = "status"];</code>
+     * @return The bytes for status.
+     */
+    com.google.protobuf.ByteString
+        getStatusBytes();
+
+    /**
+     * <code>.oscal.mapping.v1.MappingResourceReference source_resource = 5 [json_name = "sourceResource"];</code>
+     * @return Whether the sourceResource field is set.
+     */
+    boolean hasSourceResource();
+    /**
+     * <code>.oscal.mapping.v1.MappingResourceReference source_resource = 5 [json_name = "sourceResource"];</code>
+     * @return The sourceResource.
+     */
+    oscal.mapping.v1.Mapping.MappingResourceReference getSourceResource();
+    /**
+     * <code>.oscal.mapping.v1.MappingResourceReference source_resource = 5 [json_name = "sourceResource"];</code>
+     */
+    oscal.mapping.v1.Mapping.MappingResourceReferenceOrBuilder getSourceResourceOrBuilder();
+
+    /**
+     * <code>.oscal.mapping.v1.MappingResourceReference target_resource = 6 [json_name = "targetResource"];</code>
+     * @return Whether the targetResource field is set.
+     */
+    boolean hasTargetResource();
+    /**
+     * <code>.oscal.mapping.v1.MappingResourceReference target_resource = 6 [json_name = "targetResource"];</code>
+     * @return The targetResource.
+     */
+    oscal.mapping.v1.Mapping.MappingResourceReference getTargetResource();
+    /**
+     * <code>.oscal.mapping.v1.MappingResourceReference target_resource = 6 [json_name = "targetResource"];</code>
+     */
+    oscal.mapping.v1.Mapping.MappingResourceReferenceOrBuilder getTargetResourceOrBuilder();
+
+    /**
+     * <code>repeated .oscal.mapping.v1.Map maps = 7 [json_name = "maps"];</code>
+     */
+    java.util.List<oscal.mapping.v1.Mapping.Map>
+        getMapsList();
+    /**
+     * <code>repeated .oscal.mapping.v1.Map maps = 7 [json_name = "maps"];</code>
+     */
+    oscal.mapping.v1.Mapping.Map getMaps(int index);
+    /**
+     * <code>repeated .oscal.mapping.v1.Map maps = 7 [json_name = "maps"];</code>
+     */
+    int getMapsCount();
+    /**
+     * <code>repeated .oscal.mapping.v1.Map maps = 7 [json_name = "maps"];</code>
+     */
+    java.util.List<? extends oscal.mapping.v1.Mapping.MapOrBuilder>
+        getMapsOrBuilderList();
+    /**
+     * <code>repeated .oscal.mapping.v1.Map maps = 7 [json_name = "maps"];</code>
+     */
+    oscal.mapping.v1.Mapping.MapOrBuilder getMapsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props"];</code>
+     */
+    java.util.List<oscal.common.v1.Common.Property>
+        getPropsList();
+    /**
+     * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props"];</code>
+     */
+    oscal.common.v1.Common.Property getProps(int index);
+    /**
+     * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props"];</code>
+     */
+    int getPropsCount();
+    /**
+     * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props"];</code>
+     */
+    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
+        getPropsOrBuilderList();
+    /**
+     * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props"];</code>
+     */
+    oscal.common.v1.Common.PropertyOrBuilder getPropsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links"];</code>
+     */
+    java.util.List<oscal.common.v1.Common.Link>
+        getLinksList();
+    /**
+     * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links"];</code>
+     */
+    oscal.common.v1.Common.Link getLinks(int index);
+    /**
+     * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links"];</code>
+     */
+    int getLinksCount();
+    /**
+     * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links"];</code>
+     */
+    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
+        getLinksOrBuilderList();
+    /**
+     * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links"];</code>
+     */
+    oscal.common.v1.Common.LinkOrBuilder getLinksOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks"];</code>
+     */
+    java.util.List<oscal.common.v1.Common.MarkupMultiline>
+        getRemarksList();
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks"];</code>
+     */
+    oscal.common.v1.Common.MarkupMultiline getRemarks(int index);
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks"];</code>
+     */
+    int getRemarksCount();
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks"];</code>
+     */
+    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
+        getRemarksOrBuilderList();
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks"];</code>
+     */
+    oscal.common.v1.Common.MarkupMultilineOrBuilder getRemarksOrBuilder(
+        int index);
+
+    /**
+     * <code>.oscal.common.v1.MarkupMultiline mapping_description = 11 [json_name = "mappingDescription"];</code>
+     * @return Whether the mappingDescription field is set.
+     */
+    boolean hasMappingDescription();
+    /**
+     * <code>.oscal.common.v1.MarkupMultiline mapping_description = 11 [json_name = "mappingDescription"];</code>
+     * @return The mappingDescription.
+     */
+    oscal.common.v1.Common.MarkupMultiline getMappingDescription();
+    /**
+     * <code>.oscal.common.v1.MarkupMultiline mapping_description = 11 [json_name = "mappingDescription"];</code>
+     */
+    oscal.common.v1.Common.MarkupMultilineOrBuilder getMappingDescriptionOrBuilder();
+
+    /**
+     * <code>.oscal.mapping.v1.GapSummary source_gap_summary = 12 [json_name = "sourceGapSummary"];</code>
+     * @return Whether the sourceGapSummary field is set.
+     */
+    boolean hasSourceGapSummary();
+    /**
+     * <code>.oscal.mapping.v1.GapSummary source_gap_summary = 12 [json_name = "sourceGapSummary"];</code>
+     * @return The sourceGapSummary.
+     */
+    oscal.mapping.v1.Mapping.GapSummary getSourceGapSummary();
+    /**
+     * <code>.oscal.mapping.v1.GapSummary source_gap_summary = 12 [json_name = "sourceGapSummary"];</code>
+     */
+    oscal.mapping.v1.Mapping.GapSummaryOrBuilder getSourceGapSummaryOrBuilder();
+
+    /**
+     * <code>.oscal.mapping.v1.GapSummary target_gap_summary = 13 [json_name = "targetGapSummary"];</code>
+     * @return Whether the targetGapSummary field is set.
+     */
+    boolean hasTargetGapSummary();
+    /**
+     * <code>.oscal.mapping.v1.GapSummary target_gap_summary = 13 [json_name = "targetGapSummary"];</code>
+     * @return The targetGapSummary.
+     */
+    oscal.mapping.v1.Mapping.GapSummary getTargetGapSummary();
+    /**
+     * <code>.oscal.mapping.v1.GapSummary target_gap_summary = 13 [json_name = "targetGapSummary"];</code>
+     */
+    oscal.mapping.v1.Mapping.GapSummaryOrBuilder getTargetGapSummaryOrBuilder();
+
+    /**
+     * <code>.oscal.mapping.v1.ConfidenceScore confidence_score = 14 [json_name = "confidenceScore"];</code>
+     * @return Whether the confidenceScore field is set.
+     */
+    boolean hasConfidenceScore();
+    /**
+     * <code>.oscal.mapping.v1.ConfidenceScore confidence_score = 14 [json_name = "confidenceScore"];</code>
+     * @return The confidenceScore.
+     */
+    oscal.mapping.v1.Mapping.ConfidenceScore getConfidenceScore();
+    /**
+     * <code>.oscal.mapping.v1.ConfidenceScore confidence_score = 14 [json_name = "confidenceScore"];</code>
+     */
+    oscal.mapping.v1.Mapping.ConfidenceScoreOrBuilder getConfidenceScoreOrBuilder();
+
+    /**
+     * <code>.oscal.mapping.v1.Coverage coverage = 15 [json_name = "coverage"];</code>
+     * @return Whether the coverage field is set.
+     */
+    boolean hasCoverage();
+    /**
+     * <code>.oscal.mapping.v1.Coverage coverage = 15 [json_name = "coverage"];</code>
+     * @return The coverage.
+     */
+    oscal.mapping.v1.Mapping.Coverage getCoverage();
+    /**
+     * <code>.oscal.mapping.v1.Coverage coverage = 15 [json_name = "coverage"];</code>
+     */
+    oscal.mapping.v1.Mapping.CoverageOrBuilder getCoverageOrBuilder();
+  }
+  /**
+   * <pre>
+   * ControlMapping represents one source-resource to target-resource mapping.
+   * </pre>
+   *
+   * Protobuf type {@code oscal.mapping.v1.ControlMapping}
+   */
+  public static final class ControlMapping extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:oscal.mapping.v1.ControlMapping)
+      ControlMappingOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 35,
+        /* patch= */ 1,
+        /* suffix= */ "",
+        "ControlMapping");
+    }
+    // Use ControlMapping.newBuilder() to construct.
+    private ControlMapping(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private ControlMapping() {
+      method_ = "";
+      matchingRationale_ = "";
+      status_ = "";
+      maps_ = java.util.Collections.emptyList();
+      props_ = java.util.Collections.emptyList();
+      links_ = java.util.Collections.emptyList();
+      remarks_ = java.util.Collections.emptyList();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return oscal.mapping.v1.Mapping.internal_static_oscal_mapping_v1_ControlMapping_descriptor;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+      return oscal.mapping.v1.Mapping.internal_static_oscal_mapping_v1_ControlMapping_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return oscal.mapping.v1.Mapping.internal_static_oscal_mapping_v1_ControlMapping_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              oscal.mapping.v1.Mapping.ControlMapping.class, oscal.mapping.v1.Mapping.ControlMapping.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int UUID_FIELD_NUMBER = 1;
+    private oscal.common.v1.Common.UUID uuid_;
+    /**
+     * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
+     * @return Whether the uuid field is set.
+     */
+    @java.lang.Override
+    public boolean hasUuid() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
+     * @return The uuid.
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.UUID getUuid() {
+      return uuid_ == null ? oscal.common.v1.Common.UUID.getDefaultInstance() : uuid_;
+    }
+    /**
+     * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.UUIDOrBuilder getUuidOrBuilder() {
+      return uuid_ == null ? oscal.common.v1.Common.UUID.getDefaultInstance() : uuid_;
+    }
+
+    public static final int METHOD_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object method_ = "";
+    /**
+     * <code>string method = 2 [json_name = "method"];</code>
+     * @return The method.
+     */
+    @java.lang.Override
+    public java.lang.String getMethod() {
+      java.lang.Object ref = method_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        method_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string method = 2 [json_name = "method"];</code>
+     * @return The bytes for method.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMethodBytes() {
+      java.lang.Object ref = method_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        method_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MATCHING_RATIONALE_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object matchingRationale_ = "";
+    /**
+     * <code>string matching_rationale = 3 [json_name = "matchingRationale"];</code>
+     * @return The matchingRationale.
+     */
+    @java.lang.Override
+    public java.lang.String getMatchingRationale() {
+      java.lang.Object ref = matchingRationale_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        matchingRationale_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string matching_rationale = 3 [json_name = "matchingRationale"];</code>
+     * @return The bytes for matchingRationale.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMatchingRationaleBytes() {
+      java.lang.Object ref = matchingRationale_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        matchingRationale_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STATUS_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object status_ = "";
+    /**
+     * <code>string status = 4 [json_name = "status"];</code>
+     * @return The status.
+     */
+    @java.lang.Override
+    public java.lang.String getStatus() {
+      java.lang.Object ref = status_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        status_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string status = 4 [json_name = "status"];</code>
+     * @return The bytes for status.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStatusBytes() {
+      java.lang.Object ref = status_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        status_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SOURCE_RESOURCE_FIELD_NUMBER = 5;
+    private oscal.mapping.v1.Mapping.MappingResourceReference sourceResource_;
+    /**
+     * <code>.oscal.mapping.v1.MappingResourceReference source_resource = 5 [json_name = "sourceResource"];</code>
+     * @return Whether the sourceResource field is set.
+     */
+    @java.lang.Override
+    public boolean hasSourceResource() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>.oscal.mapping.v1.MappingResourceReference source_resource = 5 [json_name = "sourceResource"];</code>
+     * @return The sourceResource.
+     */
+    @java.lang.Override
+    public oscal.mapping.v1.Mapping.MappingResourceReference getSourceResource() {
+      return sourceResource_ == null ? oscal.mapping.v1.Mapping.MappingResourceReference.getDefaultInstance() : sourceResource_;
+    }
+    /**
+     * <code>.oscal.mapping.v1.MappingResourceReference source_resource = 5 [json_name = "sourceResource"];</code>
+     */
+    @java.lang.Override
+    public oscal.mapping.v1.Mapping.MappingResourceReferenceOrBuilder getSourceResourceOrBuilder() {
+      return sourceResource_ == null ? oscal.mapping.v1.Mapping.MappingResourceReference.getDefaultInstance() : sourceResource_;
+    }
+
+    public static final int TARGET_RESOURCE_FIELD_NUMBER = 6;
+    private oscal.mapping.v1.Mapping.MappingResourceReference targetResource_;
+    /**
+     * <code>.oscal.mapping.v1.MappingResourceReference target_resource = 6 [json_name = "targetResource"];</code>
+     * @return Whether the targetResource field is set.
+     */
+    @java.lang.Override
+    public boolean hasTargetResource() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>.oscal.mapping.v1.MappingResourceReference target_resource = 6 [json_name = "targetResource"];</code>
+     * @return The targetResource.
+     */
+    @java.lang.Override
+    public oscal.mapping.v1.Mapping.MappingResourceReference getTargetResource() {
+      return targetResource_ == null ? oscal.mapping.v1.Mapping.MappingResourceReference.getDefaultInstance() : targetResource_;
+    }
+    /**
+     * <code>.oscal.mapping.v1.MappingResourceReference target_resource = 6 [json_name = "targetResource"];</code>
+     */
+    @java.lang.Override
+    public oscal.mapping.v1.Mapping.MappingResourceReferenceOrBuilder getTargetResourceOrBuilder() {
+      return targetResource_ == null ? oscal.mapping.v1.Mapping.MappingResourceReference.getDefaultInstance() : targetResource_;
+    }
+
+    public static final int MAPS_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private java.util.List<oscal.mapping.v1.Mapping.Map> maps_;
+    /**
+     * <code>repeated .oscal.mapping.v1.Map maps = 7 [json_name = "maps"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<oscal.mapping.v1.Mapping.Map> getMapsList() {
+      return maps_;
+    }
+    /**
+     * <code>repeated .oscal.mapping.v1.Map maps = 7 [json_name = "maps"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends oscal.mapping.v1.Mapping.MapOrBuilder>
+        getMapsOrBuilderList() {
+      return maps_;
+    }
+    /**
+     * <code>repeated .oscal.mapping.v1.Map maps = 7 [json_name = "maps"];</code>
+     */
+    @java.lang.Override
+    public int getMapsCount() {
+      return maps_.size();
+    }
+    /**
+     * <code>repeated .oscal.mapping.v1.Map maps = 7 [json_name = "maps"];</code>
+     */
+    @java.lang.Override
+    public oscal.mapping.v1.Mapping.Map getMaps(int index) {
+      return maps_.get(index);
+    }
+    /**
+     * <code>repeated .oscal.mapping.v1.Map maps = 7 [json_name = "maps"];</code>
+     */
+    @java.lang.Override
+    public oscal.mapping.v1.Mapping.MapOrBuilder getMapsOrBuilder(
+        int index) {
+      return maps_.get(index);
+    }
+
+    public static final int PROPS_FIELD_NUMBER = 8;
+    @SuppressWarnings("serial")
+    private java.util.List<oscal.common.v1.Common.Property> props_;
+    /**
+     * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<oscal.common.v1.Common.Property> getPropsList() {
+      return props_;
+    }
+    /**
+     * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
+        getPropsOrBuilderList() {
+      return props_;
+    }
+    /**
+     * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props"];</code>
+     */
+    @java.lang.Override
+    public int getPropsCount() {
+      return props_.size();
+    }
+    /**
+     * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.Property getProps(int index) {
+      return props_.get(index);
+    }
+    /**
+     * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.PropertyOrBuilder getPropsOrBuilder(
+        int index) {
+      return props_.get(index);
+    }
+
+    public static final int LINKS_FIELD_NUMBER = 9;
+    @SuppressWarnings("serial")
+    private java.util.List<oscal.common.v1.Common.Link> links_;
+    /**
+     * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<oscal.common.v1.Common.Link> getLinksList() {
+      return links_;
+    }
+    /**
+     * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
+        getLinksOrBuilderList() {
+      return links_;
+    }
+    /**
+     * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links"];</code>
+     */
+    @java.lang.Override
+    public int getLinksCount() {
+      return links_.size();
+    }
+    /**
+     * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.Link getLinks(int index) {
+      return links_.get(index);
+    }
+    /**
+     * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.LinkOrBuilder getLinksOrBuilder(
+        int index) {
+      return links_.get(index);
+    }
+
+    public static final int REMARKS_FIELD_NUMBER = 10;
+    @SuppressWarnings("serial")
+    private java.util.List<oscal.common.v1.Common.MarkupMultiline> remarks_;
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<oscal.common.v1.Common.MarkupMultiline> getRemarksList() {
+      return remarks_;
+    }
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
+        getRemarksOrBuilderList() {
+      return remarks_;
+    }
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks"];</code>
+     */
+    @java.lang.Override
+    public int getRemarksCount() {
+      return remarks_.size();
+    }
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.MarkupMultiline getRemarks(int index) {
+      return remarks_.get(index);
+    }
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.MarkupMultilineOrBuilder getRemarksOrBuilder(
+        int index) {
+      return remarks_.get(index);
+    }
+
+    public static final int MAPPING_DESCRIPTION_FIELD_NUMBER = 11;
+    private oscal.common.v1.Common.MarkupMultiline mappingDescription_;
+    /**
+     * <code>.oscal.common.v1.MarkupMultiline mapping_description = 11 [json_name = "mappingDescription"];</code>
+     * @return Whether the mappingDescription field is set.
+     */
+    @java.lang.Override
+    public boolean hasMappingDescription() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>.oscal.common.v1.MarkupMultiline mapping_description = 11 [json_name = "mappingDescription"];</code>
+     * @return The mappingDescription.
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.MarkupMultiline getMappingDescription() {
+      return mappingDescription_ == null ? oscal.common.v1.Common.MarkupMultiline.getDefaultInstance() : mappingDescription_;
+    }
+    /**
+     * <code>.oscal.common.v1.MarkupMultiline mapping_description = 11 [json_name = "mappingDescription"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.MarkupMultilineOrBuilder getMappingDescriptionOrBuilder() {
+      return mappingDescription_ == null ? oscal.common.v1.Common.MarkupMultiline.getDefaultInstance() : mappingDescription_;
+    }
+
+    public static final int SOURCE_GAP_SUMMARY_FIELD_NUMBER = 12;
+    private oscal.mapping.v1.Mapping.GapSummary sourceGapSummary_;
+    /**
+     * <code>.oscal.mapping.v1.GapSummary source_gap_summary = 12 [json_name = "sourceGapSummary"];</code>
+     * @return Whether the sourceGapSummary field is set.
+     */
+    @java.lang.Override
+    public boolean hasSourceGapSummary() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <code>.oscal.mapping.v1.GapSummary source_gap_summary = 12 [json_name = "sourceGapSummary"];</code>
+     * @return The sourceGapSummary.
+     */
+    @java.lang.Override
+    public oscal.mapping.v1.Mapping.GapSummary getSourceGapSummary() {
+      return sourceGapSummary_ == null ? oscal.mapping.v1.Mapping.GapSummary.getDefaultInstance() : sourceGapSummary_;
+    }
+    /**
+     * <code>.oscal.mapping.v1.GapSummary source_gap_summary = 12 [json_name = "sourceGapSummary"];</code>
+     */
+    @java.lang.Override
+    public oscal.mapping.v1.Mapping.GapSummaryOrBuilder getSourceGapSummaryOrBuilder() {
+      return sourceGapSummary_ == null ? oscal.mapping.v1.Mapping.GapSummary.getDefaultInstance() : sourceGapSummary_;
+    }
+
+    public static final int TARGET_GAP_SUMMARY_FIELD_NUMBER = 13;
+    private oscal.mapping.v1.Mapping.GapSummary targetGapSummary_;
+    /**
+     * <code>.oscal.mapping.v1.GapSummary target_gap_summary = 13 [json_name = "targetGapSummary"];</code>
+     * @return Whether the targetGapSummary field is set.
+     */
+    @java.lang.Override
+    public boolean hasTargetGapSummary() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <code>.oscal.mapping.v1.GapSummary target_gap_summary = 13 [json_name = "targetGapSummary"];</code>
+     * @return The targetGapSummary.
+     */
+    @java.lang.Override
+    public oscal.mapping.v1.Mapping.GapSummary getTargetGapSummary() {
+      return targetGapSummary_ == null ? oscal.mapping.v1.Mapping.GapSummary.getDefaultInstance() : targetGapSummary_;
+    }
+    /**
+     * <code>.oscal.mapping.v1.GapSummary target_gap_summary = 13 [json_name = "targetGapSummary"];</code>
+     */
+    @java.lang.Override
+    public oscal.mapping.v1.Mapping.GapSummaryOrBuilder getTargetGapSummaryOrBuilder() {
+      return targetGapSummary_ == null ? oscal.mapping.v1.Mapping.GapSummary.getDefaultInstance() : targetGapSummary_;
+    }
+
+    public static final int CONFIDENCE_SCORE_FIELD_NUMBER = 14;
+    private oscal.mapping.v1.Mapping.ConfidenceScore confidenceScore_;
+    /**
+     * <code>.oscal.mapping.v1.ConfidenceScore confidence_score = 14 [json_name = "confidenceScore"];</code>
+     * @return Whether the confidenceScore field is set.
+     */
+    @java.lang.Override
+    public boolean hasConfidenceScore() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <code>.oscal.mapping.v1.ConfidenceScore confidence_score = 14 [json_name = "confidenceScore"];</code>
+     * @return The confidenceScore.
+     */
+    @java.lang.Override
+    public oscal.mapping.v1.Mapping.ConfidenceScore getConfidenceScore() {
+      return confidenceScore_ == null ? oscal.mapping.v1.Mapping.ConfidenceScore.getDefaultInstance() : confidenceScore_;
+    }
+    /**
+     * <code>.oscal.mapping.v1.ConfidenceScore confidence_score = 14 [json_name = "confidenceScore"];</code>
+     */
+    @java.lang.Override
+    public oscal.mapping.v1.Mapping.ConfidenceScoreOrBuilder getConfidenceScoreOrBuilder() {
+      return confidenceScore_ == null ? oscal.mapping.v1.Mapping.ConfidenceScore.getDefaultInstance() : confidenceScore_;
+    }
+
+    public static final int COVERAGE_FIELD_NUMBER = 15;
+    private oscal.mapping.v1.Mapping.Coverage coverage_;
+    /**
+     * <code>.oscal.mapping.v1.Coverage coverage = 15 [json_name = "coverage"];</code>
+     * @return Whether the coverage field is set.
+     */
+    @java.lang.Override
+    public boolean hasCoverage() {
+      return ((bitField0_ & 0x00000080) != 0);
+    }
+    /**
+     * <code>.oscal.mapping.v1.Coverage coverage = 15 [json_name = "coverage"];</code>
+     * @return The coverage.
+     */
+    @java.lang.Override
+    public oscal.mapping.v1.Mapping.Coverage getCoverage() {
+      return coverage_ == null ? oscal.mapping.v1.Mapping.Coverage.getDefaultInstance() : coverage_;
+    }
+    /**
+     * <code>.oscal.mapping.v1.Coverage coverage = 15 [json_name = "coverage"];</code>
+     */
+    @java.lang.Override
+    public oscal.mapping.v1.Mapping.CoverageOrBuilder getCoverageOrBuilder() {
+      return coverage_ == null ? oscal.mapping.v1.Mapping.Coverage.getDefaultInstance() : coverage_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeMessage(1, getUuid());
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(method_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, method_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(matchingRationale_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 3, matchingRationale_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(status_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 4, status_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeMessage(5, getSourceResource());
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeMessage(6, getTargetResource());
+      }
+      for (int i = 0; i < maps_.size(); i++) {
+        output.writeMessage(7, maps_.get(i));
+      }
+      for (int i = 0; i < props_.size(); i++) {
+        output.writeMessage(8, props_.get(i));
+      }
+      for (int i = 0; i < links_.size(); i++) {
+        output.writeMessage(9, links_.get(i));
+      }
+      for (int i = 0; i < remarks_.size(); i++) {
+        output.writeMessage(10, remarks_.get(i));
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        output.writeMessage(11, getMappingDescription());
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        output.writeMessage(12, getSourceGapSummary());
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        output.writeMessage(13, getTargetGapSummary());
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        output.writeMessage(14, getConfidenceScore());
+      }
+      if (((bitField0_ & 0x00000080) != 0)) {
+        output.writeMessage(15, getCoverage());
+      }
+      getUnknownFields().writeTo(output);
+    }
+    private int computeSerializedSize_0() {
+      int size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getUuid());
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(method_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, method_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(matchingRationale_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(3, matchingRationale_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(status_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(4, status_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getSourceResource());
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getTargetResource());
+      }
+
+          {
+            final int count = maps_.size();
+            for (int i = 0; i < count; i++) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeMessageSizeNoTag(maps_.get(i));
+            }
+            size += 1 * count;
+          }
+
+          {
+            final int count = props_.size();
+            for (int i = 0; i < count; i++) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeMessageSizeNoTag(props_.get(i));
+            }
+            size += 1 * count;
+          }
+
+          {
+            final int count = links_.size();
+            for (int i = 0; i < count; i++) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeMessageSizeNoTag(links_.get(i));
+            }
+            size += 1 * count;
+          }
+
+          {
+            final int count = remarks_.size();
+            for (int i = 0; i < count; i++) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeMessageSizeNoTag(remarks_.get(i));
+            }
+            size += 1 * count;
+          }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(11, getMappingDescription());
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(12, getSourceGapSummary());
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(13, getTargetGapSummary());
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(14, getConfidenceScore());
+      }
+      if (((bitField0_ & 0x00000080) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(15, getCoverage());
+      }
+      return size;
+    }
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += computeSerializedSize_0();
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof oscal.mapping.v1.Mapping.ControlMapping)) {
+        return super.equals(obj);
+      }
+      oscal.mapping.v1.Mapping.ControlMapping other = (oscal.mapping.v1.Mapping.ControlMapping) obj;
+
+      if (hasUuid() != other.hasUuid()) return false;
+      if (hasUuid()) {
+        if (!getUuid()
+            .equals(other.getUuid())) return false;
+      }
+      if (!getMethod()
+          .equals(other.getMethod())) return false;
+      if (!getMatchingRationale()
+          .equals(other.getMatchingRationale())) return false;
+      if (!getStatus()
+          .equals(other.getStatus())) return false;
+      if (hasSourceResource() != other.hasSourceResource()) return false;
+      if (hasSourceResource()) {
+        if (!getSourceResource()
+            .equals(other.getSourceResource())) return false;
+      }
+      if (hasTargetResource() != other.hasTargetResource()) return false;
+      if (hasTargetResource()) {
+        if (!getTargetResource()
+            .equals(other.getTargetResource())) return false;
+      }
+      if (!getMapsList()
+          .equals(other.getMapsList())) return false;
+      if (!getPropsList()
+          .equals(other.getPropsList())) return false;
+      if (!getLinksList()
+          .equals(other.getLinksList())) return false;
+      if (!getRemarksList()
+          .equals(other.getRemarksList())) return false;
+      if (hasMappingDescription() != other.hasMappingDescription()) return false;
+      if (hasMappingDescription()) {
+        if (!getMappingDescription()
+            .equals(other.getMappingDescription())) return false;
+      }
+      if (hasSourceGapSummary() != other.hasSourceGapSummary()) return false;
+      if (hasSourceGapSummary()) {
+        if (!getSourceGapSummary()
+            .equals(other.getSourceGapSummary())) return false;
+      }
+      if (hasTargetGapSummary() != other.hasTargetGapSummary()) return false;
+      if (hasTargetGapSummary()) {
+        if (!getTargetGapSummary()
+            .equals(other.getTargetGapSummary())) return false;
+      }
+      if (hasConfidenceScore() != other.hasConfidenceScore()) return false;
+      if (hasConfidenceScore()) {
+        if (!getConfidenceScore()
+            .equals(other.getConfidenceScore())) return false;
+      }
+      if (hasCoverage() != other.hasCoverage()) return false;
+      if (hasCoverage()) {
+        if (!getCoverage()
+            .equals(other.getCoverage())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasUuid()) {
+        hash = (37 * hash) + UUID_FIELD_NUMBER;
+        hash = (53 * hash) + getUuid().hashCode();
+      }
+      hash = (37 * hash) + METHOD_FIELD_NUMBER;
+      hash = (53 * hash) + getMethod().hashCode();
+      hash = (37 * hash) + MATCHING_RATIONALE_FIELD_NUMBER;
+      hash = (53 * hash) + getMatchingRationale().hashCode();
+      hash = (37 * hash) + STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + getStatus().hashCode();
+      if (hasSourceResource()) {
+        hash = (37 * hash) + SOURCE_RESOURCE_FIELD_NUMBER;
+        hash = (53 * hash) + getSourceResource().hashCode();
+      }
+      if (hasTargetResource()) {
+        hash = (37 * hash) + TARGET_RESOURCE_FIELD_NUMBER;
+        hash = (53 * hash) + getTargetResource().hashCode();
+      }
+      if (getMapsCount() > 0) {
+        hash = (37 * hash) + MAPS_FIELD_NUMBER;
+        hash = (53 * hash) + getMapsList().hashCode();
+      }
+      if (getPropsCount() > 0) {
+        hash = (37 * hash) + PROPS_FIELD_NUMBER;
+        hash = (53 * hash) + getPropsList().hashCode();
+      }
+      if (getLinksCount() > 0) {
+        hash = (37 * hash) + LINKS_FIELD_NUMBER;
+        hash = (53 * hash) + getLinksList().hashCode();
+      }
+      if (getRemarksCount() > 0) {
+        hash = (37 * hash) + REMARKS_FIELD_NUMBER;
+        hash = (53 * hash) + getRemarksList().hashCode();
+      }
+      if (hasMappingDescription()) {
+        hash = (37 * hash) + MAPPING_DESCRIPTION_FIELD_NUMBER;
+        hash = (53 * hash) + getMappingDescription().hashCode();
+      }
+      if (hasSourceGapSummary()) {
+        hash = (37 * hash) + SOURCE_GAP_SUMMARY_FIELD_NUMBER;
+        hash = (53 * hash) + getSourceGapSummary().hashCode();
+      }
+      if (hasTargetGapSummary()) {
+        hash = (37 * hash) + TARGET_GAP_SUMMARY_FIELD_NUMBER;
+        hash = (53 * hash) + getTargetGapSummary().hashCode();
+      }
+      if (hasConfidenceScore()) {
+        hash = (37 * hash) + CONFIDENCE_SCORE_FIELD_NUMBER;
+        hash = (53 * hash) + getConfidenceScore().hashCode();
+      }
+      if (hasCoverage()) {
+        hash = (37 * hash) + COVERAGE_FIELD_NUMBER;
+        hash = (53 * hash) + getCoverage().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static oscal.mapping.v1.Mapping.ControlMapping parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.mapping.v1.Mapping.ControlMapping parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.mapping.v1.Mapping.ControlMapping parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.mapping.v1.Mapping.ControlMapping parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.mapping.v1.Mapping.ControlMapping parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.mapping.v1.Mapping.ControlMapping parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.mapping.v1.Mapping.ControlMapping parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static oscal.mapping.v1.Mapping.ControlMapping parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static oscal.mapping.v1.Mapping.ControlMapping parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static oscal.mapping.v1.Mapping.ControlMapping parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static oscal.mapping.v1.Mapping.ControlMapping parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static oscal.mapping.v1.Mapping.ControlMapping parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(oscal.mapping.v1.Mapping.ControlMapping prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * ControlMapping represents one source-resource to target-resource mapping.
+     * </pre>
+     *
+     * Protobuf type {@code oscal.mapping.v1.ControlMapping}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oscal.mapping.v1.ControlMapping)
+        oscal.mapping.v1.Mapping.ControlMappingOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return oscal.mapping.v1.Mapping.internal_static_oscal_mapping_v1_ControlMapping_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return oscal.mapping.v1.Mapping.internal_static_oscal_mapping_v1_ControlMapping_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                oscal.mapping.v1.Mapping.ControlMapping.class, oscal.mapping.v1.Mapping.ControlMapping.Builder.class);
+      }
+
+      // Construct using oscal.mapping.v1.Mapping.ControlMapping.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage
+                .alwaysUseFieldBuilders) {
+          internalGetUuidFieldBuilder();
+          internalGetSourceResourceFieldBuilder();
+          internalGetTargetResourceFieldBuilder();
+          internalGetMapsFieldBuilder();
+          internalGetPropsFieldBuilder();
+          internalGetLinksFieldBuilder();
+          internalGetRemarksFieldBuilder();
+          internalGetMappingDescriptionFieldBuilder();
+          internalGetSourceGapSummaryFieldBuilder();
+          internalGetTargetGapSummaryFieldBuilder();
+          internalGetConfidenceScoreFieldBuilder();
+          internalGetCoverageFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        uuid_ = null;
+        if (uuidBuilder_ != null) {
+          uuidBuilder_.dispose();
+          uuidBuilder_ = null;
+        }
+        method_ = "";
+        matchingRationale_ = "";
+        status_ = "";
+        sourceResource_ = null;
+        if (sourceResourceBuilder_ != null) {
+          sourceResourceBuilder_.dispose();
+          sourceResourceBuilder_ = null;
+        }
+        targetResource_ = null;
+        if (targetResourceBuilder_ != null) {
+          targetResourceBuilder_.dispose();
+          targetResourceBuilder_ = null;
+        }
+        if (mapsBuilder_ == null) {
+          maps_ = java.util.Collections.emptyList();
+        } else {
+          maps_ = null;
+          mapsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000040);
+        if (propsBuilder_ == null) {
+          props_ = java.util.Collections.emptyList();
+        } else {
+          props_ = null;
+          propsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000080);
+        if (linksBuilder_ == null) {
+          links_ = java.util.Collections.emptyList();
+        } else {
+          links_ = null;
+          linksBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000100);
+        if (remarksBuilder_ == null) {
+          remarks_ = java.util.Collections.emptyList();
+        } else {
+          remarks_ = null;
+          remarksBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000200);
+        mappingDescription_ = null;
+        if (mappingDescriptionBuilder_ != null) {
+          mappingDescriptionBuilder_.dispose();
+          mappingDescriptionBuilder_ = null;
+        }
+        sourceGapSummary_ = null;
+        if (sourceGapSummaryBuilder_ != null) {
+          sourceGapSummaryBuilder_.dispose();
+          sourceGapSummaryBuilder_ = null;
+        }
+        targetGapSummary_ = null;
+        if (targetGapSummaryBuilder_ != null) {
+          targetGapSummaryBuilder_.dispose();
+          targetGapSummaryBuilder_ = null;
+        }
+        confidenceScore_ = null;
+        if (confidenceScoreBuilder_ != null) {
+          confidenceScoreBuilder_.dispose();
+          confidenceScoreBuilder_ = null;
+        }
+        coverage_ = null;
+        if (coverageBuilder_ != null) {
+          coverageBuilder_.dispose();
+          coverageBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return oscal.mapping.v1.Mapping.internal_static_oscal_mapping_v1_ControlMapping_descriptor;
+      }
+
+      @java.lang.Override
+      public oscal.mapping.v1.Mapping.ControlMapping getDefaultInstanceForType() {
+        return oscal.mapping.v1.Mapping.ControlMapping.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public oscal.mapping.v1.Mapping.ControlMapping build() {
+        oscal.mapping.v1.Mapping.ControlMapping result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public oscal.mapping.v1.Mapping.ControlMapping buildPartial() {
+        oscal.mapping.v1.Mapping.ControlMapping result = new oscal.mapping.v1.Mapping.ControlMapping(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(oscal.mapping.v1.Mapping.ControlMapping result) {
+        if (mapsBuilder_ == null) {
+          if (((bitField0_ & 0x00000040) != 0)) {
+            maps_ = java.util.Collections.unmodifiableList(maps_);
+            bitField0_ = (bitField0_ & ~0x00000040);
+          }
+          result.maps_ = maps_;
+        } else {
+          result.maps_ = mapsBuilder_.build();
+        }
+        if (propsBuilder_ == null) {
+          if (((bitField0_ & 0x00000080) != 0)) {
+            props_ = java.util.Collections.unmodifiableList(props_);
+            bitField0_ = (bitField0_ & ~0x00000080);
+          }
+          result.props_ = props_;
+        } else {
+          result.props_ = propsBuilder_.build();
+        }
+        if (linksBuilder_ == null) {
+          if (((bitField0_ & 0x00000100) != 0)) {
+            links_ = java.util.Collections.unmodifiableList(links_);
+            bitField0_ = (bitField0_ & ~0x00000100);
+          }
+          result.links_ = links_;
+        } else {
+          result.links_ = linksBuilder_.build();
+        }
+        if (remarksBuilder_ == null) {
+          if (((bitField0_ & 0x00000200) != 0)) {
+            remarks_ = java.util.Collections.unmodifiableList(remarks_);
+            bitField0_ = (bitField0_ & ~0x00000200);
+          }
+          result.remarks_ = remarks_;
+        } else {
+          result.remarks_ = remarksBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(oscal.mapping.v1.Mapping.ControlMapping result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.uuid_ = uuidBuilder_ == null
+              ? uuid_
+              : uuidBuilder_.build();
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.method_ = method_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.matchingRationale_ = matchingRationale_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.status_ = status_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.sourceResource_ = sourceResourceBuilder_ == null
+              ? sourceResource_
+              : sourceResourceBuilder_.build();
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.targetResource_ = targetResourceBuilder_ == null
+              ? targetResource_
+              : targetResourceBuilder_.build();
+          to_bitField0_ |= 0x00000004;
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.mappingDescription_ = mappingDescriptionBuilder_ == null
+              ? mappingDescription_
+              : mappingDescriptionBuilder_.build();
+          to_bitField0_ |= 0x00000008;
+        }
+        if (((from_bitField0_ & 0x00000800) != 0)) {
+          result.sourceGapSummary_ = sourceGapSummaryBuilder_ == null
+              ? sourceGapSummary_
+              : sourceGapSummaryBuilder_.build();
+          to_bitField0_ |= 0x00000010;
+        }
+        if (((from_bitField0_ & 0x00001000) != 0)) {
+          result.targetGapSummary_ = targetGapSummaryBuilder_ == null
+              ? targetGapSummary_
+              : targetGapSummaryBuilder_.build();
+          to_bitField0_ |= 0x00000020;
+        }
+        if (((from_bitField0_ & 0x00002000) != 0)) {
+          result.confidenceScore_ = confidenceScoreBuilder_ == null
+              ? confidenceScore_
+              : confidenceScoreBuilder_.build();
+          to_bitField0_ |= 0x00000040;
+        }
+        if (((from_bitField0_ & 0x00004000) != 0)) {
+          result.coverage_ = coverageBuilder_ == null
+              ? coverage_
+              : coverageBuilder_.build();
+          to_bitField0_ |= 0x00000080;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof oscal.mapping.v1.Mapping.ControlMapping) {
+          return mergeFrom((oscal.mapping.v1.Mapping.ControlMapping)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(oscal.mapping.v1.Mapping.ControlMapping other) {
+        if (other == oscal.mapping.v1.Mapping.ControlMapping.getDefaultInstance()) return this;
+        if (other.hasUuid()) {
+          mergeUuid(other.getUuid());
+        }
+        if (!other.getMethod().isEmpty()) {
+          method_ = other.method_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getMatchingRationale().isEmpty()) {
+          matchingRationale_ = other.matchingRationale_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getStatus().isEmpty()) {
+          status_ = other.status_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (other.hasSourceResource()) {
+          mergeSourceResource(other.getSourceResource());
+        }
+        if (other.hasTargetResource()) {
+          mergeTargetResource(other.getTargetResource());
+        }
+        if (mapsBuilder_ == null) {
+          if (!other.maps_.isEmpty()) {
+            if (maps_.isEmpty()) {
+              maps_ = other.maps_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+            } else {
+              ensureMapsIsMutable();
+              maps_.addAll(other.maps_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.maps_.isEmpty()) {
+            if (mapsBuilder_.isEmpty()) {
+              mapsBuilder_.dispose();
+              mapsBuilder_ = null;
+              maps_ = other.maps_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+              mapsBuilder_ =
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   internalGetMapsFieldBuilder() : null;
+            } else {
+              mapsBuilder_.addAllMessages(other.maps_);
+            }
+          }
+        }
+        if (propsBuilder_ == null) {
+          if (!other.props_.isEmpty()) {
+            if (props_.isEmpty()) {
+              props_ = other.props_;
+              bitField0_ = (bitField0_ & ~0x00000080);
+            } else {
+              ensurePropsIsMutable();
+              props_.addAll(other.props_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.props_.isEmpty()) {
+            if (propsBuilder_.isEmpty()) {
+              propsBuilder_.dispose();
+              propsBuilder_ = null;
+              props_ = other.props_;
+              bitField0_ = (bitField0_ & ~0x00000080);
+              propsBuilder_ =
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   internalGetPropsFieldBuilder() : null;
+            } else {
+              propsBuilder_.addAllMessages(other.props_);
+            }
+          }
+        }
+        if (linksBuilder_ == null) {
+          if (!other.links_.isEmpty()) {
+            if (links_.isEmpty()) {
+              links_ = other.links_;
+              bitField0_ = (bitField0_ & ~0x00000100);
+            } else {
+              ensureLinksIsMutable();
+              links_.addAll(other.links_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.links_.isEmpty()) {
+            if (linksBuilder_.isEmpty()) {
+              linksBuilder_.dispose();
+              linksBuilder_ = null;
+              links_ = other.links_;
+              bitField0_ = (bitField0_ & ~0x00000100);
+              linksBuilder_ =
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   internalGetLinksFieldBuilder() : null;
+            } else {
+              linksBuilder_.addAllMessages(other.links_);
+            }
+          }
+        }
+        if (remarksBuilder_ == null) {
+          if (!other.remarks_.isEmpty()) {
+            if (remarks_.isEmpty()) {
+              remarks_ = other.remarks_;
+              bitField0_ = (bitField0_ & ~0x00000200);
+            } else {
+              ensureRemarksIsMutable();
+              remarks_.addAll(other.remarks_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.remarks_.isEmpty()) {
+            if (remarksBuilder_.isEmpty()) {
+              remarksBuilder_.dispose();
+              remarksBuilder_ = null;
+              remarks_ = other.remarks_;
+              bitField0_ = (bitField0_ & ~0x00000200);
+              remarksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetRemarksFieldBuilder() : null;
             } else {
@@ -1655,9 +6565,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
                 break;
               } // case 10
               case 18: {
-                input.readMessage(
-                    internalGetMetadataFieldBuilder().getBuilder(),
-                    extensionRegistry);
+                method_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000002;
                 break;
               } // case 18
@@ -1897,7 +6805,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder> 
+          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder>
           internalGetUuidFieldBuilder() {
         if (uuidBuilder_ == null) {
           uuidBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -1910,125 +6818,76 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return uuidBuilder_;
       }
 
-      private oscal.common.v1.Common.Metadata metadata_;
-      private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.Metadata, oscal.common.v1.Common.Metadata.Builder, oscal.common.v1.Common.MetadataOrBuilder> metadataBuilder_;
+      private java.lang.Object method_ = "";
       /**
-       * <code>.oscal.common.v1.Metadata metadata = 2 [json_name = "metadata"];</code>
-       * @return Whether the metadata field is set.
+       * <code>string method = 2 [json_name = "method"];</code>
+       * @return The method.
        */
-      public boolean hasMetadata() {
-        return ((bitField0_ & 0x00000002) != 0);
-      }
-      /**
-       * <code>.oscal.common.v1.Metadata metadata = 2 [json_name = "metadata"];</code>
-       * @return The metadata.
-       */
-      public oscal.common.v1.Common.Metadata getMetadata() {
-        if (metadataBuilder_ == null) {
-          return metadata_ == null ? oscal.common.v1.Common.Metadata.getDefaultInstance() : metadata_;
+      public java.lang.String getMethod() {
+        java.lang.Object ref = method_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          method_ = s;
+          return s;
         } else {
-          return metadataBuilder_.getMessage();
+          return (java.lang.String) ref;
         }
       }
       /**
-       * <code>.oscal.common.v1.Metadata metadata = 2 [json_name = "metadata"];</code>
+       * <code>string method = 2 [json_name = "method"];</code>
+       * @return The bytes for method.
        */
-      public Builder setMetadata(oscal.common.v1.Common.Metadata value) {
-        if (metadataBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          metadata_ = value;
+      public com.google.protobuf.ByteString
+          getMethodBytes() {
+        java.lang.Object ref = method_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          method_ = b;
+          return b;
         } else {
-          metadataBuilder_.setMessage(value);
+          return (com.google.protobuf.ByteString) ref;
         }
+      }
+      /**
+       * <code>string method = 2 [json_name = "method"];</code>
+       * @param value The method to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMethod(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        method_ = value;
         bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
       /**
-       * <code>.oscal.common.v1.Metadata metadata = 2 [json_name = "metadata"];</code>
+       * <code>string method = 2 [json_name = "method"];</code>
+       * @return This builder for chaining.
        */
-      public Builder setMetadata(
-          oscal.common.v1.Common.Metadata.Builder builderForValue) {
-        if (metadataBuilder_ == null) {
-          metadata_ = builderForValue.build();
-        } else {
-          metadataBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.oscal.common.v1.Metadata metadata = 2 [json_name = "metadata"];</code>
-       */
-      public Builder mergeMetadata(oscal.common.v1.Common.Metadata value) {
-        if (metadataBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0) &&
-            metadata_ != null &&
-            metadata_ != oscal.common.v1.Common.Metadata.getDefaultInstance()) {
-            getMetadataBuilder().mergeFrom(value);
-          } else {
-            metadata_ = value;
-          }
-        } else {
-          metadataBuilder_.mergeFrom(value);
-        }
-        if (metadata_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
-        return this;
-      }
-      /**
-       * <code>.oscal.common.v1.Metadata metadata = 2 [json_name = "metadata"];</code>
-       */
-      public Builder clearMetadata() {
+      public Builder clearMethod() {
+        method_ = getDefaultInstance().getMethod();
         bitField0_ = (bitField0_ & ~0x00000002);
-        metadata_ = null;
-        if (metadataBuilder_ != null) {
-          metadataBuilder_.dispose();
-          metadataBuilder_ = null;
-        }
         onChanged();
         return this;
       }
       /**
-       * <code>.oscal.common.v1.Metadata metadata = 2 [json_name = "metadata"];</code>
+       * <code>string method = 2 [json_name = "method"];</code>
+       * @param value The bytes for method to set.
+       * @return This builder for chaining.
        */
-      public oscal.common.v1.Common.Metadata.Builder getMetadataBuilder() {
+      public Builder setMethodBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        method_ = value;
         bitField0_ |= 0x00000002;
         onChanged();
-        return internalGetMetadataFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.oscal.common.v1.Metadata metadata = 2 [json_name = "metadata"];</code>
-       */
-      public oscal.common.v1.Common.MetadataOrBuilder getMetadataOrBuilder() {
-        if (metadataBuilder_ != null) {
-          return metadataBuilder_.getMessageOrBuilder();
-        } else {
-          return metadata_ == null ?
-              oscal.common.v1.Common.Metadata.getDefaultInstance() : metadata_;
-        }
-      }
-      /**
-       * <code>.oscal.common.v1.Metadata metadata = 2 [json_name = "metadata"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.Metadata, oscal.common.v1.Common.Metadata.Builder, oscal.common.v1.Common.MetadataOrBuilder> 
-          internalGetMetadataFieldBuilder() {
-        if (metadataBuilder_ == null) {
-          metadataBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              oscal.common.v1.Common.Metadata, oscal.common.v1.Common.Metadata.Builder, oscal.common.v1.Common.MetadataOrBuilder>(
-                  getMetadata(),
-                  getParentForChildren(),
-                  isClean());
-          metadata_ = null;
-        }
-        return metadataBuilder_;
+        return this;
       }
 
       private java.lang.Object matchingRationale_ = "";
@@ -2056,7 +6915,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
           getMatchingRationaleBytes() {
         java.lang.Object ref = matchingRationale_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           matchingRationale_ = b;
@@ -2128,7 +6987,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
           getStatusBytes() {
         java.lang.Object ref = status_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           status_ = b;
@@ -2283,7 +7142,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.mapping.v1.MappingResourceReference source_resource = 5 [json_name = "sourceResource"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.mapping.v1.Mapping.MappingResourceReference, oscal.mapping.v1.Mapping.MappingResourceReference.Builder, oscal.mapping.v1.Mapping.MappingResourceReferenceOrBuilder> 
+          oscal.mapping.v1.Mapping.MappingResourceReference, oscal.mapping.v1.Mapping.MappingResourceReference.Builder, oscal.mapping.v1.Mapping.MappingResourceReferenceOrBuilder>
           internalGetSourceResourceFieldBuilder() {
         if (sourceResourceBuilder_ == null) {
           sourceResourceBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -2404,7 +7263,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.mapping.v1.MappingResourceReference target_resource = 6 [json_name = "targetResource"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.mapping.v1.Mapping.MappingResourceReference, oscal.mapping.v1.Mapping.MappingResourceReference.Builder, oscal.mapping.v1.Mapping.MappingResourceReferenceOrBuilder> 
+          oscal.mapping.v1.Mapping.MappingResourceReference, oscal.mapping.v1.Mapping.MappingResourceReference.Builder, oscal.mapping.v1.Mapping.MappingResourceReferenceOrBuilder>
           internalGetTargetResourceFieldBuilder() {
         if (targetResourceBuilder_ == null) {
           targetResourceBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -2612,7 +7471,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.mapping.v1.Map maps = 7 [json_name = "maps"];</code>
        */
-      public java.util.List<? extends oscal.mapping.v1.Mapping.MapOrBuilder> 
+      public java.util.List<? extends oscal.mapping.v1.Mapping.MapOrBuilder>
            getMapsOrBuilderList() {
         if (mapsBuilder_ != null) {
           return mapsBuilder_.getMessageOrBuilderList();
@@ -2638,12 +7497,12 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.mapping.v1.Map maps = 7 [json_name = "maps"];</code>
        */
-      public java.util.List<oscal.mapping.v1.Mapping.Map.Builder> 
+      public java.util.List<oscal.mapping.v1.Mapping.Map.Builder>
            getMapsBuilderList() {
         return internalGetMapsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.mapping.v1.Mapping.Map, oscal.mapping.v1.Mapping.Map.Builder, oscal.mapping.v1.Mapping.MapOrBuilder> 
+          oscal.mapping.v1.Mapping.Map, oscal.mapping.v1.Mapping.Map.Builder, oscal.mapping.v1.Mapping.MapOrBuilder>
           internalGetMapsFieldBuilder() {
         if (mapsBuilder_ == null) {
           mapsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -2852,7 +7711,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
            getPropsOrBuilderList() {
         if (propsBuilder_ != null) {
           return propsBuilder_.getMessageOrBuilderList();
@@ -2878,12 +7737,12 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Property.Builder> 
+      public java.util.List<oscal.common.v1.Common.Property.Builder>
            getPropsBuilderList() {
         return internalGetPropsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> 
+          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder>
           internalGetPropsFieldBuilder() {
         if (propsBuilder_ == null) {
           propsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -3092,7 +7951,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
            getLinksOrBuilderList() {
         if (linksBuilder_ != null) {
           return linksBuilder_.getMessageOrBuilderList();
@@ -3118,12 +7977,12 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Link.Builder> 
+      public java.util.List<oscal.common.v1.Common.Link.Builder>
            getLinksBuilderList() {
         return internalGetLinksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder> 
+          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder>
           internalGetLinksFieldBuilder() {
         if (linksBuilder_ == null) {
           linksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -3332,7 +8191,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
            getRemarksOrBuilderList() {
         if (remarksBuilder_ != null) {
           return remarksBuilder_.getMessageOrBuilderList();
@@ -3358,12 +8217,12 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder> 
+      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder>
            getRemarksBuilderList() {
         return internalGetRemarksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetRemarksFieldBuilder() {
         if (remarksBuilder_ == null) {
           remarksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -3377,31 +8236,31 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return remarksBuilder_;
       }
 
-      private oscal.mapping.v1.Mapping.MappingDescription mappingDescription_;
+      private oscal.common.v1.Common.MarkupMultiline mappingDescription_;
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.mapping.v1.Mapping.MappingDescription, oscal.mapping.v1.Mapping.MappingDescription.Builder, oscal.mapping.v1.Mapping.MappingDescriptionOrBuilder> mappingDescriptionBuilder_;
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> mappingDescriptionBuilder_;
       /**
-       * <code>.oscal.mapping.v1.MappingDescription mapping_description = 11 [json_name = "mappingDescription"];</code>
+       * <code>.oscal.common.v1.MarkupMultiline mapping_description = 11 [json_name = "mappingDescription"];</code>
        * @return Whether the mappingDescription field is set.
        */
       public boolean hasMappingDescription() {
         return ((bitField0_ & 0x00000400) != 0);
       }
       /**
-       * <code>.oscal.mapping.v1.MappingDescription mapping_description = 11 [json_name = "mappingDescription"];</code>
+       * <code>.oscal.common.v1.MarkupMultiline mapping_description = 11 [json_name = "mappingDescription"];</code>
        * @return The mappingDescription.
        */
-      public oscal.mapping.v1.Mapping.MappingDescription getMappingDescription() {
+      public oscal.common.v1.Common.MarkupMultiline getMappingDescription() {
         if (mappingDescriptionBuilder_ == null) {
-          return mappingDescription_ == null ? oscal.mapping.v1.Mapping.MappingDescription.getDefaultInstance() : mappingDescription_;
+          return mappingDescription_ == null ? oscal.common.v1.Common.MarkupMultiline.getDefaultInstance() : mappingDescription_;
         } else {
           return mappingDescriptionBuilder_.getMessage();
         }
       }
       /**
-       * <code>.oscal.mapping.v1.MappingDescription mapping_description = 11 [json_name = "mappingDescription"];</code>
+       * <code>.oscal.common.v1.MarkupMultiline mapping_description = 11 [json_name = "mappingDescription"];</code>
        */
-      public Builder setMappingDescription(oscal.mapping.v1.Mapping.MappingDescription value) {
+      public Builder setMappingDescription(oscal.common.v1.Common.MarkupMultiline value) {
         if (mappingDescriptionBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -3415,10 +8274,10 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>.oscal.mapping.v1.MappingDescription mapping_description = 11 [json_name = "mappingDescription"];</code>
+       * <code>.oscal.common.v1.MarkupMultiline mapping_description = 11 [json_name = "mappingDescription"];</code>
        */
       public Builder setMappingDescription(
-          oscal.mapping.v1.Mapping.MappingDescription.Builder builderForValue) {
+          oscal.common.v1.Common.MarkupMultiline.Builder builderForValue) {
         if (mappingDescriptionBuilder_ == null) {
           mappingDescription_ = builderForValue.build();
         } else {
@@ -3429,13 +8288,13 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>.oscal.mapping.v1.MappingDescription mapping_description = 11 [json_name = "mappingDescription"];</code>
+       * <code>.oscal.common.v1.MarkupMultiline mapping_description = 11 [json_name = "mappingDescription"];</code>
        */
-      public Builder mergeMappingDescription(oscal.mapping.v1.Mapping.MappingDescription value) {
+      public Builder mergeMappingDescription(oscal.common.v1.Common.MarkupMultiline value) {
         if (mappingDescriptionBuilder_ == null) {
           if (((bitField0_ & 0x00000400) != 0) &&
             mappingDescription_ != null &&
-            mappingDescription_ != oscal.mapping.v1.Mapping.MappingDescription.getDefaultInstance()) {
+            mappingDescription_ != oscal.common.v1.Common.MarkupMultiline.getDefaultInstance()) {
             getMappingDescriptionBuilder().mergeFrom(value);
           } else {
             mappingDescription_ = value;
@@ -3450,7 +8309,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>.oscal.mapping.v1.MappingDescription mapping_description = 11 [json_name = "mappingDescription"];</code>
+       * <code>.oscal.common.v1.MarkupMultiline mapping_description = 11 [json_name = "mappingDescription"];</code>
        */
       public Builder clearMappingDescription() {
         bitField0_ = (bitField0_ & ~0x00000400);
@@ -3463,33 +8322,33 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>.oscal.mapping.v1.MappingDescription mapping_description = 11 [json_name = "mappingDescription"];</code>
+       * <code>.oscal.common.v1.MarkupMultiline mapping_description = 11 [json_name = "mappingDescription"];</code>
        */
-      public oscal.mapping.v1.Mapping.MappingDescription.Builder getMappingDescriptionBuilder() {
+      public oscal.common.v1.Common.MarkupMultiline.Builder getMappingDescriptionBuilder() {
         bitField0_ |= 0x00000400;
         onChanged();
         return internalGetMappingDescriptionFieldBuilder().getBuilder();
       }
       /**
-       * <code>.oscal.mapping.v1.MappingDescription mapping_description = 11 [json_name = "mappingDescription"];</code>
+       * <code>.oscal.common.v1.MarkupMultiline mapping_description = 11 [json_name = "mappingDescription"];</code>
        */
-      public oscal.mapping.v1.Mapping.MappingDescriptionOrBuilder getMappingDescriptionOrBuilder() {
+      public oscal.common.v1.Common.MarkupMultilineOrBuilder getMappingDescriptionOrBuilder() {
         if (mappingDescriptionBuilder_ != null) {
           return mappingDescriptionBuilder_.getMessageOrBuilder();
         } else {
           return mappingDescription_ == null ?
-              oscal.mapping.v1.Mapping.MappingDescription.getDefaultInstance() : mappingDescription_;
+              oscal.common.v1.Common.MarkupMultiline.getDefaultInstance() : mappingDescription_;
         }
       }
       /**
-       * <code>.oscal.mapping.v1.MappingDescription mapping_description = 11 [json_name = "mappingDescription"];</code>
+       * <code>.oscal.common.v1.MarkupMultiline mapping_description = 11 [json_name = "mappingDescription"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.mapping.v1.Mapping.MappingDescription, oscal.mapping.v1.Mapping.MappingDescription.Builder, oscal.mapping.v1.Mapping.MappingDescriptionOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetMappingDescriptionFieldBuilder() {
         if (mappingDescriptionBuilder_ == null) {
           mappingDescriptionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              oscal.mapping.v1.Mapping.MappingDescription, oscal.mapping.v1.Mapping.MappingDescription.Builder, oscal.mapping.v1.Mapping.MappingDescriptionOrBuilder>(
+              oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>(
                   getMappingDescription(),
                   getParentForChildren(),
                   isClean());
@@ -3606,7 +8465,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.mapping.v1.GapSummary source_gap_summary = 12 [json_name = "sourceGapSummary"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.mapping.v1.Mapping.GapSummary, oscal.mapping.v1.Mapping.GapSummary.Builder, oscal.mapping.v1.Mapping.GapSummaryOrBuilder> 
+          oscal.mapping.v1.Mapping.GapSummary, oscal.mapping.v1.Mapping.GapSummary.Builder, oscal.mapping.v1.Mapping.GapSummaryOrBuilder>
           internalGetSourceGapSummaryFieldBuilder() {
         if (sourceGapSummaryBuilder_ == null) {
           sourceGapSummaryBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -3727,7 +8586,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.mapping.v1.GapSummary target_gap_summary = 13 [json_name = "targetGapSummary"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.mapping.v1.Mapping.GapSummary, oscal.mapping.v1.Mapping.GapSummary.Builder, oscal.mapping.v1.Mapping.GapSummaryOrBuilder> 
+          oscal.mapping.v1.Mapping.GapSummary, oscal.mapping.v1.Mapping.GapSummary.Builder, oscal.mapping.v1.Mapping.GapSummaryOrBuilder>
           internalGetTargetGapSummaryFieldBuilder() {
         if (targetGapSummaryBuilder_ == null) {
           targetGapSummaryBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -3848,7 +8707,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.mapping.v1.ConfidenceScore confidence_score = 14 [json_name = "confidenceScore"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.mapping.v1.Mapping.ConfidenceScore, oscal.mapping.v1.Mapping.ConfidenceScore.Builder, oscal.mapping.v1.Mapping.ConfidenceScoreOrBuilder> 
+          oscal.mapping.v1.Mapping.ConfidenceScore, oscal.mapping.v1.Mapping.ConfidenceScore.Builder, oscal.mapping.v1.Mapping.ConfidenceScoreOrBuilder>
           internalGetConfidenceScoreFieldBuilder() {
         if (confidenceScoreBuilder_ == null) {
           confidenceScoreBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -3969,7 +8828,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.mapping.v1.Coverage coverage = 15 [json_name = "coverage"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.mapping.v1.Mapping.Coverage, oscal.mapping.v1.Mapping.Coverage.Builder, oscal.mapping.v1.Mapping.CoverageOrBuilder> 
+          oscal.mapping.v1.Mapping.Coverage, oscal.mapping.v1.Mapping.Coverage.Builder, oscal.mapping.v1.Mapping.CoverageOrBuilder>
           internalGetCoverageFieldBuilder() {
         if (coverageBuilder_ == null) {
           coverageBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -3982,23 +8841,23 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return coverageBuilder_;
       }
 
-      // @@protoc_insertion_point(builder_scope:oscal.mapping.v1.MappingCollection)
+      // @@protoc_insertion_point(builder_scope:oscal.mapping.v1.ControlMapping)
     }
 
-    // @@protoc_insertion_point(class_scope:oscal.mapping.v1.MappingCollection)
-    private static final oscal.mapping.v1.Mapping.MappingCollection DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:oscal.mapping.v1.ControlMapping)
+    private static final oscal.mapping.v1.Mapping.ControlMapping DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new oscal.mapping.v1.Mapping.MappingCollection();
+      DEFAULT_INSTANCE = new oscal.mapping.v1.Mapping.ControlMapping();
     }
 
-    public static oscal.mapping.v1.Mapping.MappingCollection getDefaultInstance() {
+    public static oscal.mapping.v1.Mapping.ControlMapping getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<MappingCollection>
-        PARSER = new com.google.protobuf.AbstractParser<MappingCollection>() {
+    private static final com.google.protobuf.Parser<ControlMapping>
+        PARSER = new com.google.protobuf.AbstractParser<ControlMapping>() {
       @java.lang.Override
-      public MappingCollection parsePartialFrom(
+      public ControlMapping parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -4017,17 +8876,17 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
       }
     };
 
-    public static com.google.protobuf.Parser<MappingCollection> parser() {
+    public static com.google.protobuf.Parser<ControlMapping> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<MappingCollection> getParserForType() {
+    public com.google.protobuf.Parser<ControlMapping> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public oscal.mapping.v1.Mapping.MappingCollection getDefaultInstanceForType() {
+    public oscal.mapping.v1.Mapping.ControlMapping getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -4079,7 +8938,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Property> 
+    java.util.List<oscal.common.v1.Common.Property>
         getPropsList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
@@ -4092,7 +8951,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
@@ -4103,7 +8962,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Link> 
+    java.util.List<oscal.common.v1.Common.Link>
         getLinksList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
@@ -4116,7 +8975,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
@@ -4127,7 +8986,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
      */
-    java.util.List<oscal.common.v1.Common.MarkupMultiline> 
+    java.util.List<oscal.common.v1.Common.MarkupMultiline>
         getRemarksList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
@@ -4140,7 +8999,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
@@ -4213,7 +9072,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         ns_ = s;
@@ -4229,7 +9088,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         getNsBytes() {
       java.lang.Object ref = ns_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         ns_ = b;
@@ -4252,7 +9111,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         type_ = s;
@@ -4268,7 +9127,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         getTypeBytes() {
       java.lang.Object ref = type_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         type_ = b;
@@ -4318,7 +9177,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList() {
       return props_;
     }
@@ -4359,7 +9218,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList() {
       return links_;
     }
@@ -4400,7 +9259,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList() {
       return remarks_;
     }
@@ -4865,7 +9724,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
               propsBuilder_ = null;
               props_ = other.props_;
               bitField0_ = (bitField0_ & ~0x00000008);
-              propsBuilder_ = 
+              propsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetPropsFieldBuilder() : null;
             } else {
@@ -4891,7 +9750,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
               linksBuilder_ = null;
               links_ = other.links_;
               bitField0_ = (bitField0_ & ~0x00000010);
-              linksBuilder_ = 
+              linksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetLinksFieldBuilder() : null;
             } else {
@@ -4917,7 +9776,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
               remarksBuilder_ = null;
               remarks_ = other.remarks_;
               bitField0_ = (bitField0_ & ~0x00000020);
-              remarksBuilder_ = 
+              remarksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetRemarksFieldBuilder() : null;
             } else {
@@ -5049,7 +9908,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
           getNsBytes() {
         java.lang.Object ref = ns_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           ns_ = b;
@@ -5121,7 +9980,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
           getTypeBytes() {
         java.lang.Object ref = type_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           type_ = b;
@@ -5276,7 +10135,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.URIReference href = 3 [json_name = "href"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.URIReference, oscal.common.v1.Common.URIReference.Builder, oscal.common.v1.Common.URIReferenceOrBuilder> 
+          oscal.common.v1.Common.URIReference, oscal.common.v1.Common.URIReference.Builder, oscal.common.v1.Common.URIReferenceOrBuilder>
           internalGetHrefFieldBuilder() {
         if (hrefBuilder_ == null) {
           hrefBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -5484,7 +10343,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
            getPropsOrBuilderList() {
         if (propsBuilder_ != null) {
           return propsBuilder_.getMessageOrBuilderList();
@@ -5510,12 +10369,12 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Property.Builder> 
+      public java.util.List<oscal.common.v1.Common.Property.Builder>
            getPropsBuilderList() {
         return internalGetPropsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> 
+          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder>
           internalGetPropsFieldBuilder() {
         if (propsBuilder_ == null) {
           propsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -5724,7 +10583,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
            getLinksOrBuilderList() {
         if (linksBuilder_ != null) {
           return linksBuilder_.getMessageOrBuilderList();
@@ -5750,12 +10609,12 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Link.Builder> 
+      public java.util.List<oscal.common.v1.Common.Link.Builder>
            getLinksBuilderList() {
         return internalGetLinksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder> 
+          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder>
           internalGetLinksFieldBuilder() {
         if (linksBuilder_ == null) {
           linksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -5964,7 +10823,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
            getRemarksOrBuilderList() {
         if (remarksBuilder_ != null) {
           return remarksBuilder_.getMessageOrBuilderList();
@@ -5990,12 +10849,12 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder> 
+      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder>
            getRemarksBuilderList() {
         return internalGetRemarksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetRemarksFieldBuilder() {
         if (remarksBuilder_ == null) {
           remarksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -6121,7 +10980,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.mapping.v1.MappingItem sources = 5 [json_name = "sources"];</code>
      */
-    java.util.List<oscal.mapping.v1.Mapping.MappingItem> 
+    java.util.List<oscal.mapping.v1.Mapping.MappingItem>
         getSourcesList();
     /**
      * <code>repeated .oscal.mapping.v1.MappingItem sources = 5 [json_name = "sources"];</code>
@@ -6134,7 +10993,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.mapping.v1.MappingItem sources = 5 [json_name = "sources"];</code>
      */
-    java.util.List<? extends oscal.mapping.v1.Mapping.MappingItemOrBuilder> 
+    java.util.List<? extends oscal.mapping.v1.Mapping.MappingItemOrBuilder>
         getSourcesOrBuilderList();
     /**
      * <code>repeated .oscal.mapping.v1.MappingItem sources = 5 [json_name = "sources"];</code>
@@ -6145,7 +11004,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.mapping.v1.MappingItem targets = 6 [json_name = "targets"];</code>
      */
-    java.util.List<oscal.mapping.v1.Mapping.MappingItem> 
+    java.util.List<oscal.mapping.v1.Mapping.MappingItem>
         getTargetsList();
     /**
      * <code>repeated .oscal.mapping.v1.MappingItem targets = 6 [json_name = "targets"];</code>
@@ -6158,7 +11017,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.mapping.v1.MappingItem targets = 6 [json_name = "targets"];</code>
      */
-    java.util.List<? extends oscal.mapping.v1.Mapping.MappingItemOrBuilder> 
+    java.util.List<? extends oscal.mapping.v1.Mapping.MappingItemOrBuilder>
         getTargetsOrBuilderList();
     /**
      * <code>repeated .oscal.mapping.v1.MappingItem targets = 6 [json_name = "targets"];</code>
@@ -6169,7 +11028,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.mapping.v1.QualifierItem qualifiers = 7 [json_name = "qualifiers"];</code>
      */
-    java.util.List<oscal.mapping.v1.Mapping.QualifierItem> 
+    java.util.List<oscal.mapping.v1.Mapping.QualifierItem>
         getQualifiersList();
     /**
      * <code>repeated .oscal.mapping.v1.QualifierItem qualifiers = 7 [json_name = "qualifiers"];</code>
@@ -6182,7 +11041,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.mapping.v1.QualifierItem qualifiers = 7 [json_name = "qualifiers"];</code>
      */
-    java.util.List<? extends oscal.mapping.v1.Mapping.QualifierItemOrBuilder> 
+    java.util.List<? extends oscal.mapping.v1.Mapping.QualifierItemOrBuilder>
         getQualifiersOrBuilderList();
     /**
      * <code>repeated .oscal.mapping.v1.QualifierItem qualifiers = 7 [json_name = "qualifiers"];</code>
@@ -6223,7 +11082,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 10 [json_name = "props"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Property> 
+    java.util.List<oscal.common.v1.Common.Property>
         getPropsList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 10 [json_name = "props"];</code>
@@ -6236,7 +11095,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 10 [json_name = "props"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 10 [json_name = "props"];</code>
@@ -6247,7 +11106,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 11 [json_name = "links"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Link> 
+    java.util.List<oscal.common.v1.Common.Link>
         getLinksList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 11 [json_name = "links"];</code>
@@ -6260,7 +11119,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 11 [json_name = "links"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 11 [json_name = "links"];</code>
@@ -6271,7 +11130,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 12 [json_name = "remarks"];</code>
      */
-    java.util.List<oscal.common.v1.Common.MarkupMultiline> 
+    java.util.List<oscal.common.v1.Common.MarkupMultiline>
         getRemarksList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 12 [json_name = "remarks"];</code>
@@ -6284,7 +11143,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 12 [json_name = "remarks"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 12 [json_name = "remarks"];</code>
@@ -6386,7 +11245,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         ns_ = s;
@@ -6402,7 +11261,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         getNsBytes() {
       java.lang.Object ref = ns_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         ns_ = b;
@@ -6425,7 +11284,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         matchingRationale_ = s;
@@ -6441,7 +11300,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         getMatchingRationaleBytes() {
       java.lang.Object ref = matchingRationale_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         matchingRationale_ = b;
@@ -6491,7 +11350,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.mapping.v1.MappingItem sources = 5 [json_name = "sources"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.mapping.v1.Mapping.MappingItemOrBuilder> 
+    public java.util.List<? extends oscal.mapping.v1.Mapping.MappingItemOrBuilder>
         getSourcesOrBuilderList() {
       return sources_;
     }
@@ -6532,7 +11391,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.mapping.v1.MappingItem targets = 6 [json_name = "targets"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.mapping.v1.Mapping.MappingItemOrBuilder> 
+    public java.util.List<? extends oscal.mapping.v1.Mapping.MappingItemOrBuilder>
         getTargetsOrBuilderList() {
       return targets_;
     }
@@ -6573,7 +11432,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.mapping.v1.QualifierItem qualifiers = 7 [json_name = "qualifiers"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.mapping.v1.Mapping.QualifierItemOrBuilder> 
+    public java.util.List<? extends oscal.mapping.v1.Mapping.QualifierItemOrBuilder>
         getQualifiersOrBuilderList() {
       return qualifiers_;
     }
@@ -6666,7 +11525,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Property props = 10 [json_name = "props"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList() {
       return props_;
     }
@@ -6707,7 +11566,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Link links = 11 [json_name = "links"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList() {
       return links_;
     }
@@ -6748,7 +11607,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 12 [json_name = "remarks"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList() {
       return remarks_;
     }
@@ -7405,7 +12264,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
               sourcesBuilder_ = null;
               sources_ = other.sources_;
               bitField0_ = (bitField0_ & ~0x00000010);
-              sourcesBuilder_ = 
+              sourcesBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetSourcesFieldBuilder() : null;
             } else {
@@ -7431,7 +12290,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
               targetsBuilder_ = null;
               targets_ = other.targets_;
               bitField0_ = (bitField0_ & ~0x00000020);
-              targetsBuilder_ = 
+              targetsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetTargetsFieldBuilder() : null;
             } else {
@@ -7457,7 +12316,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
               qualifiersBuilder_ = null;
               qualifiers_ = other.qualifiers_;
               bitField0_ = (bitField0_ & ~0x00000040);
-              qualifiersBuilder_ = 
+              qualifiersBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetQualifiersFieldBuilder() : null;
             } else {
@@ -7489,7 +12348,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
               propsBuilder_ = null;
               props_ = other.props_;
               bitField0_ = (bitField0_ & ~0x00000200);
-              propsBuilder_ = 
+              propsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetPropsFieldBuilder() : null;
             } else {
@@ -7515,7 +12374,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
               linksBuilder_ = null;
               links_ = other.links_;
               bitField0_ = (bitField0_ & ~0x00000400);
-              linksBuilder_ = 
+              linksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetLinksFieldBuilder() : null;
             } else {
@@ -7541,7 +12400,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
               remarksBuilder_ = null;
               remarks_ = other.remarks_;
               bitField0_ = (bitField0_ & ~0x00000800);
-              remarksBuilder_ = 
+              remarksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetRemarksFieldBuilder() : null;
             } else {
@@ -7816,7 +12675,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder> 
+          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder>
           internalGetUuidFieldBuilder() {
         if (uuidBuilder_ == null) {
           uuidBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -7854,7 +12713,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
           getNsBytes() {
         java.lang.Object ref = ns_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           ns_ = b;
@@ -7926,7 +12785,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
           getMatchingRationaleBytes() {
         java.lang.Object ref = matchingRationale_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           matchingRationale_ = b;
@@ -8081,7 +12940,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.Token relationship = 4 [json_name = "relationship"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.Token, oscal.common.v1.Common.Token.Builder, oscal.common.v1.Common.TokenOrBuilder> 
+          oscal.common.v1.Common.Token, oscal.common.v1.Common.Token.Builder, oscal.common.v1.Common.TokenOrBuilder>
           internalGetRelationshipFieldBuilder() {
         if (relationshipBuilder_ == null) {
           relationshipBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -8289,7 +13148,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.mapping.v1.MappingItem sources = 5 [json_name = "sources"];</code>
        */
-      public java.util.List<? extends oscal.mapping.v1.Mapping.MappingItemOrBuilder> 
+      public java.util.List<? extends oscal.mapping.v1.Mapping.MappingItemOrBuilder>
            getSourcesOrBuilderList() {
         if (sourcesBuilder_ != null) {
           return sourcesBuilder_.getMessageOrBuilderList();
@@ -8315,12 +13174,12 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.mapping.v1.MappingItem sources = 5 [json_name = "sources"];</code>
        */
-      public java.util.List<oscal.mapping.v1.Mapping.MappingItem.Builder> 
+      public java.util.List<oscal.mapping.v1.Mapping.MappingItem.Builder>
            getSourcesBuilderList() {
         return internalGetSourcesFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.mapping.v1.Mapping.MappingItem, oscal.mapping.v1.Mapping.MappingItem.Builder, oscal.mapping.v1.Mapping.MappingItemOrBuilder> 
+          oscal.mapping.v1.Mapping.MappingItem, oscal.mapping.v1.Mapping.MappingItem.Builder, oscal.mapping.v1.Mapping.MappingItemOrBuilder>
           internalGetSourcesFieldBuilder() {
         if (sourcesBuilder_ == null) {
           sourcesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -8529,7 +13388,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.mapping.v1.MappingItem targets = 6 [json_name = "targets"];</code>
        */
-      public java.util.List<? extends oscal.mapping.v1.Mapping.MappingItemOrBuilder> 
+      public java.util.List<? extends oscal.mapping.v1.Mapping.MappingItemOrBuilder>
            getTargetsOrBuilderList() {
         if (targetsBuilder_ != null) {
           return targetsBuilder_.getMessageOrBuilderList();
@@ -8555,12 +13414,12 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.mapping.v1.MappingItem targets = 6 [json_name = "targets"];</code>
        */
-      public java.util.List<oscal.mapping.v1.Mapping.MappingItem.Builder> 
+      public java.util.List<oscal.mapping.v1.Mapping.MappingItem.Builder>
            getTargetsBuilderList() {
         return internalGetTargetsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.mapping.v1.Mapping.MappingItem, oscal.mapping.v1.Mapping.MappingItem.Builder, oscal.mapping.v1.Mapping.MappingItemOrBuilder> 
+          oscal.mapping.v1.Mapping.MappingItem, oscal.mapping.v1.Mapping.MappingItem.Builder, oscal.mapping.v1.Mapping.MappingItemOrBuilder>
           internalGetTargetsFieldBuilder() {
         if (targetsBuilder_ == null) {
           targetsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -8769,7 +13628,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.mapping.v1.QualifierItem qualifiers = 7 [json_name = "qualifiers"];</code>
        */
-      public java.util.List<? extends oscal.mapping.v1.Mapping.QualifierItemOrBuilder> 
+      public java.util.List<? extends oscal.mapping.v1.Mapping.QualifierItemOrBuilder>
            getQualifiersOrBuilderList() {
         if (qualifiersBuilder_ != null) {
           return qualifiersBuilder_.getMessageOrBuilderList();
@@ -8795,12 +13654,12 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.mapping.v1.QualifierItem qualifiers = 7 [json_name = "qualifiers"];</code>
        */
-      public java.util.List<oscal.mapping.v1.Mapping.QualifierItem.Builder> 
+      public java.util.List<oscal.mapping.v1.Mapping.QualifierItem.Builder>
            getQualifiersBuilderList() {
         return internalGetQualifiersFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.mapping.v1.Mapping.QualifierItem, oscal.mapping.v1.Mapping.QualifierItem.Builder, oscal.mapping.v1.Mapping.QualifierItemOrBuilder> 
+          oscal.mapping.v1.Mapping.QualifierItem, oscal.mapping.v1.Mapping.QualifierItem.Builder, oscal.mapping.v1.Mapping.QualifierItemOrBuilder>
           internalGetQualifiersFieldBuilder() {
         if (qualifiersBuilder_ == null) {
           qualifiersBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -8922,7 +13781,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.mapping.v1.ConfidenceScore confidence_score = 8 [json_name = "confidenceScore"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.mapping.v1.Mapping.ConfidenceScore, oscal.mapping.v1.Mapping.ConfidenceScore.Builder, oscal.mapping.v1.Mapping.ConfidenceScoreOrBuilder> 
+          oscal.mapping.v1.Mapping.ConfidenceScore, oscal.mapping.v1.Mapping.ConfidenceScore.Builder, oscal.mapping.v1.Mapping.ConfidenceScoreOrBuilder>
           internalGetConfidenceScoreFieldBuilder() {
         if (confidenceScoreBuilder_ == null) {
           confidenceScoreBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -9043,7 +13902,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.mapping.v1.Coverage coverage = 9 [json_name = "coverage"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.mapping.v1.Mapping.Coverage, oscal.mapping.v1.Mapping.Coverage.Builder, oscal.mapping.v1.Mapping.CoverageOrBuilder> 
+          oscal.mapping.v1.Mapping.Coverage, oscal.mapping.v1.Mapping.Coverage.Builder, oscal.mapping.v1.Mapping.CoverageOrBuilder>
           internalGetCoverageFieldBuilder() {
         if (coverageBuilder_ == null) {
           coverageBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -9251,7 +14110,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 10 [json_name = "props"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
            getPropsOrBuilderList() {
         if (propsBuilder_ != null) {
           return propsBuilder_.getMessageOrBuilderList();
@@ -9277,12 +14136,12 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 10 [json_name = "props"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Property.Builder> 
+      public java.util.List<oscal.common.v1.Common.Property.Builder>
            getPropsBuilderList() {
         return internalGetPropsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> 
+          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder>
           internalGetPropsFieldBuilder() {
         if (propsBuilder_ == null) {
           propsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -9491,7 +14350,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 11 [json_name = "links"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
            getLinksOrBuilderList() {
         if (linksBuilder_ != null) {
           return linksBuilder_.getMessageOrBuilderList();
@@ -9517,12 +14376,12 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 11 [json_name = "links"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Link.Builder> 
+      public java.util.List<oscal.common.v1.Common.Link.Builder>
            getLinksBuilderList() {
         return internalGetLinksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder> 
+          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder>
           internalGetLinksFieldBuilder() {
         if (linksBuilder_ == null) {
           linksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -9731,7 +14590,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 12 [json_name = "remarks"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
            getRemarksOrBuilderList() {
         if (remarksBuilder_ != null) {
           return remarksBuilder_.getMessageOrBuilderList();
@@ -9757,12 +14616,12 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 12 [json_name = "remarks"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder> 
+      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder>
            getRemarksBuilderList() {
         return internalGetRemarksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetRemarksFieldBuilder() {
         if (remarksBuilder_ == null) {
           remarksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -9858,7 +14717,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Property> 
+    java.util.List<oscal.common.v1.Common.Property>
         getPropsList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
@@ -9871,7 +14730,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
@@ -9882,7 +14741,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Link> 
+    java.util.List<oscal.common.v1.Common.Link>
         getLinksList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
@@ -9895,7 +14754,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
@@ -9906,7 +14765,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
      */
-    java.util.List<oscal.common.v1.Common.MarkupMultiline> 
+    java.util.List<oscal.common.v1.Common.MarkupMultiline>
         getRemarksList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
@@ -9919,7 +14778,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
@@ -9991,7 +14850,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         type_ = s;
@@ -10007,7 +14866,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         getTypeBytes() {
       java.lang.Object ref = type_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         type_ = b;
@@ -10030,7 +14889,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         idRef_ = s;
@@ -10046,7 +14905,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         getIdRefBytes() {
       java.lang.Object ref = idRef_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         idRef_ = b;
@@ -10070,7 +14929,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList() {
       return props_;
     }
@@ -10111,7 +14970,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList() {
       return links_;
     }
@@ -10152,7 +15011,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList() {
       return remarks_;
     }
@@ -10576,7 +15435,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
               propsBuilder_ = null;
               props_ = other.props_;
               bitField0_ = (bitField0_ & ~0x00000004);
-              propsBuilder_ = 
+              propsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetPropsFieldBuilder() : null;
             } else {
@@ -10602,7 +15461,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
               linksBuilder_ = null;
               links_ = other.links_;
               bitField0_ = (bitField0_ & ~0x00000008);
-              linksBuilder_ = 
+              linksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetLinksFieldBuilder() : null;
             } else {
@@ -10628,7 +15487,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
               remarksBuilder_ = null;
               remarks_ = other.remarks_;
               bitField0_ = (bitField0_ & ~0x00000010);
-              remarksBuilder_ = 
+              remarksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetRemarksFieldBuilder() : null;
             } else {
@@ -10753,7 +15612,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
           getTypeBytes() {
         java.lang.Object ref = type_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           type_ = b;
@@ -10825,7 +15684,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
           getIdRefBytes() {
         java.lang.Object ref = idRef_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           idRef_ = b;
@@ -11067,7 +15926,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
            getPropsOrBuilderList() {
         if (propsBuilder_ != null) {
           return propsBuilder_.getMessageOrBuilderList();
@@ -11093,12 +15952,12 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Property.Builder> 
+      public java.util.List<oscal.common.v1.Common.Property.Builder>
            getPropsBuilderList() {
         return internalGetPropsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> 
+          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder>
           internalGetPropsFieldBuilder() {
         if (propsBuilder_ == null) {
           propsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -11307,7 +16166,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
            getLinksOrBuilderList() {
         if (linksBuilder_ != null) {
           return linksBuilder_.getMessageOrBuilderList();
@@ -11333,12 +16192,12 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Link.Builder> 
+      public java.util.List<oscal.common.v1.Common.Link.Builder>
            getLinksBuilderList() {
         return internalGetLinksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder> 
+          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder>
           internalGetLinksFieldBuilder() {
         if (linksBuilder_ == null) {
           linksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -11547,7 +16406,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
            getRemarksOrBuilderList() {
         if (remarksBuilder_ != null) {
           return remarksBuilder_.getMessageOrBuilderList();
@@ -11573,12 +16432,12 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder> 
+      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder>
            getRemarksBuilderList() {
         return internalGetRemarksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetRemarksFieldBuilder() {
         if (remarksBuilder_ == null) {
           remarksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -11648,81 +16507,89 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string type = 1 [json_name = "type"];</code>
+     * <code>string type = 1 [json_name = "type", deprecated = true];</code>
+     * @deprecated oscal.mapping.v1.QualifierItem.type is deprecated.
+     *     See mapping/v1/mapping.proto;l=90
      * @return The type.
      */
-    java.lang.String getType();
+    @java.lang.Deprecated java.lang.String getType();
     /**
-     * <code>string type = 1 [json_name = "type"];</code>
+     * <code>string type = 1 [json_name = "type", deprecated = true];</code>
+     * @deprecated oscal.mapping.v1.QualifierItem.type is deprecated.
+     *     See mapping/v1/mapping.proto;l=90
      * @return The bytes for type.
      */
-    com.google.protobuf.ByteString
+    @java.lang.Deprecated com.google.protobuf.ByteString
         getTypeBytes();
 
     /**
-     * <code>string id_ref = 2 [json_name = "idRef"];</code>
+     * <code>string id_ref = 2 [json_name = "idRef", deprecated = true];</code>
+     * @deprecated oscal.mapping.v1.QualifierItem.id_ref is deprecated.
+     *     See mapping/v1/mapping.proto;l=91
      * @return The idRef.
      */
-    java.lang.String getIdRef();
+    @java.lang.Deprecated java.lang.String getIdRef();
     /**
-     * <code>string id_ref = 2 [json_name = "idRef"];</code>
+     * <code>string id_ref = 2 [json_name = "idRef", deprecated = true];</code>
+     * @deprecated oscal.mapping.v1.QualifierItem.id_ref is deprecated.
+     *     See mapping/v1/mapping.proto;l=91
      * @return The bytes for idRef.
      */
-    com.google.protobuf.ByteString
+    @java.lang.Deprecated com.google.protobuf.ByteString
         getIdRefBytes();
 
     /**
-     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
      */
-    java.util.List<oscal.common.v1.Common.Property> 
+    @java.lang.Deprecated java.util.List<oscal.common.v1.Common.Property>
         getPropsList();
     /**
-     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
      */
-    oscal.common.v1.Common.Property getProps(int index);
+    @java.lang.Deprecated oscal.common.v1.Common.Property getProps(int index);
     /**
-     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
      */
-    int getPropsCount();
+    @java.lang.Deprecated int getPropsCount();
     /**
-     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    @java.lang.Deprecated java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList();
     /**
-     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
      */
-    oscal.common.v1.Common.PropertyOrBuilder getPropsOrBuilder(
+    @java.lang.Deprecated oscal.common.v1.Common.PropertyOrBuilder getPropsOrBuilder(
         int index);
 
     /**
-     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
      */
-    java.util.List<oscal.common.v1.Common.Link> 
+    @java.lang.Deprecated java.util.List<oscal.common.v1.Common.Link>
         getLinksList();
     /**
-     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
      */
-    oscal.common.v1.Common.Link getLinks(int index);
+    @java.lang.Deprecated oscal.common.v1.Common.Link getLinks(int index);
     /**
-     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
      */
-    int getLinksCount();
+    @java.lang.Deprecated int getLinksCount();
     /**
-     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    @java.lang.Deprecated java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList();
     /**
-     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
      */
-    oscal.common.v1.Common.LinkOrBuilder getLinksOrBuilder(
+    @java.lang.Deprecated oscal.common.v1.Common.LinkOrBuilder getLinksOrBuilder(
         int index);
 
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
      */
-    java.util.List<oscal.common.v1.Common.MarkupMultiline> 
+    java.util.List<oscal.common.v1.Common.MarkupMultiline>
         getRemarksList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
@@ -11735,17 +16602,69 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
      */
     oscal.common.v1.Common.MarkupMultilineOrBuilder getRemarksOrBuilder(
         int index);
+
+    /**
+     * <code>string subject = 6 [json_name = "subject"];</code>
+     * @return The subject.
+     */
+    java.lang.String getSubject();
+    /**
+     * <code>string subject = 6 [json_name = "subject"];</code>
+     * @return The bytes for subject.
+     */
+    com.google.protobuf.ByteString
+        getSubjectBytes();
+
+    /**
+     * <code>string predicate = 7 [json_name = "predicate"];</code>
+     * @return The predicate.
+     */
+    java.lang.String getPredicate();
+    /**
+     * <code>string predicate = 7 [json_name = "predicate"];</code>
+     * @return The bytes for predicate.
+     */
+    com.google.protobuf.ByteString
+        getPredicateBytes();
+
+    /**
+     * <code>string category = 8 [json_name = "category"];</code>
+     * @return The category.
+     */
+    java.lang.String getCategory();
+    /**
+     * <code>string category = 8 [json_name = "category"];</code>
+     * @return The bytes for category.
+     */
+    com.google.protobuf.ByteString
+        getCategoryBytes();
+
+    /**
+     * <code>.oscal.common.v1.MarkupMultiline description = 9 [json_name = "description"];</code>
+     * @return Whether the description field is set.
+     */
+    boolean hasDescription();
+    /**
+     * <code>.oscal.common.v1.MarkupMultiline description = 9 [json_name = "description"];</code>
+     * @return The description.
+     */
+    oscal.common.v1.Common.MarkupMultiline getDescription();
+    /**
+     * <code>.oscal.common.v1.MarkupMultiline description = 9 [json_name = "description"];</code>
+     */
+    oscal.common.v1.Common.MarkupMultilineOrBuilder getDescriptionOrBuilder();
   }
   /**
    * <pre>
-   * QualifierItem represents a qualifier item
+   * QualifierItem represents an OSCAL relationship qualifier. Fields 1-4 are
+   * retained for wire compatibility with the pre-release mapping prototype.
    * </pre>
    *
    * Protobuf type {@code oscal.mapping.v1.QualifierItem}
@@ -11774,6 +16693,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
       props_ = java.util.Collections.emptyList();
       links_ = java.util.Collections.emptyList();
       remarks_ = java.util.Collections.emptyList();
+      subject_ = "";
+      predicate_ = "";
+      category_ = "";
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
@@ -11794,20 +16716,23 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
               oscal.mapping.v1.Mapping.QualifierItem.class, oscal.mapping.v1.Mapping.QualifierItem.Builder.class);
     }
 
+    private int bitField0_;
     public static final int TYPE_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object type_ = "";
     /**
-     * <code>string type = 1 [json_name = "type"];</code>
+     * <code>string type = 1 [json_name = "type", deprecated = true];</code>
+     * @deprecated oscal.mapping.v1.QualifierItem.type is deprecated.
+     *     See mapping/v1/mapping.proto;l=90
      * @return The type.
      */
     @java.lang.Override
-    public java.lang.String getType() {
+    @java.lang.Deprecated public java.lang.String getType() {
       java.lang.Object ref = type_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         type_ = s;
@@ -11815,15 +16740,17 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
       }
     }
     /**
-     * <code>string type = 1 [json_name = "type"];</code>
+     * <code>string type = 1 [json_name = "type", deprecated = true];</code>
+     * @deprecated oscal.mapping.v1.QualifierItem.type is deprecated.
+     *     See mapping/v1/mapping.proto;l=90
      * @return The bytes for type.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getTypeBytes() {
       java.lang.Object ref = type_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         type_ = b;
@@ -11837,16 +16764,18 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
     @SuppressWarnings("serial")
     private volatile java.lang.Object idRef_ = "";
     /**
-     * <code>string id_ref = 2 [json_name = "idRef"];</code>
+     * <code>string id_ref = 2 [json_name = "idRef", deprecated = true];</code>
+     * @deprecated oscal.mapping.v1.QualifierItem.id_ref is deprecated.
+     *     See mapping/v1/mapping.proto;l=91
      * @return The idRef.
      */
     @java.lang.Override
-    public java.lang.String getIdRef() {
+    @java.lang.Deprecated public java.lang.String getIdRef() {
       java.lang.Object ref = idRef_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         idRef_ = s;
@@ -11854,15 +16783,17 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
       }
     }
     /**
-     * <code>string id_ref = 2 [json_name = "idRef"];</code>
+     * <code>string id_ref = 2 [json_name = "idRef", deprecated = true];</code>
+     * @deprecated oscal.mapping.v1.QualifierItem.id_ref is deprecated.
+     *     See mapping/v1/mapping.proto;l=91
      * @return The bytes for idRef.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getIdRefBytes() {
       java.lang.Object ref = idRef_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         idRef_ = b;
@@ -11876,39 +16807,39 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
     @SuppressWarnings("serial")
     private java.util.List<oscal.common.v1.Common.Property> props_;
     /**
-     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
      */
     @java.lang.Override
-    public java.util.List<oscal.common.v1.Common.Property> getPropsList() {
+    @java.lang.Deprecated public java.util.List<oscal.common.v1.Common.Property> getPropsList() {
       return props_;
     }
     /**
-     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    @java.lang.Deprecated public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList() {
       return props_;
     }
     /**
-     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
      */
     @java.lang.Override
-    public int getPropsCount() {
+    @java.lang.Deprecated public int getPropsCount() {
       return props_.size();
     }
     /**
-     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
      */
     @java.lang.Override
-    public oscal.common.v1.Common.Property getProps(int index) {
+    @java.lang.Deprecated public oscal.common.v1.Common.Property getProps(int index) {
       return props_.get(index);
     }
     /**
-     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
      */
     @java.lang.Override
-    public oscal.common.v1.Common.PropertyOrBuilder getPropsOrBuilder(
+    @java.lang.Deprecated public oscal.common.v1.Common.PropertyOrBuilder getPropsOrBuilder(
         int index) {
       return props_.get(index);
     }
@@ -11917,39 +16848,39 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
     @SuppressWarnings("serial")
     private java.util.List<oscal.common.v1.Common.Link> links_;
     /**
-     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
      */
     @java.lang.Override
-    public java.util.List<oscal.common.v1.Common.Link> getLinksList() {
+    @java.lang.Deprecated public java.util.List<oscal.common.v1.Common.Link> getLinksList() {
       return links_;
     }
     /**
-     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    @java.lang.Deprecated public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList() {
       return links_;
     }
     /**
-     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
      */
     @java.lang.Override
-    public int getLinksCount() {
+    @java.lang.Deprecated public int getLinksCount() {
       return links_.size();
     }
     /**
-     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
      */
     @java.lang.Override
-    public oscal.common.v1.Common.Link getLinks(int index) {
+    @java.lang.Deprecated public oscal.common.v1.Common.Link getLinks(int index) {
       return links_.get(index);
     }
     /**
-     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
      */
     @java.lang.Override
-    public oscal.common.v1.Common.LinkOrBuilder getLinksOrBuilder(
+    @java.lang.Deprecated public oscal.common.v1.Common.LinkOrBuilder getLinksOrBuilder(
         int index) {
       return links_.get(index);
     }
@@ -11968,7 +16899,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList() {
       return remarks_;
     }
@@ -11993,6 +16924,149 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
     public oscal.common.v1.Common.MarkupMultilineOrBuilder getRemarksOrBuilder(
         int index) {
       return remarks_.get(index);
+    }
+
+    public static final int SUBJECT_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object subject_ = "";
+    /**
+     * <code>string subject = 6 [json_name = "subject"];</code>
+     * @return The subject.
+     */
+    @java.lang.Override
+    public java.lang.String getSubject() {
+      java.lang.Object ref = subject_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        subject_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string subject = 6 [json_name = "subject"];</code>
+     * @return The bytes for subject.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSubjectBytes() {
+      java.lang.Object ref = subject_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        subject_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PREDICATE_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object predicate_ = "";
+    /**
+     * <code>string predicate = 7 [json_name = "predicate"];</code>
+     * @return The predicate.
+     */
+    @java.lang.Override
+    public java.lang.String getPredicate() {
+      java.lang.Object ref = predicate_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        predicate_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string predicate = 7 [json_name = "predicate"];</code>
+     * @return The bytes for predicate.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPredicateBytes() {
+      java.lang.Object ref = predicate_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        predicate_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CATEGORY_FIELD_NUMBER = 8;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object category_ = "";
+    /**
+     * <code>string category = 8 [json_name = "category"];</code>
+     * @return The category.
+     */
+    @java.lang.Override
+    public java.lang.String getCategory() {
+      java.lang.Object ref = category_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        category_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string category = 8 [json_name = "category"];</code>
+     * @return The bytes for category.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCategoryBytes() {
+      java.lang.Object ref = category_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        category_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 9;
+    private oscal.common.v1.Common.MarkupMultiline description_;
+    /**
+     * <code>.oscal.common.v1.MarkupMultiline description = 9 [json_name = "description"];</code>
+     * @return Whether the description field is set.
+     */
+    @java.lang.Override
+    public boolean hasDescription() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.oscal.common.v1.MarkupMultiline description = 9 [json_name = "description"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.MarkupMultiline getDescription() {
+      return description_ == null ? oscal.common.v1.Common.MarkupMultiline.getDefaultInstance() : description_;
+    }
+    /**
+     * <code>.oscal.common.v1.MarkupMultiline description = 9 [json_name = "description"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.MarkupMultilineOrBuilder getDescriptionOrBuilder() {
+      return description_ == null ? oscal.common.v1.Common.MarkupMultiline.getDefaultInstance() : description_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -12023,6 +17097,18 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
       }
       for (int i = 0; i < remarks_.size(); i++) {
         output.writeMessage(5, remarks_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(subject_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 6, subject_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(predicate_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 7, predicate_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(category_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 8, category_);
+      }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeMessage(9, getDescription());
       }
       getUnknownFields().writeTo(output);
     }
@@ -12061,6 +17147,19 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
             }
             size += 1 * count;
           }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(subject_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(6, subject_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(predicate_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(7, predicate_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(category_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(8, category_);
+      }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, getDescription());
+      }
       return size;
     }
     @java.lang.Override
@@ -12095,6 +17194,17 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
           .equals(other.getLinksList())) return false;
       if (!getRemarksList()
           .equals(other.getRemarksList())) return false;
+      if (!getSubject()
+          .equals(other.getSubject())) return false;
+      if (!getPredicate()
+          .equals(other.getPredicate())) return false;
+      if (!getCategory()
+          .equals(other.getCategory())) return false;
+      if (hasDescription() != other.hasDescription()) return false;
+      if (hasDescription()) {
+        if (!getDescription()
+            .equals(other.getDescription())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -12121,6 +17231,16 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
       if (getRemarksCount() > 0) {
         hash = (37 * hash) + REMARKS_FIELD_NUMBER;
         hash = (53 * hash) + getRemarksList().hashCode();
+      }
+      hash = (37 * hash) + SUBJECT_FIELD_NUMBER;
+      hash = (53 * hash) + getSubject().hashCode();
+      hash = (37 * hash) + PREDICATE_FIELD_NUMBER;
+      hash = (53 * hash) + getPredicate().hashCode();
+      hash = (37 * hash) + CATEGORY_FIELD_NUMBER;
+      hash = (53 * hash) + getCategory().hashCode();
+      if (hasDescription()) {
+        hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+        hash = (53 * hash) + getDescription().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -12221,7 +17341,8 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
     }
     /**
      * <pre>
-     * QualifierItem represents a qualifier item
+     * QualifierItem represents an OSCAL relationship qualifier. Fields 1-4 are
+     * retained for wire compatibility with the pre-release mapping prototype.
      * </pre>
      *
      * Protobuf type {@code oscal.mapping.v1.QualifierItem}
@@ -12245,13 +17366,22 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
 
       // Construct using oscal.mapping.v1.Mapping.QualifierItem.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage
+                .alwaysUseFieldBuilders) {
+          internalGetPropsFieldBuilder();
+          internalGetLinksFieldBuilder();
+          internalGetRemarksFieldBuilder();
+          internalGetDescriptionFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -12280,6 +17410,14 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
           remarksBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000010);
+        subject_ = "";
+        predicate_ = "";
+        category_ = "";
+        description_ = null;
+        if (descriptionBuilder_ != null) {
+          descriptionBuilder_.dispose();
+          descriptionBuilder_ = null;
+        }
         return this;
       }
 
@@ -12350,6 +17488,23 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.idRef_ = idRef_;
         }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.subject_ = subject_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.predicate_ = predicate_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.category_ = category_;
+        }
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.description_ = descriptionBuilder_ == null
+              ? description_
+              : descriptionBuilder_.build();
+          to_bitField0_ |= 0x00000001;
+        }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -12392,7 +17547,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
               propsBuilder_ = null;
               props_ = other.props_;
               bitField0_ = (bitField0_ & ~0x00000004);
-              propsBuilder_ = 
+              propsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetPropsFieldBuilder() : null;
             } else {
@@ -12418,7 +17573,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
               linksBuilder_ = null;
               links_ = other.links_;
               bitField0_ = (bitField0_ & ~0x00000008);
-              linksBuilder_ = 
+              linksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetLinksFieldBuilder() : null;
             } else {
@@ -12444,13 +17599,31 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
               remarksBuilder_ = null;
               remarks_ = other.remarks_;
               bitField0_ = (bitField0_ & ~0x00000010);
-              remarksBuilder_ = 
+              remarksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetRemarksFieldBuilder() : null;
             } else {
               remarksBuilder_.addAllMessages(other.remarks_);
             }
           }
+        }
+        if (!other.getSubject().isEmpty()) {
+          subject_ = other.subject_;
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        if (!other.getPredicate().isEmpty()) {
+          predicate_ = other.predicate_;
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
+        if (!other.getCategory().isEmpty()) {
+          category_ = other.category_;
+          bitField0_ |= 0x00000080;
+          onChanged();
+        }
+        if (other.hasDescription()) {
+          mergeDescription(other.getDescription());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -12527,6 +17700,28 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
                 }
                 break;
               } // case 42
+              case 50: {
+                subject_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                predicate_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              case 66: {
+                category_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 66
+              case 74: {
+                input.readMessage(
+                    internalGetDescriptionFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 74
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -12546,10 +17741,12 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
 
       private java.lang.Object type_ = "";
       /**
-       * <code>string type = 1 [json_name = "type"];</code>
+       * <code>string type = 1 [json_name = "type", deprecated = true];</code>
+       * @deprecated oscal.mapping.v1.QualifierItem.type is deprecated.
+       *     See mapping/v1/mapping.proto;l=90
        * @return The type.
        */
-      public java.lang.String getType() {
+      @java.lang.Deprecated public java.lang.String getType() {
         java.lang.Object ref = type_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
@@ -12562,14 +17759,16 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>string type = 1 [json_name = "type"];</code>
+       * <code>string type = 1 [json_name = "type", deprecated = true];</code>
+       * @deprecated oscal.mapping.v1.QualifierItem.type is deprecated.
+       *     See mapping/v1/mapping.proto;l=90
        * @return The bytes for type.
        */
-      public com.google.protobuf.ByteString
+      @java.lang.Deprecated public com.google.protobuf.ByteString
           getTypeBytes() {
         java.lang.Object ref = type_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           type_ = b;
@@ -12579,11 +17778,13 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>string type = 1 [json_name = "type"];</code>
+       * <code>string type = 1 [json_name = "type", deprecated = true];</code>
+       * @deprecated oscal.mapping.v1.QualifierItem.type is deprecated.
+       *     See mapping/v1/mapping.proto;l=90
        * @param value The type to set.
        * @return This builder for chaining.
        */
-      public Builder setType(
+      @java.lang.Deprecated public Builder setType(
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         type_ = value;
@@ -12592,21 +17793,25 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>string type = 1 [json_name = "type"];</code>
+       * <code>string type = 1 [json_name = "type", deprecated = true];</code>
+       * @deprecated oscal.mapping.v1.QualifierItem.type is deprecated.
+       *     See mapping/v1/mapping.proto;l=90
        * @return This builder for chaining.
        */
-      public Builder clearType() {
+      @java.lang.Deprecated public Builder clearType() {
         type_ = getDefaultInstance().getType();
         bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
       /**
-       * <code>string type = 1 [json_name = "type"];</code>
+       * <code>string type = 1 [json_name = "type", deprecated = true];</code>
+       * @deprecated oscal.mapping.v1.QualifierItem.type is deprecated.
+       *     See mapping/v1/mapping.proto;l=90
        * @param value The bytes for type to set.
        * @return This builder for chaining.
        */
-      public Builder setTypeBytes(
+      @java.lang.Deprecated public Builder setTypeBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
@@ -12618,10 +17823,12 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
 
       private java.lang.Object idRef_ = "";
       /**
-       * <code>string id_ref = 2 [json_name = "idRef"];</code>
+       * <code>string id_ref = 2 [json_name = "idRef", deprecated = true];</code>
+       * @deprecated oscal.mapping.v1.QualifierItem.id_ref is deprecated.
+       *     See mapping/v1/mapping.proto;l=91
        * @return The idRef.
        */
-      public java.lang.String getIdRef() {
+      @java.lang.Deprecated public java.lang.String getIdRef() {
         java.lang.Object ref = idRef_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
@@ -12634,14 +17841,16 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>string id_ref = 2 [json_name = "idRef"];</code>
+       * <code>string id_ref = 2 [json_name = "idRef", deprecated = true];</code>
+       * @deprecated oscal.mapping.v1.QualifierItem.id_ref is deprecated.
+       *     See mapping/v1/mapping.proto;l=91
        * @return The bytes for idRef.
        */
-      public com.google.protobuf.ByteString
+      @java.lang.Deprecated public com.google.protobuf.ByteString
           getIdRefBytes() {
         java.lang.Object ref = idRef_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           idRef_ = b;
@@ -12651,11 +17860,13 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>string id_ref = 2 [json_name = "idRef"];</code>
+       * <code>string id_ref = 2 [json_name = "idRef", deprecated = true];</code>
+       * @deprecated oscal.mapping.v1.QualifierItem.id_ref is deprecated.
+       *     See mapping/v1/mapping.proto;l=91
        * @param value The idRef to set.
        * @return This builder for chaining.
        */
-      public Builder setIdRef(
+      @java.lang.Deprecated public Builder setIdRef(
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         idRef_ = value;
@@ -12664,21 +17875,25 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>string id_ref = 2 [json_name = "idRef"];</code>
+       * <code>string id_ref = 2 [json_name = "idRef", deprecated = true];</code>
+       * @deprecated oscal.mapping.v1.QualifierItem.id_ref is deprecated.
+       *     See mapping/v1/mapping.proto;l=91
        * @return This builder for chaining.
        */
-      public Builder clearIdRef() {
+      @java.lang.Deprecated public Builder clearIdRef() {
         idRef_ = getDefaultInstance().getIdRef();
         bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
       /**
-       * <code>string id_ref = 2 [json_name = "idRef"];</code>
+       * <code>string id_ref = 2 [json_name = "idRef", deprecated = true];</code>
+       * @deprecated oscal.mapping.v1.QualifierItem.id_ref is deprecated.
+       *     See mapping/v1/mapping.proto;l=91
        * @param value The bytes for idRef to set.
        * @return This builder for chaining.
        */
-      public Builder setIdRefBytes(
+      @java.lang.Deprecated public Builder setIdRefBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
@@ -12701,9 +17916,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
           oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> propsBuilder_;
 
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Property> getPropsList() {
+      @java.lang.Deprecated public java.util.List<oscal.common.v1.Common.Property> getPropsList() {
         if (propsBuilder_ == null) {
           return java.util.Collections.unmodifiableList(props_);
         } else {
@@ -12711,9 +17926,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
        */
-      public int getPropsCount() {
+      @java.lang.Deprecated public int getPropsCount() {
         if (propsBuilder_ == null) {
           return props_.size();
         } else {
@@ -12721,9 +17936,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
        */
-      public oscal.common.v1.Common.Property getProps(int index) {
+      @java.lang.Deprecated public oscal.common.v1.Common.Property getProps(int index) {
         if (propsBuilder_ == null) {
           return props_.get(index);
         } else {
@@ -12731,9 +17946,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
        */
-      public Builder setProps(
+      @java.lang.Deprecated public Builder setProps(
           int index, oscal.common.v1.Common.Property value) {
         if (propsBuilder_ == null) {
           if (value == null) {
@@ -12748,9 +17963,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
        */
-      public Builder setProps(
+      @java.lang.Deprecated public Builder setProps(
           int index, oscal.common.v1.Common.Property.Builder builderForValue) {
         if (propsBuilder_ == null) {
           ensurePropsIsMutable();
@@ -12762,9 +17977,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
        */
-      public Builder addProps(oscal.common.v1.Common.Property value) {
+      @java.lang.Deprecated public Builder addProps(oscal.common.v1.Common.Property value) {
         if (propsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -12778,9 +17993,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
        */
-      public Builder addProps(
+      @java.lang.Deprecated public Builder addProps(
           int index, oscal.common.v1.Common.Property value) {
         if (propsBuilder_ == null) {
           if (value == null) {
@@ -12795,9 +18010,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
        */
-      public Builder addProps(
+      @java.lang.Deprecated public Builder addProps(
           oscal.common.v1.Common.Property.Builder builderForValue) {
         if (propsBuilder_ == null) {
           ensurePropsIsMutable();
@@ -12809,9 +18024,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
        */
-      public Builder addProps(
+      @java.lang.Deprecated public Builder addProps(
           int index, oscal.common.v1.Common.Property.Builder builderForValue) {
         if (propsBuilder_ == null) {
           ensurePropsIsMutable();
@@ -12823,9 +18038,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
        */
-      public Builder addAllProps(
+      @java.lang.Deprecated public Builder addAllProps(
           java.lang.Iterable<? extends oscal.common.v1.Common.Property> values) {
         if (propsBuilder_ == null) {
           ensurePropsIsMutable();
@@ -12838,9 +18053,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
        */
-      public Builder clearProps() {
+      @java.lang.Deprecated public Builder clearProps() {
         if (propsBuilder_ == null) {
           props_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000004);
@@ -12851,9 +18066,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
        */
-      public Builder removeProps(int index) {
+      @java.lang.Deprecated public Builder removeProps(int index) {
         if (propsBuilder_ == null) {
           ensurePropsIsMutable();
           props_.remove(index);
@@ -12864,16 +18079,16 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
        */
-      public oscal.common.v1.Common.Property.Builder getPropsBuilder(
+      @java.lang.Deprecated public oscal.common.v1.Common.Property.Builder getPropsBuilder(
           int index) {
         return internalGetPropsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
        */
-      public oscal.common.v1.Common.PropertyOrBuilder getPropsOrBuilder(
+      @java.lang.Deprecated public oscal.common.v1.Common.PropertyOrBuilder getPropsOrBuilder(
           int index) {
         if (propsBuilder_ == null) {
           return props_.get(index);  } else {
@@ -12881,9 +18096,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+      @java.lang.Deprecated public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
            getPropsOrBuilderList() {
         if (propsBuilder_ != null) {
           return propsBuilder_.getMessageOrBuilderList();
@@ -12892,29 +18107,29 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
        */
-      public oscal.common.v1.Common.Property.Builder addPropsBuilder() {
+      @java.lang.Deprecated public oscal.common.v1.Common.Property.Builder addPropsBuilder() {
         return internalGetPropsFieldBuilder().addBuilder(
             oscal.common.v1.Common.Property.getDefaultInstance());
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
        */
-      public oscal.common.v1.Common.Property.Builder addPropsBuilder(
+      @java.lang.Deprecated public oscal.common.v1.Common.Property.Builder addPropsBuilder(
           int index) {
         return internalGetPropsFieldBuilder().addBuilder(
             index, oscal.common.v1.Common.Property.getDefaultInstance());
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Property.Builder> 
+      @java.lang.Deprecated public java.util.List<oscal.common.v1.Common.Property.Builder>
            getPropsBuilderList() {
         return internalGetPropsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> 
+          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder>
           internalGetPropsFieldBuilder() {
         if (propsBuilder_ == null) {
           propsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -12941,9 +18156,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
           oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder> linksBuilder_;
 
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Link> getLinksList() {
+      @java.lang.Deprecated public java.util.List<oscal.common.v1.Common.Link> getLinksList() {
         if (linksBuilder_ == null) {
           return java.util.Collections.unmodifiableList(links_);
         } else {
@@ -12951,9 +18166,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
        */
-      public int getLinksCount() {
+      @java.lang.Deprecated public int getLinksCount() {
         if (linksBuilder_ == null) {
           return links_.size();
         } else {
@@ -12961,9 +18176,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
        */
-      public oscal.common.v1.Common.Link getLinks(int index) {
+      @java.lang.Deprecated public oscal.common.v1.Common.Link getLinks(int index) {
         if (linksBuilder_ == null) {
           return links_.get(index);
         } else {
@@ -12971,9 +18186,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
        */
-      public Builder setLinks(
+      @java.lang.Deprecated public Builder setLinks(
           int index, oscal.common.v1.Common.Link value) {
         if (linksBuilder_ == null) {
           if (value == null) {
@@ -12988,9 +18203,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
        */
-      public Builder setLinks(
+      @java.lang.Deprecated public Builder setLinks(
           int index, oscal.common.v1.Common.Link.Builder builderForValue) {
         if (linksBuilder_ == null) {
           ensureLinksIsMutable();
@@ -13002,9 +18217,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
        */
-      public Builder addLinks(oscal.common.v1.Common.Link value) {
+      @java.lang.Deprecated public Builder addLinks(oscal.common.v1.Common.Link value) {
         if (linksBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -13018,9 +18233,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
        */
-      public Builder addLinks(
+      @java.lang.Deprecated public Builder addLinks(
           int index, oscal.common.v1.Common.Link value) {
         if (linksBuilder_ == null) {
           if (value == null) {
@@ -13035,9 +18250,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
        */
-      public Builder addLinks(
+      @java.lang.Deprecated public Builder addLinks(
           oscal.common.v1.Common.Link.Builder builderForValue) {
         if (linksBuilder_ == null) {
           ensureLinksIsMutable();
@@ -13049,9 +18264,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
        */
-      public Builder addLinks(
+      @java.lang.Deprecated public Builder addLinks(
           int index, oscal.common.v1.Common.Link.Builder builderForValue) {
         if (linksBuilder_ == null) {
           ensureLinksIsMutable();
@@ -13063,9 +18278,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
        */
-      public Builder addAllLinks(
+      @java.lang.Deprecated public Builder addAllLinks(
           java.lang.Iterable<? extends oscal.common.v1.Common.Link> values) {
         if (linksBuilder_ == null) {
           ensureLinksIsMutable();
@@ -13078,9 +18293,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
        */
-      public Builder clearLinks() {
+      @java.lang.Deprecated public Builder clearLinks() {
         if (linksBuilder_ == null) {
           links_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000008);
@@ -13091,9 +18306,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
        */
-      public Builder removeLinks(int index) {
+      @java.lang.Deprecated public Builder removeLinks(int index) {
         if (linksBuilder_ == null) {
           ensureLinksIsMutable();
           links_.remove(index);
@@ -13104,16 +18319,16 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
        */
-      public oscal.common.v1.Common.Link.Builder getLinksBuilder(
+      @java.lang.Deprecated public oscal.common.v1.Common.Link.Builder getLinksBuilder(
           int index) {
         return internalGetLinksFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
        */
-      public oscal.common.v1.Common.LinkOrBuilder getLinksOrBuilder(
+      @java.lang.Deprecated public oscal.common.v1.Common.LinkOrBuilder getLinksOrBuilder(
           int index) {
         if (linksBuilder_ == null) {
           return links_.get(index);  } else {
@@ -13121,9 +18336,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+      @java.lang.Deprecated public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
            getLinksOrBuilderList() {
         if (linksBuilder_ != null) {
           return linksBuilder_.getMessageOrBuilderList();
@@ -13132,29 +18347,29 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
        */
-      public oscal.common.v1.Common.Link.Builder addLinksBuilder() {
+      @java.lang.Deprecated public oscal.common.v1.Common.Link.Builder addLinksBuilder() {
         return internalGetLinksFieldBuilder().addBuilder(
             oscal.common.v1.Common.Link.getDefaultInstance());
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
        */
-      public oscal.common.v1.Common.Link.Builder addLinksBuilder(
+      @java.lang.Deprecated public oscal.common.v1.Common.Link.Builder addLinksBuilder(
           int index) {
         return internalGetLinksFieldBuilder().addBuilder(
             index, oscal.common.v1.Common.Link.getDefaultInstance());
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Link.Builder> 
+      @java.lang.Deprecated public java.util.List<oscal.common.v1.Common.Link.Builder>
            getLinksBuilderList() {
         return internalGetLinksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder> 
+          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder>
           internalGetLinksFieldBuilder() {
         if (linksBuilder_ == null) {
           linksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -13363,7 +18578,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
            getRemarksOrBuilderList() {
         if (remarksBuilder_ != null) {
           return remarksBuilder_.getMessageOrBuilderList();
@@ -13389,12 +18604,12 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder> 
+      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder>
            getRemarksBuilderList() {
         return internalGetRemarksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetRemarksFieldBuilder() {
         if (remarksBuilder_ == null) {
           remarksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -13406,6 +18621,343 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
           remarks_ = null;
         }
         return remarksBuilder_;
+      }
+
+      private java.lang.Object subject_ = "";
+      /**
+       * <code>string subject = 6 [json_name = "subject"];</code>
+       * @return The subject.
+       */
+      public java.lang.String getSubject() {
+        java.lang.Object ref = subject_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          subject_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string subject = 6 [json_name = "subject"];</code>
+       * @return The bytes for subject.
+       */
+      public com.google.protobuf.ByteString
+          getSubjectBytes() {
+        java.lang.Object ref = subject_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          subject_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string subject = 6 [json_name = "subject"];</code>
+       * @param value The subject to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubject(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        subject_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string subject = 6 [json_name = "subject"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSubject() {
+        subject_ = getDefaultInstance().getSubject();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string subject = 6 [json_name = "subject"];</code>
+       * @param value The bytes for subject to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubjectBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        subject_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object predicate_ = "";
+      /**
+       * <code>string predicate = 7 [json_name = "predicate"];</code>
+       * @return The predicate.
+       */
+      public java.lang.String getPredicate() {
+        java.lang.Object ref = predicate_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          predicate_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string predicate = 7 [json_name = "predicate"];</code>
+       * @return The bytes for predicate.
+       */
+      public com.google.protobuf.ByteString
+          getPredicateBytes() {
+        java.lang.Object ref = predicate_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          predicate_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string predicate = 7 [json_name = "predicate"];</code>
+       * @param value The predicate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPredicate(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        predicate_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string predicate = 7 [json_name = "predicate"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPredicate() {
+        predicate_ = getDefaultInstance().getPredicate();
+        bitField0_ = (bitField0_ & ~0x00000040);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string predicate = 7 [json_name = "predicate"];</code>
+       * @param value The bytes for predicate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPredicateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        predicate_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object category_ = "";
+      /**
+       * <code>string category = 8 [json_name = "category"];</code>
+       * @return The category.
+       */
+      public java.lang.String getCategory() {
+        java.lang.Object ref = category_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          category_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string category = 8 [json_name = "category"];</code>
+       * @return The bytes for category.
+       */
+      public com.google.protobuf.ByteString
+          getCategoryBytes() {
+        java.lang.Object ref = category_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          category_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string category = 8 [json_name = "category"];</code>
+       * @param value The category to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCategory(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        category_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string category = 8 [json_name = "category"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCategory() {
+        category_ = getDefaultInstance().getCategory();
+        bitField0_ = (bitField0_ & ~0x00000080);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string category = 8 [json_name = "category"];</code>
+       * @param value The bytes for category to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCategoryBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        category_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+
+      private oscal.common.v1.Common.MarkupMultiline description_;
+      private com.google.protobuf.SingleFieldBuilder<
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> descriptionBuilder_;
+      /**
+       * <code>.oscal.common.v1.MarkupMultiline description = 9 [json_name = "description"];</code>
+       * @return Whether the description field is set.
+       */
+      public boolean hasDescription() {
+        return ((bitField0_ & 0x00000100) != 0);
+      }
+      /**
+       * <code>.oscal.common.v1.MarkupMultiline description = 9 [json_name = "description"];</code>
+       * @return The description.
+       */
+      public oscal.common.v1.Common.MarkupMultiline getDescription() {
+        if (descriptionBuilder_ == null) {
+          return description_ == null ? oscal.common.v1.Common.MarkupMultiline.getDefaultInstance() : description_;
+        } else {
+          return descriptionBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.oscal.common.v1.MarkupMultiline description = 9 [json_name = "description"];</code>
+       */
+      public Builder setDescription(oscal.common.v1.Common.MarkupMultiline value) {
+        if (descriptionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          description_ = value;
+        } else {
+          descriptionBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.MarkupMultiline description = 9 [json_name = "description"];</code>
+       */
+      public Builder setDescription(
+          oscal.common.v1.Common.MarkupMultiline.Builder builderForValue) {
+        if (descriptionBuilder_ == null) {
+          description_ = builderForValue.build();
+        } else {
+          descriptionBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.MarkupMultiline description = 9 [json_name = "description"];</code>
+       */
+      public Builder mergeDescription(oscal.common.v1.Common.MarkupMultiline value) {
+        if (descriptionBuilder_ == null) {
+          if (((bitField0_ & 0x00000100) != 0) &&
+            description_ != null &&
+            description_ != oscal.common.v1.Common.MarkupMultiline.getDefaultInstance()) {
+            getDescriptionBuilder().mergeFrom(value);
+          } else {
+            description_ = value;
+          }
+        } else {
+          descriptionBuilder_.mergeFrom(value);
+        }
+        if (description_ != null) {
+          bitField0_ |= 0x00000100;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.MarkupMultiline description = 9 [json_name = "description"];</code>
+       */
+      public Builder clearDescription() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        description_ = null;
+        if (descriptionBuilder_ != null) {
+          descriptionBuilder_.dispose();
+          descriptionBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.MarkupMultiline description = 9 [json_name = "description"];</code>
+       */
+      public oscal.common.v1.Common.MarkupMultiline.Builder getDescriptionBuilder() {
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return internalGetDescriptionFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.oscal.common.v1.MarkupMultiline description = 9 [json_name = "description"];</code>
+       */
+      public oscal.common.v1.Common.MarkupMultilineOrBuilder getDescriptionOrBuilder() {
+        if (descriptionBuilder_ != null) {
+          return descriptionBuilder_.getMessageOrBuilder();
+        } else {
+          return description_ == null ?
+              oscal.common.v1.Common.MarkupMultiline.getDefaultInstance() : description_;
+        }
+      }
+      /**
+       * <code>.oscal.common.v1.MarkupMultiline description = 9 [json_name = "description"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
+          internalGetDescriptionFieldBuilder() {
+        if (descriptionBuilder_ == null) {
+          descriptionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>(
+                  getDescription(),
+                  getParentForChildren(),
+                  isClean());
+          description_ = null;
+        }
+        return descriptionBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:oscal.mapping.v1.QualifierItem)
@@ -13464,98 +19016,132 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>double value = 1 [json_name = "value"];</code>
+     * <code>double value = 1 [json_name = "value", deprecated = true];</code>
+     * @deprecated oscal.mapping.v1.ConfidenceScore.value is deprecated.
+     *     See mapping/v1/mapping.proto;l=104
      * @return The value.
      */
-    double getValue();
+    @java.lang.Deprecated double getValue();
 
     /**
-     * <code>string method = 2 [json_name = "method"];</code>
+     * <code>string method = 2 [json_name = "method", deprecated = true];</code>
+     * @deprecated oscal.mapping.v1.ConfidenceScore.method is deprecated.
+     *     See mapping/v1/mapping.proto;l=105
      * @return The method.
      */
-    java.lang.String getMethod();
+    @java.lang.Deprecated java.lang.String getMethod();
     /**
-     * <code>string method = 2 [json_name = "method"];</code>
+     * <code>string method = 2 [json_name = "method", deprecated = true];</code>
+     * @deprecated oscal.mapping.v1.ConfidenceScore.method is deprecated.
+     *     See mapping/v1/mapping.proto;l=105
      * @return The bytes for method.
      */
-    com.google.protobuf.ByteString
+    @java.lang.Deprecated com.google.protobuf.ByteString
         getMethodBytes();
 
     /**
-     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
      */
-    java.util.List<oscal.common.v1.Common.Property> 
+    @java.lang.Deprecated java.util.List<oscal.common.v1.Common.Property>
         getPropsList();
     /**
-     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
      */
-    oscal.common.v1.Common.Property getProps(int index);
+    @java.lang.Deprecated oscal.common.v1.Common.Property getProps(int index);
     /**
-     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
      */
-    int getPropsCount();
+    @java.lang.Deprecated int getPropsCount();
     /**
-     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    @java.lang.Deprecated java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList();
     /**
-     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
      */
-    oscal.common.v1.Common.PropertyOrBuilder getPropsOrBuilder(
+    @java.lang.Deprecated oscal.common.v1.Common.PropertyOrBuilder getPropsOrBuilder(
         int index);
 
     /**
-     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
      */
-    java.util.List<oscal.common.v1.Common.Link> 
+    @java.lang.Deprecated java.util.List<oscal.common.v1.Common.Link>
         getLinksList();
     /**
-     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
      */
-    oscal.common.v1.Common.Link getLinks(int index);
+    @java.lang.Deprecated oscal.common.v1.Common.Link getLinks(int index);
     /**
-     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
      */
-    int getLinksCount();
+    @java.lang.Deprecated int getLinksCount();
     /**
-     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    @java.lang.Deprecated java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList();
     /**
-     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
      */
-    oscal.common.v1.Common.LinkOrBuilder getLinksOrBuilder(
+    @java.lang.Deprecated oscal.common.v1.Common.LinkOrBuilder getLinksOrBuilder(
         int index);
 
     /**
-     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
      */
-    java.util.List<oscal.common.v1.Common.MarkupMultiline> 
+    @java.lang.Deprecated java.util.List<oscal.common.v1.Common.MarkupMultiline>
         getRemarksList();
     /**
-     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
      */
-    oscal.common.v1.Common.MarkupMultiline getRemarks(int index);
+    @java.lang.Deprecated oscal.common.v1.Common.MarkupMultiline getRemarks(int index);
     /**
-     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
      */
-    int getRemarksCount();
+    @java.lang.Deprecated int getRemarksCount();
     /**
-     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    @java.lang.Deprecated java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList();
     /**
-     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
      */
-    oscal.common.v1.Common.MarkupMultilineOrBuilder getRemarksOrBuilder(
+    @java.lang.Deprecated oscal.common.v1.Common.MarkupMultilineOrBuilder getRemarksOrBuilder(
         int index);
+
+    /**
+     * <code>string category = 6 [json_name = "category"];</code>
+     * @return The category.
+     */
+    java.lang.String getCategory();
+    /**
+     * <code>string category = 6 [json_name = "category"];</code>
+     * @return The bytes for category.
+     */
+    com.google.protobuf.ByteString
+        getCategoryBytes();
+
+    /**
+     * <code>.oscal.common.v1.Decimal percentage = 7 [json_name = "percentage"];</code>
+     * @return Whether the percentage field is set.
+     */
+    boolean hasPercentage();
+    /**
+     * <code>.oscal.common.v1.Decimal percentage = 7 [json_name = "percentage"];</code>
+     * @return The percentage.
+     */
+    oscal.common.v1.Common.Decimal getPercentage();
+    /**
+     * <code>.oscal.common.v1.Decimal percentage = 7 [json_name = "percentage"];</code>
+     */
+    oscal.common.v1.Common.DecimalOrBuilder getPercentageOrBuilder();
   }
   /**
    * <pre>
-   * ConfidenceScore represents a confidence score
+   * ConfidenceScore is either a category or a percentage from 0 through 1.
+   * Fields 1-5 are retained for wire compatibility with the prototype model.
    * </pre>
    *
    * Protobuf type {@code oscal.mapping.v1.ConfidenceScore}
@@ -13583,6 +19169,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
       props_ = java.util.Collections.emptyList();
       links_ = java.util.Collections.emptyList();
       remarks_ = java.util.Collections.emptyList();
+      category_ = "";
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
@@ -13603,14 +19190,17 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
               oscal.mapping.v1.Mapping.ConfidenceScore.class, oscal.mapping.v1.Mapping.ConfidenceScore.Builder.class);
     }
 
+    private int bitField0_;
     public static final int VALUE_FIELD_NUMBER = 1;
     private double value_ = 0D;
     /**
-     * <code>double value = 1 [json_name = "value"];</code>
+     * <code>double value = 1 [json_name = "value", deprecated = true];</code>
+     * @deprecated oscal.mapping.v1.ConfidenceScore.value is deprecated.
+     *     See mapping/v1/mapping.proto;l=104
      * @return The value.
      */
     @java.lang.Override
-    public double getValue() {
+    @java.lang.Deprecated public double getValue() {
       return value_;
     }
 
@@ -13618,16 +19208,18 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
     @SuppressWarnings("serial")
     private volatile java.lang.Object method_ = "";
     /**
-     * <code>string method = 2 [json_name = "method"];</code>
+     * <code>string method = 2 [json_name = "method", deprecated = true];</code>
+     * @deprecated oscal.mapping.v1.ConfidenceScore.method is deprecated.
+     *     See mapping/v1/mapping.proto;l=105
      * @return The method.
      */
     @java.lang.Override
-    public java.lang.String getMethod() {
+    @java.lang.Deprecated public java.lang.String getMethod() {
       java.lang.Object ref = method_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         method_ = s;
@@ -13635,15 +19227,17 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
       }
     }
     /**
-     * <code>string method = 2 [json_name = "method"];</code>
+     * <code>string method = 2 [json_name = "method", deprecated = true];</code>
+     * @deprecated oscal.mapping.v1.ConfidenceScore.method is deprecated.
+     *     See mapping/v1/mapping.proto;l=105
      * @return The bytes for method.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getMethodBytes() {
       java.lang.Object ref = method_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         method_ = b;
@@ -13657,39 +19251,39 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
     @SuppressWarnings("serial")
     private java.util.List<oscal.common.v1.Common.Property> props_;
     /**
-     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
      */
     @java.lang.Override
-    public java.util.List<oscal.common.v1.Common.Property> getPropsList() {
+    @java.lang.Deprecated public java.util.List<oscal.common.v1.Common.Property> getPropsList() {
       return props_;
     }
     /**
-     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    @java.lang.Deprecated public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList() {
       return props_;
     }
     /**
-     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
      */
     @java.lang.Override
-    public int getPropsCount() {
+    @java.lang.Deprecated public int getPropsCount() {
       return props_.size();
     }
     /**
-     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
      */
     @java.lang.Override
-    public oscal.common.v1.Common.Property getProps(int index) {
+    @java.lang.Deprecated public oscal.common.v1.Common.Property getProps(int index) {
       return props_.get(index);
     }
     /**
-     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
      */
     @java.lang.Override
-    public oscal.common.v1.Common.PropertyOrBuilder getPropsOrBuilder(
+    @java.lang.Deprecated public oscal.common.v1.Common.PropertyOrBuilder getPropsOrBuilder(
         int index) {
       return props_.get(index);
     }
@@ -13698,39 +19292,39 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
     @SuppressWarnings("serial")
     private java.util.List<oscal.common.v1.Common.Link> links_;
     /**
-     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
      */
     @java.lang.Override
-    public java.util.List<oscal.common.v1.Common.Link> getLinksList() {
+    @java.lang.Deprecated public java.util.List<oscal.common.v1.Common.Link> getLinksList() {
       return links_;
     }
     /**
-     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    @java.lang.Deprecated public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList() {
       return links_;
     }
     /**
-     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
      */
     @java.lang.Override
-    public int getLinksCount() {
+    @java.lang.Deprecated public int getLinksCount() {
       return links_.size();
     }
     /**
-     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
      */
     @java.lang.Override
-    public oscal.common.v1.Common.Link getLinks(int index) {
+    @java.lang.Deprecated public oscal.common.v1.Common.Link getLinks(int index) {
       return links_.get(index);
     }
     /**
-     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
      */
     @java.lang.Override
-    public oscal.common.v1.Common.LinkOrBuilder getLinksOrBuilder(
+    @java.lang.Deprecated public oscal.common.v1.Common.LinkOrBuilder getLinksOrBuilder(
         int index) {
       return links_.get(index);
     }
@@ -13739,41 +19333,106 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
     @SuppressWarnings("serial")
     private java.util.List<oscal.common.v1.Common.MarkupMultiline> remarks_;
     /**
-     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
      */
     @java.lang.Override
-    public java.util.List<oscal.common.v1.Common.MarkupMultiline> getRemarksList() {
+    @java.lang.Deprecated public java.util.List<oscal.common.v1.Common.MarkupMultiline> getRemarksList() {
       return remarks_;
     }
     /**
-     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    @java.lang.Deprecated public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList() {
       return remarks_;
     }
     /**
-     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
      */
     @java.lang.Override
-    public int getRemarksCount() {
+    @java.lang.Deprecated public int getRemarksCount() {
       return remarks_.size();
     }
     /**
-     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
      */
     @java.lang.Override
-    public oscal.common.v1.Common.MarkupMultiline getRemarks(int index) {
+    @java.lang.Deprecated public oscal.common.v1.Common.MarkupMultiline getRemarks(int index) {
       return remarks_.get(index);
     }
     /**
-     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
      */
     @java.lang.Override
-    public oscal.common.v1.Common.MarkupMultilineOrBuilder getRemarksOrBuilder(
+    @java.lang.Deprecated public oscal.common.v1.Common.MarkupMultilineOrBuilder getRemarksOrBuilder(
         int index) {
       return remarks_.get(index);
+    }
+
+    public static final int CATEGORY_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object category_ = "";
+    /**
+     * <code>string category = 6 [json_name = "category"];</code>
+     * @return The category.
+     */
+    @java.lang.Override
+    public java.lang.String getCategory() {
+      java.lang.Object ref = category_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        category_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string category = 6 [json_name = "category"];</code>
+     * @return The bytes for category.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCategoryBytes() {
+      java.lang.Object ref = category_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        category_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PERCENTAGE_FIELD_NUMBER = 7;
+    private oscal.common.v1.Common.Decimal percentage_;
+    /**
+     * <code>.oscal.common.v1.Decimal percentage = 7 [json_name = "percentage"];</code>
+     * @return Whether the percentage field is set.
+     */
+    @java.lang.Override
+    public boolean hasPercentage() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.oscal.common.v1.Decimal percentage = 7 [json_name = "percentage"];</code>
+     * @return The percentage.
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.Decimal getPercentage() {
+      return percentage_ == null ? oscal.common.v1.Common.Decimal.getDefaultInstance() : percentage_;
+    }
+    /**
+     * <code>.oscal.common.v1.Decimal percentage = 7 [json_name = "percentage"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.DecimalOrBuilder getPercentageOrBuilder() {
+      return percentage_ == null ? oscal.common.v1.Common.Decimal.getDefaultInstance() : percentage_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -13804,6 +19463,12 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
       }
       for (int i = 0; i < remarks_.size(); i++) {
         output.writeMessage(5, remarks_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(category_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 6, category_);
+      }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeMessage(7, getPercentage());
       }
       getUnknownFields().writeTo(output);
     }
@@ -13843,6 +19508,13 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
             }
             size += 1 * count;
           }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(category_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(6, category_);
+      }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getPercentage());
+      }
       return size;
     }
     @java.lang.Override
@@ -13878,6 +19550,13 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
           .equals(other.getLinksList())) return false;
       if (!getRemarksList()
           .equals(other.getRemarksList())) return false;
+      if (!getCategory()
+          .equals(other.getCategory())) return false;
+      if (hasPercentage() != other.hasPercentage()) return false;
+      if (hasPercentage()) {
+        if (!getPercentage()
+            .equals(other.getPercentage())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -13905,6 +19584,12 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
       if (getRemarksCount() > 0) {
         hash = (37 * hash) + REMARKS_FIELD_NUMBER;
         hash = (53 * hash) + getRemarksList().hashCode();
+      }
+      hash = (37 * hash) + CATEGORY_FIELD_NUMBER;
+      hash = (53 * hash) + getCategory().hashCode();
+      if (hasPercentage()) {
+        hash = (37 * hash) + PERCENTAGE_FIELD_NUMBER;
+        hash = (53 * hash) + getPercentage().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -14005,7 +19690,8 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
     }
     /**
      * <pre>
-     * ConfidenceScore represents a confidence score
+     * ConfidenceScore is either a category or a percentage from 0 through 1.
+     * Fields 1-5 are retained for wire compatibility with the prototype model.
      * </pre>
      *
      * Protobuf type {@code oscal.mapping.v1.ConfidenceScore}
@@ -14029,13 +19715,22 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
 
       // Construct using oscal.mapping.v1.Mapping.ConfidenceScore.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage
+                .alwaysUseFieldBuilders) {
+          internalGetPropsFieldBuilder();
+          internalGetLinksFieldBuilder();
+          internalGetRemarksFieldBuilder();
+          internalGetPercentageFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -14064,6 +19759,12 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
           remarksBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000010);
+        category_ = "";
+        percentage_ = null;
+        if (percentageBuilder_ != null) {
+          percentageBuilder_.dispose();
+          percentageBuilder_ = null;
+        }
         return this;
       }
 
@@ -14134,6 +19835,17 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.method_ = method_;
         }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.category_ = category_;
+        }
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.percentage_ = percentageBuilder_ == null
+              ? percentage_
+              : percentageBuilder_.build();
+          to_bitField0_ |= 0x00000001;
+        }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -14174,7 +19886,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
               propsBuilder_ = null;
               props_ = other.props_;
               bitField0_ = (bitField0_ & ~0x00000004);
-              propsBuilder_ = 
+              propsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetPropsFieldBuilder() : null;
             } else {
@@ -14200,7 +19912,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
               linksBuilder_ = null;
               links_ = other.links_;
               bitField0_ = (bitField0_ & ~0x00000008);
-              linksBuilder_ = 
+              linksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetLinksFieldBuilder() : null;
             } else {
@@ -14226,13 +19938,21 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
               remarksBuilder_ = null;
               remarks_ = other.remarks_;
               bitField0_ = (bitField0_ & ~0x00000010);
-              remarksBuilder_ = 
+              remarksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetRemarksFieldBuilder() : null;
             } else {
               remarksBuilder_.addAllMessages(other.remarks_);
             }
           }
+        }
+        if (!other.getCategory().isEmpty()) {
+          category_ = other.category_;
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        if (other.hasPercentage()) {
+          mergePercentage(other.getPercentage());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -14309,6 +20029,18 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
                 }
                 break;
               } // case 42
+              case 50: {
+                category_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                input.readMessage(
+                    internalGetPercentageFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -14328,19 +20060,23 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
 
       private double value_ ;
       /**
-       * <code>double value = 1 [json_name = "value"];</code>
+       * <code>double value = 1 [json_name = "value", deprecated = true];</code>
+       * @deprecated oscal.mapping.v1.ConfidenceScore.value is deprecated.
+       *     See mapping/v1/mapping.proto;l=104
        * @return The value.
        */
       @java.lang.Override
-      public double getValue() {
+      @java.lang.Deprecated public double getValue() {
         return value_;
       }
       /**
-       * <code>double value = 1 [json_name = "value"];</code>
+       * <code>double value = 1 [json_name = "value", deprecated = true];</code>
+       * @deprecated oscal.mapping.v1.ConfidenceScore.value is deprecated.
+       *     See mapping/v1/mapping.proto;l=104
        * @param value The value to set.
        * @return This builder for chaining.
        */
-      public Builder setValue(double value) {
+      @java.lang.Deprecated public Builder setValue(double value) {
 
         value_ = value;
         bitField0_ |= 0x00000001;
@@ -14348,10 +20084,12 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>double value = 1 [json_name = "value"];</code>
+       * <code>double value = 1 [json_name = "value", deprecated = true];</code>
+       * @deprecated oscal.mapping.v1.ConfidenceScore.value is deprecated.
+       *     See mapping/v1/mapping.proto;l=104
        * @return This builder for chaining.
        */
-      public Builder clearValue() {
+      @java.lang.Deprecated public Builder clearValue() {
         bitField0_ = (bitField0_ & ~0x00000001);
         value_ = 0D;
         onChanged();
@@ -14360,10 +20098,12 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
 
       private java.lang.Object method_ = "";
       /**
-       * <code>string method = 2 [json_name = "method"];</code>
+       * <code>string method = 2 [json_name = "method", deprecated = true];</code>
+       * @deprecated oscal.mapping.v1.ConfidenceScore.method is deprecated.
+       *     See mapping/v1/mapping.proto;l=105
        * @return The method.
        */
-      public java.lang.String getMethod() {
+      @java.lang.Deprecated public java.lang.String getMethod() {
         java.lang.Object ref = method_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
@@ -14376,14 +20116,16 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>string method = 2 [json_name = "method"];</code>
+       * <code>string method = 2 [json_name = "method", deprecated = true];</code>
+       * @deprecated oscal.mapping.v1.ConfidenceScore.method is deprecated.
+       *     See mapping/v1/mapping.proto;l=105
        * @return The bytes for method.
        */
-      public com.google.protobuf.ByteString
+      @java.lang.Deprecated public com.google.protobuf.ByteString
           getMethodBytes() {
         java.lang.Object ref = method_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           method_ = b;
@@ -14393,11 +20135,13 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>string method = 2 [json_name = "method"];</code>
+       * <code>string method = 2 [json_name = "method", deprecated = true];</code>
+       * @deprecated oscal.mapping.v1.ConfidenceScore.method is deprecated.
+       *     See mapping/v1/mapping.proto;l=105
        * @param value The method to set.
        * @return This builder for chaining.
        */
-      public Builder setMethod(
+      @java.lang.Deprecated public Builder setMethod(
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         method_ = value;
@@ -14406,21 +20150,25 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>string method = 2 [json_name = "method"];</code>
+       * <code>string method = 2 [json_name = "method", deprecated = true];</code>
+       * @deprecated oscal.mapping.v1.ConfidenceScore.method is deprecated.
+       *     See mapping/v1/mapping.proto;l=105
        * @return This builder for chaining.
        */
-      public Builder clearMethod() {
+      @java.lang.Deprecated public Builder clearMethod() {
         method_ = getDefaultInstance().getMethod();
         bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
       /**
-       * <code>string method = 2 [json_name = "method"];</code>
+       * <code>string method = 2 [json_name = "method", deprecated = true];</code>
+       * @deprecated oscal.mapping.v1.ConfidenceScore.method is deprecated.
+       *     See mapping/v1/mapping.proto;l=105
        * @param value The bytes for method to set.
        * @return This builder for chaining.
        */
-      public Builder setMethodBytes(
+      @java.lang.Deprecated public Builder setMethodBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
@@ -14443,9 +20191,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
           oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> propsBuilder_;
 
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Property> getPropsList() {
+      @java.lang.Deprecated public java.util.List<oscal.common.v1.Common.Property> getPropsList() {
         if (propsBuilder_ == null) {
           return java.util.Collections.unmodifiableList(props_);
         } else {
@@ -14453,9 +20201,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
        */
-      public int getPropsCount() {
+      @java.lang.Deprecated public int getPropsCount() {
         if (propsBuilder_ == null) {
           return props_.size();
         } else {
@@ -14463,9 +20211,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
        */
-      public oscal.common.v1.Common.Property getProps(int index) {
+      @java.lang.Deprecated public oscal.common.v1.Common.Property getProps(int index) {
         if (propsBuilder_ == null) {
           return props_.get(index);
         } else {
@@ -14473,9 +20221,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
        */
-      public Builder setProps(
+      @java.lang.Deprecated public Builder setProps(
           int index, oscal.common.v1.Common.Property value) {
         if (propsBuilder_ == null) {
           if (value == null) {
@@ -14490,9 +20238,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
        */
-      public Builder setProps(
+      @java.lang.Deprecated public Builder setProps(
           int index, oscal.common.v1.Common.Property.Builder builderForValue) {
         if (propsBuilder_ == null) {
           ensurePropsIsMutable();
@@ -14504,9 +20252,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
        */
-      public Builder addProps(oscal.common.v1.Common.Property value) {
+      @java.lang.Deprecated public Builder addProps(oscal.common.v1.Common.Property value) {
         if (propsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -14520,9 +20268,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
        */
-      public Builder addProps(
+      @java.lang.Deprecated public Builder addProps(
           int index, oscal.common.v1.Common.Property value) {
         if (propsBuilder_ == null) {
           if (value == null) {
@@ -14537,9 +20285,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
        */
-      public Builder addProps(
+      @java.lang.Deprecated public Builder addProps(
           oscal.common.v1.Common.Property.Builder builderForValue) {
         if (propsBuilder_ == null) {
           ensurePropsIsMutable();
@@ -14551,9 +20299,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
        */
-      public Builder addProps(
+      @java.lang.Deprecated public Builder addProps(
           int index, oscal.common.v1.Common.Property.Builder builderForValue) {
         if (propsBuilder_ == null) {
           ensurePropsIsMutable();
@@ -14565,9 +20313,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
        */
-      public Builder addAllProps(
+      @java.lang.Deprecated public Builder addAllProps(
           java.lang.Iterable<? extends oscal.common.v1.Common.Property> values) {
         if (propsBuilder_ == null) {
           ensurePropsIsMutable();
@@ -14580,9 +20328,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
        */
-      public Builder clearProps() {
+      @java.lang.Deprecated public Builder clearProps() {
         if (propsBuilder_ == null) {
           props_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000004);
@@ -14593,9 +20341,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
        */
-      public Builder removeProps(int index) {
+      @java.lang.Deprecated public Builder removeProps(int index) {
         if (propsBuilder_ == null) {
           ensurePropsIsMutable();
           props_.remove(index);
@@ -14606,16 +20354,16 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
        */
-      public oscal.common.v1.Common.Property.Builder getPropsBuilder(
+      @java.lang.Deprecated public oscal.common.v1.Common.Property.Builder getPropsBuilder(
           int index) {
         return internalGetPropsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
        */
-      public oscal.common.v1.Common.PropertyOrBuilder getPropsOrBuilder(
+      @java.lang.Deprecated public oscal.common.v1.Common.PropertyOrBuilder getPropsOrBuilder(
           int index) {
         if (propsBuilder_ == null) {
           return props_.get(index);  } else {
@@ -14623,9 +20371,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+      @java.lang.Deprecated public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
            getPropsOrBuilderList() {
         if (propsBuilder_ != null) {
           return propsBuilder_.getMessageOrBuilderList();
@@ -14634,29 +20382,29 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
        */
-      public oscal.common.v1.Common.Property.Builder addPropsBuilder() {
+      @java.lang.Deprecated public oscal.common.v1.Common.Property.Builder addPropsBuilder() {
         return internalGetPropsFieldBuilder().addBuilder(
             oscal.common.v1.Common.Property.getDefaultInstance());
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
        */
-      public oscal.common.v1.Common.Property.Builder addPropsBuilder(
+      @java.lang.Deprecated public oscal.common.v1.Common.Property.Builder addPropsBuilder(
           int index) {
         return internalGetPropsFieldBuilder().addBuilder(
             index, oscal.common.v1.Common.Property.getDefaultInstance());
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Property.Builder> 
+      @java.lang.Deprecated public java.util.List<oscal.common.v1.Common.Property.Builder>
            getPropsBuilderList() {
         return internalGetPropsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> 
+          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder>
           internalGetPropsFieldBuilder() {
         if (propsBuilder_ == null) {
           propsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -14683,9 +20431,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
           oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder> linksBuilder_;
 
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Link> getLinksList() {
+      @java.lang.Deprecated public java.util.List<oscal.common.v1.Common.Link> getLinksList() {
         if (linksBuilder_ == null) {
           return java.util.Collections.unmodifiableList(links_);
         } else {
@@ -14693,9 +20441,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
        */
-      public int getLinksCount() {
+      @java.lang.Deprecated public int getLinksCount() {
         if (linksBuilder_ == null) {
           return links_.size();
         } else {
@@ -14703,9 +20451,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
        */
-      public oscal.common.v1.Common.Link getLinks(int index) {
+      @java.lang.Deprecated public oscal.common.v1.Common.Link getLinks(int index) {
         if (linksBuilder_ == null) {
           return links_.get(index);
         } else {
@@ -14713,9 +20461,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
        */
-      public Builder setLinks(
+      @java.lang.Deprecated public Builder setLinks(
           int index, oscal.common.v1.Common.Link value) {
         if (linksBuilder_ == null) {
           if (value == null) {
@@ -14730,9 +20478,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
        */
-      public Builder setLinks(
+      @java.lang.Deprecated public Builder setLinks(
           int index, oscal.common.v1.Common.Link.Builder builderForValue) {
         if (linksBuilder_ == null) {
           ensureLinksIsMutable();
@@ -14744,9 +20492,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
        */
-      public Builder addLinks(oscal.common.v1.Common.Link value) {
+      @java.lang.Deprecated public Builder addLinks(oscal.common.v1.Common.Link value) {
         if (linksBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -14760,9 +20508,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
        */
-      public Builder addLinks(
+      @java.lang.Deprecated public Builder addLinks(
           int index, oscal.common.v1.Common.Link value) {
         if (linksBuilder_ == null) {
           if (value == null) {
@@ -14777,9 +20525,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
        */
-      public Builder addLinks(
+      @java.lang.Deprecated public Builder addLinks(
           oscal.common.v1.Common.Link.Builder builderForValue) {
         if (linksBuilder_ == null) {
           ensureLinksIsMutable();
@@ -14791,9 +20539,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
        */
-      public Builder addLinks(
+      @java.lang.Deprecated public Builder addLinks(
           int index, oscal.common.v1.Common.Link.Builder builderForValue) {
         if (linksBuilder_ == null) {
           ensureLinksIsMutable();
@@ -14805,9 +20553,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
        */
-      public Builder addAllLinks(
+      @java.lang.Deprecated public Builder addAllLinks(
           java.lang.Iterable<? extends oscal.common.v1.Common.Link> values) {
         if (linksBuilder_ == null) {
           ensureLinksIsMutable();
@@ -14820,9 +20568,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
        */
-      public Builder clearLinks() {
+      @java.lang.Deprecated public Builder clearLinks() {
         if (linksBuilder_ == null) {
           links_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000008);
@@ -14833,9 +20581,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
        */
-      public Builder removeLinks(int index) {
+      @java.lang.Deprecated public Builder removeLinks(int index) {
         if (linksBuilder_ == null) {
           ensureLinksIsMutable();
           links_.remove(index);
@@ -14846,16 +20594,16 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
        */
-      public oscal.common.v1.Common.Link.Builder getLinksBuilder(
+      @java.lang.Deprecated public oscal.common.v1.Common.Link.Builder getLinksBuilder(
           int index) {
         return internalGetLinksFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
        */
-      public oscal.common.v1.Common.LinkOrBuilder getLinksOrBuilder(
+      @java.lang.Deprecated public oscal.common.v1.Common.LinkOrBuilder getLinksOrBuilder(
           int index) {
         if (linksBuilder_ == null) {
           return links_.get(index);  } else {
@@ -14863,9 +20611,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+      @java.lang.Deprecated public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
            getLinksOrBuilderList() {
         if (linksBuilder_ != null) {
           return linksBuilder_.getMessageOrBuilderList();
@@ -14874,29 +20622,29 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
        */
-      public oscal.common.v1.Common.Link.Builder addLinksBuilder() {
+      @java.lang.Deprecated public oscal.common.v1.Common.Link.Builder addLinksBuilder() {
         return internalGetLinksFieldBuilder().addBuilder(
             oscal.common.v1.Common.Link.getDefaultInstance());
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
        */
-      public oscal.common.v1.Common.Link.Builder addLinksBuilder(
+      @java.lang.Deprecated public oscal.common.v1.Common.Link.Builder addLinksBuilder(
           int index) {
         return internalGetLinksFieldBuilder().addBuilder(
             index, oscal.common.v1.Common.Link.getDefaultInstance());
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Link.Builder> 
+      @java.lang.Deprecated public java.util.List<oscal.common.v1.Common.Link.Builder>
            getLinksBuilderList() {
         return internalGetLinksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder> 
+          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder>
           internalGetLinksFieldBuilder() {
         if (linksBuilder_ == null) {
           linksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -14923,9 +20671,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
           oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> remarksBuilder_;
 
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
        */
-      public java.util.List<oscal.common.v1.Common.MarkupMultiline> getRemarksList() {
+      @java.lang.Deprecated public java.util.List<oscal.common.v1.Common.MarkupMultiline> getRemarksList() {
         if (remarksBuilder_ == null) {
           return java.util.Collections.unmodifiableList(remarks_);
         } else {
@@ -14933,9 +20681,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
        */
-      public int getRemarksCount() {
+      @java.lang.Deprecated public int getRemarksCount() {
         if (remarksBuilder_ == null) {
           return remarks_.size();
         } else {
@@ -14943,9 +20691,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
        */
-      public oscal.common.v1.Common.MarkupMultiline getRemarks(int index) {
+      @java.lang.Deprecated public oscal.common.v1.Common.MarkupMultiline getRemarks(int index) {
         if (remarksBuilder_ == null) {
           return remarks_.get(index);
         } else {
@@ -14953,9 +20701,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
        */
-      public Builder setRemarks(
+      @java.lang.Deprecated public Builder setRemarks(
           int index, oscal.common.v1.Common.MarkupMultiline value) {
         if (remarksBuilder_ == null) {
           if (value == null) {
@@ -14970,9 +20718,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
        */
-      public Builder setRemarks(
+      @java.lang.Deprecated public Builder setRemarks(
           int index, oscal.common.v1.Common.MarkupMultiline.Builder builderForValue) {
         if (remarksBuilder_ == null) {
           ensureRemarksIsMutable();
@@ -14984,9 +20732,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
        */
-      public Builder addRemarks(oscal.common.v1.Common.MarkupMultiline value) {
+      @java.lang.Deprecated public Builder addRemarks(oscal.common.v1.Common.MarkupMultiline value) {
         if (remarksBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -15000,9 +20748,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
        */
-      public Builder addRemarks(
+      @java.lang.Deprecated public Builder addRemarks(
           int index, oscal.common.v1.Common.MarkupMultiline value) {
         if (remarksBuilder_ == null) {
           if (value == null) {
@@ -15017,9 +20765,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
        */
-      public Builder addRemarks(
+      @java.lang.Deprecated public Builder addRemarks(
           oscal.common.v1.Common.MarkupMultiline.Builder builderForValue) {
         if (remarksBuilder_ == null) {
           ensureRemarksIsMutable();
@@ -15031,9 +20779,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
        */
-      public Builder addRemarks(
+      @java.lang.Deprecated public Builder addRemarks(
           int index, oscal.common.v1.Common.MarkupMultiline.Builder builderForValue) {
         if (remarksBuilder_ == null) {
           ensureRemarksIsMutable();
@@ -15045,9 +20793,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
        */
-      public Builder addAllRemarks(
+      @java.lang.Deprecated public Builder addAllRemarks(
           java.lang.Iterable<? extends oscal.common.v1.Common.MarkupMultiline> values) {
         if (remarksBuilder_ == null) {
           ensureRemarksIsMutable();
@@ -15060,9 +20808,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
        */
-      public Builder clearRemarks() {
+      @java.lang.Deprecated public Builder clearRemarks() {
         if (remarksBuilder_ == null) {
           remarks_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000010);
@@ -15073,9 +20821,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
        */
-      public Builder removeRemarks(int index) {
+      @java.lang.Deprecated public Builder removeRemarks(int index) {
         if (remarksBuilder_ == null) {
           ensureRemarksIsMutable();
           remarks_.remove(index);
@@ -15086,16 +20834,16 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
        */
-      public oscal.common.v1.Common.MarkupMultiline.Builder getRemarksBuilder(
+      @java.lang.Deprecated public oscal.common.v1.Common.MarkupMultiline.Builder getRemarksBuilder(
           int index) {
         return internalGetRemarksFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
        */
-      public oscal.common.v1.Common.MarkupMultilineOrBuilder getRemarksOrBuilder(
+      @java.lang.Deprecated public oscal.common.v1.Common.MarkupMultilineOrBuilder getRemarksOrBuilder(
           int index) {
         if (remarksBuilder_ == null) {
           return remarks_.get(index);  } else {
@@ -15103,9 +20851,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+      @java.lang.Deprecated public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
            getRemarksOrBuilderList() {
         if (remarksBuilder_ != null) {
           return remarksBuilder_.getMessageOrBuilderList();
@@ -15114,29 +20862,29 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
        */
-      public oscal.common.v1.Common.MarkupMultiline.Builder addRemarksBuilder() {
+      @java.lang.Deprecated public oscal.common.v1.Common.MarkupMultiline.Builder addRemarksBuilder() {
         return internalGetRemarksFieldBuilder().addBuilder(
             oscal.common.v1.Common.MarkupMultiline.getDefaultInstance());
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
        */
-      public oscal.common.v1.Common.MarkupMultiline.Builder addRemarksBuilder(
+      @java.lang.Deprecated public oscal.common.v1.Common.MarkupMultiline.Builder addRemarksBuilder(
           int index) {
         return internalGetRemarksFieldBuilder().addBuilder(
             index, oscal.common.v1.Common.MarkupMultiline.getDefaultInstance());
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
        */
-      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder> 
+      @java.lang.Deprecated public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder>
            getRemarksBuilderList() {
         return internalGetRemarksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetRemarksFieldBuilder() {
         if (remarksBuilder_ == null) {
           remarksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -15148,6 +20896,199 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
           remarks_ = null;
         }
         return remarksBuilder_;
+      }
+
+      private java.lang.Object category_ = "";
+      /**
+       * <code>string category = 6 [json_name = "category"];</code>
+       * @return The category.
+       */
+      public java.lang.String getCategory() {
+        java.lang.Object ref = category_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          category_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string category = 6 [json_name = "category"];</code>
+       * @return The bytes for category.
+       */
+      public com.google.protobuf.ByteString
+          getCategoryBytes() {
+        java.lang.Object ref = category_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          category_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string category = 6 [json_name = "category"];</code>
+       * @param value The category to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCategory(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        category_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string category = 6 [json_name = "category"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCategory() {
+        category_ = getDefaultInstance().getCategory();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string category = 6 [json_name = "category"];</code>
+       * @param value The bytes for category to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCategoryBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        category_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+
+      private oscal.common.v1.Common.Decimal percentage_;
+      private com.google.protobuf.SingleFieldBuilder<
+          oscal.common.v1.Common.Decimal, oscal.common.v1.Common.Decimal.Builder, oscal.common.v1.Common.DecimalOrBuilder> percentageBuilder_;
+      /**
+       * <code>.oscal.common.v1.Decimal percentage = 7 [json_name = "percentage"];</code>
+       * @return Whether the percentage field is set.
+       */
+      public boolean hasPercentage() {
+        return ((bitField0_ & 0x00000040) != 0);
+      }
+      /**
+       * <code>.oscal.common.v1.Decimal percentage = 7 [json_name = "percentage"];</code>
+       * @return The percentage.
+       */
+      public oscal.common.v1.Common.Decimal getPercentage() {
+        if (percentageBuilder_ == null) {
+          return percentage_ == null ? oscal.common.v1.Common.Decimal.getDefaultInstance() : percentage_;
+        } else {
+          return percentageBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.oscal.common.v1.Decimal percentage = 7 [json_name = "percentage"];</code>
+       */
+      public Builder setPercentage(oscal.common.v1.Common.Decimal value) {
+        if (percentageBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          percentage_ = value;
+        } else {
+          percentageBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.Decimal percentage = 7 [json_name = "percentage"];</code>
+       */
+      public Builder setPercentage(
+          oscal.common.v1.Common.Decimal.Builder builderForValue) {
+        if (percentageBuilder_ == null) {
+          percentage_ = builderForValue.build();
+        } else {
+          percentageBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.Decimal percentage = 7 [json_name = "percentage"];</code>
+       */
+      public Builder mergePercentage(oscal.common.v1.Common.Decimal value) {
+        if (percentageBuilder_ == null) {
+          if (((bitField0_ & 0x00000040) != 0) &&
+            percentage_ != null &&
+            percentage_ != oscal.common.v1.Common.Decimal.getDefaultInstance()) {
+            getPercentageBuilder().mergeFrom(value);
+          } else {
+            percentage_ = value;
+          }
+        } else {
+          percentageBuilder_.mergeFrom(value);
+        }
+        if (percentage_ != null) {
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.Decimal percentage = 7 [json_name = "percentage"];</code>
+       */
+      public Builder clearPercentage() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        percentage_ = null;
+        if (percentageBuilder_ != null) {
+          percentageBuilder_.dispose();
+          percentageBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.Decimal percentage = 7 [json_name = "percentage"];</code>
+       */
+      public oscal.common.v1.Common.Decimal.Builder getPercentageBuilder() {
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return internalGetPercentageFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.oscal.common.v1.Decimal percentage = 7 [json_name = "percentage"];</code>
+       */
+      public oscal.common.v1.Common.DecimalOrBuilder getPercentageOrBuilder() {
+        if (percentageBuilder_ != null) {
+          return percentageBuilder_.getMessageOrBuilder();
+        } else {
+          return percentage_ == null ?
+              oscal.common.v1.Common.Decimal.getDefaultInstance() : percentage_;
+        }
+      }
+      /**
+       * <code>.oscal.common.v1.Decimal percentage = 7 [json_name = "percentage"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          oscal.common.v1.Common.Decimal, oscal.common.v1.Common.Decimal.Builder, oscal.common.v1.Common.DecimalOrBuilder>
+          internalGetPercentageFieldBuilder() {
+        if (percentageBuilder_ == null) {
+          percentageBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              oscal.common.v1.Common.Decimal, oscal.common.v1.Common.Decimal.Builder, oscal.common.v1.Common.DecimalOrBuilder>(
+                  getPercentage(),
+                  getParentForChildren(),
+                  isClean());
+          percentage_ = null;
+        }
+        return percentageBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:oscal.mapping.v1.ConfidenceScore)
@@ -15206,98 +21147,132 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>double value = 1 [json_name = "value"];</code>
+     * <code>double value = 1 [json_name = "value", deprecated = true];</code>
+     * @deprecated oscal.mapping.v1.Coverage.value is deprecated.
+     *     See mapping/v1/mapping.proto;l=116
      * @return The value.
      */
-    double getValue();
+    @java.lang.Deprecated double getValue();
 
     /**
-     * <code>string method = 2 [json_name = "method"];</code>
+     * <code>string method = 2 [json_name = "method", deprecated = true];</code>
+     * @deprecated oscal.mapping.v1.Coverage.method is deprecated.
+     *     See mapping/v1/mapping.proto;l=117
      * @return The method.
      */
-    java.lang.String getMethod();
+    @java.lang.Deprecated java.lang.String getMethod();
     /**
-     * <code>string method = 2 [json_name = "method"];</code>
+     * <code>string method = 2 [json_name = "method", deprecated = true];</code>
+     * @deprecated oscal.mapping.v1.Coverage.method is deprecated.
+     *     See mapping/v1/mapping.proto;l=117
      * @return The bytes for method.
      */
-    com.google.protobuf.ByteString
+    @java.lang.Deprecated com.google.protobuf.ByteString
         getMethodBytes();
 
     /**
-     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
      */
-    java.util.List<oscal.common.v1.Common.Property> 
+    @java.lang.Deprecated java.util.List<oscal.common.v1.Common.Property>
         getPropsList();
     /**
-     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
      */
-    oscal.common.v1.Common.Property getProps(int index);
+    @java.lang.Deprecated oscal.common.v1.Common.Property getProps(int index);
     /**
-     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
      */
-    int getPropsCount();
+    @java.lang.Deprecated int getPropsCount();
     /**
-     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    @java.lang.Deprecated java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList();
     /**
-     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
      */
-    oscal.common.v1.Common.PropertyOrBuilder getPropsOrBuilder(
+    @java.lang.Deprecated oscal.common.v1.Common.PropertyOrBuilder getPropsOrBuilder(
         int index);
 
     /**
-     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
      */
-    java.util.List<oscal.common.v1.Common.Link> 
+    @java.lang.Deprecated java.util.List<oscal.common.v1.Common.Link>
         getLinksList();
     /**
-     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
      */
-    oscal.common.v1.Common.Link getLinks(int index);
+    @java.lang.Deprecated oscal.common.v1.Common.Link getLinks(int index);
     /**
-     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
      */
-    int getLinksCount();
+    @java.lang.Deprecated int getLinksCount();
     /**
-     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    @java.lang.Deprecated java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList();
     /**
-     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
      */
-    oscal.common.v1.Common.LinkOrBuilder getLinksOrBuilder(
+    @java.lang.Deprecated oscal.common.v1.Common.LinkOrBuilder getLinksOrBuilder(
         int index);
 
     /**
-     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
      */
-    java.util.List<oscal.common.v1.Common.MarkupMultiline> 
+    @java.lang.Deprecated java.util.List<oscal.common.v1.Common.MarkupMultiline>
         getRemarksList();
     /**
-     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
      */
-    oscal.common.v1.Common.MarkupMultiline getRemarks(int index);
+    @java.lang.Deprecated oscal.common.v1.Common.MarkupMultiline getRemarks(int index);
     /**
-     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
      */
-    int getRemarksCount();
+    @java.lang.Deprecated int getRemarksCount();
     /**
-     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    @java.lang.Deprecated java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList();
     /**
-     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
      */
-    oscal.common.v1.Common.MarkupMultilineOrBuilder getRemarksOrBuilder(
+    @java.lang.Deprecated oscal.common.v1.Common.MarkupMultilineOrBuilder getRemarksOrBuilder(
         int index);
+
+    /**
+     * <code>string generation_method = 6 [json_name = "generationMethod"];</code>
+     * @return The generationMethod.
+     */
+    java.lang.String getGenerationMethod();
+    /**
+     * <code>string generation_method = 6 [json_name = "generationMethod"];</code>
+     * @return The bytes for generationMethod.
+     */
+    com.google.protobuf.ByteString
+        getGenerationMethodBytes();
+
+    /**
+     * <code>.oscal.common.v1.Decimal target_coverage = 7 [json_name = "targetCoverage"];</code>
+     * @return Whether the targetCoverage field is set.
+     */
+    boolean hasTargetCoverage();
+    /**
+     * <code>.oscal.common.v1.Decimal target_coverage = 7 [json_name = "targetCoverage"];</code>
+     * @return The targetCoverage.
+     */
+    oscal.common.v1.Common.Decimal getTargetCoverage();
+    /**
+     * <code>.oscal.common.v1.Decimal target_coverage = 7 [json_name = "targetCoverage"];</code>
+     */
+    oscal.common.v1.Common.DecimalOrBuilder getTargetCoverageOrBuilder();
   }
   /**
    * <pre>
-   * Coverage represents coverage information
+   * Coverage records target coverage and the method used to derive it.
+   * Fields 1-5 are retained for wire compatibility with the prototype model.
    * </pre>
    *
    * Protobuf type {@code oscal.mapping.v1.Coverage}
@@ -15325,6 +21300,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
       props_ = java.util.Collections.emptyList();
       links_ = java.util.Collections.emptyList();
       remarks_ = java.util.Collections.emptyList();
+      generationMethod_ = "";
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
@@ -15345,14 +21321,17 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
               oscal.mapping.v1.Mapping.Coverage.class, oscal.mapping.v1.Mapping.Coverage.Builder.class);
     }
 
+    private int bitField0_;
     public static final int VALUE_FIELD_NUMBER = 1;
     private double value_ = 0D;
     /**
-     * <code>double value = 1 [json_name = "value"];</code>
+     * <code>double value = 1 [json_name = "value", deprecated = true];</code>
+     * @deprecated oscal.mapping.v1.Coverage.value is deprecated.
+     *     See mapping/v1/mapping.proto;l=116
      * @return The value.
      */
     @java.lang.Override
-    public double getValue() {
+    @java.lang.Deprecated public double getValue() {
       return value_;
     }
 
@@ -15360,16 +21339,18 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
     @SuppressWarnings("serial")
     private volatile java.lang.Object method_ = "";
     /**
-     * <code>string method = 2 [json_name = "method"];</code>
+     * <code>string method = 2 [json_name = "method", deprecated = true];</code>
+     * @deprecated oscal.mapping.v1.Coverage.method is deprecated.
+     *     See mapping/v1/mapping.proto;l=117
      * @return The method.
      */
     @java.lang.Override
-    public java.lang.String getMethod() {
+    @java.lang.Deprecated public java.lang.String getMethod() {
       java.lang.Object ref = method_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         method_ = s;
@@ -15377,15 +21358,17 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
       }
     }
     /**
-     * <code>string method = 2 [json_name = "method"];</code>
+     * <code>string method = 2 [json_name = "method", deprecated = true];</code>
+     * @deprecated oscal.mapping.v1.Coverage.method is deprecated.
+     *     See mapping/v1/mapping.proto;l=117
      * @return The bytes for method.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getMethodBytes() {
       java.lang.Object ref = method_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         method_ = b;
@@ -15399,39 +21382,39 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
     @SuppressWarnings("serial")
     private java.util.List<oscal.common.v1.Common.Property> props_;
     /**
-     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
      */
     @java.lang.Override
-    public java.util.List<oscal.common.v1.Common.Property> getPropsList() {
+    @java.lang.Deprecated public java.util.List<oscal.common.v1.Common.Property> getPropsList() {
       return props_;
     }
     /**
-     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    @java.lang.Deprecated public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList() {
       return props_;
     }
     /**
-     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
      */
     @java.lang.Override
-    public int getPropsCount() {
+    @java.lang.Deprecated public int getPropsCount() {
       return props_.size();
     }
     /**
-     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
      */
     @java.lang.Override
-    public oscal.common.v1.Common.Property getProps(int index) {
+    @java.lang.Deprecated public oscal.common.v1.Common.Property getProps(int index) {
       return props_.get(index);
     }
     /**
-     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
      */
     @java.lang.Override
-    public oscal.common.v1.Common.PropertyOrBuilder getPropsOrBuilder(
+    @java.lang.Deprecated public oscal.common.v1.Common.PropertyOrBuilder getPropsOrBuilder(
         int index) {
       return props_.get(index);
     }
@@ -15440,39 +21423,39 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
     @SuppressWarnings("serial")
     private java.util.List<oscal.common.v1.Common.Link> links_;
     /**
-     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
      */
     @java.lang.Override
-    public java.util.List<oscal.common.v1.Common.Link> getLinksList() {
+    @java.lang.Deprecated public java.util.List<oscal.common.v1.Common.Link> getLinksList() {
       return links_;
     }
     /**
-     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    @java.lang.Deprecated public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList() {
       return links_;
     }
     /**
-     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
      */
     @java.lang.Override
-    public int getLinksCount() {
+    @java.lang.Deprecated public int getLinksCount() {
       return links_.size();
     }
     /**
-     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
      */
     @java.lang.Override
-    public oscal.common.v1.Common.Link getLinks(int index) {
+    @java.lang.Deprecated public oscal.common.v1.Common.Link getLinks(int index) {
       return links_.get(index);
     }
     /**
-     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
      */
     @java.lang.Override
-    public oscal.common.v1.Common.LinkOrBuilder getLinksOrBuilder(
+    @java.lang.Deprecated public oscal.common.v1.Common.LinkOrBuilder getLinksOrBuilder(
         int index) {
       return links_.get(index);
     }
@@ -15481,41 +21464,106 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
     @SuppressWarnings("serial")
     private java.util.List<oscal.common.v1.Common.MarkupMultiline> remarks_;
     /**
-     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
      */
     @java.lang.Override
-    public java.util.List<oscal.common.v1.Common.MarkupMultiline> getRemarksList() {
+    @java.lang.Deprecated public java.util.List<oscal.common.v1.Common.MarkupMultiline> getRemarksList() {
       return remarks_;
     }
     /**
-     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    @java.lang.Deprecated public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList() {
       return remarks_;
     }
     /**
-     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
      */
     @java.lang.Override
-    public int getRemarksCount() {
+    @java.lang.Deprecated public int getRemarksCount() {
       return remarks_.size();
     }
     /**
-     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
      */
     @java.lang.Override
-    public oscal.common.v1.Common.MarkupMultiline getRemarks(int index) {
+    @java.lang.Deprecated public oscal.common.v1.Common.MarkupMultiline getRemarks(int index) {
       return remarks_.get(index);
     }
     /**
-     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
      */
     @java.lang.Override
-    public oscal.common.v1.Common.MarkupMultilineOrBuilder getRemarksOrBuilder(
+    @java.lang.Deprecated public oscal.common.v1.Common.MarkupMultilineOrBuilder getRemarksOrBuilder(
         int index) {
       return remarks_.get(index);
+    }
+
+    public static final int GENERATION_METHOD_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object generationMethod_ = "";
+    /**
+     * <code>string generation_method = 6 [json_name = "generationMethod"];</code>
+     * @return The generationMethod.
+     */
+    @java.lang.Override
+    public java.lang.String getGenerationMethod() {
+      java.lang.Object ref = generationMethod_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        generationMethod_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string generation_method = 6 [json_name = "generationMethod"];</code>
+     * @return The bytes for generationMethod.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getGenerationMethodBytes() {
+      java.lang.Object ref = generationMethod_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        generationMethod_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TARGET_COVERAGE_FIELD_NUMBER = 7;
+    private oscal.common.v1.Common.Decimal targetCoverage_;
+    /**
+     * <code>.oscal.common.v1.Decimal target_coverage = 7 [json_name = "targetCoverage"];</code>
+     * @return Whether the targetCoverage field is set.
+     */
+    @java.lang.Override
+    public boolean hasTargetCoverage() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.oscal.common.v1.Decimal target_coverage = 7 [json_name = "targetCoverage"];</code>
+     * @return The targetCoverage.
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.Decimal getTargetCoverage() {
+      return targetCoverage_ == null ? oscal.common.v1.Common.Decimal.getDefaultInstance() : targetCoverage_;
+    }
+    /**
+     * <code>.oscal.common.v1.Decimal target_coverage = 7 [json_name = "targetCoverage"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.DecimalOrBuilder getTargetCoverageOrBuilder() {
+      return targetCoverage_ == null ? oscal.common.v1.Common.Decimal.getDefaultInstance() : targetCoverage_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -15546,6 +21594,12 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
       }
       for (int i = 0; i < remarks_.size(); i++) {
         output.writeMessage(5, remarks_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(generationMethod_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 6, generationMethod_);
+      }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeMessage(7, getTargetCoverage());
       }
       getUnknownFields().writeTo(output);
     }
@@ -15585,6 +21639,13 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
             }
             size += 1 * count;
           }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(generationMethod_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(6, generationMethod_);
+      }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getTargetCoverage());
+      }
       return size;
     }
     @java.lang.Override
@@ -15620,6 +21681,13 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
           .equals(other.getLinksList())) return false;
       if (!getRemarksList()
           .equals(other.getRemarksList())) return false;
+      if (!getGenerationMethod()
+          .equals(other.getGenerationMethod())) return false;
+      if (hasTargetCoverage() != other.hasTargetCoverage()) return false;
+      if (hasTargetCoverage()) {
+        if (!getTargetCoverage()
+            .equals(other.getTargetCoverage())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -15647,6 +21715,12 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
       if (getRemarksCount() > 0) {
         hash = (37 * hash) + REMARKS_FIELD_NUMBER;
         hash = (53 * hash) + getRemarksList().hashCode();
+      }
+      hash = (37 * hash) + GENERATION_METHOD_FIELD_NUMBER;
+      hash = (53 * hash) + getGenerationMethod().hashCode();
+      if (hasTargetCoverage()) {
+        hash = (37 * hash) + TARGET_COVERAGE_FIELD_NUMBER;
+        hash = (53 * hash) + getTargetCoverage().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -15747,7 +21821,8 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
     }
     /**
      * <pre>
-     * Coverage represents coverage information
+     * Coverage records target coverage and the method used to derive it.
+     * Fields 1-5 are retained for wire compatibility with the prototype model.
      * </pre>
      *
      * Protobuf type {@code oscal.mapping.v1.Coverage}
@@ -15771,13 +21846,22 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
 
       // Construct using oscal.mapping.v1.Mapping.Coverage.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage
+                .alwaysUseFieldBuilders) {
+          internalGetPropsFieldBuilder();
+          internalGetLinksFieldBuilder();
+          internalGetRemarksFieldBuilder();
+          internalGetTargetCoverageFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -15806,6 +21890,12 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
           remarksBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000010);
+        generationMethod_ = "";
+        targetCoverage_ = null;
+        if (targetCoverageBuilder_ != null) {
+          targetCoverageBuilder_.dispose();
+          targetCoverageBuilder_ = null;
+        }
         return this;
       }
 
@@ -15876,6 +21966,17 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.method_ = method_;
         }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.generationMethod_ = generationMethod_;
+        }
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.targetCoverage_ = targetCoverageBuilder_ == null
+              ? targetCoverage_
+              : targetCoverageBuilder_.build();
+          to_bitField0_ |= 0x00000001;
+        }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -15916,7 +22017,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
               propsBuilder_ = null;
               props_ = other.props_;
               bitField0_ = (bitField0_ & ~0x00000004);
-              propsBuilder_ = 
+              propsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetPropsFieldBuilder() : null;
             } else {
@@ -15942,7 +22043,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
               linksBuilder_ = null;
               links_ = other.links_;
               bitField0_ = (bitField0_ & ~0x00000008);
-              linksBuilder_ = 
+              linksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetLinksFieldBuilder() : null;
             } else {
@@ -15968,13 +22069,21 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
               remarksBuilder_ = null;
               remarks_ = other.remarks_;
               bitField0_ = (bitField0_ & ~0x00000010);
-              remarksBuilder_ = 
+              remarksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetRemarksFieldBuilder() : null;
             } else {
               remarksBuilder_.addAllMessages(other.remarks_);
             }
           }
+        }
+        if (!other.getGenerationMethod().isEmpty()) {
+          generationMethod_ = other.generationMethod_;
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        if (other.hasTargetCoverage()) {
+          mergeTargetCoverage(other.getTargetCoverage());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -16051,6 +22160,18 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
                 }
                 break;
               } // case 42
+              case 50: {
+                generationMethod_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                input.readMessage(
+                    internalGetTargetCoverageFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -16070,19 +22191,23 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
 
       private double value_ ;
       /**
-       * <code>double value = 1 [json_name = "value"];</code>
+       * <code>double value = 1 [json_name = "value", deprecated = true];</code>
+       * @deprecated oscal.mapping.v1.Coverage.value is deprecated.
+       *     See mapping/v1/mapping.proto;l=116
        * @return The value.
        */
       @java.lang.Override
-      public double getValue() {
+      @java.lang.Deprecated public double getValue() {
         return value_;
       }
       /**
-       * <code>double value = 1 [json_name = "value"];</code>
+       * <code>double value = 1 [json_name = "value", deprecated = true];</code>
+       * @deprecated oscal.mapping.v1.Coverage.value is deprecated.
+       *     See mapping/v1/mapping.proto;l=116
        * @param value The value to set.
        * @return This builder for chaining.
        */
-      public Builder setValue(double value) {
+      @java.lang.Deprecated public Builder setValue(double value) {
 
         value_ = value;
         bitField0_ |= 0x00000001;
@@ -16090,10 +22215,12 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>double value = 1 [json_name = "value"];</code>
+       * <code>double value = 1 [json_name = "value", deprecated = true];</code>
+       * @deprecated oscal.mapping.v1.Coverage.value is deprecated.
+       *     See mapping/v1/mapping.proto;l=116
        * @return This builder for chaining.
        */
-      public Builder clearValue() {
+      @java.lang.Deprecated public Builder clearValue() {
         bitField0_ = (bitField0_ & ~0x00000001);
         value_ = 0D;
         onChanged();
@@ -16102,10 +22229,12 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
 
       private java.lang.Object method_ = "";
       /**
-       * <code>string method = 2 [json_name = "method"];</code>
+       * <code>string method = 2 [json_name = "method", deprecated = true];</code>
+       * @deprecated oscal.mapping.v1.Coverage.method is deprecated.
+       *     See mapping/v1/mapping.proto;l=117
        * @return The method.
        */
-      public java.lang.String getMethod() {
+      @java.lang.Deprecated public java.lang.String getMethod() {
         java.lang.Object ref = method_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
@@ -16118,14 +22247,16 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>string method = 2 [json_name = "method"];</code>
+       * <code>string method = 2 [json_name = "method", deprecated = true];</code>
+       * @deprecated oscal.mapping.v1.Coverage.method is deprecated.
+       *     See mapping/v1/mapping.proto;l=117
        * @return The bytes for method.
        */
-      public com.google.protobuf.ByteString
+      @java.lang.Deprecated public com.google.protobuf.ByteString
           getMethodBytes() {
         java.lang.Object ref = method_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           method_ = b;
@@ -16135,11 +22266,13 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>string method = 2 [json_name = "method"];</code>
+       * <code>string method = 2 [json_name = "method", deprecated = true];</code>
+       * @deprecated oscal.mapping.v1.Coverage.method is deprecated.
+       *     See mapping/v1/mapping.proto;l=117
        * @param value The method to set.
        * @return This builder for chaining.
        */
-      public Builder setMethod(
+      @java.lang.Deprecated public Builder setMethod(
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         method_ = value;
@@ -16148,21 +22281,25 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>string method = 2 [json_name = "method"];</code>
+       * <code>string method = 2 [json_name = "method", deprecated = true];</code>
+       * @deprecated oscal.mapping.v1.Coverage.method is deprecated.
+       *     See mapping/v1/mapping.proto;l=117
        * @return This builder for chaining.
        */
-      public Builder clearMethod() {
+      @java.lang.Deprecated public Builder clearMethod() {
         method_ = getDefaultInstance().getMethod();
         bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
       /**
-       * <code>string method = 2 [json_name = "method"];</code>
+       * <code>string method = 2 [json_name = "method", deprecated = true];</code>
+       * @deprecated oscal.mapping.v1.Coverage.method is deprecated.
+       *     See mapping/v1/mapping.proto;l=117
        * @param value The bytes for method to set.
        * @return This builder for chaining.
        */
-      public Builder setMethodBytes(
+      @java.lang.Deprecated public Builder setMethodBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
@@ -16185,9 +22322,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
           oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> propsBuilder_;
 
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Property> getPropsList() {
+      @java.lang.Deprecated public java.util.List<oscal.common.v1.Common.Property> getPropsList() {
         if (propsBuilder_ == null) {
           return java.util.Collections.unmodifiableList(props_);
         } else {
@@ -16195,9 +22332,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
        */
-      public int getPropsCount() {
+      @java.lang.Deprecated public int getPropsCount() {
         if (propsBuilder_ == null) {
           return props_.size();
         } else {
@@ -16205,9 +22342,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
        */
-      public oscal.common.v1.Common.Property getProps(int index) {
+      @java.lang.Deprecated public oscal.common.v1.Common.Property getProps(int index) {
         if (propsBuilder_ == null) {
           return props_.get(index);
         } else {
@@ -16215,9 +22352,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
        */
-      public Builder setProps(
+      @java.lang.Deprecated public Builder setProps(
           int index, oscal.common.v1.Common.Property value) {
         if (propsBuilder_ == null) {
           if (value == null) {
@@ -16232,9 +22369,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
        */
-      public Builder setProps(
+      @java.lang.Deprecated public Builder setProps(
           int index, oscal.common.v1.Common.Property.Builder builderForValue) {
         if (propsBuilder_ == null) {
           ensurePropsIsMutable();
@@ -16246,9 +22383,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
        */
-      public Builder addProps(oscal.common.v1.Common.Property value) {
+      @java.lang.Deprecated public Builder addProps(oscal.common.v1.Common.Property value) {
         if (propsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -16262,9 +22399,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
        */
-      public Builder addProps(
+      @java.lang.Deprecated public Builder addProps(
           int index, oscal.common.v1.Common.Property value) {
         if (propsBuilder_ == null) {
           if (value == null) {
@@ -16279,9 +22416,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
        */
-      public Builder addProps(
+      @java.lang.Deprecated public Builder addProps(
           oscal.common.v1.Common.Property.Builder builderForValue) {
         if (propsBuilder_ == null) {
           ensurePropsIsMutable();
@@ -16293,9 +22430,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
        */
-      public Builder addProps(
+      @java.lang.Deprecated public Builder addProps(
           int index, oscal.common.v1.Common.Property.Builder builderForValue) {
         if (propsBuilder_ == null) {
           ensurePropsIsMutable();
@@ -16307,9 +22444,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
        */
-      public Builder addAllProps(
+      @java.lang.Deprecated public Builder addAllProps(
           java.lang.Iterable<? extends oscal.common.v1.Common.Property> values) {
         if (propsBuilder_ == null) {
           ensurePropsIsMutable();
@@ -16322,9 +22459,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
        */
-      public Builder clearProps() {
+      @java.lang.Deprecated public Builder clearProps() {
         if (propsBuilder_ == null) {
           props_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000004);
@@ -16335,9 +22472,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
        */
-      public Builder removeProps(int index) {
+      @java.lang.Deprecated public Builder removeProps(int index) {
         if (propsBuilder_ == null) {
           ensurePropsIsMutable();
           props_.remove(index);
@@ -16348,16 +22485,16 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
        */
-      public oscal.common.v1.Common.Property.Builder getPropsBuilder(
+      @java.lang.Deprecated public oscal.common.v1.Common.Property.Builder getPropsBuilder(
           int index) {
         return internalGetPropsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
        */
-      public oscal.common.v1.Common.PropertyOrBuilder getPropsOrBuilder(
+      @java.lang.Deprecated public oscal.common.v1.Common.PropertyOrBuilder getPropsOrBuilder(
           int index) {
         if (propsBuilder_ == null) {
           return props_.get(index);  } else {
@@ -16365,9 +22502,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+      @java.lang.Deprecated public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
            getPropsOrBuilderList() {
         if (propsBuilder_ != null) {
           return propsBuilder_.getMessageOrBuilderList();
@@ -16376,29 +22513,29 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
        */
-      public oscal.common.v1.Common.Property.Builder addPropsBuilder() {
+      @java.lang.Deprecated public oscal.common.v1.Common.Property.Builder addPropsBuilder() {
         return internalGetPropsFieldBuilder().addBuilder(
             oscal.common.v1.Common.Property.getDefaultInstance());
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
        */
-      public oscal.common.v1.Common.Property.Builder addPropsBuilder(
+      @java.lang.Deprecated public oscal.common.v1.Common.Property.Builder addPropsBuilder(
           int index) {
         return internalGetPropsFieldBuilder().addBuilder(
             index, oscal.common.v1.Common.Property.getDefaultInstance());
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Property.Builder> 
+      @java.lang.Deprecated public java.util.List<oscal.common.v1.Common.Property.Builder>
            getPropsBuilderList() {
         return internalGetPropsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> 
+          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder>
           internalGetPropsFieldBuilder() {
         if (propsBuilder_ == null) {
           propsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -16425,9 +22562,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
           oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder> linksBuilder_;
 
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Link> getLinksList() {
+      @java.lang.Deprecated public java.util.List<oscal.common.v1.Common.Link> getLinksList() {
         if (linksBuilder_ == null) {
           return java.util.Collections.unmodifiableList(links_);
         } else {
@@ -16435,9 +22572,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
        */
-      public int getLinksCount() {
+      @java.lang.Deprecated public int getLinksCount() {
         if (linksBuilder_ == null) {
           return links_.size();
         } else {
@@ -16445,9 +22582,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
        */
-      public oscal.common.v1.Common.Link getLinks(int index) {
+      @java.lang.Deprecated public oscal.common.v1.Common.Link getLinks(int index) {
         if (linksBuilder_ == null) {
           return links_.get(index);
         } else {
@@ -16455,9 +22592,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
        */
-      public Builder setLinks(
+      @java.lang.Deprecated public Builder setLinks(
           int index, oscal.common.v1.Common.Link value) {
         if (linksBuilder_ == null) {
           if (value == null) {
@@ -16472,9 +22609,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
        */
-      public Builder setLinks(
+      @java.lang.Deprecated public Builder setLinks(
           int index, oscal.common.v1.Common.Link.Builder builderForValue) {
         if (linksBuilder_ == null) {
           ensureLinksIsMutable();
@@ -16486,9 +22623,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
        */
-      public Builder addLinks(oscal.common.v1.Common.Link value) {
+      @java.lang.Deprecated public Builder addLinks(oscal.common.v1.Common.Link value) {
         if (linksBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -16502,9 +22639,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
        */
-      public Builder addLinks(
+      @java.lang.Deprecated public Builder addLinks(
           int index, oscal.common.v1.Common.Link value) {
         if (linksBuilder_ == null) {
           if (value == null) {
@@ -16519,9 +22656,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
        */
-      public Builder addLinks(
+      @java.lang.Deprecated public Builder addLinks(
           oscal.common.v1.Common.Link.Builder builderForValue) {
         if (linksBuilder_ == null) {
           ensureLinksIsMutable();
@@ -16533,9 +22670,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
        */
-      public Builder addLinks(
+      @java.lang.Deprecated public Builder addLinks(
           int index, oscal.common.v1.Common.Link.Builder builderForValue) {
         if (linksBuilder_ == null) {
           ensureLinksIsMutable();
@@ -16547,9 +22684,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
        */
-      public Builder addAllLinks(
+      @java.lang.Deprecated public Builder addAllLinks(
           java.lang.Iterable<? extends oscal.common.v1.Common.Link> values) {
         if (linksBuilder_ == null) {
           ensureLinksIsMutable();
@@ -16562,9 +22699,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
        */
-      public Builder clearLinks() {
+      @java.lang.Deprecated public Builder clearLinks() {
         if (linksBuilder_ == null) {
           links_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000008);
@@ -16575,9 +22712,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
        */
-      public Builder removeLinks(int index) {
+      @java.lang.Deprecated public Builder removeLinks(int index) {
         if (linksBuilder_ == null) {
           ensureLinksIsMutable();
           links_.remove(index);
@@ -16588,16 +22725,16 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
        */
-      public oscal.common.v1.Common.Link.Builder getLinksBuilder(
+      @java.lang.Deprecated public oscal.common.v1.Common.Link.Builder getLinksBuilder(
           int index) {
         return internalGetLinksFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
        */
-      public oscal.common.v1.Common.LinkOrBuilder getLinksOrBuilder(
+      @java.lang.Deprecated public oscal.common.v1.Common.LinkOrBuilder getLinksOrBuilder(
           int index) {
         if (linksBuilder_ == null) {
           return links_.get(index);  } else {
@@ -16605,9 +22742,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+      @java.lang.Deprecated public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
            getLinksOrBuilderList() {
         if (linksBuilder_ != null) {
           return linksBuilder_.getMessageOrBuilderList();
@@ -16616,29 +22753,29 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
        */
-      public oscal.common.v1.Common.Link.Builder addLinksBuilder() {
+      @java.lang.Deprecated public oscal.common.v1.Common.Link.Builder addLinksBuilder() {
         return internalGetLinksFieldBuilder().addBuilder(
             oscal.common.v1.Common.Link.getDefaultInstance());
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
        */
-      public oscal.common.v1.Common.Link.Builder addLinksBuilder(
+      @java.lang.Deprecated public oscal.common.v1.Common.Link.Builder addLinksBuilder(
           int index) {
         return internalGetLinksFieldBuilder().addBuilder(
             index, oscal.common.v1.Common.Link.getDefaultInstance());
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Link.Builder> 
+      @java.lang.Deprecated public java.util.List<oscal.common.v1.Common.Link.Builder>
            getLinksBuilderList() {
         return internalGetLinksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder> 
+          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder>
           internalGetLinksFieldBuilder() {
         if (linksBuilder_ == null) {
           linksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -16665,9 +22802,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
           oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> remarksBuilder_;
 
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
        */
-      public java.util.List<oscal.common.v1.Common.MarkupMultiline> getRemarksList() {
+      @java.lang.Deprecated public java.util.List<oscal.common.v1.Common.MarkupMultiline> getRemarksList() {
         if (remarksBuilder_ == null) {
           return java.util.Collections.unmodifiableList(remarks_);
         } else {
@@ -16675,9 +22812,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
        */
-      public int getRemarksCount() {
+      @java.lang.Deprecated public int getRemarksCount() {
         if (remarksBuilder_ == null) {
           return remarks_.size();
         } else {
@@ -16685,9 +22822,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
        */
-      public oscal.common.v1.Common.MarkupMultiline getRemarks(int index) {
+      @java.lang.Deprecated public oscal.common.v1.Common.MarkupMultiline getRemarks(int index) {
         if (remarksBuilder_ == null) {
           return remarks_.get(index);
         } else {
@@ -16695,9 +22832,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
        */
-      public Builder setRemarks(
+      @java.lang.Deprecated public Builder setRemarks(
           int index, oscal.common.v1.Common.MarkupMultiline value) {
         if (remarksBuilder_ == null) {
           if (value == null) {
@@ -16712,9 +22849,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
        */
-      public Builder setRemarks(
+      @java.lang.Deprecated public Builder setRemarks(
           int index, oscal.common.v1.Common.MarkupMultiline.Builder builderForValue) {
         if (remarksBuilder_ == null) {
           ensureRemarksIsMutable();
@@ -16726,9 +22863,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
        */
-      public Builder addRemarks(oscal.common.v1.Common.MarkupMultiline value) {
+      @java.lang.Deprecated public Builder addRemarks(oscal.common.v1.Common.MarkupMultiline value) {
         if (remarksBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -16742,9 +22879,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
        */
-      public Builder addRemarks(
+      @java.lang.Deprecated public Builder addRemarks(
           int index, oscal.common.v1.Common.MarkupMultiline value) {
         if (remarksBuilder_ == null) {
           if (value == null) {
@@ -16759,9 +22896,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
        */
-      public Builder addRemarks(
+      @java.lang.Deprecated public Builder addRemarks(
           oscal.common.v1.Common.MarkupMultiline.Builder builderForValue) {
         if (remarksBuilder_ == null) {
           ensureRemarksIsMutable();
@@ -16773,9 +22910,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
        */
-      public Builder addRemarks(
+      @java.lang.Deprecated public Builder addRemarks(
           int index, oscal.common.v1.Common.MarkupMultiline.Builder builderForValue) {
         if (remarksBuilder_ == null) {
           ensureRemarksIsMutable();
@@ -16787,9 +22924,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
        */
-      public Builder addAllRemarks(
+      @java.lang.Deprecated public Builder addAllRemarks(
           java.lang.Iterable<? extends oscal.common.v1.Common.MarkupMultiline> values) {
         if (remarksBuilder_ == null) {
           ensureRemarksIsMutable();
@@ -16802,9 +22939,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
        */
-      public Builder clearRemarks() {
+      @java.lang.Deprecated public Builder clearRemarks() {
         if (remarksBuilder_ == null) {
           remarks_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000010);
@@ -16815,9 +22952,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
        */
-      public Builder removeRemarks(int index) {
+      @java.lang.Deprecated public Builder removeRemarks(int index) {
         if (remarksBuilder_ == null) {
           ensureRemarksIsMutable();
           remarks_.remove(index);
@@ -16828,16 +22965,16 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
        */
-      public oscal.common.v1.Common.MarkupMultiline.Builder getRemarksBuilder(
+      @java.lang.Deprecated public oscal.common.v1.Common.MarkupMultiline.Builder getRemarksBuilder(
           int index) {
         return internalGetRemarksFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
        */
-      public oscal.common.v1.Common.MarkupMultilineOrBuilder getRemarksOrBuilder(
+      @java.lang.Deprecated public oscal.common.v1.Common.MarkupMultilineOrBuilder getRemarksOrBuilder(
           int index) {
         if (remarksBuilder_ == null) {
           return remarks_.get(index);  } else {
@@ -16845,9 +22982,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+      @java.lang.Deprecated public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
            getRemarksOrBuilderList() {
         if (remarksBuilder_ != null) {
           return remarksBuilder_.getMessageOrBuilderList();
@@ -16856,29 +22993,29 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
        */
-      public oscal.common.v1.Common.MarkupMultiline.Builder addRemarksBuilder() {
+      @java.lang.Deprecated public oscal.common.v1.Common.MarkupMultiline.Builder addRemarksBuilder() {
         return internalGetRemarksFieldBuilder().addBuilder(
             oscal.common.v1.Common.MarkupMultiline.getDefaultInstance());
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
        */
-      public oscal.common.v1.Common.MarkupMultiline.Builder addRemarksBuilder(
+      @java.lang.Deprecated public oscal.common.v1.Common.MarkupMultiline.Builder addRemarksBuilder(
           int index) {
         return internalGetRemarksFieldBuilder().addBuilder(
             index, oscal.common.v1.Common.MarkupMultiline.getDefaultInstance());
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
        */
-      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder> 
+      @java.lang.Deprecated public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder>
            getRemarksBuilderList() {
         return internalGetRemarksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetRemarksFieldBuilder() {
         if (remarksBuilder_ == null) {
           remarksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -16890,6 +23027,199 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
           remarks_ = null;
         }
         return remarksBuilder_;
+      }
+
+      private java.lang.Object generationMethod_ = "";
+      /**
+       * <code>string generation_method = 6 [json_name = "generationMethod"];</code>
+       * @return The generationMethod.
+       */
+      public java.lang.String getGenerationMethod() {
+        java.lang.Object ref = generationMethod_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          generationMethod_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string generation_method = 6 [json_name = "generationMethod"];</code>
+       * @return The bytes for generationMethod.
+       */
+      public com.google.protobuf.ByteString
+          getGenerationMethodBytes() {
+        java.lang.Object ref = generationMethod_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          generationMethod_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string generation_method = 6 [json_name = "generationMethod"];</code>
+       * @param value The generationMethod to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGenerationMethod(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        generationMethod_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string generation_method = 6 [json_name = "generationMethod"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGenerationMethod() {
+        generationMethod_ = getDefaultInstance().getGenerationMethod();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string generation_method = 6 [json_name = "generationMethod"];</code>
+       * @param value The bytes for generationMethod to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGenerationMethodBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        generationMethod_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+
+      private oscal.common.v1.Common.Decimal targetCoverage_;
+      private com.google.protobuf.SingleFieldBuilder<
+          oscal.common.v1.Common.Decimal, oscal.common.v1.Common.Decimal.Builder, oscal.common.v1.Common.DecimalOrBuilder> targetCoverageBuilder_;
+      /**
+       * <code>.oscal.common.v1.Decimal target_coverage = 7 [json_name = "targetCoverage"];</code>
+       * @return Whether the targetCoverage field is set.
+       */
+      public boolean hasTargetCoverage() {
+        return ((bitField0_ & 0x00000040) != 0);
+      }
+      /**
+       * <code>.oscal.common.v1.Decimal target_coverage = 7 [json_name = "targetCoverage"];</code>
+       * @return The targetCoverage.
+       */
+      public oscal.common.v1.Common.Decimal getTargetCoverage() {
+        if (targetCoverageBuilder_ == null) {
+          return targetCoverage_ == null ? oscal.common.v1.Common.Decimal.getDefaultInstance() : targetCoverage_;
+        } else {
+          return targetCoverageBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.oscal.common.v1.Decimal target_coverage = 7 [json_name = "targetCoverage"];</code>
+       */
+      public Builder setTargetCoverage(oscal.common.v1.Common.Decimal value) {
+        if (targetCoverageBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          targetCoverage_ = value;
+        } else {
+          targetCoverageBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.Decimal target_coverage = 7 [json_name = "targetCoverage"];</code>
+       */
+      public Builder setTargetCoverage(
+          oscal.common.v1.Common.Decimal.Builder builderForValue) {
+        if (targetCoverageBuilder_ == null) {
+          targetCoverage_ = builderForValue.build();
+        } else {
+          targetCoverageBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.Decimal target_coverage = 7 [json_name = "targetCoverage"];</code>
+       */
+      public Builder mergeTargetCoverage(oscal.common.v1.Common.Decimal value) {
+        if (targetCoverageBuilder_ == null) {
+          if (((bitField0_ & 0x00000040) != 0) &&
+            targetCoverage_ != null &&
+            targetCoverage_ != oscal.common.v1.Common.Decimal.getDefaultInstance()) {
+            getTargetCoverageBuilder().mergeFrom(value);
+          } else {
+            targetCoverage_ = value;
+          }
+        } else {
+          targetCoverageBuilder_.mergeFrom(value);
+        }
+        if (targetCoverage_ != null) {
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.Decimal target_coverage = 7 [json_name = "targetCoverage"];</code>
+       */
+      public Builder clearTargetCoverage() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        targetCoverage_ = null;
+        if (targetCoverageBuilder_ != null) {
+          targetCoverageBuilder_.dispose();
+          targetCoverageBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.Decimal target_coverage = 7 [json_name = "targetCoverage"];</code>
+       */
+      public oscal.common.v1.Common.Decimal.Builder getTargetCoverageBuilder() {
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return internalGetTargetCoverageFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.oscal.common.v1.Decimal target_coverage = 7 [json_name = "targetCoverage"];</code>
+       */
+      public oscal.common.v1.Common.DecimalOrBuilder getTargetCoverageOrBuilder() {
+        if (targetCoverageBuilder_ != null) {
+          return targetCoverageBuilder_.getMessageOrBuilder();
+        } else {
+          return targetCoverage_ == null ?
+              oscal.common.v1.Common.Decimal.getDefaultInstance() : targetCoverage_;
+        }
+      }
+      /**
+       * <code>.oscal.common.v1.Decimal target_coverage = 7 [json_name = "targetCoverage"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          oscal.common.v1.Common.Decimal, oscal.common.v1.Common.Decimal.Builder, oscal.common.v1.Common.DecimalOrBuilder>
+          internalGetTargetCoverageFieldBuilder() {
+        if (targetCoverageBuilder_ == null) {
+          targetCoverageBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              oscal.common.v1.Common.Decimal, oscal.common.v1.Common.Decimal.Builder, oscal.common.v1.Common.DecimalOrBuilder>(
+                  getTargetCoverage(),
+                  getParentForChildren(),
+                  isClean());
+          targetCoverage_ = null;
+        }
+        return targetCoverageBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:oscal.mapping.v1.Coverage)
@@ -16948,111 +23278,161 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int32 count = 1 [json_name = "count"];</code>
+     * <code>int32 count = 1 [json_name = "count", deprecated = true];</code>
+     * @deprecated oscal.mapping.v1.GapSummary.count is deprecated.
+     *     See mapping/v1/mapping.proto;l=128
      * @return The count.
      */
-    int getCount();
+    @java.lang.Deprecated int getCount();
 
     /**
-     * <code>repeated string gaps = 2 [json_name = "gaps"];</code>
+     * <code>repeated string gaps = 2 [json_name = "gaps", deprecated = true];</code>
+     * @deprecated oscal.mapping.v1.GapSummary.gaps is deprecated.
+     *     See mapping/v1/mapping.proto;l=129
      * @return A list containing the gaps.
      */
-    java.util.List<java.lang.String>
+    @java.lang.Deprecated java.util.List<java.lang.String>
         getGapsList();
     /**
-     * <code>repeated string gaps = 2 [json_name = "gaps"];</code>
+     * <code>repeated string gaps = 2 [json_name = "gaps", deprecated = true];</code>
+     * @deprecated oscal.mapping.v1.GapSummary.gaps is deprecated.
+     *     See mapping/v1/mapping.proto;l=129
      * @return The count of gaps.
      */
-    int getGapsCount();
+    @java.lang.Deprecated int getGapsCount();
     /**
-     * <code>repeated string gaps = 2 [json_name = "gaps"];</code>
+     * <code>repeated string gaps = 2 [json_name = "gaps", deprecated = true];</code>
+     * @deprecated oscal.mapping.v1.GapSummary.gaps is deprecated.
+     *     See mapping/v1/mapping.proto;l=129
      * @param index The index of the element to return.
      * @return The gaps at the given index.
      */
-    java.lang.String getGaps(int index);
+    @java.lang.Deprecated java.lang.String getGaps(int index);
     /**
-     * <code>repeated string gaps = 2 [json_name = "gaps"];</code>
+     * <code>repeated string gaps = 2 [json_name = "gaps", deprecated = true];</code>
+     * @deprecated oscal.mapping.v1.GapSummary.gaps is deprecated.
+     *     See mapping/v1/mapping.proto;l=129
      * @param index The index of the value to return.
      * @return The bytes of the gaps at the given index.
      */
-    com.google.protobuf.ByteString
+    @java.lang.Deprecated com.google.protobuf.ByteString
         getGapsBytes(int index);
 
     /**
-     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
      */
-    java.util.List<oscal.common.v1.Common.Property> 
+    @java.lang.Deprecated java.util.List<oscal.common.v1.Common.Property>
         getPropsList();
     /**
-     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
      */
-    oscal.common.v1.Common.Property getProps(int index);
+    @java.lang.Deprecated oscal.common.v1.Common.Property getProps(int index);
     /**
-     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
      */
-    int getPropsCount();
+    @java.lang.Deprecated int getPropsCount();
     /**
-     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    @java.lang.Deprecated java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList();
     /**
-     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
      */
-    oscal.common.v1.Common.PropertyOrBuilder getPropsOrBuilder(
+    @java.lang.Deprecated oscal.common.v1.Common.PropertyOrBuilder getPropsOrBuilder(
         int index);
 
     /**
-     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
      */
-    java.util.List<oscal.common.v1.Common.Link> 
+    @java.lang.Deprecated java.util.List<oscal.common.v1.Common.Link>
         getLinksList();
     /**
-     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
      */
-    oscal.common.v1.Common.Link getLinks(int index);
+    @java.lang.Deprecated oscal.common.v1.Common.Link getLinks(int index);
     /**
-     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
      */
-    int getLinksCount();
+    @java.lang.Deprecated int getLinksCount();
     /**
-     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    @java.lang.Deprecated java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList();
     /**
-     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
      */
-    oscal.common.v1.Common.LinkOrBuilder getLinksOrBuilder(
+    @java.lang.Deprecated oscal.common.v1.Common.LinkOrBuilder getLinksOrBuilder(
         int index);
 
     /**
-     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
      */
-    java.util.List<oscal.common.v1.Common.MarkupMultiline> 
+    @java.lang.Deprecated java.util.List<oscal.common.v1.Common.MarkupMultiline>
         getRemarksList();
     /**
-     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
      */
-    oscal.common.v1.Common.MarkupMultiline getRemarks(int index);
+    @java.lang.Deprecated oscal.common.v1.Common.MarkupMultiline getRemarks(int index);
     /**
-     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
      */
-    int getRemarksCount();
+    @java.lang.Deprecated int getRemarksCount();
     /**
-     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    @java.lang.Deprecated java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList();
     /**
-     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
      */
-    oscal.common.v1.Common.MarkupMultilineOrBuilder getRemarksOrBuilder(
+    @java.lang.Deprecated oscal.common.v1.Common.MarkupMultilineOrBuilder getRemarksOrBuilder(
+        int index);
+
+    /**
+     * <code>.oscal.common.v1.UUID uuid = 6 [json_name = "uuid"];</code>
+     * @return Whether the uuid field is set.
+     */
+    boolean hasUuid();
+    /**
+     * <code>.oscal.common.v1.UUID uuid = 6 [json_name = "uuid"];</code>
+     * @return The uuid.
+     */
+    oscal.common.v1.Common.UUID getUuid();
+    /**
+     * <code>.oscal.common.v1.UUID uuid = 6 [json_name = "uuid"];</code>
+     */
+    oscal.common.v1.Common.UUIDOrBuilder getUuidOrBuilder();
+
+    /**
+     * <code>repeated .oscal.mapping.v1.SelectControlById unmapped_controls = 7 [json_name = "unmappedControls"];</code>
+     */
+    java.util.List<oscal.mapping.v1.Mapping.SelectControlById>
+        getUnmappedControlsList();
+    /**
+     * <code>repeated .oscal.mapping.v1.SelectControlById unmapped_controls = 7 [json_name = "unmappedControls"];</code>
+     */
+    oscal.mapping.v1.Mapping.SelectControlById getUnmappedControls(int index);
+    /**
+     * <code>repeated .oscal.mapping.v1.SelectControlById unmapped_controls = 7 [json_name = "unmappedControls"];</code>
+     */
+    int getUnmappedControlsCount();
+    /**
+     * <code>repeated .oscal.mapping.v1.SelectControlById unmapped_controls = 7 [json_name = "unmappedControls"];</code>
+     */
+    java.util.List<? extends oscal.mapping.v1.Mapping.SelectControlByIdOrBuilder>
+        getUnmappedControlsOrBuilderList();
+    /**
+     * <code>repeated .oscal.mapping.v1.SelectControlById unmapped_controls = 7 [json_name = "unmappedControls"];</code>
+     */
+    oscal.mapping.v1.Mapping.SelectControlByIdOrBuilder getUnmappedControlsOrBuilder(
         int index);
   }
   /**
    * <pre>
-   * GapSummary represents a gap summary
+   * GapSummary selects controls that are not mapped.
+   * Fields 1-5 are retained for wire compatibility with the prototype model.
    * </pre>
    *
    * Protobuf type {@code oscal.mapping.v1.GapSummary}
@@ -17081,6 +23461,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
       props_ = java.util.Collections.emptyList();
       links_ = java.util.Collections.emptyList();
       remarks_ = java.util.Collections.emptyList();
+      unmappedControls_ = java.util.Collections.emptyList();
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
@@ -17101,14 +23482,17 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
               oscal.mapping.v1.Mapping.GapSummary.class, oscal.mapping.v1.Mapping.GapSummary.Builder.class);
     }
 
+    private int bitField0_;
     public static final int COUNT_FIELD_NUMBER = 1;
     private int count_ = 0;
     /**
-     * <code>int32 count = 1 [json_name = "count"];</code>
+     * <code>int32 count = 1 [json_name = "count", deprecated = true];</code>
+     * @deprecated oscal.mapping.v1.GapSummary.count is deprecated.
+     *     See mapping/v1/mapping.proto;l=128
      * @return The count.
      */
     @java.lang.Override
-    public int getCount() {
+    @java.lang.Deprecated public int getCount() {
       return count_;
     }
 
@@ -17117,34 +23501,42 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
     private com.google.protobuf.LazyStringArrayList gaps_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
     /**
-     * <code>repeated string gaps = 2 [json_name = "gaps"];</code>
+     * <code>repeated string gaps = 2 [json_name = "gaps", deprecated = true];</code>
+     * @deprecated oscal.mapping.v1.GapSummary.gaps is deprecated.
+     *     See mapping/v1/mapping.proto;l=129
      * @return A list containing the gaps.
      */
-    public com.google.protobuf.ProtocolStringList
+    @java.lang.Deprecated public com.google.protobuf.ProtocolStringList
         getGapsList() {
       return gaps_;
     }
     /**
-     * <code>repeated string gaps = 2 [json_name = "gaps"];</code>
+     * <code>repeated string gaps = 2 [json_name = "gaps", deprecated = true];</code>
+     * @deprecated oscal.mapping.v1.GapSummary.gaps is deprecated.
+     *     See mapping/v1/mapping.proto;l=129
      * @return The count of gaps.
      */
-    public int getGapsCount() {
+    @java.lang.Deprecated public int getGapsCount() {
       return gaps_.size();
     }
     /**
-     * <code>repeated string gaps = 2 [json_name = "gaps"];</code>
+     * <code>repeated string gaps = 2 [json_name = "gaps", deprecated = true];</code>
+     * @deprecated oscal.mapping.v1.GapSummary.gaps is deprecated.
+     *     See mapping/v1/mapping.proto;l=129
      * @param index The index of the element to return.
      * @return The gaps at the given index.
      */
-    public java.lang.String getGaps(int index) {
+    @java.lang.Deprecated public java.lang.String getGaps(int index) {
       return gaps_.get(index);
     }
     /**
-     * <code>repeated string gaps = 2 [json_name = "gaps"];</code>
+     * <code>repeated string gaps = 2 [json_name = "gaps", deprecated = true];</code>
+     * @deprecated oscal.mapping.v1.GapSummary.gaps is deprecated.
+     *     See mapping/v1/mapping.proto;l=129
      * @param index The index of the value to return.
      * @return The bytes of the gaps at the given index.
      */
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getGapsBytes(int index) {
       return gaps_.getByteString(index);
     }
@@ -17153,39 +23545,39 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
     @SuppressWarnings("serial")
     private java.util.List<oscal.common.v1.Common.Property> props_;
     /**
-     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
      */
     @java.lang.Override
-    public java.util.List<oscal.common.v1.Common.Property> getPropsList() {
+    @java.lang.Deprecated public java.util.List<oscal.common.v1.Common.Property> getPropsList() {
       return props_;
     }
     /**
-     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    @java.lang.Deprecated public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList() {
       return props_;
     }
     /**
-     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
      */
     @java.lang.Override
-    public int getPropsCount() {
+    @java.lang.Deprecated public int getPropsCount() {
       return props_.size();
     }
     /**
-     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
      */
     @java.lang.Override
-    public oscal.common.v1.Common.Property getProps(int index) {
+    @java.lang.Deprecated public oscal.common.v1.Common.Property getProps(int index) {
       return props_.get(index);
     }
     /**
-     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+     * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
      */
     @java.lang.Override
-    public oscal.common.v1.Common.PropertyOrBuilder getPropsOrBuilder(
+    @java.lang.Deprecated public oscal.common.v1.Common.PropertyOrBuilder getPropsOrBuilder(
         int index) {
       return props_.get(index);
     }
@@ -17194,39 +23586,39 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
     @SuppressWarnings("serial")
     private java.util.List<oscal.common.v1.Common.Link> links_;
     /**
-     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
      */
     @java.lang.Override
-    public java.util.List<oscal.common.v1.Common.Link> getLinksList() {
+    @java.lang.Deprecated public java.util.List<oscal.common.v1.Common.Link> getLinksList() {
       return links_;
     }
     /**
-     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    @java.lang.Deprecated public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList() {
       return links_;
     }
     /**
-     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
      */
     @java.lang.Override
-    public int getLinksCount() {
+    @java.lang.Deprecated public int getLinksCount() {
       return links_.size();
     }
     /**
-     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
      */
     @java.lang.Override
-    public oscal.common.v1.Common.Link getLinks(int index) {
+    @java.lang.Deprecated public oscal.common.v1.Common.Link getLinks(int index) {
       return links_.get(index);
     }
     /**
-     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+     * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
      */
     @java.lang.Override
-    public oscal.common.v1.Common.LinkOrBuilder getLinksOrBuilder(
+    @java.lang.Deprecated public oscal.common.v1.Common.LinkOrBuilder getLinksOrBuilder(
         int index) {
       return links_.get(index);
     }
@@ -17235,41 +23627,108 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
     @SuppressWarnings("serial")
     private java.util.List<oscal.common.v1.Common.MarkupMultiline> remarks_;
     /**
-     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
      */
     @java.lang.Override
-    public java.util.List<oscal.common.v1.Common.MarkupMultiline> getRemarksList() {
+    @java.lang.Deprecated public java.util.List<oscal.common.v1.Common.MarkupMultiline> getRemarksList() {
       return remarks_;
     }
     /**
-     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    @java.lang.Deprecated public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList() {
       return remarks_;
     }
     /**
-     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
      */
     @java.lang.Override
-    public int getRemarksCount() {
+    @java.lang.Deprecated public int getRemarksCount() {
       return remarks_.size();
     }
     /**
-     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
      */
     @java.lang.Override
-    public oscal.common.v1.Common.MarkupMultiline getRemarks(int index) {
+    @java.lang.Deprecated public oscal.common.v1.Common.MarkupMultiline getRemarks(int index) {
       return remarks_.get(index);
     }
     /**
-     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
      */
     @java.lang.Override
-    public oscal.common.v1.Common.MarkupMultilineOrBuilder getRemarksOrBuilder(
+    @java.lang.Deprecated public oscal.common.v1.Common.MarkupMultilineOrBuilder getRemarksOrBuilder(
         int index) {
       return remarks_.get(index);
+    }
+
+    public static final int UUID_FIELD_NUMBER = 6;
+    private oscal.common.v1.Common.UUID uuid_;
+    /**
+     * <code>.oscal.common.v1.UUID uuid = 6 [json_name = "uuid"];</code>
+     * @return Whether the uuid field is set.
+     */
+    @java.lang.Override
+    public boolean hasUuid() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.oscal.common.v1.UUID uuid = 6 [json_name = "uuid"];</code>
+     * @return The uuid.
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.UUID getUuid() {
+      return uuid_ == null ? oscal.common.v1.Common.UUID.getDefaultInstance() : uuid_;
+    }
+    /**
+     * <code>.oscal.common.v1.UUID uuid = 6 [json_name = "uuid"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.UUIDOrBuilder getUuidOrBuilder() {
+      return uuid_ == null ? oscal.common.v1.Common.UUID.getDefaultInstance() : uuid_;
+    }
+
+    public static final int UNMAPPED_CONTROLS_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private java.util.List<oscal.mapping.v1.Mapping.SelectControlById> unmappedControls_;
+    /**
+     * <code>repeated .oscal.mapping.v1.SelectControlById unmapped_controls = 7 [json_name = "unmappedControls"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<oscal.mapping.v1.Mapping.SelectControlById> getUnmappedControlsList() {
+      return unmappedControls_;
+    }
+    /**
+     * <code>repeated .oscal.mapping.v1.SelectControlById unmapped_controls = 7 [json_name = "unmappedControls"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends oscal.mapping.v1.Mapping.SelectControlByIdOrBuilder>
+        getUnmappedControlsOrBuilderList() {
+      return unmappedControls_;
+    }
+    /**
+     * <code>repeated .oscal.mapping.v1.SelectControlById unmapped_controls = 7 [json_name = "unmappedControls"];</code>
+     */
+    @java.lang.Override
+    public int getUnmappedControlsCount() {
+      return unmappedControls_.size();
+    }
+    /**
+     * <code>repeated .oscal.mapping.v1.SelectControlById unmapped_controls = 7 [json_name = "unmappedControls"];</code>
+     */
+    @java.lang.Override
+    public oscal.mapping.v1.Mapping.SelectControlById getUnmappedControls(int index) {
+      return unmappedControls_.get(index);
+    }
+    /**
+     * <code>repeated .oscal.mapping.v1.SelectControlById unmapped_controls = 7 [json_name = "unmappedControls"];</code>
+     */
+    @java.lang.Override
+    public oscal.mapping.v1.Mapping.SelectControlByIdOrBuilder getUnmappedControlsOrBuilder(
+        int index) {
+      return unmappedControls_.get(index);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -17300,6 +23759,12 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
       }
       for (int i = 0; i < remarks_.size(); i++) {
         output.writeMessage(5, remarks_.get(i));
+      }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeMessage(6, getUuid());
+      }
+      for (int i = 0; i < unmappedControls_.size(); i++) {
+        output.writeMessage(7, unmappedControls_.get(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -17344,6 +23809,19 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
             }
             size += 1 * count;
           }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getUuid());
+      }
+
+          {
+            final int count = unmappedControls_.size();
+            for (int i = 0; i < count; i++) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeMessageSizeNoTag(unmappedControls_.get(i));
+            }
+            size += 1 * count;
+          }
       return size;
     }
     @java.lang.Override
@@ -17378,6 +23856,13 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
           .equals(other.getLinksList())) return false;
       if (!getRemarksList()
           .equals(other.getRemarksList())) return false;
+      if (hasUuid() != other.hasUuid()) return false;
+      if (hasUuid()) {
+        if (!getUuid()
+            .equals(other.getUuid())) return false;
+      }
+      if (!getUnmappedControlsList()
+          .equals(other.getUnmappedControlsList())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -17406,6 +23891,14 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
       if (getRemarksCount() > 0) {
         hash = (37 * hash) + REMARKS_FIELD_NUMBER;
         hash = (53 * hash) + getRemarksList().hashCode();
+      }
+      if (hasUuid()) {
+        hash = (37 * hash) + UUID_FIELD_NUMBER;
+        hash = (53 * hash) + getUuid().hashCode();
+      }
+      if (getUnmappedControlsCount() > 0) {
+        hash = (37 * hash) + UNMAPPED_CONTROLS_FIELD_NUMBER;
+        hash = (53 * hash) + getUnmappedControlsList().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -17506,7 +23999,8 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
     }
     /**
      * <pre>
-     * GapSummary represents a gap summary
+     * GapSummary selects controls that are not mapped.
+     * Fields 1-5 are retained for wire compatibility with the prototype model.
      * </pre>
      *
      * Protobuf type {@code oscal.mapping.v1.GapSummary}
@@ -17530,13 +24024,23 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
 
       // Construct using oscal.mapping.v1.Mapping.GapSummary.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage
+                .alwaysUseFieldBuilders) {
+          internalGetPropsFieldBuilder();
+          internalGetLinksFieldBuilder();
+          internalGetRemarksFieldBuilder();
+          internalGetUuidFieldBuilder();
+          internalGetUnmappedControlsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -17566,6 +24070,18 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
           remarksBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000010);
+        uuid_ = null;
+        if (uuidBuilder_ != null) {
+          uuidBuilder_.dispose();
+          uuidBuilder_ = null;
+        }
+        if (unmappedControlsBuilder_ == null) {
+          unmappedControls_ = java.util.Collections.emptyList();
+        } else {
+          unmappedControls_ = null;
+          unmappedControlsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000040);
         return this;
       }
 
@@ -17626,6 +24142,15 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         } else {
           result.remarks_ = remarksBuilder_.build();
         }
+        if (unmappedControlsBuilder_ == null) {
+          if (((bitField0_ & 0x00000040) != 0)) {
+            unmappedControls_ = java.util.Collections.unmodifiableList(unmappedControls_);
+            bitField0_ = (bitField0_ & ~0x00000040);
+          }
+          result.unmappedControls_ = unmappedControls_;
+        } else {
+          result.unmappedControls_ = unmappedControlsBuilder_.build();
+        }
       }
 
       private void buildPartial0(oscal.mapping.v1.Mapping.GapSummary result) {
@@ -17637,6 +24162,14 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
           gaps_.makeImmutable();
           result.gaps_ = gaps_;
         }
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.uuid_ = uuidBuilder_ == null
+              ? uuid_
+              : uuidBuilder_.build();
+          to_bitField0_ |= 0x00000001;
+        }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -17682,7 +24215,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
               propsBuilder_ = null;
               props_ = other.props_;
               bitField0_ = (bitField0_ & ~0x00000004);
-              propsBuilder_ = 
+              propsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetPropsFieldBuilder() : null;
             } else {
@@ -17708,7 +24241,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
               linksBuilder_ = null;
               links_ = other.links_;
               bitField0_ = (bitField0_ & ~0x00000008);
-              linksBuilder_ = 
+              linksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetLinksFieldBuilder() : null;
             } else {
@@ -17734,11 +24267,40 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
               remarksBuilder_ = null;
               remarks_ = other.remarks_;
               bitField0_ = (bitField0_ & ~0x00000010);
-              remarksBuilder_ = 
+              remarksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetRemarksFieldBuilder() : null;
             } else {
               remarksBuilder_.addAllMessages(other.remarks_);
+            }
+          }
+        }
+        if (other.hasUuid()) {
+          mergeUuid(other.getUuid());
+        }
+        if (unmappedControlsBuilder_ == null) {
+          if (!other.unmappedControls_.isEmpty()) {
+            if (unmappedControls_.isEmpty()) {
+              unmappedControls_ = other.unmappedControls_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+            } else {
+              ensureUnmappedControlsIsMutable();
+              unmappedControls_.addAll(other.unmappedControls_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.unmappedControls_.isEmpty()) {
+            if (unmappedControlsBuilder_.isEmpty()) {
+              unmappedControlsBuilder_.dispose();
+              unmappedControlsBuilder_ = null;
+              unmappedControls_ = other.unmappedControls_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+              unmappedControlsBuilder_ =
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   internalGetUnmappedControlsFieldBuilder() : null;
+            } else {
+              unmappedControlsBuilder_.addAllMessages(other.unmappedControls_);
             }
           }
         }
@@ -17817,6 +24379,26 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
                 }
                 break;
               } // case 42
+              case 50: {
+                input.readMessage(
+                    internalGetUuidFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                oscal.mapping.v1.Mapping.SelectControlById m =
+                    input.readMessage(
+                        oscal.mapping.v1.Mapping.SelectControlById.parser(),
+                        extensionRegistry);
+                if (unmappedControlsBuilder_ == null) {
+                  ensureUnmappedControlsIsMutable();
+                  unmappedControls_.add(m);
+                } else {
+                  unmappedControlsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 58
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -17836,19 +24418,23 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
 
       private int count_ ;
       /**
-       * <code>int32 count = 1 [json_name = "count"];</code>
+       * <code>int32 count = 1 [json_name = "count", deprecated = true];</code>
+       * @deprecated oscal.mapping.v1.GapSummary.count is deprecated.
+       *     See mapping/v1/mapping.proto;l=128
        * @return The count.
        */
       @java.lang.Override
-      public int getCount() {
+      @java.lang.Deprecated public int getCount() {
         return count_;
       }
       /**
-       * <code>int32 count = 1 [json_name = "count"];</code>
+       * <code>int32 count = 1 [json_name = "count", deprecated = true];</code>
+       * @deprecated oscal.mapping.v1.GapSummary.count is deprecated.
+       *     See mapping/v1/mapping.proto;l=128
        * @param value The count to set.
        * @return This builder for chaining.
        */
-      public Builder setCount(int value) {
+      @java.lang.Deprecated public Builder setCount(int value) {
 
         count_ = value;
         bitField0_ |= 0x00000001;
@@ -17856,10 +24442,12 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>int32 count = 1 [json_name = "count"];</code>
+       * <code>int32 count = 1 [json_name = "count", deprecated = true];</code>
+       * @deprecated oscal.mapping.v1.GapSummary.count is deprecated.
+       *     See mapping/v1/mapping.proto;l=128
        * @return This builder for chaining.
        */
-      public Builder clearCount() {
+      @java.lang.Deprecated public Builder clearCount() {
         bitField0_ = (bitField0_ & ~0x00000001);
         count_ = 0;
         onChanged();
@@ -17875,45 +24463,55 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         bitField0_ |= 0x00000002;
       }
       /**
-       * <code>repeated string gaps = 2 [json_name = "gaps"];</code>
+       * <code>repeated string gaps = 2 [json_name = "gaps", deprecated = true];</code>
+       * @deprecated oscal.mapping.v1.GapSummary.gaps is deprecated.
+       *     See mapping/v1/mapping.proto;l=129
        * @return A list containing the gaps.
        */
-      public com.google.protobuf.ProtocolStringList
+      @java.lang.Deprecated public com.google.protobuf.ProtocolStringList
           getGapsList() {
         gaps_.makeImmutable();
         return gaps_;
       }
       /**
-       * <code>repeated string gaps = 2 [json_name = "gaps"];</code>
+       * <code>repeated string gaps = 2 [json_name = "gaps", deprecated = true];</code>
+       * @deprecated oscal.mapping.v1.GapSummary.gaps is deprecated.
+       *     See mapping/v1/mapping.proto;l=129
        * @return The count of gaps.
        */
-      public int getGapsCount() {
+      @java.lang.Deprecated public int getGapsCount() {
         return gaps_.size();
       }
       /**
-       * <code>repeated string gaps = 2 [json_name = "gaps"];</code>
+       * <code>repeated string gaps = 2 [json_name = "gaps", deprecated = true];</code>
+       * @deprecated oscal.mapping.v1.GapSummary.gaps is deprecated.
+       *     See mapping/v1/mapping.proto;l=129
        * @param index The index of the element to return.
        * @return The gaps at the given index.
        */
-      public java.lang.String getGaps(int index) {
+      @java.lang.Deprecated public java.lang.String getGaps(int index) {
         return gaps_.get(index);
       }
       /**
-       * <code>repeated string gaps = 2 [json_name = "gaps"];</code>
+       * <code>repeated string gaps = 2 [json_name = "gaps", deprecated = true];</code>
+       * @deprecated oscal.mapping.v1.GapSummary.gaps is deprecated.
+       *     See mapping/v1/mapping.proto;l=129
        * @param index The index of the value to return.
        * @return The bytes of the gaps at the given index.
        */
-      public com.google.protobuf.ByteString
+      @java.lang.Deprecated public com.google.protobuf.ByteString
           getGapsBytes(int index) {
         return gaps_.getByteString(index);
       }
       /**
-       * <code>repeated string gaps = 2 [json_name = "gaps"];</code>
+       * <code>repeated string gaps = 2 [json_name = "gaps", deprecated = true];</code>
+       * @deprecated oscal.mapping.v1.GapSummary.gaps is deprecated.
+       *     See mapping/v1/mapping.proto;l=129
        * @param index The index to set the value at.
        * @param value The gaps to set.
        * @return This builder for chaining.
        */
-      public Builder setGaps(
+      @java.lang.Deprecated public Builder setGaps(
           int index, java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         ensureGapsIsMutable();
@@ -17923,11 +24521,13 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated string gaps = 2 [json_name = "gaps"];</code>
+       * <code>repeated string gaps = 2 [json_name = "gaps", deprecated = true];</code>
+       * @deprecated oscal.mapping.v1.GapSummary.gaps is deprecated.
+       *     See mapping/v1/mapping.proto;l=129
        * @param value The gaps to add.
        * @return This builder for chaining.
        */
-      public Builder addGaps(
+      @java.lang.Deprecated public Builder addGaps(
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         ensureGapsIsMutable();
@@ -17937,11 +24537,13 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated string gaps = 2 [json_name = "gaps"];</code>
+       * <code>repeated string gaps = 2 [json_name = "gaps", deprecated = true];</code>
+       * @deprecated oscal.mapping.v1.GapSummary.gaps is deprecated.
+       *     See mapping/v1/mapping.proto;l=129
        * @param values The gaps to add.
        * @return This builder for chaining.
        */
-      public Builder addAllGaps(
+      @java.lang.Deprecated public Builder addAllGaps(
           java.lang.Iterable<java.lang.String> values) {
         ensureGapsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -17951,10 +24553,12 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated string gaps = 2 [json_name = "gaps"];</code>
+       * <code>repeated string gaps = 2 [json_name = "gaps", deprecated = true];</code>
+       * @deprecated oscal.mapping.v1.GapSummary.gaps is deprecated.
+       *     See mapping/v1/mapping.proto;l=129
        * @return This builder for chaining.
        */
-      public Builder clearGaps() {
+      @java.lang.Deprecated public Builder clearGaps() {
         gaps_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
         bitField0_ = (bitField0_ & ~0x00000002);;
@@ -17962,11 +24566,13 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated string gaps = 2 [json_name = "gaps"];</code>
+       * <code>repeated string gaps = 2 [json_name = "gaps", deprecated = true];</code>
+       * @deprecated oscal.mapping.v1.GapSummary.gaps is deprecated.
+       *     See mapping/v1/mapping.proto;l=129
        * @param value The bytes of the gaps to add.
        * @return This builder for chaining.
        */
-      public Builder addGapsBytes(
+      @java.lang.Deprecated public Builder addGapsBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
@@ -17990,9 +24596,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
           oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> propsBuilder_;
 
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Property> getPropsList() {
+      @java.lang.Deprecated public java.util.List<oscal.common.v1.Common.Property> getPropsList() {
         if (propsBuilder_ == null) {
           return java.util.Collections.unmodifiableList(props_);
         } else {
@@ -18000,9 +24606,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
        */
-      public int getPropsCount() {
+      @java.lang.Deprecated public int getPropsCount() {
         if (propsBuilder_ == null) {
           return props_.size();
         } else {
@@ -18010,9 +24616,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
        */
-      public oscal.common.v1.Common.Property getProps(int index) {
+      @java.lang.Deprecated public oscal.common.v1.Common.Property getProps(int index) {
         if (propsBuilder_ == null) {
           return props_.get(index);
         } else {
@@ -18020,9 +24626,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
        */
-      public Builder setProps(
+      @java.lang.Deprecated public Builder setProps(
           int index, oscal.common.v1.Common.Property value) {
         if (propsBuilder_ == null) {
           if (value == null) {
@@ -18037,9 +24643,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
        */
-      public Builder setProps(
+      @java.lang.Deprecated public Builder setProps(
           int index, oscal.common.v1.Common.Property.Builder builderForValue) {
         if (propsBuilder_ == null) {
           ensurePropsIsMutable();
@@ -18051,9 +24657,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
        */
-      public Builder addProps(oscal.common.v1.Common.Property value) {
+      @java.lang.Deprecated public Builder addProps(oscal.common.v1.Common.Property value) {
         if (propsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -18067,9 +24673,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
        */
-      public Builder addProps(
+      @java.lang.Deprecated public Builder addProps(
           int index, oscal.common.v1.Common.Property value) {
         if (propsBuilder_ == null) {
           if (value == null) {
@@ -18084,9 +24690,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
        */
-      public Builder addProps(
+      @java.lang.Deprecated public Builder addProps(
           oscal.common.v1.Common.Property.Builder builderForValue) {
         if (propsBuilder_ == null) {
           ensurePropsIsMutable();
@@ -18098,9 +24704,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
        */
-      public Builder addProps(
+      @java.lang.Deprecated public Builder addProps(
           int index, oscal.common.v1.Common.Property.Builder builderForValue) {
         if (propsBuilder_ == null) {
           ensurePropsIsMutable();
@@ -18112,9 +24718,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
        */
-      public Builder addAllProps(
+      @java.lang.Deprecated public Builder addAllProps(
           java.lang.Iterable<? extends oscal.common.v1.Common.Property> values) {
         if (propsBuilder_ == null) {
           ensurePropsIsMutable();
@@ -18127,9 +24733,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
        */
-      public Builder clearProps() {
+      @java.lang.Deprecated public Builder clearProps() {
         if (propsBuilder_ == null) {
           props_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000004);
@@ -18140,9 +24746,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
        */
-      public Builder removeProps(int index) {
+      @java.lang.Deprecated public Builder removeProps(int index) {
         if (propsBuilder_ == null) {
           ensurePropsIsMutable();
           props_.remove(index);
@@ -18153,16 +24759,16 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
        */
-      public oscal.common.v1.Common.Property.Builder getPropsBuilder(
+      @java.lang.Deprecated public oscal.common.v1.Common.Property.Builder getPropsBuilder(
           int index) {
         return internalGetPropsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
        */
-      public oscal.common.v1.Common.PropertyOrBuilder getPropsOrBuilder(
+      @java.lang.Deprecated public oscal.common.v1.Common.PropertyOrBuilder getPropsOrBuilder(
           int index) {
         if (propsBuilder_ == null) {
           return props_.get(index);  } else {
@@ -18170,9 +24776,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+      @java.lang.Deprecated public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
            getPropsOrBuilderList() {
         if (propsBuilder_ != null) {
           return propsBuilder_.getMessageOrBuilderList();
@@ -18181,29 +24787,29 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
        */
-      public oscal.common.v1.Common.Property.Builder addPropsBuilder() {
+      @java.lang.Deprecated public oscal.common.v1.Common.Property.Builder addPropsBuilder() {
         return internalGetPropsFieldBuilder().addBuilder(
             oscal.common.v1.Common.Property.getDefaultInstance());
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
        */
-      public oscal.common.v1.Common.Property.Builder addPropsBuilder(
+      @java.lang.Deprecated public oscal.common.v1.Common.Property.Builder addPropsBuilder(
           int index) {
         return internalGetPropsFieldBuilder().addBuilder(
             index, oscal.common.v1.Common.Property.getDefaultInstance());
       }
       /**
-       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
+       * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props", deprecated = true];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Property.Builder> 
+      @java.lang.Deprecated public java.util.List<oscal.common.v1.Common.Property.Builder>
            getPropsBuilderList() {
         return internalGetPropsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> 
+          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder>
           internalGetPropsFieldBuilder() {
         if (propsBuilder_ == null) {
           propsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -18230,9 +24836,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
           oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder> linksBuilder_;
 
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Link> getLinksList() {
+      @java.lang.Deprecated public java.util.List<oscal.common.v1.Common.Link> getLinksList() {
         if (linksBuilder_ == null) {
           return java.util.Collections.unmodifiableList(links_);
         } else {
@@ -18240,9 +24846,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
        */
-      public int getLinksCount() {
+      @java.lang.Deprecated public int getLinksCount() {
         if (linksBuilder_ == null) {
           return links_.size();
         } else {
@@ -18250,9 +24856,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
        */
-      public oscal.common.v1.Common.Link getLinks(int index) {
+      @java.lang.Deprecated public oscal.common.v1.Common.Link getLinks(int index) {
         if (linksBuilder_ == null) {
           return links_.get(index);
         } else {
@@ -18260,9 +24866,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
        */
-      public Builder setLinks(
+      @java.lang.Deprecated public Builder setLinks(
           int index, oscal.common.v1.Common.Link value) {
         if (linksBuilder_ == null) {
           if (value == null) {
@@ -18277,9 +24883,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
        */
-      public Builder setLinks(
+      @java.lang.Deprecated public Builder setLinks(
           int index, oscal.common.v1.Common.Link.Builder builderForValue) {
         if (linksBuilder_ == null) {
           ensureLinksIsMutable();
@@ -18291,9 +24897,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
        */
-      public Builder addLinks(oscal.common.v1.Common.Link value) {
+      @java.lang.Deprecated public Builder addLinks(oscal.common.v1.Common.Link value) {
         if (linksBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -18307,9 +24913,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
        */
-      public Builder addLinks(
+      @java.lang.Deprecated public Builder addLinks(
           int index, oscal.common.v1.Common.Link value) {
         if (linksBuilder_ == null) {
           if (value == null) {
@@ -18324,9 +24930,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
        */
-      public Builder addLinks(
+      @java.lang.Deprecated public Builder addLinks(
           oscal.common.v1.Common.Link.Builder builderForValue) {
         if (linksBuilder_ == null) {
           ensureLinksIsMutable();
@@ -18338,9 +24944,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
        */
-      public Builder addLinks(
+      @java.lang.Deprecated public Builder addLinks(
           int index, oscal.common.v1.Common.Link.Builder builderForValue) {
         if (linksBuilder_ == null) {
           ensureLinksIsMutable();
@@ -18352,9 +24958,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
        */
-      public Builder addAllLinks(
+      @java.lang.Deprecated public Builder addAllLinks(
           java.lang.Iterable<? extends oscal.common.v1.Common.Link> values) {
         if (linksBuilder_ == null) {
           ensureLinksIsMutable();
@@ -18367,9 +24973,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
        */
-      public Builder clearLinks() {
+      @java.lang.Deprecated public Builder clearLinks() {
         if (linksBuilder_ == null) {
           links_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000008);
@@ -18380,9 +24986,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
        */
-      public Builder removeLinks(int index) {
+      @java.lang.Deprecated public Builder removeLinks(int index) {
         if (linksBuilder_ == null) {
           ensureLinksIsMutable();
           links_.remove(index);
@@ -18393,16 +24999,16 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
        */
-      public oscal.common.v1.Common.Link.Builder getLinksBuilder(
+      @java.lang.Deprecated public oscal.common.v1.Common.Link.Builder getLinksBuilder(
           int index) {
         return internalGetLinksFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
        */
-      public oscal.common.v1.Common.LinkOrBuilder getLinksOrBuilder(
+      @java.lang.Deprecated public oscal.common.v1.Common.LinkOrBuilder getLinksOrBuilder(
           int index) {
         if (linksBuilder_ == null) {
           return links_.get(index);  } else {
@@ -18410,9 +25016,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+      @java.lang.Deprecated public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
            getLinksOrBuilderList() {
         if (linksBuilder_ != null) {
           return linksBuilder_.getMessageOrBuilderList();
@@ -18421,29 +25027,29 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
        */
-      public oscal.common.v1.Common.Link.Builder addLinksBuilder() {
+      @java.lang.Deprecated public oscal.common.v1.Common.Link.Builder addLinksBuilder() {
         return internalGetLinksFieldBuilder().addBuilder(
             oscal.common.v1.Common.Link.getDefaultInstance());
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
        */
-      public oscal.common.v1.Common.Link.Builder addLinksBuilder(
+      @java.lang.Deprecated public oscal.common.v1.Common.Link.Builder addLinksBuilder(
           int index) {
         return internalGetLinksFieldBuilder().addBuilder(
             index, oscal.common.v1.Common.Link.getDefaultInstance());
       }
       /**
-       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
+       * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links", deprecated = true];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Link.Builder> 
+      @java.lang.Deprecated public java.util.List<oscal.common.v1.Common.Link.Builder>
            getLinksBuilderList() {
         return internalGetLinksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder> 
+          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder>
           internalGetLinksFieldBuilder() {
         if (linksBuilder_ == null) {
           linksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -18470,9 +25076,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
           oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> remarksBuilder_;
 
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
        */
-      public java.util.List<oscal.common.v1.Common.MarkupMultiline> getRemarksList() {
+      @java.lang.Deprecated public java.util.List<oscal.common.v1.Common.MarkupMultiline> getRemarksList() {
         if (remarksBuilder_ == null) {
           return java.util.Collections.unmodifiableList(remarks_);
         } else {
@@ -18480,9 +25086,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
        */
-      public int getRemarksCount() {
+      @java.lang.Deprecated public int getRemarksCount() {
         if (remarksBuilder_ == null) {
           return remarks_.size();
         } else {
@@ -18490,9 +25096,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
        */
-      public oscal.common.v1.Common.MarkupMultiline getRemarks(int index) {
+      @java.lang.Deprecated public oscal.common.v1.Common.MarkupMultiline getRemarks(int index) {
         if (remarksBuilder_ == null) {
           return remarks_.get(index);
         } else {
@@ -18500,9 +25106,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
        */
-      public Builder setRemarks(
+      @java.lang.Deprecated public Builder setRemarks(
           int index, oscal.common.v1.Common.MarkupMultiline value) {
         if (remarksBuilder_ == null) {
           if (value == null) {
@@ -18517,9 +25123,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
        */
-      public Builder setRemarks(
+      @java.lang.Deprecated public Builder setRemarks(
           int index, oscal.common.v1.Common.MarkupMultiline.Builder builderForValue) {
         if (remarksBuilder_ == null) {
           ensureRemarksIsMutable();
@@ -18531,9 +25137,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
        */
-      public Builder addRemarks(oscal.common.v1.Common.MarkupMultiline value) {
+      @java.lang.Deprecated public Builder addRemarks(oscal.common.v1.Common.MarkupMultiline value) {
         if (remarksBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -18547,9 +25153,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
        */
-      public Builder addRemarks(
+      @java.lang.Deprecated public Builder addRemarks(
           int index, oscal.common.v1.Common.MarkupMultiline value) {
         if (remarksBuilder_ == null) {
           if (value == null) {
@@ -18564,9 +25170,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
        */
-      public Builder addRemarks(
+      @java.lang.Deprecated public Builder addRemarks(
           oscal.common.v1.Common.MarkupMultiline.Builder builderForValue) {
         if (remarksBuilder_ == null) {
           ensureRemarksIsMutable();
@@ -18578,9 +25184,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
        */
-      public Builder addRemarks(
+      @java.lang.Deprecated public Builder addRemarks(
           int index, oscal.common.v1.Common.MarkupMultiline.Builder builderForValue) {
         if (remarksBuilder_ == null) {
           ensureRemarksIsMutable();
@@ -18592,9 +25198,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
        */
-      public Builder addAllRemarks(
+      @java.lang.Deprecated public Builder addAllRemarks(
           java.lang.Iterable<? extends oscal.common.v1.Common.MarkupMultiline> values) {
         if (remarksBuilder_ == null) {
           ensureRemarksIsMutable();
@@ -18607,9 +25213,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
        */
-      public Builder clearRemarks() {
+      @java.lang.Deprecated public Builder clearRemarks() {
         if (remarksBuilder_ == null) {
           remarks_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000010);
@@ -18620,9 +25226,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
        */
-      public Builder removeRemarks(int index) {
+      @java.lang.Deprecated public Builder removeRemarks(int index) {
         if (remarksBuilder_ == null) {
           ensureRemarksIsMutable();
           remarks_.remove(index);
@@ -18633,16 +25239,16 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         return this;
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
        */
-      public oscal.common.v1.Common.MarkupMultiline.Builder getRemarksBuilder(
+      @java.lang.Deprecated public oscal.common.v1.Common.MarkupMultiline.Builder getRemarksBuilder(
           int index) {
         return internalGetRemarksFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
        */
-      public oscal.common.v1.Common.MarkupMultilineOrBuilder getRemarksOrBuilder(
+      @java.lang.Deprecated public oscal.common.v1.Common.MarkupMultilineOrBuilder getRemarksOrBuilder(
           int index) {
         if (remarksBuilder_ == null) {
           return remarks_.get(index);  } else {
@@ -18650,9 +25256,9 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+      @java.lang.Deprecated public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
            getRemarksOrBuilderList() {
         if (remarksBuilder_ != null) {
           return remarksBuilder_.getMessageOrBuilderList();
@@ -18661,29 +25267,29 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
         }
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
        */
-      public oscal.common.v1.Common.MarkupMultiline.Builder addRemarksBuilder() {
+      @java.lang.Deprecated public oscal.common.v1.Common.MarkupMultiline.Builder addRemarksBuilder() {
         return internalGetRemarksFieldBuilder().addBuilder(
             oscal.common.v1.Common.MarkupMultiline.getDefaultInstance());
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
        */
-      public oscal.common.v1.Common.MarkupMultiline.Builder addRemarksBuilder(
+      @java.lang.Deprecated public oscal.common.v1.Common.MarkupMultiline.Builder addRemarksBuilder(
           int index) {
         return internalGetRemarksFieldBuilder().addBuilder(
             index, oscal.common.v1.Common.MarkupMultiline.getDefaultInstance());
       }
       /**
-       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks", deprecated = true];</code>
        */
-      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder> 
+      @java.lang.Deprecated public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder>
            getRemarksBuilderList() {
         return internalGetRemarksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetRemarksFieldBuilder() {
         if (remarksBuilder_ == null) {
           remarksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -18695,6 +25301,367 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
           remarks_ = null;
         }
         return remarksBuilder_;
+      }
+
+      private oscal.common.v1.Common.UUID uuid_;
+      private com.google.protobuf.SingleFieldBuilder<
+          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder> uuidBuilder_;
+      /**
+       * <code>.oscal.common.v1.UUID uuid = 6 [json_name = "uuid"];</code>
+       * @return Whether the uuid field is set.
+       */
+      public boolean hasUuid() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <code>.oscal.common.v1.UUID uuid = 6 [json_name = "uuid"];</code>
+       * @return The uuid.
+       */
+      public oscal.common.v1.Common.UUID getUuid() {
+        if (uuidBuilder_ == null) {
+          return uuid_ == null ? oscal.common.v1.Common.UUID.getDefaultInstance() : uuid_;
+        } else {
+          return uuidBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.oscal.common.v1.UUID uuid = 6 [json_name = "uuid"];</code>
+       */
+      public Builder setUuid(oscal.common.v1.Common.UUID value) {
+        if (uuidBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          uuid_ = value;
+        } else {
+          uuidBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.UUID uuid = 6 [json_name = "uuid"];</code>
+       */
+      public Builder setUuid(
+          oscal.common.v1.Common.UUID.Builder builderForValue) {
+        if (uuidBuilder_ == null) {
+          uuid_ = builderForValue.build();
+        } else {
+          uuidBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.UUID uuid = 6 [json_name = "uuid"];</code>
+       */
+      public Builder mergeUuid(oscal.common.v1.Common.UUID value) {
+        if (uuidBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0) &&
+            uuid_ != null &&
+            uuid_ != oscal.common.v1.Common.UUID.getDefaultInstance()) {
+            getUuidBuilder().mergeFrom(value);
+          } else {
+            uuid_ = value;
+          }
+        } else {
+          uuidBuilder_.mergeFrom(value);
+        }
+        if (uuid_ != null) {
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.UUID uuid = 6 [json_name = "uuid"];</code>
+       */
+      public Builder clearUuid() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        uuid_ = null;
+        if (uuidBuilder_ != null) {
+          uuidBuilder_.dispose();
+          uuidBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.UUID uuid = 6 [json_name = "uuid"];</code>
+       */
+      public oscal.common.v1.Common.UUID.Builder getUuidBuilder() {
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return internalGetUuidFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.oscal.common.v1.UUID uuid = 6 [json_name = "uuid"];</code>
+       */
+      public oscal.common.v1.Common.UUIDOrBuilder getUuidOrBuilder() {
+        if (uuidBuilder_ != null) {
+          return uuidBuilder_.getMessageOrBuilder();
+        } else {
+          return uuid_ == null ?
+              oscal.common.v1.Common.UUID.getDefaultInstance() : uuid_;
+        }
+      }
+      /**
+       * <code>.oscal.common.v1.UUID uuid = 6 [json_name = "uuid"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder>
+          internalGetUuidFieldBuilder() {
+        if (uuidBuilder_ == null) {
+          uuidBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder>(
+                  getUuid(),
+                  getParentForChildren(),
+                  isClean());
+          uuid_ = null;
+        }
+        return uuidBuilder_;
+      }
+
+      private java.util.List<oscal.mapping.v1.Mapping.SelectControlById> unmappedControls_ =
+        java.util.Collections.emptyList();
+      private void ensureUnmappedControlsIsMutable() {
+        if (!((bitField0_ & 0x00000040) != 0)) {
+          unmappedControls_ = new java.util.ArrayList<oscal.mapping.v1.Mapping.SelectControlById>(unmappedControls_);
+          bitField0_ |= 0x00000040;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.mapping.v1.Mapping.SelectControlById, oscal.mapping.v1.Mapping.SelectControlById.Builder, oscal.mapping.v1.Mapping.SelectControlByIdOrBuilder> unmappedControlsBuilder_;
+
+      /**
+       * <code>repeated .oscal.mapping.v1.SelectControlById unmapped_controls = 7 [json_name = "unmappedControls"];</code>
+       */
+      public java.util.List<oscal.mapping.v1.Mapping.SelectControlById> getUnmappedControlsList() {
+        if (unmappedControlsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(unmappedControls_);
+        } else {
+          return unmappedControlsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .oscal.mapping.v1.SelectControlById unmapped_controls = 7 [json_name = "unmappedControls"];</code>
+       */
+      public int getUnmappedControlsCount() {
+        if (unmappedControlsBuilder_ == null) {
+          return unmappedControls_.size();
+        } else {
+          return unmappedControlsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .oscal.mapping.v1.SelectControlById unmapped_controls = 7 [json_name = "unmappedControls"];</code>
+       */
+      public oscal.mapping.v1.Mapping.SelectControlById getUnmappedControls(int index) {
+        if (unmappedControlsBuilder_ == null) {
+          return unmappedControls_.get(index);
+        } else {
+          return unmappedControlsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.mapping.v1.SelectControlById unmapped_controls = 7 [json_name = "unmappedControls"];</code>
+       */
+      public Builder setUnmappedControls(
+          int index, oscal.mapping.v1.Mapping.SelectControlById value) {
+        if (unmappedControlsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUnmappedControlsIsMutable();
+          unmappedControls_.set(index, value);
+          onChanged();
+        } else {
+          unmappedControlsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.mapping.v1.SelectControlById unmapped_controls = 7 [json_name = "unmappedControls"];</code>
+       */
+      public Builder setUnmappedControls(
+          int index, oscal.mapping.v1.Mapping.SelectControlById.Builder builderForValue) {
+        if (unmappedControlsBuilder_ == null) {
+          ensureUnmappedControlsIsMutable();
+          unmappedControls_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          unmappedControlsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.mapping.v1.SelectControlById unmapped_controls = 7 [json_name = "unmappedControls"];</code>
+       */
+      public Builder addUnmappedControls(oscal.mapping.v1.Mapping.SelectControlById value) {
+        if (unmappedControlsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUnmappedControlsIsMutable();
+          unmappedControls_.add(value);
+          onChanged();
+        } else {
+          unmappedControlsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.mapping.v1.SelectControlById unmapped_controls = 7 [json_name = "unmappedControls"];</code>
+       */
+      public Builder addUnmappedControls(
+          int index, oscal.mapping.v1.Mapping.SelectControlById value) {
+        if (unmappedControlsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUnmappedControlsIsMutable();
+          unmappedControls_.add(index, value);
+          onChanged();
+        } else {
+          unmappedControlsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.mapping.v1.SelectControlById unmapped_controls = 7 [json_name = "unmappedControls"];</code>
+       */
+      public Builder addUnmappedControls(
+          oscal.mapping.v1.Mapping.SelectControlById.Builder builderForValue) {
+        if (unmappedControlsBuilder_ == null) {
+          ensureUnmappedControlsIsMutable();
+          unmappedControls_.add(builderForValue.build());
+          onChanged();
+        } else {
+          unmappedControlsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.mapping.v1.SelectControlById unmapped_controls = 7 [json_name = "unmappedControls"];</code>
+       */
+      public Builder addUnmappedControls(
+          int index, oscal.mapping.v1.Mapping.SelectControlById.Builder builderForValue) {
+        if (unmappedControlsBuilder_ == null) {
+          ensureUnmappedControlsIsMutable();
+          unmappedControls_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          unmappedControlsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.mapping.v1.SelectControlById unmapped_controls = 7 [json_name = "unmappedControls"];</code>
+       */
+      public Builder addAllUnmappedControls(
+          java.lang.Iterable<? extends oscal.mapping.v1.Mapping.SelectControlById> values) {
+        if (unmappedControlsBuilder_ == null) {
+          ensureUnmappedControlsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, unmappedControls_);
+          onChanged();
+        } else {
+          unmappedControlsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.mapping.v1.SelectControlById unmapped_controls = 7 [json_name = "unmappedControls"];</code>
+       */
+      public Builder clearUnmappedControls() {
+        if (unmappedControlsBuilder_ == null) {
+          unmappedControls_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000040);
+          onChanged();
+        } else {
+          unmappedControlsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.mapping.v1.SelectControlById unmapped_controls = 7 [json_name = "unmappedControls"];</code>
+       */
+      public Builder removeUnmappedControls(int index) {
+        if (unmappedControlsBuilder_ == null) {
+          ensureUnmappedControlsIsMutable();
+          unmappedControls_.remove(index);
+          onChanged();
+        } else {
+          unmappedControlsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.mapping.v1.SelectControlById unmapped_controls = 7 [json_name = "unmappedControls"];</code>
+       */
+      public oscal.mapping.v1.Mapping.SelectControlById.Builder getUnmappedControlsBuilder(
+          int index) {
+        return internalGetUnmappedControlsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .oscal.mapping.v1.SelectControlById unmapped_controls = 7 [json_name = "unmappedControls"];</code>
+       */
+      public oscal.mapping.v1.Mapping.SelectControlByIdOrBuilder getUnmappedControlsOrBuilder(
+          int index) {
+        if (unmappedControlsBuilder_ == null) {
+          return unmappedControls_.get(index);  } else {
+          return unmappedControlsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.mapping.v1.SelectControlById unmapped_controls = 7 [json_name = "unmappedControls"];</code>
+       */
+      public java.util.List<? extends oscal.mapping.v1.Mapping.SelectControlByIdOrBuilder>
+           getUnmappedControlsOrBuilderList() {
+        if (unmappedControlsBuilder_ != null) {
+          return unmappedControlsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(unmappedControls_);
+        }
+      }
+      /**
+       * <code>repeated .oscal.mapping.v1.SelectControlById unmapped_controls = 7 [json_name = "unmappedControls"];</code>
+       */
+      public oscal.mapping.v1.Mapping.SelectControlById.Builder addUnmappedControlsBuilder() {
+        return internalGetUnmappedControlsFieldBuilder().addBuilder(
+            oscal.mapping.v1.Mapping.SelectControlById.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.mapping.v1.SelectControlById unmapped_controls = 7 [json_name = "unmappedControls"];</code>
+       */
+      public oscal.mapping.v1.Mapping.SelectControlById.Builder addUnmappedControlsBuilder(
+          int index) {
+        return internalGetUnmappedControlsFieldBuilder().addBuilder(
+            index, oscal.mapping.v1.Mapping.SelectControlById.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.mapping.v1.SelectControlById unmapped_controls = 7 [json_name = "unmappedControls"];</code>
+       */
+      public java.util.List<oscal.mapping.v1.Mapping.SelectControlById.Builder>
+           getUnmappedControlsBuilderList() {
+        return internalGetUnmappedControlsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.mapping.v1.Mapping.SelectControlById, oscal.mapping.v1.Mapping.SelectControlById.Builder, oscal.mapping.v1.Mapping.SelectControlByIdOrBuilder>
+          internalGetUnmappedControlsFieldBuilder() {
+        if (unmappedControlsBuilder_ == null) {
+          unmappedControlsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              oscal.mapping.v1.Mapping.SelectControlById, oscal.mapping.v1.Mapping.SelectControlById.Builder, oscal.mapping.v1.Mapping.SelectControlByIdOrBuilder>(
+                  unmappedControls_,
+                  ((bitField0_ & 0x00000040) != 0),
+                  getParentForChildren(),
+                  isClean());
+          unmappedControls_ = null;
+        }
+        return unmappedControlsBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:oscal.mapping.v1.GapSummary)
@@ -18770,7 +25737,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 2 [json_name = "props"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Property> 
+    java.util.List<oscal.common.v1.Common.Property>
         getPropsList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 2 [json_name = "props"];</code>
@@ -18783,7 +25750,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 2 [json_name = "props"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 2 [json_name = "props"];</code>
@@ -18794,7 +25761,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 3 [json_name = "links"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Link> 
+    java.util.List<oscal.common.v1.Common.Link>
         getLinksList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 3 [json_name = "links"];</code>
@@ -18807,7 +25774,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 3 [json_name = "links"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 3 [json_name = "links"];</code>
@@ -18818,7 +25785,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 4 [json_name = "remarks"];</code>
      */
-    java.util.List<oscal.common.v1.Common.MarkupMultiline> 
+    java.util.List<oscal.common.v1.Common.MarkupMultiline>
         getRemarksList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 4 [json_name = "remarks"];</code>
@@ -18831,7 +25798,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 4 [json_name = "remarks"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 4 [json_name = "remarks"];</code>
@@ -18841,7 +25808,8 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
   }
   /**
    * <pre>
-   * MappingDescription represents a mapping description
+   * MappingDescription is the deprecated prototype wrapper. Released OSCAL uses
+   * MarkupMultiline directly for mapping-description.
    * </pre>
    *
    * Protobuf type {@code oscal.mapping.v1.MappingDescription}
@@ -18929,7 +25897,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Property props = 2 [json_name = "props"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList() {
       return props_;
     }
@@ -18970,7 +25938,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Link links = 3 [json_name = "links"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList() {
       return links_;
     }
@@ -19011,7 +25979,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 4 [json_name = "remarks"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList() {
       return remarks_;
     }
@@ -19260,7 +26228,8 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
     }
     /**
      * <pre>
-     * MappingDescription represents a mapping description
+     * MappingDescription is the deprecated prototype wrapper. Released OSCAL uses
+     * MarkupMultiline directly for mapping-description.
      * </pre>
      *
      * Protobuf type {@code oscal.mapping.v1.MappingDescription}
@@ -19438,7 +26407,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
               propsBuilder_ = null;
               props_ = other.props_;
               bitField0_ = (bitField0_ & ~0x00000002);
-              propsBuilder_ = 
+              propsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetPropsFieldBuilder() : null;
             } else {
@@ -19464,7 +26433,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
               linksBuilder_ = null;
               links_ = other.links_;
               bitField0_ = (bitField0_ & ~0x00000004);
-              linksBuilder_ = 
+              linksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetLinksFieldBuilder() : null;
             } else {
@@ -19490,7 +26459,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
               remarksBuilder_ = null;
               remarks_ = other.remarks_;
               bitField0_ = (bitField0_ & ~0x00000008);
-              remarksBuilder_ = 
+              remarksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetRemarksFieldBuilder() : null;
             } else {
@@ -19695,7 +26664,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.MarkupMultiline description = 1 [json_name = "description"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetDescriptionFieldBuilder() {
         if (descriptionBuilder_ == null) {
           descriptionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -19903,7 +26872,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 2 [json_name = "props"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
            getPropsOrBuilderList() {
         if (propsBuilder_ != null) {
           return propsBuilder_.getMessageOrBuilderList();
@@ -19929,12 +26898,12 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 2 [json_name = "props"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Property.Builder> 
+      public java.util.List<oscal.common.v1.Common.Property.Builder>
            getPropsBuilderList() {
         return internalGetPropsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> 
+          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder>
           internalGetPropsFieldBuilder() {
         if (propsBuilder_ == null) {
           propsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -20143,7 +27112,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 3 [json_name = "links"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
            getLinksOrBuilderList() {
         if (linksBuilder_ != null) {
           return linksBuilder_.getMessageOrBuilderList();
@@ -20169,12 +27138,12 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 3 [json_name = "links"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Link.Builder> 
+      public java.util.List<oscal.common.v1.Common.Link.Builder>
            getLinksBuilderList() {
         return internalGetLinksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder> 
+          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder>
           internalGetLinksFieldBuilder() {
         if (linksBuilder_ == null) {
           linksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -20383,7 +27352,7 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 4 [json_name = "remarks"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
            getRemarksOrBuilderList() {
         if (remarksBuilder_ != null) {
           return remarksBuilder_.getMessageOrBuilderList();
@@ -20409,12 +27378,12 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 4 [json_name = "remarks"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder> 
+      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder>
            getRemarksBuilderList() {
         return internalGetRemarksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetRemarksFieldBuilder() {
         if (remarksBuilder_ == null) {
           remarksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -20479,51 +27448,5225 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
 
   }
 
+  public interface MappingProvenanceOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oscal.mapping.v1.MappingProvenance)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string method = 1 [json_name = "method"];</code>
+     * @return The method.
+     */
+    java.lang.String getMethod();
+    /**
+     * <code>string method = 1 [json_name = "method"];</code>
+     * @return The bytes for method.
+     */
+    com.google.protobuf.ByteString
+        getMethodBytes();
+
+    /**
+     * <code>string matching_rationale = 2 [json_name = "matchingRationale"];</code>
+     * @return The matchingRationale.
+     */
+    java.lang.String getMatchingRationale();
+    /**
+     * <code>string matching_rationale = 2 [json_name = "matchingRationale"];</code>
+     * @return The bytes for matchingRationale.
+     */
+    com.google.protobuf.ByteString
+        getMatchingRationaleBytes();
+
+    /**
+     * <code>string status = 3 [json_name = "status"];</code>
+     * @return The status.
+     */
+    java.lang.String getStatus();
+    /**
+     * <code>string status = 3 [json_name = "status"];</code>
+     * @return The bytes for status.
+     */
+    com.google.protobuf.ByteString
+        getStatusBytes();
+
+    /**
+     * <code>.oscal.mapping.v1.ConfidenceScore confidence_score = 4 [json_name = "confidenceScore"];</code>
+     * @return Whether the confidenceScore field is set.
+     */
+    boolean hasConfidenceScore();
+    /**
+     * <code>.oscal.mapping.v1.ConfidenceScore confidence_score = 4 [json_name = "confidenceScore"];</code>
+     * @return The confidenceScore.
+     */
+    oscal.mapping.v1.Mapping.ConfidenceScore getConfidenceScore();
+    /**
+     * <code>.oscal.mapping.v1.ConfidenceScore confidence_score = 4 [json_name = "confidenceScore"];</code>
+     */
+    oscal.mapping.v1.Mapping.ConfidenceScoreOrBuilder getConfidenceScoreOrBuilder();
+
+    /**
+     * <code>.oscal.mapping.v1.Coverage coverage = 5 [json_name = "coverage"];</code>
+     * @return Whether the coverage field is set.
+     */
+    boolean hasCoverage();
+    /**
+     * <code>.oscal.mapping.v1.Coverage coverage = 5 [json_name = "coverage"];</code>
+     * @return The coverage.
+     */
+    oscal.mapping.v1.Mapping.Coverage getCoverage();
+    /**
+     * <code>.oscal.mapping.v1.Coverage coverage = 5 [json_name = "coverage"];</code>
+     */
+    oscal.mapping.v1.Mapping.CoverageOrBuilder getCoverageOrBuilder();
+
+    /**
+     * <code>.oscal.common.v1.MarkupMultiline mapping_description = 6 [json_name = "mappingDescription"];</code>
+     * @return Whether the mappingDescription field is set.
+     */
+    boolean hasMappingDescription();
+    /**
+     * <code>.oscal.common.v1.MarkupMultiline mapping_description = 6 [json_name = "mappingDescription"];</code>
+     * @return The mappingDescription.
+     */
+    oscal.common.v1.Common.MarkupMultiline getMappingDescription();
+    /**
+     * <code>.oscal.common.v1.MarkupMultiline mapping_description = 6 [json_name = "mappingDescription"];</code>
+     */
+    oscal.common.v1.Common.MarkupMultilineOrBuilder getMappingDescriptionOrBuilder();
+
+    /**
+     * <code>repeated .oscal.common.v1.ResponsibleParty responsible_parties = 7 [json_name = "responsibleParties"];</code>
+     */
+    java.util.List<oscal.common.v1.Common.ResponsibleParty>
+        getResponsiblePartiesList();
+    /**
+     * <code>repeated .oscal.common.v1.ResponsibleParty responsible_parties = 7 [json_name = "responsibleParties"];</code>
+     */
+    oscal.common.v1.Common.ResponsibleParty getResponsibleParties(int index);
+    /**
+     * <code>repeated .oscal.common.v1.ResponsibleParty responsible_parties = 7 [json_name = "responsibleParties"];</code>
+     */
+    int getResponsiblePartiesCount();
+    /**
+     * <code>repeated .oscal.common.v1.ResponsibleParty responsible_parties = 7 [json_name = "responsibleParties"];</code>
+     */
+    java.util.List<? extends oscal.common.v1.Common.ResponsiblePartyOrBuilder>
+        getResponsiblePartiesOrBuilderList();
+    /**
+     * <code>repeated .oscal.common.v1.ResponsibleParty responsible_parties = 7 [json_name = "responsibleParties"];</code>
+     */
+    oscal.common.v1.Common.ResponsiblePartyOrBuilder getResponsiblePartiesOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props"];</code>
+     */
+    java.util.List<oscal.common.v1.Common.Property>
+        getPropsList();
+    /**
+     * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props"];</code>
+     */
+    oscal.common.v1.Common.Property getProps(int index);
+    /**
+     * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props"];</code>
+     */
+    int getPropsCount();
+    /**
+     * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props"];</code>
+     */
+    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
+        getPropsOrBuilderList();
+    /**
+     * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props"];</code>
+     */
+    oscal.common.v1.Common.PropertyOrBuilder getPropsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links"];</code>
+     */
+    java.util.List<oscal.common.v1.Common.Link>
+        getLinksList();
+    /**
+     * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links"];</code>
+     */
+    oscal.common.v1.Common.Link getLinks(int index);
+    /**
+     * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links"];</code>
+     */
+    int getLinksCount();
+    /**
+     * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links"];</code>
+     */
+    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
+        getLinksOrBuilderList();
+    /**
+     * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links"];</code>
+     */
+    oscal.common.v1.Common.LinkOrBuilder getLinksOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks"];</code>
+     */
+    java.util.List<oscal.common.v1.Common.MarkupMultiline>
+        getRemarksList();
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks"];</code>
+     */
+    oscal.common.v1.Common.MarkupMultiline getRemarks(int index);
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks"];</code>
+     */
+    int getRemarksCount();
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks"];</code>
+     */
+    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
+        getRemarksOrBuilderList();
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks"];</code>
+     */
+    oscal.common.v1.Common.MarkupMultilineOrBuilder getRemarksOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * MappingProvenance records how the collection was produced and its status.
+   * </pre>
+   *
+   * Protobuf type {@code oscal.mapping.v1.MappingProvenance}
+   */
+  public static final class MappingProvenance extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:oscal.mapping.v1.MappingProvenance)
+      MappingProvenanceOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 35,
+        /* patch= */ 1,
+        /* suffix= */ "",
+        "MappingProvenance");
+    }
+    // Use MappingProvenance.newBuilder() to construct.
+    private MappingProvenance(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private MappingProvenance() {
+      method_ = "";
+      matchingRationale_ = "";
+      status_ = "";
+      responsibleParties_ = java.util.Collections.emptyList();
+      props_ = java.util.Collections.emptyList();
+      links_ = java.util.Collections.emptyList();
+      remarks_ = java.util.Collections.emptyList();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return oscal.mapping.v1.Mapping.internal_static_oscal_mapping_v1_MappingProvenance_descriptor;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+      return oscal.mapping.v1.Mapping.internal_static_oscal_mapping_v1_MappingProvenance_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return oscal.mapping.v1.Mapping.internal_static_oscal_mapping_v1_MappingProvenance_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              oscal.mapping.v1.Mapping.MappingProvenance.class, oscal.mapping.v1.Mapping.MappingProvenance.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int METHOD_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object method_ = "";
+    /**
+     * <code>string method = 1 [json_name = "method"];</code>
+     * @return The method.
+     */
+    @java.lang.Override
+    public java.lang.String getMethod() {
+      java.lang.Object ref = method_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        method_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string method = 1 [json_name = "method"];</code>
+     * @return The bytes for method.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMethodBytes() {
+      java.lang.Object ref = method_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        method_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MATCHING_RATIONALE_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object matchingRationale_ = "";
+    /**
+     * <code>string matching_rationale = 2 [json_name = "matchingRationale"];</code>
+     * @return The matchingRationale.
+     */
+    @java.lang.Override
+    public java.lang.String getMatchingRationale() {
+      java.lang.Object ref = matchingRationale_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        matchingRationale_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string matching_rationale = 2 [json_name = "matchingRationale"];</code>
+     * @return The bytes for matchingRationale.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMatchingRationaleBytes() {
+      java.lang.Object ref = matchingRationale_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        matchingRationale_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STATUS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object status_ = "";
+    /**
+     * <code>string status = 3 [json_name = "status"];</code>
+     * @return The status.
+     */
+    @java.lang.Override
+    public java.lang.String getStatus() {
+      java.lang.Object ref = status_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        status_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string status = 3 [json_name = "status"];</code>
+     * @return The bytes for status.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStatusBytes() {
+      java.lang.Object ref = status_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        status_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CONFIDENCE_SCORE_FIELD_NUMBER = 4;
+    private oscal.mapping.v1.Mapping.ConfidenceScore confidenceScore_;
+    /**
+     * <code>.oscal.mapping.v1.ConfidenceScore confidence_score = 4 [json_name = "confidenceScore"];</code>
+     * @return Whether the confidenceScore field is set.
+     */
+    @java.lang.Override
+    public boolean hasConfidenceScore() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.oscal.mapping.v1.ConfidenceScore confidence_score = 4 [json_name = "confidenceScore"];</code>
+     * @return The confidenceScore.
+     */
+    @java.lang.Override
+    public oscal.mapping.v1.Mapping.ConfidenceScore getConfidenceScore() {
+      return confidenceScore_ == null ? oscal.mapping.v1.Mapping.ConfidenceScore.getDefaultInstance() : confidenceScore_;
+    }
+    /**
+     * <code>.oscal.mapping.v1.ConfidenceScore confidence_score = 4 [json_name = "confidenceScore"];</code>
+     */
+    @java.lang.Override
+    public oscal.mapping.v1.Mapping.ConfidenceScoreOrBuilder getConfidenceScoreOrBuilder() {
+      return confidenceScore_ == null ? oscal.mapping.v1.Mapping.ConfidenceScore.getDefaultInstance() : confidenceScore_;
+    }
+
+    public static final int COVERAGE_FIELD_NUMBER = 5;
+    private oscal.mapping.v1.Mapping.Coverage coverage_;
+    /**
+     * <code>.oscal.mapping.v1.Coverage coverage = 5 [json_name = "coverage"];</code>
+     * @return Whether the coverage field is set.
+     */
+    @java.lang.Override
+    public boolean hasCoverage() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>.oscal.mapping.v1.Coverage coverage = 5 [json_name = "coverage"];</code>
+     * @return The coverage.
+     */
+    @java.lang.Override
+    public oscal.mapping.v1.Mapping.Coverage getCoverage() {
+      return coverage_ == null ? oscal.mapping.v1.Mapping.Coverage.getDefaultInstance() : coverage_;
+    }
+    /**
+     * <code>.oscal.mapping.v1.Coverage coverage = 5 [json_name = "coverage"];</code>
+     */
+    @java.lang.Override
+    public oscal.mapping.v1.Mapping.CoverageOrBuilder getCoverageOrBuilder() {
+      return coverage_ == null ? oscal.mapping.v1.Mapping.Coverage.getDefaultInstance() : coverage_;
+    }
+
+    public static final int MAPPING_DESCRIPTION_FIELD_NUMBER = 6;
+    private oscal.common.v1.Common.MarkupMultiline mappingDescription_;
+    /**
+     * <code>.oscal.common.v1.MarkupMultiline mapping_description = 6 [json_name = "mappingDescription"];</code>
+     * @return Whether the mappingDescription field is set.
+     */
+    @java.lang.Override
+    public boolean hasMappingDescription() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>.oscal.common.v1.MarkupMultiline mapping_description = 6 [json_name = "mappingDescription"];</code>
+     * @return The mappingDescription.
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.MarkupMultiline getMappingDescription() {
+      return mappingDescription_ == null ? oscal.common.v1.Common.MarkupMultiline.getDefaultInstance() : mappingDescription_;
+    }
+    /**
+     * <code>.oscal.common.v1.MarkupMultiline mapping_description = 6 [json_name = "mappingDescription"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.MarkupMultilineOrBuilder getMappingDescriptionOrBuilder() {
+      return mappingDescription_ == null ? oscal.common.v1.Common.MarkupMultiline.getDefaultInstance() : mappingDescription_;
+    }
+
+    public static final int RESPONSIBLE_PARTIES_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private java.util.List<oscal.common.v1.Common.ResponsibleParty> responsibleParties_;
+    /**
+     * <code>repeated .oscal.common.v1.ResponsibleParty responsible_parties = 7 [json_name = "responsibleParties"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<oscal.common.v1.Common.ResponsibleParty> getResponsiblePartiesList() {
+      return responsibleParties_;
+    }
+    /**
+     * <code>repeated .oscal.common.v1.ResponsibleParty responsible_parties = 7 [json_name = "responsibleParties"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends oscal.common.v1.Common.ResponsiblePartyOrBuilder>
+        getResponsiblePartiesOrBuilderList() {
+      return responsibleParties_;
+    }
+    /**
+     * <code>repeated .oscal.common.v1.ResponsibleParty responsible_parties = 7 [json_name = "responsibleParties"];</code>
+     */
+    @java.lang.Override
+    public int getResponsiblePartiesCount() {
+      return responsibleParties_.size();
+    }
+    /**
+     * <code>repeated .oscal.common.v1.ResponsibleParty responsible_parties = 7 [json_name = "responsibleParties"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.ResponsibleParty getResponsibleParties(int index) {
+      return responsibleParties_.get(index);
+    }
+    /**
+     * <code>repeated .oscal.common.v1.ResponsibleParty responsible_parties = 7 [json_name = "responsibleParties"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.ResponsiblePartyOrBuilder getResponsiblePartiesOrBuilder(
+        int index) {
+      return responsibleParties_.get(index);
+    }
+
+    public static final int PROPS_FIELD_NUMBER = 8;
+    @SuppressWarnings("serial")
+    private java.util.List<oscal.common.v1.Common.Property> props_;
+    /**
+     * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<oscal.common.v1.Common.Property> getPropsList() {
+      return props_;
+    }
+    /**
+     * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
+        getPropsOrBuilderList() {
+      return props_;
+    }
+    /**
+     * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props"];</code>
+     */
+    @java.lang.Override
+    public int getPropsCount() {
+      return props_.size();
+    }
+    /**
+     * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.Property getProps(int index) {
+      return props_.get(index);
+    }
+    /**
+     * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.PropertyOrBuilder getPropsOrBuilder(
+        int index) {
+      return props_.get(index);
+    }
+
+    public static final int LINKS_FIELD_NUMBER = 9;
+    @SuppressWarnings("serial")
+    private java.util.List<oscal.common.v1.Common.Link> links_;
+    /**
+     * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<oscal.common.v1.Common.Link> getLinksList() {
+      return links_;
+    }
+    /**
+     * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
+        getLinksOrBuilderList() {
+      return links_;
+    }
+    /**
+     * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links"];</code>
+     */
+    @java.lang.Override
+    public int getLinksCount() {
+      return links_.size();
+    }
+    /**
+     * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.Link getLinks(int index) {
+      return links_.get(index);
+    }
+    /**
+     * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.LinkOrBuilder getLinksOrBuilder(
+        int index) {
+      return links_.get(index);
+    }
+
+    public static final int REMARKS_FIELD_NUMBER = 10;
+    @SuppressWarnings("serial")
+    private java.util.List<oscal.common.v1.Common.MarkupMultiline> remarks_;
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<oscal.common.v1.Common.MarkupMultiline> getRemarksList() {
+      return remarks_;
+    }
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
+        getRemarksOrBuilderList() {
+      return remarks_;
+    }
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks"];</code>
+     */
+    @java.lang.Override
+    public int getRemarksCount() {
+      return remarks_.size();
+    }
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.MarkupMultiline getRemarks(int index) {
+      return remarks_.get(index);
+    }
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.MarkupMultilineOrBuilder getRemarksOrBuilder(
+        int index) {
+      return remarks_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(method_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, method_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(matchingRationale_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, matchingRationale_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(status_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 3, status_);
+      }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeMessage(4, getConfidenceScore());
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeMessage(5, getCoverage());
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeMessage(6, getMappingDescription());
+      }
+      for (int i = 0; i < responsibleParties_.size(); i++) {
+        output.writeMessage(7, responsibleParties_.get(i));
+      }
+      for (int i = 0; i < props_.size(); i++) {
+        output.writeMessage(8, props_.get(i));
+      }
+      for (int i = 0; i < links_.size(); i++) {
+        output.writeMessage(9, links_.get(i));
+      }
+      for (int i = 0; i < remarks_.size(); i++) {
+        output.writeMessage(10, remarks_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+    private int computeSerializedSize_0() {
+      int size = 0;
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(method_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, method_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(matchingRationale_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, matchingRationale_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(status_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(3, status_);
+      }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getConfidenceScore());
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getCoverage());
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getMappingDescription());
+      }
+
+          {
+            final int count = responsibleParties_.size();
+            for (int i = 0; i < count; i++) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeMessageSizeNoTag(responsibleParties_.get(i));
+            }
+            size += 1 * count;
+          }
+
+          {
+            final int count = props_.size();
+            for (int i = 0; i < count; i++) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeMessageSizeNoTag(props_.get(i));
+            }
+            size += 1 * count;
+          }
+
+          {
+            final int count = links_.size();
+            for (int i = 0; i < count; i++) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeMessageSizeNoTag(links_.get(i));
+            }
+            size += 1 * count;
+          }
+
+          {
+            final int count = remarks_.size();
+            for (int i = 0; i < count; i++) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeMessageSizeNoTag(remarks_.get(i));
+            }
+            size += 1 * count;
+          }
+      return size;
+    }
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += computeSerializedSize_0();
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof oscal.mapping.v1.Mapping.MappingProvenance)) {
+        return super.equals(obj);
+      }
+      oscal.mapping.v1.Mapping.MappingProvenance other = (oscal.mapping.v1.Mapping.MappingProvenance) obj;
+
+      if (!getMethod()
+          .equals(other.getMethod())) return false;
+      if (!getMatchingRationale()
+          .equals(other.getMatchingRationale())) return false;
+      if (!getStatus()
+          .equals(other.getStatus())) return false;
+      if (hasConfidenceScore() != other.hasConfidenceScore()) return false;
+      if (hasConfidenceScore()) {
+        if (!getConfidenceScore()
+            .equals(other.getConfidenceScore())) return false;
+      }
+      if (hasCoverage() != other.hasCoverage()) return false;
+      if (hasCoverage()) {
+        if (!getCoverage()
+            .equals(other.getCoverage())) return false;
+      }
+      if (hasMappingDescription() != other.hasMappingDescription()) return false;
+      if (hasMappingDescription()) {
+        if (!getMappingDescription()
+            .equals(other.getMappingDescription())) return false;
+      }
+      if (!getResponsiblePartiesList()
+          .equals(other.getResponsiblePartiesList())) return false;
+      if (!getPropsList()
+          .equals(other.getPropsList())) return false;
+      if (!getLinksList()
+          .equals(other.getLinksList())) return false;
+      if (!getRemarksList()
+          .equals(other.getRemarksList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + METHOD_FIELD_NUMBER;
+      hash = (53 * hash) + getMethod().hashCode();
+      hash = (37 * hash) + MATCHING_RATIONALE_FIELD_NUMBER;
+      hash = (53 * hash) + getMatchingRationale().hashCode();
+      hash = (37 * hash) + STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + getStatus().hashCode();
+      if (hasConfidenceScore()) {
+        hash = (37 * hash) + CONFIDENCE_SCORE_FIELD_NUMBER;
+        hash = (53 * hash) + getConfidenceScore().hashCode();
+      }
+      if (hasCoverage()) {
+        hash = (37 * hash) + COVERAGE_FIELD_NUMBER;
+        hash = (53 * hash) + getCoverage().hashCode();
+      }
+      if (hasMappingDescription()) {
+        hash = (37 * hash) + MAPPING_DESCRIPTION_FIELD_NUMBER;
+        hash = (53 * hash) + getMappingDescription().hashCode();
+      }
+      if (getResponsiblePartiesCount() > 0) {
+        hash = (37 * hash) + RESPONSIBLE_PARTIES_FIELD_NUMBER;
+        hash = (53 * hash) + getResponsiblePartiesList().hashCode();
+      }
+      if (getPropsCount() > 0) {
+        hash = (37 * hash) + PROPS_FIELD_NUMBER;
+        hash = (53 * hash) + getPropsList().hashCode();
+      }
+      if (getLinksCount() > 0) {
+        hash = (37 * hash) + LINKS_FIELD_NUMBER;
+        hash = (53 * hash) + getLinksList().hashCode();
+      }
+      if (getRemarksCount() > 0) {
+        hash = (37 * hash) + REMARKS_FIELD_NUMBER;
+        hash = (53 * hash) + getRemarksList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static oscal.mapping.v1.Mapping.MappingProvenance parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.mapping.v1.Mapping.MappingProvenance parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.mapping.v1.Mapping.MappingProvenance parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.mapping.v1.Mapping.MappingProvenance parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.mapping.v1.Mapping.MappingProvenance parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.mapping.v1.Mapping.MappingProvenance parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.mapping.v1.Mapping.MappingProvenance parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static oscal.mapping.v1.Mapping.MappingProvenance parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static oscal.mapping.v1.Mapping.MappingProvenance parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static oscal.mapping.v1.Mapping.MappingProvenance parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static oscal.mapping.v1.Mapping.MappingProvenance parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static oscal.mapping.v1.Mapping.MappingProvenance parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(oscal.mapping.v1.Mapping.MappingProvenance prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MappingProvenance records how the collection was produced and its status.
+     * </pre>
+     *
+     * Protobuf type {@code oscal.mapping.v1.MappingProvenance}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oscal.mapping.v1.MappingProvenance)
+        oscal.mapping.v1.Mapping.MappingProvenanceOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return oscal.mapping.v1.Mapping.internal_static_oscal_mapping_v1_MappingProvenance_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return oscal.mapping.v1.Mapping.internal_static_oscal_mapping_v1_MappingProvenance_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                oscal.mapping.v1.Mapping.MappingProvenance.class, oscal.mapping.v1.Mapping.MappingProvenance.Builder.class);
+      }
+
+      // Construct using oscal.mapping.v1.Mapping.MappingProvenance.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage
+                .alwaysUseFieldBuilders) {
+          internalGetConfidenceScoreFieldBuilder();
+          internalGetCoverageFieldBuilder();
+          internalGetMappingDescriptionFieldBuilder();
+          internalGetResponsiblePartiesFieldBuilder();
+          internalGetPropsFieldBuilder();
+          internalGetLinksFieldBuilder();
+          internalGetRemarksFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        method_ = "";
+        matchingRationale_ = "";
+        status_ = "";
+        confidenceScore_ = null;
+        if (confidenceScoreBuilder_ != null) {
+          confidenceScoreBuilder_.dispose();
+          confidenceScoreBuilder_ = null;
+        }
+        coverage_ = null;
+        if (coverageBuilder_ != null) {
+          coverageBuilder_.dispose();
+          coverageBuilder_ = null;
+        }
+        mappingDescription_ = null;
+        if (mappingDescriptionBuilder_ != null) {
+          mappingDescriptionBuilder_.dispose();
+          mappingDescriptionBuilder_ = null;
+        }
+        if (responsiblePartiesBuilder_ == null) {
+          responsibleParties_ = java.util.Collections.emptyList();
+        } else {
+          responsibleParties_ = null;
+          responsiblePartiesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000040);
+        if (propsBuilder_ == null) {
+          props_ = java.util.Collections.emptyList();
+        } else {
+          props_ = null;
+          propsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000080);
+        if (linksBuilder_ == null) {
+          links_ = java.util.Collections.emptyList();
+        } else {
+          links_ = null;
+          linksBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000100);
+        if (remarksBuilder_ == null) {
+          remarks_ = java.util.Collections.emptyList();
+        } else {
+          remarks_ = null;
+          remarksBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000200);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return oscal.mapping.v1.Mapping.internal_static_oscal_mapping_v1_MappingProvenance_descriptor;
+      }
+
+      @java.lang.Override
+      public oscal.mapping.v1.Mapping.MappingProvenance getDefaultInstanceForType() {
+        return oscal.mapping.v1.Mapping.MappingProvenance.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public oscal.mapping.v1.Mapping.MappingProvenance build() {
+        oscal.mapping.v1.Mapping.MappingProvenance result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public oscal.mapping.v1.Mapping.MappingProvenance buildPartial() {
+        oscal.mapping.v1.Mapping.MappingProvenance result = new oscal.mapping.v1.Mapping.MappingProvenance(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(oscal.mapping.v1.Mapping.MappingProvenance result) {
+        if (responsiblePartiesBuilder_ == null) {
+          if (((bitField0_ & 0x00000040) != 0)) {
+            responsibleParties_ = java.util.Collections.unmodifiableList(responsibleParties_);
+            bitField0_ = (bitField0_ & ~0x00000040);
+          }
+          result.responsibleParties_ = responsibleParties_;
+        } else {
+          result.responsibleParties_ = responsiblePartiesBuilder_.build();
+        }
+        if (propsBuilder_ == null) {
+          if (((bitField0_ & 0x00000080) != 0)) {
+            props_ = java.util.Collections.unmodifiableList(props_);
+            bitField0_ = (bitField0_ & ~0x00000080);
+          }
+          result.props_ = props_;
+        } else {
+          result.props_ = propsBuilder_.build();
+        }
+        if (linksBuilder_ == null) {
+          if (((bitField0_ & 0x00000100) != 0)) {
+            links_ = java.util.Collections.unmodifiableList(links_);
+            bitField0_ = (bitField0_ & ~0x00000100);
+          }
+          result.links_ = links_;
+        } else {
+          result.links_ = linksBuilder_.build();
+        }
+        if (remarksBuilder_ == null) {
+          if (((bitField0_ & 0x00000200) != 0)) {
+            remarks_ = java.util.Collections.unmodifiableList(remarks_);
+            bitField0_ = (bitField0_ & ~0x00000200);
+          }
+          result.remarks_ = remarks_;
+        } else {
+          result.remarks_ = remarksBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(oscal.mapping.v1.Mapping.MappingProvenance result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.method_ = method_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.matchingRationale_ = matchingRationale_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.status_ = status_;
+        }
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.confidenceScore_ = confidenceScoreBuilder_ == null
+              ? confidenceScore_
+              : confidenceScoreBuilder_.build();
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.coverage_ = coverageBuilder_ == null
+              ? coverage_
+              : coverageBuilder_.build();
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.mappingDescription_ = mappingDescriptionBuilder_ == null
+              ? mappingDescription_
+              : mappingDescriptionBuilder_.build();
+          to_bitField0_ |= 0x00000004;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof oscal.mapping.v1.Mapping.MappingProvenance) {
+          return mergeFrom((oscal.mapping.v1.Mapping.MappingProvenance)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(oscal.mapping.v1.Mapping.MappingProvenance other) {
+        if (other == oscal.mapping.v1.Mapping.MappingProvenance.getDefaultInstance()) return this;
+        if (!other.getMethod().isEmpty()) {
+          method_ = other.method_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getMatchingRationale().isEmpty()) {
+          matchingRationale_ = other.matchingRationale_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getStatus().isEmpty()) {
+          status_ = other.status_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (other.hasConfidenceScore()) {
+          mergeConfidenceScore(other.getConfidenceScore());
+        }
+        if (other.hasCoverage()) {
+          mergeCoverage(other.getCoverage());
+        }
+        if (other.hasMappingDescription()) {
+          mergeMappingDescription(other.getMappingDescription());
+        }
+        if (responsiblePartiesBuilder_ == null) {
+          if (!other.responsibleParties_.isEmpty()) {
+            if (responsibleParties_.isEmpty()) {
+              responsibleParties_ = other.responsibleParties_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+            } else {
+              ensureResponsiblePartiesIsMutable();
+              responsibleParties_.addAll(other.responsibleParties_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.responsibleParties_.isEmpty()) {
+            if (responsiblePartiesBuilder_.isEmpty()) {
+              responsiblePartiesBuilder_.dispose();
+              responsiblePartiesBuilder_ = null;
+              responsibleParties_ = other.responsibleParties_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+              responsiblePartiesBuilder_ =
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   internalGetResponsiblePartiesFieldBuilder() : null;
+            } else {
+              responsiblePartiesBuilder_.addAllMessages(other.responsibleParties_);
+            }
+          }
+        }
+        if (propsBuilder_ == null) {
+          if (!other.props_.isEmpty()) {
+            if (props_.isEmpty()) {
+              props_ = other.props_;
+              bitField0_ = (bitField0_ & ~0x00000080);
+            } else {
+              ensurePropsIsMutable();
+              props_.addAll(other.props_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.props_.isEmpty()) {
+            if (propsBuilder_.isEmpty()) {
+              propsBuilder_.dispose();
+              propsBuilder_ = null;
+              props_ = other.props_;
+              bitField0_ = (bitField0_ & ~0x00000080);
+              propsBuilder_ =
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   internalGetPropsFieldBuilder() : null;
+            } else {
+              propsBuilder_.addAllMessages(other.props_);
+            }
+          }
+        }
+        if (linksBuilder_ == null) {
+          if (!other.links_.isEmpty()) {
+            if (links_.isEmpty()) {
+              links_ = other.links_;
+              bitField0_ = (bitField0_ & ~0x00000100);
+            } else {
+              ensureLinksIsMutable();
+              links_.addAll(other.links_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.links_.isEmpty()) {
+            if (linksBuilder_.isEmpty()) {
+              linksBuilder_.dispose();
+              linksBuilder_ = null;
+              links_ = other.links_;
+              bitField0_ = (bitField0_ & ~0x00000100);
+              linksBuilder_ =
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   internalGetLinksFieldBuilder() : null;
+            } else {
+              linksBuilder_.addAllMessages(other.links_);
+            }
+          }
+        }
+        if (remarksBuilder_ == null) {
+          if (!other.remarks_.isEmpty()) {
+            if (remarks_.isEmpty()) {
+              remarks_ = other.remarks_;
+              bitField0_ = (bitField0_ & ~0x00000200);
+            } else {
+              ensureRemarksIsMutable();
+              remarks_.addAll(other.remarks_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.remarks_.isEmpty()) {
+            if (remarksBuilder_.isEmpty()) {
+              remarksBuilder_.dispose();
+              remarksBuilder_ = null;
+              remarks_ = other.remarks_;
+              bitField0_ = (bitField0_ & ~0x00000200);
+              remarksBuilder_ =
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   internalGetRemarksFieldBuilder() : null;
+            } else {
+              remarksBuilder_.addAllMessages(other.remarks_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                method_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                matchingRationale_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                status_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    internalGetConfidenceScoreFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                input.readMessage(
+                    internalGetCoverageFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                input.readMessage(
+                    internalGetMappingDescriptionFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                oscal.common.v1.Common.ResponsibleParty m =
+                    input.readMessage(
+                        oscal.common.v1.Common.ResponsibleParty.parser(),
+                        extensionRegistry);
+                if (responsiblePartiesBuilder_ == null) {
+                  ensureResponsiblePartiesIsMutable();
+                  responsibleParties_.add(m);
+                } else {
+                  responsiblePartiesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 58
+              case 66: {
+                oscal.common.v1.Common.Property m =
+                    input.readMessage(
+                        oscal.common.v1.Common.Property.parser(),
+                        extensionRegistry);
+                if (propsBuilder_ == null) {
+                  ensurePropsIsMutable();
+                  props_.add(m);
+                } else {
+                  propsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 66
+              case 74: {
+                oscal.common.v1.Common.Link m =
+                    input.readMessage(
+                        oscal.common.v1.Common.Link.parser(),
+                        extensionRegistry);
+                if (linksBuilder_ == null) {
+                  ensureLinksIsMutable();
+                  links_.add(m);
+                } else {
+                  linksBuilder_.addMessage(m);
+                }
+                break;
+              } // case 74
+              case 82: {
+                oscal.common.v1.Common.MarkupMultiline m =
+                    input.readMessage(
+                        oscal.common.v1.Common.MarkupMultiline.parser(),
+                        extensionRegistry);
+                if (remarksBuilder_ == null) {
+                  ensureRemarksIsMutable();
+                  remarks_.add(m);
+                } else {
+                  remarksBuilder_.addMessage(m);
+                }
+                break;
+              } // case 82
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object method_ = "";
+      /**
+       * <code>string method = 1 [json_name = "method"];</code>
+       * @return The method.
+       */
+      public java.lang.String getMethod() {
+        java.lang.Object ref = method_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          method_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string method = 1 [json_name = "method"];</code>
+       * @return The bytes for method.
+       */
+      public com.google.protobuf.ByteString
+          getMethodBytes() {
+        java.lang.Object ref = method_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          method_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string method = 1 [json_name = "method"];</code>
+       * @param value The method to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMethod(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        method_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string method = 1 [json_name = "method"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMethod() {
+        method_ = getDefaultInstance().getMethod();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string method = 1 [json_name = "method"];</code>
+       * @param value The bytes for method to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMethodBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        method_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object matchingRationale_ = "";
+      /**
+       * <code>string matching_rationale = 2 [json_name = "matchingRationale"];</code>
+       * @return The matchingRationale.
+       */
+      public java.lang.String getMatchingRationale() {
+        java.lang.Object ref = matchingRationale_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          matchingRationale_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string matching_rationale = 2 [json_name = "matchingRationale"];</code>
+       * @return The bytes for matchingRationale.
+       */
+      public com.google.protobuf.ByteString
+          getMatchingRationaleBytes() {
+        java.lang.Object ref = matchingRationale_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          matchingRationale_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string matching_rationale = 2 [json_name = "matchingRationale"];</code>
+       * @param value The matchingRationale to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMatchingRationale(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        matchingRationale_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string matching_rationale = 2 [json_name = "matchingRationale"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMatchingRationale() {
+        matchingRationale_ = getDefaultInstance().getMatchingRationale();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string matching_rationale = 2 [json_name = "matchingRationale"];</code>
+       * @param value The bytes for matchingRationale to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMatchingRationaleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        matchingRationale_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object status_ = "";
+      /**
+       * <code>string status = 3 [json_name = "status"];</code>
+       * @return The status.
+       */
+      public java.lang.String getStatus() {
+        java.lang.Object ref = status_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          status_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string status = 3 [json_name = "status"];</code>
+       * @return The bytes for status.
+       */
+      public com.google.protobuf.ByteString
+          getStatusBytes() {
+        java.lang.Object ref = status_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          status_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string status = 3 [json_name = "status"];</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatus(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        status_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string status = 3 [json_name = "status"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStatus() {
+        status_ = getDefaultInstance().getStatus();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string status = 3 [json_name = "status"];</code>
+       * @param value The bytes for status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatusBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        status_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private oscal.mapping.v1.Mapping.ConfidenceScore confidenceScore_;
+      private com.google.protobuf.SingleFieldBuilder<
+          oscal.mapping.v1.Mapping.ConfidenceScore, oscal.mapping.v1.Mapping.ConfidenceScore.Builder, oscal.mapping.v1.Mapping.ConfidenceScoreOrBuilder> confidenceScoreBuilder_;
+      /**
+       * <code>.oscal.mapping.v1.ConfidenceScore confidence_score = 4 [json_name = "confidenceScore"];</code>
+       * @return Whether the confidenceScore field is set.
+       */
+      public boolean hasConfidenceScore() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>.oscal.mapping.v1.ConfidenceScore confidence_score = 4 [json_name = "confidenceScore"];</code>
+       * @return The confidenceScore.
+       */
+      public oscal.mapping.v1.Mapping.ConfidenceScore getConfidenceScore() {
+        if (confidenceScoreBuilder_ == null) {
+          return confidenceScore_ == null ? oscal.mapping.v1.Mapping.ConfidenceScore.getDefaultInstance() : confidenceScore_;
+        } else {
+          return confidenceScoreBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.oscal.mapping.v1.ConfidenceScore confidence_score = 4 [json_name = "confidenceScore"];</code>
+       */
+      public Builder setConfidenceScore(oscal.mapping.v1.Mapping.ConfidenceScore value) {
+        if (confidenceScoreBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          confidenceScore_ = value;
+        } else {
+          confidenceScoreBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.mapping.v1.ConfidenceScore confidence_score = 4 [json_name = "confidenceScore"];</code>
+       */
+      public Builder setConfidenceScore(
+          oscal.mapping.v1.Mapping.ConfidenceScore.Builder builderForValue) {
+        if (confidenceScoreBuilder_ == null) {
+          confidenceScore_ = builderForValue.build();
+        } else {
+          confidenceScoreBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.mapping.v1.ConfidenceScore confidence_score = 4 [json_name = "confidenceScore"];</code>
+       */
+      public Builder mergeConfidenceScore(oscal.mapping.v1.Mapping.ConfidenceScore value) {
+        if (confidenceScoreBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            confidenceScore_ != null &&
+            confidenceScore_ != oscal.mapping.v1.Mapping.ConfidenceScore.getDefaultInstance()) {
+            getConfidenceScoreBuilder().mergeFrom(value);
+          } else {
+            confidenceScore_ = value;
+          }
+        } else {
+          confidenceScoreBuilder_.mergeFrom(value);
+        }
+        if (confidenceScore_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>.oscal.mapping.v1.ConfidenceScore confidence_score = 4 [json_name = "confidenceScore"];</code>
+       */
+      public Builder clearConfidenceScore() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        confidenceScore_ = null;
+        if (confidenceScoreBuilder_ != null) {
+          confidenceScoreBuilder_.dispose();
+          confidenceScoreBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.mapping.v1.ConfidenceScore confidence_score = 4 [json_name = "confidenceScore"];</code>
+       */
+      public oscal.mapping.v1.Mapping.ConfidenceScore.Builder getConfidenceScoreBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return internalGetConfidenceScoreFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.oscal.mapping.v1.ConfidenceScore confidence_score = 4 [json_name = "confidenceScore"];</code>
+       */
+      public oscal.mapping.v1.Mapping.ConfidenceScoreOrBuilder getConfidenceScoreOrBuilder() {
+        if (confidenceScoreBuilder_ != null) {
+          return confidenceScoreBuilder_.getMessageOrBuilder();
+        } else {
+          return confidenceScore_ == null ?
+              oscal.mapping.v1.Mapping.ConfidenceScore.getDefaultInstance() : confidenceScore_;
+        }
+      }
+      /**
+       * <code>.oscal.mapping.v1.ConfidenceScore confidence_score = 4 [json_name = "confidenceScore"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          oscal.mapping.v1.Mapping.ConfidenceScore, oscal.mapping.v1.Mapping.ConfidenceScore.Builder, oscal.mapping.v1.Mapping.ConfidenceScoreOrBuilder>
+          internalGetConfidenceScoreFieldBuilder() {
+        if (confidenceScoreBuilder_ == null) {
+          confidenceScoreBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              oscal.mapping.v1.Mapping.ConfidenceScore, oscal.mapping.v1.Mapping.ConfidenceScore.Builder, oscal.mapping.v1.Mapping.ConfidenceScoreOrBuilder>(
+                  getConfidenceScore(),
+                  getParentForChildren(),
+                  isClean());
+          confidenceScore_ = null;
+        }
+        return confidenceScoreBuilder_;
+      }
+
+      private oscal.mapping.v1.Mapping.Coverage coverage_;
+      private com.google.protobuf.SingleFieldBuilder<
+          oscal.mapping.v1.Mapping.Coverage, oscal.mapping.v1.Mapping.Coverage.Builder, oscal.mapping.v1.Mapping.CoverageOrBuilder> coverageBuilder_;
+      /**
+       * <code>.oscal.mapping.v1.Coverage coverage = 5 [json_name = "coverage"];</code>
+       * @return Whether the coverage field is set.
+       */
+      public boolean hasCoverage() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <code>.oscal.mapping.v1.Coverage coverage = 5 [json_name = "coverage"];</code>
+       * @return The coverage.
+       */
+      public oscal.mapping.v1.Mapping.Coverage getCoverage() {
+        if (coverageBuilder_ == null) {
+          return coverage_ == null ? oscal.mapping.v1.Mapping.Coverage.getDefaultInstance() : coverage_;
+        } else {
+          return coverageBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.oscal.mapping.v1.Coverage coverage = 5 [json_name = "coverage"];</code>
+       */
+      public Builder setCoverage(oscal.mapping.v1.Mapping.Coverage value) {
+        if (coverageBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          coverage_ = value;
+        } else {
+          coverageBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.mapping.v1.Coverage coverage = 5 [json_name = "coverage"];</code>
+       */
+      public Builder setCoverage(
+          oscal.mapping.v1.Mapping.Coverage.Builder builderForValue) {
+        if (coverageBuilder_ == null) {
+          coverage_ = builderForValue.build();
+        } else {
+          coverageBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.mapping.v1.Coverage coverage = 5 [json_name = "coverage"];</code>
+       */
+      public Builder mergeCoverage(oscal.mapping.v1.Mapping.Coverage value) {
+        if (coverageBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0) &&
+            coverage_ != null &&
+            coverage_ != oscal.mapping.v1.Mapping.Coverage.getDefaultInstance()) {
+            getCoverageBuilder().mergeFrom(value);
+          } else {
+            coverage_ = value;
+          }
+        } else {
+          coverageBuilder_.mergeFrom(value);
+        }
+        if (coverage_ != null) {
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>.oscal.mapping.v1.Coverage coverage = 5 [json_name = "coverage"];</code>
+       */
+      public Builder clearCoverage() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        coverage_ = null;
+        if (coverageBuilder_ != null) {
+          coverageBuilder_.dispose();
+          coverageBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.mapping.v1.Coverage coverage = 5 [json_name = "coverage"];</code>
+       */
+      public oscal.mapping.v1.Mapping.Coverage.Builder getCoverageBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return internalGetCoverageFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.oscal.mapping.v1.Coverage coverage = 5 [json_name = "coverage"];</code>
+       */
+      public oscal.mapping.v1.Mapping.CoverageOrBuilder getCoverageOrBuilder() {
+        if (coverageBuilder_ != null) {
+          return coverageBuilder_.getMessageOrBuilder();
+        } else {
+          return coverage_ == null ?
+              oscal.mapping.v1.Mapping.Coverage.getDefaultInstance() : coverage_;
+        }
+      }
+      /**
+       * <code>.oscal.mapping.v1.Coverage coverage = 5 [json_name = "coverage"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          oscal.mapping.v1.Mapping.Coverage, oscal.mapping.v1.Mapping.Coverage.Builder, oscal.mapping.v1.Mapping.CoverageOrBuilder>
+          internalGetCoverageFieldBuilder() {
+        if (coverageBuilder_ == null) {
+          coverageBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              oscal.mapping.v1.Mapping.Coverage, oscal.mapping.v1.Mapping.Coverage.Builder, oscal.mapping.v1.Mapping.CoverageOrBuilder>(
+                  getCoverage(),
+                  getParentForChildren(),
+                  isClean());
+          coverage_ = null;
+        }
+        return coverageBuilder_;
+      }
+
+      private oscal.common.v1.Common.MarkupMultiline mappingDescription_;
+      private com.google.protobuf.SingleFieldBuilder<
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> mappingDescriptionBuilder_;
+      /**
+       * <code>.oscal.common.v1.MarkupMultiline mapping_description = 6 [json_name = "mappingDescription"];</code>
+       * @return Whether the mappingDescription field is set.
+       */
+      public boolean hasMappingDescription() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <code>.oscal.common.v1.MarkupMultiline mapping_description = 6 [json_name = "mappingDescription"];</code>
+       * @return The mappingDescription.
+       */
+      public oscal.common.v1.Common.MarkupMultiline getMappingDescription() {
+        if (mappingDescriptionBuilder_ == null) {
+          return mappingDescription_ == null ? oscal.common.v1.Common.MarkupMultiline.getDefaultInstance() : mappingDescription_;
+        } else {
+          return mappingDescriptionBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.oscal.common.v1.MarkupMultiline mapping_description = 6 [json_name = "mappingDescription"];</code>
+       */
+      public Builder setMappingDescription(oscal.common.v1.Common.MarkupMultiline value) {
+        if (mappingDescriptionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          mappingDescription_ = value;
+        } else {
+          mappingDescriptionBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.MarkupMultiline mapping_description = 6 [json_name = "mappingDescription"];</code>
+       */
+      public Builder setMappingDescription(
+          oscal.common.v1.Common.MarkupMultiline.Builder builderForValue) {
+        if (mappingDescriptionBuilder_ == null) {
+          mappingDescription_ = builderForValue.build();
+        } else {
+          mappingDescriptionBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.MarkupMultiline mapping_description = 6 [json_name = "mappingDescription"];</code>
+       */
+      public Builder mergeMappingDescription(oscal.common.v1.Common.MarkupMultiline value) {
+        if (mappingDescriptionBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0) &&
+            mappingDescription_ != null &&
+            mappingDescription_ != oscal.common.v1.Common.MarkupMultiline.getDefaultInstance()) {
+            getMappingDescriptionBuilder().mergeFrom(value);
+          } else {
+            mappingDescription_ = value;
+          }
+        } else {
+          mappingDescriptionBuilder_.mergeFrom(value);
+        }
+        if (mappingDescription_ != null) {
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.MarkupMultiline mapping_description = 6 [json_name = "mappingDescription"];</code>
+       */
+      public Builder clearMappingDescription() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        mappingDescription_ = null;
+        if (mappingDescriptionBuilder_ != null) {
+          mappingDescriptionBuilder_.dispose();
+          mappingDescriptionBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.common.v1.MarkupMultiline mapping_description = 6 [json_name = "mappingDescription"];</code>
+       */
+      public oscal.common.v1.Common.MarkupMultiline.Builder getMappingDescriptionBuilder() {
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return internalGetMappingDescriptionFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.oscal.common.v1.MarkupMultiline mapping_description = 6 [json_name = "mappingDescription"];</code>
+       */
+      public oscal.common.v1.Common.MarkupMultilineOrBuilder getMappingDescriptionOrBuilder() {
+        if (mappingDescriptionBuilder_ != null) {
+          return mappingDescriptionBuilder_.getMessageOrBuilder();
+        } else {
+          return mappingDescription_ == null ?
+              oscal.common.v1.Common.MarkupMultiline.getDefaultInstance() : mappingDescription_;
+        }
+      }
+      /**
+       * <code>.oscal.common.v1.MarkupMultiline mapping_description = 6 [json_name = "mappingDescription"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
+          internalGetMappingDescriptionFieldBuilder() {
+        if (mappingDescriptionBuilder_ == null) {
+          mappingDescriptionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>(
+                  getMappingDescription(),
+                  getParentForChildren(),
+                  isClean());
+          mappingDescription_ = null;
+        }
+        return mappingDescriptionBuilder_;
+      }
+
+      private java.util.List<oscal.common.v1.Common.ResponsibleParty> responsibleParties_ =
+        java.util.Collections.emptyList();
+      private void ensureResponsiblePartiesIsMutable() {
+        if (!((bitField0_ & 0x00000040) != 0)) {
+          responsibleParties_ = new java.util.ArrayList<oscal.common.v1.Common.ResponsibleParty>(responsibleParties_);
+          bitField0_ |= 0x00000040;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.common.v1.Common.ResponsibleParty, oscal.common.v1.Common.ResponsibleParty.Builder, oscal.common.v1.Common.ResponsiblePartyOrBuilder> responsiblePartiesBuilder_;
+
+      /**
+       * <code>repeated .oscal.common.v1.ResponsibleParty responsible_parties = 7 [json_name = "responsibleParties"];</code>
+       */
+      public java.util.List<oscal.common.v1.Common.ResponsibleParty> getResponsiblePartiesList() {
+        if (responsiblePartiesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(responsibleParties_);
+        } else {
+          return responsiblePartiesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.ResponsibleParty responsible_parties = 7 [json_name = "responsibleParties"];</code>
+       */
+      public int getResponsiblePartiesCount() {
+        if (responsiblePartiesBuilder_ == null) {
+          return responsibleParties_.size();
+        } else {
+          return responsiblePartiesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.ResponsibleParty responsible_parties = 7 [json_name = "responsibleParties"];</code>
+       */
+      public oscal.common.v1.Common.ResponsibleParty getResponsibleParties(int index) {
+        if (responsiblePartiesBuilder_ == null) {
+          return responsibleParties_.get(index);
+        } else {
+          return responsiblePartiesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.ResponsibleParty responsible_parties = 7 [json_name = "responsibleParties"];</code>
+       */
+      public Builder setResponsibleParties(
+          int index, oscal.common.v1.Common.ResponsibleParty value) {
+        if (responsiblePartiesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureResponsiblePartiesIsMutable();
+          responsibleParties_.set(index, value);
+          onChanged();
+        } else {
+          responsiblePartiesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.ResponsibleParty responsible_parties = 7 [json_name = "responsibleParties"];</code>
+       */
+      public Builder setResponsibleParties(
+          int index, oscal.common.v1.Common.ResponsibleParty.Builder builderForValue) {
+        if (responsiblePartiesBuilder_ == null) {
+          ensureResponsiblePartiesIsMutable();
+          responsibleParties_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          responsiblePartiesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.ResponsibleParty responsible_parties = 7 [json_name = "responsibleParties"];</code>
+       */
+      public Builder addResponsibleParties(oscal.common.v1.Common.ResponsibleParty value) {
+        if (responsiblePartiesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureResponsiblePartiesIsMutable();
+          responsibleParties_.add(value);
+          onChanged();
+        } else {
+          responsiblePartiesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.ResponsibleParty responsible_parties = 7 [json_name = "responsibleParties"];</code>
+       */
+      public Builder addResponsibleParties(
+          int index, oscal.common.v1.Common.ResponsibleParty value) {
+        if (responsiblePartiesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureResponsiblePartiesIsMutable();
+          responsibleParties_.add(index, value);
+          onChanged();
+        } else {
+          responsiblePartiesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.ResponsibleParty responsible_parties = 7 [json_name = "responsibleParties"];</code>
+       */
+      public Builder addResponsibleParties(
+          oscal.common.v1.Common.ResponsibleParty.Builder builderForValue) {
+        if (responsiblePartiesBuilder_ == null) {
+          ensureResponsiblePartiesIsMutable();
+          responsibleParties_.add(builderForValue.build());
+          onChanged();
+        } else {
+          responsiblePartiesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.ResponsibleParty responsible_parties = 7 [json_name = "responsibleParties"];</code>
+       */
+      public Builder addResponsibleParties(
+          int index, oscal.common.v1.Common.ResponsibleParty.Builder builderForValue) {
+        if (responsiblePartiesBuilder_ == null) {
+          ensureResponsiblePartiesIsMutable();
+          responsibleParties_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          responsiblePartiesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.ResponsibleParty responsible_parties = 7 [json_name = "responsibleParties"];</code>
+       */
+      public Builder addAllResponsibleParties(
+          java.lang.Iterable<? extends oscal.common.v1.Common.ResponsibleParty> values) {
+        if (responsiblePartiesBuilder_ == null) {
+          ensureResponsiblePartiesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, responsibleParties_);
+          onChanged();
+        } else {
+          responsiblePartiesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.ResponsibleParty responsible_parties = 7 [json_name = "responsibleParties"];</code>
+       */
+      public Builder clearResponsibleParties() {
+        if (responsiblePartiesBuilder_ == null) {
+          responsibleParties_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000040);
+          onChanged();
+        } else {
+          responsiblePartiesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.ResponsibleParty responsible_parties = 7 [json_name = "responsibleParties"];</code>
+       */
+      public Builder removeResponsibleParties(int index) {
+        if (responsiblePartiesBuilder_ == null) {
+          ensureResponsiblePartiesIsMutable();
+          responsibleParties_.remove(index);
+          onChanged();
+        } else {
+          responsiblePartiesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.ResponsibleParty responsible_parties = 7 [json_name = "responsibleParties"];</code>
+       */
+      public oscal.common.v1.Common.ResponsibleParty.Builder getResponsiblePartiesBuilder(
+          int index) {
+        return internalGetResponsiblePartiesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .oscal.common.v1.ResponsibleParty responsible_parties = 7 [json_name = "responsibleParties"];</code>
+       */
+      public oscal.common.v1.Common.ResponsiblePartyOrBuilder getResponsiblePartiesOrBuilder(
+          int index) {
+        if (responsiblePartiesBuilder_ == null) {
+          return responsibleParties_.get(index);  } else {
+          return responsiblePartiesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.ResponsibleParty responsible_parties = 7 [json_name = "responsibleParties"];</code>
+       */
+      public java.util.List<? extends oscal.common.v1.Common.ResponsiblePartyOrBuilder>
+           getResponsiblePartiesOrBuilderList() {
+        if (responsiblePartiesBuilder_ != null) {
+          return responsiblePartiesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(responsibleParties_);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.ResponsibleParty responsible_parties = 7 [json_name = "responsibleParties"];</code>
+       */
+      public oscal.common.v1.Common.ResponsibleParty.Builder addResponsiblePartiesBuilder() {
+        return internalGetResponsiblePartiesFieldBuilder().addBuilder(
+            oscal.common.v1.Common.ResponsibleParty.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.common.v1.ResponsibleParty responsible_parties = 7 [json_name = "responsibleParties"];</code>
+       */
+      public oscal.common.v1.Common.ResponsibleParty.Builder addResponsiblePartiesBuilder(
+          int index) {
+        return internalGetResponsiblePartiesFieldBuilder().addBuilder(
+            index, oscal.common.v1.Common.ResponsibleParty.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.common.v1.ResponsibleParty responsible_parties = 7 [json_name = "responsibleParties"];</code>
+       */
+      public java.util.List<oscal.common.v1.Common.ResponsibleParty.Builder>
+           getResponsiblePartiesBuilderList() {
+        return internalGetResponsiblePartiesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.common.v1.Common.ResponsibleParty, oscal.common.v1.Common.ResponsibleParty.Builder, oscal.common.v1.Common.ResponsiblePartyOrBuilder>
+          internalGetResponsiblePartiesFieldBuilder() {
+        if (responsiblePartiesBuilder_ == null) {
+          responsiblePartiesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              oscal.common.v1.Common.ResponsibleParty, oscal.common.v1.Common.ResponsibleParty.Builder, oscal.common.v1.Common.ResponsiblePartyOrBuilder>(
+                  responsibleParties_,
+                  ((bitField0_ & 0x00000040) != 0),
+                  getParentForChildren(),
+                  isClean());
+          responsibleParties_ = null;
+        }
+        return responsiblePartiesBuilder_;
+      }
+
+      private java.util.List<oscal.common.v1.Common.Property> props_ =
+        java.util.Collections.emptyList();
+      private void ensurePropsIsMutable() {
+        if (!((bitField0_ & 0x00000080) != 0)) {
+          props_ = new java.util.ArrayList<oscal.common.v1.Common.Property>(props_);
+          bitField0_ |= 0x00000080;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> propsBuilder_;
+
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props"];</code>
+       */
+      public java.util.List<oscal.common.v1.Common.Property> getPropsList() {
+        if (propsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(props_);
+        } else {
+          return propsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props"];</code>
+       */
+      public int getPropsCount() {
+        if (propsBuilder_ == null) {
+          return props_.size();
+        } else {
+          return propsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props"];</code>
+       */
+      public oscal.common.v1.Common.Property getProps(int index) {
+        if (propsBuilder_ == null) {
+          return props_.get(index);
+        } else {
+          return propsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props"];</code>
+       */
+      public Builder setProps(
+          int index, oscal.common.v1.Common.Property value) {
+        if (propsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePropsIsMutable();
+          props_.set(index, value);
+          onChanged();
+        } else {
+          propsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props"];</code>
+       */
+      public Builder setProps(
+          int index, oscal.common.v1.Common.Property.Builder builderForValue) {
+        if (propsBuilder_ == null) {
+          ensurePropsIsMutable();
+          props_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          propsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props"];</code>
+       */
+      public Builder addProps(oscal.common.v1.Common.Property value) {
+        if (propsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePropsIsMutable();
+          props_.add(value);
+          onChanged();
+        } else {
+          propsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props"];</code>
+       */
+      public Builder addProps(
+          int index, oscal.common.v1.Common.Property value) {
+        if (propsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePropsIsMutable();
+          props_.add(index, value);
+          onChanged();
+        } else {
+          propsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props"];</code>
+       */
+      public Builder addProps(
+          oscal.common.v1.Common.Property.Builder builderForValue) {
+        if (propsBuilder_ == null) {
+          ensurePropsIsMutable();
+          props_.add(builderForValue.build());
+          onChanged();
+        } else {
+          propsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props"];</code>
+       */
+      public Builder addProps(
+          int index, oscal.common.v1.Common.Property.Builder builderForValue) {
+        if (propsBuilder_ == null) {
+          ensurePropsIsMutable();
+          props_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          propsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props"];</code>
+       */
+      public Builder addAllProps(
+          java.lang.Iterable<? extends oscal.common.v1.Common.Property> values) {
+        if (propsBuilder_ == null) {
+          ensurePropsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, props_);
+          onChanged();
+        } else {
+          propsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props"];</code>
+       */
+      public Builder clearProps() {
+        if (propsBuilder_ == null) {
+          props_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000080);
+          onChanged();
+        } else {
+          propsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props"];</code>
+       */
+      public Builder removeProps(int index) {
+        if (propsBuilder_ == null) {
+          ensurePropsIsMutable();
+          props_.remove(index);
+          onChanged();
+        } else {
+          propsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props"];</code>
+       */
+      public oscal.common.v1.Common.Property.Builder getPropsBuilder(
+          int index) {
+        return internalGetPropsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props"];</code>
+       */
+      public oscal.common.v1.Common.PropertyOrBuilder getPropsOrBuilder(
+          int index) {
+        if (propsBuilder_ == null) {
+          return props_.get(index);  } else {
+          return propsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props"];</code>
+       */
+      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
+           getPropsOrBuilderList() {
+        if (propsBuilder_ != null) {
+          return propsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(props_);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props"];</code>
+       */
+      public oscal.common.v1.Common.Property.Builder addPropsBuilder() {
+        return internalGetPropsFieldBuilder().addBuilder(
+            oscal.common.v1.Common.Property.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props"];</code>
+       */
+      public oscal.common.v1.Common.Property.Builder addPropsBuilder(
+          int index) {
+        return internalGetPropsFieldBuilder().addBuilder(
+            index, oscal.common.v1.Common.Property.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Property props = 8 [json_name = "props"];</code>
+       */
+      public java.util.List<oscal.common.v1.Common.Property.Builder>
+           getPropsBuilderList() {
+        return internalGetPropsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder>
+          internalGetPropsFieldBuilder() {
+        if (propsBuilder_ == null) {
+          propsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder>(
+                  props_,
+                  ((bitField0_ & 0x00000080) != 0),
+                  getParentForChildren(),
+                  isClean());
+          props_ = null;
+        }
+        return propsBuilder_;
+      }
+
+      private java.util.List<oscal.common.v1.Common.Link> links_ =
+        java.util.Collections.emptyList();
+      private void ensureLinksIsMutable() {
+        if (!((bitField0_ & 0x00000100) != 0)) {
+          links_ = new java.util.ArrayList<oscal.common.v1.Common.Link>(links_);
+          bitField0_ |= 0x00000100;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder> linksBuilder_;
+
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links"];</code>
+       */
+      public java.util.List<oscal.common.v1.Common.Link> getLinksList() {
+        if (linksBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(links_);
+        } else {
+          return linksBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links"];</code>
+       */
+      public int getLinksCount() {
+        if (linksBuilder_ == null) {
+          return links_.size();
+        } else {
+          return linksBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links"];</code>
+       */
+      public oscal.common.v1.Common.Link getLinks(int index) {
+        if (linksBuilder_ == null) {
+          return links_.get(index);
+        } else {
+          return linksBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links"];</code>
+       */
+      public Builder setLinks(
+          int index, oscal.common.v1.Common.Link value) {
+        if (linksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLinksIsMutable();
+          links_.set(index, value);
+          onChanged();
+        } else {
+          linksBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links"];</code>
+       */
+      public Builder setLinks(
+          int index, oscal.common.v1.Common.Link.Builder builderForValue) {
+        if (linksBuilder_ == null) {
+          ensureLinksIsMutable();
+          links_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          linksBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links"];</code>
+       */
+      public Builder addLinks(oscal.common.v1.Common.Link value) {
+        if (linksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLinksIsMutable();
+          links_.add(value);
+          onChanged();
+        } else {
+          linksBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links"];</code>
+       */
+      public Builder addLinks(
+          int index, oscal.common.v1.Common.Link value) {
+        if (linksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLinksIsMutable();
+          links_.add(index, value);
+          onChanged();
+        } else {
+          linksBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links"];</code>
+       */
+      public Builder addLinks(
+          oscal.common.v1.Common.Link.Builder builderForValue) {
+        if (linksBuilder_ == null) {
+          ensureLinksIsMutable();
+          links_.add(builderForValue.build());
+          onChanged();
+        } else {
+          linksBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links"];</code>
+       */
+      public Builder addLinks(
+          int index, oscal.common.v1.Common.Link.Builder builderForValue) {
+        if (linksBuilder_ == null) {
+          ensureLinksIsMutable();
+          links_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          linksBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links"];</code>
+       */
+      public Builder addAllLinks(
+          java.lang.Iterable<? extends oscal.common.v1.Common.Link> values) {
+        if (linksBuilder_ == null) {
+          ensureLinksIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, links_);
+          onChanged();
+        } else {
+          linksBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links"];</code>
+       */
+      public Builder clearLinks() {
+        if (linksBuilder_ == null) {
+          links_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000100);
+          onChanged();
+        } else {
+          linksBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links"];</code>
+       */
+      public Builder removeLinks(int index) {
+        if (linksBuilder_ == null) {
+          ensureLinksIsMutable();
+          links_.remove(index);
+          onChanged();
+        } else {
+          linksBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links"];</code>
+       */
+      public oscal.common.v1.Common.Link.Builder getLinksBuilder(
+          int index) {
+        return internalGetLinksFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links"];</code>
+       */
+      public oscal.common.v1.Common.LinkOrBuilder getLinksOrBuilder(
+          int index) {
+        if (linksBuilder_ == null) {
+          return links_.get(index);  } else {
+          return linksBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links"];</code>
+       */
+      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
+           getLinksOrBuilderList() {
+        if (linksBuilder_ != null) {
+          return linksBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(links_);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links"];</code>
+       */
+      public oscal.common.v1.Common.Link.Builder addLinksBuilder() {
+        return internalGetLinksFieldBuilder().addBuilder(
+            oscal.common.v1.Common.Link.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links"];</code>
+       */
+      public oscal.common.v1.Common.Link.Builder addLinksBuilder(
+          int index) {
+        return internalGetLinksFieldBuilder().addBuilder(
+            index, oscal.common.v1.Common.Link.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Link links = 9 [json_name = "links"];</code>
+       */
+      public java.util.List<oscal.common.v1.Common.Link.Builder>
+           getLinksBuilderList() {
+        return internalGetLinksFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder>
+          internalGetLinksFieldBuilder() {
+        if (linksBuilder_ == null) {
+          linksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder>(
+                  links_,
+                  ((bitField0_ & 0x00000100) != 0),
+                  getParentForChildren(),
+                  isClean());
+          links_ = null;
+        }
+        return linksBuilder_;
+      }
+
+      private java.util.List<oscal.common.v1.Common.MarkupMultiline> remarks_ =
+        java.util.Collections.emptyList();
+      private void ensureRemarksIsMutable() {
+        if (!((bitField0_ & 0x00000200) != 0)) {
+          remarks_ = new java.util.ArrayList<oscal.common.v1.Common.MarkupMultiline>(remarks_);
+          bitField0_ |= 0x00000200;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> remarksBuilder_;
+
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks"];</code>
+       */
+      public java.util.List<oscal.common.v1.Common.MarkupMultiline> getRemarksList() {
+        if (remarksBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(remarks_);
+        } else {
+          return remarksBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks"];</code>
+       */
+      public int getRemarksCount() {
+        if (remarksBuilder_ == null) {
+          return remarks_.size();
+        } else {
+          return remarksBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks"];</code>
+       */
+      public oscal.common.v1.Common.MarkupMultiline getRemarks(int index) {
+        if (remarksBuilder_ == null) {
+          return remarks_.get(index);
+        } else {
+          return remarksBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks"];</code>
+       */
+      public Builder setRemarks(
+          int index, oscal.common.v1.Common.MarkupMultiline value) {
+        if (remarksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRemarksIsMutable();
+          remarks_.set(index, value);
+          onChanged();
+        } else {
+          remarksBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks"];</code>
+       */
+      public Builder setRemarks(
+          int index, oscal.common.v1.Common.MarkupMultiline.Builder builderForValue) {
+        if (remarksBuilder_ == null) {
+          ensureRemarksIsMutable();
+          remarks_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          remarksBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks"];</code>
+       */
+      public Builder addRemarks(oscal.common.v1.Common.MarkupMultiline value) {
+        if (remarksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRemarksIsMutable();
+          remarks_.add(value);
+          onChanged();
+        } else {
+          remarksBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks"];</code>
+       */
+      public Builder addRemarks(
+          int index, oscal.common.v1.Common.MarkupMultiline value) {
+        if (remarksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRemarksIsMutable();
+          remarks_.add(index, value);
+          onChanged();
+        } else {
+          remarksBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks"];</code>
+       */
+      public Builder addRemarks(
+          oscal.common.v1.Common.MarkupMultiline.Builder builderForValue) {
+        if (remarksBuilder_ == null) {
+          ensureRemarksIsMutable();
+          remarks_.add(builderForValue.build());
+          onChanged();
+        } else {
+          remarksBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks"];</code>
+       */
+      public Builder addRemarks(
+          int index, oscal.common.v1.Common.MarkupMultiline.Builder builderForValue) {
+        if (remarksBuilder_ == null) {
+          ensureRemarksIsMutable();
+          remarks_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          remarksBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks"];</code>
+       */
+      public Builder addAllRemarks(
+          java.lang.Iterable<? extends oscal.common.v1.Common.MarkupMultiline> values) {
+        if (remarksBuilder_ == null) {
+          ensureRemarksIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, remarks_);
+          onChanged();
+        } else {
+          remarksBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks"];</code>
+       */
+      public Builder clearRemarks() {
+        if (remarksBuilder_ == null) {
+          remarks_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000200);
+          onChanged();
+        } else {
+          remarksBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks"];</code>
+       */
+      public Builder removeRemarks(int index) {
+        if (remarksBuilder_ == null) {
+          ensureRemarksIsMutable();
+          remarks_.remove(index);
+          onChanged();
+        } else {
+          remarksBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks"];</code>
+       */
+      public oscal.common.v1.Common.MarkupMultiline.Builder getRemarksBuilder(
+          int index) {
+        return internalGetRemarksFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks"];</code>
+       */
+      public oscal.common.v1.Common.MarkupMultilineOrBuilder getRemarksOrBuilder(
+          int index) {
+        if (remarksBuilder_ == null) {
+          return remarks_.get(index);  } else {
+          return remarksBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks"];</code>
+       */
+      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
+           getRemarksOrBuilderList() {
+        if (remarksBuilder_ != null) {
+          return remarksBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(remarks_);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks"];</code>
+       */
+      public oscal.common.v1.Common.MarkupMultiline.Builder addRemarksBuilder() {
+        return internalGetRemarksFieldBuilder().addBuilder(
+            oscal.common.v1.Common.MarkupMultiline.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks"];</code>
+       */
+      public oscal.common.v1.Common.MarkupMultiline.Builder addRemarksBuilder(
+          int index) {
+        return internalGetRemarksFieldBuilder().addBuilder(
+            index, oscal.common.v1.Common.MarkupMultiline.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks"];</code>
+       */
+      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder>
+           getRemarksBuilderList() {
+        return internalGetRemarksFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
+          internalGetRemarksFieldBuilder() {
+        if (remarksBuilder_ == null) {
+          remarksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>(
+                  remarks_,
+                  ((bitField0_ & 0x00000200) != 0),
+                  getParentForChildren(),
+                  isClean());
+          remarks_ = null;
+        }
+        return remarksBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:oscal.mapping.v1.MappingProvenance)
+    }
+
+    // @@protoc_insertion_point(class_scope:oscal.mapping.v1.MappingProvenance)
+    private static final oscal.mapping.v1.Mapping.MappingProvenance DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new oscal.mapping.v1.Mapping.MappingProvenance();
+    }
+
+    public static oscal.mapping.v1.Mapping.MappingProvenance getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MappingProvenance>
+        PARSER = new com.google.protobuf.AbstractParser<MappingProvenance>() {
+      @java.lang.Override
+      public MappingProvenance parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MappingProvenance> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MappingProvenance> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public oscal.mapping.v1.Mapping.MappingProvenance getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface SelectControlByIdOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oscal.mapping.v1.SelectControlById)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string with_child_controls = 1 [json_name = "withChildControls"];</code>
+     * @return The withChildControls.
+     */
+    java.lang.String getWithChildControls();
+    /**
+     * <code>string with_child_controls = 1 [json_name = "withChildControls"];</code>
+     * @return The bytes for withChildControls.
+     */
+    com.google.protobuf.ByteString
+        getWithChildControlsBytes();
+
+    /**
+     * <code>repeated .oscal.common.v1.Token with_ids = 2 [json_name = "withIds"];</code>
+     */
+    java.util.List<oscal.common.v1.Common.Token>
+        getWithIdsList();
+    /**
+     * <code>repeated .oscal.common.v1.Token with_ids = 2 [json_name = "withIds"];</code>
+     */
+    oscal.common.v1.Common.Token getWithIds(int index);
+    /**
+     * <code>repeated .oscal.common.v1.Token with_ids = 2 [json_name = "withIds"];</code>
+     */
+    int getWithIdsCount();
+    /**
+     * <code>repeated .oscal.common.v1.Token with_ids = 2 [json_name = "withIds"];</code>
+     */
+    java.util.List<? extends oscal.common.v1.Common.TokenOrBuilder>
+        getWithIdsOrBuilderList();
+    /**
+     * <code>repeated .oscal.common.v1.Token with_ids = 2 [json_name = "withIds"];</code>
+     */
+    oscal.common.v1.Common.TokenOrBuilder getWithIdsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .oscal.mapping.v1.Matching matching = 3 [json_name = "matching"];</code>
+     */
+    java.util.List<oscal.mapping.v1.Mapping.Matching>
+        getMatchingList();
+    /**
+     * <code>repeated .oscal.mapping.v1.Matching matching = 3 [json_name = "matching"];</code>
+     */
+    oscal.mapping.v1.Mapping.Matching getMatching(int index);
+    /**
+     * <code>repeated .oscal.mapping.v1.Matching matching = 3 [json_name = "matching"];</code>
+     */
+    int getMatchingCount();
+    /**
+     * <code>repeated .oscal.mapping.v1.Matching matching = 3 [json_name = "matching"];</code>
+     */
+    java.util.List<? extends oscal.mapping.v1.Mapping.MatchingOrBuilder>
+        getMatchingOrBuilderList();
+    /**
+     * <code>repeated .oscal.mapping.v1.Matching matching = 3 [json_name = "matching"];</code>
+     */
+    oscal.mapping.v1.Mapping.MatchingOrBuilder getMatchingOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * SelectControlById selects explicit or pattern-matched controls.
+   * </pre>
+   *
+   * Protobuf type {@code oscal.mapping.v1.SelectControlById}
+   */
+  public static final class SelectControlById extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:oscal.mapping.v1.SelectControlById)
+      SelectControlByIdOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 35,
+        /* patch= */ 1,
+        /* suffix= */ "",
+        "SelectControlById");
+    }
+    // Use SelectControlById.newBuilder() to construct.
+    private SelectControlById(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private SelectControlById() {
+      withChildControls_ = "";
+      withIds_ = java.util.Collections.emptyList();
+      matching_ = java.util.Collections.emptyList();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return oscal.mapping.v1.Mapping.internal_static_oscal_mapping_v1_SelectControlById_descriptor;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+      return oscal.mapping.v1.Mapping.internal_static_oscal_mapping_v1_SelectControlById_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return oscal.mapping.v1.Mapping.internal_static_oscal_mapping_v1_SelectControlById_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              oscal.mapping.v1.Mapping.SelectControlById.class, oscal.mapping.v1.Mapping.SelectControlById.Builder.class);
+    }
+
+    public static final int WITH_CHILD_CONTROLS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object withChildControls_ = "";
+    /**
+     * <code>string with_child_controls = 1 [json_name = "withChildControls"];</code>
+     * @return The withChildControls.
+     */
+    @java.lang.Override
+    public java.lang.String getWithChildControls() {
+      java.lang.Object ref = withChildControls_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        withChildControls_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string with_child_controls = 1 [json_name = "withChildControls"];</code>
+     * @return The bytes for withChildControls.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getWithChildControlsBytes() {
+      java.lang.Object ref = withChildControls_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        withChildControls_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int WITH_IDS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<oscal.common.v1.Common.Token> withIds_;
+    /**
+     * <code>repeated .oscal.common.v1.Token with_ids = 2 [json_name = "withIds"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<oscal.common.v1.Common.Token> getWithIdsList() {
+      return withIds_;
+    }
+    /**
+     * <code>repeated .oscal.common.v1.Token with_ids = 2 [json_name = "withIds"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends oscal.common.v1.Common.TokenOrBuilder>
+        getWithIdsOrBuilderList() {
+      return withIds_;
+    }
+    /**
+     * <code>repeated .oscal.common.v1.Token with_ids = 2 [json_name = "withIds"];</code>
+     */
+    @java.lang.Override
+    public int getWithIdsCount() {
+      return withIds_.size();
+    }
+    /**
+     * <code>repeated .oscal.common.v1.Token with_ids = 2 [json_name = "withIds"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.Token getWithIds(int index) {
+      return withIds_.get(index);
+    }
+    /**
+     * <code>repeated .oscal.common.v1.Token with_ids = 2 [json_name = "withIds"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.TokenOrBuilder getWithIdsOrBuilder(
+        int index) {
+      return withIds_.get(index);
+    }
+
+    public static final int MATCHING_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<oscal.mapping.v1.Mapping.Matching> matching_;
+    /**
+     * <code>repeated .oscal.mapping.v1.Matching matching = 3 [json_name = "matching"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<oscal.mapping.v1.Mapping.Matching> getMatchingList() {
+      return matching_;
+    }
+    /**
+     * <code>repeated .oscal.mapping.v1.Matching matching = 3 [json_name = "matching"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends oscal.mapping.v1.Mapping.MatchingOrBuilder>
+        getMatchingOrBuilderList() {
+      return matching_;
+    }
+    /**
+     * <code>repeated .oscal.mapping.v1.Matching matching = 3 [json_name = "matching"];</code>
+     */
+    @java.lang.Override
+    public int getMatchingCount() {
+      return matching_.size();
+    }
+    /**
+     * <code>repeated .oscal.mapping.v1.Matching matching = 3 [json_name = "matching"];</code>
+     */
+    @java.lang.Override
+    public oscal.mapping.v1.Mapping.Matching getMatching(int index) {
+      return matching_.get(index);
+    }
+    /**
+     * <code>repeated .oscal.mapping.v1.Matching matching = 3 [json_name = "matching"];</code>
+     */
+    @java.lang.Override
+    public oscal.mapping.v1.Mapping.MatchingOrBuilder getMatchingOrBuilder(
+        int index) {
+      return matching_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(withChildControls_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, withChildControls_);
+      }
+      for (int i = 0; i < withIds_.size(); i++) {
+        output.writeMessage(2, withIds_.get(i));
+      }
+      for (int i = 0; i < matching_.size(); i++) {
+        output.writeMessage(3, matching_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+    private int computeSerializedSize_0() {
+      int size = 0;
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(withChildControls_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, withChildControls_);
+      }
+
+          {
+            final int count = withIds_.size();
+            for (int i = 0; i < count; i++) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeMessageSizeNoTag(withIds_.get(i));
+            }
+            size += 1 * count;
+          }
+
+          {
+            final int count = matching_.size();
+            for (int i = 0; i < count; i++) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeMessageSizeNoTag(matching_.get(i));
+            }
+            size += 1 * count;
+          }
+      return size;
+    }
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += computeSerializedSize_0();
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof oscal.mapping.v1.Mapping.SelectControlById)) {
+        return super.equals(obj);
+      }
+      oscal.mapping.v1.Mapping.SelectControlById other = (oscal.mapping.v1.Mapping.SelectControlById) obj;
+
+      if (!getWithChildControls()
+          .equals(other.getWithChildControls())) return false;
+      if (!getWithIdsList()
+          .equals(other.getWithIdsList())) return false;
+      if (!getMatchingList()
+          .equals(other.getMatchingList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + WITH_CHILD_CONTROLS_FIELD_NUMBER;
+      hash = (53 * hash) + getWithChildControls().hashCode();
+      if (getWithIdsCount() > 0) {
+        hash = (37 * hash) + WITH_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getWithIdsList().hashCode();
+      }
+      if (getMatchingCount() > 0) {
+        hash = (37 * hash) + MATCHING_FIELD_NUMBER;
+        hash = (53 * hash) + getMatchingList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static oscal.mapping.v1.Mapping.SelectControlById parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.mapping.v1.Mapping.SelectControlById parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.mapping.v1.Mapping.SelectControlById parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.mapping.v1.Mapping.SelectControlById parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.mapping.v1.Mapping.SelectControlById parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.mapping.v1.Mapping.SelectControlById parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.mapping.v1.Mapping.SelectControlById parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static oscal.mapping.v1.Mapping.SelectControlById parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static oscal.mapping.v1.Mapping.SelectControlById parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static oscal.mapping.v1.Mapping.SelectControlById parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static oscal.mapping.v1.Mapping.SelectControlById parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static oscal.mapping.v1.Mapping.SelectControlById parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(oscal.mapping.v1.Mapping.SelectControlById prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * SelectControlById selects explicit or pattern-matched controls.
+     * </pre>
+     *
+     * Protobuf type {@code oscal.mapping.v1.SelectControlById}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oscal.mapping.v1.SelectControlById)
+        oscal.mapping.v1.Mapping.SelectControlByIdOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return oscal.mapping.v1.Mapping.internal_static_oscal_mapping_v1_SelectControlById_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return oscal.mapping.v1.Mapping.internal_static_oscal_mapping_v1_SelectControlById_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                oscal.mapping.v1.Mapping.SelectControlById.class, oscal.mapping.v1.Mapping.SelectControlById.Builder.class);
+      }
+
+      // Construct using oscal.mapping.v1.Mapping.SelectControlById.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        withChildControls_ = "";
+        if (withIdsBuilder_ == null) {
+          withIds_ = java.util.Collections.emptyList();
+        } else {
+          withIds_ = null;
+          withIdsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        if (matchingBuilder_ == null) {
+          matching_ = java.util.Collections.emptyList();
+        } else {
+          matching_ = null;
+          matchingBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return oscal.mapping.v1.Mapping.internal_static_oscal_mapping_v1_SelectControlById_descriptor;
+      }
+
+      @java.lang.Override
+      public oscal.mapping.v1.Mapping.SelectControlById getDefaultInstanceForType() {
+        return oscal.mapping.v1.Mapping.SelectControlById.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public oscal.mapping.v1.Mapping.SelectControlById build() {
+        oscal.mapping.v1.Mapping.SelectControlById result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public oscal.mapping.v1.Mapping.SelectControlById buildPartial() {
+        oscal.mapping.v1.Mapping.SelectControlById result = new oscal.mapping.v1.Mapping.SelectControlById(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(oscal.mapping.v1.Mapping.SelectControlById result) {
+        if (withIdsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            withIds_ = java.util.Collections.unmodifiableList(withIds_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.withIds_ = withIds_;
+        } else {
+          result.withIds_ = withIdsBuilder_.build();
+        }
+        if (matchingBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            matching_ = java.util.Collections.unmodifiableList(matching_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.matching_ = matching_;
+        } else {
+          result.matching_ = matchingBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(oscal.mapping.v1.Mapping.SelectControlById result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.withChildControls_ = withChildControls_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof oscal.mapping.v1.Mapping.SelectControlById) {
+          return mergeFrom((oscal.mapping.v1.Mapping.SelectControlById)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(oscal.mapping.v1.Mapping.SelectControlById other) {
+        if (other == oscal.mapping.v1.Mapping.SelectControlById.getDefaultInstance()) return this;
+        if (!other.getWithChildControls().isEmpty()) {
+          withChildControls_ = other.withChildControls_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (withIdsBuilder_ == null) {
+          if (!other.withIds_.isEmpty()) {
+            if (withIds_.isEmpty()) {
+              withIds_ = other.withIds_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureWithIdsIsMutable();
+              withIds_.addAll(other.withIds_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.withIds_.isEmpty()) {
+            if (withIdsBuilder_.isEmpty()) {
+              withIdsBuilder_.dispose();
+              withIdsBuilder_ = null;
+              withIds_ = other.withIds_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              withIdsBuilder_ =
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   internalGetWithIdsFieldBuilder() : null;
+            } else {
+              withIdsBuilder_.addAllMessages(other.withIds_);
+            }
+          }
+        }
+        if (matchingBuilder_ == null) {
+          if (!other.matching_.isEmpty()) {
+            if (matching_.isEmpty()) {
+              matching_ = other.matching_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureMatchingIsMutable();
+              matching_.addAll(other.matching_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.matching_.isEmpty()) {
+            if (matchingBuilder_.isEmpty()) {
+              matchingBuilder_.dispose();
+              matchingBuilder_ = null;
+              matching_ = other.matching_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              matchingBuilder_ =
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   internalGetMatchingFieldBuilder() : null;
+            } else {
+              matchingBuilder_.addAllMessages(other.matching_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                withChildControls_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                oscal.common.v1.Common.Token m =
+                    input.readMessage(
+                        oscal.common.v1.Common.Token.parser(),
+                        extensionRegistry);
+                if (withIdsBuilder_ == null) {
+                  ensureWithIdsIsMutable();
+                  withIds_.add(m);
+                } else {
+                  withIdsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              case 26: {
+                oscal.mapping.v1.Mapping.Matching m =
+                    input.readMessage(
+                        oscal.mapping.v1.Mapping.Matching.parser(),
+                        extensionRegistry);
+                if (matchingBuilder_ == null) {
+                  ensureMatchingIsMutable();
+                  matching_.add(m);
+                } else {
+                  matchingBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object withChildControls_ = "";
+      /**
+       * <code>string with_child_controls = 1 [json_name = "withChildControls"];</code>
+       * @return The withChildControls.
+       */
+      public java.lang.String getWithChildControls() {
+        java.lang.Object ref = withChildControls_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          withChildControls_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string with_child_controls = 1 [json_name = "withChildControls"];</code>
+       * @return The bytes for withChildControls.
+       */
+      public com.google.protobuf.ByteString
+          getWithChildControlsBytes() {
+        java.lang.Object ref = withChildControls_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          withChildControls_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string with_child_controls = 1 [json_name = "withChildControls"];</code>
+       * @param value The withChildControls to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWithChildControls(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        withChildControls_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string with_child_controls = 1 [json_name = "withChildControls"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWithChildControls() {
+        withChildControls_ = getDefaultInstance().getWithChildControls();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string with_child_controls = 1 [json_name = "withChildControls"];</code>
+       * @param value The bytes for withChildControls to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWithChildControlsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        withChildControls_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<oscal.common.v1.Common.Token> withIds_ =
+        java.util.Collections.emptyList();
+      private void ensureWithIdsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          withIds_ = new java.util.ArrayList<oscal.common.v1.Common.Token>(withIds_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.common.v1.Common.Token, oscal.common.v1.Common.Token.Builder, oscal.common.v1.Common.TokenOrBuilder> withIdsBuilder_;
+
+      /**
+       * <code>repeated .oscal.common.v1.Token with_ids = 2 [json_name = "withIds"];</code>
+       */
+      public java.util.List<oscal.common.v1.Common.Token> getWithIdsList() {
+        if (withIdsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(withIds_);
+        } else {
+          return withIdsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Token with_ids = 2 [json_name = "withIds"];</code>
+       */
+      public int getWithIdsCount() {
+        if (withIdsBuilder_ == null) {
+          return withIds_.size();
+        } else {
+          return withIdsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Token with_ids = 2 [json_name = "withIds"];</code>
+       */
+      public oscal.common.v1.Common.Token getWithIds(int index) {
+        if (withIdsBuilder_ == null) {
+          return withIds_.get(index);
+        } else {
+          return withIdsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Token with_ids = 2 [json_name = "withIds"];</code>
+       */
+      public Builder setWithIds(
+          int index, oscal.common.v1.Common.Token value) {
+        if (withIdsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureWithIdsIsMutable();
+          withIds_.set(index, value);
+          onChanged();
+        } else {
+          withIdsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Token with_ids = 2 [json_name = "withIds"];</code>
+       */
+      public Builder setWithIds(
+          int index, oscal.common.v1.Common.Token.Builder builderForValue) {
+        if (withIdsBuilder_ == null) {
+          ensureWithIdsIsMutable();
+          withIds_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          withIdsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Token with_ids = 2 [json_name = "withIds"];</code>
+       */
+      public Builder addWithIds(oscal.common.v1.Common.Token value) {
+        if (withIdsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureWithIdsIsMutable();
+          withIds_.add(value);
+          onChanged();
+        } else {
+          withIdsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Token with_ids = 2 [json_name = "withIds"];</code>
+       */
+      public Builder addWithIds(
+          int index, oscal.common.v1.Common.Token value) {
+        if (withIdsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureWithIdsIsMutable();
+          withIds_.add(index, value);
+          onChanged();
+        } else {
+          withIdsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Token with_ids = 2 [json_name = "withIds"];</code>
+       */
+      public Builder addWithIds(
+          oscal.common.v1.Common.Token.Builder builderForValue) {
+        if (withIdsBuilder_ == null) {
+          ensureWithIdsIsMutable();
+          withIds_.add(builderForValue.build());
+          onChanged();
+        } else {
+          withIdsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Token with_ids = 2 [json_name = "withIds"];</code>
+       */
+      public Builder addWithIds(
+          int index, oscal.common.v1.Common.Token.Builder builderForValue) {
+        if (withIdsBuilder_ == null) {
+          ensureWithIdsIsMutable();
+          withIds_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          withIdsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Token with_ids = 2 [json_name = "withIds"];</code>
+       */
+      public Builder addAllWithIds(
+          java.lang.Iterable<? extends oscal.common.v1.Common.Token> values) {
+        if (withIdsBuilder_ == null) {
+          ensureWithIdsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, withIds_);
+          onChanged();
+        } else {
+          withIdsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Token with_ids = 2 [json_name = "withIds"];</code>
+       */
+      public Builder clearWithIds() {
+        if (withIdsBuilder_ == null) {
+          withIds_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          withIdsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Token with_ids = 2 [json_name = "withIds"];</code>
+       */
+      public Builder removeWithIds(int index) {
+        if (withIdsBuilder_ == null) {
+          ensureWithIdsIsMutable();
+          withIds_.remove(index);
+          onChanged();
+        } else {
+          withIdsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Token with_ids = 2 [json_name = "withIds"];</code>
+       */
+      public oscal.common.v1.Common.Token.Builder getWithIdsBuilder(
+          int index) {
+        return internalGetWithIdsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Token with_ids = 2 [json_name = "withIds"];</code>
+       */
+      public oscal.common.v1.Common.TokenOrBuilder getWithIdsOrBuilder(
+          int index) {
+        if (withIdsBuilder_ == null) {
+          return withIds_.get(index);  } else {
+          return withIdsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Token with_ids = 2 [json_name = "withIds"];</code>
+       */
+      public java.util.List<? extends oscal.common.v1.Common.TokenOrBuilder>
+           getWithIdsOrBuilderList() {
+        if (withIdsBuilder_ != null) {
+          return withIdsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(withIds_);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Token with_ids = 2 [json_name = "withIds"];</code>
+       */
+      public oscal.common.v1.Common.Token.Builder addWithIdsBuilder() {
+        return internalGetWithIdsFieldBuilder().addBuilder(
+            oscal.common.v1.Common.Token.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Token with_ids = 2 [json_name = "withIds"];</code>
+       */
+      public oscal.common.v1.Common.Token.Builder addWithIdsBuilder(
+          int index) {
+        return internalGetWithIdsFieldBuilder().addBuilder(
+            index, oscal.common.v1.Common.Token.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.common.v1.Token with_ids = 2 [json_name = "withIds"];</code>
+       */
+      public java.util.List<oscal.common.v1.Common.Token.Builder>
+           getWithIdsBuilderList() {
+        return internalGetWithIdsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.common.v1.Common.Token, oscal.common.v1.Common.Token.Builder, oscal.common.v1.Common.TokenOrBuilder>
+          internalGetWithIdsFieldBuilder() {
+        if (withIdsBuilder_ == null) {
+          withIdsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              oscal.common.v1.Common.Token, oscal.common.v1.Common.Token.Builder, oscal.common.v1.Common.TokenOrBuilder>(
+                  withIds_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          withIds_ = null;
+        }
+        return withIdsBuilder_;
+      }
+
+      private java.util.List<oscal.mapping.v1.Mapping.Matching> matching_ =
+        java.util.Collections.emptyList();
+      private void ensureMatchingIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          matching_ = new java.util.ArrayList<oscal.mapping.v1.Mapping.Matching>(matching_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.mapping.v1.Mapping.Matching, oscal.mapping.v1.Mapping.Matching.Builder, oscal.mapping.v1.Mapping.MatchingOrBuilder> matchingBuilder_;
+
+      /**
+       * <code>repeated .oscal.mapping.v1.Matching matching = 3 [json_name = "matching"];</code>
+       */
+      public java.util.List<oscal.mapping.v1.Mapping.Matching> getMatchingList() {
+        if (matchingBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(matching_);
+        } else {
+          return matchingBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .oscal.mapping.v1.Matching matching = 3 [json_name = "matching"];</code>
+       */
+      public int getMatchingCount() {
+        if (matchingBuilder_ == null) {
+          return matching_.size();
+        } else {
+          return matchingBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .oscal.mapping.v1.Matching matching = 3 [json_name = "matching"];</code>
+       */
+      public oscal.mapping.v1.Mapping.Matching getMatching(int index) {
+        if (matchingBuilder_ == null) {
+          return matching_.get(index);
+        } else {
+          return matchingBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.mapping.v1.Matching matching = 3 [json_name = "matching"];</code>
+       */
+      public Builder setMatching(
+          int index, oscal.mapping.v1.Mapping.Matching value) {
+        if (matchingBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMatchingIsMutable();
+          matching_.set(index, value);
+          onChanged();
+        } else {
+          matchingBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.mapping.v1.Matching matching = 3 [json_name = "matching"];</code>
+       */
+      public Builder setMatching(
+          int index, oscal.mapping.v1.Mapping.Matching.Builder builderForValue) {
+        if (matchingBuilder_ == null) {
+          ensureMatchingIsMutable();
+          matching_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          matchingBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.mapping.v1.Matching matching = 3 [json_name = "matching"];</code>
+       */
+      public Builder addMatching(oscal.mapping.v1.Mapping.Matching value) {
+        if (matchingBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMatchingIsMutable();
+          matching_.add(value);
+          onChanged();
+        } else {
+          matchingBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.mapping.v1.Matching matching = 3 [json_name = "matching"];</code>
+       */
+      public Builder addMatching(
+          int index, oscal.mapping.v1.Mapping.Matching value) {
+        if (matchingBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMatchingIsMutable();
+          matching_.add(index, value);
+          onChanged();
+        } else {
+          matchingBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.mapping.v1.Matching matching = 3 [json_name = "matching"];</code>
+       */
+      public Builder addMatching(
+          oscal.mapping.v1.Mapping.Matching.Builder builderForValue) {
+        if (matchingBuilder_ == null) {
+          ensureMatchingIsMutable();
+          matching_.add(builderForValue.build());
+          onChanged();
+        } else {
+          matchingBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.mapping.v1.Matching matching = 3 [json_name = "matching"];</code>
+       */
+      public Builder addMatching(
+          int index, oscal.mapping.v1.Mapping.Matching.Builder builderForValue) {
+        if (matchingBuilder_ == null) {
+          ensureMatchingIsMutable();
+          matching_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          matchingBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.mapping.v1.Matching matching = 3 [json_name = "matching"];</code>
+       */
+      public Builder addAllMatching(
+          java.lang.Iterable<? extends oscal.mapping.v1.Mapping.Matching> values) {
+        if (matchingBuilder_ == null) {
+          ensureMatchingIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, matching_);
+          onChanged();
+        } else {
+          matchingBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.mapping.v1.Matching matching = 3 [json_name = "matching"];</code>
+       */
+      public Builder clearMatching() {
+        if (matchingBuilder_ == null) {
+          matching_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          matchingBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.mapping.v1.Matching matching = 3 [json_name = "matching"];</code>
+       */
+      public Builder removeMatching(int index) {
+        if (matchingBuilder_ == null) {
+          ensureMatchingIsMutable();
+          matching_.remove(index);
+          onChanged();
+        } else {
+          matchingBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.mapping.v1.Matching matching = 3 [json_name = "matching"];</code>
+       */
+      public oscal.mapping.v1.Mapping.Matching.Builder getMatchingBuilder(
+          int index) {
+        return internalGetMatchingFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .oscal.mapping.v1.Matching matching = 3 [json_name = "matching"];</code>
+       */
+      public oscal.mapping.v1.Mapping.MatchingOrBuilder getMatchingOrBuilder(
+          int index) {
+        if (matchingBuilder_ == null) {
+          return matching_.get(index);  } else {
+          return matchingBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.mapping.v1.Matching matching = 3 [json_name = "matching"];</code>
+       */
+      public java.util.List<? extends oscal.mapping.v1.Mapping.MatchingOrBuilder>
+           getMatchingOrBuilderList() {
+        if (matchingBuilder_ != null) {
+          return matchingBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(matching_);
+        }
+      }
+      /**
+       * <code>repeated .oscal.mapping.v1.Matching matching = 3 [json_name = "matching"];</code>
+       */
+      public oscal.mapping.v1.Mapping.Matching.Builder addMatchingBuilder() {
+        return internalGetMatchingFieldBuilder().addBuilder(
+            oscal.mapping.v1.Mapping.Matching.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.mapping.v1.Matching matching = 3 [json_name = "matching"];</code>
+       */
+      public oscal.mapping.v1.Mapping.Matching.Builder addMatchingBuilder(
+          int index) {
+        return internalGetMatchingFieldBuilder().addBuilder(
+            index, oscal.mapping.v1.Mapping.Matching.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.mapping.v1.Matching matching = 3 [json_name = "matching"];</code>
+       */
+      public java.util.List<oscal.mapping.v1.Mapping.Matching.Builder>
+           getMatchingBuilderList() {
+        return internalGetMatchingFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.mapping.v1.Mapping.Matching, oscal.mapping.v1.Mapping.Matching.Builder, oscal.mapping.v1.Mapping.MatchingOrBuilder>
+          internalGetMatchingFieldBuilder() {
+        if (matchingBuilder_ == null) {
+          matchingBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              oscal.mapping.v1.Mapping.Matching, oscal.mapping.v1.Mapping.Matching.Builder, oscal.mapping.v1.Mapping.MatchingOrBuilder>(
+                  matching_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          matching_ = null;
+        }
+        return matchingBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:oscal.mapping.v1.SelectControlById)
+    }
+
+    // @@protoc_insertion_point(class_scope:oscal.mapping.v1.SelectControlById)
+    private static final oscal.mapping.v1.Mapping.SelectControlById DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new oscal.mapping.v1.Mapping.SelectControlById();
+    }
+
+    public static oscal.mapping.v1.Mapping.SelectControlById getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SelectControlById>
+        PARSER = new com.google.protobuf.AbstractParser<SelectControlById>() {
+      @java.lang.Override
+      public SelectControlById parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<SelectControlById> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SelectControlById> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public oscal.mapping.v1.Mapping.SelectControlById getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MatchingOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oscal.mapping.v1.Matching)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string pattern = 1 [json_name = "pattern"];</code>
+     * @return The pattern.
+     */
+    java.lang.String getPattern();
+    /**
+     * <code>string pattern = 1 [json_name = "pattern"];</code>
+     * @return The bytes for pattern.
+     */
+    com.google.protobuf.ByteString
+        getPatternBytes();
+
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
+     */
+    java.util.List<oscal.common.v1.Common.MarkupMultiline>
+        getRemarksList();
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
+     */
+    oscal.common.v1.Common.MarkupMultiline getRemarks(int index);
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
+     */
+    int getRemarksCount();
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
+     */
+    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
+        getRemarksOrBuilderList();
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
+     */
+    oscal.common.v1.Common.MarkupMultilineOrBuilder getRemarksOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * Matching selects controls by a glob expression.
+   * </pre>
+   *
+   * Protobuf type {@code oscal.mapping.v1.Matching}
+   */
+  public static final class Matching extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:oscal.mapping.v1.Matching)
+      MatchingOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 35,
+        /* patch= */ 1,
+        /* suffix= */ "",
+        "Matching");
+    }
+    // Use Matching.newBuilder() to construct.
+    private Matching(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private Matching() {
+      pattern_ = "";
+      remarks_ = java.util.Collections.emptyList();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return oscal.mapping.v1.Mapping.internal_static_oscal_mapping_v1_Matching_descriptor;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+      return oscal.mapping.v1.Mapping.internal_static_oscal_mapping_v1_Matching_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return oscal.mapping.v1.Mapping.internal_static_oscal_mapping_v1_Matching_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              oscal.mapping.v1.Mapping.Matching.class, oscal.mapping.v1.Mapping.Matching.Builder.class);
+    }
+
+    public static final int PATTERN_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object pattern_ = "";
+    /**
+     * <code>string pattern = 1 [json_name = "pattern"];</code>
+     * @return The pattern.
+     */
+    @java.lang.Override
+    public java.lang.String getPattern() {
+      java.lang.Object ref = pattern_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        pattern_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string pattern = 1 [json_name = "pattern"];</code>
+     * @return The bytes for pattern.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPatternBytes() {
+      java.lang.Object ref = pattern_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        pattern_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REMARKS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<oscal.common.v1.Common.MarkupMultiline> remarks_;
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<oscal.common.v1.Common.MarkupMultiline> getRemarksList() {
+      return remarks_;
+    }
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
+        getRemarksOrBuilderList() {
+      return remarks_;
+    }
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
+     */
+    @java.lang.Override
+    public int getRemarksCount() {
+      return remarks_.size();
+    }
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.MarkupMultiline getRemarks(int index) {
+      return remarks_.get(index);
+    }
+    /**
+     * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
+     */
+    @java.lang.Override
+    public oscal.common.v1.Common.MarkupMultilineOrBuilder getRemarksOrBuilder(
+        int index) {
+      return remarks_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(pattern_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, pattern_);
+      }
+      for (int i = 0; i < remarks_.size(); i++) {
+        output.writeMessage(2, remarks_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+    private int computeSerializedSize_0() {
+      int size = 0;
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(pattern_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, pattern_);
+      }
+
+          {
+            final int count = remarks_.size();
+            for (int i = 0; i < count; i++) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeMessageSizeNoTag(remarks_.get(i));
+            }
+            size += 1 * count;
+          }
+      return size;
+    }
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += computeSerializedSize_0();
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof oscal.mapping.v1.Mapping.Matching)) {
+        return super.equals(obj);
+      }
+      oscal.mapping.v1.Mapping.Matching other = (oscal.mapping.v1.Mapping.Matching) obj;
+
+      if (!getPattern()
+          .equals(other.getPattern())) return false;
+      if (!getRemarksList()
+          .equals(other.getRemarksList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PATTERN_FIELD_NUMBER;
+      hash = (53 * hash) + getPattern().hashCode();
+      if (getRemarksCount() > 0) {
+        hash = (37 * hash) + REMARKS_FIELD_NUMBER;
+        hash = (53 * hash) + getRemarksList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static oscal.mapping.v1.Mapping.Matching parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.mapping.v1.Mapping.Matching parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.mapping.v1.Mapping.Matching parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.mapping.v1.Mapping.Matching parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.mapping.v1.Mapping.Matching parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.mapping.v1.Mapping.Matching parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.mapping.v1.Mapping.Matching parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static oscal.mapping.v1.Mapping.Matching parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static oscal.mapping.v1.Mapping.Matching parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static oscal.mapping.v1.Mapping.Matching parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static oscal.mapping.v1.Mapping.Matching parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static oscal.mapping.v1.Mapping.Matching parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(oscal.mapping.v1.Mapping.Matching prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Matching selects controls by a glob expression.
+     * </pre>
+     *
+     * Protobuf type {@code oscal.mapping.v1.Matching}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oscal.mapping.v1.Matching)
+        oscal.mapping.v1.Mapping.MatchingOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return oscal.mapping.v1.Mapping.internal_static_oscal_mapping_v1_Matching_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return oscal.mapping.v1.Mapping.internal_static_oscal_mapping_v1_Matching_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                oscal.mapping.v1.Mapping.Matching.class, oscal.mapping.v1.Mapping.Matching.Builder.class);
+      }
+
+      // Construct using oscal.mapping.v1.Mapping.Matching.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        pattern_ = "";
+        if (remarksBuilder_ == null) {
+          remarks_ = java.util.Collections.emptyList();
+        } else {
+          remarks_ = null;
+          remarksBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return oscal.mapping.v1.Mapping.internal_static_oscal_mapping_v1_Matching_descriptor;
+      }
+
+      @java.lang.Override
+      public oscal.mapping.v1.Mapping.Matching getDefaultInstanceForType() {
+        return oscal.mapping.v1.Mapping.Matching.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public oscal.mapping.v1.Mapping.Matching build() {
+        oscal.mapping.v1.Mapping.Matching result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public oscal.mapping.v1.Mapping.Matching buildPartial() {
+        oscal.mapping.v1.Mapping.Matching result = new oscal.mapping.v1.Mapping.Matching(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(oscal.mapping.v1.Mapping.Matching result) {
+        if (remarksBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            remarks_ = java.util.Collections.unmodifiableList(remarks_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.remarks_ = remarks_;
+        } else {
+          result.remarks_ = remarksBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(oscal.mapping.v1.Mapping.Matching result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.pattern_ = pattern_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof oscal.mapping.v1.Mapping.Matching) {
+          return mergeFrom((oscal.mapping.v1.Mapping.Matching)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(oscal.mapping.v1.Mapping.Matching other) {
+        if (other == oscal.mapping.v1.Mapping.Matching.getDefaultInstance()) return this;
+        if (!other.getPattern().isEmpty()) {
+          pattern_ = other.pattern_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (remarksBuilder_ == null) {
+          if (!other.remarks_.isEmpty()) {
+            if (remarks_.isEmpty()) {
+              remarks_ = other.remarks_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureRemarksIsMutable();
+              remarks_.addAll(other.remarks_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.remarks_.isEmpty()) {
+            if (remarksBuilder_.isEmpty()) {
+              remarksBuilder_.dispose();
+              remarksBuilder_ = null;
+              remarks_ = other.remarks_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              remarksBuilder_ =
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   internalGetRemarksFieldBuilder() : null;
+            } else {
+              remarksBuilder_.addAllMessages(other.remarks_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                pattern_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                oscal.common.v1.Common.MarkupMultiline m =
+                    input.readMessage(
+                        oscal.common.v1.Common.MarkupMultiline.parser(),
+                        extensionRegistry);
+                if (remarksBuilder_ == null) {
+                  ensureRemarksIsMutable();
+                  remarks_.add(m);
+                } else {
+                  remarksBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object pattern_ = "";
+      /**
+       * <code>string pattern = 1 [json_name = "pattern"];</code>
+       * @return The pattern.
+       */
+      public java.lang.String getPattern() {
+        java.lang.Object ref = pattern_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          pattern_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string pattern = 1 [json_name = "pattern"];</code>
+       * @return The bytes for pattern.
+       */
+      public com.google.protobuf.ByteString
+          getPatternBytes() {
+        java.lang.Object ref = pattern_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          pattern_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string pattern = 1 [json_name = "pattern"];</code>
+       * @param value The pattern to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPattern(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        pattern_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string pattern = 1 [json_name = "pattern"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPattern() {
+        pattern_ = getDefaultInstance().getPattern();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string pattern = 1 [json_name = "pattern"];</code>
+       * @param value The bytes for pattern to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPatternBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        pattern_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<oscal.common.v1.Common.MarkupMultiline> remarks_ =
+        java.util.Collections.emptyList();
+      private void ensureRemarksIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          remarks_ = new java.util.ArrayList<oscal.common.v1.Common.MarkupMultiline>(remarks_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> remarksBuilder_;
+
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
+       */
+      public java.util.List<oscal.common.v1.Common.MarkupMultiline> getRemarksList() {
+        if (remarksBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(remarks_);
+        } else {
+          return remarksBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
+       */
+      public int getRemarksCount() {
+        if (remarksBuilder_ == null) {
+          return remarks_.size();
+        } else {
+          return remarksBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
+       */
+      public oscal.common.v1.Common.MarkupMultiline getRemarks(int index) {
+        if (remarksBuilder_ == null) {
+          return remarks_.get(index);
+        } else {
+          return remarksBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
+       */
+      public Builder setRemarks(
+          int index, oscal.common.v1.Common.MarkupMultiline value) {
+        if (remarksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRemarksIsMutable();
+          remarks_.set(index, value);
+          onChanged();
+        } else {
+          remarksBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
+       */
+      public Builder setRemarks(
+          int index, oscal.common.v1.Common.MarkupMultiline.Builder builderForValue) {
+        if (remarksBuilder_ == null) {
+          ensureRemarksIsMutable();
+          remarks_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          remarksBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
+       */
+      public Builder addRemarks(oscal.common.v1.Common.MarkupMultiline value) {
+        if (remarksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRemarksIsMutable();
+          remarks_.add(value);
+          onChanged();
+        } else {
+          remarksBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
+       */
+      public Builder addRemarks(
+          int index, oscal.common.v1.Common.MarkupMultiline value) {
+        if (remarksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRemarksIsMutable();
+          remarks_.add(index, value);
+          onChanged();
+        } else {
+          remarksBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
+       */
+      public Builder addRemarks(
+          oscal.common.v1.Common.MarkupMultiline.Builder builderForValue) {
+        if (remarksBuilder_ == null) {
+          ensureRemarksIsMutable();
+          remarks_.add(builderForValue.build());
+          onChanged();
+        } else {
+          remarksBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
+       */
+      public Builder addRemarks(
+          int index, oscal.common.v1.Common.MarkupMultiline.Builder builderForValue) {
+        if (remarksBuilder_ == null) {
+          ensureRemarksIsMutable();
+          remarks_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          remarksBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
+       */
+      public Builder addAllRemarks(
+          java.lang.Iterable<? extends oscal.common.v1.Common.MarkupMultiline> values) {
+        if (remarksBuilder_ == null) {
+          ensureRemarksIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, remarks_);
+          onChanged();
+        } else {
+          remarksBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
+       */
+      public Builder clearRemarks() {
+        if (remarksBuilder_ == null) {
+          remarks_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          remarksBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
+       */
+      public Builder removeRemarks(int index) {
+        if (remarksBuilder_ == null) {
+          ensureRemarksIsMutable();
+          remarks_.remove(index);
+          onChanged();
+        } else {
+          remarksBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
+       */
+      public oscal.common.v1.Common.MarkupMultiline.Builder getRemarksBuilder(
+          int index) {
+        return internalGetRemarksFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
+       */
+      public oscal.common.v1.Common.MarkupMultilineOrBuilder getRemarksOrBuilder(
+          int index) {
+        if (remarksBuilder_ == null) {
+          return remarks_.get(index);  } else {
+          return remarksBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
+       */
+      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
+           getRemarksOrBuilderList() {
+        if (remarksBuilder_ != null) {
+          return remarksBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(remarks_);
+        }
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
+       */
+      public oscal.common.v1.Common.MarkupMultiline.Builder addRemarksBuilder() {
+        return internalGetRemarksFieldBuilder().addBuilder(
+            oscal.common.v1.Common.MarkupMultiline.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
+       */
+      public oscal.common.v1.Common.MarkupMultiline.Builder addRemarksBuilder(
+          int index) {
+        return internalGetRemarksFieldBuilder().addBuilder(
+            index, oscal.common.v1.Common.MarkupMultiline.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
+       */
+      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder>
+           getRemarksBuilderList() {
+        return internalGetRemarksFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
+          internalGetRemarksFieldBuilder() {
+        if (remarksBuilder_ == null) {
+          remarksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>(
+                  remarks_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          remarks_ = null;
+        }
+        return remarksBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:oscal.mapping.v1.Matching)
+    }
+
+    // @@protoc_insertion_point(class_scope:oscal.mapping.v1.Matching)
+    private static final oscal.mapping.v1.Mapping.Matching DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new oscal.mapping.v1.Mapping.Matching();
+    }
+
+    public static oscal.mapping.v1.Mapping.Matching getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Matching>
+        PARSER = new com.google.protobuf.AbstractParser<Matching>() {
+      @java.lang.Override
+      public Matching parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Matching> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Matching> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public oscal.mapping.v1.Mapping.Matching getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_mapping_v1_MappingCollection_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_mapping_v1_MappingCollection_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_oscal_mapping_v1_ControlMapping_descriptor;
+  private static final
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_oscal_mapping_v1_ControlMapping_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_mapping_v1_MappingResourceReference_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_mapping_v1_MappingResourceReference_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_mapping_v1_Map_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_mapping_v1_Map_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_mapping_v1_MappingItem_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_mapping_v1_MappingItem_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_mapping_v1_QualifierItem_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_mapping_v1_QualifierItem_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_mapping_v1_ConfidenceScore_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_mapping_v1_ConfidenceScore_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_mapping_v1_Coverage_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_mapping_v1_Coverage_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_mapping_v1_GapSummary_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_mapping_v1_GapSummary_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_mapping_v1_MappingDescription_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_mapping_v1_MappingDescription_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_oscal_mapping_v1_MappingProvenance_descriptor;
+  private static final
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_oscal_mapping_v1_MappingProvenance_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_oscal_mapping_v1_SelectControlById_descriptor;
+  private static final
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_oscal_mapping_v1_SelectControlById_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_oscal_mapping_v1_Matching_descriptor;
+  private static final
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_oscal_mapping_v1_Matching_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -20534,88 +32677,151 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
   static {
     java.lang.String[] descriptorData = {
       "\n\030mapping/v1/mapping.proto\022\020oscal.mappin" +
-      "g.v1\032\026common/v1/common.proto\"\240\007\n\021Mapping" +
+      "g.v1\032\026common/v1/common.proto\"\225\t\n\021Mapping" +
       "Collection\022)\n\004uuid\030\001 \001(\0132\025.oscal.common." +
       "v1.UUIDR\004uuid\0225\n\010metadata\030\002 \001(\0132\031.oscal." +
-      "common.v1.MetadataR\010metadata\022-\n\022matching" +
-      "_rationale\030\003 \001(\tR\021matchingRationale\022\026\n\006s" +
-      "tatus\030\004 \001(\tR\006status\022S\n\017source_resource\030\005" +
-      " \001(\0132*.oscal.mapping.v1.MappingResourceR" +
-      "eferenceR\016sourceResource\022S\n\017target_resou" +
-      "rce\030\006 \001(\0132*.oscal.mapping.v1.MappingReso" +
-      "urceReferenceR\016targetResource\022)\n\004maps\030\007 " +
-      "\003(\0132\025.oscal.mapping.v1.MapR\004maps\022/\n\005prop" +
-      "s\030\010 \003(\0132\031.oscal.common.v1.PropertyR\005prop" +
-      "s\022+\n\005links\030\t \003(\0132\025.oscal.common.v1.LinkR" +
-      "\005links\022:\n\007remarks\030\n \003(\0132 .oscal.common.v" +
-      "1.MarkupMultilineR\007remarks\022U\n\023mapping_de" +
-      "scription\030\013 \001(\0132$.oscal.mapping.v1.Mappi" +
-      "ngDescriptionR\022mappingDescription\022J\n\022sou" +
-      "rce_gap_summary\030\014 \001(\0132\034.oscal.mapping.v1" +
-      ".GapSummaryR\020sourceGapSummary\022J\n\022target_" +
+      "common.v1.MetadataR\010metadata\0221\n\022matching" +
+      "_rationale\030\003 \001(\tB\002\030\001R\021matchingRationale\022" +
+      "\032\n\006status\030\004 \001(\tB\002\030\001R\006status\022W\n\017source_re" +
+      "source\030\005 \001(\0132*.oscal.mapping.v1.MappingR" +
+      "esourceReferenceB\002\030\001R\016sourceResource\022W\n\017" +
+      "target_resource\030\006 \001(\0132*.oscal.mapping.v1" +
+      ".MappingResourceReferenceB\002\030\001R\016targetRes" +
+      "ource\022-\n\004maps\030\007 \003(\0132\025.oscal.mapping.v1.M" +
+      "apB\002\030\001R\004maps\0223\n\005props\030\010 \003(\0132\031.oscal.comm" +
+      "on.v1.PropertyB\002\030\001R\005props\022/\n\005links\030\t \003(\013" +
+      "2\025.oscal.common.v1.LinkB\002\030\001R\005links\022>\n\007re" +
+      "marks\030\n \003(\0132 .oscal.common.v1.MarkupMult" +
+      "ilineB\002\030\001R\007remarks\022Y\n\023mapping_descriptio" +
+      "n\030\013 \001(\0132$.oscal.mapping.v1.MappingDescri" +
+      "ptionB\002\030\001R\022mappingDescription\022N\n\022source_" +
+      "gap_summary\030\014 \001(\0132\034.oscal.mapping.v1.Gap" +
+      "SummaryB\002\030\001R\020sourceGapSummary\022N\n\022target_" +
       "gap_summary\030\r \001(\0132\034.oscal.mapping.v1.Gap" +
-      "SummaryR\020targetGapSummary\022L\n\020confidence_" +
-      "score\030\016 \001(\0132!.oscal.mapping.v1.Confidenc" +
-      "eScoreR\017confidenceScore\0226\n\010coverage\030\017 \001(" +
-      "\0132\032.oscal.mapping.v1.CoverageR\010coverage\"" +
-      "\213\002\n\030MappingResourceReference\022\016\n\002ns\030\001 \001(\t" +
-      "R\002ns\022\022\n\004type\030\002 \001(\tR\004type\0221\n\004href\030\003 \001(\0132\035" +
-      ".oscal.common.v1.URIReferenceR\004href\022/\n\005p" +
-      "rops\030\004 \003(\0132\031.oscal.common.v1.PropertyR\005p" +
-      "rops\022+\n\005links\030\005 \003(\0132\025.oscal.common.v1.Li" +
-      "nkR\005links\022:\n\007remarks\030\006 \003(\0132 .oscal.commo" +
-      "n.v1.MarkupMultilineR\007remarks\"\376\004\n\003Map\022)\n" +
-      "\004uuid\030\001 \001(\0132\025.oscal.common.v1.UUIDR\004uuid" +
-      "\022\016\n\002ns\030\002 \001(\tR\002ns\022-\n\022matching_rationale\030\003" +
-      " \001(\tR\021matchingRationale\022:\n\014relationship\030" +
-      "\004 \001(\0132\026.oscal.common.v1.TokenR\014relations" +
-      "hip\0227\n\007sources\030\005 \003(\0132\035.oscal.mapping.v1." +
-      "MappingItemR\007sources\0227\n\007targets\030\006 \003(\0132\035." +
-      "oscal.mapping.v1.MappingItemR\007targets\022?\n" +
-      "\nqualifiers\030\007 \003(\0132\037.oscal.mapping.v1.Qua" +
-      "lifierItemR\nqualifiers\022L\n\020confidence_sco" +
-      "re\030\010 \001(\0132!.oscal.mapping.v1.ConfidenceSc" +
-      "oreR\017confidenceScore\0226\n\010coverage\030\t \001(\0132\032" +
-      ".oscal.mapping.v1.CoverageR\010coverage\022/\n\005" +
-      "props\030\n \003(\0132\031.oscal.common.v1.PropertyR\005" +
-      "props\022+\n\005links\030\013 \003(\0132\025.oscal.common.v1.L" +
-      "inkR\005links\022:\n\007remarks\030\014 \003(\0132 .oscal.comm" +
-      "on.v1.MarkupMultilineR\007remarks\"\322\001\n\013Mappi" +
-      "ngItem\022\022\n\004type\030\001 \001(\tR\004type\022\025\n\006id_ref\030\002 \001" +
-      "(\tR\005idRef\022/\n\005props\030\003 \003(\0132\031.oscal.common." +
-      "v1.PropertyR\005props\022+\n\005links\030\004 \003(\0132\025.osca" +
-      "l.common.v1.LinkR\005links\022:\n\007remarks\030\005 \003(\013" +
+      "SummaryB\002\030\001R\020targetGapSummary\022P\n\020confide" +
+      "nce_score\030\016 \001(\0132!.oscal.mapping.v1.Confi" +
+      "denceScoreB\002\030\001R\017confidenceScore\022:\n\010cover" +
+      "age\030\017 \001(\0132\032.oscal.mapping.v1.CoverageB\002\030" +
+      "\001R\010coverage\022C\n\nprovenance\030\020 \001(\0132#.oscal." +
+      "mapping.v1.MappingProvenanceR\nprovenance" +
+      "\022<\n\010mappings\030\021 \003(\0132 .oscal.mapping.v1.Co" +
+      "ntrolMappingR\010mappings\022<\n\013back_matter\030\022 " +
+      "\001(\0132\033.oscal.common.v1.BackMatterR\nbackMa" +
+      "tter\"\372\006\n\016ControlMapping\022)\n\004uuid\030\001 \001(\0132\025." +
+      "oscal.common.v1.UUIDR\004uuid\022\026\n\006method\030\002 \001" +
+      "(\tR\006method\022-\n\022matching_rationale\030\003 \001(\tR\021" +
+      "matchingRationale\022\026\n\006status\030\004 \001(\tR\006statu" +
+      "s\022S\n\017source_resource\030\005 \001(\0132*.oscal.mappi" +
+      "ng.v1.MappingResourceReferenceR\016sourceRe" +
+      "source\022S\n\017target_resource\030\006 \001(\0132*.oscal." +
+      "mapping.v1.MappingResourceReferenceR\016tar" +
+      "getResource\022)\n\004maps\030\007 \003(\0132\025.oscal.mappin" +
+      "g.v1.MapR\004maps\022/\n\005props\030\010 \003(\0132\031.oscal.co" +
+      "mmon.v1.PropertyR\005props\022+\n\005links\030\t \003(\0132\025" +
+      ".oscal.common.v1.LinkR\005links\022:\n\007remarks\030" +
+      "\n \003(\0132 .oscal.common.v1.MarkupMultilineR" +
+      "\007remarks\022Q\n\023mapping_description\030\013 \001(\0132 ." +
+      "oscal.common.v1.MarkupMultilineR\022mapping" +
+      "Description\022J\n\022source_gap_summary\030\014 \001(\0132" +
+      "\034.oscal.mapping.v1.GapSummaryR\020sourceGap" +
+      "Summary\022J\n\022target_gap_summary\030\r \001(\0132\034.os" +
+      "cal.mapping.v1.GapSummaryR\020targetGapSumm" +
+      "ary\022L\n\020confidence_score\030\016 \001(\0132!.oscal.ma" +
+      "pping.v1.ConfidenceScoreR\017confidenceScor" +
+      "e\0226\n\010coverage\030\017 \001(\0132\032.oscal.mapping.v1.C" +
+      "overageR\010coverage\"\213\002\n\030MappingResourceRef" +
+      "erence\022\016\n\002ns\030\001 \001(\tR\002ns\022\022\n\004type\030\002 \001(\tR\004ty" +
+      "pe\0221\n\004href\030\003 \001(\0132\035.oscal.common.v1.URIRe" +
+      "ferenceR\004href\022/\n\005props\030\004 \003(\0132\031.oscal.com" +
+      "mon.v1.PropertyR\005props\022+\n\005links\030\005 \003(\0132\025." +
+      "oscal.common.v1.LinkR\005links\022:\n\007remarks\030\006" +
+      " \003(\0132 .oscal.common.v1.MarkupMultilineR\007" +
+      "remarks\"\376\004\n\003Map\022)\n\004uuid\030\001 \001(\0132\025.oscal.co" +
+      "mmon.v1.UUIDR\004uuid\022\016\n\002ns\030\002 \001(\tR\002ns\022-\n\022ma" +
+      "tching_rationale\030\003 \001(\tR\021matchingRational" +
+      "e\022:\n\014relationship\030\004 \001(\0132\026.oscal.common.v" +
+      "1.TokenR\014relationship\0227\n\007sources\030\005 \003(\0132\035" +
+      ".oscal.mapping.v1.MappingItemR\007sources\0227" +
+      "\n\007targets\030\006 \003(\0132\035.oscal.mapping.v1.Mappi" +
+      "ngItemR\007targets\022?\n\nqualifiers\030\007 \003(\0132\037.os" +
+      "cal.mapping.v1.QualifierItemR\nqualifiers" +
+      "\022L\n\020confidence_score\030\010 \001(\0132!.oscal.mappi" +
+      "ng.v1.ConfidenceScoreR\017confidenceScore\0226" +
+      "\n\010coverage\030\t \001(\0132\032.oscal.mapping.v1.Cove" +
+      "rageR\010coverage\022/\n\005props\030\n \003(\0132\031.oscal.co" +
+      "mmon.v1.PropertyR\005props\022+\n\005links\030\013 \003(\0132\025" +
+      ".oscal.common.v1.LinkR\005links\022:\n\007remarks\030" +
+      "\014 \003(\0132 .oscal.common.v1.MarkupMultilineR" +
+      "\007remarks\"\322\001\n\013MappingItem\022\022\n\004type\030\001 \001(\tR\004" +
+      "type\022\025\n\006id_ref\030\002 \001(\tR\005idRef\022/\n\005props\030\003 \003" +
+      "(\0132\031.oscal.common.v1.PropertyR\005props\022+\n\005" +
+      "links\030\004 \003(\0132\025.oscal.common.v1.LinkR\005link" +
+      "s\022:\n\007remarks\030\005 \003(\0132 .oscal.common.v1.Mar" +
+      "kupMultilineR\007remarks\"\374\002\n\rQualifierItem\022" +
+      "\026\n\004type\030\001 \001(\tB\002\030\001R\004type\022\031\n\006id_ref\030\002 \001(\tB" +
+      "\002\030\001R\005idRef\0223\n\005props\030\003 \003(\0132\031.oscal.common" +
+      ".v1.PropertyB\002\030\001R\005props\022/\n\005links\030\004 \003(\0132\025" +
+      ".oscal.common.v1.LinkB\002\030\001R\005links\022:\n\007rema" +
+      "rks\030\005 \003(\0132 .oscal.common.v1.MarkupMultil" +
+      "ineR\007remarks\022\030\n\007subject\030\006 \001(\tR\007subject\022\034" +
+      "\n\tpredicate\030\007 \001(\tR\tpredicate\022\032\n\010category" +
+      "\030\010 \001(\tR\010category\022B\n\013description\030\t \001(\0132 ." +
+      "oscal.common.v1.MarkupMultilineR\013descrip" +
+      "tion\"\303\002\n\017ConfidenceScore\022\030\n\005value\030\001 \001(\001B" +
+      "\002\030\001R\005value\022\032\n\006method\030\002 \001(\tB\002\030\001R\006method\0223" +
+      "\n\005props\030\003 \003(\0132\031.oscal.common.v1.Property" +
+      "B\002\030\001R\005props\022/\n\005links\030\004 \003(\0132\025.oscal.commo" +
+      "n.v1.LinkB\002\030\001R\005links\022>\n\007remarks\030\005 \003(\0132 ." +
+      "oscal.common.v1.MarkupMultilineB\002\030\001R\007rem" +
+      "arks\022\032\n\010category\030\006 \001(\tR\010category\0228\n\nperc" +
+      "entage\030\007 \001(\0132\030.oscal.common.v1.DecimalR\n" +
+      "percentage\"\326\002\n\010Coverage\022\030\n\005value\030\001 \001(\001B\002" +
+      "\030\001R\005value\022\032\n\006method\030\002 \001(\tB\002\030\001R\006method\0223\n" +
+      "\005props\030\003 \003(\0132\031.oscal.common.v1.PropertyB" +
+      "\002\030\001R\005props\022/\n\005links\030\004 \003(\0132\025.oscal.common" +
+      ".v1.LinkB\002\030\001R\005links\022>\n\007remarks\030\005 \003(\0132 .o" +
+      "scal.common.v1.MarkupMultilineB\002\030\001R\007rema" +
+      "rks\022+\n\021generation_method\030\006 \001(\tR\020generati" +
+      "onMethod\022A\n\017target_coverage\030\007 \001(\0132\030.osca" +
+      "l.common.v1.DecimalR\016targetCoverage\"\341\002\n\n" +
+      "GapSummary\022\030\n\005count\030\001 \001(\005B\002\030\001R\005count\022\026\n\004" +
+      "gaps\030\002 \003(\tB\002\030\001R\004gaps\0223\n\005props\030\003 \003(\0132\031.os" +
+      "cal.common.v1.PropertyB\002\030\001R\005props\022/\n\005lin" +
+      "ks\030\004 \003(\0132\025.oscal.common.v1.LinkB\002\030\001R\005lin" +
+      "ks\022>\n\007remarks\030\005 \003(\0132 .oscal.common.v1.Ma" +
+      "rkupMultilineB\002\030\001R\007remarks\022)\n\004uuid\030\006 \001(\013" +
+      "2\025.oscal.common.v1.UUIDR\004uuid\022P\n\021unmappe" +
+      "d_controls\030\007 \003(\0132#.oscal.mapping.v1.Sele" +
+      "ctControlByIdR\020unmappedControls\"\362\001\n\022Mapp" +
+      "ingDescription\022B\n\013description\030\001 \001(\0132 .os" +
+      "cal.common.v1.MarkupMultilineR\013descripti" +
+      "on\022/\n\005props\030\002 \003(\0132\031.oscal.common.v1.Prop" +
+      "ertyR\005props\022+\n\005links\030\003 \003(\0132\025.oscal.commo" +
+      "n.v1.LinkR\005links\022:\n\007remarks\030\004 \003(\0132 .osca" +
+      "l.common.v1.MarkupMultilineR\007remarks\"\271\004\n" +
+      "\021MappingProvenance\022\026\n\006method\030\001 \001(\tR\006meth" +
+      "od\022-\n\022matching_rationale\030\002 \001(\tR\021matching" +
+      "Rationale\022\026\n\006status\030\003 \001(\tR\006status\022L\n\020con" +
+      "fidence_score\030\004 \001(\0132!.oscal.mapping.v1.C" +
+      "onfidenceScoreR\017confidenceScore\0226\n\010cover" +
+      "age\030\005 \001(\0132\032.oscal.mapping.v1.CoverageR\010c" +
+      "overage\022Q\n\023mapping_description\030\006 \001(\0132 .o" +
+      "scal.common.v1.MarkupMultilineR\022mappingD" +
+      "escription\022R\n\023responsible_parties\030\007 \003(\0132" +
+      "!.oscal.common.v1.ResponsiblePartyR\022resp" +
+      "onsibleParties\022/\n\005props\030\010 \003(\0132\031.oscal.co" +
+      "mmon.v1.PropertyR\005props\022+\n\005links\030\t \003(\0132\025" +
+      ".oscal.common.v1.LinkR\005links\022:\n\007remarks\030" +
+      "\n \003(\0132 .oscal.common.v1.MarkupMultilineR" +
+      "\007remarks\"\256\001\n\021SelectControlById\022.\n\023with_c" +
+      "hild_controls\030\001 \001(\tR\021withChildControls\0221" +
+      "\n\010with_ids\030\002 \003(\0132\026.oscal.common.v1.Token" +
+      "R\007withIds\0226\n\010matching\030\003 \003(\0132\032.oscal.mapp" +
+      "ing.v1.MatchingR\010matching\"`\n\010Matching\022\030\n" +
+      "\007pattern\030\001 \001(\tR\007pattern\022:\n\007remarks\030\002 \003(\013" +
       "2 .oscal.common.v1.MarkupMultilineR\007rema" +
-      "rks\"\324\001\n\rQualifierItem\022\022\n\004type\030\001 \001(\tR\004typ" +
-      "e\022\025\n\006id_ref\030\002 \001(\tR\005idRef\022/\n\005props\030\003 \003(\0132" +
-      "\031.oscal.common.v1.PropertyR\005props\022+\n\005lin" +
-      "ks\030\004 \003(\0132\025.oscal.common.v1.LinkR\005links\022:" +
-      "\n\007remarks\030\005 \003(\0132 .oscal.common.v1.Markup" +
-      "MultilineR\007remarks\"\331\001\n\017ConfidenceScore\022\024" +
-      "\n\005value\030\001 \001(\001R\005value\022\026\n\006method\030\002 \001(\tR\006me" +
-      "thod\022/\n\005props\030\003 \003(\0132\031.oscal.common.v1.Pr" +
-      "opertyR\005props\022+\n\005links\030\004 \003(\0132\025.oscal.com" +
-      "mon.v1.LinkR\005links\022:\n\007remarks\030\005 \003(\0132 .os" +
-      "cal.common.v1.MarkupMultilineR\007remarks\"\322" +
-      "\001\n\010Coverage\022\024\n\005value\030\001 \001(\001R\005value\022\026\n\006met" +
-      "hod\030\002 \001(\tR\006method\022/\n\005props\030\003 \003(\0132\031.oscal" +
-      ".common.v1.PropertyR\005props\022+\n\005links\030\004 \003(" +
-      "\0132\025.oscal.common.v1.LinkR\005links\022:\n\007remar" +
-      "ks\030\005 \003(\0132 .oscal.common.v1.MarkupMultili" +
-      "neR\007remarks\"\320\001\n\nGapSummary\022\024\n\005count\030\001 \001(" +
-      "\005R\005count\022\022\n\004gaps\030\002 \003(\tR\004gaps\022/\n\005props\030\003 " +
-      "\003(\0132\031.oscal.common.v1.PropertyR\005props\022+\n" +
-      "\005links\030\004 \003(\0132\025.oscal.common.v1.LinkR\005lin" +
-      "ks\022:\n\007remarks\030\005 \003(\0132 .oscal.common.v1.Ma" +
-      "rkupMultilineR\007remarks\"\362\001\n\022MappingDescri" +
-      "ption\022B\n\013description\030\001 \001(\0132 .oscal.commo" +
-      "n.v1.MarkupMultilineR\013description\022/\n\005pro" +
-      "ps\030\002 \003(\0132\031.oscal.common.v1.PropertyR\005pro" +
-      "ps\022+\n\005links\030\003 \003(\0132\025.oscal.common.v1.Link" +
-      "R\005links\022:\n\007remarks\030\004 \003(\0132 .oscal.common." +
-      "v1.MarkupMultilineR\007remarksB<Z:github.co" +
-      "m/mchorfa/xoscal/proto/oscal/mapping/v1;" +
-      "mappingv1b\006proto3"
+      "rksB<Z:github.com/mchorfa/xoscal/proto/o" +
+      "scal/mapping/v1;mappingv1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -20627,55 +32833,79 @@ public final class Mapping extends com.google.protobuf.GeneratedFile {
     internal_static_oscal_mapping_v1_MappingCollection_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_mapping_v1_MappingCollection_descriptor,
-        new java.lang.String[] { "Uuid", "Metadata", "MatchingRationale", "Status", "SourceResource", "TargetResource", "Maps", "Props", "Links", "Remarks", "MappingDescription", "SourceGapSummary", "TargetGapSummary", "ConfidenceScore", "Coverage", });
-    internal_static_oscal_mapping_v1_MappingResourceReference_descriptor =
+        new java.lang.String[] { "Uuid", "Metadata", "MatchingRationale", "Status", "SourceResource", "TargetResource", "Maps", "Props", "Links", "Remarks", "MappingDescription", "SourceGapSummary", "TargetGapSummary", "ConfidenceScore", "Coverage", "Provenance", "Mappings", "BackMatter", });
+    internal_static_oscal_mapping_v1_ControlMapping_descriptor =
       getDescriptor().getMessageType(1);
+    internal_static_oscal_mapping_v1_ControlMapping_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_oscal_mapping_v1_ControlMapping_descriptor,
+        new java.lang.String[] { "Uuid", "Method", "MatchingRationale", "Status", "SourceResource", "TargetResource", "Maps", "Props", "Links", "Remarks", "MappingDescription", "SourceGapSummary", "TargetGapSummary", "ConfidenceScore", "Coverage", });
+    internal_static_oscal_mapping_v1_MappingResourceReference_descriptor =
+      getDescriptor().getMessageType(2);
     internal_static_oscal_mapping_v1_MappingResourceReference_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_mapping_v1_MappingResourceReference_descriptor,
         new java.lang.String[] { "Ns", "Type", "Href", "Props", "Links", "Remarks", });
     internal_static_oscal_mapping_v1_Map_descriptor =
-      getDescriptor().getMessageType(2);
+      getDescriptor().getMessageType(3);
     internal_static_oscal_mapping_v1_Map_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_mapping_v1_Map_descriptor,
         new java.lang.String[] { "Uuid", "Ns", "MatchingRationale", "Relationship", "Sources", "Targets", "Qualifiers", "ConfidenceScore", "Coverage", "Props", "Links", "Remarks", });
     internal_static_oscal_mapping_v1_MappingItem_descriptor =
-      getDescriptor().getMessageType(3);
+      getDescriptor().getMessageType(4);
     internal_static_oscal_mapping_v1_MappingItem_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_mapping_v1_MappingItem_descriptor,
         new java.lang.String[] { "Type", "IdRef", "Props", "Links", "Remarks", });
     internal_static_oscal_mapping_v1_QualifierItem_descriptor =
-      getDescriptor().getMessageType(4);
+      getDescriptor().getMessageType(5);
     internal_static_oscal_mapping_v1_QualifierItem_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_mapping_v1_QualifierItem_descriptor,
-        new java.lang.String[] { "Type", "IdRef", "Props", "Links", "Remarks", });
+        new java.lang.String[] { "Type", "IdRef", "Props", "Links", "Remarks", "Subject", "Predicate", "Category", "Description", });
     internal_static_oscal_mapping_v1_ConfidenceScore_descriptor =
-      getDescriptor().getMessageType(5);
+      getDescriptor().getMessageType(6);
     internal_static_oscal_mapping_v1_ConfidenceScore_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_mapping_v1_ConfidenceScore_descriptor,
-        new java.lang.String[] { "Value", "Method", "Props", "Links", "Remarks", });
+        new java.lang.String[] { "Value", "Method", "Props", "Links", "Remarks", "Category", "Percentage", });
     internal_static_oscal_mapping_v1_Coverage_descriptor =
-      getDescriptor().getMessageType(6);
+      getDescriptor().getMessageType(7);
     internal_static_oscal_mapping_v1_Coverage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_mapping_v1_Coverage_descriptor,
-        new java.lang.String[] { "Value", "Method", "Props", "Links", "Remarks", });
+        new java.lang.String[] { "Value", "Method", "Props", "Links", "Remarks", "GenerationMethod", "TargetCoverage", });
     internal_static_oscal_mapping_v1_GapSummary_descriptor =
-      getDescriptor().getMessageType(7);
+      getDescriptor().getMessageType(8);
     internal_static_oscal_mapping_v1_GapSummary_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_mapping_v1_GapSummary_descriptor,
-        new java.lang.String[] { "Count", "Gaps", "Props", "Links", "Remarks", });
+        new java.lang.String[] { "Count", "Gaps", "Props", "Links", "Remarks", "Uuid", "UnmappedControls", });
     internal_static_oscal_mapping_v1_MappingDescription_descriptor =
-      getDescriptor().getMessageType(8);
+      getDescriptor().getMessageType(9);
     internal_static_oscal_mapping_v1_MappingDescription_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_mapping_v1_MappingDescription_descriptor,
         new java.lang.String[] { "Description", "Props", "Links", "Remarks", });
+    internal_static_oscal_mapping_v1_MappingProvenance_descriptor =
+      getDescriptor().getMessageType(10);
+    internal_static_oscal_mapping_v1_MappingProvenance_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_oscal_mapping_v1_MappingProvenance_descriptor,
+        new java.lang.String[] { "Method", "MatchingRationale", "Status", "ConfidenceScore", "Coverage", "MappingDescription", "ResponsibleParties", "Props", "Links", "Remarks", });
+    internal_static_oscal_mapping_v1_SelectControlById_descriptor =
+      getDescriptor().getMessageType(11);
+    internal_static_oscal_mapping_v1_SelectControlById_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_oscal_mapping_v1_SelectControlById_descriptor,
+        new java.lang.String[] { "WithChildControls", "WithIds", "Matching", });
+    internal_static_oscal_mapping_v1_Matching_descriptor =
+      getDescriptor().getMessageType(12);
+    internal_static_oscal_mapping_v1_Matching_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_oscal_mapping_v1_Matching_descriptor,
+        new java.lang.String[] { "Pattern", "Remarks", });
     descriptor.resolveAllFeaturesImmutable();
     oscal.common.v1.Common.getDescriptor();
   }

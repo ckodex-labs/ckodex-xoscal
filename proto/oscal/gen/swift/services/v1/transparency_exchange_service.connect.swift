@@ -26,6 +26,18 @@ internal protocol Oscal_Services_V1_TransparencyExchangeServiceClientInterface: 
     func `verifyClaim`(request: Oscal_Services_V1_VerifyClaimRequest, headers: Connect.Headers) async -> ResponseMessage<Oscal_Services_V1_VerifyClaimResponse>
 
     @available(iOS 13, *)
+    func `listVerificationEvents`(request: Oscal_Services_V1_ListVerificationEventsRequest, headers: Connect.Headers) async -> ResponseMessage<Oscal_Services_V1_ListVerificationEventsResponse>
+
+    @available(iOS 13, *)
+    func `exportClaimReceipt`(request: Oscal_Services_V1_ExportClaimReceiptRequest, headers: Connect.Headers) async -> ResponseMessage<Oscal_Services_V1_ExportClaimReceiptResponse>
+
+    @available(iOS 13, *)
+    func `preflightImport`(request: Oscal_Services_V1_PreflightImportRequest, headers: Connect.Headers) async -> ResponseMessage<Oscal_Services_V1_PreflightImportResponse>
+
+    @available(iOS 13, *)
+    func `importBatch`(request: Oscal_Services_V1_ImportBatchRequest, headers: Connect.Headers) async -> ResponseMessage<Oscal_Services_V1_ImportBatchResponse>
+
+    @available(iOS 13, *)
     func `uploadEvidence`(request: Oscal_Services_V1_UploadEvidenceRequest, headers: Connect.Headers) async -> ResponseMessage<Oscal_Services_V1_UploadEvidenceResponse>
 
     @available(iOS 13, *)
@@ -67,6 +79,26 @@ internal final class Oscal_Services_V1_TransparencyExchangeServiceClient: Oscal_
     }
 
     @available(iOS 13, *)
+    internal func `listVerificationEvents`(request: Oscal_Services_V1_ListVerificationEventsRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Oscal_Services_V1_ListVerificationEventsResponse> {
+        return await self.client.unary(path: "/oscal.services.v1.TransparencyExchangeService/ListVerificationEvents", idempotencyLevel: .unknown, request: request, headers: headers)
+    }
+
+    @available(iOS 13, *)
+    internal func `exportClaimReceipt`(request: Oscal_Services_V1_ExportClaimReceiptRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Oscal_Services_V1_ExportClaimReceiptResponse> {
+        return await self.client.unary(path: "/oscal.services.v1.TransparencyExchangeService/ExportClaimReceipt", idempotencyLevel: .unknown, request: request, headers: headers)
+    }
+
+    @available(iOS 13, *)
+    internal func `preflightImport`(request: Oscal_Services_V1_PreflightImportRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Oscal_Services_V1_PreflightImportResponse> {
+        return await self.client.unary(path: "/oscal.services.v1.TransparencyExchangeService/PreflightImport", idempotencyLevel: .unknown, request: request, headers: headers)
+    }
+
+    @available(iOS 13, *)
+    internal func `importBatch`(request: Oscal_Services_V1_ImportBatchRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Oscal_Services_V1_ImportBatchResponse> {
+        return await self.client.unary(path: "/oscal.services.v1.TransparencyExchangeService/ImportBatch", idempotencyLevel: .unknown, request: request, headers: headers)
+    }
+
+    @available(iOS 13, *)
     internal func `uploadEvidence`(request: Oscal_Services_V1_UploadEvidenceRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Oscal_Services_V1_UploadEvidenceResponse> {
         return await self.client.unary(path: "/oscal.services.v1.TransparencyExchangeService/UploadEvidence", idempotencyLevel: .unknown, request: request, headers: headers)
     }
@@ -92,6 +124,10 @@ internal final class Oscal_Services_V1_TransparencyExchangeServiceClient: Oscal_
             internal static let getClaim = Connect.MethodSpec(name: "GetClaim", service: "oscal.services.v1.TransparencyExchangeService", type: .unary)
             internal static let listClaims = Connect.MethodSpec(name: "ListClaims", service: "oscal.services.v1.TransparencyExchangeService", type: .unary)
             internal static let verifyClaim = Connect.MethodSpec(name: "VerifyClaim", service: "oscal.services.v1.TransparencyExchangeService", type: .unary)
+            internal static let listVerificationEvents = Connect.MethodSpec(name: "ListVerificationEvents", service: "oscal.services.v1.TransparencyExchangeService", type: .unary)
+            internal static let exportClaimReceipt = Connect.MethodSpec(name: "ExportClaimReceipt", service: "oscal.services.v1.TransparencyExchangeService", type: .unary)
+            internal static let preflightImport = Connect.MethodSpec(name: "PreflightImport", service: "oscal.services.v1.TransparencyExchangeService", type: .unary)
+            internal static let importBatch = Connect.MethodSpec(name: "ImportBatch", service: "oscal.services.v1.TransparencyExchangeService", type: .unary)
             internal static let uploadEvidence = Connect.MethodSpec(name: "UploadEvidence", service: "oscal.services.v1.TransparencyExchangeService", type: .unary)
             internal static let getEvidence = Connect.MethodSpec(name: "GetEvidence", service: "oscal.services.v1.TransparencyExchangeService", type: .unary)
             internal static let verifyEvidence = Connect.MethodSpec(name: "VerifyEvidence", service: "oscal.services.v1.TransparencyExchangeService", type: .unary)

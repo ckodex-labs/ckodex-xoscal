@@ -96,7 +96,7 @@
     "oscal.mapping.v1.QualifierItem.jsonschema.json": {
       "$schema": "https://json-schema.org/draft/2020-12/schema",
       "additionalProperties": false,
-      "description": "QualifierItem represents a qualifier item",
+      "description": "QualifierItem represents an OSCAL relationship qualifier. Fields 1-4 are\n retained for wire compatibility with the pre-release mapping prototype.",
       "patternProperties": {
         "^(id_ref)$": {
           "default": "",
@@ -104,6 +104,13 @@
         }
       },
       "properties": {
+        "category": {
+          "default": "",
+          "type": "string"
+        },
+        "description": {
+          "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.jsonschema.json"
+        },
         "idRef": {
           "default": "",
           "type": "string"
@@ -113,6 +120,10 @@
             "$ref": "#/$defs/oscal.common.v1.Link.jsonschema.json"
           },
           "type": "array"
+        },
+        "predicate": {
+          "default": "",
+          "type": "string"
         },
         "props": {
           "items": {
@@ -125,6 +136,10 @@
             "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.jsonschema.json"
           },
           "type": "array"
+        },
+        "subject": {
+          "default": "",
+          "type": "string"
         },
         "type": {
           "default": "",

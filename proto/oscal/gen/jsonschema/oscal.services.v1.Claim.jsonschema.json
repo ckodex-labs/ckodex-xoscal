@@ -29,11 +29,19 @@
       },
       "type": "array"
     },
+    "^(proof_state_json)$": {
+      "default": "",
+      "type": "string"
+    },
     "^(source_refs)$": {
       "items": {
         "$ref": "oscal.services.v1.EvidenceRef.jsonschema.json"
       },
       "type": "array"
+    },
+    "^(trust_state)$": {
+      "default": "",
+      "type": "string"
     },
     "^(valid_time)$": {
       "$ref": "oscal.services.v1.TimeWindow.jsonschema.json"
@@ -79,6 +87,10 @@
       },
       "type": "array"
     },
+    "proofStateJson": {
+      "default": "",
+      "type": "string"
+    },
     "sourceRefs": {
       "items": {
         "$ref": "oscal.services.v1.EvidenceRef.jsonschema.json"
@@ -87,6 +99,10 @@
     },
     "subject": {
       "$ref": "oscal.services.v1.Reference.jsonschema.json"
+    },
+    "trustState": {
+      "default": "",
+      "type": "string"
     },
     "type": {
       "default": "",

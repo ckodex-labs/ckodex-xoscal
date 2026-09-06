@@ -174,7 +174,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
     /**
      * <code>repeated .oscal.services.v1.EvidenceRef source_refs = 11 [json_name = "sourceRefs"];</code>
      */
-    java.util.List<oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceRef> 
+    java.util.List<oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceRef>
         getSourceRefsList();
     /**
      * <code>repeated .oscal.services.v1.EvidenceRef source_refs = 11 [json_name = "sourceRefs"];</code>
@@ -187,7 +187,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
     /**
      * <code>repeated .oscal.services.v1.EvidenceRef source_refs = 11 [json_name = "sourceRefs"];</code>
      */
-    java.util.List<? extends oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceRefOrBuilder> 
+    java.util.List<? extends oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceRefOrBuilder>
         getSourceRefsOrBuilderList();
     /**
      * <code>repeated .oscal.services.v1.EvidenceRef source_refs = 11 [json_name = "sourceRefs"];</code>
@@ -198,7 +198,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
     /**
      * <code>repeated .oscal.services.v1.ProofRef proof_refs = 12 [json_name = "proofRefs"];</code>
      */
-    java.util.List<oscal.services.v1.TransparencyExchangeServiceOuterClass.ProofRef> 
+    java.util.List<oscal.services.v1.TransparencyExchangeServiceOuterClass.ProofRef>
         getProofRefsList();
     /**
      * <code>repeated .oscal.services.v1.ProofRef proof_refs = 12 [json_name = "proofRefs"];</code>
@@ -211,7 +211,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
     /**
      * <code>repeated .oscal.services.v1.ProofRef proof_refs = 12 [json_name = "proofRefs"];</code>
      */
-    java.util.List<? extends oscal.services.v1.TransparencyExchangeServiceOuterClass.ProofRefOrBuilder> 
+    java.util.List<? extends oscal.services.v1.TransparencyExchangeServiceOuterClass.ProofRefOrBuilder>
         getProofRefsOrBuilderList();
     /**
      * <code>repeated .oscal.services.v1.ProofRef proof_refs = 12 [json_name = "proofRefs"];</code>
@@ -222,7 +222,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
     /**
      * <code>repeated .oscal.services.v1.PolicyRef policy_refs = 13 [json_name = "policyRefs"];</code>
      */
-    java.util.List<oscal.services.v1.TransparencyExchangeServiceOuterClass.PolicyRef> 
+    java.util.List<oscal.services.v1.TransparencyExchangeServiceOuterClass.PolicyRef>
         getPolicyRefsList();
     /**
      * <code>repeated .oscal.services.v1.PolicyRef policy_refs = 13 [json_name = "policyRefs"];</code>
@@ -235,7 +235,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
     /**
      * <code>repeated .oscal.services.v1.PolicyRef policy_refs = 13 [json_name = "policyRefs"];</code>
      */
-    java.util.List<? extends oscal.services.v1.TransparencyExchangeServiceOuterClass.PolicyRefOrBuilder> 
+    java.util.List<? extends oscal.services.v1.TransparencyExchangeServiceOuterClass.PolicyRefOrBuilder>
         getPolicyRefsOrBuilderList();
     /**
      * <code>repeated .oscal.services.v1.PolicyRef policy_refs = 13 [json_name = "policyRefs"];</code>
@@ -262,6 +262,46 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
      */
     com.google.protobuf.ByteString
         getExtensionsJsonBytes();
+
+    /**
+     * <pre>
+     * candidate | incomplete | verified | rejected
+     * </pre>
+     *
+     * <code>string trust_state = 15 [json_name = "trustState"];</code>
+     * @return The trustState.
+     */
+    java.lang.String getTrustState();
+    /**
+     * <pre>
+     * candidate | incomplete | verified | rejected
+     * </pre>
+     *
+     * <code>string trust_state = 15 [json_name = "trustState"];</code>
+     * @return The bytes for trustState.
+     */
+    com.google.protobuf.ByteString
+        getTrustStateBytes();
+
+    /**
+     * <pre>
+     * current persisted proof projection
+     * </pre>
+     *
+     * <code>string proof_state_json = 16 [json_name = "proofStateJson"];</code>
+     * @return The proofStateJson.
+     */
+    java.lang.String getProofStateJson();
+    /**
+     * <pre>
+     * current persisted proof projection
+     * </pre>
+     *
+     * <code>string proof_state_json = 16 [json_name = "proofStateJson"];</code>
+     * @return The bytes for proofStateJson.
+     */
+    com.google.protobuf.ByteString
+        getProofStateJsonBytes();
 
     oscal.services.v1.TransparencyExchangeServiceOuterClass.Claim.ObjectOptCase getObjectOptCase();
   }
@@ -294,6 +334,8 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       proofRefs_ = java.util.Collections.emptyList();
       policyRefs_ = java.util.Collections.emptyList();
       extensionsJson_ = "";
+      trustState_ = "";
+      proofStateJson_ = "";
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
@@ -370,7 +412,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         id_ = s;
@@ -386,7 +428,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
         getIdBytes() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         id_ = b;
@@ -409,7 +451,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         type_ = s;
@@ -425,7 +467,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
         getTypeBytes() {
       java.lang.Object ref = type_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         type_ = b;
@@ -588,7 +630,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         bomKind_ = s;
@@ -604,7 +646,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
         getBomKindBytes() {
       java.lang.Object ref = bomKind_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         bomKind_ = b;
@@ -680,7 +722,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
      * <code>repeated .oscal.services.v1.EvidenceRef source_refs = 11 [json_name = "sourceRefs"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceRefOrBuilder> 
+    public java.util.List<? extends oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceRefOrBuilder>
         getSourceRefsOrBuilderList() {
       return sourceRefs_;
     }
@@ -721,7 +763,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
      * <code>repeated .oscal.services.v1.ProofRef proof_refs = 12 [json_name = "proofRefs"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.services.v1.TransparencyExchangeServiceOuterClass.ProofRefOrBuilder> 
+    public java.util.List<? extends oscal.services.v1.TransparencyExchangeServiceOuterClass.ProofRefOrBuilder>
         getProofRefsOrBuilderList() {
       return proofRefs_;
     }
@@ -762,7 +804,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
      * <code>repeated .oscal.services.v1.PolicyRef policy_refs = 13 [json_name = "policyRefs"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.services.v1.TransparencyExchangeServiceOuterClass.PolicyRefOrBuilder> 
+    public java.util.List<? extends oscal.services.v1.TransparencyExchangeServiceOuterClass.PolicyRefOrBuilder>
         getPolicyRefsOrBuilderList() {
       return policyRefs_;
     }
@@ -806,7 +848,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         extensionsJson_ = s;
@@ -826,10 +868,104 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
         getExtensionsJsonBytes() {
       java.lang.Object ref = extensionsJson_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         extensionsJson_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TRUST_STATE_FIELD_NUMBER = 15;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object trustState_ = "";
+    /**
+     * <pre>
+     * candidate | incomplete | verified | rejected
+     * </pre>
+     *
+     * <code>string trust_state = 15 [json_name = "trustState"];</code>
+     * @return The trustState.
+     */
+    @java.lang.Override
+    public java.lang.String getTrustState() {
+      java.lang.Object ref = trustState_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        trustState_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * candidate | incomplete | verified | rejected
+     * </pre>
+     *
+     * <code>string trust_state = 15 [json_name = "trustState"];</code>
+     * @return The bytes for trustState.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTrustStateBytes() {
+      java.lang.Object ref = trustState_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        trustState_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PROOF_STATE_JSON_FIELD_NUMBER = 16;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object proofStateJson_ = "";
+    /**
+     * <pre>
+     * current persisted proof projection
+     * </pre>
+     *
+     * <code>string proof_state_json = 16 [json_name = "proofStateJson"];</code>
+     * @return The proofStateJson.
+     */
+    @java.lang.Override
+    public java.lang.String getProofStateJson() {
+      java.lang.Object ref = proofStateJson_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        proofStateJson_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * current persisted proof projection
+     * </pre>
+     *
+     * <code>string proof_state_json = 16 [json_name = "proofStateJson"];</code>
+     * @return The bytes for proofStateJson.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getProofStateJsonBytes() {
+      java.lang.Object ref = proofStateJson_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        proofStateJson_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -891,6 +1027,12 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       }
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(extensionsJson_)) {
         com.google.protobuf.GeneratedMessage.writeString(output, 14, extensionsJson_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(trustState_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 15, trustState_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(proofStateJson_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 16, proofStateJson_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -963,6 +1105,12 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(extensionsJson_)) {
         size += com.google.protobuf.GeneratedMessage.computeStringSize(14, extensionsJson_);
       }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(trustState_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(15, trustState_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(proofStateJson_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(16, proofStateJson_);
+      }
       return size;
     }
     @java.lang.Override
@@ -1026,6 +1174,10 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
           .equals(other.getPolicyRefsList())) return false;
       if (!getExtensionsJson()
           .equals(other.getExtensionsJson())) return false;
+      if (!getTrustState()
+          .equals(other.getTrustState())) return false;
+      if (!getProofStateJson()
+          .equals(other.getProofStateJson())) return false;
       if (!getObjectOptCase().equals(other.getObjectOptCase())) return false;
       switch (objectOptCase_) {
         case 5:
@@ -1090,6 +1242,10 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       }
       hash = (37 * hash) + EXTENSIONS_JSON_FIELD_NUMBER;
       hash = (53 * hash) + getExtensionsJson().hashCode();
+      hash = (37 * hash) + TRUST_STATE_FIELD_NUMBER;
+      hash = (53 * hash) + getTrustState().hashCode();
+      hash = (37 * hash) + PROOF_STATE_JSON_FIELD_NUMBER;
+      hash = (53 * hash) + getProofStateJson().hashCode();
       switch (objectOptCase_) {
         case 5:
           hash = (37 * hash) + OBJECT_FIELD_NUMBER;
@@ -1302,6 +1458,8 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
         }
         bitField0_ = (bitField0_ & ~0x00001000);
         extensionsJson_ = "";
+        trustState_ = "";
+        proofStateJson_ = "";
         objectOptCase_ = 0;
         objectOpt_ = null;
         return this;
@@ -1412,6 +1570,12 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
         if (((from_bitField0_ & 0x00002000) != 0)) {
           result.extensionsJson_ = extensionsJson_;
         }
+        if (((from_bitField0_ & 0x00004000) != 0)) {
+          result.trustState_ = trustState_;
+        }
+        if (((from_bitField0_ & 0x00008000) != 0)) {
+          result.proofStateJson_ = proofStateJson_;
+        }
         result.bitField0_ |= to_bitField0_;
       }
 
@@ -1488,7 +1652,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
               sourceRefsBuilder_ = null;
               sourceRefs_ = other.sourceRefs_;
               bitField0_ = (bitField0_ & ~0x00000400);
-              sourceRefsBuilder_ = 
+              sourceRefsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetSourceRefsFieldBuilder() : null;
             } else {
@@ -1514,7 +1678,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
               proofRefsBuilder_ = null;
               proofRefs_ = other.proofRefs_;
               bitField0_ = (bitField0_ & ~0x00000800);
-              proofRefsBuilder_ = 
+              proofRefsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetProofRefsFieldBuilder() : null;
             } else {
@@ -1540,7 +1704,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
               policyRefsBuilder_ = null;
               policyRefs_ = other.policyRefs_;
               bitField0_ = (bitField0_ & ~0x00001000);
-              policyRefsBuilder_ = 
+              policyRefsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetPolicyRefsFieldBuilder() : null;
             } else {
@@ -1551,6 +1715,16 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
         if (!other.getExtensionsJson().isEmpty()) {
           extensionsJson_ = other.extensionsJson_;
           bitField0_ |= 0x00002000;
+          onChanged();
+        }
+        if (!other.getTrustState().isEmpty()) {
+          trustState_ = other.trustState_;
+          bitField0_ |= 0x00004000;
+          onChanged();
+        }
+        if (!other.getProofStateJson().isEmpty()) {
+          proofStateJson_ = other.proofStateJson_;
+          bitField0_ |= 0x00008000;
           onChanged();
         }
         switch (other.getObjectOptCase()) {
@@ -1700,6 +1874,16 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
                 bitField0_ |= 0x00002000;
                 break;
               } // case 114
+              case 122: {
+                trustState_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00004000;
+                break;
+              } // case 122
+              case 130: {
+                proofStateJson_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00008000;
+                break;
+              } // case 130
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -1757,7 +1941,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
           getIdBytes() {
         java.lang.Object ref = id_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           id_ = b;
@@ -1829,7 +2013,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
           getTypeBytes() {
         java.lang.Object ref = type_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           type_ = b;
@@ -1984,7 +2168,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
        * <code>.oscal.services.v1.Reference subject = 3 [json_name = "subject"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.services.v1.TransparencyExchangeServiceOuterClass.Reference, oscal.services.v1.TransparencyExchangeServiceOuterClass.Reference.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.ReferenceOrBuilder> 
+          oscal.services.v1.TransparencyExchangeServiceOuterClass.Reference, oscal.services.v1.TransparencyExchangeServiceOuterClass.Reference.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.ReferenceOrBuilder>
           internalGetSubjectFieldBuilder() {
         if (subjectBuilder_ == null) {
           subjectBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -2105,7 +2289,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
        * <code>.oscal.services.v1.Predicate predicate = 4 [json_name = "predicate"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.services.v1.TransparencyExchangeServiceOuterClass.Predicate, oscal.services.v1.TransparencyExchangeServiceOuterClass.Predicate.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.PredicateOrBuilder> 
+          oscal.services.v1.TransparencyExchangeServiceOuterClass.Predicate, oscal.services.v1.TransparencyExchangeServiceOuterClass.Predicate.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.PredicateOrBuilder>
           internalGetPredicateFieldBuilder() {
         if (predicateBuilder_ == null) {
           predicateBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -2242,7 +2426,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
        * <code>.oscal.services.v1.Reference object = 5 [json_name = "object"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.services.v1.TransparencyExchangeServiceOuterClass.Reference, oscal.services.v1.TransparencyExchangeServiceOuterClass.Reference.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.ReferenceOrBuilder> 
+          oscal.services.v1.TransparencyExchangeServiceOuterClass.Reference, oscal.services.v1.TransparencyExchangeServiceOuterClass.Reference.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.ReferenceOrBuilder>
           internalGetObjectFieldBuilder() {
         if (objectBuilder_ == null) {
           if (!(objectOptCase_ == 5)) {
@@ -2384,7 +2568,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
        * <code>.google.protobuf.Timestamp null_object = 6 [json_name = "nullObject"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>
           internalGetNullObjectFieldBuilder() {
         if (nullObjectBuilder_ == null) {
           if (!(objectOptCase_ == 6)) {
@@ -2510,7 +2694,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
        * <code>.oscal.services.v1.Identity issuer = 7 [json_name = "issuer"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.services.v1.TransparencyExchangeServiceOuterClass.Identity, oscal.services.v1.TransparencyExchangeServiceOuterClass.Identity.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.IdentityOrBuilder> 
+          oscal.services.v1.TransparencyExchangeServiceOuterClass.Identity, oscal.services.v1.TransparencyExchangeServiceOuterClass.Identity.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.IdentityOrBuilder>
           internalGetIssuerFieldBuilder() {
         if (issuerBuilder_ == null) {
           issuerBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -2548,7 +2732,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
           getBomKindBytes() {
         java.lang.Object ref = bomKind_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           bomKind_ = b;
@@ -2703,7 +2887,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
        * <code>.oscal.services.v1.TimeWindow valid_time = 9 [json_name = "validTime"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.services.v1.TransparencyExchangeServiceOuterClass.TimeWindow, oscal.services.v1.TransparencyExchangeServiceOuterClass.TimeWindow.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.TimeWindowOrBuilder> 
+          oscal.services.v1.TransparencyExchangeServiceOuterClass.TimeWindow, oscal.services.v1.TransparencyExchangeServiceOuterClass.TimeWindow.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.TimeWindowOrBuilder>
           internalGetValidTimeFieldBuilder() {
         if (validTimeBuilder_ == null) {
           validTimeBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -2824,7 +3008,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
        * <code>.google.protobuf.Timestamp observed_time = 10 [json_name = "observedTime"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>
           internalGetObservedTimeFieldBuilder() {
         if (observedTimeBuilder_ == null) {
           observedTimeBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -3032,7 +3216,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       /**
        * <code>repeated .oscal.services.v1.EvidenceRef source_refs = 11 [json_name = "sourceRefs"];</code>
        */
-      public java.util.List<? extends oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceRefOrBuilder> 
+      public java.util.List<? extends oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceRefOrBuilder>
            getSourceRefsOrBuilderList() {
         if (sourceRefsBuilder_ != null) {
           return sourceRefsBuilder_.getMessageOrBuilderList();
@@ -3058,12 +3242,12 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       /**
        * <code>repeated .oscal.services.v1.EvidenceRef source_refs = 11 [json_name = "sourceRefs"];</code>
        */
-      public java.util.List<oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceRef.Builder> 
+      public java.util.List<oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceRef.Builder>
            getSourceRefsBuilderList() {
         return internalGetSourceRefsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceRef, oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceRef.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceRefOrBuilder> 
+          oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceRef, oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceRef.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceRefOrBuilder>
           internalGetSourceRefsFieldBuilder() {
         if (sourceRefsBuilder_ == null) {
           sourceRefsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -3272,7 +3456,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       /**
        * <code>repeated .oscal.services.v1.ProofRef proof_refs = 12 [json_name = "proofRefs"];</code>
        */
-      public java.util.List<? extends oscal.services.v1.TransparencyExchangeServiceOuterClass.ProofRefOrBuilder> 
+      public java.util.List<? extends oscal.services.v1.TransparencyExchangeServiceOuterClass.ProofRefOrBuilder>
            getProofRefsOrBuilderList() {
         if (proofRefsBuilder_ != null) {
           return proofRefsBuilder_.getMessageOrBuilderList();
@@ -3298,12 +3482,12 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       /**
        * <code>repeated .oscal.services.v1.ProofRef proof_refs = 12 [json_name = "proofRefs"];</code>
        */
-      public java.util.List<oscal.services.v1.TransparencyExchangeServiceOuterClass.ProofRef.Builder> 
+      public java.util.List<oscal.services.v1.TransparencyExchangeServiceOuterClass.ProofRef.Builder>
            getProofRefsBuilderList() {
         return internalGetProofRefsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.services.v1.TransparencyExchangeServiceOuterClass.ProofRef, oscal.services.v1.TransparencyExchangeServiceOuterClass.ProofRef.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.ProofRefOrBuilder> 
+          oscal.services.v1.TransparencyExchangeServiceOuterClass.ProofRef, oscal.services.v1.TransparencyExchangeServiceOuterClass.ProofRef.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.ProofRefOrBuilder>
           internalGetProofRefsFieldBuilder() {
         if (proofRefsBuilder_ == null) {
           proofRefsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -3512,7 +3696,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       /**
        * <code>repeated .oscal.services.v1.PolicyRef policy_refs = 13 [json_name = "policyRefs"];</code>
        */
-      public java.util.List<? extends oscal.services.v1.TransparencyExchangeServiceOuterClass.PolicyRefOrBuilder> 
+      public java.util.List<? extends oscal.services.v1.TransparencyExchangeServiceOuterClass.PolicyRefOrBuilder>
            getPolicyRefsOrBuilderList() {
         if (policyRefsBuilder_ != null) {
           return policyRefsBuilder_.getMessageOrBuilderList();
@@ -3538,12 +3722,12 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       /**
        * <code>repeated .oscal.services.v1.PolicyRef policy_refs = 13 [json_name = "policyRefs"];</code>
        */
-      public java.util.List<oscal.services.v1.TransparencyExchangeServiceOuterClass.PolicyRef.Builder> 
+      public java.util.List<oscal.services.v1.TransparencyExchangeServiceOuterClass.PolicyRef.Builder>
            getPolicyRefsBuilderList() {
         return internalGetPolicyRefsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.services.v1.TransparencyExchangeServiceOuterClass.PolicyRef, oscal.services.v1.TransparencyExchangeServiceOuterClass.PolicyRef.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.PolicyRefOrBuilder> 
+          oscal.services.v1.TransparencyExchangeServiceOuterClass.PolicyRef, oscal.services.v1.TransparencyExchangeServiceOuterClass.PolicyRef.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.PolicyRefOrBuilder>
           internalGetPolicyRefsFieldBuilder() {
         if (policyRefsBuilder_ == null) {
           policyRefsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -3590,7 +3774,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
           getExtensionsJsonBytes() {
         java.lang.Object ref = extensionsJson_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           extensionsJson_ = b;
@@ -3645,6 +3829,190 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
         checkByteStringIsUtf8(value);
         extensionsJson_ = value;
         bitField0_ |= 0x00002000;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object trustState_ = "";
+      /**
+       * <pre>
+       * candidate | incomplete | verified | rejected
+       * </pre>
+       *
+       * <code>string trust_state = 15 [json_name = "trustState"];</code>
+       * @return The trustState.
+       */
+      public java.lang.String getTrustState() {
+        java.lang.Object ref = trustState_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          trustState_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * candidate | incomplete | verified | rejected
+       * </pre>
+       *
+       * <code>string trust_state = 15 [json_name = "trustState"];</code>
+       * @return The bytes for trustState.
+       */
+      public com.google.protobuf.ByteString
+          getTrustStateBytes() {
+        java.lang.Object ref = trustState_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          trustState_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * candidate | incomplete | verified | rejected
+       * </pre>
+       *
+       * <code>string trust_state = 15 [json_name = "trustState"];</code>
+       * @param value The trustState to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTrustState(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        trustState_ = value;
+        bitField0_ |= 0x00004000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * candidate | incomplete | verified | rejected
+       * </pre>
+       *
+       * <code>string trust_state = 15 [json_name = "trustState"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTrustState() {
+        trustState_ = getDefaultInstance().getTrustState();
+        bitField0_ = (bitField0_ & ~0x00004000);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * candidate | incomplete | verified | rejected
+       * </pre>
+       *
+       * <code>string trust_state = 15 [json_name = "trustState"];</code>
+       * @param value The bytes for trustState to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTrustStateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        trustState_ = value;
+        bitField0_ |= 0x00004000;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object proofStateJson_ = "";
+      /**
+       * <pre>
+       * current persisted proof projection
+       * </pre>
+       *
+       * <code>string proof_state_json = 16 [json_name = "proofStateJson"];</code>
+       * @return The proofStateJson.
+       */
+      public java.lang.String getProofStateJson() {
+        java.lang.Object ref = proofStateJson_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          proofStateJson_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * current persisted proof projection
+       * </pre>
+       *
+       * <code>string proof_state_json = 16 [json_name = "proofStateJson"];</code>
+       * @return The bytes for proofStateJson.
+       */
+      public com.google.protobuf.ByteString
+          getProofStateJsonBytes() {
+        java.lang.Object ref = proofStateJson_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          proofStateJson_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * current persisted proof projection
+       * </pre>
+       *
+       * <code>string proof_state_json = 16 [json_name = "proofStateJson"];</code>
+       * @param value The proofStateJson to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProofStateJson(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        proofStateJson_ = value;
+        bitField0_ |= 0x00008000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * current persisted proof projection
+       * </pre>
+       *
+       * <code>string proof_state_json = 16 [json_name = "proofStateJson"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProofStateJson() {
+        proofStateJson_ = getDefaultInstance().getProofStateJson();
+        bitField0_ = (bitField0_ & ~0x00008000);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * current persisted proof projection
+       * </pre>
+       *
+       * <code>string proof_state_json = 16 [json_name = "proofStateJson"];</code>
+       * @param value The bytes for proofStateJson to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProofStateJsonBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        proofStateJson_ = value;
+        bitField0_ |= 0x00008000;
         onChanged();
         return this;
       }
@@ -3824,7 +4192,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         kind_ = s;
@@ -3840,7 +4208,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
         getKindBytes() {
       java.lang.Object ref = kind_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         kind_ = b;
@@ -3863,7 +4231,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         id_ = s;
@@ -3879,7 +4247,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
         getIdBytes() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         id_ = b;
@@ -3902,7 +4270,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         digest_ = s;
@@ -3918,7 +4286,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
         getDigestBytes() {
       java.lang.Object ref = digest_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         digest_ = b;
@@ -3941,7 +4309,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         purl_ = s;
@@ -3957,7 +4325,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
         getPurlBytes() {
       java.lang.Object ref = purl_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         purl_ = b;
@@ -3980,7 +4348,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         bomRef_ = s;
@@ -3996,7 +4364,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
         getBomRefBytes() {
       java.lang.Object ref = bomRef_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         bomRef_ = b;
@@ -4425,7 +4793,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
           getKindBytes() {
         java.lang.Object ref = kind_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           kind_ = b;
@@ -4497,7 +4865,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
           getIdBytes() {
         java.lang.Object ref = id_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           id_ = b;
@@ -4569,7 +4937,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
           getDigestBytes() {
         java.lang.Object ref = digest_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           digest_ = b;
@@ -4641,7 +5009,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
           getPurlBytes() {
         java.lang.Object ref = purl_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           purl_ = b;
@@ -4713,7 +5081,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
           getBomRefBytes() {
         java.lang.Object ref = bomRef_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           bomRef_ = b;
@@ -4917,7 +5285,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         relation_ = s;
@@ -4933,7 +5301,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
         getRelationBytes() {
       java.lang.Object ref = relation_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         relation_ = b;
@@ -4960,7 +5328,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         direction_ = s;
@@ -4980,7 +5348,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
         getDirectionBytes() {
       java.lang.Object ref = direction_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         direction_ = b;
@@ -5003,7 +5371,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         qualifier_ = s;
@@ -5019,7 +5387,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
         getQualifierBytes() {
       java.lang.Object ref = qualifier_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         qualifier_ = b;
@@ -5400,7 +5768,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
           getRelationBytes() {
         java.lang.Object ref = relation_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           relation_ = b;
@@ -5480,7 +5848,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
           getDirectionBytes() {
         java.lang.Object ref = direction_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           direction_ = b;
@@ -5564,7 +5932,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
           getQualifierBytes() {
         java.lang.Object ref = qualifier_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           qualifier_ = b;
@@ -5780,7 +6148,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         kind_ = s;
@@ -5800,7 +6168,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
         getKindBytes() {
       java.lang.Object ref = kind_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         kind_ = b;
@@ -5823,7 +6191,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         id_ = s;
@@ -5839,7 +6207,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
         getIdBytes() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         id_ = b;
@@ -5866,7 +6234,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         keyJson_ = s;
@@ -5886,7 +6254,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
         getKeyJsonBytes() {
       java.lang.Object ref = keyJson_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         keyJson_ = b;
@@ -6275,7 +6643,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
           getKindBytes() {
         java.lang.Object ref = kind_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           kind_ = b;
@@ -6359,7 +6727,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
           getIdBytes() {
         java.lang.Object ref = id_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           id_ = b;
@@ -6439,7 +6807,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
           getKeyJsonBytes() {
         java.lang.Object ref = keyJson_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           keyJson_ = b;
@@ -7167,7 +7535,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
        * <code>.google.protobuf.Timestamp from_time = 1 [json_name = "fromTime"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>
           internalGetFromTimeFieldBuilder() {
         if (fromTimeBuilder_ == null) {
           fromTimeBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -7324,7 +7692,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
        * <code>.google.protobuf.Timestamp to_time = 2 [json_name = "toTime"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>
           internalGetToTimeFieldBuilder() {
         if (toTimeBuilder_ == null) {
           toTimeBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -7499,7 +7867,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         ref_ = s;
@@ -7515,7 +7883,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
         getRefBytes() {
       java.lang.Object ref = ref_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         ref_ = b;
@@ -7538,7 +7906,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         digest_ = s;
@@ -7554,7 +7922,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
         getDigestBytes() {
       java.lang.Object ref = digest_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         digest_ = b;
@@ -7577,7 +7945,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         mediaType_ = s;
@@ -7593,7 +7961,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
         getMediaTypeBytes() {
       java.lang.Object ref = mediaType_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         mediaType_ = b;
@@ -7616,7 +7984,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         bomKind_ = s;
@@ -7632,7 +8000,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
         getBomKindBytes() {
       java.lang.Object ref = bomKind_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         bomKind_ = b;
@@ -8037,7 +8405,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
           getRefBytes() {
         java.lang.Object ref = ref_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           ref_ = b;
@@ -8109,7 +8477,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
           getDigestBytes() {
         java.lang.Object ref = digest_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           digest_ = b;
@@ -8181,7 +8549,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
           getMediaTypeBytes() {
         java.lang.Object ref = mediaType_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           mediaType_ = b;
@@ -8253,7 +8621,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
           getBomKindBytes() {
         java.lang.Object ref = bomKind_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           bomKind_ = b;
@@ -8482,7 +8850,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         type_ = s;
@@ -8502,7 +8870,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
         getTypeBytes() {
       java.lang.Object ref = type_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         type_ = b;
@@ -8525,7 +8893,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         ref_ = s;
@@ -8541,7 +8909,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
         getRefBytes() {
       java.lang.Object ref = ref_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         ref_ = b;
@@ -8564,7 +8932,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         digest_ = s;
@@ -8580,7 +8948,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
         getDigestBytes() {
       java.lang.Object ref = digest_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         digest_ = b;
@@ -8607,7 +8975,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         witnessQuorumJson_ = s;
@@ -8627,7 +8995,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
         getWitnessQuorumJsonBytes() {
       java.lang.Object ref = witnessQuorumJson_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         witnessQuorumJson_ = b;
@@ -9040,7 +9408,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
           getTypeBytes() {
         java.lang.Object ref = type_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           type_ = b;
@@ -9124,7 +9492,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
           getRefBytes() {
         java.lang.Object ref = ref_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           ref_ = b;
@@ -9196,7 +9564,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
           getDigestBytes() {
         java.lang.Object ref = digest_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           digest_ = b;
@@ -9276,7 +9644,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
           getWitnessQuorumJsonBytes() {
         java.lang.Object ref = witnessQuorumJson_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           witnessQuorumJson_ = b;
@@ -9392,7 +9760,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
 
     /**
      * <pre>
-     * opa_bundle | oscal_profile | cdxa_standard | spdx_security_profile
+     * xoscal-json | opa_bundle | oscal_profile | cdxa_standard | spdx_security_profile
      * </pre>
      *
      * <code>string type = 1 [json_name = "type"];</code>
@@ -9401,7 +9769,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
     java.lang.String getType();
     /**
      * <pre>
-     * opa_bundle | oscal_profile | cdxa_standard | spdx_security_profile
+     * xoscal-json | opa_bundle | oscal_profile | cdxa_standard | spdx_security_profile
      * </pre>
      *
      * <code>string type = 1 [json_name = "type"];</code>
@@ -9500,7 +9868,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
     private volatile java.lang.Object type_ = "";
     /**
      * <pre>
-     * opa_bundle | oscal_profile | cdxa_standard | spdx_security_profile
+     * xoscal-json | opa_bundle | oscal_profile | cdxa_standard | spdx_security_profile
      * </pre>
      *
      * <code>string type = 1 [json_name = "type"];</code>
@@ -9512,7 +9880,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         type_ = s;
@@ -9521,7 +9889,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
     }
     /**
      * <pre>
-     * opa_bundle | oscal_profile | cdxa_standard | spdx_security_profile
+     * xoscal-json | opa_bundle | oscal_profile | cdxa_standard | spdx_security_profile
      * </pre>
      *
      * <code>string type = 1 [json_name = "type"];</code>
@@ -9532,7 +9900,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
         getTypeBytes() {
       java.lang.Object ref = type_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         type_ = b;
@@ -9555,7 +9923,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         ref_ = s;
@@ -9571,7 +9939,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
         getRefBytes() {
       java.lang.Object ref = ref_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         ref_ = b;
@@ -9594,7 +9962,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         digest_ = s;
@@ -9610,7 +9978,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
         getDigestBytes() {
       java.lang.Object ref = digest_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         digest_ = b;
@@ -10040,7 +10408,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       private java.lang.Object type_ = "";
       /**
        * <pre>
-       * opa_bundle | oscal_profile | cdxa_standard | spdx_security_profile
+       * xoscal-json | opa_bundle | oscal_profile | cdxa_standard | spdx_security_profile
        * </pre>
        *
        * <code>string type = 1 [json_name = "type"];</code>
@@ -10060,7 +10428,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       }
       /**
        * <pre>
-       * opa_bundle | oscal_profile | cdxa_standard | spdx_security_profile
+       * xoscal-json | opa_bundle | oscal_profile | cdxa_standard | spdx_security_profile
        * </pre>
        *
        * <code>string type = 1 [json_name = "type"];</code>
@@ -10070,7 +10438,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
           getTypeBytes() {
         java.lang.Object ref = type_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           type_ = b;
@@ -10081,7 +10449,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       }
       /**
        * <pre>
-       * opa_bundle | oscal_profile | cdxa_standard | spdx_security_profile
+       * xoscal-json | opa_bundle | oscal_profile | cdxa_standard | spdx_security_profile
        * </pre>
        *
        * <code>string type = 1 [json_name = "type"];</code>
@@ -10098,7 +10466,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       }
       /**
        * <pre>
-       * opa_bundle | oscal_profile | cdxa_standard | spdx_security_profile
+       * xoscal-json | opa_bundle | oscal_profile | cdxa_standard | spdx_security_profile
        * </pre>
        *
        * <code>string type = 1 [json_name = "type"];</code>
@@ -10112,7 +10480,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       }
       /**
        * <pre>
-       * opa_bundle | oscal_profile | cdxa_standard | spdx_security_profile
+       * xoscal-json | opa_bundle | oscal_profile | cdxa_standard | spdx_security_profile
        * </pre>
        *
        * <code>string type = 1 [json_name = "type"];</code>
@@ -10154,7 +10522,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
           getRefBytes() {
         java.lang.Object ref = ref_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           ref_ = b;
@@ -10226,7 +10594,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
           getDigestBytes() {
         java.lang.Object ref = digest_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           digest_ = b;
@@ -10381,7 +10749,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
        * <code>.google.protobuf.Timestamp valid_to = 4 [json_name = "validTo"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>
           internalGetValidToFieldBuilder() {
         if (validToBuilder_ == null) {
           validToBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -10541,7 +10909,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
     /**
      * <code>repeated .oscal.services.v1.Reference subject_refs = 8 [json_name = "subjectRefs"];</code>
      */
-    java.util.List<oscal.services.v1.TransparencyExchangeServiceOuterClass.Reference> 
+    java.util.List<oscal.services.v1.TransparencyExchangeServiceOuterClass.Reference>
         getSubjectRefsList();
     /**
      * <code>repeated .oscal.services.v1.Reference subject_refs = 8 [json_name = "subjectRefs"];</code>
@@ -10554,7 +10922,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
     /**
      * <code>repeated .oscal.services.v1.Reference subject_refs = 8 [json_name = "subjectRefs"];</code>
      */
-    java.util.List<? extends oscal.services.v1.TransparencyExchangeServiceOuterClass.ReferenceOrBuilder> 
+    java.util.List<? extends oscal.services.v1.TransparencyExchangeServiceOuterClass.ReferenceOrBuilder>
         getSubjectRefsOrBuilderList();
     /**
      * <code>repeated .oscal.services.v1.Reference subject_refs = 8 [json_name = "subjectRefs"];</code>
@@ -10754,7 +11122,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         id_ = s;
@@ -10770,7 +11138,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
         getIdBytes() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         id_ = b;
@@ -10793,7 +11161,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         mediaType_ = s;
@@ -10809,7 +11177,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
         getMediaTypeBytes() {
       java.lang.Object ref = mediaType_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         mediaType_ = b;
@@ -10832,7 +11200,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         bomKind_ = s;
@@ -10848,7 +11216,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
         getBomKindBytes() {
       java.lang.Object ref = bomKind_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         bomKind_ = b;
@@ -10871,7 +11239,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         digest_ = s;
@@ -10887,7 +11255,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
         getDigestBytes() {
       java.lang.Object ref = digest_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         digest_ = b;
@@ -10951,7 +11319,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         producedByJson_ = s;
@@ -10971,7 +11339,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
         getProducedByJsonBytes() {
       java.lang.Object ref = producedByJson_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         producedByJson_ = b;
@@ -10995,7 +11363,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
      * <code>repeated .oscal.services.v1.Reference subject_refs = 8 [json_name = "subjectRefs"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.services.v1.TransparencyExchangeServiceOuterClass.ReferenceOrBuilder> 
+    public java.util.List<? extends oscal.services.v1.TransparencyExchangeServiceOuterClass.ReferenceOrBuilder>
         getSubjectRefsOrBuilderList() {
       return subjectRefs_;
     }
@@ -11035,7 +11403,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         predicateType_ = s;
@@ -11051,7 +11419,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
         getPredicateTypeBytes() {
       java.lang.Object ref = predicateType_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         predicateType_ = b;
@@ -11074,7 +11442,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         specJson_ = s;
@@ -11090,7 +11458,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
         getSpecJsonBytes() {
       java.lang.Object ref = specJson_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         specJson_ = b;
@@ -11202,7 +11570,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         integrityMethodsJson_ = s;
@@ -11218,7 +11586,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
         getIntegrityMethodsJsonBytes() {
       java.lang.Object ref = integrityMethodsJson_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         integrityMethodsJson_ = b;
@@ -11245,7 +11613,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         classification_ = s;
@@ -11265,7 +11633,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
         getClassificationBytes() {
       java.lang.Object ref = classification_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         classification_ = b;
@@ -11288,7 +11656,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         extensionsJson_ = s;
@@ -11304,7 +11672,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
         getExtensionsJsonBytes() {
       java.lang.Object ref = extensionsJson_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         extensionsJson_ = b;
@@ -11903,7 +12271,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
               subjectRefsBuilder_ = null;
               subjectRefs_ = other.subjectRefs_;
               bitField0_ = (bitField0_ & ~0x00000080);
-              subjectRefsBuilder_ = 
+              subjectRefsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetSubjectRefsFieldBuilder() : null;
             } else {
@@ -12114,7 +12482,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
           getIdBytes() {
         java.lang.Object ref = id_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           id_ = b;
@@ -12186,7 +12554,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
           getMediaTypeBytes() {
         java.lang.Object ref = mediaType_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           mediaType_ = b;
@@ -12258,7 +12626,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
           getBomKindBytes() {
         java.lang.Object ref = bomKind_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           bomKind_ = b;
@@ -12330,7 +12698,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
           getDigestBytes() {
         java.lang.Object ref = digest_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           digest_ = b;
@@ -12517,7 +12885,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
        * <code>.oscal.services.v1.Storage storage = 6 [json_name = "storage"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.services.v1.TransparencyExchangeServiceOuterClass.Storage, oscal.services.v1.TransparencyExchangeServiceOuterClass.Storage.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.StorageOrBuilder> 
+          oscal.services.v1.TransparencyExchangeServiceOuterClass.Storage, oscal.services.v1.TransparencyExchangeServiceOuterClass.Storage.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.StorageOrBuilder>
           internalGetStorageFieldBuilder() {
         if (storageBuilder_ == null) {
           storageBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -12563,7 +12931,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
           getProducedByJsonBytes() {
         java.lang.Object ref = producedByJson_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           producedByJson_ = b;
@@ -12817,7 +13185,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       /**
        * <code>repeated .oscal.services.v1.Reference subject_refs = 8 [json_name = "subjectRefs"];</code>
        */
-      public java.util.List<? extends oscal.services.v1.TransparencyExchangeServiceOuterClass.ReferenceOrBuilder> 
+      public java.util.List<? extends oscal.services.v1.TransparencyExchangeServiceOuterClass.ReferenceOrBuilder>
            getSubjectRefsOrBuilderList() {
         if (subjectRefsBuilder_ != null) {
           return subjectRefsBuilder_.getMessageOrBuilderList();
@@ -12843,12 +13211,12 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       /**
        * <code>repeated .oscal.services.v1.Reference subject_refs = 8 [json_name = "subjectRefs"];</code>
        */
-      public java.util.List<oscal.services.v1.TransparencyExchangeServiceOuterClass.Reference.Builder> 
+      public java.util.List<oscal.services.v1.TransparencyExchangeServiceOuterClass.Reference.Builder>
            getSubjectRefsBuilderList() {
         return internalGetSubjectRefsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.services.v1.TransparencyExchangeServiceOuterClass.Reference, oscal.services.v1.TransparencyExchangeServiceOuterClass.Reference.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.ReferenceOrBuilder> 
+          oscal.services.v1.TransparencyExchangeServiceOuterClass.Reference, oscal.services.v1.TransparencyExchangeServiceOuterClass.Reference.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.ReferenceOrBuilder>
           internalGetSubjectRefsFieldBuilder() {
         if (subjectRefsBuilder_ == null) {
           subjectRefsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -12887,7 +13255,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
           getPredicateTypeBytes() {
         java.lang.Object ref = predicateType_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           predicateType_ = b;
@@ -12959,7 +13327,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
           getSpecJsonBytes() {
         java.lang.Object ref = specJson_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           specJson_ = b;
@@ -13114,7 +13482,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
        * <code>.google.protobuf.Timestamp created_at = 11 [json_name = "createdAt"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>
           internalGetCreatedAtFieldBuilder() {
         if (createdAtBuilder_ == null) {
           createdAtBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -13235,7 +13603,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
        * <code>.oscal.services.v1.TimeWindow valid_time = 12 [json_name = "validTime"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.services.v1.TransparencyExchangeServiceOuterClass.TimeWindow, oscal.services.v1.TransparencyExchangeServiceOuterClass.TimeWindow.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.TimeWindowOrBuilder> 
+          oscal.services.v1.TransparencyExchangeServiceOuterClass.TimeWindow, oscal.services.v1.TransparencyExchangeServiceOuterClass.TimeWindow.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.TimeWindowOrBuilder>
           internalGetValidTimeFieldBuilder() {
         if (validTimeBuilder_ == null) {
           validTimeBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -13384,7 +13752,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
           getIntegrityMethodsJsonBytes() {
         java.lang.Object ref = integrityMethodsJson_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           integrityMethodsJson_ = b;
@@ -13464,7 +13832,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
           getClassificationBytes() {
         java.lang.Object ref = classification_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           classification_ = b;
@@ -13548,7 +13916,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
           getExtensionsJsonBytes() {
         java.lang.Object ref = extensionsJson_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           extensionsJson_ = b;
@@ -13813,7 +14181,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         fetchPolicy_ = s;
@@ -13833,7 +14201,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
         getFetchPolicyBytes() {
       java.lang.Object ref = fetchPolicy_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         fetchPolicy_ = b;
@@ -13867,7 +14235,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         airGapJson_ = s;
@@ -13883,7 +14251,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
         getAirGapJsonBytes() {
       java.lang.Object ref = airGapJson_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         airGapJson_ = b;
@@ -14420,7 +14788,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
           getFetchPolicyBytes() {
         java.lang.Object ref = fetchPolicy_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           fetchPolicy_ = b;
@@ -14536,7 +14904,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
           getAirGapJsonBytes() {
         java.lang.Object ref = airGapJson_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           airGapJson_ = b;
@@ -15149,7 +15517,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
        * <code>.oscal.services.v1.Claim claim = 1 [json_name = "claim"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.services.v1.TransparencyExchangeServiceOuterClass.Claim, oscal.services.v1.TransparencyExchangeServiceOuterClass.Claim.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.ClaimOrBuilder> 
+          oscal.services.v1.TransparencyExchangeServiceOuterClass.Claim, oscal.services.v1.TransparencyExchangeServiceOuterClass.Claim.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.ClaimOrBuilder>
           internalGetClaimFieldBuilder() {
         if (claimBuilder_ == null) {
           claimBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -15339,7 +15707,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         trustState_ = s;
@@ -15359,7 +15727,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
         getTrustStateBytes() {
       java.lang.Object ref = trustState_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         trustState_ = b;
@@ -15820,7 +16188,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
        * <code>.oscal.services.v1.Claim claim = 1 [json_name = "claim"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.services.v1.TransparencyExchangeServiceOuterClass.Claim, oscal.services.v1.TransparencyExchangeServiceOuterClass.Claim.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.ClaimOrBuilder> 
+          oscal.services.v1.TransparencyExchangeServiceOuterClass.Claim, oscal.services.v1.TransparencyExchangeServiceOuterClass.Claim.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.ClaimOrBuilder>
           internalGetClaimFieldBuilder() {
         if (claimBuilder_ == null) {
           claimBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -15866,7 +16234,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
           getTrustStateBytes() {
         java.lang.Object ref = trustState_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           trustState_ = b;
@@ -16048,7 +16416,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         claimId_ = s;
@@ -16064,7 +16432,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
         getClaimIdBytes() {
       java.lang.Object ref = claimId_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         claimId_ = b;
@@ -16397,7 +16765,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
           getClaimIdBytes() {
         java.lang.Object ref = claimId_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           claimId_ = b;
@@ -17010,7 +17378,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
        * <code>.oscal.services.v1.Claim claim = 1 [json_name = "claim"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.services.v1.TransparencyExchangeServiceOuterClass.Claim, oscal.services.v1.TransparencyExchangeServiceOuterClass.Claim.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.ClaimOrBuilder> 
+          oscal.services.v1.TransparencyExchangeServiceOuterClass.Claim, oscal.services.v1.TransparencyExchangeServiceOuterClass.Claim.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.ClaimOrBuilder>
           internalGetClaimFieldBuilder() {
         if (claimBuilder_ == null) {
           claimBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -17220,7 +17588,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         subjectDigest_ = s;
@@ -17236,7 +17604,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
         getSubjectDigestBytes() {
       java.lang.Object ref = subjectDigest_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         subjectDigest_ = b;
@@ -17259,7 +17627,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         bomKind_ = s;
@@ -17275,7 +17643,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
         getBomKindBytes() {
       java.lang.Object ref = bomKind_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         bomKind_ = b;
@@ -17298,7 +17666,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         relation_ = s;
@@ -17314,7 +17682,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
         getRelationBytes() {
       java.lang.Object ref = relation_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         relation_ = b;
@@ -17337,7 +17705,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         trustState_ = s;
@@ -17353,7 +17721,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
         getTrustStateBytes() {
       java.lang.Object ref = trustState_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         trustState_ = b;
@@ -17413,7 +17781,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         pageToken_ = s;
@@ -17429,7 +17797,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         pageToken_ = b;
@@ -17926,7 +18294,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
           getSubjectDigestBytes() {
         java.lang.Object ref = subjectDigest_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           subjectDigest_ = b;
@@ -17998,7 +18366,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
           getBomKindBytes() {
         java.lang.Object ref = bomKind_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           bomKind_ = b;
@@ -18070,7 +18438,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
           getRelationBytes() {
         java.lang.Object ref = relation_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           relation_ = b;
@@ -18142,7 +18510,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
           getTrustStateBytes() {
         java.lang.Object ref = trustState_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           trustState_ = b;
@@ -18297,7 +18665,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
        * <code>.google.protobuf.Timestamp valid_after = 5 [json_name = "validAfter"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>
           internalGetValidAfterFieldBuilder() {
         if (validAfterBuilder_ == null) {
           validAfterBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -18367,7 +18735,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
           getPageTokenBytes() {
         java.lang.Object ref = pageToken_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           pageToken_ = b;
@@ -18472,7 +18840,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
     /**
      * <code>repeated .oscal.services.v1.Claim claims = 1 [json_name = "claims"];</code>
      */
-    java.util.List<oscal.services.v1.TransparencyExchangeServiceOuterClass.Claim> 
+    java.util.List<oscal.services.v1.TransparencyExchangeServiceOuterClass.Claim>
         getClaimsList();
     /**
      * <code>repeated .oscal.services.v1.Claim claims = 1 [json_name = "claims"];</code>
@@ -18485,7 +18853,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
     /**
      * <code>repeated .oscal.services.v1.Claim claims = 1 [json_name = "claims"];</code>
      */
-    java.util.List<? extends oscal.services.v1.TransparencyExchangeServiceOuterClass.ClaimOrBuilder> 
+    java.util.List<? extends oscal.services.v1.TransparencyExchangeServiceOuterClass.ClaimOrBuilder>
         getClaimsOrBuilderList();
     /**
      * <code>repeated .oscal.services.v1.Claim claims = 1 [json_name = "claims"];</code>
@@ -18563,7 +18931,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
      * <code>repeated .oscal.services.v1.Claim claims = 1 [json_name = "claims"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.services.v1.TransparencyExchangeServiceOuterClass.ClaimOrBuilder> 
+    public java.util.List<? extends oscal.services.v1.TransparencyExchangeServiceOuterClass.ClaimOrBuilder>
         getClaimsOrBuilderList() {
       return claims_;
     }
@@ -18603,7 +18971,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         nextPageToken_ = s;
@@ -18619,7 +18987,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
         getNextPageTokenBytes() {
       java.lang.Object ref = nextPageToken_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         nextPageToken_ = b;
@@ -18930,7 +19298,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
               claimsBuilder_ = null;
               claims_ = other.claims_;
               bitField0_ = (bitField0_ & ~0x00000001);
-              claimsBuilder_ = 
+              claimsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetClaimsFieldBuilder() : null;
             } else {
@@ -19199,7 +19567,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       /**
        * <code>repeated .oscal.services.v1.Claim claims = 1 [json_name = "claims"];</code>
        */
-      public java.util.List<? extends oscal.services.v1.TransparencyExchangeServiceOuterClass.ClaimOrBuilder> 
+      public java.util.List<? extends oscal.services.v1.TransparencyExchangeServiceOuterClass.ClaimOrBuilder>
            getClaimsOrBuilderList() {
         if (claimsBuilder_ != null) {
           return claimsBuilder_.getMessageOrBuilderList();
@@ -19225,12 +19593,12 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       /**
        * <code>repeated .oscal.services.v1.Claim claims = 1 [json_name = "claims"];</code>
        */
-      public java.util.List<oscal.services.v1.TransparencyExchangeServiceOuterClass.Claim.Builder> 
+      public java.util.List<oscal.services.v1.TransparencyExchangeServiceOuterClass.Claim.Builder>
            getClaimsBuilderList() {
         return internalGetClaimsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.services.v1.TransparencyExchangeServiceOuterClass.Claim, oscal.services.v1.TransparencyExchangeServiceOuterClass.Claim.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.ClaimOrBuilder> 
+          oscal.services.v1.TransparencyExchangeServiceOuterClass.Claim, oscal.services.v1.TransparencyExchangeServiceOuterClass.Claim.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.ClaimOrBuilder>
           internalGetClaimsFieldBuilder() {
         if (claimsBuilder_ == null) {
           claimsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -19269,7 +19637,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
           getNextPageTokenBytes() {
         java.lang.Object ref = nextPageToken_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           nextPageToken_ = b;
@@ -19482,7 +19850,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         claimId_ = s;
@@ -19498,7 +19866,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
         getClaimIdBytes() {
       java.lang.Object ref = claimId_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         claimId_ = b;
@@ -19922,7 +20290,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
           getClaimIdBytes() {
         java.lang.Object ref = claimId_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           claimId_ = b;
@@ -20295,7 +20663,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         claimId_ = s;
@@ -20311,7 +20679,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
         getClaimIdBytes() {
       java.lang.Object ref = claimId_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         claimId_ = b;
@@ -20360,7 +20728,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         trustState_ = s;
@@ -20376,7 +20744,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
         getTrustStateBytes() {
       java.lang.Object ref = trustState_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         trustState_ = b;
@@ -20853,7 +21221,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
           getClaimIdBytes() {
         java.lang.Object ref = claimId_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           claimId_ = b;
@@ -21008,7 +21376,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
        * <code>.oscal.services.v1.ProofState proof_state = 2 [json_name = "proofState"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.services.v1.TransparencyExchangeServiceOuterClass.ProofState, oscal.services.v1.TransparencyExchangeServiceOuterClass.ProofState.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.ProofStateOrBuilder> 
+          oscal.services.v1.TransparencyExchangeServiceOuterClass.ProofState, oscal.services.v1.TransparencyExchangeServiceOuterClass.ProofState.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.ProofStateOrBuilder>
           internalGetProofStateFieldBuilder() {
         if (proofStateBuilder_ == null) {
           proofStateBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -21046,7 +21414,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
           getTrustStateBytes() {
         java.lang.Object ref = trustState_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           trustState_ = b;
@@ -21250,6 +21618,11383 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
 
     @java.lang.Override
     public oscal.services.v1.TransparencyExchangeServiceOuterClass.VerifyClaimResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ListVerificationEventsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oscal.services.v1.ListVerificationEventsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string claim_id = 1 [json_name = "claimId"];</code>
+     * @return The claimId.
+     */
+    java.lang.String getClaimId();
+    /**
+     * <code>string claim_id = 1 [json_name = "claimId"];</code>
+     * @return The bytes for claimId.
+     */
+    com.google.protobuf.ByteString
+        getClaimIdBytes();
+  }
+  /**
+   * Protobuf type {@code oscal.services.v1.ListVerificationEventsRequest}
+   */
+  public static final class ListVerificationEventsRequest extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:oscal.services.v1.ListVerificationEventsRequest)
+      ListVerificationEventsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 35,
+        /* patch= */ 1,
+        /* suffix= */ "",
+        "ListVerificationEventsRequest");
+    }
+    // Use ListVerificationEventsRequest.newBuilder() to construct.
+    private ListVerificationEventsRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private ListVerificationEventsRequest() {
+      claimId_ = "";
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_ListVerificationEventsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+      return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_ListVerificationEventsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_ListVerificationEventsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsRequest.class, oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsRequest.Builder.class);
+    }
+
+    public static final int CLAIM_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object claimId_ = "";
+    /**
+     * <code>string claim_id = 1 [json_name = "claimId"];</code>
+     * @return The claimId.
+     */
+    @java.lang.Override
+    public java.lang.String getClaimId() {
+      java.lang.Object ref = claimId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        claimId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string claim_id = 1 [json_name = "claimId"];</code>
+     * @return The bytes for claimId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClaimIdBytes() {
+      java.lang.Object ref = claimId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        claimId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(claimId_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, claimId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+    private int computeSerializedSize_0() {
+      int size = 0;
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(claimId_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, claimId_);
+      }
+      return size;
+    }
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += computeSerializedSize_0();
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsRequest)) {
+        return super.equals(obj);
+      }
+      oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsRequest other = (oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsRequest) obj;
+
+      if (!getClaimId()
+          .equals(other.getClaimId())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLAIM_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClaimId().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oscal.services.v1.ListVerificationEventsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oscal.services.v1.ListVerificationEventsRequest)
+        oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_ListVerificationEventsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_ListVerificationEventsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsRequest.class, oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsRequest.Builder.class);
+      }
+
+      // Construct using oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        claimId_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_ListVerificationEventsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsRequest getDefaultInstanceForType() {
+        return oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsRequest build() {
+        oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsRequest buildPartial() {
+        oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsRequest result = new oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.claimId_ = claimId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsRequest) {
+          return mergeFrom((oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsRequest other) {
+        if (other == oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsRequest.getDefaultInstance()) return this;
+        if (!other.getClaimId().isEmpty()) {
+          claimId_ = other.claimId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                claimId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object claimId_ = "";
+      /**
+       * <code>string claim_id = 1 [json_name = "claimId"];</code>
+       * @return The claimId.
+       */
+      public java.lang.String getClaimId() {
+        java.lang.Object ref = claimId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          claimId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string claim_id = 1 [json_name = "claimId"];</code>
+       * @return The bytes for claimId.
+       */
+      public com.google.protobuf.ByteString
+          getClaimIdBytes() {
+        java.lang.Object ref = claimId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          claimId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string claim_id = 1 [json_name = "claimId"];</code>
+       * @param value The claimId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClaimId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        claimId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string claim_id = 1 [json_name = "claimId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClaimId() {
+        claimId_ = getDefaultInstance().getClaimId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string claim_id = 1 [json_name = "claimId"];</code>
+       * @param value The bytes for claimId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClaimIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        claimId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:oscal.services.v1.ListVerificationEventsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:oscal.services.v1.ListVerificationEventsRequest)
+    private static final oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsRequest();
+    }
+
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListVerificationEventsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<ListVerificationEventsRequest>() {
+      @java.lang.Override
+      public ListVerificationEventsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListVerificationEventsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListVerificationEventsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ListVerificationEventsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oscal.services.v1.ListVerificationEventsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .oscal.services.v1.VerificationEvent events = 1 [json_name = "events"];</code>
+     */
+    java.util.List<oscal.services.v1.TransparencyExchangeServiceOuterClass.VerificationEvent>
+        getEventsList();
+    /**
+     * <code>repeated .oscal.services.v1.VerificationEvent events = 1 [json_name = "events"];</code>
+     */
+    oscal.services.v1.TransparencyExchangeServiceOuterClass.VerificationEvent getEvents(int index);
+    /**
+     * <code>repeated .oscal.services.v1.VerificationEvent events = 1 [json_name = "events"];</code>
+     */
+    int getEventsCount();
+    /**
+     * <code>repeated .oscal.services.v1.VerificationEvent events = 1 [json_name = "events"];</code>
+     */
+    java.util.List<? extends oscal.services.v1.TransparencyExchangeServiceOuterClass.VerificationEventOrBuilder>
+        getEventsOrBuilderList();
+    /**
+     * <code>repeated .oscal.services.v1.VerificationEvent events = 1 [json_name = "events"];</code>
+     */
+    oscal.services.v1.TransparencyExchangeServiceOuterClass.VerificationEventOrBuilder getEventsOrBuilder(
+        int index);
+
+    /**
+     * <code>bool chain_valid = 2 [json_name = "chainValid"];</code>
+     * @return The chainValid.
+     */
+    boolean getChainValid();
+  }
+  /**
+   * Protobuf type {@code oscal.services.v1.ListVerificationEventsResponse}
+   */
+  public static final class ListVerificationEventsResponse extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:oscal.services.v1.ListVerificationEventsResponse)
+      ListVerificationEventsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 35,
+        /* patch= */ 1,
+        /* suffix= */ "",
+        "ListVerificationEventsResponse");
+    }
+    // Use ListVerificationEventsResponse.newBuilder() to construct.
+    private ListVerificationEventsResponse(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private ListVerificationEventsResponse() {
+      events_ = java.util.Collections.emptyList();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_ListVerificationEventsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+      return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_ListVerificationEventsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_ListVerificationEventsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsResponse.class, oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsResponse.Builder.class);
+    }
+
+    public static final int EVENTS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<oscal.services.v1.TransparencyExchangeServiceOuterClass.VerificationEvent> events_;
+    /**
+     * <code>repeated .oscal.services.v1.VerificationEvent events = 1 [json_name = "events"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<oscal.services.v1.TransparencyExchangeServiceOuterClass.VerificationEvent> getEventsList() {
+      return events_;
+    }
+    /**
+     * <code>repeated .oscal.services.v1.VerificationEvent events = 1 [json_name = "events"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends oscal.services.v1.TransparencyExchangeServiceOuterClass.VerificationEventOrBuilder>
+        getEventsOrBuilderList() {
+      return events_;
+    }
+    /**
+     * <code>repeated .oscal.services.v1.VerificationEvent events = 1 [json_name = "events"];</code>
+     */
+    @java.lang.Override
+    public int getEventsCount() {
+      return events_.size();
+    }
+    /**
+     * <code>repeated .oscal.services.v1.VerificationEvent events = 1 [json_name = "events"];</code>
+     */
+    @java.lang.Override
+    public oscal.services.v1.TransparencyExchangeServiceOuterClass.VerificationEvent getEvents(int index) {
+      return events_.get(index);
+    }
+    /**
+     * <code>repeated .oscal.services.v1.VerificationEvent events = 1 [json_name = "events"];</code>
+     */
+    @java.lang.Override
+    public oscal.services.v1.TransparencyExchangeServiceOuterClass.VerificationEventOrBuilder getEventsOrBuilder(
+        int index) {
+      return events_.get(index);
+    }
+
+    public static final int CHAIN_VALID_FIELD_NUMBER = 2;
+    private boolean chainValid_ = false;
+    /**
+     * <code>bool chain_valid = 2 [json_name = "chainValid"];</code>
+     * @return The chainValid.
+     */
+    @java.lang.Override
+    public boolean getChainValid() {
+      return chainValid_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < events_.size(); i++) {
+        output.writeMessage(1, events_.get(i));
+      }
+      if (chainValid_ != false) {
+        output.writeBool(2, chainValid_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+    private int computeSerializedSize_0() {
+      int size = 0;
+
+          {
+            final int count = events_.size();
+            for (int i = 0; i < count; i++) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeMessageSizeNoTag(events_.get(i));
+            }
+            size += 1 * count;
+          }
+      if (chainValid_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, chainValid_);
+      }
+      return size;
+    }
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += computeSerializedSize_0();
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsResponse)) {
+        return super.equals(obj);
+      }
+      oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsResponse other = (oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsResponse) obj;
+
+      if (!getEventsList()
+          .equals(other.getEventsList())) return false;
+      if (getChainValid()
+          != other.getChainValid()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getEventsCount() > 0) {
+        hash = (37 * hash) + EVENTS_FIELD_NUMBER;
+        hash = (53 * hash) + getEventsList().hashCode();
+      }
+      hash = (37 * hash) + CHAIN_VALID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getChainValid());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oscal.services.v1.ListVerificationEventsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oscal.services.v1.ListVerificationEventsResponse)
+        oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_ListVerificationEventsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_ListVerificationEventsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsResponse.class, oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsResponse.Builder.class);
+      }
+
+      // Construct using oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (eventsBuilder_ == null) {
+          events_ = java.util.Collections.emptyList();
+        } else {
+          events_ = null;
+          eventsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        chainValid_ = false;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_ListVerificationEventsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsResponse getDefaultInstanceForType() {
+        return oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsResponse build() {
+        oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsResponse buildPartial() {
+        oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsResponse result = new oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsResponse result) {
+        if (eventsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            events_ = java.util.Collections.unmodifiableList(events_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.events_ = events_;
+        } else {
+          result.events_ = eventsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.chainValid_ = chainValid_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsResponse) {
+          return mergeFrom((oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsResponse other) {
+        if (other == oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsResponse.getDefaultInstance()) return this;
+        if (eventsBuilder_ == null) {
+          if (!other.events_.isEmpty()) {
+            if (events_.isEmpty()) {
+              events_ = other.events_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureEventsIsMutable();
+              events_.addAll(other.events_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.events_.isEmpty()) {
+            if (eventsBuilder_.isEmpty()) {
+              eventsBuilder_.dispose();
+              eventsBuilder_ = null;
+              events_ = other.events_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              eventsBuilder_ =
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   internalGetEventsFieldBuilder() : null;
+            } else {
+              eventsBuilder_.addAllMessages(other.events_);
+            }
+          }
+        }
+        if (other.getChainValid() != false) {
+          setChainValid(other.getChainValid());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                oscal.services.v1.TransparencyExchangeServiceOuterClass.VerificationEvent m =
+                    input.readMessage(
+                        oscal.services.v1.TransparencyExchangeServiceOuterClass.VerificationEvent.parser(),
+                        extensionRegistry);
+                if (eventsBuilder_ == null) {
+                  ensureEventsIsMutable();
+                  events_.add(m);
+                } else {
+                  eventsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 16: {
+                chainValid_ = input.readBool();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<oscal.services.v1.TransparencyExchangeServiceOuterClass.VerificationEvent> events_ =
+        java.util.Collections.emptyList();
+      private void ensureEventsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          events_ = new java.util.ArrayList<oscal.services.v1.TransparencyExchangeServiceOuterClass.VerificationEvent>(events_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.services.v1.TransparencyExchangeServiceOuterClass.VerificationEvent, oscal.services.v1.TransparencyExchangeServiceOuterClass.VerificationEvent.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.VerificationEventOrBuilder> eventsBuilder_;
+
+      /**
+       * <code>repeated .oscal.services.v1.VerificationEvent events = 1 [json_name = "events"];</code>
+       */
+      public java.util.List<oscal.services.v1.TransparencyExchangeServiceOuterClass.VerificationEvent> getEventsList() {
+        if (eventsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(events_);
+        } else {
+          return eventsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .oscal.services.v1.VerificationEvent events = 1 [json_name = "events"];</code>
+       */
+      public int getEventsCount() {
+        if (eventsBuilder_ == null) {
+          return events_.size();
+        } else {
+          return eventsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .oscal.services.v1.VerificationEvent events = 1 [json_name = "events"];</code>
+       */
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.VerificationEvent getEvents(int index) {
+        if (eventsBuilder_ == null) {
+          return events_.get(index);
+        } else {
+          return eventsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.services.v1.VerificationEvent events = 1 [json_name = "events"];</code>
+       */
+      public Builder setEvents(
+          int index, oscal.services.v1.TransparencyExchangeServiceOuterClass.VerificationEvent value) {
+        if (eventsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEventsIsMutable();
+          events_.set(index, value);
+          onChanged();
+        } else {
+          eventsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.services.v1.VerificationEvent events = 1 [json_name = "events"];</code>
+       */
+      public Builder setEvents(
+          int index, oscal.services.v1.TransparencyExchangeServiceOuterClass.VerificationEvent.Builder builderForValue) {
+        if (eventsBuilder_ == null) {
+          ensureEventsIsMutable();
+          events_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          eventsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.services.v1.VerificationEvent events = 1 [json_name = "events"];</code>
+       */
+      public Builder addEvents(oscal.services.v1.TransparencyExchangeServiceOuterClass.VerificationEvent value) {
+        if (eventsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEventsIsMutable();
+          events_.add(value);
+          onChanged();
+        } else {
+          eventsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.services.v1.VerificationEvent events = 1 [json_name = "events"];</code>
+       */
+      public Builder addEvents(
+          int index, oscal.services.v1.TransparencyExchangeServiceOuterClass.VerificationEvent value) {
+        if (eventsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEventsIsMutable();
+          events_.add(index, value);
+          onChanged();
+        } else {
+          eventsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.services.v1.VerificationEvent events = 1 [json_name = "events"];</code>
+       */
+      public Builder addEvents(
+          oscal.services.v1.TransparencyExchangeServiceOuterClass.VerificationEvent.Builder builderForValue) {
+        if (eventsBuilder_ == null) {
+          ensureEventsIsMutable();
+          events_.add(builderForValue.build());
+          onChanged();
+        } else {
+          eventsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.services.v1.VerificationEvent events = 1 [json_name = "events"];</code>
+       */
+      public Builder addEvents(
+          int index, oscal.services.v1.TransparencyExchangeServiceOuterClass.VerificationEvent.Builder builderForValue) {
+        if (eventsBuilder_ == null) {
+          ensureEventsIsMutable();
+          events_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          eventsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.services.v1.VerificationEvent events = 1 [json_name = "events"];</code>
+       */
+      public Builder addAllEvents(
+          java.lang.Iterable<? extends oscal.services.v1.TransparencyExchangeServiceOuterClass.VerificationEvent> values) {
+        if (eventsBuilder_ == null) {
+          ensureEventsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, events_);
+          onChanged();
+        } else {
+          eventsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.services.v1.VerificationEvent events = 1 [json_name = "events"];</code>
+       */
+      public Builder clearEvents() {
+        if (eventsBuilder_ == null) {
+          events_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          eventsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.services.v1.VerificationEvent events = 1 [json_name = "events"];</code>
+       */
+      public Builder removeEvents(int index) {
+        if (eventsBuilder_ == null) {
+          ensureEventsIsMutable();
+          events_.remove(index);
+          onChanged();
+        } else {
+          eventsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.services.v1.VerificationEvent events = 1 [json_name = "events"];</code>
+       */
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.VerificationEvent.Builder getEventsBuilder(
+          int index) {
+        return internalGetEventsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .oscal.services.v1.VerificationEvent events = 1 [json_name = "events"];</code>
+       */
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.VerificationEventOrBuilder getEventsOrBuilder(
+          int index) {
+        if (eventsBuilder_ == null) {
+          return events_.get(index);  } else {
+          return eventsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.services.v1.VerificationEvent events = 1 [json_name = "events"];</code>
+       */
+      public java.util.List<? extends oscal.services.v1.TransparencyExchangeServiceOuterClass.VerificationEventOrBuilder>
+           getEventsOrBuilderList() {
+        if (eventsBuilder_ != null) {
+          return eventsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(events_);
+        }
+      }
+      /**
+       * <code>repeated .oscal.services.v1.VerificationEvent events = 1 [json_name = "events"];</code>
+       */
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.VerificationEvent.Builder addEventsBuilder() {
+        return internalGetEventsFieldBuilder().addBuilder(
+            oscal.services.v1.TransparencyExchangeServiceOuterClass.VerificationEvent.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.services.v1.VerificationEvent events = 1 [json_name = "events"];</code>
+       */
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.VerificationEvent.Builder addEventsBuilder(
+          int index) {
+        return internalGetEventsFieldBuilder().addBuilder(
+            index, oscal.services.v1.TransparencyExchangeServiceOuterClass.VerificationEvent.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.services.v1.VerificationEvent events = 1 [json_name = "events"];</code>
+       */
+      public java.util.List<oscal.services.v1.TransparencyExchangeServiceOuterClass.VerificationEvent.Builder>
+           getEventsBuilderList() {
+        return internalGetEventsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.services.v1.TransparencyExchangeServiceOuterClass.VerificationEvent, oscal.services.v1.TransparencyExchangeServiceOuterClass.VerificationEvent.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.VerificationEventOrBuilder>
+          internalGetEventsFieldBuilder() {
+        if (eventsBuilder_ == null) {
+          eventsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              oscal.services.v1.TransparencyExchangeServiceOuterClass.VerificationEvent, oscal.services.v1.TransparencyExchangeServiceOuterClass.VerificationEvent.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.VerificationEventOrBuilder>(
+                  events_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          events_ = null;
+        }
+        return eventsBuilder_;
+      }
+
+      private boolean chainValid_ ;
+      /**
+       * <code>bool chain_valid = 2 [json_name = "chainValid"];</code>
+       * @return The chainValid.
+       */
+      @java.lang.Override
+      public boolean getChainValid() {
+        return chainValid_;
+      }
+      /**
+       * <code>bool chain_valid = 2 [json_name = "chainValid"];</code>
+       * @param value The chainValid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChainValid(boolean value) {
+
+        chainValid_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool chain_valid = 2 [json_name = "chainValid"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearChainValid() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        chainValid_ = false;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:oscal.services.v1.ListVerificationEventsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:oscal.services.v1.ListVerificationEventsResponse)
+    private static final oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsResponse();
+    }
+
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListVerificationEventsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<ListVerificationEventsResponse>() {
+      @java.lang.Override
+      public ListVerificationEventsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListVerificationEventsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListVerificationEventsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public oscal.services.v1.TransparencyExchangeServiceOuterClass.ListVerificationEventsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface VerificationEventOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oscal.services.v1.VerificationEvent)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int64 sequence = 1 [json_name = "sequence"];</code>
+     * @return The sequence.
+     */
+    long getSequence();
+
+    /**
+     * <code>string event_id = 2 [json_name = "eventId"];</code>
+     * @return The eventId.
+     */
+    java.lang.String getEventId();
+    /**
+     * <code>string event_id = 2 [json_name = "eventId"];</code>
+     * @return The bytes for eventId.
+     */
+    com.google.protobuf.ByteString
+        getEventIdBytes();
+
+    /**
+     * <code>string claim_id = 3 [json_name = "claimId"];</code>
+     * @return The claimId.
+     */
+    java.lang.String getClaimId();
+    /**
+     * <code>string claim_id = 3 [json_name = "claimId"];</code>
+     * @return The bytes for claimId.
+     */
+    com.google.protobuf.ByteString
+        getClaimIdBytes();
+
+    /**
+     * <code>string request_id = 4 [json_name = "requestId"];</code>
+     * @return The requestId.
+     */
+    java.lang.String getRequestId();
+    /**
+     * <code>string request_id = 4 [json_name = "requestId"];</code>
+     * @return The bytes for requestId.
+     */
+    com.google.protobuf.ByteString
+        getRequestIdBytes();
+
+    /**
+     * <code>string idempotency_key = 5 [json_name = "idempotencyKey"];</code>
+     * @return The idempotencyKey.
+     */
+    java.lang.String getIdempotencyKey();
+    /**
+     * <code>string idempotency_key = 5 [json_name = "idempotencyKey"];</code>
+     * @return The bytes for idempotencyKey.
+     */
+    com.google.protobuf.ByteString
+        getIdempotencyKeyBytes();
+
+    /**
+     * <code>string checks_json = 6 [json_name = "checksJson"];</code>
+     * @return The checksJson.
+     */
+    java.lang.String getChecksJson();
+    /**
+     * <code>string checks_json = 6 [json_name = "checksJson"];</code>
+     * @return The bytes for checksJson.
+     */
+    com.google.protobuf.ByteString
+        getChecksJsonBytes();
+
+    /**
+     * <code>string proof_state_json = 7 [json_name = "proofStateJson"];</code>
+     * @return The proofStateJson.
+     */
+    java.lang.String getProofStateJson();
+    /**
+     * <code>string proof_state_json = 7 [json_name = "proofStateJson"];</code>
+     * @return The bytes for proofStateJson.
+     */
+    com.google.protobuf.ByteString
+        getProofStateJsonBytes();
+
+    /**
+     * <code>string provider_state_json = 8 [json_name = "providerStateJson"];</code>
+     * @return The providerStateJson.
+     */
+    java.lang.String getProviderStateJson();
+    /**
+     * <code>string provider_state_json = 8 [json_name = "providerStateJson"];</code>
+     * @return The bytes for providerStateJson.
+     */
+    com.google.protobuf.ByteString
+        getProviderStateJsonBytes();
+
+    /**
+     * <code>string trust_state = 9 [json_name = "trustState"];</code>
+     * @return The trustState.
+     */
+    java.lang.String getTrustState();
+    /**
+     * <code>string trust_state = 9 [json_name = "trustState"];</code>
+     * @return The bytes for trustState.
+     */
+    com.google.protobuf.ByteString
+        getTrustStateBytes();
+
+    /**
+     * <code>repeated string diagnostics = 10 [json_name = "diagnostics"];</code>
+     * @return A list containing the diagnostics.
+     */
+    java.util.List<java.lang.String>
+        getDiagnosticsList();
+    /**
+     * <code>repeated string diagnostics = 10 [json_name = "diagnostics"];</code>
+     * @return The count of diagnostics.
+     */
+    int getDiagnosticsCount();
+    /**
+     * <code>repeated string diagnostics = 10 [json_name = "diagnostics"];</code>
+     * @param index The index of the element to return.
+     * @return The diagnostics at the given index.
+     */
+    java.lang.String getDiagnostics(int index);
+    /**
+     * <code>repeated string diagnostics = 10 [json_name = "diagnostics"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the diagnostics at the given index.
+     */
+    com.google.protobuf.ByteString
+        getDiagnosticsBytes(int index);
+
+    /**
+     * <code>string previous_hash = 11 [json_name = "previousHash"];</code>
+     * @return The previousHash.
+     */
+    java.lang.String getPreviousHash();
+    /**
+     * <code>string previous_hash = 11 [json_name = "previousHash"];</code>
+     * @return The bytes for previousHash.
+     */
+    com.google.protobuf.ByteString
+        getPreviousHashBytes();
+
+    /**
+     * <code>string event_hash = 12 [json_name = "eventHash"];</code>
+     * @return The eventHash.
+     */
+    java.lang.String getEventHash();
+    /**
+     * <code>string event_hash = 12 [json_name = "eventHash"];</code>
+     * @return The bytes for eventHash.
+     */
+    com.google.protobuf.ByteString
+        getEventHashBytes();
+
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 13 [json_name = "createdAt"];</code>
+     * @return Whether the createdAt field is set.
+     */
+    boolean hasCreatedAt();
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 13 [json_name = "createdAt"];</code>
+     * @return The createdAt.
+     */
+    com.google.protobuf.Timestamp getCreatedAt();
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 13 [json_name = "createdAt"];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
+  }
+  /**
+   * <pre>
+   * VerificationEvent is an append-only audit record. The JSON fields preserve
+   * the exact provider and proof envelopes recorded by the verifier.
+   * </pre>
+   *
+   * Protobuf type {@code oscal.services.v1.VerificationEvent}
+   */
+  public static final class VerificationEvent extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:oscal.services.v1.VerificationEvent)
+      VerificationEventOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 35,
+        /* patch= */ 1,
+        /* suffix= */ "",
+        "VerificationEvent");
+    }
+    // Use VerificationEvent.newBuilder() to construct.
+    private VerificationEvent(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private VerificationEvent() {
+      eventId_ = "";
+      claimId_ = "";
+      requestId_ = "";
+      idempotencyKey_ = "";
+      checksJson_ = "";
+      proofStateJson_ = "";
+      providerStateJson_ = "";
+      trustState_ = "";
+      diagnostics_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      previousHash_ = "";
+      eventHash_ = "";
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_VerificationEvent_descriptor;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+      return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_VerificationEvent_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_VerificationEvent_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              oscal.services.v1.TransparencyExchangeServiceOuterClass.VerificationEvent.class, oscal.services.v1.TransparencyExchangeServiceOuterClass.VerificationEvent.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int SEQUENCE_FIELD_NUMBER = 1;
+    private long sequence_ = 0L;
+    /**
+     * <code>int64 sequence = 1 [json_name = "sequence"];</code>
+     * @return The sequence.
+     */
+    @java.lang.Override
+    public long getSequence() {
+      return sequence_;
+    }
+
+    public static final int EVENT_ID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object eventId_ = "";
+    /**
+     * <code>string event_id = 2 [json_name = "eventId"];</code>
+     * @return The eventId.
+     */
+    @java.lang.Override
+    public java.lang.String getEventId() {
+      java.lang.Object ref = eventId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        eventId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string event_id = 2 [json_name = "eventId"];</code>
+     * @return The bytes for eventId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEventIdBytes() {
+      java.lang.Object ref = eventId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        eventId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CLAIM_ID_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object claimId_ = "";
+    /**
+     * <code>string claim_id = 3 [json_name = "claimId"];</code>
+     * @return The claimId.
+     */
+    @java.lang.Override
+    public java.lang.String getClaimId() {
+      java.lang.Object ref = claimId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        claimId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string claim_id = 3 [json_name = "claimId"];</code>
+     * @return The bytes for claimId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClaimIdBytes() {
+      java.lang.Object ref = claimId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        claimId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REQUEST_ID_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object requestId_ = "";
+    /**
+     * <code>string request_id = 4 [json_name = "requestId"];</code>
+     * @return The requestId.
+     */
+    @java.lang.Override
+    public java.lang.String getRequestId() {
+      java.lang.Object ref = requestId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        requestId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string request_id = 4 [json_name = "requestId"];</code>
+     * @return The bytes for requestId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRequestIdBytes() {
+      java.lang.Object ref = requestId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        requestId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int IDEMPOTENCY_KEY_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object idempotencyKey_ = "";
+    /**
+     * <code>string idempotency_key = 5 [json_name = "idempotencyKey"];</code>
+     * @return The idempotencyKey.
+     */
+    @java.lang.Override
+    public java.lang.String getIdempotencyKey() {
+      java.lang.Object ref = idempotencyKey_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        idempotencyKey_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string idempotency_key = 5 [json_name = "idempotencyKey"];</code>
+     * @return The bytes for idempotencyKey.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdempotencyKeyBytes() {
+      java.lang.Object ref = idempotencyKey_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        idempotencyKey_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CHECKS_JSON_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object checksJson_ = "";
+    /**
+     * <code>string checks_json = 6 [json_name = "checksJson"];</code>
+     * @return The checksJson.
+     */
+    @java.lang.Override
+    public java.lang.String getChecksJson() {
+      java.lang.Object ref = checksJson_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        checksJson_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string checks_json = 6 [json_name = "checksJson"];</code>
+     * @return The bytes for checksJson.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getChecksJsonBytes() {
+      java.lang.Object ref = checksJson_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        checksJson_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PROOF_STATE_JSON_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object proofStateJson_ = "";
+    /**
+     * <code>string proof_state_json = 7 [json_name = "proofStateJson"];</code>
+     * @return The proofStateJson.
+     */
+    @java.lang.Override
+    public java.lang.String getProofStateJson() {
+      java.lang.Object ref = proofStateJson_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        proofStateJson_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string proof_state_json = 7 [json_name = "proofStateJson"];</code>
+     * @return The bytes for proofStateJson.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getProofStateJsonBytes() {
+      java.lang.Object ref = proofStateJson_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        proofStateJson_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PROVIDER_STATE_JSON_FIELD_NUMBER = 8;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object providerStateJson_ = "";
+    /**
+     * <code>string provider_state_json = 8 [json_name = "providerStateJson"];</code>
+     * @return The providerStateJson.
+     */
+    @java.lang.Override
+    public java.lang.String getProviderStateJson() {
+      java.lang.Object ref = providerStateJson_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        providerStateJson_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string provider_state_json = 8 [json_name = "providerStateJson"];</code>
+     * @return The bytes for providerStateJson.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getProviderStateJsonBytes() {
+      java.lang.Object ref = providerStateJson_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        providerStateJson_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TRUST_STATE_FIELD_NUMBER = 9;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object trustState_ = "";
+    /**
+     * <code>string trust_state = 9 [json_name = "trustState"];</code>
+     * @return The trustState.
+     */
+    @java.lang.Override
+    public java.lang.String getTrustState() {
+      java.lang.Object ref = trustState_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        trustState_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string trust_state = 9 [json_name = "trustState"];</code>
+     * @return The bytes for trustState.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTrustStateBytes() {
+      java.lang.Object ref = trustState_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        trustState_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DIAGNOSTICS_FIELD_NUMBER = 10;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList diagnostics_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string diagnostics = 10 [json_name = "diagnostics"];</code>
+     * @return A list containing the diagnostics.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getDiagnosticsList() {
+      return diagnostics_;
+    }
+    /**
+     * <code>repeated string diagnostics = 10 [json_name = "diagnostics"];</code>
+     * @return The count of diagnostics.
+     */
+    public int getDiagnosticsCount() {
+      return diagnostics_.size();
+    }
+    /**
+     * <code>repeated string diagnostics = 10 [json_name = "diagnostics"];</code>
+     * @param index The index of the element to return.
+     * @return The diagnostics at the given index.
+     */
+    public java.lang.String getDiagnostics(int index) {
+      return diagnostics_.get(index);
+    }
+    /**
+     * <code>repeated string diagnostics = 10 [json_name = "diagnostics"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the diagnostics at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getDiagnosticsBytes(int index) {
+      return diagnostics_.getByteString(index);
+    }
+
+    public static final int PREVIOUS_HASH_FIELD_NUMBER = 11;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object previousHash_ = "";
+    /**
+     * <code>string previous_hash = 11 [json_name = "previousHash"];</code>
+     * @return The previousHash.
+     */
+    @java.lang.Override
+    public java.lang.String getPreviousHash() {
+      java.lang.Object ref = previousHash_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        previousHash_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string previous_hash = 11 [json_name = "previousHash"];</code>
+     * @return The bytes for previousHash.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPreviousHashBytes() {
+      java.lang.Object ref = previousHash_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        previousHash_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int EVENT_HASH_FIELD_NUMBER = 12;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object eventHash_ = "";
+    /**
+     * <code>string event_hash = 12 [json_name = "eventHash"];</code>
+     * @return The eventHash.
+     */
+    @java.lang.Override
+    public java.lang.String getEventHash() {
+      java.lang.Object ref = eventHash_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        eventHash_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string event_hash = 12 [json_name = "eventHash"];</code>
+     * @return The bytes for eventHash.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEventHashBytes() {
+      java.lang.Object ref = eventHash_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        eventHash_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CREATED_AT_FIELD_NUMBER = 13;
+    private com.google.protobuf.Timestamp createdAt_;
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 13 [json_name = "createdAt"];</code>
+     * @return Whether the createdAt field is set.
+     */
+    @java.lang.Override
+    public boolean hasCreatedAt() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 13 [json_name = "createdAt"];</code>
+     * @return The createdAt.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getCreatedAt() {
+      return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 13 [json_name = "createdAt"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
+      return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (sequence_ != 0L) {
+        output.writeInt64(1, sequence_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(eventId_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, eventId_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(claimId_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 3, claimId_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(requestId_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 4, requestId_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(idempotencyKey_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 5, idempotencyKey_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(checksJson_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 6, checksJson_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(proofStateJson_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 7, proofStateJson_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(providerStateJson_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 8, providerStateJson_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(trustState_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 9, trustState_);
+      }
+      for (int i = 0; i < diagnostics_.size(); i++) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 10, diagnostics_.getRaw(i));
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(previousHash_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 11, previousHash_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(eventHash_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 12, eventHash_);
+      }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeMessage(13, getCreatedAt());
+      }
+      getUnknownFields().writeTo(output);
+    }
+    private int computeSerializedSize_0() {
+      int size = 0;
+      if (sequence_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, sequence_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(eventId_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, eventId_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(claimId_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(3, claimId_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(requestId_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(4, requestId_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(idempotencyKey_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(5, idempotencyKey_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(checksJson_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(6, checksJson_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(proofStateJson_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(7, proofStateJson_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(providerStateJson_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(8, providerStateJson_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(trustState_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(9, trustState_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < diagnostics_.size(); i++) {
+          dataSize += computeStringSizeNoTag(diagnostics_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getDiagnosticsList().size();
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(previousHash_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(11, previousHash_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(eventHash_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(12, eventHash_);
+      }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(13, getCreatedAt());
+      }
+      return size;
+    }
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += computeSerializedSize_0();
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof oscal.services.v1.TransparencyExchangeServiceOuterClass.VerificationEvent)) {
+        return super.equals(obj);
+      }
+      oscal.services.v1.TransparencyExchangeServiceOuterClass.VerificationEvent other = (oscal.services.v1.TransparencyExchangeServiceOuterClass.VerificationEvent) obj;
+
+      if (getSequence()
+          != other.getSequence()) return false;
+      if (!getEventId()
+          .equals(other.getEventId())) return false;
+      if (!getClaimId()
+          .equals(other.getClaimId())) return false;
+      if (!getRequestId()
+          .equals(other.getRequestId())) return false;
+      if (!getIdempotencyKey()
+          .equals(other.getIdempotencyKey())) return false;
+      if (!getChecksJson()
+          .equals(other.getChecksJson())) return false;
+      if (!getProofStateJson()
+          .equals(other.getProofStateJson())) return false;
+      if (!getProviderStateJson()
+          .equals(other.getProviderStateJson())) return false;
+      if (!getTrustState()
+          .equals(other.getTrustState())) return false;
+      if (!getDiagnosticsList()
+          .equals(other.getDiagnosticsList())) return false;
+      if (!getPreviousHash()
+          .equals(other.getPreviousHash())) return false;
+      if (!getEventHash()
+          .equals(other.getEventHash())) return false;
+      if (hasCreatedAt() != other.hasCreatedAt()) return false;
+      if (hasCreatedAt()) {
+        if (!getCreatedAt()
+            .equals(other.getCreatedAt())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SEQUENCE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getSequence());
+      hash = (37 * hash) + EVENT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getEventId().hashCode();
+      hash = (37 * hash) + CLAIM_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClaimId().hashCode();
+      hash = (37 * hash) + REQUEST_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getRequestId().hashCode();
+      hash = (37 * hash) + IDEMPOTENCY_KEY_FIELD_NUMBER;
+      hash = (53 * hash) + getIdempotencyKey().hashCode();
+      hash = (37 * hash) + CHECKS_JSON_FIELD_NUMBER;
+      hash = (53 * hash) + getChecksJson().hashCode();
+      hash = (37 * hash) + PROOF_STATE_JSON_FIELD_NUMBER;
+      hash = (53 * hash) + getProofStateJson().hashCode();
+      hash = (37 * hash) + PROVIDER_STATE_JSON_FIELD_NUMBER;
+      hash = (53 * hash) + getProviderStateJson().hashCode();
+      hash = (37 * hash) + TRUST_STATE_FIELD_NUMBER;
+      hash = (53 * hash) + getTrustState().hashCode();
+      if (getDiagnosticsCount() > 0) {
+        hash = (37 * hash) + DIAGNOSTICS_FIELD_NUMBER;
+        hash = (53 * hash) + getDiagnosticsList().hashCode();
+      }
+      hash = (37 * hash) + PREVIOUS_HASH_FIELD_NUMBER;
+      hash = (53 * hash) + getPreviousHash().hashCode();
+      hash = (37 * hash) + EVENT_HASH_FIELD_NUMBER;
+      hash = (53 * hash) + getEventHash().hashCode();
+      if (hasCreatedAt()) {
+        hash = (37 * hash) + CREATED_AT_FIELD_NUMBER;
+        hash = (53 * hash) + getCreatedAt().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.VerificationEvent parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.VerificationEvent parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.VerificationEvent parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.VerificationEvent parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.VerificationEvent parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.VerificationEvent parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.VerificationEvent parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.VerificationEvent parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.VerificationEvent parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.VerificationEvent parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.VerificationEvent parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.VerificationEvent parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(oscal.services.v1.TransparencyExchangeServiceOuterClass.VerificationEvent prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * VerificationEvent is an append-only audit record. The JSON fields preserve
+     * the exact provider and proof envelopes recorded by the verifier.
+     * </pre>
+     *
+     * Protobuf type {@code oscal.services.v1.VerificationEvent}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oscal.services.v1.VerificationEvent)
+        oscal.services.v1.TransparencyExchangeServiceOuterClass.VerificationEventOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_VerificationEvent_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_VerificationEvent_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                oscal.services.v1.TransparencyExchangeServiceOuterClass.VerificationEvent.class, oscal.services.v1.TransparencyExchangeServiceOuterClass.VerificationEvent.Builder.class);
+      }
+
+      // Construct using oscal.services.v1.TransparencyExchangeServiceOuterClass.VerificationEvent.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage
+                .alwaysUseFieldBuilders) {
+          internalGetCreatedAtFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        sequence_ = 0L;
+        eventId_ = "";
+        claimId_ = "";
+        requestId_ = "";
+        idempotencyKey_ = "";
+        checksJson_ = "";
+        proofStateJson_ = "";
+        providerStateJson_ = "";
+        trustState_ = "";
+        diagnostics_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        previousHash_ = "";
+        eventHash_ = "";
+        createdAt_ = null;
+        if (createdAtBuilder_ != null) {
+          createdAtBuilder_.dispose();
+          createdAtBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_VerificationEvent_descriptor;
+      }
+
+      @java.lang.Override
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.VerificationEvent getDefaultInstanceForType() {
+        return oscal.services.v1.TransparencyExchangeServiceOuterClass.VerificationEvent.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.VerificationEvent build() {
+        oscal.services.v1.TransparencyExchangeServiceOuterClass.VerificationEvent result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.VerificationEvent buildPartial() {
+        oscal.services.v1.TransparencyExchangeServiceOuterClass.VerificationEvent result = new oscal.services.v1.TransparencyExchangeServiceOuterClass.VerificationEvent(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(oscal.services.v1.TransparencyExchangeServiceOuterClass.VerificationEvent result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.sequence_ = sequence_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.eventId_ = eventId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.claimId_ = claimId_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.requestId_ = requestId_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.idempotencyKey_ = idempotencyKey_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.checksJson_ = checksJson_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.proofStateJson_ = proofStateJson_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.providerStateJson_ = providerStateJson_;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.trustState_ = trustState_;
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          diagnostics_.makeImmutable();
+          result.diagnostics_ = diagnostics_;
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.previousHash_ = previousHash_;
+        }
+        if (((from_bitField0_ & 0x00000800) != 0)) {
+          result.eventHash_ = eventHash_;
+        }
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00001000) != 0)) {
+          result.createdAt_ = createdAtBuilder_ == null
+              ? createdAt_
+              : createdAtBuilder_.build();
+          to_bitField0_ |= 0x00000001;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof oscal.services.v1.TransparencyExchangeServiceOuterClass.VerificationEvent) {
+          return mergeFrom((oscal.services.v1.TransparencyExchangeServiceOuterClass.VerificationEvent)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(oscal.services.v1.TransparencyExchangeServiceOuterClass.VerificationEvent other) {
+        if (other == oscal.services.v1.TransparencyExchangeServiceOuterClass.VerificationEvent.getDefaultInstance()) return this;
+        if (other.getSequence() != 0L) {
+          setSequence(other.getSequence());
+        }
+        if (!other.getEventId().isEmpty()) {
+          eventId_ = other.eventId_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getClaimId().isEmpty()) {
+          claimId_ = other.claimId_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getRequestId().isEmpty()) {
+          requestId_ = other.requestId_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getIdempotencyKey().isEmpty()) {
+          idempotencyKey_ = other.idempotencyKey_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (!other.getChecksJson().isEmpty()) {
+          checksJson_ = other.checksJson_;
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        if (!other.getProofStateJson().isEmpty()) {
+          proofStateJson_ = other.proofStateJson_;
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
+        if (!other.getProviderStateJson().isEmpty()) {
+          providerStateJson_ = other.providerStateJson_;
+          bitField0_ |= 0x00000080;
+          onChanged();
+        }
+        if (!other.getTrustState().isEmpty()) {
+          trustState_ = other.trustState_;
+          bitField0_ |= 0x00000100;
+          onChanged();
+        }
+        if (!other.diagnostics_.isEmpty()) {
+          if (diagnostics_.isEmpty()) {
+            diagnostics_ = other.diagnostics_;
+            bitField0_ |= 0x00000200;
+          } else {
+            ensureDiagnosticsIsMutable();
+            diagnostics_.addAll(other.diagnostics_);
+          }
+          onChanged();
+        }
+        if (!other.getPreviousHash().isEmpty()) {
+          previousHash_ = other.previousHash_;
+          bitField0_ |= 0x00000400;
+          onChanged();
+        }
+        if (!other.getEventHash().isEmpty()) {
+          eventHash_ = other.eventHash_;
+          bitField0_ |= 0x00000800;
+          onChanged();
+        }
+        if (other.hasCreatedAt()) {
+          mergeCreatedAt(other.getCreatedAt());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                sequence_ = input.readInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                eventId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                claimId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                requestId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                idempotencyKey_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                checksJson_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                proofStateJson_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              case 66: {
+                providerStateJson_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 66
+              case 74: {
+                trustState_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 74
+              case 82: {
+                ensureDiagnosticsIsMutable();
+                diagnostics_.add(input.readStringRequireUtf8());
+                break;
+              } // case 82
+              case 90: {
+                previousHash_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000400;
+                break;
+              } // case 90
+              case 98: {
+                eventHash_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000800;
+                break;
+              } // case 98
+              case 106: {
+                input.readMessage(
+                    internalGetCreatedAtFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00001000;
+                break;
+              } // case 106
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long sequence_ ;
+      /**
+       * <code>int64 sequence = 1 [json_name = "sequence"];</code>
+       * @return The sequence.
+       */
+      @java.lang.Override
+      public long getSequence() {
+        return sequence_;
+      }
+      /**
+       * <code>int64 sequence = 1 [json_name = "sequence"];</code>
+       * @param value The sequence to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSequence(long value) {
+
+        sequence_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 sequence = 1 [json_name = "sequence"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSequence() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        sequence_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object eventId_ = "";
+      /**
+       * <code>string event_id = 2 [json_name = "eventId"];</code>
+       * @return The eventId.
+       */
+      public java.lang.String getEventId() {
+        java.lang.Object ref = eventId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          eventId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string event_id = 2 [json_name = "eventId"];</code>
+       * @return The bytes for eventId.
+       */
+      public com.google.protobuf.ByteString
+          getEventIdBytes() {
+        java.lang.Object ref = eventId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          eventId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string event_id = 2 [json_name = "eventId"];</code>
+       * @param value The eventId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEventId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        eventId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string event_id = 2 [json_name = "eventId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEventId() {
+        eventId_ = getDefaultInstance().getEventId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string event_id = 2 [json_name = "eventId"];</code>
+       * @param value The bytes for eventId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEventIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        eventId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object claimId_ = "";
+      /**
+       * <code>string claim_id = 3 [json_name = "claimId"];</code>
+       * @return The claimId.
+       */
+      public java.lang.String getClaimId() {
+        java.lang.Object ref = claimId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          claimId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string claim_id = 3 [json_name = "claimId"];</code>
+       * @return The bytes for claimId.
+       */
+      public com.google.protobuf.ByteString
+          getClaimIdBytes() {
+        java.lang.Object ref = claimId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          claimId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string claim_id = 3 [json_name = "claimId"];</code>
+       * @param value The claimId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClaimId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        claimId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string claim_id = 3 [json_name = "claimId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClaimId() {
+        claimId_ = getDefaultInstance().getClaimId();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string claim_id = 3 [json_name = "claimId"];</code>
+       * @param value The bytes for claimId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClaimIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        claimId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object requestId_ = "";
+      /**
+       * <code>string request_id = 4 [json_name = "requestId"];</code>
+       * @return The requestId.
+       */
+      public java.lang.String getRequestId() {
+        java.lang.Object ref = requestId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          requestId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string request_id = 4 [json_name = "requestId"];</code>
+       * @return The bytes for requestId.
+       */
+      public com.google.protobuf.ByteString
+          getRequestIdBytes() {
+        java.lang.Object ref = requestId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          requestId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string request_id = 4 [json_name = "requestId"];</code>
+       * @param value The requestId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRequestId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        requestId_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string request_id = 4 [json_name = "requestId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRequestId() {
+        requestId_ = getDefaultInstance().getRequestId();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string request_id = 4 [json_name = "requestId"];</code>
+       * @param value The bytes for requestId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRequestIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        requestId_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object idempotencyKey_ = "";
+      /**
+       * <code>string idempotency_key = 5 [json_name = "idempotencyKey"];</code>
+       * @return The idempotencyKey.
+       */
+      public java.lang.String getIdempotencyKey() {
+        java.lang.Object ref = idempotencyKey_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          idempotencyKey_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string idempotency_key = 5 [json_name = "idempotencyKey"];</code>
+       * @return The bytes for idempotencyKey.
+       */
+      public com.google.protobuf.ByteString
+          getIdempotencyKeyBytes() {
+        java.lang.Object ref = idempotencyKey_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          idempotencyKey_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string idempotency_key = 5 [json_name = "idempotencyKey"];</code>
+       * @param value The idempotencyKey to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdempotencyKey(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        idempotencyKey_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string idempotency_key = 5 [json_name = "idempotencyKey"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIdempotencyKey() {
+        idempotencyKey_ = getDefaultInstance().getIdempotencyKey();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string idempotency_key = 5 [json_name = "idempotencyKey"];</code>
+       * @param value The bytes for idempotencyKey to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdempotencyKeyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        idempotencyKey_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object checksJson_ = "";
+      /**
+       * <code>string checks_json = 6 [json_name = "checksJson"];</code>
+       * @return The checksJson.
+       */
+      public java.lang.String getChecksJson() {
+        java.lang.Object ref = checksJson_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          checksJson_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string checks_json = 6 [json_name = "checksJson"];</code>
+       * @return The bytes for checksJson.
+       */
+      public com.google.protobuf.ByteString
+          getChecksJsonBytes() {
+        java.lang.Object ref = checksJson_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          checksJson_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string checks_json = 6 [json_name = "checksJson"];</code>
+       * @param value The checksJson to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChecksJson(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        checksJson_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string checks_json = 6 [json_name = "checksJson"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearChecksJson() {
+        checksJson_ = getDefaultInstance().getChecksJson();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string checks_json = 6 [json_name = "checksJson"];</code>
+       * @param value The bytes for checksJson to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChecksJsonBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        checksJson_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object proofStateJson_ = "";
+      /**
+       * <code>string proof_state_json = 7 [json_name = "proofStateJson"];</code>
+       * @return The proofStateJson.
+       */
+      public java.lang.String getProofStateJson() {
+        java.lang.Object ref = proofStateJson_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          proofStateJson_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string proof_state_json = 7 [json_name = "proofStateJson"];</code>
+       * @return The bytes for proofStateJson.
+       */
+      public com.google.protobuf.ByteString
+          getProofStateJsonBytes() {
+        java.lang.Object ref = proofStateJson_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          proofStateJson_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string proof_state_json = 7 [json_name = "proofStateJson"];</code>
+       * @param value The proofStateJson to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProofStateJson(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        proofStateJson_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string proof_state_json = 7 [json_name = "proofStateJson"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProofStateJson() {
+        proofStateJson_ = getDefaultInstance().getProofStateJson();
+        bitField0_ = (bitField0_ & ~0x00000040);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string proof_state_json = 7 [json_name = "proofStateJson"];</code>
+       * @param value The bytes for proofStateJson to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProofStateJsonBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        proofStateJson_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object providerStateJson_ = "";
+      /**
+       * <code>string provider_state_json = 8 [json_name = "providerStateJson"];</code>
+       * @return The providerStateJson.
+       */
+      public java.lang.String getProviderStateJson() {
+        java.lang.Object ref = providerStateJson_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          providerStateJson_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string provider_state_json = 8 [json_name = "providerStateJson"];</code>
+       * @return The bytes for providerStateJson.
+       */
+      public com.google.protobuf.ByteString
+          getProviderStateJsonBytes() {
+        java.lang.Object ref = providerStateJson_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          providerStateJson_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string provider_state_json = 8 [json_name = "providerStateJson"];</code>
+       * @param value The providerStateJson to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProviderStateJson(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        providerStateJson_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string provider_state_json = 8 [json_name = "providerStateJson"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProviderStateJson() {
+        providerStateJson_ = getDefaultInstance().getProviderStateJson();
+        bitField0_ = (bitField0_ & ~0x00000080);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string provider_state_json = 8 [json_name = "providerStateJson"];</code>
+       * @param value The bytes for providerStateJson to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProviderStateJsonBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        providerStateJson_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object trustState_ = "";
+      /**
+       * <code>string trust_state = 9 [json_name = "trustState"];</code>
+       * @return The trustState.
+       */
+      public java.lang.String getTrustState() {
+        java.lang.Object ref = trustState_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          trustState_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string trust_state = 9 [json_name = "trustState"];</code>
+       * @return The bytes for trustState.
+       */
+      public com.google.protobuf.ByteString
+          getTrustStateBytes() {
+        java.lang.Object ref = trustState_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          trustState_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string trust_state = 9 [json_name = "trustState"];</code>
+       * @param value The trustState to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTrustState(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        trustState_ = value;
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string trust_state = 9 [json_name = "trustState"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTrustState() {
+        trustState_ = getDefaultInstance().getTrustState();
+        bitField0_ = (bitField0_ & ~0x00000100);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string trust_state = 9 [json_name = "trustState"];</code>
+       * @param value The bytes for trustState to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTrustStateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        trustState_ = value;
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringArrayList diagnostics_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureDiagnosticsIsMutable() {
+        if (!diagnostics_.isModifiable()) {
+          diagnostics_ = new com.google.protobuf.LazyStringArrayList(diagnostics_);
+        }
+        bitField0_ |= 0x00000200;
+      }
+      /**
+       * <code>repeated string diagnostics = 10 [json_name = "diagnostics"];</code>
+       * @return A list containing the diagnostics.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getDiagnosticsList() {
+        diagnostics_.makeImmutable();
+        return diagnostics_;
+      }
+      /**
+       * <code>repeated string diagnostics = 10 [json_name = "diagnostics"];</code>
+       * @return The count of diagnostics.
+       */
+      public int getDiagnosticsCount() {
+        return diagnostics_.size();
+      }
+      /**
+       * <code>repeated string diagnostics = 10 [json_name = "diagnostics"];</code>
+       * @param index The index of the element to return.
+       * @return The diagnostics at the given index.
+       */
+      public java.lang.String getDiagnostics(int index) {
+        return diagnostics_.get(index);
+      }
+      /**
+       * <code>repeated string diagnostics = 10 [json_name = "diagnostics"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the diagnostics at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getDiagnosticsBytes(int index) {
+        return diagnostics_.getByteString(index);
+      }
+      /**
+       * <code>repeated string diagnostics = 10 [json_name = "diagnostics"];</code>
+       * @param index The index to set the value at.
+       * @param value The diagnostics to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDiagnostics(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureDiagnosticsIsMutable();
+        diagnostics_.set(index, value);
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string diagnostics = 10 [json_name = "diagnostics"];</code>
+       * @param value The diagnostics to add.
+       * @return This builder for chaining.
+       */
+      public Builder addDiagnostics(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureDiagnosticsIsMutable();
+        diagnostics_.add(value);
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string diagnostics = 10 [json_name = "diagnostics"];</code>
+       * @param values The diagnostics to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllDiagnostics(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureDiagnosticsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, diagnostics_);
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string diagnostics = 10 [json_name = "diagnostics"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDiagnostics() {
+        diagnostics_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000200);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string diagnostics = 10 [json_name = "diagnostics"];</code>
+       * @param value The bytes of the diagnostics to add.
+       * @return This builder for chaining.
+       */
+      public Builder addDiagnosticsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureDiagnosticsIsMutable();
+        diagnostics_.add(value);
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object previousHash_ = "";
+      /**
+       * <code>string previous_hash = 11 [json_name = "previousHash"];</code>
+       * @return The previousHash.
+       */
+      public java.lang.String getPreviousHash() {
+        java.lang.Object ref = previousHash_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          previousHash_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string previous_hash = 11 [json_name = "previousHash"];</code>
+       * @return The bytes for previousHash.
+       */
+      public com.google.protobuf.ByteString
+          getPreviousHashBytes() {
+        java.lang.Object ref = previousHash_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          previousHash_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string previous_hash = 11 [json_name = "previousHash"];</code>
+       * @param value The previousHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPreviousHash(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        previousHash_ = value;
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string previous_hash = 11 [json_name = "previousHash"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPreviousHash() {
+        previousHash_ = getDefaultInstance().getPreviousHash();
+        bitField0_ = (bitField0_ & ~0x00000400);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string previous_hash = 11 [json_name = "previousHash"];</code>
+       * @param value The bytes for previousHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPreviousHashBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        previousHash_ = value;
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object eventHash_ = "";
+      /**
+       * <code>string event_hash = 12 [json_name = "eventHash"];</code>
+       * @return The eventHash.
+       */
+      public java.lang.String getEventHash() {
+        java.lang.Object ref = eventHash_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          eventHash_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string event_hash = 12 [json_name = "eventHash"];</code>
+       * @return The bytes for eventHash.
+       */
+      public com.google.protobuf.ByteString
+          getEventHashBytes() {
+        java.lang.Object ref = eventHash_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          eventHash_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string event_hash = 12 [json_name = "eventHash"];</code>
+       * @param value The eventHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEventHash(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        eventHash_ = value;
+        bitField0_ |= 0x00000800;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string event_hash = 12 [json_name = "eventHash"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEventHash() {
+        eventHash_ = getDefaultInstance().getEventHash();
+        bitField0_ = (bitField0_ & ~0x00000800);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string event_hash = 12 [json_name = "eventHash"];</code>
+       * @param value The bytes for eventHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEventHashBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        eventHash_ = value;
+        bitField0_ |= 0x00000800;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp createdAt_;
+      private com.google.protobuf.SingleFieldBuilder<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 13 [json_name = "createdAt"];</code>
+       * @return Whether the createdAt field is set.
+       */
+      public boolean hasCreatedAt() {
+        return ((bitField0_ & 0x00001000) != 0);
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 13 [json_name = "createdAt"];</code>
+       * @return The createdAt.
+       */
+      public com.google.protobuf.Timestamp getCreatedAt() {
+        if (createdAtBuilder_ == null) {
+          return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+        } else {
+          return createdAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 13 [json_name = "createdAt"];</code>
+       */
+      public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
+        if (createdAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          createdAt_ = value;
+        } else {
+          createdAtBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00001000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 13 [json_name = "createdAt"];</code>
+       */
+      public Builder setCreatedAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (createdAtBuilder_ == null) {
+          createdAt_ = builderForValue.build();
+        } else {
+          createdAtBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00001000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 13 [json_name = "createdAt"];</code>
+       */
+      public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
+        if (createdAtBuilder_ == null) {
+          if (((bitField0_ & 0x00001000) != 0) &&
+            createdAt_ != null &&
+            createdAt_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getCreatedAtBuilder().mergeFrom(value);
+          } else {
+            createdAt_ = value;
+          }
+        } else {
+          createdAtBuilder_.mergeFrom(value);
+        }
+        if (createdAt_ != null) {
+          bitField0_ |= 0x00001000;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 13 [json_name = "createdAt"];</code>
+       */
+      public Builder clearCreatedAt() {
+        bitField0_ = (bitField0_ & ~0x00001000);
+        createdAt_ = null;
+        if (createdAtBuilder_ != null) {
+          createdAtBuilder_.dispose();
+          createdAtBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 13 [json_name = "createdAt"];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
+        bitField0_ |= 0x00001000;
+        onChanged();
+        return internalGetCreatedAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 13 [json_name = "createdAt"];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
+        if (createdAtBuilder_ != null) {
+          return createdAtBuilder_.getMessageOrBuilder();
+        } else {
+          return createdAt_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 13 [json_name = "createdAt"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>
+          internalGetCreatedAtFieldBuilder() {
+        if (createdAtBuilder_ == null) {
+          createdAtBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getCreatedAt(),
+                  getParentForChildren(),
+                  isClean());
+          createdAt_ = null;
+        }
+        return createdAtBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:oscal.services.v1.VerificationEvent)
+    }
+
+    // @@protoc_insertion_point(class_scope:oscal.services.v1.VerificationEvent)
+    private static final oscal.services.v1.TransparencyExchangeServiceOuterClass.VerificationEvent DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new oscal.services.v1.TransparencyExchangeServiceOuterClass.VerificationEvent();
+    }
+
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.VerificationEvent getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<VerificationEvent>
+        PARSER = new com.google.protobuf.AbstractParser<VerificationEvent>() {
+      @java.lang.Override
+      public VerificationEvent parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<VerificationEvent> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<VerificationEvent> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public oscal.services.v1.TransparencyExchangeServiceOuterClass.VerificationEvent getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ExportClaimReceiptRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oscal.services.v1.ExportClaimReceiptRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string claim_id = 1 [json_name = "claimId"];</code>
+     * @return The claimId.
+     */
+    java.lang.String getClaimId();
+    /**
+     * <code>string claim_id = 1 [json_name = "claimId"];</code>
+     * @return The bytes for claimId.
+     */
+    com.google.protobuf.ByteString
+        getClaimIdBytes();
+  }
+  /**
+   * Protobuf type {@code oscal.services.v1.ExportClaimReceiptRequest}
+   */
+  public static final class ExportClaimReceiptRequest extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:oscal.services.v1.ExportClaimReceiptRequest)
+      ExportClaimReceiptRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 35,
+        /* patch= */ 1,
+        /* suffix= */ "",
+        "ExportClaimReceiptRequest");
+    }
+    // Use ExportClaimReceiptRequest.newBuilder() to construct.
+    private ExportClaimReceiptRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private ExportClaimReceiptRequest() {
+      claimId_ = "";
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_ExportClaimReceiptRequest_descriptor;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+      return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_ExportClaimReceiptRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_ExportClaimReceiptRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptRequest.class, oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptRequest.Builder.class);
+    }
+
+    public static final int CLAIM_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object claimId_ = "";
+    /**
+     * <code>string claim_id = 1 [json_name = "claimId"];</code>
+     * @return The claimId.
+     */
+    @java.lang.Override
+    public java.lang.String getClaimId() {
+      java.lang.Object ref = claimId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        claimId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string claim_id = 1 [json_name = "claimId"];</code>
+     * @return The bytes for claimId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClaimIdBytes() {
+      java.lang.Object ref = claimId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        claimId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(claimId_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, claimId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+    private int computeSerializedSize_0() {
+      int size = 0;
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(claimId_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, claimId_);
+      }
+      return size;
+    }
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += computeSerializedSize_0();
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptRequest)) {
+        return super.equals(obj);
+      }
+      oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptRequest other = (oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptRequest) obj;
+
+      if (!getClaimId()
+          .equals(other.getClaimId())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLAIM_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClaimId().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oscal.services.v1.ExportClaimReceiptRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oscal.services.v1.ExportClaimReceiptRequest)
+        oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_ExportClaimReceiptRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_ExportClaimReceiptRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptRequest.class, oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptRequest.Builder.class);
+      }
+
+      // Construct using oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        claimId_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_ExportClaimReceiptRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptRequest getDefaultInstanceForType() {
+        return oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptRequest build() {
+        oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptRequest buildPartial() {
+        oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptRequest result = new oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.claimId_ = claimId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptRequest) {
+          return mergeFrom((oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptRequest other) {
+        if (other == oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptRequest.getDefaultInstance()) return this;
+        if (!other.getClaimId().isEmpty()) {
+          claimId_ = other.claimId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                claimId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object claimId_ = "";
+      /**
+       * <code>string claim_id = 1 [json_name = "claimId"];</code>
+       * @return The claimId.
+       */
+      public java.lang.String getClaimId() {
+        java.lang.Object ref = claimId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          claimId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string claim_id = 1 [json_name = "claimId"];</code>
+       * @return The bytes for claimId.
+       */
+      public com.google.protobuf.ByteString
+          getClaimIdBytes() {
+        java.lang.Object ref = claimId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          claimId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string claim_id = 1 [json_name = "claimId"];</code>
+       * @param value The claimId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClaimId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        claimId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string claim_id = 1 [json_name = "claimId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClaimId() {
+        claimId_ = getDefaultInstance().getClaimId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string claim_id = 1 [json_name = "claimId"];</code>
+       * @param value The bytes for claimId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClaimIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        claimId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:oscal.services.v1.ExportClaimReceiptRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:oscal.services.v1.ExportClaimReceiptRequest)
+    private static final oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptRequest();
+    }
+
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ExportClaimReceiptRequest>
+        PARSER = new com.google.protobuf.AbstractParser<ExportClaimReceiptRequest>() {
+      @java.lang.Override
+      public ExportClaimReceiptRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ExportClaimReceiptRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ExportClaimReceiptRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ExportClaimReceiptResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oscal.services.v1.ExportClaimReceiptResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string claim_id = 1 [json_name = "claimId"];</code>
+     * @return The claimId.
+     */
+    java.lang.String getClaimId();
+    /**
+     * <code>string claim_id = 1 [json_name = "claimId"];</code>
+     * @return The bytes for claimId.
+     */
+    com.google.protobuf.ByteString
+        getClaimIdBytes();
+
+    /**
+     * <code>string receipt_json = 2 [json_name = "receiptJson"];</code>
+     * @return The receiptJson.
+     */
+    java.lang.String getReceiptJson();
+    /**
+     * <code>string receipt_json = 2 [json_name = "receiptJson"];</code>
+     * @return The bytes for receiptJson.
+     */
+    com.google.protobuf.ByteString
+        getReceiptJsonBytes();
+
+    /**
+     * <code>string receipt_digest = 3 [json_name = "receiptDigest"];</code>
+     * @return The receiptDigest.
+     */
+    java.lang.String getReceiptDigest();
+    /**
+     * <code>string receipt_digest = 3 [json_name = "receiptDigest"];</code>
+     * @return The bytes for receiptDigest.
+     */
+    com.google.protobuf.ByteString
+        getReceiptDigestBytes();
+
+    /**
+     * <code>string trust_state = 4 [json_name = "trustState"];</code>
+     * @return The trustState.
+     */
+    java.lang.String getTrustState();
+    /**
+     * <code>string trust_state = 4 [json_name = "trustState"];</code>
+     * @return The bytes for trustState.
+     */
+    com.google.protobuf.ByteString
+        getTrustStateBytes();
+
+    /**
+     * <code>string verification_event_hash = 5 [json_name = "verificationEventHash"];</code>
+     * @return The verificationEventHash.
+     */
+    java.lang.String getVerificationEventHash();
+    /**
+     * <code>string verification_event_hash = 5 [json_name = "verificationEventHash"];</code>
+     * @return The bytes for verificationEventHash.
+     */
+    com.google.protobuf.ByteString
+        getVerificationEventHashBytes();
+
+    /**
+     * <code>.google.protobuf.Timestamp exported_at = 6 [json_name = "exportedAt"];</code>
+     * @return Whether the exportedAt field is set.
+     */
+    boolean hasExportedAt();
+    /**
+     * <code>.google.protobuf.Timestamp exported_at = 6 [json_name = "exportedAt"];</code>
+     * @return The exportedAt.
+     */
+    com.google.protobuf.Timestamp getExportedAt();
+    /**
+     * <code>.google.protobuf.Timestamp exported_at = 6 [json_name = "exportedAt"];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getExportedAtOrBuilder();
+  }
+  /**
+   * Protobuf type {@code oscal.services.v1.ExportClaimReceiptResponse}
+   */
+  public static final class ExportClaimReceiptResponse extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:oscal.services.v1.ExportClaimReceiptResponse)
+      ExportClaimReceiptResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 35,
+        /* patch= */ 1,
+        /* suffix= */ "",
+        "ExportClaimReceiptResponse");
+    }
+    // Use ExportClaimReceiptResponse.newBuilder() to construct.
+    private ExportClaimReceiptResponse(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private ExportClaimReceiptResponse() {
+      claimId_ = "";
+      receiptJson_ = "";
+      receiptDigest_ = "";
+      trustState_ = "";
+      verificationEventHash_ = "";
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_ExportClaimReceiptResponse_descriptor;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+      return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_ExportClaimReceiptResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_ExportClaimReceiptResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptResponse.class, oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptResponse.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int CLAIM_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object claimId_ = "";
+    /**
+     * <code>string claim_id = 1 [json_name = "claimId"];</code>
+     * @return The claimId.
+     */
+    @java.lang.Override
+    public java.lang.String getClaimId() {
+      java.lang.Object ref = claimId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        claimId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string claim_id = 1 [json_name = "claimId"];</code>
+     * @return The bytes for claimId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClaimIdBytes() {
+      java.lang.Object ref = claimId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        claimId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RECEIPT_JSON_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object receiptJson_ = "";
+    /**
+     * <code>string receipt_json = 2 [json_name = "receiptJson"];</code>
+     * @return The receiptJson.
+     */
+    @java.lang.Override
+    public java.lang.String getReceiptJson() {
+      java.lang.Object ref = receiptJson_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        receiptJson_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string receipt_json = 2 [json_name = "receiptJson"];</code>
+     * @return The bytes for receiptJson.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getReceiptJsonBytes() {
+      java.lang.Object ref = receiptJson_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        receiptJson_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RECEIPT_DIGEST_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object receiptDigest_ = "";
+    /**
+     * <code>string receipt_digest = 3 [json_name = "receiptDigest"];</code>
+     * @return The receiptDigest.
+     */
+    @java.lang.Override
+    public java.lang.String getReceiptDigest() {
+      java.lang.Object ref = receiptDigest_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        receiptDigest_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string receipt_digest = 3 [json_name = "receiptDigest"];</code>
+     * @return The bytes for receiptDigest.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getReceiptDigestBytes() {
+      java.lang.Object ref = receiptDigest_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        receiptDigest_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TRUST_STATE_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object trustState_ = "";
+    /**
+     * <code>string trust_state = 4 [json_name = "trustState"];</code>
+     * @return The trustState.
+     */
+    @java.lang.Override
+    public java.lang.String getTrustState() {
+      java.lang.Object ref = trustState_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        trustState_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string trust_state = 4 [json_name = "trustState"];</code>
+     * @return The bytes for trustState.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTrustStateBytes() {
+      java.lang.Object ref = trustState_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        trustState_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VERIFICATION_EVENT_HASH_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object verificationEventHash_ = "";
+    /**
+     * <code>string verification_event_hash = 5 [json_name = "verificationEventHash"];</code>
+     * @return The verificationEventHash.
+     */
+    @java.lang.Override
+    public java.lang.String getVerificationEventHash() {
+      java.lang.Object ref = verificationEventHash_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        verificationEventHash_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string verification_event_hash = 5 [json_name = "verificationEventHash"];</code>
+     * @return The bytes for verificationEventHash.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getVerificationEventHashBytes() {
+      java.lang.Object ref = verificationEventHash_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        verificationEventHash_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int EXPORTED_AT_FIELD_NUMBER = 6;
+    private com.google.protobuf.Timestamp exportedAt_;
+    /**
+     * <code>.google.protobuf.Timestamp exported_at = 6 [json_name = "exportedAt"];</code>
+     * @return Whether the exportedAt field is set.
+     */
+    @java.lang.Override
+    public boolean hasExportedAt() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.google.protobuf.Timestamp exported_at = 6 [json_name = "exportedAt"];</code>
+     * @return The exportedAt.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getExportedAt() {
+      return exportedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : exportedAt_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp exported_at = 6 [json_name = "exportedAt"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getExportedAtOrBuilder() {
+      return exportedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : exportedAt_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(claimId_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, claimId_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(receiptJson_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, receiptJson_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(receiptDigest_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 3, receiptDigest_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(trustState_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 4, trustState_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(verificationEventHash_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 5, verificationEventHash_);
+      }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeMessage(6, getExportedAt());
+      }
+      getUnknownFields().writeTo(output);
+    }
+    private int computeSerializedSize_0() {
+      int size = 0;
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(claimId_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, claimId_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(receiptJson_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, receiptJson_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(receiptDigest_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(3, receiptDigest_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(trustState_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(4, trustState_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(verificationEventHash_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(5, verificationEventHash_);
+      }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getExportedAt());
+      }
+      return size;
+    }
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += computeSerializedSize_0();
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptResponse)) {
+        return super.equals(obj);
+      }
+      oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptResponse other = (oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptResponse) obj;
+
+      if (!getClaimId()
+          .equals(other.getClaimId())) return false;
+      if (!getReceiptJson()
+          .equals(other.getReceiptJson())) return false;
+      if (!getReceiptDigest()
+          .equals(other.getReceiptDigest())) return false;
+      if (!getTrustState()
+          .equals(other.getTrustState())) return false;
+      if (!getVerificationEventHash()
+          .equals(other.getVerificationEventHash())) return false;
+      if (hasExportedAt() != other.hasExportedAt()) return false;
+      if (hasExportedAt()) {
+        if (!getExportedAt()
+            .equals(other.getExportedAt())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLAIM_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClaimId().hashCode();
+      hash = (37 * hash) + RECEIPT_JSON_FIELD_NUMBER;
+      hash = (53 * hash) + getReceiptJson().hashCode();
+      hash = (37 * hash) + RECEIPT_DIGEST_FIELD_NUMBER;
+      hash = (53 * hash) + getReceiptDigest().hashCode();
+      hash = (37 * hash) + TRUST_STATE_FIELD_NUMBER;
+      hash = (53 * hash) + getTrustState().hashCode();
+      hash = (37 * hash) + VERIFICATION_EVENT_HASH_FIELD_NUMBER;
+      hash = (53 * hash) + getVerificationEventHash().hashCode();
+      if (hasExportedAt()) {
+        hash = (37 * hash) + EXPORTED_AT_FIELD_NUMBER;
+        hash = (53 * hash) + getExportedAt().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oscal.services.v1.ExportClaimReceiptResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oscal.services.v1.ExportClaimReceiptResponse)
+        oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_ExportClaimReceiptResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_ExportClaimReceiptResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptResponse.class, oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptResponse.Builder.class);
+      }
+
+      // Construct using oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage
+                .alwaysUseFieldBuilders) {
+          internalGetExportedAtFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        claimId_ = "";
+        receiptJson_ = "";
+        receiptDigest_ = "";
+        trustState_ = "";
+        verificationEventHash_ = "";
+        exportedAt_ = null;
+        if (exportedAtBuilder_ != null) {
+          exportedAtBuilder_.dispose();
+          exportedAtBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_ExportClaimReceiptResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptResponse getDefaultInstanceForType() {
+        return oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptResponse build() {
+        oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptResponse buildPartial() {
+        oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptResponse result = new oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.claimId_ = claimId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.receiptJson_ = receiptJson_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.receiptDigest_ = receiptDigest_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.trustState_ = trustState_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.verificationEventHash_ = verificationEventHash_;
+        }
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.exportedAt_ = exportedAtBuilder_ == null
+              ? exportedAt_
+              : exportedAtBuilder_.build();
+          to_bitField0_ |= 0x00000001;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptResponse) {
+          return mergeFrom((oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptResponse other) {
+        if (other == oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptResponse.getDefaultInstance()) return this;
+        if (!other.getClaimId().isEmpty()) {
+          claimId_ = other.claimId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getReceiptJson().isEmpty()) {
+          receiptJson_ = other.receiptJson_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getReceiptDigest().isEmpty()) {
+          receiptDigest_ = other.receiptDigest_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getTrustState().isEmpty()) {
+          trustState_ = other.trustState_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getVerificationEventHash().isEmpty()) {
+          verificationEventHash_ = other.verificationEventHash_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (other.hasExportedAt()) {
+          mergeExportedAt(other.getExportedAt());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                claimId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                receiptJson_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                receiptDigest_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                trustState_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                verificationEventHash_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                input.readMessage(
+                    internalGetExportedAtFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object claimId_ = "";
+      /**
+       * <code>string claim_id = 1 [json_name = "claimId"];</code>
+       * @return The claimId.
+       */
+      public java.lang.String getClaimId() {
+        java.lang.Object ref = claimId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          claimId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string claim_id = 1 [json_name = "claimId"];</code>
+       * @return The bytes for claimId.
+       */
+      public com.google.protobuf.ByteString
+          getClaimIdBytes() {
+        java.lang.Object ref = claimId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          claimId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string claim_id = 1 [json_name = "claimId"];</code>
+       * @param value The claimId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClaimId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        claimId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string claim_id = 1 [json_name = "claimId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClaimId() {
+        claimId_ = getDefaultInstance().getClaimId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string claim_id = 1 [json_name = "claimId"];</code>
+       * @param value The bytes for claimId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClaimIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        claimId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object receiptJson_ = "";
+      /**
+       * <code>string receipt_json = 2 [json_name = "receiptJson"];</code>
+       * @return The receiptJson.
+       */
+      public java.lang.String getReceiptJson() {
+        java.lang.Object ref = receiptJson_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          receiptJson_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string receipt_json = 2 [json_name = "receiptJson"];</code>
+       * @return The bytes for receiptJson.
+       */
+      public com.google.protobuf.ByteString
+          getReceiptJsonBytes() {
+        java.lang.Object ref = receiptJson_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          receiptJson_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string receipt_json = 2 [json_name = "receiptJson"];</code>
+       * @param value The receiptJson to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReceiptJson(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        receiptJson_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string receipt_json = 2 [json_name = "receiptJson"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearReceiptJson() {
+        receiptJson_ = getDefaultInstance().getReceiptJson();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string receipt_json = 2 [json_name = "receiptJson"];</code>
+       * @param value The bytes for receiptJson to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReceiptJsonBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        receiptJson_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object receiptDigest_ = "";
+      /**
+       * <code>string receipt_digest = 3 [json_name = "receiptDigest"];</code>
+       * @return The receiptDigest.
+       */
+      public java.lang.String getReceiptDigest() {
+        java.lang.Object ref = receiptDigest_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          receiptDigest_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string receipt_digest = 3 [json_name = "receiptDigest"];</code>
+       * @return The bytes for receiptDigest.
+       */
+      public com.google.protobuf.ByteString
+          getReceiptDigestBytes() {
+        java.lang.Object ref = receiptDigest_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          receiptDigest_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string receipt_digest = 3 [json_name = "receiptDigest"];</code>
+       * @param value The receiptDigest to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReceiptDigest(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        receiptDigest_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string receipt_digest = 3 [json_name = "receiptDigest"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearReceiptDigest() {
+        receiptDigest_ = getDefaultInstance().getReceiptDigest();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string receipt_digest = 3 [json_name = "receiptDigest"];</code>
+       * @param value The bytes for receiptDigest to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReceiptDigestBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        receiptDigest_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object trustState_ = "";
+      /**
+       * <code>string trust_state = 4 [json_name = "trustState"];</code>
+       * @return The trustState.
+       */
+      public java.lang.String getTrustState() {
+        java.lang.Object ref = trustState_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          trustState_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string trust_state = 4 [json_name = "trustState"];</code>
+       * @return The bytes for trustState.
+       */
+      public com.google.protobuf.ByteString
+          getTrustStateBytes() {
+        java.lang.Object ref = trustState_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          trustState_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string trust_state = 4 [json_name = "trustState"];</code>
+       * @param value The trustState to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTrustState(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        trustState_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string trust_state = 4 [json_name = "trustState"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTrustState() {
+        trustState_ = getDefaultInstance().getTrustState();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string trust_state = 4 [json_name = "trustState"];</code>
+       * @param value The bytes for trustState to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTrustStateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        trustState_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object verificationEventHash_ = "";
+      /**
+       * <code>string verification_event_hash = 5 [json_name = "verificationEventHash"];</code>
+       * @return The verificationEventHash.
+       */
+      public java.lang.String getVerificationEventHash() {
+        java.lang.Object ref = verificationEventHash_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          verificationEventHash_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string verification_event_hash = 5 [json_name = "verificationEventHash"];</code>
+       * @return The bytes for verificationEventHash.
+       */
+      public com.google.protobuf.ByteString
+          getVerificationEventHashBytes() {
+        java.lang.Object ref = verificationEventHash_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          verificationEventHash_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string verification_event_hash = 5 [json_name = "verificationEventHash"];</code>
+       * @param value The verificationEventHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVerificationEventHash(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        verificationEventHash_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string verification_event_hash = 5 [json_name = "verificationEventHash"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVerificationEventHash() {
+        verificationEventHash_ = getDefaultInstance().getVerificationEventHash();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string verification_event_hash = 5 [json_name = "verificationEventHash"];</code>
+       * @param value The bytes for verificationEventHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVerificationEventHashBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        verificationEventHash_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp exportedAt_;
+      private com.google.protobuf.SingleFieldBuilder<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> exportedAtBuilder_;
+      /**
+       * <code>.google.protobuf.Timestamp exported_at = 6 [json_name = "exportedAt"];</code>
+       * @return Whether the exportedAt field is set.
+       */
+      public boolean hasExportedAt() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <code>.google.protobuf.Timestamp exported_at = 6 [json_name = "exportedAt"];</code>
+       * @return The exportedAt.
+       */
+      public com.google.protobuf.Timestamp getExportedAt() {
+        if (exportedAtBuilder_ == null) {
+          return exportedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : exportedAt_;
+        } else {
+          return exportedAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp exported_at = 6 [json_name = "exportedAt"];</code>
+       */
+      public Builder setExportedAt(com.google.protobuf.Timestamp value) {
+        if (exportedAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          exportedAt_ = value;
+        } else {
+          exportedAtBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp exported_at = 6 [json_name = "exportedAt"];</code>
+       */
+      public Builder setExportedAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (exportedAtBuilder_ == null) {
+          exportedAt_ = builderForValue.build();
+        } else {
+          exportedAtBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp exported_at = 6 [json_name = "exportedAt"];</code>
+       */
+      public Builder mergeExportedAt(com.google.protobuf.Timestamp value) {
+        if (exportedAtBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0) &&
+            exportedAt_ != null &&
+            exportedAt_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getExportedAtBuilder().mergeFrom(value);
+          } else {
+            exportedAt_ = value;
+          }
+        } else {
+          exportedAtBuilder_.mergeFrom(value);
+        }
+        if (exportedAt_ != null) {
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp exported_at = 6 [json_name = "exportedAt"];</code>
+       */
+      public Builder clearExportedAt() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        exportedAt_ = null;
+        if (exportedAtBuilder_ != null) {
+          exportedAtBuilder_.dispose();
+          exportedAtBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp exported_at = 6 [json_name = "exportedAt"];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getExportedAtBuilder() {
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return internalGetExportedAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp exported_at = 6 [json_name = "exportedAt"];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getExportedAtOrBuilder() {
+        if (exportedAtBuilder_ != null) {
+          return exportedAtBuilder_.getMessageOrBuilder();
+        } else {
+          return exportedAt_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : exportedAt_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp exported_at = 6 [json_name = "exportedAt"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>
+          internalGetExportedAtFieldBuilder() {
+        if (exportedAtBuilder_ == null) {
+          exportedAtBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getExportedAt(),
+                  getParentForChildren(),
+                  isClean());
+          exportedAt_ = null;
+        }
+        return exportedAtBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:oscal.services.v1.ExportClaimReceiptResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:oscal.services.v1.ExportClaimReceiptResponse)
+    private static final oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptResponse();
+    }
+
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ExportClaimReceiptResponse>
+        PARSER = new com.google.protobuf.AbstractParser<ExportClaimReceiptResponse>() {
+      @java.lang.Override
+      public ExportClaimReceiptResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ExportClaimReceiptResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ExportClaimReceiptResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public oscal.services.v1.TransparencyExchangeServiceOuterClass.ExportClaimReceiptResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ImportEvidenceOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oscal.services.v1.ImportEvidence)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.oscal.services.v1.Evidence evidence = 1 [json_name = "evidence"];</code>
+     * @return Whether the evidence field is set.
+     */
+    boolean hasEvidence();
+    /**
+     * <code>.oscal.services.v1.Evidence evidence = 1 [json_name = "evidence"];</code>
+     * @return The evidence.
+     */
+    oscal.services.v1.TransparencyExchangeServiceOuterClass.Evidence getEvidence();
+    /**
+     * <code>.oscal.services.v1.Evidence evidence = 1 [json_name = "evidence"];</code>
+     */
+    oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceOrBuilder getEvidenceOrBuilder();
+
+    /**
+     * <code>bytes blob = 2 [json_name = "blob"];</code>
+     * @return The blob.
+     */
+    com.google.protobuf.ByteString getBlob();
+  }
+  /**
+   * Protobuf type {@code oscal.services.v1.ImportEvidence}
+   */
+  public static final class ImportEvidence extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:oscal.services.v1.ImportEvidence)
+      ImportEvidenceOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 35,
+        /* patch= */ 1,
+        /* suffix= */ "",
+        "ImportEvidence");
+    }
+    // Use ImportEvidence.newBuilder() to construct.
+    private ImportEvidence(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private ImportEvidence() {
+      blob_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_ImportEvidence_descriptor;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+      return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_ImportEvidence_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_ImportEvidence_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportEvidence.class, oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportEvidence.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int EVIDENCE_FIELD_NUMBER = 1;
+    private oscal.services.v1.TransparencyExchangeServiceOuterClass.Evidence evidence_;
+    /**
+     * <code>.oscal.services.v1.Evidence evidence = 1 [json_name = "evidence"];</code>
+     * @return Whether the evidence field is set.
+     */
+    @java.lang.Override
+    public boolean hasEvidence() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.oscal.services.v1.Evidence evidence = 1 [json_name = "evidence"];</code>
+     * @return The evidence.
+     */
+    @java.lang.Override
+    public oscal.services.v1.TransparencyExchangeServiceOuterClass.Evidence getEvidence() {
+      return evidence_ == null ? oscal.services.v1.TransparencyExchangeServiceOuterClass.Evidence.getDefaultInstance() : evidence_;
+    }
+    /**
+     * <code>.oscal.services.v1.Evidence evidence = 1 [json_name = "evidence"];</code>
+     */
+    @java.lang.Override
+    public oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceOrBuilder getEvidenceOrBuilder() {
+      return evidence_ == null ? oscal.services.v1.TransparencyExchangeServiceOuterClass.Evidence.getDefaultInstance() : evidence_;
+    }
+
+    public static final int BLOB_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString blob_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes blob = 2 [json_name = "blob"];</code>
+     * @return The blob.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getBlob() {
+      return blob_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeMessage(1, getEvidence());
+      }
+      if (!blob_.isEmpty()) {
+        output.writeBytes(2, blob_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+    private int computeSerializedSize_0() {
+      int size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getEvidence());
+      }
+      if (!blob_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, blob_);
+      }
+      return size;
+    }
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += computeSerializedSize_0();
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportEvidence)) {
+        return super.equals(obj);
+      }
+      oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportEvidence other = (oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportEvidence) obj;
+
+      if (hasEvidence() != other.hasEvidence()) return false;
+      if (hasEvidence()) {
+        if (!getEvidence()
+            .equals(other.getEvidence())) return false;
+      }
+      if (!getBlob()
+          .equals(other.getBlob())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasEvidence()) {
+        hash = (37 * hash) + EVIDENCE_FIELD_NUMBER;
+        hash = (53 * hash) + getEvidence().hashCode();
+      }
+      hash = (37 * hash) + BLOB_FIELD_NUMBER;
+      hash = (53 * hash) + getBlob().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportEvidence parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportEvidence parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportEvidence parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportEvidence parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportEvidence parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportEvidence parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportEvidence parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportEvidence parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportEvidence parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportEvidence parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportEvidence parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportEvidence parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportEvidence prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oscal.services.v1.ImportEvidence}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oscal.services.v1.ImportEvidence)
+        oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportEvidenceOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_ImportEvidence_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_ImportEvidence_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportEvidence.class, oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportEvidence.Builder.class);
+      }
+
+      // Construct using oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportEvidence.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage
+                .alwaysUseFieldBuilders) {
+          internalGetEvidenceFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        evidence_ = null;
+        if (evidenceBuilder_ != null) {
+          evidenceBuilder_.dispose();
+          evidenceBuilder_ = null;
+        }
+        blob_ = com.google.protobuf.ByteString.EMPTY;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_ImportEvidence_descriptor;
+      }
+
+      @java.lang.Override
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportEvidence getDefaultInstanceForType() {
+        return oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportEvidence.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportEvidence build() {
+        oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportEvidence result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportEvidence buildPartial() {
+        oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportEvidence result = new oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportEvidence(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportEvidence result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.evidence_ = evidenceBuilder_ == null
+              ? evidence_
+              : evidenceBuilder_.build();
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.blob_ = blob_;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportEvidence) {
+          return mergeFrom((oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportEvidence)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportEvidence other) {
+        if (other == oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportEvidence.getDefaultInstance()) return this;
+        if (other.hasEvidence()) {
+          mergeEvidence(other.getEvidence());
+        }
+        if (!other.getBlob().isEmpty()) {
+          setBlob(other.getBlob());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    internalGetEvidenceFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                blob_ = input.readBytes();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private oscal.services.v1.TransparencyExchangeServiceOuterClass.Evidence evidence_;
+      private com.google.protobuf.SingleFieldBuilder<
+          oscal.services.v1.TransparencyExchangeServiceOuterClass.Evidence, oscal.services.v1.TransparencyExchangeServiceOuterClass.Evidence.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceOrBuilder> evidenceBuilder_;
+      /**
+       * <code>.oscal.services.v1.Evidence evidence = 1 [json_name = "evidence"];</code>
+       * @return Whether the evidence field is set.
+       */
+      public boolean hasEvidence() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.oscal.services.v1.Evidence evidence = 1 [json_name = "evidence"];</code>
+       * @return The evidence.
+       */
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.Evidence getEvidence() {
+        if (evidenceBuilder_ == null) {
+          return evidence_ == null ? oscal.services.v1.TransparencyExchangeServiceOuterClass.Evidence.getDefaultInstance() : evidence_;
+        } else {
+          return evidenceBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.oscal.services.v1.Evidence evidence = 1 [json_name = "evidence"];</code>
+       */
+      public Builder setEvidence(oscal.services.v1.TransparencyExchangeServiceOuterClass.Evidence value) {
+        if (evidenceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          evidence_ = value;
+        } else {
+          evidenceBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.services.v1.Evidence evidence = 1 [json_name = "evidence"];</code>
+       */
+      public Builder setEvidence(
+          oscal.services.v1.TransparencyExchangeServiceOuterClass.Evidence.Builder builderForValue) {
+        if (evidenceBuilder_ == null) {
+          evidence_ = builderForValue.build();
+        } else {
+          evidenceBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.services.v1.Evidence evidence = 1 [json_name = "evidence"];</code>
+       */
+      public Builder mergeEvidence(oscal.services.v1.TransparencyExchangeServiceOuterClass.Evidence value) {
+        if (evidenceBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            evidence_ != null &&
+            evidence_ != oscal.services.v1.TransparencyExchangeServiceOuterClass.Evidence.getDefaultInstance()) {
+            getEvidenceBuilder().mergeFrom(value);
+          } else {
+            evidence_ = value;
+          }
+        } else {
+          evidenceBuilder_.mergeFrom(value);
+        }
+        if (evidence_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>.oscal.services.v1.Evidence evidence = 1 [json_name = "evidence"];</code>
+       */
+      public Builder clearEvidence() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        evidence_ = null;
+        if (evidenceBuilder_ != null) {
+          evidenceBuilder_.dispose();
+          evidenceBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.services.v1.Evidence evidence = 1 [json_name = "evidence"];</code>
+       */
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.Evidence.Builder getEvidenceBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return internalGetEvidenceFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.oscal.services.v1.Evidence evidence = 1 [json_name = "evidence"];</code>
+       */
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceOrBuilder getEvidenceOrBuilder() {
+        if (evidenceBuilder_ != null) {
+          return evidenceBuilder_.getMessageOrBuilder();
+        } else {
+          return evidence_ == null ?
+              oscal.services.v1.TransparencyExchangeServiceOuterClass.Evidence.getDefaultInstance() : evidence_;
+        }
+      }
+      /**
+       * <code>.oscal.services.v1.Evidence evidence = 1 [json_name = "evidence"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          oscal.services.v1.TransparencyExchangeServiceOuterClass.Evidence, oscal.services.v1.TransparencyExchangeServiceOuterClass.Evidence.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceOrBuilder>
+          internalGetEvidenceFieldBuilder() {
+        if (evidenceBuilder_ == null) {
+          evidenceBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              oscal.services.v1.TransparencyExchangeServiceOuterClass.Evidence, oscal.services.v1.TransparencyExchangeServiceOuterClass.Evidence.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceOrBuilder>(
+                  getEvidence(),
+                  getParentForChildren(),
+                  isClean());
+          evidence_ = null;
+        }
+        return evidenceBuilder_;
+      }
+
+      private com.google.protobuf.ByteString blob_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes blob = 2 [json_name = "blob"];</code>
+       * @return The blob.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getBlob() {
+        return blob_;
+      }
+      /**
+       * <code>bytes blob = 2 [json_name = "blob"];</code>
+       * @param value The blob to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBlob(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        blob_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes blob = 2 [json_name = "blob"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBlob() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        blob_ = getDefaultInstance().getBlob();
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:oscal.services.v1.ImportEvidence)
+    }
+
+    // @@protoc_insertion_point(class_scope:oscal.services.v1.ImportEvidence)
+    private static final oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportEvidence DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportEvidence();
+    }
+
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportEvidence getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ImportEvidence>
+        PARSER = new com.google.protobuf.AbstractParser<ImportEvidence>() {
+      @java.lang.Override
+      public ImportEvidence parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ImportEvidence> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ImportEvidence> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportEvidence getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ImportRecordOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oscal.services.v1.ImportRecord)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.oscal.services.v1.Claim claim = 1 [json_name = "claim"];</code>
+     * @return Whether the claim field is set.
+     */
+    boolean hasClaim();
+    /**
+     * <code>.oscal.services.v1.Claim claim = 1 [json_name = "claim"];</code>
+     * @return The claim.
+     */
+    oscal.services.v1.TransparencyExchangeServiceOuterClass.Claim getClaim();
+    /**
+     * <code>.oscal.services.v1.Claim claim = 1 [json_name = "claim"];</code>
+     */
+    oscal.services.v1.TransparencyExchangeServiceOuterClass.ClaimOrBuilder getClaimOrBuilder();
+
+    /**
+     * <code>repeated .oscal.services.v1.ImportEvidence evidence = 2 [json_name = "evidence"];</code>
+     */
+    java.util.List<oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportEvidence>
+        getEvidenceList();
+    /**
+     * <code>repeated .oscal.services.v1.ImportEvidence evidence = 2 [json_name = "evidence"];</code>
+     */
+    oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportEvidence getEvidence(int index);
+    /**
+     * <code>repeated .oscal.services.v1.ImportEvidence evidence = 2 [json_name = "evidence"];</code>
+     */
+    int getEvidenceCount();
+    /**
+     * <code>repeated .oscal.services.v1.ImportEvidence evidence = 2 [json_name = "evidence"];</code>
+     */
+    java.util.List<? extends oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportEvidenceOrBuilder>
+        getEvidenceOrBuilderList();
+    /**
+     * <code>repeated .oscal.services.v1.ImportEvidence evidence = 2 [json_name = "evidence"];</code>
+     */
+    oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportEvidenceOrBuilder getEvidenceOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code oscal.services.v1.ImportRecord}
+   */
+  public static final class ImportRecord extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:oscal.services.v1.ImportRecord)
+      ImportRecordOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 35,
+        /* patch= */ 1,
+        /* suffix= */ "",
+        "ImportRecord");
+    }
+    // Use ImportRecord.newBuilder() to construct.
+    private ImportRecord(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private ImportRecord() {
+      evidence_ = java.util.Collections.emptyList();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_ImportRecord_descriptor;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+      return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_ImportRecord_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_ImportRecord_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord.class, oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int CLAIM_FIELD_NUMBER = 1;
+    private oscal.services.v1.TransparencyExchangeServiceOuterClass.Claim claim_;
+    /**
+     * <code>.oscal.services.v1.Claim claim = 1 [json_name = "claim"];</code>
+     * @return Whether the claim field is set.
+     */
+    @java.lang.Override
+    public boolean hasClaim() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.oscal.services.v1.Claim claim = 1 [json_name = "claim"];</code>
+     * @return The claim.
+     */
+    @java.lang.Override
+    public oscal.services.v1.TransparencyExchangeServiceOuterClass.Claim getClaim() {
+      return claim_ == null ? oscal.services.v1.TransparencyExchangeServiceOuterClass.Claim.getDefaultInstance() : claim_;
+    }
+    /**
+     * <code>.oscal.services.v1.Claim claim = 1 [json_name = "claim"];</code>
+     */
+    @java.lang.Override
+    public oscal.services.v1.TransparencyExchangeServiceOuterClass.ClaimOrBuilder getClaimOrBuilder() {
+      return claim_ == null ? oscal.services.v1.TransparencyExchangeServiceOuterClass.Claim.getDefaultInstance() : claim_;
+    }
+
+    public static final int EVIDENCE_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportEvidence> evidence_;
+    /**
+     * <code>repeated .oscal.services.v1.ImportEvidence evidence = 2 [json_name = "evidence"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportEvidence> getEvidenceList() {
+      return evidence_;
+    }
+    /**
+     * <code>repeated .oscal.services.v1.ImportEvidence evidence = 2 [json_name = "evidence"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportEvidenceOrBuilder>
+        getEvidenceOrBuilderList() {
+      return evidence_;
+    }
+    /**
+     * <code>repeated .oscal.services.v1.ImportEvidence evidence = 2 [json_name = "evidence"];</code>
+     */
+    @java.lang.Override
+    public int getEvidenceCount() {
+      return evidence_.size();
+    }
+    /**
+     * <code>repeated .oscal.services.v1.ImportEvidence evidence = 2 [json_name = "evidence"];</code>
+     */
+    @java.lang.Override
+    public oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportEvidence getEvidence(int index) {
+      return evidence_.get(index);
+    }
+    /**
+     * <code>repeated .oscal.services.v1.ImportEvidence evidence = 2 [json_name = "evidence"];</code>
+     */
+    @java.lang.Override
+    public oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportEvidenceOrBuilder getEvidenceOrBuilder(
+        int index) {
+      return evidence_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeMessage(1, getClaim());
+      }
+      for (int i = 0; i < evidence_.size(); i++) {
+        output.writeMessage(2, evidence_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+    private int computeSerializedSize_0() {
+      int size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getClaim());
+      }
+
+          {
+            final int count = evidence_.size();
+            for (int i = 0; i < count; i++) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeMessageSizeNoTag(evidence_.get(i));
+            }
+            size += 1 * count;
+          }
+      return size;
+    }
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += computeSerializedSize_0();
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord)) {
+        return super.equals(obj);
+      }
+      oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord other = (oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord) obj;
+
+      if (hasClaim() != other.hasClaim()) return false;
+      if (hasClaim()) {
+        if (!getClaim()
+            .equals(other.getClaim())) return false;
+      }
+      if (!getEvidenceList()
+          .equals(other.getEvidenceList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasClaim()) {
+        hash = (37 * hash) + CLAIM_FIELD_NUMBER;
+        hash = (53 * hash) + getClaim().hashCode();
+      }
+      if (getEvidenceCount() > 0) {
+        hash = (37 * hash) + EVIDENCE_FIELD_NUMBER;
+        hash = (53 * hash) + getEvidenceList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oscal.services.v1.ImportRecord}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oscal.services.v1.ImportRecord)
+        oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_ImportRecord_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_ImportRecord_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord.class, oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord.Builder.class);
+      }
+
+      // Construct using oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage
+                .alwaysUseFieldBuilders) {
+          internalGetClaimFieldBuilder();
+          internalGetEvidenceFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        claim_ = null;
+        if (claimBuilder_ != null) {
+          claimBuilder_.dispose();
+          claimBuilder_ = null;
+        }
+        if (evidenceBuilder_ == null) {
+          evidence_ = java.util.Collections.emptyList();
+        } else {
+          evidence_ = null;
+          evidenceBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_ImportRecord_descriptor;
+      }
+
+      @java.lang.Override
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord getDefaultInstanceForType() {
+        return oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord build() {
+        oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord buildPartial() {
+        oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord result = new oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord result) {
+        if (evidenceBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            evidence_ = java.util.Collections.unmodifiableList(evidence_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.evidence_ = evidence_;
+        } else {
+          result.evidence_ = evidenceBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.claim_ = claimBuilder_ == null
+              ? claim_
+              : claimBuilder_.build();
+          to_bitField0_ |= 0x00000001;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord) {
+          return mergeFrom((oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord other) {
+        if (other == oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord.getDefaultInstance()) return this;
+        if (other.hasClaim()) {
+          mergeClaim(other.getClaim());
+        }
+        if (evidenceBuilder_ == null) {
+          if (!other.evidence_.isEmpty()) {
+            if (evidence_.isEmpty()) {
+              evidence_ = other.evidence_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureEvidenceIsMutable();
+              evidence_.addAll(other.evidence_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.evidence_.isEmpty()) {
+            if (evidenceBuilder_.isEmpty()) {
+              evidenceBuilder_.dispose();
+              evidenceBuilder_ = null;
+              evidence_ = other.evidence_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              evidenceBuilder_ =
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   internalGetEvidenceFieldBuilder() : null;
+            } else {
+              evidenceBuilder_.addAllMessages(other.evidence_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    internalGetClaimFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportEvidence m =
+                    input.readMessage(
+                        oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportEvidence.parser(),
+                        extensionRegistry);
+                if (evidenceBuilder_ == null) {
+                  ensureEvidenceIsMutable();
+                  evidence_.add(m);
+                } else {
+                  evidenceBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private oscal.services.v1.TransparencyExchangeServiceOuterClass.Claim claim_;
+      private com.google.protobuf.SingleFieldBuilder<
+          oscal.services.v1.TransparencyExchangeServiceOuterClass.Claim, oscal.services.v1.TransparencyExchangeServiceOuterClass.Claim.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.ClaimOrBuilder> claimBuilder_;
+      /**
+       * <code>.oscal.services.v1.Claim claim = 1 [json_name = "claim"];</code>
+       * @return Whether the claim field is set.
+       */
+      public boolean hasClaim() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.oscal.services.v1.Claim claim = 1 [json_name = "claim"];</code>
+       * @return The claim.
+       */
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.Claim getClaim() {
+        if (claimBuilder_ == null) {
+          return claim_ == null ? oscal.services.v1.TransparencyExchangeServiceOuterClass.Claim.getDefaultInstance() : claim_;
+        } else {
+          return claimBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.oscal.services.v1.Claim claim = 1 [json_name = "claim"];</code>
+       */
+      public Builder setClaim(oscal.services.v1.TransparencyExchangeServiceOuterClass.Claim value) {
+        if (claimBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          claim_ = value;
+        } else {
+          claimBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.services.v1.Claim claim = 1 [json_name = "claim"];</code>
+       */
+      public Builder setClaim(
+          oscal.services.v1.TransparencyExchangeServiceOuterClass.Claim.Builder builderForValue) {
+        if (claimBuilder_ == null) {
+          claim_ = builderForValue.build();
+        } else {
+          claimBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.services.v1.Claim claim = 1 [json_name = "claim"];</code>
+       */
+      public Builder mergeClaim(oscal.services.v1.TransparencyExchangeServiceOuterClass.Claim value) {
+        if (claimBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            claim_ != null &&
+            claim_ != oscal.services.v1.TransparencyExchangeServiceOuterClass.Claim.getDefaultInstance()) {
+            getClaimBuilder().mergeFrom(value);
+          } else {
+            claim_ = value;
+          }
+        } else {
+          claimBuilder_.mergeFrom(value);
+        }
+        if (claim_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>.oscal.services.v1.Claim claim = 1 [json_name = "claim"];</code>
+       */
+      public Builder clearClaim() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        claim_ = null;
+        if (claimBuilder_ != null) {
+          claimBuilder_.dispose();
+          claimBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.services.v1.Claim claim = 1 [json_name = "claim"];</code>
+       */
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.Claim.Builder getClaimBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return internalGetClaimFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.oscal.services.v1.Claim claim = 1 [json_name = "claim"];</code>
+       */
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.ClaimOrBuilder getClaimOrBuilder() {
+        if (claimBuilder_ != null) {
+          return claimBuilder_.getMessageOrBuilder();
+        } else {
+          return claim_ == null ?
+              oscal.services.v1.TransparencyExchangeServiceOuterClass.Claim.getDefaultInstance() : claim_;
+        }
+      }
+      /**
+       * <code>.oscal.services.v1.Claim claim = 1 [json_name = "claim"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          oscal.services.v1.TransparencyExchangeServiceOuterClass.Claim, oscal.services.v1.TransparencyExchangeServiceOuterClass.Claim.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.ClaimOrBuilder>
+          internalGetClaimFieldBuilder() {
+        if (claimBuilder_ == null) {
+          claimBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              oscal.services.v1.TransparencyExchangeServiceOuterClass.Claim, oscal.services.v1.TransparencyExchangeServiceOuterClass.Claim.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.ClaimOrBuilder>(
+                  getClaim(),
+                  getParentForChildren(),
+                  isClean());
+          claim_ = null;
+        }
+        return claimBuilder_;
+      }
+
+      private java.util.List<oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportEvidence> evidence_ =
+        java.util.Collections.emptyList();
+      private void ensureEvidenceIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          evidence_ = new java.util.ArrayList<oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportEvidence>(evidence_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportEvidence, oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportEvidence.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportEvidenceOrBuilder> evidenceBuilder_;
+
+      /**
+       * <code>repeated .oscal.services.v1.ImportEvidence evidence = 2 [json_name = "evidence"];</code>
+       */
+      public java.util.List<oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportEvidence> getEvidenceList() {
+        if (evidenceBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(evidence_);
+        } else {
+          return evidenceBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportEvidence evidence = 2 [json_name = "evidence"];</code>
+       */
+      public int getEvidenceCount() {
+        if (evidenceBuilder_ == null) {
+          return evidence_.size();
+        } else {
+          return evidenceBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportEvidence evidence = 2 [json_name = "evidence"];</code>
+       */
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportEvidence getEvidence(int index) {
+        if (evidenceBuilder_ == null) {
+          return evidence_.get(index);
+        } else {
+          return evidenceBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportEvidence evidence = 2 [json_name = "evidence"];</code>
+       */
+      public Builder setEvidence(
+          int index, oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportEvidence value) {
+        if (evidenceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEvidenceIsMutable();
+          evidence_.set(index, value);
+          onChanged();
+        } else {
+          evidenceBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportEvidence evidence = 2 [json_name = "evidence"];</code>
+       */
+      public Builder setEvidence(
+          int index, oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportEvidence.Builder builderForValue) {
+        if (evidenceBuilder_ == null) {
+          ensureEvidenceIsMutable();
+          evidence_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          evidenceBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportEvidence evidence = 2 [json_name = "evidence"];</code>
+       */
+      public Builder addEvidence(oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportEvidence value) {
+        if (evidenceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEvidenceIsMutable();
+          evidence_.add(value);
+          onChanged();
+        } else {
+          evidenceBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportEvidence evidence = 2 [json_name = "evidence"];</code>
+       */
+      public Builder addEvidence(
+          int index, oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportEvidence value) {
+        if (evidenceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEvidenceIsMutable();
+          evidence_.add(index, value);
+          onChanged();
+        } else {
+          evidenceBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportEvidence evidence = 2 [json_name = "evidence"];</code>
+       */
+      public Builder addEvidence(
+          oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportEvidence.Builder builderForValue) {
+        if (evidenceBuilder_ == null) {
+          ensureEvidenceIsMutable();
+          evidence_.add(builderForValue.build());
+          onChanged();
+        } else {
+          evidenceBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportEvidence evidence = 2 [json_name = "evidence"];</code>
+       */
+      public Builder addEvidence(
+          int index, oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportEvidence.Builder builderForValue) {
+        if (evidenceBuilder_ == null) {
+          ensureEvidenceIsMutable();
+          evidence_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          evidenceBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportEvidence evidence = 2 [json_name = "evidence"];</code>
+       */
+      public Builder addAllEvidence(
+          java.lang.Iterable<? extends oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportEvidence> values) {
+        if (evidenceBuilder_ == null) {
+          ensureEvidenceIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, evidence_);
+          onChanged();
+        } else {
+          evidenceBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportEvidence evidence = 2 [json_name = "evidence"];</code>
+       */
+      public Builder clearEvidence() {
+        if (evidenceBuilder_ == null) {
+          evidence_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          evidenceBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportEvidence evidence = 2 [json_name = "evidence"];</code>
+       */
+      public Builder removeEvidence(int index) {
+        if (evidenceBuilder_ == null) {
+          ensureEvidenceIsMutable();
+          evidence_.remove(index);
+          onChanged();
+        } else {
+          evidenceBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportEvidence evidence = 2 [json_name = "evidence"];</code>
+       */
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportEvidence.Builder getEvidenceBuilder(
+          int index) {
+        return internalGetEvidenceFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportEvidence evidence = 2 [json_name = "evidence"];</code>
+       */
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportEvidenceOrBuilder getEvidenceOrBuilder(
+          int index) {
+        if (evidenceBuilder_ == null) {
+          return evidence_.get(index);  } else {
+          return evidenceBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportEvidence evidence = 2 [json_name = "evidence"];</code>
+       */
+      public java.util.List<? extends oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportEvidenceOrBuilder>
+           getEvidenceOrBuilderList() {
+        if (evidenceBuilder_ != null) {
+          return evidenceBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(evidence_);
+        }
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportEvidence evidence = 2 [json_name = "evidence"];</code>
+       */
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportEvidence.Builder addEvidenceBuilder() {
+        return internalGetEvidenceFieldBuilder().addBuilder(
+            oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportEvidence.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportEvidence evidence = 2 [json_name = "evidence"];</code>
+       */
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportEvidence.Builder addEvidenceBuilder(
+          int index) {
+        return internalGetEvidenceFieldBuilder().addBuilder(
+            index, oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportEvidence.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportEvidence evidence = 2 [json_name = "evidence"];</code>
+       */
+      public java.util.List<oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportEvidence.Builder>
+           getEvidenceBuilderList() {
+        return internalGetEvidenceFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportEvidence, oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportEvidence.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportEvidenceOrBuilder>
+          internalGetEvidenceFieldBuilder() {
+        if (evidenceBuilder_ == null) {
+          evidenceBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportEvidence, oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportEvidence.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportEvidenceOrBuilder>(
+                  evidence_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          evidence_ = null;
+        }
+        return evidenceBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:oscal.services.v1.ImportRecord)
+    }
+
+    // @@protoc_insertion_point(class_scope:oscal.services.v1.ImportRecord)
+    private static final oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord();
+    }
+
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ImportRecord>
+        PARSER = new com.google.protobuf.AbstractParser<ImportRecord>() {
+      @java.lang.Override
+      public ImportRecord parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ImportRecord> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ImportRecord> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ImportRecordResultOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oscal.services.v1.ImportRecordResult)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int32 index = 1 [json_name = "index"];</code>
+     * @return The index.
+     */
+    int getIndex();
+
+    /**
+     * <code>string claim_id = 2 [json_name = "claimId"];</code>
+     * @return The claimId.
+     */
+    java.lang.String getClaimId();
+    /**
+     * <code>string claim_id = 2 [json_name = "claimId"];</code>
+     * @return The bytes for claimId.
+     */
+    com.google.protobuf.ByteString
+        getClaimIdBytes();
+
+    /**
+     * <pre>
+     * ready | already_present | invalid | imported
+     * </pre>
+     *
+     * <code>string status = 3 [json_name = "status"];</code>
+     * @return The status.
+     */
+    java.lang.String getStatus();
+    /**
+     * <pre>
+     * ready | already_present | invalid | imported
+     * </pre>
+     *
+     * <code>string status = 3 [json_name = "status"];</code>
+     * @return The bytes for status.
+     */
+    com.google.protobuf.ByteString
+        getStatusBytes();
+
+    /**
+     * <code>repeated string diagnostics = 4 [json_name = "diagnostics"];</code>
+     * @return A list containing the diagnostics.
+     */
+    java.util.List<java.lang.String>
+        getDiagnosticsList();
+    /**
+     * <code>repeated string diagnostics = 4 [json_name = "diagnostics"];</code>
+     * @return The count of diagnostics.
+     */
+    int getDiagnosticsCount();
+    /**
+     * <code>repeated string diagnostics = 4 [json_name = "diagnostics"];</code>
+     * @param index The index of the element to return.
+     * @return The diagnostics at the given index.
+     */
+    java.lang.String getDiagnostics(int index);
+    /**
+     * <code>repeated string diagnostics = 4 [json_name = "diagnostics"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the diagnostics at the given index.
+     */
+    com.google.protobuf.ByteString
+        getDiagnosticsBytes(int index);
+  }
+  /**
+   * Protobuf type {@code oscal.services.v1.ImportRecordResult}
+   */
+  public static final class ImportRecordResult extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:oscal.services.v1.ImportRecordResult)
+      ImportRecordResultOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 35,
+        /* patch= */ 1,
+        /* suffix= */ "",
+        "ImportRecordResult");
+    }
+    // Use ImportRecordResult.newBuilder() to construct.
+    private ImportRecordResult(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private ImportRecordResult() {
+      claimId_ = "";
+      status_ = "";
+      diagnostics_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_ImportRecordResult_descriptor;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+      return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_ImportRecordResult_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_ImportRecordResult_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult.class, oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult.Builder.class);
+    }
+
+    public static final int INDEX_FIELD_NUMBER = 1;
+    private int index_ = 0;
+    /**
+     * <code>int32 index = 1 [json_name = "index"];</code>
+     * @return The index.
+     */
+    @java.lang.Override
+    public int getIndex() {
+      return index_;
+    }
+
+    public static final int CLAIM_ID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object claimId_ = "";
+    /**
+     * <code>string claim_id = 2 [json_name = "claimId"];</code>
+     * @return The claimId.
+     */
+    @java.lang.Override
+    public java.lang.String getClaimId() {
+      java.lang.Object ref = claimId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        claimId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string claim_id = 2 [json_name = "claimId"];</code>
+     * @return The bytes for claimId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClaimIdBytes() {
+      java.lang.Object ref = claimId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        claimId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STATUS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object status_ = "";
+    /**
+     * <pre>
+     * ready | already_present | invalid | imported
+     * </pre>
+     *
+     * <code>string status = 3 [json_name = "status"];</code>
+     * @return The status.
+     */
+    @java.lang.Override
+    public java.lang.String getStatus() {
+      java.lang.Object ref = status_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        status_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ready | already_present | invalid | imported
+     * </pre>
+     *
+     * <code>string status = 3 [json_name = "status"];</code>
+     * @return The bytes for status.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStatusBytes() {
+      java.lang.Object ref = status_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        status_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DIAGNOSTICS_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList diagnostics_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string diagnostics = 4 [json_name = "diagnostics"];</code>
+     * @return A list containing the diagnostics.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getDiagnosticsList() {
+      return diagnostics_;
+    }
+    /**
+     * <code>repeated string diagnostics = 4 [json_name = "diagnostics"];</code>
+     * @return The count of diagnostics.
+     */
+    public int getDiagnosticsCount() {
+      return diagnostics_.size();
+    }
+    /**
+     * <code>repeated string diagnostics = 4 [json_name = "diagnostics"];</code>
+     * @param index The index of the element to return.
+     * @return The diagnostics at the given index.
+     */
+    public java.lang.String getDiagnostics(int index) {
+      return diagnostics_.get(index);
+    }
+    /**
+     * <code>repeated string diagnostics = 4 [json_name = "diagnostics"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the diagnostics at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getDiagnosticsBytes(int index) {
+      return diagnostics_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (index_ != 0) {
+        output.writeInt32(1, index_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(claimId_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, claimId_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(status_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 3, status_);
+      }
+      for (int i = 0; i < diagnostics_.size(); i++) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 4, diagnostics_.getRaw(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+    private int computeSerializedSize_0() {
+      int size = 0;
+      if (index_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, index_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(claimId_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, claimId_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(status_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(3, status_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < diagnostics_.size(); i++) {
+          dataSize += computeStringSizeNoTag(diagnostics_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getDiagnosticsList().size();
+      }
+      return size;
+    }
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += computeSerializedSize_0();
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult)) {
+        return super.equals(obj);
+      }
+      oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult other = (oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult) obj;
+
+      if (getIndex()
+          != other.getIndex()) return false;
+      if (!getClaimId()
+          .equals(other.getClaimId())) return false;
+      if (!getStatus()
+          .equals(other.getStatus())) return false;
+      if (!getDiagnosticsList()
+          .equals(other.getDiagnosticsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + INDEX_FIELD_NUMBER;
+      hash = (53 * hash) + getIndex();
+      hash = (37 * hash) + CLAIM_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClaimId().hashCode();
+      hash = (37 * hash) + STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + getStatus().hashCode();
+      if (getDiagnosticsCount() > 0) {
+        hash = (37 * hash) + DIAGNOSTICS_FIELD_NUMBER;
+        hash = (53 * hash) + getDiagnosticsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oscal.services.v1.ImportRecordResult}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oscal.services.v1.ImportRecordResult)
+        oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResultOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_ImportRecordResult_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_ImportRecordResult_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult.class, oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult.Builder.class);
+      }
+
+      // Construct using oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        index_ = 0;
+        claimId_ = "";
+        status_ = "";
+        diagnostics_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_ImportRecordResult_descriptor;
+      }
+
+      @java.lang.Override
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult getDefaultInstanceForType() {
+        return oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult build() {
+        oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult buildPartial() {
+        oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult result = new oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.index_ = index_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.claimId_ = claimId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.status_ = status_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          diagnostics_.makeImmutable();
+          result.diagnostics_ = diagnostics_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult) {
+          return mergeFrom((oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult other) {
+        if (other == oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult.getDefaultInstance()) return this;
+        if (other.getIndex() != 0) {
+          setIndex(other.getIndex());
+        }
+        if (!other.getClaimId().isEmpty()) {
+          claimId_ = other.claimId_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getStatus().isEmpty()) {
+          status_ = other.status_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.diagnostics_.isEmpty()) {
+          if (diagnostics_.isEmpty()) {
+            diagnostics_ = other.diagnostics_;
+            bitField0_ |= 0x00000008;
+          } else {
+            ensureDiagnosticsIsMutable();
+            diagnostics_.addAll(other.diagnostics_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                index_ = input.readInt32();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                claimId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                status_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                ensureDiagnosticsIsMutable();
+                diagnostics_.add(input.readStringRequireUtf8());
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int index_ ;
+      /**
+       * <code>int32 index = 1 [json_name = "index"];</code>
+       * @return The index.
+       */
+      @java.lang.Override
+      public int getIndex() {
+        return index_;
+      }
+      /**
+       * <code>int32 index = 1 [json_name = "index"];</code>
+       * @param value The index to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIndex(int value) {
+
+        index_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 index = 1 [json_name = "index"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIndex() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        index_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object claimId_ = "";
+      /**
+       * <code>string claim_id = 2 [json_name = "claimId"];</code>
+       * @return The claimId.
+       */
+      public java.lang.String getClaimId() {
+        java.lang.Object ref = claimId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          claimId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string claim_id = 2 [json_name = "claimId"];</code>
+       * @return The bytes for claimId.
+       */
+      public com.google.protobuf.ByteString
+          getClaimIdBytes() {
+        java.lang.Object ref = claimId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          claimId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string claim_id = 2 [json_name = "claimId"];</code>
+       * @param value The claimId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClaimId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        claimId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string claim_id = 2 [json_name = "claimId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClaimId() {
+        claimId_ = getDefaultInstance().getClaimId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string claim_id = 2 [json_name = "claimId"];</code>
+       * @param value The bytes for claimId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClaimIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        claimId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object status_ = "";
+      /**
+       * <pre>
+       * ready | already_present | invalid | imported
+       * </pre>
+       *
+       * <code>string status = 3 [json_name = "status"];</code>
+       * @return The status.
+       */
+      public java.lang.String getStatus() {
+        java.lang.Object ref = status_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          status_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ready | already_present | invalid | imported
+       * </pre>
+       *
+       * <code>string status = 3 [json_name = "status"];</code>
+       * @return The bytes for status.
+       */
+      public com.google.protobuf.ByteString
+          getStatusBytes() {
+        java.lang.Object ref = status_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          status_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ready | already_present | invalid | imported
+       * </pre>
+       *
+       * <code>string status = 3 [json_name = "status"];</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatus(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        status_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ready | already_present | invalid | imported
+       * </pre>
+       *
+       * <code>string status = 3 [json_name = "status"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStatus() {
+        status_ = getDefaultInstance().getStatus();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ready | already_present | invalid | imported
+       * </pre>
+       *
+       * <code>string status = 3 [json_name = "status"];</code>
+       * @param value The bytes for status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatusBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        status_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringArrayList diagnostics_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureDiagnosticsIsMutable() {
+        if (!diagnostics_.isModifiable()) {
+          diagnostics_ = new com.google.protobuf.LazyStringArrayList(diagnostics_);
+        }
+        bitField0_ |= 0x00000008;
+      }
+      /**
+       * <code>repeated string diagnostics = 4 [json_name = "diagnostics"];</code>
+       * @return A list containing the diagnostics.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getDiagnosticsList() {
+        diagnostics_.makeImmutable();
+        return diagnostics_;
+      }
+      /**
+       * <code>repeated string diagnostics = 4 [json_name = "diagnostics"];</code>
+       * @return The count of diagnostics.
+       */
+      public int getDiagnosticsCount() {
+        return diagnostics_.size();
+      }
+      /**
+       * <code>repeated string diagnostics = 4 [json_name = "diagnostics"];</code>
+       * @param index The index of the element to return.
+       * @return The diagnostics at the given index.
+       */
+      public java.lang.String getDiagnostics(int index) {
+        return diagnostics_.get(index);
+      }
+      /**
+       * <code>repeated string diagnostics = 4 [json_name = "diagnostics"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the diagnostics at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getDiagnosticsBytes(int index) {
+        return diagnostics_.getByteString(index);
+      }
+      /**
+       * <code>repeated string diagnostics = 4 [json_name = "diagnostics"];</code>
+       * @param index The index to set the value at.
+       * @param value The diagnostics to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDiagnostics(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureDiagnosticsIsMutable();
+        diagnostics_.set(index, value);
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string diagnostics = 4 [json_name = "diagnostics"];</code>
+       * @param value The diagnostics to add.
+       * @return This builder for chaining.
+       */
+      public Builder addDiagnostics(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureDiagnosticsIsMutable();
+        diagnostics_.add(value);
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string diagnostics = 4 [json_name = "diagnostics"];</code>
+       * @param values The diagnostics to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllDiagnostics(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureDiagnosticsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, diagnostics_);
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string diagnostics = 4 [json_name = "diagnostics"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDiagnostics() {
+        diagnostics_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000008);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string diagnostics = 4 [json_name = "diagnostics"];</code>
+       * @param value The bytes of the diagnostics to add.
+       * @return This builder for chaining.
+       */
+      public Builder addDiagnosticsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureDiagnosticsIsMutable();
+        diagnostics_.add(value);
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:oscal.services.v1.ImportRecordResult)
+    }
+
+    // @@protoc_insertion_point(class_scope:oscal.services.v1.ImportRecordResult)
+    private static final oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult();
+    }
+
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ImportRecordResult>
+        PARSER = new com.google.protobuf.AbstractParser<ImportRecordResult>() {
+      @java.lang.Override
+      public ImportRecordResult parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ImportRecordResult> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ImportRecordResult> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PreflightImportRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oscal.services.v1.PreflightImportRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .oscal.services.v1.ImportRecord records = 1 [json_name = "records"];</code>
+     */
+    java.util.List<oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord>
+        getRecordsList();
+    /**
+     * <code>repeated .oscal.services.v1.ImportRecord records = 1 [json_name = "records"];</code>
+     */
+    oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord getRecords(int index);
+    /**
+     * <code>repeated .oscal.services.v1.ImportRecord records = 1 [json_name = "records"];</code>
+     */
+    int getRecordsCount();
+    /**
+     * <code>repeated .oscal.services.v1.ImportRecord records = 1 [json_name = "records"];</code>
+     */
+    java.util.List<? extends oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordOrBuilder>
+        getRecordsOrBuilderList();
+    /**
+     * <code>repeated .oscal.services.v1.ImportRecord records = 1 [json_name = "records"];</code>
+     */
+    oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordOrBuilder getRecordsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code oscal.services.v1.PreflightImportRequest}
+   */
+  public static final class PreflightImportRequest extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:oscal.services.v1.PreflightImportRequest)
+      PreflightImportRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 35,
+        /* patch= */ 1,
+        /* suffix= */ "",
+        "PreflightImportRequest");
+    }
+    // Use PreflightImportRequest.newBuilder() to construct.
+    private PreflightImportRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private PreflightImportRequest() {
+      records_ = java.util.Collections.emptyList();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_PreflightImportRequest_descriptor;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+      return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_PreflightImportRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_PreflightImportRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportRequest.class, oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportRequest.Builder.class);
+    }
+
+    public static final int RECORDS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord> records_;
+    /**
+     * <code>repeated .oscal.services.v1.ImportRecord records = 1 [json_name = "records"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord> getRecordsList() {
+      return records_;
+    }
+    /**
+     * <code>repeated .oscal.services.v1.ImportRecord records = 1 [json_name = "records"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordOrBuilder>
+        getRecordsOrBuilderList() {
+      return records_;
+    }
+    /**
+     * <code>repeated .oscal.services.v1.ImportRecord records = 1 [json_name = "records"];</code>
+     */
+    @java.lang.Override
+    public int getRecordsCount() {
+      return records_.size();
+    }
+    /**
+     * <code>repeated .oscal.services.v1.ImportRecord records = 1 [json_name = "records"];</code>
+     */
+    @java.lang.Override
+    public oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord getRecords(int index) {
+      return records_.get(index);
+    }
+    /**
+     * <code>repeated .oscal.services.v1.ImportRecord records = 1 [json_name = "records"];</code>
+     */
+    @java.lang.Override
+    public oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordOrBuilder getRecordsOrBuilder(
+        int index) {
+      return records_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < records_.size(); i++) {
+        output.writeMessage(1, records_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+    private int computeSerializedSize_0() {
+      int size = 0;
+
+          {
+            final int count = records_.size();
+            for (int i = 0; i < count; i++) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeMessageSizeNoTag(records_.get(i));
+            }
+            size += 1 * count;
+          }
+      return size;
+    }
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += computeSerializedSize_0();
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportRequest)) {
+        return super.equals(obj);
+      }
+      oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportRequest other = (oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportRequest) obj;
+
+      if (!getRecordsList()
+          .equals(other.getRecordsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getRecordsCount() > 0) {
+        hash = (37 * hash) + RECORDS_FIELD_NUMBER;
+        hash = (53 * hash) + getRecordsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oscal.services.v1.PreflightImportRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oscal.services.v1.PreflightImportRequest)
+        oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_PreflightImportRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_PreflightImportRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportRequest.class, oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportRequest.Builder.class);
+      }
+
+      // Construct using oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (recordsBuilder_ == null) {
+          records_ = java.util.Collections.emptyList();
+        } else {
+          records_ = null;
+          recordsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_PreflightImportRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportRequest getDefaultInstanceForType() {
+        return oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportRequest build() {
+        oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportRequest buildPartial() {
+        oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportRequest result = new oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportRequest(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportRequest result) {
+        if (recordsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            records_ = java.util.Collections.unmodifiableList(records_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.records_ = records_;
+        } else {
+          result.records_ = recordsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportRequest result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportRequest) {
+          return mergeFrom((oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportRequest other) {
+        if (other == oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportRequest.getDefaultInstance()) return this;
+        if (recordsBuilder_ == null) {
+          if (!other.records_.isEmpty()) {
+            if (records_.isEmpty()) {
+              records_ = other.records_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureRecordsIsMutable();
+              records_.addAll(other.records_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.records_.isEmpty()) {
+            if (recordsBuilder_.isEmpty()) {
+              recordsBuilder_.dispose();
+              recordsBuilder_ = null;
+              records_ = other.records_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              recordsBuilder_ =
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   internalGetRecordsFieldBuilder() : null;
+            } else {
+              recordsBuilder_.addAllMessages(other.records_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord m =
+                    input.readMessage(
+                        oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord.parser(),
+                        extensionRegistry);
+                if (recordsBuilder_ == null) {
+                  ensureRecordsIsMutable();
+                  records_.add(m);
+                } else {
+                  recordsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord> records_ =
+        java.util.Collections.emptyList();
+      private void ensureRecordsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          records_ = new java.util.ArrayList<oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord>(records_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord, oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordOrBuilder> recordsBuilder_;
+
+      /**
+       * <code>repeated .oscal.services.v1.ImportRecord records = 1 [json_name = "records"];</code>
+       */
+      public java.util.List<oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord> getRecordsList() {
+        if (recordsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(records_);
+        } else {
+          return recordsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportRecord records = 1 [json_name = "records"];</code>
+       */
+      public int getRecordsCount() {
+        if (recordsBuilder_ == null) {
+          return records_.size();
+        } else {
+          return recordsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportRecord records = 1 [json_name = "records"];</code>
+       */
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord getRecords(int index) {
+        if (recordsBuilder_ == null) {
+          return records_.get(index);
+        } else {
+          return recordsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportRecord records = 1 [json_name = "records"];</code>
+       */
+      public Builder setRecords(
+          int index, oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord value) {
+        if (recordsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRecordsIsMutable();
+          records_.set(index, value);
+          onChanged();
+        } else {
+          recordsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportRecord records = 1 [json_name = "records"];</code>
+       */
+      public Builder setRecords(
+          int index, oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord.Builder builderForValue) {
+        if (recordsBuilder_ == null) {
+          ensureRecordsIsMutable();
+          records_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          recordsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportRecord records = 1 [json_name = "records"];</code>
+       */
+      public Builder addRecords(oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord value) {
+        if (recordsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRecordsIsMutable();
+          records_.add(value);
+          onChanged();
+        } else {
+          recordsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportRecord records = 1 [json_name = "records"];</code>
+       */
+      public Builder addRecords(
+          int index, oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord value) {
+        if (recordsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRecordsIsMutable();
+          records_.add(index, value);
+          onChanged();
+        } else {
+          recordsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportRecord records = 1 [json_name = "records"];</code>
+       */
+      public Builder addRecords(
+          oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord.Builder builderForValue) {
+        if (recordsBuilder_ == null) {
+          ensureRecordsIsMutable();
+          records_.add(builderForValue.build());
+          onChanged();
+        } else {
+          recordsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportRecord records = 1 [json_name = "records"];</code>
+       */
+      public Builder addRecords(
+          int index, oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord.Builder builderForValue) {
+        if (recordsBuilder_ == null) {
+          ensureRecordsIsMutable();
+          records_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          recordsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportRecord records = 1 [json_name = "records"];</code>
+       */
+      public Builder addAllRecords(
+          java.lang.Iterable<? extends oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord> values) {
+        if (recordsBuilder_ == null) {
+          ensureRecordsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, records_);
+          onChanged();
+        } else {
+          recordsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportRecord records = 1 [json_name = "records"];</code>
+       */
+      public Builder clearRecords() {
+        if (recordsBuilder_ == null) {
+          records_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          recordsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportRecord records = 1 [json_name = "records"];</code>
+       */
+      public Builder removeRecords(int index) {
+        if (recordsBuilder_ == null) {
+          ensureRecordsIsMutable();
+          records_.remove(index);
+          onChanged();
+        } else {
+          recordsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportRecord records = 1 [json_name = "records"];</code>
+       */
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord.Builder getRecordsBuilder(
+          int index) {
+        return internalGetRecordsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportRecord records = 1 [json_name = "records"];</code>
+       */
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordOrBuilder getRecordsOrBuilder(
+          int index) {
+        if (recordsBuilder_ == null) {
+          return records_.get(index);  } else {
+          return recordsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportRecord records = 1 [json_name = "records"];</code>
+       */
+      public java.util.List<? extends oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordOrBuilder>
+           getRecordsOrBuilderList() {
+        if (recordsBuilder_ != null) {
+          return recordsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(records_);
+        }
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportRecord records = 1 [json_name = "records"];</code>
+       */
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord.Builder addRecordsBuilder() {
+        return internalGetRecordsFieldBuilder().addBuilder(
+            oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportRecord records = 1 [json_name = "records"];</code>
+       */
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord.Builder addRecordsBuilder(
+          int index) {
+        return internalGetRecordsFieldBuilder().addBuilder(
+            index, oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportRecord records = 1 [json_name = "records"];</code>
+       */
+      public java.util.List<oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord.Builder>
+           getRecordsBuilderList() {
+        return internalGetRecordsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord, oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordOrBuilder>
+          internalGetRecordsFieldBuilder() {
+        if (recordsBuilder_ == null) {
+          recordsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord, oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordOrBuilder>(
+                  records_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          records_ = null;
+        }
+        return recordsBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:oscal.services.v1.PreflightImportRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:oscal.services.v1.PreflightImportRequest)
+    private static final oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportRequest();
+    }
+
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PreflightImportRequest>
+        PARSER = new com.google.protobuf.AbstractParser<PreflightImportRequest>() {
+      @java.lang.Override
+      public PreflightImportRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<PreflightImportRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PreflightImportRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PreflightImportResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oscal.services.v1.PreflightImportResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bool valid = 1 [json_name = "valid"];</code>
+     * @return The valid.
+     */
+    boolean getValid();
+
+    /**
+     * <code>repeated .oscal.services.v1.ImportRecordResult results = 2 [json_name = "results"];</code>
+     */
+    java.util.List<oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult>
+        getResultsList();
+    /**
+     * <code>repeated .oscal.services.v1.ImportRecordResult results = 2 [json_name = "results"];</code>
+     */
+    oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult getResults(int index);
+    /**
+     * <code>repeated .oscal.services.v1.ImportRecordResult results = 2 [json_name = "results"];</code>
+     */
+    int getResultsCount();
+    /**
+     * <code>repeated .oscal.services.v1.ImportRecordResult results = 2 [json_name = "results"];</code>
+     */
+    java.util.List<? extends oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResultOrBuilder>
+        getResultsOrBuilderList();
+    /**
+     * <code>repeated .oscal.services.v1.ImportRecordResult results = 2 [json_name = "results"];</code>
+     */
+    oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResultOrBuilder getResultsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code oscal.services.v1.PreflightImportResponse}
+   */
+  public static final class PreflightImportResponse extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:oscal.services.v1.PreflightImportResponse)
+      PreflightImportResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 35,
+        /* patch= */ 1,
+        /* suffix= */ "",
+        "PreflightImportResponse");
+    }
+    // Use PreflightImportResponse.newBuilder() to construct.
+    private PreflightImportResponse(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private PreflightImportResponse() {
+      results_ = java.util.Collections.emptyList();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_PreflightImportResponse_descriptor;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+      return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_PreflightImportResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_PreflightImportResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportResponse.class, oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportResponse.Builder.class);
+    }
+
+    public static final int VALID_FIELD_NUMBER = 1;
+    private boolean valid_ = false;
+    /**
+     * <code>bool valid = 1 [json_name = "valid"];</code>
+     * @return The valid.
+     */
+    @java.lang.Override
+    public boolean getValid() {
+      return valid_;
+    }
+
+    public static final int RESULTS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult> results_;
+    /**
+     * <code>repeated .oscal.services.v1.ImportRecordResult results = 2 [json_name = "results"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult> getResultsList() {
+      return results_;
+    }
+    /**
+     * <code>repeated .oscal.services.v1.ImportRecordResult results = 2 [json_name = "results"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResultOrBuilder>
+        getResultsOrBuilderList() {
+      return results_;
+    }
+    /**
+     * <code>repeated .oscal.services.v1.ImportRecordResult results = 2 [json_name = "results"];</code>
+     */
+    @java.lang.Override
+    public int getResultsCount() {
+      return results_.size();
+    }
+    /**
+     * <code>repeated .oscal.services.v1.ImportRecordResult results = 2 [json_name = "results"];</code>
+     */
+    @java.lang.Override
+    public oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult getResults(int index) {
+      return results_.get(index);
+    }
+    /**
+     * <code>repeated .oscal.services.v1.ImportRecordResult results = 2 [json_name = "results"];</code>
+     */
+    @java.lang.Override
+    public oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResultOrBuilder getResultsOrBuilder(
+        int index) {
+      return results_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (valid_ != false) {
+        output.writeBool(1, valid_);
+      }
+      for (int i = 0; i < results_.size(); i++) {
+        output.writeMessage(2, results_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+    private int computeSerializedSize_0() {
+      int size = 0;
+      if (valid_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, valid_);
+      }
+
+          {
+            final int count = results_.size();
+            for (int i = 0; i < count; i++) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeMessageSizeNoTag(results_.get(i));
+            }
+            size += 1 * count;
+          }
+      return size;
+    }
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += computeSerializedSize_0();
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportResponse)) {
+        return super.equals(obj);
+      }
+      oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportResponse other = (oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportResponse) obj;
+
+      if (getValid()
+          != other.getValid()) return false;
+      if (!getResultsList()
+          .equals(other.getResultsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + VALID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getValid());
+      if (getResultsCount() > 0) {
+        hash = (37 * hash) + RESULTS_FIELD_NUMBER;
+        hash = (53 * hash) + getResultsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oscal.services.v1.PreflightImportResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oscal.services.v1.PreflightImportResponse)
+        oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_PreflightImportResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_PreflightImportResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportResponse.class, oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportResponse.Builder.class);
+      }
+
+      // Construct using oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        valid_ = false;
+        if (resultsBuilder_ == null) {
+          results_ = java.util.Collections.emptyList();
+        } else {
+          results_ = null;
+          resultsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_PreflightImportResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportResponse getDefaultInstanceForType() {
+        return oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportResponse build() {
+        oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportResponse buildPartial() {
+        oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportResponse result = new oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportResponse result) {
+        if (resultsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            results_ = java.util.Collections.unmodifiableList(results_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.results_ = results_;
+        } else {
+          result.results_ = resultsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.valid_ = valid_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportResponse) {
+          return mergeFrom((oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportResponse other) {
+        if (other == oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportResponse.getDefaultInstance()) return this;
+        if (other.getValid() != false) {
+          setValid(other.getValid());
+        }
+        if (resultsBuilder_ == null) {
+          if (!other.results_.isEmpty()) {
+            if (results_.isEmpty()) {
+              results_ = other.results_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureResultsIsMutable();
+              results_.addAll(other.results_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.results_.isEmpty()) {
+            if (resultsBuilder_.isEmpty()) {
+              resultsBuilder_.dispose();
+              resultsBuilder_ = null;
+              results_ = other.results_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              resultsBuilder_ =
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   internalGetResultsFieldBuilder() : null;
+            } else {
+              resultsBuilder_.addAllMessages(other.results_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                valid_ = input.readBool();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult m =
+                    input.readMessage(
+                        oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult.parser(),
+                        extensionRegistry);
+                if (resultsBuilder_ == null) {
+                  ensureResultsIsMutable();
+                  results_.add(m);
+                } else {
+                  resultsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private boolean valid_ ;
+      /**
+       * <code>bool valid = 1 [json_name = "valid"];</code>
+       * @return The valid.
+       */
+      @java.lang.Override
+      public boolean getValid() {
+        return valid_;
+      }
+      /**
+       * <code>bool valid = 1 [json_name = "valid"];</code>
+       * @param value The valid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValid(boolean value) {
+
+        valid_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool valid = 1 [json_name = "valid"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValid() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        valid_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult> results_ =
+        java.util.Collections.emptyList();
+      private void ensureResultsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          results_ = new java.util.ArrayList<oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult>(results_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult, oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResultOrBuilder> resultsBuilder_;
+
+      /**
+       * <code>repeated .oscal.services.v1.ImportRecordResult results = 2 [json_name = "results"];</code>
+       */
+      public java.util.List<oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult> getResultsList() {
+        if (resultsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(results_);
+        } else {
+          return resultsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportRecordResult results = 2 [json_name = "results"];</code>
+       */
+      public int getResultsCount() {
+        if (resultsBuilder_ == null) {
+          return results_.size();
+        } else {
+          return resultsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportRecordResult results = 2 [json_name = "results"];</code>
+       */
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult getResults(int index) {
+        if (resultsBuilder_ == null) {
+          return results_.get(index);
+        } else {
+          return resultsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportRecordResult results = 2 [json_name = "results"];</code>
+       */
+      public Builder setResults(
+          int index, oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult value) {
+        if (resultsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureResultsIsMutable();
+          results_.set(index, value);
+          onChanged();
+        } else {
+          resultsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportRecordResult results = 2 [json_name = "results"];</code>
+       */
+      public Builder setResults(
+          int index, oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult.Builder builderForValue) {
+        if (resultsBuilder_ == null) {
+          ensureResultsIsMutable();
+          results_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          resultsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportRecordResult results = 2 [json_name = "results"];</code>
+       */
+      public Builder addResults(oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult value) {
+        if (resultsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureResultsIsMutable();
+          results_.add(value);
+          onChanged();
+        } else {
+          resultsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportRecordResult results = 2 [json_name = "results"];</code>
+       */
+      public Builder addResults(
+          int index, oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult value) {
+        if (resultsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureResultsIsMutable();
+          results_.add(index, value);
+          onChanged();
+        } else {
+          resultsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportRecordResult results = 2 [json_name = "results"];</code>
+       */
+      public Builder addResults(
+          oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult.Builder builderForValue) {
+        if (resultsBuilder_ == null) {
+          ensureResultsIsMutable();
+          results_.add(builderForValue.build());
+          onChanged();
+        } else {
+          resultsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportRecordResult results = 2 [json_name = "results"];</code>
+       */
+      public Builder addResults(
+          int index, oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult.Builder builderForValue) {
+        if (resultsBuilder_ == null) {
+          ensureResultsIsMutable();
+          results_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          resultsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportRecordResult results = 2 [json_name = "results"];</code>
+       */
+      public Builder addAllResults(
+          java.lang.Iterable<? extends oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult> values) {
+        if (resultsBuilder_ == null) {
+          ensureResultsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, results_);
+          onChanged();
+        } else {
+          resultsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportRecordResult results = 2 [json_name = "results"];</code>
+       */
+      public Builder clearResults() {
+        if (resultsBuilder_ == null) {
+          results_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          resultsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportRecordResult results = 2 [json_name = "results"];</code>
+       */
+      public Builder removeResults(int index) {
+        if (resultsBuilder_ == null) {
+          ensureResultsIsMutable();
+          results_.remove(index);
+          onChanged();
+        } else {
+          resultsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportRecordResult results = 2 [json_name = "results"];</code>
+       */
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult.Builder getResultsBuilder(
+          int index) {
+        return internalGetResultsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportRecordResult results = 2 [json_name = "results"];</code>
+       */
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResultOrBuilder getResultsOrBuilder(
+          int index) {
+        if (resultsBuilder_ == null) {
+          return results_.get(index);  } else {
+          return resultsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportRecordResult results = 2 [json_name = "results"];</code>
+       */
+      public java.util.List<? extends oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResultOrBuilder>
+           getResultsOrBuilderList() {
+        if (resultsBuilder_ != null) {
+          return resultsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(results_);
+        }
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportRecordResult results = 2 [json_name = "results"];</code>
+       */
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult.Builder addResultsBuilder() {
+        return internalGetResultsFieldBuilder().addBuilder(
+            oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportRecordResult results = 2 [json_name = "results"];</code>
+       */
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult.Builder addResultsBuilder(
+          int index) {
+        return internalGetResultsFieldBuilder().addBuilder(
+            index, oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportRecordResult results = 2 [json_name = "results"];</code>
+       */
+      public java.util.List<oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult.Builder>
+           getResultsBuilderList() {
+        return internalGetResultsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult, oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResultOrBuilder>
+          internalGetResultsFieldBuilder() {
+        if (resultsBuilder_ == null) {
+          resultsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult, oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResultOrBuilder>(
+                  results_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          results_ = null;
+        }
+        return resultsBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:oscal.services.v1.PreflightImportResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:oscal.services.v1.PreflightImportResponse)
+    private static final oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportResponse();
+    }
+
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PreflightImportResponse>
+        PARSER = new com.google.protobuf.AbstractParser<PreflightImportResponse>() {
+      @java.lang.Override
+      public PreflightImportResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<PreflightImportResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PreflightImportResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public oscal.services.v1.TransparencyExchangeServiceOuterClass.PreflightImportResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ImportBatchRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oscal.services.v1.ImportBatchRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .oscal.services.v1.ImportRecord records = 1 [json_name = "records"];</code>
+     */
+    java.util.List<oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord>
+        getRecordsList();
+    /**
+     * <code>repeated .oscal.services.v1.ImportRecord records = 1 [json_name = "records"];</code>
+     */
+    oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord getRecords(int index);
+    /**
+     * <code>repeated .oscal.services.v1.ImportRecord records = 1 [json_name = "records"];</code>
+     */
+    int getRecordsCount();
+    /**
+     * <code>repeated .oscal.services.v1.ImportRecord records = 1 [json_name = "records"];</code>
+     */
+    java.util.List<? extends oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordOrBuilder>
+        getRecordsOrBuilderList();
+    /**
+     * <code>repeated .oscal.services.v1.ImportRecord records = 1 [json_name = "records"];</code>
+     */
+    oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordOrBuilder getRecordsOrBuilder(
+        int index);
+
+    /**
+     * <code>bool all_or_nothing = 2 [json_name = "allOrNothing"];</code>
+     * @return The allOrNothing.
+     */
+    boolean getAllOrNothing();
+  }
+  /**
+   * Protobuf type {@code oscal.services.v1.ImportBatchRequest}
+   */
+  public static final class ImportBatchRequest extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:oscal.services.v1.ImportBatchRequest)
+      ImportBatchRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 35,
+        /* patch= */ 1,
+        /* suffix= */ "",
+        "ImportBatchRequest");
+    }
+    // Use ImportBatchRequest.newBuilder() to construct.
+    private ImportBatchRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private ImportBatchRequest() {
+      records_ = java.util.Collections.emptyList();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_ImportBatchRequest_descriptor;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+      return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_ImportBatchRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_ImportBatchRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchRequest.class, oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchRequest.Builder.class);
+    }
+
+    public static final int RECORDS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord> records_;
+    /**
+     * <code>repeated .oscal.services.v1.ImportRecord records = 1 [json_name = "records"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord> getRecordsList() {
+      return records_;
+    }
+    /**
+     * <code>repeated .oscal.services.v1.ImportRecord records = 1 [json_name = "records"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordOrBuilder>
+        getRecordsOrBuilderList() {
+      return records_;
+    }
+    /**
+     * <code>repeated .oscal.services.v1.ImportRecord records = 1 [json_name = "records"];</code>
+     */
+    @java.lang.Override
+    public int getRecordsCount() {
+      return records_.size();
+    }
+    /**
+     * <code>repeated .oscal.services.v1.ImportRecord records = 1 [json_name = "records"];</code>
+     */
+    @java.lang.Override
+    public oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord getRecords(int index) {
+      return records_.get(index);
+    }
+    /**
+     * <code>repeated .oscal.services.v1.ImportRecord records = 1 [json_name = "records"];</code>
+     */
+    @java.lang.Override
+    public oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordOrBuilder getRecordsOrBuilder(
+        int index) {
+      return records_.get(index);
+    }
+
+    public static final int ALL_OR_NOTHING_FIELD_NUMBER = 2;
+    private boolean allOrNothing_ = false;
+    /**
+     * <code>bool all_or_nothing = 2 [json_name = "allOrNothing"];</code>
+     * @return The allOrNothing.
+     */
+    @java.lang.Override
+    public boolean getAllOrNothing() {
+      return allOrNothing_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < records_.size(); i++) {
+        output.writeMessage(1, records_.get(i));
+      }
+      if (allOrNothing_ != false) {
+        output.writeBool(2, allOrNothing_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+    private int computeSerializedSize_0() {
+      int size = 0;
+
+          {
+            final int count = records_.size();
+            for (int i = 0; i < count; i++) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeMessageSizeNoTag(records_.get(i));
+            }
+            size += 1 * count;
+          }
+      if (allOrNothing_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, allOrNothing_);
+      }
+      return size;
+    }
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += computeSerializedSize_0();
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchRequest)) {
+        return super.equals(obj);
+      }
+      oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchRequest other = (oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchRequest) obj;
+
+      if (!getRecordsList()
+          .equals(other.getRecordsList())) return false;
+      if (getAllOrNothing()
+          != other.getAllOrNothing()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getRecordsCount() > 0) {
+        hash = (37 * hash) + RECORDS_FIELD_NUMBER;
+        hash = (53 * hash) + getRecordsList().hashCode();
+      }
+      hash = (37 * hash) + ALL_OR_NOTHING_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getAllOrNothing());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oscal.services.v1.ImportBatchRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oscal.services.v1.ImportBatchRequest)
+        oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_ImportBatchRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_ImportBatchRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchRequest.class, oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchRequest.Builder.class);
+      }
+
+      // Construct using oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (recordsBuilder_ == null) {
+          records_ = java.util.Collections.emptyList();
+        } else {
+          records_ = null;
+          recordsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        allOrNothing_ = false;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_ImportBatchRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchRequest getDefaultInstanceForType() {
+        return oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchRequest build() {
+        oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchRequest buildPartial() {
+        oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchRequest result = new oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchRequest(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchRequest result) {
+        if (recordsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            records_ = java.util.Collections.unmodifiableList(records_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.records_ = records_;
+        } else {
+          result.records_ = recordsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.allOrNothing_ = allOrNothing_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchRequest) {
+          return mergeFrom((oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchRequest other) {
+        if (other == oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchRequest.getDefaultInstance()) return this;
+        if (recordsBuilder_ == null) {
+          if (!other.records_.isEmpty()) {
+            if (records_.isEmpty()) {
+              records_ = other.records_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureRecordsIsMutable();
+              records_.addAll(other.records_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.records_.isEmpty()) {
+            if (recordsBuilder_.isEmpty()) {
+              recordsBuilder_.dispose();
+              recordsBuilder_ = null;
+              records_ = other.records_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              recordsBuilder_ =
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   internalGetRecordsFieldBuilder() : null;
+            } else {
+              recordsBuilder_.addAllMessages(other.records_);
+            }
+          }
+        }
+        if (other.getAllOrNothing() != false) {
+          setAllOrNothing(other.getAllOrNothing());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord m =
+                    input.readMessage(
+                        oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord.parser(),
+                        extensionRegistry);
+                if (recordsBuilder_ == null) {
+                  ensureRecordsIsMutable();
+                  records_.add(m);
+                } else {
+                  recordsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 16: {
+                allOrNothing_ = input.readBool();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord> records_ =
+        java.util.Collections.emptyList();
+      private void ensureRecordsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          records_ = new java.util.ArrayList<oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord>(records_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord, oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordOrBuilder> recordsBuilder_;
+
+      /**
+       * <code>repeated .oscal.services.v1.ImportRecord records = 1 [json_name = "records"];</code>
+       */
+      public java.util.List<oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord> getRecordsList() {
+        if (recordsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(records_);
+        } else {
+          return recordsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportRecord records = 1 [json_name = "records"];</code>
+       */
+      public int getRecordsCount() {
+        if (recordsBuilder_ == null) {
+          return records_.size();
+        } else {
+          return recordsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportRecord records = 1 [json_name = "records"];</code>
+       */
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord getRecords(int index) {
+        if (recordsBuilder_ == null) {
+          return records_.get(index);
+        } else {
+          return recordsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportRecord records = 1 [json_name = "records"];</code>
+       */
+      public Builder setRecords(
+          int index, oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord value) {
+        if (recordsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRecordsIsMutable();
+          records_.set(index, value);
+          onChanged();
+        } else {
+          recordsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportRecord records = 1 [json_name = "records"];</code>
+       */
+      public Builder setRecords(
+          int index, oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord.Builder builderForValue) {
+        if (recordsBuilder_ == null) {
+          ensureRecordsIsMutable();
+          records_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          recordsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportRecord records = 1 [json_name = "records"];</code>
+       */
+      public Builder addRecords(oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord value) {
+        if (recordsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRecordsIsMutable();
+          records_.add(value);
+          onChanged();
+        } else {
+          recordsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportRecord records = 1 [json_name = "records"];</code>
+       */
+      public Builder addRecords(
+          int index, oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord value) {
+        if (recordsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRecordsIsMutable();
+          records_.add(index, value);
+          onChanged();
+        } else {
+          recordsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportRecord records = 1 [json_name = "records"];</code>
+       */
+      public Builder addRecords(
+          oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord.Builder builderForValue) {
+        if (recordsBuilder_ == null) {
+          ensureRecordsIsMutable();
+          records_.add(builderForValue.build());
+          onChanged();
+        } else {
+          recordsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportRecord records = 1 [json_name = "records"];</code>
+       */
+      public Builder addRecords(
+          int index, oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord.Builder builderForValue) {
+        if (recordsBuilder_ == null) {
+          ensureRecordsIsMutable();
+          records_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          recordsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportRecord records = 1 [json_name = "records"];</code>
+       */
+      public Builder addAllRecords(
+          java.lang.Iterable<? extends oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord> values) {
+        if (recordsBuilder_ == null) {
+          ensureRecordsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, records_);
+          onChanged();
+        } else {
+          recordsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportRecord records = 1 [json_name = "records"];</code>
+       */
+      public Builder clearRecords() {
+        if (recordsBuilder_ == null) {
+          records_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          recordsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportRecord records = 1 [json_name = "records"];</code>
+       */
+      public Builder removeRecords(int index) {
+        if (recordsBuilder_ == null) {
+          ensureRecordsIsMutable();
+          records_.remove(index);
+          onChanged();
+        } else {
+          recordsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportRecord records = 1 [json_name = "records"];</code>
+       */
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord.Builder getRecordsBuilder(
+          int index) {
+        return internalGetRecordsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportRecord records = 1 [json_name = "records"];</code>
+       */
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordOrBuilder getRecordsOrBuilder(
+          int index) {
+        if (recordsBuilder_ == null) {
+          return records_.get(index);  } else {
+          return recordsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportRecord records = 1 [json_name = "records"];</code>
+       */
+      public java.util.List<? extends oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordOrBuilder>
+           getRecordsOrBuilderList() {
+        if (recordsBuilder_ != null) {
+          return recordsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(records_);
+        }
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportRecord records = 1 [json_name = "records"];</code>
+       */
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord.Builder addRecordsBuilder() {
+        return internalGetRecordsFieldBuilder().addBuilder(
+            oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportRecord records = 1 [json_name = "records"];</code>
+       */
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord.Builder addRecordsBuilder(
+          int index) {
+        return internalGetRecordsFieldBuilder().addBuilder(
+            index, oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportRecord records = 1 [json_name = "records"];</code>
+       */
+      public java.util.List<oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord.Builder>
+           getRecordsBuilderList() {
+        return internalGetRecordsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord, oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordOrBuilder>
+          internalGetRecordsFieldBuilder() {
+        if (recordsBuilder_ == null) {
+          recordsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord, oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecord.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordOrBuilder>(
+                  records_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          records_ = null;
+        }
+        return recordsBuilder_;
+      }
+
+      private boolean allOrNothing_ ;
+      /**
+       * <code>bool all_or_nothing = 2 [json_name = "allOrNothing"];</code>
+       * @return The allOrNothing.
+       */
+      @java.lang.Override
+      public boolean getAllOrNothing() {
+        return allOrNothing_;
+      }
+      /**
+       * <code>bool all_or_nothing = 2 [json_name = "allOrNothing"];</code>
+       * @param value The allOrNothing to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAllOrNothing(boolean value) {
+
+        allOrNothing_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool all_or_nothing = 2 [json_name = "allOrNothing"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAllOrNothing() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        allOrNothing_ = false;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:oscal.services.v1.ImportBatchRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:oscal.services.v1.ImportBatchRequest)
+    private static final oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchRequest();
+    }
+
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ImportBatchRequest>
+        PARSER = new com.google.protobuf.AbstractParser<ImportBatchRequest>() {
+      @java.lang.Override
+      public ImportBatchRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ImportBatchRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ImportBatchRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ImportBatchResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oscal.services.v1.ImportBatchResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bool committed = 1 [json_name = "committed"];</code>
+     * @return The committed.
+     */
+    boolean getCommitted();
+
+    /**
+     * <code>repeated .oscal.services.v1.ImportRecordResult results = 2 [json_name = "results"];</code>
+     */
+    java.util.List<oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult>
+        getResultsList();
+    /**
+     * <code>repeated .oscal.services.v1.ImportRecordResult results = 2 [json_name = "results"];</code>
+     */
+    oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult getResults(int index);
+    /**
+     * <code>repeated .oscal.services.v1.ImportRecordResult results = 2 [json_name = "results"];</code>
+     */
+    int getResultsCount();
+    /**
+     * <code>repeated .oscal.services.v1.ImportRecordResult results = 2 [json_name = "results"];</code>
+     */
+    java.util.List<? extends oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResultOrBuilder>
+        getResultsOrBuilderList();
+    /**
+     * <code>repeated .oscal.services.v1.ImportRecordResult results = 2 [json_name = "results"];</code>
+     */
+    oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResultOrBuilder getResultsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code oscal.services.v1.ImportBatchResponse}
+   */
+  public static final class ImportBatchResponse extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:oscal.services.v1.ImportBatchResponse)
+      ImportBatchResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 35,
+        /* patch= */ 1,
+        /* suffix= */ "",
+        "ImportBatchResponse");
+    }
+    // Use ImportBatchResponse.newBuilder() to construct.
+    private ImportBatchResponse(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private ImportBatchResponse() {
+      results_ = java.util.Collections.emptyList();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_ImportBatchResponse_descriptor;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+      return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_ImportBatchResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_ImportBatchResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchResponse.class, oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchResponse.Builder.class);
+    }
+
+    public static final int COMMITTED_FIELD_NUMBER = 1;
+    private boolean committed_ = false;
+    /**
+     * <code>bool committed = 1 [json_name = "committed"];</code>
+     * @return The committed.
+     */
+    @java.lang.Override
+    public boolean getCommitted() {
+      return committed_;
+    }
+
+    public static final int RESULTS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult> results_;
+    /**
+     * <code>repeated .oscal.services.v1.ImportRecordResult results = 2 [json_name = "results"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult> getResultsList() {
+      return results_;
+    }
+    /**
+     * <code>repeated .oscal.services.v1.ImportRecordResult results = 2 [json_name = "results"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResultOrBuilder>
+        getResultsOrBuilderList() {
+      return results_;
+    }
+    /**
+     * <code>repeated .oscal.services.v1.ImportRecordResult results = 2 [json_name = "results"];</code>
+     */
+    @java.lang.Override
+    public int getResultsCount() {
+      return results_.size();
+    }
+    /**
+     * <code>repeated .oscal.services.v1.ImportRecordResult results = 2 [json_name = "results"];</code>
+     */
+    @java.lang.Override
+    public oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult getResults(int index) {
+      return results_.get(index);
+    }
+    /**
+     * <code>repeated .oscal.services.v1.ImportRecordResult results = 2 [json_name = "results"];</code>
+     */
+    @java.lang.Override
+    public oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResultOrBuilder getResultsOrBuilder(
+        int index) {
+      return results_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (committed_ != false) {
+        output.writeBool(1, committed_);
+      }
+      for (int i = 0; i < results_.size(); i++) {
+        output.writeMessage(2, results_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+    private int computeSerializedSize_0() {
+      int size = 0;
+      if (committed_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, committed_);
+      }
+
+          {
+            final int count = results_.size();
+            for (int i = 0; i < count; i++) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeMessageSizeNoTag(results_.get(i));
+            }
+            size += 1 * count;
+          }
+      return size;
+    }
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += computeSerializedSize_0();
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchResponse)) {
+        return super.equals(obj);
+      }
+      oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchResponse other = (oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchResponse) obj;
+
+      if (getCommitted()
+          != other.getCommitted()) return false;
+      if (!getResultsList()
+          .equals(other.getResultsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + COMMITTED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getCommitted());
+      if (getResultsCount() > 0) {
+        hash = (37 * hash) + RESULTS_FIELD_NUMBER;
+        hash = (53 * hash) + getResultsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oscal.services.v1.ImportBatchResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oscal.services.v1.ImportBatchResponse)
+        oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_ImportBatchResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_ImportBatchResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchResponse.class, oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchResponse.Builder.class);
+      }
+
+      // Construct using oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        committed_ = false;
+        if (resultsBuilder_ == null) {
+          results_ = java.util.Collections.emptyList();
+        } else {
+          results_ = null;
+          resultsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_ImportBatchResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchResponse getDefaultInstanceForType() {
+        return oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchResponse build() {
+        oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchResponse buildPartial() {
+        oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchResponse result = new oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchResponse result) {
+        if (resultsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            results_ = java.util.Collections.unmodifiableList(results_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.results_ = results_;
+        } else {
+          result.results_ = resultsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.committed_ = committed_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchResponse) {
+          return mergeFrom((oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchResponse other) {
+        if (other == oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchResponse.getDefaultInstance()) return this;
+        if (other.getCommitted() != false) {
+          setCommitted(other.getCommitted());
+        }
+        if (resultsBuilder_ == null) {
+          if (!other.results_.isEmpty()) {
+            if (results_.isEmpty()) {
+              results_ = other.results_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureResultsIsMutable();
+              results_.addAll(other.results_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.results_.isEmpty()) {
+            if (resultsBuilder_.isEmpty()) {
+              resultsBuilder_.dispose();
+              resultsBuilder_ = null;
+              results_ = other.results_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              resultsBuilder_ =
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   internalGetResultsFieldBuilder() : null;
+            } else {
+              resultsBuilder_.addAllMessages(other.results_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                committed_ = input.readBool();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult m =
+                    input.readMessage(
+                        oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult.parser(),
+                        extensionRegistry);
+                if (resultsBuilder_ == null) {
+                  ensureResultsIsMutable();
+                  results_.add(m);
+                } else {
+                  resultsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private boolean committed_ ;
+      /**
+       * <code>bool committed = 1 [json_name = "committed"];</code>
+       * @return The committed.
+       */
+      @java.lang.Override
+      public boolean getCommitted() {
+        return committed_;
+      }
+      /**
+       * <code>bool committed = 1 [json_name = "committed"];</code>
+       * @param value The committed to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCommitted(boolean value) {
+
+        committed_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool committed = 1 [json_name = "committed"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCommitted() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        committed_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult> results_ =
+        java.util.Collections.emptyList();
+      private void ensureResultsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          results_ = new java.util.ArrayList<oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult>(results_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult, oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResultOrBuilder> resultsBuilder_;
+
+      /**
+       * <code>repeated .oscal.services.v1.ImportRecordResult results = 2 [json_name = "results"];</code>
+       */
+      public java.util.List<oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult> getResultsList() {
+        if (resultsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(results_);
+        } else {
+          return resultsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportRecordResult results = 2 [json_name = "results"];</code>
+       */
+      public int getResultsCount() {
+        if (resultsBuilder_ == null) {
+          return results_.size();
+        } else {
+          return resultsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportRecordResult results = 2 [json_name = "results"];</code>
+       */
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult getResults(int index) {
+        if (resultsBuilder_ == null) {
+          return results_.get(index);
+        } else {
+          return resultsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportRecordResult results = 2 [json_name = "results"];</code>
+       */
+      public Builder setResults(
+          int index, oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult value) {
+        if (resultsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureResultsIsMutable();
+          results_.set(index, value);
+          onChanged();
+        } else {
+          resultsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportRecordResult results = 2 [json_name = "results"];</code>
+       */
+      public Builder setResults(
+          int index, oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult.Builder builderForValue) {
+        if (resultsBuilder_ == null) {
+          ensureResultsIsMutable();
+          results_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          resultsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportRecordResult results = 2 [json_name = "results"];</code>
+       */
+      public Builder addResults(oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult value) {
+        if (resultsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureResultsIsMutable();
+          results_.add(value);
+          onChanged();
+        } else {
+          resultsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportRecordResult results = 2 [json_name = "results"];</code>
+       */
+      public Builder addResults(
+          int index, oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult value) {
+        if (resultsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureResultsIsMutable();
+          results_.add(index, value);
+          onChanged();
+        } else {
+          resultsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportRecordResult results = 2 [json_name = "results"];</code>
+       */
+      public Builder addResults(
+          oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult.Builder builderForValue) {
+        if (resultsBuilder_ == null) {
+          ensureResultsIsMutable();
+          results_.add(builderForValue.build());
+          onChanged();
+        } else {
+          resultsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportRecordResult results = 2 [json_name = "results"];</code>
+       */
+      public Builder addResults(
+          int index, oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult.Builder builderForValue) {
+        if (resultsBuilder_ == null) {
+          ensureResultsIsMutable();
+          results_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          resultsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportRecordResult results = 2 [json_name = "results"];</code>
+       */
+      public Builder addAllResults(
+          java.lang.Iterable<? extends oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult> values) {
+        if (resultsBuilder_ == null) {
+          ensureResultsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, results_);
+          onChanged();
+        } else {
+          resultsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportRecordResult results = 2 [json_name = "results"];</code>
+       */
+      public Builder clearResults() {
+        if (resultsBuilder_ == null) {
+          results_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          resultsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportRecordResult results = 2 [json_name = "results"];</code>
+       */
+      public Builder removeResults(int index) {
+        if (resultsBuilder_ == null) {
+          ensureResultsIsMutable();
+          results_.remove(index);
+          onChanged();
+        } else {
+          resultsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportRecordResult results = 2 [json_name = "results"];</code>
+       */
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult.Builder getResultsBuilder(
+          int index) {
+        return internalGetResultsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportRecordResult results = 2 [json_name = "results"];</code>
+       */
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResultOrBuilder getResultsOrBuilder(
+          int index) {
+        if (resultsBuilder_ == null) {
+          return results_.get(index);  } else {
+          return resultsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportRecordResult results = 2 [json_name = "results"];</code>
+       */
+      public java.util.List<? extends oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResultOrBuilder>
+           getResultsOrBuilderList() {
+        if (resultsBuilder_ != null) {
+          return resultsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(results_);
+        }
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportRecordResult results = 2 [json_name = "results"];</code>
+       */
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult.Builder addResultsBuilder() {
+        return internalGetResultsFieldBuilder().addBuilder(
+            oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportRecordResult results = 2 [json_name = "results"];</code>
+       */
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult.Builder addResultsBuilder(
+          int index) {
+        return internalGetResultsFieldBuilder().addBuilder(
+            index, oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.services.v1.ImportRecordResult results = 2 [json_name = "results"];</code>
+       */
+      public java.util.List<oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult.Builder>
+           getResultsBuilderList() {
+        return internalGetResultsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult, oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResultOrBuilder>
+          internalGetResultsFieldBuilder() {
+        if (resultsBuilder_ == null) {
+          resultsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult, oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResult.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportRecordResultOrBuilder>(
+                  results_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          results_ = null;
+        }
+        return resultsBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:oscal.services.v1.ImportBatchResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:oscal.services.v1.ImportBatchResponse)
+    private static final oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchResponse();
+    }
+
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ImportBatchResponse>
+        PARSER = new com.google.protobuf.AbstractParser<ImportBatchResponse>() {
+      @java.lang.Override
+      public ImportBatchResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ImportBatchResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ImportBatchResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public oscal.services.v1.TransparencyExchangeServiceOuterClass.ImportBatchResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -21811,7 +33556,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
        * <code>.oscal.services.v1.Evidence evidence = 1 [json_name = "evidence"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.services.v1.TransparencyExchangeServiceOuterClass.Evidence, oscal.services.v1.TransparencyExchangeServiceOuterClass.Evidence.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceOrBuilder> 
+          oscal.services.v1.TransparencyExchangeServiceOuterClass.Evidence, oscal.services.v1.TransparencyExchangeServiceOuterClass.Evidence.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceOrBuilder>
           internalGetEvidenceFieldBuilder() {
         if (evidenceBuilder_ == null) {
           evidenceBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -22463,7 +34208,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
        * <code>.oscal.services.v1.Evidence evidence = 1 [json_name = "evidence"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.services.v1.TransparencyExchangeServiceOuterClass.Evidence, oscal.services.v1.TransparencyExchangeServiceOuterClass.Evidence.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceOrBuilder> 
+          oscal.services.v1.TransparencyExchangeServiceOuterClass.Evidence, oscal.services.v1.TransparencyExchangeServiceOuterClass.Evidence.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceOrBuilder>
           internalGetEvidenceFieldBuilder() {
         if (evidenceBuilder_ == null) {
           evidenceBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -22631,7 +34376,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         evidenceId_ = s;
@@ -22647,7 +34392,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
         getEvidenceIdBytes() {
       java.lang.Object ref = evidenceId_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         evidenceId_ = b;
@@ -22980,7 +34725,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
           getEvidenceIdBytes() {
         java.lang.Object ref = evidenceId_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           evidenceId_ = b;
@@ -23593,7 +35338,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
        * <code>.oscal.services.v1.Evidence evidence = 1 [json_name = "evidence"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.services.v1.TransparencyExchangeServiceOuterClass.Evidence, oscal.services.v1.TransparencyExchangeServiceOuterClass.Evidence.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceOrBuilder> 
+          oscal.services.v1.TransparencyExchangeServiceOuterClass.Evidence, oscal.services.v1.TransparencyExchangeServiceOuterClass.Evidence.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceOrBuilder>
           internalGetEvidenceFieldBuilder() {
         if (evidenceBuilder_ == null) {
           evidenceBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -23735,7 +35480,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         evidenceId_ = s;
@@ -23751,7 +35496,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
         getEvidenceIdBytes() {
       java.lang.Object ref = evidenceId_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         evidenceId_ = b;
@@ -24119,7 +35864,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
           getEvidenceIdBytes() {
         java.lang.Object ref = evidenceId_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           evidenceId_ = b;
@@ -24346,7 +36091,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         evidenceId_ = s;
@@ -24362,7 +36107,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
         getEvidenceIdBytes() {
       java.lang.Object ref = evidenceId_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         evidenceId_ = b;
@@ -24407,7 +36152,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         error_ = s;
@@ -24423,7 +36168,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
         getErrorBytes() {
       java.lang.Object ref = error_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         error_ = b;
@@ -24828,7 +36573,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
           getEvidenceIdBytes() {
         java.lang.Object ref = evidenceId_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           evidenceId_ = b;
@@ -24964,7 +36709,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
           getErrorBytes() {
         java.lang.Object ref = error_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           error_ = b;
@@ -25176,7 +36921,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         peerEndpoint_ = s;
@@ -25192,7 +36937,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
         getPeerEndpointBytes() {
       java.lang.Object ref = peerEndpoint_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         peerEndpoint_ = b;
@@ -25215,7 +36960,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         filterSubject_ = s;
@@ -25231,7 +36976,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
         getFilterSubjectBytes() {
       java.lang.Object ref = filterSubject_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         filterSubject_ = b;
@@ -25254,7 +36999,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         filterBomKind_ = s;
@@ -25270,7 +37015,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
         getFilterBomKindBytes() {
       java.lang.Object ref = filterBomKind_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         filterBomKind_ = b;
@@ -25722,7 +37467,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
           getPeerEndpointBytes() {
         java.lang.Object ref = peerEndpoint_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           peerEndpoint_ = b;
@@ -25794,7 +37539,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
           getFilterSubjectBytes() {
         java.lang.Object ref = filterSubject_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           filterSubject_ = b;
@@ -25866,7 +37611,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
           getFilterBomKindBytes() {
         java.lang.Object ref = filterBomKind_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           filterBomKind_ = b;
@@ -26021,7 +37766,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
        * <code>.google.protobuf.Timestamp since = 4 [json_name = "since"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>
           internalGetSinceFieldBuilder() {
         if (sinceBuilder_ == null) {
           sinceBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -27137,7 +38882,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         discovery_ = s;
@@ -27157,7 +38902,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
         getDiscoveryBytes() {
       java.lang.Object ref = discovery_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         discovery_ = b;
@@ -27184,7 +38929,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         graph_ = s;
@@ -27204,7 +38949,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
         getGraphBytes() {
       java.lang.Object ref = graph_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         graph_ = b;
@@ -27231,7 +38976,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         claim_ = s;
@@ -27251,7 +38996,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
         getClaimBytes() {
       java.lang.Object ref = claim_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         claim_ = b;
@@ -27278,7 +39023,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         source_ = s;
@@ -27298,7 +39043,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
         getSourceBytes() {
       java.lang.Object ref = source_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         source_ = b;
@@ -27325,7 +39070,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         signature_ = s;
@@ -27345,7 +39090,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
         getSignatureBytes() {
       java.lang.Object ref = signature_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         signature_ = b;
@@ -27372,7 +39117,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         transparency_ = s;
@@ -27392,7 +39137,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
         getTransparencyBytes() {
       java.lang.Object ref = transparency_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         transparency_ = b;
@@ -27419,7 +39164,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         witnessJson_ = s;
@@ -27439,7 +39184,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
         getWitnessJsonBytes() {
       java.lang.Object ref = witnessJson_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         witnessJson_ = b;
@@ -27466,7 +39211,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         state_ = s;
@@ -27486,7 +39231,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
         getStateBytes() {
       java.lang.Object ref = state_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         state_ = b;
@@ -27513,7 +39258,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         policy_ = s;
@@ -27533,7 +39278,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
         getPolicyBytes() {
       java.lang.Object ref = policy_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         policy_ = b;
@@ -28066,7 +39811,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
           getDiscoveryBytes() {
         java.lang.Object ref = discovery_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           discovery_ = b;
@@ -28158,7 +39903,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
           getGraphBytes() {
         java.lang.Object ref = graph_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           graph_ = b;
@@ -28250,7 +39995,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
           getClaimBytes() {
         java.lang.Object ref = claim_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           claim_ = b;
@@ -28342,7 +40087,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
           getSourceBytes() {
         java.lang.Object ref = source_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           source_ = b;
@@ -28434,7 +40179,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
           getSignatureBytes() {
         java.lang.Object ref = signature_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           signature_ = b;
@@ -28526,7 +40271,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
           getTransparencyBytes() {
         java.lang.Object ref = transparency_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           transparency_ = b;
@@ -28618,7 +40363,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
           getWitnessJsonBytes() {
         java.lang.Object ref = witnessJson_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           witnessJson_ = b;
@@ -28710,7 +40455,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
           getStateBytes() {
         java.lang.Object ref = state_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           state_ = b;
@@ -28802,7 +40547,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
           getPolicyBytes() {
         java.lang.Object ref = policy_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           policy_ = b;
@@ -28914,137 +40659,197 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
 
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_Claim_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_Claim_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_Reference_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_Reference_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_Predicate_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_Predicate_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_Identity_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_Identity_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_TimeWindow_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_TimeWindow_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_EvidenceRef_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_EvidenceRef_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_ProofRef_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_ProofRef_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_PolicyRef_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_PolicyRef_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_Evidence_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_Evidence_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_Storage_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_Storage_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_CreateClaimRequest_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_CreateClaimRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_CreateClaimResponse_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_CreateClaimResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_GetClaimRequest_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_GetClaimRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_GetClaimResponse_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_GetClaimResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_ListClaimsRequest_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_ListClaimsRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_ListClaimsResponse_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_ListClaimsResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_VerifyClaimRequest_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_VerifyClaimRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_VerifyClaimResponse_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_VerifyClaimResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_oscal_services_v1_ListVerificationEventsRequest_descriptor;
+  private static final
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_oscal_services_v1_ListVerificationEventsRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_oscal_services_v1_ListVerificationEventsResponse_descriptor;
+  private static final
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_oscal_services_v1_ListVerificationEventsResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_oscal_services_v1_VerificationEvent_descriptor;
+  private static final
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_oscal_services_v1_VerificationEvent_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_oscal_services_v1_ExportClaimReceiptRequest_descriptor;
+  private static final
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_oscal_services_v1_ExportClaimReceiptRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_oscal_services_v1_ExportClaimReceiptResponse_descriptor;
+  private static final
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_oscal_services_v1_ExportClaimReceiptResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_oscal_services_v1_ImportEvidence_descriptor;
+  private static final
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_oscal_services_v1_ImportEvidence_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_oscal_services_v1_ImportRecord_descriptor;
+  private static final
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_oscal_services_v1_ImportRecord_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_oscal_services_v1_ImportRecordResult_descriptor;
+  private static final
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_oscal_services_v1_ImportRecordResult_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_oscal_services_v1_PreflightImportRequest_descriptor;
+  private static final
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_oscal_services_v1_PreflightImportRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_oscal_services_v1_PreflightImportResponse_descriptor;
+  private static final
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_oscal_services_v1_PreflightImportResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_oscal_services_v1_ImportBatchRequest_descriptor;
+  private static final
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_oscal_services_v1_ImportBatchRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_oscal_services_v1_ImportBatchResponse_descriptor;
+  private static final
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_oscal_services_v1_ImportBatchResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_UploadEvidenceRequest_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_UploadEvidenceRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_UploadEvidenceResponse_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_UploadEvidenceResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_GetEvidenceRequest_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_GetEvidenceRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_GetEvidenceResponse_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_GetEvidenceResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_VerifyEvidenceRequest_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_VerifyEvidenceRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_VerifyEvidenceResponse_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_VerifyEvidenceResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_SyncClaimsRequest_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_SyncClaimsRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_SyncClaimsResponse_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_SyncClaimsResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_ProofState_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_ProofState_fieldAccessorTable;
 
@@ -29059,7 +40864,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       "\n/services/v1/transparency_exchange_serv" +
       "ice.proto\022\021oscal.services.v1\032\034google/api" +
       "/annotations.proto\032\037google/protobuf/time" +
-      "stamp.proto\"\330\005\n\005Claim\022\016\n\002id\030\001 \001(\tR\002id\022\022\n" +
+      "stamp.proto\"\243\006\n\005Claim\022\016\n\002id\030\001 \001(\tR\002id\022\022\n" +
       "\004type\030\002 \001(\tR\004type\0226\n\007subject\030\003 \001(\0132\034.osc" +
       "al.services.v1.ReferenceR\007subject\022:\n\tpre" +
       "dicate\030\004 \001(\0132\034.oscal.services.v1.Predica" +
@@ -29077,129 +40882,192 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       "s.v1.ProofRefR\tproofRefs\022=\n\013policy_refs\030" +
       "\r \003(\0132\034.oscal.services.v1.PolicyRefR\npol" +
       "icyRefs\022\'\n\017extensions_json\030\016 \001(\tR\016extens" +
-      "ionsJsonB\014\n\nobject_opt\"t\n\tReference\022\022\n\004k" +
-      "ind\030\001 \001(\tR\004kind\022\016\n\002id\030\002 \001(\tR\002id\022\026\n\006diges" +
-      "t\030\003 \001(\tR\006digest\022\022\n\004purl\030\004 \001(\tR\004purl\022\027\n\007b" +
-      "om_ref\030\005 \001(\tR\006bomRef\"c\n\tPredicate\022\032\n\010rel" +
-      "ation\030\001 \001(\tR\010relation\022\034\n\tdirection\030\002 \001(\t" +
-      "R\tdirection\022\034\n\tqualifier\030\003 \001(\tR\tqualifie" +
-      "r\"I\n\010Identity\022\022\n\004kind\030\001 \001(\tR\004kind\022\016\n\002id\030" +
-      "\002 \001(\tR\002id\022\031\n\010key_json\030\003 \001(\tR\007keyJson\"z\n\n" +
-      "TimeWindow\0227\n\tfrom_time\030\001 \001(\0132\032.google.p" +
-      "rotobuf.TimestampR\010fromTime\0223\n\007to_time\030\002" +
-      " \001(\0132\032.google.protobuf.TimestampR\006toTime" +
-      "\"q\n\013EvidenceRef\022\020\n\003ref\030\001 \001(\tR\003ref\022\026\n\006dig" +
-      "est\030\002 \001(\tR\006digest\022\035\n\nmedia_type\030\003 \001(\tR\tm" +
-      "ediaType\022\031\n\010bom_kind\030\004 \001(\tR\007bomKind\"x\n\010P" +
-      "roofRef\022\022\n\004type\030\001 \001(\tR\004type\022\020\n\003ref\030\002 \001(\t" +
-      "R\003ref\022\026\n\006digest\030\003 \001(\tR\006digest\022.\n\023witness" +
-      "_quorum_json\030\004 \001(\tR\021witnessQuorumJson\"\200\001" +
-      "\n\tPolicyRef\022\022\n\004type\030\001 \001(\tR\004type\022\020\n\003ref\030\002" +
-      " \001(\tR\003ref\022\026\n\006digest\030\003 \001(\tR\006digest\0225\n\010val" +
-      "id_to\030\004 \001(\0132\032.google.protobuf.TimestampR" +
-      "\007validTo\"\220\005\n\010Evidence\022\016\n\002id\030\001 \001(\tR\002id\022\035\n" +
-      "\nmedia_type\030\002 \001(\tR\tmediaType\022\031\n\010bom_kind" +
-      "\030\003 \001(\tR\007bomKind\022\026\n\006digest\030\004 \001(\tR\006digest\022" +
-      "\035\n\nsize_bytes\030\005 \001(\003R\tsizeBytes\0224\n\007storag" +
-      "e\030\006 \001(\0132\032.oscal.services.v1.StorageR\007sto" +
-      "rage\022(\n\020produced_by_json\030\007 \001(\tR\016produced" +
-      "ByJson\022?\n\014subject_refs\030\010 \003(\0132\034.oscal.ser" +
-      "vices.v1.ReferenceR\013subjectRefs\022%\n\016predi" +
-      "cate_type\030\t \001(\tR\rpredicateType\022\033\n\tspec_j" +
-      "son\030\n \001(\tR\010specJson\0229\n\ncreated_at\030\013 \001(\0132" +
-      "\032.google.protobuf.TimestampR\tcreatedAt\022<" +
-      "\n\nvalid_time\030\014 \001(\0132\035.oscal.services.v1.T" +
-      "imeWindowR\tvalidTime\022\036\n\nsupersedes\030\r \003(\t" +
-      "R\nsupersedes\0224\n\026integrity_methods_json\030\016" +
-      " \001(\tR\024integrityMethodsJson\022&\n\016classifica" +
-      "tion\030\017 \001(\tR\016classification\022\'\n\017extensions" +
-      "_json\030\020 \001(\tR\016extensionsJson\"z\n\007Storage\022\022" +
-      "\n\004uris\030\001 \003(\tR\004uris\022!\n\014fetch_policy\030\002 \001(\t" +
-      "R\013fetchPolicy\022\026\n\006quorum\030\003 \001(\005R\006quorum\022 \n" +
-      "\014air_gap_json\030\004 \001(\tR\nairGapJson\"D\n\022Creat" +
-      "eClaimRequest\022.\n\005claim\030\001 \001(\0132\030.oscal.ser" +
-      "vices.v1.ClaimR\005claim\"f\n\023CreateClaimResp" +
-      "onse\022.\n\005claim\030\001 \001(\0132\030.oscal.services.v1." +
-      "ClaimR\005claim\022\037\n\013trust_state\030\002 \001(\tR\ntrust" +
-      "State\",\n\017GetClaimRequest\022\031\n\010claim_id\030\001 \001" +
-      "(\tR\007claimId\"B\n\020GetClaimResponse\022.\n\005claim" +
-      "\030\001 \001(\0132\030.oscal.services.v1.ClaimR\005claim\"" +
-      "\213\002\n\021ListClaimsRequest\022%\n\016subject_digest\030" +
-      "\001 \001(\tR\rsubjectDigest\022\031\n\010bom_kind\030\002 \001(\tR\007" +
-      "bomKind\022\032\n\010relation\030\003 \001(\tR\010relation\022\037\n\013t" +
-      "rust_state\030\004 \001(\tR\ntrustState\022;\n\013valid_af" +
-      "ter\030\005 \001(\0132\032.google.protobuf.TimestampR\nv" +
-      "alidAfter\022\033\n\tpage_size\030\006 \001(\005R\010pageSize\022\035" +
-      "\n\npage_token\030\007 \001(\tR\tpageToken\"n\n\022ListCla" +
-      "imsResponse\0220\n\006claims\030\001 \003(\0132\030.oscal.serv" +
-      "ices.v1.ClaimR\006claims\022&\n\017next_page_token" +
-      "\030\002 \001(\tR\rnextPageToken\"G\n\022VerifyClaimRequ" +
-      "est\022\031\n\010claim_id\030\001 \001(\tR\007claimId\022\026\n\006checks" +
-      "\030\002 \003(\tR\006checks\"\263\001\n\023VerifyClaimResponse\022\031" +
-      "\n\010claim_id\030\001 \001(\tR\007claimId\022>\n\013proof_state" +
-      "\030\002 \001(\0132\035.oscal.services.v1.ProofStateR\np" +
-      "roofState\022\037\n\013trust_state\030\003 \001(\tR\ntrustSta" +
-      "te\022 \n\013diagnostics\030\004 \003(\tR\013diagnostics\"d\n\025" +
-      "UploadEvidenceRequest\0227\n\010evidence\030\001 \001(\0132" +
-      "\033.oscal.services.v1.EvidenceR\010evidence\022\022" +
-      "\n\004blob\030\002 \001(\014R\004blob\"i\n\026UploadEvidenceResp" +
-      "onse\0227\n\010evidence\030\001 \001(\0132\033.oscal.services." +
-      "v1.EvidenceR\010evidence\022\026\n\006stored\030\002 \001(\010R\006s" +
-      "tored\"5\n\022GetEvidenceRequest\022\037\n\013evidence_" +
-      "id\030\001 \001(\tR\nevidenceId\"N\n\023GetEvidenceRespo" +
-      "nse\0227\n\010evidence\030\001 \001(\0132\033.oscal.services.v" +
-      "1.EvidenceR\010evidence\"^\n\025VerifyEvidenceRe" +
-      "quest\022\037\n\013evidence_id\030\001 \001(\tR\nevidenceId\022$" +
-      "\n\016fetch_and_hash\030\002 \001(\010R\014fetchAndHash\"\205\001\n" +
-      "\026VerifyEvidenceResponse\022\037\n\013evidence_id\030\001" +
-      " \001(\tR\nevidenceId\022\033\n\tdigest_ok\030\002 \001(\010R\010dig" +
-      "estOk\022\027\n\007size_ok\030\003 \001(\010R\006sizeOk\022\024\n\005error\030" +
-      "\004 \001(\tR\005error\"\271\001\n\021SyncClaimsRequest\022#\n\rpe" +
-      "er_endpoint\030\001 \001(\tR\014peerEndpoint\022%\n\016filte" +
-      "r_subject\030\002 \001(\tR\rfilterSubject\022&\n\017filter" +
-      "_bom_kind\030\003 \001(\tR\rfilterBomKind\0220\n\005since\030" +
-      "\004 \001(\0132\032.google.protobuf.TimestampR\005since" +
-      "\"\204\001\n\022SyncClaimsResponse\022\032\n\010imported\030\001 \001(" +
-      "\005R\010imported\022\030\n\007skipped\030\002 \001(\005R\007skipped\022\026\n" +
-      "\006failed\030\003 \001(\005R\006failed\022 \n\013diagnostics\030\004 \003" +
-      "(\tR\013diagnostics\"\201\002\n\nProofState\022\034\n\tdiscov" +
-      "ery\030\001 \001(\tR\tdiscovery\022\024\n\005graph\030\002 \001(\tR\005gra" +
-      "ph\022\024\n\005claim\030\003 \001(\tR\005claim\022\026\n\006source\030\004 \001(\t" +
-      "R\006source\022\034\n\tsignature\030\005 \001(\tR\tsignature\022\"" +
-      "\n\014transparency\030\006 \001(\tR\014transparency\022!\n\014wi" +
-      "tness_json\030\007 \001(\tR\013witnessJson\022\024\n\005state\030\010" +
-      " \001(\tR\005state\022\026\n\006policy\030\t \001(\tR\006policy2\360\010\n\033" +
-      "TransparencyExchangeService\022\200\001\n\013CreateCl" +
-      "aim\022%.oscal.services.v1.CreateClaimReque" +
-      "st\032&.oscal.services.v1.CreateClaimRespon" +
-      "se\"\"\202\323\344\223\002\034\"\027/v1/transparency/claims:\001*\022\177" +
-      "\n\010GetClaim\022\".oscal.services.v1.GetClaimR" +
-      "equest\032#.oscal.services.v1.GetClaimRespo" +
-      "nse\"*\202\323\344\223\002$\022\"/v1/transparency/claims/{cl" +
-      "aim_id}\022z\n\nListClaims\022$.oscal.services.v" +
-      "1.ListClaimsRequest\032%.oscal.services.v1." +
-      "ListClaimsResponse\"\037\202\323\344\223\002\031\022\027/v1/transpar" +
-      "ency/claims\022\222\001\n\013VerifyClaim\022%.oscal.serv" +
-      "ices.v1.VerifyClaimRequest\032&.oscal.servi" +
-      "ces.v1.VerifyClaimResponse\"4\202\323\344\223\002.\")/v1/" +
-      "transparency/claims/{claim_id}/verify:\001*" +
-      "\022\213\001\n\016UploadEvidence\022(.oscal.services.v1." +
-      "UploadEvidenceRequest\032).oscal.services.v" +
-      "1.UploadEvidenceResponse\"$\202\323\344\223\002\036\"\031/v1/tr" +
-      "ansparency/evidence:\001*\022\215\001\n\013GetEvidence\022%" +
-      ".oscal.services.v1.GetEvidenceRequest\032&." +
-      "oscal.services.v1.GetEvidenceResponse\"/\202" +
-      "\323\344\223\002)\022\'/v1/transparency/evidence/{eviden" +
-      "ce_id}\022\240\001\n\016VerifyEvidence\022(.oscal.servic" +
-      "es.v1.VerifyEvidenceRequest\032).oscal.serv" +
-      "ices.v1.VerifyEvidenceResponse\"9\202\323\344\223\0023\"." +
-      "/v1/transparency/evidence/{evidence_id}/" +
-      "verify:\001*\022{\n\nSyncClaims\022$.oscal.services" +
-      ".v1.SyncClaimsRequest\032%.oscal.services.v" +
-      "1.SyncClaimsResponse\" \202\323\344\223\002\032\"\025/v1/transp" +
-      "arency/sync:\001*B>Z<github.com/mchorfa/xos" +
-      "cal/proto/oscal/services/v1;servicesv1b\006" +
-      "proto3"
+      "ionsJson\022\037\n\013trust_state\030\017 \001(\tR\ntrustStat" +
+      "e\022(\n\020proof_state_json\030\020 \001(\tR\016proofStateJ" +
+      "sonB\014\n\nobject_opt\"t\n\tReference\022\022\n\004kind\030\001" +
+      " \001(\tR\004kind\022\016\n\002id\030\002 \001(\tR\002id\022\026\n\006digest\030\003 \001" +
+      "(\tR\006digest\022\022\n\004purl\030\004 \001(\tR\004purl\022\027\n\007bom_re" +
+      "f\030\005 \001(\tR\006bomRef\"c\n\tPredicate\022\032\n\010relation" +
+      "\030\001 \001(\tR\010relation\022\034\n\tdirection\030\002 \001(\tR\tdir" +
+      "ection\022\034\n\tqualifier\030\003 \001(\tR\tqualifier\"I\n\010" +
+      "Identity\022\022\n\004kind\030\001 \001(\tR\004kind\022\016\n\002id\030\002 \001(\t" +
+      "R\002id\022\031\n\010key_json\030\003 \001(\tR\007keyJson\"z\n\nTimeW" +
+      "indow\0227\n\tfrom_time\030\001 \001(\0132\032.google.protob" +
+      "uf.TimestampR\010fromTime\0223\n\007to_time\030\002 \001(\0132" +
+      "\032.google.protobuf.TimestampR\006toTime\"q\n\013E" +
+      "videnceRef\022\020\n\003ref\030\001 \001(\tR\003ref\022\026\n\006digest\030\002" +
+      " \001(\tR\006digest\022\035\n\nmedia_type\030\003 \001(\tR\tmediaT" +
+      "ype\022\031\n\010bom_kind\030\004 \001(\tR\007bomKind\"x\n\010ProofR" +
+      "ef\022\022\n\004type\030\001 \001(\tR\004type\022\020\n\003ref\030\002 \001(\tR\003ref" +
+      "\022\026\n\006digest\030\003 \001(\tR\006digest\022.\n\023witness_quor" +
+      "um_json\030\004 \001(\tR\021witnessQuorumJson\"\200\001\n\tPol" +
+      "icyRef\022\022\n\004type\030\001 \001(\tR\004type\022\020\n\003ref\030\002 \001(\tR" +
+      "\003ref\022\026\n\006digest\030\003 \001(\tR\006digest\0225\n\010valid_to" +
+      "\030\004 \001(\0132\032.google.protobuf.TimestampR\007vali" +
+      "dTo\"\220\005\n\010Evidence\022\016\n\002id\030\001 \001(\tR\002id\022\035\n\nmedi" +
+      "a_type\030\002 \001(\tR\tmediaType\022\031\n\010bom_kind\030\003 \001(" +
+      "\tR\007bomKind\022\026\n\006digest\030\004 \001(\tR\006digest\022\035\n\nsi" +
+      "ze_bytes\030\005 \001(\003R\tsizeBytes\0224\n\007storage\030\006 \001" +
+      "(\0132\032.oscal.services.v1.StorageR\007storage\022" +
+      "(\n\020produced_by_json\030\007 \001(\tR\016producedByJso" +
+      "n\022?\n\014subject_refs\030\010 \003(\0132\034.oscal.services" +
+      ".v1.ReferenceR\013subjectRefs\022%\n\016predicate_" +
+      "type\030\t \001(\tR\rpredicateType\022\033\n\tspec_json\030\n" +
+      " \001(\tR\010specJson\0229\n\ncreated_at\030\013 \001(\0132\032.goo" +
+      "gle.protobuf.TimestampR\tcreatedAt\022<\n\nval" +
+      "id_time\030\014 \001(\0132\035.oscal.services.v1.TimeWi" +
+      "ndowR\tvalidTime\022\036\n\nsupersedes\030\r \003(\tR\nsup" +
+      "ersedes\0224\n\026integrity_methods_json\030\016 \001(\tR" +
+      "\024integrityMethodsJson\022&\n\016classification\030" +
+      "\017 \001(\tR\016classification\022\'\n\017extensions_json" +
+      "\030\020 \001(\tR\016extensionsJson\"z\n\007Storage\022\022\n\004uri" +
+      "s\030\001 \003(\tR\004uris\022!\n\014fetch_policy\030\002 \001(\tR\013fet" +
+      "chPolicy\022\026\n\006quorum\030\003 \001(\005R\006quorum\022 \n\014air_" +
+      "gap_json\030\004 \001(\tR\nairGapJson\"D\n\022CreateClai" +
+      "mRequest\022.\n\005claim\030\001 \001(\0132\030.oscal.services" +
+      ".v1.ClaimR\005claim\"f\n\023CreateClaimResponse\022" +
+      ".\n\005claim\030\001 \001(\0132\030.oscal.services.v1.Claim" +
+      "R\005claim\022\037\n\013trust_state\030\002 \001(\tR\ntrustState" +
+      "\",\n\017GetClaimRequest\022\031\n\010claim_id\030\001 \001(\tR\007c" +
+      "laimId\"B\n\020GetClaimResponse\022.\n\005claim\030\001 \001(" +
+      "\0132\030.oscal.services.v1.ClaimR\005claim\"\213\002\n\021L" +
+      "istClaimsRequest\022%\n\016subject_digest\030\001 \001(\t" +
+      "R\rsubjectDigest\022\031\n\010bom_kind\030\002 \001(\tR\007bomKi" +
+      "nd\022\032\n\010relation\030\003 \001(\tR\010relation\022\037\n\013trust_" +
+      "state\030\004 \001(\tR\ntrustState\022;\n\013valid_after\030\005" +
+      " \001(\0132\032.google.protobuf.TimestampR\nvalidA" +
+      "fter\022\033\n\tpage_size\030\006 \001(\005R\010pageSize\022\035\n\npag" +
+      "e_token\030\007 \001(\tR\tpageToken\"n\n\022ListClaimsRe" +
+      "sponse\0220\n\006claims\030\001 \003(\0132\030.oscal.services." +
+      "v1.ClaimR\006claims\022&\n\017next_page_token\030\002 \001(" +
+      "\tR\rnextPageToken\"G\n\022VerifyClaimRequest\022\031" +
+      "\n\010claim_id\030\001 \001(\tR\007claimId\022\026\n\006checks\030\002 \003(" +
+      "\tR\006checks\"\263\001\n\023VerifyClaimResponse\022\031\n\010cla" +
+      "im_id\030\001 \001(\tR\007claimId\022>\n\013proof_state\030\002 \001(" +
+      "\0132\035.oscal.services.v1.ProofStateR\nproofS" +
+      "tate\022\037\n\013trust_state\030\003 \001(\tR\ntrustState\022 \n" +
+      "\013diagnostics\030\004 \003(\tR\013diagnostics\":\n\035ListV" +
+      "erificationEventsRequest\022\031\n\010claim_id\030\001 \001" +
+      "(\tR\007claimId\"\177\n\036ListVerificationEventsRes" +
+      "ponse\022<\n\006events\030\001 \003(\0132$.oscal.services.v" +
+      "1.VerificationEventR\006events\022\037\n\013chain_val" +
+      "id\030\002 \001(\010R\nchainValid\"\352\003\n\021VerificationEve" +
+      "nt\022\032\n\010sequence\030\001 \001(\003R\010sequence\022\031\n\010event_" +
+      "id\030\002 \001(\tR\007eventId\022\031\n\010claim_id\030\003 \001(\tR\007cla" +
+      "imId\022\035\n\nrequest_id\030\004 \001(\tR\trequestId\022\'\n\017i" +
+      "dempotency_key\030\005 \001(\tR\016idempotencyKey\022\037\n\013" +
+      "checks_json\030\006 \001(\tR\nchecksJson\022(\n\020proof_s" +
+      "tate_json\030\007 \001(\tR\016proofStateJson\022.\n\023provi" +
+      "der_state_json\030\010 \001(\tR\021providerStateJson\022" +
+      "\037\n\013trust_state\030\t \001(\tR\ntrustState\022 \n\013diag" +
+      "nostics\030\n \003(\tR\013diagnostics\022#\n\rprevious_h" +
+      "ash\030\013 \001(\tR\014previousHash\022\035\n\nevent_hash\030\014 " +
+      "\001(\tR\teventHash\0229\n\ncreated_at\030\r \001(\0132\032.goo" +
+      "gle.protobuf.TimestampR\tcreatedAt\"6\n\031Exp" +
+      "ortClaimReceiptRequest\022\031\n\010claim_id\030\001 \001(\t" +
+      "R\007claimId\"\227\002\n\032ExportClaimReceiptResponse" +
+      "\022\031\n\010claim_id\030\001 \001(\tR\007claimId\022!\n\014receipt_j" +
+      "son\030\002 \001(\tR\013receiptJson\022%\n\016receipt_digest" +
+      "\030\003 \001(\tR\rreceiptDigest\022\037\n\013trust_state\030\004 \001" +
+      "(\tR\ntrustState\0226\n\027verification_event_has" +
+      "h\030\005 \001(\tR\025verificationEventHash\022;\n\013export" +
+      "ed_at\030\006 \001(\0132\032.google.protobuf.TimestampR" +
+      "\nexportedAt\"]\n\016ImportEvidence\0227\n\010evidenc" +
+      "e\030\001 \001(\0132\033.oscal.services.v1.EvidenceR\010ev" +
+      "idence\022\022\n\004blob\030\002 \001(\014R\004blob\"}\n\014ImportReco" +
+      "rd\022.\n\005claim\030\001 \001(\0132\030.oscal.services.v1.Cl" +
+      "aimR\005claim\022=\n\010evidence\030\002 \003(\0132!.oscal.ser" +
+      "vices.v1.ImportEvidenceR\010evidence\"\177\n\022Imp" +
+      "ortRecordResult\022\024\n\005index\030\001 \001(\005R\005index\022\031\n" +
+      "\010claim_id\030\002 \001(\tR\007claimId\022\026\n\006status\030\003 \001(\t" +
+      "R\006status\022 \n\013diagnostics\030\004 \003(\tR\013diagnosti" +
+      "cs\"S\n\026PreflightImportRequest\0229\n\007records\030" +
+      "\001 \003(\0132\037.oscal.services.v1.ImportRecordR\007" +
+      "records\"p\n\027PreflightImportResponse\022\024\n\005va" +
+      "lid\030\001 \001(\010R\005valid\022?\n\007results\030\002 \003(\0132%.osca" +
+      "l.services.v1.ImportRecordResultR\007result" +
+      "s\"u\n\022ImportBatchRequest\0229\n\007records\030\001 \003(\013" +
+      "2\037.oscal.services.v1.ImportRecordR\007recor" +
+      "ds\022$\n\016all_or_nothing\030\002 \001(\010R\014allOrNothing" +
+      "\"t\n\023ImportBatchResponse\022\034\n\tcommitted\030\001 \001" +
+      "(\010R\tcommitted\022?\n\007results\030\002 \003(\0132%.oscal.s" +
+      "ervices.v1.ImportRecordResultR\007results\"d" +
+      "\n\025UploadEvidenceRequest\0227\n\010evidence\030\001 \001(" +
+      "\0132\033.oscal.services.v1.EvidenceR\010evidence" +
+      "\022\022\n\004blob\030\002 \001(\014R\004blob\"i\n\026UploadEvidenceRe" +
+      "sponse\0227\n\010evidence\030\001 \001(\0132\033.oscal.service" +
+      "s.v1.EvidenceR\010evidence\022\026\n\006stored\030\002 \001(\010R" +
+      "\006stored\"5\n\022GetEvidenceRequest\022\037\n\013evidenc" +
+      "e_id\030\001 \001(\tR\nevidenceId\"N\n\023GetEvidenceRes" +
+      "ponse\0227\n\010evidence\030\001 \001(\0132\033.oscal.services" +
+      ".v1.EvidenceR\010evidence\"^\n\025VerifyEvidence" +
+      "Request\022\037\n\013evidence_id\030\001 \001(\tR\nevidenceId" +
+      "\022$\n\016fetch_and_hash\030\002 \001(\010R\014fetchAndHash\"\205" +
+      "\001\n\026VerifyEvidenceResponse\022\037\n\013evidence_id" +
+      "\030\001 \001(\tR\nevidenceId\022\033\n\tdigest_ok\030\002 \001(\010R\010d" +
+      "igestOk\022\027\n\007size_ok\030\003 \001(\010R\006sizeOk\022\024\n\005erro" +
+      "r\030\004 \001(\tR\005error\"\271\001\n\021SyncClaimsRequest\022#\n\r" +
+      "peer_endpoint\030\001 \001(\tR\014peerEndpoint\022%\n\016fil" +
+      "ter_subject\030\002 \001(\tR\rfilterSubject\022&\n\017filt" +
+      "er_bom_kind\030\003 \001(\tR\rfilterBomKind\0220\n\005sinc" +
+      "e\030\004 \001(\0132\032.google.protobuf.TimestampR\005sin" +
+      "ce\"\204\001\n\022SyncClaimsResponse\022\032\n\010imported\030\001 " +
+      "\001(\005R\010imported\022\030\n\007skipped\030\002 \001(\005R\007skipped\022" +
+      "\026\n\006failed\030\003 \001(\005R\006failed\022 \n\013diagnostics\030\004" +
+      " \003(\tR\013diagnostics\"\201\002\n\nProofState\022\034\n\tdisc" +
+      "overy\030\001 \001(\tR\tdiscovery\022\024\n\005graph\030\002 \001(\tR\005g" +
+      "raph\022\024\n\005claim\030\003 \001(\tR\005claim\022\026\n\006source\030\004 \001" +
+      "(\tR\006source\022\034\n\tsignature\030\005 \001(\tR\tsignature" +
+      "\022\"\n\014transparency\030\006 \001(\tR\014transparency\022!\n\014" +
+      "witness_json\030\007 \001(\tR\013witnessJson\022\024\n\005state" +
+      "\030\010 \001(\tR\005state\022\026\n\006policy\030\t \001(\tR\006policy2\364\r" +
+      "\n\033TransparencyExchangeService\022\200\001\n\013Create" +
+      "Claim\022%.oscal.services.v1.CreateClaimReq" +
+      "uest\032&.oscal.services.v1.CreateClaimResp" +
+      "onse\"\"\202\323\344\223\002\034\"\027/v1/transparency/claims:\001*" +
+      "\022\177\n\010GetClaim\022\".oscal.services.v1.GetClai" +
+      "mRequest\032#.oscal.services.v1.GetClaimRes" +
+      "ponse\"*\202\323\344\223\002$\022\"/v1/transparency/claims/{" +
+      "claim_id}\022z\n\nListClaims\022$.oscal.services" +
+      ".v1.ListClaimsRequest\032%.oscal.services.v" +
+      "1.ListClaimsResponse\"\037\202\323\344\223\002\031\022\027/v1/transp" +
+      "arency/claims\022\222\001\n\013VerifyClaim\022%.oscal.se" +
+      "rvices.v1.VerifyClaimRequest\032&.oscal.ser" +
+      "vices.v1.VerifyClaimResponse\"4\202\323\344\223\002.\")/v" +
+      "1/transparency/claims/{claim_id}/verify:" +
+      "\001*\022\275\001\n\026ListVerificationEvents\0220.oscal.se" +
+      "rvices.v1.ListVerificationEventsRequest\032" +
+      "1.oscal.services.v1.ListVerificationEven" +
+      "tsResponse\">\202\323\344\223\0028\0226/v1/transparency/cla" +
+      "ims/{claim_id}/verification-events\022\245\001\n\022E" +
+      "xportClaimReceipt\022,.oscal.services.v1.Ex" +
+      "portClaimReceiptRequest\032-.oscal.services" +
+      ".v1.ExportClaimReceiptResponse\"2\202\323\344\223\002,\022*" +
+      "/v1/transparency/claims/{claim_id}/recei" +
+      "pt\022\226\001\n\017PreflightImport\022).oscal.services." +
+      "v1.PreflightImportRequest\032*.oscal.servic" +
+      "es.v1.PreflightImportResponse\",\202\323\344\223\002&\"!/" +
+      "v1/transparency/import/preflight:\001*\022\200\001\n\013" +
+      "ImportBatch\022%.oscal.services.v1.ImportBa" +
+      "tchRequest\032&.oscal.services.v1.ImportBat" +
+      "chResponse\"\"\202\323\344\223\002\034\"\027/v1/transparency/imp" +
+      "ort:\001*\022\213\001\n\016UploadEvidence\022(.oscal.servic" +
+      "es.v1.UploadEvidenceRequest\032).oscal.serv" +
+      "ices.v1.UploadEvidenceResponse\"$\202\323\344\223\002\036\"\031" +
+      "/v1/transparency/evidence:\001*\022\215\001\n\013GetEvid" +
+      "ence\022%.oscal.services.v1.GetEvidenceRequ" +
+      "est\032&.oscal.services.v1.GetEvidenceRespo" +
+      "nse\"/\202\323\344\223\002)\022\'/v1/transparency/evidence/{" +
+      "evidence_id}\022\240\001\n\016VerifyEvidence\022(.oscal." +
+      "services.v1.VerifyEvidenceRequest\032).osca" +
+      "l.services.v1.VerifyEvidenceResponse\"9\202\323" +
+      "\344\223\0023\"./v1/transparency/evidence/{evidenc" +
+      "e_id}/verify:\001*\022{\n\nSyncClaims\022$.oscal.se" +
+      "rvices.v1.SyncClaimsRequest\032%.oscal.serv" +
+      "ices.v1.SyncClaimsResponse\" \202\323\344\223\002\032\"\025/v1/" +
+      "transparency/sync:\001*B>Z<github.com/mchor" +
+      "fa/xoscal/proto/oscal/services/v1;servic" +
+      "esv1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -29212,7 +41080,7 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
     internal_static_oscal_services_v1_Claim_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_services_v1_Claim_descriptor,
-        new java.lang.String[] { "Id", "Type", "Subject", "Predicate", "Object", "NullObject", "Issuer", "BomKind", "ValidTime", "ObservedTime", "SourceRefs", "ProofRefs", "PolicyRefs", "ExtensionsJson", "ObjectOpt", });
+        new java.lang.String[] { "Id", "Type", "Subject", "Predicate", "Object", "NullObject", "Issuer", "BomKind", "ValidTime", "ObservedTime", "SourceRefs", "ProofRefs", "PolicyRefs", "ExtensionsJson", "TrustState", "ProofStateJson", "ObjectOpt", });
     internal_static_oscal_services_v1_Reference_descriptor =
       getDescriptor().getMessageType(1);
     internal_static_oscal_services_v1_Reference_fieldAccessorTable = new
@@ -29315,56 +41183,128 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_services_v1_VerifyClaimResponse_descriptor,
         new java.lang.String[] { "ClaimId", "ProofState", "TrustState", "Diagnostics", });
-    internal_static_oscal_services_v1_UploadEvidenceRequest_descriptor =
+    internal_static_oscal_services_v1_ListVerificationEventsRequest_descriptor =
       getDescriptor().getMessageType(18);
+    internal_static_oscal_services_v1_ListVerificationEventsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_oscal_services_v1_ListVerificationEventsRequest_descriptor,
+        new java.lang.String[] { "ClaimId", });
+    internal_static_oscal_services_v1_ListVerificationEventsResponse_descriptor =
+      getDescriptor().getMessageType(19);
+    internal_static_oscal_services_v1_ListVerificationEventsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_oscal_services_v1_ListVerificationEventsResponse_descriptor,
+        new java.lang.String[] { "Events", "ChainValid", });
+    internal_static_oscal_services_v1_VerificationEvent_descriptor =
+      getDescriptor().getMessageType(20);
+    internal_static_oscal_services_v1_VerificationEvent_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_oscal_services_v1_VerificationEvent_descriptor,
+        new java.lang.String[] { "Sequence", "EventId", "ClaimId", "RequestId", "IdempotencyKey", "ChecksJson", "ProofStateJson", "ProviderStateJson", "TrustState", "Diagnostics", "PreviousHash", "EventHash", "CreatedAt", });
+    internal_static_oscal_services_v1_ExportClaimReceiptRequest_descriptor =
+      getDescriptor().getMessageType(21);
+    internal_static_oscal_services_v1_ExportClaimReceiptRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_oscal_services_v1_ExportClaimReceiptRequest_descriptor,
+        new java.lang.String[] { "ClaimId", });
+    internal_static_oscal_services_v1_ExportClaimReceiptResponse_descriptor =
+      getDescriptor().getMessageType(22);
+    internal_static_oscal_services_v1_ExportClaimReceiptResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_oscal_services_v1_ExportClaimReceiptResponse_descriptor,
+        new java.lang.String[] { "ClaimId", "ReceiptJson", "ReceiptDigest", "TrustState", "VerificationEventHash", "ExportedAt", });
+    internal_static_oscal_services_v1_ImportEvidence_descriptor =
+      getDescriptor().getMessageType(23);
+    internal_static_oscal_services_v1_ImportEvidence_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_oscal_services_v1_ImportEvidence_descriptor,
+        new java.lang.String[] { "Evidence", "Blob", });
+    internal_static_oscal_services_v1_ImportRecord_descriptor =
+      getDescriptor().getMessageType(24);
+    internal_static_oscal_services_v1_ImportRecord_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_oscal_services_v1_ImportRecord_descriptor,
+        new java.lang.String[] { "Claim", "Evidence", });
+    internal_static_oscal_services_v1_ImportRecordResult_descriptor =
+      getDescriptor().getMessageType(25);
+    internal_static_oscal_services_v1_ImportRecordResult_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_oscal_services_v1_ImportRecordResult_descriptor,
+        new java.lang.String[] { "Index", "ClaimId", "Status", "Diagnostics", });
+    internal_static_oscal_services_v1_PreflightImportRequest_descriptor =
+      getDescriptor().getMessageType(26);
+    internal_static_oscal_services_v1_PreflightImportRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_oscal_services_v1_PreflightImportRequest_descriptor,
+        new java.lang.String[] { "Records", });
+    internal_static_oscal_services_v1_PreflightImportResponse_descriptor =
+      getDescriptor().getMessageType(27);
+    internal_static_oscal_services_v1_PreflightImportResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_oscal_services_v1_PreflightImportResponse_descriptor,
+        new java.lang.String[] { "Valid", "Results", });
+    internal_static_oscal_services_v1_ImportBatchRequest_descriptor =
+      getDescriptor().getMessageType(28);
+    internal_static_oscal_services_v1_ImportBatchRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_oscal_services_v1_ImportBatchRequest_descriptor,
+        new java.lang.String[] { "Records", "AllOrNothing", });
+    internal_static_oscal_services_v1_ImportBatchResponse_descriptor =
+      getDescriptor().getMessageType(29);
+    internal_static_oscal_services_v1_ImportBatchResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_oscal_services_v1_ImportBatchResponse_descriptor,
+        new java.lang.String[] { "Committed", "Results", });
+    internal_static_oscal_services_v1_UploadEvidenceRequest_descriptor =
+      getDescriptor().getMessageType(30);
     internal_static_oscal_services_v1_UploadEvidenceRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_services_v1_UploadEvidenceRequest_descriptor,
         new java.lang.String[] { "Evidence", "Blob", });
     internal_static_oscal_services_v1_UploadEvidenceResponse_descriptor =
-      getDescriptor().getMessageType(19);
+      getDescriptor().getMessageType(31);
     internal_static_oscal_services_v1_UploadEvidenceResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_services_v1_UploadEvidenceResponse_descriptor,
         new java.lang.String[] { "Evidence", "Stored", });
     internal_static_oscal_services_v1_GetEvidenceRequest_descriptor =
-      getDescriptor().getMessageType(20);
+      getDescriptor().getMessageType(32);
     internal_static_oscal_services_v1_GetEvidenceRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_services_v1_GetEvidenceRequest_descriptor,
         new java.lang.String[] { "EvidenceId", });
     internal_static_oscal_services_v1_GetEvidenceResponse_descriptor =
-      getDescriptor().getMessageType(21);
+      getDescriptor().getMessageType(33);
     internal_static_oscal_services_v1_GetEvidenceResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_services_v1_GetEvidenceResponse_descriptor,
         new java.lang.String[] { "Evidence", });
     internal_static_oscal_services_v1_VerifyEvidenceRequest_descriptor =
-      getDescriptor().getMessageType(22);
+      getDescriptor().getMessageType(34);
     internal_static_oscal_services_v1_VerifyEvidenceRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_services_v1_VerifyEvidenceRequest_descriptor,
         new java.lang.String[] { "EvidenceId", "FetchAndHash", });
     internal_static_oscal_services_v1_VerifyEvidenceResponse_descriptor =
-      getDescriptor().getMessageType(23);
+      getDescriptor().getMessageType(35);
     internal_static_oscal_services_v1_VerifyEvidenceResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_services_v1_VerifyEvidenceResponse_descriptor,
         new java.lang.String[] { "EvidenceId", "DigestOk", "SizeOk", "Error", });
     internal_static_oscal_services_v1_SyncClaimsRequest_descriptor =
-      getDescriptor().getMessageType(24);
+      getDescriptor().getMessageType(36);
     internal_static_oscal_services_v1_SyncClaimsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_services_v1_SyncClaimsRequest_descriptor,
         new java.lang.String[] { "PeerEndpoint", "FilterSubject", "FilterBomKind", "Since", });
     internal_static_oscal_services_v1_SyncClaimsResponse_descriptor =
-      getDescriptor().getMessageType(25);
+      getDescriptor().getMessageType(37);
     internal_static_oscal_services_v1_SyncClaimsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_services_v1_SyncClaimsResponse_descriptor,
         new java.lang.String[] { "Imported", "Skipped", "Failed", "Diagnostics", });
     internal_static_oscal_services_v1_ProofState_descriptor =
-      getDescriptor().getMessageType(26);
+      getDescriptor().getMessageType(38);
     internal_static_oscal_services_v1_ProofState_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_services_v1_ProofState_descriptor,

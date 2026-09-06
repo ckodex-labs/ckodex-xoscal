@@ -247,7 +247,7 @@ nonisolated struct Oscal_Poam_V1_User: Sendable {
   fileprivate var _description_p: Oscal_Common_V1_MarkupMultiline? = nil
 }
 
-/// PoamItem represents a POAM item as defined by the OSCAL 1.1.2 schema.
+/// PoamItem represents a POAM item as defined by the pinned OSCAL schema.
 /// Unlike Risk, poam-item is a simpler container with title, description,
 /// and references to findings/observations/risks.
 nonisolated struct Oscal_Poam_V1_PoamItem: Sendable {

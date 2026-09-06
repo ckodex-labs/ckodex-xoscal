@@ -19,14 +19,18 @@ import (
 const _ = grpc.SupportPackageIsVersion9
 
 const (
-	TransparencyExchangeService_CreateClaim_FullMethodName    = "/oscal.services.v1.TransparencyExchangeService/CreateClaim"
-	TransparencyExchangeService_GetClaim_FullMethodName       = "/oscal.services.v1.TransparencyExchangeService/GetClaim"
-	TransparencyExchangeService_ListClaims_FullMethodName     = "/oscal.services.v1.TransparencyExchangeService/ListClaims"
-	TransparencyExchangeService_VerifyClaim_FullMethodName    = "/oscal.services.v1.TransparencyExchangeService/VerifyClaim"
-	TransparencyExchangeService_UploadEvidence_FullMethodName = "/oscal.services.v1.TransparencyExchangeService/UploadEvidence"
-	TransparencyExchangeService_GetEvidence_FullMethodName    = "/oscal.services.v1.TransparencyExchangeService/GetEvidence"
-	TransparencyExchangeService_VerifyEvidence_FullMethodName = "/oscal.services.v1.TransparencyExchangeService/VerifyEvidence"
-	TransparencyExchangeService_SyncClaims_FullMethodName     = "/oscal.services.v1.TransparencyExchangeService/SyncClaims"
+	TransparencyExchangeService_CreateClaim_FullMethodName            = "/oscal.services.v1.TransparencyExchangeService/CreateClaim"
+	TransparencyExchangeService_GetClaim_FullMethodName               = "/oscal.services.v1.TransparencyExchangeService/GetClaim"
+	TransparencyExchangeService_ListClaims_FullMethodName             = "/oscal.services.v1.TransparencyExchangeService/ListClaims"
+	TransparencyExchangeService_VerifyClaim_FullMethodName            = "/oscal.services.v1.TransparencyExchangeService/VerifyClaim"
+	TransparencyExchangeService_ListVerificationEvents_FullMethodName = "/oscal.services.v1.TransparencyExchangeService/ListVerificationEvents"
+	TransparencyExchangeService_ExportClaimReceipt_FullMethodName     = "/oscal.services.v1.TransparencyExchangeService/ExportClaimReceipt"
+	TransparencyExchangeService_PreflightImport_FullMethodName        = "/oscal.services.v1.TransparencyExchangeService/PreflightImport"
+	TransparencyExchangeService_ImportBatch_FullMethodName            = "/oscal.services.v1.TransparencyExchangeService/ImportBatch"
+	TransparencyExchangeService_UploadEvidence_FullMethodName         = "/oscal.services.v1.TransparencyExchangeService/UploadEvidence"
+	TransparencyExchangeService_GetEvidence_FullMethodName            = "/oscal.services.v1.TransparencyExchangeService/GetEvidence"
+	TransparencyExchangeService_VerifyEvidence_FullMethodName         = "/oscal.services.v1.TransparencyExchangeService/VerifyEvidence"
+	TransparencyExchangeService_SyncClaims_FullMethodName             = "/oscal.services.v1.TransparencyExchangeService/SyncClaims"
 )
 
 // TransparencyExchangeServiceClient is the client API for TransparencyExchangeService service.
@@ -40,6 +44,10 @@ type TransparencyExchangeServiceClient interface {
 	GetClaim(ctx context.Context, in *GetClaimRequest, opts ...grpc.CallOption) (*GetClaimResponse, error)
 	ListClaims(ctx context.Context, in *ListClaimsRequest, opts ...grpc.CallOption) (*ListClaimsResponse, error)
 	VerifyClaim(ctx context.Context, in *VerifyClaimRequest, opts ...grpc.CallOption) (*VerifyClaimResponse, error)
+	ListVerificationEvents(ctx context.Context, in *ListVerificationEventsRequest, opts ...grpc.CallOption) (*ListVerificationEventsResponse, error)
+	ExportClaimReceipt(ctx context.Context, in *ExportClaimReceiptRequest, opts ...grpc.CallOption) (*ExportClaimReceiptResponse, error)
+	PreflightImport(ctx context.Context, in *PreflightImportRequest, opts ...grpc.CallOption) (*PreflightImportResponse, error)
+	ImportBatch(ctx context.Context, in *ImportBatchRequest, opts ...grpc.CallOption) (*ImportBatchResponse, error)
 	UploadEvidence(ctx context.Context, in *UploadEvidenceRequest, opts ...grpc.CallOption) (*UploadEvidenceResponse, error)
 	GetEvidence(ctx context.Context, in *GetEvidenceRequest, opts ...grpc.CallOption) (*GetEvidenceResponse, error)
 	VerifyEvidence(ctx context.Context, in *VerifyEvidenceRequest, opts ...grpc.CallOption) (*VerifyEvidenceResponse, error)
@@ -88,6 +96,46 @@ func (c *transparencyExchangeServiceClient) VerifyClaim(ctx context.Context, in 
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(VerifyClaimResponse)
 	err := c.cc.Invoke(ctx, TransparencyExchangeService_VerifyClaim_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *transparencyExchangeServiceClient) ListVerificationEvents(ctx context.Context, in *ListVerificationEventsRequest, opts ...grpc.CallOption) (*ListVerificationEventsResponse, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(ListVerificationEventsResponse)
+	err := c.cc.Invoke(ctx, TransparencyExchangeService_ListVerificationEvents_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *transparencyExchangeServiceClient) ExportClaimReceipt(ctx context.Context, in *ExportClaimReceiptRequest, opts ...grpc.CallOption) (*ExportClaimReceiptResponse, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(ExportClaimReceiptResponse)
+	err := c.cc.Invoke(ctx, TransparencyExchangeService_ExportClaimReceipt_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *transparencyExchangeServiceClient) PreflightImport(ctx context.Context, in *PreflightImportRequest, opts ...grpc.CallOption) (*PreflightImportResponse, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(PreflightImportResponse)
+	err := c.cc.Invoke(ctx, TransparencyExchangeService_PreflightImport_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *transparencyExchangeServiceClient) ImportBatch(ctx context.Context, in *ImportBatchRequest, opts ...grpc.CallOption) (*ImportBatchResponse, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(ImportBatchResponse)
+	err := c.cc.Invoke(ctx, TransparencyExchangeService_ImportBatch_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
@@ -145,6 +193,10 @@ type TransparencyExchangeServiceServer interface {
 	GetClaim(context.Context, *GetClaimRequest) (*GetClaimResponse, error)
 	ListClaims(context.Context, *ListClaimsRequest) (*ListClaimsResponse, error)
 	VerifyClaim(context.Context, *VerifyClaimRequest) (*VerifyClaimResponse, error)
+	ListVerificationEvents(context.Context, *ListVerificationEventsRequest) (*ListVerificationEventsResponse, error)
+	ExportClaimReceipt(context.Context, *ExportClaimReceiptRequest) (*ExportClaimReceiptResponse, error)
+	PreflightImport(context.Context, *PreflightImportRequest) (*PreflightImportResponse, error)
+	ImportBatch(context.Context, *ImportBatchRequest) (*ImportBatchResponse, error)
 	UploadEvidence(context.Context, *UploadEvidenceRequest) (*UploadEvidenceResponse, error)
 	GetEvidence(context.Context, *GetEvidenceRequest) (*GetEvidenceResponse, error)
 	VerifyEvidence(context.Context, *VerifyEvidenceRequest) (*VerifyEvidenceResponse, error)
@@ -170,6 +222,18 @@ func (UnimplementedTransparencyExchangeServiceServer) ListClaims(context.Context
 }
 func (UnimplementedTransparencyExchangeServiceServer) VerifyClaim(context.Context, *VerifyClaimRequest) (*VerifyClaimResponse, error) {
 	return nil, status.Error(codes.Unimplemented, "method VerifyClaim not implemented")
+}
+func (UnimplementedTransparencyExchangeServiceServer) ListVerificationEvents(context.Context, *ListVerificationEventsRequest) (*ListVerificationEventsResponse, error) {
+	return nil, status.Error(codes.Unimplemented, "method ListVerificationEvents not implemented")
+}
+func (UnimplementedTransparencyExchangeServiceServer) ExportClaimReceipt(context.Context, *ExportClaimReceiptRequest) (*ExportClaimReceiptResponse, error) {
+	return nil, status.Error(codes.Unimplemented, "method ExportClaimReceipt not implemented")
+}
+func (UnimplementedTransparencyExchangeServiceServer) PreflightImport(context.Context, *PreflightImportRequest) (*PreflightImportResponse, error) {
+	return nil, status.Error(codes.Unimplemented, "method PreflightImport not implemented")
+}
+func (UnimplementedTransparencyExchangeServiceServer) ImportBatch(context.Context, *ImportBatchRequest) (*ImportBatchResponse, error) {
+	return nil, status.Error(codes.Unimplemented, "method ImportBatch not implemented")
 }
 func (UnimplementedTransparencyExchangeServiceServer) UploadEvidence(context.Context, *UploadEvidenceRequest) (*UploadEvidenceResponse, error) {
 	return nil, status.Error(codes.Unimplemented, "method UploadEvidence not implemented")
@@ -277,6 +341,78 @@ func _TransparencyExchangeService_VerifyClaim_Handler(srv interface{}, ctx conte
 	return interceptor(ctx, in, info, handler)
 }
 
+func _TransparencyExchangeService_ListVerificationEvents_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ListVerificationEventsRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(TransparencyExchangeServiceServer).ListVerificationEvents(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: TransparencyExchangeService_ListVerificationEvents_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(TransparencyExchangeServiceServer).ListVerificationEvents(ctx, req.(*ListVerificationEventsRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _TransparencyExchangeService_ExportClaimReceipt_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ExportClaimReceiptRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(TransparencyExchangeServiceServer).ExportClaimReceipt(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: TransparencyExchangeService_ExportClaimReceipt_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(TransparencyExchangeServiceServer).ExportClaimReceipt(ctx, req.(*ExportClaimReceiptRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _TransparencyExchangeService_PreflightImport_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(PreflightImportRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(TransparencyExchangeServiceServer).PreflightImport(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: TransparencyExchangeService_PreflightImport_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(TransparencyExchangeServiceServer).PreflightImport(ctx, req.(*PreflightImportRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _TransparencyExchangeService_ImportBatch_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ImportBatchRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(TransparencyExchangeServiceServer).ImportBatch(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: TransparencyExchangeService_ImportBatch_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(TransparencyExchangeServiceServer).ImportBatch(ctx, req.(*ImportBatchRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 func _TransparencyExchangeService_UploadEvidence_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(UploadEvidenceRequest)
 	if err := dec(in); err != nil {
@@ -371,6 +507,22 @@ var TransparencyExchangeService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "VerifyClaim",
 			Handler:    _TransparencyExchangeService_VerifyClaim_Handler,
+		},
+		{
+			MethodName: "ListVerificationEvents",
+			Handler:    _TransparencyExchangeService_ListVerificationEvents_Handler,
+		},
+		{
+			MethodName: "ExportClaimReceipt",
+			Handler:    _TransparencyExchangeService_ExportClaimReceipt_Handler,
+		},
+		{
+			MethodName: "PreflightImport",
+			Handler:    _TransparencyExchangeService_PreflightImport_Handler,
+		},
+		{
+			MethodName: "ImportBatch",
+			Handler:    _TransparencyExchangeService_ImportBatch_Handler,
 		},
 		{
 			MethodName: "UploadEvidence",

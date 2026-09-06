@@ -1,5 +1,5 @@
-// Package schemavalidate validates OSCAL JSON artifacts against the official
-// NIST OSCAL 1.1.2 complete JSON schema. The complete schema is embedded so
+// Package schemavalidate validates OSCAL JSON artifacts against the pinned
+// official NIST OSCAL complete JSON schema. The complete schema is embedded so
 // all cross-model $ref references resolve without network access.
 package schemavalidate
 
@@ -9,14 +9,18 @@ import (
 	"fmt"
 	"strings"
 
+	"github.com/mchorfa/xoscal/server/internal/oscalversion"
 	"github.com/santhosh-tekuri/jsonschema/v6"
 )
 
-//go:embed schemas/v1.1.2/oscal_complete_schema.json
+// Keep released schemas side by side so an update PR contains an auditable
+// before/after delta. Runtime selection comes from oscalversion.VERSION.
+//
+//go:embed schemas/v*/oscal_complete_schema.json
 var completeSchemaFS embed.FS
 
 // SchemaVersion is the OSCAL version the embedded schema conforms to.
-const SchemaVersion = "1.1.2"
+var SchemaVersion = oscalversion.Current()
 
 // ArtifactKind identifies an OSCAL artifact type and its root key.
 type ArtifactKind struct {
@@ -33,6 +37,7 @@ var (
 	KindAssessmentPlan      = ArtifactKind{"assessment-plan", "assessment-plan"}
 	KindAssessmentResults   = ArtifactKind{"assessment-results", "assessment-results"}
 	KindPOAM                = ArtifactKind{"poam", "plan-of-action-and-milestones"}
+	KindMapping             = ArtifactKind{"mapping", "mapping-collection"}
 )
 
 // Validator validates OSCAL JSON artifacts against the official complete schema.
@@ -41,11 +46,12 @@ type Validator struct {
 }
 
 // NewValidator loads the embedded OSCAL complete schema and compiles a
-// separate subschema for each of the 7 OSCAL model types.
+// separate subschema for every model in the selected OSCAL release.
 func NewValidator() (*Validator, error) {
-	data, err := completeSchemaFS.ReadFile("schemas/v1.1.2/oscal_complete_schema.json")
+	schemaPath := fmt.Sprintf("schemas/v%s/oscal_complete_schema.json", SchemaVersion)
+	data, err := completeSchemaFS.ReadFile(schemaPath)
 	if err != nil {
-		return nil, fmt.Errorf("read embedded schema: %w", err)
+		return nil, fmt.Errorf("read embedded OSCAL %s schema: %w", SchemaVersion, err)
 	}
 
 	var schemaDoc interface{}

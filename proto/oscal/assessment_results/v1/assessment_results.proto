@@ -97,7 +97,7 @@ message Result {
   repeated oscal.common.v1.Property props = 8;
   repeated oscal.common.v1.Link links = 9;
   repeated oscal.common.v1.MarkupMultiline remarks = 10;
-  // reviewed_controls is required by the OSCAL 1.1.2 schema for each result.
+  // reviewed_controls is required by the pinned OSCAL schema for each result.
   ReviewedControls reviewed_controls = 11;
 }
 
@@ -118,7 +118,11 @@ message ControlSelection {
   repeated oscal.common.v1.Property props = 4;
   repeated oscal.common.v1.Link links = 5;
   repeated oscal.common.v1.MarkupMultiline remarks = 6;
+  IncludeAll include_all = 7;
 }
+
+// IncludeAll is OSCAL's empty marker object for selecting every control.
+message IncludeAll {}
 
 // SelectedControl represents a selected control
 message SelectedControl {

@@ -373,6 +373,9 @@
           },
           "type": "array"
         },
+        "^(includeAll)$": {
+          "$ref": "#/$defs/oscal.assessment_plan.v1.IncludeAll.schema.json"
+        },
         "^(includeControls)$": {
           "items": {
             "$ref": "#/$defs/oscal.assessment_plan.v1.SelectedControl.schema.json"
@@ -389,6 +392,9 @@
             "$ref": "#/$defs/oscal.assessment_plan.v1.SelectedControl.schema.json"
           },
           "type": "array"
+        },
+        "include_all": {
+          "$ref": "#/$defs/oscal.assessment_plan.v1.IncludeAll.schema.json"
         },
         "include_controls": {
           "items": {
@@ -434,6 +440,14 @@
         }
       },
       "title": "Import Ssp",
+      "type": "object"
+    },
+    "oscal.assessment_plan.v1.IncludeAll.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "IncludeAll is OSCAL's empty marker object for selecting every control.",
+      "properties": {},
+      "title": "Include All",
       "type": "object"
     },
     "oscal.assessment_plan.v1.InventoryItem.schema.json": {

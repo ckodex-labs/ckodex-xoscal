@@ -60,7 +60,14 @@ func ExportPOAMJSON(p *poamv1.PlanOfActionAndMilestones) ([]byte, error) {
 	return marshalOSCALJSON(p, "plan-of-action-and-milestones")
 }
 
+// ExportMappingCollectionJSON serializes an OSCAL 1.2 mapping collection.
+func ExportMappingCollectionJSON(m *mappingv1.MappingCollection) ([]byte, error) {
+	return marshalOSCALJSON(m, "mapping-collection")
+}
+
 // ExportMappingsJSON serializes mappings to a JSON wrapper.
+// Deprecated: this is the pre-release mapping prototype shape. Use
+// ExportMappingCollectionJSON for an OSCAL-conformant document.
 func ExportMappingsJSON(maps []*mappingv1.Map) ([]byte, error) {
 	wrapper := struct {
 		Maps []*mappingv1.Map `json:"maps"`
@@ -79,6 +86,7 @@ const (
 	ArtifactAssessmentPlan      ArtifactType = "assessment-plan"
 	ArtifactAssessmentResults   ArtifactType = "assessment-results"
 	ArtifactPOAM                ArtifactType = "poam"
+	ArtifactMapping             ArtifactType = "mapping"
 	ArtifactMappings            ArtifactType = "mappings"
 )
 

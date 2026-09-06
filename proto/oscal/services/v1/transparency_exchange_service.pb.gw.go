@@ -181,6 +181,138 @@ func local_request_TransparencyExchangeService_VerifyClaim_0(ctx context.Context
 	return msg, metadata, err
 }
 
+func request_TransparencyExchangeService_ListVerificationEvents_0(ctx context.Context, marshaler runtime.Marshaler, client TransparencyExchangeServiceClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+	var (
+		protoReq ListVerificationEventsRequest
+		metadata runtime.ServerMetadata
+		err      error
+	)
+	val, ok := pathParams["claim_id"]
+	if !ok {
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "missing parameter %s", "claim_id")
+	}
+	protoReq.ClaimId, err = runtime.String(val)
+	if err != nil {
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "claim_id", err)
+	}
+	if req.Body != nil {
+		_, _ = io.Copy(io.Discard, req.Body)
+	}
+	msg, err := client.ListVerificationEvents(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
+	return msg, metadata, err
+}
+
+func local_request_TransparencyExchangeService_ListVerificationEvents_0(ctx context.Context, marshaler runtime.Marshaler, server TransparencyExchangeServiceServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+	var (
+		protoReq ListVerificationEventsRequest
+		metadata runtime.ServerMetadata
+		err      error
+	)
+	val, ok := pathParams["claim_id"]
+	if !ok {
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "missing parameter %s", "claim_id")
+	}
+	protoReq.ClaimId, err = runtime.String(val)
+	if err != nil {
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "claim_id", err)
+	}
+	msg, err := server.ListVerificationEvents(ctx, &protoReq)
+	return msg, metadata, err
+}
+
+func request_TransparencyExchangeService_ExportClaimReceipt_0(ctx context.Context, marshaler runtime.Marshaler, client TransparencyExchangeServiceClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+	var (
+		protoReq ExportClaimReceiptRequest
+		metadata runtime.ServerMetadata
+		err      error
+	)
+	val, ok := pathParams["claim_id"]
+	if !ok {
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "missing parameter %s", "claim_id")
+	}
+	protoReq.ClaimId, err = runtime.String(val)
+	if err != nil {
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "claim_id", err)
+	}
+	if req.Body != nil {
+		_, _ = io.Copy(io.Discard, req.Body)
+	}
+	msg, err := client.ExportClaimReceipt(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
+	return msg, metadata, err
+}
+
+func local_request_TransparencyExchangeService_ExportClaimReceipt_0(ctx context.Context, marshaler runtime.Marshaler, server TransparencyExchangeServiceServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+	var (
+		protoReq ExportClaimReceiptRequest
+		metadata runtime.ServerMetadata
+		err      error
+	)
+	val, ok := pathParams["claim_id"]
+	if !ok {
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "missing parameter %s", "claim_id")
+	}
+	protoReq.ClaimId, err = runtime.String(val)
+	if err != nil {
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "claim_id", err)
+	}
+	msg, err := server.ExportClaimReceipt(ctx, &protoReq)
+	return msg, metadata, err
+}
+
+func request_TransparencyExchangeService_PreflightImport_0(ctx context.Context, marshaler runtime.Marshaler, client TransparencyExchangeServiceClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+	var (
+		protoReq PreflightImportRequest
+		metadata runtime.ServerMetadata
+	)
+	if err := marshaler.NewDecoder(req.Body).Decode(&protoReq); err != nil && !errors.Is(err, io.EOF) {
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", err)
+	}
+	if req.Body != nil {
+		_, _ = io.Copy(io.Discard, req.Body)
+	}
+	msg, err := client.PreflightImport(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
+	return msg, metadata, err
+}
+
+func local_request_TransparencyExchangeService_PreflightImport_0(ctx context.Context, marshaler runtime.Marshaler, server TransparencyExchangeServiceServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+	var (
+		protoReq PreflightImportRequest
+		metadata runtime.ServerMetadata
+	)
+	if err := marshaler.NewDecoder(req.Body).Decode(&protoReq); err != nil && !errors.Is(err, io.EOF) {
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", err)
+	}
+	msg, err := server.PreflightImport(ctx, &protoReq)
+	return msg, metadata, err
+}
+
+func request_TransparencyExchangeService_ImportBatch_0(ctx context.Context, marshaler runtime.Marshaler, client TransparencyExchangeServiceClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+	var (
+		protoReq ImportBatchRequest
+		metadata runtime.ServerMetadata
+	)
+	if err := marshaler.NewDecoder(req.Body).Decode(&protoReq); err != nil && !errors.Is(err, io.EOF) {
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", err)
+	}
+	if req.Body != nil {
+		_, _ = io.Copy(io.Discard, req.Body)
+	}
+	msg, err := client.ImportBatch(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
+	return msg, metadata, err
+}
+
+func local_request_TransparencyExchangeService_ImportBatch_0(ctx context.Context, marshaler runtime.Marshaler, server TransparencyExchangeServiceServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+	var (
+		protoReq ImportBatchRequest
+		metadata runtime.ServerMetadata
+	)
+	if err := marshaler.NewDecoder(req.Body).Decode(&protoReq); err != nil && !errors.Is(err, io.EOF) {
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", err)
+	}
+	msg, err := server.ImportBatch(ctx, &protoReq)
+	return msg, metadata, err
+}
+
 func request_TransparencyExchangeService_UploadEvidence_0(ctx context.Context, marshaler runtime.Marshaler, client TransparencyExchangeServiceClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
 	var (
 		protoReq UploadEvidenceRequest
@@ -405,6 +537,86 @@ func RegisterTransparencyExchangeServiceHandlerServer(ctx context.Context, mux *
 		}
 		forward_TransparencyExchangeService_VerifyClaim_0(annotatedContext, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
 	})
+	mux.Handle(http.MethodGet, pattern_TransparencyExchangeService_ListVerificationEvents_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+		ctx, cancel := context.WithCancel(req.Context())
+		defer cancel()
+		var stream runtime.ServerTransportStream
+		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
+		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
+		annotatedContext, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/oscal.services.v1.TransparencyExchangeService/ListVerificationEvents", runtime.WithHTTPPathPattern("/v1/transparency/claims/{claim_id}/verification-events"))
+		if err != nil {
+			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
+			return
+		}
+		resp, md, err := local_request_TransparencyExchangeService_ListVerificationEvents_0(annotatedContext, inboundMarshaler, server, req, pathParams)
+		md.HeaderMD, md.TrailerMD = metadata.Join(md.HeaderMD, stream.Header()), metadata.Join(md.TrailerMD, stream.Trailer())
+		annotatedContext = runtime.NewServerMetadataContext(annotatedContext, md)
+		if err != nil {
+			runtime.HTTPError(annotatedContext, mux, outboundMarshaler, w, req, err)
+			return
+		}
+		forward_TransparencyExchangeService_ListVerificationEvents_0(annotatedContext, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
+	})
+	mux.Handle(http.MethodGet, pattern_TransparencyExchangeService_ExportClaimReceipt_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+		ctx, cancel := context.WithCancel(req.Context())
+		defer cancel()
+		var stream runtime.ServerTransportStream
+		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
+		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
+		annotatedContext, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/oscal.services.v1.TransparencyExchangeService/ExportClaimReceipt", runtime.WithHTTPPathPattern("/v1/transparency/claims/{claim_id}/receipt"))
+		if err != nil {
+			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
+			return
+		}
+		resp, md, err := local_request_TransparencyExchangeService_ExportClaimReceipt_0(annotatedContext, inboundMarshaler, server, req, pathParams)
+		md.HeaderMD, md.TrailerMD = metadata.Join(md.HeaderMD, stream.Header()), metadata.Join(md.TrailerMD, stream.Trailer())
+		annotatedContext = runtime.NewServerMetadataContext(annotatedContext, md)
+		if err != nil {
+			runtime.HTTPError(annotatedContext, mux, outboundMarshaler, w, req, err)
+			return
+		}
+		forward_TransparencyExchangeService_ExportClaimReceipt_0(annotatedContext, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
+	})
+	mux.Handle(http.MethodPost, pattern_TransparencyExchangeService_PreflightImport_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+		ctx, cancel := context.WithCancel(req.Context())
+		defer cancel()
+		var stream runtime.ServerTransportStream
+		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
+		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
+		annotatedContext, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/oscal.services.v1.TransparencyExchangeService/PreflightImport", runtime.WithHTTPPathPattern("/v1/transparency/import/preflight"))
+		if err != nil {
+			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
+			return
+		}
+		resp, md, err := local_request_TransparencyExchangeService_PreflightImport_0(annotatedContext, inboundMarshaler, server, req, pathParams)
+		md.HeaderMD, md.TrailerMD = metadata.Join(md.HeaderMD, stream.Header()), metadata.Join(md.TrailerMD, stream.Trailer())
+		annotatedContext = runtime.NewServerMetadataContext(annotatedContext, md)
+		if err != nil {
+			runtime.HTTPError(annotatedContext, mux, outboundMarshaler, w, req, err)
+			return
+		}
+		forward_TransparencyExchangeService_PreflightImport_0(annotatedContext, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
+	})
+	mux.Handle(http.MethodPost, pattern_TransparencyExchangeService_ImportBatch_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+		ctx, cancel := context.WithCancel(req.Context())
+		defer cancel()
+		var stream runtime.ServerTransportStream
+		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
+		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
+		annotatedContext, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/oscal.services.v1.TransparencyExchangeService/ImportBatch", runtime.WithHTTPPathPattern("/v1/transparency/import"))
+		if err != nil {
+			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
+			return
+		}
+		resp, md, err := local_request_TransparencyExchangeService_ImportBatch_0(annotatedContext, inboundMarshaler, server, req, pathParams)
+		md.HeaderMD, md.TrailerMD = metadata.Join(md.HeaderMD, stream.Header()), metadata.Join(md.TrailerMD, stream.Trailer())
+		annotatedContext = runtime.NewServerMetadataContext(annotatedContext, md)
+		if err != nil {
+			runtime.HTTPError(annotatedContext, mux, outboundMarshaler, w, req, err)
+			return
+		}
+		forward_TransparencyExchangeService_ImportBatch_0(annotatedContext, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
+	})
 	mux.Handle(http.MethodPost, pattern_TransparencyExchangeService_UploadEvidence_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
@@ -593,6 +805,74 @@ func RegisterTransparencyExchangeServiceHandlerClient(ctx context.Context, mux *
 		}
 		forward_TransparencyExchangeService_VerifyClaim_0(annotatedContext, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
 	})
+	mux.Handle(http.MethodGet, pattern_TransparencyExchangeService_ListVerificationEvents_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+		ctx, cancel := context.WithCancel(req.Context())
+		defer cancel()
+		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
+		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/oscal.services.v1.TransparencyExchangeService/ListVerificationEvents", runtime.WithHTTPPathPattern("/v1/transparency/claims/{claim_id}/verification-events"))
+		if err != nil {
+			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
+			return
+		}
+		resp, md, err := request_TransparencyExchangeService_ListVerificationEvents_0(annotatedContext, inboundMarshaler, client, req, pathParams)
+		annotatedContext = runtime.NewServerMetadataContext(annotatedContext, md)
+		if err != nil {
+			runtime.HTTPError(annotatedContext, mux, outboundMarshaler, w, req, err)
+			return
+		}
+		forward_TransparencyExchangeService_ListVerificationEvents_0(annotatedContext, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
+	})
+	mux.Handle(http.MethodGet, pattern_TransparencyExchangeService_ExportClaimReceipt_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+		ctx, cancel := context.WithCancel(req.Context())
+		defer cancel()
+		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
+		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/oscal.services.v1.TransparencyExchangeService/ExportClaimReceipt", runtime.WithHTTPPathPattern("/v1/transparency/claims/{claim_id}/receipt"))
+		if err != nil {
+			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
+			return
+		}
+		resp, md, err := request_TransparencyExchangeService_ExportClaimReceipt_0(annotatedContext, inboundMarshaler, client, req, pathParams)
+		annotatedContext = runtime.NewServerMetadataContext(annotatedContext, md)
+		if err != nil {
+			runtime.HTTPError(annotatedContext, mux, outboundMarshaler, w, req, err)
+			return
+		}
+		forward_TransparencyExchangeService_ExportClaimReceipt_0(annotatedContext, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
+	})
+	mux.Handle(http.MethodPost, pattern_TransparencyExchangeService_PreflightImport_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+		ctx, cancel := context.WithCancel(req.Context())
+		defer cancel()
+		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
+		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/oscal.services.v1.TransparencyExchangeService/PreflightImport", runtime.WithHTTPPathPattern("/v1/transparency/import/preflight"))
+		if err != nil {
+			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
+			return
+		}
+		resp, md, err := request_TransparencyExchangeService_PreflightImport_0(annotatedContext, inboundMarshaler, client, req, pathParams)
+		annotatedContext = runtime.NewServerMetadataContext(annotatedContext, md)
+		if err != nil {
+			runtime.HTTPError(annotatedContext, mux, outboundMarshaler, w, req, err)
+			return
+		}
+		forward_TransparencyExchangeService_PreflightImport_0(annotatedContext, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
+	})
+	mux.Handle(http.MethodPost, pattern_TransparencyExchangeService_ImportBatch_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+		ctx, cancel := context.WithCancel(req.Context())
+		defer cancel()
+		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
+		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/oscal.services.v1.TransparencyExchangeService/ImportBatch", runtime.WithHTTPPathPattern("/v1/transparency/import"))
+		if err != nil {
+			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
+			return
+		}
+		resp, md, err := request_TransparencyExchangeService_ImportBatch_0(annotatedContext, inboundMarshaler, client, req, pathParams)
+		annotatedContext = runtime.NewServerMetadataContext(annotatedContext, md)
+		if err != nil {
+			runtime.HTTPError(annotatedContext, mux, outboundMarshaler, w, req, err)
+			return
+		}
+		forward_TransparencyExchangeService_ImportBatch_0(annotatedContext, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
+	})
 	mux.Handle(http.MethodPost, pattern_TransparencyExchangeService_UploadEvidence_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
@@ -665,23 +945,31 @@ func RegisterTransparencyExchangeServiceHandlerClient(ctx context.Context, mux *
 }
 
 var (
-	pattern_TransparencyExchangeService_CreateClaim_0    = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2}, []string{"v1", "transparency", "claims"}, ""))
-	pattern_TransparencyExchangeService_GetClaim_0       = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3}, []string{"v1", "transparency", "claims", "claim_id"}, ""))
-	pattern_TransparencyExchangeService_ListClaims_0     = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2}, []string{"v1", "transparency", "claims"}, ""))
-	pattern_TransparencyExchangeService_VerifyClaim_0    = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3, 2, 4}, []string{"v1", "transparency", "claims", "claim_id", "verify"}, ""))
-	pattern_TransparencyExchangeService_UploadEvidence_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2}, []string{"v1", "transparency", "evidence"}, ""))
-	pattern_TransparencyExchangeService_GetEvidence_0    = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3}, []string{"v1", "transparency", "evidence", "evidence_id"}, ""))
-	pattern_TransparencyExchangeService_VerifyEvidence_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3, 2, 4}, []string{"v1", "transparency", "evidence", "evidence_id", "verify"}, ""))
-	pattern_TransparencyExchangeService_SyncClaims_0     = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2}, []string{"v1", "transparency", "sync"}, ""))
+	pattern_TransparencyExchangeService_CreateClaim_0            = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2}, []string{"v1", "transparency", "claims"}, ""))
+	pattern_TransparencyExchangeService_GetClaim_0               = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3}, []string{"v1", "transparency", "claims", "claim_id"}, ""))
+	pattern_TransparencyExchangeService_ListClaims_0             = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2}, []string{"v1", "transparency", "claims"}, ""))
+	pattern_TransparencyExchangeService_VerifyClaim_0            = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3, 2, 4}, []string{"v1", "transparency", "claims", "claim_id", "verify"}, ""))
+	pattern_TransparencyExchangeService_ListVerificationEvents_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3, 2, 4}, []string{"v1", "transparency", "claims", "claim_id", "verification-events"}, ""))
+	pattern_TransparencyExchangeService_ExportClaimReceipt_0     = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3, 2, 4}, []string{"v1", "transparency", "claims", "claim_id", "receipt"}, ""))
+	pattern_TransparencyExchangeService_PreflightImport_0        = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3}, []string{"v1", "transparency", "import", "preflight"}, ""))
+	pattern_TransparencyExchangeService_ImportBatch_0            = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2}, []string{"v1", "transparency", "import"}, ""))
+	pattern_TransparencyExchangeService_UploadEvidence_0         = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2}, []string{"v1", "transparency", "evidence"}, ""))
+	pattern_TransparencyExchangeService_GetEvidence_0            = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3}, []string{"v1", "transparency", "evidence", "evidence_id"}, ""))
+	pattern_TransparencyExchangeService_VerifyEvidence_0         = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3, 2, 4}, []string{"v1", "transparency", "evidence", "evidence_id", "verify"}, ""))
+	pattern_TransparencyExchangeService_SyncClaims_0             = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2}, []string{"v1", "transparency", "sync"}, ""))
 )
 
 var (
-	forward_TransparencyExchangeService_CreateClaim_0    = runtime.ForwardResponseMessage
-	forward_TransparencyExchangeService_GetClaim_0       = runtime.ForwardResponseMessage
-	forward_TransparencyExchangeService_ListClaims_0     = runtime.ForwardResponseMessage
-	forward_TransparencyExchangeService_VerifyClaim_0    = runtime.ForwardResponseMessage
-	forward_TransparencyExchangeService_UploadEvidence_0 = runtime.ForwardResponseMessage
-	forward_TransparencyExchangeService_GetEvidence_0    = runtime.ForwardResponseMessage
-	forward_TransparencyExchangeService_VerifyEvidence_0 = runtime.ForwardResponseMessage
-	forward_TransparencyExchangeService_SyncClaims_0     = runtime.ForwardResponseMessage
+	forward_TransparencyExchangeService_CreateClaim_0            = runtime.ForwardResponseMessage
+	forward_TransparencyExchangeService_GetClaim_0               = runtime.ForwardResponseMessage
+	forward_TransparencyExchangeService_ListClaims_0             = runtime.ForwardResponseMessage
+	forward_TransparencyExchangeService_VerifyClaim_0            = runtime.ForwardResponseMessage
+	forward_TransparencyExchangeService_ListVerificationEvents_0 = runtime.ForwardResponseMessage
+	forward_TransparencyExchangeService_ExportClaimReceipt_0     = runtime.ForwardResponseMessage
+	forward_TransparencyExchangeService_PreflightImport_0        = runtime.ForwardResponseMessage
+	forward_TransparencyExchangeService_ImportBatch_0            = runtime.ForwardResponseMessage
+	forward_TransparencyExchangeService_UploadEvidence_0         = runtime.ForwardResponseMessage
+	forward_TransparencyExchangeService_GetEvidence_0            = runtime.ForwardResponseMessage
+	forward_TransparencyExchangeService_VerifyEvidence_0         = runtime.ForwardResponseMessage
+	forward_TransparencyExchangeService_SyncClaims_0             = runtime.ForwardResponseMessage
 )

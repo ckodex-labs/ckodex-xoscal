@@ -1,5 +1,5 @@
 // Command xoscal-validate-schema validates OSCAL JSON artifacts against
-// the official NIST OSCAL 1.1.2 JSON schemas.
+// the pinned official NIST OSCAL JSON schemas.
 //
 // Usage:
 //
@@ -21,7 +21,7 @@ import (
 
 func main() {
 	filePath := flag.String("file", "", "path to OSCAL JSON artifact to validate")
-	kindFlag := flag.String("kind", "", "artifact kind (catalog, profile, ssp, component-definition, assessment-plan, assessment-results, poam)")
+	kindFlag := flag.String("kind", "", "artifact kind (catalog, profile, ssp, component-definition, assessment-plan, assessment-results, poam, mapping)")
 	flag.Parse()
 
 	if *filePath == "" {
@@ -78,6 +78,7 @@ func resolveKind(kindFlag string, data []byte) (schemavalidate.ArtifactKind, err
 		schemavalidate.KindAssessmentPlan,
 		schemavalidate.KindAssessmentResults,
 		schemavalidate.KindPOAM,
+		schemavalidate.KindMapping,
 	} {
 		if _, ok := doc[k.RootKey]; ok {
 			return k, nil
@@ -103,6 +104,8 @@ func kindFromName(name string) (schemavalidate.ArtifactKind, error) {
 		return schemavalidate.KindAssessmentResults, nil
 	case "poam", "plan-of-action-and-milestones":
 		return schemavalidate.KindPOAM, nil
+	case "mapping", "mapping-collection":
+		return schemavalidate.KindMapping, nil
 	default:
 		return schemavalidate.ArtifactKind{}, fmt.Errorf("unknown kind: %s", name)
 	}

@@ -20,7 +20,9 @@ fileprivate nonisolated struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobu
   typealias Version = _2
 }
 
-/// MappingCollection represents a collection of mappings
+/// MappingCollection is the OSCAL 1.2 mapping-collection document root.
+/// Fields 3-15 predate the released Mapping model and are retained only for
+/// wire compatibility; new code uses provenance, mappings, and back_matter.
 nonisolated struct Oscal_Mapping_V1_MappingCollection: @unchecked Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
@@ -43,6 +45,162 @@ nonisolated struct Oscal_Mapping_V1_MappingCollection: @unchecked Sendable {
   var hasMetadata: Bool {_storage._metadata != nil}
   /// Clears the value of `metadata`. Subsequent reads from it will return its default value.
   mutating func clearMetadata() {_uniqueStorage()._metadata = nil}
+
+  /// NOTE: This field was marked as deprecated in the .proto file.
+  var matchingRationale: String {
+    get {_storage._matchingRationale}
+    set {_uniqueStorage()._matchingRationale = newValue}
+  }
+
+  /// NOTE: This field was marked as deprecated in the .proto file.
+  var status: String {
+    get {_storage._status}
+    set {_uniqueStorage()._status = newValue}
+  }
+
+  /// NOTE: This field was marked as deprecated in the .proto file.
+  var sourceResource: Oscal_Mapping_V1_MappingResourceReference {
+    get {_storage._sourceResource ?? Oscal_Mapping_V1_MappingResourceReference()}
+    set {_uniqueStorage()._sourceResource = newValue}
+  }
+  /// Returns true if `sourceResource` has been explicitly set.
+  var hasSourceResource: Bool {_storage._sourceResource != nil}
+  /// Clears the value of `sourceResource`. Subsequent reads from it will return its default value.
+  mutating func clearSourceResource() {_uniqueStorage()._sourceResource = nil}
+
+  /// NOTE: This field was marked as deprecated in the .proto file.
+  var targetResource: Oscal_Mapping_V1_MappingResourceReference {
+    get {_storage._targetResource ?? Oscal_Mapping_V1_MappingResourceReference()}
+    set {_uniqueStorage()._targetResource = newValue}
+  }
+  /// Returns true if `targetResource` has been explicitly set.
+  var hasTargetResource: Bool {_storage._targetResource != nil}
+  /// Clears the value of `targetResource`. Subsequent reads from it will return its default value.
+  mutating func clearTargetResource() {_uniqueStorage()._targetResource = nil}
+
+  /// NOTE: This field was marked as deprecated in the .proto file.
+  var maps: [Oscal_Mapping_V1_Map] {
+    get {_storage._maps}
+    set {_uniqueStorage()._maps = newValue}
+  }
+
+  /// NOTE: This field was marked as deprecated in the .proto file.
+  var props: [Oscal_Common_V1_Property] {
+    get {_storage._props}
+    set {_uniqueStorage()._props = newValue}
+  }
+
+  /// NOTE: This field was marked as deprecated in the .proto file.
+  var links: [Oscal_Common_V1_Link] {
+    get {_storage._links}
+    set {_uniqueStorage()._links = newValue}
+  }
+
+  /// NOTE: This field was marked as deprecated in the .proto file.
+  var remarks: [Oscal_Common_V1_MarkupMultiline] {
+    get {_storage._remarks}
+    set {_uniqueStorage()._remarks = newValue}
+  }
+
+  /// NOTE: This field was marked as deprecated in the .proto file.
+  var mappingDescription: Oscal_Mapping_V1_MappingDescription {
+    get {_storage._mappingDescription ?? Oscal_Mapping_V1_MappingDescription()}
+    set {_uniqueStorage()._mappingDescription = newValue}
+  }
+  /// Returns true if `mappingDescription` has been explicitly set.
+  var hasMappingDescription: Bool {_storage._mappingDescription != nil}
+  /// Clears the value of `mappingDescription`. Subsequent reads from it will return its default value.
+  mutating func clearMappingDescription() {_uniqueStorage()._mappingDescription = nil}
+
+  /// NOTE: This field was marked as deprecated in the .proto file.
+  var sourceGapSummary: Oscal_Mapping_V1_GapSummary {
+    get {_storage._sourceGapSummary ?? Oscal_Mapping_V1_GapSummary()}
+    set {_uniqueStorage()._sourceGapSummary = newValue}
+  }
+  /// Returns true if `sourceGapSummary` has been explicitly set.
+  var hasSourceGapSummary: Bool {_storage._sourceGapSummary != nil}
+  /// Clears the value of `sourceGapSummary`. Subsequent reads from it will return its default value.
+  mutating func clearSourceGapSummary() {_uniqueStorage()._sourceGapSummary = nil}
+
+  /// NOTE: This field was marked as deprecated in the .proto file.
+  var targetGapSummary: Oscal_Mapping_V1_GapSummary {
+    get {_storage._targetGapSummary ?? Oscal_Mapping_V1_GapSummary()}
+    set {_uniqueStorage()._targetGapSummary = newValue}
+  }
+  /// Returns true if `targetGapSummary` has been explicitly set.
+  var hasTargetGapSummary: Bool {_storage._targetGapSummary != nil}
+  /// Clears the value of `targetGapSummary`. Subsequent reads from it will return its default value.
+  mutating func clearTargetGapSummary() {_uniqueStorage()._targetGapSummary = nil}
+
+  /// NOTE: This field was marked as deprecated in the .proto file.
+  var confidenceScore: Oscal_Mapping_V1_ConfidenceScore {
+    get {_storage._confidenceScore ?? Oscal_Mapping_V1_ConfidenceScore()}
+    set {_uniqueStorage()._confidenceScore = newValue}
+  }
+  /// Returns true if `confidenceScore` has been explicitly set.
+  var hasConfidenceScore: Bool {_storage._confidenceScore != nil}
+  /// Clears the value of `confidenceScore`. Subsequent reads from it will return its default value.
+  mutating func clearConfidenceScore() {_uniqueStorage()._confidenceScore = nil}
+
+  /// NOTE: This field was marked as deprecated in the .proto file.
+  var coverage: Oscal_Mapping_V1_Coverage {
+    get {_storage._coverage ?? Oscal_Mapping_V1_Coverage()}
+    set {_uniqueStorage()._coverage = newValue}
+  }
+  /// Returns true if `coverage` has been explicitly set.
+  var hasCoverage: Bool {_storage._coverage != nil}
+  /// Clears the value of `coverage`. Subsequent reads from it will return its default value.
+  mutating func clearCoverage() {_uniqueStorage()._coverage = nil}
+
+  var provenance: Oscal_Mapping_V1_MappingProvenance {
+    get {_storage._provenance ?? Oscal_Mapping_V1_MappingProvenance()}
+    set {_uniqueStorage()._provenance = newValue}
+  }
+  /// Returns true if `provenance` has been explicitly set.
+  var hasProvenance: Bool {_storage._provenance != nil}
+  /// Clears the value of `provenance`. Subsequent reads from it will return its default value.
+  mutating func clearProvenance() {_uniqueStorage()._provenance = nil}
+
+  var mappings: [Oscal_Mapping_V1_ControlMapping] {
+    get {_storage._mappings}
+    set {_uniqueStorage()._mappings = newValue}
+  }
+
+  var backMatter: Oscal_Common_V1_BackMatter {
+    get {_storage._backMatter ?? Oscal_Common_V1_BackMatter()}
+    set {_uniqueStorage()._backMatter = newValue}
+  }
+  /// Returns true if `backMatter` has been explicitly set.
+  var hasBackMatter: Bool {_storage._backMatter != nil}
+  /// Clears the value of `backMatter`. Subsequent reads from it will return its default value.
+  mutating func clearBackMatter() {_uniqueStorage()._backMatter = nil}
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+
+  fileprivate var _storage = _StorageClass.defaultInstance
+}
+
+/// ControlMapping represents one source-resource to target-resource mapping.
+nonisolated struct Oscal_Mapping_V1_ControlMapping: @unchecked Sendable {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var uuid: Oscal_Common_V1_UUID {
+    get {_storage._uuid ?? Oscal_Common_V1_UUID()}
+    set {_uniqueStorage()._uuid = newValue}
+  }
+  /// Returns true if `uuid` has been explicitly set.
+  var hasUuid: Bool {_storage._uuid != nil}
+  /// Clears the value of `uuid`. Subsequent reads from it will return its default value.
+  mutating func clearUuid() {_uniqueStorage()._uuid = nil}
+
+  var method: String {
+    get {_storage._method}
+    set {_uniqueStorage()._method = newValue}
+  }
 
   var matchingRationale: String {
     get {_storage._matchingRationale}
@@ -92,8 +250,8 @@ nonisolated struct Oscal_Mapping_V1_MappingCollection: @unchecked Sendable {
     set {_uniqueStorage()._remarks = newValue}
   }
 
-  var mappingDescription: Oscal_Mapping_V1_MappingDescription {
-    get {_storage._mappingDescription ?? Oscal_Mapping_V1_MappingDescription()}
+  var mappingDescription: Oscal_Common_V1_MarkupMultiline {
+    get {_storage._mappingDescription ?? Oscal_Common_V1_MarkupMultiline()}
     set {_uniqueStorage()._mappingDescription = newValue}
   }
   /// Returns true if `mappingDescription` has been explicitly set.
@@ -286,91 +444,171 @@ nonisolated struct Oscal_Mapping_V1_MappingItem: Sendable {
   init() {}
 }
 
-/// QualifierItem represents a qualifier item
+/// QualifierItem represents an OSCAL relationship qualifier. Fields 1-4 are
+/// retained for wire compatibility with the pre-release mapping prototype.
 nonisolated struct Oscal_Mapping_V1_QualifierItem: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
+  /// NOTE: This field was marked as deprecated in the .proto file.
   var type: String = String()
 
+  /// NOTE: This field was marked as deprecated in the .proto file.
   var idRef: String = String()
 
+  /// NOTE: This field was marked as deprecated in the .proto file.
   var props: [Oscal_Common_V1_Property] = []
 
+  /// NOTE: This field was marked as deprecated in the .proto file.
   var links: [Oscal_Common_V1_Link] = []
 
   var remarks: [Oscal_Common_V1_MarkupMultiline] = []
 
+  var subject: String = String()
+
+  var predicate: String = String()
+
+  var category: String = String()
+
+  var description_p: Oscal_Common_V1_MarkupMultiline {
+    get {_description_p ?? Oscal_Common_V1_MarkupMultiline()}
+    set {_description_p = newValue}
+  }
+  /// Returns true if `description_p` has been explicitly set.
+  var hasDescription_p: Bool {self._description_p != nil}
+  /// Clears the value of `description_p`. Subsequent reads from it will return its default value.
+  mutating func clearDescription_p() {self._description_p = nil}
+
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
   init() {}
+
+  fileprivate var _description_p: Oscal_Common_V1_MarkupMultiline? = nil
 }
 
-/// ConfidenceScore represents a confidence score
+/// ConfidenceScore is either a category or a percentage from 0 through 1.
+/// Fields 1-5 are retained for wire compatibility with the prototype model.
 nonisolated struct Oscal_Mapping_V1_ConfidenceScore: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
+  /// NOTE: This field was marked as deprecated in the .proto file.
   var value: Double = 0
 
+  /// NOTE: This field was marked as deprecated in the .proto file.
   var method: String = String()
 
+  /// NOTE: This field was marked as deprecated in the .proto file.
   var props: [Oscal_Common_V1_Property] = []
 
+  /// NOTE: This field was marked as deprecated in the .proto file.
   var links: [Oscal_Common_V1_Link] = []
 
+  /// NOTE: This field was marked as deprecated in the .proto file.
   var remarks: [Oscal_Common_V1_MarkupMultiline] = []
+
+  var category: String = String()
+
+  var percentage: Oscal_Common_V1_Decimal {
+    get {_percentage ?? Oscal_Common_V1_Decimal()}
+    set {_percentage = newValue}
+  }
+  /// Returns true if `percentage` has been explicitly set.
+  var hasPercentage: Bool {self._percentage != nil}
+  /// Clears the value of `percentage`. Subsequent reads from it will return its default value.
+  mutating func clearPercentage() {self._percentage = nil}
 
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
   init() {}
+
+  fileprivate var _percentage: Oscal_Common_V1_Decimal? = nil
 }
 
-/// Coverage represents coverage information
+/// Coverage records target coverage and the method used to derive it.
+/// Fields 1-5 are retained for wire compatibility with the prototype model.
 nonisolated struct Oscal_Mapping_V1_Coverage: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
+  /// NOTE: This field was marked as deprecated in the .proto file.
   var value: Double = 0
 
+  /// NOTE: This field was marked as deprecated in the .proto file.
   var method: String = String()
 
+  /// NOTE: This field was marked as deprecated in the .proto file.
   var props: [Oscal_Common_V1_Property] = []
 
+  /// NOTE: This field was marked as deprecated in the .proto file.
   var links: [Oscal_Common_V1_Link] = []
 
+  /// NOTE: This field was marked as deprecated in the .proto file.
   var remarks: [Oscal_Common_V1_MarkupMultiline] = []
+
+  var generationMethod: String = String()
+
+  var targetCoverage: Oscal_Common_V1_Decimal {
+    get {_targetCoverage ?? Oscal_Common_V1_Decimal()}
+    set {_targetCoverage = newValue}
+  }
+  /// Returns true if `targetCoverage` has been explicitly set.
+  var hasTargetCoverage: Bool {self._targetCoverage != nil}
+  /// Clears the value of `targetCoverage`. Subsequent reads from it will return its default value.
+  mutating func clearTargetCoverage() {self._targetCoverage = nil}
 
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
   init() {}
+
+  fileprivate var _targetCoverage: Oscal_Common_V1_Decimal? = nil
 }
 
-/// GapSummary represents a gap summary
+/// GapSummary selects controls that are not mapped.
+/// Fields 1-5 are retained for wire compatibility with the prototype model.
 nonisolated struct Oscal_Mapping_V1_GapSummary: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
+  /// NOTE: This field was marked as deprecated in the .proto file.
   var count: Int32 = 0
 
+  /// NOTE: This field was marked as deprecated in the .proto file.
   var gaps: [String] = []
 
+  /// NOTE: This field was marked as deprecated in the .proto file.
   var props: [Oscal_Common_V1_Property] = []
 
+  /// NOTE: This field was marked as deprecated in the .proto file.
   var links: [Oscal_Common_V1_Link] = []
 
+  /// NOTE: This field was marked as deprecated in the .proto file.
   var remarks: [Oscal_Common_V1_MarkupMultiline] = []
+
+  var uuid: Oscal_Common_V1_UUID {
+    get {_uuid ?? Oscal_Common_V1_UUID()}
+    set {_uuid = newValue}
+  }
+  /// Returns true if `uuid` has been explicitly set.
+  var hasUuid: Bool {self._uuid != nil}
+  /// Clears the value of `uuid`. Subsequent reads from it will return its default value.
+  mutating func clearUuid() {self._uuid = nil}
+
+  var unmappedControls: [Oscal_Mapping_V1_SelectControlById] = []
 
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
   init() {}
+
+  fileprivate var _uuid: Oscal_Common_V1_UUID? = nil
 }
 
-/// MappingDescription represents a mapping description
+/// MappingDescription is the deprecated prototype wrapper. Released OSCAL uses
+/// MarkupMultiline directly for mapping-description.
 nonisolated struct Oscal_Mapping_V1_MappingDescription: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
@@ -398,13 +636,120 @@ nonisolated struct Oscal_Mapping_V1_MappingDescription: Sendable {
   fileprivate var _description_p: Oscal_Common_V1_MarkupMultiline? = nil
 }
 
+/// MappingProvenance records how the collection was produced and its status.
+nonisolated struct Oscal_Mapping_V1_MappingProvenance: @unchecked Sendable {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var method: String {
+    get {_storage._method}
+    set {_uniqueStorage()._method = newValue}
+  }
+
+  var matchingRationale: String {
+    get {_storage._matchingRationale}
+    set {_uniqueStorage()._matchingRationale = newValue}
+  }
+
+  var status: String {
+    get {_storage._status}
+    set {_uniqueStorage()._status = newValue}
+  }
+
+  var confidenceScore: Oscal_Mapping_V1_ConfidenceScore {
+    get {_storage._confidenceScore ?? Oscal_Mapping_V1_ConfidenceScore()}
+    set {_uniqueStorage()._confidenceScore = newValue}
+  }
+  /// Returns true if `confidenceScore` has been explicitly set.
+  var hasConfidenceScore: Bool {_storage._confidenceScore != nil}
+  /// Clears the value of `confidenceScore`. Subsequent reads from it will return its default value.
+  mutating func clearConfidenceScore() {_uniqueStorage()._confidenceScore = nil}
+
+  var coverage: Oscal_Mapping_V1_Coverage {
+    get {_storage._coverage ?? Oscal_Mapping_V1_Coverage()}
+    set {_uniqueStorage()._coverage = newValue}
+  }
+  /// Returns true if `coverage` has been explicitly set.
+  var hasCoverage: Bool {_storage._coverage != nil}
+  /// Clears the value of `coverage`. Subsequent reads from it will return its default value.
+  mutating func clearCoverage() {_uniqueStorage()._coverage = nil}
+
+  var mappingDescription: Oscal_Common_V1_MarkupMultiline {
+    get {_storage._mappingDescription ?? Oscal_Common_V1_MarkupMultiline()}
+    set {_uniqueStorage()._mappingDescription = newValue}
+  }
+  /// Returns true if `mappingDescription` has been explicitly set.
+  var hasMappingDescription: Bool {_storage._mappingDescription != nil}
+  /// Clears the value of `mappingDescription`. Subsequent reads from it will return its default value.
+  mutating func clearMappingDescription() {_uniqueStorage()._mappingDescription = nil}
+
+  var responsibleParties: [Oscal_Common_V1_ResponsibleParty] {
+    get {_storage._responsibleParties}
+    set {_uniqueStorage()._responsibleParties = newValue}
+  }
+
+  var props: [Oscal_Common_V1_Property] {
+    get {_storage._props}
+    set {_uniqueStorage()._props = newValue}
+  }
+
+  var links: [Oscal_Common_V1_Link] {
+    get {_storage._links}
+    set {_uniqueStorage()._links = newValue}
+  }
+
+  var remarks: [Oscal_Common_V1_MarkupMultiline] {
+    get {_storage._remarks}
+    set {_uniqueStorage()._remarks = newValue}
+  }
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+
+  fileprivate var _storage = _StorageClass.defaultInstance
+}
+
+/// SelectControlById selects explicit or pattern-matched controls.
+nonisolated struct Oscal_Mapping_V1_SelectControlById: Sendable {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var withChildControls: String = String()
+
+  var withIds: [Oscal_Common_V1_Token] = []
+
+  var matching: [Oscal_Mapping_V1_Matching] = []
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
+/// Matching selects controls by a glob expression.
+nonisolated struct Oscal_Mapping_V1_Matching: Sendable {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var pattern: String = String()
+
+  var remarks: [Oscal_Common_V1_MarkupMultiline] = []
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
 
 fileprivate nonisolated let _protobuf_package = "oscal.mapping.v1"
 
 nonisolated extension Oscal_Mapping_V1_MappingCollection: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   static let protoMessageName: String = _protobuf_package + ".MappingCollection"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}uuid\0\u{1}metadata\0\u{3}matching_rationale\0\u{1}status\0\u{3}source_resource\0\u{3}target_resource\0\u{1}maps\0\u{1}props\0\u{1}links\0\u{1}remarks\0\u{3}mapping_description\0\u{3}source_gap_summary\0\u{3}target_gap_summary\0\u{3}confidence_score\0\u{1}coverage\0")
+  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}uuid\0\u{1}metadata\0\u{3}matching_rationale\0\u{1}status\0\u{3}source_resource\0\u{3}target_resource\0\u{1}maps\0\u{1}props\0\u{1}links\0\u{1}remarks\0\u{3}mapping_description\0\u{3}source_gap_summary\0\u{3}target_gap_summary\0\u{3}confidence_score\0\u{1}coverage\0\u{1}provenance\0\u{1}mappings\0\u{3}back_matter\0")
 
   fileprivate class _StorageClass {
     var _uuid: Oscal_Common_V1_UUID? = nil
@@ -422,6 +767,9 @@ nonisolated extension Oscal_Mapping_V1_MappingCollection: SwiftProtobuf.Message,
     var _targetGapSummary: Oscal_Mapping_V1_GapSummary? = nil
     var _confidenceScore: Oscal_Mapping_V1_ConfidenceScore? = nil
     var _coverage: Oscal_Mapping_V1_Coverage? = nil
+    var _provenance: Oscal_Mapping_V1_MappingProvenance? = nil
+    var _mappings: [Oscal_Mapping_V1_ControlMapping] = []
+    var _backMatter: Oscal_Common_V1_BackMatter? = nil
 
       // This property is used as the initial default value for new instances of the type.
       // The type itself is protecting the reference to its storage via CoW semantics.
@@ -447,6 +795,9 @@ nonisolated extension Oscal_Mapping_V1_MappingCollection: SwiftProtobuf.Message,
       _targetGapSummary = source._targetGapSummary
       _confidenceScore = source._confidenceScore
       _coverage = source._coverage
+      _provenance = source._provenance
+      _mappings = source._mappings
+      _backMatter = source._backMatter
     }
   }
 
@@ -480,6 +831,9 @@ nonisolated extension Oscal_Mapping_V1_MappingCollection: SwiftProtobuf.Message,
         case 13: try { try decoder.decodeSingularMessageField(value: &_storage._targetGapSummary) }()
         case 14: try { try decoder.decodeSingularMessageField(value: &_storage._confidenceScore) }()
         case 15: try { try decoder.decodeSingularMessageField(value: &_storage._coverage) }()
+        case 16: try { try decoder.decodeSingularMessageField(value: &_storage._provenance) }()
+        case 17: try { try decoder.decodeRepeatedMessageField(value: &_storage._mappings) }()
+        case 18: try { try decoder.decodeSingularMessageField(value: &_storage._backMatter) }()
         default: break
         }
       }
@@ -537,6 +891,15 @@ nonisolated extension Oscal_Mapping_V1_MappingCollection: SwiftProtobuf.Message,
       try { if let v = _storage._coverage {
         try visitor.visitSingularMessageField(value: v, fieldNumber: 15)
       } }()
+      try { if let v = _storage._provenance {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 16)
+      } }()
+      if !_storage._mappings.isEmpty {
+        try visitor.visitRepeatedMessageField(value: _storage._mappings, fieldNumber: 17)
+      }
+      try { if let v = _storage._backMatter {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 18)
+      } }()
     }
     try unknownFields.traverse(visitor: &visitor)
   }
@@ -548,6 +911,177 @@ nonisolated extension Oscal_Mapping_V1_MappingCollection: SwiftProtobuf.Message,
         let rhs_storage = _args.1
         if _storage._uuid != rhs_storage._uuid {return false}
         if _storage._metadata != rhs_storage._metadata {return false}
+        if _storage._matchingRationale != rhs_storage._matchingRationale {return false}
+        if _storage._status != rhs_storage._status {return false}
+        if _storage._sourceResource != rhs_storage._sourceResource {return false}
+        if _storage._targetResource != rhs_storage._targetResource {return false}
+        if _storage._maps != rhs_storage._maps {return false}
+        if _storage._props != rhs_storage._props {return false}
+        if _storage._links != rhs_storage._links {return false}
+        if _storage._remarks != rhs_storage._remarks {return false}
+        if _storage._mappingDescription != rhs_storage._mappingDescription {return false}
+        if _storage._sourceGapSummary != rhs_storage._sourceGapSummary {return false}
+        if _storage._targetGapSummary != rhs_storage._targetGapSummary {return false}
+        if _storage._confidenceScore != rhs_storage._confidenceScore {return false}
+        if _storage._coverage != rhs_storage._coverage {return false}
+        if _storage._provenance != rhs_storage._provenance {return false}
+        if _storage._mappings != rhs_storage._mappings {return false}
+        if _storage._backMatter != rhs_storage._backMatter {return false}
+        return true
+      }
+      if !storagesAreEqual {return false}
+    }
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+nonisolated extension Oscal_Mapping_V1_ControlMapping: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".ControlMapping"
+  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}uuid\0\u{1}method\0\u{3}matching_rationale\0\u{1}status\0\u{3}source_resource\0\u{3}target_resource\0\u{1}maps\0\u{1}props\0\u{1}links\0\u{1}remarks\0\u{3}mapping_description\0\u{3}source_gap_summary\0\u{3}target_gap_summary\0\u{3}confidence_score\0\u{1}coverage\0")
+
+  fileprivate class _StorageClass {
+    var _uuid: Oscal_Common_V1_UUID? = nil
+    var _method: String = String()
+    var _matchingRationale: String = String()
+    var _status: String = String()
+    var _sourceResource: Oscal_Mapping_V1_MappingResourceReference? = nil
+    var _targetResource: Oscal_Mapping_V1_MappingResourceReference? = nil
+    var _maps: [Oscal_Mapping_V1_Map] = []
+    var _props: [Oscal_Common_V1_Property] = []
+    var _links: [Oscal_Common_V1_Link] = []
+    var _remarks: [Oscal_Common_V1_MarkupMultiline] = []
+    var _mappingDescription: Oscal_Common_V1_MarkupMultiline? = nil
+    var _sourceGapSummary: Oscal_Mapping_V1_GapSummary? = nil
+    var _targetGapSummary: Oscal_Mapping_V1_GapSummary? = nil
+    var _confidenceScore: Oscal_Mapping_V1_ConfidenceScore? = nil
+    var _coverage: Oscal_Mapping_V1_Coverage? = nil
+
+      // This property is used as the initial default value for new instances of the type.
+      // The type itself is protecting the reference to its storage via CoW semantics.
+      // This will force a copy to be made of this reference when the first mutation occurs;
+      // hence, it is safe to mark this as `nonisolated(unsafe)`.
+      static nonisolated(unsafe) let defaultInstance = _StorageClass()
+
+    private init() {}
+
+    init(copying source: _StorageClass) {
+      _uuid = source._uuid
+      _method = source._method
+      _matchingRationale = source._matchingRationale
+      _status = source._status
+      _sourceResource = source._sourceResource
+      _targetResource = source._targetResource
+      _maps = source._maps
+      _props = source._props
+      _links = source._links
+      _remarks = source._remarks
+      _mappingDescription = source._mappingDescription
+      _sourceGapSummary = source._sourceGapSummary
+      _targetGapSummary = source._targetGapSummary
+      _confidenceScore = source._confidenceScore
+      _coverage = source._coverage
+    }
+  }
+
+  fileprivate mutating func _uniqueStorage() -> _StorageClass {
+    if !isKnownUniquelyReferenced(&_storage) {
+      _storage = _StorageClass(copying: _storage)
+    }
+    return _storage
+  }
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    _ = _uniqueStorage()
+    try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
+      while let fieldNumber = try decoder.nextFieldNumber() {
+        // The use of inline closures is to circumvent an issue where the compiler
+        // allocates stack space for every case branch when no optimizations are
+        // enabled. https://github.com/apple/swift-protobuf/issues/1034
+        switch fieldNumber {
+        case 1: try { try decoder.decodeSingularMessageField(value: &_storage._uuid) }()
+        case 2: try { try decoder.decodeSingularStringField(value: &_storage._method) }()
+        case 3: try { try decoder.decodeSingularStringField(value: &_storage._matchingRationale) }()
+        case 4: try { try decoder.decodeSingularStringField(value: &_storage._status) }()
+        case 5: try { try decoder.decodeSingularMessageField(value: &_storage._sourceResource) }()
+        case 6: try { try decoder.decodeSingularMessageField(value: &_storage._targetResource) }()
+        case 7: try { try decoder.decodeRepeatedMessageField(value: &_storage._maps) }()
+        case 8: try { try decoder.decodeRepeatedMessageField(value: &_storage._props) }()
+        case 9: try { try decoder.decodeRepeatedMessageField(value: &_storage._links) }()
+        case 10: try { try decoder.decodeRepeatedMessageField(value: &_storage._remarks) }()
+        case 11: try { try decoder.decodeSingularMessageField(value: &_storage._mappingDescription) }()
+        case 12: try { try decoder.decodeSingularMessageField(value: &_storage._sourceGapSummary) }()
+        case 13: try { try decoder.decodeSingularMessageField(value: &_storage._targetGapSummary) }()
+        case 14: try { try decoder.decodeSingularMessageField(value: &_storage._confidenceScore) }()
+        case 15: try { try decoder.decodeSingularMessageField(value: &_storage._coverage) }()
+        default: break
+        }
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every if/case branch local when no optimizations
+      // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+      // https://github.com/apple/swift-protobuf/issues/1182
+      try { if let v = _storage._uuid {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
+      } }()
+      if !_storage._method.isEmpty {
+        try visitor.visitSingularStringField(value: _storage._method, fieldNumber: 2)
+      }
+      if !_storage._matchingRationale.isEmpty {
+        try visitor.visitSingularStringField(value: _storage._matchingRationale, fieldNumber: 3)
+      }
+      if !_storage._status.isEmpty {
+        try visitor.visitSingularStringField(value: _storage._status, fieldNumber: 4)
+      }
+      try { if let v = _storage._sourceResource {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 5)
+      } }()
+      try { if let v = _storage._targetResource {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 6)
+      } }()
+      if !_storage._maps.isEmpty {
+        try visitor.visitRepeatedMessageField(value: _storage._maps, fieldNumber: 7)
+      }
+      if !_storage._props.isEmpty {
+        try visitor.visitRepeatedMessageField(value: _storage._props, fieldNumber: 8)
+      }
+      if !_storage._links.isEmpty {
+        try visitor.visitRepeatedMessageField(value: _storage._links, fieldNumber: 9)
+      }
+      if !_storage._remarks.isEmpty {
+        try visitor.visitRepeatedMessageField(value: _storage._remarks, fieldNumber: 10)
+      }
+      try { if let v = _storage._mappingDescription {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 11)
+      } }()
+      try { if let v = _storage._sourceGapSummary {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 12)
+      } }()
+      try { if let v = _storage._targetGapSummary {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 13)
+      } }()
+      try { if let v = _storage._confidenceScore {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 14)
+      } }()
+      try { if let v = _storage._coverage {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 15)
+      } }()
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Oscal_Mapping_V1_ControlMapping, rhs: Oscal_Mapping_V1_ControlMapping) -> Bool {
+    if lhs._storage !== rhs._storage {
+      let storagesAreEqual: Bool = withExtendedLifetime((lhs._storage, rhs._storage)) { (_args: (_StorageClass, _StorageClass)) in
+        let _storage = _args.0
+        let rhs_storage = _args.1
+        if _storage._uuid != rhs_storage._uuid {return false}
+        if _storage._method != rhs_storage._method {return false}
         if _storage._matchingRationale != rhs_storage._matchingRationale {return false}
         if _storage._status != rhs_storage._status {return false}
         if _storage._sourceResource != rhs_storage._sourceResource {return false}
@@ -828,7 +1362,7 @@ nonisolated extension Oscal_Mapping_V1_MappingItem: SwiftProtobuf.Message, Swift
 
 nonisolated extension Oscal_Mapping_V1_QualifierItem: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   static let protoMessageName: String = _protobuf_package + ".QualifierItem"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}type\0\u{3}id_ref\0\u{1}props\0\u{1}links\0\u{1}remarks\0")
+  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}type\0\u{3}id_ref\0\u{1}props\0\u{1}links\0\u{1}remarks\0\u{1}subject\0\u{1}predicate\0\u{1}category\0\u{1}description\0")
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
@@ -841,12 +1375,20 @@ nonisolated extension Oscal_Mapping_V1_QualifierItem: SwiftProtobuf.Message, Swi
       case 3: try { try decoder.decodeRepeatedMessageField(value: &self.props) }()
       case 4: try { try decoder.decodeRepeatedMessageField(value: &self.links) }()
       case 5: try { try decoder.decodeRepeatedMessageField(value: &self.remarks) }()
+      case 6: try { try decoder.decodeSingularStringField(value: &self.subject) }()
+      case 7: try { try decoder.decodeSingularStringField(value: &self.predicate) }()
+      case 8: try { try decoder.decodeSingularStringField(value: &self.category) }()
+      case 9: try { try decoder.decodeSingularMessageField(value: &self._description_p) }()
       default: break
       }
     }
   }
 
   func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
     if !self.type.isEmpty {
       try visitor.visitSingularStringField(value: self.type, fieldNumber: 1)
     }
@@ -862,6 +1404,18 @@ nonisolated extension Oscal_Mapping_V1_QualifierItem: SwiftProtobuf.Message, Swi
     if !self.remarks.isEmpty {
       try visitor.visitRepeatedMessageField(value: self.remarks, fieldNumber: 5)
     }
+    if !self.subject.isEmpty {
+      try visitor.visitSingularStringField(value: self.subject, fieldNumber: 6)
+    }
+    if !self.predicate.isEmpty {
+      try visitor.visitSingularStringField(value: self.predicate, fieldNumber: 7)
+    }
+    if !self.category.isEmpty {
+      try visitor.visitSingularStringField(value: self.category, fieldNumber: 8)
+    }
+    try { if let v = self._description_p {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 9)
+    } }()
     try unknownFields.traverse(visitor: &visitor)
   }
 
@@ -871,6 +1425,10 @@ nonisolated extension Oscal_Mapping_V1_QualifierItem: SwiftProtobuf.Message, Swi
     if lhs.props != rhs.props {return false}
     if lhs.links != rhs.links {return false}
     if lhs.remarks != rhs.remarks {return false}
+    if lhs.subject != rhs.subject {return false}
+    if lhs.predicate != rhs.predicate {return false}
+    if lhs.category != rhs.category {return false}
+    if lhs._description_p != rhs._description_p {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -878,7 +1436,7 @@ nonisolated extension Oscal_Mapping_V1_QualifierItem: SwiftProtobuf.Message, Swi
 
 nonisolated extension Oscal_Mapping_V1_ConfidenceScore: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   static let protoMessageName: String = _protobuf_package + ".ConfidenceScore"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}value\0\u{1}method\0\u{1}props\0\u{1}links\0\u{1}remarks\0")
+  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}value\0\u{1}method\0\u{1}props\0\u{1}links\0\u{1}remarks\0\u{1}category\0\u{1}percentage\0")
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
@@ -891,12 +1449,18 @@ nonisolated extension Oscal_Mapping_V1_ConfidenceScore: SwiftProtobuf.Message, S
       case 3: try { try decoder.decodeRepeatedMessageField(value: &self.props) }()
       case 4: try { try decoder.decodeRepeatedMessageField(value: &self.links) }()
       case 5: try { try decoder.decodeRepeatedMessageField(value: &self.remarks) }()
+      case 6: try { try decoder.decodeSingularStringField(value: &self.category) }()
+      case 7: try { try decoder.decodeSingularMessageField(value: &self._percentage) }()
       default: break
       }
     }
   }
 
   func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
     if self.value.bitPattern != 0 {
       try visitor.visitSingularDoubleField(value: self.value, fieldNumber: 1)
     }
@@ -912,6 +1476,12 @@ nonisolated extension Oscal_Mapping_V1_ConfidenceScore: SwiftProtobuf.Message, S
     if !self.remarks.isEmpty {
       try visitor.visitRepeatedMessageField(value: self.remarks, fieldNumber: 5)
     }
+    if !self.category.isEmpty {
+      try visitor.visitSingularStringField(value: self.category, fieldNumber: 6)
+    }
+    try { if let v = self._percentage {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 7)
+    } }()
     try unknownFields.traverse(visitor: &visitor)
   }
 
@@ -921,6 +1491,8 @@ nonisolated extension Oscal_Mapping_V1_ConfidenceScore: SwiftProtobuf.Message, S
     if lhs.props != rhs.props {return false}
     if lhs.links != rhs.links {return false}
     if lhs.remarks != rhs.remarks {return false}
+    if lhs.category != rhs.category {return false}
+    if lhs._percentage != rhs._percentage {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -928,7 +1500,7 @@ nonisolated extension Oscal_Mapping_V1_ConfidenceScore: SwiftProtobuf.Message, S
 
 nonisolated extension Oscal_Mapping_V1_Coverage: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   static let protoMessageName: String = _protobuf_package + ".Coverage"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}value\0\u{1}method\0\u{1}props\0\u{1}links\0\u{1}remarks\0")
+  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}value\0\u{1}method\0\u{1}props\0\u{1}links\0\u{1}remarks\0\u{3}generation_method\0\u{3}target_coverage\0")
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
@@ -941,12 +1513,18 @@ nonisolated extension Oscal_Mapping_V1_Coverage: SwiftProtobuf.Message, SwiftPro
       case 3: try { try decoder.decodeRepeatedMessageField(value: &self.props) }()
       case 4: try { try decoder.decodeRepeatedMessageField(value: &self.links) }()
       case 5: try { try decoder.decodeRepeatedMessageField(value: &self.remarks) }()
+      case 6: try { try decoder.decodeSingularStringField(value: &self.generationMethod) }()
+      case 7: try { try decoder.decodeSingularMessageField(value: &self._targetCoverage) }()
       default: break
       }
     }
   }
 
   func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
     if self.value.bitPattern != 0 {
       try visitor.visitSingularDoubleField(value: self.value, fieldNumber: 1)
     }
@@ -962,6 +1540,12 @@ nonisolated extension Oscal_Mapping_V1_Coverage: SwiftProtobuf.Message, SwiftPro
     if !self.remarks.isEmpty {
       try visitor.visitRepeatedMessageField(value: self.remarks, fieldNumber: 5)
     }
+    if !self.generationMethod.isEmpty {
+      try visitor.visitSingularStringField(value: self.generationMethod, fieldNumber: 6)
+    }
+    try { if let v = self._targetCoverage {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 7)
+    } }()
     try unknownFields.traverse(visitor: &visitor)
   }
 
@@ -971,6 +1555,8 @@ nonisolated extension Oscal_Mapping_V1_Coverage: SwiftProtobuf.Message, SwiftPro
     if lhs.props != rhs.props {return false}
     if lhs.links != rhs.links {return false}
     if lhs.remarks != rhs.remarks {return false}
+    if lhs.generationMethod != rhs.generationMethod {return false}
+    if lhs._targetCoverage != rhs._targetCoverage {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -978,7 +1564,7 @@ nonisolated extension Oscal_Mapping_V1_Coverage: SwiftProtobuf.Message, SwiftPro
 
 nonisolated extension Oscal_Mapping_V1_GapSummary: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   static let protoMessageName: String = _protobuf_package + ".GapSummary"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}count\0\u{1}gaps\0\u{1}props\0\u{1}links\0\u{1}remarks\0")
+  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}count\0\u{1}gaps\0\u{1}props\0\u{1}links\0\u{1}remarks\0\u{1}uuid\0\u{3}unmapped_controls\0")
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
@@ -991,12 +1577,18 @@ nonisolated extension Oscal_Mapping_V1_GapSummary: SwiftProtobuf.Message, SwiftP
       case 3: try { try decoder.decodeRepeatedMessageField(value: &self.props) }()
       case 4: try { try decoder.decodeRepeatedMessageField(value: &self.links) }()
       case 5: try { try decoder.decodeRepeatedMessageField(value: &self.remarks) }()
+      case 6: try { try decoder.decodeSingularMessageField(value: &self._uuid) }()
+      case 7: try { try decoder.decodeRepeatedMessageField(value: &self.unmappedControls) }()
       default: break
       }
     }
   }
 
   func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
     if self.count != 0 {
       try visitor.visitSingularInt32Field(value: self.count, fieldNumber: 1)
     }
@@ -1012,6 +1604,12 @@ nonisolated extension Oscal_Mapping_V1_GapSummary: SwiftProtobuf.Message, SwiftP
     if !self.remarks.isEmpty {
       try visitor.visitRepeatedMessageField(value: self.remarks, fieldNumber: 5)
     }
+    try { if let v = self._uuid {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 6)
+    } }()
+    if !self.unmappedControls.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.unmappedControls, fieldNumber: 7)
+    }
     try unknownFields.traverse(visitor: &visitor)
   }
 
@@ -1021,6 +1619,8 @@ nonisolated extension Oscal_Mapping_V1_GapSummary: SwiftProtobuf.Message, SwiftP
     if lhs.props != rhs.props {return false}
     if lhs.links != rhs.links {return false}
     if lhs.remarks != rhs.remarks {return false}
+    if lhs._uuid != rhs._uuid {return false}
+    if lhs.unmappedControls != rhs.unmappedControls {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -1069,6 +1669,214 @@ nonisolated extension Oscal_Mapping_V1_MappingDescription: SwiftProtobuf.Message
     if lhs._description_p != rhs._description_p {return false}
     if lhs.props != rhs.props {return false}
     if lhs.links != rhs.links {return false}
+    if lhs.remarks != rhs.remarks {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+nonisolated extension Oscal_Mapping_V1_MappingProvenance: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".MappingProvenance"
+  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}method\0\u{3}matching_rationale\0\u{1}status\0\u{3}confidence_score\0\u{1}coverage\0\u{3}mapping_description\0\u{3}responsible_parties\0\u{1}props\0\u{1}links\0\u{1}remarks\0")
+
+  fileprivate class _StorageClass {
+    var _method: String = String()
+    var _matchingRationale: String = String()
+    var _status: String = String()
+    var _confidenceScore: Oscal_Mapping_V1_ConfidenceScore? = nil
+    var _coverage: Oscal_Mapping_V1_Coverage? = nil
+    var _mappingDescription: Oscal_Common_V1_MarkupMultiline? = nil
+    var _responsibleParties: [Oscal_Common_V1_ResponsibleParty] = []
+    var _props: [Oscal_Common_V1_Property] = []
+    var _links: [Oscal_Common_V1_Link] = []
+    var _remarks: [Oscal_Common_V1_MarkupMultiline] = []
+
+      // This property is used as the initial default value for new instances of the type.
+      // The type itself is protecting the reference to its storage via CoW semantics.
+      // This will force a copy to be made of this reference when the first mutation occurs;
+      // hence, it is safe to mark this as `nonisolated(unsafe)`.
+      static nonisolated(unsafe) let defaultInstance = _StorageClass()
+
+    private init() {}
+
+    init(copying source: _StorageClass) {
+      _method = source._method
+      _matchingRationale = source._matchingRationale
+      _status = source._status
+      _confidenceScore = source._confidenceScore
+      _coverage = source._coverage
+      _mappingDescription = source._mappingDescription
+      _responsibleParties = source._responsibleParties
+      _props = source._props
+      _links = source._links
+      _remarks = source._remarks
+    }
+  }
+
+  fileprivate mutating func _uniqueStorage() -> _StorageClass {
+    if !isKnownUniquelyReferenced(&_storage) {
+      _storage = _StorageClass(copying: _storage)
+    }
+    return _storage
+  }
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    _ = _uniqueStorage()
+    try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
+      while let fieldNumber = try decoder.nextFieldNumber() {
+        // The use of inline closures is to circumvent an issue where the compiler
+        // allocates stack space for every case branch when no optimizations are
+        // enabled. https://github.com/apple/swift-protobuf/issues/1034
+        switch fieldNumber {
+        case 1: try { try decoder.decodeSingularStringField(value: &_storage._method) }()
+        case 2: try { try decoder.decodeSingularStringField(value: &_storage._matchingRationale) }()
+        case 3: try { try decoder.decodeSingularStringField(value: &_storage._status) }()
+        case 4: try { try decoder.decodeSingularMessageField(value: &_storage._confidenceScore) }()
+        case 5: try { try decoder.decodeSingularMessageField(value: &_storage._coverage) }()
+        case 6: try { try decoder.decodeSingularMessageField(value: &_storage._mappingDescription) }()
+        case 7: try { try decoder.decodeRepeatedMessageField(value: &_storage._responsibleParties) }()
+        case 8: try { try decoder.decodeRepeatedMessageField(value: &_storage._props) }()
+        case 9: try { try decoder.decodeRepeatedMessageField(value: &_storage._links) }()
+        case 10: try { try decoder.decodeRepeatedMessageField(value: &_storage._remarks) }()
+        default: break
+        }
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every if/case branch local when no optimizations
+      // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+      // https://github.com/apple/swift-protobuf/issues/1182
+      if !_storage._method.isEmpty {
+        try visitor.visitSingularStringField(value: _storage._method, fieldNumber: 1)
+      }
+      if !_storage._matchingRationale.isEmpty {
+        try visitor.visitSingularStringField(value: _storage._matchingRationale, fieldNumber: 2)
+      }
+      if !_storage._status.isEmpty {
+        try visitor.visitSingularStringField(value: _storage._status, fieldNumber: 3)
+      }
+      try { if let v = _storage._confidenceScore {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 4)
+      } }()
+      try { if let v = _storage._coverage {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 5)
+      } }()
+      try { if let v = _storage._mappingDescription {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 6)
+      } }()
+      if !_storage._responsibleParties.isEmpty {
+        try visitor.visitRepeatedMessageField(value: _storage._responsibleParties, fieldNumber: 7)
+      }
+      if !_storage._props.isEmpty {
+        try visitor.visitRepeatedMessageField(value: _storage._props, fieldNumber: 8)
+      }
+      if !_storage._links.isEmpty {
+        try visitor.visitRepeatedMessageField(value: _storage._links, fieldNumber: 9)
+      }
+      if !_storage._remarks.isEmpty {
+        try visitor.visitRepeatedMessageField(value: _storage._remarks, fieldNumber: 10)
+      }
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Oscal_Mapping_V1_MappingProvenance, rhs: Oscal_Mapping_V1_MappingProvenance) -> Bool {
+    if lhs._storage !== rhs._storage {
+      let storagesAreEqual: Bool = withExtendedLifetime((lhs._storage, rhs._storage)) { (_args: (_StorageClass, _StorageClass)) in
+        let _storage = _args.0
+        let rhs_storage = _args.1
+        if _storage._method != rhs_storage._method {return false}
+        if _storage._matchingRationale != rhs_storage._matchingRationale {return false}
+        if _storage._status != rhs_storage._status {return false}
+        if _storage._confidenceScore != rhs_storage._confidenceScore {return false}
+        if _storage._coverage != rhs_storage._coverage {return false}
+        if _storage._mappingDescription != rhs_storage._mappingDescription {return false}
+        if _storage._responsibleParties != rhs_storage._responsibleParties {return false}
+        if _storage._props != rhs_storage._props {return false}
+        if _storage._links != rhs_storage._links {return false}
+        if _storage._remarks != rhs_storage._remarks {return false}
+        return true
+      }
+      if !storagesAreEqual {return false}
+    }
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+nonisolated extension Oscal_Mapping_V1_SelectControlById: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".SelectControlById"
+  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{3}with_child_controls\0\u{3}with_ids\0\u{1}matching\0")
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularStringField(value: &self.withChildControls) }()
+      case 2: try { try decoder.decodeRepeatedMessageField(value: &self.withIds) }()
+      case 3: try { try decoder.decodeRepeatedMessageField(value: &self.matching) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.withChildControls.isEmpty {
+      try visitor.visitSingularStringField(value: self.withChildControls, fieldNumber: 1)
+    }
+    if !self.withIds.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.withIds, fieldNumber: 2)
+    }
+    if !self.matching.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.matching, fieldNumber: 3)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Oscal_Mapping_V1_SelectControlById, rhs: Oscal_Mapping_V1_SelectControlById) -> Bool {
+    if lhs.withChildControls != rhs.withChildControls {return false}
+    if lhs.withIds != rhs.withIds {return false}
+    if lhs.matching != rhs.matching {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+nonisolated extension Oscal_Mapping_V1_Matching: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".Matching"
+  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}pattern\0\u{1}remarks\0")
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularStringField(value: &self.pattern) }()
+      case 2: try { try decoder.decodeRepeatedMessageField(value: &self.remarks) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.pattern.isEmpty {
+      try visitor.visitSingularStringField(value: self.pattern, fieldNumber: 1)
+    }
+    if !self.remarks.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.remarks, fieldNumber: 2)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Oscal_Mapping_V1_Matching, rhs: Oscal_Mapping_V1_Matching) -> Bool {
+    if lhs.pattern != rhs.pattern {return false}
     if lhs.remarks != rhs.remarks {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true

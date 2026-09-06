@@ -229,6 +229,9 @@ components:
           items:
             $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
           title: remarks
+        includeAll:
+          title: include_all
+          $ref: '#/components/schemas/oscal.assessment_results.v1.IncludeAll'
       title: ControlSelection
       additionalProperties: false
       description: ControlSelection represents a selection of controls for review
@@ -362,6 +365,11 @@ components:
       title: ImportSsp
       additionalProperties: false
       description: ImportSsp represents an imported system security plan
+    oscal.assessment_results.v1.IncludeAll:
+      type: object
+      title: IncludeAll
+      additionalProperties: false
+      description: IncludeAll is OSCAL's empty marker object for selecting every control.
     oscal.assessment_results.v1.InventoryItem:
       type: object
       properties:
@@ -649,7 +657,7 @@ components:
           title: remarks
         reviewedControls:
           title: reviewed_controls
-          description: reviewed_controls is required by the OSCAL 1.1.2 schema for each result.
+          description: reviewed_controls is required by the pinned OSCAL schema for each result.
           $ref: '#/components/schemas/oscal.assessment_results.v1.ReviewedControls'
       title: Result
       additionalProperties: false

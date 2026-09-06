@@ -664,11 +664,32 @@ nonisolated struct Oscal_AssessmentPlan_V1_ControlSelection: Sendable {
 
   var remarks: [Oscal_Common_V1_MarkupMultiline] = []
 
+  var includeAll: Oscal_AssessmentPlan_V1_IncludeAll {
+    get {_includeAll ?? Oscal_AssessmentPlan_V1_IncludeAll()}
+    set {_includeAll = newValue}
+  }
+  /// Returns true if `includeAll` has been explicitly set.
+  var hasIncludeAll: Bool {self._includeAll != nil}
+  /// Clears the value of `includeAll`. Subsequent reads from it will return its default value.
+  mutating func clearIncludeAll() {self._includeAll = nil}
+
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
   init() {}
 
   fileprivate var _description_p: Oscal_Common_V1_MarkupMultiline? = nil
+  fileprivate var _includeAll: Oscal_AssessmentPlan_V1_IncludeAll? = nil
+}
+
+/// IncludeAll is OSCAL's empty marker object for selecting every control.
+nonisolated struct Oscal_AssessmentPlan_V1_IncludeAll: Sendable {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
 }
 
 /// SelectedControl represents a selected control
@@ -1868,7 +1889,7 @@ nonisolated extension Oscal_AssessmentPlan_V1_ReviewedControls: SwiftProtobuf.Me
 
 nonisolated extension Oscal_AssessmentPlan_V1_ControlSelection: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   static let protoMessageName: String = _protobuf_package + ".ControlSelection"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}description\0\u{3}include_controls\0\u{3}exclude_controls\0\u{1}props\0\u{1}links\0\u{1}remarks\0")
+  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}description\0\u{3}include_controls\0\u{3}exclude_controls\0\u{1}props\0\u{1}links\0\u{1}remarks\0\u{3}include_all\0")
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
@@ -1882,6 +1903,7 @@ nonisolated extension Oscal_AssessmentPlan_V1_ControlSelection: SwiftProtobuf.Me
       case 4: try { try decoder.decodeRepeatedMessageField(value: &self.props) }()
       case 5: try { try decoder.decodeRepeatedMessageField(value: &self.links) }()
       case 6: try { try decoder.decodeRepeatedMessageField(value: &self.remarks) }()
+      case 7: try { try decoder.decodeSingularMessageField(value: &self._includeAll) }()
       default: break
       }
     }
@@ -1910,6 +1932,9 @@ nonisolated extension Oscal_AssessmentPlan_V1_ControlSelection: SwiftProtobuf.Me
     if !self.remarks.isEmpty {
       try visitor.visitRepeatedMessageField(value: self.remarks, fieldNumber: 6)
     }
+    try { if let v = self._includeAll {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 7)
+    } }()
     try unknownFields.traverse(visitor: &visitor)
   }
 
@@ -1920,6 +1945,26 @@ nonisolated extension Oscal_AssessmentPlan_V1_ControlSelection: SwiftProtobuf.Me
     if lhs.props != rhs.props {return false}
     if lhs.links != rhs.links {return false}
     if lhs.remarks != rhs.remarks {return false}
+    if lhs._includeAll != rhs._includeAll {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+nonisolated extension Oscal_AssessmentPlan_V1_IncludeAll: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".IncludeAll"
+  static let _protobuf_nameMap = SwiftProtobuf._NameMap()
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    // Load everything into unknown fields
+    while try decoder.nextFieldNumber() != nil {}
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Oscal_AssessmentPlan_V1_IncludeAll, rhs: Oscal_AssessmentPlan_V1_IncludeAll) -> Bool {
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

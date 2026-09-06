@@ -1,5 +1,33 @@
 {
   "$defs": {
+    "oscal.common.v1.Decimal.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Decimal represents a decimal value",
+      "properties": {
+        "value": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "enum": [
+                "Infinity",
+                "-Infinity",
+                "NaN"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "string"
+            }
+          ],
+          "default": 0
+        }
+      },
+      "title": "Decimal",
+      "type": "object"
+    },
     "oscal.common.v1.Link.jsonschema.json": {
       "$schema": "https://json-schema.org/draft/2020-12/schema",
       "additionalProperties": false,
@@ -96,8 +124,21 @@
     "oscal.mapping.v1.Coverage.jsonschema.json": {
       "$schema": "https://json-schema.org/draft/2020-12/schema",
       "additionalProperties": false,
-      "description": "Coverage represents coverage information",
+      "description": "Coverage records target coverage and the method used to derive it.\n Fields 1-5 are retained for wire compatibility with the prototype model.",
+      "patternProperties": {
+        "^(generation_method)$": {
+          "default": "",
+          "type": "string"
+        },
+        "^(target_coverage)$": {
+          "$ref": "#/$defs/oscal.common.v1.Decimal.jsonschema.json"
+        }
+      },
       "properties": {
+        "generationMethod": {
+          "default": "",
+          "type": "string"
+        },
         "links": {
           "items": {
             "$ref": "#/$defs/oscal.common.v1.Link.jsonschema.json"
@@ -119,6 +160,9 @@
             "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.jsonschema.json"
           },
           "type": "array"
+        },
+        "targetCoverage": {
+          "$ref": "#/$defs/oscal.common.v1.Decimal.jsonschema.json"
         },
         "value": {
           "anyOf": [

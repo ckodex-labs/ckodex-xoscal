@@ -9,6 +9,7 @@ source: usnistgov/OSCAL
 # RSS/Atom feed GitHub exposes for every repo's releases. Parsed for the
 # newest entry title; no API token required.
 feed: https://github.com/usnistgov/OSCAL/releases.atom
+feed_field: title
 
 # Regex applied to each feed <title> to extract a comparable version string.
 # Matches "v1.2.2", "1.2.2", "OSCAL v1.2.2", etc. -> capture group 1.
@@ -24,6 +25,13 @@ spec_registry: data/oscal/spec-registry.yaml
 # Upstream JSON-schema bundle to diff against the protos (per released version).
 # {version} is the bare semver from the lock; the release tag prefixes it with "v".
 schema_url_template: https://github.com/usnistgov/OSCAL/releases/download/v{version}/oscal_complete_schema.json
+
+# Deterministic release updater. Constraint/vocabulary-only releases are
+# materialized automatically into a draft PR. Wire-shape changes fail closed
+# and keep the PR as a reconciliation handoff.
+update_script: scripts/reconcile/update-oscal.sh
+version_file: server/internal/oscalversion/VERSION
+embedded_schema_dir: server/internal/schemavalidate/schemas
 
 # Downstream surfaces a version bump must propagate to.
 targets:
@@ -48,7 +56,8 @@ targets:
 gates:
   - buf-lint
   - buf-breaking
-  - make-proto
+  - go-test-oscal
+  - schema-manifest
 
 # Drift response. open-draft-pr => human approves (DAL 3, no auto-merge).
 on_drift: open-draft-pr

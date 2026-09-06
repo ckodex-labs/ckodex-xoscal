@@ -9,6 +9,7 @@ import (
 	catalogv1 "github.com/mchorfa/xoscal/proto/oscal/catalog/v1"
 	commonv1 "github.com/mchorfa/xoscal/proto/oscal/common/v1"
 	componentv1 "github.com/mchorfa/xoscal/proto/oscal/component_definition/v1"
+	mappingv1 "github.com/mchorfa/xoscal/proto/oscal/mapping/v1"
 	poamv1 "github.com/mchorfa/xoscal/proto/oscal/poam/v1"
 	profilev1 "github.com/mchorfa/xoscal/proto/oscal/profile/v1"
 	sspv1 "github.com/mchorfa/xoscal/proto/oscal/ssp/v1"
@@ -21,7 +22,7 @@ import (
 // schema validation. This is the proto-to-schema conformance test.
 //
 // If any of these tests fail, it means the proto definitions, the generator,
-// or the serializer produce JSON that does not conform to the OSCAL 1.1.2
+// or the serializer produce JSON that does not conform to the pinned OSCAL
 // JSON schema.
 
 func TestProtoConformanceCatalog(t *testing.T) {
@@ -60,7 +61,8 @@ func TestProtoConformanceProfile(t *testing.T) {
 			Version: "1.0",
 		},
 		Imports: []*profilev1.Import{{
-			Href: &commonv1.URIReference{Value: "https://example.gov/catalog.json"},
+			Href:       &commonv1.URIReference{Value: "https://example.gov/catalog.json"},
+			IncludeAll: &profilev1.IncludeAll{},
 		}},
 	}
 	b, err := oscal.ExportProfileJSON(p)
@@ -104,6 +106,7 @@ func TestProtoConformanceAssessmentPlan(t *testing.T) {
 		ReviewedControls: &assessment_planv1.ReviewedControls{
 			ControlSelections: []*assessment_planv1.ControlSelection{{
 				Description: &commonv1.MarkupMultiline{Value: "All controls reviewed"},
+				IncludeAll:  &assessment_planv1.IncludeAll{},
 			}},
 		},
 	}
@@ -135,6 +138,7 @@ func TestProtoConformanceAssessmentResults(t *testing.T) {
 			ReviewedControls: &assessment_resultsv1.ReviewedControls{
 				ControlSelections: []*assessment_resultsv1.ControlSelection{{
 					Description: &commonv1.MarkupMultiline{Value: "All controls reviewed"},
+					IncludeAll:  &assessment_resultsv1.IncludeAll{},
 				}},
 			},
 		}},
@@ -284,5 +288,46 @@ func TestDeprecatedFieldsSuppressed(t *testing.T) {
 	v := mustValidator(t)
 	if err := v.Validate(b, KindPOAM); err != nil {
 		t.Errorf("POAM with deprecated risks field failed schema validation: %v", err)
+	}
+}
+
+func TestProtoConformanceMapping(t *testing.T) {
+	v := mustValidator(t)
+	mapping := &mappingv1.MappingCollection{
+		Uuid: &commonv1.UUID{Value: validUUID},
+		Metadata: &commonv1.Metadata{
+			Title:   "Conformance Mapping Collection",
+			Version: "1.0",
+		},
+		Provenance: &mappingv1.MappingProvenance{
+			Method:             "human",
+			MatchingRationale:  "functional",
+			Status:             "complete",
+			MappingDescription: &commonv1.MarkupMultiline{Value: "Conformance mapping."},
+		},
+		Mappings: []*mappingv1.ControlMapping{{
+			Uuid: &commonv1.UUID{Value: validUUID},
+			SourceResource: &mappingv1.MappingResourceReference{
+				Type: "catalog",
+				Href: &commonv1.URIReference{Value: "https://example.gov/source.json"},
+			},
+			TargetResource: &mappingv1.MappingResourceReference{
+				Type: "catalog",
+				Href: &commonv1.URIReference{Value: "https://example.gov/target.json"},
+			},
+			Maps: []*mappingv1.Map{{
+				Uuid:         &commonv1.UUID{Value: validUUID},
+				Relationship: &commonv1.Token{Value: "subset-of"},
+				Sources:      []*mappingv1.MappingItem{{Type: "control", IdRef: "ac-1"}},
+				Targets:      []*mappingv1.MappingItem{{Type: "control", IdRef: "cc6.1"}},
+			}},
+		}},
+	}
+	b, err := oscal.ExportMappingCollectionJSON(mapping)
+	if err != nil {
+		t.Fatalf("ExportMappingCollectionJSON: %v", err)
+	}
+	if err := v.Validate(b, KindMapping); err != nil {
+		t.Errorf("mapping-collection failed schema validation: %v", err)
 	}
 }

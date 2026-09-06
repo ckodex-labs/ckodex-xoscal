@@ -7,6 +7,7 @@ import (
 	catalogv1 "github.com/mchorfa/xoscal/proto/oscal/catalog/v1"
 	commonv1 "github.com/mchorfa/xoscal/proto/oscal/common/v1"
 	componentv1 "github.com/mchorfa/xoscal/proto/oscal/component_definition/v1"
+	mappingv1 "github.com/mchorfa/xoscal/proto/oscal/mapping/v1"
 	profilev1 "github.com/mchorfa/xoscal/proto/oscal/profile/v1"
 	"github.com/mchorfa/xoscal/server/internal/oscal"
 )
@@ -23,6 +24,7 @@ func TestValidatorLoadsAllSchemas(t *testing.T) {
 		"catalog", "profile", "system-security-plan",
 		"component-definition", "assessment-plan",
 		"assessment-results", "plan-of-action-and-milestones",
+		"mapping-collection",
 	}
 	for _, key := range expectedKeys {
 		if _, ok := v.schemas[key]; !ok {
@@ -89,7 +91,8 @@ func TestValidateProfile(t *testing.T) {
 			Version: "1.0",
 		},
 		Imports: []*profilev1.Import{{
-			Href: &commonv1.URIReference{Value: "https://example.gov/catalog.json"},
+			Href:       &commonv1.URIReference{Value: "https://example.gov/catalog.json"},
+			IncludeAll: &profilev1.IncludeAll{},
 		}},
 	}
 	b, err := oscal.ExportProfileJSON(p)
@@ -117,7 +120,7 @@ func TestValidateSSP(t *testing.T) {
 			"metadata": {
 				"title": "Test SSP",
 				"version": "1.0",
-				"oscal-version": "1.1.2",
+				"oscal-version": "1.2.3",
 				"last-modified": "2026-01-01T00:00:00Z"
 			},
 			"import-profile": {"href": "https://example.gov/profile.json"},
@@ -167,6 +170,37 @@ func TestValidateComponentDefinition(t *testing.T) {
 	}
 }
 
+func TestOSCAL123DefinedComponentTypeVocabulary(t *testing.T) {
+	v, err := NewValidator()
+	if err != nil {
+		t.Fatalf("NewValidator: %v", err)
+	}
+	for _, componentType := range []string{"region", "zone", "resource-container", "network"} {
+		t.Run(componentType, func(t *testing.T) {
+			component := &componentv1.ComponentDefinition{
+				Uuid: &commonv1.UUID{Value: validUUID},
+				Metadata: &commonv1.Metadata{
+					Title:   "OSCAL 1.2.3 Component Vocabulary",
+					Version: "1.0",
+				},
+				Components: []*componentv1.DefinedComponent{{
+					Uuid:        &commonv1.UUID{Value: validUUID},
+					Type:        componentType,
+					Title:       &commonv1.MarkupLine{Value: componentType},
+					Description: &commonv1.MarkupMultiline{Value: "Vocabulary conformance fixture."},
+				}},
+			}
+			b, err := oscal.ExportComponentDefinitionJSON(component)
+			if err != nil {
+				t.Fatalf("ExportComponentDefinitionJSON: %v", err)
+			}
+			if err := v.Validate(b, KindComponentDefinition); err != nil {
+				t.Errorf("component type %q failed OSCAL 1.2.3 validation: %v", componentType, err)
+			}
+		})
+	}
+}
+
 func TestValidateAssessmentPlan(t *testing.T) {
 	v, err := NewValidator()
 	if err != nil {
@@ -181,12 +215,12 @@ func TestValidateAssessmentPlan(t *testing.T) {
 			"metadata": {
 				"title": "Test Assessment Plan",
 				"version": "1.0",
-				"oscal-version": "1.1.2",
+				"oscal-version": "1.2.3",
 				"last-modified": "2026-01-01T00:00:00Z"
 			},
 			"import-ssp": {"href": "https://example.gov/ssp.json"},
 			"reviewed-controls": {
-				"control-selections": [{"description": "All controls"}]
+				"control-selections": [{"description": "All controls", "include-all": {}}]
 			}
 		}
 	}`
@@ -209,7 +243,7 @@ func TestValidateAssessmentResults(t *testing.T) {
 			"metadata": {
 				"title": "Test Assessment Results",
 				"version": "1.0",
-				"oscal-version": "1.1.2",
+				"oscal-version": "1.2.3",
 				"last-modified": "2026-01-01T00:00:00Z"
 			},
 			"import-ap": {"href": "https://example.gov/ap.json"},
@@ -219,7 +253,7 @@ func TestValidateAssessmentResults(t *testing.T) {
 				"description": "Test result",
 				"start": "2026-01-01T00:00:00Z",
 				"reviewed-controls": {
-					"control-selections": [{"description": "All controls"}]
+					"control-selections": [{"description": "All controls", "include-all": {}}]
 				}
 			}]
 		}
@@ -243,7 +277,7 @@ func TestValidatePOAM(t *testing.T) {
 			"metadata": {
 				"title": "Test POAM",
 				"version": "1.0",
-				"oscal-version": "1.1.2",
+				"oscal-version": "1.2.3",
 				"last-modified": "2026-01-01T00:00:00Z"
 			},
 			"poam-items": [{
@@ -255,5 +289,49 @@ func TestValidatePOAM(t *testing.T) {
 	}`
 	if err := v.Validate([]byte(minimalPOAM), KindPOAM); err != nil {
 		t.Errorf("poam failed schema validation: %v", err)
+	}
+}
+
+func TestValidateMappingCollection(t *testing.T) {
+	v, err := NewValidator()
+	if err != nil {
+		t.Fatalf("NewValidator: %v", err)
+	}
+	mapping := &mappingv1.MappingCollection{
+		Uuid: &commonv1.UUID{Value: validUUID},
+		Metadata: &commonv1.Metadata{
+			Title:   "Test Mapping Collection",
+			Version: "1.0",
+		},
+		Provenance: &mappingv1.MappingProvenance{
+			Method:             "automation",
+			MatchingRationale:  "semantic",
+			Status:             "draft",
+			MappingDescription: &commonv1.MarkupMultiline{Value: "Test mapping provenance."},
+		},
+		Mappings: []*mappingv1.ControlMapping{{
+			Uuid: &commonv1.UUID{Value: validUUID},
+			SourceResource: &mappingv1.MappingResourceReference{
+				Type: "catalog",
+				Href: &commonv1.URIReference{Value: "https://example.gov/source-catalog.json"},
+			},
+			TargetResource: &mappingv1.MappingResourceReference{
+				Type: "catalog",
+				Href: &commonv1.URIReference{Value: "https://example.gov/target-catalog.json"},
+			},
+			Maps: []*mappingv1.Map{{
+				Uuid:         &commonv1.UUID{Value: validUUID},
+				Relationship: &commonv1.Token{Value: "equivalent-to"},
+				Sources:      []*mappingv1.MappingItem{{Type: "control", IdRef: "ac-1"}},
+				Targets:      []*mappingv1.MappingItem{{Type: "control", IdRef: "cc6.1"}},
+			}},
+		}},
+	}
+	b, err := oscal.ExportMappingCollectionJSON(mapping)
+	if err != nil {
+		t.Fatalf("ExportMappingCollectionJSON: %v", err)
+	}
+	if err := v.Validate(b, KindMapping); err != nil {
+		t.Errorf("mapping-collection failed schema validation: %v", err)
 	}
 }

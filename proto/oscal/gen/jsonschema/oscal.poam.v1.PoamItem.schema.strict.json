@@ -2,7 +2,7 @@
   "$id": "oscal.poam.v1.PoamItem.schema.strict.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "additionalProperties": false,
-  "description": "PoamItem represents a POAM item as defined by the OSCAL 1.1.2 schema.\n Unlike Risk, poam-item is a simpler container with title, description,\n and references to findings/observations/risks.",
+  "description": "PoamItem represents a POAM item as defined by the pinned OSCAL schema.\n Unlike Risk, poam-item is a simpler container with title, description,\n and references to findings/observations/risks.",
   "properties": {
     "description": {
       "$ref": "oscal.common.v1.MarkupMultiline.schema.strict.json"

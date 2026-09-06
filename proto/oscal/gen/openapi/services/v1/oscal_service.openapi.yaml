@@ -1398,6 +1398,9 @@ components:
           items:
             $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
           title: remarks
+        includeAll:
+          title: include_all
+          $ref: '#/components/schemas/oscal.assessment_plan.v1.IncludeAll'
       title: ControlSelection
       additionalProperties: false
       description: ControlSelection represents a control selection
@@ -1415,6 +1418,11 @@ components:
       title: ImportSsp
       additionalProperties: false
       description: ImportSsp represents an imported system security plan
+    oscal.assessment_plan.v1.IncludeAll:
+      type: object
+      title: IncludeAll
+      additionalProperties: false
+      description: IncludeAll is OSCAL's empty marker object for selecting every control.
     oscal.assessment_plan.v1.InventoryItem:
       type: object
       properties:
@@ -1956,6 +1964,9 @@ components:
           items:
             $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
           title: remarks
+        includeAll:
+          title: include_all
+          $ref: '#/components/schemas/oscal.assessment_results.v1.IncludeAll'
       title: ControlSelection
       additionalProperties: false
       description: ControlSelection represents a selection of controls for review
@@ -2089,6 +2100,11 @@ components:
       title: ImportSsp
       additionalProperties: false
       description: ImportSsp represents an imported system security plan
+    oscal.assessment_results.v1.IncludeAll:
+      type: object
+      title: IncludeAll
+      additionalProperties: false
+      description: IncludeAll is OSCAL's empty marker object for selecting every control.
     oscal.assessment_results.v1.InventoryItem:
       type: object
       properties:
@@ -2376,7 +2392,7 @@ components:
           title: remarks
         reviewedControls:
           title: reviewed_controls
-          description: reviewed_controls is required by the OSCAL 1.1.2 schema for each result.
+          description: reviewed_controls is required by the pinned OSCAL schema for each result.
           $ref: '#/components/schemas/oscal.assessment_results.v1.ReviewedControls'
       title: Result
       additionalProperties: false
@@ -2891,6 +2907,16 @@ components:
       title: DateTime
       additionalProperties: false
       description: DateTime represents a date-time with timezone (RFC3339)
+    oscal.common.v1.Decimal:
+      type: object
+      properties:
+        value:
+          type: number
+          title: value
+          format: double
+      title: Decimal
+      additionalProperties: false
+      description: Decimal represents a decimal value
     oscal.common.v1.DocumentId:
       type: object
       properties:
@@ -3701,9 +3727,66 @@ components:
           type: number
           title: value
           format: double
+          deprecated: true
         method:
           type: string
           title: method
+          deprecated: true
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+          deprecated: true
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+          deprecated: true
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+          deprecated: true
+        category:
+          type: string
+          title: category
+        percentage:
+          title: percentage
+          $ref: '#/components/schemas/oscal.common.v1.Decimal'
+      title: ConfidenceScore
+      additionalProperties: false
+      description: |-
+        ConfidenceScore is either a category or a percentage from 0 through 1.
+         Fields 1-5 are retained for wire compatibility with the prototype model.
+    oscal.mapping.v1.ControlMapping:
+      type: object
+      properties:
+        uuid:
+          title: uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        method:
+          type: string
+          title: method
+        matchingRationale:
+          type: string
+          title: matching_rationale
+        status:
+          type: string
+          title: status
+        sourceResource:
+          title: source_resource
+          $ref: '#/components/schemas/oscal.mapping.v1.MappingResourceReference'
+        targetResource:
+          title: target_resource
+          $ref: '#/components/schemas/oscal.mapping.v1.MappingResourceReference'
+        maps:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.mapping.v1.Map'
+          title: maps
         props:
           type: array
           items:
@@ -3719,9 +3802,24 @@ components:
           items:
             $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
           title: remarks
-      title: ConfidenceScore
+        mappingDescription:
+          title: mapping_description
+          $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+        sourceGapSummary:
+          title: source_gap_summary
+          $ref: '#/components/schemas/oscal.mapping.v1.GapSummary'
+        targetGapSummary:
+          title: target_gap_summary
+          $ref: '#/components/schemas/oscal.mapping.v1.GapSummary'
+        confidenceScore:
+          title: confidence_score
+          $ref: '#/components/schemas/oscal.mapping.v1.ConfidenceScore'
+        coverage:
+          title: coverage
+          $ref: '#/components/schemas/oscal.mapping.v1.Coverage'
+      title: ControlMapping
       additionalProperties: false
-      description: ConfidenceScore represents a confidence score
+      description: ControlMapping represents one source-resource to target-resource mapping.
     oscal.mapping.v1.Coverage:
       type: object
       properties:
@@ -3729,27 +3827,40 @@ components:
           type: number
           title: value
           format: double
+          deprecated: true
         method:
           type: string
           title: method
+          deprecated: true
         props:
           type: array
           items:
             $ref: '#/components/schemas/oscal.common.v1.Property'
           title: props
+          deprecated: true
         links:
           type: array
           items:
             $ref: '#/components/schemas/oscal.common.v1.Link'
           title: links
+          deprecated: true
         remarks:
           type: array
           items:
             $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
           title: remarks
+          deprecated: true
+        generationMethod:
+          type: string
+          title: generation_method
+        targetCoverage:
+          title: target_coverage
+          $ref: '#/components/schemas/oscal.common.v1.Decimal'
       title: Coverage
       additionalProperties: false
-      description: Coverage represents coverage information
+      description: |-
+        Coverage records target coverage and the method used to derive it.
+         Fields 1-5 are retained for wire compatibility with the prototype model.
     oscal.mapping.v1.GapSummary:
       type: object
       properties:
@@ -3757,29 +3868,45 @@ components:
           type: integer
           title: count
           format: int32
+          deprecated: true
         gaps:
           type: array
           items:
             type: string
+            deprecated: true
           title: gaps
+          deprecated: true
         props:
           type: array
           items:
             $ref: '#/components/schemas/oscal.common.v1.Property'
           title: props
+          deprecated: true
         links:
           type: array
           items:
             $ref: '#/components/schemas/oscal.common.v1.Link'
           title: links
+          deprecated: true
         remarks:
           type: array
           items:
             $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
           title: remarks
+          deprecated: true
+        uuid:
+          title: uuid
+          $ref: '#/components/schemas/oscal.common.v1.UUID'
+        unmappedControls:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.mapping.v1.SelectControlById'
+          title: unmapped_controls
       title: GapSummary
       additionalProperties: false
-      description: GapSummary represents a gap summary
+      description: |-
+        GapSummary selects controls that are not mapped.
+         Fields 1-5 are retained for wire compatibility with the prototype model.
     oscal.mapping.v1.Map:
       type: object
       properties:
@@ -3846,53 +3973,80 @@ components:
         matchingRationale:
           type: string
           title: matching_rationale
+          deprecated: true
         status:
           type: string
           title: status
+          deprecated: true
         sourceResource:
           title: source_resource
+          deprecated: true
           $ref: '#/components/schemas/oscal.mapping.v1.MappingResourceReference'
         targetResource:
           title: target_resource
+          deprecated: true
           $ref: '#/components/schemas/oscal.mapping.v1.MappingResourceReference'
         maps:
           type: array
           items:
             $ref: '#/components/schemas/oscal.mapping.v1.Map'
           title: maps
+          deprecated: true
         props:
           type: array
           items:
             $ref: '#/components/schemas/oscal.common.v1.Property'
           title: props
+          deprecated: true
         links:
           type: array
           items:
             $ref: '#/components/schemas/oscal.common.v1.Link'
           title: links
+          deprecated: true
         remarks:
           type: array
           items:
             $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
           title: remarks
+          deprecated: true
         mappingDescription:
           title: mapping_description
+          deprecated: true
           $ref: '#/components/schemas/oscal.mapping.v1.MappingDescription'
         sourceGapSummary:
           title: source_gap_summary
+          deprecated: true
           $ref: '#/components/schemas/oscal.mapping.v1.GapSummary'
         targetGapSummary:
           title: target_gap_summary
+          deprecated: true
           $ref: '#/components/schemas/oscal.mapping.v1.GapSummary'
         confidenceScore:
           title: confidence_score
+          deprecated: true
           $ref: '#/components/schemas/oscal.mapping.v1.ConfidenceScore'
         coverage:
           title: coverage
+          deprecated: true
           $ref: '#/components/schemas/oscal.mapping.v1.Coverage'
+        provenance:
+          title: provenance
+          $ref: '#/components/schemas/oscal.mapping.v1.MappingProvenance'
+        mappings:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.mapping.v1.ControlMapping'
+          title: mappings
+        backMatter:
+          title: back_matter
+          $ref: '#/components/schemas/oscal.common.v1.BackMatter'
       title: MappingCollection
       additionalProperties: false
-      description: MappingCollection represents a collection of mappings
+      description: |-
+        MappingCollection is the OSCAL 1.2 mapping-collection document root.
+         Fields 3-15 predate the released Mapping model and are retained only for
+         wire compatibility; new code uses provenance, mappings, and back_matter.
     oscal.mapping.v1.MappingDescription:
       type: object
       properties:
@@ -3916,7 +4070,9 @@ components:
           title: remarks
       title: MappingDescription
       additionalProperties: false
-      description: MappingDescription represents a mapping description
+      description: |-
+        MappingDescription is the deprecated prototype wrapper. Released OSCAL uses
+         MarkupMultiline directly for mapping-description.
     oscal.mapping.v1.MappingItem:
       type: object
       properties:
@@ -3944,6 +4100,50 @@ components:
       title: MappingItem
       additionalProperties: false
       description: MappingItem represents a mapping entry item (source or target)
+    oscal.mapping.v1.MappingProvenance:
+      type: object
+      properties:
+        method:
+          type: string
+          title: method
+        matchingRationale:
+          type: string
+          title: matching_rationale
+        status:
+          type: string
+          title: status
+        confidenceScore:
+          title: confidence_score
+          $ref: '#/components/schemas/oscal.mapping.v1.ConfidenceScore'
+        coverage:
+          title: coverage
+          $ref: '#/components/schemas/oscal.mapping.v1.Coverage'
+        mappingDescription:
+          title: mapping_description
+          $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+        responsibleParties:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.ResponsibleParty'
+          title: responsible_parties
+        props:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Property'
+          title: props
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Link'
+          title: links
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: MappingProvenance
+      additionalProperties: false
+      description: MappingProvenance records how the collection was produced and its status.
     oscal.mapping.v1.MappingResourceReference:
       type: object
       properties:
@@ -3974,33 +4174,84 @@ components:
       title: MappingResourceReference
       additionalProperties: false
       description: MappingResourceReference represents a mapped resource reference
+    oscal.mapping.v1.Matching:
+      type: object
+      properties:
+        pattern:
+          type: string
+          title: pattern
+        remarks:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
+          title: remarks
+      title: Matching
+      additionalProperties: false
+      description: Matching selects controls by a glob expression.
     oscal.mapping.v1.QualifierItem:
       type: object
       properties:
         type:
           type: string
           title: type
+          deprecated: true
         idRef:
           type: string
           title: id_ref
+          deprecated: true
         props:
           type: array
           items:
             $ref: '#/components/schemas/oscal.common.v1.Property'
           title: props
+          deprecated: true
         links:
           type: array
           items:
             $ref: '#/components/schemas/oscal.common.v1.Link'
           title: links
+          deprecated: true
         remarks:
           type: array
           items:
             $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
           title: remarks
+        subject:
+          type: string
+          title: subject
+        predicate:
+          type: string
+          title: predicate
+        category:
+          type: string
+          title: category
+        description:
+          title: description
+          $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
       title: QualifierItem
       additionalProperties: false
-      description: QualifierItem represents a qualifier item
+      description: |-
+        QualifierItem represents an OSCAL relationship qualifier. Fields 1-4 are
+         retained for wire compatibility with the pre-release mapping prototype.
+    oscal.mapping.v1.SelectControlById:
+      type: object
+      properties:
+        withChildControls:
+          type: string
+          title: with_child_controls
+        withIds:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.common.v1.Token'
+          title: with_ids
+        matching:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.mapping.v1.Matching'
+          title: matching
+      title: SelectControlById
+      additionalProperties: false
+      description: SelectControlById selects explicit or pattern-matched controls.
     oscal.poam.v1.Component:
       type: object
       properties:
@@ -4275,7 +4526,7 @@ components:
       title: PoamItem
       additionalProperties: false
       description: |-
-        PoamItem represents a POAM item as defined by the OSCAL 1.1.2 schema.
+        PoamItem represents a POAM item as defined by the pinned OSCAL schema.
          Unlike Risk, poam-item is a simpler container with title, description,
          and references to findings/observations/risks.
     oscal.poam.v1.RelatedFinding:

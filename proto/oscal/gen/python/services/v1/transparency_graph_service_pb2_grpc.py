@@ -21,6 +21,11 @@ class TransparencyGraphServiceStub:
                 request_serializer=services_dot_v1_dot_transparency__graph__service__pb2.ProjectEdgeRequest.SerializeToString,
                 response_deserializer=services_dot_v1_dot_transparency__graph__service__pb2.ProjectEdgeResponse.FromString,
                 _registered_method=True)
+        self.ListProjectionEvents = channel.unary_unary(
+                '/oscal.services.v1.TransparencyGraphService/ListProjectionEvents',
+                request_serializer=services_dot_v1_dot_transparency__graph__service__pb2.ListProjectionEventsRequest.SerializeToString,
+                response_deserializer=services_dot_v1_dot_transparency__graph__service__pb2.ListProjectionEventsResponse.FromString,
+                _registered_method=True)
         self.GetEdge = channel.unary_unary(
                 '/oscal.services.v1.TransparencyGraphService/GetEdge',
                 request_serializer=services_dot_v1_dot_transparency__graph__service__pb2.GetEdgeRequest.SerializeToString,
@@ -84,6 +89,12 @@ class TransparencyGraphServiceServicer:
     """
 
     def ProjectEdge(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def ListProjectionEvents(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -162,6 +173,11 @@ def add_TransparencyGraphServiceServicer_to_server(servicer, server):
                     servicer.ProjectEdge,
                     request_deserializer=services_dot_v1_dot_transparency__graph__service__pb2.ProjectEdgeRequest.FromString,
                     response_serializer=services_dot_v1_dot_transparency__graph__service__pb2.ProjectEdgeResponse.SerializeToString,
+            ),
+            'ListProjectionEvents': grpc.unary_unary_rpc_method_handler(
+                    servicer.ListProjectionEvents,
+                    request_deserializer=services_dot_v1_dot_transparency__graph__service__pb2.ListProjectionEventsRequest.FromString,
+                    response_serializer=services_dot_v1_dot_transparency__graph__service__pb2.ListProjectionEventsResponse.SerializeToString,
             ),
             'GetEdge': grpc.unary_unary_rpc_method_handler(
                     servicer.GetEdge,
@@ -248,6 +264,33 @@ class TransparencyGraphService:
             '/oscal.services.v1.TransparencyGraphService/ProjectEdge',
             services_dot_v1_dot_transparency__graph__service__pb2.ProjectEdgeRequest.SerializeToString,
             services_dot_v1_dot_transparency__graph__service__pb2.ProjectEdgeResponse.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+    @staticmethod
+    def ListProjectionEvents(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/oscal.services.v1.TransparencyGraphService/ListProjectionEvents',
+            services_dot_v1_dot_transparency__graph__service__pb2.ListProjectionEventsRequest.SerializeToString,
+            services_dot_v1_dot_transparency__graph__service__pb2.ListProjectionEventsResponse.FromString,
             options,
             channel_credentials,
             insecure,

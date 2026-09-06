@@ -46,6 +46,9 @@
           },
           "type": "array"
         },
+        "proofStateJson": {
+          "type": "string"
+        },
         "sourceRefs": {
           "items": {
             "$ref": "#/$defs/oscal.services.v1.EvidenceRef.jsonschema.strict.json"
@@ -54,6 +57,9 @@
         },
         "subject": {
           "$ref": "#/$defs/oscal.services.v1.Reference.jsonschema.strict.json"
+        },
+        "trustState": {
+          "type": "string"
         },
         "type": {
           "type": "string"
@@ -66,7 +72,9 @@
         "id",
         "type",
         "bomKind",
-        "extensionsJson"
+        "extensionsJson",
+        "trustState",
+        "proofStateJson"
       ],
       "title": "Claim",
       "type": "object"

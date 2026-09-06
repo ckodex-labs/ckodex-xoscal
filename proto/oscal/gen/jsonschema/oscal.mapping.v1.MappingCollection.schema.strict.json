@@ -2,8 +2,11 @@
   "$id": "oscal.mapping.v1.MappingCollection.schema.strict.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "additionalProperties": false,
-  "description": "MappingCollection represents a collection of mappings",
+  "description": "MappingCollection is the OSCAL 1.2 mapping-collection document root.\n Fields 3-15 predate the released Mapping model and are retained only for\n wire compatibility; new code uses provenance, mappings, and back_matter.",
   "properties": {
+    "back_matter": {
+      "$ref": "oscal.common.v1.BackMatter.schema.strict.json"
+    },
     "confidence_score": {
       "$ref": "oscal.mapping.v1.ConfidenceScore.schema.strict.json"
     },
@@ -18,6 +21,12 @@
     },
     "mapping_description": {
       "$ref": "oscal.mapping.v1.MappingDescription.schema.strict.json"
+    },
+    "mappings": {
+      "items": {
+        "$ref": "oscal.mapping.v1.ControlMapping.schema.strict.json"
+      },
+      "type": "array"
     },
     "maps": {
       "items": {
@@ -36,6 +45,9 @@
         "$ref": "oscal.common.v1.Property.schema.strict.json"
       },
       "type": "array"
+    },
+    "provenance": {
+      "$ref": "oscal.mapping.v1.MappingProvenance.schema.strict.json"
     },
     "remarks": {
       "items": {

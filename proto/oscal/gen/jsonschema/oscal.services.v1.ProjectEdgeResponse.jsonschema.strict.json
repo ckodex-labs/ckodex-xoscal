@@ -5,6 +5,9 @@
   "properties": {
     "edge": {
       "$ref": "oscal.services.v1.GraphEdge.jsonschema.strict.json"
+    },
+    "projectionEvent": {
+      "$ref": "oscal.services.v1.GraphProjectionEvent.jsonschema.strict.json"
     }
   },
   "title": "Project Edge Response",

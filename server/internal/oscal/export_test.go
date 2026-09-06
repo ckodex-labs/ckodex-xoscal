@@ -108,6 +108,10 @@ func TestExportProfileJSON(t *testing.T) {
 			Title:   "Test Profile",
 			Version: "1.0",
 		},
+		Imports: []*profilev1.Import{{
+			Href:       &commonv1.URIReference{Value: "https://example.gov/catalog.json"},
+			IncludeAll: &profilev1.IncludeAll{},
+		}},
 	}
 	b, err := ExportProfileJSON(p)
 	if err != nil {
@@ -118,6 +122,9 @@ func TestExportProfileJSON(t *testing.T) {
 	}
 	if !bytes.Contains(b, []byte(`"Test Profile"`)) {
 		t.Error("expected JSON to contain title")
+	}
+	if !bytes.Contains(b, []byte(`"include-all": {}`)) {
+		t.Error("expected JSON to preserve OSCAL's empty include-all marker")
 	}
 }
 

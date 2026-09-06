@@ -162,7 +162,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         urn_ = s;
@@ -178,7 +178,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
         getUrnBytes() {
       java.lang.Object ref = urn_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         urn_ = b;
@@ -201,7 +201,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         type_ = s;
@@ -217,7 +217,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
         getTypeBytes() {
       java.lang.Object ref = type_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         type_ = b;
@@ -240,7 +240,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         version_ = s;
@@ -256,7 +256,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
         getVersionBytes() {
       java.lang.Object ref = version_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         version_ = b;
@@ -279,7 +279,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         status_ = s;
@@ -295,7 +295,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
         getStatusBytes() {
       java.lang.Object ref = status_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         status_ = b;
@@ -322,7 +322,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         payload_ = s;
@@ -342,7 +342,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
         getPayloadBytes() {
       java.lang.Object ref = payload_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         payload_ = b;
@@ -775,7 +775,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
           getUrnBytes() {
         java.lang.Object ref = urn_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           urn_ = b;
@@ -847,7 +847,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
           getTypeBytes() {
         java.lang.Object ref = type_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           type_ = b;
@@ -919,7 +919,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
           getVersionBytes() {
         java.lang.Object ref = version_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           version_ = b;
@@ -991,7 +991,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
           getStatusBytes() {
         java.lang.Object ref = status_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           status_ = b;
@@ -1071,7 +1071,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
           getPayloadBytes() {
         java.lang.Object ref = payload_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           payload_ = b;
@@ -1696,7 +1696,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
        * <code>.oscal.services.v1.Entity entity = 1 [json_name = "entity"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.services.v1.GovernanceServiceOuterClass.Entity, oscal.services.v1.GovernanceServiceOuterClass.Entity.Builder, oscal.services.v1.GovernanceServiceOuterClass.EntityOrBuilder> 
+          oscal.services.v1.GovernanceServiceOuterClass.Entity, oscal.services.v1.GovernanceServiceOuterClass.Entity.Builder, oscal.services.v1.GovernanceServiceOuterClass.EntityOrBuilder>
           internalGetEntityFieldBuilder() {
         if (entityBuilder_ == null) {
           entityBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -2275,7 +2275,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
        * <code>.oscal.services.v1.Entity entity = 1 [json_name = "entity"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.services.v1.GovernanceServiceOuterClass.Entity, oscal.services.v1.GovernanceServiceOuterClass.Entity.Builder, oscal.services.v1.GovernanceServiceOuterClass.EntityOrBuilder> 
+          oscal.services.v1.GovernanceServiceOuterClass.Entity, oscal.services.v1.GovernanceServiceOuterClass.Entity.Builder, oscal.services.v1.GovernanceServiceOuterClass.EntityOrBuilder>
           internalGetEntityFieldBuilder() {
         if (entityBuilder_ == null) {
           entityBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -2411,7 +2411,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         urn_ = s;
@@ -2427,7 +2427,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
         getUrnBytes() {
       java.lang.Object ref = urn_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         urn_ = b;
@@ -2760,7 +2760,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
           getUrnBytes() {
         java.lang.Object ref = urn_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           urn_ = b;
@@ -3373,7 +3373,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
        * <code>.oscal.services.v1.Entity entity = 1 [json_name = "entity"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.services.v1.GovernanceServiceOuterClass.Entity, oscal.services.v1.GovernanceServiceOuterClass.Entity.Builder, oscal.services.v1.GovernanceServiceOuterClass.EntityOrBuilder> 
+          oscal.services.v1.GovernanceServiceOuterClass.Entity, oscal.services.v1.GovernanceServiceOuterClass.Entity.Builder, oscal.services.v1.GovernanceServiceOuterClass.EntityOrBuilder>
           internalGetEntityFieldBuilder() {
         if (entityBuilder_ == null) {
           entityBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -3952,7 +3952,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
        * <code>.oscal.services.v1.Entity entity = 1 [json_name = "entity"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.services.v1.GovernanceServiceOuterClass.Entity, oscal.services.v1.GovernanceServiceOuterClass.Entity.Builder, oscal.services.v1.GovernanceServiceOuterClass.EntityOrBuilder> 
+          oscal.services.v1.GovernanceServiceOuterClass.Entity, oscal.services.v1.GovernanceServiceOuterClass.Entity.Builder, oscal.services.v1.GovernanceServiceOuterClass.EntityOrBuilder>
           internalGetEntityFieldBuilder() {
         if (entityBuilder_ == null) {
           entityBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -4531,7 +4531,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
        * <code>.oscal.services.v1.Entity entity = 1 [json_name = "entity"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.services.v1.GovernanceServiceOuterClass.Entity, oscal.services.v1.GovernanceServiceOuterClass.Entity.Builder, oscal.services.v1.GovernanceServiceOuterClass.EntityOrBuilder> 
+          oscal.services.v1.GovernanceServiceOuterClass.Entity, oscal.services.v1.GovernanceServiceOuterClass.Entity.Builder, oscal.services.v1.GovernanceServiceOuterClass.EntityOrBuilder>
           internalGetEntityFieldBuilder() {
         if (entityBuilder_ == null) {
           entityBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -4699,7 +4699,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         typeFilter_ = s;
@@ -4715,7 +4715,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
         getTypeFilterBytes() {
       java.lang.Object ref = typeFilter_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         typeFilter_ = b;
@@ -4738,7 +4738,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         statusFilter_ = s;
@@ -4754,7 +4754,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
         getStatusFilterBytes() {
       java.lang.Object ref = statusFilter_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         statusFilter_ = b;
@@ -4788,7 +4788,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         pageToken_ = s;
@@ -4804,7 +4804,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         pageToken_ = b;
@@ -5208,7 +5208,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
           getTypeFilterBytes() {
         java.lang.Object ref = typeFilter_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           typeFilter_ = b;
@@ -5280,7 +5280,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
           getStatusFilterBytes() {
         java.lang.Object ref = statusFilter_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           statusFilter_ = b;
@@ -5384,7 +5384,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
           getPageTokenBytes() {
         java.lang.Object ref = pageToken_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           pageToken_ = b;
@@ -5489,7 +5489,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
     /**
      * <code>repeated .oscal.services.v1.Entity entities = 1 [json_name = "entities"];</code>
      */
-    java.util.List<oscal.services.v1.GovernanceServiceOuterClass.Entity> 
+    java.util.List<oscal.services.v1.GovernanceServiceOuterClass.Entity>
         getEntitiesList();
     /**
      * <code>repeated .oscal.services.v1.Entity entities = 1 [json_name = "entities"];</code>
@@ -5502,7 +5502,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
     /**
      * <code>repeated .oscal.services.v1.Entity entities = 1 [json_name = "entities"];</code>
      */
-    java.util.List<? extends oscal.services.v1.GovernanceServiceOuterClass.EntityOrBuilder> 
+    java.util.List<? extends oscal.services.v1.GovernanceServiceOuterClass.EntityOrBuilder>
         getEntitiesOrBuilderList();
     /**
      * <code>repeated .oscal.services.v1.Entity entities = 1 [json_name = "entities"];</code>
@@ -5580,7 +5580,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
      * <code>repeated .oscal.services.v1.Entity entities = 1 [json_name = "entities"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.services.v1.GovernanceServiceOuterClass.EntityOrBuilder> 
+    public java.util.List<? extends oscal.services.v1.GovernanceServiceOuterClass.EntityOrBuilder>
         getEntitiesOrBuilderList() {
       return entities_;
     }
@@ -5620,7 +5620,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         nextPageToken_ = s;
@@ -5636,7 +5636,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
         getNextPageTokenBytes() {
       java.lang.Object ref = nextPageToken_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         nextPageToken_ = b;
@@ -5947,7 +5947,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
               entitiesBuilder_ = null;
               entities_ = other.entities_;
               bitField0_ = (bitField0_ & ~0x00000001);
-              entitiesBuilder_ = 
+              entitiesBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetEntitiesFieldBuilder() : null;
             } else {
@@ -6216,7 +6216,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       /**
        * <code>repeated .oscal.services.v1.Entity entities = 1 [json_name = "entities"];</code>
        */
-      public java.util.List<? extends oscal.services.v1.GovernanceServiceOuterClass.EntityOrBuilder> 
+      public java.util.List<? extends oscal.services.v1.GovernanceServiceOuterClass.EntityOrBuilder>
            getEntitiesOrBuilderList() {
         if (entitiesBuilder_ != null) {
           return entitiesBuilder_.getMessageOrBuilderList();
@@ -6242,12 +6242,12 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       /**
        * <code>repeated .oscal.services.v1.Entity entities = 1 [json_name = "entities"];</code>
        */
-      public java.util.List<oscal.services.v1.GovernanceServiceOuterClass.Entity.Builder> 
+      public java.util.List<oscal.services.v1.GovernanceServiceOuterClass.Entity.Builder>
            getEntitiesBuilderList() {
         return internalGetEntitiesFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.services.v1.GovernanceServiceOuterClass.Entity, oscal.services.v1.GovernanceServiceOuterClass.Entity.Builder, oscal.services.v1.GovernanceServiceOuterClass.EntityOrBuilder> 
+          oscal.services.v1.GovernanceServiceOuterClass.Entity, oscal.services.v1.GovernanceServiceOuterClass.Entity.Builder, oscal.services.v1.GovernanceServiceOuterClass.EntityOrBuilder>
           internalGetEntitiesFieldBuilder() {
         if (entitiesBuilder_ == null) {
           entitiesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -6286,7 +6286,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
           getNextPageTokenBytes() {
         java.lang.Object ref = nextPageToken_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           nextPageToken_ = b;
@@ -6460,7 +6460,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         name_ = s;
@@ -6476,7 +6476,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
         getNameBytes() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         name_ = b;
@@ -6813,7 +6813,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
           getNameBytes() {
         java.lang.Object ref = name_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           name_ = b;
@@ -6989,7 +6989,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         name_ = s;
@@ -7005,7 +7005,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
         getNameBytes() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         name_ = b;
@@ -7372,7 +7372,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
           getNameBytes() {
         java.lang.Object ref = name_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           name_ = b;
@@ -7574,7 +7574,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         name_ = s;
@@ -7590,7 +7590,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
         getNameBytes() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         name_ = b;
@@ -7923,7 +7923,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
           getNameBytes() {
         java.lang.Object ref = name_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           name_ = b;
@@ -8028,7 +8028,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
     /**
      * <code>repeated .oscal.services.v1.Entity entities = 1 [json_name = "entities"];</code>
      */
-    java.util.List<oscal.services.v1.GovernanceServiceOuterClass.Entity> 
+    java.util.List<oscal.services.v1.GovernanceServiceOuterClass.Entity>
         getEntitiesList();
     /**
      * <code>repeated .oscal.services.v1.Entity entities = 1 [json_name = "entities"];</code>
@@ -8041,7 +8041,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
     /**
      * <code>repeated .oscal.services.v1.Entity entities = 1 [json_name = "entities"];</code>
      */
-    java.util.List<? extends oscal.services.v1.GovernanceServiceOuterClass.EntityOrBuilder> 
+    java.util.List<? extends oscal.services.v1.GovernanceServiceOuterClass.EntityOrBuilder>
         getEntitiesOrBuilderList();
     /**
      * <code>repeated .oscal.services.v1.Entity entities = 1 [json_name = "entities"];</code>
@@ -8106,7 +8106,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
      * <code>repeated .oscal.services.v1.Entity entities = 1 [json_name = "entities"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.services.v1.GovernanceServiceOuterClass.EntityOrBuilder> 
+    public java.util.List<? extends oscal.services.v1.GovernanceServiceOuterClass.EntityOrBuilder>
         getEntitiesOrBuilderList() {
       return entities_;
     }
@@ -8420,7 +8420,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
               entitiesBuilder_ = null;
               entities_ = other.entities_;
               bitField0_ = (bitField0_ & ~0x00000001);
-              entitiesBuilder_ = 
+              entitiesBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetEntitiesFieldBuilder() : null;
             } else {
@@ -8679,7 +8679,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       /**
        * <code>repeated .oscal.services.v1.Entity entities = 1 [json_name = "entities"];</code>
        */
-      public java.util.List<? extends oscal.services.v1.GovernanceServiceOuterClass.EntityOrBuilder> 
+      public java.util.List<? extends oscal.services.v1.GovernanceServiceOuterClass.EntityOrBuilder>
            getEntitiesOrBuilderList() {
         if (entitiesBuilder_ != null) {
           return entitiesBuilder_.getMessageOrBuilderList();
@@ -8705,12 +8705,12 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       /**
        * <code>repeated .oscal.services.v1.Entity entities = 1 [json_name = "entities"];</code>
        */
-      public java.util.List<oscal.services.v1.GovernanceServiceOuterClass.Entity.Builder> 
+      public java.util.List<oscal.services.v1.GovernanceServiceOuterClass.Entity.Builder>
            getEntitiesBuilderList() {
         return internalGetEntitiesFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.services.v1.GovernanceServiceOuterClass.Entity, oscal.services.v1.GovernanceServiceOuterClass.Entity.Builder, oscal.services.v1.GovernanceServiceOuterClass.EntityOrBuilder> 
+          oscal.services.v1.GovernanceServiceOuterClass.Entity, oscal.services.v1.GovernanceServiceOuterClass.Entity.Builder, oscal.services.v1.GovernanceServiceOuterClass.EntityOrBuilder>
           internalGetEntitiesFieldBuilder() {
         if (entitiesBuilder_ == null) {
           entitiesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -8864,7 +8864,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         pageToken_ = s;
@@ -8880,7 +8880,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         pageToken_ = b;
@@ -9268,7 +9268,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
           getPageTokenBytes() {
         java.lang.Object ref = pageToken_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           pageToken_ = b;
@@ -10039,7 +10039,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         name_ = s;
@@ -10055,7 +10055,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
         getNameBytes() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         name_ = b;
@@ -10078,7 +10078,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         snapshotName_ = s;
@@ -10094,7 +10094,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
         getSnapshotNameBytes() {
       java.lang.Object ref = snapshotName_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         snapshotName_ = b;
@@ -10455,7 +10455,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
           getNameBytes() {
         java.lang.Object ref = name_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           name_ = b;
@@ -10527,7 +10527,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
           getSnapshotNameBytes() {
         java.lang.Object ref = snapshotName_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           snapshotName_ = b;
@@ -10710,7 +10710,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         name_ = s;
@@ -10726,7 +10726,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
         getNameBytes() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         name_ = b;
@@ -10749,7 +10749,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         snapshotName_ = s;
@@ -10765,7 +10765,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
         getSnapshotNameBytes() {
       java.lang.Object ref = snapshotName_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         snapshotName_ = b;
@@ -11122,7 +11122,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
           getNameBytes() {
         java.lang.Object ref = name_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           name_ = b;
@@ -11194,7 +11194,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
           getSnapshotNameBytes() {
         java.lang.Object ref = snapshotName_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           snapshotName_ = b;
@@ -11381,7 +11381,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         pageToken_ = s;
@@ -11397,7 +11397,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         pageToken_ = b;
@@ -11785,7 +11785,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
           getPageTokenBytes() {
         java.lang.Object ref = pageToken_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           pageToken_ = b;
@@ -12586,7 +12586,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         format_ = s;
@@ -12606,7 +12606,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
         getFormatBytes() {
       java.lang.Object ref = format_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         format_ = b;
@@ -12629,7 +12629,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         framework_ = s;
@@ -12645,7 +12645,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
         getFrameworkBytes() {
       java.lang.Object ref = framework_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         framework_ = b;
@@ -13069,7 +13069,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
           getFormatBytes() {
         java.lang.Object ref = format_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           format_ = b;
@@ -13153,7 +13153,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
           getFrameworkBytes() {
         java.lang.Object ref = framework_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           framework_ = b;
@@ -13933,7 +13933,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         query_ = s;
@@ -13949,7 +13949,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
         getQueryBytes() {
       java.lang.Object ref = query_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         query_ = b;
@@ -13972,7 +13972,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         framework_ = s;
@@ -13988,7 +13988,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
         getFrameworkBytes() {
       java.lang.Object ref = framework_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         framework_ = b;
@@ -14383,7 +14383,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
           getQueryBytes() {
         java.lang.Object ref = query_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           query_ = b;
@@ -14455,7 +14455,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
           getFrameworkBytes() {
         java.lang.Object ref = framework_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           framework_ = b;
@@ -14689,7 +14689,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         entityUrn_ = s;
@@ -14705,7 +14705,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
         getEntityUrnBytes() {
       java.lang.Object ref = entityUrn_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         entityUrn_ = b;
@@ -14728,7 +14728,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         entityType_ = s;
@@ -14744,7 +14744,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
         getEntityTypeBytes() {
       java.lang.Object ref = entityType_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         entityType_ = b;
@@ -14767,7 +14767,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         content_ = s;
@@ -14783,7 +14783,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
         getContentBytes() {
       java.lang.Object ref = content_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         content_ = b;
@@ -15200,7 +15200,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
           getEntityUrnBytes() {
         java.lang.Object ref = entityUrn_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           entityUrn_ = b;
@@ -15272,7 +15272,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
           getEntityTypeBytes() {
         java.lang.Object ref = entityType_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           entityType_ = b;
@@ -15344,7 +15344,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
           getContentBytes() {
         java.lang.Object ref = content_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           content_ = b;
@@ -15481,7 +15481,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
     /**
      * <code>repeated .oscal.services.v1.SemanticSearchResult results = 1 [json_name = "results"];</code>
      */
-    java.util.List<oscal.services.v1.GovernanceServiceOuterClass.SemanticSearchResult> 
+    java.util.List<oscal.services.v1.GovernanceServiceOuterClass.SemanticSearchResult>
         getResultsList();
     /**
      * <code>repeated .oscal.services.v1.SemanticSearchResult results = 1 [json_name = "results"];</code>
@@ -15494,7 +15494,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
     /**
      * <code>repeated .oscal.services.v1.SemanticSearchResult results = 1 [json_name = "results"];</code>
      */
-    java.util.List<? extends oscal.services.v1.GovernanceServiceOuterClass.SemanticSearchResultOrBuilder> 
+    java.util.List<? extends oscal.services.v1.GovernanceServiceOuterClass.SemanticSearchResultOrBuilder>
         getResultsOrBuilderList();
     /**
      * <code>repeated .oscal.services.v1.SemanticSearchResult results = 1 [json_name = "results"];</code>
@@ -15559,7 +15559,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
      * <code>repeated .oscal.services.v1.SemanticSearchResult results = 1 [json_name = "results"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.services.v1.GovernanceServiceOuterClass.SemanticSearchResultOrBuilder> 
+    public java.util.List<? extends oscal.services.v1.GovernanceServiceOuterClass.SemanticSearchResultOrBuilder>
         getResultsOrBuilderList() {
       return results_;
     }
@@ -15873,7 +15873,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
               resultsBuilder_ = null;
               results_ = other.results_;
               bitField0_ = (bitField0_ & ~0x00000001);
-              resultsBuilder_ = 
+              resultsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetResultsFieldBuilder() : null;
             } else {
@@ -16132,7 +16132,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       /**
        * <code>repeated .oscal.services.v1.SemanticSearchResult results = 1 [json_name = "results"];</code>
        */
-      public java.util.List<? extends oscal.services.v1.GovernanceServiceOuterClass.SemanticSearchResultOrBuilder> 
+      public java.util.List<? extends oscal.services.v1.GovernanceServiceOuterClass.SemanticSearchResultOrBuilder>
            getResultsOrBuilderList() {
         if (resultsBuilder_ != null) {
           return resultsBuilder_.getMessageOrBuilderList();
@@ -16158,12 +16158,12 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       /**
        * <code>repeated .oscal.services.v1.SemanticSearchResult results = 1 [json_name = "results"];</code>
        */
-      public java.util.List<oscal.services.v1.GovernanceServiceOuterClass.SemanticSearchResult.Builder> 
+      public java.util.List<oscal.services.v1.GovernanceServiceOuterClass.SemanticSearchResult.Builder>
            getResultsBuilderList() {
         return internalGetResultsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.services.v1.GovernanceServiceOuterClass.SemanticSearchResult, oscal.services.v1.GovernanceServiceOuterClass.SemanticSearchResult.Builder, oscal.services.v1.GovernanceServiceOuterClass.SemanticSearchResultOrBuilder> 
+          oscal.services.v1.GovernanceServiceOuterClass.SemanticSearchResult, oscal.services.v1.GovernanceServiceOuterClass.SemanticSearchResult.Builder, oscal.services.v1.GovernanceServiceOuterClass.SemanticSearchResultOrBuilder>
           internalGetResultsFieldBuilder() {
         if (resultsBuilder_ == null) {
           resultsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -16317,7 +16317,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         snapshotName_ = s;
@@ -16333,7 +16333,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
         getSnapshotNameBytes() {
       java.lang.Object ref = snapshotName_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         snapshotName_ = b;
@@ -16356,7 +16356,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         framework_ = s;
@@ -16372,7 +16372,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
         getFrameworkBytes() {
       java.lang.Object ref = framework_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         framework_ = b;
@@ -16733,7 +16733,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
           getSnapshotNameBytes() {
         java.lang.Object ref = snapshotName_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           snapshotName_ = b;
@@ -16805,7 +16805,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
           getFrameworkBytes() {
         java.lang.Object ref = framework_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           framework_ = b;
@@ -17418,7 +17418,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
        * <code>.oscal.catalog.v1.Catalog catalog = 1 [json_name = "catalog"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.catalog.v1.CatalogOuterClass.Catalog, oscal.catalog.v1.CatalogOuterClass.Catalog.Builder, oscal.catalog.v1.CatalogOuterClass.CatalogOrBuilder> 
+          oscal.catalog.v1.CatalogOuterClass.Catalog, oscal.catalog.v1.CatalogOuterClass.Catalog.Builder, oscal.catalog.v1.CatalogOuterClass.CatalogOrBuilder>
           internalGetCatalogFieldBuilder() {
         if (catalogBuilder_ == null) {
           catalogBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -17594,7 +17594,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         snapshotName_ = s;
@@ -17610,7 +17610,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
         getSnapshotNameBytes() {
       java.lang.Object ref = snapshotName_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         snapshotName_ = b;
@@ -17633,7 +17633,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         framework_ = s;
@@ -17649,7 +17649,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
         getFrameworkBytes() {
       java.lang.Object ref = framework_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         framework_ = b;
@@ -18081,7 +18081,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
           getSnapshotNameBytes() {
         java.lang.Object ref = snapshotName_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           snapshotName_ = b;
@@ -18153,7 +18153,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
           getFrameworkBytes() {
         java.lang.Object ref = framework_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           framework_ = b;
@@ -18877,7 +18877,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
        * <code>.oscal.profile.v1.Profile profile = 1 [json_name = "profile"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.profile.v1.ProfileOuterClass.Profile, oscal.profile.v1.ProfileOuterClass.Profile.Builder, oscal.profile.v1.ProfileOuterClass.ProfileOrBuilder> 
+          oscal.profile.v1.ProfileOuterClass.Profile, oscal.profile.v1.ProfileOuterClass.Profile.Builder, oscal.profile.v1.ProfileOuterClass.ProfileOrBuilder>
           internalGetProfileFieldBuilder() {
         if (profileBuilder_ == null) {
           profileBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -19013,7 +19013,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         snapshotName_ = s;
@@ -19029,7 +19029,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
         getSnapshotNameBytes() {
       java.lang.Object ref = snapshotName_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         snapshotName_ = b;
@@ -19362,7 +19362,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
           getSnapshotNameBytes() {
         java.lang.Object ref = snapshotName_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           snapshotName_ = b;
@@ -19467,7 +19467,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
     /**
      * <code>repeated .oscal.mapping.v1.Map maps = 1 [json_name = "maps"];</code>
      */
-    java.util.List<oscal.mapping.v1.Mapping.Map> 
+    java.util.List<oscal.mapping.v1.Mapping.Map>
         getMapsList();
     /**
      * <code>repeated .oscal.mapping.v1.Map maps = 1 [json_name = "maps"];</code>
@@ -19480,7 +19480,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
     /**
      * <code>repeated .oscal.mapping.v1.Map maps = 1 [json_name = "maps"];</code>
      */
-    java.util.List<? extends oscal.mapping.v1.Mapping.MapOrBuilder> 
+    java.util.List<? extends oscal.mapping.v1.Mapping.MapOrBuilder>
         getMapsOrBuilderList();
     /**
      * <code>repeated .oscal.mapping.v1.Map maps = 1 [json_name = "maps"];</code>
@@ -19545,7 +19545,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
      * <code>repeated .oscal.mapping.v1.Map maps = 1 [json_name = "maps"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.mapping.v1.Mapping.MapOrBuilder> 
+    public java.util.List<? extends oscal.mapping.v1.Mapping.MapOrBuilder>
         getMapsOrBuilderList() {
       return maps_;
     }
@@ -19859,7 +19859,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
               mapsBuilder_ = null;
               maps_ = other.maps_;
               bitField0_ = (bitField0_ & ~0x00000001);
-              mapsBuilder_ = 
+              mapsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetMapsFieldBuilder() : null;
             } else {
@@ -20118,7 +20118,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       /**
        * <code>repeated .oscal.mapping.v1.Map maps = 1 [json_name = "maps"];</code>
        */
-      public java.util.List<? extends oscal.mapping.v1.Mapping.MapOrBuilder> 
+      public java.util.List<? extends oscal.mapping.v1.Mapping.MapOrBuilder>
            getMapsOrBuilderList() {
         if (mapsBuilder_ != null) {
           return mapsBuilder_.getMessageOrBuilderList();
@@ -20144,12 +20144,12 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       /**
        * <code>repeated .oscal.mapping.v1.Map maps = 1 [json_name = "maps"];</code>
        */
-      public java.util.List<oscal.mapping.v1.Mapping.Map.Builder> 
+      public java.util.List<oscal.mapping.v1.Mapping.Map.Builder>
            getMapsBuilderList() {
         return internalGetMapsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.mapping.v1.Mapping.Map, oscal.mapping.v1.Mapping.Map.Builder, oscal.mapping.v1.Mapping.MapOrBuilder> 
+          oscal.mapping.v1.Mapping.Map, oscal.mapping.v1.Mapping.Map.Builder, oscal.mapping.v1.Mapping.MapOrBuilder>
           internalGetMapsFieldBuilder() {
         if (mapsBuilder_ == null) {
           mapsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -20299,7 +20299,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         snapshotName_ = s;
@@ -20315,7 +20315,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
         getSnapshotNameBytes() {
       java.lang.Object ref = snapshotName_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         snapshotName_ = b;
@@ -20338,7 +20338,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         framework_ = s;
@@ -20354,7 +20354,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
         getFrameworkBytes() {
       java.lang.Object ref = framework_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         framework_ = b;
@@ -20711,7 +20711,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
           getSnapshotNameBytes() {
         java.lang.Object ref = snapshotName_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           snapshotName_ = b;
@@ -20783,7 +20783,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
           getFrameworkBytes() {
         java.lang.Object ref = framework_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           framework_ = b;
@@ -21396,7 +21396,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
        * <code>.oscal.ssp.v1.SystemSecurityPlan ssp = 1 [json_name = "ssp"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.ssp.v1.Ssp.SystemSecurityPlan, oscal.ssp.v1.Ssp.SystemSecurityPlan.Builder, oscal.ssp.v1.Ssp.SystemSecurityPlanOrBuilder> 
+          oscal.ssp.v1.Ssp.SystemSecurityPlan, oscal.ssp.v1.Ssp.SystemSecurityPlan.Builder, oscal.ssp.v1.Ssp.SystemSecurityPlanOrBuilder>
           internalGetSspFieldBuilder() {
         if (sspBuilder_ == null) {
           sspBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -21545,7 +21545,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         snapshotName_ = s;
@@ -21561,7 +21561,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
         getSnapshotNameBytes() {
       java.lang.Object ref = snapshotName_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         snapshotName_ = b;
@@ -21584,7 +21584,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         framework_ = s;
@@ -21600,7 +21600,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
         getFrameworkBytes() {
       java.lang.Object ref = framework_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         framework_ = b;
@@ -21957,7 +21957,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
           getSnapshotNameBytes() {
         java.lang.Object ref = snapshotName_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           snapshotName_ = b;
@@ -22029,7 +22029,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
           getFrameworkBytes() {
         java.lang.Object ref = framework_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           framework_ = b;
@@ -22642,7 +22642,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
        * <code>.oscal.component_definition.v1.ComponentDefinition component_definition = 1 [json_name = "componentDefinition"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.component_definition.v1.Component.ComponentDefinition, oscal.component_definition.v1.Component.ComponentDefinition.Builder, oscal.component_definition.v1.Component.ComponentDefinitionOrBuilder> 
+          oscal.component_definition.v1.Component.ComponentDefinition, oscal.component_definition.v1.Component.ComponentDefinition.Builder, oscal.component_definition.v1.Component.ComponentDefinitionOrBuilder>
           internalGetComponentDefinitionFieldBuilder() {
         if (componentDefinitionBuilder_ == null) {
           componentDefinitionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -22791,7 +22791,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         snapshotName_ = s;
@@ -22807,7 +22807,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
         getSnapshotNameBytes() {
       java.lang.Object ref = snapshotName_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         snapshotName_ = b;
@@ -22830,7 +22830,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         framework_ = s;
@@ -22846,7 +22846,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
         getFrameworkBytes() {
       java.lang.Object ref = framework_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         framework_ = b;
@@ -23203,7 +23203,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
           getSnapshotNameBytes() {
         java.lang.Object ref = snapshotName_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           snapshotName_ = b;
@@ -23275,7 +23275,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
           getFrameworkBytes() {
         java.lang.Object ref = framework_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           framework_ = b;
@@ -23888,7 +23888,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
        * <code>.oscal.assessment_plan.v1.AssessmentPlan assessment_plan = 1 [json_name = "assessmentPlan"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.assessment_plan.v1.AssessmentPlanOuterClass.AssessmentPlan, oscal.assessment_plan.v1.AssessmentPlanOuterClass.AssessmentPlan.Builder, oscal.assessment_plan.v1.AssessmentPlanOuterClass.AssessmentPlanOrBuilder> 
+          oscal.assessment_plan.v1.AssessmentPlanOuterClass.AssessmentPlan, oscal.assessment_plan.v1.AssessmentPlanOuterClass.AssessmentPlan.Builder, oscal.assessment_plan.v1.AssessmentPlanOuterClass.AssessmentPlanOrBuilder>
           internalGetAssessmentPlanFieldBuilder() {
         if (assessmentPlanBuilder_ == null) {
           assessmentPlanBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -24037,7 +24037,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         snapshotName_ = s;
@@ -24053,7 +24053,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
         getSnapshotNameBytes() {
       java.lang.Object ref = snapshotName_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         snapshotName_ = b;
@@ -24076,7 +24076,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         framework_ = s;
@@ -24092,7 +24092,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
         getFrameworkBytes() {
       java.lang.Object ref = framework_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         framework_ = b;
@@ -24449,7 +24449,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
           getSnapshotNameBytes() {
         java.lang.Object ref = snapshotName_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           snapshotName_ = b;
@@ -24521,7 +24521,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
           getFrameworkBytes() {
         java.lang.Object ref = framework_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           framework_ = b;
@@ -25134,7 +25134,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
        * <code>.oscal.poam.v1.PlanOfActionAndMilestones poam = 1 [json_name = "poam"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.poam.v1.Poam.PlanOfActionAndMilestones, oscal.poam.v1.Poam.PlanOfActionAndMilestones.Builder, oscal.poam.v1.Poam.PlanOfActionAndMilestonesOrBuilder> 
+          oscal.poam.v1.Poam.PlanOfActionAndMilestones, oscal.poam.v1.Poam.PlanOfActionAndMilestones.Builder, oscal.poam.v1.Poam.PlanOfActionAndMilestonesOrBuilder>
           internalGetPoamFieldBuilder() {
         if (poamBuilder_ == null) {
           poamBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -25283,7 +25283,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         snapshotName_ = s;
@@ -25299,7 +25299,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
         getSnapshotNameBytes() {
       java.lang.Object ref = snapshotName_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         snapshotName_ = b;
@@ -25322,7 +25322,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         framework_ = s;
@@ -25338,7 +25338,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
         getFrameworkBytes() {
       java.lang.Object ref = framework_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         framework_ = b;
@@ -25695,7 +25695,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
           getSnapshotNameBytes() {
         java.lang.Object ref = snapshotName_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           snapshotName_ = b;
@@ -25767,7 +25767,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
           getFrameworkBytes() {
         java.lang.Object ref = framework_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           framework_ = b;
@@ -26380,7 +26380,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
        * <code>.oscal.assessment_results.v1.AssessmentResults assessment_results = 1 [json_name = "assessmentResults"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.assessment_results.v1.AssessmentResultsOuterClass.AssessmentResults, oscal.assessment_results.v1.AssessmentResultsOuterClass.AssessmentResults.Builder, oscal.assessment_results.v1.AssessmentResultsOuterClass.AssessmentResultsOrBuilder> 
+          oscal.assessment_results.v1.AssessmentResultsOuterClass.AssessmentResults, oscal.assessment_results.v1.AssessmentResultsOuterClass.AssessmentResults.Builder, oscal.assessment_results.v1.AssessmentResultsOuterClass.AssessmentResultsOrBuilder>
           internalGetAssessmentResultsFieldBuilder() {
         if (assessmentResultsBuilder_ == null) {
           assessmentResultsBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -26451,7 +26451,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
     /**
      * <code>repeated .oscal.services.v1.Entity proposals = 1 [json_name = "proposals"];</code>
      */
-    java.util.List<oscal.services.v1.GovernanceServiceOuterClass.Entity> 
+    java.util.List<oscal.services.v1.GovernanceServiceOuterClass.Entity>
         getProposalsList();
     /**
      * <code>repeated .oscal.services.v1.Entity proposals = 1 [json_name = "proposals"];</code>
@@ -26464,7 +26464,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
     /**
      * <code>repeated .oscal.services.v1.Entity proposals = 1 [json_name = "proposals"];</code>
      */
-    java.util.List<? extends oscal.services.v1.GovernanceServiceOuterClass.EntityOrBuilder> 
+    java.util.List<? extends oscal.services.v1.GovernanceServiceOuterClass.EntityOrBuilder>
         getProposalsOrBuilderList();
     /**
      * <code>repeated .oscal.services.v1.Entity proposals = 1 [json_name = "proposals"];</code>
@@ -26533,7 +26533,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
      * <code>repeated .oscal.services.v1.Entity proposals = 1 [json_name = "proposals"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.services.v1.GovernanceServiceOuterClass.EntityOrBuilder> 
+    public java.util.List<? extends oscal.services.v1.GovernanceServiceOuterClass.EntityOrBuilder>
         getProposalsOrBuilderList() {
       return proposals_;
     }
@@ -26851,7 +26851,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
               proposalsBuilder_ = null;
               proposals_ = other.proposals_;
               bitField0_ = (bitField0_ & ~0x00000001);
-              proposalsBuilder_ = 
+              proposalsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetProposalsFieldBuilder() : null;
             } else {
@@ -27110,7 +27110,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       /**
        * <code>repeated .oscal.services.v1.Entity proposals = 1 [json_name = "proposals"];</code>
        */
-      public java.util.List<? extends oscal.services.v1.GovernanceServiceOuterClass.EntityOrBuilder> 
+      public java.util.List<? extends oscal.services.v1.GovernanceServiceOuterClass.EntityOrBuilder>
            getProposalsOrBuilderList() {
         if (proposalsBuilder_ != null) {
           return proposalsBuilder_.getMessageOrBuilderList();
@@ -27136,12 +27136,12 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       /**
        * <code>repeated .oscal.services.v1.Entity proposals = 1 [json_name = "proposals"];</code>
        */
-      public java.util.List<oscal.services.v1.GovernanceServiceOuterClass.Entity.Builder> 
+      public java.util.List<oscal.services.v1.GovernanceServiceOuterClass.Entity.Builder>
            getProposalsBuilderList() {
         return internalGetProposalsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.services.v1.GovernanceServiceOuterClass.Entity, oscal.services.v1.GovernanceServiceOuterClass.Entity.Builder, oscal.services.v1.GovernanceServiceOuterClass.EntityOrBuilder> 
+          oscal.services.v1.GovernanceServiceOuterClass.Entity, oscal.services.v1.GovernanceServiceOuterClass.Entity.Builder, oscal.services.v1.GovernanceServiceOuterClass.EntityOrBuilder>
           internalGetProposalsFieldBuilder() {
         if (proposalsBuilder_ == null) {
           proposalsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -27810,7 +27810,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         pageToken_ = s;
@@ -27826,7 +27826,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         pageToken_ = b;
@@ -28214,7 +28214,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
           getPageTokenBytes() {
         java.lang.Object ref = pageToken_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           pageToken_ = b;
@@ -28319,7 +28319,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
     /**
      * <code>repeated .oscal.services.v1.Entity conflicts = 1 [json_name = "conflicts"];</code>
      */
-    java.util.List<oscal.services.v1.GovernanceServiceOuterClass.Entity> 
+    java.util.List<oscal.services.v1.GovernanceServiceOuterClass.Entity>
         getConflictsList();
     /**
      * <code>repeated .oscal.services.v1.Entity conflicts = 1 [json_name = "conflicts"];</code>
@@ -28332,7 +28332,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
     /**
      * <code>repeated .oscal.services.v1.Entity conflicts = 1 [json_name = "conflicts"];</code>
      */
-    java.util.List<? extends oscal.services.v1.GovernanceServiceOuterClass.EntityOrBuilder> 
+    java.util.List<? extends oscal.services.v1.GovernanceServiceOuterClass.EntityOrBuilder>
         getConflictsOrBuilderList();
     /**
      * <code>repeated .oscal.services.v1.Entity conflicts = 1 [json_name = "conflicts"];</code>
@@ -28397,7 +28397,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
      * <code>repeated .oscal.services.v1.Entity conflicts = 1 [json_name = "conflicts"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.services.v1.GovernanceServiceOuterClass.EntityOrBuilder> 
+    public java.util.List<? extends oscal.services.v1.GovernanceServiceOuterClass.EntityOrBuilder>
         getConflictsOrBuilderList() {
       return conflicts_;
     }
@@ -28711,7 +28711,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
               conflictsBuilder_ = null;
               conflicts_ = other.conflicts_;
               bitField0_ = (bitField0_ & ~0x00000001);
-              conflictsBuilder_ = 
+              conflictsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetConflictsFieldBuilder() : null;
             } else {
@@ -28970,7 +28970,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       /**
        * <code>repeated .oscal.services.v1.Entity conflicts = 1 [json_name = "conflicts"];</code>
        */
-      public java.util.List<? extends oscal.services.v1.GovernanceServiceOuterClass.EntityOrBuilder> 
+      public java.util.List<? extends oscal.services.v1.GovernanceServiceOuterClass.EntityOrBuilder>
            getConflictsOrBuilderList() {
         if (conflictsBuilder_ != null) {
           return conflictsBuilder_.getMessageOrBuilderList();
@@ -28996,12 +28996,12 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       /**
        * <code>repeated .oscal.services.v1.Entity conflicts = 1 [json_name = "conflicts"];</code>
        */
-      public java.util.List<oscal.services.v1.GovernanceServiceOuterClass.Entity.Builder> 
+      public java.util.List<oscal.services.v1.GovernanceServiceOuterClass.Entity.Builder>
            getConflictsBuilderList() {
         return internalGetConflictsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.services.v1.GovernanceServiceOuterClass.Entity, oscal.services.v1.GovernanceServiceOuterClass.Entity.Builder, oscal.services.v1.GovernanceServiceOuterClass.EntityOrBuilder> 
+          oscal.services.v1.GovernanceServiceOuterClass.Entity, oscal.services.v1.GovernanceServiceOuterClass.Entity.Builder, oscal.services.v1.GovernanceServiceOuterClass.EntityOrBuilder>
           internalGetConflictsFieldBuilder() {
         if (conflictsBuilder_ == null) {
           conflictsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -29159,7 +29159,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         conflictUrn_ = s;
@@ -29175,7 +29175,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
         getConflictUrnBytes() {
       java.lang.Object ref = conflictUrn_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         conflictUrn_ = b;
@@ -29202,7 +29202,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         resolution_ = s;
@@ -29222,7 +29222,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
         getResolutionBytes() {
       java.lang.Object ref = resolution_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         resolution_ = b;
@@ -29579,7 +29579,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
           getConflictUrnBytes() {
         java.lang.Object ref = conflictUrn_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           conflictUrn_ = b;
@@ -29659,7 +29659,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
           getResolutionBytes() {
         java.lang.Object ref = resolution_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           resolution_ = b;
@@ -30342,7 +30342,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         githubOwner_ = s;
@@ -30358,7 +30358,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
         getGithubOwnerBytes() {
       java.lang.Object ref = githubOwner_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         githubOwner_ = b;
@@ -30381,7 +30381,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         githubRepo_ = s;
@@ -30397,7 +30397,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
         getGithubRepoBytes() {
       java.lang.Object ref = githubRepo_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         githubRepo_ = b;
@@ -30420,7 +30420,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         githubPath_ = s;
@@ -30436,7 +30436,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
         getGithubPathBytes() {
       java.lang.Object ref = githubPath_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         githubPath_ = b;
@@ -30463,7 +30463,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         filter_ = s;
@@ -30483,7 +30483,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
         getFilterBytes() {
       java.lang.Object ref = filter_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         filter_ = b;
@@ -30927,7 +30927,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
           getGithubOwnerBytes() {
         java.lang.Object ref = githubOwner_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           githubOwner_ = b;
@@ -30999,7 +30999,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
           getGithubRepoBytes() {
         java.lang.Object ref = githubRepo_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           githubRepo_ = b;
@@ -31071,7 +31071,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
           getGithubPathBytes() {
         java.lang.Object ref = githubPath_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           githubPath_ = b;
@@ -31151,7 +31151,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
           getFilterBytes() {
         java.lang.Object ref = filter_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           filter_ = b;
@@ -31429,7 +31429,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         refId_ = s;
@@ -31445,7 +31445,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
         getRefIdBytes() {
       java.lang.Object ref = refId_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         refId_ = b;
@@ -31468,7 +31468,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         name_ = s;
@@ -31484,7 +31484,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
         getNameBytes() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         name_ = b;
@@ -31507,7 +31507,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         provider_ = s;
@@ -31523,7 +31523,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
         getProviderBytes() {
       java.lang.Object ref = provider_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         provider_ = b;
@@ -31546,7 +31546,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         jurisdiction_ = s;
@@ -31562,7 +31562,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
         getJurisdictionBytes() {
       java.lang.Object ref = jurisdiction_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         jurisdiction_ = b;
@@ -31607,7 +31607,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         version_ = s;
@@ -31623,7 +31623,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
         getVersionBytes() {
       java.lang.Object ref = version_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         version_ = b;
@@ -32098,7 +32098,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
           getRefIdBytes() {
         java.lang.Object ref = refId_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           refId_ = b;
@@ -32170,7 +32170,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
           getNameBytes() {
         java.lang.Object ref = name_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           name_ = b;
@@ -32242,7 +32242,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
           getProviderBytes() {
         java.lang.Object ref = provider_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           provider_ = b;
@@ -32314,7 +32314,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
           getJurisdictionBytes() {
         java.lang.Object ref = jurisdiction_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           jurisdiction_ = b;
@@ -32450,7 +32450,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
           getVersionBytes() {
         java.lang.Object ref = version_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           version_ = b;
@@ -32555,7 +32555,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
     /**
      * <code>repeated .oscal.services.v1.FrameworkSummary frameworks = 1 [json_name = "frameworks"];</code>
      */
-    java.util.List<oscal.services.v1.GovernanceServiceOuterClass.FrameworkSummary> 
+    java.util.List<oscal.services.v1.GovernanceServiceOuterClass.FrameworkSummary>
         getFrameworksList();
     /**
      * <code>repeated .oscal.services.v1.FrameworkSummary frameworks = 1 [json_name = "frameworks"];</code>
@@ -32568,7 +32568,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
     /**
      * <code>repeated .oscal.services.v1.FrameworkSummary frameworks = 1 [json_name = "frameworks"];</code>
      */
-    java.util.List<? extends oscal.services.v1.GovernanceServiceOuterClass.FrameworkSummaryOrBuilder> 
+    java.util.List<? extends oscal.services.v1.GovernanceServiceOuterClass.FrameworkSummaryOrBuilder>
         getFrameworksOrBuilderList();
     /**
      * <code>repeated .oscal.services.v1.FrameworkSummary frameworks = 1 [json_name = "frameworks"];</code>
@@ -32645,7 +32645,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
      * <code>repeated .oscal.services.v1.FrameworkSummary frameworks = 1 [json_name = "frameworks"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.services.v1.GovernanceServiceOuterClass.FrameworkSummaryOrBuilder> 
+    public java.util.List<? extends oscal.services.v1.GovernanceServiceOuterClass.FrameworkSummaryOrBuilder>
         getFrameworksOrBuilderList() {
       return frameworks_;
     }
@@ -33011,7 +33011,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
               frameworksBuilder_ = null;
               frameworks_ = other.frameworks_;
               bitField0_ = (bitField0_ & ~0x00000001);
-              frameworksBuilder_ = 
+              frameworksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetFrameworksFieldBuilder() : null;
             } else {
@@ -33286,7 +33286,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       /**
        * <code>repeated .oscal.services.v1.FrameworkSummary frameworks = 1 [json_name = "frameworks"];</code>
        */
-      public java.util.List<? extends oscal.services.v1.GovernanceServiceOuterClass.FrameworkSummaryOrBuilder> 
+      public java.util.List<? extends oscal.services.v1.GovernanceServiceOuterClass.FrameworkSummaryOrBuilder>
            getFrameworksOrBuilderList() {
         if (frameworksBuilder_ != null) {
           return frameworksBuilder_.getMessageOrBuilderList();
@@ -33312,12 +33312,12 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       /**
        * <code>repeated .oscal.services.v1.FrameworkSummary frameworks = 1 [json_name = "frameworks"];</code>
        */
-      public java.util.List<oscal.services.v1.GovernanceServiceOuterClass.FrameworkSummary.Builder> 
+      public java.util.List<oscal.services.v1.GovernanceServiceOuterClass.FrameworkSummary.Builder>
            getFrameworksBuilderList() {
         return internalGetFrameworksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.services.v1.GovernanceServiceOuterClass.FrameworkSummary, oscal.services.v1.GovernanceServiceOuterClass.FrameworkSummary.Builder, oscal.services.v1.GovernanceServiceOuterClass.FrameworkSummaryOrBuilder> 
+          oscal.services.v1.GovernanceServiceOuterClass.FrameworkSummary, oscal.services.v1.GovernanceServiceOuterClass.FrameworkSummary.Builder, oscal.services.v1.GovernanceServiceOuterClass.FrameworkSummaryOrBuilder>
           internalGetFrameworksFieldBuilder() {
         if (frameworksBuilder_ == null) {
           frameworksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -33537,7 +33537,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         jurisdictionFilter_ = s;
@@ -33553,7 +33553,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
         getJurisdictionFilterBytes() {
       java.lang.Object ref = jurisdictionFilter_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         jurisdictionFilter_ = b;
@@ -33587,7 +33587,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         pageToken_ = s;
@@ -33603,7 +33603,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         pageToken_ = b;
@@ -33983,7 +33983,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
           getJurisdictionFilterBytes() {
         java.lang.Object ref = jurisdictionFilter_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           jurisdictionFilter_ = b;
@@ -34087,7 +34087,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
           getPageTokenBytes() {
         java.lang.Object ref = pageToken_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           pageToken_ = b;
@@ -34192,7 +34192,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
     /**
      * <code>repeated .oscal.services.v1.FrameworkSummary frameworks = 1 [json_name = "frameworks"];</code>
      */
-    java.util.List<oscal.services.v1.GovernanceServiceOuterClass.FrameworkSummary> 
+    java.util.List<oscal.services.v1.GovernanceServiceOuterClass.FrameworkSummary>
         getFrameworksList();
     /**
      * <code>repeated .oscal.services.v1.FrameworkSummary frameworks = 1 [json_name = "frameworks"];</code>
@@ -34205,7 +34205,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
     /**
      * <code>repeated .oscal.services.v1.FrameworkSummary frameworks = 1 [json_name = "frameworks"];</code>
      */
-    java.util.List<? extends oscal.services.v1.GovernanceServiceOuterClass.FrameworkSummaryOrBuilder> 
+    java.util.List<? extends oscal.services.v1.GovernanceServiceOuterClass.FrameworkSummaryOrBuilder>
         getFrameworksOrBuilderList();
     /**
      * <code>repeated .oscal.services.v1.FrameworkSummary frameworks = 1 [json_name = "frameworks"];</code>
@@ -34283,7 +34283,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
      * <code>repeated .oscal.services.v1.FrameworkSummary frameworks = 1 [json_name = "frameworks"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.services.v1.GovernanceServiceOuterClass.FrameworkSummaryOrBuilder> 
+    public java.util.List<? extends oscal.services.v1.GovernanceServiceOuterClass.FrameworkSummaryOrBuilder>
         getFrameworksOrBuilderList() {
       return frameworks_;
     }
@@ -34323,7 +34323,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         nextPageToken_ = s;
@@ -34339,7 +34339,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
         getNextPageTokenBytes() {
       java.lang.Object ref = nextPageToken_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         nextPageToken_ = b;
@@ -34650,7 +34650,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
               frameworksBuilder_ = null;
               frameworks_ = other.frameworks_;
               bitField0_ = (bitField0_ & ~0x00000001);
-              frameworksBuilder_ = 
+              frameworksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetFrameworksFieldBuilder() : null;
             } else {
@@ -34919,7 +34919,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       /**
        * <code>repeated .oscal.services.v1.FrameworkSummary frameworks = 1 [json_name = "frameworks"];</code>
        */
-      public java.util.List<? extends oscal.services.v1.GovernanceServiceOuterClass.FrameworkSummaryOrBuilder> 
+      public java.util.List<? extends oscal.services.v1.GovernanceServiceOuterClass.FrameworkSummaryOrBuilder>
            getFrameworksOrBuilderList() {
         if (frameworksBuilder_ != null) {
           return frameworksBuilder_.getMessageOrBuilderList();
@@ -34945,12 +34945,12 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       /**
        * <code>repeated .oscal.services.v1.FrameworkSummary frameworks = 1 [json_name = "frameworks"];</code>
        */
-      public java.util.List<oscal.services.v1.GovernanceServiceOuterClass.FrameworkSummary.Builder> 
+      public java.util.List<oscal.services.v1.GovernanceServiceOuterClass.FrameworkSummary.Builder>
            getFrameworksBuilderList() {
         return internalGetFrameworksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.services.v1.GovernanceServiceOuterClass.FrameworkSummary, oscal.services.v1.GovernanceServiceOuterClass.FrameworkSummary.Builder, oscal.services.v1.GovernanceServiceOuterClass.FrameworkSummaryOrBuilder> 
+          oscal.services.v1.GovernanceServiceOuterClass.FrameworkSummary, oscal.services.v1.GovernanceServiceOuterClass.FrameworkSummary.Builder, oscal.services.v1.GovernanceServiceOuterClass.FrameworkSummaryOrBuilder>
           internalGetFrameworksFieldBuilder() {
         if (frameworksBuilder_ == null) {
           frameworksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -34989,7 +34989,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
           getNextPageTokenBytes() {
         java.lang.Object ref = nextPageToken_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           nextPageToken_ = b;
@@ -35159,7 +35159,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         refId_ = s;
@@ -35175,7 +35175,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
         getRefIdBytes() {
       java.lang.Object ref = refId_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         refId_ = b;
@@ -35508,7 +35508,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
           getRefIdBytes() {
         java.lang.Object ref = refId_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           refId_ = b;
@@ -36121,7 +36121,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
        * <code>.oscal.services.v1.FrameworkSummary framework = 1 [json_name = "framework"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.services.v1.GovernanceServiceOuterClass.FrameworkSummary, oscal.services.v1.GovernanceServiceOuterClass.FrameworkSummary.Builder, oscal.services.v1.GovernanceServiceOuterClass.FrameworkSummaryOrBuilder> 
+          oscal.services.v1.GovernanceServiceOuterClass.FrameworkSummary, oscal.services.v1.GovernanceServiceOuterClass.FrameworkSummary.Builder, oscal.services.v1.GovernanceServiceOuterClass.FrameworkSummaryOrBuilder>
           internalGetFrameworkFieldBuilder() {
         if (frameworkBuilder_ == null) {
           frameworkBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -36287,7 +36287,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         sourceFramework_ = s;
@@ -36303,7 +36303,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
         getSourceFrameworkBytes() {
       java.lang.Object ref = sourceFramework_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         sourceFramework_ = b;
@@ -36326,7 +36326,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         targetFramework_ = s;
@@ -36342,7 +36342,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
         getTargetFrameworkBytes() {
       java.lang.Object ref = targetFramework_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         targetFramework_ = b;
@@ -36365,7 +36365,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         snapshotName_ = s;
@@ -36381,7 +36381,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
         getSnapshotNameBytes() {
       java.lang.Object ref = snapshotName_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         snapshotName_ = b;
@@ -36766,7 +36766,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
           getSourceFrameworkBytes() {
         java.lang.Object ref = sourceFramework_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           sourceFramework_ = b;
@@ -36838,7 +36838,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
           getTargetFrameworkBytes() {
         java.lang.Object ref = targetFramework_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           targetFramework_ = b;
@@ -36910,7 +36910,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
           getSnapshotNameBytes() {
         java.lang.Object ref = snapshotName_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           snapshotName_ = b;
@@ -37015,7 +37015,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
     /**
      * <code>repeated .oscal.mapping.v1.Map maps = 1 [json_name = "maps"];</code>
      */
-    java.util.List<oscal.mapping.v1.Mapping.Map> 
+    java.util.List<oscal.mapping.v1.Mapping.Map>
         getMapsList();
     /**
      * <code>repeated .oscal.mapping.v1.Map maps = 1 [json_name = "maps"];</code>
@@ -37028,7 +37028,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
     /**
      * <code>repeated .oscal.mapping.v1.Map maps = 1 [json_name = "maps"];</code>
      */
-    java.util.List<? extends oscal.mapping.v1.Mapping.MapOrBuilder> 
+    java.util.List<? extends oscal.mapping.v1.Mapping.MapOrBuilder>
         getMapsOrBuilderList();
     /**
      * <code>repeated .oscal.mapping.v1.Map maps = 1 [json_name = "maps"];</code>
@@ -37093,7 +37093,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
      * <code>repeated .oscal.mapping.v1.Map maps = 1 [json_name = "maps"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.mapping.v1.Mapping.MapOrBuilder> 
+    public java.util.List<? extends oscal.mapping.v1.Mapping.MapOrBuilder>
         getMapsOrBuilderList() {
       return maps_;
     }
@@ -37407,7 +37407,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
               mapsBuilder_ = null;
               maps_ = other.maps_;
               bitField0_ = (bitField0_ & ~0x00000001);
-              mapsBuilder_ = 
+              mapsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetMapsFieldBuilder() : null;
             } else {
@@ -37666,7 +37666,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       /**
        * <code>repeated .oscal.mapping.v1.Map maps = 1 [json_name = "maps"];</code>
        */
-      public java.util.List<? extends oscal.mapping.v1.Mapping.MapOrBuilder> 
+      public java.util.List<? extends oscal.mapping.v1.Mapping.MapOrBuilder>
            getMapsOrBuilderList() {
         if (mapsBuilder_ != null) {
           return mapsBuilder_.getMessageOrBuilderList();
@@ -37692,12 +37692,12 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       /**
        * <code>repeated .oscal.mapping.v1.Map maps = 1 [json_name = "maps"];</code>
        */
-      public java.util.List<oscal.mapping.v1.Mapping.Map.Builder> 
+      public java.util.List<oscal.mapping.v1.Mapping.Map.Builder>
            getMapsBuilderList() {
         return internalGetMapsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.mapping.v1.Mapping.Map, oscal.mapping.v1.Mapping.Map.Builder, oscal.mapping.v1.Mapping.MapOrBuilder> 
+          oscal.mapping.v1.Mapping.Map, oscal.mapping.v1.Mapping.Map.Builder, oscal.mapping.v1.Mapping.MapOrBuilder>
           internalGetMapsFieldBuilder() {
         if (mapsBuilder_ == null) {
           mapsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -37930,7 +37930,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         repoOwner_ = s;
@@ -37946,7 +37946,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
         getRepoOwnerBytes() {
       java.lang.Object ref = repoOwner_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         repoOwner_ = b;
@@ -37969,7 +37969,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         repoName_ = s;
@@ -37985,7 +37985,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
         getRepoNameBytes() {
       java.lang.Object ref = repoName_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         repoName_ = b;
@@ -38008,7 +38008,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         tagName_ = s;
@@ -38024,7 +38024,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
         getTagNameBytes() {
       java.lang.Object ref = tagName_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         tagName_ = b;
@@ -38047,7 +38047,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         targetCommitish_ = s;
@@ -38063,7 +38063,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
         getTargetCommitishBytes() {
       java.lang.Object ref = targetCommitish_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         targetCommitish_ = b;
@@ -38086,7 +38086,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         releaseName_ = s;
@@ -38102,7 +38102,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
         getReleaseNameBytes() {
       java.lang.Object ref = releaseName_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         releaseName_ = b;
@@ -38125,7 +38125,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         body_ = s;
@@ -38141,7 +38141,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
         getBodyBytes() {
       java.lang.Object ref = body_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         body_ = b;
@@ -38673,7 +38673,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
           getRepoOwnerBytes() {
         java.lang.Object ref = repoOwner_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           repoOwner_ = b;
@@ -38745,7 +38745,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
           getRepoNameBytes() {
         java.lang.Object ref = repoName_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           repoName_ = b;
@@ -38817,7 +38817,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
           getTagNameBytes() {
         java.lang.Object ref = tagName_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           tagName_ = b;
@@ -38889,7 +38889,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
           getTargetCommitishBytes() {
         java.lang.Object ref = targetCommitish_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           targetCommitish_ = b;
@@ -38961,7 +38961,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
           getReleaseNameBytes() {
         java.lang.Object ref = releaseName_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           releaseName_ = b;
@@ -39033,7 +39033,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
           getBodyBytes() {
         java.lang.Object ref = body_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           body_ = b;
@@ -39327,7 +39327,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         releaseUrl_ = s;
@@ -39343,7 +39343,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
         getReleaseUrlBytes() {
       java.lang.Object ref = releaseUrl_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         releaseUrl_ = b;
@@ -39366,7 +39366,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         uploadUrl_ = s;
@@ -39382,7 +39382,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
         getUploadUrlBytes() {
       java.lang.Object ref = uploadUrl_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         uploadUrl_ = b;
@@ -39739,7 +39739,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
           getReleaseUrlBytes() {
         java.lang.Object ref = releaseUrl_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           releaseUrl_ = b;
@@ -39811,7 +39811,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
           getUploadUrlBytes() {
         java.lang.Object ref = uploadUrl_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           uploadUrl_ = b;
@@ -40046,7 +40046,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         repoOwner_ = s;
@@ -40062,7 +40062,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
         getRepoOwnerBytes() {
       java.lang.Object ref = repoOwner_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         repoOwner_ = b;
@@ -40085,7 +40085,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         repoName_ = s;
@@ -40101,7 +40101,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
         getRepoNameBytes() {
       java.lang.Object ref = repoName_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         repoName_ = b;
@@ -40124,7 +40124,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         baseBranch_ = s;
@@ -40140,7 +40140,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
         getBaseBranchBytes() {
       java.lang.Object ref = baseBranch_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         baseBranch_ = b;
@@ -40163,7 +40163,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         headBranch_ = s;
@@ -40179,7 +40179,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
         getHeadBranchBytes() {
       java.lang.Object ref = headBranch_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         headBranch_ = b;
@@ -40202,7 +40202,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         title_ = s;
@@ -40218,7 +40218,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
         getTitleBytes() {
       java.lang.Object ref = title_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         title_ = b;
@@ -40241,7 +40241,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         body_ = s;
@@ -40257,7 +40257,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
         getBodyBytes() {
       java.lang.Object ref = body_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         body_ = b;
@@ -40710,7 +40710,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
           getRepoOwnerBytes() {
         java.lang.Object ref = repoOwner_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           repoOwner_ = b;
@@ -40782,7 +40782,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
           getRepoNameBytes() {
         java.lang.Object ref = repoName_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           repoName_ = b;
@@ -40854,7 +40854,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
           getBaseBranchBytes() {
         java.lang.Object ref = baseBranch_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           baseBranch_ = b;
@@ -40926,7 +40926,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
           getHeadBranchBytes() {
         java.lang.Object ref = headBranch_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           headBranch_ = b;
@@ -40998,7 +40998,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
           getTitleBytes() {
         java.lang.Object ref = title_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           title_ = b;
@@ -41070,7 +41070,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
           getBodyBytes() {
         java.lang.Object ref = body_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           body_ = b;
@@ -41246,7 +41246,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         pullRequestUrl_ = s;
@@ -41262,7 +41262,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
         getPullRequestUrlBytes() {
       java.lang.Object ref = pullRequestUrl_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         pullRequestUrl_ = b;
@@ -41629,7 +41629,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
           getPullRequestUrlBytes() {
         java.lang.Object ref = pullRequestUrl_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           pullRequestUrl_ = b;
@@ -41761,297 +41761,297 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
 
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_Entity_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_Entity_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_CreateEntityRequest_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_CreateEntityRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_CreateEntityResponse_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_CreateEntityResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_GetEntityRequest_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_GetEntityRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_GetEntityResponse_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_GetEntityResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_UpdateEntityRequest_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_UpdateEntityRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_UpdateEntityResponse_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_UpdateEntityResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_ListEntitiesRequest_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_ListEntitiesRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_ListEntitiesResponse_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_ListEntitiesResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_CreateSnapshotRequest_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_CreateSnapshotRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_CreateSnapshotResponse_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_CreateSnapshotResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_GetSnapshotRequest_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_GetSnapshotRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_GetSnapshotResponse_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_GetSnapshotResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_ListSnapshotsRequest_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_ListSnapshotsRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_ListSnapshotsResponse_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_ListSnapshotsResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_CreateReleaseRequest_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_CreateReleaseRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_CreateReleaseResponse_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_CreateReleaseResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_ListReleasesRequest_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_ListReleasesRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_ListReleasesResponse_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_ListReleasesResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_IngestRequirementsRequest_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_IngestRequirementsRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_IngestRequirementsResponse_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_IngestRequirementsResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_SemanticSearchRequest_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_SemanticSearchRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_SemanticSearchResult_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_SemanticSearchResult_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_SemanticSearchResponse_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_SemanticSearchResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_GenerateCatalogRequest_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_GenerateCatalogRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_GenerateCatalogResponse_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_GenerateCatalogResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_GenerateProfileRequest_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_GenerateProfileRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_GenerateProfileResponse_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_GenerateProfileResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_GenerateMappingsRequest_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_GenerateMappingsRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_GenerateMappingsResponse_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_GenerateMappingsResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_GenerateSSPRequest_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_GenerateSSPRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_GenerateSSPResponse_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_GenerateSSPResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_GenerateComponentDefinitionRequest_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_GenerateComponentDefinitionRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_GenerateComponentDefinitionResponse_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_GenerateComponentDefinitionResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_GenerateAssessmentPlanRequest_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_GenerateAssessmentPlanRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_GenerateAssessmentPlanResponse_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_GenerateAssessmentPlanResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_GeneratePOAMRequest_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_GeneratePOAMRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_GeneratePOAMResponse_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_GeneratePOAMResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_GenerateAssessmentResultsRequest_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_GenerateAssessmentResultsRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_GenerateAssessmentResultsResponse_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_GenerateAssessmentResultsResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_ProposeRequest_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_ProposeRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_ProposeResponse_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_ProposeResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_ListConflictsRequest_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_ListConflictsRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_ListConflictsResponse_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_ListConflictsResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_ResolveConflictRequest_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_ResolveConflictRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_ResolveConflictResponse_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_ResolveConflictResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_BulkIngestFrameworksRequest_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_BulkIngestFrameworksRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_FrameworkSummary_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_FrameworkSummary_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_BulkIngestFrameworksResponse_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_BulkIngestFrameworksResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_ListFrameworksRequest_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_ListFrameworksRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_ListFrameworksResponse_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_ListFrameworksResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_GetFrameworkRequest_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_GetFrameworkRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_GetFrameworkResponse_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_GetFrameworkResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_GenerateCrossFrameworkMappingsRequest_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_GenerateCrossFrameworkMappingsRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_GenerateCrossFrameworkMappingsResponse_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_GenerateCrossFrameworkMappingsResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_PublishReleaseRequest_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_PublishReleaseRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_PublishReleaseResponse_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_PublishReleaseResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_ProposeMappingUpdateRequest_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_ProposeMappingUpdateRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_ProposeMappingUpdateResponse_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_ProposeMappingUpdateResponse_fieldAccessorTable;
 

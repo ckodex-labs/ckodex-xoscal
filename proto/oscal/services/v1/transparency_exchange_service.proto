@@ -28,6 +28,24 @@ service TransparencyExchangeService {
       body: "*"
     };
   }
+  rpc ListVerificationEvents(ListVerificationEventsRequest) returns (ListVerificationEventsResponse) {
+    option (google.api.http) = {get: "/v1/transparency/claims/{claim_id}/verification-events"};
+  }
+  rpc ExportClaimReceipt(ExportClaimReceiptRequest) returns (ExportClaimReceiptResponse) {
+    option (google.api.http) = {get: "/v1/transparency/claims/{claim_id}/receipt"};
+  }
+  rpc PreflightImport(PreflightImportRequest) returns (PreflightImportResponse) {
+    option (google.api.http) = {
+      post: "/v1/transparency/import/preflight"
+      body: "*"
+    };
+  }
+  rpc ImportBatch(ImportBatchRequest) returns (ImportBatchResponse) {
+    option (google.api.http) = {
+      post: "/v1/transparency/import"
+      body: "*"
+    };
+  }
 
   rpc UploadEvidence(UploadEvidenceRequest) returns (UploadEvidenceResponse) {
     option (google.api.http) = {
@@ -72,6 +90,8 @@ message Claim {
   repeated ProofRef proof_refs = 12;
   repeated PolicyRef policy_refs = 13;
   string extensions_json = 14; // JSON blob for flexible extensions
+  string trust_state = 15; // candidate | incomplete | verified | rejected
+  string proof_state_json = 16; // current persisted proof projection
 }
 
 message Reference {
@@ -114,7 +134,7 @@ message ProofRef {
 }
 
 message PolicyRef {
-  string type = 1; // opa_bundle | oscal_profile | cdxa_standard | spdx_security_profile
+  string type = 1; // xoscal-json | opa_bundle | oscal_profile | cdxa_standard | spdx_security_profile
   string ref = 2;
   string digest = 3;
   google.protobuf.Timestamp valid_to = 4;
@@ -192,6 +212,82 @@ message VerifyClaimResponse {
   ProofState proof_state = 2;
   string trust_state = 3;
   repeated string diagnostics = 4;
+}
+
+message ListVerificationEventsRequest {
+  string claim_id = 1;
+}
+
+message ListVerificationEventsResponse {
+  repeated VerificationEvent events = 1;
+  bool chain_valid = 2;
+}
+
+// VerificationEvent is an append-only audit record. The JSON fields preserve
+// the exact provider and proof envelopes recorded by the verifier.
+message VerificationEvent {
+  int64 sequence = 1;
+  string event_id = 2;
+  string claim_id = 3;
+  string request_id = 4;
+  string idempotency_key = 5;
+  string checks_json = 6;
+  string proof_state_json = 7;
+  string provider_state_json = 8;
+  string trust_state = 9;
+  repeated string diagnostics = 10;
+  string previous_hash = 11;
+  string event_hash = 12;
+  google.protobuf.Timestamp created_at = 13;
+}
+
+message ExportClaimReceiptRequest {
+  string claim_id = 1;
+}
+
+message ExportClaimReceiptResponse {
+  string claim_id = 1;
+  string receipt_json = 2;
+  string receipt_digest = 3;
+  string trust_state = 4;
+  string verification_event_hash = 5;
+  google.protobuf.Timestamp exported_at = 6;
+}
+
+message ImportEvidence {
+  Evidence evidence = 1;
+  bytes blob = 2;
+}
+
+message ImportRecord {
+  Claim claim = 1;
+  repeated ImportEvidence evidence = 2;
+}
+
+message ImportRecordResult {
+  int32 index = 1;
+  string claim_id = 2;
+  string status = 3; // ready | already_present | invalid | imported
+  repeated string diagnostics = 4;
+}
+
+message PreflightImportRequest {
+  repeated ImportRecord records = 1;
+}
+
+message PreflightImportResponse {
+  bool valid = 1;
+  repeated ImportRecordResult results = 2;
+}
+
+message ImportBatchRequest {
+  repeated ImportRecord records = 1;
+  bool all_or_nothing = 2;
+}
+
+message ImportBatchResponse {
+  bool committed = 1;
+  repeated ImportRecordResult results = 2;
 }
 
 message UploadEvidenceRequest {

@@ -1,36 +1,36 @@
 version: "1.0"
-oscal_version: 1.2.2
-generated_at: "2026-08-09T23:15:54Z"
+oscal_version: 1.2.3
+generated_at: "2026-08-16T17:31:42Z"
 models:
     - model: catalog
       schema_asset: oscal_catalog_schema.json
-      schema_sha256: sha256:fdc559f5dff6848b1ebbe1898a69cc08263479f7c796e2f056412059e7489d0c
+      schema_sha256: sha256:ab95836e9e8dfeb6fde80007f6cc76fa3192f595d427c751a3f3923c3f474fc2
       proto: proto/oscal/catalog/v1/catalog.proto
     - model: profile
       schema_asset: oscal_profile_schema.json
-      schema_sha256: sha256:04329bd68032f48825f712f79576b3fd00e129e59d3597beb56ed72c17277f66
+      schema_sha256: sha256:7c5ff5a92683b6a80ce6a3474dea04e0ea8680a4ecb60702ffa08ebfc677e6cb
       proto: proto/oscal/profile/v1/profile.proto
     - model: ssp
       schema_asset: oscal_ssp_schema.json
-      schema_sha256: sha256:d7f9bf67101829083472a8f058a5b5ef078e09b3f699ac0c4dbe33a5b0671b6a
+      schema_sha256: sha256:99b1bee2df5604a7d4f1faeab43148e0bd4c4a1f513cd0d2d0c7896aa216a1e7
       proto: proto/oscal/ssp/v1/ssp.proto
     - model: component-definition
       schema_asset: oscal_component_schema.json
-      schema_sha256: sha256:3b6e0765c44037c4d1bfb2cdb972713917d3eca73e566c0e6c6881a565638830
+      schema_sha256: sha256:95e76881151ececd5cb1a93ff0f70ad74b8cc1aa58771626ac8b262bf2c8e001
       proto: proto/oscal/component_definition/v1/component.proto
     - model: assessment-plan
       schema_asset: oscal_assessment-plan_schema.json
-      schema_sha256: sha256:ba265f05982969142cbc3c6ed6bb99e0880081ceb366c152e44fe7e2b08aa125
+      schema_sha256: sha256:ea687b9d0ab1d84c9cb11ee0a5e22b17956fe892ee93f5acca937bef81d23ea2
       proto: proto/oscal/assessment_plan/v1/assessment_plan.proto
     - model: assessment-results
       schema_asset: oscal_assessment-results_schema.json
-      schema_sha256: sha256:d4e1e7e17c6662814882810ad64075266964ee1a575759ce3955302fd74edcd9
+      schema_sha256: sha256:4034e2032332dbf597e59e0646ec16c2c31df992962490371e91f47b219ff42c
       proto: proto/oscal/assessment_results/v1/assessment_results.proto
     - model: poam
       schema_asset: oscal_poam_schema.json
-      schema_sha256: sha256:c8f2ce52b3c71299bb0c9e1cd950d48dc79d9f52920c543ac30b3c3f08c2e152
+      schema_sha256: sha256:f4fd94487408a9589954b5b92d88965c984d4f79b85365cc574b860898759437
       proto: proto/oscal/poam/v1/poam.proto
     - model: mapping
       schema_asset: oscal_mapping_schema.json
-      schema_sha256: sha256:45b4f909f72e17fbe8476e2a7f3d9f64ec42dc26ab2fe2d56c6b44fc57346022
+      schema_sha256: sha256:ed28b68c8e56cc7d39f0c6076a5d7da3e8100fbe25abf5bb731120bd34f8817e
       proto: proto/oscal/mapping/v1/mapping.proto

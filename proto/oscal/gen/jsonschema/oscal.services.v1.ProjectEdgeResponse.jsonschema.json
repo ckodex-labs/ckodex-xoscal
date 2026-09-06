@@ -2,9 +2,17 @@
   "$id": "oscal.services.v1.ProjectEdgeResponse.jsonschema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "additionalProperties": false,
+  "patternProperties": {
+    "^(projection_event)$": {
+      "$ref": "oscal.services.v1.GraphProjectionEvent.jsonschema.json"
+    }
+  },
   "properties": {
     "edge": {
       "$ref": "oscal.services.v1.GraphEdge.jsonschema.json"
+    },
+    "projectionEvent": {
+      "$ref": "oscal.services.v1.GraphProjectionEvent.jsonschema.json"
     }
   },
   "title": "Project Edge Response",

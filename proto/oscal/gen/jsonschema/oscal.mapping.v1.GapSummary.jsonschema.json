@@ -2,7 +2,15 @@
   "$id": "oscal.mapping.v1.GapSummary.jsonschema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "additionalProperties": false,
-  "description": "GapSummary represents a gap summary",
+  "description": "GapSummary selects controls that are not mapped.\n Fields 1-5 are retained for wire compatibility with the prototype model.",
+  "patternProperties": {
+    "^(unmapped_controls)$": {
+      "items": {
+        "$ref": "oscal.mapping.v1.SelectControlById.jsonschema.json"
+      },
+      "type": "array"
+    }
+  },
   "properties": {
     "count": {
       "anyOf": [
@@ -41,6 +49,15 @@
         "$ref": "oscal.common.v1.MarkupMultiline.jsonschema.json"
       },
       "type": "array"
+    },
+    "unmappedControls": {
+      "items": {
+        "$ref": "oscal.mapping.v1.SelectControlById.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "uuid": {
+      "$ref": "oscal.common.v1.UUID.jsonschema.json"
     }
   },
   "title": "Gap Summary",

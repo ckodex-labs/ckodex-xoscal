@@ -97,7 +97,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
      *
      * <code>repeated .oscal.poam.v1.Risk risks = 5 [json_name = "risks", deprecated = true];</code>
      */
-    @java.lang.Deprecated java.util.List<oscal.poam.v1.Poam.Risk> 
+    @java.lang.Deprecated java.util.List<oscal.poam.v1.Poam.Risk>
         getRisksList();
     /**
      * <pre>
@@ -122,7 +122,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
      *
      * <code>repeated .oscal.poam.v1.Risk risks = 5 [json_name = "risks", deprecated = true];</code>
      */
-    @java.lang.Deprecated java.util.List<? extends oscal.poam.v1.Poam.RiskOrBuilder> 
+    @java.lang.Deprecated java.util.List<? extends oscal.poam.v1.Poam.RiskOrBuilder>
         getRisksOrBuilderList();
     /**
      * <pre>
@@ -156,7 +156,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
      *
      * <code>repeated .oscal.poam.v1.PoamItem poam_items = 7 [json_name = "poamItems"];</code>
      */
-    java.util.List<oscal.poam.v1.Poam.PoamItem> 
+    java.util.List<oscal.poam.v1.Poam.PoamItem>
         getPoamItemsList();
     /**
      * <pre>
@@ -181,7 +181,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
      *
      * <code>repeated .oscal.poam.v1.PoamItem poam_items = 7 [json_name = "poamItems"];</code>
      */
-    java.util.List<? extends oscal.poam.v1.Poam.PoamItemOrBuilder> 
+    java.util.List<? extends oscal.poam.v1.Poam.PoamItemOrBuilder>
         getPoamItemsOrBuilderList();
     /**
      * <pre>
@@ -368,7 +368,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.poam.v1.Risk risks = 5 [json_name = "risks", deprecated = true];</code>
      */
     @java.lang.Override
-    @java.lang.Deprecated public java.util.List<? extends oscal.poam.v1.Poam.RiskOrBuilder> 
+    @java.lang.Deprecated public java.util.List<? extends oscal.poam.v1.Poam.RiskOrBuilder>
         getRisksOrBuilderList() {
       return risks_;
     }
@@ -455,7 +455,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.poam.v1.PoamItem poam_items = 7 [json_name = "poamItems"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.poam.v1.Poam.PoamItemOrBuilder> 
+    public java.util.List<? extends oscal.poam.v1.Poam.PoamItemOrBuilder>
         getPoamItemsOrBuilderList() {
       return poamItems_;
     }
@@ -980,7 +980,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
               risksBuilder_ = null;
               risks_ = other.risks_;
               bitField0_ = (bitField0_ & ~0x00000010);
-              risksBuilder_ = 
+              risksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetRisksFieldBuilder() : null;
             } else {
@@ -1009,7 +1009,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
               poamItemsBuilder_ = null;
               poamItems_ = other.poamItems_;
               bitField0_ = (bitField0_ & ~0x00000040);
-              poamItemsBuilder_ = 
+              poamItemsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetPoamItemsFieldBuilder() : null;
             } else {
@@ -1229,7 +1229,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder> 
+          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder>
           internalGetUuidFieldBuilder() {
         if (uuidBuilder_ == null) {
           uuidBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -1350,7 +1350,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.Metadata metadata = 2 [json_name = "metadata"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.Metadata, oscal.common.v1.Common.Metadata.Builder, oscal.common.v1.Common.MetadataOrBuilder> 
+          oscal.common.v1.Common.Metadata, oscal.common.v1.Common.Metadata.Builder, oscal.common.v1.Common.MetadataOrBuilder>
           internalGetMetadataFieldBuilder() {
         if (metadataBuilder_ == null) {
           metadataBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -1471,7 +1471,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.poam.v1.ImportSsp import_ssp = 3 [json_name = "importSsp"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.poam.v1.Poam.ImportSsp, oscal.poam.v1.Poam.ImportSsp.Builder, oscal.poam.v1.Poam.ImportSspOrBuilder> 
+          oscal.poam.v1.Poam.ImportSsp, oscal.poam.v1.Poam.ImportSsp.Builder, oscal.poam.v1.Poam.ImportSspOrBuilder>
           internalGetImportSspFieldBuilder() {
         if (importSspBuilder_ == null) {
           importSspBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -1592,7 +1592,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.poam.v1.LocalDefinitions local_definitions = 4 [json_name = "localDefinitions"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.poam.v1.Poam.LocalDefinitions, oscal.poam.v1.Poam.LocalDefinitions.Builder, oscal.poam.v1.Poam.LocalDefinitionsOrBuilder> 
+          oscal.poam.v1.Poam.LocalDefinitions, oscal.poam.v1.Poam.LocalDefinitions.Builder, oscal.poam.v1.Poam.LocalDefinitionsOrBuilder>
           internalGetLocalDefinitionsFieldBuilder() {
         if (localDefinitionsBuilder_ == null) {
           localDefinitionsBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -1860,7 +1860,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
        *
        * <code>repeated .oscal.poam.v1.Risk risks = 5 [json_name = "risks", deprecated = true];</code>
        */
-      @java.lang.Deprecated public java.util.List<? extends oscal.poam.v1.Poam.RiskOrBuilder> 
+      @java.lang.Deprecated public java.util.List<? extends oscal.poam.v1.Poam.RiskOrBuilder>
            getRisksOrBuilderList() {
         if (risksBuilder_ != null) {
           return risksBuilder_.getMessageOrBuilderList();
@@ -1898,12 +1898,12 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
        *
        * <code>repeated .oscal.poam.v1.Risk risks = 5 [json_name = "risks", deprecated = true];</code>
        */
-      @java.lang.Deprecated public java.util.List<oscal.poam.v1.Poam.Risk.Builder> 
+      @java.lang.Deprecated public java.util.List<oscal.poam.v1.Poam.Risk.Builder>
            getRisksBuilderList() {
         return internalGetRisksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.poam.v1.Poam.Risk, oscal.poam.v1.Poam.Risk.Builder, oscal.poam.v1.Poam.RiskOrBuilder> 
+          oscal.poam.v1.Poam.Risk, oscal.poam.v1.Poam.Risk.Builder, oscal.poam.v1.Poam.RiskOrBuilder>
           internalGetRisksFieldBuilder() {
         if (risksBuilder_ == null) {
           risksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -2025,7 +2025,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.BackMatter back_matter = 6 [json_name = "backMatter"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.BackMatter, oscal.common.v1.Common.BackMatter.Builder, oscal.common.v1.Common.BackMatterOrBuilder> 
+          oscal.common.v1.Common.BackMatter, oscal.common.v1.Common.BackMatter.Builder, oscal.common.v1.Common.BackMatterOrBuilder>
           internalGetBackMatterFieldBuilder() {
         if (backMatterBuilder_ == null) {
           backMatterBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -2293,7 +2293,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
        *
        * <code>repeated .oscal.poam.v1.PoamItem poam_items = 7 [json_name = "poamItems"];</code>
        */
-      public java.util.List<? extends oscal.poam.v1.Poam.PoamItemOrBuilder> 
+      public java.util.List<? extends oscal.poam.v1.Poam.PoamItemOrBuilder>
            getPoamItemsOrBuilderList() {
         if (poamItemsBuilder_ != null) {
           return poamItemsBuilder_.getMessageOrBuilderList();
@@ -2331,12 +2331,12 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
        *
        * <code>repeated .oscal.poam.v1.PoamItem poam_items = 7 [json_name = "poamItems"];</code>
        */
-      public java.util.List<oscal.poam.v1.Poam.PoamItem.Builder> 
+      public java.util.List<oscal.poam.v1.Poam.PoamItem.Builder>
            getPoamItemsBuilderList() {
         return internalGetPoamItemsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.poam.v1.Poam.PoamItem, oscal.poam.v1.Poam.PoamItem.Builder, oscal.poam.v1.Poam.PoamItemOrBuilder> 
+          oscal.poam.v1.Poam.PoamItem, oscal.poam.v1.Poam.PoamItem.Builder, oscal.poam.v1.Poam.PoamItemOrBuilder>
           internalGetPoamItemsFieldBuilder() {
         if (poamItemsBuilder_ == null) {
           poamItemsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -2423,7 +2423,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
      */
-    java.util.List<oscal.common.v1.Common.MarkupMultiline> 
+    java.util.List<oscal.common.v1.Common.MarkupMultiline>
         getRemarksList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
@@ -2436,7 +2436,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
@@ -2532,7 +2532,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList() {
       return remarks_;
     }
@@ -2889,7 +2889,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
               remarksBuilder_ = null;
               remarks_ = other.remarks_;
               bitField0_ = (bitField0_ & ~0x00000002);
-              remarksBuilder_ = 
+              remarksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetRemarksFieldBuilder() : null;
             } else {
@@ -3068,7 +3068,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.URIReference href = 1 [json_name = "href"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.URIReference, oscal.common.v1.Common.URIReference.Builder, oscal.common.v1.Common.URIReferenceOrBuilder> 
+          oscal.common.v1.Common.URIReference, oscal.common.v1.Common.URIReference.Builder, oscal.common.v1.Common.URIReferenceOrBuilder>
           internalGetHrefFieldBuilder() {
         if (hrefBuilder_ == null) {
           hrefBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -3276,7 +3276,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
            getRemarksOrBuilderList() {
         if (remarksBuilder_ != null) {
           return remarksBuilder_.getMessageOrBuilderList();
@@ -3302,12 +3302,12 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder> 
+      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder>
            getRemarksBuilderList() {
         return internalGetRemarksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetRemarksFieldBuilder() {
         if (remarksBuilder_ == null) {
           remarksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -3379,7 +3379,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.poam.v1.Component components = 1 [json_name = "components"];</code>
      */
-    java.util.List<oscal.poam.v1.Poam.Component> 
+    java.util.List<oscal.poam.v1.Poam.Component>
         getComponentsList();
     /**
      * <code>repeated .oscal.poam.v1.Component components = 1 [json_name = "components"];</code>
@@ -3392,7 +3392,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.poam.v1.Component components = 1 [json_name = "components"];</code>
      */
-    java.util.List<? extends oscal.poam.v1.Poam.ComponentOrBuilder> 
+    java.util.List<? extends oscal.poam.v1.Poam.ComponentOrBuilder>
         getComponentsOrBuilderList();
     /**
      * <code>repeated .oscal.poam.v1.Component components = 1 [json_name = "components"];</code>
@@ -3403,7 +3403,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.poam.v1.InventoryItem inventory_items = 2 [json_name = "inventoryItems"];</code>
      */
-    java.util.List<oscal.poam.v1.Poam.InventoryItem> 
+    java.util.List<oscal.poam.v1.Poam.InventoryItem>
         getInventoryItemsList();
     /**
      * <code>repeated .oscal.poam.v1.InventoryItem inventory_items = 2 [json_name = "inventoryItems"];</code>
@@ -3416,7 +3416,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.poam.v1.InventoryItem inventory_items = 2 [json_name = "inventoryItems"];</code>
      */
-    java.util.List<? extends oscal.poam.v1.Poam.InventoryItemOrBuilder> 
+    java.util.List<? extends oscal.poam.v1.Poam.InventoryItemOrBuilder>
         getInventoryItemsOrBuilderList();
     /**
      * <code>repeated .oscal.poam.v1.InventoryItem inventory_items = 2 [json_name = "inventoryItems"];</code>
@@ -3427,7 +3427,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.poam.v1.User users = 3 [json_name = "users"];</code>
      */
-    java.util.List<oscal.poam.v1.Poam.User> 
+    java.util.List<oscal.poam.v1.Poam.User>
         getUsersList();
     /**
      * <code>repeated .oscal.poam.v1.User users = 3 [json_name = "users"];</code>
@@ -3440,7 +3440,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.poam.v1.User users = 3 [json_name = "users"];</code>
      */
-    java.util.List<? extends oscal.poam.v1.Poam.UserOrBuilder> 
+    java.util.List<? extends oscal.poam.v1.Poam.UserOrBuilder>
         getUsersOrBuilderList();
     /**
      * <code>repeated .oscal.poam.v1.User users = 3 [json_name = "users"];</code>
@@ -3511,7 +3511,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.poam.v1.Component components = 1 [json_name = "components"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.poam.v1.Poam.ComponentOrBuilder> 
+    public java.util.List<? extends oscal.poam.v1.Poam.ComponentOrBuilder>
         getComponentsOrBuilderList() {
       return components_;
     }
@@ -3552,7 +3552,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.poam.v1.InventoryItem inventory_items = 2 [json_name = "inventoryItems"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.poam.v1.Poam.InventoryItemOrBuilder> 
+    public java.util.List<? extends oscal.poam.v1.Poam.InventoryItemOrBuilder>
         getInventoryItemsOrBuilderList() {
       return inventoryItems_;
     }
@@ -3593,7 +3593,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.poam.v1.User users = 3 [json_name = "users"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.poam.v1.Poam.UserOrBuilder> 
+    public java.util.List<? extends oscal.poam.v1.Poam.UserOrBuilder>
         getUsersOrBuilderList() {
       return users_;
     }
@@ -3979,7 +3979,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
               componentsBuilder_ = null;
               components_ = other.components_;
               bitField0_ = (bitField0_ & ~0x00000001);
-              componentsBuilder_ = 
+              componentsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetComponentsFieldBuilder() : null;
             } else {
@@ -4005,7 +4005,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
               inventoryItemsBuilder_ = null;
               inventoryItems_ = other.inventoryItems_;
               bitField0_ = (bitField0_ & ~0x00000002);
-              inventoryItemsBuilder_ = 
+              inventoryItemsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetInventoryItemsFieldBuilder() : null;
             } else {
@@ -4031,7 +4031,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
               usersBuilder_ = null;
               users_ = other.users_;
               bitField0_ = (bitField0_ & ~0x00000004);
-              usersBuilder_ = 
+              usersBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetUsersFieldBuilder() : null;
             } else {
@@ -4316,7 +4316,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.poam.v1.Component components = 1 [json_name = "components"];</code>
        */
-      public java.util.List<? extends oscal.poam.v1.Poam.ComponentOrBuilder> 
+      public java.util.List<? extends oscal.poam.v1.Poam.ComponentOrBuilder>
            getComponentsOrBuilderList() {
         if (componentsBuilder_ != null) {
           return componentsBuilder_.getMessageOrBuilderList();
@@ -4342,12 +4342,12 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.poam.v1.Component components = 1 [json_name = "components"];</code>
        */
-      public java.util.List<oscal.poam.v1.Poam.Component.Builder> 
+      public java.util.List<oscal.poam.v1.Poam.Component.Builder>
            getComponentsBuilderList() {
         return internalGetComponentsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.poam.v1.Poam.Component, oscal.poam.v1.Poam.Component.Builder, oscal.poam.v1.Poam.ComponentOrBuilder> 
+          oscal.poam.v1.Poam.Component, oscal.poam.v1.Poam.Component.Builder, oscal.poam.v1.Poam.ComponentOrBuilder>
           internalGetComponentsFieldBuilder() {
         if (componentsBuilder_ == null) {
           componentsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -4556,7 +4556,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.poam.v1.InventoryItem inventory_items = 2 [json_name = "inventoryItems"];</code>
        */
-      public java.util.List<? extends oscal.poam.v1.Poam.InventoryItemOrBuilder> 
+      public java.util.List<? extends oscal.poam.v1.Poam.InventoryItemOrBuilder>
            getInventoryItemsOrBuilderList() {
         if (inventoryItemsBuilder_ != null) {
           return inventoryItemsBuilder_.getMessageOrBuilderList();
@@ -4582,12 +4582,12 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.poam.v1.InventoryItem inventory_items = 2 [json_name = "inventoryItems"];</code>
        */
-      public java.util.List<oscal.poam.v1.Poam.InventoryItem.Builder> 
+      public java.util.List<oscal.poam.v1.Poam.InventoryItem.Builder>
            getInventoryItemsBuilderList() {
         return internalGetInventoryItemsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.poam.v1.Poam.InventoryItem, oscal.poam.v1.Poam.InventoryItem.Builder, oscal.poam.v1.Poam.InventoryItemOrBuilder> 
+          oscal.poam.v1.Poam.InventoryItem, oscal.poam.v1.Poam.InventoryItem.Builder, oscal.poam.v1.Poam.InventoryItemOrBuilder>
           internalGetInventoryItemsFieldBuilder() {
         if (inventoryItemsBuilder_ == null) {
           inventoryItemsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -4796,7 +4796,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.poam.v1.User users = 3 [json_name = "users"];</code>
        */
-      public java.util.List<? extends oscal.poam.v1.Poam.UserOrBuilder> 
+      public java.util.List<? extends oscal.poam.v1.Poam.UserOrBuilder>
            getUsersOrBuilderList() {
         if (usersBuilder_ != null) {
           return usersBuilder_.getMessageOrBuilderList();
@@ -4822,12 +4822,12 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.poam.v1.User users = 3 [json_name = "users"];</code>
        */
-      public java.util.List<oscal.poam.v1.Poam.User.Builder> 
+      public java.util.List<oscal.poam.v1.Poam.User.Builder>
            getUsersBuilderList() {
         return internalGetUsersFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.poam.v1.Poam.User, oscal.poam.v1.Poam.User.Builder, oscal.poam.v1.Poam.UserOrBuilder> 
+          oscal.poam.v1.Poam.User, oscal.poam.v1.Poam.User.Builder, oscal.poam.v1.Poam.UserOrBuilder>
           internalGetUsersFieldBuilder() {
         if (usersBuilder_ == null) {
           usersBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -4950,7 +4950,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Property> 
+    java.util.List<oscal.common.v1.Common.Property>
         getPropsList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
@@ -4963,7 +4963,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
@@ -4974,7 +4974,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Link> 
+    java.util.List<oscal.common.v1.Common.Link>
         getLinksList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
@@ -4987,7 +4987,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
@@ -4998,7 +4998,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
      */
-    java.util.List<oscal.common.v1.Common.MarkupMultiline> 
+    java.util.List<oscal.common.v1.Common.MarkupMultiline>
         getRemarksList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
@@ -5011,7 +5011,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
@@ -5111,7 +5111,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         type_ = s;
@@ -5127,7 +5127,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
         getTypeBytes() {
       java.lang.Object ref = type_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         type_ = b;
@@ -5150,7 +5150,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         title_ = s;
@@ -5166,7 +5166,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
         getTitleBytes() {
       java.lang.Object ref = title_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         title_ = b;
@@ -5189,7 +5189,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         description_ = s;
@@ -5205,7 +5205,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
         getDescriptionBytes() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         description_ = b;
@@ -5229,7 +5229,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList() {
       return props_;
     }
@@ -5270,7 +5270,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList() {
       return links_;
     }
@@ -5311,7 +5311,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList() {
       return remarks_;
     }
@@ -5795,7 +5795,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
               propsBuilder_ = null;
               props_ = other.props_;
               bitField0_ = (bitField0_ & ~0x00000010);
-              propsBuilder_ = 
+              propsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetPropsFieldBuilder() : null;
             } else {
@@ -5821,7 +5821,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
               linksBuilder_ = null;
               links_ = other.links_;
               bitField0_ = (bitField0_ & ~0x00000020);
-              linksBuilder_ = 
+              linksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetLinksFieldBuilder() : null;
             } else {
@@ -5847,7 +5847,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
               remarksBuilder_ = null;
               remarks_ = other.remarks_;
               bitField0_ = (bitField0_ & ~0x00000040);
-              remarksBuilder_ = 
+              remarksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetRemarksFieldBuilder() : null;
             } else {
@@ -6067,7 +6067,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder> 
+          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder>
           internalGetUuidFieldBuilder() {
         if (uuidBuilder_ == null) {
           uuidBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -6105,7 +6105,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
           getTypeBytes() {
         java.lang.Object ref = type_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           type_ = b;
@@ -6177,7 +6177,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
           getTitleBytes() {
         java.lang.Object ref = title_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           title_ = b;
@@ -6249,7 +6249,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
           getDescriptionBytes() {
         java.lang.Object ref = description_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           description_ = b;
@@ -6491,7 +6491,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
            getPropsOrBuilderList() {
         if (propsBuilder_ != null) {
           return propsBuilder_.getMessageOrBuilderList();
@@ -6517,12 +6517,12 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Property.Builder> 
+      public java.util.List<oscal.common.v1.Common.Property.Builder>
            getPropsBuilderList() {
         return internalGetPropsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> 
+          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder>
           internalGetPropsFieldBuilder() {
         if (propsBuilder_ == null) {
           propsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -6731,7 +6731,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
            getLinksOrBuilderList() {
         if (linksBuilder_ != null) {
           return linksBuilder_.getMessageOrBuilderList();
@@ -6757,12 +6757,12 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Link.Builder> 
+      public java.util.List<oscal.common.v1.Common.Link.Builder>
            getLinksBuilderList() {
         return internalGetLinksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder> 
+          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder>
           internalGetLinksFieldBuilder() {
         if (linksBuilder_ == null) {
           linksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -6971,7 +6971,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
            getRemarksOrBuilderList() {
         if (remarksBuilder_ != null) {
           return remarksBuilder_.getMessageOrBuilderList();
@@ -6997,12 +6997,12 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder> 
+      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder>
            getRemarksBuilderList() {
         return internalGetRemarksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetRemarksFieldBuilder() {
         if (remarksBuilder_ == null) {
           remarksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -7104,7 +7104,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Property> 
+    java.util.List<oscal.common.v1.Common.Property>
         getPropsList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
@@ -7117,7 +7117,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
@@ -7128,7 +7128,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Link> 
+    java.util.List<oscal.common.v1.Common.Link>
         getLinksList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
@@ -7141,7 +7141,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
@@ -7152,7 +7152,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
      */
-    java.util.List<oscal.common.v1.Common.MarkupMultiline> 
+    java.util.List<oscal.common.v1.Common.MarkupMultiline>
         getRemarksList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
@@ -7165,7 +7165,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
@@ -7289,7 +7289,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList() {
       return props_;
     }
@@ -7330,7 +7330,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList() {
       return links_;
     }
@@ -7371,7 +7371,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList() {
       return remarks_;
     }
@@ -7829,7 +7829,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
               propsBuilder_ = null;
               props_ = other.props_;
               bitField0_ = (bitField0_ & ~0x00000004);
-              propsBuilder_ = 
+              propsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetPropsFieldBuilder() : null;
             } else {
@@ -7855,7 +7855,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
               linksBuilder_ = null;
               links_ = other.links_;
               bitField0_ = (bitField0_ & ~0x00000008);
-              linksBuilder_ = 
+              linksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetLinksFieldBuilder() : null;
             } else {
@@ -7881,7 +7881,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
               remarksBuilder_ = null;
               remarks_ = other.remarks_;
               bitField0_ = (bitField0_ & ~0x00000010);
-              remarksBuilder_ = 
+              remarksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetRemarksFieldBuilder() : null;
             } else {
@@ -8093,7 +8093,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder> 
+          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder>
           internalGetUuidFieldBuilder() {
         if (uuidBuilder_ == null) {
           uuidBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -8214,7 +8214,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.MarkupLine description = 2 [json_name = "description"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.MarkupLine, oscal.common.v1.Common.MarkupLine.Builder, oscal.common.v1.Common.MarkupLineOrBuilder> 
+          oscal.common.v1.Common.MarkupLine, oscal.common.v1.Common.MarkupLine.Builder, oscal.common.v1.Common.MarkupLineOrBuilder>
           internalGetDescriptionFieldBuilder() {
         if (descriptionBuilder_ == null) {
           descriptionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -8422,7 +8422,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
            getPropsOrBuilderList() {
         if (propsBuilder_ != null) {
           return propsBuilder_.getMessageOrBuilderList();
@@ -8448,12 +8448,12 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Property.Builder> 
+      public java.util.List<oscal.common.v1.Common.Property.Builder>
            getPropsBuilderList() {
         return internalGetPropsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> 
+          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder>
           internalGetPropsFieldBuilder() {
         if (propsBuilder_ == null) {
           propsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -8662,7 +8662,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
            getLinksOrBuilderList() {
         if (linksBuilder_ != null) {
           return linksBuilder_.getMessageOrBuilderList();
@@ -8688,12 +8688,12 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Link.Builder> 
+      public java.util.List<oscal.common.v1.Common.Link.Builder>
            getLinksBuilderList() {
         return internalGetLinksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder> 
+          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder>
           internalGetLinksFieldBuilder() {
         if (linksBuilder_ == null) {
           linksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -8902,7 +8902,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
            getRemarksOrBuilderList() {
         if (remarksBuilder_ != null) {
           return remarksBuilder_.getMessageOrBuilderList();
@@ -8928,12 +8928,12 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder> 
+      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder>
            getRemarksBuilderList() {
         return internalGetRemarksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetRemarksFieldBuilder() {
         if (remarksBuilder_ == null) {
           remarksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -9059,7 +9059,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Property> 
+    java.util.List<oscal.common.v1.Common.Property>
         getPropsList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
@@ -9072,7 +9072,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
@@ -9083,7 +9083,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Link> 
+    java.util.List<oscal.common.v1.Common.Link>
         getLinksList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
@@ -9096,7 +9096,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
@@ -9107,7 +9107,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
      */
-    java.util.List<oscal.common.v1.Common.MarkupMultiline> 
+    java.util.List<oscal.common.v1.Common.MarkupMultiline>
         getRemarksList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
@@ -9120,7 +9120,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
@@ -9219,7 +9219,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         title_ = s;
@@ -9235,7 +9235,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
         getTitleBytes() {
       java.lang.Object ref = title_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         title_ = b;
@@ -9258,7 +9258,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         shortName_ = s;
@@ -9274,7 +9274,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
         getShortNameBytes() {
       java.lang.Object ref = shortName_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         shortName_ = b;
@@ -9324,7 +9324,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList() {
       return props_;
     }
@@ -9365,7 +9365,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList() {
       return links_;
     }
@@ -9406,7 +9406,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList() {
       return remarks_;
     }
@@ -9902,7 +9902,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
               propsBuilder_ = null;
               props_ = other.props_;
               bitField0_ = (bitField0_ & ~0x00000010);
-              propsBuilder_ = 
+              propsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetPropsFieldBuilder() : null;
             } else {
@@ -9928,7 +9928,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
               linksBuilder_ = null;
               links_ = other.links_;
               bitField0_ = (bitField0_ & ~0x00000020);
-              linksBuilder_ = 
+              linksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetLinksFieldBuilder() : null;
             } else {
@@ -9954,7 +9954,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
               remarksBuilder_ = null;
               remarks_ = other.remarks_;
               bitField0_ = (bitField0_ & ~0x00000040);
-              remarksBuilder_ = 
+              remarksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetRemarksFieldBuilder() : null;
             } else {
@@ -10176,7 +10176,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder> 
+          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder>
           internalGetUuidFieldBuilder() {
         if (uuidBuilder_ == null) {
           uuidBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -10214,7 +10214,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
           getTitleBytes() {
         java.lang.Object ref = title_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           title_ = b;
@@ -10286,7 +10286,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
           getShortNameBytes() {
         java.lang.Object ref = shortName_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           shortName_ = b;
@@ -10441,7 +10441,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.MarkupMultiline description = 4 [json_name = "description"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetDescriptionFieldBuilder() {
         if (descriptionBuilder_ == null) {
           descriptionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -10649,7 +10649,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
            getPropsOrBuilderList() {
         if (propsBuilder_ != null) {
           return propsBuilder_.getMessageOrBuilderList();
@@ -10675,12 +10675,12 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Property.Builder> 
+      public java.util.List<oscal.common.v1.Common.Property.Builder>
            getPropsBuilderList() {
         return internalGetPropsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> 
+          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder>
           internalGetPropsFieldBuilder() {
         if (propsBuilder_ == null) {
           propsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -10889,7 +10889,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
            getLinksOrBuilderList() {
         if (linksBuilder_ != null) {
           return linksBuilder_.getMessageOrBuilderList();
@@ -10915,12 +10915,12 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Link.Builder> 
+      public java.util.List<oscal.common.v1.Common.Link.Builder>
            getLinksBuilderList() {
         return internalGetLinksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder> 
+          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder>
           internalGetLinksFieldBuilder() {
         if (linksBuilder_ == null) {
           linksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -11129,7 +11129,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
            getRemarksOrBuilderList() {
         if (remarksBuilder_ != null) {
           return remarksBuilder_.getMessageOrBuilderList();
@@ -11155,12 +11155,12 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder> 
+      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder>
            getRemarksBuilderList() {
         return internalGetRemarksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetRemarksFieldBuilder() {
         if (remarksBuilder_ == null) {
           remarksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -11277,7 +11277,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Property> 
+    java.util.List<oscal.common.v1.Common.Property>
         getPropsList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
@@ -11290,7 +11290,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
@@ -11301,7 +11301,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Link> 
+    java.util.List<oscal.common.v1.Common.Link>
         getLinksList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
@@ -11314,7 +11314,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
@@ -11325,7 +11325,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.poam.v1.Origin origins = 6 [json_name = "origins"];</code>
      */
-    java.util.List<oscal.poam.v1.Poam.Origin> 
+    java.util.List<oscal.poam.v1.Poam.Origin>
         getOriginsList();
     /**
      * <code>repeated .oscal.poam.v1.Origin origins = 6 [json_name = "origins"];</code>
@@ -11338,7 +11338,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.poam.v1.Origin origins = 6 [json_name = "origins"];</code>
      */
-    java.util.List<? extends oscal.poam.v1.Poam.OriginOrBuilder> 
+    java.util.List<? extends oscal.poam.v1.Poam.OriginOrBuilder>
         getOriginsOrBuilderList();
     /**
      * <code>repeated .oscal.poam.v1.Origin origins = 6 [json_name = "origins"];</code>
@@ -11349,7 +11349,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.poam.v1.RelatedFinding related_findings = 7 [json_name = "relatedFindings"];</code>
      */
-    java.util.List<oscal.poam.v1.Poam.RelatedFinding> 
+    java.util.List<oscal.poam.v1.Poam.RelatedFinding>
         getRelatedFindingsList();
     /**
      * <code>repeated .oscal.poam.v1.RelatedFinding related_findings = 7 [json_name = "relatedFindings"];</code>
@@ -11362,7 +11362,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.poam.v1.RelatedFinding related_findings = 7 [json_name = "relatedFindings"];</code>
      */
-    java.util.List<? extends oscal.poam.v1.Poam.RelatedFindingOrBuilder> 
+    java.util.List<? extends oscal.poam.v1.Poam.RelatedFindingOrBuilder>
         getRelatedFindingsOrBuilderList();
     /**
      * <code>repeated .oscal.poam.v1.RelatedFinding related_findings = 7 [json_name = "relatedFindings"];</code>
@@ -11373,7 +11373,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.poam.v1.RelatedObservation related_observations = 8 [json_name = "relatedObservations"];</code>
      */
-    java.util.List<oscal.poam.v1.Poam.RelatedObservation> 
+    java.util.List<oscal.poam.v1.Poam.RelatedObservation>
         getRelatedObservationsList();
     /**
      * <code>repeated .oscal.poam.v1.RelatedObservation related_observations = 8 [json_name = "relatedObservations"];</code>
@@ -11386,7 +11386,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.poam.v1.RelatedObservation related_observations = 8 [json_name = "relatedObservations"];</code>
      */
-    java.util.List<? extends oscal.poam.v1.Poam.RelatedObservationOrBuilder> 
+    java.util.List<? extends oscal.poam.v1.Poam.RelatedObservationOrBuilder>
         getRelatedObservationsOrBuilderList();
     /**
      * <code>repeated .oscal.poam.v1.RelatedObservation related_observations = 8 [json_name = "relatedObservations"];</code>
@@ -11397,7 +11397,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.poam.v1.RelatedRisk related_risks = 9 [json_name = "relatedRisks"];</code>
      */
-    java.util.List<oscal.poam.v1.Poam.RelatedRisk> 
+    java.util.List<oscal.poam.v1.Poam.RelatedRisk>
         getRelatedRisksList();
     /**
      * <code>repeated .oscal.poam.v1.RelatedRisk related_risks = 9 [json_name = "relatedRisks"];</code>
@@ -11410,7 +11410,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.poam.v1.RelatedRisk related_risks = 9 [json_name = "relatedRisks"];</code>
      */
-    java.util.List<? extends oscal.poam.v1.Poam.RelatedRiskOrBuilder> 
+    java.util.List<? extends oscal.poam.v1.Poam.RelatedRiskOrBuilder>
         getRelatedRisksOrBuilderList();
     /**
      * <code>repeated .oscal.poam.v1.RelatedRisk related_risks = 9 [json_name = "relatedRisks"];</code>
@@ -11421,7 +11421,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks"];</code>
      */
-    java.util.List<oscal.common.v1.Common.MarkupMultiline> 
+    java.util.List<oscal.common.v1.Common.MarkupMultiline>
         getRemarksList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks"];</code>
@@ -11434,7 +11434,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks"];</code>
@@ -11444,7 +11444,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
   }
   /**
    * <pre>
-   * PoamItem represents a POAM item as defined by the OSCAL 1.1.2 schema.
+   * PoamItem represents a POAM item as defined by the pinned OSCAL schema.
    * Unlike Risk, poam-item is a simpler container with title, description,
    * and references to findings/observations/risks.
    * </pre>
@@ -11590,7 +11590,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList() {
       return props_;
     }
@@ -11631,7 +11631,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList() {
       return links_;
     }
@@ -11672,7 +11672,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.poam.v1.Origin origins = 6 [json_name = "origins"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.poam.v1.Poam.OriginOrBuilder> 
+    public java.util.List<? extends oscal.poam.v1.Poam.OriginOrBuilder>
         getOriginsOrBuilderList() {
       return origins_;
     }
@@ -11713,7 +11713,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.poam.v1.RelatedFinding related_findings = 7 [json_name = "relatedFindings"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.poam.v1.Poam.RelatedFindingOrBuilder> 
+    public java.util.List<? extends oscal.poam.v1.Poam.RelatedFindingOrBuilder>
         getRelatedFindingsOrBuilderList() {
       return relatedFindings_;
     }
@@ -11754,7 +11754,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.poam.v1.RelatedObservation related_observations = 8 [json_name = "relatedObservations"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.poam.v1.Poam.RelatedObservationOrBuilder> 
+    public java.util.List<? extends oscal.poam.v1.Poam.RelatedObservationOrBuilder>
         getRelatedObservationsOrBuilderList() {
       return relatedObservations_;
     }
@@ -11795,7 +11795,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.poam.v1.RelatedRisk related_risks = 9 [json_name = "relatedRisks"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.poam.v1.Poam.RelatedRiskOrBuilder> 
+    public java.util.List<? extends oscal.poam.v1.Poam.RelatedRiskOrBuilder>
         getRelatedRisksOrBuilderList() {
       return relatedRisks_;
     }
@@ -11836,7 +11836,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList() {
       return remarks_;
     }
@@ -12189,7 +12189,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     }
     /**
      * <pre>
-     * PoamItem represents a POAM item as defined by the OSCAL 1.1.2 schema.
+     * PoamItem represents a POAM item as defined by the pinned OSCAL schema.
      * Unlike Risk, poam-item is a simpler container with title, description,
      * and references to findings/observations/risks.
      * </pre>
@@ -12467,7 +12467,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
               propsBuilder_ = null;
               props_ = other.props_;
               bitField0_ = (bitField0_ & ~0x00000008);
-              propsBuilder_ = 
+              propsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetPropsFieldBuilder() : null;
             } else {
@@ -12493,7 +12493,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
               linksBuilder_ = null;
               links_ = other.links_;
               bitField0_ = (bitField0_ & ~0x00000010);
-              linksBuilder_ = 
+              linksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetLinksFieldBuilder() : null;
             } else {
@@ -12519,7 +12519,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
               originsBuilder_ = null;
               origins_ = other.origins_;
               bitField0_ = (bitField0_ & ~0x00000020);
-              originsBuilder_ = 
+              originsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetOriginsFieldBuilder() : null;
             } else {
@@ -12545,7 +12545,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
               relatedFindingsBuilder_ = null;
               relatedFindings_ = other.relatedFindings_;
               bitField0_ = (bitField0_ & ~0x00000040);
-              relatedFindingsBuilder_ = 
+              relatedFindingsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetRelatedFindingsFieldBuilder() : null;
             } else {
@@ -12571,7 +12571,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
               relatedObservationsBuilder_ = null;
               relatedObservations_ = other.relatedObservations_;
               bitField0_ = (bitField0_ & ~0x00000080);
-              relatedObservationsBuilder_ = 
+              relatedObservationsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetRelatedObservationsFieldBuilder() : null;
             } else {
@@ -12597,7 +12597,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
               relatedRisksBuilder_ = null;
               relatedRisks_ = other.relatedRisks_;
               bitField0_ = (bitField0_ & ~0x00000100);
-              relatedRisksBuilder_ = 
+              relatedRisksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetRelatedRisksFieldBuilder() : null;
             } else {
@@ -12623,7 +12623,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
               remarksBuilder_ = null;
               remarks_ = other.remarks_;
               bitField0_ = (bitField0_ & ~0x00000200);
-              remarksBuilder_ = 
+              remarksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetRemarksFieldBuilder() : null;
             } else {
@@ -12894,7 +12894,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder> 
+          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder>
           internalGetUuidFieldBuilder() {
         if (uuidBuilder_ == null) {
           uuidBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -13015,7 +13015,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.MarkupLine title = 2 [json_name = "title"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.MarkupLine, oscal.common.v1.Common.MarkupLine.Builder, oscal.common.v1.Common.MarkupLineOrBuilder> 
+          oscal.common.v1.Common.MarkupLine, oscal.common.v1.Common.MarkupLine.Builder, oscal.common.v1.Common.MarkupLineOrBuilder>
           internalGetTitleFieldBuilder() {
         if (titleBuilder_ == null) {
           titleBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -13136,7 +13136,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.MarkupMultiline description = 3 [json_name = "description"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetDescriptionFieldBuilder() {
         if (descriptionBuilder_ == null) {
           descriptionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -13344,7 +13344,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
            getPropsOrBuilderList() {
         if (propsBuilder_ != null) {
           return propsBuilder_.getMessageOrBuilderList();
@@ -13370,12 +13370,12 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Property.Builder> 
+      public java.util.List<oscal.common.v1.Common.Property.Builder>
            getPropsBuilderList() {
         return internalGetPropsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> 
+          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder>
           internalGetPropsFieldBuilder() {
         if (propsBuilder_ == null) {
           propsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -13584,7 +13584,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
            getLinksOrBuilderList() {
         if (linksBuilder_ != null) {
           return linksBuilder_.getMessageOrBuilderList();
@@ -13610,12 +13610,12 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Link.Builder> 
+      public java.util.List<oscal.common.v1.Common.Link.Builder>
            getLinksBuilderList() {
         return internalGetLinksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder> 
+          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder>
           internalGetLinksFieldBuilder() {
         if (linksBuilder_ == null) {
           linksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -13824,7 +13824,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.poam.v1.Origin origins = 6 [json_name = "origins"];</code>
        */
-      public java.util.List<? extends oscal.poam.v1.Poam.OriginOrBuilder> 
+      public java.util.List<? extends oscal.poam.v1.Poam.OriginOrBuilder>
            getOriginsOrBuilderList() {
         if (originsBuilder_ != null) {
           return originsBuilder_.getMessageOrBuilderList();
@@ -13850,12 +13850,12 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.poam.v1.Origin origins = 6 [json_name = "origins"];</code>
        */
-      public java.util.List<oscal.poam.v1.Poam.Origin.Builder> 
+      public java.util.List<oscal.poam.v1.Poam.Origin.Builder>
            getOriginsBuilderList() {
         return internalGetOriginsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.poam.v1.Poam.Origin, oscal.poam.v1.Poam.Origin.Builder, oscal.poam.v1.Poam.OriginOrBuilder> 
+          oscal.poam.v1.Poam.Origin, oscal.poam.v1.Poam.Origin.Builder, oscal.poam.v1.Poam.OriginOrBuilder>
           internalGetOriginsFieldBuilder() {
         if (originsBuilder_ == null) {
           originsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -14064,7 +14064,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.poam.v1.RelatedFinding related_findings = 7 [json_name = "relatedFindings"];</code>
        */
-      public java.util.List<? extends oscal.poam.v1.Poam.RelatedFindingOrBuilder> 
+      public java.util.List<? extends oscal.poam.v1.Poam.RelatedFindingOrBuilder>
            getRelatedFindingsOrBuilderList() {
         if (relatedFindingsBuilder_ != null) {
           return relatedFindingsBuilder_.getMessageOrBuilderList();
@@ -14090,12 +14090,12 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.poam.v1.RelatedFinding related_findings = 7 [json_name = "relatedFindings"];</code>
        */
-      public java.util.List<oscal.poam.v1.Poam.RelatedFinding.Builder> 
+      public java.util.List<oscal.poam.v1.Poam.RelatedFinding.Builder>
            getRelatedFindingsBuilderList() {
         return internalGetRelatedFindingsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.poam.v1.Poam.RelatedFinding, oscal.poam.v1.Poam.RelatedFinding.Builder, oscal.poam.v1.Poam.RelatedFindingOrBuilder> 
+          oscal.poam.v1.Poam.RelatedFinding, oscal.poam.v1.Poam.RelatedFinding.Builder, oscal.poam.v1.Poam.RelatedFindingOrBuilder>
           internalGetRelatedFindingsFieldBuilder() {
         if (relatedFindingsBuilder_ == null) {
           relatedFindingsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -14304,7 +14304,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.poam.v1.RelatedObservation related_observations = 8 [json_name = "relatedObservations"];</code>
        */
-      public java.util.List<? extends oscal.poam.v1.Poam.RelatedObservationOrBuilder> 
+      public java.util.List<? extends oscal.poam.v1.Poam.RelatedObservationOrBuilder>
            getRelatedObservationsOrBuilderList() {
         if (relatedObservationsBuilder_ != null) {
           return relatedObservationsBuilder_.getMessageOrBuilderList();
@@ -14330,12 +14330,12 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.poam.v1.RelatedObservation related_observations = 8 [json_name = "relatedObservations"];</code>
        */
-      public java.util.List<oscal.poam.v1.Poam.RelatedObservation.Builder> 
+      public java.util.List<oscal.poam.v1.Poam.RelatedObservation.Builder>
            getRelatedObservationsBuilderList() {
         return internalGetRelatedObservationsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.poam.v1.Poam.RelatedObservation, oscal.poam.v1.Poam.RelatedObservation.Builder, oscal.poam.v1.Poam.RelatedObservationOrBuilder> 
+          oscal.poam.v1.Poam.RelatedObservation, oscal.poam.v1.Poam.RelatedObservation.Builder, oscal.poam.v1.Poam.RelatedObservationOrBuilder>
           internalGetRelatedObservationsFieldBuilder() {
         if (relatedObservationsBuilder_ == null) {
           relatedObservationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -14544,7 +14544,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.poam.v1.RelatedRisk related_risks = 9 [json_name = "relatedRisks"];</code>
        */
-      public java.util.List<? extends oscal.poam.v1.Poam.RelatedRiskOrBuilder> 
+      public java.util.List<? extends oscal.poam.v1.Poam.RelatedRiskOrBuilder>
            getRelatedRisksOrBuilderList() {
         if (relatedRisksBuilder_ != null) {
           return relatedRisksBuilder_.getMessageOrBuilderList();
@@ -14570,12 +14570,12 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.poam.v1.RelatedRisk related_risks = 9 [json_name = "relatedRisks"];</code>
        */
-      public java.util.List<oscal.poam.v1.Poam.RelatedRisk.Builder> 
+      public java.util.List<oscal.poam.v1.Poam.RelatedRisk.Builder>
            getRelatedRisksBuilderList() {
         return internalGetRelatedRisksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.poam.v1.Poam.RelatedRisk, oscal.poam.v1.Poam.RelatedRisk.Builder, oscal.poam.v1.Poam.RelatedRiskOrBuilder> 
+          oscal.poam.v1.Poam.RelatedRisk, oscal.poam.v1.Poam.RelatedRisk.Builder, oscal.poam.v1.Poam.RelatedRiskOrBuilder>
           internalGetRelatedRisksFieldBuilder() {
         if (relatedRisksBuilder_ == null) {
           relatedRisksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -14784,7 +14784,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
            getRemarksOrBuilderList() {
         if (remarksBuilder_ != null) {
           return remarksBuilder_.getMessageOrBuilderList();
@@ -14810,12 +14810,12 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder> 
+      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder>
            getRemarksBuilderList() {
         return internalGetRemarksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetRemarksFieldBuilder() {
         if (remarksBuilder_ == null) {
           remarksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -14887,7 +14887,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.poam.v1.OriginActor actors = 1 [json_name = "actors"];</code>
      */
-    java.util.List<oscal.poam.v1.Poam.OriginActor> 
+    java.util.List<oscal.poam.v1.Poam.OriginActor>
         getActorsList();
     /**
      * <code>repeated .oscal.poam.v1.OriginActor actors = 1 [json_name = "actors"];</code>
@@ -14900,7 +14900,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.poam.v1.OriginActor actors = 1 [json_name = "actors"];</code>
      */
-    java.util.List<? extends oscal.poam.v1.Poam.OriginActorOrBuilder> 
+    java.util.List<? extends oscal.poam.v1.Poam.OriginActorOrBuilder>
         getActorsOrBuilderList();
     /**
      * <code>repeated .oscal.poam.v1.OriginActor actors = 1 [json_name = "actors"];</code>
@@ -14969,7 +14969,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.poam.v1.OriginActor actors = 1 [json_name = "actors"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.poam.v1.Poam.OriginActorOrBuilder> 
+    public java.util.List<? extends oscal.poam.v1.Poam.OriginActorOrBuilder>
         getActorsOrBuilderList() {
       return actors_;
     }
@@ -15287,7 +15287,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
               actorsBuilder_ = null;
               actors_ = other.actors_;
               bitField0_ = (bitField0_ & ~0x00000001);
-              actorsBuilder_ = 
+              actorsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetActorsFieldBuilder() : null;
             } else {
@@ -15546,7 +15546,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.poam.v1.OriginActor actors = 1 [json_name = "actors"];</code>
        */
-      public java.util.List<? extends oscal.poam.v1.Poam.OriginActorOrBuilder> 
+      public java.util.List<? extends oscal.poam.v1.Poam.OriginActorOrBuilder>
            getActorsOrBuilderList() {
         if (actorsBuilder_ != null) {
           return actorsBuilder_.getMessageOrBuilderList();
@@ -15572,12 +15572,12 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.poam.v1.OriginActor actors = 1 [json_name = "actors"];</code>
        */
-      public java.util.List<oscal.poam.v1.Poam.OriginActor.Builder> 
+      public java.util.List<oscal.poam.v1.Poam.OriginActor.Builder>
            getActorsBuilderList() {
         return internalGetActorsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.poam.v1.Poam.OriginActor, oscal.poam.v1.Poam.OriginActor.Builder, oscal.poam.v1.Poam.OriginActorOrBuilder> 
+          oscal.poam.v1.Poam.OriginActor, oscal.poam.v1.Poam.OriginActor.Builder, oscal.poam.v1.Poam.OriginActorOrBuilder>
           internalGetActorsFieldBuilder() {
         if (actorsBuilder_ == null) {
           actorsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -15679,7 +15679,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Property> 
+    java.util.List<oscal.common.v1.Common.Property>
         getPropsList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
@@ -15692,7 +15692,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
@@ -15703,7 +15703,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Link> 
+    java.util.List<oscal.common.v1.Common.Link>
         getLinksList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
@@ -15716,7 +15716,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
@@ -15727,7 +15727,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
      */
-    java.util.List<oscal.common.v1.Common.MarkupMultiline> 
+    java.util.List<oscal.common.v1.Common.MarkupMultiline>
         getRemarksList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
@@ -15740,7 +15740,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
@@ -15864,7 +15864,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList() {
       return props_;
     }
@@ -15905,7 +15905,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList() {
       return links_;
     }
@@ -15946,7 +15946,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList() {
       return remarks_;
     }
@@ -16404,7 +16404,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
               propsBuilder_ = null;
               props_ = other.props_;
               bitField0_ = (bitField0_ & ~0x00000004);
-              propsBuilder_ = 
+              propsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetPropsFieldBuilder() : null;
             } else {
@@ -16430,7 +16430,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
               linksBuilder_ = null;
               links_ = other.links_;
               bitField0_ = (bitField0_ & ~0x00000008);
-              linksBuilder_ = 
+              linksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetLinksFieldBuilder() : null;
             } else {
@@ -16456,7 +16456,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
               remarksBuilder_ = null;
               remarks_ = other.remarks_;
               bitField0_ = (bitField0_ & ~0x00000010);
-              remarksBuilder_ = 
+              remarksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetRemarksFieldBuilder() : null;
             } else {
@@ -16668,7 +16668,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.UUID actor_uuid = 1 [json_name = "actorUuid"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder> 
+          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder>
           internalGetActorUuidFieldBuilder() {
         if (actorUuidBuilder_ == null) {
           actorUuidBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -16789,7 +16789,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.MarkupLine title = 2 [json_name = "title"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.MarkupLine, oscal.common.v1.Common.MarkupLine.Builder, oscal.common.v1.Common.MarkupLineOrBuilder> 
+          oscal.common.v1.Common.MarkupLine, oscal.common.v1.Common.MarkupLine.Builder, oscal.common.v1.Common.MarkupLineOrBuilder>
           internalGetTitleFieldBuilder() {
         if (titleBuilder_ == null) {
           titleBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -16997,7 +16997,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
            getPropsOrBuilderList() {
         if (propsBuilder_ != null) {
           return propsBuilder_.getMessageOrBuilderList();
@@ -17023,12 +17023,12 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Property.Builder> 
+      public java.util.List<oscal.common.v1.Common.Property.Builder>
            getPropsBuilderList() {
         return internalGetPropsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> 
+          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder>
           internalGetPropsFieldBuilder() {
         if (propsBuilder_ == null) {
           propsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -17237,7 +17237,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
            getLinksOrBuilderList() {
         if (linksBuilder_ != null) {
           return linksBuilder_.getMessageOrBuilderList();
@@ -17263,12 +17263,12 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Link.Builder> 
+      public java.util.List<oscal.common.v1.Common.Link.Builder>
            getLinksBuilderList() {
         return internalGetLinksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder> 
+          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder>
           internalGetLinksFieldBuilder() {
         if (linksBuilder_ == null) {
           linksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -17477,7 +17477,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
            getRemarksOrBuilderList() {
         if (remarksBuilder_ != null) {
           return remarksBuilder_.getMessageOrBuilderList();
@@ -17503,12 +17503,12 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder> 
+      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder>
            getRemarksBuilderList() {
         return internalGetRemarksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetRemarksFieldBuilder() {
         if (remarksBuilder_ == null) {
           remarksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -18096,7 +18096,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.UUID finding_uuid = 1 [json_name = "findingUuid"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder> 
+          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder>
           internalGetFindingUuidFieldBuilder() {
         if (findingUuidBuilder_ == null) {
           findingUuidBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -18683,7 +18683,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.UUID risk_uuid = 1 [json_name = "riskUuid"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder> 
+          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder>
           internalGetRiskUuidFieldBuilder() {
         if (riskUuidBuilder_ == null) {
           riskUuidBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -18829,7 +18829,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.poam.v1.MitigatingFactor mitigating_factors = 6 [json_name = "mitigatingFactors"];</code>
      */
-    java.util.List<oscal.poam.v1.Poam.MitigatingFactor> 
+    java.util.List<oscal.poam.v1.Poam.MitigatingFactor>
         getMitigatingFactorsList();
     /**
      * <code>repeated .oscal.poam.v1.MitigatingFactor mitigating_factors = 6 [json_name = "mitigatingFactors"];</code>
@@ -18842,7 +18842,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.poam.v1.MitigatingFactor mitigating_factors = 6 [json_name = "mitigatingFactors"];</code>
      */
-    java.util.List<? extends oscal.poam.v1.Poam.MitigatingFactorOrBuilder> 
+    java.util.List<? extends oscal.poam.v1.Poam.MitigatingFactorOrBuilder>
         getMitigatingFactorsOrBuilderList();
     /**
      * <code>repeated .oscal.poam.v1.MitigatingFactor mitigating_factors = 6 [json_name = "mitigatingFactors"];</code>
@@ -18868,7 +18868,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.poam.v1.Response remediations = 8 [json_name = "remediations"];</code>
      */
-    java.util.List<oscal.poam.v1.Poam.Response> 
+    java.util.List<oscal.poam.v1.Poam.Response>
         getRemediationsList();
     /**
      * <code>repeated .oscal.poam.v1.Response remediations = 8 [json_name = "remediations"];</code>
@@ -18881,7 +18881,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.poam.v1.Response remediations = 8 [json_name = "remediations"];</code>
      */
-    java.util.List<? extends oscal.poam.v1.Poam.ResponseOrBuilder> 
+    java.util.List<? extends oscal.poam.v1.Poam.ResponseOrBuilder>
         getRemediationsOrBuilderList();
     /**
      * <code>repeated .oscal.poam.v1.Response remediations = 8 [json_name = "remediations"];</code>
@@ -18907,7 +18907,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.poam.v1.RelatedObservation related_observations = 10 [json_name = "relatedObservations"];</code>
      */
-    java.util.List<oscal.poam.v1.Poam.RelatedObservation> 
+    java.util.List<oscal.poam.v1.Poam.RelatedObservation>
         getRelatedObservationsList();
     /**
      * <code>repeated .oscal.poam.v1.RelatedObservation related_observations = 10 [json_name = "relatedObservations"];</code>
@@ -18920,7 +18920,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.poam.v1.RelatedObservation related_observations = 10 [json_name = "relatedObservations"];</code>
      */
-    java.util.List<? extends oscal.poam.v1.Poam.RelatedObservationOrBuilder> 
+    java.util.List<? extends oscal.poam.v1.Poam.RelatedObservationOrBuilder>
         getRelatedObservationsOrBuilderList();
     /**
      * <code>repeated .oscal.poam.v1.RelatedObservation related_observations = 10 [json_name = "relatedObservations"];</code>
@@ -18931,7 +18931,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 11 [json_name = "props"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Property> 
+    java.util.List<oscal.common.v1.Common.Property>
         getPropsList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 11 [json_name = "props"];</code>
@@ -18944,7 +18944,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 11 [json_name = "props"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 11 [json_name = "props"];</code>
@@ -18955,7 +18955,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 12 [json_name = "links"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Link> 
+    java.util.List<oscal.common.v1.Common.Link>
         getLinksList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 12 [json_name = "links"];</code>
@@ -18968,7 +18968,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 12 [json_name = "links"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 12 [json_name = "links"];</code>
@@ -18979,7 +18979,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 13 [json_name = "remarks"];</code>
      */
-    java.util.List<oscal.common.v1.Common.MarkupMultiline> 
+    java.util.List<oscal.common.v1.Common.MarkupMultiline>
         getRemarksList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 13 [json_name = "remarks"];</code>
@@ -18992,7 +18992,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 13 [json_name = "remarks"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 13 [json_name = "remarks"];</code>
@@ -19197,7 +19197,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.poam.v1.MitigatingFactor mitigating_factors = 6 [json_name = "mitigatingFactors"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.poam.v1.Poam.MitigatingFactorOrBuilder> 
+    public java.util.List<? extends oscal.poam.v1.Poam.MitigatingFactorOrBuilder>
         getMitigatingFactorsOrBuilderList() {
       return mitigatingFactors_;
     }
@@ -19264,7 +19264,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.poam.v1.Response remediations = 8 [json_name = "remediations"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.poam.v1.Poam.ResponseOrBuilder> 
+    public java.util.List<? extends oscal.poam.v1.Poam.ResponseOrBuilder>
         getRemediationsOrBuilderList() {
       return remediations_;
     }
@@ -19331,7 +19331,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.poam.v1.RelatedObservation related_observations = 10 [json_name = "relatedObservations"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.poam.v1.Poam.RelatedObservationOrBuilder> 
+    public java.util.List<? extends oscal.poam.v1.Poam.RelatedObservationOrBuilder>
         getRelatedObservationsOrBuilderList() {
       return relatedObservations_;
     }
@@ -19372,7 +19372,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Property props = 11 [json_name = "props"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList() {
       return props_;
     }
@@ -19413,7 +19413,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Link links = 12 [json_name = "links"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList() {
       return links_;
     }
@@ -19454,7 +19454,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 13 [json_name = "remarks"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList() {
       return remarks_;
     }
@@ -20166,7 +20166,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
               mitigatingFactorsBuilder_ = null;
               mitigatingFactors_ = other.mitigatingFactors_;
               bitField0_ = (bitField0_ & ~0x00000020);
-              mitigatingFactorsBuilder_ = 
+              mitigatingFactorsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetMitigatingFactorsFieldBuilder() : null;
             } else {
@@ -20195,7 +20195,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
               remediationsBuilder_ = null;
               remediations_ = other.remediations_;
               bitField0_ = (bitField0_ & ~0x00000080);
-              remediationsBuilder_ = 
+              remediationsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetRemediationsFieldBuilder() : null;
             } else {
@@ -20224,7 +20224,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
               relatedObservationsBuilder_ = null;
               relatedObservations_ = other.relatedObservations_;
               bitField0_ = (bitField0_ & ~0x00000200);
-              relatedObservationsBuilder_ = 
+              relatedObservationsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetRelatedObservationsFieldBuilder() : null;
             } else {
@@ -20250,7 +20250,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
               propsBuilder_ = null;
               props_ = other.props_;
               bitField0_ = (bitField0_ & ~0x00000400);
-              propsBuilder_ = 
+              propsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetPropsFieldBuilder() : null;
             } else {
@@ -20276,7 +20276,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
               linksBuilder_ = null;
               links_ = other.links_;
               bitField0_ = (bitField0_ & ~0x00000800);
-              linksBuilder_ = 
+              linksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetLinksFieldBuilder() : null;
             } else {
@@ -20302,7 +20302,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
               remarksBuilder_ = null;
               remarks_ = other.remarks_;
               bitField0_ = (bitField0_ & ~0x00001000);
-              remarksBuilder_ = 
+              remarksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetRemarksFieldBuilder() : null;
             } else {
@@ -20588,7 +20588,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder> 
+          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder>
           internalGetUuidFieldBuilder() {
         if (uuidBuilder_ == null) {
           uuidBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -20709,7 +20709,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.MarkupLine title = 2 [json_name = "title"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.MarkupLine, oscal.common.v1.Common.MarkupLine.Builder, oscal.common.v1.Common.MarkupLineOrBuilder> 
+          oscal.common.v1.Common.MarkupLine, oscal.common.v1.Common.MarkupLine.Builder, oscal.common.v1.Common.MarkupLineOrBuilder>
           internalGetTitleFieldBuilder() {
         if (titleBuilder_ == null) {
           titleBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -20830,7 +20830,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.MarkupMultiline description = 3 [json_name = "description"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetDescriptionFieldBuilder() {
         if (descriptionBuilder_ == null) {
           descriptionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -20951,7 +20951,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.MarkupMultiline statement = 4 [json_name = "statement"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetStatementFieldBuilder() {
         if (statementBuilder_ == null) {
           statementBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -21072,7 +21072,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.poam.v1.RiskStatus status = 5 [json_name = "status"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.poam.v1.Poam.RiskStatus, oscal.poam.v1.Poam.RiskStatus.Builder, oscal.poam.v1.Poam.RiskStatusOrBuilder> 
+          oscal.poam.v1.Poam.RiskStatus, oscal.poam.v1.Poam.RiskStatus.Builder, oscal.poam.v1.Poam.RiskStatusOrBuilder>
           internalGetStatusFieldBuilder() {
         if (statusBuilder_ == null) {
           statusBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -21280,7 +21280,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.poam.v1.MitigatingFactor mitigating_factors = 6 [json_name = "mitigatingFactors"];</code>
        */
-      public java.util.List<? extends oscal.poam.v1.Poam.MitigatingFactorOrBuilder> 
+      public java.util.List<? extends oscal.poam.v1.Poam.MitigatingFactorOrBuilder>
            getMitigatingFactorsOrBuilderList() {
         if (mitigatingFactorsBuilder_ != null) {
           return mitigatingFactorsBuilder_.getMessageOrBuilderList();
@@ -21306,12 +21306,12 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.poam.v1.MitigatingFactor mitigating_factors = 6 [json_name = "mitigatingFactors"];</code>
        */
-      public java.util.List<oscal.poam.v1.Poam.MitigatingFactor.Builder> 
+      public java.util.List<oscal.poam.v1.Poam.MitigatingFactor.Builder>
            getMitigatingFactorsBuilderList() {
         return internalGetMitigatingFactorsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.poam.v1.Poam.MitigatingFactor, oscal.poam.v1.Poam.MitigatingFactor.Builder, oscal.poam.v1.Poam.MitigatingFactorOrBuilder> 
+          oscal.poam.v1.Poam.MitigatingFactor, oscal.poam.v1.Poam.MitigatingFactor.Builder, oscal.poam.v1.Poam.MitigatingFactorOrBuilder>
           internalGetMitigatingFactorsFieldBuilder() {
         if (mitigatingFactorsBuilder_ == null) {
           mitigatingFactorsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -21433,7 +21433,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.DateTime deadline = 7 [json_name = "deadline"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.DateTime, oscal.common.v1.Common.DateTime.Builder, oscal.common.v1.Common.DateTimeOrBuilder> 
+          oscal.common.v1.Common.DateTime, oscal.common.v1.Common.DateTime.Builder, oscal.common.v1.Common.DateTimeOrBuilder>
           internalGetDeadlineFieldBuilder() {
         if (deadlineBuilder_ == null) {
           deadlineBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -21641,7 +21641,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.poam.v1.Response remediations = 8 [json_name = "remediations"];</code>
        */
-      public java.util.List<? extends oscal.poam.v1.Poam.ResponseOrBuilder> 
+      public java.util.List<? extends oscal.poam.v1.Poam.ResponseOrBuilder>
            getRemediationsOrBuilderList() {
         if (remediationsBuilder_ != null) {
           return remediationsBuilder_.getMessageOrBuilderList();
@@ -21667,12 +21667,12 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.poam.v1.Response remediations = 8 [json_name = "remediations"];</code>
        */
-      public java.util.List<oscal.poam.v1.Poam.Response.Builder> 
+      public java.util.List<oscal.poam.v1.Poam.Response.Builder>
            getRemediationsBuilderList() {
         return internalGetRemediationsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.poam.v1.Poam.Response, oscal.poam.v1.Poam.Response.Builder, oscal.poam.v1.Poam.ResponseOrBuilder> 
+          oscal.poam.v1.Poam.Response, oscal.poam.v1.Poam.Response.Builder, oscal.poam.v1.Poam.ResponseOrBuilder>
           internalGetRemediationsFieldBuilder() {
         if (remediationsBuilder_ == null) {
           remediationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -21794,7 +21794,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.poam.v1.RiskLog risk_log = 9 [json_name = "riskLog"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.poam.v1.Poam.RiskLog, oscal.poam.v1.Poam.RiskLog.Builder, oscal.poam.v1.Poam.RiskLogOrBuilder> 
+          oscal.poam.v1.Poam.RiskLog, oscal.poam.v1.Poam.RiskLog.Builder, oscal.poam.v1.Poam.RiskLogOrBuilder>
           internalGetRiskLogFieldBuilder() {
         if (riskLogBuilder_ == null) {
           riskLogBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -22002,7 +22002,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.poam.v1.RelatedObservation related_observations = 10 [json_name = "relatedObservations"];</code>
        */
-      public java.util.List<? extends oscal.poam.v1.Poam.RelatedObservationOrBuilder> 
+      public java.util.List<? extends oscal.poam.v1.Poam.RelatedObservationOrBuilder>
            getRelatedObservationsOrBuilderList() {
         if (relatedObservationsBuilder_ != null) {
           return relatedObservationsBuilder_.getMessageOrBuilderList();
@@ -22028,12 +22028,12 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.poam.v1.RelatedObservation related_observations = 10 [json_name = "relatedObservations"];</code>
        */
-      public java.util.List<oscal.poam.v1.Poam.RelatedObservation.Builder> 
+      public java.util.List<oscal.poam.v1.Poam.RelatedObservation.Builder>
            getRelatedObservationsBuilderList() {
         return internalGetRelatedObservationsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.poam.v1.Poam.RelatedObservation, oscal.poam.v1.Poam.RelatedObservation.Builder, oscal.poam.v1.Poam.RelatedObservationOrBuilder> 
+          oscal.poam.v1.Poam.RelatedObservation, oscal.poam.v1.Poam.RelatedObservation.Builder, oscal.poam.v1.Poam.RelatedObservationOrBuilder>
           internalGetRelatedObservationsFieldBuilder() {
         if (relatedObservationsBuilder_ == null) {
           relatedObservationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -22242,7 +22242,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 11 [json_name = "props"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
            getPropsOrBuilderList() {
         if (propsBuilder_ != null) {
           return propsBuilder_.getMessageOrBuilderList();
@@ -22268,12 +22268,12 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 11 [json_name = "props"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Property.Builder> 
+      public java.util.List<oscal.common.v1.Common.Property.Builder>
            getPropsBuilderList() {
         return internalGetPropsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> 
+          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder>
           internalGetPropsFieldBuilder() {
         if (propsBuilder_ == null) {
           propsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -22482,7 +22482,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 12 [json_name = "links"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
            getLinksOrBuilderList() {
         if (linksBuilder_ != null) {
           return linksBuilder_.getMessageOrBuilderList();
@@ -22508,12 +22508,12 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 12 [json_name = "links"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Link.Builder> 
+      public java.util.List<oscal.common.v1.Common.Link.Builder>
            getLinksBuilderList() {
         return internalGetLinksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder> 
+          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder>
           internalGetLinksFieldBuilder() {
         if (linksBuilder_ == null) {
           linksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -22722,7 +22722,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 13 [json_name = "remarks"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
            getRemarksOrBuilderList() {
         if (remarksBuilder_ != null) {
           return remarksBuilder_.getMessageOrBuilderList();
@@ -22748,12 +22748,12 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 13 [json_name = "remarks"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder> 
+      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder>
            getRemarksBuilderList() {
         return internalGetRemarksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetRemarksFieldBuilder() {
         if (remarksBuilder_ == null) {
           remarksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -22837,7 +22837,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
      */
-    java.util.List<oscal.common.v1.Common.MarkupMultiline> 
+    java.util.List<oscal.common.v1.Common.MarkupMultiline>
         getRemarksList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
@@ -22850,7 +22850,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
@@ -22919,7 +22919,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         state_ = s;
@@ -22935,7 +22935,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
         getStateBytes() {
       java.lang.Object ref = state_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         state_ = b;
@@ -22959,7 +22959,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList() {
       return remarks_;
     }
@@ -23296,7 +23296,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
               remarksBuilder_ = null;
               remarks_ = other.remarks_;
               bitField0_ = (bitField0_ & ~0x00000002);
-              remarksBuilder_ = 
+              remarksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetRemarksFieldBuilder() : null;
             } else {
@@ -23390,7 +23390,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
           getStateBytes() {
         java.lang.Object ref = state_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           state_ = b;
@@ -23632,7 +23632,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
            getRemarksOrBuilderList() {
         if (remarksBuilder_ != null) {
           return remarksBuilder_.getMessageOrBuilderList();
@@ -23658,12 +23658,12 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder> 
+      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder>
            getRemarksBuilderList() {
         return internalGetRemarksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetRemarksFieldBuilder() {
         if (remarksBuilder_ == null) {
           remarksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -23780,7 +23780,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Property> 
+    java.util.List<oscal.common.v1.Common.Property>
         getPropsList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
@@ -23793,7 +23793,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
@@ -23804,7 +23804,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Link> 
+    java.util.List<oscal.common.v1.Common.Link>
         getLinksList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
@@ -23817,7 +23817,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
@@ -23828,7 +23828,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.poam.v1.SubjectReference subjects = 6 [json_name = "subjects"];</code>
      */
-    java.util.List<oscal.poam.v1.Poam.SubjectReference> 
+    java.util.List<oscal.poam.v1.Poam.SubjectReference>
         getSubjectsList();
     /**
      * <code>repeated .oscal.poam.v1.SubjectReference subjects = 6 [json_name = "subjects"];</code>
@@ -23841,7 +23841,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.poam.v1.SubjectReference subjects = 6 [json_name = "subjects"];</code>
      */
-    java.util.List<? extends oscal.poam.v1.Poam.SubjectReferenceOrBuilder> 
+    java.util.List<? extends oscal.poam.v1.Poam.SubjectReferenceOrBuilder>
         getSubjectsOrBuilderList();
     /**
      * <code>repeated .oscal.poam.v1.SubjectReference subjects = 6 [json_name = "subjects"];</code>
@@ -23991,7 +23991,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList() {
       return props_;
     }
@@ -24032,7 +24032,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList() {
       return links_;
     }
@@ -24073,7 +24073,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.poam.v1.SubjectReference subjects = 6 [json_name = "subjects"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.poam.v1.Poam.SubjectReferenceOrBuilder> 
+    public java.util.List<? extends oscal.poam.v1.Poam.SubjectReferenceOrBuilder>
         getSubjectsOrBuilderList() {
       return subjects_;
     }
@@ -24562,7 +24562,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
               propsBuilder_ = null;
               props_ = other.props_;
               bitField0_ = (bitField0_ & ~0x00000008);
-              propsBuilder_ = 
+              propsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetPropsFieldBuilder() : null;
             } else {
@@ -24588,7 +24588,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
               linksBuilder_ = null;
               links_ = other.links_;
               bitField0_ = (bitField0_ & ~0x00000010);
-              linksBuilder_ = 
+              linksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetLinksFieldBuilder() : null;
             } else {
@@ -24614,7 +24614,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
               subjectsBuilder_ = null;
               subjects_ = other.subjects_;
               bitField0_ = (bitField0_ & ~0x00000020);
-              subjectsBuilder_ = 
+              subjectsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetSubjectsFieldBuilder() : null;
             } else {
@@ -24833,7 +24833,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder> 
+          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder>
           internalGetUuidFieldBuilder() {
         if (uuidBuilder_ == null) {
           uuidBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -24954,7 +24954,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.UUID implementation_uuid = 2 [json_name = "implementationUuid"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder> 
+          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder>
           internalGetImplementationUuidFieldBuilder() {
         if (implementationUuidBuilder_ == null) {
           implementationUuidBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -25075,7 +25075,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.MarkupMultiline description = 3 [json_name = "description"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetDescriptionFieldBuilder() {
         if (descriptionBuilder_ == null) {
           descriptionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -25283,7 +25283,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
            getPropsOrBuilderList() {
         if (propsBuilder_ != null) {
           return propsBuilder_.getMessageOrBuilderList();
@@ -25309,12 +25309,12 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Property.Builder> 
+      public java.util.List<oscal.common.v1.Common.Property.Builder>
            getPropsBuilderList() {
         return internalGetPropsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> 
+          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder>
           internalGetPropsFieldBuilder() {
         if (propsBuilder_ == null) {
           propsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -25523,7 +25523,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
            getLinksOrBuilderList() {
         if (linksBuilder_ != null) {
           return linksBuilder_.getMessageOrBuilderList();
@@ -25549,12 +25549,12 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Link.Builder> 
+      public java.util.List<oscal.common.v1.Common.Link.Builder>
            getLinksBuilderList() {
         return internalGetLinksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder> 
+          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder>
           internalGetLinksFieldBuilder() {
         if (linksBuilder_ == null) {
           linksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -25763,7 +25763,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.poam.v1.SubjectReference subjects = 6 [json_name = "subjects"];</code>
        */
-      public java.util.List<? extends oscal.poam.v1.Poam.SubjectReferenceOrBuilder> 
+      public java.util.List<? extends oscal.poam.v1.Poam.SubjectReferenceOrBuilder>
            getSubjectsOrBuilderList() {
         if (subjectsBuilder_ != null) {
           return subjectsBuilder_.getMessageOrBuilderList();
@@ -25789,12 +25789,12 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.poam.v1.SubjectReference subjects = 6 [json_name = "subjects"];</code>
        */
-      public java.util.List<oscal.poam.v1.Poam.SubjectReference.Builder> 
+      public java.util.List<oscal.poam.v1.Poam.SubjectReference.Builder>
            getSubjectsBuilderList() {
         return internalGetSubjectsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.poam.v1.Poam.SubjectReference, oscal.poam.v1.Poam.SubjectReference.Builder, oscal.poam.v1.Poam.SubjectReferenceOrBuilder> 
+          oscal.poam.v1.Poam.SubjectReference, oscal.poam.v1.Poam.SubjectReference.Builder, oscal.poam.v1.Poam.SubjectReferenceOrBuilder>
           internalGetSubjectsFieldBuilder() {
         if (subjectsBuilder_ == null) {
           subjectsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -25896,7 +25896,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Property> 
+    java.util.List<oscal.common.v1.Common.Property>
         getPropsList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
@@ -25909,7 +25909,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
@@ -25920,7 +25920,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Link> 
+    java.util.List<oscal.common.v1.Common.Link>
         getLinksList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
@@ -25933,7 +25933,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
@@ -25944,7 +25944,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
      */
-    java.util.List<oscal.common.v1.Common.MarkupMultiline> 
+    java.util.List<oscal.common.v1.Common.MarkupMultiline>
         getRemarksList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
@@ -25957,7 +25957,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
@@ -26081,7 +26081,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList() {
       return props_;
     }
@@ -26122,7 +26122,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList() {
       return links_;
     }
@@ -26163,7 +26163,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList() {
       return remarks_;
     }
@@ -26621,7 +26621,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
               propsBuilder_ = null;
               props_ = other.props_;
               bitField0_ = (bitField0_ & ~0x00000004);
-              propsBuilder_ = 
+              propsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetPropsFieldBuilder() : null;
             } else {
@@ -26647,7 +26647,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
               linksBuilder_ = null;
               links_ = other.links_;
               bitField0_ = (bitField0_ & ~0x00000008);
-              linksBuilder_ = 
+              linksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetLinksFieldBuilder() : null;
             } else {
@@ -26673,7 +26673,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
               remarksBuilder_ = null;
               remarks_ = other.remarks_;
               bitField0_ = (bitField0_ & ~0x00000010);
-              remarksBuilder_ = 
+              remarksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetRemarksFieldBuilder() : null;
             } else {
@@ -26885,7 +26885,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.UUID subject_uuid = 1 [json_name = "subjectUuid"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder> 
+          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder>
           internalGetSubjectUuidFieldBuilder() {
         if (subjectUuidBuilder_ == null) {
           subjectUuidBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -27006,7 +27006,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.MarkupLine title = 2 [json_name = "title"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.MarkupLine, oscal.common.v1.Common.MarkupLine.Builder, oscal.common.v1.Common.MarkupLineOrBuilder> 
+          oscal.common.v1.Common.MarkupLine, oscal.common.v1.Common.MarkupLine.Builder, oscal.common.v1.Common.MarkupLineOrBuilder>
           internalGetTitleFieldBuilder() {
         if (titleBuilder_ == null) {
           titleBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -27214,7 +27214,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
            getPropsOrBuilderList() {
         if (propsBuilder_ != null) {
           return propsBuilder_.getMessageOrBuilderList();
@@ -27240,12 +27240,12 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Property.Builder> 
+      public java.util.List<oscal.common.v1.Common.Property.Builder>
            getPropsBuilderList() {
         return internalGetPropsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> 
+          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder>
           internalGetPropsFieldBuilder() {
         if (propsBuilder_ == null) {
           propsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -27454,7 +27454,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
            getLinksOrBuilderList() {
         if (linksBuilder_ != null) {
           return linksBuilder_.getMessageOrBuilderList();
@@ -27480,12 +27480,12 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Link.Builder> 
+      public java.util.List<oscal.common.v1.Common.Link.Builder>
            getLinksBuilderList() {
         return internalGetLinksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder> 
+          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder>
           internalGetLinksFieldBuilder() {
         if (linksBuilder_ == null) {
           linksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -27694,7 +27694,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
            getRemarksOrBuilderList() {
         if (remarksBuilder_ != null) {
           return remarksBuilder_.getMessageOrBuilderList();
@@ -27720,12 +27720,12 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder> 
+      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder>
            getRemarksBuilderList() {
         return internalGetRemarksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetRemarksFieldBuilder() {
         if (remarksBuilder_ == null) {
           remarksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -27872,7 +27872,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.poam.v1.ResponsibleRole responsible_roles = 6 [json_name = "responsibleRoles"];</code>
      */
-    java.util.List<oscal.poam.v1.Poam.ResponsibleRole> 
+    java.util.List<oscal.poam.v1.Poam.ResponsibleRole>
         getResponsibleRolesList();
     /**
      * <code>repeated .oscal.poam.v1.ResponsibleRole responsible_roles = 6 [json_name = "responsibleRoles"];</code>
@@ -27885,7 +27885,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.poam.v1.ResponsibleRole responsible_roles = 6 [json_name = "responsibleRoles"];</code>
      */
-    java.util.List<? extends oscal.poam.v1.Poam.ResponsibleRoleOrBuilder> 
+    java.util.List<? extends oscal.poam.v1.Poam.ResponsibleRoleOrBuilder>
         getResponsibleRolesOrBuilderList();
     /**
      * <code>repeated .oscal.poam.v1.ResponsibleRole responsible_roles = 6 [json_name = "responsibleRoles"];</code>
@@ -27896,7 +27896,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.poam.v1.RelatedTask related_tasks = 7 [json_name = "relatedTasks"];</code>
      */
-    java.util.List<oscal.poam.v1.Poam.RelatedTask> 
+    java.util.List<oscal.poam.v1.Poam.RelatedTask>
         getRelatedTasksList();
     /**
      * <code>repeated .oscal.poam.v1.RelatedTask related_tasks = 7 [json_name = "relatedTasks"];</code>
@@ -27909,7 +27909,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.poam.v1.RelatedTask related_tasks = 7 [json_name = "relatedTasks"];</code>
      */
-    java.util.List<? extends oscal.poam.v1.Poam.RelatedTaskOrBuilder> 
+    java.util.List<? extends oscal.poam.v1.Poam.RelatedTaskOrBuilder>
         getRelatedTasksOrBuilderList();
     /**
      * <code>repeated .oscal.poam.v1.RelatedTask related_tasks = 7 [json_name = "relatedTasks"];</code>
@@ -27920,7 +27920,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.poam.v1.SubjectReference subjects = 8 [json_name = "subjects"];</code>
      */
-    java.util.List<oscal.poam.v1.Poam.SubjectReference> 
+    java.util.List<oscal.poam.v1.Poam.SubjectReference>
         getSubjectsList();
     /**
      * <code>repeated .oscal.poam.v1.SubjectReference subjects = 8 [json_name = "subjects"];</code>
@@ -27933,7 +27933,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.poam.v1.SubjectReference subjects = 8 [json_name = "subjects"];</code>
      */
-    java.util.List<? extends oscal.poam.v1.Poam.SubjectReferenceOrBuilder> 
+    java.util.List<? extends oscal.poam.v1.Poam.SubjectReferenceOrBuilder>
         getSubjectsOrBuilderList();
     /**
      * <code>repeated .oscal.poam.v1.SubjectReference subjects = 8 [json_name = "subjects"];</code>
@@ -27944,7 +27944,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 9 [json_name = "props"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Property> 
+    java.util.List<oscal.common.v1.Common.Property>
         getPropsList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 9 [json_name = "props"];</code>
@@ -27957,7 +27957,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 9 [json_name = "props"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 9 [json_name = "props"];</code>
@@ -27968,7 +27968,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 10 [json_name = "links"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Link> 
+    java.util.List<oscal.common.v1.Common.Link>
         getLinksList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 10 [json_name = "links"];</code>
@@ -27981,7 +27981,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 10 [json_name = "links"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 10 [json_name = "links"];</code>
@@ -27992,7 +27992,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 11 [json_name = "remarks"];</code>
      */
-    java.util.List<oscal.common.v1.Common.MarkupMultiline> 
+    java.util.List<oscal.common.v1.Common.MarkupMultiline>
         getRemarksList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 11 [json_name = "remarks"];</code>
@@ -28005,7 +28005,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 11 [json_name = "remarks"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 11 [json_name = "remarks"];</code>
@@ -28210,7 +28210,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.poam.v1.ResponsibleRole responsible_roles = 6 [json_name = "responsibleRoles"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.poam.v1.Poam.ResponsibleRoleOrBuilder> 
+    public java.util.List<? extends oscal.poam.v1.Poam.ResponsibleRoleOrBuilder>
         getResponsibleRolesOrBuilderList() {
       return responsibleRoles_;
     }
@@ -28251,7 +28251,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.poam.v1.RelatedTask related_tasks = 7 [json_name = "relatedTasks"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.poam.v1.Poam.RelatedTaskOrBuilder> 
+    public java.util.List<? extends oscal.poam.v1.Poam.RelatedTaskOrBuilder>
         getRelatedTasksOrBuilderList() {
       return relatedTasks_;
     }
@@ -28292,7 +28292,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.poam.v1.SubjectReference subjects = 8 [json_name = "subjects"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.poam.v1.Poam.SubjectReferenceOrBuilder> 
+    public java.util.List<? extends oscal.poam.v1.Poam.SubjectReferenceOrBuilder>
         getSubjectsOrBuilderList() {
       return subjects_;
     }
@@ -28333,7 +28333,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Property props = 9 [json_name = "props"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList() {
       return props_;
     }
@@ -28374,7 +28374,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Link links = 10 [json_name = "links"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList() {
       return links_;
     }
@@ -28415,7 +28415,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 11 [json_name = "remarks"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList() {
       return remarks_;
     }
@@ -29071,7 +29071,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
               responsibleRolesBuilder_ = null;
               responsibleRoles_ = other.responsibleRoles_;
               bitField0_ = (bitField0_ & ~0x00000020);
-              responsibleRolesBuilder_ = 
+              responsibleRolesBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetResponsibleRolesFieldBuilder() : null;
             } else {
@@ -29097,7 +29097,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
               relatedTasksBuilder_ = null;
               relatedTasks_ = other.relatedTasks_;
               bitField0_ = (bitField0_ & ~0x00000040);
-              relatedTasksBuilder_ = 
+              relatedTasksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetRelatedTasksFieldBuilder() : null;
             } else {
@@ -29123,7 +29123,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
               subjectsBuilder_ = null;
               subjects_ = other.subjects_;
               bitField0_ = (bitField0_ & ~0x00000080);
-              subjectsBuilder_ = 
+              subjectsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetSubjectsFieldBuilder() : null;
             } else {
@@ -29149,7 +29149,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
               propsBuilder_ = null;
               props_ = other.props_;
               bitField0_ = (bitField0_ & ~0x00000100);
-              propsBuilder_ = 
+              propsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetPropsFieldBuilder() : null;
             } else {
@@ -29175,7 +29175,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
               linksBuilder_ = null;
               links_ = other.links_;
               bitField0_ = (bitField0_ & ~0x00000200);
-              linksBuilder_ = 
+              linksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetLinksFieldBuilder() : null;
             } else {
@@ -29201,7 +29201,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
               remarksBuilder_ = null;
               remarks_ = other.remarks_;
               bitField0_ = (bitField0_ & ~0x00000400);
-              remarksBuilder_ = 
+              remarksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetRemarksFieldBuilder() : null;
             } else {
@@ -29473,7 +29473,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder> 
+          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder>
           internalGetUuidFieldBuilder() {
         if (uuidBuilder_ == null) {
           uuidBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -29594,7 +29594,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.MarkupLine title = 2 [json_name = "title"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.MarkupLine, oscal.common.v1.Common.MarkupLine.Builder, oscal.common.v1.Common.MarkupLineOrBuilder> 
+          oscal.common.v1.Common.MarkupLine, oscal.common.v1.Common.MarkupLine.Builder, oscal.common.v1.Common.MarkupLineOrBuilder>
           internalGetTitleFieldBuilder() {
         if (titleBuilder_ == null) {
           titleBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -29715,7 +29715,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.MarkupMultiline description = 3 [json_name = "description"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetDescriptionFieldBuilder() {
         if (descriptionBuilder_ == null) {
           descriptionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -29836,7 +29836,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.DateTime deadline = 4 [json_name = "deadline"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.DateTime, oscal.common.v1.Common.DateTime.Builder, oscal.common.v1.Common.DateTimeOrBuilder> 
+          oscal.common.v1.Common.DateTime, oscal.common.v1.Common.DateTime.Builder, oscal.common.v1.Common.DateTimeOrBuilder>
           internalGetDeadlineFieldBuilder() {
         if (deadlineBuilder_ == null) {
           deadlineBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -29957,7 +29957,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.poam.v1.ResponseStatus status = 5 [json_name = "status"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.poam.v1.Poam.ResponseStatus, oscal.poam.v1.Poam.ResponseStatus.Builder, oscal.poam.v1.Poam.ResponseStatusOrBuilder> 
+          oscal.poam.v1.Poam.ResponseStatus, oscal.poam.v1.Poam.ResponseStatus.Builder, oscal.poam.v1.Poam.ResponseStatusOrBuilder>
           internalGetStatusFieldBuilder() {
         if (statusBuilder_ == null) {
           statusBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -30165,7 +30165,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.poam.v1.ResponsibleRole responsible_roles = 6 [json_name = "responsibleRoles"];</code>
        */
-      public java.util.List<? extends oscal.poam.v1.Poam.ResponsibleRoleOrBuilder> 
+      public java.util.List<? extends oscal.poam.v1.Poam.ResponsibleRoleOrBuilder>
            getResponsibleRolesOrBuilderList() {
         if (responsibleRolesBuilder_ != null) {
           return responsibleRolesBuilder_.getMessageOrBuilderList();
@@ -30191,12 +30191,12 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.poam.v1.ResponsibleRole responsible_roles = 6 [json_name = "responsibleRoles"];</code>
        */
-      public java.util.List<oscal.poam.v1.Poam.ResponsibleRole.Builder> 
+      public java.util.List<oscal.poam.v1.Poam.ResponsibleRole.Builder>
            getResponsibleRolesBuilderList() {
         return internalGetResponsibleRolesFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.poam.v1.Poam.ResponsibleRole, oscal.poam.v1.Poam.ResponsibleRole.Builder, oscal.poam.v1.Poam.ResponsibleRoleOrBuilder> 
+          oscal.poam.v1.Poam.ResponsibleRole, oscal.poam.v1.Poam.ResponsibleRole.Builder, oscal.poam.v1.Poam.ResponsibleRoleOrBuilder>
           internalGetResponsibleRolesFieldBuilder() {
         if (responsibleRolesBuilder_ == null) {
           responsibleRolesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -30405,7 +30405,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.poam.v1.RelatedTask related_tasks = 7 [json_name = "relatedTasks"];</code>
        */
-      public java.util.List<? extends oscal.poam.v1.Poam.RelatedTaskOrBuilder> 
+      public java.util.List<? extends oscal.poam.v1.Poam.RelatedTaskOrBuilder>
            getRelatedTasksOrBuilderList() {
         if (relatedTasksBuilder_ != null) {
           return relatedTasksBuilder_.getMessageOrBuilderList();
@@ -30431,12 +30431,12 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.poam.v1.RelatedTask related_tasks = 7 [json_name = "relatedTasks"];</code>
        */
-      public java.util.List<oscal.poam.v1.Poam.RelatedTask.Builder> 
+      public java.util.List<oscal.poam.v1.Poam.RelatedTask.Builder>
            getRelatedTasksBuilderList() {
         return internalGetRelatedTasksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.poam.v1.Poam.RelatedTask, oscal.poam.v1.Poam.RelatedTask.Builder, oscal.poam.v1.Poam.RelatedTaskOrBuilder> 
+          oscal.poam.v1.Poam.RelatedTask, oscal.poam.v1.Poam.RelatedTask.Builder, oscal.poam.v1.Poam.RelatedTaskOrBuilder>
           internalGetRelatedTasksFieldBuilder() {
         if (relatedTasksBuilder_ == null) {
           relatedTasksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -30645,7 +30645,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.poam.v1.SubjectReference subjects = 8 [json_name = "subjects"];</code>
        */
-      public java.util.List<? extends oscal.poam.v1.Poam.SubjectReferenceOrBuilder> 
+      public java.util.List<? extends oscal.poam.v1.Poam.SubjectReferenceOrBuilder>
            getSubjectsOrBuilderList() {
         if (subjectsBuilder_ != null) {
           return subjectsBuilder_.getMessageOrBuilderList();
@@ -30671,12 +30671,12 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.poam.v1.SubjectReference subjects = 8 [json_name = "subjects"];</code>
        */
-      public java.util.List<oscal.poam.v1.Poam.SubjectReference.Builder> 
+      public java.util.List<oscal.poam.v1.Poam.SubjectReference.Builder>
            getSubjectsBuilderList() {
         return internalGetSubjectsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.poam.v1.Poam.SubjectReference, oscal.poam.v1.Poam.SubjectReference.Builder, oscal.poam.v1.Poam.SubjectReferenceOrBuilder> 
+          oscal.poam.v1.Poam.SubjectReference, oscal.poam.v1.Poam.SubjectReference.Builder, oscal.poam.v1.Poam.SubjectReferenceOrBuilder>
           internalGetSubjectsFieldBuilder() {
         if (subjectsBuilder_ == null) {
           subjectsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -30885,7 +30885,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 9 [json_name = "props"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
            getPropsOrBuilderList() {
         if (propsBuilder_ != null) {
           return propsBuilder_.getMessageOrBuilderList();
@@ -30911,12 +30911,12 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 9 [json_name = "props"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Property.Builder> 
+      public java.util.List<oscal.common.v1.Common.Property.Builder>
            getPropsBuilderList() {
         return internalGetPropsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> 
+          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder>
           internalGetPropsFieldBuilder() {
         if (propsBuilder_ == null) {
           propsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -31125,7 +31125,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 10 [json_name = "links"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
            getLinksOrBuilderList() {
         if (linksBuilder_ != null) {
           return linksBuilder_.getMessageOrBuilderList();
@@ -31151,12 +31151,12 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 10 [json_name = "links"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Link.Builder> 
+      public java.util.List<oscal.common.v1.Common.Link.Builder>
            getLinksBuilderList() {
         return internalGetLinksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder> 
+          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder>
           internalGetLinksFieldBuilder() {
         if (linksBuilder_ == null) {
           linksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -31365,7 +31365,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 11 [json_name = "remarks"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
            getRemarksOrBuilderList() {
         if (remarksBuilder_ != null) {
           return remarksBuilder_.getMessageOrBuilderList();
@@ -31391,12 +31391,12 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 11 [json_name = "remarks"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder> 
+      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder>
            getRemarksBuilderList() {
         return internalGetRemarksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetRemarksFieldBuilder() {
         if (remarksBuilder_ == null) {
           remarksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -31480,7 +31480,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
      */
-    java.util.List<oscal.common.v1.Common.MarkupMultiline> 
+    java.util.List<oscal.common.v1.Common.MarkupMultiline>
         getRemarksList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
@@ -31493,7 +31493,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
@@ -31562,7 +31562,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         state_ = s;
@@ -31578,7 +31578,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
         getStateBytes() {
       java.lang.Object ref = state_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         state_ = b;
@@ -31602,7 +31602,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList() {
       return remarks_;
     }
@@ -31939,7 +31939,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
               remarksBuilder_ = null;
               remarks_ = other.remarks_;
               bitField0_ = (bitField0_ & ~0x00000002);
-              remarksBuilder_ = 
+              remarksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetRemarksFieldBuilder() : null;
             } else {
@@ -32033,7 +32033,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
           getStateBytes() {
         java.lang.Object ref = state_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           state_ = b;
@@ -32275,7 +32275,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
            getRemarksOrBuilderList() {
         if (remarksBuilder_ != null) {
           return remarksBuilder_.getMessageOrBuilderList();
@@ -32301,12 +32301,12 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder> 
+      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder>
            getRemarksBuilderList() {
         return internalGetRemarksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetRemarksFieldBuilder() {
         if (remarksBuilder_ == null) {
           remarksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -32393,7 +32393,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.UUID party_uuids = 2 [json_name = "partyUuids"];</code>
      */
-    java.util.List<oscal.common.v1.Common.UUID> 
+    java.util.List<oscal.common.v1.Common.UUID>
         getPartyUuidsList();
     /**
      * <code>repeated .oscal.common.v1.UUID party_uuids = 2 [json_name = "partyUuids"];</code>
@@ -32406,7 +32406,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.UUID party_uuids = 2 [json_name = "partyUuids"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.UUIDOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.UUIDOrBuilder>
         getPartyUuidsOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.UUID party_uuids = 2 [json_name = "partyUuids"];</code>
@@ -32417,7 +32417,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Property> 
+    java.util.List<oscal.common.v1.Common.Property>
         getPropsList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
@@ -32430,7 +32430,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
@@ -32441,7 +32441,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 4 [json_name = "remarks"];</code>
      */
-    java.util.List<oscal.common.v1.Common.MarkupMultiline> 
+    java.util.List<oscal.common.v1.Common.MarkupMultiline>
         getRemarksList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 4 [json_name = "remarks"];</code>
@@ -32454,7 +32454,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 4 [json_name = "remarks"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 4 [json_name = "remarks"];</code>
@@ -32552,7 +32552,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.UUID party_uuids = 2 [json_name = "partyUuids"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.UUIDOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.UUIDOrBuilder>
         getPartyUuidsOrBuilderList() {
       return partyUuids_;
     }
@@ -32593,7 +32593,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList() {
       return props_;
     }
@@ -32634,7 +32634,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 4 [json_name = "remarks"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList() {
       return remarks_;
     }
@@ -33061,7 +33061,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
               partyUuidsBuilder_ = null;
               partyUuids_ = other.partyUuids_;
               bitField0_ = (bitField0_ & ~0x00000002);
-              partyUuidsBuilder_ = 
+              partyUuidsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetPartyUuidsFieldBuilder() : null;
             } else {
@@ -33087,7 +33087,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
               propsBuilder_ = null;
               props_ = other.props_;
               bitField0_ = (bitField0_ & ~0x00000004);
-              propsBuilder_ = 
+              propsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetPropsFieldBuilder() : null;
             } else {
@@ -33113,7 +33113,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
               remarksBuilder_ = null;
               remarks_ = other.remarks_;
               bitField0_ = (bitField0_ & ~0x00000008);
-              remarksBuilder_ = 
+              remarksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetRemarksFieldBuilder() : null;
             } else {
@@ -33318,7 +33318,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.Token role_id = 1 [json_name = "roleId"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.Token, oscal.common.v1.Common.Token.Builder, oscal.common.v1.Common.TokenOrBuilder> 
+          oscal.common.v1.Common.Token, oscal.common.v1.Common.Token.Builder, oscal.common.v1.Common.TokenOrBuilder>
           internalGetRoleIdFieldBuilder() {
         if (roleIdBuilder_ == null) {
           roleIdBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -33526,7 +33526,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.UUID party_uuids = 2 [json_name = "partyUuids"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.UUIDOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.UUIDOrBuilder>
            getPartyUuidsOrBuilderList() {
         if (partyUuidsBuilder_ != null) {
           return partyUuidsBuilder_.getMessageOrBuilderList();
@@ -33552,12 +33552,12 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.UUID party_uuids = 2 [json_name = "partyUuids"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.UUID.Builder> 
+      public java.util.List<oscal.common.v1.Common.UUID.Builder>
            getPartyUuidsBuilderList() {
         return internalGetPartyUuidsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder> 
+          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder>
           internalGetPartyUuidsFieldBuilder() {
         if (partyUuidsBuilder_ == null) {
           partyUuidsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -33766,7 +33766,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
            getPropsOrBuilderList() {
         if (propsBuilder_ != null) {
           return propsBuilder_.getMessageOrBuilderList();
@@ -33792,12 +33792,12 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Property.Builder> 
+      public java.util.List<oscal.common.v1.Common.Property.Builder>
            getPropsBuilderList() {
         return internalGetPropsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> 
+          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder>
           internalGetPropsFieldBuilder() {
         if (propsBuilder_ == null) {
           propsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -34006,7 +34006,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 4 [json_name = "remarks"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
            getRemarksOrBuilderList() {
         if (remarksBuilder_ != null) {
           return remarksBuilder_.getMessageOrBuilderList();
@@ -34032,12 +34032,12 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 4 [json_name = "remarks"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder> 
+      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder>
            getRemarksBuilderList() {
         return internalGetRemarksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetRemarksFieldBuilder() {
         if (remarksBuilder_ == null) {
           remarksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -34139,7 +34139,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Property> 
+    java.util.List<oscal.common.v1.Common.Property>
         getPropsList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
@@ -34152,7 +34152,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
@@ -34163,7 +34163,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Link> 
+    java.util.List<oscal.common.v1.Common.Link>
         getLinksList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
@@ -34176,7 +34176,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
@@ -34187,7 +34187,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
      */
-    java.util.List<oscal.common.v1.Common.MarkupMultiline> 
+    java.util.List<oscal.common.v1.Common.MarkupMultiline>
         getRemarksList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
@@ -34200,7 +34200,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
@@ -34324,7 +34324,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList() {
       return props_;
     }
@@ -34365,7 +34365,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList() {
       return links_;
     }
@@ -34406,7 +34406,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList() {
       return remarks_;
     }
@@ -34864,7 +34864,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
               propsBuilder_ = null;
               props_ = other.props_;
               bitField0_ = (bitField0_ & ~0x00000004);
-              propsBuilder_ = 
+              propsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetPropsFieldBuilder() : null;
             } else {
@@ -34890,7 +34890,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
               linksBuilder_ = null;
               links_ = other.links_;
               bitField0_ = (bitField0_ & ~0x00000008);
-              linksBuilder_ = 
+              linksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetLinksFieldBuilder() : null;
             } else {
@@ -34916,7 +34916,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
               remarksBuilder_ = null;
               remarks_ = other.remarks_;
               bitField0_ = (bitField0_ & ~0x00000010);
-              remarksBuilder_ = 
+              remarksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetRemarksFieldBuilder() : null;
             } else {
@@ -35128,7 +35128,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.UUID task_uuid = 1 [json_name = "taskUuid"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder> 
+          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder>
           internalGetTaskUuidFieldBuilder() {
         if (taskUuidBuilder_ == null) {
           taskUuidBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -35249,7 +35249,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.MarkupLine title = 2 [json_name = "title"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.MarkupLine, oscal.common.v1.Common.MarkupLine.Builder, oscal.common.v1.Common.MarkupLineOrBuilder> 
+          oscal.common.v1.Common.MarkupLine, oscal.common.v1.Common.MarkupLine.Builder, oscal.common.v1.Common.MarkupLineOrBuilder>
           internalGetTitleFieldBuilder() {
         if (titleBuilder_ == null) {
           titleBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -35457,7 +35457,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
            getPropsOrBuilderList() {
         if (propsBuilder_ != null) {
           return propsBuilder_.getMessageOrBuilderList();
@@ -35483,12 +35483,12 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Property.Builder> 
+      public java.util.List<oscal.common.v1.Common.Property.Builder>
            getPropsBuilderList() {
         return internalGetPropsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> 
+          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder>
           internalGetPropsFieldBuilder() {
         if (propsBuilder_ == null) {
           propsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -35697,7 +35697,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
            getLinksOrBuilderList() {
         if (linksBuilder_ != null) {
           return linksBuilder_.getMessageOrBuilderList();
@@ -35723,12 +35723,12 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Link.Builder> 
+      public java.util.List<oscal.common.v1.Common.Link.Builder>
            getLinksBuilderList() {
         return internalGetLinksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder> 
+          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder>
           internalGetLinksFieldBuilder() {
         if (linksBuilder_ == null) {
           linksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -35937,7 +35937,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
            getRemarksOrBuilderList() {
         if (remarksBuilder_ != null) {
           return remarksBuilder_.getMessageOrBuilderList();
@@ -35963,12 +35963,12 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder> 
+      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder>
            getRemarksBuilderList() {
         return internalGetRemarksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetRemarksFieldBuilder() {
         if (remarksBuilder_ == null) {
           remarksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -36040,7 +36040,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.poam.v1.RiskLogEntry entries = 1 [json_name = "entries"];</code>
      */
-    java.util.List<oscal.poam.v1.Poam.RiskLogEntry> 
+    java.util.List<oscal.poam.v1.Poam.RiskLogEntry>
         getEntriesList();
     /**
      * <code>repeated .oscal.poam.v1.RiskLogEntry entries = 1 [json_name = "entries"];</code>
@@ -36053,7 +36053,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.poam.v1.RiskLogEntry entries = 1 [json_name = "entries"];</code>
      */
-    java.util.List<? extends oscal.poam.v1.Poam.RiskLogEntryOrBuilder> 
+    java.util.List<? extends oscal.poam.v1.Poam.RiskLogEntryOrBuilder>
         getEntriesOrBuilderList();
     /**
      * <code>repeated .oscal.poam.v1.RiskLogEntry entries = 1 [json_name = "entries"];</code>
@@ -36122,7 +36122,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.poam.v1.RiskLogEntry entries = 1 [json_name = "entries"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.poam.v1.Poam.RiskLogEntryOrBuilder> 
+    public java.util.List<? extends oscal.poam.v1.Poam.RiskLogEntryOrBuilder>
         getEntriesOrBuilderList() {
       return entries_;
     }
@@ -36440,7 +36440,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
               entriesBuilder_ = null;
               entries_ = other.entries_;
               bitField0_ = (bitField0_ & ~0x00000001);
-              entriesBuilder_ = 
+              entriesBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetEntriesFieldBuilder() : null;
             } else {
@@ -36699,7 +36699,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.poam.v1.RiskLogEntry entries = 1 [json_name = "entries"];</code>
        */
-      public java.util.List<? extends oscal.poam.v1.Poam.RiskLogEntryOrBuilder> 
+      public java.util.List<? extends oscal.poam.v1.Poam.RiskLogEntryOrBuilder>
            getEntriesOrBuilderList() {
         if (entriesBuilder_ != null) {
           return entriesBuilder_.getMessageOrBuilderList();
@@ -36725,12 +36725,12 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.poam.v1.RiskLogEntry entries = 1 [json_name = "entries"];</code>
        */
-      public java.util.List<oscal.poam.v1.Poam.RiskLogEntry.Builder> 
+      public java.util.List<oscal.poam.v1.Poam.RiskLogEntry.Builder>
            getEntriesBuilderList() {
         return internalGetEntriesFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.poam.v1.Poam.RiskLogEntry, oscal.poam.v1.Poam.RiskLogEntry.Builder, oscal.poam.v1.Poam.RiskLogEntryOrBuilder> 
+          oscal.poam.v1.Poam.RiskLogEntry, oscal.poam.v1.Poam.RiskLogEntry.Builder, oscal.poam.v1.Poam.RiskLogEntryOrBuilder>
           internalGetEntriesFieldBuilder() {
         if (entriesBuilder_ == null) {
           entriesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -36877,7 +36877,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 6 [json_name = "props"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Property> 
+    java.util.List<oscal.common.v1.Common.Property>
         getPropsList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 6 [json_name = "props"];</code>
@@ -36890,7 +36890,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 6 [json_name = "props"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 6 [json_name = "props"];</code>
@@ -36901,7 +36901,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 7 [json_name = "links"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Link> 
+    java.util.List<oscal.common.v1.Common.Link>
         getLinksList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 7 [json_name = "links"];</code>
@@ -36914,7 +36914,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 7 [json_name = "links"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 7 [json_name = "links"];</code>
@@ -36925,7 +36925,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.poam.v1.LoggedBy logged_by = 8 [json_name = "loggedBy"];</code>
      */
-    java.util.List<oscal.poam.v1.Poam.LoggedBy> 
+    java.util.List<oscal.poam.v1.Poam.LoggedBy>
         getLoggedByList();
     /**
      * <code>repeated .oscal.poam.v1.LoggedBy logged_by = 8 [json_name = "loggedBy"];</code>
@@ -36938,7 +36938,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.poam.v1.LoggedBy logged_by = 8 [json_name = "loggedBy"];</code>
      */
-    java.util.List<? extends oscal.poam.v1.Poam.LoggedByOrBuilder> 
+    java.util.List<? extends oscal.poam.v1.Poam.LoggedByOrBuilder>
         getLoggedByOrBuilderList();
     /**
      * <code>repeated .oscal.poam.v1.LoggedBy logged_by = 8 [json_name = "loggedBy"];</code>
@@ -36964,7 +36964,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.poam.v1.RelatedResponse related_responses = 10 [json_name = "relatedResponses"];</code>
      */
-    java.util.List<oscal.poam.v1.Poam.RelatedResponse> 
+    java.util.List<oscal.poam.v1.Poam.RelatedResponse>
         getRelatedResponsesList();
     /**
      * <code>repeated .oscal.poam.v1.RelatedResponse related_responses = 10 [json_name = "relatedResponses"];</code>
@@ -36977,7 +36977,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.poam.v1.RelatedResponse related_responses = 10 [json_name = "relatedResponses"];</code>
      */
-    java.util.List<? extends oscal.poam.v1.Poam.RelatedResponseOrBuilder> 
+    java.util.List<? extends oscal.poam.v1.Poam.RelatedResponseOrBuilder>
         getRelatedResponsesOrBuilderList();
     /**
      * <code>repeated .oscal.poam.v1.RelatedResponse related_responses = 10 [json_name = "relatedResponses"];</code>
@@ -36988,7 +36988,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 11 [json_name = "remarks"];</code>
      */
-    java.util.List<oscal.common.v1.Common.MarkupMultiline> 
+    java.util.List<oscal.common.v1.Common.MarkupMultiline>
         getRemarksList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 11 [json_name = "remarks"];</code>
@@ -37001,7 +37001,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 11 [json_name = "remarks"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 11 [json_name = "remarks"];</code>
@@ -37205,7 +37205,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Property props = 6 [json_name = "props"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList() {
       return props_;
     }
@@ -37246,7 +37246,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Link links = 7 [json_name = "links"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList() {
       return links_;
     }
@@ -37287,7 +37287,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.poam.v1.LoggedBy logged_by = 8 [json_name = "loggedBy"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.poam.v1.Poam.LoggedByOrBuilder> 
+    public java.util.List<? extends oscal.poam.v1.Poam.LoggedByOrBuilder>
         getLoggedByOrBuilderList() {
       return loggedBy_;
     }
@@ -37354,7 +37354,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.poam.v1.RelatedResponse related_responses = 10 [json_name = "relatedResponses"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.poam.v1.Poam.RelatedResponseOrBuilder> 
+    public java.util.List<? extends oscal.poam.v1.Poam.RelatedResponseOrBuilder>
         getRelatedResponsesOrBuilderList() {
       return relatedResponses_;
     }
@@ -37395,7 +37395,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 11 [json_name = "remarks"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList() {
       return remarks_;
     }
@@ -38044,7 +38044,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
               propsBuilder_ = null;
               props_ = other.props_;
               bitField0_ = (bitField0_ & ~0x00000020);
-              propsBuilder_ = 
+              propsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetPropsFieldBuilder() : null;
             } else {
@@ -38070,7 +38070,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
               linksBuilder_ = null;
               links_ = other.links_;
               bitField0_ = (bitField0_ & ~0x00000040);
-              linksBuilder_ = 
+              linksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetLinksFieldBuilder() : null;
             } else {
@@ -38096,7 +38096,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
               loggedByBuilder_ = null;
               loggedBy_ = other.loggedBy_;
               bitField0_ = (bitField0_ & ~0x00000080);
-              loggedByBuilder_ = 
+              loggedByBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetLoggedByFieldBuilder() : null;
             } else {
@@ -38125,7 +38125,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
               relatedResponsesBuilder_ = null;
               relatedResponses_ = other.relatedResponses_;
               bitField0_ = (bitField0_ & ~0x00000200);
-              relatedResponsesBuilder_ = 
+              relatedResponsesBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetRelatedResponsesFieldBuilder() : null;
             } else {
@@ -38151,7 +38151,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
               remarksBuilder_ = null;
               remarks_ = other.remarks_;
               bitField0_ = (bitField0_ & ~0x00000400);
-              remarksBuilder_ = 
+              remarksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetRemarksFieldBuilder() : null;
             } else {
@@ -38417,7 +38417,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder> 
+          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder>
           internalGetUuidFieldBuilder() {
         if (uuidBuilder_ == null) {
           uuidBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -38538,7 +38538,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.MarkupLine title = 2 [json_name = "title"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.MarkupLine, oscal.common.v1.Common.MarkupLine.Builder, oscal.common.v1.Common.MarkupLineOrBuilder> 
+          oscal.common.v1.Common.MarkupLine, oscal.common.v1.Common.MarkupLine.Builder, oscal.common.v1.Common.MarkupLineOrBuilder>
           internalGetTitleFieldBuilder() {
         if (titleBuilder_ == null) {
           titleBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -38659,7 +38659,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.MarkupMultiline description = 3 [json_name = "description"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetDescriptionFieldBuilder() {
         if (descriptionBuilder_ == null) {
           descriptionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -38780,7 +38780,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.DateTime start = 4 [json_name = "start"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.DateTime, oscal.common.v1.Common.DateTime.Builder, oscal.common.v1.Common.DateTimeOrBuilder> 
+          oscal.common.v1.Common.DateTime, oscal.common.v1.Common.DateTime.Builder, oscal.common.v1.Common.DateTimeOrBuilder>
           internalGetStartFieldBuilder() {
         if (startBuilder_ == null) {
           startBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -38901,7 +38901,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.DateTime end = 5 [json_name = "end"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.DateTime, oscal.common.v1.Common.DateTime.Builder, oscal.common.v1.Common.DateTimeOrBuilder> 
+          oscal.common.v1.Common.DateTime, oscal.common.v1.Common.DateTime.Builder, oscal.common.v1.Common.DateTimeOrBuilder>
           internalGetEndFieldBuilder() {
         if (endBuilder_ == null) {
           endBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -39109,7 +39109,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 6 [json_name = "props"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
            getPropsOrBuilderList() {
         if (propsBuilder_ != null) {
           return propsBuilder_.getMessageOrBuilderList();
@@ -39135,12 +39135,12 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 6 [json_name = "props"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Property.Builder> 
+      public java.util.List<oscal.common.v1.Common.Property.Builder>
            getPropsBuilderList() {
         return internalGetPropsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> 
+          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder>
           internalGetPropsFieldBuilder() {
         if (propsBuilder_ == null) {
           propsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -39349,7 +39349,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 7 [json_name = "links"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
            getLinksOrBuilderList() {
         if (linksBuilder_ != null) {
           return linksBuilder_.getMessageOrBuilderList();
@@ -39375,12 +39375,12 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 7 [json_name = "links"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Link.Builder> 
+      public java.util.List<oscal.common.v1.Common.Link.Builder>
            getLinksBuilderList() {
         return internalGetLinksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder> 
+          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder>
           internalGetLinksFieldBuilder() {
         if (linksBuilder_ == null) {
           linksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -39589,7 +39589,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.poam.v1.LoggedBy logged_by = 8 [json_name = "loggedBy"];</code>
        */
-      public java.util.List<? extends oscal.poam.v1.Poam.LoggedByOrBuilder> 
+      public java.util.List<? extends oscal.poam.v1.Poam.LoggedByOrBuilder>
            getLoggedByOrBuilderList() {
         if (loggedByBuilder_ != null) {
           return loggedByBuilder_.getMessageOrBuilderList();
@@ -39615,12 +39615,12 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.poam.v1.LoggedBy logged_by = 8 [json_name = "loggedBy"];</code>
        */
-      public java.util.List<oscal.poam.v1.Poam.LoggedBy.Builder> 
+      public java.util.List<oscal.poam.v1.Poam.LoggedBy.Builder>
            getLoggedByBuilderList() {
         return internalGetLoggedByFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.poam.v1.Poam.LoggedBy, oscal.poam.v1.Poam.LoggedBy.Builder, oscal.poam.v1.Poam.LoggedByOrBuilder> 
+          oscal.poam.v1.Poam.LoggedBy, oscal.poam.v1.Poam.LoggedBy.Builder, oscal.poam.v1.Poam.LoggedByOrBuilder>
           internalGetLoggedByFieldBuilder() {
         if (loggedByBuilder_ == null) {
           loggedByBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -39742,7 +39742,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.poam.v1.RiskStatus status_change = 9 [json_name = "statusChange"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.poam.v1.Poam.RiskStatus, oscal.poam.v1.Poam.RiskStatus.Builder, oscal.poam.v1.Poam.RiskStatusOrBuilder> 
+          oscal.poam.v1.Poam.RiskStatus, oscal.poam.v1.Poam.RiskStatus.Builder, oscal.poam.v1.Poam.RiskStatusOrBuilder>
           internalGetStatusChangeFieldBuilder() {
         if (statusChangeBuilder_ == null) {
           statusChangeBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -39950,7 +39950,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.poam.v1.RelatedResponse related_responses = 10 [json_name = "relatedResponses"];</code>
        */
-      public java.util.List<? extends oscal.poam.v1.Poam.RelatedResponseOrBuilder> 
+      public java.util.List<? extends oscal.poam.v1.Poam.RelatedResponseOrBuilder>
            getRelatedResponsesOrBuilderList() {
         if (relatedResponsesBuilder_ != null) {
           return relatedResponsesBuilder_.getMessageOrBuilderList();
@@ -39976,12 +39976,12 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.poam.v1.RelatedResponse related_responses = 10 [json_name = "relatedResponses"];</code>
        */
-      public java.util.List<oscal.poam.v1.Poam.RelatedResponse.Builder> 
+      public java.util.List<oscal.poam.v1.Poam.RelatedResponse.Builder>
            getRelatedResponsesBuilderList() {
         return internalGetRelatedResponsesFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.poam.v1.Poam.RelatedResponse, oscal.poam.v1.Poam.RelatedResponse.Builder, oscal.poam.v1.Poam.RelatedResponseOrBuilder> 
+          oscal.poam.v1.Poam.RelatedResponse, oscal.poam.v1.Poam.RelatedResponse.Builder, oscal.poam.v1.Poam.RelatedResponseOrBuilder>
           internalGetRelatedResponsesFieldBuilder() {
         if (relatedResponsesBuilder_ == null) {
           relatedResponsesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -40190,7 +40190,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 11 [json_name = "remarks"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
            getRemarksOrBuilderList() {
         if (remarksBuilder_ != null) {
           return remarksBuilder_.getMessageOrBuilderList();
@@ -40216,12 +40216,12 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 11 [json_name = "remarks"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder> 
+      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder>
            getRemarksBuilderList() {
         return internalGetRemarksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetRemarksFieldBuilder() {
         if (remarksBuilder_ == null) {
           remarksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -40323,7 +40323,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Property> 
+    java.util.List<oscal.common.v1.Common.Property>
         getPropsList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
@@ -40336,7 +40336,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
@@ -40347,7 +40347,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Link> 
+    java.util.List<oscal.common.v1.Common.Link>
         getLinksList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
@@ -40360,7 +40360,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
@@ -40371,7 +40371,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
      */
-    java.util.List<oscal.common.v1.Common.MarkupMultiline> 
+    java.util.List<oscal.common.v1.Common.MarkupMultiline>
         getRemarksList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
@@ -40384,7 +40384,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
@@ -40508,7 +40508,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList() {
       return props_;
     }
@@ -40549,7 +40549,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList() {
       return links_;
     }
@@ -40590,7 +40590,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList() {
       return remarks_;
     }
@@ -41048,7 +41048,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
               propsBuilder_ = null;
               props_ = other.props_;
               bitField0_ = (bitField0_ & ~0x00000004);
-              propsBuilder_ = 
+              propsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetPropsFieldBuilder() : null;
             } else {
@@ -41074,7 +41074,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
               linksBuilder_ = null;
               links_ = other.links_;
               bitField0_ = (bitField0_ & ~0x00000008);
-              linksBuilder_ = 
+              linksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetLinksFieldBuilder() : null;
             } else {
@@ -41100,7 +41100,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
               remarksBuilder_ = null;
               remarks_ = other.remarks_;
               bitField0_ = (bitField0_ & ~0x00000010);
-              remarksBuilder_ = 
+              remarksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetRemarksFieldBuilder() : null;
             } else {
@@ -41312,7 +41312,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.UUID party_uuid = 1 [json_name = "partyUuid"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder> 
+          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder>
           internalGetPartyUuidFieldBuilder() {
         if (partyUuidBuilder_ == null) {
           partyUuidBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -41433,7 +41433,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.MarkupLine title = 2 [json_name = "title"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.MarkupLine, oscal.common.v1.Common.MarkupLine.Builder, oscal.common.v1.Common.MarkupLineOrBuilder> 
+          oscal.common.v1.Common.MarkupLine, oscal.common.v1.Common.MarkupLine.Builder, oscal.common.v1.Common.MarkupLineOrBuilder>
           internalGetTitleFieldBuilder() {
         if (titleBuilder_ == null) {
           titleBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -41641,7 +41641,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
            getPropsOrBuilderList() {
         if (propsBuilder_ != null) {
           return propsBuilder_.getMessageOrBuilderList();
@@ -41667,12 +41667,12 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Property.Builder> 
+      public java.util.List<oscal.common.v1.Common.Property.Builder>
            getPropsBuilderList() {
         return internalGetPropsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> 
+          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder>
           internalGetPropsFieldBuilder() {
         if (propsBuilder_ == null) {
           propsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -41881,7 +41881,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
            getLinksOrBuilderList() {
         if (linksBuilder_ != null) {
           return linksBuilder_.getMessageOrBuilderList();
@@ -41907,12 +41907,12 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Link.Builder> 
+      public java.util.List<oscal.common.v1.Common.Link.Builder>
            getLinksBuilderList() {
         return internalGetLinksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder> 
+          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder>
           internalGetLinksFieldBuilder() {
         if (linksBuilder_ == null) {
           linksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -42121,7 +42121,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
            getRemarksOrBuilderList() {
         if (remarksBuilder_ != null) {
           return remarksBuilder_.getMessageOrBuilderList();
@@ -42147,12 +42147,12 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder> 
+      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder>
            getRemarksBuilderList() {
         return internalGetRemarksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetRemarksFieldBuilder() {
         if (remarksBuilder_ == null) {
           remarksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -42239,7 +42239,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 2 [json_name = "props"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Property> 
+    java.util.List<oscal.common.v1.Common.Property>
         getPropsList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 2 [json_name = "props"];</code>
@@ -42252,7 +42252,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 2 [json_name = "props"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 2 [json_name = "props"];</code>
@@ -42263,7 +42263,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 3 [json_name = "links"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Link> 
+    java.util.List<oscal.common.v1.Common.Link>
         getLinksList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 3 [json_name = "links"];</code>
@@ -42276,7 +42276,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 3 [json_name = "links"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 3 [json_name = "links"];</code>
@@ -42287,7 +42287,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.poam.v1.RelatedTask related_tasks = 4 [json_name = "relatedTasks"];</code>
      */
-    java.util.List<oscal.poam.v1.Poam.RelatedTask> 
+    java.util.List<oscal.poam.v1.Poam.RelatedTask>
         getRelatedTasksList();
     /**
      * <code>repeated .oscal.poam.v1.RelatedTask related_tasks = 4 [json_name = "relatedTasks"];</code>
@@ -42300,7 +42300,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.poam.v1.RelatedTask related_tasks = 4 [json_name = "relatedTasks"];</code>
      */
-    java.util.List<? extends oscal.poam.v1.Poam.RelatedTaskOrBuilder> 
+    java.util.List<? extends oscal.poam.v1.Poam.RelatedTaskOrBuilder>
         getRelatedTasksOrBuilderList();
     /**
      * <code>repeated .oscal.poam.v1.RelatedTask related_tasks = 4 [json_name = "relatedTasks"];</code>
@@ -42311,7 +42311,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
      */
-    java.util.List<oscal.common.v1.Common.MarkupMultiline> 
+    java.util.List<oscal.common.v1.Common.MarkupMultiline>
         getRemarksList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
@@ -42324,7 +42324,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
@@ -42423,7 +42423,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Property props = 2 [json_name = "props"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList() {
       return props_;
     }
@@ -42464,7 +42464,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Link links = 3 [json_name = "links"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList() {
       return links_;
     }
@@ -42505,7 +42505,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.poam.v1.RelatedTask related_tasks = 4 [json_name = "relatedTasks"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.poam.v1.Poam.RelatedTaskOrBuilder> 
+    public java.util.List<? extends oscal.poam.v1.Poam.RelatedTaskOrBuilder>
         getRelatedTasksOrBuilderList() {
       return relatedTasks_;
     }
@@ -42546,7 +42546,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList() {
       return remarks_;
     }
@@ -43008,7 +43008,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
               propsBuilder_ = null;
               props_ = other.props_;
               bitField0_ = (bitField0_ & ~0x00000002);
-              propsBuilder_ = 
+              propsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetPropsFieldBuilder() : null;
             } else {
@@ -43034,7 +43034,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
               linksBuilder_ = null;
               links_ = other.links_;
               bitField0_ = (bitField0_ & ~0x00000004);
-              linksBuilder_ = 
+              linksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetLinksFieldBuilder() : null;
             } else {
@@ -43060,7 +43060,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
               relatedTasksBuilder_ = null;
               relatedTasks_ = other.relatedTasks_;
               bitField0_ = (bitField0_ & ~0x00000008);
-              relatedTasksBuilder_ = 
+              relatedTasksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetRelatedTasksFieldBuilder() : null;
             } else {
@@ -43086,7 +43086,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
               remarksBuilder_ = null;
               remarks_ = other.remarks_;
               bitField0_ = (bitField0_ & ~0x00000010);
-              remarksBuilder_ = 
+              remarksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetRemarksFieldBuilder() : null;
             } else {
@@ -43304,7 +43304,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.UUID response_uuid = 1 [json_name = "responseUuid"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder> 
+          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder>
           internalGetResponseUuidFieldBuilder() {
         if (responseUuidBuilder_ == null) {
           responseUuidBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -43512,7 +43512,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 2 [json_name = "props"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
            getPropsOrBuilderList() {
         if (propsBuilder_ != null) {
           return propsBuilder_.getMessageOrBuilderList();
@@ -43538,12 +43538,12 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 2 [json_name = "props"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Property.Builder> 
+      public java.util.List<oscal.common.v1.Common.Property.Builder>
            getPropsBuilderList() {
         return internalGetPropsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> 
+          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder>
           internalGetPropsFieldBuilder() {
         if (propsBuilder_ == null) {
           propsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -43752,7 +43752,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 3 [json_name = "links"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
            getLinksOrBuilderList() {
         if (linksBuilder_ != null) {
           return linksBuilder_.getMessageOrBuilderList();
@@ -43778,12 +43778,12 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 3 [json_name = "links"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Link.Builder> 
+      public java.util.List<oscal.common.v1.Common.Link.Builder>
            getLinksBuilderList() {
         return internalGetLinksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder> 
+          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder>
           internalGetLinksFieldBuilder() {
         if (linksBuilder_ == null) {
           linksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -43992,7 +43992,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.poam.v1.RelatedTask related_tasks = 4 [json_name = "relatedTasks"];</code>
        */
-      public java.util.List<? extends oscal.poam.v1.Poam.RelatedTaskOrBuilder> 
+      public java.util.List<? extends oscal.poam.v1.Poam.RelatedTaskOrBuilder>
            getRelatedTasksOrBuilderList() {
         if (relatedTasksBuilder_ != null) {
           return relatedTasksBuilder_.getMessageOrBuilderList();
@@ -44018,12 +44018,12 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.poam.v1.RelatedTask related_tasks = 4 [json_name = "relatedTasks"];</code>
        */
-      public java.util.List<oscal.poam.v1.Poam.RelatedTask.Builder> 
+      public java.util.List<oscal.poam.v1.Poam.RelatedTask.Builder>
            getRelatedTasksBuilderList() {
         return internalGetRelatedTasksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.poam.v1.Poam.RelatedTask, oscal.poam.v1.Poam.RelatedTask.Builder, oscal.poam.v1.Poam.RelatedTaskOrBuilder> 
+          oscal.poam.v1.Poam.RelatedTask, oscal.poam.v1.Poam.RelatedTask.Builder, oscal.poam.v1.Poam.RelatedTaskOrBuilder>
           internalGetRelatedTasksFieldBuilder() {
         if (relatedTasksBuilder_ == null) {
           relatedTasksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -44232,7 +44232,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
            getRemarksOrBuilderList() {
         if (remarksBuilder_ != null) {
           return remarksBuilder_.getMessageOrBuilderList();
@@ -44258,12 +44258,12 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder> 
+      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder>
            getRemarksBuilderList() {
         return internalGetRemarksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetRemarksFieldBuilder() {
         if (remarksBuilder_ == null) {
           remarksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -44350,7 +44350,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
      */
-    java.util.List<oscal.common.v1.Common.MarkupMultiline> 
+    java.util.List<oscal.common.v1.Common.MarkupMultiline>
         getRemarksList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
@@ -44363,7 +44363,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
@@ -44459,7 +44459,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList() {
       return remarks_;
     }
@@ -44816,7 +44816,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
               remarksBuilder_ = null;
               remarks_ = other.remarks_;
               bitField0_ = (bitField0_ & ~0x00000002);
-              remarksBuilder_ = 
+              remarksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetRemarksFieldBuilder() : null;
             } else {
@@ -44995,7 +44995,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.UUID observation_uuid = 1 [json_name = "observationUuid"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder> 
+          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder>
           internalGetObservationUuidFieldBuilder() {
         if (observationUuidBuilder_ == null) {
           observationUuidBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -45203,7 +45203,7 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
            getRemarksOrBuilderList() {
         if (remarksBuilder_ != null) {
           return remarksBuilder_.getMessageOrBuilderList();
@@ -45229,12 +45229,12 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder> 
+      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder>
            getRemarksBuilderList() {
         return internalGetRemarksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetRemarksFieldBuilder() {
         if (remarksBuilder_ == null) {
           remarksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -45301,122 +45301,122 @@ public final class Poam extends com.google.protobuf.GeneratedFile {
 
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_poam_v1_PlanOfActionAndMilestones_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_poam_v1_PlanOfActionAndMilestones_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_poam_v1_ImportSsp_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_poam_v1_ImportSsp_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_poam_v1_LocalDefinitions_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_poam_v1_LocalDefinitions_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_poam_v1_Component_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_poam_v1_Component_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_poam_v1_InventoryItem_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_poam_v1_InventoryItem_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_poam_v1_User_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_poam_v1_User_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_poam_v1_PoamItem_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_poam_v1_PoamItem_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_poam_v1_Origin_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_poam_v1_Origin_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_poam_v1_OriginActor_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_poam_v1_OriginActor_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_poam_v1_RelatedFinding_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_poam_v1_RelatedFinding_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_poam_v1_RelatedRisk_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_poam_v1_RelatedRisk_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_poam_v1_Risk_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_poam_v1_Risk_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_poam_v1_RiskStatus_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_poam_v1_RiskStatus_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_poam_v1_MitigatingFactor_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_poam_v1_MitigatingFactor_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_poam_v1_SubjectReference_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_poam_v1_SubjectReference_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_poam_v1_Response_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_poam_v1_Response_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_poam_v1_ResponseStatus_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_poam_v1_ResponseStatus_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_poam_v1_ResponsibleRole_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_poam_v1_ResponsibleRole_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_poam_v1_RelatedTask_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_poam_v1_RelatedTask_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_poam_v1_RiskLog_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_poam_v1_RiskLog_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_poam_v1_RiskLogEntry_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_poam_v1_RiskLogEntry_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_poam_v1_LoggedBy_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_poam_v1_LoggedBy_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_poam_v1_RelatedResponse_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_poam_v1_RelatedResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_poam_v1_RelatedObservation_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_poam_v1_RelatedObservation_fieldAccessorTable;
 

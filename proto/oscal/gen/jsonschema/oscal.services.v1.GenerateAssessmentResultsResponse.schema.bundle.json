@@ -164,6 +164,9 @@
           },
           "type": "array"
         },
+        "^(includeAll)$": {
+          "$ref": "#/$defs/oscal.assessment_results.v1.IncludeAll.schema.json"
+        },
         "^(includeControls)$": {
           "items": {
             "$ref": "#/$defs/oscal.assessment_results.v1.SelectedControl.schema.json"
@@ -180,6 +183,9 @@
             "$ref": "#/$defs/oscal.assessment_results.v1.SelectedControl.schema.json"
           },
           "type": "array"
+        },
+        "include_all": {
+          "$ref": "#/$defs/oscal.assessment_results.v1.IncludeAll.schema.json"
         },
         "include_controls": {
           "items": {
@@ -390,6 +396,14 @@
         }
       },
       "title": "Import Ssp",
+      "type": "object"
+    },
+    "oscal.assessment_results.v1.IncludeAll.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "IncludeAll is OSCAL's empty marker object for selecting every control.",
+      "properties": {},
+      "title": "Include All",
       "type": "object"
     },
     "oscal.assessment_results.v1.InventoryItem.schema.json": {
@@ -743,7 +757,7 @@
       "patternProperties": {
         "^(reviewedControls)$": {
           "$ref": "#/$defs/oscal.assessment_results.v1.ReviewedControls.schema.json",
-          "description": "reviewed_controls is required by the OSCAL 1.1.2 schema for each result."
+          "description": "reviewed_controls is required by the pinned OSCAL schema for each result."
         }
       },
       "properties": {
@@ -785,7 +799,7 @@
         },
         "reviewed_controls": {
           "$ref": "#/$defs/oscal.assessment_results.v1.ReviewedControls.schema.json",
-          "description": "reviewed_controls is required by the OSCAL 1.1.2 schema for each result."
+          "description": "reviewed_controls is required by the pinned OSCAL schema for each result."
         },
         "start": {
           "$ref": "#/$defs/oscal.common.v1.DateTime.schema.json"

@@ -71,7 +71,7 @@ func populate(reg *specregistry.Registry, path, version string) (int, error) {
 	if err != nil {
 		return 1, err
 	}
-	// #nosec G304,G306 -- path is the explicit registry destination selected by the CLI operator.
+	// #nosec G304,G306,G703 -- path is the explicit registry destination selected by the CLI operator.
 	if err := os.WriteFile(path, out, 0o600); err != nil {
 		return 1, fmt.Errorf("write registry: %w", err)
 	}

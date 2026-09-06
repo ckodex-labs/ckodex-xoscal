@@ -17,6 +17,9 @@ service TransparencyGraphService {
       body: "*"
     };
   }
+  rpc ListProjectionEvents(ListProjectionEventsRequest) returns (ListProjectionEventsResponse) {
+    option (google.api.http) = {get: "/v1/graph/projection-events"};
+  }
   rpc GetEdge(GetEdgeRequest) returns (GetEdgeResponse) {
     option (google.api.http) = {get: "/v1/graph/edges/{edge_id}"};
   }
@@ -111,6 +114,34 @@ message ProjectEdgeRequest {
 
 message ProjectEdgeResponse {
   GraphEdge edge = 1;
+  GraphProjectionEvent projection_event = 2;
+}
+
+// GraphProjectionEvent is an append-only, hash-chained audit record emitted
+// in the same transaction as a successful edge projection.
+message GraphProjectionEvent {
+  int64 sequence = 1;
+  string event_id = 2;
+  string edge_id = 3;
+  string claim_id = 4;
+  string from_node = 5;
+  string to_node = 6;
+  string relation = 7;
+  string evidence_digest = 8;
+  string trust_state = 9;
+  string previous_hash = 10;
+  string event_hash = 11;
+  google.protobuf.Timestamp projected_at = 12;
+}
+
+message ListProjectionEventsRequest {
+  string claim_id = 1;
+  string edge_id = 2;
+}
+
+message ListProjectionEventsResponse {
+  repeated GraphProjectionEvent events = 1;
+  bool chain_valid = 2;
 }
 
 message GetEdgeRequest {

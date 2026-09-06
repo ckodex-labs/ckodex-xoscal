@@ -384,6 +384,9 @@ components:
           items:
             $ref: '#/components/schemas/oscal.common.v1.MarkupMultiline'
           title: remarks
+        includeAll:
+          title: include_all
+          $ref: '#/components/schemas/oscal.assessment_plan.v1.IncludeAll'
       title: ControlSelection
       additionalProperties: false
       description: ControlSelection represents a control selection
@@ -401,6 +404,11 @@ components:
       title: ImportSsp
       additionalProperties: false
       description: ImportSsp represents an imported system security plan
+    oscal.assessment_plan.v1.IncludeAll:
+      type: object
+      title: IncludeAll
+      additionalProperties: false
+      description: IncludeAll is OSCAL's empty marker object for selecting every control.
     oscal.assessment_plan.v1.InventoryItem:
       type: object
       properties:

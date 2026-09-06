@@ -2,8 +2,21 @@
   "$id": "oscal.mapping.v1.Coverage.jsonschema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "additionalProperties": false,
-  "description": "Coverage represents coverage information",
+  "description": "Coverage records target coverage and the method used to derive it.\n Fields 1-5 are retained for wire compatibility with the prototype model.",
+  "patternProperties": {
+    "^(generation_method)$": {
+      "default": "",
+      "type": "string"
+    },
+    "^(target_coverage)$": {
+      "$ref": "oscal.common.v1.Decimal.jsonschema.json"
+    }
+  },
   "properties": {
+    "generationMethod": {
+      "default": "",
+      "type": "string"
+    },
     "links": {
       "items": {
         "$ref": "oscal.common.v1.Link.jsonschema.json"
@@ -25,6 +38,9 @@
         "$ref": "oscal.common.v1.MarkupMultiline.jsonschema.json"
       },
       "type": "array"
+    },
+    "targetCoverage": {
+      "$ref": "oscal.common.v1.Decimal.jsonschema.json"
     },
     "value": {
       "anyOf": [

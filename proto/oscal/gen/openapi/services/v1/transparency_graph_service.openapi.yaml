@@ -394,6 +394,30 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/oscal.services.v1.GetNodeResponse'
+  /v1/graph/projection-events:
+    get:
+      tags:
+        - oscal.services.v1.TransparencyGraphService
+      summary: ListProjectionEvents
+      operationId: oscal.services.v1.TransparencyGraphService.ListProjectionEvents
+      parameters:
+        - name: claimId
+          in: query
+          schema:
+            type: string
+            title: claim_id
+        - name: edgeId
+          in: query
+          schema:
+            type: string
+            title: edge_id
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/oscal.services.v1.ListProjectionEventsResponse'
   /v1/graph/shortest-path:
     post:
       tags:
@@ -615,6 +639,14 @@ components:
               type: string
               title: extensions_json
               description: JSON blob for flexible extensions
+            trustState:
+              type: string
+              title: trust_state
+              description: candidate | incomplete | verified | rejected
+            proofStateJson:
+              type: string
+              title: proof_state_json
+              description: current persisted proof projection
         - oneOf:
             - type: object
               properties:
@@ -888,6 +920,53 @@ components:
           $ref: '#/components/schemas/google.protobuf.Timestamp'
       title: GraphNode
       additionalProperties: false
+    oscal.services.v1.GraphProjectionEvent:
+      type: object
+      properties:
+        sequence:
+          type:
+            - integer
+            - string
+          title: sequence
+          format: int64
+        eventId:
+          type: string
+          title: event_id
+        edgeId:
+          type: string
+          title: edge_id
+        claimId:
+          type: string
+          title: claim_id
+        fromNode:
+          type: string
+          title: from_node
+        toNode:
+          type: string
+          title: to_node
+        relation:
+          type: string
+          title: relation
+        evidenceDigest:
+          type: string
+          title: evidence_digest
+        trustState:
+          type: string
+          title: trust_state
+        previousHash:
+          type: string
+          title: previous_hash
+        eventHash:
+          type: string
+          title: event_hash
+        projectedAt:
+          title: projected_at
+          $ref: '#/components/schemas/google.protobuf.Timestamp'
+      title: GraphProjectionEvent
+      additionalProperties: false
+      description: |-
+        GraphProjectionEvent is an append-only, hash-chained audit record emitted
+         in the same transaction as a successful edge projection.
     oscal.services.v1.Identity:
       type: object
       properties:
@@ -1014,6 +1093,30 @@ components:
           title: next_page_token
       title: ListNodesResponse
       additionalProperties: false
+    oscal.services.v1.ListProjectionEventsRequest:
+      type: object
+      properties:
+        claimId:
+          type: string
+          title: claim_id
+        edgeId:
+          type: string
+          title: edge_id
+      title: ListProjectionEventsRequest
+      additionalProperties: false
+    oscal.services.v1.ListProjectionEventsResponse:
+      type: object
+      properties:
+        events:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.services.v1.GraphProjectionEvent'
+          title: events
+        chainValid:
+          type: boolean
+          title: chain_valid
+      title: ListProjectionEventsResponse
+      additionalProperties: false
     oscal.services.v1.PathSegment:
       type: object
       properties:
@@ -1035,7 +1138,7 @@ components:
         type:
           type: string
           title: type
-          description: opa_bundle | oscal_profile | cdxa_standard | spdx_security_profile
+          description: xoscal-json | opa_bundle | oscal_profile | cdxa_standard | spdx_security_profile
         ref:
           type: string
           title: ref
@@ -1080,6 +1183,9 @@ components:
         edge:
           title: edge
           $ref: '#/components/schemas/oscal.services.v1.GraphEdge'
+        projectionEvent:
+          title: projection_event
+          $ref: '#/components/schemas/oscal.services.v1.GraphProjectionEvent'
       title: ProjectEdgeResponse
       additionalProperties: false
     oscal.services.v1.ProofRef:

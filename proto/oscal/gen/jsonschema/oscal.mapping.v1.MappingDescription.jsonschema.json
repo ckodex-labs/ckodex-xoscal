@@ -2,7 +2,7 @@
   "$id": "oscal.mapping.v1.MappingDescription.jsonschema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "additionalProperties": false,
-  "description": "MappingDescription represents a mapping description",
+  "description": "MappingDescription is the deprecated prototype wrapper. Released OSCAL uses\n MarkupMultiline directly for mapping-description.",
   "properties": {
     "description": {
       "$ref": "oscal.common.v1.MarkupMultiline.jsonschema.json"

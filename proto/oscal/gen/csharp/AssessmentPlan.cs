@@ -139,7 +139,7 @@ namespace Oscal.AssessmentPlan.V1 {
             "dGlvblIRY29udHJvbFNlbGVjdGlvbnMSLwoFcHJvcHMYBCADKAsyGS5vc2Nh",
             "bC5jb21tb24udjEuUHJvcGVydHlSBXByb3BzEisKBWxpbmtzGAUgAygLMhUu",
             "b3NjYWwuY29tbW9uLnYxLkxpbmtSBWxpbmtzEjoKB3JlbWFya3MYBiADKAsy",
-            "IC5vc2NhbC5jb21tb24udjEuTWFya3VwTXVsdGlsaW5lUgdyZW1hcmtzIpwD",
+            "IC5vc2NhbC5jb21tb24udjEuTWFya3VwTXVsdGlsaW5lUgdyZW1hcmtzIuMD",
             "ChBDb250cm9sU2VsZWN0aW9uEkIKC2Rlc2NyaXB0aW9uGAEgASgLMiAub3Nj",
             "YWwuY29tbW9uLnYxLk1hcmt1cE11bHRpbGluZVILZGVzY3JpcHRpb24SVAoQ",
             "aW5jbHVkZV9jb250cm9scxgCIAMoCzIpLm9zY2FsLmFzc2Vzc21lbnRfcGxh",
@@ -149,60 +149,62 @@ namespace Oscal.AssessmentPlan.V1 {
             "AygLMhkub3NjYWwuY29tbW9uLnYxLlByb3BlcnR5UgVwcm9wcxIrCgVsaW5r",
             "cxgFIAMoCzIVLm9zY2FsLmNvbW1vbi52MS5MaW5rUgVsaW5rcxI6CgdyZW1h",
             "cmtzGAYgAygLMiAub3NjYWwuY29tbW9uLnYxLk1hcmt1cE11bHRpbGluZVIH",
-            "cmVtYXJrcyKdAgoPU2VsZWN0ZWRDb250cm9sEjUKCmNvbnRyb2xfaWQYASAB",
-            "KAsyFi5vc2NhbC5jb21tb24udjEuVG9rZW5SCWNvbnRyb2xJZBI5CgxzdGF0",
-            "ZW1lbnRfaWQYAiABKAsyFi5vc2NhbC5jb21tb24udjEuVG9rZW5SC3N0YXRl",
-            "bWVudElkEi8KBXByb3BzGAMgAygLMhkub3NjYWwuY29tbW9uLnYxLlByb3Bl",
-            "cnR5UgVwcm9wcxIrCgVsaW5rcxgEIAMoCzIVLm9zY2FsLmNvbW1vbi52MS5M",
-            "aW5rUgVsaW5rcxI6CgdyZW1hcmtzGAUgAygLMiAub3NjYWwuY29tbW9uLnYx",
-            "Lk1hcmt1cE11bHRpbGluZVIHcmVtYXJrcyKZBQoOQXNzZXNzbWVudFRhc2sS",
-            "KQoEdXVpZBgBIAEoCzIVLm9zY2FsLmNvbW1vbi52MS5VVUlEUgR1dWlkEhIK",
-            "BHR5cGUYAiABKAlSBHR5cGUSMQoFdGl0bGUYAyABKAsyGy5vc2NhbC5jb21t",
-            "b24udjEuTWFya3VwTGluZVIFdGl0bGUSQgoLZGVzY3JpcHRpb24YBCABKAsy",
-            "IC5vc2NhbC5jb21tb24udjEuTWFya3VwTXVsdGlsaW5lUgtkZXNjcmlwdGlv",
-            "bhJGCghzdWJqZWN0cxgFIAMoCzIqLm9zY2FsLmFzc2Vzc21lbnRfcGxhbi52",
-            "MS5TdWJqZWN0UmVmZXJlbmNlUghzdWJqZWN0cxI0CgV0YXNrcxgGIAMoCzIe",
-            "Lm9zY2FsLmFzc2Vzc21lbnRfcGxhbi52MS5UYXNrUgV0YXNrcxJhChVhc3Nv",
-            "Y2lhdGVkX2FjdGl2aXRpZXMYByADKAsyLC5vc2NhbC5hc3Nlc3NtZW50X3Bs",
-            "YW4udjEuQXNzb2NpYXRlZEFjdGl2aXR5UhRhc3NvY2lhdGVkQWN0aXZpdGll",
-            "cxJWChFyZXNwb25zaWJsZV9yb2xlcxgIIAMoCzIpLm9zY2FsLmFzc2Vzc21l",
-            "bnRfcGxhbi52MS5SZXNwb25zaWJsZVJvbGVSEHJlc3BvbnNpYmxlUm9sZXMS",
-            "LwoFcHJvcHMYCSADKAsyGS5vc2NhbC5jb21tb24udjEuUHJvcGVydHlSBXBy",
-            "b3BzEisKBWxpbmtzGAogAygLMhUub3NjYWwuY29tbW9uLnYxLkxpbmtSBWxp",
-            "bmtzEjoKB3JlbWFya3MYCyADKAsyIC5vc2NhbC5jb21tb24udjEuTWFya3Vw",
-            "TXVsdGlsaW5lUgdyZW1hcmtzIpkCChBTdWJqZWN0UmVmZXJlbmNlEjgKDHN1",
-            "YmplY3RfdXVpZBgBIAEoCzIVLm9zY2FsLmNvbW1vbi52MS5VVUlEUgtzdWJq",
-            "ZWN0VXVpZBIxCgV0aXRsZRgCIAEoCzIbLm9zY2FsLmNvbW1vbi52MS5NYXJr",
-            "dXBMaW5lUgV0aXRsZRIvCgVwcm9wcxgDIAMoCzIZLm9zY2FsLmNvbW1vbi52",
-            "MS5Qcm9wZXJ0eVIFcHJvcHMSKwoFbGlua3MYBCADKAsyFS5vc2NhbC5jb21t",
-            "b24udjEuTGlua1IFbGlua3MSOgoHcmVtYXJrcxgFIAMoCzIgLm9zY2FsLmNv",
-            "bW1vbi52MS5NYXJrdXBNdWx0aWxpbmVSB3JlbWFya3MijwUKBFRhc2sSKQoE",
-            "dXVpZBgBIAEoCzIVLm9zY2FsLmNvbW1vbi52MS5VVUlEUgR1dWlkEhIKBHR5",
-            "cGUYAiABKAlSBHR5cGUSMQoFdGl0bGUYAyABKAsyGy5vc2NhbC5jb21tb24u",
-            "djEuTWFya3VwTGluZVIFdGl0bGUSQgoLZGVzY3JpcHRpb24YBCABKAsyIC5v",
-            "c2NhbC5jb21tb24udjEuTWFya3VwTXVsdGlsaW5lUgtkZXNjcmlwdGlvbhJG",
-            "CghzdWJqZWN0cxgFIAMoCzIqLm9zY2FsLmFzc2Vzc21lbnRfcGxhbi52MS5T",
-            "dWJqZWN0UmVmZXJlbmNlUghzdWJqZWN0cxI0CgV0YXNrcxgGIAMoCzIeLm9z",
-            "Y2FsLmFzc2Vzc21lbnRfcGxhbi52MS5UYXNrUgV0YXNrcxJhChVhc3NvY2lh",
-            "dGVkX2FjdGl2aXRpZXMYByADKAsyLC5vc2NhbC5hc3Nlc3NtZW50X3BsYW4u",
-            "djEuQXNzb2NpYXRlZEFjdGl2aXR5UhRhc3NvY2lhdGVkQWN0aXZpdGllcxJW",
-            "ChFyZXNwb25zaWJsZV9yb2xlcxgIIAMoCzIpLm9zY2FsLmFzc2Vzc21lbnRf",
-            "cGxhbi52MS5SZXNwb25zaWJsZVJvbGVSEHJlc3BvbnNpYmxlUm9sZXMSLwoF",
-            "cHJvcHMYCSADKAsyGS5vc2NhbC5jb21tb24udjEuUHJvcGVydHlSBXByb3Bz",
-            "EisKBWxpbmtzGAogAygLMhUub3NjYWwuY29tbW9uLnYxLkxpbmtSBWxpbmtz",
-            "EjoKB3JlbWFya3MYCyADKAsyIC5vc2NhbC5jb21tb24udjEuTWFya3VwTXVs",
-            "dGlsaW5lUgdyZW1hcmtzIq8BChJBc3NvY2lhdGVkQWN0aXZpdHkSOgoNYWN0",
-            "aXZpdHlfdXVpZBgBIAEoCzIVLm9zY2FsLmNvbW1vbi52MS5VVUlEUgxhY3Rp",
-            "dml0eVV1aWQSHwoLaW5jbHVkZV9hbGwYAiABKAhSCmluY2x1ZGVBbGwSPAoO",
-            "YWN0aXZpdHlfdXVpZHMYAyADKAsyFS5vc2NhbC5jb21tb24udjEuVVVJRFIN",
-            "YWN0aXZpdHlVdWlkcyLnAQoPUmVzcG9uc2libGVSb2xlEi8KB3JvbGVfaWQY",
-            "ASABKAsyFi5vc2NhbC5jb21tb24udjEuVG9rZW5SBnJvbGVJZBI2CgtwYXJ0",
-            "eV91dWlkcxgCIAMoCzIVLm9zY2FsLmNvbW1vbi52MS5VVUlEUgpwYXJ0eVV1",
-            "aWRzEi8KBXByb3BzGAMgAygLMhkub3NjYWwuY29tbW9uLnYxLlByb3BlcnR5",
-            "UgVwcm9wcxI6CgdyZW1hcmtzGAQgAygLMiAub3NjYWwuY29tbW9uLnYxLk1h",
-            "cmt1cE11bHRpbGluZVIHcmVtYXJrc0JMWkpnaXRodWIuY29tL21jaG9yZmEv",
-            "eG9zY2FsL3Byb3RvL29zY2FsL2Fzc2Vzc21lbnRfcGxhbi92MTthc3Nlc3Nt",
-            "ZW50X3BsYW52MWIGcHJvdG8z"));
+            "cmVtYXJrcxJFCgtpbmNsdWRlX2FsbBgHIAEoCzIkLm9zY2FsLmFzc2Vzc21l",
+            "bnRfcGxhbi52MS5JbmNsdWRlQWxsUgppbmNsdWRlQWxsIgwKCkluY2x1ZGVB",
+            "bGwinQIKD1NlbGVjdGVkQ29udHJvbBI1Cgpjb250cm9sX2lkGAEgASgLMhYu",
+            "b3NjYWwuY29tbW9uLnYxLlRva2VuUgljb250cm9sSWQSOQoMc3RhdGVtZW50",
+            "X2lkGAIgASgLMhYub3NjYWwuY29tbW9uLnYxLlRva2VuUgtzdGF0ZW1lbnRJ",
+            "ZBIvCgVwcm9wcxgDIAMoCzIZLm9zY2FsLmNvbW1vbi52MS5Qcm9wZXJ0eVIF",
+            "cHJvcHMSKwoFbGlua3MYBCADKAsyFS5vc2NhbC5jb21tb24udjEuTGlua1IF",
+            "bGlua3MSOgoHcmVtYXJrcxgFIAMoCzIgLm9zY2FsLmNvbW1vbi52MS5NYXJr",
+            "dXBNdWx0aWxpbmVSB3JlbWFya3MimQUKDkFzc2Vzc21lbnRUYXNrEikKBHV1",
+            "aWQYASABKAsyFS5vc2NhbC5jb21tb24udjEuVVVJRFIEdXVpZBISCgR0eXBl",
+            "GAIgASgJUgR0eXBlEjEKBXRpdGxlGAMgASgLMhsub3NjYWwuY29tbW9uLnYx",
+            "Lk1hcmt1cExpbmVSBXRpdGxlEkIKC2Rlc2NyaXB0aW9uGAQgASgLMiAub3Nj",
+            "YWwuY29tbW9uLnYxLk1hcmt1cE11bHRpbGluZVILZGVzY3JpcHRpb24SRgoI",
+            "c3ViamVjdHMYBSADKAsyKi5vc2NhbC5hc3Nlc3NtZW50X3BsYW4udjEuU3Vi",
+            "amVjdFJlZmVyZW5jZVIIc3ViamVjdHMSNAoFdGFza3MYBiADKAsyHi5vc2Nh",
+            "bC5hc3Nlc3NtZW50X3BsYW4udjEuVGFza1IFdGFza3MSYQoVYXNzb2NpYXRl",
+            "ZF9hY3Rpdml0aWVzGAcgAygLMiwub3NjYWwuYXNzZXNzbWVudF9wbGFuLnYx",
+            "LkFzc29jaWF0ZWRBY3Rpdml0eVIUYXNzb2NpYXRlZEFjdGl2aXRpZXMSVgoR",
+            "cmVzcG9uc2libGVfcm9sZXMYCCADKAsyKS5vc2NhbC5hc3Nlc3NtZW50X3Bs",
+            "YW4udjEuUmVzcG9uc2libGVSb2xlUhByZXNwb25zaWJsZVJvbGVzEi8KBXBy",
+            "b3BzGAkgAygLMhkub3NjYWwuY29tbW9uLnYxLlByb3BlcnR5UgVwcm9wcxIr",
+            "CgVsaW5rcxgKIAMoCzIVLm9zY2FsLmNvbW1vbi52MS5MaW5rUgVsaW5rcxI6",
+            "CgdyZW1hcmtzGAsgAygLMiAub3NjYWwuY29tbW9uLnYxLk1hcmt1cE11bHRp",
+            "bGluZVIHcmVtYXJrcyKZAgoQU3ViamVjdFJlZmVyZW5jZRI4CgxzdWJqZWN0",
+            "X3V1aWQYASABKAsyFS5vc2NhbC5jb21tb24udjEuVVVJRFILc3ViamVjdFV1",
+            "aWQSMQoFdGl0bGUYAiABKAsyGy5vc2NhbC5jb21tb24udjEuTWFya3VwTGlu",
+            "ZVIFdGl0bGUSLwoFcHJvcHMYAyADKAsyGS5vc2NhbC5jb21tb24udjEuUHJv",
+            "cGVydHlSBXByb3BzEisKBWxpbmtzGAQgAygLMhUub3NjYWwuY29tbW9uLnYx",
+            "LkxpbmtSBWxpbmtzEjoKB3JlbWFya3MYBSADKAsyIC5vc2NhbC5jb21tb24u",
+            "djEuTWFya3VwTXVsdGlsaW5lUgdyZW1hcmtzIo8FCgRUYXNrEikKBHV1aWQY",
+            "ASABKAsyFS5vc2NhbC5jb21tb24udjEuVVVJRFIEdXVpZBISCgR0eXBlGAIg",
+            "ASgJUgR0eXBlEjEKBXRpdGxlGAMgASgLMhsub3NjYWwuY29tbW9uLnYxLk1h",
+            "cmt1cExpbmVSBXRpdGxlEkIKC2Rlc2NyaXB0aW9uGAQgASgLMiAub3NjYWwu",
+            "Y29tbW9uLnYxLk1hcmt1cE11bHRpbGluZVILZGVzY3JpcHRpb24SRgoIc3Vi",
+            "amVjdHMYBSADKAsyKi5vc2NhbC5hc3Nlc3NtZW50X3BsYW4udjEuU3ViamVj",
+            "dFJlZmVyZW5jZVIIc3ViamVjdHMSNAoFdGFza3MYBiADKAsyHi5vc2NhbC5h",
+            "c3Nlc3NtZW50X3BsYW4udjEuVGFza1IFdGFza3MSYQoVYXNzb2NpYXRlZF9h",
+            "Y3Rpdml0aWVzGAcgAygLMiwub3NjYWwuYXNzZXNzbWVudF9wbGFuLnYxLkFz",
+            "c29jaWF0ZWRBY3Rpdml0eVIUYXNzb2NpYXRlZEFjdGl2aXRpZXMSVgoRcmVz",
+            "cG9uc2libGVfcm9sZXMYCCADKAsyKS5vc2NhbC5hc3Nlc3NtZW50X3BsYW4u",
+            "djEuUmVzcG9uc2libGVSb2xlUhByZXNwb25zaWJsZVJvbGVzEi8KBXByb3Bz",
+            "GAkgAygLMhkub3NjYWwuY29tbW9uLnYxLlByb3BlcnR5UgVwcm9wcxIrCgVs",
+            "aW5rcxgKIAMoCzIVLm9zY2FsLmNvbW1vbi52MS5MaW5rUgVsaW5rcxI6Cgdy",
+            "ZW1hcmtzGAsgAygLMiAub3NjYWwuY29tbW9uLnYxLk1hcmt1cE11bHRpbGlu",
+            "ZVIHcmVtYXJrcyKvAQoSQXNzb2NpYXRlZEFjdGl2aXR5EjoKDWFjdGl2aXR5",
+            "X3V1aWQYASABKAsyFS5vc2NhbC5jb21tb24udjEuVVVJRFIMYWN0aXZpdHlV",
+            "dWlkEh8KC2luY2x1ZGVfYWxsGAIgASgIUgppbmNsdWRlQWxsEjwKDmFjdGl2",
+            "aXR5X3V1aWRzGAMgAygLMhUub3NjYWwuY29tbW9uLnYxLlVVSURSDWFjdGl2",
+            "aXR5VXVpZHMi5wEKD1Jlc3BvbnNpYmxlUm9sZRIvCgdyb2xlX2lkGAEgASgL",
+            "MhYub3NjYWwuY29tbW9uLnYxLlRva2VuUgZyb2xlSWQSNgoLcGFydHlfdXVp",
+            "ZHMYAiADKAsyFS5vc2NhbC5jb21tb24udjEuVVVJRFIKcGFydHlVdWlkcxIv",
+            "CgVwcm9wcxgDIAMoCzIZLm9zY2FsLmNvbW1vbi52MS5Qcm9wZXJ0eVIFcHJv",
+            "cHMSOgoHcmVtYXJrcxgEIAMoCzIgLm9zY2FsLmNvbW1vbi52MS5NYXJrdXBN",
+            "dWx0aWxpbmVSB3JlbWFya3NCTFpKZ2l0aHViLmNvbS9tY2hvcmZhL3hvc2Nh",
+            "bC9wcm90by9vc2NhbC9hc3Nlc3NtZW50X3BsYW4vdjE7YXNzZXNzbWVudF9w",
+            "bGFudjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Oscal.Common.V1.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -221,7 +223,8 @@ namespace Oscal.AssessmentPlan.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Oscal.AssessmentPlan.V1.Terms), global::Oscal.AssessmentPlan.V1.Terms.Parser, new[]{ "Terms_" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Oscal.AssessmentPlan.V1.Term), global::Oscal.AssessmentPlan.V1.Term.Parser, new[]{ "Id", "Name", "Definition", "Props", "Links", "Remarks" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Oscal.AssessmentPlan.V1.ReviewedControls), global::Oscal.AssessmentPlan.V1.ReviewedControls.Parser, new[]{ "ControlSelection", "Controls", "ControlSelections", "Props", "Links", "Remarks" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Oscal.AssessmentPlan.V1.ControlSelection), global::Oscal.AssessmentPlan.V1.ControlSelection.Parser, new[]{ "Description", "IncludeControls", "ExcludeControls", "Props", "Links", "Remarks" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Oscal.AssessmentPlan.V1.ControlSelection), global::Oscal.AssessmentPlan.V1.ControlSelection.Parser, new[]{ "Description", "IncludeControls", "ExcludeControls", "Props", "Links", "Remarks", "IncludeAll" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Oscal.AssessmentPlan.V1.IncludeAll), global::Oscal.AssessmentPlan.V1.IncludeAll.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Oscal.AssessmentPlan.V1.SelectedControl), global::Oscal.AssessmentPlan.V1.SelectedControl.Parser, new[]{ "ControlId", "StatementId", "Props", "Links", "Remarks" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Oscal.AssessmentPlan.V1.AssessmentTask), global::Oscal.AssessmentPlan.V1.AssessmentTask.Parser, new[]{ "Uuid", "Type", "Title", "Description", "Subjects", "Tasks", "AssociatedActivities", "ResponsibleRoles", "Props", "Links", "Remarks" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Oscal.AssessmentPlan.V1.SubjectReference), global::Oscal.AssessmentPlan.V1.SubjectReference.Parser, new[]{ "SubjectUuid", "Title", "Props", "Links", "Remarks" }, null, null, null, null),
@@ -5942,6 +5945,7 @@ namespace Oscal.AssessmentPlan.V1 {
       props_ = other.props_.Clone();
       links_ = other.links_.Clone();
       remarks_ = other.remarks_.Clone();
+      includeAll_ = other.includeAll_ != null ? other.includeAll_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -6018,6 +6022,18 @@ namespace Oscal.AssessmentPlan.V1 {
       get { return remarks_; }
     }
 
+    /// <summary>Field number for the "include_all" field.</summary>
+    public const int IncludeAllFieldNumber = 7;
+    private global::Oscal.AssessmentPlan.V1.IncludeAll includeAll_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Oscal.AssessmentPlan.V1.IncludeAll IncludeAll {
+      get { return includeAll_; }
+      set {
+        includeAll_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -6039,6 +6055,7 @@ namespace Oscal.AssessmentPlan.V1 {
       if(!props_.Equals(other.props_)) return false;
       if(!links_.Equals(other.links_)) return false;
       if(!remarks_.Equals(other.remarks_)) return false;
+      if (!object.Equals(IncludeAll, other.IncludeAll)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -6052,6 +6069,7 @@ namespace Oscal.AssessmentPlan.V1 {
       hash ^= props_.GetHashCode();
       hash ^= links_.GetHashCode();
       hash ^= remarks_.GetHashCode();
+      if (includeAll_ != null) hash ^= IncludeAll.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -6079,6 +6097,10 @@ namespace Oscal.AssessmentPlan.V1 {
       props_.WriteTo(output, _repeated_props_codec);
       links_.WriteTo(output, _repeated_links_codec);
       remarks_.WriteTo(output, _repeated_remarks_codec);
+      if (includeAll_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(IncludeAll);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -6098,6 +6120,10 @@ namespace Oscal.AssessmentPlan.V1 {
       props_.WriteTo(ref output, _repeated_props_codec);
       links_.WriteTo(ref output, _repeated_links_codec);
       remarks_.WriteTo(ref output, _repeated_remarks_codec);
+      if (includeAll_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(IncludeAll);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -6116,6 +6142,9 @@ namespace Oscal.AssessmentPlan.V1 {
       size += props_.CalculateSize(_repeated_props_codec);
       size += links_.CalculateSize(_repeated_links_codec);
       size += remarks_.CalculateSize(_repeated_remarks_codec);
+      if (includeAll_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(IncludeAll);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -6139,6 +6168,12 @@ namespace Oscal.AssessmentPlan.V1 {
       props_.Add(other.props_);
       links_.Add(other.links_);
       remarks_.Add(other.remarks_);
+      if (other.includeAll_ != null) {
+        if (includeAll_ == null) {
+          IncludeAll = new global::Oscal.AssessmentPlan.V1.IncludeAll();
+        }
+        IncludeAll.MergeFrom(other.IncludeAll);
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -6183,6 +6218,13 @@ namespace Oscal.AssessmentPlan.V1 {
           }
           case 50: {
             remarks_.AddEntriesFrom(input, _repeated_remarks_codec);
+            break;
+          }
+          case 58: {
+            if (includeAll_ == null) {
+              IncludeAll = new global::Oscal.AssessmentPlan.V1.IncludeAll();
+            }
+            input.ReadMessage(IncludeAll);
             break;
           }
         }
@@ -6231,6 +6273,177 @@ namespace Oscal.AssessmentPlan.V1 {
             remarks_.AddEntriesFrom(ref input, _repeated_remarks_codec);
             break;
           }
+          case 58: {
+            if (includeAll_ == null) {
+              IncludeAll = new global::Oscal.AssessmentPlan.V1.IncludeAll();
+            }
+            input.ReadMessage(IncludeAll);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// IncludeAll is OSCAL's empty marker object for selecting every control.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class IncludeAll : pb::IMessage<IncludeAll>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<IncludeAll> _parser = new pb::MessageParser<IncludeAll>(() => new IncludeAll());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<IncludeAll> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Oscal.AssessmentPlan.V1.AssessmentPlanReflection.Descriptor.MessageTypes[16]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public IncludeAll() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public IncludeAll(IncludeAll other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public IncludeAll Clone() {
+      return new IncludeAll(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as IncludeAll);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(IncludeAll other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(IncludeAll other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
         }
       }
     }
@@ -6256,7 +6469,7 @@ namespace Oscal.AssessmentPlan.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Oscal.AssessmentPlan.V1.AssessmentPlanReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Oscal.AssessmentPlan.V1.AssessmentPlanReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6590,7 +6803,7 @@ namespace Oscal.AssessmentPlan.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Oscal.AssessmentPlan.V1.AssessmentPlanReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Oscal.AssessmentPlan.V1.AssessmentPlanReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7111,7 +7324,7 @@ namespace Oscal.AssessmentPlan.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Oscal.AssessmentPlan.V1.AssessmentPlanReflection.Descriptor.MessageTypes[18]; }
+      get { return global::Oscal.AssessmentPlan.V1.AssessmentPlanReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7445,7 +7658,7 @@ namespace Oscal.AssessmentPlan.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Oscal.AssessmentPlan.V1.AssessmentPlanReflection.Descriptor.MessageTypes[19]; }
+      get { return global::Oscal.AssessmentPlan.V1.AssessmentPlanReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7966,7 +8179,7 @@ namespace Oscal.AssessmentPlan.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Oscal.AssessmentPlan.V1.AssessmentPlanReflection.Descriptor.MessageTypes[20]; }
+      get { return global::Oscal.AssessmentPlan.V1.AssessmentPlanReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8239,7 +8452,7 @@ namespace Oscal.AssessmentPlan.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Oscal.AssessmentPlan.V1.AssessmentPlanReflection.Descriptor.MessageTypes[21]; }
+      get { return global::Oscal.AssessmentPlan.V1.AssessmentPlanReflection.Descriptor.MessageTypes[22]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

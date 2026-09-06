@@ -107,12 +107,125 @@
       "title": "Graph Edge",
       "type": "object"
     },
+    "oscal.services.v1.GraphProjectionEvent.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "GraphProjectionEvent is an append-only, hash-chained audit record emitted\n in the same transaction as a successful edge projection.",
+      "patternProperties": {
+        "^(claimId)$": {
+          "default": "",
+          "type": "string"
+        },
+        "^(edgeId)$": {
+          "default": "",
+          "type": "string"
+        },
+        "^(eventHash)$": {
+          "default": "",
+          "type": "string"
+        },
+        "^(eventId)$": {
+          "default": "",
+          "type": "string"
+        },
+        "^(evidenceDigest)$": {
+          "default": "",
+          "type": "string"
+        },
+        "^(fromNode)$": {
+          "default": "",
+          "type": "string"
+        },
+        "^(previousHash)$": {
+          "default": "",
+          "type": "string"
+        },
+        "^(projectedAt)$": {
+          "$ref": "#/$defs/google.protobuf.Timestamp.schema.json"
+        },
+        "^(toNode)$": {
+          "default": "",
+          "type": "string"
+        },
+        "^(trustState)$": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "properties": {
+        "claim_id": {
+          "default": "",
+          "type": "string"
+        },
+        "edge_id": {
+          "default": "",
+          "type": "string"
+        },
+        "event_hash": {
+          "default": "",
+          "type": "string"
+        },
+        "event_id": {
+          "default": "",
+          "type": "string"
+        },
+        "evidence_digest": {
+          "default": "",
+          "type": "string"
+        },
+        "from_node": {
+          "default": "",
+          "type": "string"
+        },
+        "previous_hash": {
+          "default": "",
+          "type": "string"
+        },
+        "projected_at": {
+          "$ref": "#/$defs/google.protobuf.Timestamp.schema.json"
+        },
+        "relation": {
+          "default": "",
+          "type": "string"
+        },
+        "sequence": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "pattern": "^-?[0-9]+$",
+              "type": "string"
+            }
+          ],
+          "default": 0
+        },
+        "to_node": {
+          "default": "",
+          "type": "string"
+        },
+        "trust_state": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Graph Projection Event",
+      "type": "object"
+    },
     "oscal.services.v1.ProjectEdgeResponse.schema.json": {
       "$schema": "https://json-schema.org/draft/2020-12/schema",
       "additionalProperties": false,
+      "patternProperties": {
+        "^(projectionEvent)$": {
+          "$ref": "#/$defs/oscal.services.v1.GraphProjectionEvent.schema.json"
+        }
+      },
       "properties": {
         "edge": {
           "$ref": "#/$defs/oscal.services.v1.GraphEdge.schema.json"
+        },
+        "projection_event": {
+          "$ref": "#/$defs/oscal.services.v1.GraphProjectionEvent.schema.json"
         }
       },
       "title": "Project Edge Response",

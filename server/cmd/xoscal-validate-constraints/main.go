@@ -53,8 +53,9 @@ var modelCLIName = map[string]string{
 }
 
 // rootKeyOrder is the deterministic set of OSCAL roots supported by the
-// pinned oscal-cli release. A JSON object with more than one of these roots is
-// ambiguous and must not be accepted by auto-detection.
+// embedded schema. A JSON object with more than one of these roots is
+// ambiguous and must not be accepted by auto-detection. modelCLIName remains
+// the narrower set supported by the pinned external oscal-cli release.
 var rootKeyOrder = []string{
 	"catalog",
 	"profile",
@@ -63,6 +64,7 @@ var rootKeyOrder = []string{
 	"assessment-plan",
 	"assessment-results",
 	"plan-of-action-and-milestones",
+	"mapping-collection",
 }
 
 func main() {
@@ -230,6 +232,8 @@ func kindFromRootKey(rootKey string) (schemavalidate.ArtifactKind, error) {
 		return schemavalidate.KindAssessmentResults, nil
 	case "plan-of-action-and-milestones":
 		return schemavalidate.KindPOAM, nil
+	case "mapping-collection":
+		return schemavalidate.KindMapping, nil
 	default:
 		return schemavalidate.ArtifactKind{}, fmt.Errorf("no embedded schema for root key: %s", rootKey)
 	}
@@ -251,6 +255,8 @@ func kindToRootKey(name string) (string, bool) {
 		return "assessment-results", true
 	case "poam", "plan-of-action-and-milestones":
 		return "plan-of-action-and-milestones", true
+	case "mapping", "mapping-collection":
+		return "mapping-collection", true
 	}
 	return "", false
 }

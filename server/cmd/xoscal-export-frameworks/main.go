@@ -82,14 +82,17 @@ func run(manifestPath, outDir, dsn string) error {
 			return fmt.Errorf("export %s: %w", refID, err)
 		}
 		dir := filepath.Join(outDir, refID)
+		// #nosec G703 -- outDir is an explicit local destination selected by the CLI operator; refID comes from the trusted manifest.
 		if err := os.MkdirAll(dir, 0o750); err != nil {
 			return fmt.Errorf("mkdir %s: %w", dir, err)
 		}
 		catPath := filepath.Join(dir, "catalog.json")
+		// #nosec G703,G304,G306 -- catPath is beneath the explicit operator-selected output directory.
 		if err := os.WriteFile(catPath, data, 0o600); err != nil {
 			return fmt.Errorf("write %s: %w", catPath, err)
 		}
 		sum := sha256.Sum256(data)
+		// #nosec G703,G304,G306 -- the sidecar path is derived from the same bounded output path.
 		if err := os.WriteFile(catPath+".sha256", []byte("sha256:"+hex.EncodeToString(sum[:])+"\n"), 0o600); err != nil {
 			return fmt.Errorf("write sidecar: %w", err)
 		}

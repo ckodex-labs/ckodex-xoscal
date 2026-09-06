@@ -170,7 +170,11 @@ message ControlSelection {
   repeated oscal.common.v1.Property props = 4;
   repeated oscal.common.v1.Link links = 5;
   repeated oscal.common.v1.MarkupMultiline remarks = 6;
+  IncludeAll include_all = 7;
 }
+
+// IncludeAll is OSCAL's empty marker object for selecting every control.
+message IncludeAll {}
 
 // SelectedControl represents a selected control
 message SelectedControl {

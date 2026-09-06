@@ -160,11 +160,94 @@ nonisolated struct Oscal_Services_V1_ProjectEdgeResponse: Sendable {
   /// Clears the value of `edge`. Subsequent reads from it will return its default value.
   mutating func clearEdge() {self._edge = nil}
 
+  var projectionEvent: Oscal_Services_V1_GraphProjectionEvent {
+    get {_projectionEvent ?? Oscal_Services_V1_GraphProjectionEvent()}
+    set {_projectionEvent = newValue}
+  }
+  /// Returns true if `projectionEvent` has been explicitly set.
+  var hasProjectionEvent: Bool {self._projectionEvent != nil}
+  /// Clears the value of `projectionEvent`. Subsequent reads from it will return its default value.
+  mutating func clearProjectionEvent() {self._projectionEvent = nil}
+
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
   init() {}
 
   fileprivate var _edge: Oscal_Services_V1_GraphEdge? = nil
+  fileprivate var _projectionEvent: Oscal_Services_V1_GraphProjectionEvent? = nil
+}
+
+/// GraphProjectionEvent is an append-only, hash-chained audit record emitted
+/// in the same transaction as a successful edge projection.
+nonisolated struct Oscal_Services_V1_GraphProjectionEvent: Sendable {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var sequence: Int64 = 0
+
+  var eventID: String = String()
+
+  var edgeID: String = String()
+
+  var claimID: String = String()
+
+  var fromNode: String = String()
+
+  var toNode: String = String()
+
+  var relation: String = String()
+
+  var evidenceDigest: String = String()
+
+  var trustState: String = String()
+
+  var previousHash: String = String()
+
+  var eventHash: String = String()
+
+  var projectedAt: SwiftProtobuf.Google_Protobuf_Timestamp {
+    get {_projectedAt ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
+    set {_projectedAt = newValue}
+  }
+  /// Returns true if `projectedAt` has been explicitly set.
+  var hasProjectedAt: Bool {self._projectedAt != nil}
+  /// Clears the value of `projectedAt`. Subsequent reads from it will return its default value.
+  mutating func clearProjectedAt() {self._projectedAt = nil}
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+
+  fileprivate var _projectedAt: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
+}
+
+nonisolated struct Oscal_Services_V1_ListProjectionEventsRequest: Sendable {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var claimID: String = String()
+
+  var edgeID: String = String()
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
+nonisolated struct Oscal_Services_V1_ListProjectionEventsResponse: Sendable {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var events: [Oscal_Services_V1_GraphProjectionEvent] = []
+
+  var chainValid: Bool = false
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
 }
 
 nonisolated struct Oscal_Services_V1_GetEdgeRequest: Sendable {
@@ -856,7 +939,7 @@ nonisolated extension Oscal_Services_V1_ProjectEdgeRequest: SwiftProtobuf.Messag
 
 nonisolated extension Oscal_Services_V1_ProjectEdgeResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   static let protoMessageName: String = _protobuf_package + ".ProjectEdgeResponse"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}edge\0")
+  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}edge\0\u{3}projection_event\0")
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
@@ -865,6 +948,7 @@ nonisolated extension Oscal_Services_V1_ProjectEdgeResponse: SwiftProtobuf.Messa
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
       switch fieldNumber {
       case 1: try { try decoder.decodeSingularMessageField(value: &self._edge) }()
+      case 2: try { try decoder.decodeSingularMessageField(value: &self._projectionEvent) }()
       default: break
       }
     }
@@ -878,11 +962,174 @@ nonisolated extension Oscal_Services_V1_ProjectEdgeResponse: SwiftProtobuf.Messa
     try { if let v = self._edge {
       try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
     } }()
+    try { if let v = self._projectionEvent {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
+    } }()
     try unknownFields.traverse(visitor: &visitor)
   }
 
   static func ==(lhs: Oscal_Services_V1_ProjectEdgeResponse, rhs: Oscal_Services_V1_ProjectEdgeResponse) -> Bool {
     if lhs._edge != rhs._edge {return false}
+    if lhs._projectionEvent != rhs._projectionEvent {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+nonisolated extension Oscal_Services_V1_GraphProjectionEvent: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".GraphProjectionEvent"
+  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}sequence\0\u{3}event_id\0\u{3}edge_id\0\u{3}claim_id\0\u{3}from_node\0\u{3}to_node\0\u{1}relation\0\u{3}evidence_digest\0\u{3}trust_state\0\u{3}previous_hash\0\u{3}event_hash\0\u{3}projected_at\0")
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularInt64Field(value: &self.sequence) }()
+      case 2: try { try decoder.decodeSingularStringField(value: &self.eventID) }()
+      case 3: try { try decoder.decodeSingularStringField(value: &self.edgeID) }()
+      case 4: try { try decoder.decodeSingularStringField(value: &self.claimID) }()
+      case 5: try { try decoder.decodeSingularStringField(value: &self.fromNode) }()
+      case 6: try { try decoder.decodeSingularStringField(value: &self.toNode) }()
+      case 7: try { try decoder.decodeSingularStringField(value: &self.relation) }()
+      case 8: try { try decoder.decodeSingularStringField(value: &self.evidenceDigest) }()
+      case 9: try { try decoder.decodeSingularStringField(value: &self.trustState) }()
+      case 10: try { try decoder.decodeSingularStringField(value: &self.previousHash) }()
+      case 11: try { try decoder.decodeSingularStringField(value: &self.eventHash) }()
+      case 12: try { try decoder.decodeSingularMessageField(value: &self._projectedAt) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
+    if self.sequence != 0 {
+      try visitor.visitSingularInt64Field(value: self.sequence, fieldNumber: 1)
+    }
+    if !self.eventID.isEmpty {
+      try visitor.visitSingularStringField(value: self.eventID, fieldNumber: 2)
+    }
+    if !self.edgeID.isEmpty {
+      try visitor.visitSingularStringField(value: self.edgeID, fieldNumber: 3)
+    }
+    if !self.claimID.isEmpty {
+      try visitor.visitSingularStringField(value: self.claimID, fieldNumber: 4)
+    }
+    if !self.fromNode.isEmpty {
+      try visitor.visitSingularStringField(value: self.fromNode, fieldNumber: 5)
+    }
+    if !self.toNode.isEmpty {
+      try visitor.visitSingularStringField(value: self.toNode, fieldNumber: 6)
+    }
+    if !self.relation.isEmpty {
+      try visitor.visitSingularStringField(value: self.relation, fieldNumber: 7)
+    }
+    if !self.evidenceDigest.isEmpty {
+      try visitor.visitSingularStringField(value: self.evidenceDigest, fieldNumber: 8)
+    }
+    if !self.trustState.isEmpty {
+      try visitor.visitSingularStringField(value: self.trustState, fieldNumber: 9)
+    }
+    if !self.previousHash.isEmpty {
+      try visitor.visitSingularStringField(value: self.previousHash, fieldNumber: 10)
+    }
+    if !self.eventHash.isEmpty {
+      try visitor.visitSingularStringField(value: self.eventHash, fieldNumber: 11)
+    }
+    try { if let v = self._projectedAt {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 12)
+    } }()
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Oscal_Services_V1_GraphProjectionEvent, rhs: Oscal_Services_V1_GraphProjectionEvent) -> Bool {
+    if lhs.sequence != rhs.sequence {return false}
+    if lhs.eventID != rhs.eventID {return false}
+    if lhs.edgeID != rhs.edgeID {return false}
+    if lhs.claimID != rhs.claimID {return false}
+    if lhs.fromNode != rhs.fromNode {return false}
+    if lhs.toNode != rhs.toNode {return false}
+    if lhs.relation != rhs.relation {return false}
+    if lhs.evidenceDigest != rhs.evidenceDigest {return false}
+    if lhs.trustState != rhs.trustState {return false}
+    if lhs.previousHash != rhs.previousHash {return false}
+    if lhs.eventHash != rhs.eventHash {return false}
+    if lhs._projectedAt != rhs._projectedAt {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+nonisolated extension Oscal_Services_V1_ListProjectionEventsRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".ListProjectionEventsRequest"
+  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{3}claim_id\0\u{3}edge_id\0")
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularStringField(value: &self.claimID) }()
+      case 2: try { try decoder.decodeSingularStringField(value: &self.edgeID) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.claimID.isEmpty {
+      try visitor.visitSingularStringField(value: self.claimID, fieldNumber: 1)
+    }
+    if !self.edgeID.isEmpty {
+      try visitor.visitSingularStringField(value: self.edgeID, fieldNumber: 2)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Oscal_Services_V1_ListProjectionEventsRequest, rhs: Oscal_Services_V1_ListProjectionEventsRequest) -> Bool {
+    if lhs.claimID != rhs.claimID {return false}
+    if lhs.edgeID != rhs.edgeID {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+nonisolated extension Oscal_Services_V1_ListProjectionEventsResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".ListProjectionEventsResponse"
+  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}events\0\u{3}chain_valid\0")
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeRepeatedMessageField(value: &self.events) }()
+      case 2: try { try decoder.decodeSingularBoolField(value: &self.chainValid) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.events.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.events, fieldNumber: 1)
+    }
+    if self.chainValid != false {
+      try visitor.visitSingularBoolField(value: self.chainValid, fieldNumber: 2)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Oscal_Services_V1_ListProjectionEventsResponse, rhs: Oscal_Services_V1_ListProjectionEventsResponse) -> Bool {
+    if lhs.events != rhs.events {return false}
+    if lhs.chainValid != rhs.chainValid {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

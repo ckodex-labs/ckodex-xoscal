@@ -169,7 +169,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         id_ = s;
@@ -185,7 +185,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
         getIdBytes() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         id_ = b;
@@ -212,7 +212,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         kind_ = s;
@@ -232,7 +232,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
         getKindBytes() {
       java.lang.Object ref = kind_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         kind_ = b;
@@ -255,7 +255,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         urn_ = s;
@@ -271,7 +271,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
         getUrnBytes() {
       java.lang.Object ref = urn_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         urn_ = b;
@@ -298,7 +298,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         labelsJson_ = s;
@@ -318,7 +318,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
         getLabelsJsonBytes() {
       java.lang.Object ref = labelsJson_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         labelsJson_ = b;
@@ -794,7 +794,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
           getIdBytes() {
         java.lang.Object ref = id_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           id_ = b;
@@ -874,7 +874,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
           getKindBytes() {
         java.lang.Object ref = kind_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           kind_ = b;
@@ -958,7 +958,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
           getUrnBytes() {
         java.lang.Object ref = urn_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           urn_ = b;
@@ -1038,7 +1038,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
           getLabelsJsonBytes() {
         java.lang.Object ref = labelsJson_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           labelsJson_ = b;
@@ -1205,7 +1205,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
        * <code>.google.protobuf.Timestamp created_at = 5 [json_name = "createdAt"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>
           internalGetCreatedAtFieldBuilder() {
         if (createdAtBuilder_ == null) {
           createdAtBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -1482,7 +1482,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         id_ = s;
@@ -1498,7 +1498,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
         getIdBytes() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         id_ = b;
@@ -1521,7 +1521,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         fromNode_ = s;
@@ -1537,7 +1537,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
         getFromNodeBytes() {
       java.lang.Object ref = fromNode_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         fromNode_ = b;
@@ -1560,7 +1560,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         toNode_ = s;
@@ -1576,7 +1576,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
         getToNodeBytes() {
       java.lang.Object ref = toNode_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         toNode_ = b;
@@ -1599,7 +1599,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         relation_ = s;
@@ -1615,7 +1615,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
         getRelationBytes() {
       java.lang.Object ref = relation_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         relation_ = b;
@@ -1638,7 +1638,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         qualifier_ = s;
@@ -1654,7 +1654,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
         getQualifierBytes() {
       java.lang.Object ref = qualifier_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         qualifier_ = b;
@@ -1677,7 +1677,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         claimId_ = s;
@@ -1693,7 +1693,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
         getClaimIdBytes() {
       java.lang.Object ref = claimId_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         claimId_ = b;
@@ -1716,7 +1716,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         evidenceDigest_ = s;
@@ -1732,7 +1732,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
         getEvidenceDigestBytes() {
       java.lang.Object ref = evidenceDigest_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         evidenceDigest_ = b;
@@ -1807,7 +1807,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         trustState_ = s;
@@ -1823,7 +1823,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
         getTrustStateBytes() {
       java.lang.Object ref = trustState_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         trustState_ = b;
@@ -1857,7 +1857,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         extensionsJson_ = s;
@@ -1873,7 +1873,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
         getExtensionsJsonBytes() {
       java.lang.Object ref = extensionsJson_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         extensionsJson_ = b;
@@ -2506,7 +2506,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
           getIdBytes() {
         java.lang.Object ref = id_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           id_ = b;
@@ -2578,7 +2578,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
           getFromNodeBytes() {
         java.lang.Object ref = fromNode_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           fromNode_ = b;
@@ -2650,7 +2650,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
           getToNodeBytes() {
         java.lang.Object ref = toNode_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           toNode_ = b;
@@ -2722,7 +2722,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
           getRelationBytes() {
         java.lang.Object ref = relation_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           relation_ = b;
@@ -2794,7 +2794,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
           getQualifierBytes() {
         java.lang.Object ref = qualifier_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           qualifier_ = b;
@@ -2866,7 +2866,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
           getClaimIdBytes() {
         java.lang.Object ref = claimId_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           claimId_ = b;
@@ -2938,7 +2938,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
           getEvidenceDigestBytes() {
         java.lang.Object ref = evidenceDigest_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           evidenceDigest_ = b;
@@ -3093,7 +3093,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
        * <code>.oscal.services.v1.ProofState proof_state = 8 [json_name = "proofState"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.services.v1.TransparencyExchangeServiceOuterClass.ProofState, oscal.services.v1.TransparencyExchangeServiceOuterClass.ProofState.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.ProofStateOrBuilder> 
+          oscal.services.v1.TransparencyExchangeServiceOuterClass.ProofState, oscal.services.v1.TransparencyExchangeServiceOuterClass.ProofState.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.ProofStateOrBuilder>
           internalGetProofStateFieldBuilder() {
         if (proofStateBuilder_ == null) {
           proofStateBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -3214,7 +3214,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
        * <code>.oscal.services.v1.TimeWindow valid_time = 9 [json_name = "validTime"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.services.v1.TransparencyExchangeServiceOuterClass.TimeWindow, oscal.services.v1.TransparencyExchangeServiceOuterClass.TimeWindow.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.TimeWindowOrBuilder> 
+          oscal.services.v1.TransparencyExchangeServiceOuterClass.TimeWindow, oscal.services.v1.TransparencyExchangeServiceOuterClass.TimeWindow.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.TimeWindowOrBuilder>
           internalGetValidTimeFieldBuilder() {
         if (validTimeBuilder_ == null) {
           validTimeBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -3252,7 +3252,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
           getTrustStateBytes() {
         java.lang.Object ref = trustState_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           trustState_ = b;
@@ -3356,7 +3356,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
           getExtensionsJsonBytes() {
         java.lang.Object ref = extensionsJson_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           extensionsJson_ = b;
@@ -3547,7 +3547,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         claimId_ = s;
@@ -3563,7 +3563,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
         getClaimIdBytes() {
       java.lang.Object ref = claimId_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         claimId_ = b;
@@ -3590,7 +3590,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         edgeId_ = s;
@@ -3610,7 +3610,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
         getEdgeIdBytes() {
       java.lang.Object ref = edgeId_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         edgeId_ = b;
@@ -3967,7 +3967,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
           getClaimIdBytes() {
         java.lang.Object ref = claimId_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           claimId_ = b;
@@ -4047,7 +4047,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
           getEdgeIdBytes() {
         java.lang.Object ref = edgeId_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           edgeId_ = b;
@@ -4175,6 +4175,21 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
      * <code>.oscal.services.v1.GraphEdge edge = 1 [json_name = "edge"];</code>
      */
     oscal.services.v1.TransparencyGraphServiceOuterClass.GraphEdgeOrBuilder getEdgeOrBuilder();
+
+    /**
+     * <code>.oscal.services.v1.GraphProjectionEvent projection_event = 2 [json_name = "projectionEvent"];</code>
+     * @return Whether the projectionEvent field is set.
+     */
+    boolean hasProjectionEvent();
+    /**
+     * <code>.oscal.services.v1.GraphProjectionEvent projection_event = 2 [json_name = "projectionEvent"];</code>
+     * @return The projectionEvent.
+     */
+    oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent getProjectionEvent();
+    /**
+     * <code>.oscal.services.v1.GraphProjectionEvent projection_event = 2 [json_name = "projectionEvent"];</code>
+     */
+    oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEventOrBuilder getProjectionEventOrBuilder();
   }
   /**
    * Protobuf type {@code oscal.services.v1.ProjectEdgeResponse}
@@ -4245,6 +4260,32 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
       return edge_ == null ? oscal.services.v1.TransparencyGraphServiceOuterClass.GraphEdge.getDefaultInstance() : edge_;
     }
 
+    public static final int PROJECTION_EVENT_FIELD_NUMBER = 2;
+    private oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent projectionEvent_;
+    /**
+     * <code>.oscal.services.v1.GraphProjectionEvent projection_event = 2 [json_name = "projectionEvent"];</code>
+     * @return Whether the projectionEvent field is set.
+     */
+    @java.lang.Override
+    public boolean hasProjectionEvent() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>.oscal.services.v1.GraphProjectionEvent projection_event = 2 [json_name = "projectionEvent"];</code>
+     * @return The projectionEvent.
+     */
+    @java.lang.Override
+    public oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent getProjectionEvent() {
+      return projectionEvent_ == null ? oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent.getDefaultInstance() : projectionEvent_;
+    }
+    /**
+     * <code>.oscal.services.v1.GraphProjectionEvent projection_event = 2 [json_name = "projectionEvent"];</code>
+     */
+    @java.lang.Override
+    public oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEventOrBuilder getProjectionEventOrBuilder() {
+      return projectionEvent_ == null ? oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent.getDefaultInstance() : projectionEvent_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4262,6 +4303,9 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
       if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getEdge());
       }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeMessage(2, getProjectionEvent());
+      }
       getUnknownFields().writeTo(output);
     }
     private int computeSerializedSize_0() {
@@ -4269,6 +4313,10 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
       if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getEdge());
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getProjectionEvent());
       }
       return size;
     }
@@ -4299,6 +4347,11 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
         if (!getEdge()
             .equals(other.getEdge())) return false;
       }
+      if (hasProjectionEvent() != other.hasProjectionEvent()) return false;
+      if (hasProjectionEvent()) {
+        if (!getProjectionEvent()
+            .equals(other.getProjectionEvent())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -4313,6 +4366,10 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
       if (hasEdge()) {
         hash = (37 * hash) + EDGE_FIELD_NUMBER;
         hash = (53 * hash) + getEdge().hashCode();
+      }
+      if (hasProjectionEvent()) {
+        hash = (37 * hash) + PROJECTION_EVENT_FIELD_NUMBER;
+        hash = (53 * hash) + getProjectionEvent().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -4445,6 +4502,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
         if (com.google.protobuf.GeneratedMessage
                 .alwaysUseFieldBuilders) {
           internalGetEdgeFieldBuilder();
+          internalGetProjectionEventFieldBuilder();
         }
       }
       @java.lang.Override
@@ -4455,6 +4513,11 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
         if (edgeBuilder_ != null) {
           edgeBuilder_.dispose();
           edgeBuilder_ = null;
+        }
+        projectionEvent_ = null;
+        if (projectionEventBuilder_ != null) {
+          projectionEventBuilder_.dispose();
+          projectionEventBuilder_ = null;
         }
         return this;
       }
@@ -4496,6 +4559,12 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
               : edgeBuilder_.build();
           to_bitField0_ |= 0x00000001;
         }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.projectionEvent_ = projectionEventBuilder_ == null
+              ? projectionEvent_
+              : projectionEventBuilder_.build();
+          to_bitField0_ |= 0x00000002;
+        }
         result.bitField0_ |= to_bitField0_;
       }
 
@@ -4513,6 +4582,9 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
         if (other == oscal.services.v1.TransparencyGraphServiceOuterClass.ProjectEdgeResponse.getDefaultInstance()) return this;
         if (other.hasEdge()) {
           mergeEdge(other.getEdge());
+        }
+        if (other.hasProjectionEvent()) {
+          mergeProjectionEvent(other.getProjectionEvent());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -4547,6 +4619,13 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
                 bitField0_ |= 0x00000001;
                 break;
               } // case 10
+              case 18: {
+                input.readMessage(
+                    internalGetProjectionEventFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -4672,7 +4751,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
        * <code>.oscal.services.v1.GraphEdge edge = 1 [json_name = "edge"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.services.v1.TransparencyGraphServiceOuterClass.GraphEdge, oscal.services.v1.TransparencyGraphServiceOuterClass.GraphEdge.Builder, oscal.services.v1.TransparencyGraphServiceOuterClass.GraphEdgeOrBuilder> 
+          oscal.services.v1.TransparencyGraphServiceOuterClass.GraphEdge, oscal.services.v1.TransparencyGraphServiceOuterClass.GraphEdge.Builder, oscal.services.v1.TransparencyGraphServiceOuterClass.GraphEdgeOrBuilder>
           internalGetEdgeFieldBuilder() {
         if (edgeBuilder_ == null) {
           edgeBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -4683,6 +4762,127 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
           edge_ = null;
         }
         return edgeBuilder_;
+      }
+
+      private oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent projectionEvent_;
+      private com.google.protobuf.SingleFieldBuilder<
+          oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent, oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent.Builder, oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEventOrBuilder> projectionEventBuilder_;
+      /**
+       * <code>.oscal.services.v1.GraphProjectionEvent projection_event = 2 [json_name = "projectionEvent"];</code>
+       * @return Whether the projectionEvent field is set.
+       */
+      public boolean hasProjectionEvent() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.oscal.services.v1.GraphProjectionEvent projection_event = 2 [json_name = "projectionEvent"];</code>
+       * @return The projectionEvent.
+       */
+      public oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent getProjectionEvent() {
+        if (projectionEventBuilder_ == null) {
+          return projectionEvent_ == null ? oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent.getDefaultInstance() : projectionEvent_;
+        } else {
+          return projectionEventBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.oscal.services.v1.GraphProjectionEvent projection_event = 2 [json_name = "projectionEvent"];</code>
+       */
+      public Builder setProjectionEvent(oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent value) {
+        if (projectionEventBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          projectionEvent_ = value;
+        } else {
+          projectionEventBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.services.v1.GraphProjectionEvent projection_event = 2 [json_name = "projectionEvent"];</code>
+       */
+      public Builder setProjectionEvent(
+          oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent.Builder builderForValue) {
+        if (projectionEventBuilder_ == null) {
+          projectionEvent_ = builderForValue.build();
+        } else {
+          projectionEventBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.services.v1.GraphProjectionEvent projection_event = 2 [json_name = "projectionEvent"];</code>
+       */
+      public Builder mergeProjectionEvent(oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent value) {
+        if (projectionEventBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            projectionEvent_ != null &&
+            projectionEvent_ != oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent.getDefaultInstance()) {
+            getProjectionEventBuilder().mergeFrom(value);
+          } else {
+            projectionEvent_ = value;
+          }
+        } else {
+          projectionEventBuilder_.mergeFrom(value);
+        }
+        if (projectionEvent_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>.oscal.services.v1.GraphProjectionEvent projection_event = 2 [json_name = "projectionEvent"];</code>
+       */
+      public Builder clearProjectionEvent() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        projectionEvent_ = null;
+        if (projectionEventBuilder_ != null) {
+          projectionEventBuilder_.dispose();
+          projectionEventBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.services.v1.GraphProjectionEvent projection_event = 2 [json_name = "projectionEvent"];</code>
+       */
+      public oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent.Builder getProjectionEventBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return internalGetProjectionEventFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.oscal.services.v1.GraphProjectionEvent projection_event = 2 [json_name = "projectionEvent"];</code>
+       */
+      public oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEventOrBuilder getProjectionEventOrBuilder() {
+        if (projectionEventBuilder_ != null) {
+          return projectionEventBuilder_.getMessageOrBuilder();
+        } else {
+          return projectionEvent_ == null ?
+              oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent.getDefaultInstance() : projectionEvent_;
+        }
+      }
+      /**
+       * <code>.oscal.services.v1.GraphProjectionEvent projection_event = 2 [json_name = "projectionEvent"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent, oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent.Builder, oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEventOrBuilder>
+          internalGetProjectionEventFieldBuilder() {
+        if (projectionEventBuilder_ == null) {
+          projectionEventBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent, oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent.Builder, oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEventOrBuilder>(
+                  getProjectionEvent(),
+                  getParentForChildren(),
+                  isClean());
+          projectionEvent_ = null;
+        }
+        return projectionEventBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:oscal.services.v1.ProjectEdgeResponse)
@@ -4731,6 +4931,3642 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
 
     @java.lang.Override
     public oscal.services.v1.TransparencyGraphServiceOuterClass.ProjectEdgeResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GraphProjectionEventOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oscal.services.v1.GraphProjectionEvent)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int64 sequence = 1 [json_name = "sequence"];</code>
+     * @return The sequence.
+     */
+    long getSequence();
+
+    /**
+     * <code>string event_id = 2 [json_name = "eventId"];</code>
+     * @return The eventId.
+     */
+    java.lang.String getEventId();
+    /**
+     * <code>string event_id = 2 [json_name = "eventId"];</code>
+     * @return The bytes for eventId.
+     */
+    com.google.protobuf.ByteString
+        getEventIdBytes();
+
+    /**
+     * <code>string edge_id = 3 [json_name = "edgeId"];</code>
+     * @return The edgeId.
+     */
+    java.lang.String getEdgeId();
+    /**
+     * <code>string edge_id = 3 [json_name = "edgeId"];</code>
+     * @return The bytes for edgeId.
+     */
+    com.google.protobuf.ByteString
+        getEdgeIdBytes();
+
+    /**
+     * <code>string claim_id = 4 [json_name = "claimId"];</code>
+     * @return The claimId.
+     */
+    java.lang.String getClaimId();
+    /**
+     * <code>string claim_id = 4 [json_name = "claimId"];</code>
+     * @return The bytes for claimId.
+     */
+    com.google.protobuf.ByteString
+        getClaimIdBytes();
+
+    /**
+     * <code>string from_node = 5 [json_name = "fromNode"];</code>
+     * @return The fromNode.
+     */
+    java.lang.String getFromNode();
+    /**
+     * <code>string from_node = 5 [json_name = "fromNode"];</code>
+     * @return The bytes for fromNode.
+     */
+    com.google.protobuf.ByteString
+        getFromNodeBytes();
+
+    /**
+     * <code>string to_node = 6 [json_name = "toNode"];</code>
+     * @return The toNode.
+     */
+    java.lang.String getToNode();
+    /**
+     * <code>string to_node = 6 [json_name = "toNode"];</code>
+     * @return The bytes for toNode.
+     */
+    com.google.protobuf.ByteString
+        getToNodeBytes();
+
+    /**
+     * <code>string relation = 7 [json_name = "relation"];</code>
+     * @return The relation.
+     */
+    java.lang.String getRelation();
+    /**
+     * <code>string relation = 7 [json_name = "relation"];</code>
+     * @return The bytes for relation.
+     */
+    com.google.protobuf.ByteString
+        getRelationBytes();
+
+    /**
+     * <code>string evidence_digest = 8 [json_name = "evidenceDigest"];</code>
+     * @return The evidenceDigest.
+     */
+    java.lang.String getEvidenceDigest();
+    /**
+     * <code>string evidence_digest = 8 [json_name = "evidenceDigest"];</code>
+     * @return The bytes for evidenceDigest.
+     */
+    com.google.protobuf.ByteString
+        getEvidenceDigestBytes();
+
+    /**
+     * <code>string trust_state = 9 [json_name = "trustState"];</code>
+     * @return The trustState.
+     */
+    java.lang.String getTrustState();
+    /**
+     * <code>string trust_state = 9 [json_name = "trustState"];</code>
+     * @return The bytes for trustState.
+     */
+    com.google.protobuf.ByteString
+        getTrustStateBytes();
+
+    /**
+     * <code>string previous_hash = 10 [json_name = "previousHash"];</code>
+     * @return The previousHash.
+     */
+    java.lang.String getPreviousHash();
+    /**
+     * <code>string previous_hash = 10 [json_name = "previousHash"];</code>
+     * @return The bytes for previousHash.
+     */
+    com.google.protobuf.ByteString
+        getPreviousHashBytes();
+
+    /**
+     * <code>string event_hash = 11 [json_name = "eventHash"];</code>
+     * @return The eventHash.
+     */
+    java.lang.String getEventHash();
+    /**
+     * <code>string event_hash = 11 [json_name = "eventHash"];</code>
+     * @return The bytes for eventHash.
+     */
+    com.google.protobuf.ByteString
+        getEventHashBytes();
+
+    /**
+     * <code>.google.protobuf.Timestamp projected_at = 12 [json_name = "projectedAt"];</code>
+     * @return Whether the projectedAt field is set.
+     */
+    boolean hasProjectedAt();
+    /**
+     * <code>.google.protobuf.Timestamp projected_at = 12 [json_name = "projectedAt"];</code>
+     * @return The projectedAt.
+     */
+    com.google.protobuf.Timestamp getProjectedAt();
+    /**
+     * <code>.google.protobuf.Timestamp projected_at = 12 [json_name = "projectedAt"];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getProjectedAtOrBuilder();
+  }
+  /**
+   * <pre>
+   * GraphProjectionEvent is an append-only, hash-chained audit record emitted
+   * in the same transaction as a successful edge projection.
+   * </pre>
+   *
+   * Protobuf type {@code oscal.services.v1.GraphProjectionEvent}
+   */
+  public static final class GraphProjectionEvent extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:oscal.services.v1.GraphProjectionEvent)
+      GraphProjectionEventOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 35,
+        /* patch= */ 1,
+        /* suffix= */ "",
+        "GraphProjectionEvent");
+    }
+    // Use GraphProjectionEvent.newBuilder() to construct.
+    private GraphProjectionEvent(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private GraphProjectionEvent() {
+      eventId_ = "";
+      edgeId_ = "";
+      claimId_ = "";
+      fromNode_ = "";
+      toNode_ = "";
+      relation_ = "";
+      evidenceDigest_ = "";
+      trustState_ = "";
+      previousHash_ = "";
+      eventHash_ = "";
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return oscal.services.v1.TransparencyGraphServiceOuterClass.internal_static_oscal_services_v1_GraphProjectionEvent_descriptor;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+      return oscal.services.v1.TransparencyGraphServiceOuterClass.internal_static_oscal_services_v1_GraphProjectionEvent_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return oscal.services.v1.TransparencyGraphServiceOuterClass.internal_static_oscal_services_v1_GraphProjectionEvent_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent.class, oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int SEQUENCE_FIELD_NUMBER = 1;
+    private long sequence_ = 0L;
+    /**
+     * <code>int64 sequence = 1 [json_name = "sequence"];</code>
+     * @return The sequence.
+     */
+    @java.lang.Override
+    public long getSequence() {
+      return sequence_;
+    }
+
+    public static final int EVENT_ID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object eventId_ = "";
+    /**
+     * <code>string event_id = 2 [json_name = "eventId"];</code>
+     * @return The eventId.
+     */
+    @java.lang.Override
+    public java.lang.String getEventId() {
+      java.lang.Object ref = eventId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        eventId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string event_id = 2 [json_name = "eventId"];</code>
+     * @return The bytes for eventId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEventIdBytes() {
+      java.lang.Object ref = eventId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        eventId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int EDGE_ID_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object edgeId_ = "";
+    /**
+     * <code>string edge_id = 3 [json_name = "edgeId"];</code>
+     * @return The edgeId.
+     */
+    @java.lang.Override
+    public java.lang.String getEdgeId() {
+      java.lang.Object ref = edgeId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        edgeId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string edge_id = 3 [json_name = "edgeId"];</code>
+     * @return The bytes for edgeId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEdgeIdBytes() {
+      java.lang.Object ref = edgeId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        edgeId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CLAIM_ID_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object claimId_ = "";
+    /**
+     * <code>string claim_id = 4 [json_name = "claimId"];</code>
+     * @return The claimId.
+     */
+    @java.lang.Override
+    public java.lang.String getClaimId() {
+      java.lang.Object ref = claimId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        claimId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string claim_id = 4 [json_name = "claimId"];</code>
+     * @return The bytes for claimId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClaimIdBytes() {
+      java.lang.Object ref = claimId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        claimId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FROM_NODE_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object fromNode_ = "";
+    /**
+     * <code>string from_node = 5 [json_name = "fromNode"];</code>
+     * @return The fromNode.
+     */
+    @java.lang.Override
+    public java.lang.String getFromNode() {
+      java.lang.Object ref = fromNode_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        fromNode_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string from_node = 5 [json_name = "fromNode"];</code>
+     * @return The bytes for fromNode.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFromNodeBytes() {
+      java.lang.Object ref = fromNode_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        fromNode_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TO_NODE_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object toNode_ = "";
+    /**
+     * <code>string to_node = 6 [json_name = "toNode"];</code>
+     * @return The toNode.
+     */
+    @java.lang.Override
+    public java.lang.String getToNode() {
+      java.lang.Object ref = toNode_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        toNode_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string to_node = 6 [json_name = "toNode"];</code>
+     * @return The bytes for toNode.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getToNodeBytes() {
+      java.lang.Object ref = toNode_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        toNode_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RELATION_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object relation_ = "";
+    /**
+     * <code>string relation = 7 [json_name = "relation"];</code>
+     * @return The relation.
+     */
+    @java.lang.Override
+    public java.lang.String getRelation() {
+      java.lang.Object ref = relation_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        relation_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string relation = 7 [json_name = "relation"];</code>
+     * @return The bytes for relation.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRelationBytes() {
+      java.lang.Object ref = relation_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        relation_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int EVIDENCE_DIGEST_FIELD_NUMBER = 8;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object evidenceDigest_ = "";
+    /**
+     * <code>string evidence_digest = 8 [json_name = "evidenceDigest"];</code>
+     * @return The evidenceDigest.
+     */
+    @java.lang.Override
+    public java.lang.String getEvidenceDigest() {
+      java.lang.Object ref = evidenceDigest_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        evidenceDigest_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string evidence_digest = 8 [json_name = "evidenceDigest"];</code>
+     * @return The bytes for evidenceDigest.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEvidenceDigestBytes() {
+      java.lang.Object ref = evidenceDigest_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        evidenceDigest_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TRUST_STATE_FIELD_NUMBER = 9;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object trustState_ = "";
+    /**
+     * <code>string trust_state = 9 [json_name = "trustState"];</code>
+     * @return The trustState.
+     */
+    @java.lang.Override
+    public java.lang.String getTrustState() {
+      java.lang.Object ref = trustState_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        trustState_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string trust_state = 9 [json_name = "trustState"];</code>
+     * @return The bytes for trustState.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTrustStateBytes() {
+      java.lang.Object ref = trustState_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        trustState_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PREVIOUS_HASH_FIELD_NUMBER = 10;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object previousHash_ = "";
+    /**
+     * <code>string previous_hash = 10 [json_name = "previousHash"];</code>
+     * @return The previousHash.
+     */
+    @java.lang.Override
+    public java.lang.String getPreviousHash() {
+      java.lang.Object ref = previousHash_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        previousHash_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string previous_hash = 10 [json_name = "previousHash"];</code>
+     * @return The bytes for previousHash.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPreviousHashBytes() {
+      java.lang.Object ref = previousHash_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        previousHash_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int EVENT_HASH_FIELD_NUMBER = 11;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object eventHash_ = "";
+    /**
+     * <code>string event_hash = 11 [json_name = "eventHash"];</code>
+     * @return The eventHash.
+     */
+    @java.lang.Override
+    public java.lang.String getEventHash() {
+      java.lang.Object ref = eventHash_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        eventHash_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string event_hash = 11 [json_name = "eventHash"];</code>
+     * @return The bytes for eventHash.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEventHashBytes() {
+      java.lang.Object ref = eventHash_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        eventHash_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PROJECTED_AT_FIELD_NUMBER = 12;
+    private com.google.protobuf.Timestamp projectedAt_;
+    /**
+     * <code>.google.protobuf.Timestamp projected_at = 12 [json_name = "projectedAt"];</code>
+     * @return Whether the projectedAt field is set.
+     */
+    @java.lang.Override
+    public boolean hasProjectedAt() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.google.protobuf.Timestamp projected_at = 12 [json_name = "projectedAt"];</code>
+     * @return The projectedAt.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getProjectedAt() {
+      return projectedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : projectedAt_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp projected_at = 12 [json_name = "projectedAt"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getProjectedAtOrBuilder() {
+      return projectedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : projectedAt_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (sequence_ != 0L) {
+        output.writeInt64(1, sequence_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(eventId_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, eventId_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(edgeId_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 3, edgeId_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(claimId_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 4, claimId_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(fromNode_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 5, fromNode_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(toNode_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 6, toNode_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(relation_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 7, relation_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(evidenceDigest_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 8, evidenceDigest_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(trustState_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 9, trustState_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(previousHash_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 10, previousHash_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(eventHash_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 11, eventHash_);
+      }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeMessage(12, getProjectedAt());
+      }
+      getUnknownFields().writeTo(output);
+    }
+    private int computeSerializedSize_0() {
+      int size = 0;
+      if (sequence_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, sequence_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(eventId_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, eventId_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(edgeId_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(3, edgeId_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(claimId_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(4, claimId_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(fromNode_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(5, fromNode_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(toNode_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(6, toNode_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(relation_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(7, relation_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(evidenceDigest_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(8, evidenceDigest_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(trustState_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(9, trustState_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(previousHash_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(10, previousHash_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(eventHash_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(11, eventHash_);
+      }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(12, getProjectedAt());
+      }
+      return size;
+    }
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += computeSerializedSize_0();
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent)) {
+        return super.equals(obj);
+      }
+      oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent other = (oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent) obj;
+
+      if (getSequence()
+          != other.getSequence()) return false;
+      if (!getEventId()
+          .equals(other.getEventId())) return false;
+      if (!getEdgeId()
+          .equals(other.getEdgeId())) return false;
+      if (!getClaimId()
+          .equals(other.getClaimId())) return false;
+      if (!getFromNode()
+          .equals(other.getFromNode())) return false;
+      if (!getToNode()
+          .equals(other.getToNode())) return false;
+      if (!getRelation()
+          .equals(other.getRelation())) return false;
+      if (!getEvidenceDigest()
+          .equals(other.getEvidenceDigest())) return false;
+      if (!getTrustState()
+          .equals(other.getTrustState())) return false;
+      if (!getPreviousHash()
+          .equals(other.getPreviousHash())) return false;
+      if (!getEventHash()
+          .equals(other.getEventHash())) return false;
+      if (hasProjectedAt() != other.hasProjectedAt()) return false;
+      if (hasProjectedAt()) {
+        if (!getProjectedAt()
+            .equals(other.getProjectedAt())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SEQUENCE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getSequence());
+      hash = (37 * hash) + EVENT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getEventId().hashCode();
+      hash = (37 * hash) + EDGE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getEdgeId().hashCode();
+      hash = (37 * hash) + CLAIM_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClaimId().hashCode();
+      hash = (37 * hash) + FROM_NODE_FIELD_NUMBER;
+      hash = (53 * hash) + getFromNode().hashCode();
+      hash = (37 * hash) + TO_NODE_FIELD_NUMBER;
+      hash = (53 * hash) + getToNode().hashCode();
+      hash = (37 * hash) + RELATION_FIELD_NUMBER;
+      hash = (53 * hash) + getRelation().hashCode();
+      hash = (37 * hash) + EVIDENCE_DIGEST_FIELD_NUMBER;
+      hash = (53 * hash) + getEvidenceDigest().hashCode();
+      hash = (37 * hash) + TRUST_STATE_FIELD_NUMBER;
+      hash = (53 * hash) + getTrustState().hashCode();
+      hash = (37 * hash) + PREVIOUS_HASH_FIELD_NUMBER;
+      hash = (53 * hash) + getPreviousHash().hashCode();
+      hash = (37 * hash) + EVENT_HASH_FIELD_NUMBER;
+      hash = (53 * hash) + getEventHash().hashCode();
+      if (hasProjectedAt()) {
+        hash = (37 * hash) + PROJECTED_AT_FIELD_NUMBER;
+        hash = (53 * hash) + getProjectedAt().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GraphProjectionEvent is an append-only, hash-chained audit record emitted
+     * in the same transaction as a successful edge projection.
+     * </pre>
+     *
+     * Protobuf type {@code oscal.services.v1.GraphProjectionEvent}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oscal.services.v1.GraphProjectionEvent)
+        oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEventOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return oscal.services.v1.TransparencyGraphServiceOuterClass.internal_static_oscal_services_v1_GraphProjectionEvent_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return oscal.services.v1.TransparencyGraphServiceOuterClass.internal_static_oscal_services_v1_GraphProjectionEvent_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent.class, oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent.Builder.class);
+      }
+
+      // Construct using oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage
+                .alwaysUseFieldBuilders) {
+          internalGetProjectedAtFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        sequence_ = 0L;
+        eventId_ = "";
+        edgeId_ = "";
+        claimId_ = "";
+        fromNode_ = "";
+        toNode_ = "";
+        relation_ = "";
+        evidenceDigest_ = "";
+        trustState_ = "";
+        previousHash_ = "";
+        eventHash_ = "";
+        projectedAt_ = null;
+        if (projectedAtBuilder_ != null) {
+          projectedAtBuilder_.dispose();
+          projectedAtBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return oscal.services.v1.TransparencyGraphServiceOuterClass.internal_static_oscal_services_v1_GraphProjectionEvent_descriptor;
+      }
+
+      @java.lang.Override
+      public oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent getDefaultInstanceForType() {
+        return oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent build() {
+        oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent buildPartial() {
+        oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent result = new oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.sequence_ = sequence_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.eventId_ = eventId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.edgeId_ = edgeId_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.claimId_ = claimId_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.fromNode_ = fromNode_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.toNode_ = toNode_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.relation_ = relation_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.evidenceDigest_ = evidenceDigest_;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.trustState_ = trustState_;
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.previousHash_ = previousHash_;
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.eventHash_ = eventHash_;
+        }
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000800) != 0)) {
+          result.projectedAt_ = projectedAtBuilder_ == null
+              ? projectedAt_
+              : projectedAtBuilder_.build();
+          to_bitField0_ |= 0x00000001;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent) {
+          return mergeFrom((oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent other) {
+        if (other == oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent.getDefaultInstance()) return this;
+        if (other.getSequence() != 0L) {
+          setSequence(other.getSequence());
+        }
+        if (!other.getEventId().isEmpty()) {
+          eventId_ = other.eventId_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getEdgeId().isEmpty()) {
+          edgeId_ = other.edgeId_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getClaimId().isEmpty()) {
+          claimId_ = other.claimId_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getFromNode().isEmpty()) {
+          fromNode_ = other.fromNode_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (!other.getToNode().isEmpty()) {
+          toNode_ = other.toNode_;
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        if (!other.getRelation().isEmpty()) {
+          relation_ = other.relation_;
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
+        if (!other.getEvidenceDigest().isEmpty()) {
+          evidenceDigest_ = other.evidenceDigest_;
+          bitField0_ |= 0x00000080;
+          onChanged();
+        }
+        if (!other.getTrustState().isEmpty()) {
+          trustState_ = other.trustState_;
+          bitField0_ |= 0x00000100;
+          onChanged();
+        }
+        if (!other.getPreviousHash().isEmpty()) {
+          previousHash_ = other.previousHash_;
+          bitField0_ |= 0x00000200;
+          onChanged();
+        }
+        if (!other.getEventHash().isEmpty()) {
+          eventHash_ = other.eventHash_;
+          bitField0_ |= 0x00000400;
+          onChanged();
+        }
+        if (other.hasProjectedAt()) {
+          mergeProjectedAt(other.getProjectedAt());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                sequence_ = input.readInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                eventId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                edgeId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                claimId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                fromNode_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                toNode_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                relation_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              case 66: {
+                evidenceDigest_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 66
+              case 74: {
+                trustState_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 74
+              case 82: {
+                previousHash_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000200;
+                break;
+              } // case 82
+              case 90: {
+                eventHash_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000400;
+                break;
+              } // case 90
+              case 98: {
+                input.readMessage(
+                    internalGetProjectedAtFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000800;
+                break;
+              } // case 98
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long sequence_ ;
+      /**
+       * <code>int64 sequence = 1 [json_name = "sequence"];</code>
+       * @return The sequence.
+       */
+      @java.lang.Override
+      public long getSequence() {
+        return sequence_;
+      }
+      /**
+       * <code>int64 sequence = 1 [json_name = "sequence"];</code>
+       * @param value The sequence to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSequence(long value) {
+
+        sequence_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 sequence = 1 [json_name = "sequence"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSequence() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        sequence_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object eventId_ = "";
+      /**
+       * <code>string event_id = 2 [json_name = "eventId"];</code>
+       * @return The eventId.
+       */
+      public java.lang.String getEventId() {
+        java.lang.Object ref = eventId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          eventId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string event_id = 2 [json_name = "eventId"];</code>
+       * @return The bytes for eventId.
+       */
+      public com.google.protobuf.ByteString
+          getEventIdBytes() {
+        java.lang.Object ref = eventId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          eventId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string event_id = 2 [json_name = "eventId"];</code>
+       * @param value The eventId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEventId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        eventId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string event_id = 2 [json_name = "eventId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEventId() {
+        eventId_ = getDefaultInstance().getEventId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string event_id = 2 [json_name = "eventId"];</code>
+       * @param value The bytes for eventId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEventIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        eventId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object edgeId_ = "";
+      /**
+       * <code>string edge_id = 3 [json_name = "edgeId"];</code>
+       * @return The edgeId.
+       */
+      public java.lang.String getEdgeId() {
+        java.lang.Object ref = edgeId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          edgeId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string edge_id = 3 [json_name = "edgeId"];</code>
+       * @return The bytes for edgeId.
+       */
+      public com.google.protobuf.ByteString
+          getEdgeIdBytes() {
+        java.lang.Object ref = edgeId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          edgeId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string edge_id = 3 [json_name = "edgeId"];</code>
+       * @param value The edgeId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEdgeId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        edgeId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string edge_id = 3 [json_name = "edgeId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEdgeId() {
+        edgeId_ = getDefaultInstance().getEdgeId();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string edge_id = 3 [json_name = "edgeId"];</code>
+       * @param value The bytes for edgeId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEdgeIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        edgeId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object claimId_ = "";
+      /**
+       * <code>string claim_id = 4 [json_name = "claimId"];</code>
+       * @return The claimId.
+       */
+      public java.lang.String getClaimId() {
+        java.lang.Object ref = claimId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          claimId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string claim_id = 4 [json_name = "claimId"];</code>
+       * @return The bytes for claimId.
+       */
+      public com.google.protobuf.ByteString
+          getClaimIdBytes() {
+        java.lang.Object ref = claimId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          claimId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string claim_id = 4 [json_name = "claimId"];</code>
+       * @param value The claimId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClaimId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        claimId_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string claim_id = 4 [json_name = "claimId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClaimId() {
+        claimId_ = getDefaultInstance().getClaimId();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string claim_id = 4 [json_name = "claimId"];</code>
+       * @param value The bytes for claimId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClaimIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        claimId_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object fromNode_ = "";
+      /**
+       * <code>string from_node = 5 [json_name = "fromNode"];</code>
+       * @return The fromNode.
+       */
+      public java.lang.String getFromNode() {
+        java.lang.Object ref = fromNode_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          fromNode_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string from_node = 5 [json_name = "fromNode"];</code>
+       * @return The bytes for fromNode.
+       */
+      public com.google.protobuf.ByteString
+          getFromNodeBytes() {
+        java.lang.Object ref = fromNode_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          fromNode_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string from_node = 5 [json_name = "fromNode"];</code>
+       * @param value The fromNode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFromNode(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        fromNode_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string from_node = 5 [json_name = "fromNode"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFromNode() {
+        fromNode_ = getDefaultInstance().getFromNode();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string from_node = 5 [json_name = "fromNode"];</code>
+       * @param value The bytes for fromNode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFromNodeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        fromNode_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object toNode_ = "";
+      /**
+       * <code>string to_node = 6 [json_name = "toNode"];</code>
+       * @return The toNode.
+       */
+      public java.lang.String getToNode() {
+        java.lang.Object ref = toNode_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          toNode_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string to_node = 6 [json_name = "toNode"];</code>
+       * @return The bytes for toNode.
+       */
+      public com.google.protobuf.ByteString
+          getToNodeBytes() {
+        java.lang.Object ref = toNode_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          toNode_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string to_node = 6 [json_name = "toNode"];</code>
+       * @param value The toNode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setToNode(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        toNode_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string to_node = 6 [json_name = "toNode"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearToNode() {
+        toNode_ = getDefaultInstance().getToNode();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string to_node = 6 [json_name = "toNode"];</code>
+       * @param value The bytes for toNode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setToNodeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        toNode_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object relation_ = "";
+      /**
+       * <code>string relation = 7 [json_name = "relation"];</code>
+       * @return The relation.
+       */
+      public java.lang.String getRelation() {
+        java.lang.Object ref = relation_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          relation_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string relation = 7 [json_name = "relation"];</code>
+       * @return The bytes for relation.
+       */
+      public com.google.protobuf.ByteString
+          getRelationBytes() {
+        java.lang.Object ref = relation_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          relation_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string relation = 7 [json_name = "relation"];</code>
+       * @param value The relation to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRelation(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        relation_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string relation = 7 [json_name = "relation"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRelation() {
+        relation_ = getDefaultInstance().getRelation();
+        bitField0_ = (bitField0_ & ~0x00000040);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string relation = 7 [json_name = "relation"];</code>
+       * @param value The bytes for relation to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRelationBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        relation_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object evidenceDigest_ = "";
+      /**
+       * <code>string evidence_digest = 8 [json_name = "evidenceDigest"];</code>
+       * @return The evidenceDigest.
+       */
+      public java.lang.String getEvidenceDigest() {
+        java.lang.Object ref = evidenceDigest_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          evidenceDigest_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string evidence_digest = 8 [json_name = "evidenceDigest"];</code>
+       * @return The bytes for evidenceDigest.
+       */
+      public com.google.protobuf.ByteString
+          getEvidenceDigestBytes() {
+        java.lang.Object ref = evidenceDigest_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          evidenceDigest_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string evidence_digest = 8 [json_name = "evidenceDigest"];</code>
+       * @param value The evidenceDigest to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEvidenceDigest(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        evidenceDigest_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string evidence_digest = 8 [json_name = "evidenceDigest"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEvidenceDigest() {
+        evidenceDigest_ = getDefaultInstance().getEvidenceDigest();
+        bitField0_ = (bitField0_ & ~0x00000080);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string evidence_digest = 8 [json_name = "evidenceDigest"];</code>
+       * @param value The bytes for evidenceDigest to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEvidenceDigestBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        evidenceDigest_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object trustState_ = "";
+      /**
+       * <code>string trust_state = 9 [json_name = "trustState"];</code>
+       * @return The trustState.
+       */
+      public java.lang.String getTrustState() {
+        java.lang.Object ref = trustState_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          trustState_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string trust_state = 9 [json_name = "trustState"];</code>
+       * @return The bytes for trustState.
+       */
+      public com.google.protobuf.ByteString
+          getTrustStateBytes() {
+        java.lang.Object ref = trustState_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          trustState_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string trust_state = 9 [json_name = "trustState"];</code>
+       * @param value The trustState to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTrustState(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        trustState_ = value;
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string trust_state = 9 [json_name = "trustState"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTrustState() {
+        trustState_ = getDefaultInstance().getTrustState();
+        bitField0_ = (bitField0_ & ~0x00000100);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string trust_state = 9 [json_name = "trustState"];</code>
+       * @param value The bytes for trustState to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTrustStateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        trustState_ = value;
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object previousHash_ = "";
+      /**
+       * <code>string previous_hash = 10 [json_name = "previousHash"];</code>
+       * @return The previousHash.
+       */
+      public java.lang.String getPreviousHash() {
+        java.lang.Object ref = previousHash_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          previousHash_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string previous_hash = 10 [json_name = "previousHash"];</code>
+       * @return The bytes for previousHash.
+       */
+      public com.google.protobuf.ByteString
+          getPreviousHashBytes() {
+        java.lang.Object ref = previousHash_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          previousHash_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string previous_hash = 10 [json_name = "previousHash"];</code>
+       * @param value The previousHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPreviousHash(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        previousHash_ = value;
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string previous_hash = 10 [json_name = "previousHash"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPreviousHash() {
+        previousHash_ = getDefaultInstance().getPreviousHash();
+        bitField0_ = (bitField0_ & ~0x00000200);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string previous_hash = 10 [json_name = "previousHash"];</code>
+       * @param value The bytes for previousHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPreviousHashBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        previousHash_ = value;
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object eventHash_ = "";
+      /**
+       * <code>string event_hash = 11 [json_name = "eventHash"];</code>
+       * @return The eventHash.
+       */
+      public java.lang.String getEventHash() {
+        java.lang.Object ref = eventHash_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          eventHash_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string event_hash = 11 [json_name = "eventHash"];</code>
+       * @return The bytes for eventHash.
+       */
+      public com.google.protobuf.ByteString
+          getEventHashBytes() {
+        java.lang.Object ref = eventHash_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          eventHash_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string event_hash = 11 [json_name = "eventHash"];</code>
+       * @param value The eventHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEventHash(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        eventHash_ = value;
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string event_hash = 11 [json_name = "eventHash"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEventHash() {
+        eventHash_ = getDefaultInstance().getEventHash();
+        bitField0_ = (bitField0_ & ~0x00000400);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string event_hash = 11 [json_name = "eventHash"];</code>
+       * @param value The bytes for eventHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEventHashBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        eventHash_ = value;
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp projectedAt_;
+      private com.google.protobuf.SingleFieldBuilder<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> projectedAtBuilder_;
+      /**
+       * <code>.google.protobuf.Timestamp projected_at = 12 [json_name = "projectedAt"];</code>
+       * @return Whether the projectedAt field is set.
+       */
+      public boolean hasProjectedAt() {
+        return ((bitField0_ & 0x00000800) != 0);
+      }
+      /**
+       * <code>.google.protobuf.Timestamp projected_at = 12 [json_name = "projectedAt"];</code>
+       * @return The projectedAt.
+       */
+      public com.google.protobuf.Timestamp getProjectedAt() {
+        if (projectedAtBuilder_ == null) {
+          return projectedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : projectedAt_;
+        } else {
+          return projectedAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp projected_at = 12 [json_name = "projectedAt"];</code>
+       */
+      public Builder setProjectedAt(com.google.protobuf.Timestamp value) {
+        if (projectedAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          projectedAt_ = value;
+        } else {
+          projectedAtBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000800;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp projected_at = 12 [json_name = "projectedAt"];</code>
+       */
+      public Builder setProjectedAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (projectedAtBuilder_ == null) {
+          projectedAt_ = builderForValue.build();
+        } else {
+          projectedAtBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000800;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp projected_at = 12 [json_name = "projectedAt"];</code>
+       */
+      public Builder mergeProjectedAt(com.google.protobuf.Timestamp value) {
+        if (projectedAtBuilder_ == null) {
+          if (((bitField0_ & 0x00000800) != 0) &&
+            projectedAt_ != null &&
+            projectedAt_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getProjectedAtBuilder().mergeFrom(value);
+          } else {
+            projectedAt_ = value;
+          }
+        } else {
+          projectedAtBuilder_.mergeFrom(value);
+        }
+        if (projectedAt_ != null) {
+          bitField0_ |= 0x00000800;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp projected_at = 12 [json_name = "projectedAt"];</code>
+       */
+      public Builder clearProjectedAt() {
+        bitField0_ = (bitField0_ & ~0x00000800);
+        projectedAt_ = null;
+        if (projectedAtBuilder_ != null) {
+          projectedAtBuilder_.dispose();
+          projectedAtBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp projected_at = 12 [json_name = "projectedAt"];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getProjectedAtBuilder() {
+        bitField0_ |= 0x00000800;
+        onChanged();
+        return internalGetProjectedAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp projected_at = 12 [json_name = "projectedAt"];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getProjectedAtOrBuilder() {
+        if (projectedAtBuilder_ != null) {
+          return projectedAtBuilder_.getMessageOrBuilder();
+        } else {
+          return projectedAt_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : projectedAt_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp projected_at = 12 [json_name = "projectedAt"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>
+          internalGetProjectedAtFieldBuilder() {
+        if (projectedAtBuilder_ == null) {
+          projectedAtBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getProjectedAt(),
+                  getParentForChildren(),
+                  isClean());
+          projectedAt_ = null;
+        }
+        return projectedAtBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:oscal.services.v1.GraphProjectionEvent)
+    }
+
+    // @@protoc_insertion_point(class_scope:oscal.services.v1.GraphProjectionEvent)
+    private static final oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent();
+    }
+
+    public static oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GraphProjectionEvent>
+        PARSER = new com.google.protobuf.AbstractParser<GraphProjectionEvent>() {
+      @java.lang.Override
+      public GraphProjectionEvent parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GraphProjectionEvent> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GraphProjectionEvent> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ListProjectionEventsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oscal.services.v1.ListProjectionEventsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string claim_id = 1 [json_name = "claimId"];</code>
+     * @return The claimId.
+     */
+    java.lang.String getClaimId();
+    /**
+     * <code>string claim_id = 1 [json_name = "claimId"];</code>
+     * @return The bytes for claimId.
+     */
+    com.google.protobuf.ByteString
+        getClaimIdBytes();
+
+    /**
+     * <code>string edge_id = 2 [json_name = "edgeId"];</code>
+     * @return The edgeId.
+     */
+    java.lang.String getEdgeId();
+    /**
+     * <code>string edge_id = 2 [json_name = "edgeId"];</code>
+     * @return The bytes for edgeId.
+     */
+    com.google.protobuf.ByteString
+        getEdgeIdBytes();
+  }
+  /**
+   * Protobuf type {@code oscal.services.v1.ListProjectionEventsRequest}
+   */
+  public static final class ListProjectionEventsRequest extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:oscal.services.v1.ListProjectionEventsRequest)
+      ListProjectionEventsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 35,
+        /* patch= */ 1,
+        /* suffix= */ "",
+        "ListProjectionEventsRequest");
+    }
+    // Use ListProjectionEventsRequest.newBuilder() to construct.
+    private ListProjectionEventsRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private ListProjectionEventsRequest() {
+      claimId_ = "";
+      edgeId_ = "";
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return oscal.services.v1.TransparencyGraphServiceOuterClass.internal_static_oscal_services_v1_ListProjectionEventsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+      return oscal.services.v1.TransparencyGraphServiceOuterClass.internal_static_oscal_services_v1_ListProjectionEventsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return oscal.services.v1.TransparencyGraphServiceOuterClass.internal_static_oscal_services_v1_ListProjectionEventsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsRequest.class, oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsRequest.Builder.class);
+    }
+
+    public static final int CLAIM_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object claimId_ = "";
+    /**
+     * <code>string claim_id = 1 [json_name = "claimId"];</code>
+     * @return The claimId.
+     */
+    @java.lang.Override
+    public java.lang.String getClaimId() {
+      java.lang.Object ref = claimId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        claimId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string claim_id = 1 [json_name = "claimId"];</code>
+     * @return The bytes for claimId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClaimIdBytes() {
+      java.lang.Object ref = claimId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        claimId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int EDGE_ID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object edgeId_ = "";
+    /**
+     * <code>string edge_id = 2 [json_name = "edgeId"];</code>
+     * @return The edgeId.
+     */
+    @java.lang.Override
+    public java.lang.String getEdgeId() {
+      java.lang.Object ref = edgeId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        edgeId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string edge_id = 2 [json_name = "edgeId"];</code>
+     * @return The bytes for edgeId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEdgeIdBytes() {
+      java.lang.Object ref = edgeId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        edgeId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(claimId_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, claimId_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(edgeId_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, edgeId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+    private int computeSerializedSize_0() {
+      int size = 0;
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(claimId_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, claimId_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(edgeId_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, edgeId_);
+      }
+      return size;
+    }
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += computeSerializedSize_0();
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsRequest)) {
+        return super.equals(obj);
+      }
+      oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsRequest other = (oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsRequest) obj;
+
+      if (!getClaimId()
+          .equals(other.getClaimId())) return false;
+      if (!getEdgeId()
+          .equals(other.getEdgeId())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLAIM_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClaimId().hashCode();
+      hash = (37 * hash) + EDGE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getEdgeId().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oscal.services.v1.ListProjectionEventsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oscal.services.v1.ListProjectionEventsRequest)
+        oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return oscal.services.v1.TransparencyGraphServiceOuterClass.internal_static_oscal_services_v1_ListProjectionEventsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return oscal.services.v1.TransparencyGraphServiceOuterClass.internal_static_oscal_services_v1_ListProjectionEventsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsRequest.class, oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsRequest.Builder.class);
+      }
+
+      // Construct using oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        claimId_ = "";
+        edgeId_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return oscal.services.v1.TransparencyGraphServiceOuterClass.internal_static_oscal_services_v1_ListProjectionEventsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsRequest getDefaultInstanceForType() {
+        return oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsRequest build() {
+        oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsRequest buildPartial() {
+        oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsRequest result = new oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.claimId_ = claimId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.edgeId_ = edgeId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsRequest) {
+          return mergeFrom((oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsRequest other) {
+        if (other == oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsRequest.getDefaultInstance()) return this;
+        if (!other.getClaimId().isEmpty()) {
+          claimId_ = other.claimId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getEdgeId().isEmpty()) {
+          edgeId_ = other.edgeId_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                claimId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                edgeId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object claimId_ = "";
+      /**
+       * <code>string claim_id = 1 [json_name = "claimId"];</code>
+       * @return The claimId.
+       */
+      public java.lang.String getClaimId() {
+        java.lang.Object ref = claimId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          claimId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string claim_id = 1 [json_name = "claimId"];</code>
+       * @return The bytes for claimId.
+       */
+      public com.google.protobuf.ByteString
+          getClaimIdBytes() {
+        java.lang.Object ref = claimId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          claimId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string claim_id = 1 [json_name = "claimId"];</code>
+       * @param value The claimId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClaimId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        claimId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string claim_id = 1 [json_name = "claimId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClaimId() {
+        claimId_ = getDefaultInstance().getClaimId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string claim_id = 1 [json_name = "claimId"];</code>
+       * @param value The bytes for claimId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClaimIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        claimId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object edgeId_ = "";
+      /**
+       * <code>string edge_id = 2 [json_name = "edgeId"];</code>
+       * @return The edgeId.
+       */
+      public java.lang.String getEdgeId() {
+        java.lang.Object ref = edgeId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          edgeId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string edge_id = 2 [json_name = "edgeId"];</code>
+       * @return The bytes for edgeId.
+       */
+      public com.google.protobuf.ByteString
+          getEdgeIdBytes() {
+        java.lang.Object ref = edgeId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          edgeId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string edge_id = 2 [json_name = "edgeId"];</code>
+       * @param value The edgeId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEdgeId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        edgeId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string edge_id = 2 [json_name = "edgeId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEdgeId() {
+        edgeId_ = getDefaultInstance().getEdgeId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string edge_id = 2 [json_name = "edgeId"];</code>
+       * @param value The bytes for edgeId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEdgeIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        edgeId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:oscal.services.v1.ListProjectionEventsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:oscal.services.v1.ListProjectionEventsRequest)
+    private static final oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsRequest();
+    }
+
+    public static oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListProjectionEventsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<ListProjectionEventsRequest>() {
+      @java.lang.Override
+      public ListProjectionEventsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListProjectionEventsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListProjectionEventsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ListProjectionEventsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oscal.services.v1.ListProjectionEventsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .oscal.services.v1.GraphProjectionEvent events = 1 [json_name = "events"];</code>
+     */
+    java.util.List<oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent>
+        getEventsList();
+    /**
+     * <code>repeated .oscal.services.v1.GraphProjectionEvent events = 1 [json_name = "events"];</code>
+     */
+    oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent getEvents(int index);
+    /**
+     * <code>repeated .oscal.services.v1.GraphProjectionEvent events = 1 [json_name = "events"];</code>
+     */
+    int getEventsCount();
+    /**
+     * <code>repeated .oscal.services.v1.GraphProjectionEvent events = 1 [json_name = "events"];</code>
+     */
+    java.util.List<? extends oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEventOrBuilder>
+        getEventsOrBuilderList();
+    /**
+     * <code>repeated .oscal.services.v1.GraphProjectionEvent events = 1 [json_name = "events"];</code>
+     */
+    oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEventOrBuilder getEventsOrBuilder(
+        int index);
+
+    /**
+     * <code>bool chain_valid = 2 [json_name = "chainValid"];</code>
+     * @return The chainValid.
+     */
+    boolean getChainValid();
+  }
+  /**
+   * Protobuf type {@code oscal.services.v1.ListProjectionEventsResponse}
+   */
+  public static final class ListProjectionEventsResponse extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:oscal.services.v1.ListProjectionEventsResponse)
+      ListProjectionEventsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 35,
+        /* patch= */ 1,
+        /* suffix= */ "",
+        "ListProjectionEventsResponse");
+    }
+    // Use ListProjectionEventsResponse.newBuilder() to construct.
+    private ListProjectionEventsResponse(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private ListProjectionEventsResponse() {
+      events_ = java.util.Collections.emptyList();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return oscal.services.v1.TransparencyGraphServiceOuterClass.internal_static_oscal_services_v1_ListProjectionEventsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+      return oscal.services.v1.TransparencyGraphServiceOuterClass.internal_static_oscal_services_v1_ListProjectionEventsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return oscal.services.v1.TransparencyGraphServiceOuterClass.internal_static_oscal_services_v1_ListProjectionEventsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsResponse.class, oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsResponse.Builder.class);
+    }
+
+    public static final int EVENTS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent> events_;
+    /**
+     * <code>repeated .oscal.services.v1.GraphProjectionEvent events = 1 [json_name = "events"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent> getEventsList() {
+      return events_;
+    }
+    /**
+     * <code>repeated .oscal.services.v1.GraphProjectionEvent events = 1 [json_name = "events"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEventOrBuilder>
+        getEventsOrBuilderList() {
+      return events_;
+    }
+    /**
+     * <code>repeated .oscal.services.v1.GraphProjectionEvent events = 1 [json_name = "events"];</code>
+     */
+    @java.lang.Override
+    public int getEventsCount() {
+      return events_.size();
+    }
+    /**
+     * <code>repeated .oscal.services.v1.GraphProjectionEvent events = 1 [json_name = "events"];</code>
+     */
+    @java.lang.Override
+    public oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent getEvents(int index) {
+      return events_.get(index);
+    }
+    /**
+     * <code>repeated .oscal.services.v1.GraphProjectionEvent events = 1 [json_name = "events"];</code>
+     */
+    @java.lang.Override
+    public oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEventOrBuilder getEventsOrBuilder(
+        int index) {
+      return events_.get(index);
+    }
+
+    public static final int CHAIN_VALID_FIELD_NUMBER = 2;
+    private boolean chainValid_ = false;
+    /**
+     * <code>bool chain_valid = 2 [json_name = "chainValid"];</code>
+     * @return The chainValid.
+     */
+    @java.lang.Override
+    public boolean getChainValid() {
+      return chainValid_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < events_.size(); i++) {
+        output.writeMessage(1, events_.get(i));
+      }
+      if (chainValid_ != false) {
+        output.writeBool(2, chainValid_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+    private int computeSerializedSize_0() {
+      int size = 0;
+
+          {
+            final int count = events_.size();
+            for (int i = 0; i < count; i++) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeMessageSizeNoTag(events_.get(i));
+            }
+            size += 1 * count;
+          }
+      if (chainValid_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, chainValid_);
+      }
+      return size;
+    }
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += computeSerializedSize_0();
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsResponse)) {
+        return super.equals(obj);
+      }
+      oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsResponse other = (oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsResponse) obj;
+
+      if (!getEventsList()
+          .equals(other.getEventsList())) return false;
+      if (getChainValid()
+          != other.getChainValid()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getEventsCount() > 0) {
+        hash = (37 * hash) + EVENTS_FIELD_NUMBER;
+        hash = (53 * hash) + getEventsList().hashCode();
+      }
+      hash = (37 * hash) + CHAIN_VALID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getChainValid());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oscal.services.v1.ListProjectionEventsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oscal.services.v1.ListProjectionEventsResponse)
+        oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return oscal.services.v1.TransparencyGraphServiceOuterClass.internal_static_oscal_services_v1_ListProjectionEventsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return oscal.services.v1.TransparencyGraphServiceOuterClass.internal_static_oscal_services_v1_ListProjectionEventsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsResponse.class, oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsResponse.Builder.class);
+      }
+
+      // Construct using oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (eventsBuilder_ == null) {
+          events_ = java.util.Collections.emptyList();
+        } else {
+          events_ = null;
+          eventsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        chainValid_ = false;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return oscal.services.v1.TransparencyGraphServiceOuterClass.internal_static_oscal_services_v1_ListProjectionEventsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsResponse getDefaultInstanceForType() {
+        return oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsResponse build() {
+        oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsResponse buildPartial() {
+        oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsResponse result = new oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsResponse result) {
+        if (eventsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            events_ = java.util.Collections.unmodifiableList(events_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.events_ = events_;
+        } else {
+          result.events_ = eventsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.chainValid_ = chainValid_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsResponse) {
+          return mergeFrom((oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsResponse other) {
+        if (other == oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsResponse.getDefaultInstance()) return this;
+        if (eventsBuilder_ == null) {
+          if (!other.events_.isEmpty()) {
+            if (events_.isEmpty()) {
+              events_ = other.events_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureEventsIsMutable();
+              events_.addAll(other.events_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.events_.isEmpty()) {
+            if (eventsBuilder_.isEmpty()) {
+              eventsBuilder_.dispose();
+              eventsBuilder_ = null;
+              events_ = other.events_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              eventsBuilder_ =
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   internalGetEventsFieldBuilder() : null;
+            } else {
+              eventsBuilder_.addAllMessages(other.events_);
+            }
+          }
+        }
+        if (other.getChainValid() != false) {
+          setChainValid(other.getChainValid());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent m =
+                    input.readMessage(
+                        oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent.parser(),
+                        extensionRegistry);
+                if (eventsBuilder_ == null) {
+                  ensureEventsIsMutable();
+                  events_.add(m);
+                } else {
+                  eventsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 16: {
+                chainValid_ = input.readBool();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent> events_ =
+        java.util.Collections.emptyList();
+      private void ensureEventsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          events_ = new java.util.ArrayList<oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent>(events_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent, oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent.Builder, oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEventOrBuilder> eventsBuilder_;
+
+      /**
+       * <code>repeated .oscal.services.v1.GraphProjectionEvent events = 1 [json_name = "events"];</code>
+       */
+      public java.util.List<oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent> getEventsList() {
+        if (eventsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(events_);
+        } else {
+          return eventsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .oscal.services.v1.GraphProjectionEvent events = 1 [json_name = "events"];</code>
+       */
+      public int getEventsCount() {
+        if (eventsBuilder_ == null) {
+          return events_.size();
+        } else {
+          return eventsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .oscal.services.v1.GraphProjectionEvent events = 1 [json_name = "events"];</code>
+       */
+      public oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent getEvents(int index) {
+        if (eventsBuilder_ == null) {
+          return events_.get(index);
+        } else {
+          return eventsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.services.v1.GraphProjectionEvent events = 1 [json_name = "events"];</code>
+       */
+      public Builder setEvents(
+          int index, oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent value) {
+        if (eventsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEventsIsMutable();
+          events_.set(index, value);
+          onChanged();
+        } else {
+          eventsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.services.v1.GraphProjectionEvent events = 1 [json_name = "events"];</code>
+       */
+      public Builder setEvents(
+          int index, oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent.Builder builderForValue) {
+        if (eventsBuilder_ == null) {
+          ensureEventsIsMutable();
+          events_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          eventsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.services.v1.GraphProjectionEvent events = 1 [json_name = "events"];</code>
+       */
+      public Builder addEvents(oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent value) {
+        if (eventsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEventsIsMutable();
+          events_.add(value);
+          onChanged();
+        } else {
+          eventsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.services.v1.GraphProjectionEvent events = 1 [json_name = "events"];</code>
+       */
+      public Builder addEvents(
+          int index, oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent value) {
+        if (eventsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEventsIsMutable();
+          events_.add(index, value);
+          onChanged();
+        } else {
+          eventsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.services.v1.GraphProjectionEvent events = 1 [json_name = "events"];</code>
+       */
+      public Builder addEvents(
+          oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent.Builder builderForValue) {
+        if (eventsBuilder_ == null) {
+          ensureEventsIsMutable();
+          events_.add(builderForValue.build());
+          onChanged();
+        } else {
+          eventsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.services.v1.GraphProjectionEvent events = 1 [json_name = "events"];</code>
+       */
+      public Builder addEvents(
+          int index, oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent.Builder builderForValue) {
+        if (eventsBuilder_ == null) {
+          ensureEventsIsMutable();
+          events_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          eventsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.services.v1.GraphProjectionEvent events = 1 [json_name = "events"];</code>
+       */
+      public Builder addAllEvents(
+          java.lang.Iterable<? extends oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent> values) {
+        if (eventsBuilder_ == null) {
+          ensureEventsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, events_);
+          onChanged();
+        } else {
+          eventsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.services.v1.GraphProjectionEvent events = 1 [json_name = "events"];</code>
+       */
+      public Builder clearEvents() {
+        if (eventsBuilder_ == null) {
+          events_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          eventsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.services.v1.GraphProjectionEvent events = 1 [json_name = "events"];</code>
+       */
+      public Builder removeEvents(int index) {
+        if (eventsBuilder_ == null) {
+          ensureEventsIsMutable();
+          events_.remove(index);
+          onChanged();
+        } else {
+          eventsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.services.v1.GraphProjectionEvent events = 1 [json_name = "events"];</code>
+       */
+      public oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent.Builder getEventsBuilder(
+          int index) {
+        return internalGetEventsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .oscal.services.v1.GraphProjectionEvent events = 1 [json_name = "events"];</code>
+       */
+      public oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEventOrBuilder getEventsOrBuilder(
+          int index) {
+        if (eventsBuilder_ == null) {
+          return events_.get(index);  } else {
+          return eventsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.services.v1.GraphProjectionEvent events = 1 [json_name = "events"];</code>
+       */
+      public java.util.List<? extends oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEventOrBuilder>
+           getEventsOrBuilderList() {
+        if (eventsBuilder_ != null) {
+          return eventsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(events_);
+        }
+      }
+      /**
+       * <code>repeated .oscal.services.v1.GraphProjectionEvent events = 1 [json_name = "events"];</code>
+       */
+      public oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent.Builder addEventsBuilder() {
+        return internalGetEventsFieldBuilder().addBuilder(
+            oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.services.v1.GraphProjectionEvent events = 1 [json_name = "events"];</code>
+       */
+      public oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent.Builder addEventsBuilder(
+          int index) {
+        return internalGetEventsFieldBuilder().addBuilder(
+            index, oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.services.v1.GraphProjectionEvent events = 1 [json_name = "events"];</code>
+       */
+      public java.util.List<oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent.Builder>
+           getEventsBuilderList() {
+        return internalGetEventsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent, oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent.Builder, oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEventOrBuilder>
+          internalGetEventsFieldBuilder() {
+        if (eventsBuilder_ == null) {
+          eventsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent, oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEvent.Builder, oscal.services.v1.TransparencyGraphServiceOuterClass.GraphProjectionEventOrBuilder>(
+                  events_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          events_ = null;
+        }
+        return eventsBuilder_;
+      }
+
+      private boolean chainValid_ ;
+      /**
+       * <code>bool chain_valid = 2 [json_name = "chainValid"];</code>
+       * @return The chainValid.
+       */
+      @java.lang.Override
+      public boolean getChainValid() {
+        return chainValid_;
+      }
+      /**
+       * <code>bool chain_valid = 2 [json_name = "chainValid"];</code>
+       * @param value The chainValid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChainValid(boolean value) {
+
+        chainValid_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool chain_valid = 2 [json_name = "chainValid"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearChainValid() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        chainValid_ = false;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:oscal.services.v1.ListProjectionEventsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:oscal.services.v1.ListProjectionEventsResponse)
+    private static final oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsResponse();
+    }
+
+    public static oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListProjectionEventsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<ListProjectionEventsResponse>() {
+      @java.lang.Override
+      public ListProjectionEventsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListProjectionEventsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListProjectionEventsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -4808,7 +8644,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         edgeId_ = s;
@@ -4824,7 +8660,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
         getEdgeIdBytes() {
       java.lang.Object ref = edgeId_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         edgeId_ = b;
@@ -5157,7 +8993,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
           getEdgeIdBytes() {
         java.lang.Object ref = edgeId_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           edgeId_ = b;
@@ -5770,7 +9606,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
        * <code>.oscal.services.v1.GraphEdge edge = 1 [json_name = "edge"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.services.v1.TransparencyGraphServiceOuterClass.GraphEdge, oscal.services.v1.TransparencyGraphServiceOuterClass.GraphEdge.Builder, oscal.services.v1.TransparencyGraphServiceOuterClass.GraphEdgeOrBuilder> 
+          oscal.services.v1.TransparencyGraphServiceOuterClass.GraphEdge, oscal.services.v1.TransparencyGraphServiceOuterClass.GraphEdge.Builder, oscal.services.v1.TransparencyGraphServiceOuterClass.GraphEdgeOrBuilder>
           internalGetEdgeFieldBuilder() {
         if (edgeBuilder_ == null) {
           edgeBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -5980,7 +9816,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         fromNode_ = s;
@@ -5996,7 +9832,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
         getFromNodeBytes() {
       java.lang.Object ref = fromNode_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         fromNode_ = b;
@@ -6019,7 +9855,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         toNode_ = s;
@@ -6035,7 +9871,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
         getToNodeBytes() {
       java.lang.Object ref = toNode_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         toNode_ = b;
@@ -6058,7 +9894,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         relation_ = s;
@@ -6074,7 +9910,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
         getRelationBytes() {
       java.lang.Object ref = relation_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         relation_ = b;
@@ -6097,7 +9933,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         trustState_ = s;
@@ -6113,7 +9949,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
         getTrustStateBytes() {
       java.lang.Object ref = trustState_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         trustState_ = b;
@@ -6173,7 +10009,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         pageToken_ = s;
@@ -6189,7 +10025,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         pageToken_ = b;
@@ -6686,7 +10522,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
           getFromNodeBytes() {
         java.lang.Object ref = fromNode_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           fromNode_ = b;
@@ -6758,7 +10594,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
           getToNodeBytes() {
         java.lang.Object ref = toNode_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           toNode_ = b;
@@ -6830,7 +10666,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
           getRelationBytes() {
         java.lang.Object ref = relation_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           relation_ = b;
@@ -6902,7 +10738,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
           getTrustStateBytes() {
         java.lang.Object ref = trustState_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           trustState_ = b;
@@ -7057,7 +10893,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
        * <code>.google.protobuf.Timestamp valid_after = 5 [json_name = "validAfter"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>
           internalGetValidAfterFieldBuilder() {
         if (validAfterBuilder_ == null) {
           validAfterBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -7127,7 +10963,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
           getPageTokenBytes() {
         java.lang.Object ref = pageToken_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           pageToken_ = b;
@@ -7232,7 +11068,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
     /**
      * <code>repeated .oscal.services.v1.GraphEdge edges = 1 [json_name = "edges"];</code>
      */
-    java.util.List<oscal.services.v1.TransparencyGraphServiceOuterClass.GraphEdge> 
+    java.util.List<oscal.services.v1.TransparencyGraphServiceOuterClass.GraphEdge>
         getEdgesList();
     /**
      * <code>repeated .oscal.services.v1.GraphEdge edges = 1 [json_name = "edges"];</code>
@@ -7245,7 +11081,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
     /**
      * <code>repeated .oscal.services.v1.GraphEdge edges = 1 [json_name = "edges"];</code>
      */
-    java.util.List<? extends oscal.services.v1.TransparencyGraphServiceOuterClass.GraphEdgeOrBuilder> 
+    java.util.List<? extends oscal.services.v1.TransparencyGraphServiceOuterClass.GraphEdgeOrBuilder>
         getEdgesOrBuilderList();
     /**
      * <code>repeated .oscal.services.v1.GraphEdge edges = 1 [json_name = "edges"];</code>
@@ -7323,7 +11159,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
      * <code>repeated .oscal.services.v1.GraphEdge edges = 1 [json_name = "edges"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.services.v1.TransparencyGraphServiceOuterClass.GraphEdgeOrBuilder> 
+    public java.util.List<? extends oscal.services.v1.TransparencyGraphServiceOuterClass.GraphEdgeOrBuilder>
         getEdgesOrBuilderList() {
       return edges_;
     }
@@ -7363,7 +11199,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         nextPageToken_ = s;
@@ -7379,7 +11215,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
         getNextPageTokenBytes() {
       java.lang.Object ref = nextPageToken_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         nextPageToken_ = b;
@@ -7690,7 +11526,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
               edgesBuilder_ = null;
               edges_ = other.edges_;
               bitField0_ = (bitField0_ & ~0x00000001);
-              edgesBuilder_ = 
+              edgesBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetEdgesFieldBuilder() : null;
             } else {
@@ -7959,7 +11795,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
       /**
        * <code>repeated .oscal.services.v1.GraphEdge edges = 1 [json_name = "edges"];</code>
        */
-      public java.util.List<? extends oscal.services.v1.TransparencyGraphServiceOuterClass.GraphEdgeOrBuilder> 
+      public java.util.List<? extends oscal.services.v1.TransparencyGraphServiceOuterClass.GraphEdgeOrBuilder>
            getEdgesOrBuilderList() {
         if (edgesBuilder_ != null) {
           return edgesBuilder_.getMessageOrBuilderList();
@@ -7985,12 +11821,12 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
       /**
        * <code>repeated .oscal.services.v1.GraphEdge edges = 1 [json_name = "edges"];</code>
        */
-      public java.util.List<oscal.services.v1.TransparencyGraphServiceOuterClass.GraphEdge.Builder> 
+      public java.util.List<oscal.services.v1.TransparencyGraphServiceOuterClass.GraphEdge.Builder>
            getEdgesBuilderList() {
         return internalGetEdgesFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.services.v1.TransparencyGraphServiceOuterClass.GraphEdge, oscal.services.v1.TransparencyGraphServiceOuterClass.GraphEdge.Builder, oscal.services.v1.TransparencyGraphServiceOuterClass.GraphEdgeOrBuilder> 
+          oscal.services.v1.TransparencyGraphServiceOuterClass.GraphEdge, oscal.services.v1.TransparencyGraphServiceOuterClass.GraphEdge.Builder, oscal.services.v1.TransparencyGraphServiceOuterClass.GraphEdgeOrBuilder>
           internalGetEdgesFieldBuilder() {
         if (edgesBuilder_ == null) {
           edgesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -8029,7 +11865,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
           getNextPageTokenBytes() {
         java.lang.Object ref = nextPageToken_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           nextPageToken_ = b;
@@ -8199,7 +12035,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         edgeId_ = s;
@@ -8215,7 +12051,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
         getEdgeIdBytes() {
       java.lang.Object ref = edgeId_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         edgeId_ = b;
@@ -8548,7 +12384,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
           getEdgeIdBytes() {
         java.lang.Object ref = edgeId_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           edgeId_ = b;
@@ -9162,7 +12998,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         nodeId_ = s;
@@ -9178,7 +13014,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
         getNodeIdBytes() {
       java.lang.Object ref = nodeId_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         nodeId_ = b;
@@ -9511,7 +13347,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
           getNodeIdBytes() {
         java.lang.Object ref = nodeId_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           nodeId_ = b;
@@ -10124,7 +13960,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
        * <code>.oscal.services.v1.GraphNode node = 1 [json_name = "node"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.services.v1.TransparencyGraphServiceOuterClass.GraphNode, oscal.services.v1.TransparencyGraphServiceOuterClass.GraphNode.Builder, oscal.services.v1.TransparencyGraphServiceOuterClass.GraphNodeOrBuilder> 
+          oscal.services.v1.TransparencyGraphServiceOuterClass.GraphNode, oscal.services.v1.TransparencyGraphServiceOuterClass.GraphNode.Builder, oscal.services.v1.TransparencyGraphServiceOuterClass.GraphNodeOrBuilder>
           internalGetNodeFieldBuilder() {
         if (nodeBuilder_ == null) {
           nodeBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -10316,7 +14152,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         kind_ = s;
@@ -10332,7 +14168,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
         getKindBytes() {
       java.lang.Object ref = kind_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         kind_ = b;
@@ -10359,7 +14195,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         labelFilter_ = s;
@@ -10379,7 +14215,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
         getLabelFilterBytes() {
       java.lang.Object ref = labelFilter_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         labelFilter_ = b;
@@ -10439,7 +14275,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         pageToken_ = s;
@@ -10455,7 +14291,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
         getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         pageToken_ = b;
@@ -10904,7 +14740,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
           getKindBytes() {
         java.lang.Object ref = kind_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           kind_ = b;
@@ -10984,7 +14820,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
           getLabelFilterBytes() {
         java.lang.Object ref = labelFilter_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           labelFilter_ = b;
@@ -11151,7 +14987,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
        * <code>.google.protobuf.Timestamp created_after = 3 [json_name = "createdAfter"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>
           internalGetCreatedAfterFieldBuilder() {
         if (createdAfterBuilder_ == null) {
           createdAfterBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -11221,7 +15057,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
           getPageTokenBytes() {
         java.lang.Object ref = pageToken_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           pageToken_ = b;
@@ -11326,7 +15162,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
     /**
      * <code>repeated .oscal.services.v1.GraphNode nodes = 1 [json_name = "nodes"];</code>
      */
-    java.util.List<oscal.services.v1.TransparencyGraphServiceOuterClass.GraphNode> 
+    java.util.List<oscal.services.v1.TransparencyGraphServiceOuterClass.GraphNode>
         getNodesList();
     /**
      * <code>repeated .oscal.services.v1.GraphNode nodes = 1 [json_name = "nodes"];</code>
@@ -11339,7 +15175,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
     /**
      * <code>repeated .oscal.services.v1.GraphNode nodes = 1 [json_name = "nodes"];</code>
      */
-    java.util.List<? extends oscal.services.v1.TransparencyGraphServiceOuterClass.GraphNodeOrBuilder> 
+    java.util.List<? extends oscal.services.v1.TransparencyGraphServiceOuterClass.GraphNodeOrBuilder>
         getNodesOrBuilderList();
     /**
      * <code>repeated .oscal.services.v1.GraphNode nodes = 1 [json_name = "nodes"];</code>
@@ -11417,7 +15253,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
      * <code>repeated .oscal.services.v1.GraphNode nodes = 1 [json_name = "nodes"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.services.v1.TransparencyGraphServiceOuterClass.GraphNodeOrBuilder> 
+    public java.util.List<? extends oscal.services.v1.TransparencyGraphServiceOuterClass.GraphNodeOrBuilder>
         getNodesOrBuilderList() {
       return nodes_;
     }
@@ -11457,7 +15293,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         nextPageToken_ = s;
@@ -11473,7 +15309,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
         getNextPageTokenBytes() {
       java.lang.Object ref = nextPageToken_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         nextPageToken_ = b;
@@ -11784,7 +15620,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
               nodesBuilder_ = null;
               nodes_ = other.nodes_;
               bitField0_ = (bitField0_ & ~0x00000001);
-              nodesBuilder_ = 
+              nodesBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetNodesFieldBuilder() : null;
             } else {
@@ -12053,7 +15889,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
       /**
        * <code>repeated .oscal.services.v1.GraphNode nodes = 1 [json_name = "nodes"];</code>
        */
-      public java.util.List<? extends oscal.services.v1.TransparencyGraphServiceOuterClass.GraphNodeOrBuilder> 
+      public java.util.List<? extends oscal.services.v1.TransparencyGraphServiceOuterClass.GraphNodeOrBuilder>
            getNodesOrBuilderList() {
         if (nodesBuilder_ != null) {
           return nodesBuilder_.getMessageOrBuilderList();
@@ -12079,12 +15915,12 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
       /**
        * <code>repeated .oscal.services.v1.GraphNode nodes = 1 [json_name = "nodes"];</code>
        */
-      public java.util.List<oscal.services.v1.TransparencyGraphServiceOuterClass.GraphNode.Builder> 
+      public java.util.List<oscal.services.v1.TransparencyGraphServiceOuterClass.GraphNode.Builder>
            getNodesBuilderList() {
         return internalGetNodesFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.services.v1.TransparencyGraphServiceOuterClass.GraphNode, oscal.services.v1.TransparencyGraphServiceOuterClass.GraphNode.Builder, oscal.services.v1.TransparencyGraphServiceOuterClass.GraphNodeOrBuilder> 
+          oscal.services.v1.TransparencyGraphServiceOuterClass.GraphNode, oscal.services.v1.TransparencyGraphServiceOuterClass.GraphNode.Builder, oscal.services.v1.TransparencyGraphServiceOuterClass.GraphNodeOrBuilder>
           internalGetNodesFieldBuilder() {
         if (nodesBuilder_ == null) {
           nodesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -12123,7 +15959,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
           getNextPageTokenBytes() {
         java.lang.Object ref = nextPageToken_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           nextPageToken_ = b;
@@ -12376,7 +16212,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         startNode_ = s;
@@ -12392,7 +16228,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
         getStartNodeBytes() {
       java.lang.Object ref = startNode_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         startNode_ = b;
@@ -12479,7 +16315,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         minTrustState_ = s;
@@ -12495,7 +16331,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
         getMinTrustStateBytes() {
       java.lang.Object ref = minTrustState_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         minTrustState_ = b;
@@ -12522,7 +16358,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         traversalMode_ = s;
@@ -12542,7 +16378,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
         getTraversalModeBytes() {
       java.lang.Object ref = traversalMode_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         traversalMode_ = b;
@@ -12984,7 +16820,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
           getStartNodeBytes() {
         java.lang.Object ref = startNode_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           startNode_ = b;
@@ -13235,7 +17071,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
           getMinTrustStateBytes() {
         java.lang.Object ref = minTrustState_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           minTrustState_ = b;
@@ -13315,7 +17151,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
           getTraversalModeBytes() {
         java.lang.Object ref = traversalMode_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           traversalMode_ = b;
@@ -14091,7 +17927,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
        * <code>.oscal.services.v1.GraphEdge edge = 2 [json_name = "edge"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.services.v1.TransparencyGraphServiceOuterClass.GraphEdge, oscal.services.v1.TransparencyGraphServiceOuterClass.GraphEdge.Builder, oscal.services.v1.TransparencyGraphServiceOuterClass.GraphEdgeOrBuilder> 
+          oscal.services.v1.TransparencyGraphServiceOuterClass.GraphEdge, oscal.services.v1.TransparencyGraphServiceOuterClass.GraphEdge.Builder, oscal.services.v1.TransparencyGraphServiceOuterClass.GraphEdgeOrBuilder>
           internalGetEdgeFieldBuilder() {
         if (edgeBuilder_ == null) {
           edgeBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -14212,7 +18048,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
        * <code>.oscal.services.v1.GraphNode node = 3 [json_name = "node"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.services.v1.TransparencyGraphServiceOuterClass.GraphNode, oscal.services.v1.TransparencyGraphServiceOuterClass.GraphNode.Builder, oscal.services.v1.TransparencyGraphServiceOuterClass.GraphNodeOrBuilder> 
+          oscal.services.v1.TransparencyGraphServiceOuterClass.GraphNode, oscal.services.v1.TransparencyGraphServiceOuterClass.GraphNode.Builder, oscal.services.v1.TransparencyGraphServiceOuterClass.GraphNodeOrBuilder>
           internalGetNodeFieldBuilder() {
         if (nodeBuilder_ == null) {
           nodeBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -14283,7 +18119,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
     /**
      * <code>repeated .oscal.services.v1.PathSegment path = 1 [json_name = "path"];</code>
      */
-    java.util.List<oscal.services.v1.TransparencyGraphServiceOuterClass.PathSegment> 
+    java.util.List<oscal.services.v1.TransparencyGraphServiceOuterClass.PathSegment>
         getPathList();
     /**
      * <code>repeated .oscal.services.v1.PathSegment path = 1 [json_name = "path"];</code>
@@ -14296,7 +18132,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
     /**
      * <code>repeated .oscal.services.v1.PathSegment path = 1 [json_name = "path"];</code>
      */
-    java.util.List<? extends oscal.services.v1.TransparencyGraphServiceOuterClass.PathSegmentOrBuilder> 
+    java.util.List<? extends oscal.services.v1.TransparencyGraphServiceOuterClass.PathSegmentOrBuilder>
         getPathOrBuilderList();
     /**
      * <code>repeated .oscal.services.v1.PathSegment path = 1 [json_name = "path"];</code>
@@ -14361,7 +18197,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
      * <code>repeated .oscal.services.v1.PathSegment path = 1 [json_name = "path"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.services.v1.TransparencyGraphServiceOuterClass.PathSegmentOrBuilder> 
+    public java.util.List<? extends oscal.services.v1.TransparencyGraphServiceOuterClass.PathSegmentOrBuilder>
         getPathOrBuilderList() {
       return path_;
     }
@@ -14675,7 +18511,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
               pathBuilder_ = null;
               path_ = other.path_;
               bitField0_ = (bitField0_ & ~0x00000001);
-              pathBuilder_ = 
+              pathBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetPathFieldBuilder() : null;
             } else {
@@ -14934,7 +18770,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
       /**
        * <code>repeated .oscal.services.v1.PathSegment path = 1 [json_name = "path"];</code>
        */
-      public java.util.List<? extends oscal.services.v1.TransparencyGraphServiceOuterClass.PathSegmentOrBuilder> 
+      public java.util.List<? extends oscal.services.v1.TransparencyGraphServiceOuterClass.PathSegmentOrBuilder>
            getPathOrBuilderList() {
         if (pathBuilder_ != null) {
           return pathBuilder_.getMessageOrBuilderList();
@@ -14960,12 +18796,12 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
       /**
        * <code>repeated .oscal.services.v1.PathSegment path = 1 [json_name = "path"];</code>
        */
-      public java.util.List<oscal.services.v1.TransparencyGraphServiceOuterClass.PathSegment.Builder> 
+      public java.util.List<oscal.services.v1.TransparencyGraphServiceOuterClass.PathSegment.Builder>
            getPathBuilderList() {
         return internalGetPathFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.services.v1.TransparencyGraphServiceOuterClass.PathSegment, oscal.services.v1.TransparencyGraphServiceOuterClass.PathSegment.Builder, oscal.services.v1.TransparencyGraphServiceOuterClass.PathSegmentOrBuilder> 
+          oscal.services.v1.TransparencyGraphServiceOuterClass.PathSegment, oscal.services.v1.TransparencyGraphServiceOuterClass.PathSegment.Builder, oscal.services.v1.TransparencyGraphServiceOuterClass.PathSegmentOrBuilder>
           internalGetPathFieldBuilder() {
         if (pathBuilder_ == null) {
           pathBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -15155,7 +18991,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         fromNode_ = s;
@@ -15171,7 +19007,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
         getFromNodeBytes() {
       java.lang.Object ref = fromNode_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         fromNode_ = b;
@@ -15194,7 +19030,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         toNode_ = s;
@@ -15210,7 +19046,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
         getToNodeBytes() {
       java.lang.Object ref = toNode_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         toNode_ = b;
@@ -15233,7 +19069,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         minTrustState_ = s;
@@ -15249,7 +19085,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
         getMinTrustStateBytes() {
       java.lang.Object ref = minTrustState_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         minTrustState_ = b;
@@ -15705,7 +19541,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
           getFromNodeBytes() {
         java.lang.Object ref = fromNode_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           fromNode_ = b;
@@ -15777,7 +19613,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
           getToNodeBytes() {
         java.lang.Object ref = toNode_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           toNode_ = b;
@@ -15849,7 +19685,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
           getMinTrustStateBytes() {
         java.lang.Object ref = minTrustState_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           minTrustState_ = b;
@@ -16065,7 +19901,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
     /**
      * <code>repeated .oscal.services.v1.GraphEdge edges = 1 [json_name = "edges"];</code>
      */
-    java.util.List<oscal.services.v1.TransparencyGraphServiceOuterClass.GraphEdge> 
+    java.util.List<oscal.services.v1.TransparencyGraphServiceOuterClass.GraphEdge>
         getEdgesList();
     /**
      * <code>repeated .oscal.services.v1.GraphEdge edges = 1 [json_name = "edges"];</code>
@@ -16078,7 +19914,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
     /**
      * <code>repeated .oscal.services.v1.GraphEdge edges = 1 [json_name = "edges"];</code>
      */
-    java.util.List<? extends oscal.services.v1.TransparencyGraphServiceOuterClass.GraphEdgeOrBuilder> 
+    java.util.List<? extends oscal.services.v1.TransparencyGraphServiceOuterClass.GraphEdgeOrBuilder>
         getEdgesOrBuilderList();
     /**
      * <code>repeated .oscal.services.v1.GraphEdge edges = 1 [json_name = "edges"];</code>
@@ -16155,7 +19991,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
      * <code>repeated .oscal.services.v1.GraphEdge edges = 1 [json_name = "edges"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.services.v1.TransparencyGraphServiceOuterClass.GraphEdgeOrBuilder> 
+    public java.util.List<? extends oscal.services.v1.TransparencyGraphServiceOuterClass.GraphEdgeOrBuilder>
         getEdgesOrBuilderList() {
       return edges_;
     }
@@ -16524,7 +20360,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
               edgesBuilder_ = null;
               edges_ = other.edges_;
               bitField0_ = (bitField0_ & ~0x00000001);
-              edgesBuilder_ = 
+              edgesBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetEdgesFieldBuilder() : null;
             } else {
@@ -16799,7 +20635,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
       /**
        * <code>repeated .oscal.services.v1.GraphEdge edges = 1 [json_name = "edges"];</code>
        */
-      public java.util.List<? extends oscal.services.v1.TransparencyGraphServiceOuterClass.GraphEdgeOrBuilder> 
+      public java.util.List<? extends oscal.services.v1.TransparencyGraphServiceOuterClass.GraphEdgeOrBuilder>
            getEdgesOrBuilderList() {
         if (edgesBuilder_ != null) {
           return edgesBuilder_.getMessageOrBuilderList();
@@ -16825,12 +20661,12 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
       /**
        * <code>repeated .oscal.services.v1.GraphEdge edges = 1 [json_name = "edges"];</code>
        */
-      public java.util.List<oscal.services.v1.TransparencyGraphServiceOuterClass.GraphEdge.Builder> 
+      public java.util.List<oscal.services.v1.TransparencyGraphServiceOuterClass.GraphEdge.Builder>
            getEdgesBuilderList() {
         return internalGetEdgesFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.services.v1.TransparencyGraphServiceOuterClass.GraphEdge, oscal.services.v1.TransparencyGraphServiceOuterClass.GraphEdge.Builder, oscal.services.v1.TransparencyGraphServiceOuterClass.GraphEdgeOrBuilder> 
+          oscal.services.v1.TransparencyGraphServiceOuterClass.GraphEdge, oscal.services.v1.TransparencyGraphServiceOuterClass.GraphEdge.Builder, oscal.services.v1.TransparencyGraphServiceOuterClass.GraphEdgeOrBuilder>
           internalGetEdgesFieldBuilder() {
         if (edgesBuilder_ == null) {
           edgesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -17077,7 +20913,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         node_ = s;
@@ -17093,7 +20929,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
         getNodeBytes() {
       java.lang.Object ref = node_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         node_ = b;
@@ -17127,7 +20963,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         minTrustState_ = s;
@@ -17143,7 +20979,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
         getMinTrustStateBytes() {
       java.lang.Object ref = minTrustState_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         minTrustState_ = b;
@@ -17598,7 +21434,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
           getNodeBytes() {
         java.lang.Object ref = node_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           node_ = b;
@@ -17702,7 +21538,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
           getMinTrustStateBytes() {
         java.lang.Object ref = minTrustState_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           minTrustState_ = b;
@@ -17918,7 +21754,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
     /**
      * <code>repeated .oscal.services.v1.GraphNode nodes = 1 [json_name = "nodes"];</code>
      */
-    java.util.List<oscal.services.v1.TransparencyGraphServiceOuterClass.GraphNode> 
+    java.util.List<oscal.services.v1.TransparencyGraphServiceOuterClass.GraphNode>
         getNodesList();
     /**
      * <code>repeated .oscal.services.v1.GraphNode nodes = 1 [json_name = "nodes"];</code>
@@ -17931,7 +21767,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
     /**
      * <code>repeated .oscal.services.v1.GraphNode nodes = 1 [json_name = "nodes"];</code>
      */
-    java.util.List<? extends oscal.services.v1.TransparencyGraphServiceOuterClass.GraphNodeOrBuilder> 
+    java.util.List<? extends oscal.services.v1.TransparencyGraphServiceOuterClass.GraphNodeOrBuilder>
         getNodesOrBuilderList();
     /**
      * <code>repeated .oscal.services.v1.GraphNode nodes = 1 [json_name = "nodes"];</code>
@@ -17942,7 +21778,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
     /**
      * <code>repeated .oscal.services.v1.GraphEdge edges = 2 [json_name = "edges"];</code>
      */
-    java.util.List<oscal.services.v1.TransparencyGraphServiceOuterClass.GraphEdge> 
+    java.util.List<oscal.services.v1.TransparencyGraphServiceOuterClass.GraphEdge>
         getEdgesList();
     /**
      * <code>repeated .oscal.services.v1.GraphEdge edges = 2 [json_name = "edges"];</code>
@@ -17955,7 +21791,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
     /**
      * <code>repeated .oscal.services.v1.GraphEdge edges = 2 [json_name = "edges"];</code>
      */
-    java.util.List<? extends oscal.services.v1.TransparencyGraphServiceOuterClass.GraphEdgeOrBuilder> 
+    java.util.List<? extends oscal.services.v1.TransparencyGraphServiceOuterClass.GraphEdgeOrBuilder>
         getEdgesOrBuilderList();
     /**
      * <code>repeated .oscal.services.v1.GraphEdge edges = 2 [json_name = "edges"];</code>
@@ -18021,7 +21857,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
      * <code>repeated .oscal.services.v1.GraphNode nodes = 1 [json_name = "nodes"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.services.v1.TransparencyGraphServiceOuterClass.GraphNodeOrBuilder> 
+    public java.util.List<? extends oscal.services.v1.TransparencyGraphServiceOuterClass.GraphNodeOrBuilder>
         getNodesOrBuilderList() {
       return nodes_;
     }
@@ -18062,7 +21898,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
      * <code>repeated .oscal.services.v1.GraphEdge edges = 2 [json_name = "edges"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.services.v1.TransparencyGraphServiceOuterClass.GraphEdgeOrBuilder> 
+    public java.util.List<? extends oscal.services.v1.TransparencyGraphServiceOuterClass.GraphEdgeOrBuilder>
         getEdgesOrBuilderList() {
       return edges_;
     }
@@ -18410,7 +22246,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
               nodesBuilder_ = null;
               nodes_ = other.nodes_;
               bitField0_ = (bitField0_ & ~0x00000001);
-              nodesBuilder_ = 
+              nodesBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetNodesFieldBuilder() : null;
             } else {
@@ -18436,7 +22272,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
               edgesBuilder_ = null;
               edges_ = other.edges_;
               bitField0_ = (bitField0_ & ~0x00000002);
-              edgesBuilder_ = 
+              edgesBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetEdgesFieldBuilder() : null;
             } else {
@@ -18708,7 +22544,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
       /**
        * <code>repeated .oscal.services.v1.GraphNode nodes = 1 [json_name = "nodes"];</code>
        */
-      public java.util.List<? extends oscal.services.v1.TransparencyGraphServiceOuterClass.GraphNodeOrBuilder> 
+      public java.util.List<? extends oscal.services.v1.TransparencyGraphServiceOuterClass.GraphNodeOrBuilder>
            getNodesOrBuilderList() {
         if (nodesBuilder_ != null) {
           return nodesBuilder_.getMessageOrBuilderList();
@@ -18734,12 +22570,12 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
       /**
        * <code>repeated .oscal.services.v1.GraphNode nodes = 1 [json_name = "nodes"];</code>
        */
-      public java.util.List<oscal.services.v1.TransparencyGraphServiceOuterClass.GraphNode.Builder> 
+      public java.util.List<oscal.services.v1.TransparencyGraphServiceOuterClass.GraphNode.Builder>
            getNodesBuilderList() {
         return internalGetNodesFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.services.v1.TransparencyGraphServiceOuterClass.GraphNode, oscal.services.v1.TransparencyGraphServiceOuterClass.GraphNode.Builder, oscal.services.v1.TransparencyGraphServiceOuterClass.GraphNodeOrBuilder> 
+          oscal.services.v1.TransparencyGraphServiceOuterClass.GraphNode, oscal.services.v1.TransparencyGraphServiceOuterClass.GraphNode.Builder, oscal.services.v1.TransparencyGraphServiceOuterClass.GraphNodeOrBuilder>
           internalGetNodesFieldBuilder() {
         if (nodesBuilder_ == null) {
           nodesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -18948,7 +22784,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
       /**
        * <code>repeated .oscal.services.v1.GraphEdge edges = 2 [json_name = "edges"];</code>
        */
-      public java.util.List<? extends oscal.services.v1.TransparencyGraphServiceOuterClass.GraphEdgeOrBuilder> 
+      public java.util.List<? extends oscal.services.v1.TransparencyGraphServiceOuterClass.GraphEdgeOrBuilder>
            getEdgesOrBuilderList() {
         if (edgesBuilder_ != null) {
           return edgesBuilder_.getMessageOrBuilderList();
@@ -18974,12 +22810,12 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
       /**
        * <code>repeated .oscal.services.v1.GraphEdge edges = 2 [json_name = "edges"];</code>
        */
-      public java.util.List<oscal.services.v1.TransparencyGraphServiceOuterClass.GraphEdge.Builder> 
+      public java.util.List<oscal.services.v1.TransparencyGraphServiceOuterClass.GraphEdge.Builder>
            getEdgesBuilderList() {
         return internalGetEdgesFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.services.v1.TransparencyGraphServiceOuterClass.GraphEdge, oscal.services.v1.TransparencyGraphServiceOuterClass.GraphEdge.Builder, oscal.services.v1.TransparencyGraphServiceOuterClass.GraphEdgeOrBuilder> 
+          oscal.services.v1.TransparencyGraphServiceOuterClass.GraphEdge, oscal.services.v1.TransparencyGraphServiceOuterClass.GraphEdge.Builder, oscal.services.v1.TransparencyGraphServiceOuterClass.GraphEdgeOrBuilder>
           internalGetEdgesFieldBuilder() {
         if (edgesBuilder_ == null) {
           edgesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -19129,7 +22965,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         claimId_ = s;
@@ -19145,7 +22981,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
         getClaimIdBytes() {
       java.lang.Object ref = claimId_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         claimId_ = b;
@@ -19168,7 +23004,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         edgeId_ = s;
@@ -19184,7 +23020,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
         getEdgeIdBytes() {
       java.lang.Object ref = edgeId_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         edgeId_ = b;
@@ -19541,7 +23377,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
           getClaimIdBytes() {
         java.lang.Object ref = claimId_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           claimId_ = b;
@@ -19613,7 +23449,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
           getEdgeIdBytes() {
         java.lang.Object ref = edgeId_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           edgeId_ = b;
@@ -19733,7 +23569,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
     /**
      * <code>repeated .oscal.services.v1.Evidence evidence = 2 [json_name = "evidence"];</code>
      */
-    java.util.List<oscal.services.v1.TransparencyExchangeServiceOuterClass.Evidence> 
+    java.util.List<oscal.services.v1.TransparencyExchangeServiceOuterClass.Evidence>
         getEvidenceList();
     /**
      * <code>repeated .oscal.services.v1.Evidence evidence = 2 [json_name = "evidence"];</code>
@@ -19746,7 +23582,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
     /**
      * <code>repeated .oscal.services.v1.Evidence evidence = 2 [json_name = "evidence"];</code>
      */
-    java.util.List<? extends oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceOrBuilder> 
+    java.util.List<? extends oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceOrBuilder>
         getEvidenceOrBuilderList();
     /**
      * <code>repeated .oscal.services.v1.Evidence evidence = 2 [json_name = "evidence"];</code>
@@ -19864,7 +23700,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
      * <code>repeated .oscal.services.v1.Evidence evidence = 2 [json_name = "evidence"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceOrBuilder> 
+    public java.util.List<? extends oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceOrBuilder>
         getEvidenceOrBuilderList() {
       return evidence_;
     }
@@ -19904,7 +23740,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         proofStateJson_ = s;
@@ -19920,7 +23756,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
         getProofStateJsonBytes() {
       java.lang.Object ref = proofStateJson_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         proofStateJson_ = b;
@@ -19943,7 +23779,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         trustState_ = s;
@@ -19959,7 +23795,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
         getTrustStateBytes() {
       java.lang.Object ref = trustState_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         trustState_ = b;
@@ -20323,7 +24159,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
               evidenceBuilder_ = null;
               evidence_ = other.evidence_;
               bitField0_ = (bitField0_ & ~0x00000002);
-              evidenceBuilder_ = 
+              evidenceBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetEvidenceFieldBuilder() : null;
             } else {
@@ -20522,7 +24358,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
        * <code>.oscal.services.v1.Claim claim = 1 [json_name = "claim"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.services.v1.TransparencyExchangeServiceOuterClass.Claim, oscal.services.v1.TransparencyExchangeServiceOuterClass.Claim.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.ClaimOrBuilder> 
+          oscal.services.v1.TransparencyExchangeServiceOuterClass.Claim, oscal.services.v1.TransparencyExchangeServiceOuterClass.Claim.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.ClaimOrBuilder>
           internalGetClaimFieldBuilder() {
         if (claimBuilder_ == null) {
           claimBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -20730,7 +24566,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
       /**
        * <code>repeated .oscal.services.v1.Evidence evidence = 2 [json_name = "evidence"];</code>
        */
-      public java.util.List<? extends oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceOrBuilder> 
+      public java.util.List<? extends oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceOrBuilder>
            getEvidenceOrBuilderList() {
         if (evidenceBuilder_ != null) {
           return evidenceBuilder_.getMessageOrBuilderList();
@@ -20756,12 +24592,12 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
       /**
        * <code>repeated .oscal.services.v1.Evidence evidence = 2 [json_name = "evidence"];</code>
        */
-      public java.util.List<oscal.services.v1.TransparencyExchangeServiceOuterClass.Evidence.Builder> 
+      public java.util.List<oscal.services.v1.TransparencyExchangeServiceOuterClass.Evidence.Builder>
            getEvidenceBuilderList() {
         return internalGetEvidenceFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.services.v1.TransparencyExchangeServiceOuterClass.Evidence, oscal.services.v1.TransparencyExchangeServiceOuterClass.Evidence.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceOrBuilder> 
+          oscal.services.v1.TransparencyExchangeServiceOuterClass.Evidence, oscal.services.v1.TransparencyExchangeServiceOuterClass.Evidence.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceOrBuilder>
           internalGetEvidenceFieldBuilder() {
         if (evidenceBuilder_ == null) {
           evidenceBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -20800,7 +24636,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
           getProofStateJsonBytes() {
         java.lang.Object ref = proofStateJson_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           proofStateJson_ = b;
@@ -20872,7 +24708,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
           getTrustStateBytes() {
         java.lang.Object ref = trustState_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           trustState_ = b;
@@ -21055,7 +24891,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         claimId_ = s;
@@ -21071,7 +24907,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
         getClaimIdBytes() {
       java.lang.Object ref = claimId_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         claimId_ = b;
@@ -21094,7 +24930,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         edgeId_ = s;
@@ -21110,7 +24946,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
         getEdgeIdBytes() {
       java.lang.Object ref = edgeId_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         edgeId_ = b;
@@ -21467,7 +25303,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
           getClaimIdBytes() {
         java.lang.Object ref = claimId_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           claimId_ = b;
@@ -21539,7 +25375,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
           getEdgeIdBytes() {
         java.lang.Object ref = edgeId_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           edgeId_ = b;
@@ -21778,7 +25614,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         claimId_ = s;
@@ -21794,7 +25630,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
         getClaimIdBytes() {
       java.lang.Object ref = claimId_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         claimId_ = b;
@@ -21817,7 +25653,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         edgeId_ = s;
@@ -21833,7 +25669,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
         getEdgeIdBytes() {
       java.lang.Object ref = edgeId_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         edgeId_ = b;
@@ -21882,7 +25718,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         trustState_ = s;
@@ -21898,7 +25734,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
         getTrustStateBytes() {
       java.lang.Object ref = trustState_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         trustState_ = b;
@@ -22399,7 +26235,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
           getClaimIdBytes() {
         java.lang.Object ref = claimId_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           claimId_ = b;
@@ -22471,7 +26307,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
           getEdgeIdBytes() {
         java.lang.Object ref = edgeId_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           edgeId_ = b;
@@ -22626,7 +26462,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
        * <code>.oscal.services.v1.ProofState proof_state = 3 [json_name = "proofState"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.services.v1.TransparencyExchangeServiceOuterClass.ProofState, oscal.services.v1.TransparencyExchangeServiceOuterClass.ProofState.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.ProofStateOrBuilder> 
+          oscal.services.v1.TransparencyExchangeServiceOuterClass.ProofState, oscal.services.v1.TransparencyExchangeServiceOuterClass.ProofState.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.ProofStateOrBuilder>
           internalGetProofStateFieldBuilder() {
         if (proofStateBuilder_ == null) {
           proofStateBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -22664,7 +26500,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
           getTrustStateBytes() {
         java.lang.Object ref = trustState_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           trustState_ = b;
@@ -22974,7 +26810,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         subjectNode_ = s;
@@ -22990,7 +26826,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
         getSubjectNodeBytes() {
       java.lang.Object ref = subjectNode_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         subjectNode_ = b;
@@ -23013,7 +26849,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         purpose_ = s;
@@ -23029,7 +26865,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
         getPurposeBytes() {
       java.lang.Object ref = purpose_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         purpose_ = b;
@@ -23457,7 +27293,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
           getSubjectNodeBytes() {
         java.lang.Object ref = subjectNode_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           subjectNode_ = b;
@@ -23529,7 +27365,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
           getPurposeBytes() {
         java.lang.Object ref = purpose_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           purpose_ = b;
@@ -23684,7 +27520,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
        * <code>.google.protobuf.Timestamp as_of = 3 [json_name = "asOf"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>
           internalGetAsOfFieldBuilder() {
         if (asOfBuilder_ == null) {
           asOfBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -23891,7 +27727,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         subjectNode_ = s;
@@ -23907,7 +27743,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
         getSubjectNodeBytes() {
       java.lang.Object ref = subjectNode_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         subjectNode_ = b;
@@ -23930,7 +27766,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         purpose_ = s;
@@ -23946,7 +27782,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
         getPurposeBytes() {
       java.lang.Object ref = purpose_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         purpose_ = b;
@@ -23980,7 +27816,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         trustState_ = s;
@@ -23996,7 +27832,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
         getTrustStateBytes() {
       java.lang.Object ref = trustState_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         trustState_ = b;
@@ -24544,7 +28380,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
           getSubjectNodeBytes() {
         java.lang.Object ref = subjectNode_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           subjectNode_ = b;
@@ -24616,7 +28452,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
           getPurposeBytes() {
         java.lang.Object ref = purpose_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           purpose_ = b;
@@ -24720,7 +28556,7 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
           getTrustStateBytes() {
         java.lang.Object ref = trustState_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           trustState_ = b;
@@ -24995,137 +28831,152 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
 
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_GraphNode_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_GraphNode_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_GraphEdge_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_GraphEdge_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_ProjectEdgeRequest_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_ProjectEdgeRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_ProjectEdgeResponse_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_ProjectEdgeResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_oscal_services_v1_GraphProjectionEvent_descriptor;
+  private static final
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_oscal_services_v1_GraphProjectionEvent_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_oscal_services_v1_ListProjectionEventsRequest_descriptor;
+  private static final
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_oscal_services_v1_ListProjectionEventsRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_oscal_services_v1_ListProjectionEventsResponse_descriptor;
+  private static final
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_oscal_services_v1_ListProjectionEventsResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_GetEdgeRequest_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_GetEdgeRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_GetEdgeResponse_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_GetEdgeResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_ListEdgesRequest_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_ListEdgesRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_ListEdgesResponse_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_ListEdgesResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_DeleteEdgeRequest_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_DeleteEdgeRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_DeleteEdgeResponse_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_DeleteEdgeResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_GetNodeRequest_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_GetNodeRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_GetNodeResponse_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_GetNodeResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_ListNodesRequest_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_ListNodesRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_ListNodesResponse_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_ListNodesResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_TraverseRequest_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_TraverseRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_PathSegment_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_PathSegment_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_TraverseResponse_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_TraverseResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_ShortestPathRequest_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_ShortestPathRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_ShortestPathResponse_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_ShortestPathResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_ImpactRadiusRequest_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_ImpactRadiusRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_ImpactRadiusResponse_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_ImpactRadiusResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_ExplainClaimRequest_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_ExplainClaimRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_ExplainClaimResponse_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_ExplainClaimResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_ComputeTrustStateRequest_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_ComputeTrustStateRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_ComputeTrustStateResponse_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_ComputeTrustStateResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_VerifyClosureRequest_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_VerifyClosureRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_VerifyClosureResponse_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_VerifyClosureResponse_fieldAccessorTable;
 
@@ -25158,122 +29009,144 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
       "(\001R\006weight\022\'\n\017extensions_json\030\014 \001(\tR\016ext" +
       "ensionsJson\"H\n\022ProjectEdgeRequest\022\031\n\010cla" +
       "im_id\030\001 \001(\tR\007claimId\022\027\n\007edge_id\030\002 \001(\tR\006e" +
-      "dgeId\"G\n\023ProjectEdgeResponse\0220\n\004edge\030\001 \001" +
-      "(\0132\034.oscal.services.v1.GraphEdgeR\004edge\")" +
-      "\n\016GetEdgeRequest\022\027\n\007edge_id\030\001 \001(\tR\006edgeI" +
-      "d\"C\n\017GetEdgeResponse\0220\n\004edge\030\001 \001(\0132\034.osc" +
-      "al.services.v1.GraphEdgeR\004edge\"\376\001\n\020ListE" +
-      "dgesRequest\022\033\n\tfrom_node\030\001 \001(\tR\010fromNode" +
-      "\022\027\n\007to_node\030\002 \001(\tR\006toNode\022\032\n\010relation\030\003 " +
-      "\001(\tR\010relation\022\037\n\013trust_state\030\004 \001(\tR\ntrus" +
-      "tState\022;\n\013valid_after\030\005 \001(\0132\032.google.pro" +
-      "tobuf.TimestampR\nvalidAfter\022\033\n\tpage_size" +
-      "\030\006 \001(\005R\010pageSize\022\035\n\npage_token\030\007 \001(\tR\tpa" +
-      "geToken\"o\n\021ListEdgesResponse\0222\n\005edges\030\001 " +
-      "\003(\0132\034.oscal.services.v1.GraphEdgeR\005edges" +
-      "\022&\n\017next_page_token\030\002 \001(\tR\rnextPageToken" +
-      "\",\n\021DeleteEdgeRequest\022\027\n\007edge_id\030\001 \001(\tR\006" +
-      "edgeId\".\n\022DeleteEdgeResponse\022\030\n\007success\030" +
-      "\001 \001(\010R\007success\")\n\016GetNodeRequest\022\027\n\007node" +
-      "_id\030\001 \001(\tR\006nodeId\"C\n\017GetNodeResponse\0220\n\004" +
-      "node\030\001 \001(\0132\034.oscal.services.v1.GraphNode" +
-      "R\004node\"\306\001\n\020ListNodesRequest\022\022\n\004kind\030\001 \001(" +
-      "\tR\004kind\022!\n\014label_filter\030\002 \001(\tR\013labelFilt" +
-      "er\022?\n\rcreated_after\030\003 \001(\0132\032.google.proto" +
-      "buf.TimestampR\014createdAfter\022\033\n\tpage_size" +
-      "\030\004 \001(\005R\010pageSize\022\035\n\npage_token\030\005 \001(\tR\tpa" +
-      "geToken\"o\n\021ListNodesResponse\0222\n\005nodes\030\001 " +
-      "\003(\0132\034.oscal.services.v1.GraphNodeR\005nodes" +
-      "\022&\n\017next_page_token\030\002 \001(\tR\rnextPageToken" +
-      "\"\272\001\n\017TraverseRequest\022\035\n\nstart_node\030\001 \001(\t" +
-      "R\tstartNode\022\034\n\trelations\030\002 \003(\tR\trelation" +
-      "s\022\033\n\tmax_depth\030\003 \001(\005R\010maxDepth\022&\n\017min_tr" +
-      "ust_state\030\004 \001(\tR\rminTrustState\022%\n\016traver" +
-      "sal_mode\030\005 \001(\tR\rtraversalMode\"\207\001\n\013PathSe" +
-      "gment\022\024\n\005depth\030\001 \001(\005R\005depth\0220\n\004edge\030\002 \001(" +
-      "\0132\034.oscal.services.v1.GraphEdgeR\004edge\0220\n" +
-      "\004node\030\003 \001(\0132\034.oscal.services.v1.GraphNod" +
-      "eR\004node\"F\n\020TraverseResponse\0222\n\004path\030\001 \003(" +
-      "\0132\036.oscal.services.v1.PathSegmentR\004path\"" +
-      "\240\001\n\023ShortestPathRequest\022\033\n\tfrom_node\030\001 \001" +
-      "(\tR\010fromNode\022\027\n\007to_node\030\002 \001(\tR\006toNode\022&\n" +
-      "\017min_trust_state\030\003 \001(\tR\rminTrustState\022+\n" +
-      "\021allowed_relations\030\004 \003(\tR\020allowedRelatio" +
-      "ns\"\203\001\n\024ShortestPathResponse\0222\n\005edges\030\001 \003" +
-      "(\0132\034.oscal.services.v1.GraphEdgeR\005edges\022" +
-      "!\n\014total_weight\030\002 \001(\001R\013totalWeight\022\024\n\005fo" +
-      "und\030\003 \001(\010R\005found\"\214\001\n\023ImpactRadiusRequest" +
-      "\022\022\n\004node\030\001 \001(\tR\004node\022\033\n\tmax_depth\030\002 \001(\005R" +
-      "\010maxDepth\022&\n\017min_trust_state\030\003 \001(\tR\rminT" +
-      "rustState\022\034\n\trelations\030\004 \003(\tR\trelations\"" +
-      "~\n\024ImpactRadiusResponse\0222\n\005nodes\030\001 \003(\0132\034" +
-      ".oscal.services.v1.GraphNodeR\005nodes\0222\n\005e" +
-      "dges\030\002 \003(\0132\034.oscal.services.v1.GraphEdge" +
-      "R\005edges\"I\n\023ExplainClaimRequest\022\031\n\010claim_" +
-      "id\030\001 \001(\tR\007claimId\022\027\n\007edge_id\030\002 \001(\tR\006edge" +
-      "Id\"\312\001\n\024ExplainClaimResponse\022.\n\005claim\030\001 \001" +
-      "(\0132\030.oscal.services.v1.ClaimR\005claim\0227\n\010e" +
-      "vidence\030\002 \003(\0132\033.oscal.services.v1.Eviden" +
-      "ceR\010evidence\022(\n\020proof_state_json\030\003 \001(\tR\016" +
-      "proofStateJson\022\037\n\013trust_state\030\004 \001(\tR\ntru" +
-      "stState\"N\n\030ComputeTrustStateRequest\022\031\n\010c" +
+      "dgeId\"\233\001\n\023ProjectEdgeResponse\0220\n\004edge\030\001 " +
+      "\001(\0132\034.oscal.services.v1.GraphEdgeR\004edge\022" +
+      "R\n\020projection_event\030\002 \001(\0132\'.oscal.servic" +
+      "es.v1.GraphProjectionEventR\017projectionEv" +
+      "ent\"\240\003\n\024GraphProjectionEvent\022\032\n\010sequence" +
+      "\030\001 \001(\003R\010sequence\022\031\n\010event_id\030\002 \001(\tR\007even" +
+      "tId\022\027\n\007edge_id\030\003 \001(\tR\006edgeId\022\031\n\010claim_id" +
+      "\030\004 \001(\tR\007claimId\022\033\n\tfrom_node\030\005 \001(\tR\010from" +
+      "Node\022\027\n\007to_node\030\006 \001(\tR\006toNode\022\032\n\010relatio" +
+      "n\030\007 \001(\tR\010relation\022\'\n\017evidence_digest\030\010 \001" +
+      "(\tR\016evidenceDigest\022\037\n\013trust_state\030\t \001(\tR" +
+      "\ntrustState\022#\n\rprevious_hash\030\n \001(\tR\014prev" +
+      "iousHash\022\035\n\nevent_hash\030\013 \001(\tR\teventHash\022" +
+      "=\n\014projected_at\030\014 \001(\0132\032.google.protobuf." +
+      "TimestampR\013projectedAt\"Q\n\033ListProjection" +
+      "EventsRequest\022\031\n\010claim_id\030\001 \001(\tR\007claimId" +
+      "\022\027\n\007edge_id\030\002 \001(\tR\006edgeId\"\200\001\n\034ListProjec" +
+      "tionEventsResponse\022?\n\006events\030\001 \003(\0132\'.osc" +
+      "al.services.v1.GraphProjectionEventR\006eve" +
+      "nts\022\037\n\013chain_valid\030\002 \001(\010R\nchainValid\")\n\016" +
+      "GetEdgeRequest\022\027\n\007edge_id\030\001 \001(\tR\006edgeId\"" +
+      "C\n\017GetEdgeResponse\0220\n\004edge\030\001 \001(\0132\034.oscal" +
+      ".services.v1.GraphEdgeR\004edge\"\376\001\n\020ListEdg" +
+      "esRequest\022\033\n\tfrom_node\030\001 \001(\tR\010fromNode\022\027" +
+      "\n\007to_node\030\002 \001(\tR\006toNode\022\032\n\010relation\030\003 \001(" +
+      "\tR\010relation\022\037\n\013trust_state\030\004 \001(\tR\ntrustS" +
+      "tate\022;\n\013valid_after\030\005 \001(\0132\032.google.proto" +
+      "buf.TimestampR\nvalidAfter\022\033\n\tpage_size\030\006" +
+      " \001(\005R\010pageSize\022\035\n\npage_token\030\007 \001(\tR\tpage" +
+      "Token\"o\n\021ListEdgesResponse\0222\n\005edges\030\001 \003(" +
+      "\0132\034.oscal.services.v1.GraphEdgeR\005edges\022&" +
+      "\n\017next_page_token\030\002 \001(\tR\rnextPageToken\"," +
+      "\n\021DeleteEdgeRequest\022\027\n\007edge_id\030\001 \001(\tR\006ed" +
+      "geId\".\n\022DeleteEdgeResponse\022\030\n\007success\030\001 " +
+      "\001(\010R\007success\")\n\016GetNodeRequest\022\027\n\007node_i" +
+      "d\030\001 \001(\tR\006nodeId\"C\n\017GetNodeResponse\0220\n\004no" +
+      "de\030\001 \001(\0132\034.oscal.services.v1.GraphNodeR\004" +
+      "node\"\306\001\n\020ListNodesRequest\022\022\n\004kind\030\001 \001(\tR" +
+      "\004kind\022!\n\014label_filter\030\002 \001(\tR\013labelFilter" +
+      "\022?\n\rcreated_after\030\003 \001(\0132\032.google.protobu" +
+      "f.TimestampR\014createdAfter\022\033\n\tpage_size\030\004" +
+      " \001(\005R\010pageSize\022\035\n\npage_token\030\005 \001(\tR\tpage" +
+      "Token\"o\n\021ListNodesResponse\0222\n\005nodes\030\001 \003(" +
+      "\0132\034.oscal.services.v1.GraphNodeR\005nodes\022&" +
+      "\n\017next_page_token\030\002 \001(\tR\rnextPageToken\"\272" +
+      "\001\n\017TraverseRequest\022\035\n\nstart_node\030\001 \001(\tR\t" +
+      "startNode\022\034\n\trelations\030\002 \003(\tR\trelations\022" +
+      "\033\n\tmax_depth\030\003 \001(\005R\010maxDepth\022&\n\017min_trus" +
+      "t_state\030\004 \001(\tR\rminTrustState\022%\n\016traversa" +
+      "l_mode\030\005 \001(\tR\rtraversalMode\"\207\001\n\013PathSegm" +
+      "ent\022\024\n\005depth\030\001 \001(\005R\005depth\0220\n\004edge\030\002 \001(\0132" +
+      "\034.oscal.services.v1.GraphEdgeR\004edge\0220\n\004n" +
+      "ode\030\003 \001(\0132\034.oscal.services.v1.GraphNodeR" +
+      "\004node\"F\n\020TraverseResponse\0222\n\004path\030\001 \003(\0132" +
+      "\036.oscal.services.v1.PathSegmentR\004path\"\240\001" +
+      "\n\023ShortestPathRequest\022\033\n\tfrom_node\030\001 \001(\t" +
+      "R\010fromNode\022\027\n\007to_node\030\002 \001(\tR\006toNode\022&\n\017m" +
+      "in_trust_state\030\003 \001(\tR\rminTrustState\022+\n\021a" +
+      "llowed_relations\030\004 \003(\tR\020allowedRelations" +
+      "\"\203\001\n\024ShortestPathResponse\0222\n\005edges\030\001 \003(\013" +
+      "2\034.oscal.services.v1.GraphEdgeR\005edges\022!\n" +
+      "\014total_weight\030\002 \001(\001R\013totalWeight\022\024\n\005foun" +
+      "d\030\003 \001(\010R\005found\"\214\001\n\023ImpactRadiusRequest\022\022" +
+      "\n\004node\030\001 \001(\tR\004node\022\033\n\tmax_depth\030\002 \001(\005R\010m" +
+      "axDepth\022&\n\017min_trust_state\030\003 \001(\tR\rminTru" +
+      "stState\022\034\n\trelations\030\004 \003(\tR\trelations\"~\n" +
+      "\024ImpactRadiusResponse\0222\n\005nodes\030\001 \003(\0132\034.o" +
+      "scal.services.v1.GraphNodeR\005nodes\0222\n\005edg" +
+      "es\030\002 \003(\0132\034.oscal.services.v1.GraphEdgeR\005" +
+      "edges\"I\n\023ExplainClaimRequest\022\031\n\010claim_id" +
+      "\030\001 \001(\tR\007claimId\022\027\n\007edge_id\030\002 \001(\tR\006edgeId" +
+      "\"\312\001\n\024ExplainClaimResponse\022.\n\005claim\030\001 \001(\013" +
+      "2\030.oscal.services.v1.ClaimR\005claim\0227\n\010evi" +
+      "dence\030\002 \003(\0132\033.oscal.services.v1.Evidence" +
+      "R\010evidence\022(\n\020proof_state_json\030\003 \001(\tR\016pr" +
+      "oofStateJson\022\037\n\013trust_state\030\004 \001(\tR\ntrust" +
+      "State\"N\n\030ComputeTrustStateRequest\022\031\n\010cla" +
+      "im_id\030\001 \001(\tR\007claimId\022\027\n\007edge_id\030\002 \001(\tR\006e" +
+      "dgeId\"\322\001\n\031ComputeTrustStateResponse\022\031\n\010c" +
       "laim_id\030\001 \001(\tR\007claimId\022\027\n\007edge_id\030\002 \001(\tR" +
-      "\006edgeId\"\322\001\n\031ComputeTrustStateResponse\022\031\n" +
-      "\010claim_id\030\001 \001(\tR\007claimId\022\027\n\007edge_id\030\002 \001(" +
-      "\tR\006edgeId\022>\n\013proof_state\030\003 \001(\0132\035.oscal.s" +
-      "ervices.v1.ProofStateR\nproofState\022\037\n\013tru" +
-      "st_state\030\004 \001(\tR\ntrustState\022 \n\013diagnostic" +
-      "s\030\005 \003(\tR\013diagnostics\"\204\001\n\024VerifyClosureRe" +
-      "quest\022!\n\014subject_node\030\001 \001(\tR\013subjectNode" +
-      "\022\030\n\007purpose\030\002 \001(\tR\007purpose\022/\n\005as_of\030\003 \001(" +
-      "\0132\032.google.protobuf.TimestampR\004asOf\"\371\001\n\025" +
-      "VerifyClosureResponse\022!\n\014subject_node\030\001 " +
-      "\001(\tR\013subjectNode\022\030\n\007purpose\030\002 \001(\tR\007purpo" +
-      "se\022\030\n\007verdict\030\003 \001(\010R\007verdict\022\037\n\013trust_st" +
-      "ate\030\004 \001(\tR\ntrustState\022 \n\013diagnostics\030\005 \003" +
-      "(\tR\013diagnostics\022#\n\redges_checked\030\006 \001(\005R\014" +
-      "edgesChecked\022!\n\014edges_failed\030\007 \001(\005R\013edge" +
-      "sFailed2\372\013\n\030TransparencyGraphService\022x\n\013" +
-      "ProjectEdge\022%.oscal.services.v1.ProjectE" +
-      "dgeRequest\032&.oscal.services.v1.ProjectEd" +
-      "geResponse\"\032\202\323\344\223\002\024\"\017/v1/graph/edges:\001*\022s" +
-      "\n\007GetEdge\022!.oscal.services.v1.GetEdgeReq" +
-      "uest\032\".oscal.services.v1.GetEdgeResponse" +
-      "\"!\202\323\344\223\002\033\022\031/v1/graph/edges/{edge_id}\022o\n\tL" +
-      "istEdges\022#.oscal.services.v1.ListEdgesRe" +
-      "quest\032$.oscal.services.v1.ListEdgesRespo" +
-      "nse\"\027\202\323\344\223\002\021\022\017/v1/graph/edges\022|\n\nDeleteEd" +
-      "ge\022$.oscal.services.v1.DeleteEdgeRequest" +
-      "\032%.oscal.services.v1.DeleteEdgeResponse\"" +
-      "!\202\323\344\223\002\033*\031/v1/graph/edges/{edge_id}\022s\n\007Ge" +
-      "tNode\022!.oscal.services.v1.GetNodeRequest" +
-      "\032\".oscal.services.v1.GetNodeResponse\"!\202\323" +
-      "\344\223\002\033\022\031/v1/graph/nodes/{node_id}\022o\n\tListN" +
-      "odes\022#.oscal.services.v1.ListNodesReques" +
-      "t\032$.oscal.services.v1.ListNodesResponse\"" +
-      "\027\202\323\344\223\002\021\022\017/v1/graph/nodes\022r\n\010Traverse\022\".o" +
-      "scal.services.v1.TraverseRequest\032#.oscal" +
-      ".services.v1.TraverseResponse\"\035\202\323\344\223\002\027\"\022/" +
-      "v1/graph/traverse:\001*\022\203\001\n\014ShortestPath\022&." +
-      "oscal.services.v1.ShortestPathRequest\032\'." +
-      "oscal.services.v1.ShortestPathResponse\"\"" +
-      "\202\323\344\223\002\034\"\027/v1/graph/shortest-path:\001*\022\203\001\n\014I" +
-      "mpactRadius\022&.oscal.services.v1.ImpactRa" +
-      "diusRequest\032\'.oscal.services.v1.ImpactRa" +
-      "diusResponse\"\"\202\323\344\223\002\034\"\027/v1/graph/impact-r" +
-      "adius:\001*\022}\n\014ExplainClaim\022&.oscal.service" +
-      "s.v1.ExplainClaimRequest\032\'.oscal.service" +
-      "s.v1.ExplainClaimResponse\"\034\202\323\344\223\002\026\"\021/v1/g" +
-      "raph/explain:\001*\022\220\001\n\021ComputeTrustState\022+." +
-      "oscal.services.v1.ComputeTrustStateReque" +
-      "st\032,.oscal.services.v1.ComputeTrustState" +
-      "Response\" \202\323\344\223\002\032\"\025/v1/graph/trust-state:" +
-      "\001*\022\207\001\n\rVerifyClosure\022\'.oscal.services.v1" +
-      ".VerifyClosureRequest\032(.oscal.services.v" +
-      "1.VerifyClosureResponse\"#\202\323\344\223\002\035\"\030/v1/gra" +
-      "ph/verify-closure:\001*B>Z<github.com/mchor" +
-      "fa/xoscal/proto/oscal/services/v1;servic" +
-      "esv1b\006proto3"
+      "\006edgeId\022>\n\013proof_state\030\003 \001(\0132\035.oscal.ser" +
+      "vices.v1.ProofStateR\nproofState\022\037\n\013trust" +
+      "_state\030\004 \001(\tR\ntrustState\022 \n\013diagnostics\030" +
+      "\005 \003(\tR\013diagnostics\"\204\001\n\024VerifyClosureRequ" +
+      "est\022!\n\014subject_node\030\001 \001(\tR\013subjectNode\022\030" +
+      "\n\007purpose\030\002 \001(\tR\007purpose\022/\n\005as_of\030\003 \001(\0132" +
+      "\032.google.protobuf.TimestampR\004asOf\"\371\001\n\025Ve" +
+      "rifyClosureResponse\022!\n\014subject_node\030\001 \001(" +
+      "\tR\013subjectNode\022\030\n\007purpose\030\002 \001(\tR\007purpose" +
+      "\022\030\n\007verdict\030\003 \001(\010R\007verdict\022\037\n\013trust_stat" +
+      "e\030\004 \001(\tR\ntrustState\022 \n\013diagnostics\030\005 \003(\t" +
+      "R\013diagnostics\022#\n\redges_checked\030\006 \001(\005R\014ed" +
+      "gesChecked\022!\n\014edges_failed\030\007 \001(\005R\013edgesF" +
+      "ailed2\231\r\n\030TransparencyGraphService\022x\n\013Pr" +
+      "ojectEdge\022%.oscal.services.v1.ProjectEdg" +
+      "eRequest\032&.oscal.services.v1.ProjectEdge" +
+      "Response\"\032\202\323\344\223\002\024\"\017/v1/graph/edges:\001*\022\234\001\n" +
+      "\024ListProjectionEvents\022..oscal.services.v" +
+      "1.ListProjectionEventsRequest\032/.oscal.se" +
+      "rvices.v1.ListProjectionEventsResponse\"#" +
+      "\202\323\344\223\002\035\022\033/v1/graph/projection-events\022s\n\007G" +
+      "etEdge\022!.oscal.services.v1.GetEdgeReques" +
+      "t\032\".oscal.services.v1.GetEdgeResponse\"!\202" +
+      "\323\344\223\002\033\022\031/v1/graph/edges/{edge_id}\022o\n\tList" +
+      "Edges\022#.oscal.services.v1.ListEdgesReque" +
+      "st\032$.oscal.services.v1.ListEdgesResponse" +
+      "\"\027\202\323\344\223\002\021\022\017/v1/graph/edges\022|\n\nDeleteEdge\022" +
+      "$.oscal.services.v1.DeleteEdgeRequest\032%." +
+      "oscal.services.v1.DeleteEdgeResponse\"!\202\323" +
+      "\344\223\002\033*\031/v1/graph/edges/{edge_id}\022s\n\007GetNo" +
+      "de\022!.oscal.services.v1.GetNodeRequest\032\"." +
+      "oscal.services.v1.GetNodeResponse\"!\202\323\344\223\002" +
+      "\033\022\031/v1/graph/nodes/{node_id}\022o\n\tListNode" +
+      "s\022#.oscal.services.v1.ListNodesRequest\032$" +
+      ".oscal.services.v1.ListNodesResponse\"\027\202\323" +
+      "\344\223\002\021\022\017/v1/graph/nodes\022r\n\010Traverse\022\".osca" +
+      "l.services.v1.TraverseRequest\032#.oscal.se" +
+      "rvices.v1.TraverseResponse\"\035\202\323\344\223\002\027\"\022/v1/" +
+      "graph/traverse:\001*\022\203\001\n\014ShortestPath\022&.osc" +
+      "al.services.v1.ShortestPathRequest\032\'.osc" +
+      "al.services.v1.ShortestPathResponse\"\"\202\323\344" +
+      "\223\002\034\"\027/v1/graph/shortest-path:\001*\022\203\001\n\014Impa" +
+      "ctRadius\022&.oscal.services.v1.ImpactRadiu" +
+      "sRequest\032\'.oscal.services.v1.ImpactRadiu" +
+      "sResponse\"\"\202\323\344\223\002\034\"\027/v1/graph/impact-radi" +
+      "us:\001*\022}\n\014ExplainClaim\022&.oscal.services.v" +
+      "1.ExplainClaimRequest\032\'.oscal.services.v" +
+      "1.ExplainClaimResponse\"\034\202\323\344\223\002\026\"\021/v1/grap" +
+      "h/explain:\001*\022\220\001\n\021ComputeTrustState\022+.osc" +
+      "al.services.v1.ComputeTrustStateRequest\032" +
+      ",.oscal.services.v1.ComputeTrustStateRes" +
+      "ponse\" \202\323\344\223\002\032\"\025/v1/graph/trust-state:\001*\022" +
+      "\207\001\n\rVerifyClosure\022\'.oscal.services.v1.Ve" +
+      "rifyClosureRequest\032(.oscal.services.v1.V" +
+      "erifyClosureResponse\"#\202\323\344\223\002\035\"\030/v1/graph/" +
+      "verify-closure:\001*B>Z<github.com/mchorfa/" +
+      "xoscal/proto/oscal/services/v1;servicesv" +
+      "1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -25305,141 +29178,159 @@ public final class TransparencyGraphServiceOuterClass extends com.google.protobu
     internal_static_oscal_services_v1_ProjectEdgeResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_services_v1_ProjectEdgeResponse_descriptor,
-        new java.lang.String[] { "Edge", });
-    internal_static_oscal_services_v1_GetEdgeRequest_descriptor =
+        new java.lang.String[] { "Edge", "ProjectionEvent", });
+    internal_static_oscal_services_v1_GraphProjectionEvent_descriptor =
       getDescriptor().getMessageType(4);
+    internal_static_oscal_services_v1_GraphProjectionEvent_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_oscal_services_v1_GraphProjectionEvent_descriptor,
+        new java.lang.String[] { "Sequence", "EventId", "EdgeId", "ClaimId", "FromNode", "ToNode", "Relation", "EvidenceDigest", "TrustState", "PreviousHash", "EventHash", "ProjectedAt", });
+    internal_static_oscal_services_v1_ListProjectionEventsRequest_descriptor =
+      getDescriptor().getMessageType(5);
+    internal_static_oscal_services_v1_ListProjectionEventsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_oscal_services_v1_ListProjectionEventsRequest_descriptor,
+        new java.lang.String[] { "ClaimId", "EdgeId", });
+    internal_static_oscal_services_v1_ListProjectionEventsResponse_descriptor =
+      getDescriptor().getMessageType(6);
+    internal_static_oscal_services_v1_ListProjectionEventsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_oscal_services_v1_ListProjectionEventsResponse_descriptor,
+        new java.lang.String[] { "Events", "ChainValid", });
+    internal_static_oscal_services_v1_GetEdgeRequest_descriptor =
+      getDescriptor().getMessageType(7);
     internal_static_oscal_services_v1_GetEdgeRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_services_v1_GetEdgeRequest_descriptor,
         new java.lang.String[] { "EdgeId", });
     internal_static_oscal_services_v1_GetEdgeResponse_descriptor =
-      getDescriptor().getMessageType(5);
+      getDescriptor().getMessageType(8);
     internal_static_oscal_services_v1_GetEdgeResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_services_v1_GetEdgeResponse_descriptor,
         new java.lang.String[] { "Edge", });
     internal_static_oscal_services_v1_ListEdgesRequest_descriptor =
-      getDescriptor().getMessageType(6);
+      getDescriptor().getMessageType(9);
     internal_static_oscal_services_v1_ListEdgesRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_services_v1_ListEdgesRequest_descriptor,
         new java.lang.String[] { "FromNode", "ToNode", "Relation", "TrustState", "ValidAfter", "PageSize", "PageToken", });
     internal_static_oscal_services_v1_ListEdgesResponse_descriptor =
-      getDescriptor().getMessageType(7);
+      getDescriptor().getMessageType(10);
     internal_static_oscal_services_v1_ListEdgesResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_services_v1_ListEdgesResponse_descriptor,
         new java.lang.String[] { "Edges", "NextPageToken", });
     internal_static_oscal_services_v1_DeleteEdgeRequest_descriptor =
-      getDescriptor().getMessageType(8);
+      getDescriptor().getMessageType(11);
     internal_static_oscal_services_v1_DeleteEdgeRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_services_v1_DeleteEdgeRequest_descriptor,
         new java.lang.String[] { "EdgeId", });
     internal_static_oscal_services_v1_DeleteEdgeResponse_descriptor =
-      getDescriptor().getMessageType(9);
+      getDescriptor().getMessageType(12);
     internal_static_oscal_services_v1_DeleteEdgeResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_services_v1_DeleteEdgeResponse_descriptor,
         new java.lang.String[] { "Success", });
     internal_static_oscal_services_v1_GetNodeRequest_descriptor =
-      getDescriptor().getMessageType(10);
+      getDescriptor().getMessageType(13);
     internal_static_oscal_services_v1_GetNodeRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_services_v1_GetNodeRequest_descriptor,
         new java.lang.String[] { "NodeId", });
     internal_static_oscal_services_v1_GetNodeResponse_descriptor =
-      getDescriptor().getMessageType(11);
+      getDescriptor().getMessageType(14);
     internal_static_oscal_services_v1_GetNodeResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_services_v1_GetNodeResponse_descriptor,
         new java.lang.String[] { "Node", });
     internal_static_oscal_services_v1_ListNodesRequest_descriptor =
-      getDescriptor().getMessageType(12);
+      getDescriptor().getMessageType(15);
     internal_static_oscal_services_v1_ListNodesRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_services_v1_ListNodesRequest_descriptor,
         new java.lang.String[] { "Kind", "LabelFilter", "CreatedAfter", "PageSize", "PageToken", });
     internal_static_oscal_services_v1_ListNodesResponse_descriptor =
-      getDescriptor().getMessageType(13);
+      getDescriptor().getMessageType(16);
     internal_static_oscal_services_v1_ListNodesResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_services_v1_ListNodesResponse_descriptor,
         new java.lang.String[] { "Nodes", "NextPageToken", });
     internal_static_oscal_services_v1_TraverseRequest_descriptor =
-      getDescriptor().getMessageType(14);
+      getDescriptor().getMessageType(17);
     internal_static_oscal_services_v1_TraverseRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_services_v1_TraverseRequest_descriptor,
         new java.lang.String[] { "StartNode", "Relations", "MaxDepth", "MinTrustState", "TraversalMode", });
     internal_static_oscal_services_v1_PathSegment_descriptor =
-      getDescriptor().getMessageType(15);
+      getDescriptor().getMessageType(18);
     internal_static_oscal_services_v1_PathSegment_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_services_v1_PathSegment_descriptor,
         new java.lang.String[] { "Depth", "Edge", "Node", });
     internal_static_oscal_services_v1_TraverseResponse_descriptor =
-      getDescriptor().getMessageType(16);
+      getDescriptor().getMessageType(19);
     internal_static_oscal_services_v1_TraverseResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_services_v1_TraverseResponse_descriptor,
         new java.lang.String[] { "Path", });
     internal_static_oscal_services_v1_ShortestPathRequest_descriptor =
-      getDescriptor().getMessageType(17);
+      getDescriptor().getMessageType(20);
     internal_static_oscal_services_v1_ShortestPathRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_services_v1_ShortestPathRequest_descriptor,
         new java.lang.String[] { "FromNode", "ToNode", "MinTrustState", "AllowedRelations", });
     internal_static_oscal_services_v1_ShortestPathResponse_descriptor =
-      getDescriptor().getMessageType(18);
+      getDescriptor().getMessageType(21);
     internal_static_oscal_services_v1_ShortestPathResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_services_v1_ShortestPathResponse_descriptor,
         new java.lang.String[] { "Edges", "TotalWeight", "Found", });
     internal_static_oscal_services_v1_ImpactRadiusRequest_descriptor =
-      getDescriptor().getMessageType(19);
+      getDescriptor().getMessageType(22);
     internal_static_oscal_services_v1_ImpactRadiusRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_services_v1_ImpactRadiusRequest_descriptor,
         new java.lang.String[] { "Node", "MaxDepth", "MinTrustState", "Relations", });
     internal_static_oscal_services_v1_ImpactRadiusResponse_descriptor =
-      getDescriptor().getMessageType(20);
+      getDescriptor().getMessageType(23);
     internal_static_oscal_services_v1_ImpactRadiusResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_services_v1_ImpactRadiusResponse_descriptor,
         new java.lang.String[] { "Nodes", "Edges", });
     internal_static_oscal_services_v1_ExplainClaimRequest_descriptor =
-      getDescriptor().getMessageType(21);
+      getDescriptor().getMessageType(24);
     internal_static_oscal_services_v1_ExplainClaimRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_services_v1_ExplainClaimRequest_descriptor,
         new java.lang.String[] { "ClaimId", "EdgeId", });
     internal_static_oscal_services_v1_ExplainClaimResponse_descriptor =
-      getDescriptor().getMessageType(22);
+      getDescriptor().getMessageType(25);
     internal_static_oscal_services_v1_ExplainClaimResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_services_v1_ExplainClaimResponse_descriptor,
         new java.lang.String[] { "Claim", "Evidence", "ProofStateJson", "TrustState", });
     internal_static_oscal_services_v1_ComputeTrustStateRequest_descriptor =
-      getDescriptor().getMessageType(23);
+      getDescriptor().getMessageType(26);
     internal_static_oscal_services_v1_ComputeTrustStateRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_services_v1_ComputeTrustStateRequest_descriptor,
         new java.lang.String[] { "ClaimId", "EdgeId", });
     internal_static_oscal_services_v1_ComputeTrustStateResponse_descriptor =
-      getDescriptor().getMessageType(24);
+      getDescriptor().getMessageType(27);
     internal_static_oscal_services_v1_ComputeTrustStateResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_services_v1_ComputeTrustStateResponse_descriptor,
         new java.lang.String[] { "ClaimId", "EdgeId", "ProofState", "TrustState", "Diagnostics", });
     internal_static_oscal_services_v1_VerifyClosureRequest_descriptor =
-      getDescriptor().getMessageType(25);
+      getDescriptor().getMessageType(28);
     internal_static_oscal_services_v1_VerifyClosureRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_services_v1_VerifyClosureRequest_descriptor,
         new java.lang.String[] { "SubjectNode", "Purpose", "AsOf", });
     internal_static_oscal_services_v1_VerifyClosureResponse_descriptor =
-      getDescriptor().getMessageType(26);
+      getDescriptor().getMessageType(29);
     internal_static_oscal_services_v1_VerifyClosureResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_services_v1_VerifyClosureResponse_descriptor,

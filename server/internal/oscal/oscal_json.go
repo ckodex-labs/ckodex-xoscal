@@ -6,12 +6,13 @@ import (
 	"strings"
 	"time"
 
+	"github.com/mchorfa/xoscal/server/internal/oscalversion"
 	"google.golang.org/protobuf/encoding/protojson"
 	"google.golang.org/protobuf/proto"
 )
 
 // OSCALVersion is the OSCAL version all artifacts conform to.
-const OSCALVersion = "1.1.2"
+var OSCALVersion = oscalversion.Current()
 
 // oscalRootKeys maps protobuf message types to their OSCAL JSON root wrapper key.
 var oscalRootKeys = map[string]string{
@@ -22,6 +23,7 @@ var oscalRootKeys = map[string]string{
 	"AssessmentPlan":            "assessment-plan",
 	"AssessmentResults":         "assessment-results",
 	"PlanOfActionAndMilestones": "plan-of-action-and-milestones",
+	"MappingCollection":         "mapping-collection",
 }
 
 // marshalOSCALJSON serializes a protobuf message to OSCAL-compliant JSON.
@@ -122,6 +124,14 @@ func transformOSCAL(data interface{}) interface{} {
 			// Skip null values
 			if val == nil {
 				continue
+			}
+			// OSCAL uses an empty object as the semantic marker for selecting
+			// every control. It must survive the normal empty-value pruning.
+			if key == "includeAll" {
+				if marker, ok := val.(map[string]interface{}); ok && len(marker) == 0 {
+					result["include-all"] = map[string]interface{}{}
+					continue
+				}
 			}
 
 			transformed := transformOSCAL(val)

@@ -1,5 +1,32 @@
 {
   "$defs": {
+    "oscal.common.v1.Decimal.jsonschema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Decimal represents a decimal value",
+      "properties": {
+        "value": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "enum": [
+                "Infinity",
+                "-Infinity",
+                "NaN"
+              ],
+              "type": "string"
+            }
+          ]
+        }
+      },
+      "required": [
+        "value"
+      ],
+      "title": "Decimal",
+      "type": "object"
+    },
     "oscal.common.v1.Link.jsonschema.strict.json": {
       "$schema": "https://json-schema.org/draft/2020-12/schema",
       "additionalProperties": false,
@@ -94,8 +121,11 @@
     "oscal.mapping.v1.Coverage.jsonschema.strict.json": {
       "$schema": "https://json-schema.org/draft/2020-12/schema",
       "additionalProperties": false,
-      "description": "Coverage represents coverage information",
+      "description": "Coverage records target coverage and the method used to derive it.\n Fields 1-5 are retained for wire compatibility with the prototype model.",
       "properties": {
+        "generationMethod": {
+          "type": "string"
+        },
         "links": {
           "items": {
             "$ref": "#/$defs/oscal.common.v1.Link.jsonschema.strict.json"
@@ -117,6 +147,9 @@
           },
           "type": "array"
         },
+        "targetCoverage": {
+          "$ref": "#/$defs/oscal.common.v1.Decimal.jsonschema.strict.json"
+        },
         "value": {
           "anyOf": [
             {
@@ -135,7 +168,8 @@
       },
       "required": [
         "value",
-        "method"
+        "method",
+        "generationMethod"
       ],
       "title": "Coverage",
       "type": "object"

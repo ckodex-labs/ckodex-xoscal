@@ -19,18 +19,19 @@ import (
 const _ = grpc.SupportPackageIsVersion9
 
 const (
-	TransparencyGraphService_ProjectEdge_FullMethodName       = "/oscal.services.v1.TransparencyGraphService/ProjectEdge"
-	TransparencyGraphService_GetEdge_FullMethodName           = "/oscal.services.v1.TransparencyGraphService/GetEdge"
-	TransparencyGraphService_ListEdges_FullMethodName         = "/oscal.services.v1.TransparencyGraphService/ListEdges"
-	TransparencyGraphService_DeleteEdge_FullMethodName        = "/oscal.services.v1.TransparencyGraphService/DeleteEdge"
-	TransparencyGraphService_GetNode_FullMethodName           = "/oscal.services.v1.TransparencyGraphService/GetNode"
-	TransparencyGraphService_ListNodes_FullMethodName         = "/oscal.services.v1.TransparencyGraphService/ListNodes"
-	TransparencyGraphService_Traverse_FullMethodName          = "/oscal.services.v1.TransparencyGraphService/Traverse"
-	TransparencyGraphService_ShortestPath_FullMethodName      = "/oscal.services.v1.TransparencyGraphService/ShortestPath"
-	TransparencyGraphService_ImpactRadius_FullMethodName      = "/oscal.services.v1.TransparencyGraphService/ImpactRadius"
-	TransparencyGraphService_ExplainClaim_FullMethodName      = "/oscal.services.v1.TransparencyGraphService/ExplainClaim"
-	TransparencyGraphService_ComputeTrustState_FullMethodName = "/oscal.services.v1.TransparencyGraphService/ComputeTrustState"
-	TransparencyGraphService_VerifyClosure_FullMethodName     = "/oscal.services.v1.TransparencyGraphService/VerifyClosure"
+	TransparencyGraphService_ProjectEdge_FullMethodName          = "/oscal.services.v1.TransparencyGraphService/ProjectEdge"
+	TransparencyGraphService_ListProjectionEvents_FullMethodName = "/oscal.services.v1.TransparencyGraphService/ListProjectionEvents"
+	TransparencyGraphService_GetEdge_FullMethodName              = "/oscal.services.v1.TransparencyGraphService/GetEdge"
+	TransparencyGraphService_ListEdges_FullMethodName            = "/oscal.services.v1.TransparencyGraphService/ListEdges"
+	TransparencyGraphService_DeleteEdge_FullMethodName           = "/oscal.services.v1.TransparencyGraphService/DeleteEdge"
+	TransparencyGraphService_GetNode_FullMethodName              = "/oscal.services.v1.TransparencyGraphService/GetNode"
+	TransparencyGraphService_ListNodes_FullMethodName            = "/oscal.services.v1.TransparencyGraphService/ListNodes"
+	TransparencyGraphService_Traverse_FullMethodName             = "/oscal.services.v1.TransparencyGraphService/Traverse"
+	TransparencyGraphService_ShortestPath_FullMethodName         = "/oscal.services.v1.TransparencyGraphService/ShortestPath"
+	TransparencyGraphService_ImpactRadius_FullMethodName         = "/oscal.services.v1.TransparencyGraphService/ImpactRadius"
+	TransparencyGraphService_ExplainClaim_FullMethodName         = "/oscal.services.v1.TransparencyGraphService/ExplainClaim"
+	TransparencyGraphService_ComputeTrustState_FullMethodName    = "/oscal.services.v1.TransparencyGraphService/ComputeTrustState"
+	TransparencyGraphService_VerifyClosure_FullMethodName        = "/oscal.services.v1.TransparencyGraphService/VerifyClosure"
 )
 
 // TransparencyGraphServiceClient is the client API for TransparencyGraphService service.
@@ -41,6 +42,7 @@ const (
 // with structured proof-state verification for xOSCAL.
 type TransparencyGraphServiceClient interface {
 	ProjectEdge(ctx context.Context, in *ProjectEdgeRequest, opts ...grpc.CallOption) (*ProjectEdgeResponse, error)
+	ListProjectionEvents(ctx context.Context, in *ListProjectionEventsRequest, opts ...grpc.CallOption) (*ListProjectionEventsResponse, error)
 	GetEdge(ctx context.Context, in *GetEdgeRequest, opts ...grpc.CallOption) (*GetEdgeResponse, error)
 	ListEdges(ctx context.Context, in *ListEdgesRequest, opts ...grpc.CallOption) (*ListEdgesResponse, error)
 	DeleteEdge(ctx context.Context, in *DeleteEdgeRequest, opts ...grpc.CallOption) (*DeleteEdgeResponse, error)
@@ -66,6 +68,16 @@ func (c *transparencyGraphServiceClient) ProjectEdge(ctx context.Context, in *Pr
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(ProjectEdgeResponse)
 	err := c.cc.Invoke(ctx, TransparencyGraphService_ProjectEdge_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *transparencyGraphServiceClient) ListProjectionEvents(ctx context.Context, in *ListProjectionEventsRequest, opts ...grpc.CallOption) (*ListProjectionEventsResponse, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(ListProjectionEventsResponse)
+	err := c.cc.Invoke(ctx, TransparencyGraphService_ListProjectionEvents_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
@@ -190,6 +202,7 @@ func (c *transparencyGraphServiceClient) VerifyClosure(ctx context.Context, in *
 // with structured proof-state verification for xOSCAL.
 type TransparencyGraphServiceServer interface {
 	ProjectEdge(context.Context, *ProjectEdgeRequest) (*ProjectEdgeResponse, error)
+	ListProjectionEvents(context.Context, *ListProjectionEventsRequest) (*ListProjectionEventsResponse, error)
 	GetEdge(context.Context, *GetEdgeRequest) (*GetEdgeResponse, error)
 	ListEdges(context.Context, *ListEdgesRequest) (*ListEdgesResponse, error)
 	DeleteEdge(context.Context, *DeleteEdgeRequest) (*DeleteEdgeResponse, error)
@@ -213,6 +226,9 @@ type UnimplementedTransparencyGraphServiceServer struct{}
 
 func (UnimplementedTransparencyGraphServiceServer) ProjectEdge(context.Context, *ProjectEdgeRequest) (*ProjectEdgeResponse, error) {
 	return nil, status.Error(codes.Unimplemented, "method ProjectEdge not implemented")
+}
+func (UnimplementedTransparencyGraphServiceServer) ListProjectionEvents(context.Context, *ListProjectionEventsRequest) (*ListProjectionEventsResponse, error) {
+	return nil, status.Error(codes.Unimplemented, "method ListProjectionEvents not implemented")
 }
 func (UnimplementedTransparencyGraphServiceServer) GetEdge(context.Context, *GetEdgeRequest) (*GetEdgeResponse, error) {
 	return nil, status.Error(codes.Unimplemented, "method GetEdge not implemented")
@@ -283,6 +299,24 @@ func _TransparencyGraphService_ProjectEdge_Handler(srv interface{}, ctx context.
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(TransparencyGraphServiceServer).ProjectEdge(ctx, req.(*ProjectEdgeRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _TransparencyGraphService_ListProjectionEvents_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ListProjectionEventsRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(TransparencyGraphServiceServer).ListProjectionEvents(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: TransparencyGraphService_ListProjectionEvents_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(TransparencyGraphServiceServer).ListProjectionEvents(ctx, req.(*ListProjectionEventsRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -495,6 +529,10 @@ var TransparencyGraphService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "ProjectEdge",
 			Handler:    _TransparencyGraphService_ProjectEdge_Handler,
+		},
+		{
+			MethodName: "ListProjectionEvents",
+			Handler:    _TransparencyGraphService_ListProjectionEvents_Handler,
 		},
 		{
 			MethodName: "GetEdge",

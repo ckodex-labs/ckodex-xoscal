@@ -1023,7 +1023,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder> 
+          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder>
           internalGetUuidFieldBuilder() {
         if (uuidBuilder_ == null) {
           uuidBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -1144,7 +1144,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.Metadata metadata = 2 [json_name = "metadata"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.Metadata, oscal.common.v1.Common.Metadata.Builder, oscal.common.v1.Common.MetadataOrBuilder> 
+          oscal.common.v1.Common.Metadata, oscal.common.v1.Common.Metadata.Builder, oscal.common.v1.Common.MetadataOrBuilder>
           internalGetMetadataFieldBuilder() {
         if (metadataBuilder_ == null) {
           metadataBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -1265,7 +1265,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.ssp.v1.ImportProfile import_profile = 3 [json_name = "importProfile"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.ssp.v1.Ssp.ImportProfile, oscal.ssp.v1.Ssp.ImportProfile.Builder, oscal.ssp.v1.Ssp.ImportProfileOrBuilder> 
+          oscal.ssp.v1.Ssp.ImportProfile, oscal.ssp.v1.Ssp.ImportProfile.Builder, oscal.ssp.v1.Ssp.ImportProfileOrBuilder>
           internalGetImportProfileFieldBuilder() {
         if (importProfileBuilder_ == null) {
           importProfileBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -1386,7 +1386,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.ssp.v1.SystemCharacteristics system_characteristics = 4 [json_name = "systemCharacteristics"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.ssp.v1.Ssp.SystemCharacteristics, oscal.ssp.v1.Ssp.SystemCharacteristics.Builder, oscal.ssp.v1.Ssp.SystemCharacteristicsOrBuilder> 
+          oscal.ssp.v1.Ssp.SystemCharacteristics, oscal.ssp.v1.Ssp.SystemCharacteristics.Builder, oscal.ssp.v1.Ssp.SystemCharacteristicsOrBuilder>
           internalGetSystemCharacteristicsFieldBuilder() {
         if (systemCharacteristicsBuilder_ == null) {
           systemCharacteristicsBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -1507,7 +1507,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.ssp.v1.SystemImplementation system_implementation = 5 [json_name = "systemImplementation"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.ssp.v1.Ssp.SystemImplementation, oscal.ssp.v1.Ssp.SystemImplementation.Builder, oscal.ssp.v1.Ssp.SystemImplementationOrBuilder> 
+          oscal.ssp.v1.Ssp.SystemImplementation, oscal.ssp.v1.Ssp.SystemImplementation.Builder, oscal.ssp.v1.Ssp.SystemImplementationOrBuilder>
           internalGetSystemImplementationFieldBuilder() {
         if (systemImplementationBuilder_ == null) {
           systemImplementationBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -1628,7 +1628,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.ssp.v1.ControlImplementation control_implementation = 6 [json_name = "controlImplementation"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.ssp.v1.Ssp.ControlImplementation, oscal.ssp.v1.Ssp.ControlImplementation.Builder, oscal.ssp.v1.Ssp.ControlImplementationOrBuilder> 
+          oscal.ssp.v1.Ssp.ControlImplementation, oscal.ssp.v1.Ssp.ControlImplementation.Builder, oscal.ssp.v1.Ssp.ControlImplementationOrBuilder>
           internalGetControlImplementationFieldBuilder() {
         if (controlImplementationBuilder_ == null) {
           controlImplementationBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -1749,7 +1749,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.BackMatter back_matter = 7 [json_name = "backMatter"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.BackMatter, oscal.common.v1.Common.BackMatter.Builder, oscal.common.v1.Common.BackMatterOrBuilder> 
+          oscal.common.v1.Common.BackMatter, oscal.common.v1.Common.BackMatter.Builder, oscal.common.v1.Common.BackMatterOrBuilder>
           internalGetBackMatterFieldBuilder() {
         if (backMatterBuilder_ == null) {
           backMatterBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -1835,7 +1835,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
      */
-    java.util.List<oscal.common.v1.Common.MarkupMultiline> 
+    java.util.List<oscal.common.v1.Common.MarkupMultiline>
         getRemarksList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
@@ -1848,7 +1848,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
@@ -1944,7 +1944,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList() {
       return remarks_;
     }
@@ -2301,7 +2301,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               remarksBuilder_ = null;
               remarks_ = other.remarks_;
               bitField0_ = (bitField0_ & ~0x00000002);
-              remarksBuilder_ = 
+              remarksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetRemarksFieldBuilder() : null;
             } else {
@@ -2480,7 +2480,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.URIReference href = 1 [json_name = "href"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.URIReference, oscal.common.v1.Common.URIReference.Builder, oscal.common.v1.Common.URIReferenceOrBuilder> 
+          oscal.common.v1.Common.URIReference, oscal.common.v1.Common.URIReference.Builder, oscal.common.v1.Common.URIReferenceOrBuilder>
           internalGetHrefFieldBuilder() {
         if (hrefBuilder_ == null) {
           hrefBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -2688,7 +2688,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
            getRemarksOrBuilderList() {
         if (remarksBuilder_ != null) {
           return remarksBuilder_.getMessageOrBuilderList();
@@ -2714,12 +2714,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder> 
+      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder>
            getRemarksBuilderList() {
         return internalGetRemarksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetRemarksFieldBuilder() {
         if (remarksBuilder_ == null) {
           remarksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -2791,7 +2791,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.ssp.v1.SystemId system_ids = 1 [json_name = "systemIds"];</code>
      */
-    java.util.List<oscal.ssp.v1.Ssp.SystemId> 
+    java.util.List<oscal.ssp.v1.Ssp.SystemId>
         getSystemIdsList();
     /**
      * <code>repeated .oscal.ssp.v1.SystemId system_ids = 1 [json_name = "systemIds"];</code>
@@ -2804,7 +2804,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.ssp.v1.SystemId system_ids = 1 [json_name = "systemIds"];</code>
      */
-    java.util.List<? extends oscal.ssp.v1.Ssp.SystemIdOrBuilder> 
+    java.util.List<? extends oscal.ssp.v1.Ssp.SystemIdOrBuilder>
         getSystemIdsOrBuilderList();
     /**
      * <code>repeated .oscal.ssp.v1.SystemId system_ids = 1 [json_name = "systemIds"];</code>
@@ -2854,7 +2854,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Property> 
+    java.util.List<oscal.common.v1.Common.Property>
         getPropsList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
@@ -2867,7 +2867,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
@@ -2878,7 +2878,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Link> 
+    java.util.List<oscal.common.v1.Common.Link>
         getLinksList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
@@ -2891,7 +2891,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
@@ -3019,7 +3019,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.ResponsibleParty responsible_parties = 15 [json_name = "responsibleParties"];</code>
      */
-    java.util.List<oscal.common.v1.Common.ResponsibleParty> 
+    java.util.List<oscal.common.v1.Common.ResponsibleParty>
         getResponsiblePartiesList();
     /**
      * <code>repeated .oscal.common.v1.ResponsibleParty responsible_parties = 15 [json_name = "responsibleParties"];</code>
@@ -3032,7 +3032,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.ResponsibleParty responsible_parties = 15 [json_name = "responsibleParties"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.ResponsiblePartyOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.ResponsiblePartyOrBuilder>
         getResponsiblePartiesOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.ResponsibleParty responsible_parties = 15 [json_name = "responsibleParties"];</code>
@@ -3043,7 +3043,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 16 [json_name = "remarks"];</code>
      */
-    java.util.List<oscal.common.v1.Common.MarkupMultiline> 
+    java.util.List<oscal.common.v1.Common.MarkupMultiline>
         getRemarksList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 16 [json_name = "remarks"];</code>
@@ -3056,7 +3056,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 16 [json_name = "remarks"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 16 [json_name = "remarks"];</code>
@@ -3133,7 +3133,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.ssp.v1.SystemId system_ids = 1 [json_name = "systemIds"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.ssp.v1.Ssp.SystemIdOrBuilder> 
+    public java.util.List<? extends oscal.ssp.v1.Ssp.SystemIdOrBuilder>
         getSystemIdsOrBuilderList() {
       return systemIds_;
     }
@@ -3173,7 +3173,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         systemName_ = s;
@@ -3189,7 +3189,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
         getSystemNameBytes() {
       java.lang.Object ref = systemName_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         systemName_ = b;
@@ -3212,7 +3212,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         systemNameShort_ = s;
@@ -3228,7 +3228,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
         getSystemNameShortBytes() {
       java.lang.Object ref = systemNameShort_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         systemNameShort_ = b;
@@ -3278,7 +3278,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList() {
       return props_;
     }
@@ -3319,7 +3319,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList() {
       return links_;
     }
@@ -3385,7 +3385,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         securitySensitivityLevel_ = s;
@@ -3401,7 +3401,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
         getSecuritySensitivityLevelBytes() {
       java.lang.Object ref = securitySensitivityLevel_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         securitySensitivityLevel_ = b;
@@ -3581,7 +3581,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.ResponsibleParty responsible_parties = 15 [json_name = "responsibleParties"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.ResponsiblePartyOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.ResponsiblePartyOrBuilder>
         getResponsiblePartiesOrBuilderList() {
       return responsibleParties_;
     }
@@ -3622,7 +3622,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 16 [json_name = "remarks"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList() {
       return remarks_;
     }
@@ -4354,7 +4354,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               systemIdsBuilder_ = null;
               systemIds_ = other.systemIds_;
               bitField0_ = (bitField0_ & ~0x00000001);
-              systemIdsBuilder_ = 
+              systemIdsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetSystemIdsFieldBuilder() : null;
             } else {
@@ -4393,7 +4393,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               propsBuilder_ = null;
               props_ = other.props_;
               bitField0_ = (bitField0_ & ~0x00000010);
-              propsBuilder_ = 
+              propsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetPropsFieldBuilder() : null;
             } else {
@@ -4419,7 +4419,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               linksBuilder_ = null;
               links_ = other.links_;
               bitField0_ = (bitField0_ & ~0x00000020);
-              linksBuilder_ = 
+              linksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetLinksFieldBuilder() : null;
             } else {
@@ -4471,7 +4471,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               responsiblePartiesBuilder_ = null;
               responsibleParties_ = other.responsibleParties_;
               bitField0_ = (bitField0_ & ~0x00004000);
-              responsiblePartiesBuilder_ = 
+              responsiblePartiesBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetResponsiblePartiesFieldBuilder() : null;
             } else {
@@ -4497,7 +4497,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               remarksBuilder_ = null;
               remarks_ = other.remarks_;
               bitField0_ = (bitField0_ & ~0x00008000);
-              remarksBuilder_ = 
+              remarksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetRemarksFieldBuilder() : null;
             } else {
@@ -4879,7 +4879,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.ssp.v1.SystemId system_ids = 1 [json_name = "systemIds"];</code>
        */
-      public java.util.List<? extends oscal.ssp.v1.Ssp.SystemIdOrBuilder> 
+      public java.util.List<? extends oscal.ssp.v1.Ssp.SystemIdOrBuilder>
            getSystemIdsOrBuilderList() {
         if (systemIdsBuilder_ != null) {
           return systemIdsBuilder_.getMessageOrBuilderList();
@@ -4905,12 +4905,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.ssp.v1.SystemId system_ids = 1 [json_name = "systemIds"];</code>
        */
-      public java.util.List<oscal.ssp.v1.Ssp.SystemId.Builder> 
+      public java.util.List<oscal.ssp.v1.Ssp.SystemId.Builder>
            getSystemIdsBuilderList() {
         return internalGetSystemIdsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.ssp.v1.Ssp.SystemId, oscal.ssp.v1.Ssp.SystemId.Builder, oscal.ssp.v1.Ssp.SystemIdOrBuilder> 
+          oscal.ssp.v1.Ssp.SystemId, oscal.ssp.v1.Ssp.SystemId.Builder, oscal.ssp.v1.Ssp.SystemIdOrBuilder>
           internalGetSystemIdsFieldBuilder() {
         if (systemIdsBuilder_ == null) {
           systemIdsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -4949,7 +4949,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
           getSystemNameBytes() {
         java.lang.Object ref = systemName_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           systemName_ = b;
@@ -5021,7 +5021,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
           getSystemNameShortBytes() {
         java.lang.Object ref = systemNameShort_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           systemNameShort_ = b;
@@ -5176,7 +5176,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.MarkupMultiline description = 4 [json_name = "description"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetDescriptionFieldBuilder() {
         if (descriptionBuilder_ == null) {
           descriptionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -5384,7 +5384,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
            getPropsOrBuilderList() {
         if (propsBuilder_ != null) {
           return propsBuilder_.getMessageOrBuilderList();
@@ -5410,12 +5410,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Property.Builder> 
+      public java.util.List<oscal.common.v1.Common.Property.Builder>
            getPropsBuilderList() {
         return internalGetPropsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> 
+          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder>
           internalGetPropsFieldBuilder() {
         if (propsBuilder_ == null) {
           propsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -5624,7 +5624,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
            getLinksOrBuilderList() {
         if (linksBuilder_ != null) {
           return linksBuilder_.getMessageOrBuilderList();
@@ -5650,12 +5650,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Link.Builder> 
+      public java.util.List<oscal.common.v1.Common.Link.Builder>
            getLinksBuilderList() {
         return internalGetLinksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder> 
+          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder>
           internalGetLinksFieldBuilder() {
         if (linksBuilder_ == null) {
           linksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -5777,7 +5777,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.Date date_authorized = 7 [json_name = "dateAuthorized"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.Date, oscal.common.v1.Common.Date.Builder, oscal.common.v1.Common.DateOrBuilder> 
+          oscal.common.v1.Common.Date, oscal.common.v1.Common.Date.Builder, oscal.common.v1.Common.DateOrBuilder>
           internalGetDateAuthorizedFieldBuilder() {
         if (dateAuthorizedBuilder_ == null) {
           dateAuthorizedBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -5815,7 +5815,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
           getSecuritySensitivityLevelBytes() {
         java.lang.Object ref = securitySensitivityLevel_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           securitySensitivityLevel_ = b;
@@ -5970,7 +5970,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.ssp.v1.SystemInformation system_information = 9 [json_name = "systemInformation"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.ssp.v1.Ssp.SystemInformation, oscal.ssp.v1.Ssp.SystemInformation.Builder, oscal.ssp.v1.Ssp.SystemInformationOrBuilder> 
+          oscal.ssp.v1.Ssp.SystemInformation, oscal.ssp.v1.Ssp.SystemInformation.Builder, oscal.ssp.v1.Ssp.SystemInformationOrBuilder>
           internalGetSystemInformationFieldBuilder() {
         if (systemInformationBuilder_ == null) {
           systemInformationBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -6091,7 +6091,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.ssp.v1.SecurityImpactLevel security_impact_level = 10 [json_name = "securityImpactLevel"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.ssp.v1.Ssp.SecurityImpactLevel, oscal.ssp.v1.Ssp.SecurityImpactLevel.Builder, oscal.ssp.v1.Ssp.SecurityImpactLevelOrBuilder> 
+          oscal.ssp.v1.Ssp.SecurityImpactLevel, oscal.ssp.v1.Ssp.SecurityImpactLevel.Builder, oscal.ssp.v1.Ssp.SecurityImpactLevelOrBuilder>
           internalGetSecurityImpactLevelFieldBuilder() {
         if (securityImpactLevelBuilder_ == null) {
           securityImpactLevelBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -6212,7 +6212,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.ssp.v1.Status status = 11 [json_name = "status"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.ssp.v1.Ssp.Status, oscal.ssp.v1.Ssp.Status.Builder, oscal.ssp.v1.Ssp.StatusOrBuilder> 
+          oscal.ssp.v1.Ssp.Status, oscal.ssp.v1.Ssp.Status.Builder, oscal.ssp.v1.Ssp.StatusOrBuilder>
           internalGetStatusFieldBuilder() {
         if (statusBuilder_ == null) {
           statusBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -6333,7 +6333,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.ssp.v1.AuthorizationBoundary authorization_boundary = 12 [json_name = "authorizationBoundary"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.ssp.v1.Ssp.AuthorizationBoundary, oscal.ssp.v1.Ssp.AuthorizationBoundary.Builder, oscal.ssp.v1.Ssp.AuthorizationBoundaryOrBuilder> 
+          oscal.ssp.v1.Ssp.AuthorizationBoundary, oscal.ssp.v1.Ssp.AuthorizationBoundary.Builder, oscal.ssp.v1.Ssp.AuthorizationBoundaryOrBuilder>
           internalGetAuthorizationBoundaryFieldBuilder() {
         if (authorizationBoundaryBuilder_ == null) {
           authorizationBoundaryBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -6454,7 +6454,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.ssp.v1.NetworkArchitecture network_architecture = 13 [json_name = "networkArchitecture"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.ssp.v1.Ssp.NetworkArchitecture, oscal.ssp.v1.Ssp.NetworkArchitecture.Builder, oscal.ssp.v1.Ssp.NetworkArchitectureOrBuilder> 
+          oscal.ssp.v1.Ssp.NetworkArchitecture, oscal.ssp.v1.Ssp.NetworkArchitecture.Builder, oscal.ssp.v1.Ssp.NetworkArchitectureOrBuilder>
           internalGetNetworkArchitectureFieldBuilder() {
         if (networkArchitectureBuilder_ == null) {
           networkArchitectureBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -6575,7 +6575,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.ssp.v1.DataFlow data_flow = 14 [json_name = "dataFlow"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.ssp.v1.Ssp.DataFlow, oscal.ssp.v1.Ssp.DataFlow.Builder, oscal.ssp.v1.Ssp.DataFlowOrBuilder> 
+          oscal.ssp.v1.Ssp.DataFlow, oscal.ssp.v1.Ssp.DataFlow.Builder, oscal.ssp.v1.Ssp.DataFlowOrBuilder>
           internalGetDataFlowFieldBuilder() {
         if (dataFlowBuilder_ == null) {
           dataFlowBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -6783,7 +6783,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.ResponsibleParty responsible_parties = 15 [json_name = "responsibleParties"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.ResponsiblePartyOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.ResponsiblePartyOrBuilder>
            getResponsiblePartiesOrBuilderList() {
         if (responsiblePartiesBuilder_ != null) {
           return responsiblePartiesBuilder_.getMessageOrBuilderList();
@@ -6809,12 +6809,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.ResponsibleParty responsible_parties = 15 [json_name = "responsibleParties"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.ResponsibleParty.Builder> 
+      public java.util.List<oscal.common.v1.Common.ResponsibleParty.Builder>
            getResponsiblePartiesBuilderList() {
         return internalGetResponsiblePartiesFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.ResponsibleParty, oscal.common.v1.Common.ResponsibleParty.Builder, oscal.common.v1.Common.ResponsiblePartyOrBuilder> 
+          oscal.common.v1.Common.ResponsibleParty, oscal.common.v1.Common.ResponsibleParty.Builder, oscal.common.v1.Common.ResponsiblePartyOrBuilder>
           internalGetResponsiblePartiesFieldBuilder() {
         if (responsiblePartiesBuilder_ == null) {
           responsiblePartiesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -7023,7 +7023,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 16 [json_name = "remarks"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
            getRemarksOrBuilderList() {
         if (remarksBuilder_ != null) {
           return remarksBuilder_.getMessageOrBuilderList();
@@ -7049,12 +7049,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 16 [json_name = "remarks"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder> 
+      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder>
            getRemarksBuilderList() {
         return internalGetRemarksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetRemarksFieldBuilder() {
         if (remarksBuilder_ == null) {
           remarksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -7208,7 +7208,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         id_ = s;
@@ -7224,7 +7224,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
         getIdBytes() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         id_ = b;
@@ -7247,7 +7247,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         identifierType_ = s;
@@ -7263,7 +7263,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
         getIdentifierTypeBytes() {
       java.lang.Object ref = identifierType_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         identifierType_ = b;
@@ -7624,7 +7624,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
           getIdBytes() {
         java.lang.Object ref = id_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           id_ = b;
@@ -7696,7 +7696,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
           getIdentifierTypeBytes() {
         java.lang.Object ref = identifierType_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           identifierType_ = b;
@@ -7801,7 +7801,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 1 [json_name = "props"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Property> 
+    java.util.List<oscal.common.v1.Common.Property>
         getPropsList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 1 [json_name = "props"];</code>
@@ -7814,7 +7814,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 1 [json_name = "props"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 1 [json_name = "props"];</code>
@@ -7825,7 +7825,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 2 [json_name = "links"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Link> 
+    java.util.List<oscal.common.v1.Common.Link>
         getLinksList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 2 [json_name = "links"];</code>
@@ -7838,7 +7838,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 2 [json_name = "links"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 2 [json_name = "links"];</code>
@@ -7849,7 +7849,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.ssp.v1.InformationType information_types = 3 [json_name = "informationTypes"];</code>
      */
-    java.util.List<oscal.ssp.v1.Ssp.InformationType> 
+    java.util.List<oscal.ssp.v1.Ssp.InformationType>
         getInformationTypesList();
     /**
      * <code>repeated .oscal.ssp.v1.InformationType information_types = 3 [json_name = "informationTypes"];</code>
@@ -7862,7 +7862,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.ssp.v1.InformationType information_types = 3 [json_name = "informationTypes"];</code>
      */
-    java.util.List<? extends oscal.ssp.v1.Ssp.InformationTypeOrBuilder> 
+    java.util.List<? extends oscal.ssp.v1.Ssp.InformationTypeOrBuilder>
         getInformationTypesOrBuilderList();
     /**
      * <code>repeated .oscal.ssp.v1.InformationType information_types = 3 [json_name = "informationTypes"];</code>
@@ -7933,7 +7933,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Property props = 1 [json_name = "props"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList() {
       return props_;
     }
@@ -7974,7 +7974,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Link links = 2 [json_name = "links"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList() {
       return links_;
     }
@@ -8015,7 +8015,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.ssp.v1.InformationType information_types = 3 [json_name = "informationTypes"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.ssp.v1.Ssp.InformationTypeOrBuilder> 
+    public java.util.List<? extends oscal.ssp.v1.Ssp.InformationTypeOrBuilder>
         getInformationTypesOrBuilderList() {
       return informationTypes_;
     }
@@ -8401,7 +8401,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               propsBuilder_ = null;
               props_ = other.props_;
               bitField0_ = (bitField0_ & ~0x00000001);
-              propsBuilder_ = 
+              propsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetPropsFieldBuilder() : null;
             } else {
@@ -8427,7 +8427,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               linksBuilder_ = null;
               links_ = other.links_;
               bitField0_ = (bitField0_ & ~0x00000002);
-              linksBuilder_ = 
+              linksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetLinksFieldBuilder() : null;
             } else {
@@ -8453,7 +8453,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               informationTypesBuilder_ = null;
               informationTypes_ = other.informationTypes_;
               bitField0_ = (bitField0_ & ~0x00000004);
-              informationTypesBuilder_ = 
+              informationTypesBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetInformationTypesFieldBuilder() : null;
             } else {
@@ -8738,7 +8738,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 1 [json_name = "props"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
            getPropsOrBuilderList() {
         if (propsBuilder_ != null) {
           return propsBuilder_.getMessageOrBuilderList();
@@ -8764,12 +8764,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 1 [json_name = "props"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Property.Builder> 
+      public java.util.List<oscal.common.v1.Common.Property.Builder>
            getPropsBuilderList() {
         return internalGetPropsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> 
+          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder>
           internalGetPropsFieldBuilder() {
         if (propsBuilder_ == null) {
           propsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -8978,7 +8978,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 2 [json_name = "links"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
            getLinksOrBuilderList() {
         if (linksBuilder_ != null) {
           return linksBuilder_.getMessageOrBuilderList();
@@ -9004,12 +9004,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 2 [json_name = "links"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Link.Builder> 
+      public java.util.List<oscal.common.v1.Common.Link.Builder>
            getLinksBuilderList() {
         return internalGetLinksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder> 
+          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder>
           internalGetLinksFieldBuilder() {
         if (linksBuilder_ == null) {
           linksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -9218,7 +9218,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.ssp.v1.InformationType information_types = 3 [json_name = "informationTypes"];</code>
        */
-      public java.util.List<? extends oscal.ssp.v1.Ssp.InformationTypeOrBuilder> 
+      public java.util.List<? extends oscal.ssp.v1.Ssp.InformationTypeOrBuilder>
            getInformationTypesOrBuilderList() {
         if (informationTypesBuilder_ != null) {
           return informationTypesBuilder_.getMessageOrBuilderList();
@@ -9244,12 +9244,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.ssp.v1.InformationType information_types = 3 [json_name = "informationTypes"];</code>
        */
-      public java.util.List<oscal.ssp.v1.Ssp.InformationType.Builder> 
+      public java.util.List<oscal.ssp.v1.Ssp.InformationType.Builder>
            getInformationTypesBuilderList() {
         return internalGetInformationTypesFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.ssp.v1.Ssp.InformationType, oscal.ssp.v1.Ssp.InformationType.Builder, oscal.ssp.v1.Ssp.InformationTypeOrBuilder> 
+          oscal.ssp.v1.Ssp.InformationType, oscal.ssp.v1.Ssp.InformationType.Builder, oscal.ssp.v1.Ssp.InformationTypeOrBuilder>
           internalGetInformationTypesFieldBuilder() {
         if (informationTypesBuilder_ == null) {
           informationTypesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -9366,7 +9366,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.ssp.v1.Categorization categorizations = 4 [json_name = "categorizations"];</code>
      */
-    java.util.List<oscal.ssp.v1.Ssp.Categorization> 
+    java.util.List<oscal.ssp.v1.Ssp.Categorization>
         getCategorizationsList();
     /**
      * <code>repeated .oscal.ssp.v1.Categorization categorizations = 4 [json_name = "categorizations"];</code>
@@ -9379,7 +9379,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.ssp.v1.Categorization categorizations = 4 [json_name = "categorizations"];</code>
      */
-    java.util.List<? extends oscal.ssp.v1.Ssp.CategorizationOrBuilder> 
+    java.util.List<? extends oscal.ssp.v1.Ssp.CategorizationOrBuilder>
         getCategorizationsOrBuilderList();
     /**
      * <code>repeated .oscal.ssp.v1.Categorization categorizations = 4 [json_name = "categorizations"];</code>
@@ -9390,7 +9390,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Property> 
+    java.util.List<oscal.common.v1.Common.Property>
         getPropsList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
@@ -9403,7 +9403,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
@@ -9414,7 +9414,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Link> 
+    java.util.List<oscal.common.v1.Common.Link>
         getLinksList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
@@ -9427,7 +9427,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
@@ -9622,7 +9622,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.ssp.v1.Categorization categorizations = 4 [json_name = "categorizations"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.ssp.v1.Ssp.CategorizationOrBuilder> 
+    public java.util.List<? extends oscal.ssp.v1.Ssp.CategorizationOrBuilder>
         getCategorizationsOrBuilderList() {
       return categorizations_;
     }
@@ -9663,7 +9663,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList() {
       return props_;
     }
@@ -9704,7 +9704,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList() {
       return links_;
     }
@@ -10355,7 +10355,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               categorizationsBuilder_ = null;
               categorizations_ = other.categorizations_;
               bitField0_ = (bitField0_ & ~0x00000008);
-              categorizationsBuilder_ = 
+              categorizationsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetCategorizationsFieldBuilder() : null;
             } else {
@@ -10381,7 +10381,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               propsBuilder_ = null;
               props_ = other.props_;
               bitField0_ = (bitField0_ & ~0x00000010);
-              propsBuilder_ = 
+              propsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetPropsFieldBuilder() : null;
             } else {
@@ -10407,7 +10407,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               linksBuilder_ = null;
               links_ = other.links_;
               bitField0_ = (bitField0_ & ~0x00000020);
-              linksBuilder_ = 
+              linksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetLinksFieldBuilder() : null;
             } else {
@@ -10656,7 +10656,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder> 
+          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder>
           internalGetUuidFieldBuilder() {
         if (uuidBuilder_ == null) {
           uuidBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -10777,7 +10777,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.MarkupLine title = 2 [json_name = "title"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.MarkupLine, oscal.common.v1.Common.MarkupLine.Builder, oscal.common.v1.Common.MarkupLineOrBuilder> 
+          oscal.common.v1.Common.MarkupLine, oscal.common.v1.Common.MarkupLine.Builder, oscal.common.v1.Common.MarkupLineOrBuilder>
           internalGetTitleFieldBuilder() {
         if (titleBuilder_ == null) {
           titleBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -10898,7 +10898,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.MarkupMultiline description = 3 [json_name = "description"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetDescriptionFieldBuilder() {
         if (descriptionBuilder_ == null) {
           descriptionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -11106,7 +11106,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.ssp.v1.Categorization categorizations = 4 [json_name = "categorizations"];</code>
        */
-      public java.util.List<? extends oscal.ssp.v1.Ssp.CategorizationOrBuilder> 
+      public java.util.List<? extends oscal.ssp.v1.Ssp.CategorizationOrBuilder>
            getCategorizationsOrBuilderList() {
         if (categorizationsBuilder_ != null) {
           return categorizationsBuilder_.getMessageOrBuilderList();
@@ -11132,12 +11132,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.ssp.v1.Categorization categorizations = 4 [json_name = "categorizations"];</code>
        */
-      public java.util.List<oscal.ssp.v1.Ssp.Categorization.Builder> 
+      public java.util.List<oscal.ssp.v1.Ssp.Categorization.Builder>
            getCategorizationsBuilderList() {
         return internalGetCategorizationsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.ssp.v1.Ssp.Categorization, oscal.ssp.v1.Ssp.Categorization.Builder, oscal.ssp.v1.Ssp.CategorizationOrBuilder> 
+          oscal.ssp.v1.Ssp.Categorization, oscal.ssp.v1.Ssp.Categorization.Builder, oscal.ssp.v1.Ssp.CategorizationOrBuilder>
           internalGetCategorizationsFieldBuilder() {
         if (categorizationsBuilder_ == null) {
           categorizationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -11346,7 +11346,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
            getPropsOrBuilderList() {
         if (propsBuilder_ != null) {
           return propsBuilder_.getMessageOrBuilderList();
@@ -11372,12 +11372,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Property.Builder> 
+      public java.util.List<oscal.common.v1.Common.Property.Builder>
            getPropsBuilderList() {
         return internalGetPropsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> 
+          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder>
           internalGetPropsFieldBuilder() {
         if (propsBuilder_ == null) {
           propsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -11586,7 +11586,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
            getLinksOrBuilderList() {
         if (linksBuilder_ != null) {
           return linksBuilder_.getMessageOrBuilderList();
@@ -11612,12 +11612,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Link.Builder> 
+      public java.util.List<oscal.common.v1.Common.Link.Builder>
            getLinksBuilderList() {
         return internalGetLinksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder> 
+          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder>
           internalGetLinksFieldBuilder() {
         if (linksBuilder_ == null) {
           linksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -11739,7 +11739,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.ssp.v1.Impact confidentiality_impact = 7 [json_name = "confidentialityImpact"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.ssp.v1.Ssp.Impact, oscal.ssp.v1.Ssp.Impact.Builder, oscal.ssp.v1.Ssp.ImpactOrBuilder> 
+          oscal.ssp.v1.Ssp.Impact, oscal.ssp.v1.Ssp.Impact.Builder, oscal.ssp.v1.Ssp.ImpactOrBuilder>
           internalGetConfidentialityImpactFieldBuilder() {
         if (confidentialityImpactBuilder_ == null) {
           confidentialityImpactBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -11860,7 +11860,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.ssp.v1.Impact integrity_impact = 8 [json_name = "integrityImpact"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.ssp.v1.Ssp.Impact, oscal.ssp.v1.Ssp.Impact.Builder, oscal.ssp.v1.Ssp.ImpactOrBuilder> 
+          oscal.ssp.v1.Ssp.Impact, oscal.ssp.v1.Ssp.Impact.Builder, oscal.ssp.v1.Ssp.ImpactOrBuilder>
           internalGetIntegrityImpactFieldBuilder() {
         if (integrityImpactBuilder_ == null) {
           integrityImpactBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -11981,7 +11981,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.ssp.v1.Impact availability_impact = 9 [json_name = "availabilityImpact"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.ssp.v1.Ssp.Impact, oscal.ssp.v1.Ssp.Impact.Builder, oscal.ssp.v1.Ssp.ImpactOrBuilder> 
+          oscal.ssp.v1.Ssp.Impact, oscal.ssp.v1.Ssp.Impact.Builder, oscal.ssp.v1.Ssp.ImpactOrBuilder>
           internalGetAvailabilityImpactFieldBuilder() {
         if (availabilityImpactBuilder_ == null) {
           availabilityImpactBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -12148,7 +12148,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         system_ = s;
@@ -12164,7 +12164,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
         getSystemBytes() {
       java.lang.Object ref = system_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         system_ = b;
@@ -12576,7 +12576,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
           getSystemBytes() {
         java.lang.Object ref = system_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           system_ = b;
@@ -12792,7 +12792,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 1 [json_name = "props"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Property> 
+    java.util.List<oscal.common.v1.Common.Property>
         getPropsList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 1 [json_name = "props"];</code>
@@ -12805,7 +12805,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 1 [json_name = "props"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 1 [json_name = "props"];</code>
@@ -12816,7 +12816,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 2 [json_name = "links"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Link> 
+    java.util.List<oscal.common.v1.Common.Link>
         getLinksList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 2 [json_name = "links"];</code>
@@ -12829,7 +12829,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 2 [json_name = "links"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 2 [json_name = "links"];</code>
@@ -12941,7 +12941,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Property props = 1 [json_name = "props"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList() {
       return props_;
     }
@@ -12982,7 +12982,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Link links = 2 [json_name = "links"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList() {
       return links_;
     }
@@ -13022,7 +13022,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         base_ = s;
@@ -13038,7 +13038,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
         getBaseBytes() {
       java.lang.Object ref = base_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         base_ = b;
@@ -13061,7 +13061,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         selected_ = s;
@@ -13077,7 +13077,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
         getSelectedBytes() {
       java.lang.Object ref = selected_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         selected_ = b;
@@ -13503,7 +13503,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               propsBuilder_ = null;
               props_ = other.props_;
               bitField0_ = (bitField0_ & ~0x00000001);
-              propsBuilder_ = 
+              propsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetPropsFieldBuilder() : null;
             } else {
@@ -13529,7 +13529,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               linksBuilder_ = null;
               links_ = other.links_;
               bitField0_ = (bitField0_ & ~0x00000002);
-              linksBuilder_ = 
+              linksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetLinksFieldBuilder() : null;
             } else {
@@ -13831,7 +13831,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 1 [json_name = "props"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
            getPropsOrBuilderList() {
         if (propsBuilder_ != null) {
           return propsBuilder_.getMessageOrBuilderList();
@@ -13857,12 +13857,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 1 [json_name = "props"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Property.Builder> 
+      public java.util.List<oscal.common.v1.Common.Property.Builder>
            getPropsBuilderList() {
         return internalGetPropsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> 
+          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder>
           internalGetPropsFieldBuilder() {
         if (propsBuilder_ == null) {
           propsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -14071,7 +14071,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 2 [json_name = "links"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
            getLinksOrBuilderList() {
         if (linksBuilder_ != null) {
           return linksBuilder_.getMessageOrBuilderList();
@@ -14097,12 +14097,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 2 [json_name = "links"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Link.Builder> 
+      public java.util.List<oscal.common.v1.Common.Link.Builder>
            getLinksBuilderList() {
         return internalGetLinksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder> 
+          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder>
           internalGetLinksFieldBuilder() {
         if (linksBuilder_ == null) {
           linksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -14141,7 +14141,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
           getBaseBytes() {
         java.lang.Object ref = base_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           base_ = b;
@@ -14213,7 +14213,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
           getSelectedBytes() {
         java.lang.Object ref = selected_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           selected_ = b;
@@ -14368,7 +14368,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.MarkupMultiline adjustment_justification = 5 [json_name = "adjustmentJustification"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetAdjustmentJustificationFieldBuilder() {
         if (adjustmentJustificationBuilder_ == null) {
           adjustmentJustificationBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -14534,7 +14534,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         securityObjectiveConfidentiality_ = s;
@@ -14550,7 +14550,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
         getSecurityObjectiveConfidentialityBytes() {
       java.lang.Object ref = securityObjectiveConfidentiality_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         securityObjectiveConfidentiality_ = b;
@@ -14573,7 +14573,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         securityObjectiveIntegrity_ = s;
@@ -14589,7 +14589,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
         getSecurityObjectiveIntegrityBytes() {
       java.lang.Object ref = securityObjectiveIntegrity_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         securityObjectiveIntegrity_ = b;
@@ -14612,7 +14612,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         securityObjectiveAvailability_ = s;
@@ -14628,7 +14628,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
         getSecurityObjectiveAvailabilityBytes() {
       java.lang.Object ref = securityObjectiveAvailability_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         securityObjectiveAvailability_ = b;
@@ -15013,7 +15013,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
           getSecurityObjectiveConfidentialityBytes() {
         java.lang.Object ref = securityObjectiveConfidentiality_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           securityObjectiveConfidentiality_ = b;
@@ -15085,7 +15085,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
           getSecurityObjectiveIntegrityBytes() {
         java.lang.Object ref = securityObjectiveIntegrity_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           securityObjectiveIntegrity_ = b;
@@ -15157,7 +15157,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
           getSecurityObjectiveAvailabilityBytes() {
         java.lang.Object ref = securityObjectiveAvailability_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           securityObjectiveAvailability_ = b;
@@ -15274,7 +15274,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
      */
-    java.util.List<oscal.common.v1.Common.MarkupMultiline> 
+    java.util.List<oscal.common.v1.Common.MarkupMultiline>
         getRemarksList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
@@ -15287,7 +15287,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
@@ -15356,7 +15356,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         state_ = s;
@@ -15372,7 +15372,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
         getStateBytes() {
       java.lang.Object ref = state_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         state_ = b;
@@ -15396,7 +15396,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList() {
       return remarks_;
     }
@@ -15733,7 +15733,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               remarksBuilder_ = null;
               remarks_ = other.remarks_;
               bitField0_ = (bitField0_ & ~0x00000002);
-              remarksBuilder_ = 
+              remarksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetRemarksFieldBuilder() : null;
             } else {
@@ -15827,7 +15827,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
           getStateBytes() {
         java.lang.Object ref = state_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           state_ = b;
@@ -16069,7 +16069,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
            getRemarksOrBuilderList() {
         if (remarksBuilder_ != null) {
           return remarksBuilder_.getMessageOrBuilderList();
@@ -16095,12 +16095,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder> 
+      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder>
            getRemarksBuilderList() {
         return internalGetRemarksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetRemarksFieldBuilder() {
         if (remarksBuilder_ == null) {
           remarksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -16187,7 +16187,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 2 [json_name = "props"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Property> 
+    java.util.List<oscal.common.v1.Common.Property>
         getPropsList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 2 [json_name = "props"];</code>
@@ -16200,7 +16200,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 2 [json_name = "props"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 2 [json_name = "props"];</code>
@@ -16211,7 +16211,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 3 [json_name = "links"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Link> 
+    java.util.List<oscal.common.v1.Common.Link>
         getLinksList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 3 [json_name = "links"];</code>
@@ -16224,7 +16224,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 3 [json_name = "links"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 3 [json_name = "links"];</code>
@@ -16235,7 +16235,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.ssp.v1.Diagram diagrams = 4 [json_name = "diagrams"];</code>
      */
-    java.util.List<oscal.ssp.v1.Ssp.Diagram> 
+    java.util.List<oscal.ssp.v1.Ssp.Diagram>
         getDiagramsList();
     /**
      * <code>repeated .oscal.ssp.v1.Diagram diagrams = 4 [json_name = "diagrams"];</code>
@@ -16248,7 +16248,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.ssp.v1.Diagram diagrams = 4 [json_name = "diagrams"];</code>
      */
-    java.util.List<? extends oscal.ssp.v1.Ssp.DiagramOrBuilder> 
+    java.util.List<? extends oscal.ssp.v1.Ssp.DiagramOrBuilder>
         getDiagramsOrBuilderList();
     /**
      * <code>repeated .oscal.ssp.v1.Diagram diagrams = 4 [json_name = "diagrams"];</code>
@@ -16259,7 +16259,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
      */
-    java.util.List<oscal.common.v1.Common.MarkupMultiline> 
+    java.util.List<oscal.common.v1.Common.MarkupMultiline>
         getRemarksList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
@@ -16272,7 +16272,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
@@ -16371,7 +16371,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Property props = 2 [json_name = "props"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList() {
       return props_;
     }
@@ -16412,7 +16412,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Link links = 3 [json_name = "links"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList() {
       return links_;
     }
@@ -16453,7 +16453,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.ssp.v1.Diagram diagrams = 4 [json_name = "diagrams"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.ssp.v1.Ssp.DiagramOrBuilder> 
+    public java.util.List<? extends oscal.ssp.v1.Ssp.DiagramOrBuilder>
         getDiagramsOrBuilderList() {
       return diagrams_;
     }
@@ -16494,7 +16494,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList() {
       return remarks_;
     }
@@ -16956,7 +16956,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               propsBuilder_ = null;
               props_ = other.props_;
               bitField0_ = (bitField0_ & ~0x00000002);
-              propsBuilder_ = 
+              propsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetPropsFieldBuilder() : null;
             } else {
@@ -16982,7 +16982,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               linksBuilder_ = null;
               links_ = other.links_;
               bitField0_ = (bitField0_ & ~0x00000004);
-              linksBuilder_ = 
+              linksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetLinksFieldBuilder() : null;
             } else {
@@ -17008,7 +17008,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               diagramsBuilder_ = null;
               diagrams_ = other.diagrams_;
               bitField0_ = (bitField0_ & ~0x00000008);
-              diagramsBuilder_ = 
+              diagramsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetDiagramsFieldBuilder() : null;
             } else {
@@ -17034,7 +17034,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               remarksBuilder_ = null;
               remarks_ = other.remarks_;
               bitField0_ = (bitField0_ & ~0x00000010);
-              remarksBuilder_ = 
+              remarksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetRemarksFieldBuilder() : null;
             } else {
@@ -17252,7 +17252,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.MarkupMultiline description = 1 [json_name = "description"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetDescriptionFieldBuilder() {
         if (descriptionBuilder_ == null) {
           descriptionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -17460,7 +17460,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 2 [json_name = "props"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
            getPropsOrBuilderList() {
         if (propsBuilder_ != null) {
           return propsBuilder_.getMessageOrBuilderList();
@@ -17486,12 +17486,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 2 [json_name = "props"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Property.Builder> 
+      public java.util.List<oscal.common.v1.Common.Property.Builder>
            getPropsBuilderList() {
         return internalGetPropsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> 
+          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder>
           internalGetPropsFieldBuilder() {
         if (propsBuilder_ == null) {
           propsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -17700,7 +17700,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 3 [json_name = "links"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
            getLinksOrBuilderList() {
         if (linksBuilder_ != null) {
           return linksBuilder_.getMessageOrBuilderList();
@@ -17726,12 +17726,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 3 [json_name = "links"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Link.Builder> 
+      public java.util.List<oscal.common.v1.Common.Link.Builder>
            getLinksBuilderList() {
         return internalGetLinksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder> 
+          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder>
           internalGetLinksFieldBuilder() {
         if (linksBuilder_ == null) {
           linksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -17940,7 +17940,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.ssp.v1.Diagram diagrams = 4 [json_name = "diagrams"];</code>
        */
-      public java.util.List<? extends oscal.ssp.v1.Ssp.DiagramOrBuilder> 
+      public java.util.List<? extends oscal.ssp.v1.Ssp.DiagramOrBuilder>
            getDiagramsOrBuilderList() {
         if (diagramsBuilder_ != null) {
           return diagramsBuilder_.getMessageOrBuilderList();
@@ -17966,12 +17966,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.ssp.v1.Diagram diagrams = 4 [json_name = "diagrams"];</code>
        */
-      public java.util.List<oscal.ssp.v1.Ssp.Diagram.Builder> 
+      public java.util.List<oscal.ssp.v1.Ssp.Diagram.Builder>
            getDiagramsBuilderList() {
         return internalGetDiagramsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.ssp.v1.Ssp.Diagram, oscal.ssp.v1.Ssp.Diagram.Builder, oscal.ssp.v1.Ssp.DiagramOrBuilder> 
+          oscal.ssp.v1.Ssp.Diagram, oscal.ssp.v1.Ssp.Diagram.Builder, oscal.ssp.v1.Ssp.DiagramOrBuilder>
           internalGetDiagramsFieldBuilder() {
         if (diagramsBuilder_ == null) {
           diagramsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -18180,7 +18180,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
            getRemarksOrBuilderList() {
         if (remarksBuilder_ != null) {
           return remarksBuilder_.getMessageOrBuilderList();
@@ -18206,12 +18206,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder> 
+      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder>
            getRemarksBuilderList() {
         return internalGetRemarksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetRemarksFieldBuilder() {
         if (remarksBuilder_ == null) {
           remarksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -18313,7 +18313,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Property> 
+    java.util.List<oscal.common.v1.Common.Property>
         getPropsList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
@@ -18326,7 +18326,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
@@ -18337,7 +18337,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Link> 
+    java.util.List<oscal.common.v1.Common.Link>
         getLinksList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
@@ -18350,7 +18350,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
@@ -18376,7 +18376,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
      */
-    java.util.List<oscal.common.v1.Common.MarkupMultiline> 
+    java.util.List<oscal.common.v1.Common.MarkupMultiline>
         getRemarksList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
@@ -18389,7 +18389,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
@@ -18513,7 +18513,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList() {
       return props_;
     }
@@ -18554,7 +18554,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList() {
       return links_;
     }
@@ -18621,7 +18621,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList() {
       return remarks_;
     }
@@ -19107,7 +19107,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               propsBuilder_ = null;
               props_ = other.props_;
               bitField0_ = (bitField0_ & ~0x00000004);
-              propsBuilder_ = 
+              propsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetPropsFieldBuilder() : null;
             } else {
@@ -19133,7 +19133,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               linksBuilder_ = null;
               links_ = other.links_;
               bitField0_ = (bitField0_ & ~0x00000008);
-              linksBuilder_ = 
+              linksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetLinksFieldBuilder() : null;
             } else {
@@ -19162,7 +19162,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               remarksBuilder_ = null;
               remarks_ = other.remarks_;
               bitField0_ = (bitField0_ & ~0x00000020);
-              remarksBuilder_ = 
+              remarksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetRemarksFieldBuilder() : null;
             } else {
@@ -19381,7 +19381,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder> 
+          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder>
           internalGetUuidFieldBuilder() {
         if (uuidBuilder_ == null) {
           uuidBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -19502,7 +19502,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.MarkupMultiline description = 2 [json_name = "description"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetDescriptionFieldBuilder() {
         if (descriptionBuilder_ == null) {
           descriptionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -19710,7 +19710,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
            getPropsOrBuilderList() {
         if (propsBuilder_ != null) {
           return propsBuilder_.getMessageOrBuilderList();
@@ -19736,12 +19736,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Property.Builder> 
+      public java.util.List<oscal.common.v1.Common.Property.Builder>
            getPropsBuilderList() {
         return internalGetPropsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> 
+          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder>
           internalGetPropsFieldBuilder() {
         if (propsBuilder_ == null) {
           propsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -19950,7 +19950,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
            getLinksOrBuilderList() {
         if (linksBuilder_ != null) {
           return linksBuilder_.getMessageOrBuilderList();
@@ -19976,12 +19976,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Link.Builder> 
+      public java.util.List<oscal.common.v1.Common.Link.Builder>
            getLinksBuilderList() {
         return internalGetLinksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder> 
+          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder>
           internalGetLinksFieldBuilder() {
         if (linksBuilder_ == null) {
           linksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -20103,7 +20103,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.MarkupLine caption = 5 [json_name = "caption"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.MarkupLine, oscal.common.v1.Common.MarkupLine.Builder, oscal.common.v1.Common.MarkupLineOrBuilder> 
+          oscal.common.v1.Common.MarkupLine, oscal.common.v1.Common.MarkupLine.Builder, oscal.common.v1.Common.MarkupLineOrBuilder>
           internalGetCaptionFieldBuilder() {
         if (captionBuilder_ == null) {
           captionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -20311,7 +20311,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
            getRemarksOrBuilderList() {
         if (remarksBuilder_ != null) {
           return remarksBuilder_.getMessageOrBuilderList();
@@ -20337,12 +20337,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder> 
+      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder>
            getRemarksBuilderList() {
         return internalGetRemarksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetRemarksFieldBuilder() {
         if (remarksBuilder_ == null) {
           remarksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -20429,7 +20429,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 2 [json_name = "props"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Property> 
+    java.util.List<oscal.common.v1.Common.Property>
         getPropsList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 2 [json_name = "props"];</code>
@@ -20442,7 +20442,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 2 [json_name = "props"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 2 [json_name = "props"];</code>
@@ -20453,7 +20453,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 3 [json_name = "links"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Link> 
+    java.util.List<oscal.common.v1.Common.Link>
         getLinksList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 3 [json_name = "links"];</code>
@@ -20466,7 +20466,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 3 [json_name = "links"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 3 [json_name = "links"];</code>
@@ -20477,7 +20477,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.ssp.v1.Diagram diagrams = 4 [json_name = "diagrams"];</code>
      */
-    java.util.List<oscal.ssp.v1.Ssp.Diagram> 
+    java.util.List<oscal.ssp.v1.Ssp.Diagram>
         getDiagramsList();
     /**
      * <code>repeated .oscal.ssp.v1.Diagram diagrams = 4 [json_name = "diagrams"];</code>
@@ -20490,7 +20490,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.ssp.v1.Diagram diagrams = 4 [json_name = "diagrams"];</code>
      */
-    java.util.List<? extends oscal.ssp.v1.Ssp.DiagramOrBuilder> 
+    java.util.List<? extends oscal.ssp.v1.Ssp.DiagramOrBuilder>
         getDiagramsOrBuilderList();
     /**
      * <code>repeated .oscal.ssp.v1.Diagram diagrams = 4 [json_name = "diagrams"];</code>
@@ -20501,7 +20501,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
      */
-    java.util.List<oscal.common.v1.Common.MarkupMultiline> 
+    java.util.List<oscal.common.v1.Common.MarkupMultiline>
         getRemarksList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
@@ -20514,7 +20514,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
@@ -20613,7 +20613,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Property props = 2 [json_name = "props"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList() {
       return props_;
     }
@@ -20654,7 +20654,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Link links = 3 [json_name = "links"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList() {
       return links_;
     }
@@ -20695,7 +20695,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.ssp.v1.Diagram diagrams = 4 [json_name = "diagrams"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.ssp.v1.Ssp.DiagramOrBuilder> 
+    public java.util.List<? extends oscal.ssp.v1.Ssp.DiagramOrBuilder>
         getDiagramsOrBuilderList() {
       return diagrams_;
     }
@@ -20736,7 +20736,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList() {
       return remarks_;
     }
@@ -21198,7 +21198,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               propsBuilder_ = null;
               props_ = other.props_;
               bitField0_ = (bitField0_ & ~0x00000002);
-              propsBuilder_ = 
+              propsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetPropsFieldBuilder() : null;
             } else {
@@ -21224,7 +21224,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               linksBuilder_ = null;
               links_ = other.links_;
               bitField0_ = (bitField0_ & ~0x00000004);
-              linksBuilder_ = 
+              linksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetLinksFieldBuilder() : null;
             } else {
@@ -21250,7 +21250,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               diagramsBuilder_ = null;
               diagrams_ = other.diagrams_;
               bitField0_ = (bitField0_ & ~0x00000008);
-              diagramsBuilder_ = 
+              diagramsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetDiagramsFieldBuilder() : null;
             } else {
@@ -21276,7 +21276,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               remarksBuilder_ = null;
               remarks_ = other.remarks_;
               bitField0_ = (bitField0_ & ~0x00000010);
-              remarksBuilder_ = 
+              remarksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetRemarksFieldBuilder() : null;
             } else {
@@ -21494,7 +21494,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.MarkupMultiline description = 1 [json_name = "description"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetDescriptionFieldBuilder() {
         if (descriptionBuilder_ == null) {
           descriptionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -21702,7 +21702,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 2 [json_name = "props"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
            getPropsOrBuilderList() {
         if (propsBuilder_ != null) {
           return propsBuilder_.getMessageOrBuilderList();
@@ -21728,12 +21728,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 2 [json_name = "props"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Property.Builder> 
+      public java.util.List<oscal.common.v1.Common.Property.Builder>
            getPropsBuilderList() {
         return internalGetPropsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> 
+          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder>
           internalGetPropsFieldBuilder() {
         if (propsBuilder_ == null) {
           propsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -21942,7 +21942,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 3 [json_name = "links"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
            getLinksOrBuilderList() {
         if (linksBuilder_ != null) {
           return linksBuilder_.getMessageOrBuilderList();
@@ -21968,12 +21968,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 3 [json_name = "links"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Link.Builder> 
+      public java.util.List<oscal.common.v1.Common.Link.Builder>
            getLinksBuilderList() {
         return internalGetLinksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder> 
+          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder>
           internalGetLinksFieldBuilder() {
         if (linksBuilder_ == null) {
           linksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -22182,7 +22182,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.ssp.v1.Diagram diagrams = 4 [json_name = "diagrams"];</code>
        */
-      public java.util.List<? extends oscal.ssp.v1.Ssp.DiagramOrBuilder> 
+      public java.util.List<? extends oscal.ssp.v1.Ssp.DiagramOrBuilder>
            getDiagramsOrBuilderList() {
         if (diagramsBuilder_ != null) {
           return diagramsBuilder_.getMessageOrBuilderList();
@@ -22208,12 +22208,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.ssp.v1.Diagram diagrams = 4 [json_name = "diagrams"];</code>
        */
-      public java.util.List<oscal.ssp.v1.Ssp.Diagram.Builder> 
+      public java.util.List<oscal.ssp.v1.Ssp.Diagram.Builder>
            getDiagramsBuilderList() {
         return internalGetDiagramsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.ssp.v1.Ssp.Diagram, oscal.ssp.v1.Ssp.Diagram.Builder, oscal.ssp.v1.Ssp.DiagramOrBuilder> 
+          oscal.ssp.v1.Ssp.Diagram, oscal.ssp.v1.Ssp.Diagram.Builder, oscal.ssp.v1.Ssp.DiagramOrBuilder>
           internalGetDiagramsFieldBuilder() {
         if (diagramsBuilder_ == null) {
           diagramsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -22422,7 +22422,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
            getRemarksOrBuilderList() {
         if (remarksBuilder_ != null) {
           return remarksBuilder_.getMessageOrBuilderList();
@@ -22448,12 +22448,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder> 
+      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder>
            getRemarksBuilderList() {
         return internalGetRemarksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetRemarksFieldBuilder() {
         if (remarksBuilder_ == null) {
           remarksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -22540,7 +22540,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 2 [json_name = "props"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Property> 
+    java.util.List<oscal.common.v1.Common.Property>
         getPropsList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 2 [json_name = "props"];</code>
@@ -22553,7 +22553,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 2 [json_name = "props"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 2 [json_name = "props"];</code>
@@ -22564,7 +22564,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 3 [json_name = "links"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Link> 
+    java.util.List<oscal.common.v1.Common.Link>
         getLinksList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 3 [json_name = "links"];</code>
@@ -22577,7 +22577,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 3 [json_name = "links"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 3 [json_name = "links"];</code>
@@ -22588,7 +22588,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.ssp.v1.Diagram diagrams = 4 [json_name = "diagrams"];</code>
      */
-    java.util.List<oscal.ssp.v1.Ssp.Diagram> 
+    java.util.List<oscal.ssp.v1.Ssp.Diagram>
         getDiagramsList();
     /**
      * <code>repeated .oscal.ssp.v1.Diagram diagrams = 4 [json_name = "diagrams"];</code>
@@ -22601,7 +22601,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.ssp.v1.Diagram diagrams = 4 [json_name = "diagrams"];</code>
      */
-    java.util.List<? extends oscal.ssp.v1.Ssp.DiagramOrBuilder> 
+    java.util.List<? extends oscal.ssp.v1.Ssp.DiagramOrBuilder>
         getDiagramsOrBuilderList();
     /**
      * <code>repeated .oscal.ssp.v1.Diagram diagrams = 4 [json_name = "diagrams"];</code>
@@ -22612,7 +22612,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
      */
-    java.util.List<oscal.common.v1.Common.MarkupMultiline> 
+    java.util.List<oscal.common.v1.Common.MarkupMultiline>
         getRemarksList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
@@ -22625,7 +22625,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
@@ -22724,7 +22724,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Property props = 2 [json_name = "props"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList() {
       return props_;
     }
@@ -22765,7 +22765,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Link links = 3 [json_name = "links"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList() {
       return links_;
     }
@@ -22806,7 +22806,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.ssp.v1.Diagram diagrams = 4 [json_name = "diagrams"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.ssp.v1.Ssp.DiagramOrBuilder> 
+    public java.util.List<? extends oscal.ssp.v1.Ssp.DiagramOrBuilder>
         getDiagramsOrBuilderList() {
       return diagrams_;
     }
@@ -22847,7 +22847,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList() {
       return remarks_;
     }
@@ -23309,7 +23309,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               propsBuilder_ = null;
               props_ = other.props_;
               bitField0_ = (bitField0_ & ~0x00000002);
-              propsBuilder_ = 
+              propsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetPropsFieldBuilder() : null;
             } else {
@@ -23335,7 +23335,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               linksBuilder_ = null;
               links_ = other.links_;
               bitField0_ = (bitField0_ & ~0x00000004);
-              linksBuilder_ = 
+              linksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetLinksFieldBuilder() : null;
             } else {
@@ -23361,7 +23361,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               diagramsBuilder_ = null;
               diagrams_ = other.diagrams_;
               bitField0_ = (bitField0_ & ~0x00000008);
-              diagramsBuilder_ = 
+              diagramsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetDiagramsFieldBuilder() : null;
             } else {
@@ -23387,7 +23387,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               remarksBuilder_ = null;
               remarks_ = other.remarks_;
               bitField0_ = (bitField0_ & ~0x00000010);
-              remarksBuilder_ = 
+              remarksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetRemarksFieldBuilder() : null;
             } else {
@@ -23605,7 +23605,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.MarkupMultiline description = 1 [json_name = "description"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetDescriptionFieldBuilder() {
         if (descriptionBuilder_ == null) {
           descriptionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -23813,7 +23813,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 2 [json_name = "props"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
            getPropsOrBuilderList() {
         if (propsBuilder_ != null) {
           return propsBuilder_.getMessageOrBuilderList();
@@ -23839,12 +23839,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 2 [json_name = "props"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Property.Builder> 
+      public java.util.List<oscal.common.v1.Common.Property.Builder>
            getPropsBuilderList() {
         return internalGetPropsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> 
+          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder>
           internalGetPropsFieldBuilder() {
         if (propsBuilder_ == null) {
           propsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -24053,7 +24053,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 3 [json_name = "links"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
            getLinksOrBuilderList() {
         if (linksBuilder_ != null) {
           return linksBuilder_.getMessageOrBuilderList();
@@ -24079,12 +24079,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 3 [json_name = "links"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Link.Builder> 
+      public java.util.List<oscal.common.v1.Common.Link.Builder>
            getLinksBuilderList() {
         return internalGetLinksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder> 
+          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder>
           internalGetLinksFieldBuilder() {
         if (linksBuilder_ == null) {
           linksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -24293,7 +24293,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.ssp.v1.Diagram diagrams = 4 [json_name = "diagrams"];</code>
        */
-      public java.util.List<? extends oscal.ssp.v1.Ssp.DiagramOrBuilder> 
+      public java.util.List<? extends oscal.ssp.v1.Ssp.DiagramOrBuilder>
            getDiagramsOrBuilderList() {
         if (diagramsBuilder_ != null) {
           return diagramsBuilder_.getMessageOrBuilderList();
@@ -24319,12 +24319,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.ssp.v1.Diagram diagrams = 4 [json_name = "diagrams"];</code>
        */
-      public java.util.List<oscal.ssp.v1.Ssp.Diagram.Builder> 
+      public java.util.List<oscal.ssp.v1.Ssp.Diagram.Builder>
            getDiagramsBuilderList() {
         return internalGetDiagramsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.ssp.v1.Ssp.Diagram, oscal.ssp.v1.Ssp.Diagram.Builder, oscal.ssp.v1.Ssp.DiagramOrBuilder> 
+          oscal.ssp.v1.Ssp.Diagram, oscal.ssp.v1.Ssp.Diagram.Builder, oscal.ssp.v1.Ssp.DiagramOrBuilder>
           internalGetDiagramsFieldBuilder() {
         if (diagramsBuilder_ == null) {
           diagramsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -24533,7 +24533,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
            getRemarksOrBuilderList() {
         if (remarksBuilder_ != null) {
           return remarksBuilder_.getMessageOrBuilderList();
@@ -24559,12 +24559,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder> 
+      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder>
            getRemarksBuilderList() {
         return internalGetRemarksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetRemarksFieldBuilder() {
         if (remarksBuilder_ == null) {
           remarksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -24636,7 +24636,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 1 [json_name = "props"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Property> 
+    java.util.List<oscal.common.v1.Common.Property>
         getPropsList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 1 [json_name = "props"];</code>
@@ -24649,7 +24649,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 1 [json_name = "props"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 1 [json_name = "props"];</code>
@@ -24660,7 +24660,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 2 [json_name = "links"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Link> 
+    java.util.List<oscal.common.v1.Common.Link>
         getLinksList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 2 [json_name = "links"];</code>
@@ -24673,7 +24673,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 2 [json_name = "links"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 2 [json_name = "links"];</code>
@@ -24684,7 +24684,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.ssp.v1.LeveragedAuthorization leveraged_authorizations = 3 [json_name = "leveragedAuthorizations"];</code>
      */
-    java.util.List<oscal.ssp.v1.Ssp.LeveragedAuthorization> 
+    java.util.List<oscal.ssp.v1.Ssp.LeveragedAuthorization>
         getLeveragedAuthorizationsList();
     /**
      * <code>repeated .oscal.ssp.v1.LeveragedAuthorization leveraged_authorizations = 3 [json_name = "leveragedAuthorizations"];</code>
@@ -24697,7 +24697,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.ssp.v1.LeveragedAuthorization leveraged_authorizations = 3 [json_name = "leveragedAuthorizations"];</code>
      */
-    java.util.List<? extends oscal.ssp.v1.Ssp.LeveragedAuthorizationOrBuilder> 
+    java.util.List<? extends oscal.ssp.v1.Ssp.LeveragedAuthorizationOrBuilder>
         getLeveragedAuthorizationsOrBuilderList();
     /**
      * <code>repeated .oscal.ssp.v1.LeveragedAuthorization leveraged_authorizations = 3 [json_name = "leveragedAuthorizations"];</code>
@@ -24708,7 +24708,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.ssp.v1.SystemUser users = 4 [json_name = "users"];</code>
      */
-    java.util.List<oscal.ssp.v1.Ssp.SystemUser> 
+    java.util.List<oscal.ssp.v1.Ssp.SystemUser>
         getUsersList();
     /**
      * <code>repeated .oscal.ssp.v1.SystemUser users = 4 [json_name = "users"];</code>
@@ -24721,7 +24721,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.ssp.v1.SystemUser users = 4 [json_name = "users"];</code>
      */
-    java.util.List<? extends oscal.ssp.v1.Ssp.SystemUserOrBuilder> 
+    java.util.List<? extends oscal.ssp.v1.Ssp.SystemUserOrBuilder>
         getUsersOrBuilderList();
     /**
      * <code>repeated .oscal.ssp.v1.SystemUser users = 4 [json_name = "users"];</code>
@@ -24732,7 +24732,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.ssp.v1.SystemComponent components = 5 [json_name = "components"];</code>
      */
-    java.util.List<oscal.ssp.v1.Ssp.SystemComponent> 
+    java.util.List<oscal.ssp.v1.Ssp.SystemComponent>
         getComponentsList();
     /**
      * <code>repeated .oscal.ssp.v1.SystemComponent components = 5 [json_name = "components"];</code>
@@ -24745,7 +24745,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.ssp.v1.SystemComponent components = 5 [json_name = "components"];</code>
      */
-    java.util.List<? extends oscal.ssp.v1.Ssp.SystemComponentOrBuilder> 
+    java.util.List<? extends oscal.ssp.v1.Ssp.SystemComponentOrBuilder>
         getComponentsOrBuilderList();
     /**
      * <code>repeated .oscal.ssp.v1.SystemComponent components = 5 [json_name = "components"];</code>
@@ -24756,7 +24756,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.ssp.v1.InventoryItem inventory_items = 6 [json_name = "inventoryItems"];</code>
      */
-    java.util.List<oscal.ssp.v1.Ssp.InventoryItem> 
+    java.util.List<oscal.ssp.v1.Ssp.InventoryItem>
         getInventoryItemsList();
     /**
      * <code>repeated .oscal.ssp.v1.InventoryItem inventory_items = 6 [json_name = "inventoryItems"];</code>
@@ -24769,7 +24769,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.ssp.v1.InventoryItem inventory_items = 6 [json_name = "inventoryItems"];</code>
      */
-    java.util.List<? extends oscal.ssp.v1.Ssp.InventoryItemOrBuilder> 
+    java.util.List<? extends oscal.ssp.v1.Ssp.InventoryItemOrBuilder>
         getInventoryItemsOrBuilderList();
     /**
      * <code>repeated .oscal.ssp.v1.InventoryItem inventory_items = 6 [json_name = "inventoryItems"];</code>
@@ -24780,7 +24780,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
      */
-    java.util.List<oscal.common.v1.Common.MarkupMultiline> 
+    java.util.List<oscal.common.v1.Common.MarkupMultiline>
         getRemarksList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
@@ -24793,7 +24793,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
@@ -24868,7 +24868,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Property props = 1 [json_name = "props"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList() {
       return props_;
     }
@@ -24909,7 +24909,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Link links = 2 [json_name = "links"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList() {
       return links_;
     }
@@ -24950,7 +24950,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.ssp.v1.LeveragedAuthorization leveraged_authorizations = 3 [json_name = "leveragedAuthorizations"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.ssp.v1.Ssp.LeveragedAuthorizationOrBuilder> 
+    public java.util.List<? extends oscal.ssp.v1.Ssp.LeveragedAuthorizationOrBuilder>
         getLeveragedAuthorizationsOrBuilderList() {
       return leveragedAuthorizations_;
     }
@@ -24991,7 +24991,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.ssp.v1.SystemUser users = 4 [json_name = "users"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.ssp.v1.Ssp.SystemUserOrBuilder> 
+    public java.util.List<? extends oscal.ssp.v1.Ssp.SystemUserOrBuilder>
         getUsersOrBuilderList() {
       return users_;
     }
@@ -25032,7 +25032,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.ssp.v1.SystemComponent components = 5 [json_name = "components"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.ssp.v1.Ssp.SystemComponentOrBuilder> 
+    public java.util.List<? extends oscal.ssp.v1.Ssp.SystemComponentOrBuilder>
         getComponentsOrBuilderList() {
       return components_;
     }
@@ -25073,7 +25073,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.ssp.v1.InventoryItem inventory_items = 6 [json_name = "inventoryItems"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.ssp.v1.Ssp.InventoryItemOrBuilder> 
+    public java.util.List<? extends oscal.ssp.v1.Ssp.InventoryItemOrBuilder>
         getInventoryItemsOrBuilderList() {
       return inventoryItems_;
     }
@@ -25114,7 +25114,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList() {
       return remarks_;
     }
@@ -25636,7 +25636,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               propsBuilder_ = null;
               props_ = other.props_;
               bitField0_ = (bitField0_ & ~0x00000001);
-              propsBuilder_ = 
+              propsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetPropsFieldBuilder() : null;
             } else {
@@ -25662,7 +25662,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               linksBuilder_ = null;
               links_ = other.links_;
               bitField0_ = (bitField0_ & ~0x00000002);
-              linksBuilder_ = 
+              linksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetLinksFieldBuilder() : null;
             } else {
@@ -25688,7 +25688,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               leveragedAuthorizationsBuilder_ = null;
               leveragedAuthorizations_ = other.leveragedAuthorizations_;
               bitField0_ = (bitField0_ & ~0x00000004);
-              leveragedAuthorizationsBuilder_ = 
+              leveragedAuthorizationsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetLeveragedAuthorizationsFieldBuilder() : null;
             } else {
@@ -25714,7 +25714,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               usersBuilder_ = null;
               users_ = other.users_;
               bitField0_ = (bitField0_ & ~0x00000008);
-              usersBuilder_ = 
+              usersBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetUsersFieldBuilder() : null;
             } else {
@@ -25740,7 +25740,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               componentsBuilder_ = null;
               components_ = other.components_;
               bitField0_ = (bitField0_ & ~0x00000010);
-              componentsBuilder_ = 
+              componentsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetComponentsFieldBuilder() : null;
             } else {
@@ -25766,7 +25766,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               inventoryItemsBuilder_ = null;
               inventoryItems_ = other.inventoryItems_;
               bitField0_ = (bitField0_ & ~0x00000020);
-              inventoryItemsBuilder_ = 
+              inventoryItemsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetInventoryItemsFieldBuilder() : null;
             } else {
@@ -25792,7 +25792,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               remarksBuilder_ = null;
               remarks_ = other.remarks_;
               bitField0_ = (bitField0_ & ~0x00000040);
-              remarksBuilder_ = 
+              remarksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetRemarksFieldBuilder() : null;
             } else {
@@ -26129,7 +26129,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 1 [json_name = "props"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
            getPropsOrBuilderList() {
         if (propsBuilder_ != null) {
           return propsBuilder_.getMessageOrBuilderList();
@@ -26155,12 +26155,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 1 [json_name = "props"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Property.Builder> 
+      public java.util.List<oscal.common.v1.Common.Property.Builder>
            getPropsBuilderList() {
         return internalGetPropsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> 
+          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder>
           internalGetPropsFieldBuilder() {
         if (propsBuilder_ == null) {
           propsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -26369,7 +26369,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 2 [json_name = "links"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
            getLinksOrBuilderList() {
         if (linksBuilder_ != null) {
           return linksBuilder_.getMessageOrBuilderList();
@@ -26395,12 +26395,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 2 [json_name = "links"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Link.Builder> 
+      public java.util.List<oscal.common.v1.Common.Link.Builder>
            getLinksBuilderList() {
         return internalGetLinksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder> 
+          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder>
           internalGetLinksFieldBuilder() {
         if (linksBuilder_ == null) {
           linksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -26609,7 +26609,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.ssp.v1.LeveragedAuthorization leveraged_authorizations = 3 [json_name = "leveragedAuthorizations"];</code>
        */
-      public java.util.List<? extends oscal.ssp.v1.Ssp.LeveragedAuthorizationOrBuilder> 
+      public java.util.List<? extends oscal.ssp.v1.Ssp.LeveragedAuthorizationOrBuilder>
            getLeveragedAuthorizationsOrBuilderList() {
         if (leveragedAuthorizationsBuilder_ != null) {
           return leveragedAuthorizationsBuilder_.getMessageOrBuilderList();
@@ -26635,12 +26635,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.ssp.v1.LeveragedAuthorization leveraged_authorizations = 3 [json_name = "leveragedAuthorizations"];</code>
        */
-      public java.util.List<oscal.ssp.v1.Ssp.LeveragedAuthorization.Builder> 
+      public java.util.List<oscal.ssp.v1.Ssp.LeveragedAuthorization.Builder>
            getLeveragedAuthorizationsBuilderList() {
         return internalGetLeveragedAuthorizationsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.ssp.v1.Ssp.LeveragedAuthorization, oscal.ssp.v1.Ssp.LeveragedAuthorization.Builder, oscal.ssp.v1.Ssp.LeveragedAuthorizationOrBuilder> 
+          oscal.ssp.v1.Ssp.LeveragedAuthorization, oscal.ssp.v1.Ssp.LeveragedAuthorization.Builder, oscal.ssp.v1.Ssp.LeveragedAuthorizationOrBuilder>
           internalGetLeveragedAuthorizationsFieldBuilder() {
         if (leveragedAuthorizationsBuilder_ == null) {
           leveragedAuthorizationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -26849,7 +26849,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.ssp.v1.SystemUser users = 4 [json_name = "users"];</code>
        */
-      public java.util.List<? extends oscal.ssp.v1.Ssp.SystemUserOrBuilder> 
+      public java.util.List<? extends oscal.ssp.v1.Ssp.SystemUserOrBuilder>
            getUsersOrBuilderList() {
         if (usersBuilder_ != null) {
           return usersBuilder_.getMessageOrBuilderList();
@@ -26875,12 +26875,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.ssp.v1.SystemUser users = 4 [json_name = "users"];</code>
        */
-      public java.util.List<oscal.ssp.v1.Ssp.SystemUser.Builder> 
+      public java.util.List<oscal.ssp.v1.Ssp.SystemUser.Builder>
            getUsersBuilderList() {
         return internalGetUsersFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.ssp.v1.Ssp.SystemUser, oscal.ssp.v1.Ssp.SystemUser.Builder, oscal.ssp.v1.Ssp.SystemUserOrBuilder> 
+          oscal.ssp.v1.Ssp.SystemUser, oscal.ssp.v1.Ssp.SystemUser.Builder, oscal.ssp.v1.Ssp.SystemUserOrBuilder>
           internalGetUsersFieldBuilder() {
         if (usersBuilder_ == null) {
           usersBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -27089,7 +27089,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.ssp.v1.SystemComponent components = 5 [json_name = "components"];</code>
        */
-      public java.util.List<? extends oscal.ssp.v1.Ssp.SystemComponentOrBuilder> 
+      public java.util.List<? extends oscal.ssp.v1.Ssp.SystemComponentOrBuilder>
            getComponentsOrBuilderList() {
         if (componentsBuilder_ != null) {
           return componentsBuilder_.getMessageOrBuilderList();
@@ -27115,12 +27115,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.ssp.v1.SystemComponent components = 5 [json_name = "components"];</code>
        */
-      public java.util.List<oscal.ssp.v1.Ssp.SystemComponent.Builder> 
+      public java.util.List<oscal.ssp.v1.Ssp.SystemComponent.Builder>
            getComponentsBuilderList() {
         return internalGetComponentsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.ssp.v1.Ssp.SystemComponent, oscal.ssp.v1.Ssp.SystemComponent.Builder, oscal.ssp.v1.Ssp.SystemComponentOrBuilder> 
+          oscal.ssp.v1.Ssp.SystemComponent, oscal.ssp.v1.Ssp.SystemComponent.Builder, oscal.ssp.v1.Ssp.SystemComponentOrBuilder>
           internalGetComponentsFieldBuilder() {
         if (componentsBuilder_ == null) {
           componentsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -27329,7 +27329,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.ssp.v1.InventoryItem inventory_items = 6 [json_name = "inventoryItems"];</code>
        */
-      public java.util.List<? extends oscal.ssp.v1.Ssp.InventoryItemOrBuilder> 
+      public java.util.List<? extends oscal.ssp.v1.Ssp.InventoryItemOrBuilder>
            getInventoryItemsOrBuilderList() {
         if (inventoryItemsBuilder_ != null) {
           return inventoryItemsBuilder_.getMessageOrBuilderList();
@@ -27355,12 +27355,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.ssp.v1.InventoryItem inventory_items = 6 [json_name = "inventoryItems"];</code>
        */
-      public java.util.List<oscal.ssp.v1.Ssp.InventoryItem.Builder> 
+      public java.util.List<oscal.ssp.v1.Ssp.InventoryItem.Builder>
            getInventoryItemsBuilderList() {
         return internalGetInventoryItemsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.ssp.v1.Ssp.InventoryItem, oscal.ssp.v1.Ssp.InventoryItem.Builder, oscal.ssp.v1.Ssp.InventoryItemOrBuilder> 
+          oscal.ssp.v1.Ssp.InventoryItem, oscal.ssp.v1.Ssp.InventoryItem.Builder, oscal.ssp.v1.Ssp.InventoryItemOrBuilder>
           internalGetInventoryItemsFieldBuilder() {
         if (inventoryItemsBuilder_ == null) {
           inventoryItemsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -27569,7 +27569,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
            getRemarksOrBuilderList() {
         if (remarksBuilder_ != null) {
           return remarksBuilder_.getMessageOrBuilderList();
@@ -27595,12 +27595,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder> 
+      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder>
            getRemarksBuilderList() {
         return internalGetRemarksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetRemarksFieldBuilder() {
         if (remarksBuilder_ == null) {
           remarksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -27702,7 +27702,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Property> 
+    java.util.List<oscal.common.v1.Common.Property>
         getPropsList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
@@ -27715,7 +27715,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
@@ -27726,7 +27726,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Link> 
+    java.util.List<oscal.common.v1.Common.Link>
         getLinksList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
@@ -27739,7 +27739,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
@@ -27780,7 +27780,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
      */
-    java.util.List<oscal.common.v1.Common.MarkupMultiline> 
+    java.util.List<oscal.common.v1.Common.MarkupMultiline>
         getRemarksList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
@@ -27793,7 +27793,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
@@ -27917,7 +27917,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList() {
       return props_;
     }
@@ -27958,7 +27958,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList() {
       return links_;
     }
@@ -28051,7 +28051,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList() {
       return remarks_;
     }
@@ -28565,7 +28565,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               propsBuilder_ = null;
               props_ = other.props_;
               bitField0_ = (bitField0_ & ~0x00000004);
-              propsBuilder_ = 
+              propsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetPropsFieldBuilder() : null;
             } else {
@@ -28591,7 +28591,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               linksBuilder_ = null;
               links_ = other.links_;
               bitField0_ = (bitField0_ & ~0x00000008);
-              linksBuilder_ = 
+              linksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetLinksFieldBuilder() : null;
             } else {
@@ -28623,7 +28623,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               remarksBuilder_ = null;
               remarks_ = other.remarks_;
               bitField0_ = (bitField0_ & ~0x00000040);
-              remarksBuilder_ = 
+              remarksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetRemarksFieldBuilder() : null;
             } else {
@@ -28849,7 +28849,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder> 
+          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder>
           internalGetUuidFieldBuilder() {
         if (uuidBuilder_ == null) {
           uuidBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -28970,7 +28970,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.MarkupLine title = 2 [json_name = "title"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.MarkupLine, oscal.common.v1.Common.MarkupLine.Builder, oscal.common.v1.Common.MarkupLineOrBuilder> 
+          oscal.common.v1.Common.MarkupLine, oscal.common.v1.Common.MarkupLine.Builder, oscal.common.v1.Common.MarkupLineOrBuilder>
           internalGetTitleFieldBuilder() {
         if (titleBuilder_ == null) {
           titleBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -29178,7 +29178,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
            getPropsOrBuilderList() {
         if (propsBuilder_ != null) {
           return propsBuilder_.getMessageOrBuilderList();
@@ -29204,12 +29204,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Property.Builder> 
+      public java.util.List<oscal.common.v1.Common.Property.Builder>
            getPropsBuilderList() {
         return internalGetPropsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> 
+          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder>
           internalGetPropsFieldBuilder() {
         if (propsBuilder_ == null) {
           propsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -29418,7 +29418,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
            getLinksOrBuilderList() {
         if (linksBuilder_ != null) {
           return linksBuilder_.getMessageOrBuilderList();
@@ -29444,12 +29444,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Link.Builder> 
+      public java.util.List<oscal.common.v1.Common.Link.Builder>
            getLinksBuilderList() {
         return internalGetLinksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder> 
+          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder>
           internalGetLinksFieldBuilder() {
         if (linksBuilder_ == null) {
           linksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -29571,7 +29571,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.UUID party_uuid = 5 [json_name = "partyUuid"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder> 
+          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder>
           internalGetPartyUuidFieldBuilder() {
         if (partyUuidBuilder_ == null) {
           partyUuidBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -29692,7 +29692,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.Date date_authorized = 6 [json_name = "dateAuthorized"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.Date, oscal.common.v1.Common.Date.Builder, oscal.common.v1.Common.DateOrBuilder> 
+          oscal.common.v1.Common.Date, oscal.common.v1.Common.Date.Builder, oscal.common.v1.Common.DateOrBuilder>
           internalGetDateAuthorizedFieldBuilder() {
         if (dateAuthorizedBuilder_ == null) {
           dateAuthorizedBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -29900,7 +29900,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
            getRemarksOrBuilderList() {
         if (remarksBuilder_ != null) {
           return remarksBuilder_.getMessageOrBuilderList();
@@ -29926,12 +29926,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder> 
+      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder>
            getRemarksBuilderList() {
         return internalGetRemarksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetRemarksFieldBuilder() {
         if (remarksBuilder_ == null) {
           remarksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -30057,7 +30057,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Property> 
+    java.util.List<oscal.common.v1.Common.Property>
         getPropsList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
@@ -30070,7 +30070,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
@@ -30081,7 +30081,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Link> 
+    java.util.List<oscal.common.v1.Common.Link>
         getLinksList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
@@ -30094,7 +30094,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
@@ -30105,7 +30105,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
      */
-    java.util.List<oscal.common.v1.Common.MarkupMultiline> 
+    java.util.List<oscal.common.v1.Common.MarkupMultiline>
         getRemarksList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
@@ -30118,7 +30118,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
@@ -30217,7 +30217,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         title_ = s;
@@ -30233,7 +30233,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
         getTitleBytes() {
       java.lang.Object ref = title_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         title_ = b;
@@ -30256,7 +30256,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         shortName_ = s;
@@ -30272,7 +30272,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
         getShortNameBytes() {
       java.lang.Object ref = shortName_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         shortName_ = b;
@@ -30322,7 +30322,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList() {
       return props_;
     }
@@ -30363,7 +30363,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList() {
       return links_;
     }
@@ -30404,7 +30404,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList() {
       return remarks_;
     }
@@ -30900,7 +30900,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               propsBuilder_ = null;
               props_ = other.props_;
               bitField0_ = (bitField0_ & ~0x00000010);
-              propsBuilder_ = 
+              propsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetPropsFieldBuilder() : null;
             } else {
@@ -30926,7 +30926,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               linksBuilder_ = null;
               links_ = other.links_;
               bitField0_ = (bitField0_ & ~0x00000020);
-              linksBuilder_ = 
+              linksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetLinksFieldBuilder() : null;
             } else {
@@ -30952,7 +30952,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               remarksBuilder_ = null;
               remarks_ = other.remarks_;
               bitField0_ = (bitField0_ & ~0x00000040);
-              remarksBuilder_ = 
+              remarksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetRemarksFieldBuilder() : null;
             } else {
@@ -31174,7 +31174,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder> 
+          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder>
           internalGetUuidFieldBuilder() {
         if (uuidBuilder_ == null) {
           uuidBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -31212,7 +31212,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
           getTitleBytes() {
         java.lang.Object ref = title_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           title_ = b;
@@ -31284,7 +31284,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
           getShortNameBytes() {
         java.lang.Object ref = shortName_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           shortName_ = b;
@@ -31439,7 +31439,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.MarkupMultiline description = 4 [json_name = "description"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetDescriptionFieldBuilder() {
         if (descriptionBuilder_ == null) {
           descriptionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -31647,7 +31647,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
            getPropsOrBuilderList() {
         if (propsBuilder_ != null) {
           return propsBuilder_.getMessageOrBuilderList();
@@ -31673,12 +31673,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Property.Builder> 
+      public java.util.List<oscal.common.v1.Common.Property.Builder>
            getPropsBuilderList() {
         return internalGetPropsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> 
+          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder>
           internalGetPropsFieldBuilder() {
         if (propsBuilder_ == null) {
           propsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -31887,7 +31887,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
            getLinksOrBuilderList() {
         if (linksBuilder_ != null) {
           return linksBuilder_.getMessageOrBuilderList();
@@ -31913,12 +31913,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Link.Builder> 
+      public java.util.List<oscal.common.v1.Common.Link.Builder>
            getLinksBuilderList() {
         return internalGetLinksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder> 
+          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder>
           internalGetLinksFieldBuilder() {
         if (linksBuilder_ == null) {
           linksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -32127,7 +32127,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
            getRemarksOrBuilderList() {
         if (remarksBuilder_ != null) {
           return remarksBuilder_.getMessageOrBuilderList();
@@ -32153,12 +32153,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder> 
+      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder>
            getRemarksBuilderList() {
         return internalGetRemarksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetRemarksFieldBuilder() {
         if (remarksBuilder_ == null) {
           remarksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -32281,7 +32281,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 6 [json_name = "props"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Property> 
+    java.util.List<oscal.common.v1.Common.Property>
         getPropsList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 6 [json_name = "props"];</code>
@@ -32294,7 +32294,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 6 [json_name = "props"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 6 [json_name = "props"];</code>
@@ -32305,7 +32305,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 7 [json_name = "links"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Link> 
+    java.util.List<oscal.common.v1.Common.Link>
         getLinksList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 7 [json_name = "links"];</code>
@@ -32318,7 +32318,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 7 [json_name = "links"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 7 [json_name = "links"];</code>
@@ -32329,7 +32329,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 8 [json_name = "remarks"];</code>
      */
-    java.util.List<oscal.common.v1.Common.MarkupMultiline> 
+    java.util.List<oscal.common.v1.Common.MarkupMultiline>
         getRemarksList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 8 [json_name = "remarks"];</code>
@@ -32342,7 +32342,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 8 [json_name = "remarks"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 8 [json_name = "remarks"];</code>
@@ -32457,7 +32457,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         type_ = s;
@@ -32473,7 +32473,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
         getTypeBytes() {
       java.lang.Object ref = type_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         type_ = b;
@@ -32496,7 +32496,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         title_ = s;
@@ -32512,7 +32512,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
         getTitleBytes() {
       java.lang.Object ref = title_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         title_ = b;
@@ -32535,7 +32535,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         description_ = s;
@@ -32551,7 +32551,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
         getDescriptionBytes() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         description_ = b;
@@ -32575,7 +32575,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Property props = 6 [json_name = "props"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList() {
       return props_;
     }
@@ -32616,7 +32616,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Link links = 7 [json_name = "links"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList() {
       return links_;
     }
@@ -32657,7 +32657,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 8 [json_name = "remarks"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList() {
       return remarks_;
     }
@@ -33195,7 +33195,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               propsBuilder_ = null;
               props_ = other.props_;
               bitField0_ = (bitField0_ & ~0x00000010);
-              propsBuilder_ = 
+              propsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetPropsFieldBuilder() : null;
             } else {
@@ -33221,7 +33221,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               linksBuilder_ = null;
               links_ = other.links_;
               bitField0_ = (bitField0_ & ~0x00000020);
-              linksBuilder_ = 
+              linksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetLinksFieldBuilder() : null;
             } else {
@@ -33247,7 +33247,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               remarksBuilder_ = null;
               remarks_ = other.remarks_;
               bitField0_ = (bitField0_ & ~0x00000040);
-              remarksBuilder_ = 
+              remarksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetRemarksFieldBuilder() : null;
             } else {
@@ -33477,7 +33477,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.UUID uuid = 2 [json_name = "uuid"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder> 
+          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder>
           internalGetUuidFieldBuilder() {
         if (uuidBuilder_ == null) {
           uuidBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -33515,7 +33515,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
           getTypeBytes() {
         java.lang.Object ref = type_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           type_ = b;
@@ -33587,7 +33587,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
           getTitleBytes() {
         java.lang.Object ref = title_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           title_ = b;
@@ -33659,7 +33659,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
           getDescriptionBytes() {
         java.lang.Object ref = description_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           description_ = b;
@@ -33901,7 +33901,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 6 [json_name = "props"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
            getPropsOrBuilderList() {
         if (propsBuilder_ != null) {
           return propsBuilder_.getMessageOrBuilderList();
@@ -33927,12 +33927,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 6 [json_name = "props"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Property.Builder> 
+      public java.util.List<oscal.common.v1.Common.Property.Builder>
            getPropsBuilderList() {
         return internalGetPropsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> 
+          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder>
           internalGetPropsFieldBuilder() {
         if (propsBuilder_ == null) {
           propsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -34141,7 +34141,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 7 [json_name = "links"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
            getLinksOrBuilderList() {
         if (linksBuilder_ != null) {
           return linksBuilder_.getMessageOrBuilderList();
@@ -34167,12 +34167,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 7 [json_name = "links"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Link.Builder> 
+      public java.util.List<oscal.common.v1.Common.Link.Builder>
            getLinksBuilderList() {
         return internalGetLinksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder> 
+          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder>
           internalGetLinksFieldBuilder() {
         if (linksBuilder_ == null) {
           linksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -34381,7 +34381,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 8 [json_name = "remarks"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
            getRemarksOrBuilderList() {
         if (remarksBuilder_ != null) {
           return remarksBuilder_.getMessageOrBuilderList();
@@ -34407,12 +34407,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 8 [json_name = "remarks"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder> 
+      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder>
            getRemarksBuilderList() {
         return internalGetRemarksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetRemarksFieldBuilder() {
         if (remarksBuilder_ == null) {
           remarksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -34534,7 +34534,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.ssp.v1.Status status = 9 [json_name = "status"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.ssp.v1.Ssp.Status, oscal.ssp.v1.Ssp.Status.Builder, oscal.ssp.v1.Ssp.StatusOrBuilder> 
+          oscal.ssp.v1.Ssp.Status, oscal.ssp.v1.Ssp.Status.Builder, oscal.ssp.v1.Ssp.StatusOrBuilder>
           internalGetStatusFieldBuilder() {
         if (statusBuilder_ == null) {
           statusBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -34635,7 +34635,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Property> 
+    java.util.List<oscal.common.v1.Common.Property>
         getPropsList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
@@ -34648,7 +34648,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
@@ -34659,7 +34659,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Link> 
+    java.util.List<oscal.common.v1.Common.Link>
         getLinksList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
@@ -34672,7 +34672,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
@@ -34683,7 +34683,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
      */
-    java.util.List<oscal.common.v1.Common.MarkupMultiline> 
+    java.util.List<oscal.common.v1.Common.MarkupMultiline>
         getRemarksList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
@@ -34696,7 +34696,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
@@ -34820,7 +34820,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList() {
       return props_;
     }
@@ -34861,7 +34861,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList() {
       return links_;
     }
@@ -34902,7 +34902,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList() {
       return remarks_;
     }
@@ -35360,7 +35360,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               propsBuilder_ = null;
               props_ = other.props_;
               bitField0_ = (bitField0_ & ~0x00000004);
-              propsBuilder_ = 
+              propsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetPropsFieldBuilder() : null;
             } else {
@@ -35386,7 +35386,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               linksBuilder_ = null;
               links_ = other.links_;
               bitField0_ = (bitField0_ & ~0x00000008);
-              linksBuilder_ = 
+              linksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetLinksFieldBuilder() : null;
             } else {
@@ -35412,7 +35412,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               remarksBuilder_ = null;
               remarks_ = other.remarks_;
               bitField0_ = (bitField0_ & ~0x00000010);
-              remarksBuilder_ = 
+              remarksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetRemarksFieldBuilder() : null;
             } else {
@@ -35624,7 +35624,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder> 
+          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder>
           internalGetUuidFieldBuilder() {
         if (uuidBuilder_ == null) {
           uuidBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -35745,7 +35745,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.MarkupLine description = 2 [json_name = "description"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.MarkupLine, oscal.common.v1.Common.MarkupLine.Builder, oscal.common.v1.Common.MarkupLineOrBuilder> 
+          oscal.common.v1.Common.MarkupLine, oscal.common.v1.Common.MarkupLine.Builder, oscal.common.v1.Common.MarkupLineOrBuilder>
           internalGetDescriptionFieldBuilder() {
         if (descriptionBuilder_ == null) {
           descriptionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -35953,7 +35953,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
            getPropsOrBuilderList() {
         if (propsBuilder_ != null) {
           return propsBuilder_.getMessageOrBuilderList();
@@ -35979,12 +35979,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Property.Builder> 
+      public java.util.List<oscal.common.v1.Common.Property.Builder>
            getPropsBuilderList() {
         return internalGetPropsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> 
+          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder>
           internalGetPropsFieldBuilder() {
         if (propsBuilder_ == null) {
           propsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -36193,7 +36193,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
            getLinksOrBuilderList() {
         if (linksBuilder_ != null) {
           return linksBuilder_.getMessageOrBuilderList();
@@ -36219,12 +36219,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Link.Builder> 
+      public java.util.List<oscal.common.v1.Common.Link.Builder>
            getLinksBuilderList() {
         return internalGetLinksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder> 
+          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder>
           internalGetLinksFieldBuilder() {
         if (linksBuilder_ == null) {
           linksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -36433,7 +36433,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
            getRemarksOrBuilderList() {
         if (remarksBuilder_ != null) {
           return remarksBuilder_.getMessageOrBuilderList();
@@ -36459,12 +36459,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder> 
+      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder>
            getRemarksBuilderList() {
         return internalGetRemarksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetRemarksFieldBuilder() {
         if (remarksBuilder_ == null) {
           remarksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -36551,7 +36551,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.ssp.v1.SetParameter set_parameters = 2 [json_name = "setParameters"];</code>
      */
-    java.util.List<oscal.ssp.v1.Ssp.SetParameter> 
+    java.util.List<oscal.ssp.v1.Ssp.SetParameter>
         getSetParametersList();
     /**
      * <code>repeated .oscal.ssp.v1.SetParameter set_parameters = 2 [json_name = "setParameters"];</code>
@@ -36564,7 +36564,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.ssp.v1.SetParameter set_parameters = 2 [json_name = "setParameters"];</code>
      */
-    java.util.List<? extends oscal.ssp.v1.Ssp.SetParameterOrBuilder> 
+    java.util.List<? extends oscal.ssp.v1.Ssp.SetParameterOrBuilder>
         getSetParametersOrBuilderList();
     /**
      * <code>repeated .oscal.ssp.v1.SetParameter set_parameters = 2 [json_name = "setParameters"];</code>
@@ -36575,7 +36575,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.ssp.v1.ImplementedRequirement implemented_requirements = 3 [json_name = "implementedRequirements"];</code>
      */
-    java.util.List<oscal.ssp.v1.Ssp.ImplementedRequirement> 
+    java.util.List<oscal.ssp.v1.Ssp.ImplementedRequirement>
         getImplementedRequirementsList();
     /**
      * <code>repeated .oscal.ssp.v1.ImplementedRequirement implemented_requirements = 3 [json_name = "implementedRequirements"];</code>
@@ -36588,7 +36588,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.ssp.v1.ImplementedRequirement implemented_requirements = 3 [json_name = "implementedRequirements"];</code>
      */
-    java.util.List<? extends oscal.ssp.v1.Ssp.ImplementedRequirementOrBuilder> 
+    java.util.List<? extends oscal.ssp.v1.Ssp.ImplementedRequirementOrBuilder>
         getImplementedRequirementsOrBuilderList();
     /**
      * <code>repeated .oscal.ssp.v1.ImplementedRequirement implemented_requirements = 3 [json_name = "implementedRequirements"];</code>
@@ -36685,7 +36685,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.ssp.v1.SetParameter set_parameters = 2 [json_name = "setParameters"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.ssp.v1.Ssp.SetParameterOrBuilder> 
+    public java.util.List<? extends oscal.ssp.v1.Ssp.SetParameterOrBuilder>
         getSetParametersOrBuilderList() {
       return setParameters_;
     }
@@ -36726,7 +36726,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.ssp.v1.ImplementedRequirement implemented_requirements = 3 [json_name = "implementedRequirements"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.ssp.v1.Ssp.ImplementedRequirementOrBuilder> 
+    public java.util.List<? extends oscal.ssp.v1.Ssp.ImplementedRequirementOrBuilder>
         getImplementedRequirementsOrBuilderList() {
       return implementedRequirements_;
     }
@@ -37118,7 +37118,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               setParametersBuilder_ = null;
               setParameters_ = other.setParameters_;
               bitField0_ = (bitField0_ & ~0x00000002);
-              setParametersBuilder_ = 
+              setParametersBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetSetParametersFieldBuilder() : null;
             } else {
@@ -37144,7 +37144,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               implementedRequirementsBuilder_ = null;
               implementedRequirements_ = other.implementedRequirements_;
               bitField0_ = (bitField0_ & ~0x00000004);
-              implementedRequirementsBuilder_ = 
+              implementedRequirementsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetImplementedRequirementsFieldBuilder() : null;
             } else {
@@ -37336,7 +37336,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.MarkupMultiline description = 1 [json_name = "description"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetDescriptionFieldBuilder() {
         if (descriptionBuilder_ == null) {
           descriptionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -37544,7 +37544,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.ssp.v1.SetParameter set_parameters = 2 [json_name = "setParameters"];</code>
        */
-      public java.util.List<? extends oscal.ssp.v1.Ssp.SetParameterOrBuilder> 
+      public java.util.List<? extends oscal.ssp.v1.Ssp.SetParameterOrBuilder>
            getSetParametersOrBuilderList() {
         if (setParametersBuilder_ != null) {
           return setParametersBuilder_.getMessageOrBuilderList();
@@ -37570,12 +37570,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.ssp.v1.SetParameter set_parameters = 2 [json_name = "setParameters"];</code>
        */
-      public java.util.List<oscal.ssp.v1.Ssp.SetParameter.Builder> 
+      public java.util.List<oscal.ssp.v1.Ssp.SetParameter.Builder>
            getSetParametersBuilderList() {
         return internalGetSetParametersFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.ssp.v1.Ssp.SetParameter, oscal.ssp.v1.Ssp.SetParameter.Builder, oscal.ssp.v1.Ssp.SetParameterOrBuilder> 
+          oscal.ssp.v1.Ssp.SetParameter, oscal.ssp.v1.Ssp.SetParameter.Builder, oscal.ssp.v1.Ssp.SetParameterOrBuilder>
           internalGetSetParametersFieldBuilder() {
         if (setParametersBuilder_ == null) {
           setParametersBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -37784,7 +37784,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.ssp.v1.ImplementedRequirement implemented_requirements = 3 [json_name = "implementedRequirements"];</code>
        */
-      public java.util.List<? extends oscal.ssp.v1.Ssp.ImplementedRequirementOrBuilder> 
+      public java.util.List<? extends oscal.ssp.v1.Ssp.ImplementedRequirementOrBuilder>
            getImplementedRequirementsOrBuilderList() {
         if (implementedRequirementsBuilder_ != null) {
           return implementedRequirementsBuilder_.getMessageOrBuilderList();
@@ -37810,12 +37810,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.ssp.v1.ImplementedRequirement implemented_requirements = 3 [json_name = "implementedRequirements"];</code>
        */
-      public java.util.List<oscal.ssp.v1.Ssp.ImplementedRequirement.Builder> 
+      public java.util.List<oscal.ssp.v1.Ssp.ImplementedRequirement.Builder>
            getImplementedRequirementsBuilderList() {
         return internalGetImplementedRequirementsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.ssp.v1.Ssp.ImplementedRequirement, oscal.ssp.v1.Ssp.ImplementedRequirement.Builder, oscal.ssp.v1.Ssp.ImplementedRequirementOrBuilder> 
+          oscal.ssp.v1.Ssp.ImplementedRequirement, oscal.ssp.v1.Ssp.ImplementedRequirement.Builder, oscal.ssp.v1.Ssp.ImplementedRequirementOrBuilder>
           internalGetImplementedRequirementsFieldBuilder() {
         if (implementedRequirementsBuilder_ == null) {
           implementedRequirementsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -37926,7 +37926,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 3 [json_name = "remarks"];</code>
      */
-    java.util.List<oscal.common.v1.Common.MarkupMultiline> 
+    java.util.List<oscal.common.v1.Common.MarkupMultiline>
         getRemarksList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 3 [json_name = "remarks"];</code>
@@ -37939,7 +37939,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 3 [json_name = "remarks"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 3 [json_name = "remarks"];</code>
@@ -37954,7 +37954,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      *
      * <code>repeated .oscal.common.v1.MarkupLine values = 4 [json_name = "values"];</code>
      */
-    java.util.List<oscal.common.v1.Common.MarkupLine> 
+    java.util.List<oscal.common.v1.Common.MarkupLine>
         getValuesList();
     /**
      * <pre>
@@ -37979,7 +37979,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      *
      * <code>repeated .oscal.common.v1.MarkupLine values = 4 [json_name = "values"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.MarkupLineOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.MarkupLineOrBuilder>
         getValuesOrBuilderList();
     /**
      * <pre>
@@ -38086,7 +38086,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         value_ = s;
@@ -38108,7 +38108,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
         getValueBytes() {
       java.lang.Object ref = value_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         value_ = b;
@@ -38132,7 +38132,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 3 [json_name = "remarks"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList() {
       return remarks_;
     }
@@ -38181,7 +38181,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.MarkupLine values = 4 [json_name = "values"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.MarkupLineOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.MarkupLineOrBuilder>
         getValuesOrBuilderList() {
       return values_;
     }
@@ -38604,7 +38604,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               remarksBuilder_ = null;
               remarks_ = other.remarks_;
               bitField0_ = (bitField0_ & ~0x00000004);
-              remarksBuilder_ = 
+              remarksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetRemarksFieldBuilder() : null;
             } else {
@@ -38630,7 +38630,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               valuesBuilder_ = null;
               values_ = other.values_;
               bitField0_ = (bitField0_ & ~0x00000008);
-              valuesBuilder_ = 
+              valuesBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetValuesFieldBuilder() : null;
             } else {
@@ -38827,7 +38827,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.Token param_id = 1 [json_name = "paramId"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.Token, oscal.common.v1.Common.Token.Builder, oscal.common.v1.Common.TokenOrBuilder> 
+          oscal.common.v1.Common.Token, oscal.common.v1.Common.Token.Builder, oscal.common.v1.Common.TokenOrBuilder>
           internalGetParamIdFieldBuilder() {
         if (paramIdBuilder_ == null) {
           paramIdBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -38877,7 +38877,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
           getValueBytes() {
         java.lang.Object ref = value_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           value_ = b;
@@ -39137,7 +39137,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 3 [json_name = "remarks"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
            getRemarksOrBuilderList() {
         if (remarksBuilder_ != null) {
           return remarksBuilder_.getMessageOrBuilderList();
@@ -39163,12 +39163,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 3 [json_name = "remarks"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder> 
+      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder>
            getRemarksBuilderList() {
         return internalGetRemarksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetRemarksFieldBuilder() {
         if (remarksBuilder_ == null) {
           remarksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -39437,7 +39437,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
        *
        * <code>repeated .oscal.common.v1.MarkupLine values = 4 [json_name = "values"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.MarkupLineOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.MarkupLineOrBuilder>
            getValuesOrBuilderList() {
         if (valuesBuilder_ != null) {
           return valuesBuilder_.getMessageOrBuilderList();
@@ -39475,12 +39475,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
        *
        * <code>repeated .oscal.common.v1.MarkupLine values = 4 [json_name = "values"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.MarkupLine.Builder> 
+      public java.util.List<oscal.common.v1.Common.MarkupLine.Builder>
            getValuesBuilderList() {
         return internalGetValuesFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.MarkupLine, oscal.common.v1.Common.MarkupLine.Builder, oscal.common.v1.Common.MarkupLineOrBuilder> 
+          oscal.common.v1.Common.MarkupLine, oscal.common.v1.Common.MarkupLine.Builder, oscal.common.v1.Common.MarkupLineOrBuilder>
           internalGetValuesFieldBuilder() {
         if (valuesBuilder_ == null) {
           valuesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -39582,7 +39582,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Property> 
+    java.util.List<oscal.common.v1.Common.Property>
         getPropsList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
@@ -39595,7 +39595,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
@@ -39606,7 +39606,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Link> 
+    java.util.List<oscal.common.v1.Common.Link>
         getLinksList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
@@ -39619,7 +39619,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
@@ -39630,7 +39630,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.ssp.v1.SetParameter set_parameters = 5 [json_name = "setParameters"];</code>
      */
-    java.util.List<oscal.ssp.v1.Ssp.SetParameter> 
+    java.util.List<oscal.ssp.v1.Ssp.SetParameter>
         getSetParametersList();
     /**
      * <code>repeated .oscal.ssp.v1.SetParameter set_parameters = 5 [json_name = "setParameters"];</code>
@@ -39643,7 +39643,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.ssp.v1.SetParameter set_parameters = 5 [json_name = "setParameters"];</code>
      */
-    java.util.List<? extends oscal.ssp.v1.Ssp.SetParameterOrBuilder> 
+    java.util.List<? extends oscal.ssp.v1.Ssp.SetParameterOrBuilder>
         getSetParametersOrBuilderList();
     /**
      * <code>repeated .oscal.ssp.v1.SetParameter set_parameters = 5 [json_name = "setParameters"];</code>
@@ -39654,7 +39654,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.ssp.v1.ResponsibleRole responsible_roles = 6 [json_name = "responsibleRoles"];</code>
      */
-    java.util.List<oscal.ssp.v1.Ssp.ResponsibleRole> 
+    java.util.List<oscal.ssp.v1.Ssp.ResponsibleRole>
         getResponsibleRolesList();
     /**
      * <code>repeated .oscal.ssp.v1.ResponsibleRole responsible_roles = 6 [json_name = "responsibleRoles"];</code>
@@ -39667,7 +39667,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.ssp.v1.ResponsibleRole responsible_roles = 6 [json_name = "responsibleRoles"];</code>
      */
-    java.util.List<? extends oscal.ssp.v1.Ssp.ResponsibleRoleOrBuilder> 
+    java.util.List<? extends oscal.ssp.v1.Ssp.ResponsibleRoleOrBuilder>
         getResponsibleRolesOrBuilderList();
     /**
      * <code>repeated .oscal.ssp.v1.ResponsibleRole responsible_roles = 6 [json_name = "responsibleRoles"];</code>
@@ -39678,7 +39678,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.ssp.v1.Statement statements = 7 [json_name = "statements"];</code>
      */
-    java.util.List<oscal.ssp.v1.Ssp.Statement> 
+    java.util.List<oscal.ssp.v1.Ssp.Statement>
         getStatementsList();
     /**
      * <code>repeated .oscal.ssp.v1.Statement statements = 7 [json_name = "statements"];</code>
@@ -39691,7 +39691,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.ssp.v1.Statement statements = 7 [json_name = "statements"];</code>
      */
-    java.util.List<? extends oscal.ssp.v1.Ssp.StatementOrBuilder> 
+    java.util.List<? extends oscal.ssp.v1.Ssp.StatementOrBuilder>
         getStatementsOrBuilderList();
     /**
      * <code>repeated .oscal.ssp.v1.Statement statements = 7 [json_name = "statements"];</code>
@@ -39702,7 +39702,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.ssp.v1.ByComponent by_components = 8 [json_name = "byComponents"];</code>
      */
-    java.util.List<oscal.ssp.v1.Ssp.ByComponent> 
+    java.util.List<oscal.ssp.v1.Ssp.ByComponent>
         getByComponentsList();
     /**
      * <code>repeated .oscal.ssp.v1.ByComponent by_components = 8 [json_name = "byComponents"];</code>
@@ -39715,7 +39715,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.ssp.v1.ByComponent by_components = 8 [json_name = "byComponents"];</code>
      */
-    java.util.List<? extends oscal.ssp.v1.Ssp.ByComponentOrBuilder> 
+    java.util.List<? extends oscal.ssp.v1.Ssp.ByComponentOrBuilder>
         getByComponentsOrBuilderList();
     /**
      * <code>repeated .oscal.ssp.v1.ByComponent by_components = 8 [json_name = "byComponents"];</code>
@@ -39726,7 +39726,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 9 [json_name = "remarks"];</code>
      */
-    java.util.List<oscal.common.v1.Common.MarkupMultiline> 
+    java.util.List<oscal.common.v1.Common.MarkupMultiline>
         getRemarksList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 9 [json_name = "remarks"];</code>
@@ -39739,7 +39739,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 9 [json_name = "remarks"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 9 [json_name = "remarks"];</code>
@@ -39867,7 +39867,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList() {
       return props_;
     }
@@ -39908,7 +39908,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList() {
       return links_;
     }
@@ -39949,7 +39949,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.ssp.v1.SetParameter set_parameters = 5 [json_name = "setParameters"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.ssp.v1.Ssp.SetParameterOrBuilder> 
+    public java.util.List<? extends oscal.ssp.v1.Ssp.SetParameterOrBuilder>
         getSetParametersOrBuilderList() {
       return setParameters_;
     }
@@ -39990,7 +39990,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.ssp.v1.ResponsibleRole responsible_roles = 6 [json_name = "responsibleRoles"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.ssp.v1.Ssp.ResponsibleRoleOrBuilder> 
+    public java.util.List<? extends oscal.ssp.v1.Ssp.ResponsibleRoleOrBuilder>
         getResponsibleRolesOrBuilderList() {
       return responsibleRoles_;
     }
@@ -40031,7 +40031,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.ssp.v1.Statement statements = 7 [json_name = "statements"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.ssp.v1.Ssp.StatementOrBuilder> 
+    public java.util.List<? extends oscal.ssp.v1.Ssp.StatementOrBuilder>
         getStatementsOrBuilderList() {
       return statements_;
     }
@@ -40072,7 +40072,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.ssp.v1.ByComponent by_components = 8 [json_name = "byComponents"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.ssp.v1.Ssp.ByComponentOrBuilder> 
+    public java.util.List<? extends oscal.ssp.v1.Ssp.ByComponentOrBuilder>
         getByComponentsOrBuilderList() {
       return byComponents_;
     }
@@ -40113,7 +40113,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 9 [json_name = "remarks"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList() {
       return remarks_;
     }
@@ -40711,7 +40711,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               propsBuilder_ = null;
               props_ = other.props_;
               bitField0_ = (bitField0_ & ~0x00000004);
-              propsBuilder_ = 
+              propsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetPropsFieldBuilder() : null;
             } else {
@@ -40737,7 +40737,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               linksBuilder_ = null;
               links_ = other.links_;
               bitField0_ = (bitField0_ & ~0x00000008);
-              linksBuilder_ = 
+              linksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetLinksFieldBuilder() : null;
             } else {
@@ -40763,7 +40763,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               setParametersBuilder_ = null;
               setParameters_ = other.setParameters_;
               bitField0_ = (bitField0_ & ~0x00000010);
-              setParametersBuilder_ = 
+              setParametersBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetSetParametersFieldBuilder() : null;
             } else {
@@ -40789,7 +40789,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               responsibleRolesBuilder_ = null;
               responsibleRoles_ = other.responsibleRoles_;
               bitField0_ = (bitField0_ & ~0x00000020);
-              responsibleRolesBuilder_ = 
+              responsibleRolesBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetResponsibleRolesFieldBuilder() : null;
             } else {
@@ -40815,7 +40815,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               statementsBuilder_ = null;
               statements_ = other.statements_;
               bitField0_ = (bitField0_ & ~0x00000040);
-              statementsBuilder_ = 
+              statementsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetStatementsFieldBuilder() : null;
             } else {
@@ -40841,7 +40841,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               byComponentsBuilder_ = null;
               byComponents_ = other.byComponents_;
               bitField0_ = (bitField0_ & ~0x00000080);
-              byComponentsBuilder_ = 
+              byComponentsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetByComponentsFieldBuilder() : null;
             } else {
@@ -40867,7 +40867,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               remarksBuilder_ = null;
               remarks_ = other.remarks_;
               bitField0_ = (bitField0_ & ~0x00000100);
-              remarksBuilder_ = 
+              remarksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetRemarksFieldBuilder() : null;
             } else {
@@ -41131,7 +41131,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder> 
+          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder>
           internalGetUuidFieldBuilder() {
         if (uuidBuilder_ == null) {
           uuidBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -41252,7 +41252,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.Token control_id = 2 [json_name = "controlId"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.Token, oscal.common.v1.Common.Token.Builder, oscal.common.v1.Common.TokenOrBuilder> 
+          oscal.common.v1.Common.Token, oscal.common.v1.Common.Token.Builder, oscal.common.v1.Common.TokenOrBuilder>
           internalGetControlIdFieldBuilder() {
         if (controlIdBuilder_ == null) {
           controlIdBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -41460,7 +41460,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
            getPropsOrBuilderList() {
         if (propsBuilder_ != null) {
           return propsBuilder_.getMessageOrBuilderList();
@@ -41486,12 +41486,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Property.Builder> 
+      public java.util.List<oscal.common.v1.Common.Property.Builder>
            getPropsBuilderList() {
         return internalGetPropsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> 
+          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder>
           internalGetPropsFieldBuilder() {
         if (propsBuilder_ == null) {
           propsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -41700,7 +41700,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
            getLinksOrBuilderList() {
         if (linksBuilder_ != null) {
           return linksBuilder_.getMessageOrBuilderList();
@@ -41726,12 +41726,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Link.Builder> 
+      public java.util.List<oscal.common.v1.Common.Link.Builder>
            getLinksBuilderList() {
         return internalGetLinksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder> 
+          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder>
           internalGetLinksFieldBuilder() {
         if (linksBuilder_ == null) {
           linksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -41940,7 +41940,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.ssp.v1.SetParameter set_parameters = 5 [json_name = "setParameters"];</code>
        */
-      public java.util.List<? extends oscal.ssp.v1.Ssp.SetParameterOrBuilder> 
+      public java.util.List<? extends oscal.ssp.v1.Ssp.SetParameterOrBuilder>
            getSetParametersOrBuilderList() {
         if (setParametersBuilder_ != null) {
           return setParametersBuilder_.getMessageOrBuilderList();
@@ -41966,12 +41966,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.ssp.v1.SetParameter set_parameters = 5 [json_name = "setParameters"];</code>
        */
-      public java.util.List<oscal.ssp.v1.Ssp.SetParameter.Builder> 
+      public java.util.List<oscal.ssp.v1.Ssp.SetParameter.Builder>
            getSetParametersBuilderList() {
         return internalGetSetParametersFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.ssp.v1.Ssp.SetParameter, oscal.ssp.v1.Ssp.SetParameter.Builder, oscal.ssp.v1.Ssp.SetParameterOrBuilder> 
+          oscal.ssp.v1.Ssp.SetParameter, oscal.ssp.v1.Ssp.SetParameter.Builder, oscal.ssp.v1.Ssp.SetParameterOrBuilder>
           internalGetSetParametersFieldBuilder() {
         if (setParametersBuilder_ == null) {
           setParametersBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -42180,7 +42180,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.ssp.v1.ResponsibleRole responsible_roles = 6 [json_name = "responsibleRoles"];</code>
        */
-      public java.util.List<? extends oscal.ssp.v1.Ssp.ResponsibleRoleOrBuilder> 
+      public java.util.List<? extends oscal.ssp.v1.Ssp.ResponsibleRoleOrBuilder>
            getResponsibleRolesOrBuilderList() {
         if (responsibleRolesBuilder_ != null) {
           return responsibleRolesBuilder_.getMessageOrBuilderList();
@@ -42206,12 +42206,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.ssp.v1.ResponsibleRole responsible_roles = 6 [json_name = "responsibleRoles"];</code>
        */
-      public java.util.List<oscal.ssp.v1.Ssp.ResponsibleRole.Builder> 
+      public java.util.List<oscal.ssp.v1.Ssp.ResponsibleRole.Builder>
            getResponsibleRolesBuilderList() {
         return internalGetResponsibleRolesFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.ssp.v1.Ssp.ResponsibleRole, oscal.ssp.v1.Ssp.ResponsibleRole.Builder, oscal.ssp.v1.Ssp.ResponsibleRoleOrBuilder> 
+          oscal.ssp.v1.Ssp.ResponsibleRole, oscal.ssp.v1.Ssp.ResponsibleRole.Builder, oscal.ssp.v1.Ssp.ResponsibleRoleOrBuilder>
           internalGetResponsibleRolesFieldBuilder() {
         if (responsibleRolesBuilder_ == null) {
           responsibleRolesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -42420,7 +42420,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.ssp.v1.Statement statements = 7 [json_name = "statements"];</code>
        */
-      public java.util.List<? extends oscal.ssp.v1.Ssp.StatementOrBuilder> 
+      public java.util.List<? extends oscal.ssp.v1.Ssp.StatementOrBuilder>
            getStatementsOrBuilderList() {
         if (statementsBuilder_ != null) {
           return statementsBuilder_.getMessageOrBuilderList();
@@ -42446,12 +42446,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.ssp.v1.Statement statements = 7 [json_name = "statements"];</code>
        */
-      public java.util.List<oscal.ssp.v1.Ssp.Statement.Builder> 
+      public java.util.List<oscal.ssp.v1.Ssp.Statement.Builder>
            getStatementsBuilderList() {
         return internalGetStatementsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.ssp.v1.Ssp.Statement, oscal.ssp.v1.Ssp.Statement.Builder, oscal.ssp.v1.Ssp.StatementOrBuilder> 
+          oscal.ssp.v1.Ssp.Statement, oscal.ssp.v1.Ssp.Statement.Builder, oscal.ssp.v1.Ssp.StatementOrBuilder>
           internalGetStatementsFieldBuilder() {
         if (statementsBuilder_ == null) {
           statementsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -42660,7 +42660,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.ssp.v1.ByComponent by_components = 8 [json_name = "byComponents"];</code>
        */
-      public java.util.List<? extends oscal.ssp.v1.Ssp.ByComponentOrBuilder> 
+      public java.util.List<? extends oscal.ssp.v1.Ssp.ByComponentOrBuilder>
            getByComponentsOrBuilderList() {
         if (byComponentsBuilder_ != null) {
           return byComponentsBuilder_.getMessageOrBuilderList();
@@ -42686,12 +42686,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.ssp.v1.ByComponent by_components = 8 [json_name = "byComponents"];</code>
        */
-      public java.util.List<oscal.ssp.v1.Ssp.ByComponent.Builder> 
+      public java.util.List<oscal.ssp.v1.Ssp.ByComponent.Builder>
            getByComponentsBuilderList() {
         return internalGetByComponentsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.ssp.v1.Ssp.ByComponent, oscal.ssp.v1.Ssp.ByComponent.Builder, oscal.ssp.v1.Ssp.ByComponentOrBuilder> 
+          oscal.ssp.v1.Ssp.ByComponent, oscal.ssp.v1.Ssp.ByComponent.Builder, oscal.ssp.v1.Ssp.ByComponentOrBuilder>
           internalGetByComponentsFieldBuilder() {
         if (byComponentsBuilder_ == null) {
           byComponentsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -42900,7 +42900,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 9 [json_name = "remarks"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
            getRemarksOrBuilderList() {
         if (remarksBuilder_ != null) {
           return remarksBuilder_.getMessageOrBuilderList();
@@ -42926,12 +42926,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 9 [json_name = "remarks"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder> 
+      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder>
            getRemarksBuilderList() {
         return internalGetRemarksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetRemarksFieldBuilder() {
         if (remarksBuilder_ == null) {
           remarksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -43018,7 +43018,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.UUID party_uuids = 2 [json_name = "partyUuids"];</code>
      */
-    java.util.List<oscal.common.v1.Common.UUID> 
+    java.util.List<oscal.common.v1.Common.UUID>
         getPartyUuidsList();
     /**
      * <code>repeated .oscal.common.v1.UUID party_uuids = 2 [json_name = "partyUuids"];</code>
@@ -43031,7 +43031,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.UUID party_uuids = 2 [json_name = "partyUuids"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.UUIDOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.UUIDOrBuilder>
         getPartyUuidsOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.UUID party_uuids = 2 [json_name = "partyUuids"];</code>
@@ -43042,7 +43042,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Property> 
+    java.util.List<oscal.common.v1.Common.Property>
         getPropsList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
@@ -43055,7 +43055,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
@@ -43066,7 +43066,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 4 [json_name = "remarks"];</code>
      */
-    java.util.List<oscal.common.v1.Common.MarkupMultiline> 
+    java.util.List<oscal.common.v1.Common.MarkupMultiline>
         getRemarksList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 4 [json_name = "remarks"];</code>
@@ -43079,7 +43079,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 4 [json_name = "remarks"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 4 [json_name = "remarks"];</code>
@@ -43177,7 +43177,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.UUID party_uuids = 2 [json_name = "partyUuids"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.UUIDOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.UUIDOrBuilder>
         getPartyUuidsOrBuilderList() {
       return partyUuids_;
     }
@@ -43218,7 +43218,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList() {
       return props_;
     }
@@ -43259,7 +43259,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 4 [json_name = "remarks"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList() {
       return remarks_;
     }
@@ -43686,7 +43686,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               partyUuidsBuilder_ = null;
               partyUuids_ = other.partyUuids_;
               bitField0_ = (bitField0_ & ~0x00000002);
-              partyUuidsBuilder_ = 
+              partyUuidsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetPartyUuidsFieldBuilder() : null;
             } else {
@@ -43712,7 +43712,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               propsBuilder_ = null;
               props_ = other.props_;
               bitField0_ = (bitField0_ & ~0x00000004);
-              propsBuilder_ = 
+              propsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetPropsFieldBuilder() : null;
             } else {
@@ -43738,7 +43738,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               remarksBuilder_ = null;
               remarks_ = other.remarks_;
               bitField0_ = (bitField0_ & ~0x00000008);
-              remarksBuilder_ = 
+              remarksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetRemarksFieldBuilder() : null;
             } else {
@@ -43943,7 +43943,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.Token role_id = 1 [json_name = "roleId"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.Token, oscal.common.v1.Common.Token.Builder, oscal.common.v1.Common.TokenOrBuilder> 
+          oscal.common.v1.Common.Token, oscal.common.v1.Common.Token.Builder, oscal.common.v1.Common.TokenOrBuilder>
           internalGetRoleIdFieldBuilder() {
         if (roleIdBuilder_ == null) {
           roleIdBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -44151,7 +44151,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.UUID party_uuids = 2 [json_name = "partyUuids"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.UUIDOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.UUIDOrBuilder>
            getPartyUuidsOrBuilderList() {
         if (partyUuidsBuilder_ != null) {
           return partyUuidsBuilder_.getMessageOrBuilderList();
@@ -44177,12 +44177,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.UUID party_uuids = 2 [json_name = "partyUuids"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.UUID.Builder> 
+      public java.util.List<oscal.common.v1.Common.UUID.Builder>
            getPartyUuidsBuilderList() {
         return internalGetPartyUuidsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder> 
+          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder>
           internalGetPartyUuidsFieldBuilder() {
         if (partyUuidsBuilder_ == null) {
           partyUuidsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -44391,7 +44391,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
            getPropsOrBuilderList() {
         if (propsBuilder_ != null) {
           return propsBuilder_.getMessageOrBuilderList();
@@ -44417,12 +44417,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Property.Builder> 
+      public java.util.List<oscal.common.v1.Common.Property.Builder>
            getPropsBuilderList() {
         return internalGetPropsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> 
+          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder>
           internalGetPropsFieldBuilder() {
         if (propsBuilder_ == null) {
           propsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -44631,7 +44631,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 4 [json_name = "remarks"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
            getRemarksOrBuilderList() {
         if (remarksBuilder_ != null) {
           return remarksBuilder_.getMessageOrBuilderList();
@@ -44657,12 +44657,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 4 [json_name = "remarks"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder> 
+      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder>
            getRemarksBuilderList() {
         return internalGetRemarksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetRemarksFieldBuilder() {
         if (remarksBuilder_ == null) {
           remarksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -44764,7 +44764,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Property> 
+    java.util.List<oscal.common.v1.Common.Property>
         getPropsList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
@@ -44777,7 +44777,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
@@ -44788,7 +44788,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Link> 
+    java.util.List<oscal.common.v1.Common.Link>
         getLinksList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
@@ -44801,7 +44801,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
@@ -44812,7 +44812,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.ssp.v1.ResponsibleRole responsible_roles = 5 [json_name = "responsibleRoles"];</code>
      */
-    java.util.List<oscal.ssp.v1.Ssp.ResponsibleRole> 
+    java.util.List<oscal.ssp.v1.Ssp.ResponsibleRole>
         getResponsibleRolesList();
     /**
      * <code>repeated .oscal.ssp.v1.ResponsibleRole responsible_roles = 5 [json_name = "responsibleRoles"];</code>
@@ -44825,7 +44825,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.ssp.v1.ResponsibleRole responsible_roles = 5 [json_name = "responsibleRoles"];</code>
      */
-    java.util.List<? extends oscal.ssp.v1.Ssp.ResponsibleRoleOrBuilder> 
+    java.util.List<? extends oscal.ssp.v1.Ssp.ResponsibleRoleOrBuilder>
         getResponsibleRolesOrBuilderList();
     /**
      * <code>repeated .oscal.ssp.v1.ResponsibleRole responsible_roles = 5 [json_name = "responsibleRoles"];</code>
@@ -44836,7 +44836,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.ssp.v1.ByComponent by_components = 6 [json_name = "byComponents"];</code>
      */
-    java.util.List<oscal.ssp.v1.Ssp.ByComponent> 
+    java.util.List<oscal.ssp.v1.Ssp.ByComponent>
         getByComponentsList();
     /**
      * <code>repeated .oscal.ssp.v1.ByComponent by_components = 6 [json_name = "byComponents"];</code>
@@ -44849,7 +44849,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.ssp.v1.ByComponent by_components = 6 [json_name = "byComponents"];</code>
      */
-    java.util.List<? extends oscal.ssp.v1.Ssp.ByComponentOrBuilder> 
+    java.util.List<? extends oscal.ssp.v1.Ssp.ByComponentOrBuilder>
         getByComponentsOrBuilderList();
     /**
      * <code>repeated .oscal.ssp.v1.ByComponent by_components = 6 [json_name = "byComponents"];</code>
@@ -44860,7 +44860,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
      */
-    java.util.List<oscal.common.v1.Common.MarkupMultiline> 
+    java.util.List<oscal.common.v1.Common.MarkupMultiline>
         getRemarksList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
@@ -44873,7 +44873,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
@@ -44999,7 +44999,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList() {
       return props_;
     }
@@ -45040,7 +45040,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList() {
       return links_;
     }
@@ -45081,7 +45081,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.ssp.v1.ResponsibleRole responsible_roles = 5 [json_name = "responsibleRoles"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.ssp.v1.Ssp.ResponsibleRoleOrBuilder> 
+    public java.util.List<? extends oscal.ssp.v1.Ssp.ResponsibleRoleOrBuilder>
         getResponsibleRolesOrBuilderList() {
       return responsibleRoles_;
     }
@@ -45122,7 +45122,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.ssp.v1.ByComponent by_components = 6 [json_name = "byComponents"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.ssp.v1.Ssp.ByComponentOrBuilder> 
+    public java.util.List<? extends oscal.ssp.v1.Ssp.ByComponentOrBuilder>
         getByComponentsOrBuilderList() {
       return byComponents_;
     }
@@ -45163,7 +45163,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList() {
       return remarks_;
     }
@@ -45691,7 +45691,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               propsBuilder_ = null;
               props_ = other.props_;
               bitField0_ = (bitField0_ & ~0x00000004);
-              propsBuilder_ = 
+              propsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetPropsFieldBuilder() : null;
             } else {
@@ -45717,7 +45717,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               linksBuilder_ = null;
               links_ = other.links_;
               bitField0_ = (bitField0_ & ~0x00000008);
-              linksBuilder_ = 
+              linksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetLinksFieldBuilder() : null;
             } else {
@@ -45743,7 +45743,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               responsibleRolesBuilder_ = null;
               responsibleRoles_ = other.responsibleRoles_;
               bitField0_ = (bitField0_ & ~0x00000010);
-              responsibleRolesBuilder_ = 
+              responsibleRolesBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetResponsibleRolesFieldBuilder() : null;
             } else {
@@ -45769,7 +45769,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               byComponentsBuilder_ = null;
               byComponents_ = other.byComponents_;
               bitField0_ = (bitField0_ & ~0x00000020);
-              byComponentsBuilder_ = 
+              byComponentsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetByComponentsFieldBuilder() : null;
             } else {
@@ -45795,7 +45795,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               remarksBuilder_ = null;
               remarks_ = other.remarks_;
               bitField0_ = (bitField0_ & ~0x00000040);
-              remarksBuilder_ = 
+              remarksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetRemarksFieldBuilder() : null;
             } else {
@@ -46033,7 +46033,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.Token statement_id = 1 [json_name = "statementId"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.Token, oscal.common.v1.Common.Token.Builder, oscal.common.v1.Common.TokenOrBuilder> 
+          oscal.common.v1.Common.Token, oscal.common.v1.Common.Token.Builder, oscal.common.v1.Common.TokenOrBuilder>
           internalGetStatementIdFieldBuilder() {
         if (statementIdBuilder_ == null) {
           statementIdBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -46154,7 +46154,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.UUID uuid = 2 [json_name = "uuid"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder> 
+          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder>
           internalGetUuidFieldBuilder() {
         if (uuidBuilder_ == null) {
           uuidBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -46362,7 +46362,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
            getPropsOrBuilderList() {
         if (propsBuilder_ != null) {
           return propsBuilder_.getMessageOrBuilderList();
@@ -46388,12 +46388,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Property.Builder> 
+      public java.util.List<oscal.common.v1.Common.Property.Builder>
            getPropsBuilderList() {
         return internalGetPropsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> 
+          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder>
           internalGetPropsFieldBuilder() {
         if (propsBuilder_ == null) {
           propsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -46602,7 +46602,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
            getLinksOrBuilderList() {
         if (linksBuilder_ != null) {
           return linksBuilder_.getMessageOrBuilderList();
@@ -46628,12 +46628,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Link.Builder> 
+      public java.util.List<oscal.common.v1.Common.Link.Builder>
            getLinksBuilderList() {
         return internalGetLinksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder> 
+          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder>
           internalGetLinksFieldBuilder() {
         if (linksBuilder_ == null) {
           linksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -46842,7 +46842,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.ssp.v1.ResponsibleRole responsible_roles = 5 [json_name = "responsibleRoles"];</code>
        */
-      public java.util.List<? extends oscal.ssp.v1.Ssp.ResponsibleRoleOrBuilder> 
+      public java.util.List<? extends oscal.ssp.v1.Ssp.ResponsibleRoleOrBuilder>
            getResponsibleRolesOrBuilderList() {
         if (responsibleRolesBuilder_ != null) {
           return responsibleRolesBuilder_.getMessageOrBuilderList();
@@ -46868,12 +46868,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.ssp.v1.ResponsibleRole responsible_roles = 5 [json_name = "responsibleRoles"];</code>
        */
-      public java.util.List<oscal.ssp.v1.Ssp.ResponsibleRole.Builder> 
+      public java.util.List<oscal.ssp.v1.Ssp.ResponsibleRole.Builder>
            getResponsibleRolesBuilderList() {
         return internalGetResponsibleRolesFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.ssp.v1.Ssp.ResponsibleRole, oscal.ssp.v1.Ssp.ResponsibleRole.Builder, oscal.ssp.v1.Ssp.ResponsibleRoleOrBuilder> 
+          oscal.ssp.v1.Ssp.ResponsibleRole, oscal.ssp.v1.Ssp.ResponsibleRole.Builder, oscal.ssp.v1.Ssp.ResponsibleRoleOrBuilder>
           internalGetResponsibleRolesFieldBuilder() {
         if (responsibleRolesBuilder_ == null) {
           responsibleRolesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -47082,7 +47082,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.ssp.v1.ByComponent by_components = 6 [json_name = "byComponents"];</code>
        */
-      public java.util.List<? extends oscal.ssp.v1.Ssp.ByComponentOrBuilder> 
+      public java.util.List<? extends oscal.ssp.v1.Ssp.ByComponentOrBuilder>
            getByComponentsOrBuilderList() {
         if (byComponentsBuilder_ != null) {
           return byComponentsBuilder_.getMessageOrBuilderList();
@@ -47108,12 +47108,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.ssp.v1.ByComponent by_components = 6 [json_name = "byComponents"];</code>
        */
-      public java.util.List<oscal.ssp.v1.Ssp.ByComponent.Builder> 
+      public java.util.List<oscal.ssp.v1.Ssp.ByComponent.Builder>
            getByComponentsBuilderList() {
         return internalGetByComponentsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.ssp.v1.Ssp.ByComponent, oscal.ssp.v1.Ssp.ByComponent.Builder, oscal.ssp.v1.Ssp.ByComponentOrBuilder> 
+          oscal.ssp.v1.Ssp.ByComponent, oscal.ssp.v1.Ssp.ByComponent.Builder, oscal.ssp.v1.Ssp.ByComponentOrBuilder>
           internalGetByComponentsFieldBuilder() {
         if (byComponentsBuilder_ == null) {
           byComponentsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -47322,7 +47322,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
            getRemarksOrBuilderList() {
         if (remarksBuilder_ != null) {
           return remarksBuilder_.getMessageOrBuilderList();
@@ -47348,12 +47348,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder> 
+      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder>
            getRemarksBuilderList() {
         return internalGetRemarksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetRemarksFieldBuilder() {
         if (remarksBuilder_ == null) {
           remarksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -47470,7 +47470,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Property> 
+    java.util.List<oscal.common.v1.Common.Property>
         getPropsList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
@@ -47483,7 +47483,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
@@ -47494,7 +47494,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Link> 
+    java.util.List<oscal.common.v1.Common.Link>
         getLinksList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
@@ -47507,7 +47507,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
@@ -47518,7 +47518,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.ssp.v1.SetParameter set_parameters = 6 [json_name = "setParameters"];</code>
      */
-    java.util.List<oscal.ssp.v1.Ssp.SetParameter> 
+    java.util.List<oscal.ssp.v1.Ssp.SetParameter>
         getSetParametersList();
     /**
      * <code>repeated .oscal.ssp.v1.SetParameter set_parameters = 6 [json_name = "setParameters"];</code>
@@ -47531,7 +47531,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.ssp.v1.SetParameter set_parameters = 6 [json_name = "setParameters"];</code>
      */
-    java.util.List<? extends oscal.ssp.v1.Ssp.SetParameterOrBuilder> 
+    java.util.List<? extends oscal.ssp.v1.Ssp.SetParameterOrBuilder>
         getSetParametersOrBuilderList();
     /**
      * <code>repeated .oscal.ssp.v1.SetParameter set_parameters = 6 [json_name = "setParameters"];</code>
@@ -47572,7 +47572,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.ssp.v1.Inherited inherited = 9 [json_name = "inherited"];</code>
      */
-    java.util.List<oscal.ssp.v1.Ssp.Inherited> 
+    java.util.List<oscal.ssp.v1.Ssp.Inherited>
         getInheritedList();
     /**
      * <code>repeated .oscal.ssp.v1.Inherited inherited = 9 [json_name = "inherited"];</code>
@@ -47585,7 +47585,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.ssp.v1.Inherited inherited = 9 [json_name = "inherited"];</code>
      */
-    java.util.List<? extends oscal.ssp.v1.Ssp.InheritedOrBuilder> 
+    java.util.List<? extends oscal.ssp.v1.Ssp.InheritedOrBuilder>
         getInheritedOrBuilderList();
     /**
      * <code>repeated .oscal.ssp.v1.Inherited inherited = 9 [json_name = "inherited"];</code>
@@ -47596,7 +47596,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.ssp.v1.Satisfied satisfied = 10 [json_name = "satisfied"];</code>
      */
-    java.util.List<oscal.ssp.v1.Ssp.Satisfied> 
+    java.util.List<oscal.ssp.v1.Ssp.Satisfied>
         getSatisfiedList();
     /**
      * <code>repeated .oscal.ssp.v1.Satisfied satisfied = 10 [json_name = "satisfied"];</code>
@@ -47609,7 +47609,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.ssp.v1.Satisfied satisfied = 10 [json_name = "satisfied"];</code>
      */
-    java.util.List<? extends oscal.ssp.v1.Ssp.SatisfiedOrBuilder> 
+    java.util.List<? extends oscal.ssp.v1.Ssp.SatisfiedOrBuilder>
         getSatisfiedOrBuilderList();
     /**
      * <code>repeated .oscal.ssp.v1.Satisfied satisfied = 10 [json_name = "satisfied"];</code>
@@ -47620,7 +47620,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.ssp.v1.ResponsibleRole responsible_roles = 11 [json_name = "responsibleRoles"];</code>
      */
-    java.util.List<oscal.ssp.v1.Ssp.ResponsibleRole> 
+    java.util.List<oscal.ssp.v1.Ssp.ResponsibleRole>
         getResponsibleRolesList();
     /**
      * <code>repeated .oscal.ssp.v1.ResponsibleRole responsible_roles = 11 [json_name = "responsibleRoles"];</code>
@@ -47633,7 +47633,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.ssp.v1.ResponsibleRole responsible_roles = 11 [json_name = "responsibleRoles"];</code>
      */
-    java.util.List<? extends oscal.ssp.v1.Ssp.ResponsibleRoleOrBuilder> 
+    java.util.List<? extends oscal.ssp.v1.Ssp.ResponsibleRoleOrBuilder>
         getResponsibleRolesOrBuilderList();
     /**
      * <code>repeated .oscal.ssp.v1.ResponsibleRole responsible_roles = 11 [json_name = "responsibleRoles"];</code>
@@ -47644,7 +47644,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 12 [json_name = "remarks"];</code>
      */
-    java.util.List<oscal.common.v1.Common.MarkupMultiline> 
+    java.util.List<oscal.common.v1.Common.MarkupMultiline>
         getRemarksList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 12 [json_name = "remarks"];</code>
@@ -47657,7 +47657,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 12 [json_name = "remarks"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 12 [json_name = "remarks"];</code>
@@ -47811,7 +47811,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList() {
       return props_;
     }
@@ -47852,7 +47852,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList() {
       return links_;
     }
@@ -47893,7 +47893,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.ssp.v1.SetParameter set_parameters = 6 [json_name = "setParameters"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.ssp.v1.Ssp.SetParameterOrBuilder> 
+    public java.util.List<? extends oscal.ssp.v1.Ssp.SetParameterOrBuilder>
         getSetParametersOrBuilderList() {
       return setParameters_;
     }
@@ -47986,7 +47986,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.ssp.v1.Inherited inherited = 9 [json_name = "inherited"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.ssp.v1.Ssp.InheritedOrBuilder> 
+    public java.util.List<? extends oscal.ssp.v1.Ssp.InheritedOrBuilder>
         getInheritedOrBuilderList() {
       return inherited_;
     }
@@ -48027,7 +48027,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.ssp.v1.Satisfied satisfied = 10 [json_name = "satisfied"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.ssp.v1.Ssp.SatisfiedOrBuilder> 
+    public java.util.List<? extends oscal.ssp.v1.Ssp.SatisfiedOrBuilder>
         getSatisfiedOrBuilderList() {
       return satisfied_;
     }
@@ -48068,7 +48068,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.ssp.v1.ResponsibleRole responsible_roles = 11 [json_name = "responsibleRoles"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.ssp.v1.Ssp.ResponsibleRoleOrBuilder> 
+    public java.util.List<? extends oscal.ssp.v1.Ssp.ResponsibleRoleOrBuilder>
         getResponsibleRolesOrBuilderList() {
       return responsibleRoles_;
     }
@@ -48109,7 +48109,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 12 [json_name = "remarks"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList() {
       return remarks_;
     }
@@ -48794,7 +48794,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               propsBuilder_ = null;
               props_ = other.props_;
               bitField0_ = (bitField0_ & ~0x00000008);
-              propsBuilder_ = 
+              propsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetPropsFieldBuilder() : null;
             } else {
@@ -48820,7 +48820,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               linksBuilder_ = null;
               links_ = other.links_;
               bitField0_ = (bitField0_ & ~0x00000010);
-              linksBuilder_ = 
+              linksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetLinksFieldBuilder() : null;
             } else {
@@ -48846,7 +48846,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               setParametersBuilder_ = null;
               setParameters_ = other.setParameters_;
               bitField0_ = (bitField0_ & ~0x00000020);
-              setParametersBuilder_ = 
+              setParametersBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetSetParametersFieldBuilder() : null;
             } else {
@@ -48878,7 +48878,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               inheritedBuilder_ = null;
               inherited_ = other.inherited_;
               bitField0_ = (bitField0_ & ~0x00000100);
-              inheritedBuilder_ = 
+              inheritedBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetInheritedFieldBuilder() : null;
             } else {
@@ -48904,7 +48904,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               satisfiedBuilder_ = null;
               satisfied_ = other.satisfied_;
               bitField0_ = (bitField0_ & ~0x00000200);
-              satisfiedBuilder_ = 
+              satisfiedBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetSatisfiedFieldBuilder() : null;
             } else {
@@ -48930,7 +48930,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               responsibleRolesBuilder_ = null;
               responsibleRoles_ = other.responsibleRoles_;
               bitField0_ = (bitField0_ & ~0x00000400);
-              responsibleRolesBuilder_ = 
+              responsibleRolesBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetResponsibleRolesFieldBuilder() : null;
             } else {
@@ -48956,7 +48956,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               remarksBuilder_ = null;
               remarks_ = other.remarks_;
               bitField0_ = (bitField0_ & ~0x00000800);
-              remarksBuilder_ = 
+              remarksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetRemarksFieldBuilder() : null;
             } else {
@@ -49241,7 +49241,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.UUID component_uuid = 1 [json_name = "componentUuid"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder> 
+          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder>
           internalGetComponentUuidFieldBuilder() {
         if (componentUuidBuilder_ == null) {
           componentUuidBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -49362,7 +49362,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.UUID uuid = 2 [json_name = "uuid"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder> 
+          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder>
           internalGetUuidFieldBuilder() {
         if (uuidBuilder_ == null) {
           uuidBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -49483,7 +49483,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.MarkupMultiline description = 3 [json_name = "description"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetDescriptionFieldBuilder() {
         if (descriptionBuilder_ == null) {
           descriptionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -49691,7 +49691,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
            getPropsOrBuilderList() {
         if (propsBuilder_ != null) {
           return propsBuilder_.getMessageOrBuilderList();
@@ -49717,12 +49717,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Property.Builder> 
+      public java.util.List<oscal.common.v1.Common.Property.Builder>
            getPropsBuilderList() {
         return internalGetPropsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> 
+          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder>
           internalGetPropsFieldBuilder() {
         if (propsBuilder_ == null) {
           propsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -49931,7 +49931,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
            getLinksOrBuilderList() {
         if (linksBuilder_ != null) {
           return linksBuilder_.getMessageOrBuilderList();
@@ -49957,12 +49957,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Link.Builder> 
+      public java.util.List<oscal.common.v1.Common.Link.Builder>
            getLinksBuilderList() {
         return internalGetLinksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder> 
+          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder>
           internalGetLinksFieldBuilder() {
         if (linksBuilder_ == null) {
           linksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -50171,7 +50171,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.ssp.v1.SetParameter set_parameters = 6 [json_name = "setParameters"];</code>
        */
-      public java.util.List<? extends oscal.ssp.v1.Ssp.SetParameterOrBuilder> 
+      public java.util.List<? extends oscal.ssp.v1.Ssp.SetParameterOrBuilder>
            getSetParametersOrBuilderList() {
         if (setParametersBuilder_ != null) {
           return setParametersBuilder_.getMessageOrBuilderList();
@@ -50197,12 +50197,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.ssp.v1.SetParameter set_parameters = 6 [json_name = "setParameters"];</code>
        */
-      public java.util.List<oscal.ssp.v1.Ssp.SetParameter.Builder> 
+      public java.util.List<oscal.ssp.v1.Ssp.SetParameter.Builder>
            getSetParametersBuilderList() {
         return internalGetSetParametersFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.ssp.v1.Ssp.SetParameter, oscal.ssp.v1.Ssp.SetParameter.Builder, oscal.ssp.v1.Ssp.SetParameterOrBuilder> 
+          oscal.ssp.v1.Ssp.SetParameter, oscal.ssp.v1.Ssp.SetParameter.Builder, oscal.ssp.v1.Ssp.SetParameterOrBuilder>
           internalGetSetParametersFieldBuilder() {
         if (setParametersBuilder_ == null) {
           setParametersBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -50324,7 +50324,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.ssp.v1.ImplementationStatus implementation_status = 7 [json_name = "implementationStatus"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.ssp.v1.Ssp.ImplementationStatus, oscal.ssp.v1.Ssp.ImplementationStatus.Builder, oscal.ssp.v1.Ssp.ImplementationStatusOrBuilder> 
+          oscal.ssp.v1.Ssp.ImplementationStatus, oscal.ssp.v1.Ssp.ImplementationStatus.Builder, oscal.ssp.v1.Ssp.ImplementationStatusOrBuilder>
           internalGetImplementationStatusFieldBuilder() {
         if (implementationStatusBuilder_ == null) {
           implementationStatusBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -50445,7 +50445,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.ssp.v1.Export export = 8 [json_name = "export"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.ssp.v1.Ssp.Export, oscal.ssp.v1.Ssp.Export.Builder, oscal.ssp.v1.Ssp.ExportOrBuilder> 
+          oscal.ssp.v1.Ssp.Export, oscal.ssp.v1.Ssp.Export.Builder, oscal.ssp.v1.Ssp.ExportOrBuilder>
           internalGetExportFieldBuilder() {
         if (exportBuilder_ == null) {
           exportBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -50653,7 +50653,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.ssp.v1.Inherited inherited = 9 [json_name = "inherited"];</code>
        */
-      public java.util.List<? extends oscal.ssp.v1.Ssp.InheritedOrBuilder> 
+      public java.util.List<? extends oscal.ssp.v1.Ssp.InheritedOrBuilder>
            getInheritedOrBuilderList() {
         if (inheritedBuilder_ != null) {
           return inheritedBuilder_.getMessageOrBuilderList();
@@ -50679,12 +50679,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.ssp.v1.Inherited inherited = 9 [json_name = "inherited"];</code>
        */
-      public java.util.List<oscal.ssp.v1.Ssp.Inherited.Builder> 
+      public java.util.List<oscal.ssp.v1.Ssp.Inherited.Builder>
            getInheritedBuilderList() {
         return internalGetInheritedFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.ssp.v1.Ssp.Inherited, oscal.ssp.v1.Ssp.Inherited.Builder, oscal.ssp.v1.Ssp.InheritedOrBuilder> 
+          oscal.ssp.v1.Ssp.Inherited, oscal.ssp.v1.Ssp.Inherited.Builder, oscal.ssp.v1.Ssp.InheritedOrBuilder>
           internalGetInheritedFieldBuilder() {
         if (inheritedBuilder_ == null) {
           inheritedBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -50893,7 +50893,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.ssp.v1.Satisfied satisfied = 10 [json_name = "satisfied"];</code>
        */
-      public java.util.List<? extends oscal.ssp.v1.Ssp.SatisfiedOrBuilder> 
+      public java.util.List<? extends oscal.ssp.v1.Ssp.SatisfiedOrBuilder>
            getSatisfiedOrBuilderList() {
         if (satisfiedBuilder_ != null) {
           return satisfiedBuilder_.getMessageOrBuilderList();
@@ -50919,12 +50919,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.ssp.v1.Satisfied satisfied = 10 [json_name = "satisfied"];</code>
        */
-      public java.util.List<oscal.ssp.v1.Ssp.Satisfied.Builder> 
+      public java.util.List<oscal.ssp.v1.Ssp.Satisfied.Builder>
            getSatisfiedBuilderList() {
         return internalGetSatisfiedFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.ssp.v1.Ssp.Satisfied, oscal.ssp.v1.Ssp.Satisfied.Builder, oscal.ssp.v1.Ssp.SatisfiedOrBuilder> 
+          oscal.ssp.v1.Ssp.Satisfied, oscal.ssp.v1.Ssp.Satisfied.Builder, oscal.ssp.v1.Ssp.SatisfiedOrBuilder>
           internalGetSatisfiedFieldBuilder() {
         if (satisfiedBuilder_ == null) {
           satisfiedBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -51133,7 +51133,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.ssp.v1.ResponsibleRole responsible_roles = 11 [json_name = "responsibleRoles"];</code>
        */
-      public java.util.List<? extends oscal.ssp.v1.Ssp.ResponsibleRoleOrBuilder> 
+      public java.util.List<? extends oscal.ssp.v1.Ssp.ResponsibleRoleOrBuilder>
            getResponsibleRolesOrBuilderList() {
         if (responsibleRolesBuilder_ != null) {
           return responsibleRolesBuilder_.getMessageOrBuilderList();
@@ -51159,12 +51159,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.ssp.v1.ResponsibleRole responsible_roles = 11 [json_name = "responsibleRoles"];</code>
        */
-      public java.util.List<oscal.ssp.v1.Ssp.ResponsibleRole.Builder> 
+      public java.util.List<oscal.ssp.v1.Ssp.ResponsibleRole.Builder>
            getResponsibleRolesBuilderList() {
         return internalGetResponsibleRolesFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.ssp.v1.Ssp.ResponsibleRole, oscal.ssp.v1.Ssp.ResponsibleRole.Builder, oscal.ssp.v1.Ssp.ResponsibleRoleOrBuilder> 
+          oscal.ssp.v1.Ssp.ResponsibleRole, oscal.ssp.v1.Ssp.ResponsibleRole.Builder, oscal.ssp.v1.Ssp.ResponsibleRoleOrBuilder>
           internalGetResponsibleRolesFieldBuilder() {
         if (responsibleRolesBuilder_ == null) {
           responsibleRolesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -51373,7 +51373,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 12 [json_name = "remarks"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
            getRemarksOrBuilderList() {
         if (remarksBuilder_ != null) {
           return remarksBuilder_.getMessageOrBuilderList();
@@ -51399,12 +51399,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 12 [json_name = "remarks"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder> 
+      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder>
            getRemarksBuilderList() {
         return internalGetRemarksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetRemarksFieldBuilder() {
         if (remarksBuilder_ == null) {
           remarksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -51561,7 +51561,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         state_ = s;
@@ -51577,7 +51577,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
         getStateBytes() {
       java.lang.Object ref = state_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         state_ = b;
@@ -51985,7 +51985,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
           getStateBytes() {
         java.lang.Object ref = state_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           state_ = b;
@@ -52140,7 +52140,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetRemarksFieldBuilder() {
         if (remarksBuilder_ == null) {
           remarksBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -52226,7 +52226,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 2 [json_name = "props"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Property> 
+    java.util.List<oscal.common.v1.Common.Property>
         getPropsList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 2 [json_name = "props"];</code>
@@ -52239,7 +52239,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 2 [json_name = "props"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 2 [json_name = "props"];</code>
@@ -52250,7 +52250,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 3 [json_name = "links"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Link> 
+    java.util.List<oscal.common.v1.Common.Link>
         getLinksList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 3 [json_name = "links"];</code>
@@ -52263,7 +52263,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 3 [json_name = "links"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 3 [json_name = "links"];</code>
@@ -52274,7 +52274,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.ssp.v1.Provided provided = 4 [json_name = "provided"];</code>
      */
-    java.util.List<oscal.ssp.v1.Ssp.Provided> 
+    java.util.List<oscal.ssp.v1.Ssp.Provided>
         getProvidedList();
     /**
      * <code>repeated .oscal.ssp.v1.Provided provided = 4 [json_name = "provided"];</code>
@@ -52287,7 +52287,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.ssp.v1.Provided provided = 4 [json_name = "provided"];</code>
      */
-    java.util.List<? extends oscal.ssp.v1.Ssp.ProvidedOrBuilder> 
+    java.util.List<? extends oscal.ssp.v1.Ssp.ProvidedOrBuilder>
         getProvidedOrBuilderList();
     /**
      * <code>repeated .oscal.ssp.v1.Provided provided = 4 [json_name = "provided"];</code>
@@ -52298,7 +52298,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.ssp.v1.Responsibility responsibilities = 5 [json_name = "responsibilities"];</code>
      */
-    java.util.List<oscal.ssp.v1.Ssp.Responsibility> 
+    java.util.List<oscal.ssp.v1.Ssp.Responsibility>
         getResponsibilitiesList();
     /**
      * <code>repeated .oscal.ssp.v1.Responsibility responsibilities = 5 [json_name = "responsibilities"];</code>
@@ -52311,7 +52311,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.ssp.v1.Responsibility responsibilities = 5 [json_name = "responsibilities"];</code>
      */
-    java.util.List<? extends oscal.ssp.v1.Ssp.ResponsibilityOrBuilder> 
+    java.util.List<? extends oscal.ssp.v1.Ssp.ResponsibilityOrBuilder>
         getResponsibilitiesOrBuilderList();
     /**
      * <code>repeated .oscal.ssp.v1.Responsibility responsibilities = 5 [json_name = "responsibilities"];</code>
@@ -52322,7 +52322,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
      */
-    java.util.List<oscal.common.v1.Common.MarkupMultiline> 
+    java.util.List<oscal.common.v1.Common.MarkupMultiline>
         getRemarksList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
@@ -52335,7 +52335,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
@@ -52435,7 +52435,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Property props = 2 [json_name = "props"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList() {
       return props_;
     }
@@ -52476,7 +52476,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Link links = 3 [json_name = "links"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList() {
       return links_;
     }
@@ -52517,7 +52517,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.ssp.v1.Provided provided = 4 [json_name = "provided"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.ssp.v1.Ssp.ProvidedOrBuilder> 
+    public java.util.List<? extends oscal.ssp.v1.Ssp.ProvidedOrBuilder>
         getProvidedOrBuilderList() {
       return provided_;
     }
@@ -52558,7 +52558,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.ssp.v1.Responsibility responsibilities = 5 [json_name = "responsibilities"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.ssp.v1.Ssp.ResponsibilityOrBuilder> 
+    public java.util.List<? extends oscal.ssp.v1.Ssp.ResponsibilityOrBuilder>
         getResponsibilitiesOrBuilderList() {
       return responsibilities_;
     }
@@ -52599,7 +52599,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList() {
       return remarks_;
     }
@@ -53096,7 +53096,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               propsBuilder_ = null;
               props_ = other.props_;
               bitField0_ = (bitField0_ & ~0x00000002);
-              propsBuilder_ = 
+              propsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetPropsFieldBuilder() : null;
             } else {
@@ -53122,7 +53122,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               linksBuilder_ = null;
               links_ = other.links_;
               bitField0_ = (bitField0_ & ~0x00000004);
-              linksBuilder_ = 
+              linksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetLinksFieldBuilder() : null;
             } else {
@@ -53148,7 +53148,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               providedBuilder_ = null;
               provided_ = other.provided_;
               bitField0_ = (bitField0_ & ~0x00000008);
-              providedBuilder_ = 
+              providedBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetProvidedFieldBuilder() : null;
             } else {
@@ -53174,7 +53174,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               responsibilitiesBuilder_ = null;
               responsibilities_ = other.responsibilities_;
               bitField0_ = (bitField0_ & ~0x00000010);
-              responsibilitiesBuilder_ = 
+              responsibilitiesBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetResponsibilitiesFieldBuilder() : null;
             } else {
@@ -53200,7 +53200,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               remarksBuilder_ = null;
               remarks_ = other.remarks_;
               bitField0_ = (bitField0_ & ~0x00000020);
-              remarksBuilder_ = 
+              remarksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetRemarksFieldBuilder() : null;
             } else {
@@ -53431,7 +53431,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.MarkupMultiline description = 1 [json_name = "description"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetDescriptionFieldBuilder() {
         if (descriptionBuilder_ == null) {
           descriptionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -53639,7 +53639,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 2 [json_name = "props"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
            getPropsOrBuilderList() {
         if (propsBuilder_ != null) {
           return propsBuilder_.getMessageOrBuilderList();
@@ -53665,12 +53665,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 2 [json_name = "props"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Property.Builder> 
+      public java.util.List<oscal.common.v1.Common.Property.Builder>
            getPropsBuilderList() {
         return internalGetPropsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> 
+          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder>
           internalGetPropsFieldBuilder() {
         if (propsBuilder_ == null) {
           propsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -53879,7 +53879,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 3 [json_name = "links"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
            getLinksOrBuilderList() {
         if (linksBuilder_ != null) {
           return linksBuilder_.getMessageOrBuilderList();
@@ -53905,12 +53905,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 3 [json_name = "links"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Link.Builder> 
+      public java.util.List<oscal.common.v1.Common.Link.Builder>
            getLinksBuilderList() {
         return internalGetLinksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder> 
+          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder>
           internalGetLinksFieldBuilder() {
         if (linksBuilder_ == null) {
           linksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -54119,7 +54119,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.ssp.v1.Provided provided = 4 [json_name = "provided"];</code>
        */
-      public java.util.List<? extends oscal.ssp.v1.Ssp.ProvidedOrBuilder> 
+      public java.util.List<? extends oscal.ssp.v1.Ssp.ProvidedOrBuilder>
            getProvidedOrBuilderList() {
         if (providedBuilder_ != null) {
           return providedBuilder_.getMessageOrBuilderList();
@@ -54145,12 +54145,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.ssp.v1.Provided provided = 4 [json_name = "provided"];</code>
        */
-      public java.util.List<oscal.ssp.v1.Ssp.Provided.Builder> 
+      public java.util.List<oscal.ssp.v1.Ssp.Provided.Builder>
            getProvidedBuilderList() {
         return internalGetProvidedFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.ssp.v1.Ssp.Provided, oscal.ssp.v1.Ssp.Provided.Builder, oscal.ssp.v1.Ssp.ProvidedOrBuilder> 
+          oscal.ssp.v1.Ssp.Provided, oscal.ssp.v1.Ssp.Provided.Builder, oscal.ssp.v1.Ssp.ProvidedOrBuilder>
           internalGetProvidedFieldBuilder() {
         if (providedBuilder_ == null) {
           providedBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -54359,7 +54359,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.ssp.v1.Responsibility responsibilities = 5 [json_name = "responsibilities"];</code>
        */
-      public java.util.List<? extends oscal.ssp.v1.Ssp.ResponsibilityOrBuilder> 
+      public java.util.List<? extends oscal.ssp.v1.Ssp.ResponsibilityOrBuilder>
            getResponsibilitiesOrBuilderList() {
         if (responsibilitiesBuilder_ != null) {
           return responsibilitiesBuilder_.getMessageOrBuilderList();
@@ -54385,12 +54385,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.ssp.v1.Responsibility responsibilities = 5 [json_name = "responsibilities"];</code>
        */
-      public java.util.List<oscal.ssp.v1.Ssp.Responsibility.Builder> 
+      public java.util.List<oscal.ssp.v1.Ssp.Responsibility.Builder>
            getResponsibilitiesBuilderList() {
         return internalGetResponsibilitiesFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.ssp.v1.Ssp.Responsibility, oscal.ssp.v1.Ssp.Responsibility.Builder, oscal.ssp.v1.Ssp.ResponsibilityOrBuilder> 
+          oscal.ssp.v1.Ssp.Responsibility, oscal.ssp.v1.Ssp.Responsibility.Builder, oscal.ssp.v1.Ssp.ResponsibilityOrBuilder>
           internalGetResponsibilitiesFieldBuilder() {
         if (responsibilitiesBuilder_ == null) {
           responsibilitiesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -54599,7 +54599,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
            getRemarksOrBuilderList() {
         if (remarksBuilder_ != null) {
           return remarksBuilder_.getMessageOrBuilderList();
@@ -54625,12 +54625,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder> 
+      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder>
            getRemarksBuilderList() {
         return internalGetRemarksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetRemarksFieldBuilder() {
         if (remarksBuilder_ == null) {
           remarksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -54732,7 +54732,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Property> 
+    java.util.List<oscal.common.v1.Common.Property>
         getPropsList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
@@ -54745,7 +54745,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
@@ -54756,7 +54756,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Link> 
+    java.util.List<oscal.common.v1.Common.Link>
         getLinksList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
@@ -54769,7 +54769,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
@@ -54780,7 +54780,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.ssp.v1.ResponsibleRole responsible_roles = 5 [json_name = "responsibleRoles"];</code>
      */
-    java.util.List<oscal.ssp.v1.Ssp.ResponsibleRole> 
+    java.util.List<oscal.ssp.v1.Ssp.ResponsibleRole>
         getResponsibleRolesList();
     /**
      * <code>repeated .oscal.ssp.v1.ResponsibleRole responsible_roles = 5 [json_name = "responsibleRoles"];</code>
@@ -54793,7 +54793,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.ssp.v1.ResponsibleRole responsible_roles = 5 [json_name = "responsibleRoles"];</code>
      */
-    java.util.List<? extends oscal.ssp.v1.Ssp.ResponsibleRoleOrBuilder> 
+    java.util.List<? extends oscal.ssp.v1.Ssp.ResponsibleRoleOrBuilder>
         getResponsibleRolesOrBuilderList();
     /**
      * <code>repeated .oscal.ssp.v1.ResponsibleRole responsible_roles = 5 [json_name = "responsibleRoles"];</code>
@@ -54804,7 +54804,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
      */
-    java.util.List<oscal.common.v1.Common.MarkupMultiline> 
+    java.util.List<oscal.common.v1.Common.MarkupMultiline>
         getRemarksList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
@@ -54817,7 +54817,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
@@ -54942,7 +54942,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList() {
       return props_;
     }
@@ -54983,7 +54983,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList() {
       return links_;
     }
@@ -55024,7 +55024,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.ssp.v1.ResponsibleRole responsible_roles = 5 [json_name = "responsibleRoles"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.ssp.v1.Ssp.ResponsibleRoleOrBuilder> 
+    public java.util.List<? extends oscal.ssp.v1.Ssp.ResponsibleRoleOrBuilder>
         getResponsibleRolesOrBuilderList() {
       return responsibleRoles_;
     }
@@ -55065,7 +55065,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList() {
       return remarks_;
     }
@@ -55558,7 +55558,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               propsBuilder_ = null;
               props_ = other.props_;
               bitField0_ = (bitField0_ & ~0x00000004);
-              propsBuilder_ = 
+              propsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetPropsFieldBuilder() : null;
             } else {
@@ -55584,7 +55584,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               linksBuilder_ = null;
               links_ = other.links_;
               bitField0_ = (bitField0_ & ~0x00000008);
-              linksBuilder_ = 
+              linksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetLinksFieldBuilder() : null;
             } else {
@@ -55610,7 +55610,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               responsibleRolesBuilder_ = null;
               responsibleRoles_ = other.responsibleRoles_;
               bitField0_ = (bitField0_ & ~0x00000010);
-              responsibleRolesBuilder_ = 
+              responsibleRolesBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetResponsibleRolesFieldBuilder() : null;
             } else {
@@ -55636,7 +55636,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               remarksBuilder_ = null;
               remarks_ = other.remarks_;
               bitField0_ = (bitField0_ & ~0x00000020);
-              remarksBuilder_ = 
+              remarksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetRemarksFieldBuilder() : null;
             } else {
@@ -55861,7 +55861,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder> 
+          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder>
           internalGetUuidFieldBuilder() {
         if (uuidBuilder_ == null) {
           uuidBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -55982,7 +55982,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.MarkupMultiline description = 2 [json_name = "description"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetDescriptionFieldBuilder() {
         if (descriptionBuilder_ == null) {
           descriptionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -56190,7 +56190,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
            getPropsOrBuilderList() {
         if (propsBuilder_ != null) {
           return propsBuilder_.getMessageOrBuilderList();
@@ -56216,12 +56216,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Property.Builder> 
+      public java.util.List<oscal.common.v1.Common.Property.Builder>
            getPropsBuilderList() {
         return internalGetPropsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> 
+          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder>
           internalGetPropsFieldBuilder() {
         if (propsBuilder_ == null) {
           propsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -56430,7 +56430,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
            getLinksOrBuilderList() {
         if (linksBuilder_ != null) {
           return linksBuilder_.getMessageOrBuilderList();
@@ -56456,12 +56456,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Link.Builder> 
+      public java.util.List<oscal.common.v1.Common.Link.Builder>
            getLinksBuilderList() {
         return internalGetLinksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder> 
+          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder>
           internalGetLinksFieldBuilder() {
         if (linksBuilder_ == null) {
           linksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -56670,7 +56670,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.ssp.v1.ResponsibleRole responsible_roles = 5 [json_name = "responsibleRoles"];</code>
        */
-      public java.util.List<? extends oscal.ssp.v1.Ssp.ResponsibleRoleOrBuilder> 
+      public java.util.List<? extends oscal.ssp.v1.Ssp.ResponsibleRoleOrBuilder>
            getResponsibleRolesOrBuilderList() {
         if (responsibleRolesBuilder_ != null) {
           return responsibleRolesBuilder_.getMessageOrBuilderList();
@@ -56696,12 +56696,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.ssp.v1.ResponsibleRole responsible_roles = 5 [json_name = "responsibleRoles"];</code>
        */
-      public java.util.List<oscal.ssp.v1.Ssp.ResponsibleRole.Builder> 
+      public java.util.List<oscal.ssp.v1.Ssp.ResponsibleRole.Builder>
            getResponsibleRolesBuilderList() {
         return internalGetResponsibleRolesFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.ssp.v1.Ssp.ResponsibleRole, oscal.ssp.v1.Ssp.ResponsibleRole.Builder, oscal.ssp.v1.Ssp.ResponsibleRoleOrBuilder> 
+          oscal.ssp.v1.Ssp.ResponsibleRole, oscal.ssp.v1.Ssp.ResponsibleRole.Builder, oscal.ssp.v1.Ssp.ResponsibleRoleOrBuilder>
           internalGetResponsibleRolesFieldBuilder() {
         if (responsibleRolesBuilder_ == null) {
           responsibleRolesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -56910,7 +56910,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
            getRemarksOrBuilderList() {
         if (remarksBuilder_ != null) {
           return remarksBuilder_.getMessageOrBuilderList();
@@ -56936,12 +56936,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder> 
+      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder>
            getRemarksBuilderList() {
         return internalGetRemarksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetRemarksFieldBuilder() {
         if (remarksBuilder_ == null) {
           remarksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -57058,7 +57058,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Property> 
+    java.util.List<oscal.common.v1.Common.Property>
         getPropsList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
@@ -57071,7 +57071,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
@@ -57082,7 +57082,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Link> 
+    java.util.List<oscal.common.v1.Common.Link>
         getLinksList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
@@ -57095,7 +57095,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
@@ -57106,7 +57106,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.ssp.v1.ResponsibleRole responsible_roles = 6 [json_name = "responsibleRoles"];</code>
      */
-    java.util.List<oscal.ssp.v1.Ssp.ResponsibleRole> 
+    java.util.List<oscal.ssp.v1.Ssp.ResponsibleRole>
         getResponsibleRolesList();
     /**
      * <code>repeated .oscal.ssp.v1.ResponsibleRole responsible_roles = 6 [json_name = "responsibleRoles"];</code>
@@ -57119,7 +57119,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.ssp.v1.ResponsibleRole responsible_roles = 6 [json_name = "responsibleRoles"];</code>
      */
-    java.util.List<? extends oscal.ssp.v1.Ssp.ResponsibleRoleOrBuilder> 
+    java.util.List<? extends oscal.ssp.v1.Ssp.ResponsibleRoleOrBuilder>
         getResponsibleRolesOrBuilderList();
     /**
      * <code>repeated .oscal.ssp.v1.ResponsibleRole responsible_roles = 6 [json_name = "responsibleRoles"];</code>
@@ -57130,7 +57130,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
      */
-    java.util.List<oscal.common.v1.Common.MarkupMultiline> 
+    java.util.List<oscal.common.v1.Common.MarkupMultiline>
         getRemarksList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
@@ -57143,7 +57143,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
@@ -57294,7 +57294,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList() {
       return props_;
     }
@@ -57335,7 +57335,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList() {
       return links_;
     }
@@ -57376,7 +57376,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.ssp.v1.ResponsibleRole responsible_roles = 6 [json_name = "responsibleRoles"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.ssp.v1.Ssp.ResponsibleRoleOrBuilder> 
+    public java.util.List<? extends oscal.ssp.v1.Ssp.ResponsibleRoleOrBuilder>
         getResponsibleRolesOrBuilderList() {
       return responsibleRoles_;
     }
@@ -57417,7 +57417,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList() {
       return remarks_;
     }
@@ -57941,7 +57941,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               propsBuilder_ = null;
               props_ = other.props_;
               bitField0_ = (bitField0_ & ~0x00000008);
-              propsBuilder_ = 
+              propsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetPropsFieldBuilder() : null;
             } else {
@@ -57967,7 +57967,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               linksBuilder_ = null;
               links_ = other.links_;
               bitField0_ = (bitField0_ & ~0x00000010);
-              linksBuilder_ = 
+              linksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetLinksFieldBuilder() : null;
             } else {
@@ -57993,7 +57993,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               responsibleRolesBuilder_ = null;
               responsibleRoles_ = other.responsibleRoles_;
               bitField0_ = (bitField0_ & ~0x00000020);
-              responsibleRolesBuilder_ = 
+              responsibleRolesBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetResponsibleRolesFieldBuilder() : null;
             } else {
@@ -58019,7 +58019,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               remarksBuilder_ = null;
               remarks_ = other.remarks_;
               bitField0_ = (bitField0_ & ~0x00000040);
-              remarksBuilder_ = 
+              remarksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetRemarksFieldBuilder() : null;
             } else {
@@ -58251,7 +58251,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder> 
+          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder>
           internalGetUuidFieldBuilder() {
         if (uuidBuilder_ == null) {
           uuidBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -58372,7 +58372,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.UUID provided_uuid = 2 [json_name = "providedUuid"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder> 
+          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder>
           internalGetProvidedUuidFieldBuilder() {
         if (providedUuidBuilder_ == null) {
           providedUuidBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -58493,7 +58493,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.MarkupMultiline description = 3 [json_name = "description"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetDescriptionFieldBuilder() {
         if (descriptionBuilder_ == null) {
           descriptionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -58701,7 +58701,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
            getPropsOrBuilderList() {
         if (propsBuilder_ != null) {
           return propsBuilder_.getMessageOrBuilderList();
@@ -58727,12 +58727,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Property.Builder> 
+      public java.util.List<oscal.common.v1.Common.Property.Builder>
            getPropsBuilderList() {
         return internalGetPropsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> 
+          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder>
           internalGetPropsFieldBuilder() {
         if (propsBuilder_ == null) {
           propsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -58941,7 +58941,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
            getLinksOrBuilderList() {
         if (linksBuilder_ != null) {
           return linksBuilder_.getMessageOrBuilderList();
@@ -58967,12 +58967,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Link.Builder> 
+      public java.util.List<oscal.common.v1.Common.Link.Builder>
            getLinksBuilderList() {
         return internalGetLinksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder> 
+          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder>
           internalGetLinksFieldBuilder() {
         if (linksBuilder_ == null) {
           linksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -59181,7 +59181,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.ssp.v1.ResponsibleRole responsible_roles = 6 [json_name = "responsibleRoles"];</code>
        */
-      public java.util.List<? extends oscal.ssp.v1.Ssp.ResponsibleRoleOrBuilder> 
+      public java.util.List<? extends oscal.ssp.v1.Ssp.ResponsibleRoleOrBuilder>
            getResponsibleRolesOrBuilderList() {
         if (responsibleRolesBuilder_ != null) {
           return responsibleRolesBuilder_.getMessageOrBuilderList();
@@ -59207,12 +59207,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.ssp.v1.ResponsibleRole responsible_roles = 6 [json_name = "responsibleRoles"];</code>
        */
-      public java.util.List<oscal.ssp.v1.Ssp.ResponsibleRole.Builder> 
+      public java.util.List<oscal.ssp.v1.Ssp.ResponsibleRole.Builder>
            getResponsibleRolesBuilderList() {
         return internalGetResponsibleRolesFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.ssp.v1.Ssp.ResponsibleRole, oscal.ssp.v1.Ssp.ResponsibleRole.Builder, oscal.ssp.v1.Ssp.ResponsibleRoleOrBuilder> 
+          oscal.ssp.v1.Ssp.ResponsibleRole, oscal.ssp.v1.Ssp.ResponsibleRole.Builder, oscal.ssp.v1.Ssp.ResponsibleRoleOrBuilder>
           internalGetResponsibleRolesFieldBuilder() {
         if (responsibleRolesBuilder_ == null) {
           responsibleRolesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -59421,7 +59421,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
            getRemarksOrBuilderList() {
         if (remarksBuilder_ != null) {
           return remarksBuilder_.getMessageOrBuilderList();
@@ -59447,12 +59447,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder> 
+      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder>
            getRemarksBuilderList() {
         return internalGetRemarksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetRemarksFieldBuilder() {
         if (remarksBuilder_ == null) {
           remarksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -59569,7 +59569,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Property> 
+    java.util.List<oscal.common.v1.Common.Property>
         getPropsList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
@@ -59582,7 +59582,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
@@ -59593,7 +59593,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Link> 
+    java.util.List<oscal.common.v1.Common.Link>
         getLinksList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
@@ -59606,7 +59606,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
@@ -59617,7 +59617,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.ssp.v1.ResponsibleRole responsible_roles = 6 [json_name = "responsibleRoles"];</code>
      */
-    java.util.List<oscal.ssp.v1.Ssp.ResponsibleRole> 
+    java.util.List<oscal.ssp.v1.Ssp.ResponsibleRole>
         getResponsibleRolesList();
     /**
      * <code>repeated .oscal.ssp.v1.ResponsibleRole responsible_roles = 6 [json_name = "responsibleRoles"];</code>
@@ -59630,7 +59630,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.ssp.v1.ResponsibleRole responsible_roles = 6 [json_name = "responsibleRoles"];</code>
      */
-    java.util.List<? extends oscal.ssp.v1.Ssp.ResponsibleRoleOrBuilder> 
+    java.util.List<? extends oscal.ssp.v1.Ssp.ResponsibleRoleOrBuilder>
         getResponsibleRolesOrBuilderList();
     /**
      * <code>repeated .oscal.ssp.v1.ResponsibleRole responsible_roles = 6 [json_name = "responsibleRoles"];</code>
@@ -59780,7 +59780,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList() {
       return props_;
     }
@@ -59821,7 +59821,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList() {
       return links_;
     }
@@ -59862,7 +59862,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.ssp.v1.ResponsibleRole responsible_roles = 6 [json_name = "responsibleRoles"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.ssp.v1.Ssp.ResponsibleRoleOrBuilder> 
+    public java.util.List<? extends oscal.ssp.v1.Ssp.ResponsibleRoleOrBuilder>
         getResponsibleRolesOrBuilderList() {
       return responsibleRoles_;
     }
@@ -60351,7 +60351,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               propsBuilder_ = null;
               props_ = other.props_;
               bitField0_ = (bitField0_ & ~0x00000008);
-              propsBuilder_ = 
+              propsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetPropsFieldBuilder() : null;
             } else {
@@ -60377,7 +60377,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               linksBuilder_ = null;
               links_ = other.links_;
               bitField0_ = (bitField0_ & ~0x00000010);
-              linksBuilder_ = 
+              linksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetLinksFieldBuilder() : null;
             } else {
@@ -60403,7 +60403,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               responsibleRolesBuilder_ = null;
               responsibleRoles_ = other.responsibleRoles_;
               bitField0_ = (bitField0_ & ~0x00000020);
-              responsibleRolesBuilder_ = 
+              responsibleRolesBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetResponsibleRolesFieldBuilder() : null;
             } else {
@@ -60622,7 +60622,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder> 
+          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder>
           internalGetUuidFieldBuilder() {
         if (uuidBuilder_ == null) {
           uuidBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -60743,7 +60743,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.UUID provided_uuid = 2 [json_name = "providedUuid"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder> 
+          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder>
           internalGetProvidedUuidFieldBuilder() {
         if (providedUuidBuilder_ == null) {
           providedUuidBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -60864,7 +60864,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.MarkupMultiline description = 3 [json_name = "description"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetDescriptionFieldBuilder() {
         if (descriptionBuilder_ == null) {
           descriptionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -61072,7 +61072,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
            getPropsOrBuilderList() {
         if (propsBuilder_ != null) {
           return propsBuilder_.getMessageOrBuilderList();
@@ -61098,12 +61098,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Property.Builder> 
+      public java.util.List<oscal.common.v1.Common.Property.Builder>
            getPropsBuilderList() {
         return internalGetPropsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> 
+          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder>
           internalGetPropsFieldBuilder() {
         if (propsBuilder_ == null) {
           propsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -61312,7 +61312,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
            getLinksOrBuilderList() {
         if (linksBuilder_ != null) {
           return linksBuilder_.getMessageOrBuilderList();
@@ -61338,12 +61338,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Link.Builder> 
+      public java.util.List<oscal.common.v1.Common.Link.Builder>
            getLinksBuilderList() {
         return internalGetLinksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder> 
+          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder>
           internalGetLinksFieldBuilder() {
         if (linksBuilder_ == null) {
           linksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -61552,7 +61552,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.ssp.v1.ResponsibleRole responsible_roles = 6 [json_name = "responsibleRoles"];</code>
        */
-      public java.util.List<? extends oscal.ssp.v1.Ssp.ResponsibleRoleOrBuilder> 
+      public java.util.List<? extends oscal.ssp.v1.Ssp.ResponsibleRoleOrBuilder>
            getResponsibleRolesOrBuilderList() {
         if (responsibleRolesBuilder_ != null) {
           return responsibleRolesBuilder_.getMessageOrBuilderList();
@@ -61578,12 +61578,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.ssp.v1.ResponsibleRole responsible_roles = 6 [json_name = "responsibleRoles"];</code>
        */
-      public java.util.List<oscal.ssp.v1.Ssp.ResponsibleRole.Builder> 
+      public java.util.List<oscal.ssp.v1.Ssp.ResponsibleRole.Builder>
            getResponsibleRolesBuilderList() {
         return internalGetResponsibleRolesFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.ssp.v1.Ssp.ResponsibleRole, oscal.ssp.v1.Ssp.ResponsibleRole.Builder, oscal.ssp.v1.Ssp.ResponsibleRoleOrBuilder> 
+          oscal.ssp.v1.Ssp.ResponsibleRole, oscal.ssp.v1.Ssp.ResponsibleRole.Builder, oscal.ssp.v1.Ssp.ResponsibleRoleOrBuilder>
           internalGetResponsibleRolesFieldBuilder() {
         if (responsibleRolesBuilder_ == null) {
           responsibleRolesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -61700,7 +61700,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Property> 
+    java.util.List<oscal.common.v1.Common.Property>
         getPropsList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
@@ -61713,7 +61713,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
@@ -61724,7 +61724,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Link> 
+    java.util.List<oscal.common.v1.Common.Link>
         getLinksList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
@@ -61737,7 +61737,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
@@ -61748,7 +61748,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.ssp.v1.ResponsibleRole responsible_roles = 6 [json_name = "responsibleRoles"];</code>
      */
-    java.util.List<oscal.ssp.v1.Ssp.ResponsibleRole> 
+    java.util.List<oscal.ssp.v1.Ssp.ResponsibleRole>
         getResponsibleRolesList();
     /**
      * <code>repeated .oscal.ssp.v1.ResponsibleRole responsible_roles = 6 [json_name = "responsibleRoles"];</code>
@@ -61761,7 +61761,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.ssp.v1.ResponsibleRole responsible_roles = 6 [json_name = "responsibleRoles"];</code>
      */
-    java.util.List<? extends oscal.ssp.v1.Ssp.ResponsibleRoleOrBuilder> 
+    java.util.List<? extends oscal.ssp.v1.Ssp.ResponsibleRoleOrBuilder>
         getResponsibleRolesOrBuilderList();
     /**
      * <code>repeated .oscal.ssp.v1.ResponsibleRole responsible_roles = 6 [json_name = "responsibleRoles"];</code>
@@ -61772,7 +61772,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
      */
-    java.util.List<oscal.common.v1.Common.MarkupMultiline> 
+    java.util.List<oscal.common.v1.Common.MarkupMultiline>
         getRemarksList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
@@ -61785,7 +61785,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
@@ -61936,7 +61936,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList() {
       return props_;
     }
@@ -61977,7 +61977,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList() {
       return links_;
     }
@@ -62018,7 +62018,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.ssp.v1.ResponsibleRole responsible_roles = 6 [json_name = "responsibleRoles"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.ssp.v1.Ssp.ResponsibleRoleOrBuilder> 
+    public java.util.List<? extends oscal.ssp.v1.Ssp.ResponsibleRoleOrBuilder>
         getResponsibleRolesOrBuilderList() {
       return responsibleRoles_;
     }
@@ -62059,7 +62059,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList() {
       return remarks_;
     }
@@ -62583,7 +62583,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               propsBuilder_ = null;
               props_ = other.props_;
               bitField0_ = (bitField0_ & ~0x00000008);
-              propsBuilder_ = 
+              propsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetPropsFieldBuilder() : null;
             } else {
@@ -62609,7 +62609,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               linksBuilder_ = null;
               links_ = other.links_;
               bitField0_ = (bitField0_ & ~0x00000010);
-              linksBuilder_ = 
+              linksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetLinksFieldBuilder() : null;
             } else {
@@ -62635,7 +62635,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               responsibleRolesBuilder_ = null;
               responsibleRoles_ = other.responsibleRoles_;
               bitField0_ = (bitField0_ & ~0x00000020);
-              responsibleRolesBuilder_ = 
+              responsibleRolesBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetResponsibleRolesFieldBuilder() : null;
             } else {
@@ -62661,7 +62661,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
               remarksBuilder_ = null;
               remarks_ = other.remarks_;
               bitField0_ = (bitField0_ & ~0x00000040);
-              remarksBuilder_ = 
+              remarksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetRemarksFieldBuilder() : null;
             } else {
@@ -62893,7 +62893,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder> 
+          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder>
           internalGetUuidFieldBuilder() {
         if (uuidBuilder_ == null) {
           uuidBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -63014,7 +63014,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.UUID responsibility_uuid = 2 [json_name = "responsibilityUuid"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder> 
+          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder>
           internalGetResponsibilityUuidFieldBuilder() {
         if (responsibilityUuidBuilder_ == null) {
           responsibilityUuidBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -63135,7 +63135,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.MarkupMultiline description = 3 [json_name = "description"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetDescriptionFieldBuilder() {
         if (descriptionBuilder_ == null) {
           descriptionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -63343,7 +63343,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
            getPropsOrBuilderList() {
         if (propsBuilder_ != null) {
           return propsBuilder_.getMessageOrBuilderList();
@@ -63369,12 +63369,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Property.Builder> 
+      public java.util.List<oscal.common.v1.Common.Property.Builder>
            getPropsBuilderList() {
         return internalGetPropsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> 
+          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder>
           internalGetPropsFieldBuilder() {
         if (propsBuilder_ == null) {
           propsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -63583,7 +63583,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
            getLinksOrBuilderList() {
         if (linksBuilder_ != null) {
           return linksBuilder_.getMessageOrBuilderList();
@@ -63609,12 +63609,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Link.Builder> 
+      public java.util.List<oscal.common.v1.Common.Link.Builder>
            getLinksBuilderList() {
         return internalGetLinksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder> 
+          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder>
           internalGetLinksFieldBuilder() {
         if (linksBuilder_ == null) {
           linksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -63823,7 +63823,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.ssp.v1.ResponsibleRole responsible_roles = 6 [json_name = "responsibleRoles"];</code>
        */
-      public java.util.List<? extends oscal.ssp.v1.Ssp.ResponsibleRoleOrBuilder> 
+      public java.util.List<? extends oscal.ssp.v1.Ssp.ResponsibleRoleOrBuilder>
            getResponsibleRolesOrBuilderList() {
         if (responsibleRolesBuilder_ != null) {
           return responsibleRolesBuilder_.getMessageOrBuilderList();
@@ -63849,12 +63849,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.ssp.v1.ResponsibleRole responsible_roles = 6 [json_name = "responsibleRoles"];</code>
        */
-      public java.util.List<oscal.ssp.v1.Ssp.ResponsibleRole.Builder> 
+      public java.util.List<oscal.ssp.v1.Ssp.ResponsibleRole.Builder>
            getResponsibleRolesBuilderList() {
         return internalGetResponsibleRolesFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.ssp.v1.Ssp.ResponsibleRole, oscal.ssp.v1.Ssp.ResponsibleRole.Builder, oscal.ssp.v1.Ssp.ResponsibleRoleOrBuilder> 
+          oscal.ssp.v1.Ssp.ResponsibleRole, oscal.ssp.v1.Ssp.ResponsibleRole.Builder, oscal.ssp.v1.Ssp.ResponsibleRoleOrBuilder>
           internalGetResponsibleRolesFieldBuilder() {
         if (responsibleRolesBuilder_ == null) {
           responsibleRolesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -64063,7 +64063,7 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
            getRemarksOrBuilderList() {
         if (remarksBuilder_ != null) {
           return remarksBuilder_.getMessageOrBuilderList();
@@ -64089,12 +64089,12 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder> 
+      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder>
            getRemarksBuilderList() {
         return internalGetRemarksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetRemarksFieldBuilder() {
         if (remarksBuilder_ == null) {
           remarksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -64161,157 +64161,157 @@ public final class Ssp extends com.google.protobuf.GeneratedFile {
 
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_ssp_v1_SystemSecurityPlan_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_ssp_v1_SystemSecurityPlan_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_ssp_v1_ImportProfile_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_ssp_v1_ImportProfile_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_ssp_v1_SystemCharacteristics_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_ssp_v1_SystemCharacteristics_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_ssp_v1_SystemId_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_ssp_v1_SystemId_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_ssp_v1_SystemInformation_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_ssp_v1_SystemInformation_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_ssp_v1_InformationType_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_ssp_v1_InformationType_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_ssp_v1_Categorization_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_ssp_v1_Categorization_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_ssp_v1_Impact_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_ssp_v1_Impact_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_ssp_v1_SecurityImpactLevel_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_ssp_v1_SecurityImpactLevel_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_ssp_v1_Status_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_ssp_v1_Status_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_ssp_v1_AuthorizationBoundary_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_ssp_v1_AuthorizationBoundary_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_ssp_v1_Diagram_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_ssp_v1_Diagram_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_ssp_v1_NetworkArchitecture_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_ssp_v1_NetworkArchitecture_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_ssp_v1_DataFlow_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_ssp_v1_DataFlow_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_ssp_v1_SystemImplementation_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_ssp_v1_SystemImplementation_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_ssp_v1_LeveragedAuthorization_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_ssp_v1_LeveragedAuthorization_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_ssp_v1_SystemUser_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_ssp_v1_SystemUser_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_ssp_v1_SystemComponent_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_ssp_v1_SystemComponent_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_ssp_v1_InventoryItem_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_ssp_v1_InventoryItem_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_ssp_v1_ControlImplementation_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_ssp_v1_ControlImplementation_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_ssp_v1_SetParameter_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_ssp_v1_SetParameter_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_ssp_v1_ImplementedRequirement_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_ssp_v1_ImplementedRequirement_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_ssp_v1_ResponsibleRole_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_ssp_v1_ResponsibleRole_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_ssp_v1_Statement_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_ssp_v1_Statement_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_ssp_v1_ByComponent_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_ssp_v1_ByComponent_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_ssp_v1_ImplementationStatus_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_ssp_v1_ImplementationStatus_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_ssp_v1_Export_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_ssp_v1_Export_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_ssp_v1_Provided_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_ssp_v1_Provided_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_ssp_v1_Responsibility_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_ssp_v1_Responsibility_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_ssp_v1_Inherited_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_ssp_v1_Inherited_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_ssp_v1_Satisfied_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_ssp_v1_Satisfied_fieldAccessorTable;
 

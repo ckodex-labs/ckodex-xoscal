@@ -8,6 +8,7 @@ import (
 	catalogv1 "github.com/mchorfa/xoscal/proto/oscal/catalog/v1"
 	commonv1 "github.com/mchorfa/xoscal/proto/oscal/common/v1"
 	componentv1 "github.com/mchorfa/xoscal/proto/oscal/component_definition/v1"
+	mappingv1 "github.com/mchorfa/xoscal/proto/oscal/mapping/v1"
 	poamv1 "github.com/mchorfa/xoscal/proto/oscal/poam/v1"
 	profilev1 "github.com/mchorfa/xoscal/proto/oscal/profile/v1"
 	sspv1 "github.com/mchorfa/xoscal/proto/oscal/ssp/v1"
@@ -53,7 +54,8 @@ func TestOSCALMarshalerProfile(t *testing.T) {
 			Version: "1.0",
 		},
 		Imports: []*profilev1.Import{{
-			Href: &commonv1.URIReference{Value: "https://example.gov/catalog.json"},
+			Href:       &commonv1.URIReference{Value: "https://example.gov/catalog.json"},
+			IncludeAll: &profilev1.IncludeAll{},
 		}},
 	}
 	b, err := m.Marshal(p)
@@ -103,6 +105,7 @@ func TestOSCALMarshalerAssessmentPlan(t *testing.T) {
 		ReviewedControls: &assessment_planv1.ReviewedControls{
 			ControlSelections: []*assessment_planv1.ControlSelection{{
 				Description: &commonv1.MarkupMultiline{Value: "All controls"},
+				IncludeAll:  &assessment_planv1.IncludeAll{},
 			}},
 		},
 	}
@@ -137,6 +140,7 @@ func TestOSCALMarshalerAssessmentResults(t *testing.T) {
 			ReviewedControls: &assessment_resultsv1.ReviewedControls{
 				ControlSelections: []*assessment_resultsv1.ControlSelection{{
 					Description: &commonv1.MarkupMultiline{Value: "All controls"},
+					IncludeAll:  &assessment_resultsv1.IncludeAll{},
 				}},
 			},
 		}},
@@ -174,6 +178,50 @@ func TestOSCALMarshalerPOAM(t *testing.T) {
 	v := mustValidator(t)
 	if err := v.Validate(b, schemavalidate.KindPOAM); err != nil {
 		t.Errorf("poam failed schema validation: %v", err)
+	}
+}
+
+// TestOSCALMarshalerMapping verifies the gateway marshaler produces
+// schema-valid JSON for the OSCAL 1.2 Mapping model.
+func TestOSCALMarshalerMapping(t *testing.T) {
+	m := newOSCALMarshaler()
+	mapping := &mappingv1.MappingCollection{
+		Uuid: &commonv1.UUID{Value: testUUID},
+		Metadata: &commonv1.Metadata{
+			Title:   "Gateway Test Mapping",
+			Version: "1.0",
+		},
+		Provenance: &mappingv1.MappingProvenance{
+			Method:             "human",
+			MatchingRationale:  "functional",
+			Status:             "complete",
+			MappingDescription: &commonv1.MarkupMultiline{Value: "Gateway mapping."},
+		},
+		Mappings: []*mappingv1.ControlMapping{{
+			Uuid: &commonv1.UUID{Value: testUUID},
+			SourceResource: &mappingv1.MappingResourceReference{
+				Type: "catalog",
+				Href: &commonv1.URIReference{Value: "https://example.gov/source.json"},
+			},
+			TargetResource: &mappingv1.MappingResourceReference{
+				Type: "catalog",
+				Href: &commonv1.URIReference{Value: "https://example.gov/target.json"},
+			},
+			Maps: []*mappingv1.Map{{
+				Uuid:         &commonv1.UUID{Value: testUUID},
+				Relationship: &commonv1.Token{Value: "subset-of"},
+				Sources:      []*mappingv1.MappingItem{{Type: "control", IdRef: "ac-1"}},
+				Targets:      []*mappingv1.MappingItem{{Type: "control", IdRef: "cc6.1"}},
+			}},
+		}},
+	}
+	b, err := m.Marshal(mapping)
+	if err != nil {
+		t.Fatalf("Marshal: %v", err)
+	}
+	v := mustValidator(t)
+	if err := v.Validate(b, schemavalidate.KindMapping); err != nil {
+		t.Errorf("mapping-collection failed schema validation: %v", err)
 	}
 }
 

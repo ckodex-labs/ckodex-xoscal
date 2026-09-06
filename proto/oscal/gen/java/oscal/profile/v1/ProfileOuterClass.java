@@ -63,7 +63,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.profile.v1.Import imports = 3 [json_name = "imports"];</code>
      */
-    java.util.List<oscal.profile.v1.ProfileOuterClass.Import> 
+    java.util.List<oscal.profile.v1.ProfileOuterClass.Import>
         getImportsList();
     /**
      * <code>repeated .oscal.profile.v1.Import imports = 3 [json_name = "imports"];</code>
@@ -76,7 +76,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.profile.v1.Import imports = 3 [json_name = "imports"];</code>
      */
-    java.util.List<? extends oscal.profile.v1.ProfileOuterClass.ImportOrBuilder> 
+    java.util.List<? extends oscal.profile.v1.ProfileOuterClass.ImportOrBuilder>
         getImportsOrBuilderList();
     /**
      * <code>repeated .oscal.profile.v1.Import imports = 3 [json_name = "imports"];</code>
@@ -243,7 +243,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.profile.v1.Import imports = 3 [json_name = "imports"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.profile.v1.ProfileOuterClass.ImportOrBuilder> 
+    public java.util.List<? extends oscal.profile.v1.ProfileOuterClass.ImportOrBuilder>
         getImportsOrBuilderList() {
       return imports_;
     }
@@ -793,7 +793,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
               importsBuilder_ = null;
               imports_ = other.imports_;
               bitField0_ = (bitField0_ & ~0x00000004);
-              importsBuilder_ = 
+              importsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetImportsFieldBuilder() : null;
             } else {
@@ -1009,7 +1009,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder> 
+          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder>
           internalGetUuidFieldBuilder() {
         if (uuidBuilder_ == null) {
           uuidBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -1130,7 +1130,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.Metadata metadata = 2 [json_name = "metadata"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.Metadata, oscal.common.v1.Common.Metadata.Builder, oscal.common.v1.Common.MetadataOrBuilder> 
+          oscal.common.v1.Common.Metadata, oscal.common.v1.Common.Metadata.Builder, oscal.common.v1.Common.MetadataOrBuilder>
           internalGetMetadataFieldBuilder() {
         if (metadataBuilder_ == null) {
           metadataBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -1338,7 +1338,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.profile.v1.Import imports = 3 [json_name = "imports"];</code>
        */
-      public java.util.List<? extends oscal.profile.v1.ProfileOuterClass.ImportOrBuilder> 
+      public java.util.List<? extends oscal.profile.v1.ProfileOuterClass.ImportOrBuilder>
            getImportsOrBuilderList() {
         if (importsBuilder_ != null) {
           return importsBuilder_.getMessageOrBuilderList();
@@ -1364,12 +1364,12 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.profile.v1.Import imports = 3 [json_name = "imports"];</code>
        */
-      public java.util.List<oscal.profile.v1.ProfileOuterClass.Import.Builder> 
+      public java.util.List<oscal.profile.v1.ProfileOuterClass.Import.Builder>
            getImportsBuilderList() {
         return internalGetImportsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.profile.v1.ProfileOuterClass.Import, oscal.profile.v1.ProfileOuterClass.Import.Builder, oscal.profile.v1.ProfileOuterClass.ImportOrBuilder> 
+          oscal.profile.v1.ProfileOuterClass.Import, oscal.profile.v1.ProfileOuterClass.Import.Builder, oscal.profile.v1.ProfileOuterClass.ImportOrBuilder>
           internalGetImportsFieldBuilder() {
         if (importsBuilder_ == null) {
           importsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -1491,7 +1491,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.profile.v1.Merge merge = 4 [json_name = "merge"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.profile.v1.ProfileOuterClass.Merge, oscal.profile.v1.ProfileOuterClass.Merge.Builder, oscal.profile.v1.ProfileOuterClass.MergeOrBuilder> 
+          oscal.profile.v1.ProfileOuterClass.Merge, oscal.profile.v1.ProfileOuterClass.Merge.Builder, oscal.profile.v1.ProfileOuterClass.MergeOrBuilder>
           internalGetMergeFieldBuilder() {
         if (mergeBuilder_ == null) {
           mergeBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -1612,7 +1612,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.profile.v1.Modify modify = 5 [json_name = "modify"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.profile.v1.ProfileOuterClass.Modify, oscal.profile.v1.ProfileOuterClass.Modify.Builder, oscal.profile.v1.ProfileOuterClass.ModifyOrBuilder> 
+          oscal.profile.v1.ProfileOuterClass.Modify, oscal.profile.v1.ProfileOuterClass.Modify.Builder, oscal.profile.v1.ProfileOuterClass.ModifyOrBuilder>
           internalGetModifyFieldBuilder() {
         if (modifyBuilder_ == null) {
           modifyBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -1733,7 +1733,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.BackMatter back_matter = 6 [json_name = "backMatter"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.BackMatter, oscal.common.v1.Common.BackMatter.Builder, oscal.common.v1.Common.BackMatterOrBuilder> 
+          oscal.common.v1.Common.BackMatter, oscal.common.v1.Common.BackMatter.Builder, oscal.common.v1.Common.BackMatterOrBuilder>
           internalGetBackMatterFieldBuilder() {
         if (backMatterBuilder_ == null) {
           backMatterBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -1834,7 +1834,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.profile.v1.ExcludeControls exclude_controls = 3 [json_name = "excludeControls"];</code>
      */
-    java.util.List<oscal.profile.v1.ProfileOuterClass.ExcludeControls> 
+    java.util.List<oscal.profile.v1.ProfileOuterClass.ExcludeControls>
         getExcludeControlsList();
     /**
      * <code>repeated .oscal.profile.v1.ExcludeControls exclude_controls = 3 [json_name = "excludeControls"];</code>
@@ -1847,7 +1847,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.profile.v1.ExcludeControls exclude_controls = 3 [json_name = "excludeControls"];</code>
      */
-    java.util.List<? extends oscal.profile.v1.ProfileOuterClass.ExcludeControlsOrBuilder> 
+    java.util.List<? extends oscal.profile.v1.ProfileOuterClass.ExcludeControlsOrBuilder>
         getExcludeControlsOrBuilderList();
     /**
      * <code>repeated .oscal.profile.v1.ExcludeControls exclude_controls = 3 [json_name = "excludeControls"];</code>
@@ -1873,7 +1873,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Property> 
+    java.util.List<oscal.common.v1.Common.Property>
         getPropsList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
@@ -1886,7 +1886,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
@@ -1897,7 +1897,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Link> 
+    java.util.List<oscal.common.v1.Common.Link>
         getLinksList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
@@ -1910,7 +1910,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
@@ -1921,7 +1921,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
      */
-    java.util.List<oscal.common.v1.Common.MarkupMultiline> 
+    java.util.List<oscal.common.v1.Common.MarkupMultiline>
         getRemarksList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
@@ -1934,7 +1934,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
@@ -2059,7 +2059,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.profile.v1.ExcludeControls exclude_controls = 3 [json_name = "excludeControls"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.profile.v1.ProfileOuterClass.ExcludeControlsOrBuilder> 
+    public java.util.List<? extends oscal.profile.v1.ProfileOuterClass.ExcludeControlsOrBuilder>
         getExcludeControlsOrBuilderList() {
       return excludeControls_;
     }
@@ -2126,7 +2126,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList() {
       return props_;
     }
@@ -2167,7 +2167,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList() {
       return links_;
     }
@@ -2208,7 +2208,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList() {
       return remarks_;
     }
@@ -2729,7 +2729,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
               excludeControlsBuilder_ = null;
               excludeControls_ = other.excludeControls_;
               bitField0_ = (bitField0_ & ~0x00000004);
-              excludeControlsBuilder_ = 
+              excludeControlsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetExcludeControlsFieldBuilder() : null;
             } else {
@@ -2758,7 +2758,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
               propsBuilder_ = null;
               props_ = other.props_;
               bitField0_ = (bitField0_ & ~0x00000010);
-              propsBuilder_ = 
+              propsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetPropsFieldBuilder() : null;
             } else {
@@ -2784,7 +2784,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
               linksBuilder_ = null;
               links_ = other.links_;
               bitField0_ = (bitField0_ & ~0x00000020);
-              linksBuilder_ = 
+              linksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetLinksFieldBuilder() : null;
             } else {
@@ -2810,7 +2810,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
               remarksBuilder_ = null;
               remarks_ = other.remarks_;
               bitField0_ = (bitField0_ & ~0x00000040);
-              remarksBuilder_ = 
+              remarksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetRemarksFieldBuilder() : null;
             } else {
@@ -3042,7 +3042,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.URIReference href = 1 [json_name = "href"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.URIReference, oscal.common.v1.Common.URIReference.Builder, oscal.common.v1.Common.URIReferenceOrBuilder> 
+          oscal.common.v1.Common.URIReference, oscal.common.v1.Common.URIReference.Builder, oscal.common.v1.Common.URIReferenceOrBuilder>
           internalGetHrefFieldBuilder() {
         if (hrefBuilder_ == null) {
           hrefBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -3163,7 +3163,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.profile.v1.IncludeAll include_all = 2 [json_name = "includeAll"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.profile.v1.ProfileOuterClass.IncludeAll, oscal.profile.v1.ProfileOuterClass.IncludeAll.Builder, oscal.profile.v1.ProfileOuterClass.IncludeAllOrBuilder> 
+          oscal.profile.v1.ProfileOuterClass.IncludeAll, oscal.profile.v1.ProfileOuterClass.IncludeAll.Builder, oscal.profile.v1.ProfileOuterClass.IncludeAllOrBuilder>
           internalGetIncludeAllFieldBuilder() {
         if (includeAllBuilder_ == null) {
           includeAllBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -3371,7 +3371,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.profile.v1.ExcludeControls exclude_controls = 3 [json_name = "excludeControls"];</code>
        */
-      public java.util.List<? extends oscal.profile.v1.ProfileOuterClass.ExcludeControlsOrBuilder> 
+      public java.util.List<? extends oscal.profile.v1.ProfileOuterClass.ExcludeControlsOrBuilder>
            getExcludeControlsOrBuilderList() {
         if (excludeControlsBuilder_ != null) {
           return excludeControlsBuilder_.getMessageOrBuilderList();
@@ -3397,12 +3397,12 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.profile.v1.ExcludeControls exclude_controls = 3 [json_name = "excludeControls"];</code>
        */
-      public java.util.List<oscal.profile.v1.ProfileOuterClass.ExcludeControls.Builder> 
+      public java.util.List<oscal.profile.v1.ProfileOuterClass.ExcludeControls.Builder>
            getExcludeControlsBuilderList() {
         return internalGetExcludeControlsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.profile.v1.ProfileOuterClass.ExcludeControls, oscal.profile.v1.ProfileOuterClass.ExcludeControls.Builder, oscal.profile.v1.ProfileOuterClass.ExcludeControlsOrBuilder> 
+          oscal.profile.v1.ProfileOuterClass.ExcludeControls, oscal.profile.v1.ProfileOuterClass.ExcludeControls.Builder, oscal.profile.v1.ProfileOuterClass.ExcludeControlsOrBuilder>
           internalGetExcludeControlsFieldBuilder() {
         if (excludeControlsBuilder_ == null) {
           excludeControlsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -3524,7 +3524,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.profile.v1.Custom custom = 4 [json_name = "custom"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.profile.v1.ProfileOuterClass.Custom, oscal.profile.v1.ProfileOuterClass.Custom.Builder, oscal.profile.v1.ProfileOuterClass.CustomOrBuilder> 
+          oscal.profile.v1.ProfileOuterClass.Custom, oscal.profile.v1.ProfileOuterClass.Custom.Builder, oscal.profile.v1.ProfileOuterClass.CustomOrBuilder>
           internalGetCustomFieldBuilder() {
         if (customBuilder_ == null) {
           customBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -3732,7 +3732,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
            getPropsOrBuilderList() {
         if (propsBuilder_ != null) {
           return propsBuilder_.getMessageOrBuilderList();
@@ -3758,12 +3758,12 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 5 [json_name = "props"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Property.Builder> 
+      public java.util.List<oscal.common.v1.Common.Property.Builder>
            getPropsBuilderList() {
         return internalGetPropsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> 
+          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder>
           internalGetPropsFieldBuilder() {
         if (propsBuilder_ == null) {
           propsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -3972,7 +3972,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
            getLinksOrBuilderList() {
         if (linksBuilder_ != null) {
           return linksBuilder_.getMessageOrBuilderList();
@@ -3998,12 +3998,12 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 6 [json_name = "links"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Link.Builder> 
+      public java.util.List<oscal.common.v1.Common.Link.Builder>
            getLinksBuilderList() {
         return internalGetLinksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder> 
+          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder>
           internalGetLinksFieldBuilder() {
         if (linksBuilder_ == null) {
           linksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -4212,7 +4212,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
            getRemarksOrBuilderList() {
         if (remarksBuilder_ != null) {
           return remarksBuilder_.getMessageOrBuilderList();
@@ -4238,12 +4238,12 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 7 [json_name = "remarks"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder> 
+      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder>
            getRemarksBuilderList() {
         return internalGetRemarksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetRemarksFieldBuilder() {
         if (remarksBuilder_ == null) {
           remarksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -4315,7 +4315,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.catalog.v1.Parameter params = 1 [json_name = "params"];</code>
      */
-    java.util.List<oscal.catalog.v1.CatalogOuterClass.Parameter> 
+    java.util.List<oscal.catalog.v1.CatalogOuterClass.Parameter>
         getParamsList();
     /**
      * <code>repeated .oscal.catalog.v1.Parameter params = 1 [json_name = "params"];</code>
@@ -4328,7 +4328,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.catalog.v1.Parameter params = 1 [json_name = "params"];</code>
      */
-    java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.ParameterOrBuilder> 
+    java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.ParameterOrBuilder>
         getParamsOrBuilderList();
     /**
      * <code>repeated .oscal.catalog.v1.Parameter params = 1 [json_name = "params"];</code>
@@ -4339,7 +4339,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 2 [json_name = "props"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Property> 
+    java.util.List<oscal.common.v1.Common.Property>
         getPropsList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 2 [json_name = "props"];</code>
@@ -4352,7 +4352,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 2 [json_name = "props"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 2 [json_name = "props"];</code>
@@ -4363,7 +4363,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 3 [json_name = "links"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Link> 
+    java.util.List<oscal.common.v1.Common.Link>
         getLinksList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 3 [json_name = "links"];</code>
@@ -4376,7 +4376,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 3 [json_name = "links"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 3 [json_name = "links"];</code>
@@ -4387,7 +4387,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 4 [json_name = "remarks"];</code>
      */
-    java.util.List<oscal.common.v1.Common.MarkupMultiline> 
+    java.util.List<oscal.common.v1.Common.MarkupMultiline>
         getRemarksList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 4 [json_name = "remarks"];</code>
@@ -4400,7 +4400,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 4 [json_name = "remarks"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 4 [json_name = "remarks"];</code>
@@ -4472,7 +4472,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.catalog.v1.Parameter params = 1 [json_name = "params"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.ParameterOrBuilder> 
+    public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.ParameterOrBuilder>
         getParamsOrBuilderList() {
       return params_;
     }
@@ -4513,7 +4513,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Property props = 2 [json_name = "props"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList() {
       return props_;
     }
@@ -4554,7 +4554,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Link links = 3 [json_name = "links"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList() {
       return links_;
     }
@@ -4595,7 +4595,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 4 [json_name = "remarks"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList() {
       return remarks_;
     }
@@ -5015,7 +5015,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
               paramsBuilder_ = null;
               params_ = other.params_;
               bitField0_ = (bitField0_ & ~0x00000001);
-              paramsBuilder_ = 
+              paramsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetParamsFieldBuilder() : null;
             } else {
@@ -5041,7 +5041,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
               propsBuilder_ = null;
               props_ = other.props_;
               bitField0_ = (bitField0_ & ~0x00000002);
-              propsBuilder_ = 
+              propsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetPropsFieldBuilder() : null;
             } else {
@@ -5067,7 +5067,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
               linksBuilder_ = null;
               links_ = other.links_;
               bitField0_ = (bitField0_ & ~0x00000004);
-              linksBuilder_ = 
+              linksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetLinksFieldBuilder() : null;
             } else {
@@ -5093,7 +5093,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
               remarksBuilder_ = null;
               remarks_ = other.remarks_;
               bitField0_ = (bitField0_ & ~0x00000008);
-              remarksBuilder_ = 
+              remarksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetRemarksFieldBuilder() : null;
             } else {
@@ -5391,7 +5391,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.catalog.v1.Parameter params = 1 [json_name = "params"];</code>
        */
-      public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.ParameterOrBuilder> 
+      public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.ParameterOrBuilder>
            getParamsOrBuilderList() {
         if (paramsBuilder_ != null) {
           return paramsBuilder_.getMessageOrBuilderList();
@@ -5417,12 +5417,12 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.catalog.v1.Parameter params = 1 [json_name = "params"];</code>
        */
-      public java.util.List<oscal.catalog.v1.CatalogOuterClass.Parameter.Builder> 
+      public java.util.List<oscal.catalog.v1.CatalogOuterClass.Parameter.Builder>
            getParamsBuilderList() {
         return internalGetParamsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.catalog.v1.CatalogOuterClass.Parameter, oscal.catalog.v1.CatalogOuterClass.Parameter.Builder, oscal.catalog.v1.CatalogOuterClass.ParameterOrBuilder> 
+          oscal.catalog.v1.CatalogOuterClass.Parameter, oscal.catalog.v1.CatalogOuterClass.Parameter.Builder, oscal.catalog.v1.CatalogOuterClass.ParameterOrBuilder>
           internalGetParamsFieldBuilder() {
         if (paramsBuilder_ == null) {
           paramsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -5631,7 +5631,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 2 [json_name = "props"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
            getPropsOrBuilderList() {
         if (propsBuilder_ != null) {
           return propsBuilder_.getMessageOrBuilderList();
@@ -5657,12 +5657,12 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 2 [json_name = "props"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Property.Builder> 
+      public java.util.List<oscal.common.v1.Common.Property.Builder>
            getPropsBuilderList() {
         return internalGetPropsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> 
+          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder>
           internalGetPropsFieldBuilder() {
         if (propsBuilder_ == null) {
           propsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -5871,7 +5871,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 3 [json_name = "links"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
            getLinksOrBuilderList() {
         if (linksBuilder_ != null) {
           return linksBuilder_.getMessageOrBuilderList();
@@ -5897,12 +5897,12 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 3 [json_name = "links"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Link.Builder> 
+      public java.util.List<oscal.common.v1.Common.Link.Builder>
            getLinksBuilderList() {
         return internalGetLinksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder> 
+          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder>
           internalGetLinksFieldBuilder() {
         if (linksBuilder_ == null) {
           linksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -6111,7 +6111,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 4 [json_name = "remarks"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
            getRemarksOrBuilderList() {
         if (remarksBuilder_ != null) {
           return remarksBuilder_.getMessageOrBuilderList();
@@ -6137,12 +6137,12 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 4 [json_name = "remarks"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder> 
+      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder>
            getRemarksBuilderList() {
         return internalGetRemarksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetRemarksFieldBuilder() {
         if (remarksBuilder_ == null) {
           remarksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -6214,7 +6214,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.catalog.v1.Control with_ids = 1 [json_name = "withIds"];</code>
      */
-    java.util.List<oscal.catalog.v1.CatalogOuterClass.Control> 
+    java.util.List<oscal.catalog.v1.CatalogOuterClass.Control>
         getWithIdsList();
     /**
      * <code>repeated .oscal.catalog.v1.Control with_ids = 1 [json_name = "withIds"];</code>
@@ -6227,7 +6227,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.catalog.v1.Control with_ids = 1 [json_name = "withIds"];</code>
      */
-    java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.ControlOrBuilder> 
+    java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.ControlOrBuilder>
         getWithIdsOrBuilderList();
     /**
      * <code>repeated .oscal.catalog.v1.Control with_ids = 1 [json_name = "withIds"];</code>
@@ -6263,7 +6263,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Property> 
+    java.util.List<oscal.common.v1.Common.Property>
         getPropsList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
@@ -6276,7 +6276,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
@@ -6287,7 +6287,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Link> 
+    java.util.List<oscal.common.v1.Common.Link>
         getLinksList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
@@ -6300,7 +6300,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
@@ -6311,7 +6311,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
      */
-    java.util.List<oscal.common.v1.Common.MarkupMultiline> 
+    java.util.List<oscal.common.v1.Common.MarkupMultiline>
         getRemarksList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
@@ -6324,7 +6324,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
@@ -6398,7 +6398,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.catalog.v1.Control with_ids = 1 [json_name = "withIds"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.ControlOrBuilder> 
+    public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.ControlOrBuilder>
         getWithIdsOrBuilderList() {
       return withIds_;
     }
@@ -6476,7 +6476,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList() {
       return props_;
     }
@@ -6517,7 +6517,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList() {
       return links_;
     }
@@ -6558,7 +6558,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList() {
       return remarks_;
     }
@@ -7001,7 +7001,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
               withIdsBuilder_ = null;
               withIds_ = other.withIds_;
               bitField0_ = (bitField0_ & ~0x00000001);
-              withIdsBuilder_ = 
+              withIdsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetWithIdsFieldBuilder() : null;
             } else {
@@ -7037,7 +7037,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
               propsBuilder_ = null;
               props_ = other.props_;
               bitField0_ = (bitField0_ & ~0x00000004);
-              propsBuilder_ = 
+              propsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetPropsFieldBuilder() : null;
             } else {
@@ -7063,7 +7063,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
               linksBuilder_ = null;
               links_ = other.links_;
               bitField0_ = (bitField0_ & ~0x00000008);
-              linksBuilder_ = 
+              linksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetLinksFieldBuilder() : null;
             } else {
@@ -7089,7 +7089,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
               remarksBuilder_ = null;
               remarks_ = other.remarks_;
               bitField0_ = (bitField0_ & ~0x00000010);
-              remarksBuilder_ = 
+              remarksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetRemarksFieldBuilder() : null;
             } else {
@@ -7392,7 +7392,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.catalog.v1.Control with_ids = 1 [json_name = "withIds"];</code>
        */
-      public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.ControlOrBuilder> 
+      public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.ControlOrBuilder>
            getWithIdsOrBuilderList() {
         if (withIdsBuilder_ != null) {
           return withIdsBuilder_.getMessageOrBuilderList();
@@ -7418,12 +7418,12 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.catalog.v1.Control with_ids = 1 [json_name = "withIds"];</code>
        */
-      public java.util.List<oscal.catalog.v1.CatalogOuterClass.Control.Builder> 
+      public java.util.List<oscal.catalog.v1.CatalogOuterClass.Control.Builder>
            getWithIdsBuilderList() {
         return internalGetWithIdsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.catalog.v1.CatalogOuterClass.Control, oscal.catalog.v1.CatalogOuterClass.Control.Builder, oscal.catalog.v1.CatalogOuterClass.ControlOrBuilder> 
+          oscal.catalog.v1.CatalogOuterClass.Control, oscal.catalog.v1.CatalogOuterClass.Control.Builder, oscal.catalog.v1.CatalogOuterClass.ControlOrBuilder>
           internalGetWithIdsFieldBuilder() {
         if (withIdsBuilder_ == null) {
           withIdsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -7743,7 +7743,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
            getPropsOrBuilderList() {
         if (propsBuilder_ != null) {
           return propsBuilder_.getMessageOrBuilderList();
@@ -7769,12 +7769,12 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Property.Builder> 
+      public java.util.List<oscal.common.v1.Common.Property.Builder>
            getPropsBuilderList() {
         return internalGetPropsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> 
+          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder>
           internalGetPropsFieldBuilder() {
         if (propsBuilder_ == null) {
           propsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -7983,7 +7983,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
            getLinksOrBuilderList() {
         if (linksBuilder_ != null) {
           return linksBuilder_.getMessageOrBuilderList();
@@ -8009,12 +8009,12 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Link.Builder> 
+      public java.util.List<oscal.common.v1.Common.Link.Builder>
            getLinksBuilderList() {
         return internalGetLinksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder> 
+          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder>
           internalGetLinksFieldBuilder() {
         if (linksBuilder_ == null) {
           linksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -8223,7 +8223,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
            getRemarksOrBuilderList() {
         if (remarksBuilder_ != null) {
           return remarksBuilder_.getMessageOrBuilderList();
@@ -8249,12 +8249,12 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder> 
+      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder>
            getRemarksBuilderList() {
         return internalGetRemarksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetRemarksFieldBuilder() {
         if (remarksBuilder_ == null) {
           remarksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -8376,7 +8376,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Property> 
+    java.util.List<oscal.common.v1.Common.Property>
         getPropsList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
@@ -8389,7 +8389,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
@@ -8400,7 +8400,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Link> 
+    java.util.List<oscal.common.v1.Common.Link>
         getLinksList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
@@ -8413,7 +8413,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
@@ -8424,7 +8424,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
      */
-    java.util.List<oscal.common.v1.Common.MarkupMultiline> 
+    java.util.List<oscal.common.v1.Common.MarkupMultiline>
         getRemarksList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
@@ -8437,7 +8437,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
@@ -8586,7 +8586,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList() {
       return props_;
     }
@@ -8627,7 +8627,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList() {
       return links_;
     }
@@ -8668,7 +8668,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList() {
       return remarks_;
     }
@@ -9120,7 +9120,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
               propsBuilder_ = null;
               props_ = other.props_;
               bitField0_ = (bitField0_ & ~0x00000004);
-              propsBuilder_ = 
+              propsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetPropsFieldBuilder() : null;
             } else {
@@ -9146,7 +9146,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
               linksBuilder_ = null;
               links_ = other.links_;
               bitField0_ = (bitField0_ & ~0x00000008);
-              linksBuilder_ = 
+              linksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetLinksFieldBuilder() : null;
             } else {
@@ -9172,7 +9172,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
               remarksBuilder_ = null;
               remarks_ = other.remarks_;
               bitField0_ = (bitField0_ & ~0x00000010);
-              remarksBuilder_ = 
+              remarksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetRemarksFieldBuilder() : null;
             } else {
@@ -9689,7 +9689,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
            getPropsOrBuilderList() {
         if (propsBuilder_ != null) {
           return propsBuilder_.getMessageOrBuilderList();
@@ -9715,12 +9715,12 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Property.Builder> 
+      public java.util.List<oscal.common.v1.Common.Property.Builder>
            getPropsBuilderList() {
         return internalGetPropsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> 
+          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder>
           internalGetPropsFieldBuilder() {
         if (propsBuilder_ == null) {
           propsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -9929,7 +9929,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
            getLinksOrBuilderList() {
         if (linksBuilder_ != null) {
           return linksBuilder_.getMessageOrBuilderList();
@@ -9955,12 +9955,12 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Link.Builder> 
+      public java.util.List<oscal.common.v1.Common.Link.Builder>
            getLinksBuilderList() {
         return internalGetLinksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder> 
+          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder>
           internalGetLinksFieldBuilder() {
         if (linksBuilder_ == null) {
           linksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -10169,7 +10169,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
            getRemarksOrBuilderList() {
         if (remarksBuilder_ != null) {
           return remarksBuilder_.getMessageOrBuilderList();
@@ -10195,12 +10195,12 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder> 
+      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder>
            getRemarksBuilderList() {
         return internalGetRemarksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetRemarksFieldBuilder() {
         if (remarksBuilder_ == null) {
           remarksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -10302,7 +10302,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Property> 
+    java.util.List<oscal.common.v1.Common.Property>
         getPropsList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
@@ -10315,7 +10315,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
@@ -10326,7 +10326,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Link> 
+    java.util.List<oscal.common.v1.Common.Link>
         getLinksList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
@@ -10339,7 +10339,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
@@ -10350,7 +10350,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
      */
-    java.util.List<oscal.common.v1.Common.MarkupMultiline> 
+    java.util.List<oscal.common.v1.Common.MarkupMultiline>
         getRemarksList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
@@ -10363,7 +10363,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
@@ -10487,7 +10487,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList() {
       return props_;
     }
@@ -10528,7 +10528,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList() {
       return links_;
     }
@@ -10569,7 +10569,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList() {
       return remarks_;
     }
@@ -11027,7 +11027,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
               propsBuilder_ = null;
               props_ = other.props_;
               bitField0_ = (bitField0_ & ~0x00000004);
-              propsBuilder_ = 
+              propsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetPropsFieldBuilder() : null;
             } else {
@@ -11053,7 +11053,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
               linksBuilder_ = null;
               links_ = other.links_;
               bitField0_ = (bitField0_ & ~0x00000008);
-              linksBuilder_ = 
+              linksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetLinksFieldBuilder() : null;
             } else {
@@ -11079,7 +11079,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
               remarksBuilder_ = null;
               remarks_ = other.remarks_;
               bitField0_ = (bitField0_ & ~0x00000010);
-              remarksBuilder_ = 
+              remarksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetRemarksFieldBuilder() : null;
             } else {
@@ -11291,7 +11291,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.profile.v1.Custom custom = 1 [json_name = "custom"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.profile.v1.ProfileOuterClass.Custom, oscal.profile.v1.ProfileOuterClass.Custom.Builder, oscal.profile.v1.ProfileOuterClass.CustomOrBuilder> 
+          oscal.profile.v1.ProfileOuterClass.Custom, oscal.profile.v1.ProfileOuterClass.Custom.Builder, oscal.profile.v1.ProfileOuterClass.CustomOrBuilder>
           internalGetCustomFieldBuilder() {
         if (customBuilder_ == null) {
           customBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -11412,7 +11412,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.profile.v1.Combine combine = 2 [json_name = "combine"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.profile.v1.ProfileOuterClass.Combine, oscal.profile.v1.ProfileOuterClass.Combine.Builder, oscal.profile.v1.ProfileOuterClass.CombineOrBuilder> 
+          oscal.profile.v1.ProfileOuterClass.Combine, oscal.profile.v1.ProfileOuterClass.Combine.Builder, oscal.profile.v1.ProfileOuterClass.CombineOrBuilder>
           internalGetCombineFieldBuilder() {
         if (combineBuilder_ == null) {
           combineBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -11620,7 +11620,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
            getPropsOrBuilderList() {
         if (propsBuilder_ != null) {
           return propsBuilder_.getMessageOrBuilderList();
@@ -11646,12 +11646,12 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 3 [json_name = "props"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Property.Builder> 
+      public java.util.List<oscal.common.v1.Common.Property.Builder>
            getPropsBuilderList() {
         return internalGetPropsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> 
+          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder>
           internalGetPropsFieldBuilder() {
         if (propsBuilder_ == null) {
           propsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -11860,7 +11860,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
            getLinksOrBuilderList() {
         if (linksBuilder_ != null) {
           return linksBuilder_.getMessageOrBuilderList();
@@ -11886,12 +11886,12 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 4 [json_name = "links"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Link.Builder> 
+      public java.util.List<oscal.common.v1.Common.Link.Builder>
            getLinksBuilderList() {
         return internalGetLinksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder> 
+          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder>
           internalGetLinksFieldBuilder() {
         if (linksBuilder_ == null) {
           linksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -12100,7 +12100,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
            getRemarksOrBuilderList() {
         if (remarksBuilder_ != null) {
           return remarksBuilder_.getMessageOrBuilderList();
@@ -12126,12 +12126,12 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 5 [json_name = "remarks"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder> 
+      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder>
            getRemarksBuilderList() {
         return internalGetRemarksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetRemarksFieldBuilder() {
         if (remarksBuilder_ == null) {
           remarksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -12221,7 +12221,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupLine as_is = 3 [json_name = "asIs"];</code>
      */
-    java.util.List<oscal.common.v1.Common.MarkupLine> 
+    java.util.List<oscal.common.v1.Common.MarkupLine>
         getAsIsList();
     /**
      * <code>repeated .oscal.common.v1.MarkupLine as_is = 3 [json_name = "asIs"];</code>
@@ -12234,7 +12234,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupLine as_is = 3 [json_name = "asIs"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.MarkupLineOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.MarkupLineOrBuilder>
         getAsIsOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.MarkupLine as_is = 3 [json_name = "asIs"];</code>
@@ -12303,7 +12303,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         method_ = s;
@@ -12319,7 +12319,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
         getMethodBytes() {
       java.lang.Object ref = method_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         method_ = b;
@@ -12354,7 +12354,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.MarkupLine as_is = 3 [json_name = "asIs"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.MarkupLineOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.MarkupLineOrBuilder>
         getAsIsOrBuilderList() {
       return asIs_;
     }
@@ -12710,7 +12710,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
               asIsBuilder_ = null;
               asIs_ = other.asIs_;
               bitField0_ = (bitField0_ & ~0x00000004);
-              asIsBuilder_ = 
+              asIsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetAsIsFieldBuilder() : null;
             } else {
@@ -12809,7 +12809,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
           getMethodBytes() {
         java.lang.Object ref = method_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           method_ = b;
@@ -13083,7 +13083,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupLine as_is = 3 [json_name = "asIs"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.MarkupLineOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.MarkupLineOrBuilder>
            getAsIsOrBuilderList() {
         if (asIsBuilder_ != null) {
           return asIsBuilder_.getMessageOrBuilderList();
@@ -13109,12 +13109,12 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupLine as_is = 3 [json_name = "asIs"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.MarkupLine.Builder> 
+      public java.util.List<oscal.common.v1.Common.MarkupLine.Builder>
            getAsIsBuilderList() {
         return internalGetAsIsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.MarkupLine, oscal.common.v1.Common.MarkupLine.Builder, oscal.common.v1.Common.MarkupLineOrBuilder> 
+          oscal.common.v1.Common.MarkupLine, oscal.common.v1.Common.MarkupLine.Builder, oscal.common.v1.Common.MarkupLineOrBuilder>
           internalGetAsIsFieldBuilder() {
         if (asIsBuilder_ == null) {
           asIsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -13186,7 +13186,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.profile.v1.SetParameters set_parameters = 1 [json_name = "setParameters"];</code>
      */
-    java.util.List<oscal.profile.v1.ProfileOuterClass.SetParameters> 
+    java.util.List<oscal.profile.v1.ProfileOuterClass.SetParameters>
         getSetParametersList();
     /**
      * <code>repeated .oscal.profile.v1.SetParameters set_parameters = 1 [json_name = "setParameters"];</code>
@@ -13199,7 +13199,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.profile.v1.SetParameters set_parameters = 1 [json_name = "setParameters"];</code>
      */
-    java.util.List<? extends oscal.profile.v1.ProfileOuterClass.SetParametersOrBuilder> 
+    java.util.List<? extends oscal.profile.v1.ProfileOuterClass.SetParametersOrBuilder>
         getSetParametersOrBuilderList();
     /**
      * <code>repeated .oscal.profile.v1.SetParameters set_parameters = 1 [json_name = "setParameters"];</code>
@@ -13214,7 +13214,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
      *
      * <code>repeated .oscal.profile.v1.AlterControls alter_controls = 2 [json_name = "alterControls", deprecated = true];</code>
      */
-    @java.lang.Deprecated java.util.List<oscal.profile.v1.ProfileOuterClass.AlterControls> 
+    @java.lang.Deprecated java.util.List<oscal.profile.v1.ProfileOuterClass.AlterControls>
         getAlterControlsList();
     /**
      * <pre>
@@ -13239,7 +13239,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
      *
      * <code>repeated .oscal.profile.v1.AlterControls alter_controls = 2 [json_name = "alterControls", deprecated = true];</code>
      */
-    @java.lang.Deprecated java.util.List<? extends oscal.profile.v1.ProfileOuterClass.AlterControlsOrBuilder> 
+    @java.lang.Deprecated java.util.List<? extends oscal.profile.v1.ProfileOuterClass.AlterControlsOrBuilder>
         getAlterControlsOrBuilderList();
     /**
      * <pre>
@@ -13254,7 +13254,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.profile.v1.AddControls add_controls = 3 [json_name = "addControls"];</code>
      */
-    java.util.List<oscal.profile.v1.ProfileOuterClass.AddControls> 
+    java.util.List<oscal.profile.v1.ProfileOuterClass.AddControls>
         getAddControlsList();
     /**
      * <code>repeated .oscal.profile.v1.AddControls add_controls = 3 [json_name = "addControls"];</code>
@@ -13267,7 +13267,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.profile.v1.AddControls add_controls = 3 [json_name = "addControls"];</code>
      */
-    java.util.List<? extends oscal.profile.v1.ProfileOuterClass.AddControlsOrBuilder> 
+    java.util.List<? extends oscal.profile.v1.ProfileOuterClass.AddControlsOrBuilder>
         getAddControlsOrBuilderList();
     /**
      * <code>repeated .oscal.profile.v1.AddControls add_controls = 3 [json_name = "addControls"];</code>
@@ -13278,7 +13278,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Property> 
+    java.util.List<oscal.common.v1.Common.Property>
         getPropsList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
@@ -13291,7 +13291,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
@@ -13302,7 +13302,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Link> 
+    java.util.List<oscal.common.v1.Common.Link>
         getLinksList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
@@ -13315,7 +13315,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
@@ -13326,7 +13326,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
      */
-    java.util.List<oscal.common.v1.Common.MarkupMultiline> 
+    java.util.List<oscal.common.v1.Common.MarkupMultiline>
         getRemarksList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
@@ -13339,7 +13339,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
@@ -13350,7 +13350,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.profile.v1.Alter alters = 7 [json_name = "alters"];</code>
      */
-    java.util.List<oscal.profile.v1.ProfileOuterClass.Alter> 
+    java.util.List<oscal.profile.v1.ProfileOuterClass.Alter>
         getAltersList();
     /**
      * <code>repeated .oscal.profile.v1.Alter alters = 7 [json_name = "alters"];</code>
@@ -13363,7 +13363,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.profile.v1.Alter alters = 7 [json_name = "alters"];</code>
      */
-    java.util.List<? extends oscal.profile.v1.ProfileOuterClass.AlterOrBuilder> 
+    java.util.List<? extends oscal.profile.v1.ProfileOuterClass.AlterOrBuilder>
         getAltersOrBuilderList();
     /**
      * <code>repeated .oscal.profile.v1.Alter alters = 7 [json_name = "alters"];</code>
@@ -13438,7 +13438,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.profile.v1.SetParameters set_parameters = 1 [json_name = "setParameters"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.profile.v1.ProfileOuterClass.SetParametersOrBuilder> 
+    public java.util.List<? extends oscal.profile.v1.ProfileOuterClass.SetParametersOrBuilder>
         getSetParametersOrBuilderList() {
       return setParameters_;
     }
@@ -13487,7 +13487,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.profile.v1.AlterControls alter_controls = 2 [json_name = "alterControls", deprecated = true];</code>
      */
     @java.lang.Override
-    @java.lang.Deprecated public java.util.List<? extends oscal.profile.v1.ProfileOuterClass.AlterControlsOrBuilder> 
+    @java.lang.Deprecated public java.util.List<? extends oscal.profile.v1.ProfileOuterClass.AlterControlsOrBuilder>
         getAlterControlsOrBuilderList() {
       return alterControls_;
     }
@@ -13540,7 +13540,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.profile.v1.AddControls add_controls = 3 [json_name = "addControls"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.profile.v1.ProfileOuterClass.AddControlsOrBuilder> 
+    public java.util.List<? extends oscal.profile.v1.ProfileOuterClass.AddControlsOrBuilder>
         getAddControlsOrBuilderList() {
       return addControls_;
     }
@@ -13581,7 +13581,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList() {
       return props_;
     }
@@ -13622,7 +13622,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList() {
       return links_;
     }
@@ -13663,7 +13663,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList() {
       return remarks_;
     }
@@ -13704,7 +13704,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.profile.v1.Alter alters = 7 [json_name = "alters"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.profile.v1.ProfileOuterClass.AlterOrBuilder> 
+    public java.util.List<? extends oscal.profile.v1.ProfileOuterClass.AlterOrBuilder>
         getAltersOrBuilderList() {
       return alters_;
     }
@@ -14226,7 +14226,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
               setParametersBuilder_ = null;
               setParameters_ = other.setParameters_;
               bitField0_ = (bitField0_ & ~0x00000001);
-              setParametersBuilder_ = 
+              setParametersBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetSetParametersFieldBuilder() : null;
             } else {
@@ -14252,7 +14252,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
               alterControlsBuilder_ = null;
               alterControls_ = other.alterControls_;
               bitField0_ = (bitField0_ & ~0x00000002);
-              alterControlsBuilder_ = 
+              alterControlsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetAlterControlsFieldBuilder() : null;
             } else {
@@ -14278,7 +14278,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
               addControlsBuilder_ = null;
               addControls_ = other.addControls_;
               bitField0_ = (bitField0_ & ~0x00000004);
-              addControlsBuilder_ = 
+              addControlsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetAddControlsFieldBuilder() : null;
             } else {
@@ -14304,7 +14304,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
               propsBuilder_ = null;
               props_ = other.props_;
               bitField0_ = (bitField0_ & ~0x00000008);
-              propsBuilder_ = 
+              propsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetPropsFieldBuilder() : null;
             } else {
@@ -14330,7 +14330,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
               linksBuilder_ = null;
               links_ = other.links_;
               bitField0_ = (bitField0_ & ~0x00000010);
-              linksBuilder_ = 
+              linksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetLinksFieldBuilder() : null;
             } else {
@@ -14356,7 +14356,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
               remarksBuilder_ = null;
               remarks_ = other.remarks_;
               bitField0_ = (bitField0_ & ~0x00000020);
-              remarksBuilder_ = 
+              remarksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetRemarksFieldBuilder() : null;
             } else {
@@ -14382,7 +14382,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
               altersBuilder_ = null;
               alters_ = other.alters_;
               bitField0_ = (bitField0_ & ~0x00000040);
-              altersBuilder_ = 
+              altersBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetAltersFieldBuilder() : null;
             } else {
@@ -14719,7 +14719,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.profile.v1.SetParameters set_parameters = 1 [json_name = "setParameters"];</code>
        */
-      public java.util.List<? extends oscal.profile.v1.ProfileOuterClass.SetParametersOrBuilder> 
+      public java.util.List<? extends oscal.profile.v1.ProfileOuterClass.SetParametersOrBuilder>
            getSetParametersOrBuilderList() {
         if (setParametersBuilder_ != null) {
           return setParametersBuilder_.getMessageOrBuilderList();
@@ -14745,12 +14745,12 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.profile.v1.SetParameters set_parameters = 1 [json_name = "setParameters"];</code>
        */
-      public java.util.List<oscal.profile.v1.ProfileOuterClass.SetParameters.Builder> 
+      public java.util.List<oscal.profile.v1.ProfileOuterClass.SetParameters.Builder>
            getSetParametersBuilderList() {
         return internalGetSetParametersFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.profile.v1.ProfileOuterClass.SetParameters, oscal.profile.v1.ProfileOuterClass.SetParameters.Builder, oscal.profile.v1.ProfileOuterClass.SetParametersOrBuilder> 
+          oscal.profile.v1.ProfileOuterClass.SetParameters, oscal.profile.v1.ProfileOuterClass.SetParameters.Builder, oscal.profile.v1.ProfileOuterClass.SetParametersOrBuilder>
           internalGetSetParametersFieldBuilder() {
         if (setParametersBuilder_ == null) {
           setParametersBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -15019,7 +15019,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
        *
        * <code>repeated .oscal.profile.v1.AlterControls alter_controls = 2 [json_name = "alterControls", deprecated = true];</code>
        */
-      @java.lang.Deprecated public java.util.List<? extends oscal.profile.v1.ProfileOuterClass.AlterControlsOrBuilder> 
+      @java.lang.Deprecated public java.util.List<? extends oscal.profile.v1.ProfileOuterClass.AlterControlsOrBuilder>
            getAlterControlsOrBuilderList() {
         if (alterControlsBuilder_ != null) {
           return alterControlsBuilder_.getMessageOrBuilderList();
@@ -15057,12 +15057,12 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
        *
        * <code>repeated .oscal.profile.v1.AlterControls alter_controls = 2 [json_name = "alterControls", deprecated = true];</code>
        */
-      @java.lang.Deprecated public java.util.List<oscal.profile.v1.ProfileOuterClass.AlterControls.Builder> 
+      @java.lang.Deprecated public java.util.List<oscal.profile.v1.ProfileOuterClass.AlterControls.Builder>
            getAlterControlsBuilderList() {
         return internalGetAlterControlsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.profile.v1.ProfileOuterClass.AlterControls, oscal.profile.v1.ProfileOuterClass.AlterControls.Builder, oscal.profile.v1.ProfileOuterClass.AlterControlsOrBuilder> 
+          oscal.profile.v1.ProfileOuterClass.AlterControls, oscal.profile.v1.ProfileOuterClass.AlterControls.Builder, oscal.profile.v1.ProfileOuterClass.AlterControlsOrBuilder>
           internalGetAlterControlsFieldBuilder() {
         if (alterControlsBuilder_ == null) {
           alterControlsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -15271,7 +15271,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.profile.v1.AddControls add_controls = 3 [json_name = "addControls"];</code>
        */
-      public java.util.List<? extends oscal.profile.v1.ProfileOuterClass.AddControlsOrBuilder> 
+      public java.util.List<? extends oscal.profile.v1.ProfileOuterClass.AddControlsOrBuilder>
            getAddControlsOrBuilderList() {
         if (addControlsBuilder_ != null) {
           return addControlsBuilder_.getMessageOrBuilderList();
@@ -15297,12 +15297,12 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.profile.v1.AddControls add_controls = 3 [json_name = "addControls"];</code>
        */
-      public java.util.List<oscal.profile.v1.ProfileOuterClass.AddControls.Builder> 
+      public java.util.List<oscal.profile.v1.ProfileOuterClass.AddControls.Builder>
            getAddControlsBuilderList() {
         return internalGetAddControlsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.profile.v1.ProfileOuterClass.AddControls, oscal.profile.v1.ProfileOuterClass.AddControls.Builder, oscal.profile.v1.ProfileOuterClass.AddControlsOrBuilder> 
+          oscal.profile.v1.ProfileOuterClass.AddControls, oscal.profile.v1.ProfileOuterClass.AddControls.Builder, oscal.profile.v1.ProfileOuterClass.AddControlsOrBuilder>
           internalGetAddControlsFieldBuilder() {
         if (addControlsBuilder_ == null) {
           addControlsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -15511,7 +15511,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
            getPropsOrBuilderList() {
         if (propsBuilder_ != null) {
           return propsBuilder_.getMessageOrBuilderList();
@@ -15537,12 +15537,12 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Property.Builder> 
+      public java.util.List<oscal.common.v1.Common.Property.Builder>
            getPropsBuilderList() {
         return internalGetPropsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> 
+          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder>
           internalGetPropsFieldBuilder() {
         if (propsBuilder_ == null) {
           propsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -15751,7 +15751,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
            getLinksOrBuilderList() {
         if (linksBuilder_ != null) {
           return linksBuilder_.getMessageOrBuilderList();
@@ -15777,12 +15777,12 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Link.Builder> 
+      public java.util.List<oscal.common.v1.Common.Link.Builder>
            getLinksBuilderList() {
         return internalGetLinksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder> 
+          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder>
           internalGetLinksFieldBuilder() {
         if (linksBuilder_ == null) {
           linksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -15991,7 +15991,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
            getRemarksOrBuilderList() {
         if (remarksBuilder_ != null) {
           return remarksBuilder_.getMessageOrBuilderList();
@@ -16017,12 +16017,12 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder> 
+      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder>
            getRemarksBuilderList() {
         return internalGetRemarksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetRemarksFieldBuilder() {
         if (remarksBuilder_ == null) {
           remarksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -16231,7 +16231,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.profile.v1.Alter alters = 7 [json_name = "alters"];</code>
        */
-      public java.util.List<? extends oscal.profile.v1.ProfileOuterClass.AlterOrBuilder> 
+      public java.util.List<? extends oscal.profile.v1.ProfileOuterClass.AlterOrBuilder>
            getAltersOrBuilderList() {
         if (altersBuilder_ != null) {
           return altersBuilder_.getMessageOrBuilderList();
@@ -16257,12 +16257,12 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.profile.v1.Alter alters = 7 [json_name = "alters"];</code>
        */
-      public java.util.List<oscal.profile.v1.ProfileOuterClass.Alter.Builder> 
+      public java.util.List<oscal.profile.v1.ProfileOuterClass.Alter.Builder>
            getAltersBuilderList() {
         return internalGetAltersFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.profile.v1.ProfileOuterClass.Alter, oscal.profile.v1.ProfileOuterClass.Alter.Builder, oscal.profile.v1.ProfileOuterClass.AlterOrBuilder> 
+          oscal.profile.v1.ProfileOuterClass.Alter, oscal.profile.v1.ProfileOuterClass.Alter.Builder, oscal.profile.v1.ProfileOuterClass.AlterOrBuilder>
           internalGetAltersFieldBuilder() {
         if (altersBuilder_ == null) {
           altersBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -16334,7 +16334,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.catalog.v1.Parameter params = 1 [json_name = "params"];</code>
      */
-    java.util.List<oscal.catalog.v1.CatalogOuterClass.Parameter> 
+    java.util.List<oscal.catalog.v1.CatalogOuterClass.Parameter>
         getParamsList();
     /**
      * <code>repeated .oscal.catalog.v1.Parameter params = 1 [json_name = "params"];</code>
@@ -16347,7 +16347,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.catalog.v1.Parameter params = 1 [json_name = "params"];</code>
      */
-    java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.ParameterOrBuilder> 
+    java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.ParameterOrBuilder>
         getParamsOrBuilderList();
     /**
      * <code>repeated .oscal.catalog.v1.Parameter params = 1 [json_name = "params"];</code>
@@ -16408,7 +16408,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Property> 
+    java.util.List<oscal.common.v1.Common.Property>
         getPropsList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
@@ -16421,7 +16421,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
@@ -16432,7 +16432,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Link> 
+    java.util.List<oscal.common.v1.Common.Link>
         getLinksList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
@@ -16445,7 +16445,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
@@ -16456,7 +16456,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
      */
-    java.util.List<oscal.common.v1.Common.MarkupMultiline> 
+    java.util.List<oscal.common.v1.Common.MarkupMultiline>
         getRemarksList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
@@ -16469,7 +16469,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
@@ -16545,7 +16545,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.catalog.v1.Parameter params = 1 [json_name = "params"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.ParameterOrBuilder> 
+    public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.ParameterOrBuilder>
         getParamsOrBuilderList() {
       return params_;
     }
@@ -16660,7 +16660,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList() {
       return props_;
     }
@@ -16701,7 +16701,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList() {
       return links_;
     }
@@ -16742,7 +16742,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList() {
       return remarks_;
     }
@@ -17208,7 +17208,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
               paramsBuilder_ = null;
               params_ = other.params_;
               bitField0_ = (bitField0_ & ~0x00000001);
-              paramsBuilder_ = 
+              paramsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetParamsFieldBuilder() : null;
             } else {
@@ -17254,7 +17254,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
               propsBuilder_ = null;
               props_ = other.props_;
               bitField0_ = (bitField0_ & ~0x00000008);
-              propsBuilder_ = 
+              propsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetPropsFieldBuilder() : null;
             } else {
@@ -17280,7 +17280,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
               linksBuilder_ = null;
               links_ = other.links_;
               bitField0_ = (bitField0_ & ~0x00000010);
-              linksBuilder_ = 
+              linksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetLinksFieldBuilder() : null;
             } else {
@@ -17306,7 +17306,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
               remarksBuilder_ = null;
               remarks_ = other.remarks_;
               bitField0_ = (bitField0_ & ~0x00000020);
-              remarksBuilder_ = 
+              remarksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetRemarksFieldBuilder() : null;
             } else {
@@ -17614,7 +17614,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.catalog.v1.Parameter params = 1 [json_name = "params"];</code>
        */
-      public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.ParameterOrBuilder> 
+      public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.ParameterOrBuilder>
            getParamsOrBuilderList() {
         if (paramsBuilder_ != null) {
           return paramsBuilder_.getMessageOrBuilderList();
@@ -17640,12 +17640,12 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.catalog.v1.Parameter params = 1 [json_name = "params"];</code>
        */
-      public java.util.List<oscal.catalog.v1.CatalogOuterClass.Parameter.Builder> 
+      public java.util.List<oscal.catalog.v1.CatalogOuterClass.Parameter.Builder>
            getParamsBuilderList() {
         return internalGetParamsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.catalog.v1.CatalogOuterClass.Parameter, oscal.catalog.v1.CatalogOuterClass.Parameter.Builder, oscal.catalog.v1.CatalogOuterClass.ParameterOrBuilder> 
+          oscal.catalog.v1.CatalogOuterClass.Parameter, oscal.catalog.v1.CatalogOuterClass.Parameter.Builder, oscal.catalog.v1.CatalogOuterClass.ParameterOrBuilder>
           internalGetParamsFieldBuilder() {
         if (paramsBuilder_ == null) {
           paramsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -18076,7 +18076,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
            getPropsOrBuilderList() {
         if (propsBuilder_ != null) {
           return propsBuilder_.getMessageOrBuilderList();
@@ -18102,12 +18102,12 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Property.Builder> 
+      public java.util.List<oscal.common.v1.Common.Property.Builder>
            getPropsBuilderList() {
         return internalGetPropsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> 
+          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder>
           internalGetPropsFieldBuilder() {
         if (propsBuilder_ == null) {
           propsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -18316,7 +18316,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
            getLinksOrBuilderList() {
         if (linksBuilder_ != null) {
           return linksBuilder_.getMessageOrBuilderList();
@@ -18342,12 +18342,12 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Link.Builder> 
+      public java.util.List<oscal.common.v1.Common.Link.Builder>
            getLinksBuilderList() {
         return internalGetLinksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder> 
+          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder>
           internalGetLinksFieldBuilder() {
         if (linksBuilder_ == null) {
           linksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -18556,7 +18556,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
            getRemarksOrBuilderList() {
         if (remarksBuilder_ != null) {
           return remarksBuilder_.getMessageOrBuilderList();
@@ -18582,12 +18582,12 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder> 
+      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder>
            getRemarksBuilderList() {
         return internalGetRemarksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetRemarksFieldBuilder() {
         if (remarksBuilder_ == null) {
           remarksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -18659,7 +18659,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.profile.v1.Alter control_alterations = 1 [json_name = "controlAlterations"];</code>
      */
-    java.util.List<oscal.profile.v1.ProfileOuterClass.Alter> 
+    java.util.List<oscal.profile.v1.ProfileOuterClass.Alter>
         getControlAlterationsList();
     /**
      * <code>repeated .oscal.profile.v1.Alter control_alterations = 1 [json_name = "controlAlterations"];</code>
@@ -18672,7 +18672,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.profile.v1.Alter control_alterations = 1 [json_name = "controlAlterations"];</code>
      */
-    java.util.List<? extends oscal.profile.v1.ProfileOuterClass.AlterOrBuilder> 
+    java.util.List<? extends oscal.profile.v1.ProfileOuterClass.AlterOrBuilder>
         getControlAlterationsOrBuilderList();
     /**
      * <code>repeated .oscal.profile.v1.Alter control_alterations = 1 [json_name = "controlAlterations"];</code>
@@ -18733,7 +18733,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Property> 
+    java.util.List<oscal.common.v1.Common.Property>
         getPropsList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
@@ -18746,7 +18746,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
@@ -18757,7 +18757,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Link> 
+    java.util.List<oscal.common.v1.Common.Link>
         getLinksList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
@@ -18770,7 +18770,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
@@ -18781,7 +18781,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
      */
-    java.util.List<oscal.common.v1.Common.MarkupMultiline> 
+    java.util.List<oscal.common.v1.Common.MarkupMultiline>
         getRemarksList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
@@ -18794,7 +18794,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
@@ -18870,7 +18870,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.profile.v1.Alter control_alterations = 1 [json_name = "controlAlterations"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.profile.v1.ProfileOuterClass.AlterOrBuilder> 
+    public java.util.List<? extends oscal.profile.v1.ProfileOuterClass.AlterOrBuilder>
         getControlAlterationsOrBuilderList() {
       return controlAlterations_;
     }
@@ -18985,7 +18985,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList() {
       return props_;
     }
@@ -19026,7 +19026,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList() {
       return links_;
     }
@@ -19067,7 +19067,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList() {
       return remarks_;
     }
@@ -19533,7 +19533,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
               controlAlterationsBuilder_ = null;
               controlAlterations_ = other.controlAlterations_;
               bitField0_ = (bitField0_ & ~0x00000001);
-              controlAlterationsBuilder_ = 
+              controlAlterationsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetControlAlterationsFieldBuilder() : null;
             } else {
@@ -19579,7 +19579,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
               propsBuilder_ = null;
               props_ = other.props_;
               bitField0_ = (bitField0_ & ~0x00000008);
-              propsBuilder_ = 
+              propsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetPropsFieldBuilder() : null;
             } else {
@@ -19605,7 +19605,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
               linksBuilder_ = null;
               links_ = other.links_;
               bitField0_ = (bitField0_ & ~0x00000010);
-              linksBuilder_ = 
+              linksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetLinksFieldBuilder() : null;
             } else {
@@ -19631,7 +19631,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
               remarksBuilder_ = null;
               remarks_ = other.remarks_;
               bitField0_ = (bitField0_ & ~0x00000020);
-              remarksBuilder_ = 
+              remarksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetRemarksFieldBuilder() : null;
             } else {
@@ -19939,7 +19939,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.profile.v1.Alter control_alterations = 1 [json_name = "controlAlterations"];</code>
        */
-      public java.util.List<? extends oscal.profile.v1.ProfileOuterClass.AlterOrBuilder> 
+      public java.util.List<? extends oscal.profile.v1.ProfileOuterClass.AlterOrBuilder>
            getControlAlterationsOrBuilderList() {
         if (controlAlterationsBuilder_ != null) {
           return controlAlterationsBuilder_.getMessageOrBuilderList();
@@ -19965,12 +19965,12 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.profile.v1.Alter control_alterations = 1 [json_name = "controlAlterations"];</code>
        */
-      public java.util.List<oscal.profile.v1.ProfileOuterClass.Alter.Builder> 
+      public java.util.List<oscal.profile.v1.ProfileOuterClass.Alter.Builder>
            getControlAlterationsBuilderList() {
         return internalGetControlAlterationsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.profile.v1.ProfileOuterClass.Alter, oscal.profile.v1.ProfileOuterClass.Alter.Builder, oscal.profile.v1.ProfileOuterClass.AlterOrBuilder> 
+          oscal.profile.v1.ProfileOuterClass.Alter, oscal.profile.v1.ProfileOuterClass.Alter.Builder, oscal.profile.v1.ProfileOuterClass.AlterOrBuilder>
           internalGetControlAlterationsFieldBuilder() {
         if (controlAlterationsBuilder_ == null) {
           controlAlterationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -20401,7 +20401,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
            getPropsOrBuilderList() {
         if (propsBuilder_ != null) {
           return propsBuilder_.getMessageOrBuilderList();
@@ -20427,12 +20427,12 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Property.Builder> 
+      public java.util.List<oscal.common.v1.Common.Property.Builder>
            getPropsBuilderList() {
         return internalGetPropsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> 
+          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder>
           internalGetPropsFieldBuilder() {
         if (propsBuilder_ == null) {
           propsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -20641,7 +20641,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
            getLinksOrBuilderList() {
         if (linksBuilder_ != null) {
           return linksBuilder_.getMessageOrBuilderList();
@@ -20667,12 +20667,12 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Link.Builder> 
+      public java.util.List<oscal.common.v1.Common.Link.Builder>
            getLinksBuilderList() {
         return internalGetLinksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder> 
+          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder>
           internalGetLinksFieldBuilder() {
         if (linksBuilder_ == null) {
           linksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -20881,7 +20881,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
            getRemarksOrBuilderList() {
         if (remarksBuilder_ != null) {
           return remarksBuilder_.getMessageOrBuilderList();
@@ -20907,12 +20907,12 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder> 
+      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder>
            getRemarksBuilderList() {
         return internalGetRemarksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetRemarksFieldBuilder() {
         if (remarksBuilder_ == null) {
           remarksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -20996,7 +20996,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.profile.v1.Remove removes = 2 [json_name = "removes"];</code>
      */
-    java.util.List<oscal.profile.v1.ProfileOuterClass.Remove> 
+    java.util.List<oscal.profile.v1.ProfileOuterClass.Remove>
         getRemovesList();
     /**
      * <code>repeated .oscal.profile.v1.Remove removes = 2 [json_name = "removes"];</code>
@@ -21009,7 +21009,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.profile.v1.Remove removes = 2 [json_name = "removes"];</code>
      */
-    java.util.List<? extends oscal.profile.v1.ProfileOuterClass.RemoveOrBuilder> 
+    java.util.List<? extends oscal.profile.v1.ProfileOuterClass.RemoveOrBuilder>
         getRemovesOrBuilderList();
     /**
      * <code>repeated .oscal.profile.v1.Remove removes = 2 [json_name = "removes"];</code>
@@ -21020,7 +21020,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.profile.v1.Add adds = 3 [json_name = "adds"];</code>
      */
-    java.util.List<oscal.profile.v1.ProfileOuterClass.Add> 
+    java.util.List<oscal.profile.v1.ProfileOuterClass.Add>
         getAddsList();
     /**
      * <code>repeated .oscal.profile.v1.Add adds = 3 [json_name = "adds"];</code>
@@ -21033,7 +21033,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.profile.v1.Add adds = 3 [json_name = "adds"];</code>
      */
-    java.util.List<? extends oscal.profile.v1.ProfileOuterClass.AddOrBuilder> 
+    java.util.List<? extends oscal.profile.v1.ProfileOuterClass.AddOrBuilder>
         getAddsOrBuilderList();
     /**
      * <code>repeated .oscal.profile.v1.Add adds = 3 [json_name = "adds"];</code>
@@ -21044,7 +21044,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 4 [json_name = "remarks"];</code>
      */
-    java.util.List<oscal.common.v1.Common.MarkupMultiline> 
+    java.util.List<oscal.common.v1.Common.MarkupMultiline>
         getRemarksList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 4 [json_name = "remarks"];</code>
@@ -21057,7 +21057,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 4 [json_name = "remarks"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 4 [json_name = "remarks"];</code>
@@ -21128,7 +21128,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         controlId_ = s;
@@ -21144,7 +21144,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
         getControlIdBytes() {
       java.lang.Object ref = controlId_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         controlId_ = b;
@@ -21168,7 +21168,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.profile.v1.Remove removes = 2 [json_name = "removes"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.profile.v1.ProfileOuterClass.RemoveOrBuilder> 
+    public java.util.List<? extends oscal.profile.v1.ProfileOuterClass.RemoveOrBuilder>
         getRemovesOrBuilderList() {
       return removes_;
     }
@@ -21209,7 +21209,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.profile.v1.Add adds = 3 [json_name = "adds"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.profile.v1.ProfileOuterClass.AddOrBuilder> 
+    public java.util.List<? extends oscal.profile.v1.ProfileOuterClass.AddOrBuilder>
         getAddsOrBuilderList() {
       return adds_;
     }
@@ -21250,7 +21250,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 4 [json_name = "remarks"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList() {
       return remarks_;
     }
@@ -21655,7 +21655,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
               removesBuilder_ = null;
               removes_ = other.removes_;
               bitField0_ = (bitField0_ & ~0x00000002);
-              removesBuilder_ = 
+              removesBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetRemovesFieldBuilder() : null;
             } else {
@@ -21681,7 +21681,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
               addsBuilder_ = null;
               adds_ = other.adds_;
               bitField0_ = (bitField0_ & ~0x00000004);
-              addsBuilder_ = 
+              addsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetAddsFieldBuilder() : null;
             } else {
@@ -21707,7 +21707,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
               remarksBuilder_ = null;
               remarks_ = other.remarks_;
               bitField0_ = (bitField0_ & ~0x00000008);
-              remarksBuilder_ = 
+              remarksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetRemarksFieldBuilder() : null;
             } else {
@@ -21827,7 +21827,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
           getControlIdBytes() {
         java.lang.Object ref = controlId_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           controlId_ = b;
@@ -22069,7 +22069,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.profile.v1.Remove removes = 2 [json_name = "removes"];</code>
        */
-      public java.util.List<? extends oscal.profile.v1.ProfileOuterClass.RemoveOrBuilder> 
+      public java.util.List<? extends oscal.profile.v1.ProfileOuterClass.RemoveOrBuilder>
            getRemovesOrBuilderList() {
         if (removesBuilder_ != null) {
           return removesBuilder_.getMessageOrBuilderList();
@@ -22095,12 +22095,12 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.profile.v1.Remove removes = 2 [json_name = "removes"];</code>
        */
-      public java.util.List<oscal.profile.v1.ProfileOuterClass.Remove.Builder> 
+      public java.util.List<oscal.profile.v1.ProfileOuterClass.Remove.Builder>
            getRemovesBuilderList() {
         return internalGetRemovesFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.profile.v1.ProfileOuterClass.Remove, oscal.profile.v1.ProfileOuterClass.Remove.Builder, oscal.profile.v1.ProfileOuterClass.RemoveOrBuilder> 
+          oscal.profile.v1.ProfileOuterClass.Remove, oscal.profile.v1.ProfileOuterClass.Remove.Builder, oscal.profile.v1.ProfileOuterClass.RemoveOrBuilder>
           internalGetRemovesFieldBuilder() {
         if (removesBuilder_ == null) {
           removesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -22309,7 +22309,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.profile.v1.Add adds = 3 [json_name = "adds"];</code>
        */
-      public java.util.List<? extends oscal.profile.v1.ProfileOuterClass.AddOrBuilder> 
+      public java.util.List<? extends oscal.profile.v1.ProfileOuterClass.AddOrBuilder>
            getAddsOrBuilderList() {
         if (addsBuilder_ != null) {
           return addsBuilder_.getMessageOrBuilderList();
@@ -22335,12 +22335,12 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.profile.v1.Add adds = 3 [json_name = "adds"];</code>
        */
-      public java.util.List<oscal.profile.v1.ProfileOuterClass.Add.Builder> 
+      public java.util.List<oscal.profile.v1.ProfileOuterClass.Add.Builder>
            getAddsBuilderList() {
         return internalGetAddsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.profile.v1.ProfileOuterClass.Add, oscal.profile.v1.ProfileOuterClass.Add.Builder, oscal.profile.v1.ProfileOuterClass.AddOrBuilder> 
+          oscal.profile.v1.ProfileOuterClass.Add, oscal.profile.v1.ProfileOuterClass.Add.Builder, oscal.profile.v1.ProfileOuterClass.AddOrBuilder>
           internalGetAddsFieldBuilder() {
         if (addsBuilder_ == null) {
           addsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -22549,7 +22549,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 4 [json_name = "remarks"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
            getRemarksOrBuilderList() {
         if (remarksBuilder_ != null) {
           return remarksBuilder_.getMessageOrBuilderList();
@@ -22575,12 +22575,12 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 4 [json_name = "remarks"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder> 
+      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder>
            getRemarksBuilderList() {
         return internalGetRemarksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetRemarksFieldBuilder() {
         if (remarksBuilder_ == null) {
           remarksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -22829,7 +22829,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         itemName_ = s;
@@ -22845,7 +22845,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
         getItemNameBytes() {
       java.lang.Object ref = itemName_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         itemName_ = b;
@@ -23482,7 +23482,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
           getItemNameBytes() {
         java.lang.Object ref = itemName_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           itemName_ = b;
@@ -24067,7 +24067,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.catalog.v1.Part parts = 3 [json_name = "parts"];</code>
      */
-    java.util.List<oscal.catalog.v1.CatalogOuterClass.Part> 
+    java.util.List<oscal.catalog.v1.CatalogOuterClass.Part>
         getPartsList();
     /**
      * <code>repeated .oscal.catalog.v1.Part parts = 3 [json_name = "parts"];</code>
@@ -24080,7 +24080,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.catalog.v1.Part parts = 3 [json_name = "parts"];</code>
      */
-    java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.PartOrBuilder> 
+    java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.PartOrBuilder>
         getPartsOrBuilderList();
     /**
      * <code>repeated .oscal.catalog.v1.Part parts = 3 [json_name = "parts"];</code>
@@ -24091,7 +24091,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Property> 
+    java.util.List<oscal.common.v1.Common.Property>
         getPropsList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
@@ -24104,7 +24104,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
@@ -24115,7 +24115,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Link> 
+    java.util.List<oscal.common.v1.Common.Link>
         getLinksList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
@@ -24128,7 +24128,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
@@ -24139,7 +24139,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.catalog.v1.Parameter params = 6 [json_name = "params"];</code>
      */
-    java.util.List<oscal.catalog.v1.CatalogOuterClass.Parameter> 
+    java.util.List<oscal.catalog.v1.CatalogOuterClass.Parameter>
         getParamsList();
     /**
      * <code>repeated .oscal.catalog.v1.Parameter params = 6 [json_name = "params"];</code>
@@ -24152,7 +24152,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.catalog.v1.Parameter params = 6 [json_name = "params"];</code>
      */
-    java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.ParameterOrBuilder> 
+    java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.ParameterOrBuilder>
         getParamsOrBuilderList();
     /**
      * <code>repeated .oscal.catalog.v1.Parameter params = 6 [json_name = "params"];</code>
@@ -24257,7 +24257,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         itemName_ = s;
@@ -24279,7 +24279,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
         getItemNameBytes() {
       java.lang.Object ref = itemName_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         itemName_ = b;
@@ -24302,7 +24302,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         position_ = s;
@@ -24318,7 +24318,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
         getPositionBytes() {
       java.lang.Object ref = position_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         position_ = b;
@@ -24342,7 +24342,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.catalog.v1.Part parts = 3 [json_name = "parts"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.PartOrBuilder> 
+    public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.PartOrBuilder>
         getPartsOrBuilderList() {
       return parts_;
     }
@@ -24383,7 +24383,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList() {
       return props_;
     }
@@ -24424,7 +24424,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList() {
       return links_;
     }
@@ -24465,7 +24465,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.catalog.v1.Parameter params = 6 [json_name = "params"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.ParameterOrBuilder> 
+    public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.ParameterOrBuilder>
         getParamsOrBuilderList() {
       return params_;
     }
@@ -24505,7 +24505,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         byId_ = s;
@@ -24521,7 +24521,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
         getByIdBytes() {
       java.lang.Object ref = byId_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         byId_ = b;
@@ -24544,7 +24544,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         title_ = s;
@@ -24560,7 +24560,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
         getTitleBytes() {
       java.lang.Object ref = title_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         title_ = b;
@@ -25029,7 +25029,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
               partsBuilder_ = null;
               parts_ = other.parts_;
               bitField0_ = (bitField0_ & ~0x00000004);
-              partsBuilder_ = 
+              partsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetPartsFieldBuilder() : null;
             } else {
@@ -25055,7 +25055,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
               propsBuilder_ = null;
               props_ = other.props_;
               bitField0_ = (bitField0_ & ~0x00000008);
-              propsBuilder_ = 
+              propsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetPropsFieldBuilder() : null;
             } else {
@@ -25081,7 +25081,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
               linksBuilder_ = null;
               links_ = other.links_;
               bitField0_ = (bitField0_ & ~0x00000010);
-              linksBuilder_ = 
+              linksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetLinksFieldBuilder() : null;
             } else {
@@ -25107,7 +25107,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
               paramsBuilder_ = null;
               params_ = other.params_;
               bitField0_ = (bitField0_ & ~0x00000020);
-              paramsBuilder_ = 
+              paramsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetParamsFieldBuilder() : null;
             } else {
@@ -25277,7 +25277,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
           getItemNameBytes() {
         java.lang.Object ref = itemName_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           itemName_ = b;
@@ -25367,7 +25367,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
           getPositionBytes() {
         java.lang.Object ref = position_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           position_ = b;
@@ -25609,7 +25609,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.catalog.v1.Part parts = 3 [json_name = "parts"];</code>
        */
-      public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.PartOrBuilder> 
+      public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.PartOrBuilder>
            getPartsOrBuilderList() {
         if (partsBuilder_ != null) {
           return partsBuilder_.getMessageOrBuilderList();
@@ -25635,12 +25635,12 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.catalog.v1.Part parts = 3 [json_name = "parts"];</code>
        */
-      public java.util.List<oscal.catalog.v1.CatalogOuterClass.Part.Builder> 
+      public java.util.List<oscal.catalog.v1.CatalogOuterClass.Part.Builder>
            getPartsBuilderList() {
         return internalGetPartsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.catalog.v1.CatalogOuterClass.Part, oscal.catalog.v1.CatalogOuterClass.Part.Builder, oscal.catalog.v1.CatalogOuterClass.PartOrBuilder> 
+          oscal.catalog.v1.CatalogOuterClass.Part, oscal.catalog.v1.CatalogOuterClass.Part.Builder, oscal.catalog.v1.CatalogOuterClass.PartOrBuilder>
           internalGetPartsFieldBuilder() {
         if (partsBuilder_ == null) {
           partsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -25849,7 +25849,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
            getPropsOrBuilderList() {
         if (propsBuilder_ != null) {
           return propsBuilder_.getMessageOrBuilderList();
@@ -25875,12 +25875,12 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Property.Builder> 
+      public java.util.List<oscal.common.v1.Common.Property.Builder>
            getPropsBuilderList() {
         return internalGetPropsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> 
+          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder>
           internalGetPropsFieldBuilder() {
         if (propsBuilder_ == null) {
           propsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -26089,7 +26089,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
            getLinksOrBuilderList() {
         if (linksBuilder_ != null) {
           return linksBuilder_.getMessageOrBuilderList();
@@ -26115,12 +26115,12 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Link.Builder> 
+      public java.util.List<oscal.common.v1.Common.Link.Builder>
            getLinksBuilderList() {
         return internalGetLinksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder> 
+          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder>
           internalGetLinksFieldBuilder() {
         if (linksBuilder_ == null) {
           linksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -26329,7 +26329,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.catalog.v1.Parameter params = 6 [json_name = "params"];</code>
        */
-      public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.ParameterOrBuilder> 
+      public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.ParameterOrBuilder>
            getParamsOrBuilderList() {
         if (paramsBuilder_ != null) {
           return paramsBuilder_.getMessageOrBuilderList();
@@ -26355,12 +26355,12 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.catalog.v1.Parameter params = 6 [json_name = "params"];</code>
        */
-      public java.util.List<oscal.catalog.v1.CatalogOuterClass.Parameter.Builder> 
+      public java.util.List<oscal.catalog.v1.CatalogOuterClass.Parameter.Builder>
            getParamsBuilderList() {
         return internalGetParamsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.catalog.v1.CatalogOuterClass.Parameter, oscal.catalog.v1.CatalogOuterClass.Parameter.Builder, oscal.catalog.v1.CatalogOuterClass.ParameterOrBuilder> 
+          oscal.catalog.v1.CatalogOuterClass.Parameter, oscal.catalog.v1.CatalogOuterClass.Parameter.Builder, oscal.catalog.v1.CatalogOuterClass.ParameterOrBuilder>
           internalGetParamsFieldBuilder() {
         if (paramsBuilder_ == null) {
           paramsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -26399,7 +26399,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
           getByIdBytes() {
         java.lang.Object ref = byId_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           byId_ = b;
@@ -26471,7 +26471,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
           getTitleBytes() {
         java.lang.Object ref = title_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           title_ = b;
@@ -26576,7 +26576,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.catalog.v1.Control controls = 1 [json_name = "controls"];</code>
      */
-    java.util.List<oscal.catalog.v1.CatalogOuterClass.Control> 
+    java.util.List<oscal.catalog.v1.CatalogOuterClass.Control>
         getControlsList();
     /**
      * <code>repeated .oscal.catalog.v1.Control controls = 1 [json_name = "controls"];</code>
@@ -26589,7 +26589,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.catalog.v1.Control controls = 1 [json_name = "controls"];</code>
      */
-    java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.ControlOrBuilder> 
+    java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.ControlOrBuilder>
         getControlsOrBuilderList();
     /**
      * <code>repeated .oscal.catalog.v1.Control controls = 1 [json_name = "controls"];</code>
@@ -26650,7 +26650,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Property> 
+    java.util.List<oscal.common.v1.Common.Property>
         getPropsList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
@@ -26663,7 +26663,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
@@ -26674,7 +26674,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Link> 
+    java.util.List<oscal.common.v1.Common.Link>
         getLinksList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
@@ -26687,7 +26687,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
@@ -26698,7 +26698,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
      */
-    java.util.List<oscal.common.v1.Common.MarkupMultiline> 
+    java.util.List<oscal.common.v1.Common.MarkupMultiline>
         getRemarksList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
@@ -26711,7 +26711,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
@@ -26787,7 +26787,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.catalog.v1.Control controls = 1 [json_name = "controls"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.ControlOrBuilder> 
+    public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.ControlOrBuilder>
         getControlsOrBuilderList() {
       return controls_;
     }
@@ -26902,7 +26902,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList() {
       return props_;
     }
@@ -26943,7 +26943,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList() {
       return links_;
     }
@@ -26984,7 +26984,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList() {
       return remarks_;
     }
@@ -27450,7 +27450,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
               controlsBuilder_ = null;
               controls_ = other.controls_;
               bitField0_ = (bitField0_ & ~0x00000001);
-              controlsBuilder_ = 
+              controlsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetControlsFieldBuilder() : null;
             } else {
@@ -27496,7 +27496,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
               propsBuilder_ = null;
               props_ = other.props_;
               bitField0_ = (bitField0_ & ~0x00000008);
-              propsBuilder_ = 
+              propsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetPropsFieldBuilder() : null;
             } else {
@@ -27522,7 +27522,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
               linksBuilder_ = null;
               links_ = other.links_;
               bitField0_ = (bitField0_ & ~0x00000010);
-              linksBuilder_ = 
+              linksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetLinksFieldBuilder() : null;
             } else {
@@ -27548,7 +27548,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
               remarksBuilder_ = null;
               remarks_ = other.remarks_;
               bitField0_ = (bitField0_ & ~0x00000020);
-              remarksBuilder_ = 
+              remarksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetRemarksFieldBuilder() : null;
             } else {
@@ -27856,7 +27856,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.catalog.v1.Control controls = 1 [json_name = "controls"];</code>
        */
-      public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.ControlOrBuilder> 
+      public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.ControlOrBuilder>
            getControlsOrBuilderList() {
         if (controlsBuilder_ != null) {
           return controlsBuilder_.getMessageOrBuilderList();
@@ -27882,12 +27882,12 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.catalog.v1.Control controls = 1 [json_name = "controls"];</code>
        */
-      public java.util.List<oscal.catalog.v1.CatalogOuterClass.Control.Builder> 
+      public java.util.List<oscal.catalog.v1.CatalogOuterClass.Control.Builder>
            getControlsBuilderList() {
         return internalGetControlsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.catalog.v1.CatalogOuterClass.Control, oscal.catalog.v1.CatalogOuterClass.Control.Builder, oscal.catalog.v1.CatalogOuterClass.ControlOrBuilder> 
+          oscal.catalog.v1.CatalogOuterClass.Control, oscal.catalog.v1.CatalogOuterClass.Control.Builder, oscal.catalog.v1.CatalogOuterClass.ControlOrBuilder>
           internalGetControlsFieldBuilder() {
         if (controlsBuilder_ == null) {
           controlsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -28318,7 +28318,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
            getPropsOrBuilderList() {
         if (propsBuilder_ != null) {
           return propsBuilder_.getMessageOrBuilderList();
@@ -28344,12 +28344,12 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 4 [json_name = "props"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Property.Builder> 
+      public java.util.List<oscal.common.v1.Common.Property.Builder>
            getPropsBuilderList() {
         return internalGetPropsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> 
+          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder>
           internalGetPropsFieldBuilder() {
         if (propsBuilder_ == null) {
           propsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -28558,7 +28558,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
            getLinksOrBuilderList() {
         if (linksBuilder_ != null) {
           return linksBuilder_.getMessageOrBuilderList();
@@ -28584,12 +28584,12 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 5 [json_name = "links"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Link.Builder> 
+      public java.util.List<oscal.common.v1.Common.Link.Builder>
            getLinksBuilderList() {
         return internalGetLinksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder> 
+          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder>
           internalGetLinksFieldBuilder() {
         if (linksBuilder_ == null) {
           linksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -28798,7 +28798,7 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
            getRemarksOrBuilderList() {
         if (remarksBuilder_ != null) {
           return remarksBuilder_.getMessageOrBuilderList();
@@ -28824,12 +28824,12 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 6 [json_name = "remarks"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder> 
+      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder>
            getRemarksBuilderList() {
         return internalGetRemarksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetRemarksFieldBuilder() {
         if (remarksBuilder_ == null) {
           remarksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -28896,72 +28896,72 @@ public final class ProfileOuterClass extends com.google.protobuf.GeneratedFile {
 
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_profile_v1_Profile_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_profile_v1_Profile_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_profile_v1_Import_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_profile_v1_Import_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_profile_v1_IncludeAll_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_profile_v1_IncludeAll_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_profile_v1_ExcludeControls_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_profile_v1_ExcludeControls_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_profile_v1_Custom_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_profile_v1_Custom_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_profile_v1_Merge_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_profile_v1_Merge_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_profile_v1_Combine_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_profile_v1_Combine_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_profile_v1_Modify_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_profile_v1_Modify_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_profile_v1_SetParameters_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_profile_v1_SetParameters_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_profile_v1_AlterControls_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_profile_v1_AlterControls_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_profile_v1_Alter_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_profile_v1_Alter_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_profile_v1_Remove_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_profile_v1_Remove_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_profile_v1_Add_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_profile_v1_Add_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_profile_v1_AddControls_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_profile_v1_AddControls_fieldAccessorTable;
 

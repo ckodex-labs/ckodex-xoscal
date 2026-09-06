@@ -63,7 +63,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.catalog.v1.Parameter params = 3 [json_name = "params"];</code>
      */
-    java.util.List<oscal.catalog.v1.CatalogOuterClass.Parameter> 
+    java.util.List<oscal.catalog.v1.CatalogOuterClass.Parameter>
         getParamsList();
     /**
      * <code>repeated .oscal.catalog.v1.Parameter params = 3 [json_name = "params"];</code>
@@ -76,7 +76,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.catalog.v1.Parameter params = 3 [json_name = "params"];</code>
      */
-    java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.ParameterOrBuilder> 
+    java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.ParameterOrBuilder>
         getParamsOrBuilderList();
     /**
      * <code>repeated .oscal.catalog.v1.Parameter params = 3 [json_name = "params"];</code>
@@ -87,7 +87,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.catalog.v1.Control controls = 4 [json_name = "controls"];</code>
      */
-    java.util.List<oscal.catalog.v1.CatalogOuterClass.Control> 
+    java.util.List<oscal.catalog.v1.CatalogOuterClass.Control>
         getControlsList();
     /**
      * <code>repeated .oscal.catalog.v1.Control controls = 4 [json_name = "controls"];</code>
@@ -100,7 +100,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.catalog.v1.Control controls = 4 [json_name = "controls"];</code>
      */
-    java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.ControlOrBuilder> 
+    java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.ControlOrBuilder>
         getControlsOrBuilderList();
     /**
      * <code>repeated .oscal.catalog.v1.Control controls = 4 [json_name = "controls"];</code>
@@ -111,7 +111,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.catalog.v1.Group groups = 5 [json_name = "groups"];</code>
      */
-    java.util.List<oscal.catalog.v1.CatalogOuterClass.Group> 
+    java.util.List<oscal.catalog.v1.CatalogOuterClass.Group>
         getGroupsList();
     /**
      * <code>repeated .oscal.catalog.v1.Group groups = 5 [json_name = "groups"];</code>
@@ -124,7 +124,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.catalog.v1.Group groups = 5 [json_name = "groups"];</code>
      */
-    java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.GroupOrBuilder> 
+    java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.GroupOrBuilder>
         getGroupsOrBuilderList();
     /**
      * <code>repeated .oscal.catalog.v1.Group groups = 5 [json_name = "groups"];</code>
@@ -263,7 +263,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.catalog.v1.Parameter params = 3 [json_name = "params"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.ParameterOrBuilder> 
+    public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.ParameterOrBuilder>
         getParamsOrBuilderList() {
       return params_;
     }
@@ -304,7 +304,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.catalog.v1.Control controls = 4 [json_name = "controls"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.ControlOrBuilder> 
+    public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.ControlOrBuilder>
         getControlsOrBuilderList() {
       return controls_;
     }
@@ -345,7 +345,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.catalog.v1.Group groups = 5 [json_name = "groups"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.GroupOrBuilder> 
+    public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.GroupOrBuilder>
         getGroupsOrBuilderList() {
       return groups_;
     }
@@ -857,7 +857,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
               paramsBuilder_ = null;
               params_ = other.params_;
               bitField0_ = (bitField0_ & ~0x00000004);
-              paramsBuilder_ = 
+              paramsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetParamsFieldBuilder() : null;
             } else {
@@ -883,7 +883,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
               controlsBuilder_ = null;
               controls_ = other.controls_;
               bitField0_ = (bitField0_ & ~0x00000008);
-              controlsBuilder_ = 
+              controlsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetControlsFieldBuilder() : null;
             } else {
@@ -909,7 +909,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
               groupsBuilder_ = null;
               groups_ = other.groups_;
               bitField0_ = (bitField0_ & ~0x00000010);
-              groupsBuilder_ = 
+              groupsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetGroupsFieldBuilder() : null;
             } else {
@@ -1131,7 +1131,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.UUID uuid = 1 [json_name = "uuid"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder> 
+          oscal.common.v1.Common.UUID, oscal.common.v1.Common.UUID.Builder, oscal.common.v1.Common.UUIDOrBuilder>
           internalGetUuidFieldBuilder() {
         if (uuidBuilder_ == null) {
           uuidBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -1252,7 +1252,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.Metadata metadata = 2 [json_name = "metadata"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.Metadata, oscal.common.v1.Common.Metadata.Builder, oscal.common.v1.Common.MetadataOrBuilder> 
+          oscal.common.v1.Common.Metadata, oscal.common.v1.Common.Metadata.Builder, oscal.common.v1.Common.MetadataOrBuilder>
           internalGetMetadataFieldBuilder() {
         if (metadataBuilder_ == null) {
           metadataBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -1460,7 +1460,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.catalog.v1.Parameter params = 3 [json_name = "params"];</code>
        */
-      public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.ParameterOrBuilder> 
+      public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.ParameterOrBuilder>
            getParamsOrBuilderList() {
         if (paramsBuilder_ != null) {
           return paramsBuilder_.getMessageOrBuilderList();
@@ -1486,12 +1486,12 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.catalog.v1.Parameter params = 3 [json_name = "params"];</code>
        */
-      public java.util.List<oscal.catalog.v1.CatalogOuterClass.Parameter.Builder> 
+      public java.util.List<oscal.catalog.v1.CatalogOuterClass.Parameter.Builder>
            getParamsBuilderList() {
         return internalGetParamsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.catalog.v1.CatalogOuterClass.Parameter, oscal.catalog.v1.CatalogOuterClass.Parameter.Builder, oscal.catalog.v1.CatalogOuterClass.ParameterOrBuilder> 
+          oscal.catalog.v1.CatalogOuterClass.Parameter, oscal.catalog.v1.CatalogOuterClass.Parameter.Builder, oscal.catalog.v1.CatalogOuterClass.ParameterOrBuilder>
           internalGetParamsFieldBuilder() {
         if (paramsBuilder_ == null) {
           paramsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -1700,7 +1700,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.catalog.v1.Control controls = 4 [json_name = "controls"];</code>
        */
-      public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.ControlOrBuilder> 
+      public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.ControlOrBuilder>
            getControlsOrBuilderList() {
         if (controlsBuilder_ != null) {
           return controlsBuilder_.getMessageOrBuilderList();
@@ -1726,12 +1726,12 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.catalog.v1.Control controls = 4 [json_name = "controls"];</code>
        */
-      public java.util.List<oscal.catalog.v1.CatalogOuterClass.Control.Builder> 
+      public java.util.List<oscal.catalog.v1.CatalogOuterClass.Control.Builder>
            getControlsBuilderList() {
         return internalGetControlsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.catalog.v1.CatalogOuterClass.Control, oscal.catalog.v1.CatalogOuterClass.Control.Builder, oscal.catalog.v1.CatalogOuterClass.ControlOrBuilder> 
+          oscal.catalog.v1.CatalogOuterClass.Control, oscal.catalog.v1.CatalogOuterClass.Control.Builder, oscal.catalog.v1.CatalogOuterClass.ControlOrBuilder>
           internalGetControlsFieldBuilder() {
         if (controlsBuilder_ == null) {
           controlsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -1940,7 +1940,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.catalog.v1.Group groups = 5 [json_name = "groups"];</code>
        */
-      public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.GroupOrBuilder> 
+      public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.GroupOrBuilder>
            getGroupsOrBuilderList() {
         if (groupsBuilder_ != null) {
           return groupsBuilder_.getMessageOrBuilderList();
@@ -1966,12 +1966,12 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.catalog.v1.Group groups = 5 [json_name = "groups"];</code>
        */
-      public java.util.List<oscal.catalog.v1.CatalogOuterClass.Group.Builder> 
+      public java.util.List<oscal.catalog.v1.CatalogOuterClass.Group.Builder>
            getGroupsBuilderList() {
         return internalGetGroupsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.catalog.v1.CatalogOuterClass.Group, oscal.catalog.v1.CatalogOuterClass.Group.Builder, oscal.catalog.v1.CatalogOuterClass.GroupOrBuilder> 
+          oscal.catalog.v1.CatalogOuterClass.Group, oscal.catalog.v1.CatalogOuterClass.Group.Builder, oscal.catalog.v1.CatalogOuterClass.GroupOrBuilder>
           internalGetGroupsFieldBuilder() {
         if (groupsBuilder_ == null) {
           groupsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -2093,7 +2093,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.BackMatter back_matter = 6 [json_name = "backMatter"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.BackMatter, oscal.common.v1.Common.BackMatter.Builder, oscal.common.v1.Common.BackMatterOrBuilder> 
+          oscal.common.v1.Common.BackMatter, oscal.common.v1.Common.BackMatter.Builder, oscal.common.v1.Common.BackMatterOrBuilder>
           internalGetBackMatterFieldBuilder() {
         if (backMatterBuilder_ == null) {
           backMatterBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -2206,7 +2206,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.catalog.v1.Parameter params = 4 [json_name = "params"];</code>
      */
-    java.util.List<oscal.catalog.v1.CatalogOuterClass.Parameter> 
+    java.util.List<oscal.catalog.v1.CatalogOuterClass.Parameter>
         getParamsList();
     /**
      * <code>repeated .oscal.catalog.v1.Parameter params = 4 [json_name = "params"];</code>
@@ -2219,7 +2219,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.catalog.v1.Parameter params = 4 [json_name = "params"];</code>
      */
-    java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.ParameterOrBuilder> 
+    java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.ParameterOrBuilder>
         getParamsOrBuilderList();
     /**
      * <code>repeated .oscal.catalog.v1.Parameter params = 4 [json_name = "params"];</code>
@@ -2230,7 +2230,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.catalog.v1.Control controls = 5 [json_name = "controls"];</code>
      */
-    java.util.List<oscal.catalog.v1.CatalogOuterClass.Control> 
+    java.util.List<oscal.catalog.v1.CatalogOuterClass.Control>
         getControlsList();
     /**
      * <code>repeated .oscal.catalog.v1.Control controls = 5 [json_name = "controls"];</code>
@@ -2243,7 +2243,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.catalog.v1.Control controls = 5 [json_name = "controls"];</code>
      */
-    java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.ControlOrBuilder> 
+    java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.ControlOrBuilder>
         getControlsOrBuilderList();
     /**
      * <code>repeated .oscal.catalog.v1.Control controls = 5 [json_name = "controls"];</code>
@@ -2254,7 +2254,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.catalog.v1.Group groups = 6 [json_name = "groups"];</code>
      */
-    java.util.List<oscal.catalog.v1.CatalogOuterClass.Group> 
+    java.util.List<oscal.catalog.v1.CatalogOuterClass.Group>
         getGroupsList();
     /**
      * <code>repeated .oscal.catalog.v1.Group groups = 6 [json_name = "groups"];</code>
@@ -2267,7 +2267,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.catalog.v1.Group groups = 6 [json_name = "groups"];</code>
      */
-    java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.GroupOrBuilder> 
+    java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.GroupOrBuilder>
         getGroupsOrBuilderList();
     /**
      * <code>repeated .oscal.catalog.v1.Group groups = 6 [json_name = "groups"];</code>
@@ -2278,7 +2278,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 7 [json_name = "props"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Property> 
+    java.util.List<oscal.common.v1.Common.Property>
         getPropsList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 7 [json_name = "props"];</code>
@@ -2291,7 +2291,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 7 [json_name = "props"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 7 [json_name = "props"];</code>
@@ -2302,7 +2302,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 8 [json_name = "links"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Link> 
+    java.util.List<oscal.common.v1.Common.Link>
         getLinksList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 8 [json_name = "links"];</code>
@@ -2315,7 +2315,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 8 [json_name = "links"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 8 [json_name = "links"];</code>
@@ -2326,7 +2326,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 9 [json_name = "remarks"];</code>
      */
-    java.util.List<oscal.common.v1.Common.MarkupMultiline> 
+    java.util.List<oscal.common.v1.Common.MarkupMultiline>
         getRemarksList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 9 [json_name = "remarks"];</code>
@@ -2339,7 +2339,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 9 [json_name = "remarks"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 9 [json_name = "remarks"];</code>
@@ -2440,7 +2440,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         class__ = s;
@@ -2456,7 +2456,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
         getClass_Bytes() {
       java.lang.Object ref = class__;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         class__ = b;
@@ -2506,7 +2506,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.catalog.v1.Parameter params = 4 [json_name = "params"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.ParameterOrBuilder> 
+    public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.ParameterOrBuilder>
         getParamsOrBuilderList() {
       return params_;
     }
@@ -2547,7 +2547,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.catalog.v1.Control controls = 5 [json_name = "controls"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.ControlOrBuilder> 
+    public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.ControlOrBuilder>
         getControlsOrBuilderList() {
       return controls_;
     }
@@ -2588,7 +2588,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.catalog.v1.Group groups = 6 [json_name = "groups"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.GroupOrBuilder> 
+    public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.GroupOrBuilder>
         getGroupsOrBuilderList() {
       return groups_;
     }
@@ -2629,7 +2629,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Property props = 7 [json_name = "props"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList() {
       return props_;
     }
@@ -2670,7 +2670,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Link links = 8 [json_name = "links"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList() {
       return links_;
     }
@@ -2711,7 +2711,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 9 [json_name = "remarks"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList() {
       return remarks_;
     }
@@ -3293,7 +3293,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
               paramsBuilder_ = null;
               params_ = other.params_;
               bitField0_ = (bitField0_ & ~0x00000008);
-              paramsBuilder_ = 
+              paramsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetParamsFieldBuilder() : null;
             } else {
@@ -3319,7 +3319,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
               controlsBuilder_ = null;
               controls_ = other.controls_;
               bitField0_ = (bitField0_ & ~0x00000010);
-              controlsBuilder_ = 
+              controlsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetControlsFieldBuilder() : null;
             } else {
@@ -3345,7 +3345,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
               groupsBuilder_ = null;
               groups_ = other.groups_;
               bitField0_ = (bitField0_ & ~0x00000020);
-              groupsBuilder_ = 
+              groupsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetGroupsFieldBuilder() : null;
             } else {
@@ -3371,7 +3371,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
               propsBuilder_ = null;
               props_ = other.props_;
               bitField0_ = (bitField0_ & ~0x00000040);
-              propsBuilder_ = 
+              propsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetPropsFieldBuilder() : null;
             } else {
@@ -3397,7 +3397,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
               linksBuilder_ = null;
               links_ = other.links_;
               bitField0_ = (bitField0_ & ~0x00000080);
-              linksBuilder_ = 
+              linksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetLinksFieldBuilder() : null;
             } else {
@@ -3423,7 +3423,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
               remarksBuilder_ = null;
               remarks_ = other.remarks_;
               bitField0_ = (bitField0_ & ~0x00000100);
-              remarksBuilder_ = 
+              remarksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetRemarksFieldBuilder() : null;
             } else {
@@ -3679,7 +3679,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.Token id = 1 [json_name = "id"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.Token, oscal.common.v1.Common.Token.Builder, oscal.common.v1.Common.TokenOrBuilder> 
+          oscal.common.v1.Common.Token, oscal.common.v1.Common.Token.Builder, oscal.common.v1.Common.TokenOrBuilder>
           internalGetIdFieldBuilder() {
         if (idBuilder_ == null) {
           idBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -3717,7 +3717,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
           getClass_Bytes() {
         java.lang.Object ref = class__;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           class__ = b;
@@ -3872,7 +3872,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.MarkupLine title = 3 [json_name = "title"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.MarkupLine, oscal.common.v1.Common.MarkupLine.Builder, oscal.common.v1.Common.MarkupLineOrBuilder> 
+          oscal.common.v1.Common.MarkupLine, oscal.common.v1.Common.MarkupLine.Builder, oscal.common.v1.Common.MarkupLineOrBuilder>
           internalGetTitleFieldBuilder() {
         if (titleBuilder_ == null) {
           titleBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -4080,7 +4080,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.catalog.v1.Parameter params = 4 [json_name = "params"];</code>
        */
-      public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.ParameterOrBuilder> 
+      public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.ParameterOrBuilder>
            getParamsOrBuilderList() {
         if (paramsBuilder_ != null) {
           return paramsBuilder_.getMessageOrBuilderList();
@@ -4106,12 +4106,12 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.catalog.v1.Parameter params = 4 [json_name = "params"];</code>
        */
-      public java.util.List<oscal.catalog.v1.CatalogOuterClass.Parameter.Builder> 
+      public java.util.List<oscal.catalog.v1.CatalogOuterClass.Parameter.Builder>
            getParamsBuilderList() {
         return internalGetParamsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.catalog.v1.CatalogOuterClass.Parameter, oscal.catalog.v1.CatalogOuterClass.Parameter.Builder, oscal.catalog.v1.CatalogOuterClass.ParameterOrBuilder> 
+          oscal.catalog.v1.CatalogOuterClass.Parameter, oscal.catalog.v1.CatalogOuterClass.Parameter.Builder, oscal.catalog.v1.CatalogOuterClass.ParameterOrBuilder>
           internalGetParamsFieldBuilder() {
         if (paramsBuilder_ == null) {
           paramsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -4320,7 +4320,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.catalog.v1.Control controls = 5 [json_name = "controls"];</code>
        */
-      public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.ControlOrBuilder> 
+      public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.ControlOrBuilder>
            getControlsOrBuilderList() {
         if (controlsBuilder_ != null) {
           return controlsBuilder_.getMessageOrBuilderList();
@@ -4346,12 +4346,12 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.catalog.v1.Control controls = 5 [json_name = "controls"];</code>
        */
-      public java.util.List<oscal.catalog.v1.CatalogOuterClass.Control.Builder> 
+      public java.util.List<oscal.catalog.v1.CatalogOuterClass.Control.Builder>
            getControlsBuilderList() {
         return internalGetControlsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.catalog.v1.CatalogOuterClass.Control, oscal.catalog.v1.CatalogOuterClass.Control.Builder, oscal.catalog.v1.CatalogOuterClass.ControlOrBuilder> 
+          oscal.catalog.v1.CatalogOuterClass.Control, oscal.catalog.v1.CatalogOuterClass.Control.Builder, oscal.catalog.v1.CatalogOuterClass.ControlOrBuilder>
           internalGetControlsFieldBuilder() {
         if (controlsBuilder_ == null) {
           controlsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -4560,7 +4560,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.catalog.v1.Group groups = 6 [json_name = "groups"];</code>
        */
-      public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.GroupOrBuilder> 
+      public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.GroupOrBuilder>
            getGroupsOrBuilderList() {
         if (groupsBuilder_ != null) {
           return groupsBuilder_.getMessageOrBuilderList();
@@ -4586,12 +4586,12 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.catalog.v1.Group groups = 6 [json_name = "groups"];</code>
        */
-      public java.util.List<oscal.catalog.v1.CatalogOuterClass.Group.Builder> 
+      public java.util.List<oscal.catalog.v1.CatalogOuterClass.Group.Builder>
            getGroupsBuilderList() {
         return internalGetGroupsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.catalog.v1.CatalogOuterClass.Group, oscal.catalog.v1.CatalogOuterClass.Group.Builder, oscal.catalog.v1.CatalogOuterClass.GroupOrBuilder> 
+          oscal.catalog.v1.CatalogOuterClass.Group, oscal.catalog.v1.CatalogOuterClass.Group.Builder, oscal.catalog.v1.CatalogOuterClass.GroupOrBuilder>
           internalGetGroupsFieldBuilder() {
         if (groupsBuilder_ == null) {
           groupsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -4800,7 +4800,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 7 [json_name = "props"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
            getPropsOrBuilderList() {
         if (propsBuilder_ != null) {
           return propsBuilder_.getMessageOrBuilderList();
@@ -4826,12 +4826,12 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 7 [json_name = "props"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Property.Builder> 
+      public java.util.List<oscal.common.v1.Common.Property.Builder>
            getPropsBuilderList() {
         return internalGetPropsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> 
+          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder>
           internalGetPropsFieldBuilder() {
         if (propsBuilder_ == null) {
           propsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -5040,7 +5040,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 8 [json_name = "links"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
            getLinksOrBuilderList() {
         if (linksBuilder_ != null) {
           return linksBuilder_.getMessageOrBuilderList();
@@ -5066,12 +5066,12 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 8 [json_name = "links"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Link.Builder> 
+      public java.util.List<oscal.common.v1.Common.Link.Builder>
            getLinksBuilderList() {
         return internalGetLinksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder> 
+          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder>
           internalGetLinksFieldBuilder() {
         if (linksBuilder_ == null) {
           linksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -5280,7 +5280,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 9 [json_name = "remarks"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
            getRemarksOrBuilderList() {
         if (remarksBuilder_ != null) {
           return remarksBuilder_.getMessageOrBuilderList();
@@ -5306,12 +5306,12 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 9 [json_name = "remarks"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder> 
+      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder>
            getRemarksBuilderList() {
         return internalGetRemarksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetRemarksFieldBuilder() {
         if (remarksBuilder_ == null) {
           remarksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -5425,7 +5425,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.catalog.v1.Parameter params = 4 [json_name = "params"];</code>
      */
-    java.util.List<oscal.catalog.v1.CatalogOuterClass.Parameter> 
+    java.util.List<oscal.catalog.v1.CatalogOuterClass.Parameter>
         getParamsList();
     /**
      * <code>repeated .oscal.catalog.v1.Parameter params = 4 [json_name = "params"];</code>
@@ -5438,7 +5438,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.catalog.v1.Parameter params = 4 [json_name = "params"];</code>
      */
-    java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.ParameterOrBuilder> 
+    java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.ParameterOrBuilder>
         getParamsOrBuilderList();
     /**
      * <code>repeated .oscal.catalog.v1.Parameter params = 4 [json_name = "params"];</code>
@@ -5449,7 +5449,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.catalog.v1.Part parts = 5 [json_name = "parts"];</code>
      */
-    java.util.List<oscal.catalog.v1.CatalogOuterClass.Part> 
+    java.util.List<oscal.catalog.v1.CatalogOuterClass.Part>
         getPartsList();
     /**
      * <code>repeated .oscal.catalog.v1.Part parts = 5 [json_name = "parts"];</code>
@@ -5462,7 +5462,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.catalog.v1.Part parts = 5 [json_name = "parts"];</code>
      */
-    java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.PartOrBuilder> 
+    java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.PartOrBuilder>
         getPartsOrBuilderList();
     /**
      * <code>repeated .oscal.catalog.v1.Part parts = 5 [json_name = "parts"];</code>
@@ -5473,7 +5473,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.catalog.v1.Control controls = 6 [json_name = "controls"];</code>
      */
-    java.util.List<oscal.catalog.v1.CatalogOuterClass.Control> 
+    java.util.List<oscal.catalog.v1.CatalogOuterClass.Control>
         getControlsList();
     /**
      * <code>repeated .oscal.catalog.v1.Control controls = 6 [json_name = "controls"];</code>
@@ -5486,7 +5486,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.catalog.v1.Control controls = 6 [json_name = "controls"];</code>
      */
-    java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.ControlOrBuilder> 
+    java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.ControlOrBuilder>
         getControlsOrBuilderList();
     /**
      * <code>repeated .oscal.catalog.v1.Control controls = 6 [json_name = "controls"];</code>
@@ -5497,7 +5497,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 7 [json_name = "props"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Property> 
+    java.util.List<oscal.common.v1.Common.Property>
         getPropsList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 7 [json_name = "props"];</code>
@@ -5510,7 +5510,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 7 [json_name = "props"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 7 [json_name = "props"];</code>
@@ -5521,7 +5521,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 8 [json_name = "links"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Link> 
+    java.util.List<oscal.common.v1.Common.Link>
         getLinksList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 8 [json_name = "links"];</code>
@@ -5534,7 +5534,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 8 [json_name = "links"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 8 [json_name = "links"];</code>
@@ -5545,7 +5545,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 9 [json_name = "remarks"];</code>
      */
-    java.util.List<oscal.common.v1.Common.MarkupMultiline> 
+    java.util.List<oscal.common.v1.Common.MarkupMultiline>
         getRemarksList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 9 [json_name = "remarks"];</code>
@@ -5558,7 +5558,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 9 [json_name = "remarks"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 9 [json_name = "remarks"];</code>
@@ -5659,7 +5659,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         class__ = s;
@@ -5675,7 +5675,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
         getClass_Bytes() {
       java.lang.Object ref = class__;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         class__ = b;
@@ -5725,7 +5725,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.catalog.v1.Parameter params = 4 [json_name = "params"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.ParameterOrBuilder> 
+    public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.ParameterOrBuilder>
         getParamsOrBuilderList() {
       return params_;
     }
@@ -5766,7 +5766,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.catalog.v1.Part parts = 5 [json_name = "parts"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.PartOrBuilder> 
+    public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.PartOrBuilder>
         getPartsOrBuilderList() {
       return parts_;
     }
@@ -5807,7 +5807,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.catalog.v1.Control controls = 6 [json_name = "controls"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.ControlOrBuilder> 
+    public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.ControlOrBuilder>
         getControlsOrBuilderList() {
       return controls_;
     }
@@ -5848,7 +5848,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Property props = 7 [json_name = "props"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList() {
       return props_;
     }
@@ -5889,7 +5889,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Link links = 8 [json_name = "links"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList() {
       return links_;
     }
@@ -5930,7 +5930,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 9 [json_name = "remarks"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList() {
       return remarks_;
     }
@@ -6512,7 +6512,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
               paramsBuilder_ = null;
               params_ = other.params_;
               bitField0_ = (bitField0_ & ~0x00000008);
-              paramsBuilder_ = 
+              paramsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetParamsFieldBuilder() : null;
             } else {
@@ -6538,7 +6538,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
               partsBuilder_ = null;
               parts_ = other.parts_;
               bitField0_ = (bitField0_ & ~0x00000010);
-              partsBuilder_ = 
+              partsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetPartsFieldBuilder() : null;
             } else {
@@ -6564,7 +6564,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
               controlsBuilder_ = null;
               controls_ = other.controls_;
               bitField0_ = (bitField0_ & ~0x00000020);
-              controlsBuilder_ = 
+              controlsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetControlsFieldBuilder() : null;
             } else {
@@ -6590,7 +6590,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
               propsBuilder_ = null;
               props_ = other.props_;
               bitField0_ = (bitField0_ & ~0x00000040);
-              propsBuilder_ = 
+              propsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetPropsFieldBuilder() : null;
             } else {
@@ -6616,7 +6616,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
               linksBuilder_ = null;
               links_ = other.links_;
               bitField0_ = (bitField0_ & ~0x00000080);
-              linksBuilder_ = 
+              linksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetLinksFieldBuilder() : null;
             } else {
@@ -6642,7 +6642,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
               remarksBuilder_ = null;
               remarks_ = other.remarks_;
               bitField0_ = (bitField0_ & ~0x00000100);
-              remarksBuilder_ = 
+              remarksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetRemarksFieldBuilder() : null;
             } else {
@@ -6898,7 +6898,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.Token id = 1 [json_name = "id"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.Token, oscal.common.v1.Common.Token.Builder, oscal.common.v1.Common.TokenOrBuilder> 
+          oscal.common.v1.Common.Token, oscal.common.v1.Common.Token.Builder, oscal.common.v1.Common.TokenOrBuilder>
           internalGetIdFieldBuilder() {
         if (idBuilder_ == null) {
           idBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -6936,7 +6936,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
           getClass_Bytes() {
         java.lang.Object ref = class__;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           class__ = b;
@@ -7091,7 +7091,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.MarkupLine title = 3 [json_name = "title"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.MarkupLine, oscal.common.v1.Common.MarkupLine.Builder, oscal.common.v1.Common.MarkupLineOrBuilder> 
+          oscal.common.v1.Common.MarkupLine, oscal.common.v1.Common.MarkupLine.Builder, oscal.common.v1.Common.MarkupLineOrBuilder>
           internalGetTitleFieldBuilder() {
         if (titleBuilder_ == null) {
           titleBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -7299,7 +7299,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.catalog.v1.Parameter params = 4 [json_name = "params"];</code>
        */
-      public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.ParameterOrBuilder> 
+      public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.ParameterOrBuilder>
            getParamsOrBuilderList() {
         if (paramsBuilder_ != null) {
           return paramsBuilder_.getMessageOrBuilderList();
@@ -7325,12 +7325,12 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.catalog.v1.Parameter params = 4 [json_name = "params"];</code>
        */
-      public java.util.List<oscal.catalog.v1.CatalogOuterClass.Parameter.Builder> 
+      public java.util.List<oscal.catalog.v1.CatalogOuterClass.Parameter.Builder>
            getParamsBuilderList() {
         return internalGetParamsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.catalog.v1.CatalogOuterClass.Parameter, oscal.catalog.v1.CatalogOuterClass.Parameter.Builder, oscal.catalog.v1.CatalogOuterClass.ParameterOrBuilder> 
+          oscal.catalog.v1.CatalogOuterClass.Parameter, oscal.catalog.v1.CatalogOuterClass.Parameter.Builder, oscal.catalog.v1.CatalogOuterClass.ParameterOrBuilder>
           internalGetParamsFieldBuilder() {
         if (paramsBuilder_ == null) {
           paramsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -7539,7 +7539,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.catalog.v1.Part parts = 5 [json_name = "parts"];</code>
        */
-      public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.PartOrBuilder> 
+      public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.PartOrBuilder>
            getPartsOrBuilderList() {
         if (partsBuilder_ != null) {
           return partsBuilder_.getMessageOrBuilderList();
@@ -7565,12 +7565,12 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.catalog.v1.Part parts = 5 [json_name = "parts"];</code>
        */
-      public java.util.List<oscal.catalog.v1.CatalogOuterClass.Part.Builder> 
+      public java.util.List<oscal.catalog.v1.CatalogOuterClass.Part.Builder>
            getPartsBuilderList() {
         return internalGetPartsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.catalog.v1.CatalogOuterClass.Part, oscal.catalog.v1.CatalogOuterClass.Part.Builder, oscal.catalog.v1.CatalogOuterClass.PartOrBuilder> 
+          oscal.catalog.v1.CatalogOuterClass.Part, oscal.catalog.v1.CatalogOuterClass.Part.Builder, oscal.catalog.v1.CatalogOuterClass.PartOrBuilder>
           internalGetPartsFieldBuilder() {
         if (partsBuilder_ == null) {
           partsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -7779,7 +7779,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.catalog.v1.Control controls = 6 [json_name = "controls"];</code>
        */
-      public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.ControlOrBuilder> 
+      public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.ControlOrBuilder>
            getControlsOrBuilderList() {
         if (controlsBuilder_ != null) {
           return controlsBuilder_.getMessageOrBuilderList();
@@ -7805,12 +7805,12 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.catalog.v1.Control controls = 6 [json_name = "controls"];</code>
        */
-      public java.util.List<oscal.catalog.v1.CatalogOuterClass.Control.Builder> 
+      public java.util.List<oscal.catalog.v1.CatalogOuterClass.Control.Builder>
            getControlsBuilderList() {
         return internalGetControlsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.catalog.v1.CatalogOuterClass.Control, oscal.catalog.v1.CatalogOuterClass.Control.Builder, oscal.catalog.v1.CatalogOuterClass.ControlOrBuilder> 
+          oscal.catalog.v1.CatalogOuterClass.Control, oscal.catalog.v1.CatalogOuterClass.Control.Builder, oscal.catalog.v1.CatalogOuterClass.ControlOrBuilder>
           internalGetControlsFieldBuilder() {
         if (controlsBuilder_ == null) {
           controlsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -8019,7 +8019,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 7 [json_name = "props"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
            getPropsOrBuilderList() {
         if (propsBuilder_ != null) {
           return propsBuilder_.getMessageOrBuilderList();
@@ -8045,12 +8045,12 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 7 [json_name = "props"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Property.Builder> 
+      public java.util.List<oscal.common.v1.Common.Property.Builder>
            getPropsBuilderList() {
         return internalGetPropsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> 
+          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder>
           internalGetPropsFieldBuilder() {
         if (propsBuilder_ == null) {
           propsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -8259,7 +8259,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 8 [json_name = "links"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
            getLinksOrBuilderList() {
         if (linksBuilder_ != null) {
           return linksBuilder_.getMessageOrBuilderList();
@@ -8285,12 +8285,12 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 8 [json_name = "links"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Link.Builder> 
+      public java.util.List<oscal.common.v1.Common.Link.Builder>
            getLinksBuilderList() {
         return internalGetLinksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder> 
+          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder>
           internalGetLinksFieldBuilder() {
         if (linksBuilder_ == null) {
           linksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -8499,7 +8499,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 9 [json_name = "remarks"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
            getRemarksOrBuilderList() {
         if (remarksBuilder_ != null) {
           return remarksBuilder_.getMessageOrBuilderList();
@@ -8525,12 +8525,12 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 9 [json_name = "remarks"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder> 
+      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder>
            getRemarksBuilderList() {
         return internalGetRemarksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetRemarksFieldBuilder() {
         if (remarksBuilder_ == null) {
           remarksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -8644,7 +8644,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupLine values = 4 [json_name = "values"];</code>
      */
-    java.util.List<oscal.common.v1.Common.MarkupLine> 
+    java.util.List<oscal.common.v1.Common.MarkupLine>
         getValuesList();
     /**
      * <code>repeated .oscal.common.v1.MarkupLine values = 4 [json_name = "values"];</code>
@@ -8657,7 +8657,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupLine values = 4 [json_name = "values"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.MarkupLineOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.MarkupLineOrBuilder>
         getValuesOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.MarkupLine values = 4 [json_name = "values"];</code>
@@ -8683,7 +8683,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 6 [json_name = "props"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Property> 
+    java.util.List<oscal.common.v1.Common.Property>
         getPropsList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 6 [json_name = "props"];</code>
@@ -8696,7 +8696,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 6 [json_name = "props"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 6 [json_name = "props"];</code>
@@ -8707,7 +8707,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 7 [json_name = "links"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Link> 
+    java.util.List<oscal.common.v1.Common.Link>
         getLinksList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 7 [json_name = "links"];</code>
@@ -8720,7 +8720,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 7 [json_name = "links"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 7 [json_name = "links"];</code>
@@ -8731,7 +8731,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 8 [json_name = "remarks"];</code>
      */
-    java.util.List<oscal.common.v1.Common.MarkupMultiline> 
+    java.util.List<oscal.common.v1.Common.MarkupMultiline>
         getRemarksList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 8 [json_name = "remarks"];</code>
@@ -8744,7 +8744,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 8 [json_name = "remarks"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 8 [json_name = "remarks"];</code>
@@ -8755,7 +8755,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.catalog.v1.Constraint constraints = 9 [json_name = "constraints"];</code>
      */
-    java.util.List<oscal.catalog.v1.CatalogOuterClass.Constraint> 
+    java.util.List<oscal.catalog.v1.CatalogOuterClass.Constraint>
         getConstraintsList();
     /**
      * <code>repeated .oscal.catalog.v1.Constraint constraints = 9 [json_name = "constraints"];</code>
@@ -8768,7 +8768,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.catalog.v1.Constraint constraints = 9 [json_name = "constraints"];</code>
      */
-    java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.ConstraintOrBuilder> 
+    java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.ConstraintOrBuilder>
         getConstraintsOrBuilderList();
     /**
      * <code>repeated .oscal.catalog.v1.Constraint constraints = 9 [json_name = "constraints"];</code>
@@ -8810,7 +8810,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.catalog.v1.Guideline guidelines = 11 [json_name = "guidelines"];</code>
      */
-    java.util.List<oscal.catalog.v1.CatalogOuterClass.Guideline> 
+    java.util.List<oscal.catalog.v1.CatalogOuterClass.Guideline>
         getGuidelinesList();
     /**
      * <code>repeated .oscal.catalog.v1.Guideline guidelines = 11 [json_name = "guidelines"];</code>
@@ -8823,7 +8823,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.catalog.v1.Guideline guidelines = 11 [json_name = "guidelines"];</code>
      */
-    java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.GuidelineOrBuilder> 
+    java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.GuidelineOrBuilder>
         getGuidelinesOrBuilderList();
     /**
      * <code>repeated .oscal.catalog.v1.Guideline guidelines = 11 [json_name = "guidelines"];</code>
@@ -8924,7 +8924,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         class__ = s;
@@ -8940,7 +8940,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
         getClass_Bytes() {
       java.lang.Object ref = class__;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         class__ = b;
@@ -8990,7 +8990,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.MarkupLine values = 4 [json_name = "values"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.MarkupLineOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.MarkupLineOrBuilder>
         getValuesOrBuilderList() {
       return values_;
     }
@@ -9057,7 +9057,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Property props = 6 [json_name = "props"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList() {
       return props_;
     }
@@ -9098,7 +9098,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Link links = 7 [json_name = "links"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList() {
       return links_;
     }
@@ -9139,7 +9139,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 8 [json_name = "remarks"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList() {
       return remarks_;
     }
@@ -9180,7 +9180,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.catalog.v1.Constraint constraints = 9 [json_name = "constraints"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.ConstraintOrBuilder> 
+    public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.ConstraintOrBuilder>
         getConstraintsOrBuilderList() {
       return constraints_;
     }
@@ -9263,7 +9263,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.catalog.v1.Guideline guidelines = 11 [json_name = "guidelines"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.GuidelineOrBuilder> 
+    public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.GuidelineOrBuilder>
         getGuidelinesOrBuilderList() {
       return guidelines_;
     }
@@ -9901,7 +9901,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
               valuesBuilder_ = null;
               values_ = other.values_;
               bitField0_ = (bitField0_ & ~0x00000008);
-              valuesBuilder_ = 
+              valuesBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetValuesFieldBuilder() : null;
             } else {
@@ -9930,7 +9930,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
               propsBuilder_ = null;
               props_ = other.props_;
               bitField0_ = (bitField0_ & ~0x00000020);
-              propsBuilder_ = 
+              propsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetPropsFieldBuilder() : null;
             } else {
@@ -9956,7 +9956,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
               linksBuilder_ = null;
               links_ = other.links_;
               bitField0_ = (bitField0_ & ~0x00000040);
-              linksBuilder_ = 
+              linksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetLinksFieldBuilder() : null;
             } else {
@@ -9982,7 +9982,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
               remarksBuilder_ = null;
               remarks_ = other.remarks_;
               bitField0_ = (bitField0_ & ~0x00000080);
-              remarksBuilder_ = 
+              remarksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetRemarksFieldBuilder() : null;
             } else {
@@ -10008,7 +10008,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
               constraintsBuilder_ = null;
               constraints_ = other.constraints_;
               bitField0_ = (bitField0_ & ~0x00000100);
-              constraintsBuilder_ = 
+              constraintsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetConstraintsFieldBuilder() : null;
             } else {
@@ -10037,7 +10037,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
               guidelinesBuilder_ = null;
               guidelines_ = other.guidelines_;
               bitField0_ = (bitField0_ & ~0x00000400);
-              guidelinesBuilder_ = 
+              guidelinesBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetGuidelinesFieldBuilder() : null;
             } else {
@@ -10307,7 +10307,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.Token id = 1 [json_name = "id"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.Token, oscal.common.v1.Common.Token.Builder, oscal.common.v1.Common.TokenOrBuilder> 
+          oscal.common.v1.Common.Token, oscal.common.v1.Common.Token.Builder, oscal.common.v1.Common.TokenOrBuilder>
           internalGetIdFieldBuilder() {
         if (idBuilder_ == null) {
           idBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -10345,7 +10345,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
           getClass_Bytes() {
         java.lang.Object ref = class__;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           class__ = b;
@@ -10500,7 +10500,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.MarkupLine label = 3 [json_name = "label"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.MarkupLine, oscal.common.v1.Common.MarkupLine.Builder, oscal.common.v1.Common.MarkupLineOrBuilder> 
+          oscal.common.v1.Common.MarkupLine, oscal.common.v1.Common.MarkupLine.Builder, oscal.common.v1.Common.MarkupLineOrBuilder>
           internalGetLabelFieldBuilder() {
         if (labelBuilder_ == null) {
           labelBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -10708,7 +10708,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupLine values = 4 [json_name = "values"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.MarkupLineOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.MarkupLineOrBuilder>
            getValuesOrBuilderList() {
         if (valuesBuilder_ != null) {
           return valuesBuilder_.getMessageOrBuilderList();
@@ -10734,12 +10734,12 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupLine values = 4 [json_name = "values"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.MarkupLine.Builder> 
+      public java.util.List<oscal.common.v1.Common.MarkupLine.Builder>
            getValuesBuilderList() {
         return internalGetValuesFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.MarkupLine, oscal.common.v1.Common.MarkupLine.Builder, oscal.common.v1.Common.MarkupLineOrBuilder> 
+          oscal.common.v1.Common.MarkupLine, oscal.common.v1.Common.MarkupLine.Builder, oscal.common.v1.Common.MarkupLineOrBuilder>
           internalGetValuesFieldBuilder() {
         if (valuesBuilder_ == null) {
           valuesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -10861,7 +10861,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.catalog.v1.Select select = 5 [json_name = "select"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.catalog.v1.CatalogOuterClass.Select, oscal.catalog.v1.CatalogOuterClass.Select.Builder, oscal.catalog.v1.CatalogOuterClass.SelectOrBuilder> 
+          oscal.catalog.v1.CatalogOuterClass.Select, oscal.catalog.v1.CatalogOuterClass.Select.Builder, oscal.catalog.v1.CatalogOuterClass.SelectOrBuilder>
           internalGetSelectFieldBuilder() {
         if (selectBuilder_ == null) {
           selectBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -11069,7 +11069,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 6 [json_name = "props"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
            getPropsOrBuilderList() {
         if (propsBuilder_ != null) {
           return propsBuilder_.getMessageOrBuilderList();
@@ -11095,12 +11095,12 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 6 [json_name = "props"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Property.Builder> 
+      public java.util.List<oscal.common.v1.Common.Property.Builder>
            getPropsBuilderList() {
         return internalGetPropsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> 
+          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder>
           internalGetPropsFieldBuilder() {
         if (propsBuilder_ == null) {
           propsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -11309,7 +11309,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 7 [json_name = "links"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
            getLinksOrBuilderList() {
         if (linksBuilder_ != null) {
           return linksBuilder_.getMessageOrBuilderList();
@@ -11335,12 +11335,12 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 7 [json_name = "links"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Link.Builder> 
+      public java.util.List<oscal.common.v1.Common.Link.Builder>
            getLinksBuilderList() {
         return internalGetLinksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder> 
+          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder>
           internalGetLinksFieldBuilder() {
         if (linksBuilder_ == null) {
           linksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -11549,7 +11549,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 8 [json_name = "remarks"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
            getRemarksOrBuilderList() {
         if (remarksBuilder_ != null) {
           return remarksBuilder_.getMessageOrBuilderList();
@@ -11575,12 +11575,12 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 8 [json_name = "remarks"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder> 
+      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder>
            getRemarksBuilderList() {
         return internalGetRemarksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetRemarksFieldBuilder() {
         if (remarksBuilder_ == null) {
           remarksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -11789,7 +11789,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.catalog.v1.Constraint constraints = 9 [json_name = "constraints"];</code>
        */
-      public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.ConstraintOrBuilder> 
+      public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.ConstraintOrBuilder>
            getConstraintsOrBuilderList() {
         if (constraintsBuilder_ != null) {
           return constraintsBuilder_.getMessageOrBuilderList();
@@ -11815,12 +11815,12 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.catalog.v1.Constraint constraints = 9 [json_name = "constraints"];</code>
        */
-      public java.util.List<oscal.catalog.v1.CatalogOuterClass.Constraint.Builder> 
+      public java.util.List<oscal.catalog.v1.CatalogOuterClass.Constraint.Builder>
            getConstraintsBuilderList() {
         return internalGetConstraintsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.catalog.v1.CatalogOuterClass.Constraint, oscal.catalog.v1.CatalogOuterClass.Constraint.Builder, oscal.catalog.v1.CatalogOuterClass.ConstraintOrBuilder> 
+          oscal.catalog.v1.CatalogOuterClass.Constraint, oscal.catalog.v1.CatalogOuterClass.Constraint.Builder, oscal.catalog.v1.CatalogOuterClass.ConstraintOrBuilder>
           internalGetConstraintsFieldBuilder() {
         if (constraintsBuilder_ == null) {
           constraintsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -11982,7 +11982,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.MarkupLine guidance = 10 [json_name = "guidance", deprecated = true];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.MarkupLine, oscal.common.v1.Common.MarkupLine.Builder, oscal.common.v1.Common.MarkupLineOrBuilder> 
+          oscal.common.v1.Common.MarkupLine, oscal.common.v1.Common.MarkupLine.Builder, oscal.common.v1.Common.MarkupLineOrBuilder>
           internalGetGuidanceFieldBuilder() {
         if (guidanceBuilder_ == null) {
           guidanceBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -12190,7 +12190,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.catalog.v1.Guideline guidelines = 11 [json_name = "guidelines"];</code>
        */
-      public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.GuidelineOrBuilder> 
+      public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.GuidelineOrBuilder>
            getGuidelinesOrBuilderList() {
         if (guidelinesBuilder_ != null) {
           return guidelinesBuilder_.getMessageOrBuilderList();
@@ -12216,12 +12216,12 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.catalog.v1.Guideline guidelines = 11 [json_name = "guidelines"];</code>
        */
-      public java.util.List<oscal.catalog.v1.CatalogOuterClass.Guideline.Builder> 
+      public java.util.List<oscal.catalog.v1.CatalogOuterClass.Guideline.Builder>
            getGuidelinesBuilderList() {
         return internalGetGuidelinesFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.catalog.v1.CatalogOuterClass.Guideline, oscal.catalog.v1.CatalogOuterClass.Guideline.Builder, oscal.catalog.v1.CatalogOuterClass.GuidelineOrBuilder> 
+          oscal.catalog.v1.CatalogOuterClass.Guideline, oscal.catalog.v1.CatalogOuterClass.Guideline.Builder, oscal.catalog.v1.CatalogOuterClass.GuidelineOrBuilder>
           internalGetGuidelinesFieldBuilder() {
         if (guidelinesBuilder_ == null) {
           guidelinesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -12809,7 +12809,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.MarkupMultiline prose = 1 [json_name = "prose"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetProseFieldBuilder() {
         if (proseBuilder_ == null) {
           proseBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -12880,7 +12880,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupLine choices = 1 [json_name = "choices"];</code>
      */
-    java.util.List<oscal.common.v1.Common.MarkupLine> 
+    java.util.List<oscal.common.v1.Common.MarkupLine>
         getChoicesList();
     /**
      * <code>repeated .oscal.common.v1.MarkupLine choices = 1 [json_name = "choices"];</code>
@@ -12893,7 +12893,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupLine choices = 1 [json_name = "choices"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.MarkupLineOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.MarkupLineOrBuilder>
         getChoicesOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.MarkupLine choices = 1 [json_name = "choices"];</code>
@@ -12968,7 +12968,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.MarkupLine choices = 1 [json_name = "choices"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.MarkupLineOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.MarkupLineOrBuilder>
         getChoicesOrBuilderList() {
       return choices_;
     }
@@ -13313,7 +13313,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
               choicesBuilder_ = null;
               choices_ = other.choices_;
               bitField0_ = (bitField0_ & ~0x00000001);
-              choicesBuilder_ = 
+              choicesBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetChoicesFieldBuilder() : null;
             } else {
@@ -13580,7 +13580,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupLine choices = 1 [json_name = "choices"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.MarkupLineOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.MarkupLineOrBuilder>
            getChoicesOrBuilderList() {
         if (choicesBuilder_ != null) {
           return choicesBuilder_.getMessageOrBuilderList();
@@ -13606,12 +13606,12 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupLine choices = 1 [json_name = "choices"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.MarkupLine.Builder> 
+      public java.util.List<oscal.common.v1.Common.MarkupLine.Builder>
            getChoicesBuilderList() {
         return internalGetChoicesFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.MarkupLine, oscal.common.v1.Common.MarkupLine.Builder, oscal.common.v1.Common.MarkupLineOrBuilder> 
+          oscal.common.v1.Common.MarkupLine, oscal.common.v1.Common.MarkupLine.Builder, oscal.common.v1.Common.MarkupLineOrBuilder>
           internalGetChoicesFieldBuilder() {
         if (choicesBuilder_ == null) {
           choicesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -13727,7 +13727,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.catalog.v1.Test tests = 2 [json_name = "tests"];</code>
      */
-    java.util.List<oscal.catalog.v1.CatalogOuterClass.Test> 
+    java.util.List<oscal.catalog.v1.CatalogOuterClass.Test>
         getTestsList();
     /**
      * <code>repeated .oscal.catalog.v1.Test tests = 2 [json_name = "tests"];</code>
@@ -13740,7 +13740,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.catalog.v1.Test tests = 2 [json_name = "tests"];</code>
      */
-    java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.TestOrBuilder> 
+    java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.TestOrBuilder>
         getTestsOrBuilderList();
     /**
      * <code>repeated .oscal.catalog.v1.Test tests = 2 [json_name = "tests"];</code>
@@ -13809,7 +13809,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         description_ = s;
@@ -13825,7 +13825,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
         getDescriptionBytes() {
       java.lang.Object ref = description_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         description_ = b;
@@ -13849,7 +13849,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.catalog.v1.Test tests = 2 [json_name = "tests"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.TestOrBuilder> 
+    public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.TestOrBuilder>
         getTestsOrBuilderList() {
       return tests_;
     }
@@ -14186,7 +14186,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
               testsBuilder_ = null;
               tests_ = other.tests_;
               bitField0_ = (bitField0_ & ~0x00000002);
-              testsBuilder_ = 
+              testsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetTestsFieldBuilder() : null;
             } else {
@@ -14280,7 +14280,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
           getDescriptionBytes() {
         java.lang.Object ref = description_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           description_ = b;
@@ -14522,7 +14522,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.catalog.v1.Test tests = 2 [json_name = "tests"];</code>
        */
-      public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.TestOrBuilder> 
+      public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.TestOrBuilder>
            getTestsOrBuilderList() {
         if (testsBuilder_ != null) {
           return testsBuilder_.getMessageOrBuilderList();
@@ -14548,12 +14548,12 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.catalog.v1.Test tests = 2 [json_name = "tests"];</code>
        */
-      public java.util.List<oscal.catalog.v1.CatalogOuterClass.Test.Builder> 
+      public java.util.List<oscal.catalog.v1.CatalogOuterClass.Test.Builder>
            getTestsBuilderList() {
         return internalGetTestsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.catalog.v1.CatalogOuterClass.Test, oscal.catalog.v1.CatalogOuterClass.Test.Builder, oscal.catalog.v1.CatalogOuterClass.TestOrBuilder> 
+          oscal.catalog.v1.CatalogOuterClass.Test, oscal.catalog.v1.CatalogOuterClass.Test.Builder, oscal.catalog.v1.CatalogOuterClass.TestOrBuilder>
           internalGetTestsFieldBuilder() {
         if (testsBuilder_ == null) {
           testsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -14637,7 +14637,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
      */
-    java.util.List<oscal.common.v1.Common.MarkupMultiline> 
+    java.util.List<oscal.common.v1.Common.MarkupMultiline>
         getRemarksList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
@@ -14650,7 +14650,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
@@ -14719,7 +14719,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         expression_ = s;
@@ -14735,7 +14735,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
         getExpressionBytes() {
       java.lang.Object ref = expression_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         expression_ = b;
@@ -14759,7 +14759,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList() {
       return remarks_;
     }
@@ -15096,7 +15096,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
               remarksBuilder_ = null;
               remarks_ = other.remarks_;
               bitField0_ = (bitField0_ & ~0x00000002);
-              remarksBuilder_ = 
+              remarksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetRemarksFieldBuilder() : null;
             } else {
@@ -15190,7 +15190,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
           getExpressionBytes() {
         java.lang.Object ref = expression_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           expression_ = b;
@@ -15432,7 +15432,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
            getRemarksOrBuilderList() {
         if (remarksBuilder_ != null) {
           return remarksBuilder_.getMessageOrBuilderList();
@@ -15458,12 +15458,12 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 2 [json_name = "remarks"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder> 
+      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder>
            getRemarksBuilderList() {
         return internalGetRemarksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetRemarksFieldBuilder() {
         if (remarksBuilder_ == null) {
           remarksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -15609,7 +15609,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 6 [json_name = "props"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Property> 
+    java.util.List<oscal.common.v1.Common.Property>
         getPropsList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 6 [json_name = "props"];</code>
@@ -15622,7 +15622,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Property props = 6 [json_name = "props"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Property props = 6 [json_name = "props"];</code>
@@ -15633,7 +15633,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 7 [json_name = "links"];</code>
      */
-    java.util.List<oscal.common.v1.Common.Link> 
+    java.util.List<oscal.common.v1.Common.Link>
         getLinksList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 7 [json_name = "links"];</code>
@@ -15646,7 +15646,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.Link links = 7 [json_name = "links"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.Link links = 7 [json_name = "links"];</code>
@@ -15657,7 +15657,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.catalog.v1.Part parts = 8 [json_name = "parts"];</code>
      */
-    java.util.List<oscal.catalog.v1.CatalogOuterClass.Part> 
+    java.util.List<oscal.catalog.v1.CatalogOuterClass.Part>
         getPartsList();
     /**
      * <code>repeated .oscal.catalog.v1.Part parts = 8 [json_name = "parts"];</code>
@@ -15670,7 +15670,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.catalog.v1.Part parts = 8 [json_name = "parts"];</code>
      */
-    java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.PartOrBuilder> 
+    java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.PartOrBuilder>
         getPartsOrBuilderList();
     /**
      * <code>repeated .oscal.catalog.v1.Part parts = 8 [json_name = "parts"];</code>
@@ -15681,7 +15681,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline prose = 9 [json_name = "prose"];</code>
      */
-    java.util.List<oscal.common.v1.Common.MarkupMultiline> 
+    java.util.List<oscal.common.v1.Common.MarkupMultiline>
         getProseList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline prose = 9 [json_name = "prose"];</code>
@@ -15694,7 +15694,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline prose = 9 [json_name = "prose"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getProseOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline prose = 9 [json_name = "prose"];</code>
@@ -15705,7 +15705,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks"];</code>
      */
-    java.util.List<oscal.common.v1.Common.MarkupMultiline> 
+    java.util.List<oscal.common.v1.Common.MarkupMultiline>
         getRemarksList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks"];</code>
@@ -15718,7 +15718,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks"];</code>
      */
-    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList();
     /**
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks"];</code>
@@ -15820,7 +15820,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         name_ = s;
@@ -15836,7 +15836,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
         getNameBytes() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         name_ = b;
@@ -15863,7 +15863,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         ns_ = s;
@@ -15883,7 +15883,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
         getNsBytes() {
       java.lang.Object ref = ns_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         ns_ = b;
@@ -15906,7 +15906,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         class__ = s;
@@ -15922,7 +15922,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
         getClass_Bytes() {
       java.lang.Object ref = class__;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         class__ = b;
@@ -15972,7 +15972,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Property props = 6 [json_name = "props"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
         getPropsOrBuilderList() {
       return props_;
     }
@@ -16013,7 +16013,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.Link links = 7 [json_name = "links"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
         getLinksOrBuilderList() {
       return links_;
     }
@@ -16054,7 +16054,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.catalog.v1.Part parts = 8 [json_name = "parts"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.PartOrBuilder> 
+    public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.PartOrBuilder>
         getPartsOrBuilderList() {
       return parts_;
     }
@@ -16095,7 +16095,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.MarkupMultiline prose = 9 [json_name = "prose"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getProseOrBuilderList() {
       return prose_;
     }
@@ -16136,7 +16136,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
      * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+    public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
         getRemarksOrBuilderList() {
       return remarks_;
     }
@@ -16721,7 +16721,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
               propsBuilder_ = null;
               props_ = other.props_;
               bitField0_ = (bitField0_ & ~0x00000020);
-              propsBuilder_ = 
+              propsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetPropsFieldBuilder() : null;
             } else {
@@ -16747,7 +16747,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
               linksBuilder_ = null;
               links_ = other.links_;
               bitField0_ = (bitField0_ & ~0x00000040);
-              linksBuilder_ = 
+              linksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetLinksFieldBuilder() : null;
             } else {
@@ -16773,7 +16773,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
               partsBuilder_ = null;
               parts_ = other.parts_;
               bitField0_ = (bitField0_ & ~0x00000080);
-              partsBuilder_ = 
+              partsBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetPartsFieldBuilder() : null;
             } else {
@@ -16799,7 +16799,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
               proseBuilder_ = null;
               prose_ = other.prose_;
               bitField0_ = (bitField0_ & ~0x00000100);
-              proseBuilder_ = 
+              proseBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetProseFieldBuilder() : null;
             } else {
@@ -16825,7 +16825,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
               remarksBuilder_ = null;
               remarks_ = other.remarks_;
               bitField0_ = (bitField0_ & ~0x00000200);
-              remarksBuilder_ = 
+              remarksBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetRemarksFieldBuilder() : null;
             } else {
@@ -17078,7 +17078,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.Token id = 1 [json_name = "id"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.Token, oscal.common.v1.Common.Token.Builder, oscal.common.v1.Common.TokenOrBuilder> 
+          oscal.common.v1.Common.Token, oscal.common.v1.Common.Token.Builder, oscal.common.v1.Common.TokenOrBuilder>
           internalGetIdFieldBuilder() {
         if (idBuilder_ == null) {
           idBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -17116,7 +17116,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
           getNameBytes() {
         java.lang.Object ref = name_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           name_ = b;
@@ -17196,7 +17196,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
           getNsBytes() {
         java.lang.Object ref = ns_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           ns_ = b;
@@ -17280,7 +17280,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
           getClass_Bytes() {
         java.lang.Object ref = class__;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           class__ = b;
@@ -17435,7 +17435,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
        * <code>.oscal.common.v1.MarkupLine title = 5 [json_name = "title"];</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          oscal.common.v1.Common.MarkupLine, oscal.common.v1.Common.MarkupLine.Builder, oscal.common.v1.Common.MarkupLineOrBuilder> 
+          oscal.common.v1.Common.MarkupLine, oscal.common.v1.Common.MarkupLine.Builder, oscal.common.v1.Common.MarkupLineOrBuilder>
           internalGetTitleFieldBuilder() {
         if (titleBuilder_ == null) {
           titleBuilder_ = new com.google.protobuf.SingleFieldBuilder<
@@ -17643,7 +17643,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 6 [json_name = "props"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.PropertyOrBuilder>
            getPropsOrBuilderList() {
         if (propsBuilder_ != null) {
           return propsBuilder_.getMessageOrBuilderList();
@@ -17669,12 +17669,12 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Property props = 6 [json_name = "props"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Property.Builder> 
+      public java.util.List<oscal.common.v1.Common.Property.Builder>
            getPropsBuilderList() {
         return internalGetPropsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder> 
+          oscal.common.v1.Common.Property, oscal.common.v1.Common.Property.Builder, oscal.common.v1.Common.PropertyOrBuilder>
           internalGetPropsFieldBuilder() {
         if (propsBuilder_ == null) {
           propsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -17883,7 +17883,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 7 [json_name = "links"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.LinkOrBuilder>
            getLinksOrBuilderList() {
         if (linksBuilder_ != null) {
           return linksBuilder_.getMessageOrBuilderList();
@@ -17909,12 +17909,12 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.Link links = 7 [json_name = "links"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.Link.Builder> 
+      public java.util.List<oscal.common.v1.Common.Link.Builder>
            getLinksBuilderList() {
         return internalGetLinksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder> 
+          oscal.common.v1.Common.Link, oscal.common.v1.Common.Link.Builder, oscal.common.v1.Common.LinkOrBuilder>
           internalGetLinksFieldBuilder() {
         if (linksBuilder_ == null) {
           linksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -18123,7 +18123,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.catalog.v1.Part parts = 8 [json_name = "parts"];</code>
        */
-      public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.PartOrBuilder> 
+      public java.util.List<? extends oscal.catalog.v1.CatalogOuterClass.PartOrBuilder>
            getPartsOrBuilderList() {
         if (partsBuilder_ != null) {
           return partsBuilder_.getMessageOrBuilderList();
@@ -18149,12 +18149,12 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.catalog.v1.Part parts = 8 [json_name = "parts"];</code>
        */
-      public java.util.List<oscal.catalog.v1.CatalogOuterClass.Part.Builder> 
+      public java.util.List<oscal.catalog.v1.CatalogOuterClass.Part.Builder>
            getPartsBuilderList() {
         return internalGetPartsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.catalog.v1.CatalogOuterClass.Part, oscal.catalog.v1.CatalogOuterClass.Part.Builder, oscal.catalog.v1.CatalogOuterClass.PartOrBuilder> 
+          oscal.catalog.v1.CatalogOuterClass.Part, oscal.catalog.v1.CatalogOuterClass.Part.Builder, oscal.catalog.v1.CatalogOuterClass.PartOrBuilder>
           internalGetPartsFieldBuilder() {
         if (partsBuilder_ == null) {
           partsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -18363,7 +18363,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline prose = 9 [json_name = "prose"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
            getProseOrBuilderList() {
         if (proseBuilder_ != null) {
           return proseBuilder_.getMessageOrBuilderList();
@@ -18389,12 +18389,12 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline prose = 9 [json_name = "prose"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder> 
+      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder>
            getProseBuilderList() {
         return internalGetProseFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetProseFieldBuilder() {
         if (proseBuilder_ == null) {
           proseBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -18603,7 +18603,7 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks"];</code>
        */
-      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+      public java.util.List<? extends oscal.common.v1.Common.MarkupMultilineOrBuilder>
            getRemarksOrBuilderList() {
         if (remarksBuilder_ != null) {
           return remarksBuilder_.getMessageOrBuilderList();
@@ -18629,12 +18629,12 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
       /**
        * <code>repeated .oscal.common.v1.MarkupMultiline remarks = 10 [json_name = "remarks"];</code>
        */
-      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder> 
+      public java.util.List<oscal.common.v1.Common.MarkupMultiline.Builder>
            getRemarksBuilderList() {
         return internalGetRemarksFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder> 
+          oscal.common.v1.Common.MarkupMultiline, oscal.common.v1.Common.MarkupMultiline.Builder, oscal.common.v1.Common.MarkupMultilineOrBuilder>
           internalGetRemarksFieldBuilder() {
         if (remarksBuilder_ == null) {
           remarksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
@@ -18701,47 +18701,47 @@ public final class CatalogOuterClass extends com.google.protobuf.GeneratedFile {
 
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_catalog_v1_Catalog_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_catalog_v1_Catalog_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_catalog_v1_Group_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_catalog_v1_Group_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_catalog_v1_Control_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_catalog_v1_Control_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_catalog_v1_Parameter_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_catalog_v1_Parameter_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_catalog_v1_Guideline_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_catalog_v1_Guideline_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_catalog_v1_Select_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_catalog_v1_Select_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_catalog_v1_Constraint_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_catalog_v1_Constraint_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_catalog_v1_Test_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_catalog_v1_Test_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_catalog_v1_Part_descriptor;
-  private static final 
+  private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_catalog_v1_Part_fieldAccessorTable;
 

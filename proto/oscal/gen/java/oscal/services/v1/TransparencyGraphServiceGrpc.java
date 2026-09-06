@@ -47,6 +47,37 @@ public final class TransparencyGraphServiceGrpc {
     return getProjectEdgeMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsRequest,
+      oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsResponse> getListProjectionEventsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListProjectionEvents",
+      requestType = oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsRequest.class,
+      responseType = oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsRequest,
+      oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsResponse> getListProjectionEventsMethod() {
+    io.grpc.MethodDescriptor<oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsRequest, oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsResponse> getListProjectionEventsMethod;
+    if ((getListProjectionEventsMethod = TransparencyGraphServiceGrpc.getListProjectionEventsMethod) == null) {
+      synchronized (TransparencyGraphServiceGrpc.class) {
+        if ((getListProjectionEventsMethod = TransparencyGraphServiceGrpc.getListProjectionEventsMethod) == null) {
+          TransparencyGraphServiceGrpc.getListProjectionEventsMethod = getListProjectionEventsMethod =
+              io.grpc.MethodDescriptor.<oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsRequest, oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListProjectionEvents"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new TransparencyGraphServiceMethodDescriptorSupplier("ListProjectionEvents"))
+              .build();
+        }
+      }
+    }
+    return getListProjectionEventsMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<oscal.services.v1.TransparencyGraphServiceOuterClass.GetEdgeRequest,
       oscal.services.v1.TransparencyGraphServiceOuterClass.GetEdgeResponse> getGetEdgeMethod;
 
@@ -464,6 +495,13 @@ public final class TransparencyGraphServiceGrpc {
 
     /**
      */
+    default void listProjectionEvents(oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsRequest request,
+        io.grpc.stub.StreamObserver<oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListProjectionEventsMethod(), responseObserver);
+    }
+
+    /**
+     */
     default void getEdge(oscal.services.v1.TransparencyGraphServiceOuterClass.GetEdgeRequest request,
         io.grpc.stub.StreamObserver<oscal.services.v1.TransparencyGraphServiceOuterClass.GetEdgeResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetEdgeMethod(), responseObserver);
@@ -585,6 +623,14 @@ public final class TransparencyGraphServiceGrpc {
 
     /**
      */
+    public void listProjectionEvents(oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsRequest request,
+        io.grpc.stub.StreamObserver<oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListProjectionEventsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
     public void getEdge(oscal.services.v1.TransparencyGraphServiceOuterClass.GetEdgeRequest request,
         io.grpc.stub.StreamObserver<oscal.services.v1.TransparencyGraphServiceOuterClass.GetEdgeResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -701,6 +747,13 @@ public final class TransparencyGraphServiceGrpc {
 
     /**
      */
+    public oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsResponse listProjectionEvents(oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getListProjectionEventsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
     public oscal.services.v1.TransparencyGraphServiceOuterClass.GetEdgeResponse getEdge(oscal.services.v1.TransparencyGraphServiceOuterClass.GetEdgeRequest request) throws io.grpc.StatusException {
       return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getGetEdgeMethod(), getCallOptions(), request);
@@ -802,6 +855,13 @@ public final class TransparencyGraphServiceGrpc {
     public oscal.services.v1.TransparencyGraphServiceOuterClass.ProjectEdgeResponse projectEdge(oscal.services.v1.TransparencyGraphServiceOuterClass.ProjectEdgeRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getProjectEdgeMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsResponse listProjectionEvents(oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListProjectionEventsMethod(), getCallOptions(), request);
     }
 
     /**
@@ -912,6 +972,14 @@ public final class TransparencyGraphServiceGrpc {
 
     /**
      */
+    public com.google.common.util.concurrent.ListenableFuture<oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsResponse> listProjectionEvents(
+        oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListProjectionEventsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
     public com.google.common.util.concurrent.ListenableFuture<oscal.services.v1.TransparencyGraphServiceOuterClass.GetEdgeResponse> getEdge(
         oscal.services.v1.TransparencyGraphServiceOuterClass.GetEdgeRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -1000,17 +1068,18 @@ public final class TransparencyGraphServiceGrpc {
   }
 
   private static final int METHODID_PROJECT_EDGE = 0;
-  private static final int METHODID_GET_EDGE = 1;
-  private static final int METHODID_LIST_EDGES = 2;
-  private static final int METHODID_DELETE_EDGE = 3;
-  private static final int METHODID_GET_NODE = 4;
-  private static final int METHODID_LIST_NODES = 5;
-  private static final int METHODID_TRAVERSE = 6;
-  private static final int METHODID_SHORTEST_PATH = 7;
-  private static final int METHODID_IMPACT_RADIUS = 8;
-  private static final int METHODID_EXPLAIN_CLAIM = 9;
-  private static final int METHODID_COMPUTE_TRUST_STATE = 10;
-  private static final int METHODID_VERIFY_CLOSURE = 11;
+  private static final int METHODID_LIST_PROJECTION_EVENTS = 1;
+  private static final int METHODID_GET_EDGE = 2;
+  private static final int METHODID_LIST_EDGES = 3;
+  private static final int METHODID_DELETE_EDGE = 4;
+  private static final int METHODID_GET_NODE = 5;
+  private static final int METHODID_LIST_NODES = 6;
+  private static final int METHODID_TRAVERSE = 7;
+  private static final int METHODID_SHORTEST_PATH = 8;
+  private static final int METHODID_IMPACT_RADIUS = 9;
+  private static final int METHODID_EXPLAIN_CLAIM = 10;
+  private static final int METHODID_COMPUTE_TRUST_STATE = 11;
+  private static final int METHODID_VERIFY_CLOSURE = 12;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1032,6 +1101,10 @@ public final class TransparencyGraphServiceGrpc {
         case METHODID_PROJECT_EDGE:
           serviceImpl.projectEdge((oscal.services.v1.TransparencyGraphServiceOuterClass.ProjectEdgeRequest) request,
               (io.grpc.stub.StreamObserver<oscal.services.v1.TransparencyGraphServiceOuterClass.ProjectEdgeResponse>) responseObserver);
+          break;
+        case METHODID_LIST_PROJECTION_EVENTS:
+          serviceImpl.listProjectionEvents((oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsRequest) request,
+              (io.grpc.stub.StreamObserver<oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsResponse>) responseObserver);
           break;
         case METHODID_GET_EDGE:
           serviceImpl.getEdge((oscal.services.v1.TransparencyGraphServiceOuterClass.GetEdgeRequest) request,
@@ -1102,6 +1175,13 @@ public final class TransparencyGraphServiceGrpc {
               oscal.services.v1.TransparencyGraphServiceOuterClass.ProjectEdgeRequest,
               oscal.services.v1.TransparencyGraphServiceOuterClass.ProjectEdgeResponse>(
                 service, METHODID_PROJECT_EDGE)))
+        .addMethod(
+          getListProjectionEventsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsRequest,
+              oscal.services.v1.TransparencyGraphServiceOuterClass.ListProjectionEventsResponse>(
+                service, METHODID_LIST_PROJECTION_EVENTS)))
         .addMethod(
           getGetEdgeMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -1228,6 +1308,7 @@ public final class TransparencyGraphServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new TransparencyGraphServiceFileDescriptorSupplier())
               .addMethod(getProjectEdgeMethod())
+              .addMethod(getListProjectionEventsMethod())
               .addMethod(getGetEdgeMethod())
               .addMethod(getListEdgesMethod())
               .addMethod(getDeleteEdgeMethod())

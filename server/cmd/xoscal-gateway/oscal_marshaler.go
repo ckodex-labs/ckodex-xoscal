@@ -10,6 +10,7 @@ import (
 	assessment_resultsv1 "github.com/mchorfa/xoscal/proto/oscal/assessment_results/v1"
 	catalogv1 "github.com/mchorfa/xoscal/proto/oscal/catalog/v1"
 	componentv1 "github.com/mchorfa/xoscal/proto/oscal/component_definition/v1"
+	mappingv1 "github.com/mchorfa/xoscal/proto/oscal/mapping/v1"
 	poamv1 "github.com/mchorfa/xoscal/proto/oscal/poam/v1"
 	profilev1 "github.com/mchorfa/xoscal/proto/oscal/profile/v1"
 	sspv1 "github.com/mchorfa/xoscal/proto/oscal/ssp/v1"
@@ -64,6 +65,8 @@ func (m *oscalMarshaler) Marshal(v interface{}) ([]byte, error) {
 		return oscal.ExportAssessmentResultsJSON(msg)
 	case *poamv1.PlanOfActionAndMilestones:
 		return oscal.ExportPOAMJSON(msg)
+	case *mappingv1.MappingCollection:
+		return oscal.ExportMappingCollectionJSON(msg)
 	default:
 		return m.JSONPb.Marshal(v)
 	}

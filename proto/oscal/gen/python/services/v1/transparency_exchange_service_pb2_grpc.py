@@ -36,6 +36,26 @@ class TransparencyExchangeServiceStub:
                 request_serializer=services_dot_v1_dot_transparency__exchange__service__pb2.VerifyClaimRequest.SerializeToString,
                 response_deserializer=services_dot_v1_dot_transparency__exchange__service__pb2.VerifyClaimResponse.FromString,
                 _registered_method=True)
+        self.ListVerificationEvents = channel.unary_unary(
+                '/oscal.services.v1.TransparencyExchangeService/ListVerificationEvents',
+                request_serializer=services_dot_v1_dot_transparency__exchange__service__pb2.ListVerificationEventsRequest.SerializeToString,
+                response_deserializer=services_dot_v1_dot_transparency__exchange__service__pb2.ListVerificationEventsResponse.FromString,
+                _registered_method=True)
+        self.ExportClaimReceipt = channel.unary_unary(
+                '/oscal.services.v1.TransparencyExchangeService/ExportClaimReceipt',
+                request_serializer=services_dot_v1_dot_transparency__exchange__service__pb2.ExportClaimReceiptRequest.SerializeToString,
+                response_deserializer=services_dot_v1_dot_transparency__exchange__service__pb2.ExportClaimReceiptResponse.FromString,
+                _registered_method=True)
+        self.PreflightImport = channel.unary_unary(
+                '/oscal.services.v1.TransparencyExchangeService/PreflightImport',
+                request_serializer=services_dot_v1_dot_transparency__exchange__service__pb2.PreflightImportRequest.SerializeToString,
+                response_deserializer=services_dot_v1_dot_transparency__exchange__service__pb2.PreflightImportResponse.FromString,
+                _registered_method=True)
+        self.ImportBatch = channel.unary_unary(
+                '/oscal.services.v1.TransparencyExchangeService/ImportBatch',
+                request_serializer=services_dot_v1_dot_transparency__exchange__service__pb2.ImportBatchRequest.SerializeToString,
+                response_deserializer=services_dot_v1_dot_transparency__exchange__service__pb2.ImportBatchResponse.FromString,
+                _registered_method=True)
         self.UploadEvidence = channel.unary_unary(
                 '/oscal.services.v1.TransparencyExchangeService/UploadEvidence',
                 request_serializer=services_dot_v1_dot_transparency__exchange__service__pb2.UploadEvidenceRequest.SerializeToString,
@@ -87,6 +107,30 @@ class TransparencyExchangeServiceServicer:
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
+    def ListVerificationEvents(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def ExportClaimReceipt(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def PreflightImport(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def ImportBatch(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
     def UploadEvidence(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -133,6 +177,26 @@ def add_TransparencyExchangeServiceServicer_to_server(servicer, server):
                     servicer.VerifyClaim,
                     request_deserializer=services_dot_v1_dot_transparency__exchange__service__pb2.VerifyClaimRequest.FromString,
                     response_serializer=services_dot_v1_dot_transparency__exchange__service__pb2.VerifyClaimResponse.SerializeToString,
+            ),
+            'ListVerificationEvents': grpc.unary_unary_rpc_method_handler(
+                    servicer.ListVerificationEvents,
+                    request_deserializer=services_dot_v1_dot_transparency__exchange__service__pb2.ListVerificationEventsRequest.FromString,
+                    response_serializer=services_dot_v1_dot_transparency__exchange__service__pb2.ListVerificationEventsResponse.SerializeToString,
+            ),
+            'ExportClaimReceipt': grpc.unary_unary_rpc_method_handler(
+                    servicer.ExportClaimReceipt,
+                    request_deserializer=services_dot_v1_dot_transparency__exchange__service__pb2.ExportClaimReceiptRequest.FromString,
+                    response_serializer=services_dot_v1_dot_transparency__exchange__service__pb2.ExportClaimReceiptResponse.SerializeToString,
+            ),
+            'PreflightImport': grpc.unary_unary_rpc_method_handler(
+                    servicer.PreflightImport,
+                    request_deserializer=services_dot_v1_dot_transparency__exchange__service__pb2.PreflightImportRequest.FromString,
+                    response_serializer=services_dot_v1_dot_transparency__exchange__service__pb2.PreflightImportResponse.SerializeToString,
+            ),
+            'ImportBatch': grpc.unary_unary_rpc_method_handler(
+                    servicer.ImportBatch,
+                    request_deserializer=services_dot_v1_dot_transparency__exchange__service__pb2.ImportBatchRequest.FromString,
+                    response_serializer=services_dot_v1_dot_transparency__exchange__service__pb2.ImportBatchResponse.SerializeToString,
             ),
             'UploadEvidence': grpc.unary_unary_rpc_method_handler(
                     servicer.UploadEvidence,
@@ -265,6 +329,114 @@ class TransparencyExchangeService:
             '/oscal.services.v1.TransparencyExchangeService/VerifyClaim',
             services_dot_v1_dot_transparency__exchange__service__pb2.VerifyClaimRequest.SerializeToString,
             services_dot_v1_dot_transparency__exchange__service__pb2.VerifyClaimResponse.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+    @staticmethod
+    def ListVerificationEvents(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/oscal.services.v1.TransparencyExchangeService/ListVerificationEvents',
+            services_dot_v1_dot_transparency__exchange__service__pb2.ListVerificationEventsRequest.SerializeToString,
+            services_dot_v1_dot_transparency__exchange__service__pb2.ListVerificationEventsResponse.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+    @staticmethod
+    def ExportClaimReceipt(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/oscal.services.v1.TransparencyExchangeService/ExportClaimReceipt',
+            services_dot_v1_dot_transparency__exchange__service__pb2.ExportClaimReceiptRequest.SerializeToString,
+            services_dot_v1_dot_transparency__exchange__service__pb2.ExportClaimReceiptResponse.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+    @staticmethod
+    def PreflightImport(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/oscal.services.v1.TransparencyExchangeService/PreflightImport',
+            services_dot_v1_dot_transparency__exchange__service__pb2.PreflightImportRequest.SerializeToString,
+            services_dot_v1_dot_transparency__exchange__service__pb2.PreflightImportResponse.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+    @staticmethod
+    def ImportBatch(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/oscal.services.v1.TransparencyExchangeService/ImportBatch',
+            services_dot_v1_dot_transparency__exchange__service__pb2.ImportBatchRequest.SerializeToString,
+            services_dot_v1_dot_transparency__exchange__service__pb2.ImportBatchResponse.FromString,
             options,
             channel_credentials,
             insecure,

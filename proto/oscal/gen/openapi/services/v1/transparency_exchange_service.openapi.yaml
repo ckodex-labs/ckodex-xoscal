@@ -183,6 +183,46 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/oscal.services.v1.GetClaimResponse'
+  /v1/transparency/claims/{claim_id}/receipt:
+    get:
+      tags:
+        - oscal.services.v1.TransparencyExchangeService
+      summary: ExportClaimReceipt
+      operationId: oscal.services.v1.TransparencyExchangeService.ExportClaimReceipt
+      parameters:
+        - name: claim_id
+          in: path
+          required: true
+          schema:
+            type: string
+            title: claim_id
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/oscal.services.v1.ExportClaimReceiptResponse'
+  /v1/transparency/claims/{claim_id}/verification-events:
+    get:
+      tags:
+        - oscal.services.v1.TransparencyExchangeService
+      summary: ListVerificationEvents
+      operationId: oscal.services.v1.TransparencyExchangeService.ListVerificationEvents
+      parameters:
+        - name: claim_id
+          in: path
+          required: true
+          schema:
+            type: string
+            title: claim_id
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/oscal.services.v1.ListVerificationEventsResponse'
   /v1/transparency/claims/{claim_id}/verify:
     post:
       tags:
@@ -289,6 +329,44 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/oscal.services.v1.VerifyEvidenceResponse'
+  /v1/transparency/import:
+    post:
+      tags:
+        - oscal.services.v1.TransparencyExchangeService
+      summary: ImportBatch
+      operationId: oscal.services.v1.TransparencyExchangeService.ImportBatch
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/oscal.services.v1.ImportBatchRequest'
+        required: true
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/oscal.services.v1.ImportBatchResponse'
+  /v1/transparency/import/preflight:
+    post:
+      tags:
+        - oscal.services.v1.TransparencyExchangeService
+      summary: PreflightImport
+      operationId: oscal.services.v1.TransparencyExchangeService.PreflightImport
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/oscal.services.v1.PreflightImportRequest'
+        required: true
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/oscal.services.v1.PreflightImportResponse'
   /v1/transparency/sync:
     post:
       tags:
@@ -453,6 +531,14 @@ components:
               type: string
               title: extensions_json
               description: JSON blob for flexible extensions
+            trustState:
+              type: string
+              title: trust_state
+              description: candidate | incomplete | verified | rejected
+            proofStateJson:
+              type: string
+              title: proof_state_json
+              description: current persisted proof projection
         - oneOf:
             - type: object
               properties:
@@ -571,6 +657,37 @@ components:
           title: bom_kind
       title: EvidenceRef
       additionalProperties: false
+    oscal.services.v1.ExportClaimReceiptRequest:
+      type: object
+      properties:
+        claimId:
+          type: string
+          title: claim_id
+      title: ExportClaimReceiptRequest
+      additionalProperties: false
+    oscal.services.v1.ExportClaimReceiptResponse:
+      type: object
+      properties:
+        claimId:
+          type: string
+          title: claim_id
+        receiptJson:
+          type: string
+          title: receipt_json
+        receiptDigest:
+          type: string
+          title: receipt_digest
+        trustState:
+          type: string
+          title: trust_state
+        verificationEventHash:
+          type: string
+          title: verification_event_hash
+        exportedAt:
+          title: exported_at
+          $ref: '#/components/schemas/google.protobuf.Timestamp'
+      title: ExportClaimReceiptResponse
+      additionalProperties: false
     oscal.services.v1.GetClaimRequest:
       type: object
       properties:
@@ -619,6 +736,78 @@ components:
           description: JSON blob for key metadata
       title: Identity
       additionalProperties: false
+    oscal.services.v1.ImportBatchRequest:
+      type: object
+      properties:
+        records:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.services.v1.ImportRecord'
+          title: records
+        allOrNothing:
+          type: boolean
+          title: all_or_nothing
+      title: ImportBatchRequest
+      additionalProperties: false
+    oscal.services.v1.ImportBatchResponse:
+      type: object
+      properties:
+        committed:
+          type: boolean
+          title: committed
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.services.v1.ImportRecordResult'
+          title: results
+      title: ImportBatchResponse
+      additionalProperties: false
+    oscal.services.v1.ImportEvidence:
+      type: object
+      properties:
+        evidence:
+          title: evidence
+          $ref: '#/components/schemas/oscal.services.v1.Evidence'
+        blob:
+          type: string
+          title: blob
+          format: byte
+      title: ImportEvidence
+      additionalProperties: false
+    oscal.services.v1.ImportRecord:
+      type: object
+      properties:
+        claim:
+          title: claim
+          $ref: '#/components/schemas/oscal.services.v1.Claim'
+        evidence:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.services.v1.ImportEvidence'
+          title: evidence
+      title: ImportRecord
+      additionalProperties: false
+    oscal.services.v1.ImportRecordResult:
+      type: object
+      properties:
+        index:
+          type: integer
+          title: index
+          format: int32
+        claimId:
+          type: string
+          title: claim_id
+        status:
+          type: string
+          title: status
+          description: ready | already_present | invalid | imported
+        diagnostics:
+          type: array
+          items:
+            type: string
+          title: diagnostics
+      title: ImportRecordResult
+      additionalProperties: false
     oscal.services.v1.ListClaimsRequest:
       type: object
       properties:
@@ -659,13 +848,34 @@ components:
           title: next_page_token
       title: ListClaimsResponse
       additionalProperties: false
+    oscal.services.v1.ListVerificationEventsRequest:
+      type: object
+      properties:
+        claimId:
+          type: string
+          title: claim_id
+      title: ListVerificationEventsRequest
+      additionalProperties: false
+    oscal.services.v1.ListVerificationEventsResponse:
+      type: object
+      properties:
+        events:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.services.v1.VerificationEvent'
+          title: events
+        chainValid:
+          type: boolean
+          title: chain_valid
+      title: ListVerificationEventsResponse
+      additionalProperties: false
     oscal.services.v1.PolicyRef:
       type: object
       properties:
         type:
           type: string
           title: type
-          description: opa_bundle | oscal_profile | cdxa_standard | spdx_security_profile
+          description: xoscal-json | opa_bundle | oscal_profile | cdxa_standard | spdx_security_profile
         ref:
           type: string
           title: ref
@@ -691,6 +901,29 @@ components:
           type: string
           title: qualifier
       title: Predicate
+      additionalProperties: false
+    oscal.services.v1.PreflightImportRequest:
+      type: object
+      properties:
+        records:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.services.v1.ImportRecord'
+          title: records
+      title: PreflightImportRequest
+      additionalProperties: false
+    oscal.services.v1.PreflightImportResponse:
+      type: object
+      properties:
+        valid:
+          type: boolean
+          title: valid
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.services.v1.ImportRecordResult'
+          title: results
+      title: PreflightImportResponse
       additionalProperties: false
     oscal.services.v1.ProofRef:
       type: object
@@ -867,6 +1100,58 @@ components:
           title: stored
       title: UploadEvidenceResponse
       additionalProperties: false
+    oscal.services.v1.VerificationEvent:
+      type: object
+      properties:
+        sequence:
+          type:
+            - integer
+            - string
+          title: sequence
+          format: int64
+        eventId:
+          type: string
+          title: event_id
+        claimId:
+          type: string
+          title: claim_id
+        requestId:
+          type: string
+          title: request_id
+        idempotencyKey:
+          type: string
+          title: idempotency_key
+        checksJson:
+          type: string
+          title: checks_json
+        proofStateJson:
+          type: string
+          title: proof_state_json
+        providerStateJson:
+          type: string
+          title: provider_state_json
+        trustState:
+          type: string
+          title: trust_state
+        diagnostics:
+          type: array
+          items:
+            type: string
+          title: diagnostics
+        previousHash:
+          type: string
+          title: previous_hash
+        eventHash:
+          type: string
+          title: event_hash
+        createdAt:
+          title: created_at
+          $ref: '#/components/schemas/google.protobuf.Timestamp'
+      title: VerificationEvent
+      additionalProperties: false
+      description: |-
+        VerificationEvent is an append-only audit record. The JSON fields preserve
+         the exact provider and proof envelopes recorded by the verifier.
     oscal.services.v1.VerifyClaimRequest:
       type: object
       properties:

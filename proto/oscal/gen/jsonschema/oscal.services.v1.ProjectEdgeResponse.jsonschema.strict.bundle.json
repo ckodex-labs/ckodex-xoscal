@@ -74,12 +74,73 @@
       "title": "Graph Edge",
       "type": "object"
     },
+    "oscal.services.v1.GraphProjectionEvent.jsonschema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "GraphProjectionEvent is an append-only, hash-chained audit record emitted\n in the same transaction as a successful edge projection.",
+      "properties": {
+        "claimId": {
+          "type": "string"
+        },
+        "edgeId": {
+          "type": "string"
+        },
+        "eventHash": {
+          "type": "string"
+        },
+        "eventId": {
+          "type": "string"
+        },
+        "evidenceDigest": {
+          "type": "string"
+        },
+        "fromNode": {
+          "type": "string"
+        },
+        "previousHash": {
+          "type": "string"
+        },
+        "projectedAt": {
+          "$ref": "#/$defs/google.protobuf.Timestamp.jsonschema.strict.json"
+        },
+        "relation": {
+          "type": "string"
+        },
+        "sequence": {
+          "type": "integer"
+        },
+        "toNode": {
+          "type": "string"
+        },
+        "trustState": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "sequence",
+        "eventId",
+        "edgeId",
+        "claimId",
+        "fromNode",
+        "toNode",
+        "relation",
+        "evidenceDigest",
+        "trustState",
+        "previousHash",
+        "eventHash"
+      ],
+      "title": "Graph Projection Event",
+      "type": "object"
+    },
     "oscal.services.v1.ProjectEdgeResponse.jsonschema.strict.json": {
       "$schema": "https://json-schema.org/draft/2020-12/schema",
       "additionalProperties": false,
       "properties": {
         "edge": {
           "$ref": "#/$defs/oscal.services.v1.GraphEdge.jsonschema.strict.json"
+        },
+        "projectionEvent": {
+          "$ref": "#/$defs/oscal.services.v1.GraphProjectionEvent.jsonschema.strict.json"
         }
       },
       "title": "Project Edge Response",

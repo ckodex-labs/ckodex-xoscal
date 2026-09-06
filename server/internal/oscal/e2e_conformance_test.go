@@ -10,7 +10,7 @@ import (
 
 // TestEndToEndSchemaConformance generates all OSCAL artifacts from mock
 // requirements, exports each to JSON via the OSCAL exporters, and validates
-// every artifact against the official OSCAL 1.1.2 JSON schema.
+// every generated artifact against the pinned official OSCAL JSON schema.
 //
 // This is the end-to-end conformance test: generator → exporter → schema.
 // If any artifact fails validation, the proto definitions, generator logic,
