@@ -1,0 +1,20 @@
+{
+  "generated_at": "2026-09-06T23:30:29Z",
+  "drift": true,
+  "sources": [
+    {
+      "source": "ciso-assistant",
+      "current": "b205141a202e10b1c0df1c5bc27d28724e36046e",
+      "latest": "e3b3105df6bd4989e2af170813f80c51627ce3e1",
+      "status": "drift",
+      "feed": "https://github.com/intuitem/ciso-assistant-community/commits/main.atom"
+    },
+    {
+      "source": "oscal",
+      "current": "1.2.2",
+      "latest": "1.2.3",
+      "status": "drift",
+      "feed": "https://github.com/usnistgov/OSCAL/releases.atom"
+    }
+  ]
+}
