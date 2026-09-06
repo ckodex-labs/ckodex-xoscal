@@ -18,7 +18,7 @@ const (
 	sbomToolsLinuxAMD64SHA = "0f93406da9643a8ea3afe4fb56c7418fb74d29ecaa0af49b260dc4b2ff597956"
 	sbomToolsLinuxARM64SHA = "fd3ed73f4d259704fa1eb7065e3fcbf45213751b3a7cbe3f0ae3429d88ad24bb"
 	syftVersion            = "v1.51.0"
-	syftLinuxAMD64SHA      = "2a2e837a2c8d59ec9af5472ee22d3b04ee463c4e44476f993fd1e5ab6ebc7f"
+	syftLinuxAMD64SHA      = "2a2e837a2c8d59ec9af5472ee22d3b04ee463c4e44476ecf993fd1e5ab6ebc7f"
 	syftLinuxARM64SHA      = "6c0466811541ea03add5213a60a1562f0851e4c0b0ecfdee1a694a9455285900"
 	distrolessBase         = "gcr.io/distroless/base-debian12:nonroot@sha256:b12529fbbd0bb15eea8905f69d83148679e0b4d7d434c8808100792029b1caae"
 	ubuntuBase             = "ubuntu:24.04@sha256:561618e2c15bf2397621dd04f96926663a3b5616c189cf7e38db7e82f5c538ea"

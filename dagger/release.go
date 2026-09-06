@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"strings"
 
 	"dagger/xoscal/internal/dagger"
 )
@@ -61,7 +62,7 @@ func pinnedSyftInstall() string {
 		"curl -fsSL \"https://github.com/anchore/syft/releases/download/%s/syft_%s_linux_${asset_arch}.tar.gz\" -o \"$archive\"\n"+
 		"printf '%%s  %%s\\n' \"$expected\" \"$archive\" | sha256sum -c -\n"+
 		"tar -xzf \"$archive\" -C /usr/local/bin syft\n"+
-		"test -x /usr/local/bin/syft", syftLinuxAMD64SHA, syftLinuxARM64SHA, syftVersion, syftVersion)
+		"test -x /usr/local/bin/syft", syftLinuxAMD64SHA, syftLinuxARM64SHA, syftVersion, strings.TrimPrefix(syftVersion, "v"))
 }
 
 // goreleaser returns a GoReleaser container with source, caches, and token mounted.
