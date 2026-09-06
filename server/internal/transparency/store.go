@@ -4,6 +4,7 @@ import (
 	"context"
 	"database/sql"
 	"fmt"
+	"strings"
 	"time"
 
 	_ "modernc.org/sqlite"
@@ -12,13 +13,18 @@ import (
 // Store persists claims and evidence for the transparency exchange.
 type Store interface {
 	CreateClaim(ctx context.Context, claim *Claim) error
+	CreateImportBatch(ctx context.Context, records []*ImportRecord) error
 	GetClaim(ctx context.Context, id string) (*Claim, error)
-	ListClaims(ctx context.Context, subjectDigest, bomKind, relation, trustState string, validAfter time.Time, limit int) ([]*Claim, error)
+	ListClaims(ctx context.Context, subjectDigest, bomKind, relation, trustState string, validAfter time.Time, limit int, pageToken string) ([]*Claim, string, error)
 	UpdateClaimTrustState(ctx context.Context, id, trustState string, proofStateJSON string) error
+	RecordVerification(ctx context.Context, claimID, trustState, proofStateJSON string, event *VerificationEvent) (*VerificationEvent, error)
+	ListVerificationEvents(ctx context.Context, claimID string) ([]*VerificationEvent, error)
+	VerifyVerificationChain(ctx context.Context) error
 
 	CreateEvidence(ctx context.Context, ev *Evidence) error
 	GetEvidence(ctx context.Context, id string) (*Evidence, error)
 	GetEvidenceByDigest(ctx context.Context, digest string) (*Evidence, error)
+	GetEvidenceBlob(ctx context.Context, id string) ([]byte, error)
 
 	Close() error
 }
@@ -63,6 +69,32 @@ type Evidence struct {
 	IntegrityMethodsJSON string
 	Classification       string
 	ExtensionsJSON       string
+	Blob                 []byte
+}
+
+// ImportRecord is the storage-level unit for an all-or-nothing intake batch.
+type ImportRecord struct {
+	Claim    *Claim
+	Evidence []*Evidence
+}
+
+// VerificationEvent is an append-only audit record for a claim verification.
+// EventHash chains records in insertion order so an operator can detect a
+// modified or removed event when exporting the audit history.
+type VerificationEvent struct {
+	Sequence          int64
+	EventID           string
+	ClaimID           string
+	RequestID         string
+	IdempotencyKey    string
+	ChecksJSON        string
+	ProofStateJSON    string
+	ProviderStateJSON string
+	TrustState        string
+	DiagnosticsJSON   string
+	PreviousHash      string
+	EventHash         string
+	CreatedAt         time.Time
 }
 
 // SQLiteStore implements Store with SQLite.
@@ -129,7 +161,8 @@ CREATE TABLE IF NOT EXISTS kg_evidence (
 	supersedes_json TEXT,
 	integrity_methods_json TEXT,
 	classification TEXT,
-	extensions_json TEXT
+	extensions_json TEXT,
+	blob BLOB
 );
 CREATE INDEX IF NOT EXISTS idx_evidence_digest ON kg_evidence(digest);
 CREATE INDEX IF NOT EXISTS idx_evidence_bomkind ON kg_evidence(bom_kind);
@@ -139,197 +172,45 @@ CREATE TABLE IF NOT EXISTS kg_claim_evidence (
 	evidence_id TEXT NOT NULL REFERENCES kg_evidence(id) ON DELETE CASCADE,
 	PRIMARY KEY (claim_id, evidence_id)
 );
+
+CREATE TABLE IF NOT EXISTS verification_events (
+	sequence INTEGER PRIMARY KEY AUTOINCREMENT,
+	event_id TEXT NOT NULL UNIQUE,
+	claim_id TEXT NOT NULL REFERENCES kg_claims(id) ON DELETE RESTRICT,
+	request_id TEXT NOT NULL,
+	idempotency_key TEXT NOT NULL UNIQUE,
+	checks_json TEXT NOT NULL,
+	proof_state_json TEXT NOT NULL,
+	provider_state_json TEXT NOT NULL,
+	trust_state TEXT NOT NULL,
+	diagnostics_json TEXT NOT NULL,
+	previous_hash TEXT NOT NULL,
+	event_hash TEXT NOT NULL,
+	created_at DATETIME NOT NULL
+);
+CREATE INDEX IF NOT EXISTS idx_verification_events_claim ON verification_events(claim_id, sequence);
+CREATE TRIGGER IF NOT EXISTS verification_events_no_update
+BEFORE UPDATE ON verification_events
+BEGIN
+	SELECT RAISE(ABORT, 'verification_events are append-only');
+END;
+CREATE TRIGGER IF NOT EXISTS verification_events_no_delete
+BEFORE DELETE ON verification_events
+BEGIN
+	SELECT RAISE(ABORT, 'verification_events are append-only');
+END;
 `
 	if _, err := s.db.Exec(schema); err != nil {
 		return fmt.Errorf("exec schema: %w", err)
+	}
+	// Existing beta databases predate inline evidence content. Keep the migration
+	// explicit so digest verification cannot silently operate against a missing
+	// content column after an upgrade.
+	if _, err := s.db.Exec(`ALTER TABLE kg_evidence ADD COLUMN blob BLOB`); err != nil &&
+		!strings.Contains(strings.ToLower(err.Error()), "duplicate column") {
+		return fmt.Errorf("add evidence blob column: %w", err)
 	}
 	return nil
 }
 
 func (s *SQLiteStore) Close() error { return s.db.Close() }
-
-func (s *SQLiteStore) CreateClaim(ctx context.Context, claim *Claim) error {
-	_, err := s.db.ExecContext(ctx,
-		`INSERT INTO kg_claims(id, claim_type, subject_json, predicate_json, object_json, issuer_json, bom_kind,
-		valid_from, valid_to, observed_time, source_refs_json, proof_refs_json, policy_refs_json, extensions_json,
-		trust_state, proof_state_json, created_at)
-		VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
-		claim.ID, claim.Type, claim.SubjectJSON, claim.PredicateJSON, claim.ObjectJSON,
-		claim.IssuerJSON, claim.BomKind, claim.ValidFrom, claim.ValidTo, claim.ObservedTime,
-		claim.SourceRefsJSON, claim.ProofRefsJSON, claim.PolicyRefsJSON, claim.ExtensionsJSON,
-		claim.TrustState, claim.ProofStateJSON, claim.CreatedAt,
-	)
-	if err != nil {
-		return fmt.Errorf("insert claim: %w", err)
-	}
-	return nil
-}
-
-func (s *SQLiteStore) GetClaim(ctx context.Context, id string) (*Claim, error) {
-	row := s.db.QueryRowContext(ctx,
-		`SELECT id, claim_type, subject_json, predicate_json, object_json, issuer_json, bom_kind,
-		valid_from, valid_to, observed_time, source_refs_json, proof_refs_json, policy_refs_json, extensions_json,
-		trust_state, proof_state_json, created_at FROM kg_claims WHERE id = ?`, id)
-	return scanClaim(row)
-}
-
-func (s *SQLiteStore) ListClaims(ctx context.Context, subjectDigest, bomKind, relation, trustState string, validAfter time.Time, limit int) ([]*Claim, error) {
-	query := `SELECT id, claim_type, subject_json, predicate_json, object_json, issuer_json, bom_kind,
-		valid_from, valid_to, observed_time, source_refs_json, proof_refs_json, policy_refs_json, extensions_json,
-		trust_state, proof_state_json, created_at FROM kg_claims WHERE 1=1`
-	args := []interface{}{}
-	if bomKind != "" {
-		query += ` AND bom_kind = ?`
-		args = append(args, bomKind)
-	}
-	if trustState != "" {
-		query += ` AND trust_state = ?`
-		args = append(args, trustState)
-	}
-	if !validAfter.IsZero() {
-		query += ` AND valid_from >= ?`
-		args = append(args, validAfter)
-	}
-	query += ` ORDER BY created_at DESC`
-	if limit > 0 {
-		query += ` LIMIT ?`
-		args = append(args, limit)
-	}
-	rows, err := s.db.QueryContext(ctx, query, args...)
-	if err != nil {
-		return nil, fmt.Errorf("list claims: %w", err)
-	}
-	defer rows.Close()
-	var out []*Claim
-	for rows.Next() {
-		c, err := scanClaim(rows)
-		if err != nil {
-			return nil, err
-		}
-		out = append(out, c)
-	}
-	return out, rows.Err()
-}
-
-func (s *SQLiteStore) UpdateClaimTrustState(ctx context.Context, id, trustState string, proofStateJSON string) error {
-	_, err := s.db.ExecContext(ctx,
-		`UPDATE kg_claims SET trust_state = ?, proof_state_json = ? WHERE id = ?`,
-		trustState, proofStateJSON, id)
-	return err
-}
-
-func (s *SQLiteStore) CreateEvidence(ctx context.Context, ev *Evidence) error {
-	_, err := s.db.ExecContext(ctx,
-		`INSERT INTO kg_evidence(id, media_type, bom_kind, digest, size_bytes, storage_json, produced_by_json,
-		subject_refs_json, predicate_type, spec_json, created_at, valid_from, valid_to, supersedes_json,
-		integrity_methods_json, classification, extensions_json)
-		VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
-		ev.ID, ev.MediaType, ev.BomKind, ev.Digest, ev.SizeBytes, ev.StorageJSON, ev.ProducedByJSON,
-		ev.SubjectRefsJSON, ev.PredicateType, ev.SpecJSON, ev.CreatedAt, ev.ValidFrom, ev.ValidTo,
-		ev.SupersedesJSON, ev.IntegrityMethodsJSON, ev.Classification, ev.ExtensionsJSON,
-	)
-	if err != nil {
-		return fmt.Errorf("insert evidence: %w", err)
-	}
-	return nil
-}
-
-func (s *SQLiteStore) GetEvidence(ctx context.Context, id string) (*Evidence, error) {
-	row := s.db.QueryRowContext(ctx,
-		`SELECT id, media_type, bom_kind, digest, size_bytes, storage_json, produced_by_json,
-		subject_refs_json, predicate_type, spec_json, created_at, valid_from, valid_to, supersedes_json,
-		integrity_methods_json, classification, extensions_json FROM kg_evidence WHERE id = ?`, id)
-	return scanEvidence(row)
-}
-
-func (s *SQLiteStore) GetEvidenceByDigest(ctx context.Context, digest string) (*Evidence, error) {
-	row := s.db.QueryRowContext(ctx,
-		`SELECT id, media_type, bom_kind, digest, size_bytes, storage_json, produced_by_json,
-		subject_refs_json, predicate_type, spec_json, created_at, valid_from, valid_to, supersedes_json,
-		integrity_methods_json, classification, extensions_json FROM kg_evidence WHERE digest = ?`, digest)
-	return scanEvidence(row)
-}
-
-type scanner interface {
-	Scan(dest ...interface{}) error
-}
-
-func scanClaim(row scanner) (*Claim, error) {
-	var c Claim
-	var validTo sql.NullTime
-	var proofState, extensions, objectJSON, proofRefs, policyRefs sql.NullString
-	err := row.Scan(&c.ID, &c.Type, &c.SubjectJSON, &c.PredicateJSON, &objectJSON,
-		&c.IssuerJSON, &c.BomKind, &c.ValidFrom, &validTo, &c.ObservedTime,
-		&c.SourceRefsJSON, &proofRefs, &policyRefs, &extensions,
-		&c.TrustState, &proofState, &c.CreatedAt)
-	if err != nil {
-		if err == sql.ErrNoRows {
-			return nil, sql.ErrNoRows
-		}
-		return nil, fmt.Errorf("scan claim: %w", err)
-	}
-	if validTo.Valid {
-		c.ValidTo = &validTo.Time
-	}
-	if proofState.Valid {
-		c.ProofStateJSON = proofState.String
-	}
-	if extensions.Valid {
-		c.ExtensionsJSON = extensions.String
-	}
-	if objectJSON.Valid {
-		c.ObjectJSON = objectJSON.String
-	}
-	if proofRefs.Valid {
-		c.ProofRefsJSON = proofRefs.String
-	}
-	if policyRefs.Valid {
-		c.PolicyRefsJSON = policyRefs.String
-	}
-	return &c, nil
-}
-
-func scanEvidence(row scanner) (*Evidence, error) {
-	var ev Evidence
-	var validTo sql.NullTime
-	var createdAt sql.NullTime
-	var sizeBytes sql.NullInt64
-	var producedBy, subjectRefs, spec, supersedes, integrity, extensions sql.NullString
-	err := row.Scan(&ev.ID, &ev.MediaType, &ev.BomKind, &ev.Digest, &sizeBytes, &ev.StorageJSON, &producedBy,
-		&subjectRefs, &ev.PredicateType, &spec, &createdAt, &ev.ValidFrom, &validTo, &supersedes,
-		&integrity, &ev.Classification, &extensions)
-	if err != nil {
-		if err == sql.ErrNoRows {
-			return nil, sql.ErrNoRows
-		}
-		return nil, fmt.Errorf("scan evidence: %w", err)
-	}
-	if sizeBytes.Valid {
-		ev.SizeBytes = sizeBytes.Int64
-	}
-	if createdAt.Valid {
-		ev.CreatedAt = createdAt.Time
-	}
-	if validTo.Valid {
-		ev.ValidTo = &validTo.Time
-	}
-	if producedBy.Valid {
-		ev.ProducedByJSON = producedBy.String
-	}
-	if subjectRefs.Valid {
-		ev.SubjectRefsJSON = subjectRefs.String
-	}
-	if spec.Valid {
-		ev.SpecJSON = spec.String
-	}
-	if supersedes.Valid {
-		ev.SupersedesJSON = supersedes.String
-	}
-	if integrity.Valid {
-		ev.IntegrityMethodsJSON = integrity.String
-	}
-	if extensions.Valid {
-		ev.ExtensionsJSON = extensions.String
-	}
-	return &ev, nil
-}
