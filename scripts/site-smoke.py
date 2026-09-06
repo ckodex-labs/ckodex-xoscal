@@ -26,7 +26,7 @@ def main() -> int:
     thread = threading.Thread(target=server.serve_forever, daemon=True)
     thread.start()
     base = f"http://127.0.0.1:{server.server_port}"
-    routes = ["index.html", "portal.html", "docs.html", "downloads.html", "sbom-validation.html", "transparency.html", "styles.css"]
+    routes = ["index.html", "portal.html", "review.html", "review.js", "docs.html", "downloads.html", "sbom-validation.html", "transparency.html", "styles.css"]
     errors: list[str] = []
     try:
         for route in routes:
@@ -37,11 +37,30 @@ def main() -> int:
                         errors.append(f"{route}: HTTP {response.status} or empty body")
             except (urllib.error.URLError, OSError) as error:
                 errors.append(f"{route}: {error}")
-        for route in ("portal.html", "docs.html", "downloads.html", "sbom-validation.html", "transparency.html"):
+        for route in ("portal.html", "review.html", "docs.html", "downloads.html", "sbom-validation.html", "transparency.html"):
             body = urllib.request.urlopen(f"{base}/{route}", timeout=5).read().decode("utf-8")
             for marker in ('<main id="main"', '<aside class="ck-shell__margin', '<footer class="ck-shell__footer'):
                 if marker not in body:
                     errors.append(f"{route}: missing rendered marker {marker}")
+            if route == "review.html":
+                for marker in (
+                    '<div id="review-status" role="status"',
+                    '<form id="import-form"',
+                    'id="import-form" class="ck-quiet ck-padded ck-stack--tight" novalidate',
+                    'data-import-field="evidence-content"',
+                ):
+                    if marker not in body:
+                        errors.append(f"{route}: missing beta interaction contract {marker}")
+        review_js = urllib.request.urlopen(f"{base}/review.js", timeout=5).read().decode("utf-8")
+        for marker in (
+            "Import preflight blocked:",
+            "Import failed:",
+            "graph/projection-events",
+            "Graph projection history",
+            'addReceipt("rejected"',
+        ):
+            if marker not in review_js:
+                errors.append(f"review.js: missing actionable rejection path {marker}")
     finally:
         server.shutdown()
         thread.join(timeout=5)

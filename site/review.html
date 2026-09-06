@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en" data-theme="ledger">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>xOSCAL — Live Review</title>
+<meta name="xoscal-api-base" content="">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="assets/logos/mark-a2-favicon.svg" type="image/svg+xml">
+</head>
+<body>
+<a class="ck-skip" href="#main">skip to main content</a>
+<div class="ck-shell ck-shell--document">
+  <header class="ck-shell__header">
+    <a class="ck-site-brand" href="index.html" aria-label="xOSCAL home">
+      <img class="ck-site-brand__mark" src="assets/logos/mark-a2-favicon.svg" alt="" width="24" height="24">
+      <span aria-hidden="true">XOSCAL</span>
+    </a>
+    <nav class="ck-site-nav" aria-label="Primary">
+      <a href="portal.html">Portal</a><a href="review.html" aria-current="page">Live Review</a>
+      <a href="docs.html">API Docs</a><a href="transparency.html">Transparency</a>
+      <a href="downloads.html">Downloads</a><a href="sbom-validation.html">SBOM Validation</a>
+    </nav>
+  </header>
+  <main id="main" class="ck-shell__main" tabindex="-1">
+    <div class="ck-measure ck-stack">
+      <div>
+        <p class="ck-label ck-page-kicker">live beta surface</p>
+        <h1 class="ck-page-title">Review queue</h1>
+      </div>
+      <p class="ck-site-note">This surface reads claims from the configured API. No local sample data is substituted when the API is unavailable.</p>
+      <form id="api-form" class="ck-quiet ck-padded ck-stack--tight" aria-labelledby="api-heading">
+        <h2 id="api-heading">Connect to an API</h2>
+        <label for="api-base">API base URL</label>
+        <input id="api-base" class="ck-field" type="url" inputmode="url" autocomplete="url" placeholder="http://127.0.0.1:8080" aria-describedby="api-help api-error" required>
+        <p id="api-help" class="ck-caption">The gateway must expose the transparency exchange and graph routes.</p>
+        <p id="api-error" class="ck-fieldnote ck-fieldnote--invalid" aria-live="polite" hidden></p>
+        <label for="api-token">Bearer token <span class="ck-caption">(optional for local development)</span></label>
+        <input id="api-token" class="ck-field" type="password" autocomplete="off" spellcheck="false" aria-describedby="token-help">
+        <p id="token-help" class="ck-caption">Held in memory for this page only; it is sent as an Authorization header and never stored.</p>
+        <div><button class="ck-btn ck-btn--primary" type="submit">Load claims</button></div>
+      </form>
+      <div id="review-status" role="status" aria-live="polite" aria-atomic="true" class="ck-site-note">API endpoint not configured.</div>
+      <section aria-labelledby="import-heading">
+        <h2 id="import-heading">Import claims and evidence</h2>
+        <p class="ck-site-note">The evidence is hashed in this browser, preflighted with its claim, then committed as one atomic import. Verification remains incomplete until configured signature and policy providers pass.</p>
+        <form id="import-form" class="ck-quiet ck-padded ck-stack--tight" novalidate>
+          <div id="import-records" class="ck-stack--tight">
+            <section class="ck-import-record" data-import-record="0" aria-labelledby="import-record-heading-0">
+              <h3 id="import-record-heading-0">Record 1</h3>
+              <fieldset class="ck-stack--tight">
+                <legend>Claim identity</legend>
+                <label for="claim-id-0">Claim ID</label>
+                <input id="claim-id-0" data-import-field="claim-id" class="ck-field" type="text" required autocomplete="off" aria-describedby="claim-id-help-0">
+                <p id="claim-id-help-0" class="ck-caption">Use a stable identifier; duplicate IDs are rejected by the API.</p>
+                <label for="subject-kind-0">Subject kind</label>
+                <input id="subject-kind-0" data-import-field="subject-kind" class="ck-field" type="text" required autocomplete="off" placeholder="artifact">
+                <label for="subject-value-0">Subject ID or digest</label>
+                <input id="subject-value-0" data-import-field="subject-value" class="ck-field" type="text" required autocomplete="off" placeholder="build-123 or sha256:...">
+                <label for="predicate-relation-0">Relation</label>
+                <input id="predicate-relation-0" data-import-field="predicate-relation" class="ck-field" type="text" required autocomplete="off" placeholder="produced_by">
+                <label for="object-kind-0">Object kind</label>
+                <input id="object-kind-0" data-import-field="object-kind" class="ck-field" type="text" required autocomplete="off" placeholder="workload">
+                <label for="object-value-0">Object ID or digest</label>
+                <input id="object-value-0" data-import-field="object-value" class="ck-field" type="text" required autocomplete="off" placeholder="pipeline-run-123 or sha256:...">
+              </fieldset>
+              <fieldset class="ck-stack--tight">
+                <legend>Source evidence</legend>
+                <label for="evidence-id-0">Evidence ID</label>
+                <input id="evidence-id-0" data-import-field="evidence-id" class="ck-field" type="text" required autocomplete="off">
+                <label for="evidence-media-type-0">Media type</label>
+                <input id="evidence-media-type-0" data-import-field="evidence-media-type" class="ck-field" type="text" required value="application/json">
+                <label for="evidence-bom-kind-0">BOM kind</label>
+                <input id="evidence-bom-kind-0" data-import-field="evidence-bom-kind" class="ck-field" type="text" required value="sbom">
+                <label for="evidence-content-0">Evidence content</label>
+                <textarea id="evidence-content-0" data-import-field="evidence-content" class="ck-field" rows="8" required spellcheck="false" aria-describedby="evidence-help-0"></textarea>
+                <p id="evidence-help-0" class="ck-caption">Content is stored as the evidence blob. Do not paste secrets or personal data.</p>
+              </fieldset>
+            </section>
+          </div>
+          <div class="ck-row-3">
+            <button id="add-import-record" class="ck-btn ck-btn--quiet" type="button">Add another record</button>
+            <button class="ck-btn ck-btn--primary" type="submit">Preflight and import batch</button>
+          </div>
+          <p class="ck-caption">Up to 10 records are committed together. If one record fails preflight, none of the batch is written.</p>
+        </form>
+      </section>
+      <section aria-labelledby="queue-heading">
+        <h2 id="queue-heading">Claims requiring review</h2>
+        <div id="claim-list" class="ck-data-grid" aria-live="polite">
+          <p class="ck-loading">Connect an API to load the review queue.</p>
+        </div>
+      </section>
+      <section aria-labelledby="detail-heading">
+        <h2 id="detail-heading">Selected claim</h2>
+        <div id="claim-detail" class="ck-quiet ck-padded" role="region" aria-live="polite" aria-atomic="false">
+          <p class="ck-loading">No claim selected.</p>
+        </div>
+      </section>
+    </div>
+  </main>
+  <aside class="ck-shell__margin" aria-label="Evidence Margin">
+    <div class="ck-stack ck-stack--tight">
+      <div class="ck-margin__head"><h2>Evidence Margin</h2></div>
+      <div id="receipts" aria-live="polite">
+        <div class="ck-receipt"><span class="ck-receipt__rule"></span><div><div class="ck-receipt__event">generated</div><div class="ck-receipt__detail">review surface loaded</div></div></div>
+      </div>
+      <span class="ck-chip ck-chip--claimed">○ live state pending</span>
+    </div>
+  </aside>
+  <footer class="ck-shell__footer ck-authority ck-authority--internal" aria-label="Authority Footer">
+    <span class="ck-authority__zone ck-authority__zone--start"><span class="ck-authority__k">boundary</span><span class="ck-authority__v">beta / configured API</span></span>
+    <span class="ck-authority__invariant">mode changes deployment, not governance semantics</span>
+    <span class="ck-authority__zone ck-authority__zone--end"><span class="ck-authority__k">handling</span><span class="ck-authority__v">internal</span></span>
+  </footer>
+</div>
+<script src="./review.js"></script>
+</body>
+</html>

@@ -110,7 +110,7 @@
   --ck-structural:      var(--ck-tone);    /* teal is NOT structural on paper */
 
   --ck-accent:     var(--ck-rust);
-  --ck-accent-ink: #F6F1E8;                /* text on rust */
+  --ck-accent-ink: #FFFFFF;                /* text on rust; 4.9:1 minimum */
   --ck-proof:      var(--ck-violet);
   --ck-alarm:      var(--ck-red);
 
@@ -396,6 +396,7 @@ body {
   text-transform: uppercase;
   font-variant-ligatures: none;
   padding: 10px 16px;
+  min-height: 44px;
   border: 1px solid transparent;
   cursor: pointer;
   background: transparent;
@@ -428,12 +429,14 @@ body {
 
 /* Fields — square, hairline, evidence-grade placeholder */
 .ck-field {
+  box-sizing: border-box;
   font-family: var(--ck-ff-ui);
   font-size: var(--ck-fs-body-sm);
   color: var(--ck-fg-1);
   background: var(--ck-bg-1);
   border: 1px solid var(--ck-hairline-strong);
   padding: 9px 12px;
+  min-height: 44px;
 }
 .ck-field::placeholder { color: var(--ck-fg-mute); }
 .ck-field:focus-visible { outline: none; box-shadow: var(--ck-ring-focus); border-color: transparent; }
@@ -1540,6 +1543,8 @@ body {
 .ck-padded { padding: var(--ck-sp-5); }
 .ck-data-grid { display: grid; gap: var(--ck-sp-3); }
 .ck-data-grid > .ck-quiet { padding: var(--ck-sp-4); }
+.ck-import-record { display: grid; gap: var(--ck-sp-4); border-top: 1px solid var(--ck-hairline); padding-top: var(--ck-sp-4); }
+.ck-import-record:first-child { border-top: 0; padding-top: 0; }
 .ck-table { width: 100%; border-collapse: collapse; font-size: var(--ck-fs-body-sm); }
 .ck-table th, .ck-table td { padding: var(--ck-sp-2) 0; border-bottom: 1px solid var(--ck-hairline); text-align: left; vertical-align: top; }
 .ck-table th { color: var(--ck-fg-mute); font-family: var(--ck-ff-mono); font-size: var(--ck-fs-micro); letter-spacing: .08em; text-transform: uppercase; }
@@ -1660,6 +1665,7 @@ nav.surfaces button.active, nav.surfaces button:hover { color: var(--ck-accent) 
 .shell.ck-portal-main .trace-table td:first-child { color: var(--ck-fg-1) !important; }
 .shell.ck-portal-main .trace-table td .where { color: var(--ck-fg-3) !important; }
 .shell.ck-portal-main .act, .shell.ck-portal-main .dl { border-radius: 0 !important; }
+.shell.ck-portal-main .act { min-height: 44px; }
 .shell.ck-portal-main .ck-portal-margin { border-left: 1px solid var(--ck-hairline); padding: var(--ck-sp-4); }
 footer.ck-shell__footer { max-width: none !important; margin: 0 !important; }
 footer.ck-shell__footer .ck-authority__invariant { color: var(--ck-fg-mute); }

@@ -313,8 +313,8 @@
     cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:5px;
     transition:background .12s,border-color .12s,color .12s}
   .act:hover{background:var(--paper);border-color:var(--ink)}
-  .act.primary{background:var(--rust);color:var(--paper);border-color:var(--rust)}
-  .act.primary:hover{filter:brightness(1.07);background:var(--rust);border-color:var(--rust);color:var(--paper)}
+  .act.primary{background:var(--rust);color:#fff;border-color:var(--rust)}
+  .act.primary:hover{filter:brightness(1.07);background:var(--rust);border-color:var(--rust);color:#fff}
   .act.export{color:var(--tone);border-style:dashed}
   .act.export:hover{color:var(--ink);border-style:solid;border-color:var(--ink)}
   .act .glyph{font-size:13px;line-height:1;flex:none}
@@ -587,6 +587,7 @@
       <button data-theme="vault" aria-pressed="false">Vault</button>
       <button data-theme="hc" aria-pressed="false">HC</button>
     </div>
+    <a class="ck-btn ck-btn--quiet" href="review.html">Live Review</a>
   </div>
 </header>
 
@@ -611,7 +612,7 @@
         <div><dt>Jurisdiction</dt><dd>US Federal</dd></div>
         <div><dt>Model</dt><dd>system-security-plan</dd></div>
         <div><dt>Origin</dt><dd>authored + reg-to-OSCAL</dd></div>
-        <div><dt>OSCAL</dt><dd class="mono">1.2.2</dd></div>
+        <div><dt>OSCAL</dt><dd class="mono">1.2.3</dd></div>
         <div><dt>Snapshot</dt><dd><span class="pill">v3 — sealed</span></dd></div>
         <div><dt>Release</dt><dd><span class="pill">sample — no release proof</span></dd></div>
       </dl>
