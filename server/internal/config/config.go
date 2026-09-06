@@ -23,6 +23,7 @@ type Server struct {
 	TLSCertPath          string        `mapstructure:"tls_cert_path"`
 	TLSKeyPath           string        `mapstructure:"tls_key_path"`
 	TLSClientCAPath      string        `mapstructure:"tls_client_ca_path"`
+	RequireTLS           bool          `mapstructure:"require_tls"`
 }
 
 // Store holds persistence tunables.
@@ -58,10 +59,12 @@ type Observability struct {
 
 // Security holds auth and rate-limit settings.
 type Security struct {
-	RateLimitRPS    float64 `mapstructure:"rate_limit_rps"`
-	RateLimitBurst  int     `mapstructure:"rate_limit_burst"`
-	AuthMode        string  `mapstructure:"auth_mode"`
-	AuthSPIRESocket string  `mapstructure:"auth_spire_socket"`
+	RateLimitRPS    float64  `mapstructure:"rate_limit_rps"`
+	RateLimitBurst  int      `mapstructure:"rate_limit_burst"`
+	AuthMode        string   `mapstructure:"auth_mode"`
+	AuthSPIRESocket string   `mapstructure:"auth_spire_socket"`
+	AuthTokenFile   string   `mapstructure:"auth_token_file"`
+	AuthTokens      []string `mapstructure:"auth_tokens"`
 }
 
 // Config is the root application configuration.
@@ -120,11 +123,7 @@ func Default() *Config {
 func Load(configPath string) (*Config, error) {
 	v := viper.New()
 	defaults := Default()
-	v.SetDefault("server", defaults.Server)
-	v.SetDefault("store", defaults.Store)
-	v.SetDefault("vector", defaults.Vector)
-	v.SetDefault("observability", defaults.Observability)
-	v.SetDefault("security", defaults.Security)
+	setDefaults(v, defaults)
 
 	// Environment
 	v.SetEnvPrefix("XOSCAL")
@@ -144,4 +143,49 @@ func Load(configPath string) (*Config, error) {
 		return nil, fmt.Errorf("unmarshal config: %w", err)
 	}
 	return &cfg, nil
+}
+
+func setDefaults(v *viper.Viper, defaults *Config) {
+	v.SetDefault("server.addr", defaults.Server.Addr)
+	v.SetDefault("server.max_recv_msg_size_mb", defaults.Server.MaxRecvMsgSize)
+	v.SetDefault("server.max_send_msg_size_mb", defaults.Server.MaxSendMsgSize)
+	v.SetDefault("server.max_concurrent_streams", defaults.Server.MaxConcurrentStreams)
+	v.SetDefault("server.keepalive_time", defaults.Server.KeepaliveTime)
+	v.SetDefault("server.keepalive_timeout", defaults.Server.KeepaliveTimeout)
+	v.SetDefault("server.enable_reflection", defaults.Server.EnableReflection)
+	v.SetDefault("server.enable_pprof", defaults.Server.EnablePProf)
+	v.SetDefault("server.pprof_addr", defaults.Server.PProfAddr)
+	v.SetDefault("server.shutdown_timeout", defaults.Server.ShutdownTimeout)
+	v.SetDefault("server.tls_cert_path", defaults.Server.TLSCertPath)
+	v.SetDefault("server.tls_key_path", defaults.Server.TLSKeyPath)
+	v.SetDefault("server.tls_client_ca_path", defaults.Server.TLSClientCAPath)
+	v.SetDefault("server.require_tls", defaults.Server.RequireTLS)
+
+	v.SetDefault("store.dsn", defaults.Store.DSN)
+	v.SetDefault("store.max_open_conn", defaults.Store.MaxOpenConn)
+	v.SetDefault("store.max_idle_conn", defaults.Store.MaxIdleConn)
+	v.SetDefault("store.conn_max_lifetime", defaults.Store.ConnMaxLifetime)
+
+	v.SetDefault("vector.backend", defaults.Vector.Backend)
+	v.SetDefault("vector.uri", defaults.Vector.URI)
+	v.SetDefault("vector.s3_region", defaults.Vector.S3Region)
+	v.SetDefault("vector.s3_access_key_id", defaults.Vector.S3KeyID)
+	v.SetDefault("vector.s3_secret_access_key", defaults.Vector.S3Secret)
+	v.SetDefault("vector.openai_api_key", defaults.Vector.OpenAIKey)
+	v.SetDefault("vector.openai_model", defaults.Vector.OpenAIModel)
+	v.SetDefault("vector.openai_base_url", defaults.Vector.OpenAIBaseURL)
+
+	v.SetDefault("observability.metrics_enabled", defaults.Observability.MetricsEnabled)
+	v.SetDefault("observability.metrics_addr", defaults.Observability.MetricsAddr)
+	v.SetDefault("observability.tracing_enabled", defaults.Observability.TracingEnabled)
+	v.SetDefault("observability.tracing_endpoint", defaults.Observability.TracingEndpoint)
+	v.SetDefault("observability.tracing_sample_rate", defaults.Observability.TracingSampleRate)
+	v.SetDefault("observability.log_level", defaults.Observability.LogLevel)
+	v.SetDefault("observability.log_format", defaults.Observability.LogFormat)
+
+	v.SetDefault("security.rate_limit_rps", defaults.Security.RateLimitRPS)
+	v.SetDefault("security.rate_limit_burst", defaults.Security.RateLimitBurst)
+	v.SetDefault("security.auth_mode", defaults.Security.AuthMode)
+	v.SetDefault("security.auth_spire_socket", defaults.Security.AuthSPIRESocket)
+	v.SetDefault("security.auth_token_file", defaults.Security.AuthTokenFile)
 }

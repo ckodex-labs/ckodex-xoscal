@@ -13,6 +13,7 @@ import (
 	"net/http/pprof"
 	"os"
 	"os/signal"
+	"strings"
 	"syscall"
 	"time"
 
@@ -50,6 +51,16 @@ func main() {
 
 	logger := newLogger(cfg.Observability.LogLevel, cfg.Observability.LogFormat)
 	logger.Info("starting xoscal-server", slog.String("version", version))
+	if cfg.Security.AuthMode == "spire" {
+		log.Fatal("auth_mode=spire is not available in the beta server")
+	}
+	allowedTokens, err := configuredAuthTokens(cfg.Security.AuthTokens, cfg.Security.AuthTokenFile)
+	if err != nil {
+		log.Fatalf("load auth tokens: %v", err)
+	}
+	if cfg.Security.AuthMode == "token" && len(allowedTokens) == 0 {
+		log.Fatal("auth_mode=token requires at least one configured auth token")
+	}
 	ctx := context.Background()
 
 	// Observability: tracing
@@ -155,8 +166,9 @@ func main() {
 			interceptors.UnaryRecovery(logger),
 			interceptors.UnaryRequestID(),
 			interceptors.UnaryAuth(interceptors.AuthConfig{
-				Mode:      cfg.Security.AuthMode,
-				SPIREAddr: cfg.Security.AuthSPIRESocket,
+				Mode:          cfg.Security.AuthMode,
+				SPIREAddr:     cfg.Security.AuthSPIRESocket,
+				AllowedTokens: allowedTokens,
 			}),
 			interceptors.UnaryValidate(),
 			interceptors.UnaryTracing(),
@@ -166,11 +178,17 @@ func main() {
 		),
 	}
 
+	tlsRequired := cfg.Server.RequireTLS || cfg.Security.AuthMode != "none"
 	if tlsCreds, err := loadTLSCredentials(cfg.Server.TLSCertPath, cfg.Server.TLSKeyPath, cfg.Server.TLSClientCAPath); err != nil {
+		if tlsRequired {
+			log.Fatalf("TLS is required but credentials could not be loaded: %v", err)
+		}
 		logger.Warn("TLS credential load failed, starting without TLS", slog.String("error", err.Error()))
 	} else if tlsCreds != nil {
 		opts = append(opts, grpc.Creds(tlsCreds))
 		logger.Info("gRPC TLS enabled")
+	} else if tlsRequired {
+		log.Fatal("TLS is required but tls_cert_path and tls_key_path are not configured")
 	}
 	grpcServer := grpc.NewServer(opts...)
 
@@ -178,7 +196,7 @@ func main() {
 	rec := reconciler.NewReconciler(kgStore)
 	servicesv1.RegisterGovernanceServiceServer(grpcServer, service.NewGovernanceServer(kgStore, rec, vectorStore))
 	servicesv1.RegisterTransparencyExchangeServiceServer(grpcServer, transparency.NewExchangeServer(transparencyStore))
-	servicesv1.RegisterTransparencyGraphServiceServer(grpcServer, graph.NewGraphServer(graphStore))
+	servicesv1.RegisterTransparencyGraphServiceServer(grpcServer, graph.NewGraphServer(graphStore, transparencyStore))
 
 	if cfg.Server.EnableReflection {
 		reflection.Register(grpcServer)
@@ -302,4 +320,28 @@ func loadTLSCredentials(certPath, keyPath, clientCAPath string) (credentials.Tra
 		tlsConfig.ClientAuth = tls.RequireAndVerifyClientCert
 	}
 	return credentials.NewTLS(tlsConfig), nil
+}
+
+func configuredAuthTokens(tokens []string, tokenFile string) (map[string]bool, error) {
+	configured := make(map[string]bool, len(tokens))
+	for _, token := range tokens {
+		if token = strings.TrimSpace(token); token != "" {
+			configured[token] = true
+		}
+	}
+	if tokenFile == "" {
+		return configured, nil
+	}
+	// #nosec G304 -- tokenFile is an explicit operator-configured secret path.
+	data, err := os.ReadFile(tokenFile)
+	if err != nil {
+		return nil, err
+	}
+	for _, line := range strings.Split(string(data), "\n") {
+		line = strings.TrimSpace(line)
+		if line != "" && !strings.HasPrefix(line, "#") {
+			configured[line] = true
+		}
+	}
+	return configured, nil
 }
