@@ -107,4 +107,4 @@ frameworks:
     filename: ai-act.yaml
   - ref_id: iso-iec-42001
     jurisdiction: eu
-    filename: iso-iec-42001.yaml
+    filename: iso42001-2023.yaml
