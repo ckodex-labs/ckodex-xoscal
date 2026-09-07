@@ -114,7 +114,7 @@ jobs:
         if: steps.latest.outputs.tag != ''
         run: |
           gh attestation verify \
-            ghcr.io/ckodex-labs/ckodex-xoscal:${{ steps.latest.outputs.tag }} \
+            "oci://ghcr.io/ckodex-labs/ckodex-xoscal:${{ steps.latest.outputs.tag }}" \
             -R ckodex-labs/ckodex-xoscal
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
