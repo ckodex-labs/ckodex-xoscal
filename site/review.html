@@ -41,6 +41,25 @@
         <div><button class="ck-btn ck-btn--primary" type="submit">Load claims</button></div>
       </form>
       <div id="review-status" role="status" aria-live="polite" aria-atomic="true" class="ck-site-note">API endpoint not configured.</div>
+      <p class="ck-site-note" id="connection-state" data-connection="disconnected">
+        <span class="ck-chip ck-chip--claimed" data-connection-chip>○ disconnected</span>
+      </p>
+      <section aria-labelledby="bulk-heading">
+        <h2 id="bulk-heading">Bulk import from CSV</h2>
+        <p class="ck-site-note">Load a UTF-8 CSV with a header row naming the import fields
+          (<code>claim-id,subject-kind,subject-value,predicate-relation,object-kind,object-value,evidence-id,evidence-media-type,evidence-bom-kind,evidence-content</code>).
+          At most 100 rows are accepted; rows are imported in batches of 10 with all-or-nothing semantics, and an interrupted
+          batch stays recoverable in this browser until it is resumed or discarded. Evidence is hashed locally before preflight.</p>
+        <div class="ck-quiet ck-padded ck-stack--tight">
+          <label for="csv-file">CSV file</label>
+          <input id="csv-file" class="ck-field" type="file" accept=".csv,text/csv" autocomplete="off">
+          <p id="csv-status" class="ck-caption" role="status" aria-live="polite">No CSV loaded.</p>
+          <div class="ck-row-3">
+            <button id="csv-resume" class="ck-btn ck-btn--quiet" type="button" hidden>Resume pending import</button>
+            <button id="csv-discard" class="ck-btn ck-btn--quiet" type="button" hidden>Discard pending import</button>
+          </div>
+        </div>
+      </section>
       <section aria-labelledby="import-heading">
         <h2 id="import-heading">Import claims and evidence</h2>
         <p class="ck-site-note">The evidence is hashed in this browser, preflighted with its claim, then committed as one atomic import. Verification remains incomplete until configured signature and policy providers pass.</p>
