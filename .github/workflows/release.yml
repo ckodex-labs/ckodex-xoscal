@@ -66,7 +66,9 @@ jobs:
           archive=/tmp/sbom-tools-linux-x86_64.tar.gz
           curl -fsSL "https://github.com/sbom-tool/sbom-tools/releases/download/v0.2.0/sbom-tools-linux-x86_64.tar.gz" -o "$archive"
           printf '%s  %s\n' "0f93406da9643a8ea3afe4fb56c7418fb74d29ecaa0af49b260dc4b2ff597956" "$archive" | sha256sum -c -
-          tar -xzf "$archive" -C /usr/local/bin sbom-tools
+          # Members are prefixed with ./ — extract all, then install the binary.
+          tar -xzf "$archive" -C /tmp
+          install -m 0755 /tmp/sbom-tools /usr/local/bin/sbom-tools
           sbom-tools validate image-sbom.cyclonedx.json --standard ntia -o oscal-json -O image-sbom-assessment-results.json || true
           test -s image-sbom-assessment-results.json
 
