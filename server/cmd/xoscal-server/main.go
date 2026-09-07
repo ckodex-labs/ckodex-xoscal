@@ -195,7 +195,14 @@ func main() {
 	servicesv1.RegisterOscalServiceServer(grpcServer, service.NewOscalServer(s))
 	rec := reconciler.NewReconciler(kgStore)
 	servicesv1.RegisterGovernanceServiceServer(grpcServer, service.NewGovernanceServer(kgStore, rec, vectorStore))
-	servicesv1.RegisterTransparencyExchangeServiceServer(grpcServer, transparency.NewExchangeServer(transparencyStore))
+	servicesv1.RegisterTransparencyExchangeServiceServer(grpcServer, transparency.NewExchangeServer(transparencyStore).
+		WithFetchPolicy(&transparency.FetchPolicy{
+			Enabled:      cfg.FetchPolicy.Enabled,
+			MaxBytes:     cfg.FetchPolicy.MaxBytes,
+			Timeout:      cfg.FetchPolicy.Timeout,
+			AllowedHosts: cfg.FetchPolicy.AllowedHosts,
+			MaxRedirects: cfg.FetchPolicy.MaxRedirects,
+		}))
 	servicesv1.RegisterTransparencyGraphServiceServer(grpcServer, graph.NewGraphServer(graphStore, transparencyStore))
 
 	if cfg.Server.EnableReflection {

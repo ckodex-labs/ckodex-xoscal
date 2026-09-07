@@ -63,6 +63,15 @@ The beta includes two bounded local providers:
   JSON document with `version: xoscal-policy-v1` and optional relation, BOM-kind,
   issuer-kind, and validity constraints.
 
+External evidence fetching is available only when the deployment enables a
+bounded fetch policy (`fetch_policy.enabled`). A fetch is admitted only over
+HTTPS, within the configured byte cap, timeout, redirect bound, and optional
+host allowlist; fetched bytes are stored as content-addressed evidence with
+the source URI recorded, and every attempt — success, policy denial, or
+failure — appends a fetch audit event queryable via
+`GET /v1/transparency/evidence/fetch/events`. Fetching stays disabled unless
+explicitly enabled; an absent policy is a fail-closed default.
+
 Missing inputs remain `incomplete`; malformed or cryptographically invalid inputs are
 `rejected`. Unsupported external provider types remain explicitly `unavailable` and
 cannot produce a verified state.

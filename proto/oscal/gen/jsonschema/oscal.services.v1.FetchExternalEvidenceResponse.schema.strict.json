@@ -1,0 +1,21 @@
+{
+  "$id": "oscal.services.v1.FetchExternalEvidenceResponse.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "audit": {
+      "$ref": "oscal.services.v1.EvidenceFetchAudit.schema.strict.json"
+    },
+    "evidence": {
+      "$ref": "oscal.services.v1.Evidence.schema.strict.json"
+    },
+    "stored": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "stored"
+  ],
+  "title": "Fetch External Evidence Response",
+  "type": "object"
+}

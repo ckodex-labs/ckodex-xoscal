@@ -2279,6 +2279,330 @@ func (x *GetEvidenceResponse) GetEvidence() *Evidence {
 	return nil
 }
 
+type FetchExternalEvidenceRequest struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	Url           string                 `protobuf:"bytes,1,opt,name=url,proto3" json:"url,omitempty"`
+	EvidenceId    string                 `protobuf:"bytes,2,opt,name=evidence_id,json=evidenceId,proto3" json:"evidence_id,omitempty"`
+	MediaType     string                 `protobuf:"bytes,3,opt,name=media_type,json=mediaType,proto3" json:"media_type,omitempty"`
+	BomKind       string                 `protobuf:"bytes,4,opt,name=bom_kind,json=bomKind,proto3" json:"bom_kind,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *FetchExternalEvidenceRequest) Reset() {
+	*x = FetchExternalEvidenceRequest{}
+	mi := &file_services_v1_transparency_exchange_service_proto_msgTypes[34]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *FetchExternalEvidenceRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*FetchExternalEvidenceRequest) ProtoMessage() {}
+
+func (x *FetchExternalEvidenceRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_services_v1_transparency_exchange_service_proto_msgTypes[34]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use FetchExternalEvidenceRequest.ProtoReflect.Descriptor instead.
+func (*FetchExternalEvidenceRequest) Descriptor() ([]byte, []int) {
+	return file_services_v1_transparency_exchange_service_proto_rawDescGZIP(), []int{34}
+}
+
+func (x *FetchExternalEvidenceRequest) GetUrl() string {
+	if x != nil {
+		return x.Url
+	}
+	return ""
+}
+
+func (x *FetchExternalEvidenceRequest) GetEvidenceId() string {
+	if x != nil {
+		return x.EvidenceId
+	}
+	return ""
+}
+
+func (x *FetchExternalEvidenceRequest) GetMediaType() string {
+	if x != nil {
+		return x.MediaType
+	}
+	return ""
+}
+
+func (x *FetchExternalEvidenceRequest) GetBomKind() string {
+	if x != nil {
+		return x.BomKind
+	}
+	return ""
+}
+
+type FetchExternalEvidenceResponse struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	Evidence      *Evidence              `protobuf:"bytes,1,opt,name=evidence,proto3" json:"evidence,omitempty"`
+	Stored        bool                   `protobuf:"varint,2,opt,name=stored,proto3" json:"stored,omitempty"`
+	Audit         *EvidenceFetchAudit    `protobuf:"bytes,3,opt,name=audit,proto3" json:"audit,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *FetchExternalEvidenceResponse) Reset() {
+	*x = FetchExternalEvidenceResponse{}
+	mi := &file_services_v1_transparency_exchange_service_proto_msgTypes[35]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *FetchExternalEvidenceResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*FetchExternalEvidenceResponse) ProtoMessage() {}
+
+func (x *FetchExternalEvidenceResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_services_v1_transparency_exchange_service_proto_msgTypes[35]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use FetchExternalEvidenceResponse.ProtoReflect.Descriptor instead.
+func (*FetchExternalEvidenceResponse) Descriptor() ([]byte, []int) {
+	return file_services_v1_transparency_exchange_service_proto_rawDescGZIP(), []int{35}
+}
+
+func (x *FetchExternalEvidenceResponse) GetEvidence() *Evidence {
+	if x != nil {
+		return x.Evidence
+	}
+	return nil
+}
+
+func (x *FetchExternalEvidenceResponse) GetStored() bool {
+	if x != nil {
+		return x.Stored
+	}
+	return false
+}
+
+func (x *FetchExternalEvidenceResponse) GetAudit() *EvidenceFetchAudit {
+	if x != nil {
+		return x.Audit
+	}
+	return nil
+}
+
+type EvidenceFetchAudit struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	Url           string                 `protobuf:"bytes,1,opt,name=url,proto3" json:"url,omitempty"`
+	Digest        string                 `protobuf:"bytes,2,opt,name=digest,proto3" json:"digest,omitempty"`
+	SizeBytes     int64                  `protobuf:"varint,3,opt,name=size_bytes,json=sizeBytes,proto3" json:"size_bytes,omitempty"`
+	Outcome       string                 `protobuf:"bytes,4,opt,name=outcome,proto3" json:"outcome,omitempty"` // fetched | policy_denied | fetch_failed
+	Detail        string                 `protobuf:"bytes,5,opt,name=detail,proto3" json:"detail,omitempty"`
+	FetchedAt     *timestamppb.Timestamp `protobuf:"bytes,6,opt,name=fetched_at,json=fetchedAt,proto3" json:"fetched_at,omitempty"`
+	DurationMs    int64                  `protobuf:"varint,7,opt,name=duration_ms,json=durationMs,proto3" json:"duration_ms,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *EvidenceFetchAudit) Reset() {
+	*x = EvidenceFetchAudit{}
+	mi := &file_services_v1_transparency_exchange_service_proto_msgTypes[36]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *EvidenceFetchAudit) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*EvidenceFetchAudit) ProtoMessage() {}
+
+func (x *EvidenceFetchAudit) ProtoReflect() protoreflect.Message {
+	mi := &file_services_v1_transparency_exchange_service_proto_msgTypes[36]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use EvidenceFetchAudit.ProtoReflect.Descriptor instead.
+func (*EvidenceFetchAudit) Descriptor() ([]byte, []int) {
+	return file_services_v1_transparency_exchange_service_proto_rawDescGZIP(), []int{36}
+}
+
+func (x *EvidenceFetchAudit) GetUrl() string {
+	if x != nil {
+		return x.Url
+	}
+	return ""
+}
+
+func (x *EvidenceFetchAudit) GetDigest() string {
+	if x != nil {
+		return x.Digest
+	}
+	return ""
+}
+
+func (x *EvidenceFetchAudit) GetSizeBytes() int64 {
+	if x != nil {
+		return x.SizeBytes
+	}
+	return 0
+}
+
+func (x *EvidenceFetchAudit) GetOutcome() string {
+	if x != nil {
+		return x.Outcome
+	}
+	return ""
+}
+
+func (x *EvidenceFetchAudit) GetDetail() string {
+	if x != nil {
+		return x.Detail
+	}
+	return ""
+}
+
+func (x *EvidenceFetchAudit) GetFetchedAt() *timestamppb.Timestamp {
+	if x != nil {
+		return x.FetchedAt
+	}
+	return nil
+}
+
+func (x *EvidenceFetchAudit) GetDurationMs() int64 {
+	if x != nil {
+		return x.DurationMs
+	}
+	return 0
+}
+
+type ListFetchEventsRequest struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	PageSize      int32                  `protobuf:"varint,1,opt,name=page_size,json=pageSize,proto3" json:"page_size,omitempty"`
+	PageToken     string                 `protobuf:"bytes,2,opt,name=page_token,json=pageToken,proto3" json:"page_token,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *ListFetchEventsRequest) Reset() {
+	*x = ListFetchEventsRequest{}
+	mi := &file_services_v1_transparency_exchange_service_proto_msgTypes[37]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *ListFetchEventsRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ListFetchEventsRequest) ProtoMessage() {}
+
+func (x *ListFetchEventsRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_services_v1_transparency_exchange_service_proto_msgTypes[37]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ListFetchEventsRequest.ProtoReflect.Descriptor instead.
+func (*ListFetchEventsRequest) Descriptor() ([]byte, []int) {
+	return file_services_v1_transparency_exchange_service_proto_rawDescGZIP(), []int{37}
+}
+
+func (x *ListFetchEventsRequest) GetPageSize() int32 {
+	if x != nil {
+		return x.PageSize
+	}
+	return 0
+}
+
+func (x *ListFetchEventsRequest) GetPageToken() string {
+	if x != nil {
+		return x.PageToken
+	}
+	return ""
+}
+
+type ListFetchEventsResponse struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	Events        []*EvidenceFetchAudit  `protobuf:"bytes,1,rep,name=events,proto3" json:"events,omitempty"`
+	NextPageToken string                 `protobuf:"bytes,2,opt,name=next_page_token,json=nextPageToken,proto3" json:"next_page_token,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *ListFetchEventsResponse) Reset() {
+	*x = ListFetchEventsResponse{}
+	mi := &file_services_v1_transparency_exchange_service_proto_msgTypes[38]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *ListFetchEventsResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ListFetchEventsResponse) ProtoMessage() {}
+
+func (x *ListFetchEventsResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_services_v1_transparency_exchange_service_proto_msgTypes[38]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ListFetchEventsResponse.ProtoReflect.Descriptor instead.
+func (*ListFetchEventsResponse) Descriptor() ([]byte, []int) {
+	return file_services_v1_transparency_exchange_service_proto_rawDescGZIP(), []int{38}
+}
+
+func (x *ListFetchEventsResponse) GetEvents() []*EvidenceFetchAudit {
+	if x != nil {
+		return x.Events
+	}
+	return nil
+}
+
+func (x *ListFetchEventsResponse) GetNextPageToken() string {
+	if x != nil {
+		return x.NextPageToken
+	}
+	return ""
+}
+
 type VerifyEvidenceRequest struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	EvidenceId    string                 `protobuf:"bytes,1,opt,name=evidence_id,json=evidenceId,proto3" json:"evidence_id,omitempty"`
@@ -2289,7 +2613,7 @@ type VerifyEvidenceRequest struct {
 
 func (x *VerifyEvidenceRequest) Reset() {
 	*x = VerifyEvidenceRequest{}
-	mi := &file_services_v1_transparency_exchange_service_proto_msgTypes[34]
+	mi := &file_services_v1_transparency_exchange_service_proto_msgTypes[39]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2301,7 +2625,7 @@ func (x *VerifyEvidenceRequest) String() string {
 func (*VerifyEvidenceRequest) ProtoMessage() {}
 
 func (x *VerifyEvidenceRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_services_v1_transparency_exchange_service_proto_msgTypes[34]
+	mi := &file_services_v1_transparency_exchange_service_proto_msgTypes[39]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2314,7 +2638,7 @@ func (x *VerifyEvidenceRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VerifyEvidenceRequest.ProtoReflect.Descriptor instead.
 func (*VerifyEvidenceRequest) Descriptor() ([]byte, []int) {
-	return file_services_v1_transparency_exchange_service_proto_rawDescGZIP(), []int{34}
+	return file_services_v1_transparency_exchange_service_proto_rawDescGZIP(), []int{39}
 }
 
 func (x *VerifyEvidenceRequest) GetEvidenceId() string {
@@ -2343,7 +2667,7 @@ type VerifyEvidenceResponse struct {
 
 func (x *VerifyEvidenceResponse) Reset() {
 	*x = VerifyEvidenceResponse{}
-	mi := &file_services_v1_transparency_exchange_service_proto_msgTypes[35]
+	mi := &file_services_v1_transparency_exchange_service_proto_msgTypes[40]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2355,7 +2679,7 @@ func (x *VerifyEvidenceResponse) String() string {
 func (*VerifyEvidenceResponse) ProtoMessage() {}
 
 func (x *VerifyEvidenceResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_services_v1_transparency_exchange_service_proto_msgTypes[35]
+	mi := &file_services_v1_transparency_exchange_service_proto_msgTypes[40]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2368,7 +2692,7 @@ func (x *VerifyEvidenceResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VerifyEvidenceResponse.ProtoReflect.Descriptor instead.
 func (*VerifyEvidenceResponse) Descriptor() ([]byte, []int) {
-	return file_services_v1_transparency_exchange_service_proto_rawDescGZIP(), []int{35}
+	return file_services_v1_transparency_exchange_service_proto_rawDescGZIP(), []int{40}
 }
 
 func (x *VerifyEvidenceResponse) GetEvidenceId() string {
@@ -2411,7 +2735,7 @@ type SyncClaimsRequest struct {
 
 func (x *SyncClaimsRequest) Reset() {
 	*x = SyncClaimsRequest{}
-	mi := &file_services_v1_transparency_exchange_service_proto_msgTypes[36]
+	mi := &file_services_v1_transparency_exchange_service_proto_msgTypes[41]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2423,7 +2747,7 @@ func (x *SyncClaimsRequest) String() string {
 func (*SyncClaimsRequest) ProtoMessage() {}
 
 func (x *SyncClaimsRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_services_v1_transparency_exchange_service_proto_msgTypes[36]
+	mi := &file_services_v1_transparency_exchange_service_proto_msgTypes[41]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2436,7 +2760,7 @@ func (x *SyncClaimsRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SyncClaimsRequest.ProtoReflect.Descriptor instead.
 func (*SyncClaimsRequest) Descriptor() ([]byte, []int) {
-	return file_services_v1_transparency_exchange_service_proto_rawDescGZIP(), []int{36}
+	return file_services_v1_transparency_exchange_service_proto_rawDescGZIP(), []int{41}
 }
 
 func (x *SyncClaimsRequest) GetPeerEndpoint() string {
@@ -2479,7 +2803,7 @@ type SyncClaimsResponse struct {
 
 func (x *SyncClaimsResponse) Reset() {
 	*x = SyncClaimsResponse{}
-	mi := &file_services_v1_transparency_exchange_service_proto_msgTypes[37]
+	mi := &file_services_v1_transparency_exchange_service_proto_msgTypes[42]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2491,7 +2815,7 @@ func (x *SyncClaimsResponse) String() string {
 func (*SyncClaimsResponse) ProtoMessage() {}
 
 func (x *SyncClaimsResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_services_v1_transparency_exchange_service_proto_msgTypes[37]
+	mi := &file_services_v1_transparency_exchange_service_proto_msgTypes[42]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2504,7 +2828,7 @@ func (x *SyncClaimsResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SyncClaimsResponse.ProtoReflect.Descriptor instead.
 func (*SyncClaimsResponse) Descriptor() ([]byte, []int) {
-	return file_services_v1_transparency_exchange_service_proto_rawDescGZIP(), []int{37}
+	return file_services_v1_transparency_exchange_service_proto_rawDescGZIP(), []int{42}
 }
 
 func (x *SyncClaimsResponse) GetImported() int32 {
@@ -2552,7 +2876,7 @@ type ProofState struct {
 
 func (x *ProofState) Reset() {
 	*x = ProofState{}
-	mi := &file_services_v1_transparency_exchange_service_proto_msgTypes[38]
+	mi := &file_services_v1_transparency_exchange_service_proto_msgTypes[43]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2564,7 +2888,7 @@ func (x *ProofState) String() string {
 func (*ProofState) ProtoMessage() {}
 
 func (x *ProofState) ProtoReflect() protoreflect.Message {
-	mi := &file_services_v1_transparency_exchange_service_proto_msgTypes[38]
+	mi := &file_services_v1_transparency_exchange_service_proto_msgTypes[43]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2577,7 +2901,7 @@ func (x *ProofState) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ProofState.ProtoReflect.Descriptor instead.
 func (*ProofState) Descriptor() ([]byte, []int) {
-	return file_services_v1_transparency_exchange_service_proto_rawDescGZIP(), []int{38}
+	return file_services_v1_transparency_exchange_service_proto_rawDescGZIP(), []int{43}
 }
 
 func (x *ProofState) GetDiscovery() string {
@@ -2841,7 +3165,36 @@ const file_services_v1_transparency_exchange_service_proto_rawDesc = "" +
 	"\vevidence_id\x18\x01 \x01(\tR\n" +
 	"evidenceId\"N\n" +
 	"\x13GetEvidenceResponse\x127\n" +
-	"\bevidence\x18\x01 \x01(\v2\x1b.oscal.services.v1.EvidenceR\bevidence\"^\n" +
+	"\bevidence\x18\x01 \x01(\v2\x1b.oscal.services.v1.EvidenceR\bevidence\"\x8b\x01\n" +
+	"\x1cFetchExternalEvidenceRequest\x12\x10\n" +
+	"\x03url\x18\x01 \x01(\tR\x03url\x12\x1f\n" +
+	"\vevidence_id\x18\x02 \x01(\tR\n" +
+	"evidenceId\x12\x1d\n" +
+	"\n" +
+	"media_type\x18\x03 \x01(\tR\tmediaType\x12\x19\n" +
+	"\bbom_kind\x18\x04 \x01(\tR\abomKind\"\xad\x01\n" +
+	"\x1dFetchExternalEvidenceResponse\x127\n" +
+	"\bevidence\x18\x01 \x01(\v2\x1b.oscal.services.v1.EvidenceR\bevidence\x12\x16\n" +
+	"\x06stored\x18\x02 \x01(\bR\x06stored\x12;\n" +
+	"\x05audit\x18\x03 \x01(\v2%.oscal.services.v1.EvidenceFetchAuditR\x05audit\"\xeb\x01\n" +
+	"\x12EvidenceFetchAudit\x12\x10\n" +
+	"\x03url\x18\x01 \x01(\tR\x03url\x12\x16\n" +
+	"\x06digest\x18\x02 \x01(\tR\x06digest\x12\x1d\n" +
+	"\n" +
+	"size_bytes\x18\x03 \x01(\x03R\tsizeBytes\x12\x18\n" +
+	"\aoutcome\x18\x04 \x01(\tR\aoutcome\x12\x16\n" +
+	"\x06detail\x18\x05 \x01(\tR\x06detail\x129\n" +
+	"\n" +
+	"fetched_at\x18\x06 \x01(\v2\x1a.google.protobuf.TimestampR\tfetchedAt\x12\x1f\n" +
+	"\vduration_ms\x18\a \x01(\x03R\n" +
+	"durationMs\"T\n" +
+	"\x16ListFetchEventsRequest\x12\x1b\n" +
+	"\tpage_size\x18\x01 \x01(\x05R\bpageSize\x12\x1d\n" +
+	"\n" +
+	"page_token\x18\x02 \x01(\tR\tpageToken\"\x80\x01\n" +
+	"\x17ListFetchEventsResponse\x12=\n" +
+	"\x06events\x18\x01 \x03(\v2%.oscal.services.v1.EvidenceFetchAuditR\x06events\x12&\n" +
+	"\x0fnext_page_token\x18\x02 \x01(\tR\rnextPageToken\"^\n" +
 	"\x15VerifyEvidenceRequest\x12\x1f\n" +
 	"\vevidence_id\x18\x01 \x01(\tR\n" +
 	"evidenceId\x12$\n" +
@@ -2872,7 +3225,7 @@ const file_services_v1_transparency_exchange_service_proto_rawDesc = "" +
 	"\ftransparency\x18\x06 \x01(\tR\ftransparency\x12!\n" +
 	"\fwitness_json\x18\a \x01(\tR\vwitnessJson\x12\x14\n" +
 	"\x05state\x18\b \x01(\tR\x05state\x12\x16\n" +
-	"\x06policy\x18\t \x01(\tR\x06policy2\xf4\r\n" +
+	"\x06policy\x18\t \x01(\tR\x06policy2\xb8\x10\n" +
 	"\x1bTransparencyExchangeService\x12\x80\x01\n" +
 	"\vCreateClaim\x12%.oscal.services.v1.CreateClaimRequest\x1a&.oscal.services.v1.CreateClaimResponse\"\"\x82\xd3\xe4\x93\x02\x1c:\x01*\"\x17/v1/transparency/claims\x12\x7f\n" +
 	"\bGetClaim\x12\".oscal.services.v1.GetClaimRequest\x1a#.oscal.services.v1.GetClaimResponse\"*\x82\xd3\xe4\x93\x02$\x12\"/v1/transparency/claims/{claim_id}\x12z\n" +
@@ -2885,7 +3238,9 @@ const file_services_v1_transparency_exchange_service_proto_rawDesc = "" +
 	"\vImportBatch\x12%.oscal.services.v1.ImportBatchRequest\x1a&.oscal.services.v1.ImportBatchResponse\"\"\x82\xd3\xe4\x93\x02\x1c:\x01*\"\x17/v1/transparency/import\x12\x8b\x01\n" +
 	"\x0eUploadEvidence\x12(.oscal.services.v1.UploadEvidenceRequest\x1a).oscal.services.v1.UploadEvidenceResponse\"$\x82\xd3\xe4\x93\x02\x1e:\x01*\"\x19/v1/transparency/evidence\x12\x8d\x01\n" +
 	"\vGetEvidence\x12%.oscal.services.v1.GetEvidenceRequest\x1a&.oscal.services.v1.GetEvidenceResponse\"/\x82\xd3\xe4\x93\x02)\x12'/v1/transparency/evidence/{evidence_id}\x12\xa0\x01\n" +
-	"\x0eVerifyEvidence\x12(.oscal.services.v1.VerifyEvidenceRequest\x1a).oscal.services.v1.VerifyEvidenceResponse\"9\x82\xd3\xe4\x93\x023:\x01*\"./v1/transparency/evidence/{evidence_id}/verify\x12{\n" +
+	"\x0eVerifyEvidence\x12(.oscal.services.v1.VerifyEvidenceRequest\x1a).oscal.services.v1.VerifyEvidenceResponse\"9\x82\xd3\xe4\x93\x023:\x01*\"./v1/transparency/evidence/{evidence_id}/verify\x12\xa6\x01\n" +
+	"\x15FetchExternalEvidence\x12/.oscal.services.v1.FetchExternalEvidenceRequest\x1a0.oscal.services.v1.FetchExternalEvidenceResponse\"*\x82\xd3\xe4\x93\x02$:\x01*\"\x1f/v1/transparency/evidence/fetch\x12\x98\x01\n" +
+	"\x0fListFetchEvents\x12).oscal.services.v1.ListFetchEventsRequest\x1a*.oscal.services.v1.ListFetchEventsResponse\".\x82\xd3\xe4\x93\x02(\x12&/v1/transparency/evidence/fetch/events\x12{\n" +
 	"\n" +
 	"SyncClaims\x12$.oscal.services.v1.SyncClaimsRequest\x1a%.oscal.services.v1.SyncClaimsResponse\" \x82\xd3\xe4\x93\x02\x1a:\x01*\"\x15/v1/transparency/syncB>Z<github.com/mchorfa/xoscal/proto/oscal/services/v1;servicesv1b\x06proto3"
 
@@ -2901,7 +3256,7 @@ func file_services_v1_transparency_exchange_service_proto_rawDescGZIP() []byte {
 	return file_services_v1_transparency_exchange_service_proto_rawDescData
 }
 
-var file_services_v1_transparency_exchange_service_proto_msgTypes = make([]protoimpl.MessageInfo, 39)
+var file_services_v1_transparency_exchange_service_proto_msgTypes = make([]protoimpl.MessageInfo, 44)
 var file_services_v1_transparency_exchange_service_proto_goTypes = []any{
 	(*Claim)(nil),                          // 0: oscal.services.v1.Claim
 	(*Reference)(nil),                      // 1: oscal.services.v1.Reference
@@ -2937,40 +3292,45 @@ var file_services_v1_transparency_exchange_service_proto_goTypes = []any{
 	(*UploadEvidenceResponse)(nil),         // 31: oscal.services.v1.UploadEvidenceResponse
 	(*GetEvidenceRequest)(nil),             // 32: oscal.services.v1.GetEvidenceRequest
 	(*GetEvidenceResponse)(nil),            // 33: oscal.services.v1.GetEvidenceResponse
-	(*VerifyEvidenceRequest)(nil),          // 34: oscal.services.v1.VerifyEvidenceRequest
-	(*VerifyEvidenceResponse)(nil),         // 35: oscal.services.v1.VerifyEvidenceResponse
-	(*SyncClaimsRequest)(nil),              // 36: oscal.services.v1.SyncClaimsRequest
-	(*SyncClaimsResponse)(nil),             // 37: oscal.services.v1.SyncClaimsResponse
-	(*ProofState)(nil),                     // 38: oscal.services.v1.ProofState
-	(*timestamppb.Timestamp)(nil),          // 39: google.protobuf.Timestamp
+	(*FetchExternalEvidenceRequest)(nil),   // 34: oscal.services.v1.FetchExternalEvidenceRequest
+	(*FetchExternalEvidenceResponse)(nil),  // 35: oscal.services.v1.FetchExternalEvidenceResponse
+	(*EvidenceFetchAudit)(nil),             // 36: oscal.services.v1.EvidenceFetchAudit
+	(*ListFetchEventsRequest)(nil),         // 37: oscal.services.v1.ListFetchEventsRequest
+	(*ListFetchEventsResponse)(nil),        // 38: oscal.services.v1.ListFetchEventsResponse
+	(*VerifyEvidenceRequest)(nil),          // 39: oscal.services.v1.VerifyEvidenceRequest
+	(*VerifyEvidenceResponse)(nil),         // 40: oscal.services.v1.VerifyEvidenceResponse
+	(*SyncClaimsRequest)(nil),              // 41: oscal.services.v1.SyncClaimsRequest
+	(*SyncClaimsResponse)(nil),             // 42: oscal.services.v1.SyncClaimsResponse
+	(*ProofState)(nil),                     // 43: oscal.services.v1.ProofState
+	(*timestamppb.Timestamp)(nil),          // 44: google.protobuf.Timestamp
 }
 var file_services_v1_transparency_exchange_service_proto_depIdxs = []int32{
 	1,  // 0: oscal.services.v1.Claim.subject:type_name -> oscal.services.v1.Reference
 	2,  // 1: oscal.services.v1.Claim.predicate:type_name -> oscal.services.v1.Predicate
 	1,  // 2: oscal.services.v1.Claim.object:type_name -> oscal.services.v1.Reference
-	39, // 3: oscal.services.v1.Claim.null_object:type_name -> google.protobuf.Timestamp
+	44, // 3: oscal.services.v1.Claim.null_object:type_name -> google.protobuf.Timestamp
 	3,  // 4: oscal.services.v1.Claim.issuer:type_name -> oscal.services.v1.Identity
 	4,  // 5: oscal.services.v1.Claim.valid_time:type_name -> oscal.services.v1.TimeWindow
-	39, // 6: oscal.services.v1.Claim.observed_time:type_name -> google.protobuf.Timestamp
+	44, // 6: oscal.services.v1.Claim.observed_time:type_name -> google.protobuf.Timestamp
 	5,  // 7: oscal.services.v1.Claim.source_refs:type_name -> oscal.services.v1.EvidenceRef
 	6,  // 8: oscal.services.v1.Claim.proof_refs:type_name -> oscal.services.v1.ProofRef
 	7,  // 9: oscal.services.v1.Claim.policy_refs:type_name -> oscal.services.v1.PolicyRef
-	39, // 10: oscal.services.v1.TimeWindow.from_time:type_name -> google.protobuf.Timestamp
-	39, // 11: oscal.services.v1.TimeWindow.to_time:type_name -> google.protobuf.Timestamp
-	39, // 12: oscal.services.v1.PolicyRef.valid_to:type_name -> google.protobuf.Timestamp
+	44, // 10: oscal.services.v1.TimeWindow.from_time:type_name -> google.protobuf.Timestamp
+	44, // 11: oscal.services.v1.TimeWindow.to_time:type_name -> google.protobuf.Timestamp
+	44, // 12: oscal.services.v1.PolicyRef.valid_to:type_name -> google.protobuf.Timestamp
 	9,  // 13: oscal.services.v1.Evidence.storage:type_name -> oscal.services.v1.Storage
 	1,  // 14: oscal.services.v1.Evidence.subject_refs:type_name -> oscal.services.v1.Reference
-	39, // 15: oscal.services.v1.Evidence.created_at:type_name -> google.protobuf.Timestamp
+	44, // 15: oscal.services.v1.Evidence.created_at:type_name -> google.protobuf.Timestamp
 	4,  // 16: oscal.services.v1.Evidence.valid_time:type_name -> oscal.services.v1.TimeWindow
 	0,  // 17: oscal.services.v1.CreateClaimRequest.claim:type_name -> oscal.services.v1.Claim
 	0,  // 18: oscal.services.v1.CreateClaimResponse.claim:type_name -> oscal.services.v1.Claim
 	0,  // 19: oscal.services.v1.GetClaimResponse.claim:type_name -> oscal.services.v1.Claim
-	39, // 20: oscal.services.v1.ListClaimsRequest.valid_after:type_name -> google.protobuf.Timestamp
+	44, // 20: oscal.services.v1.ListClaimsRequest.valid_after:type_name -> google.protobuf.Timestamp
 	0,  // 21: oscal.services.v1.ListClaimsResponse.claims:type_name -> oscal.services.v1.Claim
-	38, // 22: oscal.services.v1.VerifyClaimResponse.proof_state:type_name -> oscal.services.v1.ProofState
+	43, // 22: oscal.services.v1.VerifyClaimResponse.proof_state:type_name -> oscal.services.v1.ProofState
 	20, // 23: oscal.services.v1.ListVerificationEventsResponse.events:type_name -> oscal.services.v1.VerificationEvent
-	39, // 24: oscal.services.v1.VerificationEvent.created_at:type_name -> google.protobuf.Timestamp
-	39, // 25: oscal.services.v1.ExportClaimReceiptResponse.exported_at:type_name -> google.protobuf.Timestamp
+	44, // 24: oscal.services.v1.VerificationEvent.created_at:type_name -> google.protobuf.Timestamp
+	44, // 25: oscal.services.v1.ExportClaimReceiptResponse.exported_at:type_name -> google.protobuf.Timestamp
 	8,  // 26: oscal.services.v1.ImportEvidence.evidence:type_name -> oscal.services.v1.Evidence
 	0,  // 27: oscal.services.v1.ImportRecord.claim:type_name -> oscal.services.v1.Claim
 	23, // 28: oscal.services.v1.ImportRecord.evidence:type_name -> oscal.services.v1.ImportEvidence
@@ -2981,36 +3341,44 @@ var file_services_v1_transparency_exchange_service_proto_depIdxs = []int32{
 	8,  // 33: oscal.services.v1.UploadEvidenceRequest.evidence:type_name -> oscal.services.v1.Evidence
 	8,  // 34: oscal.services.v1.UploadEvidenceResponse.evidence:type_name -> oscal.services.v1.Evidence
 	8,  // 35: oscal.services.v1.GetEvidenceResponse.evidence:type_name -> oscal.services.v1.Evidence
-	39, // 36: oscal.services.v1.SyncClaimsRequest.since:type_name -> google.protobuf.Timestamp
-	10, // 37: oscal.services.v1.TransparencyExchangeService.CreateClaim:input_type -> oscal.services.v1.CreateClaimRequest
-	12, // 38: oscal.services.v1.TransparencyExchangeService.GetClaim:input_type -> oscal.services.v1.GetClaimRequest
-	14, // 39: oscal.services.v1.TransparencyExchangeService.ListClaims:input_type -> oscal.services.v1.ListClaimsRequest
-	16, // 40: oscal.services.v1.TransparencyExchangeService.VerifyClaim:input_type -> oscal.services.v1.VerifyClaimRequest
-	18, // 41: oscal.services.v1.TransparencyExchangeService.ListVerificationEvents:input_type -> oscal.services.v1.ListVerificationEventsRequest
-	21, // 42: oscal.services.v1.TransparencyExchangeService.ExportClaimReceipt:input_type -> oscal.services.v1.ExportClaimReceiptRequest
-	26, // 43: oscal.services.v1.TransparencyExchangeService.PreflightImport:input_type -> oscal.services.v1.PreflightImportRequest
-	28, // 44: oscal.services.v1.TransparencyExchangeService.ImportBatch:input_type -> oscal.services.v1.ImportBatchRequest
-	30, // 45: oscal.services.v1.TransparencyExchangeService.UploadEvidence:input_type -> oscal.services.v1.UploadEvidenceRequest
-	32, // 46: oscal.services.v1.TransparencyExchangeService.GetEvidence:input_type -> oscal.services.v1.GetEvidenceRequest
-	34, // 47: oscal.services.v1.TransparencyExchangeService.VerifyEvidence:input_type -> oscal.services.v1.VerifyEvidenceRequest
-	36, // 48: oscal.services.v1.TransparencyExchangeService.SyncClaims:input_type -> oscal.services.v1.SyncClaimsRequest
-	11, // 49: oscal.services.v1.TransparencyExchangeService.CreateClaim:output_type -> oscal.services.v1.CreateClaimResponse
-	13, // 50: oscal.services.v1.TransparencyExchangeService.GetClaim:output_type -> oscal.services.v1.GetClaimResponse
-	15, // 51: oscal.services.v1.TransparencyExchangeService.ListClaims:output_type -> oscal.services.v1.ListClaimsResponse
-	17, // 52: oscal.services.v1.TransparencyExchangeService.VerifyClaim:output_type -> oscal.services.v1.VerifyClaimResponse
-	19, // 53: oscal.services.v1.TransparencyExchangeService.ListVerificationEvents:output_type -> oscal.services.v1.ListVerificationEventsResponse
-	22, // 54: oscal.services.v1.TransparencyExchangeService.ExportClaimReceipt:output_type -> oscal.services.v1.ExportClaimReceiptResponse
-	27, // 55: oscal.services.v1.TransparencyExchangeService.PreflightImport:output_type -> oscal.services.v1.PreflightImportResponse
-	29, // 56: oscal.services.v1.TransparencyExchangeService.ImportBatch:output_type -> oscal.services.v1.ImportBatchResponse
-	31, // 57: oscal.services.v1.TransparencyExchangeService.UploadEvidence:output_type -> oscal.services.v1.UploadEvidenceResponse
-	33, // 58: oscal.services.v1.TransparencyExchangeService.GetEvidence:output_type -> oscal.services.v1.GetEvidenceResponse
-	35, // 59: oscal.services.v1.TransparencyExchangeService.VerifyEvidence:output_type -> oscal.services.v1.VerifyEvidenceResponse
-	37, // 60: oscal.services.v1.TransparencyExchangeService.SyncClaims:output_type -> oscal.services.v1.SyncClaimsResponse
-	49, // [49:61] is the sub-list for method output_type
-	37, // [37:49] is the sub-list for method input_type
-	37, // [37:37] is the sub-list for extension type_name
-	37, // [37:37] is the sub-list for extension extendee
-	0,  // [0:37] is the sub-list for field type_name
+	8,  // 36: oscal.services.v1.FetchExternalEvidenceResponse.evidence:type_name -> oscal.services.v1.Evidence
+	36, // 37: oscal.services.v1.FetchExternalEvidenceResponse.audit:type_name -> oscal.services.v1.EvidenceFetchAudit
+	44, // 38: oscal.services.v1.EvidenceFetchAudit.fetched_at:type_name -> google.protobuf.Timestamp
+	36, // 39: oscal.services.v1.ListFetchEventsResponse.events:type_name -> oscal.services.v1.EvidenceFetchAudit
+	44, // 40: oscal.services.v1.SyncClaimsRequest.since:type_name -> google.protobuf.Timestamp
+	10, // 41: oscal.services.v1.TransparencyExchangeService.CreateClaim:input_type -> oscal.services.v1.CreateClaimRequest
+	12, // 42: oscal.services.v1.TransparencyExchangeService.GetClaim:input_type -> oscal.services.v1.GetClaimRequest
+	14, // 43: oscal.services.v1.TransparencyExchangeService.ListClaims:input_type -> oscal.services.v1.ListClaimsRequest
+	16, // 44: oscal.services.v1.TransparencyExchangeService.VerifyClaim:input_type -> oscal.services.v1.VerifyClaimRequest
+	18, // 45: oscal.services.v1.TransparencyExchangeService.ListVerificationEvents:input_type -> oscal.services.v1.ListVerificationEventsRequest
+	21, // 46: oscal.services.v1.TransparencyExchangeService.ExportClaimReceipt:input_type -> oscal.services.v1.ExportClaimReceiptRequest
+	26, // 47: oscal.services.v1.TransparencyExchangeService.PreflightImport:input_type -> oscal.services.v1.PreflightImportRequest
+	28, // 48: oscal.services.v1.TransparencyExchangeService.ImportBatch:input_type -> oscal.services.v1.ImportBatchRequest
+	30, // 49: oscal.services.v1.TransparencyExchangeService.UploadEvidence:input_type -> oscal.services.v1.UploadEvidenceRequest
+	32, // 50: oscal.services.v1.TransparencyExchangeService.GetEvidence:input_type -> oscal.services.v1.GetEvidenceRequest
+	39, // 51: oscal.services.v1.TransparencyExchangeService.VerifyEvidence:input_type -> oscal.services.v1.VerifyEvidenceRequest
+	34, // 52: oscal.services.v1.TransparencyExchangeService.FetchExternalEvidence:input_type -> oscal.services.v1.FetchExternalEvidenceRequest
+	37, // 53: oscal.services.v1.TransparencyExchangeService.ListFetchEvents:input_type -> oscal.services.v1.ListFetchEventsRequest
+	41, // 54: oscal.services.v1.TransparencyExchangeService.SyncClaims:input_type -> oscal.services.v1.SyncClaimsRequest
+	11, // 55: oscal.services.v1.TransparencyExchangeService.CreateClaim:output_type -> oscal.services.v1.CreateClaimResponse
+	13, // 56: oscal.services.v1.TransparencyExchangeService.GetClaim:output_type -> oscal.services.v1.GetClaimResponse
+	15, // 57: oscal.services.v1.TransparencyExchangeService.ListClaims:output_type -> oscal.services.v1.ListClaimsResponse
+	17, // 58: oscal.services.v1.TransparencyExchangeService.VerifyClaim:output_type -> oscal.services.v1.VerifyClaimResponse
+	19, // 59: oscal.services.v1.TransparencyExchangeService.ListVerificationEvents:output_type -> oscal.services.v1.ListVerificationEventsResponse
+	22, // 60: oscal.services.v1.TransparencyExchangeService.ExportClaimReceipt:output_type -> oscal.services.v1.ExportClaimReceiptResponse
+	27, // 61: oscal.services.v1.TransparencyExchangeService.PreflightImport:output_type -> oscal.services.v1.PreflightImportResponse
+	29, // 62: oscal.services.v1.TransparencyExchangeService.ImportBatch:output_type -> oscal.services.v1.ImportBatchResponse
+	31, // 63: oscal.services.v1.TransparencyExchangeService.UploadEvidence:output_type -> oscal.services.v1.UploadEvidenceResponse
+	33, // 64: oscal.services.v1.TransparencyExchangeService.GetEvidence:output_type -> oscal.services.v1.GetEvidenceResponse
+	40, // 65: oscal.services.v1.TransparencyExchangeService.VerifyEvidence:output_type -> oscal.services.v1.VerifyEvidenceResponse
+	35, // 66: oscal.services.v1.TransparencyExchangeService.FetchExternalEvidence:output_type -> oscal.services.v1.FetchExternalEvidenceResponse
+	38, // 67: oscal.services.v1.TransparencyExchangeService.ListFetchEvents:output_type -> oscal.services.v1.ListFetchEventsResponse
+	42, // 68: oscal.services.v1.TransparencyExchangeService.SyncClaims:output_type -> oscal.services.v1.SyncClaimsResponse
+	55, // [55:69] is the sub-list for method output_type
+	41, // [41:55] is the sub-list for method input_type
+	41, // [41:41] is the sub-list for extension type_name
+	41, // [41:41] is the sub-list for extension extendee
+	0,  // [0:41] is the sub-list for field type_name
 }
 
 func init() { file_services_v1_transparency_exchange_service_proto_init() }
@@ -3028,7 +3396,7 @@ func file_services_v1_transparency_exchange_service_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_services_v1_transparency_exchange_service_proto_rawDesc), len(file_services_v1_transparency_exchange_service_proto_rawDesc)),
 			NumEnums:      0,
-			NumMessages:   39,
+			NumMessages:   44,
 			NumExtensions: 0,
 			NumServices:   1,
 		},

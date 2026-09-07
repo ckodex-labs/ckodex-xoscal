@@ -67,6 +67,16 @@ type Security struct {
 	AuthTokens      []string `mapstructure:"auth_tokens"`
 }
 
+// FetchPolicy bounds external evidence fetches. Fetching stays disabled
+// unless explicitly enabled; an absent policy is a fail-closed default.
+type FetchPolicy struct {
+	Enabled      bool          `mapstructure:"enabled"`
+	MaxBytes     int64         `mapstructure:"max_bytes"`
+	Timeout      time.Duration `mapstructure:"timeout"`
+	AllowedHosts []string      `mapstructure:"allowed_hosts"`
+	MaxRedirects int           `mapstructure:"max_redirects"`
+}
+
 // Config is the root application configuration.
 type Config struct {
 	Server        Server        `mapstructure:"server"`
@@ -74,6 +84,7 @@ type Config struct {
 	Vector        Vector        `mapstructure:"vector"`
 	Observability Observability `mapstructure:"observability"`
 	Security      Security      `mapstructure:"security"`
+	FetchPolicy   FetchPolicy   `mapstructure:"fetch_policy"`
 }
 
 // Default returns a Config populated with production-safe defaults.
@@ -114,6 +125,12 @@ func Default() *Config {
 			RateLimitRPS:   100,
 			RateLimitBurst: 200,
 			AuthMode:       "none",
+		},
+		FetchPolicy: FetchPolicy{
+			Enabled:      false, // fail-closed: external fetching is opt-in
+			MaxBytes:     10 << 20,
+			Timeout:      30 * time.Second,
+			MaxRedirects: 3,
 		},
 	}
 }

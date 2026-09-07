@@ -71,6 +71,16 @@ class TransparencyExchangeServiceStub:
                 request_serializer=services_dot_v1_dot_transparency__exchange__service__pb2.VerifyEvidenceRequest.SerializeToString,
                 response_deserializer=services_dot_v1_dot_transparency__exchange__service__pb2.VerifyEvidenceResponse.FromString,
                 _registered_method=True)
+        self.FetchExternalEvidence = channel.unary_unary(
+                '/oscal.services.v1.TransparencyExchangeService/FetchExternalEvidence',
+                request_serializer=services_dot_v1_dot_transparency__exchange__service__pb2.FetchExternalEvidenceRequest.SerializeToString,
+                response_deserializer=services_dot_v1_dot_transparency__exchange__service__pb2.FetchExternalEvidenceResponse.FromString,
+                _registered_method=True)
+        self.ListFetchEvents = channel.unary_unary(
+                '/oscal.services.v1.TransparencyExchangeService/ListFetchEvents',
+                request_serializer=services_dot_v1_dot_transparency__exchange__service__pb2.ListFetchEventsRequest.SerializeToString,
+                response_deserializer=services_dot_v1_dot_transparency__exchange__service__pb2.ListFetchEventsResponse.FromString,
+                _registered_method=True)
         self.SyncClaims = channel.unary_unary(
                 '/oscal.services.v1.TransparencyExchangeService/SyncClaims',
                 request_serializer=services_dot_v1_dot_transparency__exchange__service__pb2.SyncClaimsRequest.SerializeToString,
@@ -149,6 +159,22 @@ class TransparencyExchangeServiceServicer:
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
+    def FetchExternalEvidence(self, request, context):
+        """FetchExternalEvidence retrieves an external artifact over HTTPS under the
+        deployment's bounded fetch policy, stores it as content-addressed
+        evidence, and records an append-only fetch audit event. The RPC fails
+        closed when no fetch policy is configured or the request violates it.
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def ListFetchEvents(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
     def SyncClaims(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -212,6 +238,16 @@ def add_TransparencyExchangeServiceServicer_to_server(servicer, server):
                     servicer.VerifyEvidence,
                     request_deserializer=services_dot_v1_dot_transparency__exchange__service__pb2.VerifyEvidenceRequest.FromString,
                     response_serializer=services_dot_v1_dot_transparency__exchange__service__pb2.VerifyEvidenceResponse.SerializeToString,
+            ),
+            'FetchExternalEvidence': grpc.unary_unary_rpc_method_handler(
+                    servicer.FetchExternalEvidence,
+                    request_deserializer=services_dot_v1_dot_transparency__exchange__service__pb2.FetchExternalEvidenceRequest.FromString,
+                    response_serializer=services_dot_v1_dot_transparency__exchange__service__pb2.FetchExternalEvidenceResponse.SerializeToString,
+            ),
+            'ListFetchEvents': grpc.unary_unary_rpc_method_handler(
+                    servicer.ListFetchEvents,
+                    request_deserializer=services_dot_v1_dot_transparency__exchange__service__pb2.ListFetchEventsRequest.FromString,
+                    response_serializer=services_dot_v1_dot_transparency__exchange__service__pb2.ListFetchEventsResponse.SerializeToString,
             ),
             'SyncClaims': grpc.unary_unary_rpc_method_handler(
                     servicer.SyncClaims,
@@ -518,6 +554,60 @@ class TransparencyExchangeService:
             '/oscal.services.v1.TransparencyExchangeService/VerifyEvidence',
             services_dot_v1_dot_transparency__exchange__service__pb2.VerifyEvidenceRequest.SerializeToString,
             services_dot_v1_dot_transparency__exchange__service__pb2.VerifyEvidenceResponse.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+    @staticmethod
+    def FetchExternalEvidence(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/oscal.services.v1.TransparencyExchangeService/FetchExternalEvidence',
+            services_dot_v1_dot_transparency__exchange__service__pb2.FetchExternalEvidenceRequest.SerializeToString,
+            services_dot_v1_dot_transparency__exchange__service__pb2.FetchExternalEvidenceResponse.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+    @staticmethod
+    def ListFetchEvents(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/oscal.services.v1.TransparencyExchangeService/ListFetchEvents',
+            services_dot_v1_dot_transparency__exchange__service__pb2.ListFetchEventsRequest.SerializeToString,
+            services_dot_v1_dot_transparency__exchange__service__pb2.ListFetchEventsResponse.FromString,
             options,
             channel_credentials,
             insecure,

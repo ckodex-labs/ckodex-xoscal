@@ -1,0 +1,27 @@
+{
+  "$id": "oscal.services.v1.FetchExternalEvidenceRequest.jsonschema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "bomKind": {
+      "type": "string"
+    },
+    "evidenceId": {
+      "type": "string"
+    },
+    "mediaType": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "url",
+    "evidenceId",
+    "mediaType",
+    "bomKind"
+  ],
+  "title": "Fetch External Evidence Request",
+  "type": "object"
+}

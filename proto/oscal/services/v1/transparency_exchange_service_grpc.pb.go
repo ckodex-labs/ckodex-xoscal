@@ -30,6 +30,8 @@ const (
 	TransparencyExchangeService_UploadEvidence_FullMethodName         = "/oscal.services.v1.TransparencyExchangeService/UploadEvidence"
 	TransparencyExchangeService_GetEvidence_FullMethodName            = "/oscal.services.v1.TransparencyExchangeService/GetEvidence"
 	TransparencyExchangeService_VerifyEvidence_FullMethodName         = "/oscal.services.v1.TransparencyExchangeService/VerifyEvidence"
+	TransparencyExchangeService_FetchExternalEvidence_FullMethodName  = "/oscal.services.v1.TransparencyExchangeService/FetchExternalEvidence"
+	TransparencyExchangeService_ListFetchEvents_FullMethodName        = "/oscal.services.v1.TransparencyExchangeService/ListFetchEvents"
 	TransparencyExchangeService_SyncClaims_FullMethodName             = "/oscal.services.v1.TransparencyExchangeService/SyncClaims"
 )
 
@@ -51,6 +53,12 @@ type TransparencyExchangeServiceClient interface {
 	UploadEvidence(ctx context.Context, in *UploadEvidenceRequest, opts ...grpc.CallOption) (*UploadEvidenceResponse, error)
 	GetEvidence(ctx context.Context, in *GetEvidenceRequest, opts ...grpc.CallOption) (*GetEvidenceResponse, error)
 	VerifyEvidence(ctx context.Context, in *VerifyEvidenceRequest, opts ...grpc.CallOption) (*VerifyEvidenceResponse, error)
+	// FetchExternalEvidence retrieves an external artifact over HTTPS under the
+	// deployment's bounded fetch policy, stores it as content-addressed
+	// evidence, and records an append-only fetch audit event. The RPC fails
+	// closed when no fetch policy is configured or the request violates it.
+	FetchExternalEvidence(ctx context.Context, in *FetchExternalEvidenceRequest, opts ...grpc.CallOption) (*FetchExternalEvidenceResponse, error)
+	ListFetchEvents(ctx context.Context, in *ListFetchEventsRequest, opts ...grpc.CallOption) (*ListFetchEventsResponse, error)
 	SyncClaims(ctx context.Context, in *SyncClaimsRequest, opts ...grpc.CallOption) (*SyncClaimsResponse, error)
 }
 
@@ -172,6 +180,26 @@ func (c *transparencyExchangeServiceClient) VerifyEvidence(ctx context.Context, 
 	return out, nil
 }
 
+func (c *transparencyExchangeServiceClient) FetchExternalEvidence(ctx context.Context, in *FetchExternalEvidenceRequest, opts ...grpc.CallOption) (*FetchExternalEvidenceResponse, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(FetchExternalEvidenceResponse)
+	err := c.cc.Invoke(ctx, TransparencyExchangeService_FetchExternalEvidence_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *transparencyExchangeServiceClient) ListFetchEvents(ctx context.Context, in *ListFetchEventsRequest, opts ...grpc.CallOption) (*ListFetchEventsResponse, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(ListFetchEventsResponse)
+	err := c.cc.Invoke(ctx, TransparencyExchangeService_ListFetchEvents_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 func (c *transparencyExchangeServiceClient) SyncClaims(ctx context.Context, in *SyncClaimsRequest, opts ...grpc.CallOption) (*SyncClaimsResponse, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(SyncClaimsResponse)
@@ -200,6 +228,12 @@ type TransparencyExchangeServiceServer interface {
 	UploadEvidence(context.Context, *UploadEvidenceRequest) (*UploadEvidenceResponse, error)
 	GetEvidence(context.Context, *GetEvidenceRequest) (*GetEvidenceResponse, error)
 	VerifyEvidence(context.Context, *VerifyEvidenceRequest) (*VerifyEvidenceResponse, error)
+	// FetchExternalEvidence retrieves an external artifact over HTTPS under the
+	// deployment's bounded fetch policy, stores it as content-addressed
+	// evidence, and records an append-only fetch audit event. The RPC fails
+	// closed when no fetch policy is configured or the request violates it.
+	FetchExternalEvidence(context.Context, *FetchExternalEvidenceRequest) (*FetchExternalEvidenceResponse, error)
+	ListFetchEvents(context.Context, *ListFetchEventsRequest) (*ListFetchEventsResponse, error)
 	SyncClaims(context.Context, *SyncClaimsRequest) (*SyncClaimsResponse, error)
 	mustEmbedUnimplementedTransparencyExchangeServiceServer()
 }
@@ -243,6 +277,12 @@ func (UnimplementedTransparencyExchangeServiceServer) GetEvidence(context.Contex
 }
 func (UnimplementedTransparencyExchangeServiceServer) VerifyEvidence(context.Context, *VerifyEvidenceRequest) (*VerifyEvidenceResponse, error) {
 	return nil, status.Error(codes.Unimplemented, "method VerifyEvidence not implemented")
+}
+func (UnimplementedTransparencyExchangeServiceServer) FetchExternalEvidence(context.Context, *FetchExternalEvidenceRequest) (*FetchExternalEvidenceResponse, error) {
+	return nil, status.Error(codes.Unimplemented, "method FetchExternalEvidence not implemented")
+}
+func (UnimplementedTransparencyExchangeServiceServer) ListFetchEvents(context.Context, *ListFetchEventsRequest) (*ListFetchEventsResponse, error) {
+	return nil, status.Error(codes.Unimplemented, "method ListFetchEvents not implemented")
 }
 func (UnimplementedTransparencyExchangeServiceServer) SyncClaims(context.Context, *SyncClaimsRequest) (*SyncClaimsResponse, error) {
 	return nil, status.Error(codes.Unimplemented, "method SyncClaims not implemented")
@@ -467,6 +507,42 @@ func _TransparencyExchangeService_VerifyEvidence_Handler(srv interface{}, ctx co
 	return interceptor(ctx, in, info, handler)
 }
 
+func _TransparencyExchangeService_FetchExternalEvidence_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(FetchExternalEvidenceRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(TransparencyExchangeServiceServer).FetchExternalEvidence(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: TransparencyExchangeService_FetchExternalEvidence_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(TransparencyExchangeServiceServer).FetchExternalEvidence(ctx, req.(*FetchExternalEvidenceRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _TransparencyExchangeService_ListFetchEvents_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ListFetchEventsRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(TransparencyExchangeServiceServer).ListFetchEvents(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: TransparencyExchangeService_ListFetchEvents_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(TransparencyExchangeServiceServer).ListFetchEvents(ctx, req.(*ListFetchEventsRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 func _TransparencyExchangeService_SyncClaims_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(SyncClaimsRequest)
 	if err := dec(in); err != nil {
@@ -535,6 +611,14 @@ var TransparencyExchangeService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "VerifyEvidence",
 			Handler:    _TransparencyExchangeService_VerifyEvidence_Handler,
+		},
+		{
+			MethodName: "FetchExternalEvidence",
+			Handler:    _TransparencyExchangeService_FetchExternalEvidence_Handler,
+		},
+		{
+			MethodName: "ListFetchEvents",
+			Handler:    _TransparencyExchangeService_ListFetchEvents_Handler,
 		},
 		{
 			MethodName: "SyncClaims",

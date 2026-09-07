@@ -277,6 +277,55 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/oscal.services.v1.UploadEvidenceResponse'
+  /v1/transparency/evidence/fetch:
+    post:
+      tags:
+        - oscal.services.v1.TransparencyExchangeService
+      summary: FetchExternalEvidence
+      description: |-
+        FetchExternalEvidence retrieves an external artifact over HTTPS under the
+         deployment's bounded fetch policy, stores it as content-addressed
+         evidence, and records an append-only fetch audit event. The RPC fails
+         closed when no fetch policy is configured or the request violates it.
+      operationId: oscal.services.v1.TransparencyExchangeService.FetchExternalEvidence
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/oscal.services.v1.FetchExternalEvidenceRequest'
+        required: true
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/oscal.services.v1.FetchExternalEvidenceResponse'
+  /v1/transparency/evidence/fetch/events:
+    get:
+      tags:
+        - oscal.services.v1.TransparencyExchangeService
+      summary: ListFetchEvents
+      operationId: oscal.services.v1.TransparencyExchangeService.ListFetchEvents
+      parameters:
+        - name: pageSize
+          in: query
+          schema:
+            type: integer
+            title: page_size
+            format: int32
+        - name: pageToken
+          in: query
+          schema:
+            type: string
+            title: page_token
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/oscal.services.v1.ListFetchEventsResponse'
   /v1/transparency/evidence/{evidenceId}:
     get:
       tags:
@@ -640,6 +689,39 @@ components:
           title: extensions_json
       title: Evidence
       additionalProperties: false
+    oscal.services.v1.EvidenceFetchAudit:
+      type: object
+      properties:
+        url:
+          type: string
+          title: url
+        digest:
+          type: string
+          title: digest
+        sizeBytes:
+          type:
+            - integer
+            - string
+          title: size_bytes
+          format: int64
+        outcome:
+          type: string
+          title: outcome
+          description: fetched | policy_denied | fetch_failed
+        detail:
+          type: string
+          title: detail
+        fetchedAt:
+          title: fetched_at
+          $ref: '#/components/schemas/google.protobuf.Timestamp'
+        durationMs:
+          type:
+            - integer
+            - string
+          title: duration_ms
+          format: int64
+      title: EvidenceFetchAudit
+      additionalProperties: false
     oscal.services.v1.EvidenceRef:
       type: object
       properties:
@@ -687,6 +769,37 @@ components:
           title: exported_at
           $ref: '#/components/schemas/google.protobuf.Timestamp'
       title: ExportClaimReceiptResponse
+      additionalProperties: false
+    oscal.services.v1.FetchExternalEvidenceRequest:
+      type: object
+      properties:
+        url:
+          type: string
+          title: url
+        evidenceId:
+          type: string
+          title: evidence_id
+        mediaType:
+          type: string
+          title: media_type
+        bomKind:
+          type: string
+          title: bom_kind
+      title: FetchExternalEvidenceRequest
+      additionalProperties: false
+    oscal.services.v1.FetchExternalEvidenceResponse:
+      type: object
+      properties:
+        evidence:
+          title: evidence
+          $ref: '#/components/schemas/oscal.services.v1.Evidence'
+        stored:
+          type: boolean
+          title: stored
+        audit:
+          title: audit
+          $ref: '#/components/schemas/oscal.services.v1.EvidenceFetchAudit'
+      title: FetchExternalEvidenceResponse
       additionalProperties: false
     oscal.services.v1.GetClaimRequest:
       type: object
@@ -847,6 +960,31 @@ components:
           type: string
           title: next_page_token
       title: ListClaimsResponse
+      additionalProperties: false
+    oscal.services.v1.ListFetchEventsRequest:
+      type: object
+      properties:
+        pageSize:
+          type: integer
+          title: page_size
+          format: int32
+        pageToken:
+          type: string
+          title: page_token
+      title: ListFetchEventsRequest
+      additionalProperties: false
+    oscal.services.v1.ListFetchEventsResponse:
+      type: object
+      properties:
+        events:
+          type: array
+          items:
+            $ref: '#/components/schemas/oscal.services.v1.EvidenceFetchAudit'
+          title: events
+        nextPageToken:
+          type: string
+          title: next_page_token
+      title: ListFetchEventsResponse
       additionalProperties: false
     oscal.services.v1.ListVerificationEventsRequest:
       type: object
