@@ -163,14 +163,14 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/oscal.services.v1.CreateClaimResponse'
-  /v1/transparency/claims/{claim_id}:
+  /v1/transparency/claims/{claimId}:
     get:
       tags:
         - oscal.services.v1.TransparencyExchangeService
       summary: GetClaim
       operationId: oscal.services.v1.TransparencyExchangeService.GetClaim
       parameters:
-        - name: claim_id
+        - name: claimId
           in: path
           required: true
           schema:
@@ -183,14 +183,14 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/oscal.services.v1.GetClaimResponse'
-  /v1/transparency/claims/{claim_id}/receipt:
+  /v1/transparency/claims/{claimId}/receipt:
     get:
       tags:
         - oscal.services.v1.TransparencyExchangeService
       summary: ExportClaimReceipt
       operationId: oscal.services.v1.TransparencyExchangeService.ExportClaimReceipt
       parameters:
-        - name: claim_id
+        - name: claimId
           in: path
           required: true
           schema:
@@ -203,14 +203,14 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/oscal.services.v1.ExportClaimReceiptResponse'
-  /v1/transparency/claims/{claim_id}/verification-events:
+  /v1/transparency/claims/{claimId}/verification-events:
     get:
       tags:
         - oscal.services.v1.TransparencyExchangeService
       summary: ListVerificationEvents
       operationId: oscal.services.v1.TransparencyExchangeService.ListVerificationEvents
       parameters:
-        - name: claim_id
+        - name: claimId
           in: path
           required: true
           schema:
@@ -223,14 +223,14 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/oscal.services.v1.ListVerificationEventsResponse'
-  /v1/transparency/claims/{claim_id}/verify:
+  /v1/transparency/claims/{claimId}/verify:
     post:
       tags:
         - oscal.services.v1.TransparencyExchangeService
       summary: VerifyClaim
       operationId: oscal.services.v1.TransparencyExchangeService.VerifyClaim
       parameters:
-        - name: claim_id
+        - name: claimId
           in: path
           required: true
           schema:
@@ -277,14 +277,14 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/oscal.services.v1.UploadEvidenceResponse'
-  /v1/transparency/evidence/{evidence_id}:
+  /v1/transparency/evidence/{evidenceId}:
     get:
       tags:
         - oscal.services.v1.TransparencyExchangeService
       summary: GetEvidence
       operationId: oscal.services.v1.TransparencyExchangeService.GetEvidence
       parameters:
-        - name: evidence_id
+        - name: evidenceId
           in: path
           required: true
           schema:
@@ -297,14 +297,14 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/oscal.services.v1.GetEvidenceResponse'
-  /v1/transparency/evidence/{evidence_id}/verify:
+  /v1/transparency/evidence/{evidenceId}/verify:
     post:
       tags:
         - oscal.services.v1.TransparencyExchangeService
       summary: VerifyEvidence
       operationId: oscal.services.v1.TransparencyExchangeService.VerifyEvidence
       parameters:
-        - name: evidence_id
+        - name: evidenceId
           in: path
           required: true
           schema:

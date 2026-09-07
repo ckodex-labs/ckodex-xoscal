@@ -89,9 +89,6 @@ paths:
             schema:
               type: object
               properties:
-                uuid:
-                  title: uuid
-                  $ref: '#/components/schemas/oscal.common.v1.UUID'
                 assessmentPlan:
                   title: assessment_plan
                   $ref: '#/components/schemas/oscal.assessment_plan.v1.AssessmentPlan'
@@ -211,9 +208,6 @@ paths:
             schema:
               type: object
               properties:
-                uuid:
-                  title: uuid
-                  $ref: '#/components/schemas/oscal.common.v1.UUID'
                 assessmentResults:
                   title: assessment_results
                   $ref: '#/components/schemas/oscal.assessment_results.v1.AssessmentResults'
@@ -333,9 +327,6 @@ paths:
             schema:
               type: object
               properties:
-                uuid:
-                  title: uuid
-                  $ref: '#/components/schemas/oscal.common.v1.UUID'
                 catalog:
                   title: catalog
                   $ref: '#/components/schemas/oscal.catalog.v1.Catalog'
@@ -455,9 +446,6 @@ paths:
             schema:
               type: object
               properties:
-                uuid:
-                  title: uuid
-                  $ref: '#/components/schemas/oscal.common.v1.UUID'
                 componentDefinition:
                   title: component_definition
                   $ref: '#/components/schemas/oscal.component_definition.v1.ComponentDefinition'
@@ -577,9 +565,6 @@ paths:
             schema:
               type: object
               properties:
-                uuid:
-                  title: uuid
-                  $ref: '#/components/schemas/oscal.common.v1.UUID'
                 mapping:
                   title: mapping
                   $ref: '#/components/schemas/oscal.mapping.v1.MappingCollection'
@@ -699,9 +684,6 @@ paths:
             schema:
               type: object
               properties:
-                uuid:
-                  title: uuid
-                  $ref: '#/components/schemas/oscal.common.v1.UUID'
                 poam:
                   title: poam
                   $ref: '#/components/schemas/oscal.poam.v1.PlanOfActionAndMilestones'
@@ -821,9 +803,6 @@ paths:
             schema:
               type: object
               properties:
-                uuid:
-                  title: uuid
-                  $ref: '#/components/schemas/oscal.common.v1.UUID'
                 profile:
                   title: profile
                   $ref: '#/components/schemas/oscal.profile.v1.Profile'
@@ -981,9 +960,6 @@ paths:
             schema:
               type: object
               properties:
-                uuid:
-                  title: uuid
-                  $ref: '#/components/schemas/oscal.common.v1.UUID'
                 ssp:
                   title: ssp
                   $ref: '#/components/schemas/oscal.ssp.v1.SystemSecurityPlan'

@@ -1,11 +1,11 @@
 version: v2
 plugins:
   # Go SDK with gRPC
-  - remote: buf.build/protocolbuffers/go
+  - remote: buf.build/protocolbuffers/go:v1.36.12
     out: proto/oscal
     opt:
       - paths=source_relative
-  - remote: buf.build/grpc/go
+  - remote: buf.build/grpc/go:v1.6.2
     out: proto/oscal
     opt:
       - paths=source_relative
@@ -28,7 +28,7 @@ plugins:
   - remote: buf.build/protocolbuffers/csharp
     out: proto/oscal/gen/csharp
   # TypeScript/JavaScript SDK
-  - remote: buf.build/bufbuild/es
+  - remote: buf.build/bufbuild/es:v2.14.1
     out: proto/oscal/gen/ts
   # Swift SDK with Connect RPC
   - remote: buf.build/apple/swift

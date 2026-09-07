@@ -163,14 +163,14 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/oscal.services.v1.ProjectEdgeResponse'
-  /v1/graph/edges/{edge_id}:
+  /v1/graph/edges/{edgeId}:
     get:
       tags:
         - oscal.services.v1.TransparencyGraphService
       summary: GetEdge
       operationId: oscal.services.v1.TransparencyGraphService.GetEdge
       parameters:
-        - name: edge_id
+        - name: edgeId
           in: path
           required: true
           schema:
@@ -189,7 +189,7 @@ paths:
       summary: DeleteEdge
       operationId: oscal.services.v1.TransparencyGraphService.DeleteEdge
       parameters:
-        - name: edge_id
+        - name: edgeId
           in: path
           required: true
           schema:
@@ -374,14 +374,14 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/oscal.services.v1.ListNodesResponse'
-  /v1/graph/nodes/{node_id}:
+  /v1/graph/nodes/{nodeId}:
     get:
       tags:
         - oscal.services.v1.TransparencyGraphService
       summary: GetNode
       operationId: oscal.services.v1.TransparencyGraphService.GetNode
       parameters:
-        - name: node_id
+        - name: nodeId
           in: path
           required: true
           schema:

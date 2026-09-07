@@ -27,14 +27,14 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/oscal.services.v1.ListConflictsResponse'
-  /v1/conflicts/{conflict_urn}/resolve:
+  /v1/conflicts/{conflictUrn}/resolve:
     post:
       tags:
         - oscal.services.v1.GovernanceService
       summary: ResolveConflict
       operationId: oscal.services.v1.GovernanceService.ResolveConflict
       parameters:
-        - name: conflict_urn
+        - name: conflictUrn
           in: path
           required: true
           schema:
@@ -127,18 +127,6 @@ paths:
           schema:
             type: string
             title: urn
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                entity:
-                  title: entity
-                  $ref: '#/components/schemas/oscal.services.v1.Entity'
-              title: UpdateEntityRequest
-              additionalProperties: false
-        required: true
       responses:
         "200":
           description: Success
@@ -196,14 +184,14 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/oscal.services.v1.ListFrameworksResponse'
-  /v1/frameworks/{ref_id}:
+  /v1/frameworks/{refId}:
     get:
       tags:
         - oscal.services.v1.GovernanceService
       summary: GetFramework
       operationId: oscal.services.v1.GovernanceService.GetFramework
       parameters:
-        - name: ref_id
+        - name: refId
           in: path
           required: true
           schema:
