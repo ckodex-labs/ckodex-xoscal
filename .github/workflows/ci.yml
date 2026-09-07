@@ -79,6 +79,10 @@ jobs:
           output: trivy-results.sarif
           exit-code: "1"
           severity: CRITICAL,HIGH
+          # Without this the wrapper unsets the severity filter for SARIF
+          # output, so exit-code fires on the base image's known low/medium
+          # findings instead of only the CRITICAL,HIGH gate.
+          limit-severities-for-sarif: true
 
       - name: Upload Trivy SARIF
         uses: github/codeql-action/upload-sarif@988661ebb5e81487b3fb31b2185d2856c0a10679 # v4
