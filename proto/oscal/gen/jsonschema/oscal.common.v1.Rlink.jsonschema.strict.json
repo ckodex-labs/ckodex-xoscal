@@ -1,0 +1,25 @@
+{
+  "$id": "oscal.common.v1.Rlink.jsonschema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Rlink represents a resource link",
+  "properties": {
+    "hashes": {
+      "items": {
+        "$ref": "oscal.common.v1.Hash.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "href": {
+      "$ref": "oscal.common.v1.URI.jsonschema.strict.json"
+    },
+    "mediaType": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "mediaType"
+  ],
+  "title": "Rlink",
+  "type": "object"
+}

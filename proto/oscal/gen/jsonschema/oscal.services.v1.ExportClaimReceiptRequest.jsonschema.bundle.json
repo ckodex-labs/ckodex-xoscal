@@ -1,0 +1,25 @@
+{
+  "$defs": {
+    "oscal.services.v1.ExportClaimReceiptRequest.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "patternProperties": {
+        "^(claim_id)$": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "properties": {
+        "claimId": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Export Claim Receipt Request",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.services.v1.ExportClaimReceiptRequest.jsonschema.bundle.json",
+  "$ref": "#/$defs/oscal.services.v1.ExportClaimReceiptRequest.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

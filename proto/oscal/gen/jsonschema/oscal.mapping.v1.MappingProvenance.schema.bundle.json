@@ -1,0 +1,393 @@
+{
+  "$defs": {
+    "oscal.common.v1.Decimal.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Decimal represents a decimal value",
+      "properties": {
+        "value": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "enum": [
+                "Infinity",
+                "-Infinity",
+                "NaN"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "string"
+            }
+          ],
+          "default": 0
+        }
+      },
+      "title": "Decimal",
+      "type": "object"
+    },
+    "oscal.common.v1.Link.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Link represents a hyperlink with metadata",
+      "patternProperties": {
+        "^(mediaType)$": {
+          "default": "",
+          "type": "string"
+        },
+        "^(resourceFragment)$": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "properties": {
+        "href": {
+          "$ref": "#/$defs/oscal.common.v1.URI.schema.json"
+        },
+        "media_type": {
+          "default": "",
+          "type": "string"
+        },
+        "rel": {
+          "default": "",
+          "type": "string"
+        },
+        "resource_fragment": {
+          "default": "",
+          "type": "string"
+        },
+        "text": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Link",
+      "type": "object"
+    },
+    "oscal.common.v1.MarkupMultiline.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "MarkupMultiline represents multiline markup text",
+      "properties": {
+        "value": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Markup Multiline",
+      "type": "object"
+    },
+    "oscal.common.v1.Property.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Property represents a key-value property with optional classification",
+      "properties": {
+        "class": {
+          "default": "",
+          "type": "string"
+        },
+        "id": {
+          "default": "",
+          "type": "string"
+        },
+        "name": {
+          "default": "",
+          "type": "string"
+        },
+        "ns": {
+          "default": "",
+          "type": "string"
+        },
+        "value": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Property",
+      "type": "object"
+    },
+    "oscal.common.v1.ResponsibleParty.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "ResponsibleParty represents a party responsible for a role",
+      "patternProperties": {
+        "^(partyUuids)$": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.UUID.schema.json"
+          },
+          "type": "array"
+        },
+        "^(roleId)$": {
+          "$ref": "#/$defs/oscal.common.v1.Token.schema.json"
+        }
+      },
+      "properties": {
+        "links": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Link.schema.json"
+          },
+          "type": "array"
+        },
+        "party_uuids": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.UUID.schema.json"
+          },
+          "type": "array"
+        },
+        "props": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Property.schema.json"
+          },
+          "type": "array"
+        },
+        "remarks": {
+          "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.schema.json"
+        },
+        "role_id": {
+          "$ref": "#/$defs/oscal.common.v1.Token.schema.json"
+        }
+      },
+      "title": "Responsible Party",
+      "type": "object"
+    },
+    "oscal.common.v1.Token.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Token represents an alphanumeric token (e.g., control IDs)",
+      "properties": {
+        "value": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Token",
+      "type": "object"
+    },
+    "oscal.common.v1.URI.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "URI represents a uniform resource identifier",
+      "properties": {
+        "value": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "URI",
+      "type": "object"
+    },
+    "oscal.common.v1.UUID.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "UUID represents a universally unique identifier",
+      "properties": {
+        "value": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "UUID",
+      "type": "object"
+    },
+    "oscal.mapping.v1.ConfidenceScore.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "ConfidenceScore is either a category or a percentage from 0 through 1.\n Fields 1-5 are retained for wire compatibility with the prototype model.",
+      "properties": {
+        "category": {
+          "default": "",
+          "type": "string"
+        },
+        "links": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Link.schema.json"
+          },
+          "type": "array"
+        },
+        "method": {
+          "default": "",
+          "type": "string"
+        },
+        "percentage": {
+          "$ref": "#/$defs/oscal.common.v1.Decimal.schema.json"
+        },
+        "props": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Property.schema.json"
+          },
+          "type": "array"
+        },
+        "remarks": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.schema.json"
+          },
+          "type": "array"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "enum": [
+                "Infinity",
+                "-Infinity",
+                "NaN"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "string"
+            }
+          ],
+          "default": 0
+        }
+      },
+      "title": "Confidence Score",
+      "type": "object"
+    },
+    "oscal.mapping.v1.Coverage.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Coverage records target coverage and the method used to derive it.\n Fields 1-5 are retained for wire compatibility with the prototype model.",
+      "patternProperties": {
+        "^(generationMethod)$": {
+          "default": "",
+          "type": "string"
+        },
+        "^(targetCoverage)$": {
+          "$ref": "#/$defs/oscal.common.v1.Decimal.schema.json"
+        }
+      },
+      "properties": {
+        "generation_method": {
+          "default": "",
+          "type": "string"
+        },
+        "links": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Link.schema.json"
+          },
+          "type": "array"
+        },
+        "method": {
+          "default": "",
+          "type": "string"
+        },
+        "props": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Property.schema.json"
+          },
+          "type": "array"
+        },
+        "remarks": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.schema.json"
+          },
+          "type": "array"
+        },
+        "target_coverage": {
+          "$ref": "#/$defs/oscal.common.v1.Decimal.schema.json"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "enum": [
+                "Infinity",
+                "-Infinity",
+                "NaN"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "string"
+            }
+          ],
+          "default": 0
+        }
+      },
+      "title": "Coverage",
+      "type": "object"
+    },
+    "oscal.mapping.v1.MappingProvenance.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "MappingProvenance records how the collection was produced and its status.",
+      "patternProperties": {
+        "^(confidenceScore)$": {
+          "$ref": "#/$defs/oscal.mapping.v1.ConfidenceScore.schema.json"
+        },
+        "^(mappingDescription)$": {
+          "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.schema.json"
+        },
+        "^(matchingRationale)$": {
+          "default": "",
+          "type": "string"
+        },
+        "^(responsibleParties)$": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.ResponsibleParty.schema.json"
+          },
+          "type": "array"
+        }
+      },
+      "properties": {
+        "confidence_score": {
+          "$ref": "#/$defs/oscal.mapping.v1.ConfidenceScore.schema.json"
+        },
+        "coverage": {
+          "$ref": "#/$defs/oscal.mapping.v1.Coverage.schema.json"
+        },
+        "links": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Link.schema.json"
+          },
+          "type": "array"
+        },
+        "mapping_description": {
+          "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.schema.json"
+        },
+        "matching_rationale": {
+          "default": "",
+          "type": "string"
+        },
+        "method": {
+          "default": "",
+          "type": "string"
+        },
+        "props": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Property.schema.json"
+          },
+          "type": "array"
+        },
+        "remarks": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.schema.json"
+          },
+          "type": "array"
+        },
+        "responsible_parties": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.ResponsibleParty.schema.json"
+          },
+          "type": "array"
+        },
+        "status": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Mapping Provenance",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.mapping.v1.MappingProvenance.schema.bundle.json",
+  "$ref": "#/$defs/oscal.mapping.v1.MappingProvenance.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

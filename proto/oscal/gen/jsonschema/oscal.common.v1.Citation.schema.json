@@ -1,0 +1,25 @@
+{
+  "$id": "oscal.common.v1.Citation.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Citation represents a bibliographic citation",
+  "properties": {
+    "links": {
+      "items": {
+        "$ref": "oscal.common.v1.Link.schema.json"
+      },
+      "type": "array"
+    },
+    "props": {
+      "items": {
+        "$ref": "oscal.common.v1.Property.schema.json"
+      },
+      "type": "array"
+    },
+    "text": {
+      "$ref": "oscal.common.v1.MarkupLine.schema.json"
+    }
+  },
+  "title": "Citation",
+  "type": "object"
+}

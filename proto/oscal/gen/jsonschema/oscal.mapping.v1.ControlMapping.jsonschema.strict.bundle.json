@@ -1,0 +1,647 @@
+{
+  "$defs": {
+    "oscal.common.v1.Decimal.jsonschema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Decimal represents a decimal value",
+      "properties": {
+        "value": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "enum": [
+                "Infinity",
+                "-Infinity",
+                "NaN"
+              ],
+              "type": "string"
+            }
+          ]
+        }
+      },
+      "required": [
+        "value"
+      ],
+      "title": "Decimal",
+      "type": "object"
+    },
+    "oscal.common.v1.Link.jsonschema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Link represents a hyperlink with metadata",
+      "properties": {
+        "href": {
+          "$ref": "#/$defs/oscal.common.v1.URI.jsonschema.strict.json"
+        },
+        "mediaType": {
+          "type": "string"
+        },
+        "rel": {
+          "type": "string"
+        },
+        "resourceFragment": {
+          "type": "string"
+        },
+        "text": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "rel",
+        "mediaType",
+        "text",
+        "resourceFragment"
+      ],
+      "title": "Link",
+      "type": "object"
+    },
+    "oscal.common.v1.MarkupMultiline.jsonschema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "MarkupMultiline represents multiline markup text",
+      "properties": {
+        "value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "value"
+      ],
+      "title": "Markup Multiline",
+      "type": "object"
+    },
+    "oscal.common.v1.Property.jsonschema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Property represents a key-value property with optional classification",
+      "properties": {
+        "class": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "ns": {
+          "type": "string"
+        },
+        "value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "value",
+        "class",
+        "id",
+        "ns"
+      ],
+      "title": "Property",
+      "type": "object"
+    },
+    "oscal.common.v1.Token.jsonschema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Token represents an alphanumeric token (e.g., control IDs)",
+      "properties": {
+        "value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "value"
+      ],
+      "title": "Token",
+      "type": "object"
+    },
+    "oscal.common.v1.URI.jsonschema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "URI represents a uniform resource identifier",
+      "properties": {
+        "value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "value"
+      ],
+      "title": "URI",
+      "type": "object"
+    },
+    "oscal.common.v1.URIReference.jsonschema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "URIReference represents a URI reference (may be relative)",
+      "properties": {
+        "value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "value"
+      ],
+      "title": "URI Reference",
+      "type": "object"
+    },
+    "oscal.common.v1.UUID.jsonschema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "UUID represents a universally unique identifier",
+      "properties": {
+        "value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "value"
+      ],
+      "title": "UUID",
+      "type": "object"
+    },
+    "oscal.mapping.v1.ConfidenceScore.jsonschema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "ConfidenceScore is either a category or a percentage from 0 through 1.\n Fields 1-5 are retained for wire compatibility with the prototype model.",
+      "properties": {
+        "category": {
+          "type": "string"
+        },
+        "links": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Link.jsonschema.strict.json"
+          },
+          "type": "array"
+        },
+        "method": {
+          "type": "string"
+        },
+        "percentage": {
+          "$ref": "#/$defs/oscal.common.v1.Decimal.jsonschema.strict.json"
+        },
+        "props": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Property.jsonschema.strict.json"
+          },
+          "type": "array"
+        },
+        "remarks": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.jsonschema.strict.json"
+          },
+          "type": "array"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "enum": [
+                "Infinity",
+                "-Infinity",
+                "NaN"
+              ],
+              "type": "string"
+            }
+          ]
+        }
+      },
+      "required": [
+        "value",
+        "method",
+        "category"
+      ],
+      "title": "Confidence Score",
+      "type": "object"
+    },
+    "oscal.mapping.v1.ControlMapping.jsonschema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "ControlMapping represents one source-resource to target-resource mapping.",
+      "properties": {
+        "confidenceScore": {
+          "$ref": "#/$defs/oscal.mapping.v1.ConfidenceScore.jsonschema.strict.json"
+        },
+        "coverage": {
+          "$ref": "#/$defs/oscal.mapping.v1.Coverage.jsonschema.strict.json"
+        },
+        "links": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Link.jsonschema.strict.json"
+          },
+          "type": "array"
+        },
+        "mappingDescription": {
+          "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.jsonschema.strict.json"
+        },
+        "maps": {
+          "items": {
+            "$ref": "#/$defs/oscal.mapping.v1.Map.jsonschema.strict.json"
+          },
+          "type": "array"
+        },
+        "matchingRationale": {
+          "type": "string"
+        },
+        "method": {
+          "type": "string"
+        },
+        "props": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Property.jsonschema.strict.json"
+          },
+          "type": "array"
+        },
+        "remarks": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.jsonschema.strict.json"
+          },
+          "type": "array"
+        },
+        "sourceGapSummary": {
+          "$ref": "#/$defs/oscal.mapping.v1.GapSummary.jsonschema.strict.json"
+        },
+        "sourceResource": {
+          "$ref": "#/$defs/oscal.mapping.v1.MappingResourceReference.jsonschema.strict.json"
+        },
+        "status": {
+          "type": "string"
+        },
+        "targetGapSummary": {
+          "$ref": "#/$defs/oscal.mapping.v1.GapSummary.jsonschema.strict.json"
+        },
+        "targetResource": {
+          "$ref": "#/$defs/oscal.mapping.v1.MappingResourceReference.jsonschema.strict.json"
+        },
+        "uuid": {
+          "$ref": "#/$defs/oscal.common.v1.UUID.jsonschema.strict.json"
+        }
+      },
+      "required": [
+        "method",
+        "matchingRationale",
+        "status"
+      ],
+      "title": "Control Mapping",
+      "type": "object"
+    },
+    "oscal.mapping.v1.Coverage.jsonschema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Coverage records target coverage and the method used to derive it.\n Fields 1-5 are retained for wire compatibility with the prototype model.",
+      "properties": {
+        "generationMethod": {
+          "type": "string"
+        },
+        "links": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Link.jsonschema.strict.json"
+          },
+          "type": "array"
+        },
+        "method": {
+          "type": "string"
+        },
+        "props": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Property.jsonschema.strict.json"
+          },
+          "type": "array"
+        },
+        "remarks": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.jsonschema.strict.json"
+          },
+          "type": "array"
+        },
+        "targetCoverage": {
+          "$ref": "#/$defs/oscal.common.v1.Decimal.jsonschema.strict.json"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "enum": [
+                "Infinity",
+                "-Infinity",
+                "NaN"
+              ],
+              "type": "string"
+            }
+          ]
+        }
+      },
+      "required": [
+        "value",
+        "method",
+        "generationMethod"
+      ],
+      "title": "Coverage",
+      "type": "object"
+    },
+    "oscal.mapping.v1.GapSummary.jsonschema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "GapSummary selects controls that are not mapped.\n Fields 1-5 are retained for wire compatibility with the prototype model.",
+      "properties": {
+        "count": {
+          "maximum": 2147483647,
+          "minimum": -2147483648,
+          "type": "integer"
+        },
+        "gaps": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "links": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Link.jsonschema.strict.json"
+          },
+          "type": "array"
+        },
+        "props": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Property.jsonschema.strict.json"
+          },
+          "type": "array"
+        },
+        "remarks": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.jsonschema.strict.json"
+          },
+          "type": "array"
+        },
+        "unmappedControls": {
+          "items": {
+            "$ref": "#/$defs/oscal.mapping.v1.SelectControlById.jsonschema.strict.json"
+          },
+          "type": "array"
+        },
+        "uuid": {
+          "$ref": "#/$defs/oscal.common.v1.UUID.jsonschema.strict.json"
+        }
+      },
+      "required": [
+        "count"
+      ],
+      "title": "Gap Summary",
+      "type": "object"
+    },
+    "oscal.mapping.v1.Map.jsonschema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Map represents a mapping entry",
+      "properties": {
+        "confidenceScore": {
+          "$ref": "#/$defs/oscal.mapping.v1.ConfidenceScore.jsonschema.strict.json"
+        },
+        "coverage": {
+          "$ref": "#/$defs/oscal.mapping.v1.Coverage.jsonschema.strict.json"
+        },
+        "links": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Link.jsonschema.strict.json"
+          },
+          "type": "array"
+        },
+        "matchingRationale": {
+          "type": "string"
+        },
+        "ns": {
+          "type": "string"
+        },
+        "props": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Property.jsonschema.strict.json"
+          },
+          "type": "array"
+        },
+        "qualifiers": {
+          "items": {
+            "$ref": "#/$defs/oscal.mapping.v1.QualifierItem.jsonschema.strict.json"
+          },
+          "type": "array"
+        },
+        "relationship": {
+          "$ref": "#/$defs/oscal.common.v1.Token.jsonschema.strict.json"
+        },
+        "remarks": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.jsonschema.strict.json"
+          },
+          "type": "array"
+        },
+        "sources": {
+          "items": {
+            "$ref": "#/$defs/oscal.mapping.v1.MappingItem.jsonschema.strict.json"
+          },
+          "type": "array"
+        },
+        "targets": {
+          "items": {
+            "$ref": "#/$defs/oscal.mapping.v1.MappingItem.jsonschema.strict.json"
+          },
+          "type": "array"
+        },
+        "uuid": {
+          "$ref": "#/$defs/oscal.common.v1.UUID.jsonschema.strict.json"
+        }
+      },
+      "required": [
+        "ns",
+        "matchingRationale"
+      ],
+      "title": "Map",
+      "type": "object"
+    },
+    "oscal.mapping.v1.MappingItem.jsonschema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "MappingItem represents a mapping entry item (source or target)",
+      "properties": {
+        "idRef": {
+          "type": "string"
+        },
+        "links": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Link.jsonschema.strict.json"
+          },
+          "type": "array"
+        },
+        "props": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Property.jsonschema.strict.json"
+          },
+          "type": "array"
+        },
+        "remarks": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.jsonschema.strict.json"
+          },
+          "type": "array"
+        },
+        "type": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "type",
+        "idRef"
+      ],
+      "title": "Mapping Item",
+      "type": "object"
+    },
+    "oscal.mapping.v1.MappingResourceReference.jsonschema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "MappingResourceReference represents a mapped resource reference",
+      "properties": {
+        "href": {
+          "$ref": "#/$defs/oscal.common.v1.URIReference.jsonschema.strict.json"
+        },
+        "links": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Link.jsonschema.strict.json"
+          },
+          "type": "array"
+        },
+        "ns": {
+          "type": "string"
+        },
+        "props": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Property.jsonschema.strict.json"
+          },
+          "type": "array"
+        },
+        "remarks": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.jsonschema.strict.json"
+          },
+          "type": "array"
+        },
+        "type": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "ns",
+        "type"
+      ],
+      "title": "Mapping Resource Reference",
+      "type": "object"
+    },
+    "oscal.mapping.v1.Matching.jsonschema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Matching selects controls by a glob expression.",
+      "properties": {
+        "pattern": {
+          "type": "string"
+        },
+        "remarks": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.jsonschema.strict.json"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "pattern"
+      ],
+      "title": "Matching",
+      "type": "object"
+    },
+    "oscal.mapping.v1.QualifierItem.jsonschema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "QualifierItem represents an OSCAL relationship qualifier. Fields 1-4 are\n retained for wire compatibility with the pre-release mapping prototype.",
+      "properties": {
+        "category": {
+          "type": "string"
+        },
+        "description": {
+          "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.jsonschema.strict.json"
+        },
+        "idRef": {
+          "type": "string"
+        },
+        "links": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Link.jsonschema.strict.json"
+          },
+          "type": "array"
+        },
+        "predicate": {
+          "type": "string"
+        },
+        "props": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Property.jsonschema.strict.json"
+          },
+          "type": "array"
+        },
+        "remarks": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.jsonschema.strict.json"
+          },
+          "type": "array"
+        },
+        "subject": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "type",
+        "idRef",
+        "subject",
+        "predicate",
+        "category"
+      ],
+      "title": "Qualifier Item",
+      "type": "object"
+    },
+    "oscal.mapping.v1.SelectControlById.jsonschema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "SelectControlById selects explicit or pattern-matched controls.",
+      "properties": {
+        "matching": {
+          "items": {
+            "$ref": "#/$defs/oscal.mapping.v1.Matching.jsonschema.strict.json"
+          },
+          "type": "array"
+        },
+        "withChildControls": {
+          "type": "string"
+        },
+        "withIds": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Token.jsonschema.strict.json"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "withChildControls"
+      ],
+      "title": "Select Control By Id",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.mapping.v1.ControlMapping.jsonschema.strict.bundle.json",
+  "$ref": "#/$defs/oscal.mapping.v1.ControlMapping.jsonschema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

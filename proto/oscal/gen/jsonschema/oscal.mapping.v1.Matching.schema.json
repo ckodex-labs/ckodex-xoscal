@@ -1,0 +1,20 @@
+{
+  "$id": "oscal.mapping.v1.Matching.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Matching selects controls by a glob expression.",
+  "properties": {
+    "pattern": {
+      "default": "",
+      "type": "string"
+    },
+    "remarks": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupMultiline.schema.json"
+      },
+      "type": "array"
+    }
+  },
+  "title": "Matching",
+  "type": "object"
+}

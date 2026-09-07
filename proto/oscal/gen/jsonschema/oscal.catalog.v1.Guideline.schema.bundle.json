@@ -1,0 +1,32 @@
+{
+  "$defs": {
+    "oscal.catalog.v1.Guideline.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Guideline represents a parameter guideline",
+      "properties": {
+        "prose": {
+          "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.schema.json"
+        }
+      },
+      "title": "Guideline",
+      "type": "object"
+    },
+    "oscal.common.v1.MarkupMultiline.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "MarkupMultiline represents multiline markup text",
+      "properties": {
+        "value": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Markup Multiline",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.catalog.v1.Guideline.schema.bundle.json",
+  "$ref": "#/$defs/oscal.catalog.v1.Guideline.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

@@ -1,0 +1,22 @@
+{
+  "$id": "oscal.catalog.v1.Test.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Test represents a constraint test",
+  "properties": {
+    "expression": {
+      "type": "string"
+    },
+    "remarks": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupMultiline.schema.strict.json"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "expression"
+  ],
+  "title": "Test",
+  "type": "object"
+}

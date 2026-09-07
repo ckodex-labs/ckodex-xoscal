@@ -1,0 +1,13 @@
+{
+  "$id": "oscal.poam.v1.RelatedFinding.jsonschema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "RelatedFinding represents a related finding",
+  "properties": {
+    "findingUuid": {
+      "$ref": "oscal.common.v1.UUID.jsonschema.strict.json"
+    }
+  },
+  "title": "Related Finding",
+  "type": "object"
+}

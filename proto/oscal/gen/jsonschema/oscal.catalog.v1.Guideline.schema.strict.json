@@ -1,0 +1,13 @@
+{
+  "$id": "oscal.catalog.v1.Guideline.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Guideline represents a parameter guideline",
+  "properties": {
+    "prose": {
+      "$ref": "oscal.common.v1.MarkupMultiline.schema.strict.json"
+    }
+  },
+  "title": "Guideline",
+  "type": "object"
+}

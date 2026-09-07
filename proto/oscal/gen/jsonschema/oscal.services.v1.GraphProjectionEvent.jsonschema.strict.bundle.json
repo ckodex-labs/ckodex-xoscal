@@ -1,0 +1,71 @@
+{
+  "$defs": {
+    "google.protobuf.Timestamp.jsonschema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "format": "date-time",
+      "title": "Timestamp",
+      "type": "string"
+    },
+    "oscal.services.v1.GraphProjectionEvent.jsonschema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "GraphProjectionEvent is an append-only, hash-chained audit record emitted\n in the same transaction as a successful edge projection.",
+      "properties": {
+        "claimId": {
+          "type": "string"
+        },
+        "edgeId": {
+          "type": "string"
+        },
+        "eventHash": {
+          "type": "string"
+        },
+        "eventId": {
+          "type": "string"
+        },
+        "evidenceDigest": {
+          "type": "string"
+        },
+        "fromNode": {
+          "type": "string"
+        },
+        "previousHash": {
+          "type": "string"
+        },
+        "projectedAt": {
+          "$ref": "#/$defs/google.protobuf.Timestamp.jsonschema.strict.json"
+        },
+        "relation": {
+          "type": "string"
+        },
+        "sequence": {
+          "type": "integer"
+        },
+        "toNode": {
+          "type": "string"
+        },
+        "trustState": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "sequence",
+        "eventId",
+        "edgeId",
+        "claimId",
+        "fromNode",
+        "toNode",
+        "relation",
+        "evidenceDigest",
+        "trustState",
+        "previousHash",
+        "eventHash"
+      ],
+      "title": "Graph Projection Event",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.services.v1.GraphProjectionEvent.jsonschema.strict.bundle.json",
+  "$ref": "#/$defs/oscal.services.v1.GraphProjectionEvent.jsonschema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

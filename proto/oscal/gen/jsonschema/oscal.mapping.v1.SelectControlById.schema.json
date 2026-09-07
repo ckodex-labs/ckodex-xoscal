@@ -1,0 +1,38 @@
+{
+  "$id": "oscal.mapping.v1.SelectControlById.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "SelectControlById selects explicit or pattern-matched controls.",
+  "patternProperties": {
+    "^(withChildControls)$": {
+      "default": "",
+      "type": "string"
+    },
+    "^(withIds)$": {
+      "items": {
+        "$ref": "oscal.common.v1.Token.schema.json"
+      },
+      "type": "array"
+    }
+  },
+  "properties": {
+    "matching": {
+      "items": {
+        "$ref": "oscal.mapping.v1.Matching.schema.json"
+      },
+      "type": "array"
+    },
+    "with_child_controls": {
+      "default": "",
+      "type": "string"
+    },
+    "with_ids": {
+      "items": {
+        "$ref": "oscal.common.v1.Token.schema.json"
+      },
+      "type": "array"
+    }
+  },
+  "title": "Select Control By Id",
+  "type": "object"
+}

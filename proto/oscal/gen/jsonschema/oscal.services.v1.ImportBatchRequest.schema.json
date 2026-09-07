@@ -1,0 +1,25 @@
+{
+  "$id": "oscal.services.v1.ImportBatchRequest.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "patternProperties": {
+    "^(allOrNothing)$": {
+      "default": false,
+      "type": "boolean"
+    }
+  },
+  "properties": {
+    "all_or_nothing": {
+      "default": false,
+      "type": "boolean"
+    },
+    "records": {
+      "items": {
+        "$ref": "oscal.services.v1.ImportRecord.schema.json"
+      },
+      "type": "array"
+    }
+  },
+  "title": "Import Batch Request",
+  "type": "object"
+}

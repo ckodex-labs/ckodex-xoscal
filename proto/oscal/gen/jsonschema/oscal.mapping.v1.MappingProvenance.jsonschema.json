@@ -1,0 +1,73 @@
+{
+  "$id": "oscal.mapping.v1.MappingProvenance.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "MappingProvenance records how the collection was produced and its status.",
+  "patternProperties": {
+    "^(confidence_score)$": {
+      "$ref": "oscal.mapping.v1.ConfidenceScore.jsonschema.json"
+    },
+    "^(mapping_description)$": {
+      "$ref": "oscal.common.v1.MarkupMultiline.jsonschema.json"
+    },
+    "^(matching_rationale)$": {
+      "default": "",
+      "type": "string"
+    },
+    "^(responsible_parties)$": {
+      "items": {
+        "$ref": "oscal.common.v1.ResponsibleParty.jsonschema.json"
+      },
+      "type": "array"
+    }
+  },
+  "properties": {
+    "confidenceScore": {
+      "$ref": "oscal.mapping.v1.ConfidenceScore.jsonschema.json"
+    },
+    "coverage": {
+      "$ref": "oscal.mapping.v1.Coverage.jsonschema.json"
+    },
+    "links": {
+      "items": {
+        "$ref": "oscal.common.v1.Link.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "mappingDescription": {
+      "$ref": "oscal.common.v1.MarkupMultiline.jsonschema.json"
+    },
+    "matchingRationale": {
+      "default": "",
+      "type": "string"
+    },
+    "method": {
+      "default": "",
+      "type": "string"
+    },
+    "props": {
+      "items": {
+        "$ref": "oscal.common.v1.Property.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "remarks": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupMultiline.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "responsibleParties": {
+      "items": {
+        "$ref": "oscal.common.v1.ResponsibleParty.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "status": {
+      "default": "",
+      "type": "string"
+    }
+  },
+  "title": "Mapping Provenance",
+  "type": "object"
+}

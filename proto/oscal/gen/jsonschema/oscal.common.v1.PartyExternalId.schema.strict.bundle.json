@@ -1,0 +1,40 @@
+{
+  "$defs": {
+    "oscal.common.v1.PartyExternalId.schema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "PartyExternalId represents an external identifier for a party",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "scheme": {
+          "$ref": "#/$defs/oscal.common.v1.URI.schema.strict.json"
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "title": "Party External Id",
+      "type": "object"
+    },
+    "oscal.common.v1.URI.schema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "URI represents a uniform resource identifier",
+      "properties": {
+        "value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "value"
+      ],
+      "title": "URI",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.common.v1.PartyExternalId.schema.strict.bundle.json",
+  "$ref": "#/$defs/oscal.common.v1.PartyExternalId.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

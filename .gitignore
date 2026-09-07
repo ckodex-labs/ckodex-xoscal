@@ -190,7 +190,10 @@ trivy-report.json
 snyk-report.json
 *.sarif
 
-/proto/oscal/gen/**
+# Disposable local generation output (the Go SDK generates source-relative
+# to proto/oscal, so gen/go is never shipped). The other gen/<lang> trees
+# are committed and guarded by the SDK-drift gate (dagger ProtoCheck).
+/proto/oscal/gen/go/
 THIRD_PARTY_LICENSES
 # Portal site build artifacts (dagger Site / local preview)
 /_site/

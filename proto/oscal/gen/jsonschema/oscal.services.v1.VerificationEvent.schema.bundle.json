@@ -1,0 +1,128 @@
+{
+  "$defs": {
+    "google.protobuf.Timestamp.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "format": "date-time",
+      "title": "Timestamp",
+      "type": "string"
+    },
+    "oscal.services.v1.VerificationEvent.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "VerificationEvent is an append-only audit record. The JSON fields preserve\n the exact provider and proof envelopes recorded by the verifier.",
+      "patternProperties": {
+        "^(checksJson)$": {
+          "default": "",
+          "type": "string"
+        },
+        "^(claimId)$": {
+          "default": "",
+          "type": "string"
+        },
+        "^(createdAt)$": {
+          "$ref": "#/$defs/google.protobuf.Timestamp.schema.json"
+        },
+        "^(eventHash)$": {
+          "default": "",
+          "type": "string"
+        },
+        "^(eventId)$": {
+          "default": "",
+          "type": "string"
+        },
+        "^(idempotencyKey)$": {
+          "default": "",
+          "type": "string"
+        },
+        "^(previousHash)$": {
+          "default": "",
+          "type": "string"
+        },
+        "^(proofStateJson)$": {
+          "default": "",
+          "type": "string"
+        },
+        "^(providerStateJson)$": {
+          "default": "",
+          "type": "string"
+        },
+        "^(requestId)$": {
+          "default": "",
+          "type": "string"
+        },
+        "^(trustState)$": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "properties": {
+        "checks_json": {
+          "default": "",
+          "type": "string"
+        },
+        "claim_id": {
+          "default": "",
+          "type": "string"
+        },
+        "created_at": {
+          "$ref": "#/$defs/google.protobuf.Timestamp.schema.json"
+        },
+        "diagnostics": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "event_hash": {
+          "default": "",
+          "type": "string"
+        },
+        "event_id": {
+          "default": "",
+          "type": "string"
+        },
+        "idempotency_key": {
+          "default": "",
+          "type": "string"
+        },
+        "previous_hash": {
+          "default": "",
+          "type": "string"
+        },
+        "proof_state_json": {
+          "default": "",
+          "type": "string"
+        },
+        "provider_state_json": {
+          "default": "",
+          "type": "string"
+        },
+        "request_id": {
+          "default": "",
+          "type": "string"
+        },
+        "sequence": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "pattern": "^-?[0-9]+$",
+              "type": "string"
+            }
+          ],
+          "default": 0
+        },
+        "trust_state": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Verification Event",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.services.v1.VerificationEvent.schema.bundle.json",
+  "$ref": "#/$defs/oscal.services.v1.VerificationEvent.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

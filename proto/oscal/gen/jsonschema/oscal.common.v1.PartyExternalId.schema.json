@@ -1,0 +1,17 @@
+{
+  "$id": "oscal.common.v1.PartyExternalId.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "PartyExternalId represents an external identifier for a party",
+  "properties": {
+    "id": {
+      "default": "",
+      "type": "string"
+    },
+    "scheme": {
+      "$ref": "oscal.common.v1.URI.schema.json"
+    }
+  },
+  "title": "Party External Id",
+  "type": "object"
+}

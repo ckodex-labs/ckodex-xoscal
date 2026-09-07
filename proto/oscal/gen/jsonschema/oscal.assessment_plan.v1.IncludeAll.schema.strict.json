@@ -1,0 +1,9 @@
+{
+  "$id": "oscal.assessment_plan.v1.IncludeAll.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "IncludeAll is OSCAL's empty marker object for selecting every control.",
+  "properties": {},
+  "title": "Include All",
+  "type": "object"
+}

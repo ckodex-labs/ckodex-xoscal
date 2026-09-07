@@ -1,0 +1,65 @@
+{
+  "$id": "oscal.services.v1.VerificationEvent.jsonschema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "VerificationEvent is an append-only audit record. The JSON fields preserve\n the exact provider and proof envelopes recorded by the verifier.",
+  "properties": {
+    "checksJson": {
+      "type": "string"
+    },
+    "claimId": {
+      "type": "string"
+    },
+    "createdAt": {
+      "$ref": "google.protobuf.Timestamp.jsonschema.strict.json"
+    },
+    "diagnostics": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "eventHash": {
+      "type": "string"
+    },
+    "eventId": {
+      "type": "string"
+    },
+    "idempotencyKey": {
+      "type": "string"
+    },
+    "previousHash": {
+      "type": "string"
+    },
+    "proofStateJson": {
+      "type": "string"
+    },
+    "providerStateJson": {
+      "type": "string"
+    },
+    "requestId": {
+      "type": "string"
+    },
+    "sequence": {
+      "type": "integer"
+    },
+    "trustState": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "sequence",
+    "eventId",
+    "claimId",
+    "requestId",
+    "idempotencyKey",
+    "checksJson",
+    "proofStateJson",
+    "providerStateJson",
+    "trustState",
+    "previousHash",
+    "eventHash"
+  ],
+  "title": "Verification Event",
+  "type": "object"
+}

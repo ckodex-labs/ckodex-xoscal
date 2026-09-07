@@ -1,0 +1,57 @@
+{
+  "$defs": {
+    "oscal.services.v1.ImportRecordResult.schema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "properties": {
+        "claim_id": {
+          "type": "string"
+        },
+        "diagnostics": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "index": {
+          "maximum": 2147483647,
+          "minimum": -2147483648,
+          "type": "integer"
+        },
+        "status": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "index",
+        "claim_id",
+        "status"
+      ],
+      "title": "Import Record Result",
+      "type": "object"
+    },
+    "oscal.services.v1.PreflightImportResponse.schema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "properties": {
+        "results": {
+          "items": {
+            "$ref": "#/$defs/oscal.services.v1.ImportRecordResult.schema.strict.json"
+          },
+          "type": "array"
+        },
+        "valid": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "valid"
+      ],
+      "title": "Preflight Import Response",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.services.v1.PreflightImportResponse.schema.strict.bundle.json",
+  "$ref": "#/$defs/oscal.services.v1.PreflightImportResponse.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

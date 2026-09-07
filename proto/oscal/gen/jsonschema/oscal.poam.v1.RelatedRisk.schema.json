@@ -1,0 +1,18 @@
+{
+  "$id": "oscal.poam.v1.RelatedRisk.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "RelatedRisk represents a related risk",
+  "patternProperties": {
+    "^(riskUuid)$": {
+      "$ref": "oscal.common.v1.UUID.schema.json"
+    }
+  },
+  "properties": {
+    "risk_uuid": {
+      "$ref": "oscal.common.v1.UUID.schema.json"
+    }
+  },
+  "title": "Related Risk",
+  "type": "object"
+}

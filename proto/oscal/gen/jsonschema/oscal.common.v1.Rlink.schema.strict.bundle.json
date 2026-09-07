@@ -1,0 +1,79 @@
+{
+  "$defs": {
+    "oscal.common.v1.Base64.schema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Base64 represents base64-encoded binary data",
+      "properties": {
+        "value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "value"
+      ],
+      "title": "Base64",
+      "type": "object"
+    },
+    "oscal.common.v1.Hash.schema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Hash represents a cryptographic hash",
+      "properties": {
+        "algorithm": {
+          "type": "string"
+        },
+        "value": {
+          "$ref": "#/$defs/oscal.common.v1.Base64.schema.strict.json"
+        }
+      },
+      "required": [
+        "algorithm"
+      ],
+      "title": "Hash",
+      "type": "object"
+    },
+    "oscal.common.v1.Rlink.schema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Rlink represents a resource link",
+      "properties": {
+        "hashes": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.Hash.schema.strict.json"
+          },
+          "type": "array"
+        },
+        "href": {
+          "$ref": "#/$defs/oscal.common.v1.URI.schema.strict.json"
+        },
+        "media_type": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "media_type"
+      ],
+      "title": "Rlink",
+      "type": "object"
+    },
+    "oscal.common.v1.URI.schema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "URI represents a uniform resource identifier",
+      "properties": {
+        "value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "value"
+      ],
+      "title": "URI",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.common.v1.Rlink.schema.strict.bundle.json",
+  "$ref": "#/$defs/oscal.common.v1.Rlink.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

@@ -1,0 +1,34 @@
+{
+  "$id": "oscal.services.v1.ExportClaimReceiptResponse.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "claim_id": {
+      "type": "string"
+    },
+    "exported_at": {
+      "$ref": "google.protobuf.Timestamp.schema.strict.json"
+    },
+    "receipt_digest": {
+      "type": "string"
+    },
+    "receipt_json": {
+      "type": "string"
+    },
+    "trust_state": {
+      "type": "string"
+    },
+    "verification_event_hash": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "claim_id",
+    "receipt_json",
+    "receipt_digest",
+    "trust_state",
+    "verification_event_hash"
+  ],
+  "title": "Export Claim Receipt Response",
+  "type": "object"
+}

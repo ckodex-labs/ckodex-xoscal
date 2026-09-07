@@ -1,0 +1,37 @@
+{
+  "$defs": {
+    "oscal.common.v1.UUID.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "UUID represents a universally unique identifier",
+      "properties": {
+        "value": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "UUID",
+      "type": "object"
+    },
+    "oscal.poam.v1.RelatedFinding.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "RelatedFinding represents a related finding",
+      "patternProperties": {
+        "^(findingUuid)$": {
+          "$ref": "#/$defs/oscal.common.v1.UUID.schema.json"
+        }
+      },
+      "properties": {
+        "finding_uuid": {
+          "$ref": "#/$defs/oscal.common.v1.UUID.schema.json"
+        }
+      },
+      "title": "Related Finding",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.poam.v1.RelatedFinding.schema.bundle.json",
+  "$ref": "#/$defs/oscal.poam.v1.RelatedFinding.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

@@ -1,0 +1,19 @@
+{
+  "$id": "oscal.services.v1.ImportBatchResponse.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "committed": {
+      "default": false,
+      "type": "boolean"
+    },
+    "results": {
+      "items": {
+        "$ref": "oscal.services.v1.ImportRecordResult.schema.json"
+      },
+      "type": "array"
+    }
+  },
+  "title": "Import Batch Response",
+  "type": "object"
+}

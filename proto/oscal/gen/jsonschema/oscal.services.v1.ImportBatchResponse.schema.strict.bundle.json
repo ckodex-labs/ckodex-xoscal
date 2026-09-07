@@ -1,0 +1,57 @@
+{
+  "$defs": {
+    "oscal.services.v1.ImportBatchResponse.schema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "properties": {
+        "committed": {
+          "type": "boolean"
+        },
+        "results": {
+          "items": {
+            "$ref": "#/$defs/oscal.services.v1.ImportRecordResult.schema.strict.json"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "committed"
+      ],
+      "title": "Import Batch Response",
+      "type": "object"
+    },
+    "oscal.services.v1.ImportRecordResult.schema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "properties": {
+        "claim_id": {
+          "type": "string"
+        },
+        "diagnostics": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "index": {
+          "maximum": 2147483647,
+          "minimum": -2147483648,
+          "type": "integer"
+        },
+        "status": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "index",
+        "claim_id",
+        "status"
+      ],
+      "title": "Import Record Result",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.services.v1.ImportBatchResponse.schema.strict.bundle.json",
+  "$ref": "#/$defs/oscal.services.v1.ImportBatchResponse.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

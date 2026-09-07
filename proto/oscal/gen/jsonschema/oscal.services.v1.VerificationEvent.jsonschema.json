@@ -1,0 +1,116 @@
+{
+  "$id": "oscal.services.v1.VerificationEvent.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "VerificationEvent is an append-only audit record. The JSON fields preserve\n the exact provider and proof envelopes recorded by the verifier.",
+  "patternProperties": {
+    "^(checks_json)$": {
+      "default": "",
+      "type": "string"
+    },
+    "^(claim_id)$": {
+      "default": "",
+      "type": "string"
+    },
+    "^(created_at)$": {
+      "$ref": "google.protobuf.Timestamp.jsonschema.json"
+    },
+    "^(event_hash)$": {
+      "default": "",
+      "type": "string"
+    },
+    "^(event_id)$": {
+      "default": "",
+      "type": "string"
+    },
+    "^(idempotency_key)$": {
+      "default": "",
+      "type": "string"
+    },
+    "^(previous_hash)$": {
+      "default": "",
+      "type": "string"
+    },
+    "^(proof_state_json)$": {
+      "default": "",
+      "type": "string"
+    },
+    "^(provider_state_json)$": {
+      "default": "",
+      "type": "string"
+    },
+    "^(request_id)$": {
+      "default": "",
+      "type": "string"
+    },
+    "^(trust_state)$": {
+      "default": "",
+      "type": "string"
+    }
+  },
+  "properties": {
+    "checksJson": {
+      "default": "",
+      "type": "string"
+    },
+    "claimId": {
+      "default": "",
+      "type": "string"
+    },
+    "createdAt": {
+      "$ref": "google.protobuf.Timestamp.jsonschema.json"
+    },
+    "diagnostics": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "eventHash": {
+      "default": "",
+      "type": "string"
+    },
+    "eventId": {
+      "default": "",
+      "type": "string"
+    },
+    "idempotencyKey": {
+      "default": "",
+      "type": "string"
+    },
+    "previousHash": {
+      "default": "",
+      "type": "string"
+    },
+    "proofStateJson": {
+      "default": "",
+      "type": "string"
+    },
+    "providerStateJson": {
+      "default": "",
+      "type": "string"
+    },
+    "requestId": {
+      "default": "",
+      "type": "string"
+    },
+    "sequence": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "pattern": "^-?[0-9]+$",
+          "type": "string"
+        }
+      ],
+      "default": 0
+    },
+    "trustState": {
+      "default": "",
+      "type": "string"
+    }
+  },
+  "title": "Verification Event",
+  "type": "object"
+}

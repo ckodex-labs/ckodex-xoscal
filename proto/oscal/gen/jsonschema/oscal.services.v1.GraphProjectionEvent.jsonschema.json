@@ -1,0 +1,106 @@
+{
+  "$id": "oscal.services.v1.GraphProjectionEvent.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "GraphProjectionEvent is an append-only, hash-chained audit record emitted\n in the same transaction as a successful edge projection.",
+  "patternProperties": {
+    "^(claim_id)$": {
+      "default": "",
+      "type": "string"
+    },
+    "^(edge_id)$": {
+      "default": "",
+      "type": "string"
+    },
+    "^(event_hash)$": {
+      "default": "",
+      "type": "string"
+    },
+    "^(event_id)$": {
+      "default": "",
+      "type": "string"
+    },
+    "^(evidence_digest)$": {
+      "default": "",
+      "type": "string"
+    },
+    "^(from_node)$": {
+      "default": "",
+      "type": "string"
+    },
+    "^(previous_hash)$": {
+      "default": "",
+      "type": "string"
+    },
+    "^(projected_at)$": {
+      "$ref": "google.protobuf.Timestamp.jsonschema.json"
+    },
+    "^(to_node)$": {
+      "default": "",
+      "type": "string"
+    },
+    "^(trust_state)$": {
+      "default": "",
+      "type": "string"
+    }
+  },
+  "properties": {
+    "claimId": {
+      "default": "",
+      "type": "string"
+    },
+    "edgeId": {
+      "default": "",
+      "type": "string"
+    },
+    "eventHash": {
+      "default": "",
+      "type": "string"
+    },
+    "eventId": {
+      "default": "",
+      "type": "string"
+    },
+    "evidenceDigest": {
+      "default": "",
+      "type": "string"
+    },
+    "fromNode": {
+      "default": "",
+      "type": "string"
+    },
+    "previousHash": {
+      "default": "",
+      "type": "string"
+    },
+    "projectedAt": {
+      "$ref": "google.protobuf.Timestamp.jsonschema.json"
+    },
+    "relation": {
+      "default": "",
+      "type": "string"
+    },
+    "sequence": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "pattern": "^-?[0-9]+$",
+          "type": "string"
+        }
+      ],
+      "default": 0
+    },
+    "toNode": {
+      "default": "",
+      "type": "string"
+    },
+    "trustState": {
+      "default": "",
+      "type": "string"
+    }
+  },
+  "title": "Graph Projection Event",
+  "type": "object"
+}

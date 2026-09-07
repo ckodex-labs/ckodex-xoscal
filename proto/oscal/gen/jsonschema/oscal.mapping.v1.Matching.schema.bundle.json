@@ -1,0 +1,39 @@
+{
+  "$defs": {
+    "oscal.common.v1.MarkupMultiline.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "MarkupMultiline represents multiline markup text",
+      "properties": {
+        "value": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Markup Multiline",
+      "type": "object"
+    },
+    "oscal.mapping.v1.Matching.schema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "description": "Matching selects controls by a glob expression.",
+      "properties": {
+        "pattern": {
+          "default": "",
+          "type": "string"
+        },
+        "remarks": {
+          "items": {
+            "$ref": "#/$defs/oscal.common.v1.MarkupMultiline.schema.json"
+          },
+          "type": "array"
+        }
+      },
+      "title": "Matching",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.mapping.v1.Matching.schema.bundle.json",
+  "$ref": "#/$defs/oscal.mapping.v1.Matching.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

@@ -1,0 +1,63 @@
+{
+  "$id": "oscal.assessment_results.v1.ControlSelection.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "ControlSelection represents a selection of controls for review",
+  "patternProperties": {
+    "^(exclude_controls)$": {
+      "items": {
+        "$ref": "oscal.assessment_results.v1.SelectedControl.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "^(include_all)$": {
+      "$ref": "oscal.assessment_results.v1.IncludeAll.jsonschema.json"
+    },
+    "^(include_controls)$": {
+      "items": {
+        "$ref": "oscal.assessment_results.v1.SelectedControl.jsonschema.json"
+      },
+      "type": "array"
+    }
+  },
+  "properties": {
+    "description": {
+      "$ref": "oscal.common.v1.MarkupMultiline.jsonschema.json"
+    },
+    "excludeControls": {
+      "items": {
+        "$ref": "oscal.assessment_results.v1.SelectedControl.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "includeAll": {
+      "$ref": "oscal.assessment_results.v1.IncludeAll.jsonschema.json"
+    },
+    "includeControls": {
+      "items": {
+        "$ref": "oscal.assessment_results.v1.SelectedControl.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "links": {
+      "items": {
+        "$ref": "oscal.common.v1.Link.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "props": {
+      "items": {
+        "$ref": "oscal.common.v1.Property.jsonschema.json"
+      },
+      "type": "array"
+    },
+    "remarks": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupMultiline.jsonschema.json"
+      },
+      "type": "array"
+    }
+  },
+  "title": "Control Selection",
+  "type": "object"
+}

@@ -1,0 +1,21 @@
+{
+  "$id": "oscal.services.v1.PreflightImportResponse.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "results": {
+      "items": {
+        "$ref": "oscal.services.v1.ImportRecordResult.schema.strict.json"
+      },
+      "type": "array"
+    },
+    "valid": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "valid"
+  ],
+  "title": "Preflight Import Response",
+  "type": "object"
+}

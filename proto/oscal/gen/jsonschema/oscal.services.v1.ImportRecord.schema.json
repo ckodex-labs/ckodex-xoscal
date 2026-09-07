@@ -1,0 +1,18 @@
+{
+  "$id": "oscal.services.v1.ImportRecord.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "claim": {
+      "$ref": "oscal.services.v1.Claim.schema.json"
+    },
+    "evidence": {
+      "items": {
+        "$ref": "oscal.services.v1.ImportEvidence.schema.json"
+      },
+      "type": "array"
+    }
+  },
+  "title": "Import Record",
+  "type": "object"
+}

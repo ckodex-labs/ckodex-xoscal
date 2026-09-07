@@ -1,0 +1,21 @@
+{
+  "$id": "oscal.services.v1.ListVerificationEventsResponse.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "chain_valid": {
+      "type": "boolean"
+    },
+    "events": {
+      "items": {
+        "$ref": "oscal.services.v1.VerificationEvent.schema.strict.json"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "chain_valid"
+  ],
+  "title": "List Verification Events Response",
+  "type": "object"
+}

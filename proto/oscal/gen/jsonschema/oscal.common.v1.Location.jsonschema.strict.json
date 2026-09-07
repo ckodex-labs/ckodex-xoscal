@@ -1,0 +1,58 @@
+{
+  "$id": "oscal.common.v1.Location.jsonschema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Location represents a physical or virtual location",
+  "properties": {
+    "address": {
+      "$ref": "oscal.common.v1.Address.jsonschema.strict.json"
+    },
+    "emailAddresses": {
+      "items": {
+        "$ref": "oscal.common.v1.EmailAddress.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "links": {
+      "items": {
+        "$ref": "oscal.common.v1.Link.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "props": {
+      "items": {
+        "$ref": "oscal.common.v1.Property.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "remarks": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupMultiline.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "telephoneNumbers": {
+      "items": {
+        "$ref": "oscal.common.v1.TelephoneNumber.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "title": {
+      "type": "string"
+    },
+    "urls": {
+      "items": {
+        "$ref": "oscal.common.v1.URI.jsonschema.strict.json"
+      },
+      "type": "array"
+    },
+    "uuid": {
+      "$ref": "oscal.common.v1.UUID.jsonschema.strict.json"
+    }
+  },
+  "required": [
+    "title"
+  ],
+  "title": "Location",
+  "type": "object"
+}

@@ -1,0 +1,40 @@
+{
+  "$id": "oscal.assessment_results.v1.ReviewedControls.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "ReviewedControls represents the reviewed controls for a result",
+  "properties": {
+    "control_selections": {
+      "items": {
+        "$ref": "oscal.assessment_results.v1.ControlSelection.schema.strict.json"
+      },
+      "type": "array"
+    },
+    "controls": {
+      "items": {
+        "$ref": "oscal.assessment_results.v1.SelectedControl.schema.strict.json"
+      },
+      "type": "array"
+    },
+    "links": {
+      "items": {
+        "$ref": "oscal.common.v1.Link.schema.strict.json"
+      },
+      "type": "array"
+    },
+    "props": {
+      "items": {
+        "$ref": "oscal.common.v1.Property.schema.strict.json"
+      },
+      "type": "array"
+    },
+    "remarks": {
+      "items": {
+        "$ref": "oscal.common.v1.MarkupMultiline.schema.strict.json"
+      },
+      "type": "array"
+    }
+  },
+  "title": "Reviewed Controls",
+  "type": "object"
+}
