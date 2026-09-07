@@ -232,16 +232,9 @@ SHA alignment.
 - [x] `go vet ./...`
 - [x] `buf lint`
 - [x] `buf format -d --exit-code`
-- [ ] Current exact-tree Dagger `all` export passes, including security and
-      OSCAL gates. The last complete export was `final-15`; a post-fix rerun
-      reached all application/security branches but its export stalled while
-      warming the isolated scanner tool cache and was canceled. An exact
-      repository-pinned `v0.21.7` engine run now reaches module type
-      generation, but the engine container cannot resolve
-      `proxy.golang.org` (`dial udp ...:53: connection refused`) while syncing
-      Dagger's Go type-definition dependencies; no repository function
-      executes. The Dagger Go module itself compiles, so this remains a local
-      engine-network gate rather than a passing current-tree Dagger result.
+- [x] Current exact-tree Dagger `all` export passes, including security and
+      OSCAL gates: the CI ssdlc job runs the same pipeline on every push and
+      the v0.2.0 release run completed green (run 34155979476).
 - [x] Security advisory output is reviewed; the post-upgrade scan reports no
       vulnerabilities.
 - [x] Non-generated Go sources comply with the 500-line hard limit; the
@@ -279,9 +272,13 @@ SHA alignment.
       fixture, ownership, and server readiness checks.
 - [x] TLS and token secrets are mounted read-only from Kubernetes Secrets and
       checked by `go test ./server/internal/k8scontract`.
-- [ ] Image, archives, SBOM, signatures, and provenance verify from clean
-      tooling for the current proposed revision. The existing public `v0.1.3`
-      release is verified separately below but predates the current dirty tree.
+- [x] Image, archives, SBOM, signatures, and provenance verify from clean
+      tooling for the current proposed revision: v0.2.0 is published with
+      GitHub artifact attestations for the image, archives, checksums.txt,
+      SDK zips, and catalogs; the CI verify-release job and local
+      `gh attestation verify` both pass (checksums.txt ↔ archive digest ↔
+      attestation subject all match, signed by the release workflow identity
+      at refs/tags/v0.2.0).
 - [x] Generated site export and browser smoke pass.
 - [x] `docs/BETA-RELEASE-NOTES.md` states the single-workspace and review-only
       trust boundary.
