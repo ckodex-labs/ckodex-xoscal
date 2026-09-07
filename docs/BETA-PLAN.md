@@ -193,11 +193,11 @@ SHA alignment.
   in [docs/OPERATIONS.md](OPERATIONS.md) and a Dagger `ReleaseBundle` assembly.
 - Remote policy documents (`xoscal-remote`) are fetched through the bounded
   fetch policy and evaluated as xoscal-policy-v1; a deployment key registry
-  with rotation (retired keys verify but surface rotation) and a transparency
+  with rotation (retired keys verify but surface rotation), a transparency
   inclusion provider (RFC 6962-style Merkle proof plus Ed25519-signed
-  checkpoint) are implemented with fail-closed vectors. External signature
-  algorithms beyond Ed25519 and registry-backed transparency (Rekor) remain
-  out of scope.
+  checkpoint), and ECDSA P-256/P-384 detached signature algorithms are
+  implemented with fail-closed vectors. Registry-backed transparency (Rekor)
+  remains out of scope.
 - Gateway-to-gRPC TLS/auth configuration is now fail-closed and unit-tested;
   the Kubernetes manifest contract test verifies one SQLite writer, read-only
   TLS/token Secret mounts, and matching config paths; target-cluster
@@ -207,10 +207,12 @@ SHA alignment.
 - Release tooling is now reproducibility-bound: GoReleaser and Syft downloads
   are version- and SHA-256-pinned; Buf and sbom-tools are pinned the same way;
   runtime bases are digest-pinned, workflow actions are commit-pinned, and
-  critical Trivy findings fail the image job. Cosign and slsa-verifier are
-  digest-pinned in the Dagger module, release archives and checksums.txt are
-  cosign-signed, and `VerifyPublishedRelease` verifies a published release
-  from a clean environment.
+  critical Trivy findings fail the image job. Release signing uses GitHub
+  artifact attestations (actions/attest-build-provenance, commit-pinned) for
+  the image, archives, checksums, SDK zips, and catalogs — GitHub signs with
+  its own key and `gh attestation verify` checks them from any clean
+  environment with no Sigstore/TUF dependency. `VerifyPublishedRelease`
+  verifies a published release from a clean environment.
 
 ### P2 — post-beta improvements
 

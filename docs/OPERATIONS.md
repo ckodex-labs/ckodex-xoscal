@@ -221,11 +221,11 @@ Every published release has a verifiable evidence bundle. Assemble it with:
 dagger call release-bundle --github-token=env:GITHUB_TOKEN export --path=./release-bundle
 ```
 
-The bundle contains every release asset, `provenance.intoto.jsonl`,
-`image-signature.json`, and `inventory.json` (name, SHA-256, size, and
-verification status per asset). Assembly aborts unless checksums, cosign
-signatures, SLSA provenance, and the image signature all verify; a partial
-bundle is never produced.
+The bundle contains every release asset, `image-attestation.json`, and
+`inventory.json` (name, SHA-256, size, and verification status per asset).
+Assembly aborts unless checksums, the GitHub artifact attestations for every
+attested artifact, and the image attestation all verify; a partial bundle is
+never produced.
 
 Retention procedure:
 
