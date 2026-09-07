@@ -20,13 +20,52 @@ type providerResult struct {
 // issuer.key_json contains an Ed25519 public key and the signature proof ref
 // resolves to an evidence blob containing the raw 64-byte signature.
 func verifyClaimSignature(ctx context.Context, store Store, claim *Claim) providerResult {
+	signature, result := resolveSignatureEvidence(ctx, store, claim)
+	if result != nil {
+		return *result
+	}
+	publicKey, retired, err := resolveIssuerKey(nil, claim)
+	if err != nil {
+		return providerResult{State: "invalid", Provider: "available", Message: err.Error()}
+	}
+	return verifySignatureAgainstKey(claim, signature, publicKey, retired)
+}
+
+// verifyClaimSignatureWithRegistry verifies the claim signature with the
+// deployment key registry: the inline issuer key wins when present, otherwise
+// the registry resolves the issuer's key_id. A retired key still verifies but
+// the result message surfaces the rotation; an unknown key_id is explicitly
+// unavailable and can never produce a verified state.
+func (s *ExchangeServer) verifyClaimSignatureWithRegistry(ctx context.Context, claim *Claim) providerResult {
+	signature, result := resolveSignatureEvidence(ctx, s.store, claim)
+	if result != nil {
+		return *result
+	}
+	publicKey, retired, err := resolveIssuerKey(s.keyRegistry, claim)
+	if err != nil {
+		msg := err.Error()
+		state := "invalid"
+		provider := "available"
+		if strings.Contains(msg, "is not registered") {
+			state = "unverified"
+			provider = "unavailable"
+		}
+		return providerResult{State: state, Provider: provider, Message: msg}
+	}
+	return verifySignatureAgainstKey(claim, signature, publicKey, retired)
+}
+
+// resolveSignatureEvidence locates and validates the signature proof
+// reference. A nil providerResult means the signature bytes are ready for
+// cryptographic verification.
+func resolveSignatureEvidence(ctx context.Context, store Store, claim *Claim) ([]byte, *providerResult) {
 	var refs []struct {
 		Type   string `json:"type"`
 		Ref    string `json:"ref"`
 		Digest string `json:"digest"`
 	}
 	if err := json.Unmarshal([]byte(claim.ProofRefsJSON), &refs); err != nil {
-		return providerResult{State: "invalid", Provider: "available", Message: "signature proof references are not valid JSON"}
+		return nil, &providerResult{State: "invalid", Provider: "available", Message: "signature proof references are not valid JSON"}
 	}
 	var signatureRef *struct {
 		Type   string `json:"type"`
@@ -41,40 +80,78 @@ func verifyClaimSignature(ctx context.Context, store Store, claim *Claim) provid
 		}
 	}
 	if signatureRef == nil {
-		return providerResult{State: "unverified", Provider: "available", Message: "signature proof reference is required"}
+		return nil, &providerResult{State: "unverified", Provider: "available", Message: "signature proof reference is required"}
 	}
 	signature, err := resolveEvidenceBlob(ctx, store, signatureRef.Ref, signatureRef.Digest)
 	if err != nil {
-		return providerResult{State: "unverified", Provider: "available", Message: fmt.Sprintf("signature evidence is unavailable: %v", err)}
+		return nil, &providerResult{State: "unverified", Provider: "available", Message: fmt.Sprintf("signature evidence is unavailable: %v", err)}
 	}
 	if len(signature) != ed25519.SignatureSize {
-		return providerResult{State: "invalid", Provider: "available", Message: "signature evidence is not a 64-byte Ed25519 signature"}
+		return nil, &providerResult{State: "invalid", Provider: "available", Message: "signature evidence is not a 64-byte Ed25519 signature"}
 	}
+	return signature, nil
+}
 
+// resolveIssuerKey returns the Ed25519 public key for a claim issuer. The
+// inline `key` object wins when present; otherwise the registry resolves the
+// issuer's key_id. The second return value flags a retired key so the
+// diagnostic can surface the rotation.
+func resolveIssuerKey(registry *KeyRegistry, claim *Claim) (ed25519.PublicKey, bool, error) {
 	var issuer map[string]string
 	if err := json.Unmarshal([]byte(claim.IssuerJSON), &issuer); err != nil {
-		return providerResult{State: "invalid", Provider: "available", Message: "claim issuer is not valid JSON"}
+		return nil, false, fmt.Errorf("claim issuer is not valid JSON")
 	}
-	var key struct {
-		Algorithm string `json:"algorithm"`
-		PublicKey string `json:"public_key"`
+	if inline, ok := issuer["key"]; ok && strings.TrimSpace(inline) != "" {
+		var key struct {
+			Algorithm string `json:"algorithm"`
+			PublicKey string `json:"public_key"`
+		}
+		if err := json.Unmarshal([]byte(inline), &key); err != nil {
+			return nil, false, fmt.Errorf("issuer key metadata is not valid JSON")
+		}
+		if key.Algorithm != "ed25519" {
+			return nil, false, fmt.Errorf("issuer key algorithm must be ed25519")
+		}
+		publicKey, err := decodeBase64Key(key.PublicKey)
+		if err != nil || len(publicKey) != ed25519.PublicKeySize {
+			return nil, false, fmt.Errorf("issuer public key is not a valid Ed25519 key")
+		}
+		return ed25519.PublicKey(publicKey), false, nil
 	}
-	if err := json.Unmarshal([]byte(issuer["key"]), &key); err != nil {
-		return providerResult{State: "invalid", Provider: "available", Message: "issuer key metadata is not valid JSON"}
+
+	keyID := strings.TrimSpace(issuer["key_id"])
+	if keyID == "" {
+		return nil, false, fmt.Errorf("issuer has neither an inline key nor a key_id")
 	}
-	if key.Algorithm != "ed25519" {
-		return providerResult{State: "invalid", Provider: "available", Message: "issuer key algorithm must be ed25519"}
+	entry, ok := registry.lookup(keyID)
+	if !ok {
+		// Unknown key IDs are unavailable, not invalid: the registry may not
+		// know keys that a later rotation introduces.
+		return nil, false, fmt.Errorf("issuer key_id %q is not registered", keyID)
 	}
-	publicKey, err := decodeBase64Key(key.PublicKey)
+	if entry.Algorithm != "ed25519" {
+		return nil, false, fmt.Errorf("registered key %q algorithm must be ed25519", keyID)
+	}
+	publicKey, err := decodeBase64Key(entry.PublicKey)
 	if err != nil || len(publicKey) != ed25519.PublicKeySize {
-		return providerResult{State: "invalid", Provider: "available", Message: "issuer public key is not a valid Ed25519 key"}
+		return nil, false, fmt.Errorf("registered key %q is not a valid Ed25519 key", keyID)
 	}
+	return ed25519.PublicKey(publicKey), entry.Status == "retired", nil
+}
+
+// verifySignatureAgainstKey verifies the detached signature against a
+// resolved issuer public key. A retired key still verifies; the caller
+// surfaces the rotation in the result message.
+func verifySignatureAgainstKey(claim *Claim, signature []byte, publicKey ed25519.PublicKey, retired bool) providerResult {
 	payload, err := canonicalClaimPayload(claim)
 	if err != nil {
 		return providerResult{State: "invalid", Provider: "available", Message: fmt.Sprintf("canonical claim payload: %v", err)}
 	}
-	if !ed25519.Verify(ed25519.PublicKey(publicKey), payload, signature) {
+	if !ed25519.Verify(publicKey, payload, signature) {
 		return providerResult{State: "invalid", Provider: "available", Message: "signature does not match the canonical claim payload"}
+	}
+	if retired {
+		return providerResult{State: "signature_verified", Provider: "available", Message: "issuer key is retired; rotation is visible in diagnostics"}
 	}
 	return providerResult{State: "signature_verified", Provider: "available"}
 }

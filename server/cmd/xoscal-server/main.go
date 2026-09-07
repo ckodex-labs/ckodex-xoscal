@@ -195,14 +195,34 @@ func main() {
 	servicesv1.RegisterOscalServiceServer(grpcServer, service.NewOscalServer(s))
 	rec := reconciler.NewReconciler(kgStore)
 	servicesv1.RegisterGovernanceServiceServer(grpcServer, service.NewGovernanceServer(kgStore, rec, vectorStore))
-	servicesv1.RegisterTransparencyExchangeServiceServer(grpcServer, transparency.NewExchangeServer(transparencyStore).
+	exchangeServer := transparency.NewExchangeServer(transparencyStore).
 		WithFetchPolicy(&transparency.FetchPolicy{
 			Enabled:      cfg.FetchPolicy.Enabled,
 			MaxBytes:     cfg.FetchPolicy.MaxBytes,
 			Timeout:      cfg.FetchPolicy.Timeout,
 			AllowedHosts: cfg.FetchPolicy.AllowedHosts,
 			MaxRedirects: cfg.FetchPolicy.MaxRedirects,
-		}))
+		})
+	if len(cfg.KeyRegistry.Keys) > 0 {
+		registry := &transparency.KeyRegistry{Keys: map[string]transparency.KeyEntry{}}
+		for keyID, entry := range cfg.KeyRegistry.Keys {
+			registry.Keys[keyID] = transparency.KeyEntry{
+				KeyID:     keyID,
+				Algorithm: entry.Algorithm,
+				PublicKey: entry.PublicKey,
+				Status:    entry.Status,
+			}
+		}
+		exchangeServer = exchangeServer.WithKeyRegistry(registry)
+	}
+	if cfg.Transparency.Enabled {
+		exchangeServer = exchangeServer.WithTransparencyConfig(&transparency.TransparencyConfig{
+			Enabled:   true,
+			LogID:     cfg.Transparency.LogID,
+			PublicKey: cfg.Transparency.PublicKey,
+		})
+	}
+	servicesv1.RegisterTransparencyExchangeServiceServer(grpcServer, exchangeServer)
 	servicesv1.RegisterTransparencyGraphServiceServer(grpcServer, graph.NewGraphServer(graphStore, transparencyStore))
 
 	if cfg.Server.EnableReflection {

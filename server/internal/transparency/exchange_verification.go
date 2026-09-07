@@ -41,23 +41,26 @@ func (s *ExchangeServer) VerifyClaim(ctx context.Context, req *servicesv1.Verify
 				diagnostics = append(diagnostics, diag)
 			}
 		case "signature":
-			result := verifyClaimSignature(ctx, s.store, claim)
+			result := s.verifyClaimSignatureWithRegistry(ctx, claim)
 			proofState.Signature = result.State
 			providerStates[check] = result.Provider
 			if result.Message != "" {
 				diagnostics = append(diagnostics, "signature: "+result.Message)
 			}
 		case "policy":
-			result := evaluateClaimPolicy(ctx, s.store, claim)
+			result := s.evaluateClaimPolicyDispatched(ctx, claim)
 			proofState.Policy = result.State
 			providerStates[check] = result.Provider
 			if result.Message != "" {
 				diagnostics = append(diagnostics, "policy: "+result.Message)
 			}
 		case "transparency":
-			proofState.Transparency = "missing"
-			providerStates[check] = "unavailable"
-			diagnostics = append(diagnostics, "transparency: inclusion proof not provided")
+			result := s.verifyTransparencyInclusion(ctx, s.store, claim, s.transparencyCfg)
+			proofState.Transparency = result.State
+			providerStates[check] = result.Provider
+			if result.Message != "" {
+				diagnostics = append(diagnostics, "transparency: "+result.Message)
+			}
 		case "witness":
 			proofState.WitnessJson = `{"status":"missing"}`
 			providerStates[check] = "unavailable"
