@@ -916,6 +916,119 @@ nonisolated struct Oscal_Services_V1_GetEvidenceResponse: Sendable {
   fileprivate var _evidence: Oscal_Services_V1_Evidence? = nil
 }
 
+nonisolated struct Oscal_Services_V1_FetchExternalEvidenceRequest: Sendable {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var url: String = String()
+
+  var evidenceID: String = String()
+
+  var mediaType: String = String()
+
+  var bomKind: String = String()
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
+nonisolated struct Oscal_Services_V1_FetchExternalEvidenceResponse: Sendable {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var evidence: Oscal_Services_V1_Evidence {
+    get {_evidence ?? Oscal_Services_V1_Evidence()}
+    set {_evidence = newValue}
+  }
+  /// Returns true if `evidence` has been explicitly set.
+  var hasEvidence: Bool {self._evidence != nil}
+  /// Clears the value of `evidence`. Subsequent reads from it will return its default value.
+  mutating func clearEvidence() {self._evidence = nil}
+
+  var stored: Bool = false
+
+  var audit: Oscal_Services_V1_EvidenceFetchAudit {
+    get {_audit ?? Oscal_Services_V1_EvidenceFetchAudit()}
+    set {_audit = newValue}
+  }
+  /// Returns true if `audit` has been explicitly set.
+  var hasAudit: Bool {self._audit != nil}
+  /// Clears the value of `audit`. Subsequent reads from it will return its default value.
+  mutating func clearAudit() {self._audit = nil}
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+
+  fileprivate var _evidence: Oscal_Services_V1_Evidence? = nil
+  fileprivate var _audit: Oscal_Services_V1_EvidenceFetchAudit? = nil
+}
+
+nonisolated struct Oscal_Services_V1_EvidenceFetchAudit: Sendable {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var url: String = String()
+
+  var digest: String = String()
+
+  var sizeBytes: Int64 = 0
+
+  /// fetched | policy_denied | fetch_failed
+  var outcome: String = String()
+
+  var detail: String = String()
+
+  var fetchedAt: SwiftProtobuf.Google_Protobuf_Timestamp {
+    get {_fetchedAt ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
+    set {_fetchedAt = newValue}
+  }
+  /// Returns true if `fetchedAt` has been explicitly set.
+  var hasFetchedAt: Bool {self._fetchedAt != nil}
+  /// Clears the value of `fetchedAt`. Subsequent reads from it will return its default value.
+  mutating func clearFetchedAt() {self._fetchedAt = nil}
+
+  var durationMs: Int64 = 0
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+
+  fileprivate var _fetchedAt: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
+}
+
+nonisolated struct Oscal_Services_V1_ListFetchEventsRequest: Sendable {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var pageSize: Int32 = 0
+
+  var pageToken: String = String()
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
+nonisolated struct Oscal_Services_V1_ListFetchEventsResponse: Sendable {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var events: [Oscal_Services_V1_EvidenceFetchAudit] = []
+
+  var nextPageToken: String = String()
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
 nonisolated struct Oscal_Services_V1_VerifyEvidenceRequest: Sendable {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
@@ -2726,6 +2839,229 @@ nonisolated extension Oscal_Services_V1_GetEvidenceResponse: SwiftProtobuf.Messa
 
   static func ==(lhs: Oscal_Services_V1_GetEvidenceResponse, rhs: Oscal_Services_V1_GetEvidenceResponse) -> Bool {
     if lhs._evidence != rhs._evidence {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+nonisolated extension Oscal_Services_V1_FetchExternalEvidenceRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".FetchExternalEvidenceRequest"
+  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}url\0\u{3}evidence_id\0\u{3}media_type\0\u{3}bom_kind\0")
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularStringField(value: &self.url) }()
+      case 2: try { try decoder.decodeSingularStringField(value: &self.evidenceID) }()
+      case 3: try { try decoder.decodeSingularStringField(value: &self.mediaType) }()
+      case 4: try { try decoder.decodeSingularStringField(value: &self.bomKind) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.url.isEmpty {
+      try visitor.visitSingularStringField(value: self.url, fieldNumber: 1)
+    }
+    if !self.evidenceID.isEmpty {
+      try visitor.visitSingularStringField(value: self.evidenceID, fieldNumber: 2)
+    }
+    if !self.mediaType.isEmpty {
+      try visitor.visitSingularStringField(value: self.mediaType, fieldNumber: 3)
+    }
+    if !self.bomKind.isEmpty {
+      try visitor.visitSingularStringField(value: self.bomKind, fieldNumber: 4)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Oscal_Services_V1_FetchExternalEvidenceRequest, rhs: Oscal_Services_V1_FetchExternalEvidenceRequest) -> Bool {
+    if lhs.url != rhs.url {return false}
+    if lhs.evidenceID != rhs.evidenceID {return false}
+    if lhs.mediaType != rhs.mediaType {return false}
+    if lhs.bomKind != rhs.bomKind {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+nonisolated extension Oscal_Services_V1_FetchExternalEvidenceResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".FetchExternalEvidenceResponse"
+  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}evidence\0\u{1}stored\0\u{1}audit\0")
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularMessageField(value: &self._evidence) }()
+      case 2: try { try decoder.decodeSingularBoolField(value: &self.stored) }()
+      case 3: try { try decoder.decodeSingularMessageField(value: &self._audit) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
+    try { if let v = self._evidence {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
+    } }()
+    if self.stored != false {
+      try visitor.visitSingularBoolField(value: self.stored, fieldNumber: 2)
+    }
+    try { if let v = self._audit {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 3)
+    } }()
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Oscal_Services_V1_FetchExternalEvidenceResponse, rhs: Oscal_Services_V1_FetchExternalEvidenceResponse) -> Bool {
+    if lhs._evidence != rhs._evidence {return false}
+    if lhs.stored != rhs.stored {return false}
+    if lhs._audit != rhs._audit {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+nonisolated extension Oscal_Services_V1_EvidenceFetchAudit: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".EvidenceFetchAudit"
+  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}url\0\u{1}digest\0\u{3}size_bytes\0\u{1}outcome\0\u{1}detail\0\u{3}fetched_at\0\u{3}duration_ms\0")
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularStringField(value: &self.url) }()
+      case 2: try { try decoder.decodeSingularStringField(value: &self.digest) }()
+      case 3: try { try decoder.decodeSingularInt64Field(value: &self.sizeBytes) }()
+      case 4: try { try decoder.decodeSingularStringField(value: &self.outcome) }()
+      case 5: try { try decoder.decodeSingularStringField(value: &self.detail) }()
+      case 6: try { try decoder.decodeSingularMessageField(value: &self._fetchedAt) }()
+      case 7: try { try decoder.decodeSingularInt64Field(value: &self.durationMs) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
+    if !self.url.isEmpty {
+      try visitor.visitSingularStringField(value: self.url, fieldNumber: 1)
+    }
+    if !self.digest.isEmpty {
+      try visitor.visitSingularStringField(value: self.digest, fieldNumber: 2)
+    }
+    if self.sizeBytes != 0 {
+      try visitor.visitSingularInt64Field(value: self.sizeBytes, fieldNumber: 3)
+    }
+    if !self.outcome.isEmpty {
+      try visitor.visitSingularStringField(value: self.outcome, fieldNumber: 4)
+    }
+    if !self.detail.isEmpty {
+      try visitor.visitSingularStringField(value: self.detail, fieldNumber: 5)
+    }
+    try { if let v = self._fetchedAt {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 6)
+    } }()
+    if self.durationMs != 0 {
+      try visitor.visitSingularInt64Field(value: self.durationMs, fieldNumber: 7)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Oscal_Services_V1_EvidenceFetchAudit, rhs: Oscal_Services_V1_EvidenceFetchAudit) -> Bool {
+    if lhs.url != rhs.url {return false}
+    if lhs.digest != rhs.digest {return false}
+    if lhs.sizeBytes != rhs.sizeBytes {return false}
+    if lhs.outcome != rhs.outcome {return false}
+    if lhs.detail != rhs.detail {return false}
+    if lhs._fetchedAt != rhs._fetchedAt {return false}
+    if lhs.durationMs != rhs.durationMs {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+nonisolated extension Oscal_Services_V1_ListFetchEventsRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".ListFetchEventsRequest"
+  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{3}page_size\0\u{3}page_token\0")
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularInt32Field(value: &self.pageSize) }()
+      case 2: try { try decoder.decodeSingularStringField(value: &self.pageToken) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if self.pageSize != 0 {
+      try visitor.visitSingularInt32Field(value: self.pageSize, fieldNumber: 1)
+    }
+    if !self.pageToken.isEmpty {
+      try visitor.visitSingularStringField(value: self.pageToken, fieldNumber: 2)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Oscal_Services_V1_ListFetchEventsRequest, rhs: Oscal_Services_V1_ListFetchEventsRequest) -> Bool {
+    if lhs.pageSize != rhs.pageSize {return false}
+    if lhs.pageToken != rhs.pageToken {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+nonisolated extension Oscal_Services_V1_ListFetchEventsResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".ListFetchEventsResponse"
+  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{1}events\0\u{3}next_page_token\0")
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeRepeatedMessageField(value: &self.events) }()
+      case 2: try { try decoder.decodeSingularStringField(value: &self.nextPageToken) }()
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.events.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.events, fieldNumber: 1)
+    }
+    if !self.nextPageToken.isEmpty {
+      try visitor.visitSingularStringField(value: self.nextPageToken, fieldNumber: 2)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: Oscal_Services_V1_ListFetchEventsResponse, rhs: Oscal_Services_V1_ListFetchEventsResponse) -> Bool {
+    if lhs.events != rhs.events {return false}
+    if lhs.nextPageToken != rhs.nextPageToken {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

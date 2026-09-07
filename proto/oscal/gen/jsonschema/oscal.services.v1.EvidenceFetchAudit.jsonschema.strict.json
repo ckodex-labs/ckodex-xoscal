@@ -1,0 +1,38 @@
+{
+  "$id": "oscal.services.v1.EvidenceFetchAudit.jsonschema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "detail": {
+      "type": "string"
+    },
+    "digest": {
+      "type": "string"
+    },
+    "durationMs": {
+      "type": "integer"
+    },
+    "fetchedAt": {
+      "$ref": "google.protobuf.Timestamp.jsonschema.strict.json"
+    },
+    "outcome": {
+      "type": "string"
+    },
+    "sizeBytes": {
+      "type": "integer"
+    },
+    "url": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "url",
+    "digest",
+    "sizeBytes",
+    "outcome",
+    "detail",
+    "durationMs"
+  ],
+  "title": "Evidence Fetch Audit",
+  "type": "object"
+}

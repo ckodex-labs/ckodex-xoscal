@@ -34,3 +34,8 @@ data:
       rate_limit_burst: 200
       auth_mode: "token"
       auth_token_file: "/etc/xoscal/auth/token"
+    fetch_policy:
+      enabled: "false"
+      max_bytes: "10485760"
+      timeout: "30s"
+      max_redirects: "3"

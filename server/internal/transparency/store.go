@@ -26,6 +26,9 @@ type Store interface {
 	GetEvidenceByDigest(ctx context.Context, digest string) (*Evidence, error)
 	GetEvidenceBlob(ctx context.Context, id string) ([]byte, error)
 
+	RecordFetchEvent(ctx context.Context, ev FetchEvent) error
+	ListFetchEvents(ctx context.Context, limit int) ([]FetchEvent, error)
+
 	Close() error
 }
 
@@ -209,6 +212,9 @@ END;
 	if _, err := s.db.Exec(`ALTER TABLE kg_evidence ADD COLUMN blob BLOB`); err != nil &&
 		!strings.Contains(strings.ToLower(err.Error()), "duplicate column") {
 		return fmt.Errorf("add evidence blob column: %w", err)
+	}
+	if err := s.migrateFetchEvents(); err != nil {
+		return fmt.Errorf("migrate fetch events: %w", err)
 	}
 	return nil
 }

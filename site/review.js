@@ -335,12 +335,14 @@
       const response = await request("/v1/transparency/claims?page_size=50");
       const claims = response.claims || [];
       renderList(claims);
+      setConnectionState("connected");
       setStatus(`${claims.length} claim${claims.length === 1 ? "" : "s"} loaded from the live API.`);
       addReceipt("evaluated", `claim queue loaded: ${claims.length}`);
     } catch (error) {
       const message = requestErrorMessage(error, "load the claim queue");
       list.innerHTML = `<p class="ck-site-note">${escapeHTML(message)}</p>`;
       setConnectionError(message);
+      setConnectionState("error", message);
       setStatus("Live claim queue unavailable. No sample data was substituted.");
       addReceipt("rejected", message);
     }
@@ -539,6 +541,7 @@
     apiBase = apiInput.value.trim().replace(/\/$/, "");
     apiToken = tokenInput.value.trim();
     clearConnectionError();
+    setConnectionState("connecting");
     loadClaims();
   });
   importForm.addEventListener("submit", importClaim);
@@ -569,4 +572,255 @@
   });
 
   if (apiBase) loadClaims();
+
+  // ---- Connection state machine ----
+  // disconnected | connecting | connected | error. The chip names the state
+  // and, on error, the class of failure (auth, scope, network, or path) so
+  // the operator's next action is explicit.
+  const connectionState = document.getElementById("connection-state");
+  const connectionChip = connectionState.querySelector("[data-connection-chip]");
+
+  const connectionChipClass = {
+    disconnected: "ck-chip ck-chip--claimed",
+    connecting: "ck-chip ck-chip--claimed",
+    connected: "ck-chip ck-chip--observed",
+    error: "ck-chip ck-chip--invalid"
+  };
+  const connectionGlyph = { disconnected: "○", connecting: "○", connected: "⊢", error: "⊘" };
+
+  const classifyConnectionFailure = message => {
+    if (/401|unauthenticated|unauthenticated/i.test(message)) return "authentication rejected: check the bearer token";
+    if (/403|permission|denied/i.test(message)) return "scope denied: the token lacks this workspace";
+    if (/404|Not Found/i.test(message)) return "route not found: verify the API base URL";
+    if (/Failed to fetch|NetworkError|refused/i.test(message)) return "network unreachable: the API did not answer";
+    return message;
+  };
+
+  const setConnectionState = (state, detail) => {
+    connectionState.dataset.connection = state;
+    connectionChip.className = connectionChipClass[state] || connectionChipClass.disconnected;
+    const label = state === "error" ? classifyConnectionFailure(detail || "") : state;
+    connectionChip.textContent = `${connectionGlyph[state] || "○"} ${label}`;
+  };
+
+  // ---- CSV bulk import with resumable batches ----
+  const csvFile = document.getElementById("csv-file");
+  const csvStatus = document.getElementById("csv-status");
+  const csvResume = document.getElementById("csv-resume");
+  const csvDiscard = document.getElementById("csv-discard");
+  const CSV_MAX_ROWS = 100;
+  const CSV_PENDING_KEY = "xoscal-pending-import-v1";
+  let csvRows = [];
+
+  const updateCsvControls = () => {
+    const pending = csvRows.length > 0;
+    csvResume.hidden = !pending;
+    csvDiscard.hidden = !pending;
+    csvResume.textContent = pending ? `Resume pending import (${csvRows.length} row${csvRows.length === 1 ? "" : "s"})` : "Resume pending import";
+  };
+
+  const persistPending = () => {
+    try {
+      if (csvRows.length) window.localStorage.setItem(CSV_PENDING_KEY, JSON.stringify(csvRows));
+      else window.localStorage.removeItem(CSV_PENDING_KEY);
+    } catch (_) { /* storage unavailable: recovery degrades to this page load */ }
+  };
+
+  const restorePending = () => {
+    try {
+      const raw = window.localStorage.getItem(CSV_PENDING_KEY);
+      if (!raw) return;
+      const parsed = JSON.parse(raw);
+      if (Array.isArray(parsed) && parsed.length && parsed.every(row => row && typeof row === "object")) {
+        csvRows = parsed;
+        csvStatus.textContent = `Recovered a pending import of ${csvRows.length} row${csvRows.length === 1 ? "" : "s"} from this browser.`;
+        updateCsvControls();
+      }
+    } catch (_) { /* corrupt pending state is discarded silently */ }
+  };
+
+  const discardPending = () => {
+    csvRows = [];
+    persistPending();
+    csvStatus.textContent = "Pending import discarded. No rows were sent.";
+    addReceipt("rejected", "pending import discarded");
+    updateCsvControls();
+  };
+
+  // parseCSV implements bounded RFC 4180 splitting: quoted fields, escaped
+  // quotes, CRLF and LF row endings. No unbounded growth: the caller caps rows.
+  const parseCSV = text => {
+    const rows = [];
+    let field = "";
+    let row = [];
+    let inQuotes = false;
+    for (let index = 0; index < text.length; index += 1) {
+      const char = text[index];
+      if (inQuotes) {
+        if (char === '"') {
+          if (text[index + 1] === '"') { field += '"'; index += 1; }
+          else inQuotes = false;
+        } else field += char;
+        continue;
+      }
+      if (char === '"') { inQuotes = true; continue; }
+      if (char === ",") { row.push(field); field = ""; continue; }
+      if (char === "\n" || char === "\r") {
+        if (char === "\r" && text[index + 1] === "\n") index += 1;
+        row.push(field); field = "";
+        if (row.length > 1 || row[0] !== "") rows.push(row);
+        row = [];
+        continue;
+      }
+      field += char;
+    }
+    row.push(field);
+    if (row.length > 1 || row[0] !== "") rows.push(row);
+    return rows;
+  };
+
+  const rowToRecord = async row => {
+    const bytes = new TextEncoder().encode(row["evidence-content"] || "");
+    const digest = await digestBytes(bytes);
+    const now = new Date().toISOString();
+    return {
+      claim: {
+        id: row["claim-id"],
+        type: "beta.review",
+        subject: referenceFromValue(row["subject-kind"], row["subject-value"]),
+        predicate: { relation: row["predicate-relation"], direction: "forward" },
+        object: referenceFromValue(row["object-kind"], row["object-value"]),
+        issuer: { kind: "human", id: "beta-operator" },
+        bomKind: row["evidence-bom-kind"],
+        validTime: { fromTime: now },
+        observedTime: now,
+        sourceRefs: [{ ref: row["evidence-id"], digest, mediaType: row["evidence-media-type"], bomKind: row["evidence-bom-kind"] }]
+      },
+      evidence: [{
+        evidence: { id: row["evidence-id"], mediaType: row["evidence-media-type"], bomKind: row["evidence-bom-kind"], digest, sizeBytes: bytes.length },
+        blob: base64Bytes(bytes)
+      }]
+    };
+  };
+
+  const importCsvChunk = async () => {
+    if (!apiBase) throw new Error("Connect an API before importing evidence.");
+    const chunk = csvRows.slice(0, maxImportRecords);
+    if (!chunk.length) return;
+    setStatus(`Hashing ${chunk.length} CSV row${chunk.length === 1 ? "" : "s"} locally before preflight.`);
+    const records = [];
+    for (const row of chunk) records.push(await rowToRecord(row));
+    const preflight = await request("/v1/transparency/import/preflight", {
+      method: "POST",
+      body: JSON.stringify({ records })
+    });
+    if (!preflight.valid) {
+      const diagnostics = (preflight.results || []).flatMap(result => result.diagnostics || []).join(" ");
+      throw new Error(`preflight blocked: ${diagnostics || "one or more rows are not ready"}`);
+    }
+    const imported = await request("/v1/transparency/import", {
+      method: "POST",
+      body: JSON.stringify({ records, allOrNothing: true })
+    });
+    if (!imported.committed) {
+      const diagnostics = (imported.results || []).flatMap(result => result.diagnostics || []).join(" ");
+      throw new Error(`batch rolled back: ${diagnostics || "the API did not commit the chunk"}`);
+    }
+    csvRows = csvRows.slice(chunk.length);
+    persistPending();
+    addReceipt("transformed", `csv batch imported: ${chunk.length} row${chunk.length === 1 ? "" : "s"} (${csvRows.length} pending)`);
+    return chunk.length;
+  };
+
+  const runCsvImport = async () => {
+    if (!apiBase) {
+      csvStatus.textContent = "Connect an API before importing.";
+      return;
+    }
+    let total = 0;
+    try {
+      while (csvRows.length) {
+        const imported = await importCsvChunk();
+        updateCsvControls();
+        csvStatus.textContent = `Imported ${imported} row${imported === 1 ? "" : "s"}; ${csvRows.length} remaining.`;
+        total += imported;
+      }
+      csvStatus.textContent = `CSV import complete: ${total} row${total === 1 ? "" : "s"} imported in batches of up to ${maxImportRecords}.`;
+      addReceipt("transformed", `csv import complete: ${total}`);
+      await loadClaims();
+    } catch (error) {
+      const message = requestErrorMessage(error, "import the CSV batch");
+      csvStatus.textContent = `CSV import interrupted with ${csvRows.length} row${csvRows.length === 1 ? "" : "s"} pending: ${message}`;
+      addReceipt("rejected", message);
+      updateCsvControls();
+    }
+  };
+
+  csvFile.addEventListener("change", () => {
+    const file = csvFile.files && csvFile.files[0];
+    if (!file) return;
+    if (file.size > (1 << 20) * 8) {
+      csvStatus.textContent = "CSV rejected: files above 8 MiB are outside the bounded import surface.";
+      addReceipt("rejected", "csv file too large");
+      csvFile.value = "";
+      return;
+    }
+    const reader = new FileReader();
+    reader.onload = () => {
+      const rows = parseCSV(String(reader.result || ""));
+      if (!rows.length) {
+        csvStatus.textContent = "CSV rejected: the file is empty.";
+        return;
+      }
+      const header = rows[0].map(name => name.trim());
+      const required = Object.keys(importFieldLabels);
+      const missing = required.filter(name => !header.includes(name));
+      if (missing.length) {
+        csvStatus.textContent = `CSV rejected: missing column${missing.length === 1 ? "" : "s"} ${missing.join(", ")}.`;
+        addReceipt("rejected", "csv header incomplete");
+        return;
+      }
+      const dataRows = rows.slice(1)
+        .filter(row => row.some(value => value.trim() !== ""))
+        .map(row => {
+          const record = {};
+          required.forEach((name, index) => { record[name] = (row[index] || "").trim(); });
+          return record;
+        })
+        .filter(row => Object.values(row).some(value => value !== ""));
+      if (!dataRows.length) {
+        csvStatus.textContent = "CSV rejected: no data rows under the header.";
+        return;
+      }
+      if (dataRows.length > CSV_MAX_ROWS) {
+        csvStatus.textContent = `CSV rejected: ${dataRows.length} rows exceed the ${CSV_MAX_ROWS}-row bounded import surface.`;
+        addReceipt("rejected", `csv rows over cap: ${dataRows.length}`);
+        csvFile.value = "";
+        return;
+      }
+      const incomplete = dataRows.filter(row => Object.keys(importFieldLabels).some(name => !row[name]));
+      if (incomplete.length) {
+        csvStatus.textContent = `CSV rejected: ${incomplete.length} row${incomplete.length === 1 ? "" : "s"} have empty required fields.`;
+        addReceipt("rejected", `csv rows incomplete: ${incomplete.length}`);
+        return;
+      }
+      csvRows = dataRows;
+      persistPending();
+      updateCsvControls();
+      csvStatus.textContent = `CSV loaded: ${csvRows.length} row${csvRows.length === 1 ? "" : "s"} ready in batches of up to ${maxImportRecords}.`;
+      addReceipt("evaluated", `csv loaded: ${csvRows.length} rows`);
+      runCsvImport();
+    };
+    reader.onerror = () => {
+      csvStatus.textContent = "CSV could not be read from disk.";
+      addReceipt("rejected", "csv read failed");
+    };
+    reader.readAsText(file);
+  });
+
+  csvResume.addEventListener("click", runCsvImport);
+  csvDiscard.addEventListener("click", discardPending);
+
+  if (apiBase) setConnectionState("connecting");
+  restorePending();
 })();

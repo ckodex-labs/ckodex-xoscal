@@ -96,6 +96,7 @@ jobs:
     permissions:
       contents: read
       packages: read
+      attestations: read
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
 
@@ -109,46 +110,24 @@ jobs:
         if: steps.latest.outputs.tag == ''
         run: echo "No releases found, skipping verification."
 
-      - name: Install cosign + slsa-verifier
+      - name: Verify image attestation (GitHub-signed)
         if: steps.latest.outputs.tag != ''
         run: |
-          set -eu
-          curl -fsSL "https://github.com/slsa-framework/slsa-verifier/releases/download/v2.7.0/slsa-verifier-linux-amd64" -o /usr/local/bin/slsa-verifier
-          printf '%s  %s\n' "499befb675efcca9001afe6e5156891b91e71f9c07ab120a8943979f85cc82e6" /usr/local/bin/slsa-verifier | sha256sum -c -
-          chmod +x /usr/local/bin/slsa-verifier
-          slsa-verifier version
+          gh attestation verify \
+            ghcr.io/ckodex-labs/ckodex-xoscal:${{ steps.latest.outputs.tag }} \
+            -R ckodex-labs/ckodex-xoscal
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Install Cosign
-        if: steps.latest.outputs.tag != ''
-        uses: sigstore/cosign-installer@6f9f17788090df1f26f669e9d70d6ae9567deba6 # v4.1.2
-
-      - name: Log in to GHCR
-        if: steps.latest.outputs.tag != ''
-        uses: docker/login-action@c94ce9fb468520275223c153574b00df6fe4bcc9 # v3
-        with:
-          registry: ghcr.io
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Verify image signature (cosign)
-        if: steps.latest.outputs.tag != ''
-        run: |
-          cosign verify \
-            --certificate-identity-regexp "https://github.com/ckodex-labs/ckodex-xoscal/.github/" \
-            --certificate-oidc-issuer "https://token.actions.githubusercontent.com" \
-            ghcr.io/ckodex-labs/ckodex-xoscal:${{ steps.latest.outputs.tag }}
-
-      - name: Verify SLSA provenance (slsa-verifier)
+      - name: Verify artifact attestations (GitHub-signed)
         if: steps.latest.outputs.tag != ''
         run: |
           tag="${{ steps.latest.outputs.tag }}"
-          gh release download "$tag" --pattern "provenance.intoto.jsonl" --dir /tmp
-          gh release download "$tag" --pattern "*.tar.gz" --dir /tmp
-          for archive in /tmp/ckodex-xoscal_*.tar.gz; do
-            echo "Verifying: $archive"
-            slsa-verifier verify-artifact "$archive" \
-              --provenance-path /tmp/provenance.intoto.jsonl \
-              --source-uri github.com/ckodex-labs/ckodex-xoscal
+          gh release download "$tag" --pattern "*.tar.gz" --dir /tmp --clobber
+          gh release download "$tag" --pattern "checksums.txt" --dir /tmp --clobber
+          for artifact in /tmp/ckodex-xoscal_*.tar.gz /tmp/checksums.txt; do
+            echo "Verifying attestation: $artifact"
+            gh attestation verify "$artifact" -R ckodex-labs/ckodex-xoscal
           done
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

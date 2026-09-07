@@ -46,6 +46,16 @@ internal protocol Oscal_Services_V1_TransparencyExchangeServiceClientInterface: 
     @available(iOS 13, *)
     func `verifyEvidence`(request: Oscal_Services_V1_VerifyEvidenceRequest, headers: Connect.Headers) async -> ResponseMessage<Oscal_Services_V1_VerifyEvidenceResponse>
 
+    /// FetchExternalEvidence retrieves an external artifact over HTTPS under the
+    /// deployment's bounded fetch policy, stores it as content-addressed
+    /// evidence, and records an append-only fetch audit event. The RPC fails
+    /// closed when no fetch policy is configured or the request violates it.
+    @available(iOS 13, *)
+    func `fetchExternalEvidence`(request: Oscal_Services_V1_FetchExternalEvidenceRequest, headers: Connect.Headers) async -> ResponseMessage<Oscal_Services_V1_FetchExternalEvidenceResponse>
+
+    @available(iOS 13, *)
+    func `listFetchEvents`(request: Oscal_Services_V1_ListFetchEventsRequest, headers: Connect.Headers) async -> ResponseMessage<Oscal_Services_V1_ListFetchEventsResponse>
+
     @available(iOS 13, *)
     func `syncClaims`(request: Oscal_Services_V1_SyncClaimsRequest, headers: Connect.Headers) async -> ResponseMessage<Oscal_Services_V1_SyncClaimsResponse>
 }
@@ -114,6 +124,16 @@ internal final class Oscal_Services_V1_TransparencyExchangeServiceClient: Oscal_
     }
 
     @available(iOS 13, *)
+    internal func `fetchExternalEvidence`(request: Oscal_Services_V1_FetchExternalEvidenceRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Oscal_Services_V1_FetchExternalEvidenceResponse> {
+        return await self.client.unary(path: "/oscal.services.v1.TransparencyExchangeService/FetchExternalEvidence", idempotencyLevel: .unknown, request: request, headers: headers)
+    }
+
+    @available(iOS 13, *)
+    internal func `listFetchEvents`(request: Oscal_Services_V1_ListFetchEventsRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Oscal_Services_V1_ListFetchEventsResponse> {
+        return await self.client.unary(path: "/oscal.services.v1.TransparencyExchangeService/ListFetchEvents", idempotencyLevel: .unknown, request: request, headers: headers)
+    }
+
+    @available(iOS 13, *)
     internal func `syncClaims`(request: Oscal_Services_V1_SyncClaimsRequest, headers: Connect.Headers = [:]) async -> ResponseMessage<Oscal_Services_V1_SyncClaimsResponse> {
         return await self.client.unary(path: "/oscal.services.v1.TransparencyExchangeService/SyncClaims", idempotencyLevel: .unknown, request: request, headers: headers)
     }
@@ -131,6 +151,8 @@ internal final class Oscal_Services_V1_TransparencyExchangeServiceClient: Oscal_
             internal static let uploadEvidence = Connect.MethodSpec(name: "UploadEvidence", service: "oscal.services.v1.TransparencyExchangeService", type: .unary)
             internal static let getEvidence = Connect.MethodSpec(name: "GetEvidence", service: "oscal.services.v1.TransparencyExchangeService", type: .unary)
             internal static let verifyEvidence = Connect.MethodSpec(name: "VerifyEvidence", service: "oscal.services.v1.TransparencyExchangeService", type: .unary)
+            internal static let fetchExternalEvidence = Connect.MethodSpec(name: "FetchExternalEvidence", service: "oscal.services.v1.TransparencyExchangeService", type: .unary)
+            internal static let listFetchEvents = Connect.MethodSpec(name: "ListFetchEvents", service: "oscal.services.v1.TransparencyExchangeService", type: .unary)
             internal static let syncClaims = Connect.MethodSpec(name: "SyncClaims", service: "oscal.services.v1.TransparencyExchangeService", type: .unary)
         }
     }

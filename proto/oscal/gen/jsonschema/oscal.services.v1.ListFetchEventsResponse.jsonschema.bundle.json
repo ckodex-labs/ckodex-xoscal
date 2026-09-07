@@ -1,0 +1,117 @@
+{
+  "$defs": {
+    "google.protobuf.Timestamp.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "format": "date-time",
+      "title": "Timestamp",
+      "type": "string"
+    },
+    "oscal.services.v1.EvidenceFetchAudit.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "patternProperties": {
+        "^(duration_ms)$": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "pattern": "^-?[0-9]+$",
+              "type": "string"
+            }
+          ],
+          "default": 0
+        },
+        "^(fetched_at)$": {
+          "$ref": "#/$defs/google.protobuf.Timestamp.jsonschema.json"
+        },
+        "^(size_bytes)$": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "pattern": "^-?[0-9]+$",
+              "type": "string"
+            }
+          ],
+          "default": 0
+        }
+      },
+      "properties": {
+        "detail": {
+          "default": "",
+          "type": "string"
+        },
+        "digest": {
+          "default": "",
+          "type": "string"
+        },
+        "durationMs": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "pattern": "^-?[0-9]+$",
+              "type": "string"
+            }
+          ],
+          "default": 0
+        },
+        "fetchedAt": {
+          "$ref": "#/$defs/google.protobuf.Timestamp.jsonschema.json"
+        },
+        "outcome": {
+          "default": "",
+          "type": "string"
+        },
+        "sizeBytes": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "pattern": "^-?[0-9]+$",
+              "type": "string"
+            }
+          ],
+          "default": 0
+        },
+        "url": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "Evidence Fetch Audit",
+      "type": "object"
+    },
+    "oscal.services.v1.ListFetchEventsResponse.jsonschema.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "patternProperties": {
+        "^(next_page_token)$": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "properties": {
+        "events": {
+          "items": {
+            "$ref": "#/$defs/oscal.services.v1.EvidenceFetchAudit.jsonschema.json"
+          },
+          "type": "array"
+        },
+        "nextPageToken": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "title": "List Fetch Events Response",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.services.v1.ListFetchEventsResponse.jsonschema.bundle.json",
+  "$ref": "#/$defs/oscal.services.v1.ListFetchEventsResponse.jsonschema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

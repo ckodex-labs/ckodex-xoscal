@@ -35218,6 +35218,4645 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
 
   }
 
+  public interface FetchExternalEvidenceRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oscal.services.v1.FetchExternalEvidenceRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string url = 1 [json_name = "url"];</code>
+     * @return The url.
+     */
+    java.lang.String getUrl();
+    /**
+     * <code>string url = 1 [json_name = "url"];</code>
+     * @return The bytes for url.
+     */
+    com.google.protobuf.ByteString
+        getUrlBytes();
+
+    /**
+     * <code>string evidence_id = 2 [json_name = "evidenceId"];</code>
+     * @return The evidenceId.
+     */
+    java.lang.String getEvidenceId();
+    /**
+     * <code>string evidence_id = 2 [json_name = "evidenceId"];</code>
+     * @return The bytes for evidenceId.
+     */
+    com.google.protobuf.ByteString
+        getEvidenceIdBytes();
+
+    /**
+     * <code>string media_type = 3 [json_name = "mediaType"];</code>
+     * @return The mediaType.
+     */
+    java.lang.String getMediaType();
+    /**
+     * <code>string media_type = 3 [json_name = "mediaType"];</code>
+     * @return The bytes for mediaType.
+     */
+    com.google.protobuf.ByteString
+        getMediaTypeBytes();
+
+    /**
+     * <code>string bom_kind = 4 [json_name = "bomKind"];</code>
+     * @return The bomKind.
+     */
+    java.lang.String getBomKind();
+    /**
+     * <code>string bom_kind = 4 [json_name = "bomKind"];</code>
+     * @return The bytes for bomKind.
+     */
+    com.google.protobuf.ByteString
+        getBomKindBytes();
+  }
+  /**
+   * Protobuf type {@code oscal.services.v1.FetchExternalEvidenceRequest}
+   */
+  public static final class FetchExternalEvidenceRequest extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:oscal.services.v1.FetchExternalEvidenceRequest)
+      FetchExternalEvidenceRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 36,
+        /* patch= */ 1,
+        /* suffix= */ "",
+        "FetchExternalEvidenceRequest");
+    }
+    // Use FetchExternalEvidenceRequest.newBuilder() to construct.
+    private FetchExternalEvidenceRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private FetchExternalEvidenceRequest() {
+      url_ = "";
+      evidenceId_ = "";
+      mediaType_ = "";
+      bomKind_ = "";
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_FetchExternalEvidenceRequest_descriptor;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+      return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_FetchExternalEvidenceRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_FetchExternalEvidenceRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceRequest.class, oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceRequest.Builder.class);
+    }
+
+    public static final int URL_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object url_ = "";
+    /**
+     * <code>string url = 1 [json_name = "url"];</code>
+     * @return The url.
+     */
+    @java.lang.Override
+    public java.lang.String getUrl() {
+      java.lang.Object ref = url_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        url_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string url = 1 [json_name = "url"];</code>
+     * @return The bytes for url.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUrlBytes() {
+      java.lang.Object ref = url_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        url_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int EVIDENCE_ID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object evidenceId_ = "";
+    /**
+     * <code>string evidence_id = 2 [json_name = "evidenceId"];</code>
+     * @return The evidenceId.
+     */
+    @java.lang.Override
+    public java.lang.String getEvidenceId() {
+      java.lang.Object ref = evidenceId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        evidenceId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string evidence_id = 2 [json_name = "evidenceId"];</code>
+     * @return The bytes for evidenceId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEvidenceIdBytes() {
+      java.lang.Object ref = evidenceId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        evidenceId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MEDIA_TYPE_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object mediaType_ = "";
+    /**
+     * <code>string media_type = 3 [json_name = "mediaType"];</code>
+     * @return The mediaType.
+     */
+    @java.lang.Override
+    public java.lang.String getMediaType() {
+      java.lang.Object ref = mediaType_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        mediaType_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string media_type = 3 [json_name = "mediaType"];</code>
+     * @return The bytes for mediaType.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMediaTypeBytes() {
+      java.lang.Object ref = mediaType_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        mediaType_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BOM_KIND_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object bomKind_ = "";
+    /**
+     * <code>string bom_kind = 4 [json_name = "bomKind"];</code>
+     * @return The bomKind.
+     */
+    @java.lang.Override
+    public java.lang.String getBomKind() {
+      java.lang.Object ref = bomKind_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        bomKind_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string bom_kind = 4 [json_name = "bomKind"];</code>
+     * @return The bytes for bomKind.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBomKindBytes() {
+      java.lang.Object ref = bomKind_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        bomKind_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(url_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, url_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(evidenceId_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, evidenceId_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(mediaType_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 3, mediaType_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(bomKind_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 4, bomKind_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+    private int computeSerializedSize_0() {
+      int size = 0;
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(url_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, url_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(evidenceId_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, evidenceId_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(mediaType_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(3, mediaType_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(bomKind_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(4, bomKind_);
+      }
+      return size;
+    }
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += computeSerializedSize_0();
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceRequest)) {
+        return super.equals(obj);
+      }
+      oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceRequest other = (oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceRequest) obj;
+
+      if (!getUrl()
+          .equals(other.getUrl())) return false;
+      if (!getEvidenceId()
+          .equals(other.getEvidenceId())) return false;
+      if (!getMediaType()
+          .equals(other.getMediaType())) return false;
+      if (!getBomKind()
+          .equals(other.getBomKind())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + URL_FIELD_NUMBER;
+      hash = (53 * hash) + getUrl().hashCode();
+      hash = (37 * hash) + EVIDENCE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getEvidenceId().hashCode();
+      hash = (37 * hash) + MEDIA_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getMediaType().hashCode();
+      hash = (37 * hash) + BOM_KIND_FIELD_NUMBER;
+      hash = (53 * hash) + getBomKind().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oscal.services.v1.FetchExternalEvidenceRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oscal.services.v1.FetchExternalEvidenceRequest)
+        oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_FetchExternalEvidenceRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_FetchExternalEvidenceRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceRequest.class, oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceRequest.Builder.class);
+      }
+
+      // Construct using oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        url_ = "";
+        evidenceId_ = "";
+        mediaType_ = "";
+        bomKind_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_FetchExternalEvidenceRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceRequest getDefaultInstanceForType() {
+        return oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceRequest build() {
+        oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceRequest buildPartial() {
+        oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceRequest result = new oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.url_ = url_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.evidenceId_ = evidenceId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.mediaType_ = mediaType_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.bomKind_ = bomKind_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceRequest) {
+          return mergeFrom((oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceRequest other) {
+        if (other == oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceRequest.getDefaultInstance()) return this;
+        if (!other.getUrl().isEmpty()) {
+          url_ = other.url_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getEvidenceId().isEmpty()) {
+          evidenceId_ = other.evidenceId_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getMediaType().isEmpty()) {
+          mediaType_ = other.mediaType_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getBomKind().isEmpty()) {
+          bomKind_ = other.bomKind_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        java.util.Objects.requireNonNull(extensionRegistry);
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                url_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                evidenceId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                mediaType_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                bomKind_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object url_ = "";
+      /**
+       * <code>string url = 1 [json_name = "url"];</code>
+       * @return The url.
+       */
+      public java.lang.String getUrl() {
+        java.lang.Object ref = url_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          url_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string url = 1 [json_name = "url"];</code>
+       * @return The bytes for url.
+       */
+      public com.google.protobuf.ByteString
+          getUrlBytes() {
+        java.lang.Object ref = url_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          url_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string url = 1 [json_name = "url"];</code>
+       * @param value The url to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUrl(
+          java.lang.String value) {
+        java.util.Objects.requireNonNull(value);
+        url_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string url = 1 [json_name = "url"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUrl() {
+        url_ = getDefaultInstance().getUrl();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string url = 1 [json_name = "url"];</code>
+       * @param value The bytes for url to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUrlBytes(
+          com.google.protobuf.ByteString value) {
+        java.util.Objects.requireNonNull(value);
+        checkByteStringIsUtf8(value);
+        url_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object evidenceId_ = "";
+      /**
+       * <code>string evidence_id = 2 [json_name = "evidenceId"];</code>
+       * @return The evidenceId.
+       */
+      public java.lang.String getEvidenceId() {
+        java.lang.Object ref = evidenceId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          evidenceId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string evidence_id = 2 [json_name = "evidenceId"];</code>
+       * @return The bytes for evidenceId.
+       */
+      public com.google.protobuf.ByteString
+          getEvidenceIdBytes() {
+        java.lang.Object ref = evidenceId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          evidenceId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string evidence_id = 2 [json_name = "evidenceId"];</code>
+       * @param value The evidenceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEvidenceId(
+          java.lang.String value) {
+        java.util.Objects.requireNonNull(value);
+        evidenceId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string evidence_id = 2 [json_name = "evidenceId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEvidenceId() {
+        evidenceId_ = getDefaultInstance().getEvidenceId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string evidence_id = 2 [json_name = "evidenceId"];</code>
+       * @param value The bytes for evidenceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEvidenceIdBytes(
+          com.google.protobuf.ByteString value) {
+        java.util.Objects.requireNonNull(value);
+        checkByteStringIsUtf8(value);
+        evidenceId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object mediaType_ = "";
+      /**
+       * <code>string media_type = 3 [json_name = "mediaType"];</code>
+       * @return The mediaType.
+       */
+      public java.lang.String getMediaType() {
+        java.lang.Object ref = mediaType_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          mediaType_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string media_type = 3 [json_name = "mediaType"];</code>
+       * @return The bytes for mediaType.
+       */
+      public com.google.protobuf.ByteString
+          getMediaTypeBytes() {
+        java.lang.Object ref = mediaType_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          mediaType_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string media_type = 3 [json_name = "mediaType"];</code>
+       * @param value The mediaType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMediaType(
+          java.lang.String value) {
+        java.util.Objects.requireNonNull(value);
+        mediaType_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string media_type = 3 [json_name = "mediaType"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMediaType() {
+        mediaType_ = getDefaultInstance().getMediaType();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string media_type = 3 [json_name = "mediaType"];</code>
+       * @param value The bytes for mediaType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMediaTypeBytes(
+          com.google.protobuf.ByteString value) {
+        java.util.Objects.requireNonNull(value);
+        checkByteStringIsUtf8(value);
+        mediaType_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object bomKind_ = "";
+      /**
+       * <code>string bom_kind = 4 [json_name = "bomKind"];</code>
+       * @return The bomKind.
+       */
+      public java.lang.String getBomKind() {
+        java.lang.Object ref = bomKind_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          bomKind_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string bom_kind = 4 [json_name = "bomKind"];</code>
+       * @return The bytes for bomKind.
+       */
+      public com.google.protobuf.ByteString
+          getBomKindBytes() {
+        java.lang.Object ref = bomKind_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          bomKind_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string bom_kind = 4 [json_name = "bomKind"];</code>
+       * @param value The bomKind to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBomKind(
+          java.lang.String value) {
+        java.util.Objects.requireNonNull(value);
+        bomKind_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string bom_kind = 4 [json_name = "bomKind"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBomKind() {
+        bomKind_ = getDefaultInstance().getBomKind();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string bom_kind = 4 [json_name = "bomKind"];</code>
+       * @param value The bytes for bomKind to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBomKindBytes(
+          com.google.protobuf.ByteString value) {
+        java.util.Objects.requireNonNull(value);
+        checkByteStringIsUtf8(value);
+        bomKind_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:oscal.services.v1.FetchExternalEvidenceRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:oscal.services.v1.FetchExternalEvidenceRequest)
+    private static final oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceRequest();
+    }
+
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<FetchExternalEvidenceRequest>
+        PARSER = new com.google.protobuf.AbstractParser<FetchExternalEvidenceRequest>() {
+      @java.lang.Override
+      public FetchExternalEvidenceRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<FetchExternalEvidenceRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<FetchExternalEvidenceRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface FetchExternalEvidenceResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oscal.services.v1.FetchExternalEvidenceResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.oscal.services.v1.Evidence evidence = 1 [json_name = "evidence"];</code>
+     * @return Whether the evidence field is set.
+     */
+    boolean hasEvidence();
+    /**
+     * <code>.oscal.services.v1.Evidence evidence = 1 [json_name = "evidence"];</code>
+     * @return The evidence.
+     */
+    oscal.services.v1.TransparencyExchangeServiceOuterClass.Evidence getEvidence();
+    /**
+     * <code>.oscal.services.v1.Evidence evidence = 1 [json_name = "evidence"];</code>
+     */
+    oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceOrBuilder getEvidenceOrBuilder();
+
+    /**
+     * <code>bool stored = 2 [json_name = "stored"];</code>
+     * @return The stored.
+     */
+    boolean getStored();
+
+    /**
+     * <code>.oscal.services.v1.EvidenceFetchAudit audit = 3 [json_name = "audit"];</code>
+     * @return Whether the audit field is set.
+     */
+    boolean hasAudit();
+    /**
+     * <code>.oscal.services.v1.EvidenceFetchAudit audit = 3 [json_name = "audit"];</code>
+     * @return The audit.
+     */
+    oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit getAudit();
+    /**
+     * <code>.oscal.services.v1.EvidenceFetchAudit audit = 3 [json_name = "audit"];</code>
+     */
+    oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAuditOrBuilder getAuditOrBuilder();
+  }
+  /**
+   * Protobuf type {@code oscal.services.v1.FetchExternalEvidenceResponse}
+   */
+  public static final class FetchExternalEvidenceResponse extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:oscal.services.v1.FetchExternalEvidenceResponse)
+      FetchExternalEvidenceResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 36,
+        /* patch= */ 1,
+        /* suffix= */ "",
+        "FetchExternalEvidenceResponse");
+    }
+    // Use FetchExternalEvidenceResponse.newBuilder() to construct.
+    private FetchExternalEvidenceResponse(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private FetchExternalEvidenceResponse() {
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_FetchExternalEvidenceResponse_descriptor;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+      return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_FetchExternalEvidenceResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_FetchExternalEvidenceResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceResponse.class, oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceResponse.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int EVIDENCE_FIELD_NUMBER = 1;
+    private oscal.services.v1.TransparencyExchangeServiceOuterClass.Evidence evidence_;
+    /**
+     * <code>.oscal.services.v1.Evidence evidence = 1 [json_name = "evidence"];</code>
+     * @return Whether the evidence field is set.
+     */
+    @java.lang.Override
+    public boolean hasEvidence() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.oscal.services.v1.Evidence evidence = 1 [json_name = "evidence"];</code>
+     * @return The evidence.
+     */
+    @java.lang.Override
+    public oscal.services.v1.TransparencyExchangeServiceOuterClass.Evidence getEvidence() {
+      return evidence_ == null ? oscal.services.v1.TransparencyExchangeServiceOuterClass.Evidence.getDefaultInstance() : evidence_;
+    }
+    /**
+     * <code>.oscal.services.v1.Evidence evidence = 1 [json_name = "evidence"];</code>
+     */
+    @java.lang.Override
+    public oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceOrBuilder getEvidenceOrBuilder() {
+      return evidence_ == null ? oscal.services.v1.TransparencyExchangeServiceOuterClass.Evidence.getDefaultInstance() : evidence_;
+    }
+
+    public static final int STORED_FIELD_NUMBER = 2;
+    private boolean stored_ = false;
+    /**
+     * <code>bool stored = 2 [json_name = "stored"];</code>
+     * @return The stored.
+     */
+    @java.lang.Override
+    public boolean getStored() {
+      return stored_;
+    }
+
+    public static final int AUDIT_FIELD_NUMBER = 3;
+    private oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit audit_;
+    /**
+     * <code>.oscal.services.v1.EvidenceFetchAudit audit = 3 [json_name = "audit"];</code>
+     * @return Whether the audit field is set.
+     */
+    @java.lang.Override
+    public boolean hasAudit() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>.oscal.services.v1.EvidenceFetchAudit audit = 3 [json_name = "audit"];</code>
+     * @return The audit.
+     */
+    @java.lang.Override
+    public oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit getAudit() {
+      return audit_ == null ? oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit.getDefaultInstance() : audit_;
+    }
+    /**
+     * <code>.oscal.services.v1.EvidenceFetchAudit audit = 3 [json_name = "audit"];</code>
+     */
+    @java.lang.Override
+    public oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAuditOrBuilder getAuditOrBuilder() {
+      return audit_ == null ? oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit.getDefaultInstance() : audit_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeMessage(1, getEvidence());
+      }
+      if (stored_ != false) {
+        output.writeBool(2, stored_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeMessage(3, getAudit());
+      }
+      getUnknownFields().writeTo(output);
+    }
+    private int computeSerializedSize_0() {
+      int size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getEvidence());
+      }
+      if (stored_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, stored_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getAudit());
+      }
+      return size;
+    }
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += computeSerializedSize_0();
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceResponse)) {
+        return super.equals(obj);
+      }
+      oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceResponse other = (oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceResponse) obj;
+
+      if (hasEvidence() != other.hasEvidence()) return false;
+      if (hasEvidence()) {
+        if (!getEvidence()
+            .equals(other.getEvidence())) return false;
+      }
+      if (getStored()
+          != other.getStored()) return false;
+      if (hasAudit() != other.hasAudit()) return false;
+      if (hasAudit()) {
+        if (!getAudit()
+            .equals(other.getAudit())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasEvidence()) {
+        hash = (37 * hash) + EVIDENCE_FIELD_NUMBER;
+        hash = (53 * hash) + getEvidence().hashCode();
+      }
+      hash = (37 * hash) + STORED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getStored());
+      if (hasAudit()) {
+        hash = (37 * hash) + AUDIT_FIELD_NUMBER;
+        hash = (53 * hash) + getAudit().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oscal.services.v1.FetchExternalEvidenceResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oscal.services.v1.FetchExternalEvidenceResponse)
+        oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_FetchExternalEvidenceResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_FetchExternalEvidenceResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceResponse.class, oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceResponse.Builder.class);
+      }
+
+      // Construct using oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage
+                .alwaysUseFieldBuilders) {
+          internalGetEvidenceFieldBuilder();
+          internalGetAuditFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        evidence_ = null;
+        if (evidenceBuilder_ != null) {
+          evidenceBuilder_.dispose();
+          evidenceBuilder_ = null;
+        }
+        stored_ = false;
+        audit_ = null;
+        if (auditBuilder_ != null) {
+          auditBuilder_.dispose();
+          auditBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_FetchExternalEvidenceResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceResponse getDefaultInstanceForType() {
+        return oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceResponse build() {
+        oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceResponse buildPartial() {
+        oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceResponse result = new oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceResponse result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.evidence_ = evidenceBuilder_ == null
+              ? evidence_
+              : evidenceBuilder_.build();
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.stored_ = stored_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.audit_ = auditBuilder_ == null
+              ? audit_
+              : auditBuilder_.build();
+          to_bitField0_ |= 0x00000002;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceResponse) {
+          return mergeFrom((oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceResponse other) {
+        if (other == oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceResponse.getDefaultInstance()) return this;
+        if (other.hasEvidence()) {
+          mergeEvidence(other.getEvidence());
+        }
+        if (other.getStored() != false) {
+          setStored(other.getStored());
+        }
+        if (other.hasAudit()) {
+          mergeAudit(other.getAudit());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        java.util.Objects.requireNonNull(extensionRegistry);
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    internalGetEvidenceFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                stored_ = input.readBool();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                input.readMessage(
+                    internalGetAuditFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private oscal.services.v1.TransparencyExchangeServiceOuterClass.Evidence evidence_;
+      private com.google.protobuf.SingleFieldBuilder<
+          oscal.services.v1.TransparencyExchangeServiceOuterClass.Evidence, oscal.services.v1.TransparencyExchangeServiceOuterClass.Evidence.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceOrBuilder> evidenceBuilder_;
+      /**
+       * <code>.oscal.services.v1.Evidence evidence = 1 [json_name = "evidence"];</code>
+       * @return Whether the evidence field is set.
+       */
+      public boolean hasEvidence() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.oscal.services.v1.Evidence evidence = 1 [json_name = "evidence"];</code>
+       * @return The evidence.
+       */
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.Evidence getEvidence() {
+        if (evidenceBuilder_ == null) {
+          return evidence_ == null ? oscal.services.v1.TransparencyExchangeServiceOuterClass.Evidence.getDefaultInstance() : evidence_;
+        } else {
+          return evidenceBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.oscal.services.v1.Evidence evidence = 1 [json_name = "evidence"];</code>
+       */
+      public Builder setEvidence(oscal.services.v1.TransparencyExchangeServiceOuterClass.Evidence value) {
+        if (evidenceBuilder_ == null) {
+          java.util.Objects.requireNonNull(value);
+          evidence_ = value;
+        } else {
+          evidenceBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.services.v1.Evidence evidence = 1 [json_name = "evidence"];</code>
+       */
+      public Builder setEvidence(
+          oscal.services.v1.TransparencyExchangeServiceOuterClass.Evidence.Builder builderForValue) {
+        if (evidenceBuilder_ == null) {
+          evidence_ = builderForValue.build();
+        } else {
+          evidenceBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.services.v1.Evidence evidence = 1 [json_name = "evidence"];</code>
+       */
+      public Builder mergeEvidence(oscal.services.v1.TransparencyExchangeServiceOuterClass.Evidence value) {
+        if (evidenceBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            evidence_ != null &&
+            evidence_ != oscal.services.v1.TransparencyExchangeServiceOuterClass.Evidence.getDefaultInstance()) {
+            getEvidenceBuilder().mergeFrom(value);
+          } else {
+            evidence_ = value;
+          }
+        } else {
+          evidenceBuilder_.mergeFrom(value);
+        }
+        if (evidence_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>.oscal.services.v1.Evidence evidence = 1 [json_name = "evidence"];</code>
+       */
+      public Builder clearEvidence() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        evidence_ = null;
+        if (evidenceBuilder_ != null) {
+          evidenceBuilder_.dispose();
+          evidenceBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.services.v1.Evidence evidence = 1 [json_name = "evidence"];</code>
+       */
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.Evidence.Builder getEvidenceBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return internalGetEvidenceFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.oscal.services.v1.Evidence evidence = 1 [json_name = "evidence"];</code>
+       */
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceOrBuilder getEvidenceOrBuilder() {
+        if (evidenceBuilder_ != null) {
+          return evidenceBuilder_.getMessageOrBuilder();
+        } else {
+          return evidence_ == null ?
+              oscal.services.v1.TransparencyExchangeServiceOuterClass.Evidence.getDefaultInstance() : evidence_;
+        }
+      }
+      /**
+       * <code>.oscal.services.v1.Evidence evidence = 1 [json_name = "evidence"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          oscal.services.v1.TransparencyExchangeServiceOuterClass.Evidence, oscal.services.v1.TransparencyExchangeServiceOuterClass.Evidence.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceOrBuilder>
+          internalGetEvidenceFieldBuilder() {
+        if (evidenceBuilder_ == null) {
+          evidenceBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              oscal.services.v1.TransparencyExchangeServiceOuterClass.Evidence, oscal.services.v1.TransparencyExchangeServiceOuterClass.Evidence.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceOrBuilder>(
+                  getEvidence(),
+                  getParentForChildren(),
+                  isClean());
+          evidence_ = null;
+        }
+        return evidenceBuilder_;
+      }
+
+      private boolean stored_ ;
+      /**
+       * <code>bool stored = 2 [json_name = "stored"];</code>
+       * @return The stored.
+       */
+      @java.lang.Override
+      public boolean getStored() {
+        return stored_;
+      }
+      /**
+       * <code>bool stored = 2 [json_name = "stored"];</code>
+       * @param value The stored to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStored(boolean value) {
+
+        stored_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool stored = 2 [json_name = "stored"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStored() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        stored_ = false;
+        onChanged();
+        return this;
+      }
+
+      private oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit audit_;
+      private com.google.protobuf.SingleFieldBuilder<
+          oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit, oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAuditOrBuilder> auditBuilder_;
+      /**
+       * <code>.oscal.services.v1.EvidenceFetchAudit audit = 3 [json_name = "audit"];</code>
+       * @return Whether the audit field is set.
+       */
+      public boolean hasAudit() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.oscal.services.v1.EvidenceFetchAudit audit = 3 [json_name = "audit"];</code>
+       * @return The audit.
+       */
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit getAudit() {
+        if (auditBuilder_ == null) {
+          return audit_ == null ? oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit.getDefaultInstance() : audit_;
+        } else {
+          return auditBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.oscal.services.v1.EvidenceFetchAudit audit = 3 [json_name = "audit"];</code>
+       */
+      public Builder setAudit(oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit value) {
+        if (auditBuilder_ == null) {
+          java.util.Objects.requireNonNull(value);
+          audit_ = value;
+        } else {
+          auditBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.services.v1.EvidenceFetchAudit audit = 3 [json_name = "audit"];</code>
+       */
+      public Builder setAudit(
+          oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit.Builder builderForValue) {
+        if (auditBuilder_ == null) {
+          audit_ = builderForValue.build();
+        } else {
+          auditBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.services.v1.EvidenceFetchAudit audit = 3 [json_name = "audit"];</code>
+       */
+      public Builder mergeAudit(oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit value) {
+        if (auditBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            audit_ != null &&
+            audit_ != oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit.getDefaultInstance()) {
+            getAuditBuilder().mergeFrom(value);
+          } else {
+            audit_ = value;
+          }
+        } else {
+          auditBuilder_.mergeFrom(value);
+        }
+        if (audit_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>.oscal.services.v1.EvidenceFetchAudit audit = 3 [json_name = "audit"];</code>
+       */
+      public Builder clearAudit() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        audit_ = null;
+        if (auditBuilder_ != null) {
+          auditBuilder_.dispose();
+          auditBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oscal.services.v1.EvidenceFetchAudit audit = 3 [json_name = "audit"];</code>
+       */
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit.Builder getAuditBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return internalGetAuditFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.oscal.services.v1.EvidenceFetchAudit audit = 3 [json_name = "audit"];</code>
+       */
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAuditOrBuilder getAuditOrBuilder() {
+        if (auditBuilder_ != null) {
+          return auditBuilder_.getMessageOrBuilder();
+        } else {
+          return audit_ == null ?
+              oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit.getDefaultInstance() : audit_;
+        }
+      }
+      /**
+       * <code>.oscal.services.v1.EvidenceFetchAudit audit = 3 [json_name = "audit"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit, oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAuditOrBuilder>
+          internalGetAuditFieldBuilder() {
+        if (auditBuilder_ == null) {
+          auditBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit, oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAuditOrBuilder>(
+                  getAudit(),
+                  getParentForChildren(),
+                  isClean());
+          audit_ = null;
+        }
+        return auditBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:oscal.services.v1.FetchExternalEvidenceResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:oscal.services.v1.FetchExternalEvidenceResponse)
+    private static final oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceResponse();
+    }
+
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<FetchExternalEvidenceResponse>
+        PARSER = new com.google.protobuf.AbstractParser<FetchExternalEvidenceResponse>() {
+      @java.lang.Override
+      public FetchExternalEvidenceResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<FetchExternalEvidenceResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<FetchExternalEvidenceResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EvidenceFetchAuditOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oscal.services.v1.EvidenceFetchAudit)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string url = 1 [json_name = "url"];</code>
+     * @return The url.
+     */
+    java.lang.String getUrl();
+    /**
+     * <code>string url = 1 [json_name = "url"];</code>
+     * @return The bytes for url.
+     */
+    com.google.protobuf.ByteString
+        getUrlBytes();
+
+    /**
+     * <code>string digest = 2 [json_name = "digest"];</code>
+     * @return The digest.
+     */
+    java.lang.String getDigest();
+    /**
+     * <code>string digest = 2 [json_name = "digest"];</code>
+     * @return The bytes for digest.
+     */
+    com.google.protobuf.ByteString
+        getDigestBytes();
+
+    /**
+     * <code>int64 size_bytes = 3 [json_name = "sizeBytes"];</code>
+     * @return The sizeBytes.
+     */
+    long getSizeBytes();
+
+    /**
+     * <pre>
+     * fetched | policy_denied | fetch_failed
+     * </pre>
+     *
+     * <code>string outcome = 4 [json_name = "outcome"];</code>
+     * @return The outcome.
+     */
+    java.lang.String getOutcome();
+    /**
+     * <pre>
+     * fetched | policy_denied | fetch_failed
+     * </pre>
+     *
+     * <code>string outcome = 4 [json_name = "outcome"];</code>
+     * @return The bytes for outcome.
+     */
+    com.google.protobuf.ByteString
+        getOutcomeBytes();
+
+    /**
+     * <code>string detail = 5 [json_name = "detail"];</code>
+     * @return The detail.
+     */
+    java.lang.String getDetail();
+    /**
+     * <code>string detail = 5 [json_name = "detail"];</code>
+     * @return The bytes for detail.
+     */
+    com.google.protobuf.ByteString
+        getDetailBytes();
+
+    /**
+     * <code>.google.protobuf.Timestamp fetched_at = 6 [json_name = "fetchedAt"];</code>
+     * @return Whether the fetchedAt field is set.
+     */
+    boolean hasFetchedAt();
+    /**
+     * <code>.google.protobuf.Timestamp fetched_at = 6 [json_name = "fetchedAt"];</code>
+     * @return The fetchedAt.
+     */
+    com.google.protobuf.Timestamp getFetchedAt();
+    /**
+     * <code>.google.protobuf.Timestamp fetched_at = 6 [json_name = "fetchedAt"];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getFetchedAtOrBuilder();
+
+    /**
+     * <code>int64 duration_ms = 7 [json_name = "durationMs"];</code>
+     * @return The durationMs.
+     */
+    long getDurationMs();
+  }
+  /**
+   * Protobuf type {@code oscal.services.v1.EvidenceFetchAudit}
+   */
+  public static final class EvidenceFetchAudit extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:oscal.services.v1.EvidenceFetchAudit)
+      EvidenceFetchAuditOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 36,
+        /* patch= */ 1,
+        /* suffix= */ "",
+        "EvidenceFetchAudit");
+    }
+    // Use EvidenceFetchAudit.newBuilder() to construct.
+    private EvidenceFetchAudit(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private EvidenceFetchAudit() {
+      url_ = "";
+      digest_ = "";
+      outcome_ = "";
+      detail_ = "";
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_EvidenceFetchAudit_descriptor;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+      return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_EvidenceFetchAudit_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_EvidenceFetchAudit_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit.class, oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int URL_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object url_ = "";
+    /**
+     * <code>string url = 1 [json_name = "url"];</code>
+     * @return The url.
+     */
+    @java.lang.Override
+    public java.lang.String getUrl() {
+      java.lang.Object ref = url_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        url_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string url = 1 [json_name = "url"];</code>
+     * @return The bytes for url.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUrlBytes() {
+      java.lang.Object ref = url_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        url_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DIGEST_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object digest_ = "";
+    /**
+     * <code>string digest = 2 [json_name = "digest"];</code>
+     * @return The digest.
+     */
+    @java.lang.Override
+    public java.lang.String getDigest() {
+      java.lang.Object ref = digest_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        digest_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string digest = 2 [json_name = "digest"];</code>
+     * @return The bytes for digest.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDigestBytes() {
+      java.lang.Object ref = digest_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        digest_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SIZE_BYTES_FIELD_NUMBER = 3;
+    private long sizeBytes_ = 0L;
+    /**
+     * <code>int64 size_bytes = 3 [json_name = "sizeBytes"];</code>
+     * @return The sizeBytes.
+     */
+    @java.lang.Override
+    public long getSizeBytes() {
+      return sizeBytes_;
+    }
+
+    public static final int OUTCOME_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object outcome_ = "";
+    /**
+     * <pre>
+     * fetched | policy_denied | fetch_failed
+     * </pre>
+     *
+     * <code>string outcome = 4 [json_name = "outcome"];</code>
+     * @return The outcome.
+     */
+    @java.lang.Override
+    public java.lang.String getOutcome() {
+      java.lang.Object ref = outcome_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        outcome_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * fetched | policy_denied | fetch_failed
+     * </pre>
+     *
+     * <code>string outcome = 4 [json_name = "outcome"];</code>
+     * @return The bytes for outcome.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOutcomeBytes() {
+      java.lang.Object ref = outcome_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        outcome_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DETAIL_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object detail_ = "";
+    /**
+     * <code>string detail = 5 [json_name = "detail"];</code>
+     * @return The detail.
+     */
+    @java.lang.Override
+    public java.lang.String getDetail() {
+      java.lang.Object ref = detail_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        detail_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string detail = 5 [json_name = "detail"];</code>
+     * @return The bytes for detail.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDetailBytes() {
+      java.lang.Object ref = detail_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        detail_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FETCHED_AT_FIELD_NUMBER = 6;
+    private com.google.protobuf.Timestamp fetchedAt_;
+    /**
+     * <code>.google.protobuf.Timestamp fetched_at = 6 [json_name = "fetchedAt"];</code>
+     * @return Whether the fetchedAt field is set.
+     */
+    @java.lang.Override
+    public boolean hasFetchedAt() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.google.protobuf.Timestamp fetched_at = 6 [json_name = "fetchedAt"];</code>
+     * @return The fetchedAt.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getFetchedAt() {
+      return fetchedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : fetchedAt_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp fetched_at = 6 [json_name = "fetchedAt"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getFetchedAtOrBuilder() {
+      return fetchedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : fetchedAt_;
+    }
+
+    public static final int DURATION_MS_FIELD_NUMBER = 7;
+    private long durationMs_ = 0L;
+    /**
+     * <code>int64 duration_ms = 7 [json_name = "durationMs"];</code>
+     * @return The durationMs.
+     */
+    @java.lang.Override
+    public long getDurationMs() {
+      return durationMs_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(url_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, url_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(digest_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, digest_);
+      }
+      if (sizeBytes_ != 0L) {
+        output.writeInt64(3, sizeBytes_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(outcome_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 4, outcome_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(detail_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 5, detail_);
+      }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeMessage(6, getFetchedAt());
+      }
+      if (durationMs_ != 0L) {
+        output.writeInt64(7, durationMs_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+    private int computeSerializedSize_0() {
+      int size = 0;
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(url_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, url_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(digest_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, digest_);
+      }
+      if (sizeBytes_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(3, sizeBytes_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(outcome_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(4, outcome_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(detail_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(5, detail_);
+      }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getFetchedAt());
+      }
+      if (durationMs_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(7, durationMs_);
+      }
+      return size;
+    }
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += computeSerializedSize_0();
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit)) {
+        return super.equals(obj);
+      }
+      oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit other = (oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit) obj;
+
+      if (!getUrl()
+          .equals(other.getUrl())) return false;
+      if (!getDigest()
+          .equals(other.getDigest())) return false;
+      if (getSizeBytes()
+          != other.getSizeBytes()) return false;
+      if (!getOutcome()
+          .equals(other.getOutcome())) return false;
+      if (!getDetail()
+          .equals(other.getDetail())) return false;
+      if (hasFetchedAt() != other.hasFetchedAt()) return false;
+      if (hasFetchedAt()) {
+        if (!getFetchedAt()
+            .equals(other.getFetchedAt())) return false;
+      }
+      if (getDurationMs()
+          != other.getDurationMs()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + URL_FIELD_NUMBER;
+      hash = (53 * hash) + getUrl().hashCode();
+      hash = (37 * hash) + DIGEST_FIELD_NUMBER;
+      hash = (53 * hash) + getDigest().hashCode();
+      hash = (37 * hash) + SIZE_BYTES_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getSizeBytes());
+      hash = (37 * hash) + OUTCOME_FIELD_NUMBER;
+      hash = (53 * hash) + getOutcome().hashCode();
+      hash = (37 * hash) + DETAIL_FIELD_NUMBER;
+      hash = (53 * hash) + getDetail().hashCode();
+      if (hasFetchedAt()) {
+        hash = (37 * hash) + FETCHED_AT_FIELD_NUMBER;
+        hash = (53 * hash) + getFetchedAt().hashCode();
+      }
+      hash = (37 * hash) + DURATION_MS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getDurationMs());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oscal.services.v1.EvidenceFetchAudit}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oscal.services.v1.EvidenceFetchAudit)
+        oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAuditOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_EvidenceFetchAudit_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_EvidenceFetchAudit_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit.class, oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit.Builder.class);
+      }
+
+      // Construct using oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage
+                .alwaysUseFieldBuilders) {
+          internalGetFetchedAtFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        url_ = "";
+        digest_ = "";
+        sizeBytes_ = 0L;
+        outcome_ = "";
+        detail_ = "";
+        fetchedAt_ = null;
+        if (fetchedAtBuilder_ != null) {
+          fetchedAtBuilder_.dispose();
+          fetchedAtBuilder_ = null;
+        }
+        durationMs_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_EvidenceFetchAudit_descriptor;
+      }
+
+      @java.lang.Override
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit getDefaultInstanceForType() {
+        return oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit build() {
+        oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit buildPartial() {
+        oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit result = new oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.url_ = url_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.digest_ = digest_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.sizeBytes_ = sizeBytes_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.outcome_ = outcome_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.detail_ = detail_;
+        }
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.fetchedAt_ = fetchedAtBuilder_ == null
+              ? fetchedAt_
+              : fetchedAtBuilder_.build();
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.durationMs_ = durationMs_;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit) {
+          return mergeFrom((oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit other) {
+        if (other == oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit.getDefaultInstance()) return this;
+        if (!other.getUrl().isEmpty()) {
+          url_ = other.url_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDigest().isEmpty()) {
+          digest_ = other.digest_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.getSizeBytes() != 0L) {
+          setSizeBytes(other.getSizeBytes());
+        }
+        if (!other.getOutcome().isEmpty()) {
+          outcome_ = other.outcome_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getDetail().isEmpty()) {
+          detail_ = other.detail_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (other.hasFetchedAt()) {
+          mergeFetchedAt(other.getFetchedAt());
+        }
+        if (other.getDurationMs() != 0L) {
+          setDurationMs(other.getDurationMs());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        java.util.Objects.requireNonNull(extensionRegistry);
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                url_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                digest_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                sizeBytes_ = input.readInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 34: {
+                outcome_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                detail_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                input.readMessage(
+                    internalGetFetchedAtFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 56: {
+                durationMs_ = input.readInt64();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 56
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object url_ = "";
+      /**
+       * <code>string url = 1 [json_name = "url"];</code>
+       * @return The url.
+       */
+      public java.lang.String getUrl() {
+        java.lang.Object ref = url_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          url_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string url = 1 [json_name = "url"];</code>
+       * @return The bytes for url.
+       */
+      public com.google.protobuf.ByteString
+          getUrlBytes() {
+        java.lang.Object ref = url_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          url_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string url = 1 [json_name = "url"];</code>
+       * @param value The url to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUrl(
+          java.lang.String value) {
+        java.util.Objects.requireNonNull(value);
+        url_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string url = 1 [json_name = "url"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUrl() {
+        url_ = getDefaultInstance().getUrl();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string url = 1 [json_name = "url"];</code>
+       * @param value The bytes for url to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUrlBytes(
+          com.google.protobuf.ByteString value) {
+        java.util.Objects.requireNonNull(value);
+        checkByteStringIsUtf8(value);
+        url_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object digest_ = "";
+      /**
+       * <code>string digest = 2 [json_name = "digest"];</code>
+       * @return The digest.
+       */
+      public java.lang.String getDigest() {
+        java.lang.Object ref = digest_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          digest_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string digest = 2 [json_name = "digest"];</code>
+       * @return The bytes for digest.
+       */
+      public com.google.protobuf.ByteString
+          getDigestBytes() {
+        java.lang.Object ref = digest_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          digest_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string digest = 2 [json_name = "digest"];</code>
+       * @param value The digest to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDigest(
+          java.lang.String value) {
+        java.util.Objects.requireNonNull(value);
+        digest_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string digest = 2 [json_name = "digest"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDigest() {
+        digest_ = getDefaultInstance().getDigest();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string digest = 2 [json_name = "digest"];</code>
+       * @param value The bytes for digest to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDigestBytes(
+          com.google.protobuf.ByteString value) {
+        java.util.Objects.requireNonNull(value);
+        checkByteStringIsUtf8(value);
+        digest_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private long sizeBytes_ ;
+      /**
+       * <code>int64 size_bytes = 3 [json_name = "sizeBytes"];</code>
+       * @return The sizeBytes.
+       */
+      @java.lang.Override
+      public long getSizeBytes() {
+        return sizeBytes_;
+      }
+      /**
+       * <code>int64 size_bytes = 3 [json_name = "sizeBytes"];</code>
+       * @param value The sizeBytes to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSizeBytes(long value) {
+
+        sizeBytes_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 size_bytes = 3 [json_name = "sizeBytes"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSizeBytes() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        sizeBytes_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object outcome_ = "";
+      /**
+       * <pre>
+       * fetched | policy_denied | fetch_failed
+       * </pre>
+       *
+       * <code>string outcome = 4 [json_name = "outcome"];</code>
+       * @return The outcome.
+       */
+      public java.lang.String getOutcome() {
+        java.lang.Object ref = outcome_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          outcome_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * fetched | policy_denied | fetch_failed
+       * </pre>
+       *
+       * <code>string outcome = 4 [json_name = "outcome"];</code>
+       * @return The bytes for outcome.
+       */
+      public com.google.protobuf.ByteString
+          getOutcomeBytes() {
+        java.lang.Object ref = outcome_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          outcome_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * fetched | policy_denied | fetch_failed
+       * </pre>
+       *
+       * <code>string outcome = 4 [json_name = "outcome"];</code>
+       * @param value The outcome to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOutcome(
+          java.lang.String value) {
+        java.util.Objects.requireNonNull(value);
+        outcome_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * fetched | policy_denied | fetch_failed
+       * </pre>
+       *
+       * <code>string outcome = 4 [json_name = "outcome"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOutcome() {
+        outcome_ = getDefaultInstance().getOutcome();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * fetched | policy_denied | fetch_failed
+       * </pre>
+       *
+       * <code>string outcome = 4 [json_name = "outcome"];</code>
+       * @param value The bytes for outcome to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOutcomeBytes(
+          com.google.protobuf.ByteString value) {
+        java.util.Objects.requireNonNull(value);
+        checkByteStringIsUtf8(value);
+        outcome_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object detail_ = "";
+      /**
+       * <code>string detail = 5 [json_name = "detail"];</code>
+       * @return The detail.
+       */
+      public java.lang.String getDetail() {
+        java.lang.Object ref = detail_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          detail_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string detail = 5 [json_name = "detail"];</code>
+       * @return The bytes for detail.
+       */
+      public com.google.protobuf.ByteString
+          getDetailBytes() {
+        java.lang.Object ref = detail_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          detail_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string detail = 5 [json_name = "detail"];</code>
+       * @param value The detail to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDetail(
+          java.lang.String value) {
+        java.util.Objects.requireNonNull(value);
+        detail_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string detail = 5 [json_name = "detail"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDetail() {
+        detail_ = getDefaultInstance().getDetail();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string detail = 5 [json_name = "detail"];</code>
+       * @param value The bytes for detail to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDetailBytes(
+          com.google.protobuf.ByteString value) {
+        java.util.Objects.requireNonNull(value);
+        checkByteStringIsUtf8(value);
+        detail_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp fetchedAt_;
+      private com.google.protobuf.SingleFieldBuilder<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> fetchedAtBuilder_;
+      /**
+       * <code>.google.protobuf.Timestamp fetched_at = 6 [json_name = "fetchedAt"];</code>
+       * @return Whether the fetchedAt field is set.
+       */
+      public boolean hasFetchedAt() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <code>.google.protobuf.Timestamp fetched_at = 6 [json_name = "fetchedAt"];</code>
+       * @return The fetchedAt.
+       */
+      public com.google.protobuf.Timestamp getFetchedAt() {
+        if (fetchedAtBuilder_ == null) {
+          return fetchedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : fetchedAt_;
+        } else {
+          return fetchedAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp fetched_at = 6 [json_name = "fetchedAt"];</code>
+       */
+      public Builder setFetchedAt(com.google.protobuf.Timestamp value) {
+        if (fetchedAtBuilder_ == null) {
+          java.util.Objects.requireNonNull(value);
+          fetchedAt_ = value;
+        } else {
+          fetchedAtBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp fetched_at = 6 [json_name = "fetchedAt"];</code>
+       */
+      public Builder setFetchedAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (fetchedAtBuilder_ == null) {
+          fetchedAt_ = builderForValue.build();
+        } else {
+          fetchedAtBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp fetched_at = 6 [json_name = "fetchedAt"];</code>
+       */
+      public Builder mergeFetchedAt(com.google.protobuf.Timestamp value) {
+        if (fetchedAtBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0) &&
+            fetchedAt_ != null &&
+            fetchedAt_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getFetchedAtBuilder().mergeFrom(value);
+          } else {
+            fetchedAt_ = value;
+          }
+        } else {
+          fetchedAtBuilder_.mergeFrom(value);
+        }
+        if (fetchedAt_ != null) {
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp fetched_at = 6 [json_name = "fetchedAt"];</code>
+       */
+      public Builder clearFetchedAt() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        fetchedAt_ = null;
+        if (fetchedAtBuilder_ != null) {
+          fetchedAtBuilder_.dispose();
+          fetchedAtBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp fetched_at = 6 [json_name = "fetchedAt"];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getFetchedAtBuilder() {
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return internalGetFetchedAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp fetched_at = 6 [json_name = "fetchedAt"];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getFetchedAtOrBuilder() {
+        if (fetchedAtBuilder_ != null) {
+          return fetchedAtBuilder_.getMessageOrBuilder();
+        } else {
+          return fetchedAt_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : fetchedAt_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp fetched_at = 6 [json_name = "fetchedAt"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>
+          internalGetFetchedAtFieldBuilder() {
+        if (fetchedAtBuilder_ == null) {
+          fetchedAtBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getFetchedAt(),
+                  getParentForChildren(),
+                  isClean());
+          fetchedAt_ = null;
+        }
+        return fetchedAtBuilder_;
+      }
+
+      private long durationMs_ ;
+      /**
+       * <code>int64 duration_ms = 7 [json_name = "durationMs"];</code>
+       * @return The durationMs.
+       */
+      @java.lang.Override
+      public long getDurationMs() {
+        return durationMs_;
+      }
+      /**
+       * <code>int64 duration_ms = 7 [json_name = "durationMs"];</code>
+       * @param value The durationMs to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDurationMs(long value) {
+
+        durationMs_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 duration_ms = 7 [json_name = "durationMs"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDurationMs() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        durationMs_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:oscal.services.v1.EvidenceFetchAudit)
+    }
+
+    // @@protoc_insertion_point(class_scope:oscal.services.v1.EvidenceFetchAudit)
+    private static final oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit();
+    }
+
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EvidenceFetchAudit>
+        PARSER = new com.google.protobuf.AbstractParser<EvidenceFetchAudit>() {
+      @java.lang.Override
+      public EvidenceFetchAudit parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EvidenceFetchAudit> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EvidenceFetchAudit> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ListFetchEventsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oscal.services.v1.ListFetchEventsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int32 page_size = 1 [json_name = "pageSize"];</code>
+     * @return The pageSize.
+     */
+    int getPageSize();
+
+    /**
+     * <code>string page_token = 2 [json_name = "pageToken"];</code>
+     * @return The pageToken.
+     */
+    java.lang.String getPageToken();
+    /**
+     * <code>string page_token = 2 [json_name = "pageToken"];</code>
+     * @return The bytes for pageToken.
+     */
+    com.google.protobuf.ByteString
+        getPageTokenBytes();
+  }
+  /**
+   * Protobuf type {@code oscal.services.v1.ListFetchEventsRequest}
+   */
+  public static final class ListFetchEventsRequest extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:oscal.services.v1.ListFetchEventsRequest)
+      ListFetchEventsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 36,
+        /* patch= */ 1,
+        /* suffix= */ "",
+        "ListFetchEventsRequest");
+    }
+    // Use ListFetchEventsRequest.newBuilder() to construct.
+    private ListFetchEventsRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private ListFetchEventsRequest() {
+      pageToken_ = "";
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_ListFetchEventsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+      return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_ListFetchEventsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_ListFetchEventsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsRequest.class, oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsRequest.Builder.class);
+    }
+
+    public static final int PAGE_SIZE_FIELD_NUMBER = 1;
+    private int pageSize_ = 0;
+    /**
+     * <code>int32 page_size = 1 [json_name = "pageSize"];</code>
+     * @return The pageSize.
+     */
+    @java.lang.Override
+    public int getPageSize() {
+      return pageSize_;
+    }
+
+    public static final int PAGE_TOKEN_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object pageToken_ = "";
+    /**
+     * <code>string page_token = 2 [json_name = "pageToken"];</code>
+     * @return The pageToken.
+     */
+    @java.lang.Override
+    public java.lang.String getPageToken() {
+      java.lang.Object ref = pageToken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        pageToken_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string page_token = 2 [json_name = "pageToken"];</code>
+     * @return The bytes for pageToken.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPageTokenBytes() {
+      java.lang.Object ref = pageToken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        pageToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (pageSize_ != 0) {
+        output.writeInt32(1, pageSize_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(pageToken_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, pageToken_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+    private int computeSerializedSize_0() {
+      int size = 0;
+      if (pageSize_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, pageSize_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(pageToken_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, pageToken_);
+      }
+      return size;
+    }
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += computeSerializedSize_0();
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsRequest)) {
+        return super.equals(obj);
+      }
+      oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsRequest other = (oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsRequest) obj;
+
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PAGE_SIZE_FIELD_NUMBER;
+      hash = (53 * hash) + getPageSize();
+      hash = (37 * hash) + PAGE_TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getPageToken().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oscal.services.v1.ListFetchEventsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oscal.services.v1.ListFetchEventsRequest)
+        oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_ListFetchEventsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_ListFetchEventsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsRequest.class, oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsRequest.Builder.class);
+      }
+
+      // Construct using oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        pageSize_ = 0;
+        pageToken_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_ListFetchEventsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsRequest getDefaultInstanceForType() {
+        return oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsRequest build() {
+        oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsRequest buildPartial() {
+        oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsRequest result = new oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.pageSize_ = pageSize_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pageToken_ = pageToken_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsRequest) {
+          return mergeFrom((oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsRequest other) {
+        if (other == oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsRequest.getDefaultInstance()) return this;
+        if (other.getPageSize() != 0) {
+          setPageSize(other.getPageSize());
+        }
+        if (!other.getPageToken().isEmpty()) {
+          pageToken_ = other.pageToken_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        java.util.Objects.requireNonNull(extensionRegistry);
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                pageSize_ = input.readInt32();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                pageToken_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int pageSize_ ;
+      /**
+       * <code>int32 page_size = 1 [json_name = "pageSize"];</code>
+       * @return The pageSize.
+       */
+      @java.lang.Override
+      public int getPageSize() {
+        return pageSize_;
+      }
+      /**
+       * <code>int32 page_size = 1 [json_name = "pageSize"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageSize(int value) {
+
+        pageSize_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 page_size = 1 [json_name = "pageSize"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPageSize() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pageSize_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object pageToken_ = "";
+      /**
+       * <code>string page_token = 2 [json_name = "pageToken"];</code>
+       * @return The pageToken.
+       */
+      public java.lang.String getPageToken() {
+        java.lang.Object ref = pageToken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          pageToken_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string page_token = 2 [json_name = "pageToken"];</code>
+       * @return The bytes for pageToken.
+       */
+      public com.google.protobuf.ByteString
+          getPageTokenBytes() {
+        java.lang.Object ref = pageToken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          pageToken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string page_token = 2 [json_name = "pageToken"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageToken(
+          java.lang.String value) {
+        java.util.Objects.requireNonNull(value);
+        pageToken_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string page_token = 2 [json_name = "pageToken"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPageToken() {
+        pageToken_ = getDefaultInstance().getPageToken();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string page_token = 2 [json_name = "pageToken"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageTokenBytes(
+          com.google.protobuf.ByteString value) {
+        java.util.Objects.requireNonNull(value);
+        checkByteStringIsUtf8(value);
+        pageToken_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:oscal.services.v1.ListFetchEventsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:oscal.services.v1.ListFetchEventsRequest)
+    private static final oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsRequest();
+    }
+
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListFetchEventsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<ListFetchEventsRequest>() {
+      @java.lang.Override
+      public ListFetchEventsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListFetchEventsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListFetchEventsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ListFetchEventsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:oscal.services.v1.ListFetchEventsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .oscal.services.v1.EvidenceFetchAudit events = 1 [json_name = "events"];</code>
+     */
+    java.util.List<oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit>
+        getEventsList();
+    /**
+     * <code>repeated .oscal.services.v1.EvidenceFetchAudit events = 1 [json_name = "events"];</code>
+     */
+    oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit getEvents(int index);
+    /**
+     * <code>repeated .oscal.services.v1.EvidenceFetchAudit events = 1 [json_name = "events"];</code>
+     */
+    int getEventsCount();
+    /**
+     * <code>repeated .oscal.services.v1.EvidenceFetchAudit events = 1 [json_name = "events"];</code>
+     */
+    java.util.List<? extends oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAuditOrBuilder>
+        getEventsOrBuilderList();
+    /**
+     * <code>repeated .oscal.services.v1.EvidenceFetchAudit events = 1 [json_name = "events"];</code>
+     */
+    oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAuditOrBuilder getEventsOrBuilder(
+        int index);
+
+    /**
+     * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
+     * @return The nextPageToken.
+     */
+    java.lang.String getNextPageToken();
+    /**
+     * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
+     * @return The bytes for nextPageToken.
+     */
+    com.google.protobuf.ByteString
+        getNextPageTokenBytes();
+  }
+  /**
+   * Protobuf type {@code oscal.services.v1.ListFetchEventsResponse}
+   */
+  public static final class ListFetchEventsResponse extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:oscal.services.v1.ListFetchEventsResponse)
+      ListFetchEventsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 36,
+        /* patch= */ 1,
+        /* suffix= */ "",
+        "ListFetchEventsResponse");
+    }
+    // Use ListFetchEventsResponse.newBuilder() to construct.
+    private ListFetchEventsResponse(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private ListFetchEventsResponse() {
+      events_ = java.util.Collections.emptyList();
+      nextPageToken_ = "";
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_ListFetchEventsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+      return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_ListFetchEventsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_ListFetchEventsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsResponse.class, oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsResponse.Builder.class);
+    }
+
+    public static final int EVENTS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit> events_;
+    /**
+     * <code>repeated .oscal.services.v1.EvidenceFetchAudit events = 1 [json_name = "events"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit> getEventsList() {
+      return events_;
+    }
+    /**
+     * <code>repeated .oscal.services.v1.EvidenceFetchAudit events = 1 [json_name = "events"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAuditOrBuilder>
+        getEventsOrBuilderList() {
+      return events_;
+    }
+    /**
+     * <code>repeated .oscal.services.v1.EvidenceFetchAudit events = 1 [json_name = "events"];</code>
+     */
+    @java.lang.Override
+    public int getEventsCount() {
+      return events_.size();
+    }
+    /**
+     * <code>repeated .oscal.services.v1.EvidenceFetchAudit events = 1 [json_name = "events"];</code>
+     */
+    @java.lang.Override
+    public oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit getEvents(int index) {
+      return events_.get(index);
+    }
+    /**
+     * <code>repeated .oscal.services.v1.EvidenceFetchAudit events = 1 [json_name = "events"];</code>
+     */
+    @java.lang.Override
+    public oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAuditOrBuilder getEventsOrBuilder(
+        int index) {
+      return events_.get(index);
+    }
+
+    public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object nextPageToken_ = "";
+    /**
+     * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
+     * @return The nextPageToken.
+     */
+    @java.lang.Override
+    public java.lang.String getNextPageToken() {
+      java.lang.Object ref = nextPageToken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nextPageToken_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
+     * @return The bytes for nextPageToken.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNextPageTokenBytes() {
+      java.lang.Object ref = nextPageToken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nextPageToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < events_.size(); i++) {
+        output.writeMessage(1, events_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(nextPageToken_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, nextPageToken_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+    private int computeSerializedSize_0() {
+      int size = 0;
+
+          {
+            final int count = events_.size();
+            for (int i = 0; i < count; i++) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeMessageSizeNoTag(events_.get(i));
+            }
+            size += 1 * count;
+          }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(nextPageToken_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, nextPageToken_);
+      }
+      return size;
+    }
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += computeSerializedSize_0();
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsResponse)) {
+        return super.equals(obj);
+      }
+      oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsResponse other = (oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsResponse) obj;
+
+      if (!getEventsList()
+          .equals(other.getEventsList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getEventsCount() > 0) {
+        hash = (37 * hash) + EVENTS_FIELD_NUMBER;
+        hash = (53 * hash) + getEventsList().hashCode();
+      }
+      hash = (37 * hash) + NEXT_PAGE_TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getNextPageToken().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code oscal.services.v1.ListFetchEventsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:oscal.services.v1.ListFetchEventsResponse)
+        oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_ListFetchEventsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_ListFetchEventsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsResponse.class, oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsResponse.Builder.class);
+      }
+
+      // Construct using oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (eventsBuilder_ == null) {
+          events_ = java.util.Collections.emptyList();
+        } else {
+          events_ = null;
+          eventsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        nextPageToken_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return oscal.services.v1.TransparencyExchangeServiceOuterClass.internal_static_oscal_services_v1_ListFetchEventsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsResponse getDefaultInstanceForType() {
+        return oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsResponse build() {
+        oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsResponse buildPartial() {
+        oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsResponse result = new oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsResponse result) {
+        if (eventsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            events_ = java.util.Collections.unmodifiableList(events_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.events_ = events_;
+        } else {
+          result.events_ = eventsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.nextPageToken_ = nextPageToken_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsResponse) {
+          return mergeFrom((oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsResponse other) {
+        if (other == oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsResponse.getDefaultInstance()) return this;
+        if (eventsBuilder_ == null) {
+          if (!other.events_.isEmpty()) {
+            if (events_.isEmpty()) {
+              events_ = other.events_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureEventsIsMutable();
+              events_.addAll(other.events_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.events_.isEmpty()) {
+            if (eventsBuilder_.isEmpty()) {
+              eventsBuilder_.dispose();
+              eventsBuilder_ = null;
+              events_ = other.events_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              eventsBuilder_ =
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   internalGetEventsFieldBuilder() : null;
+            } else {
+              eventsBuilder_.addAllMessages(other.events_);
+            }
+          }
+        }
+        if (!other.getNextPageToken().isEmpty()) {
+          nextPageToken_ = other.nextPageToken_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        java.util.Objects.requireNonNull(extensionRegistry);
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit m =
+                    input.readMessage(
+                        oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit.parser(),
+                        extensionRegistry);
+                if (eventsBuilder_ == null) {
+                  ensureEventsIsMutable();
+                  events_.add(m);
+                } else {
+                  eventsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                nextPageToken_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit> events_ =
+        java.util.Collections.emptyList();
+      private void ensureEventsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          events_ = new java.util.ArrayList<oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit>(events_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit, oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAuditOrBuilder> eventsBuilder_;
+
+      /**
+       * <code>repeated .oscal.services.v1.EvidenceFetchAudit events = 1 [json_name = "events"];</code>
+       */
+      public java.util.List<oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit> getEventsList() {
+        if (eventsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(events_);
+        } else {
+          return eventsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .oscal.services.v1.EvidenceFetchAudit events = 1 [json_name = "events"];</code>
+       */
+      public int getEventsCount() {
+        if (eventsBuilder_ == null) {
+          return events_.size();
+        } else {
+          return eventsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .oscal.services.v1.EvidenceFetchAudit events = 1 [json_name = "events"];</code>
+       */
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit getEvents(int index) {
+        if (eventsBuilder_ == null) {
+          return events_.get(index);
+        } else {
+          return eventsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.services.v1.EvidenceFetchAudit events = 1 [json_name = "events"];</code>
+       */
+      public Builder setEvents(
+          int index, oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit value) {
+        if (eventsBuilder_ == null) {
+          java.util.Objects.requireNonNull(value);
+          ensureEventsIsMutable();
+          events_.set(index, value);
+          onChanged();
+        } else {
+          eventsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.services.v1.EvidenceFetchAudit events = 1 [json_name = "events"];</code>
+       */
+      public Builder setEvents(
+          int index, oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit.Builder builderForValue) {
+        if (eventsBuilder_ == null) {
+          ensureEventsIsMutable();
+          events_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          eventsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.services.v1.EvidenceFetchAudit events = 1 [json_name = "events"];</code>
+       */
+      public Builder addEvents(oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit value) {
+        if (eventsBuilder_ == null) {
+          java.util.Objects.requireNonNull(value);
+          ensureEventsIsMutable();
+          events_.add(value);
+          onChanged();
+        } else {
+          eventsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.services.v1.EvidenceFetchAudit events = 1 [json_name = "events"];</code>
+       */
+      public Builder addEvents(
+          int index, oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit value) {
+        if (eventsBuilder_ == null) {
+          java.util.Objects.requireNonNull(value);
+          ensureEventsIsMutable();
+          events_.add(index, value);
+          onChanged();
+        } else {
+          eventsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.services.v1.EvidenceFetchAudit events = 1 [json_name = "events"];</code>
+       */
+      public Builder addEvents(
+          oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit.Builder builderForValue) {
+        if (eventsBuilder_ == null) {
+          ensureEventsIsMutable();
+          events_.add(builderForValue.build());
+          onChanged();
+        } else {
+          eventsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.services.v1.EvidenceFetchAudit events = 1 [json_name = "events"];</code>
+       */
+      public Builder addEvents(
+          int index, oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit.Builder builderForValue) {
+        if (eventsBuilder_ == null) {
+          ensureEventsIsMutable();
+          events_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          eventsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.services.v1.EvidenceFetchAudit events = 1 [json_name = "events"];</code>
+       */
+      public Builder addAllEvents(
+          java.lang.Iterable<? extends oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit> values) {
+        if (eventsBuilder_ == null) {
+          ensureEventsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, events_);
+          onChanged();
+        } else {
+          eventsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.services.v1.EvidenceFetchAudit events = 1 [json_name = "events"];</code>
+       */
+      public Builder clearEvents() {
+        if (eventsBuilder_ == null) {
+          events_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          eventsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.services.v1.EvidenceFetchAudit events = 1 [json_name = "events"];</code>
+       */
+      public Builder removeEvents(int index) {
+        if (eventsBuilder_ == null) {
+          ensureEventsIsMutable();
+          events_.remove(index);
+          onChanged();
+        } else {
+          eventsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .oscal.services.v1.EvidenceFetchAudit events = 1 [json_name = "events"];</code>
+       */
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit.Builder getEventsBuilder(
+          int index) {
+        return internalGetEventsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .oscal.services.v1.EvidenceFetchAudit events = 1 [json_name = "events"];</code>
+       */
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAuditOrBuilder getEventsOrBuilder(
+          int index) {
+        if (eventsBuilder_ == null) {
+          return events_.get(index);  } else {
+          return eventsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .oscal.services.v1.EvidenceFetchAudit events = 1 [json_name = "events"];</code>
+       */
+      public java.util.List<? extends oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAuditOrBuilder>
+           getEventsOrBuilderList() {
+        if (eventsBuilder_ != null) {
+          return eventsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(events_);
+        }
+      }
+      /**
+       * <code>repeated .oscal.services.v1.EvidenceFetchAudit events = 1 [json_name = "events"];</code>
+       */
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit.Builder addEventsBuilder() {
+        return internalGetEventsFieldBuilder().addBuilder(
+            oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.services.v1.EvidenceFetchAudit events = 1 [json_name = "events"];</code>
+       */
+      public oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit.Builder addEventsBuilder(
+          int index) {
+        return internalGetEventsFieldBuilder().addBuilder(
+            index, oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .oscal.services.v1.EvidenceFetchAudit events = 1 [json_name = "events"];</code>
+       */
+      public java.util.List<oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit.Builder>
+           getEventsBuilderList() {
+        return internalGetEventsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit, oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAuditOrBuilder>
+          internalGetEventsFieldBuilder() {
+        if (eventsBuilder_ == null) {
+          eventsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit, oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAudit.Builder, oscal.services.v1.TransparencyExchangeServiceOuterClass.EvidenceFetchAuditOrBuilder>(
+                  events_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          events_ = null;
+        }
+        return eventsBuilder_;
+      }
+
+      private java.lang.Object nextPageToken_ = "";
+      /**
+       * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
+       * @return The nextPageToken.
+       */
+      public java.lang.String getNextPageToken() {
+        java.lang.Object ref = nextPageToken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nextPageToken_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
+       * @return The bytes for nextPageToken.
+       */
+      public com.google.protobuf.ByteString
+          getNextPageTokenBytes() {
+        java.lang.Object ref = nextPageToken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nextPageToken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNextPageToken(
+          java.lang.String value) {
+        java.util.Objects.requireNonNull(value);
+        nextPageToken_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNextPageToken() {
+        nextPageToken_ = getDefaultInstance().getNextPageToken();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNextPageTokenBytes(
+          com.google.protobuf.ByteString value) {
+        java.util.Objects.requireNonNull(value);
+        checkByteStringIsUtf8(value);
+        nextPageToken_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:oscal.services.v1.ListFetchEventsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:oscal.services.v1.ListFetchEventsResponse)
+    private static final oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsResponse();
+    }
+
+    public static oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListFetchEventsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<ListFetchEventsResponse>() {
+      @java.lang.Override
+      public ListFetchEventsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListFetchEventsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListFetchEventsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface VerifyEvidenceRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:oscal.services.v1.VerifyEvidenceRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -40632,6 +45271,31 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_oscal_services_v1_GetEvidenceResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_oscal_services_v1_FetchExternalEvidenceRequest_descriptor;
+  private static final
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_oscal_services_v1_FetchExternalEvidenceRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_oscal_services_v1_FetchExternalEvidenceResponse_descriptor;
+  private static final
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_oscal_services_v1_FetchExternalEvidenceResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_oscal_services_v1_EvidenceFetchAudit_descriptor;
+  private static final
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_oscal_services_v1_EvidenceFetchAudit_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_oscal_services_v1_ListFetchEventsRequest_descriptor;
+  private static final
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_oscal_services_v1_ListFetchEventsRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_oscal_services_v1_ListFetchEventsResponse_descriptor;
+  private static final
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_oscal_services_v1_ListFetchEventsResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_oscal_services_v1_VerifyEvidenceRequest_descriptor;
   private static final
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -40804,74 +45468,101 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       "\006stored\"5\n\022GetEvidenceRequest\022\037\n\013evidenc" +
       "e_id\030\001 \001(\tR\nevidenceId\"N\n\023GetEvidenceRes" +
       "ponse\0227\n\010evidence\030\001 \001(\0132\033.oscal.services" +
-      ".v1.EvidenceR\010evidence\"^\n\025VerifyEvidence" +
-      "Request\022\037\n\013evidence_id\030\001 \001(\tR\nevidenceId" +
-      "\022$\n\016fetch_and_hash\030\002 \001(\010R\014fetchAndHash\"\205" +
-      "\001\n\026VerifyEvidenceResponse\022\037\n\013evidence_id" +
-      "\030\001 \001(\tR\nevidenceId\022\033\n\tdigest_ok\030\002 \001(\010R\010d" +
-      "igestOk\022\027\n\007size_ok\030\003 \001(\010R\006sizeOk\022\024\n\005erro" +
-      "r\030\004 \001(\tR\005error\"\271\001\n\021SyncClaimsRequest\022#\n\r" +
-      "peer_endpoint\030\001 \001(\tR\014peerEndpoint\022%\n\016fil" +
-      "ter_subject\030\002 \001(\tR\rfilterSubject\022&\n\017filt" +
-      "er_bom_kind\030\003 \001(\tR\rfilterBomKind\0220\n\005sinc" +
-      "e\030\004 \001(\0132\032.google.protobuf.TimestampR\005sin" +
-      "ce\"\204\001\n\022SyncClaimsResponse\022\032\n\010imported\030\001 " +
-      "\001(\005R\010imported\022\030\n\007skipped\030\002 \001(\005R\007skipped\022" +
-      "\026\n\006failed\030\003 \001(\005R\006failed\022 \n\013diagnostics\030\004" +
-      " \003(\tR\013diagnostics\"\201\002\n\nProofState\022\034\n\tdisc" +
-      "overy\030\001 \001(\tR\tdiscovery\022\024\n\005graph\030\002 \001(\tR\005g" +
-      "raph\022\024\n\005claim\030\003 \001(\tR\005claim\022\026\n\006source\030\004 \001" +
-      "(\tR\006source\022\034\n\tsignature\030\005 \001(\tR\tsignature" +
-      "\022\"\n\014transparency\030\006 \001(\tR\014transparency\022!\n\014" +
-      "witness_json\030\007 \001(\tR\013witnessJson\022\024\n\005state" +
-      "\030\010 \001(\tR\005state\022\026\n\006policy\030\t \001(\tR\006policy2\364\r" +
-      "\n\033TransparencyExchangeService\022\200\001\n\013Create" +
-      "Claim\022%.oscal.services.v1.CreateClaimReq" +
-      "uest\032&.oscal.services.v1.CreateClaimResp" +
-      "onse\"\"\202\323\344\223\002\034\"\027/v1/transparency/claims:\001*" +
-      "\022\177\n\010GetClaim\022\".oscal.services.v1.GetClai" +
-      "mRequest\032#.oscal.services.v1.GetClaimRes" +
-      "ponse\"*\202\323\344\223\002$\022\"/v1/transparency/claims/{" +
-      "claim_id}\022z\n\nListClaims\022$.oscal.services" +
-      ".v1.ListClaimsRequest\032%.oscal.services.v" +
-      "1.ListClaimsResponse\"\037\202\323\344\223\002\031\022\027/v1/transp" +
-      "arency/claims\022\222\001\n\013VerifyClaim\022%.oscal.se" +
-      "rvices.v1.VerifyClaimRequest\032&.oscal.ser" +
-      "vices.v1.VerifyClaimResponse\"4\202\323\344\223\002.\")/v" +
-      "1/transparency/claims/{claim_id}/verify:" +
-      "\001*\022\275\001\n\026ListVerificationEvents\0220.oscal.se" +
-      "rvices.v1.ListVerificationEventsRequest\032" +
-      "1.oscal.services.v1.ListVerificationEven" +
-      "tsResponse\">\202\323\344\223\0028\0226/v1/transparency/cla" +
-      "ims/{claim_id}/verification-events\022\245\001\n\022E" +
-      "xportClaimReceipt\022,.oscal.services.v1.Ex" +
-      "portClaimReceiptRequest\032-.oscal.services" +
-      ".v1.ExportClaimReceiptResponse\"2\202\323\344\223\002,\022*" +
-      "/v1/transparency/claims/{claim_id}/recei" +
-      "pt\022\226\001\n\017PreflightImport\022).oscal.services." +
-      "v1.PreflightImportRequest\032*.oscal.servic" +
-      "es.v1.PreflightImportResponse\",\202\323\344\223\002&\"!/" +
-      "v1/transparency/import/preflight:\001*\022\200\001\n\013" +
-      "ImportBatch\022%.oscal.services.v1.ImportBa" +
-      "tchRequest\032&.oscal.services.v1.ImportBat" +
-      "chResponse\"\"\202\323\344\223\002\034\"\027/v1/transparency/imp" +
-      "ort:\001*\022\213\001\n\016UploadEvidence\022(.oscal.servic" +
-      "es.v1.UploadEvidenceRequest\032).oscal.serv" +
-      "ices.v1.UploadEvidenceResponse\"$\202\323\344\223\002\036\"\031" +
-      "/v1/transparency/evidence:\001*\022\215\001\n\013GetEvid" +
-      "ence\022%.oscal.services.v1.GetEvidenceRequ" +
-      "est\032&.oscal.services.v1.GetEvidenceRespo" +
-      "nse\"/\202\323\344\223\002)\022\'/v1/transparency/evidence/{" +
-      "evidence_id}\022\240\001\n\016VerifyEvidence\022(.oscal." +
-      "services.v1.VerifyEvidenceRequest\032).osca" +
-      "l.services.v1.VerifyEvidenceResponse\"9\202\323" +
-      "\344\223\0023\"./v1/transparency/evidence/{evidenc" +
-      "e_id}/verify:\001*\022{\n\nSyncClaims\022$.oscal.se" +
-      "rvices.v1.SyncClaimsRequest\032%.oscal.serv" +
-      "ices.v1.SyncClaimsResponse\" \202\323\344\223\002\032\"\025/v1/" +
-      "transparency/sync:\001*B>Z<github.com/mchor" +
-      "fa/xoscal/proto/oscal/services/v1;servic" +
-      "esv1b\006proto3"
+      ".v1.EvidenceR\010evidence\"\213\001\n\034FetchExternal" +
+      "EvidenceRequest\022\020\n\003url\030\001 \001(\tR\003url\022\037\n\013evi" +
+      "dence_id\030\002 \001(\tR\nevidenceId\022\035\n\nmedia_type" +
+      "\030\003 \001(\tR\tmediaType\022\031\n\010bom_kind\030\004 \001(\tR\007bom" +
+      "Kind\"\255\001\n\035FetchExternalEvidenceResponse\0227" +
+      "\n\010evidence\030\001 \001(\0132\033.oscal.services.v1.Evi" +
+      "denceR\010evidence\022\026\n\006stored\030\002 \001(\010R\006stored\022" +
+      ";\n\005audit\030\003 \001(\0132%.oscal.services.v1.Evide" +
+      "nceFetchAuditR\005audit\"\353\001\n\022EvidenceFetchAu" +
+      "dit\022\020\n\003url\030\001 \001(\tR\003url\022\026\n\006digest\030\002 \001(\tR\006d" +
+      "igest\022\035\n\nsize_bytes\030\003 \001(\003R\tsizeBytes\022\030\n\007" +
+      "outcome\030\004 \001(\tR\007outcome\022\026\n\006detail\030\005 \001(\tR\006" +
+      "detail\0229\n\nfetched_at\030\006 \001(\0132\032.google.prot" +
+      "obuf.TimestampR\tfetchedAt\022\037\n\013duration_ms" +
+      "\030\007 \001(\003R\ndurationMs\"T\n\026ListFetchEventsReq" +
+      "uest\022\033\n\tpage_size\030\001 \001(\005R\010pageSize\022\035\n\npag" +
+      "e_token\030\002 \001(\tR\tpageToken\"\200\001\n\027ListFetchEv" +
+      "entsResponse\022=\n\006events\030\001 \003(\0132%.oscal.ser" +
+      "vices.v1.EvidenceFetchAuditR\006events\022&\n\017n" +
+      "ext_page_token\030\002 \001(\tR\rnextPageToken\"^\n\025V" +
+      "erifyEvidenceRequest\022\037\n\013evidence_id\030\001 \001(" +
+      "\tR\nevidenceId\022$\n\016fetch_and_hash\030\002 \001(\010R\014f" +
+      "etchAndHash\"\205\001\n\026VerifyEvidenceResponse\022\037" +
+      "\n\013evidence_id\030\001 \001(\tR\nevidenceId\022\033\n\tdiges" +
+      "t_ok\030\002 \001(\010R\010digestOk\022\027\n\007size_ok\030\003 \001(\010R\006s" +
+      "izeOk\022\024\n\005error\030\004 \001(\tR\005error\"\271\001\n\021SyncClai" +
+      "msRequest\022#\n\rpeer_endpoint\030\001 \001(\tR\014peerEn" +
+      "dpoint\022%\n\016filter_subject\030\002 \001(\tR\rfilterSu" +
+      "bject\022&\n\017filter_bom_kind\030\003 \001(\tR\rfilterBo" +
+      "mKind\0220\n\005since\030\004 \001(\0132\032.google.protobuf.T" +
+      "imestampR\005since\"\204\001\n\022SyncClaimsResponse\022\032" +
+      "\n\010imported\030\001 \001(\005R\010imported\022\030\n\007skipped\030\002 " +
+      "\001(\005R\007skipped\022\026\n\006failed\030\003 \001(\005R\006failed\022 \n\013" +
+      "diagnostics\030\004 \003(\tR\013diagnostics\"\201\002\n\nProof" +
+      "State\022\034\n\tdiscovery\030\001 \001(\tR\tdiscovery\022\024\n\005g" +
+      "raph\030\002 \001(\tR\005graph\022\024\n\005claim\030\003 \001(\tR\005claim\022" +
+      "\026\n\006source\030\004 \001(\tR\006source\022\034\n\tsignature\030\005 \001" +
+      "(\tR\tsignature\022\"\n\014transparency\030\006 \001(\tR\014tra" +
+      "nsparency\022!\n\014witness_json\030\007 \001(\tR\013witness" +
+      "Json\022\024\n\005state\030\010 \001(\tR\005state\022\026\n\006policy\030\t \001" +
+      "(\tR\006policy2\270\020\n\033TransparencyExchangeServi" +
+      "ce\022\200\001\n\013CreateClaim\022%.oscal.services.v1.C" +
+      "reateClaimRequest\032&.oscal.services.v1.Cr" +
+      "eateClaimResponse\"\"\202\323\344\223\002\034\"\027/v1/transpare" +
+      "ncy/claims:\001*\022\177\n\010GetClaim\022\".oscal.servic" +
+      "es.v1.GetClaimRequest\032#.oscal.services.v" +
+      "1.GetClaimResponse\"*\202\323\344\223\002$\022\"/v1/transpar" +
+      "ency/claims/{claim_id}\022z\n\nListClaims\022$.o" +
+      "scal.services.v1.ListClaimsRequest\032%.osc" +
+      "al.services.v1.ListClaimsResponse\"\037\202\323\344\223\002" +
+      "\031\022\027/v1/transparency/claims\022\222\001\n\013VerifyCla" +
+      "im\022%.oscal.services.v1.VerifyClaimReques" +
+      "t\032&.oscal.services.v1.VerifyClaimRespons" +
+      "e\"4\202\323\344\223\002.\")/v1/transparency/claims/{clai" +
+      "m_id}/verify:\001*\022\275\001\n\026ListVerificationEven" +
+      "ts\0220.oscal.services.v1.ListVerificationE" +
+      "ventsRequest\0321.oscal.services.v1.ListVer" +
+      "ificationEventsResponse\">\202\323\344\223\0028\0226/v1/tra" +
+      "nsparency/claims/{claim_id}/verification" +
+      "-events\022\245\001\n\022ExportClaimReceipt\022,.oscal.s" +
+      "ervices.v1.ExportClaimReceiptRequest\032-.o" +
+      "scal.services.v1.ExportClaimReceiptRespo" +
+      "nse\"2\202\323\344\223\002,\022*/v1/transparency/claims/{cl" +
+      "aim_id}/receipt\022\226\001\n\017PreflightImport\022).os" +
+      "cal.services.v1.PreflightImportRequest\032*" +
+      ".oscal.services.v1.PreflightImportRespon" +
+      "se\",\202\323\344\223\002&\"!/v1/transparency/import/pref" +
+      "light:\001*\022\200\001\n\013ImportBatch\022%.oscal.service" +
+      "s.v1.ImportBatchRequest\032&.oscal.services" +
+      ".v1.ImportBatchResponse\"\"\202\323\344\223\002\034\"\027/v1/tra" +
+      "nsparency/import:\001*\022\213\001\n\016UploadEvidence\022(" +
+      ".oscal.services.v1.UploadEvidenceRequest" +
+      "\032).oscal.services.v1.UploadEvidenceRespo" +
+      "nse\"$\202\323\344\223\002\036\"\031/v1/transparency/evidence:\001" +
+      "*\022\215\001\n\013GetEvidence\022%.oscal.services.v1.Ge" +
+      "tEvidenceRequest\032&.oscal.services.v1.Get" +
+      "EvidenceResponse\"/\202\323\344\223\002)\022\'/v1/transparen" +
+      "cy/evidence/{evidence_id}\022\240\001\n\016VerifyEvid" +
+      "ence\022(.oscal.services.v1.VerifyEvidenceR" +
+      "equest\032).oscal.services.v1.VerifyEvidenc" +
+      "eResponse\"9\202\323\344\223\0023\"./v1/transparency/evid" +
+      "ence/{evidence_id}/verify:\001*\022\246\001\n\025FetchEx" +
+      "ternalEvidence\022/.oscal.services.v1.Fetch" +
+      "ExternalEvidenceRequest\0320.oscal.services" +
+      ".v1.FetchExternalEvidenceResponse\"*\202\323\344\223\002" +
+      "$\"\037/v1/transparency/evidence/fetch:\001*\022\230\001" +
+      "\n\017ListFetchEvents\022).oscal.services.v1.Li" +
+      "stFetchEventsRequest\032*.oscal.services.v1" +
+      ".ListFetchEventsResponse\".\202\323\344\223\002(\022&/v1/tr" +
+      "ansparency/evidence/fetch/events\022{\n\nSync" +
+      "Claims\022$.oscal.services.v1.SyncClaimsReq" +
+      "uest\032%.oscal.services.v1.SyncClaimsRespo" +
+      "nse\" \202\323\344\223\002\032\"\025/v1/transparency/sync:\001*B>Z" +
+      "<github.com/mchorfa/xoscal/proto/oscal/s" +
+      "ervices/v1;servicesv1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -41083,32 +45774,62 @@ public final class TransparencyExchangeServiceOuterClass extends com.google.prot
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_services_v1_GetEvidenceResponse_descriptor,
         new java.lang.String[] { "Evidence", });
-    internal_static_oscal_services_v1_VerifyEvidenceRequest_descriptor =
+    internal_static_oscal_services_v1_FetchExternalEvidenceRequest_descriptor =
       getDescriptor().getMessageType(34);
+    internal_static_oscal_services_v1_FetchExternalEvidenceRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_oscal_services_v1_FetchExternalEvidenceRequest_descriptor,
+        new java.lang.String[] { "Url", "EvidenceId", "MediaType", "BomKind", });
+    internal_static_oscal_services_v1_FetchExternalEvidenceResponse_descriptor =
+      getDescriptor().getMessageType(35);
+    internal_static_oscal_services_v1_FetchExternalEvidenceResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_oscal_services_v1_FetchExternalEvidenceResponse_descriptor,
+        new java.lang.String[] { "Evidence", "Stored", "Audit", });
+    internal_static_oscal_services_v1_EvidenceFetchAudit_descriptor =
+      getDescriptor().getMessageType(36);
+    internal_static_oscal_services_v1_EvidenceFetchAudit_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_oscal_services_v1_EvidenceFetchAudit_descriptor,
+        new java.lang.String[] { "Url", "Digest", "SizeBytes", "Outcome", "Detail", "FetchedAt", "DurationMs", });
+    internal_static_oscal_services_v1_ListFetchEventsRequest_descriptor =
+      getDescriptor().getMessageType(37);
+    internal_static_oscal_services_v1_ListFetchEventsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_oscal_services_v1_ListFetchEventsRequest_descriptor,
+        new java.lang.String[] { "PageSize", "PageToken", });
+    internal_static_oscal_services_v1_ListFetchEventsResponse_descriptor =
+      getDescriptor().getMessageType(38);
+    internal_static_oscal_services_v1_ListFetchEventsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_oscal_services_v1_ListFetchEventsResponse_descriptor,
+        new java.lang.String[] { "Events", "NextPageToken", });
+    internal_static_oscal_services_v1_VerifyEvidenceRequest_descriptor =
+      getDescriptor().getMessageType(39);
     internal_static_oscal_services_v1_VerifyEvidenceRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_services_v1_VerifyEvidenceRequest_descriptor,
         new java.lang.String[] { "EvidenceId", "FetchAndHash", });
     internal_static_oscal_services_v1_VerifyEvidenceResponse_descriptor =
-      getDescriptor().getMessageType(35);
+      getDescriptor().getMessageType(40);
     internal_static_oscal_services_v1_VerifyEvidenceResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_services_v1_VerifyEvidenceResponse_descriptor,
         new java.lang.String[] { "EvidenceId", "DigestOk", "SizeOk", "Error", });
     internal_static_oscal_services_v1_SyncClaimsRequest_descriptor =
-      getDescriptor().getMessageType(36);
+      getDescriptor().getMessageType(41);
     internal_static_oscal_services_v1_SyncClaimsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_services_v1_SyncClaimsRequest_descriptor,
         new java.lang.String[] { "PeerEndpoint", "FilterSubject", "FilterBomKind", "Since", });
     internal_static_oscal_services_v1_SyncClaimsResponse_descriptor =
-      getDescriptor().getMessageType(37);
+      getDescriptor().getMessageType(42);
     internal_static_oscal_services_v1_SyncClaimsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_services_v1_SyncClaimsResponse_descriptor,
         new java.lang.String[] { "Imported", "Skipped", "Failed", "Diagnostics", });
     internal_static_oscal_services_v1_ProofState_descriptor =
-      getDescriptor().getMessageType(38);
+      getDescriptor().getMessageType(43);
     internal_static_oscal_services_v1_ProofState_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_oscal_services_v1_ProofState_descriptor,

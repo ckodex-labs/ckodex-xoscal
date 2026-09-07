@@ -173,9 +173,14 @@ SHA alignment.
 
 ### P1 — beta quality gaps
 
-- Live Review has bounded multi-record composition (up to 10 records), but no
-  file/CSV import or resumable batch-recovery UX yet.
-- No external evidence fetcher with bounded policy and audit trail.
+- Live Review has bounded multi-record composition (up to 10 records) plus
+  CSV bulk import (100-row cap, 8 MiB file cap) with resumable pending
+  batches persisted in the operator's browser; file/CSV resumable recovery
+  is now implemented and browser-verified.
+- External evidence fetching is implemented behind a bounded fetch policy
+  (HTTPS-only, byte cap, timeout, redirect bound, optional host allowlist)
+  with an append-only fetch audit trail queryable via `ListFetchEvents`;
+  fetching stays disabled unless the deployment enables it.
 - No peer-sync implementation; currently explicit and safe, but needs product
   decision before the beta API is advertised as exchange-capable.
 - Graph projection atomicity, append-only audit history, chain verification, and
@@ -184,9 +189,15 @@ SHA alignment.
   Projection edge identity is content-stable when callers omit an edge ID, so
   retries cannot create duplicate graph edges or audit events.
 - Verification audit history and fail-closed receipt export are available; the
-  release bundle still needs an operator-selected retention/export procedure.
-- External signature algorithms, key rotation/registry, OPA or remote policy
-  providers, and transparency/witness inclusion are not implemented.
+  release bundle now has an operator retention and re-verification procedure
+  in [docs/OPERATIONS.md](OPERATIONS.md) and a Dagger `ReleaseBundle` assembly.
+- Remote policy documents (`xoscal-remote`) are fetched through the bounded
+  fetch policy and evaluated as xoscal-policy-v1; a deployment key registry
+  with rotation (retired keys verify but surface rotation), a transparency
+  inclusion provider (RFC 6962-style Merkle proof plus Ed25519-signed
+  checkpoint), and ECDSA P-256/P-384 detached signature algorithms are
+  implemented with fail-closed vectors. Registry-backed transparency (Rekor)
+  remains out of scope.
 - Gateway-to-gRPC TLS/auth configuration is now fail-closed and unit-tested;
   the Kubernetes manifest contract test verifies one SQLite writer, read-only
   TLS/token Secret mounts, and matching config paths; target-cluster
@@ -195,9 +206,13 @@ SHA alignment.
   versions; the post-upgrade `govulncheck` scan reports no vulnerabilities.
 - Release tooling is now reproducibility-bound: GoReleaser and Syft downloads
   are version- and SHA-256-pinned; Buf and sbom-tools are pinned the same way;
-  runtime bases are digest-pinned, workflow actions are commit-pinned, the
-  SLSA verifier download is hash-checked, and critical Trivy findings fail the
-  image job.
+  runtime bases are digest-pinned, workflow actions are commit-pinned, and
+  critical Trivy findings fail the image job. Release signing uses GitHub
+  artifact attestations (actions/attest-build-provenance, commit-pinned) for
+  the image, archives, checksums, SDK zips, and catalogs — GitHub signs with
+  its own key and `gh attestation verify` checks them from any clean
+  environment with no Sigstore/TUF dependency. `VerifyPublishedRelease`
+  verifies a published release from a clean environment.
 
 ### P2 — post-beta improvements
 

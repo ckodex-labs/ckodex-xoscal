@@ -1,0 +1,50 @@
+{
+  "$defs": {
+    "google.protobuf.Timestamp.schema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "format": "date-time",
+      "title": "Timestamp",
+      "type": "string"
+    },
+    "oscal.services.v1.EvidenceFetchAudit.schema.strict.json": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "properties": {
+        "detail": {
+          "type": "string"
+        },
+        "digest": {
+          "type": "string"
+        },
+        "duration_ms": {
+          "type": "integer"
+        },
+        "fetched_at": {
+          "$ref": "#/$defs/google.protobuf.Timestamp.schema.strict.json"
+        },
+        "outcome": {
+          "type": "string"
+        },
+        "size_bytes": {
+          "type": "integer"
+        },
+        "url": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "url",
+        "digest",
+        "size_bytes",
+        "outcome",
+        "detail",
+        "duration_ms"
+      ],
+      "title": "Evidence Fetch Audit",
+      "type": "object"
+    }
+  },
+  "$id": "oscal.services.v1.EvidenceFetchAudit.schema.strict.bundle.json",
+  "$ref": "#/$defs/oscal.services.v1.EvidenceFetchAudit.schema.strict.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

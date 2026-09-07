@@ -63,6 +63,20 @@ service TransparencyExchangeService {
     };
   }
 
+  // FetchExternalEvidence retrieves an external artifact over HTTPS under the
+  // deployment's bounded fetch policy, stores it as content-addressed
+  // evidence, and records an append-only fetch audit event. The RPC fails
+  // closed when no fetch policy is configured or the request violates it.
+  rpc FetchExternalEvidence(FetchExternalEvidenceRequest) returns (FetchExternalEvidenceResponse) {
+    option (google.api.http) = {
+      post: "/v1/transparency/evidence/fetch"
+      body: "*"
+    };
+  }
+  rpc ListFetchEvents(ListFetchEventsRequest) returns (ListFetchEventsResponse) {
+    option (google.api.http) = {get: "/v1/transparency/evidence/fetch/events"};
+  }
+
   rpc SyncClaims(SyncClaimsRequest) returns (SyncClaimsResponse) {
     option (google.api.http) = {
       post: "/v1/transparency/sync"
@@ -306,6 +320,39 @@ message GetEvidenceRequest {
 
 message GetEvidenceResponse {
   Evidence evidence = 1;
+}
+
+message FetchExternalEvidenceRequest {
+  string url = 1;
+  string evidence_id = 2;
+  string media_type = 3;
+  string bom_kind = 4;
+}
+
+message FetchExternalEvidenceResponse {
+  Evidence evidence = 1;
+  bool stored = 2;
+  EvidenceFetchAudit audit = 3;
+}
+
+message EvidenceFetchAudit {
+  string url = 1;
+  string digest = 2;
+  int64 size_bytes = 3;
+  string outcome = 4; // fetched | policy_denied | fetch_failed
+  string detail = 5;
+  google.protobuf.Timestamp fetched_at = 6;
+  int64 duration_ms = 7;
+}
+
+message ListFetchEventsRequest {
+  int32 page_size = 1;
+  string page_token = 2;
+}
+
+message ListFetchEventsResponse {
+  repeated EvidenceFetchAudit events = 1;
+  string next_page_token = 2;
 }
 
 message VerifyEvidenceRequest {

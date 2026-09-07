@@ -357,6 +357,68 @@ public final class TransparencyExchangeServiceGrpc {
     return getVerifyEvidenceMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceRequest,
+      oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceResponse> getFetchExternalEvidenceMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "FetchExternalEvidence",
+      requestType = oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceRequest.class,
+      responseType = oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceRequest,
+      oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceResponse> getFetchExternalEvidenceMethod() {
+    io.grpc.MethodDescriptor<oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceRequest, oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceResponse> getFetchExternalEvidenceMethod;
+    if ((getFetchExternalEvidenceMethod = TransparencyExchangeServiceGrpc.getFetchExternalEvidenceMethod) == null) {
+      synchronized (TransparencyExchangeServiceGrpc.class) {
+        if ((getFetchExternalEvidenceMethod = TransparencyExchangeServiceGrpc.getFetchExternalEvidenceMethod) == null) {
+          TransparencyExchangeServiceGrpc.getFetchExternalEvidenceMethod = getFetchExternalEvidenceMethod =
+              io.grpc.MethodDescriptor.<oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceRequest, oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "FetchExternalEvidence"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new TransparencyExchangeServiceMethodDescriptorSupplier("FetchExternalEvidence"))
+              .build();
+        }
+      }
+    }
+    return getFetchExternalEvidenceMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsRequest,
+      oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsResponse> getListFetchEventsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListFetchEvents",
+      requestType = oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsRequest.class,
+      responseType = oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsRequest,
+      oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsResponse> getListFetchEventsMethod() {
+    io.grpc.MethodDescriptor<oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsRequest, oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsResponse> getListFetchEventsMethod;
+    if ((getListFetchEventsMethod = TransparencyExchangeServiceGrpc.getListFetchEventsMethod) == null) {
+      synchronized (TransparencyExchangeServiceGrpc.class) {
+        if ((getListFetchEventsMethod = TransparencyExchangeServiceGrpc.getListFetchEventsMethod) == null) {
+          TransparencyExchangeServiceGrpc.getListFetchEventsMethod = getListFetchEventsMethod =
+              io.grpc.MethodDescriptor.<oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsRequest, oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListFetchEvents"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new TransparencyExchangeServiceMethodDescriptorSupplier("ListFetchEvents"))
+              .build();
+        }
+      }
+    }
+    return getListFetchEventsMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<oscal.services.v1.TransparencyExchangeServiceOuterClass.SyncClaimsRequest,
       oscal.services.v1.TransparencyExchangeServiceOuterClass.SyncClaimsResponse> getSyncClaimsMethod;
 
@@ -533,6 +595,26 @@ public final class TransparencyExchangeServiceGrpc {
     }
 
     /**
+     * <pre>
+     * FetchExternalEvidence retrieves an external artifact over HTTPS under the
+     * deployment's bounded fetch policy, stores it as content-addressed
+     * evidence, and records an append-only fetch audit event. The RPC fails
+     * closed when no fetch policy is configured or the request violates it.
+     * </pre>
+     */
+    default void fetchExternalEvidence(oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceRequest request,
+        io.grpc.stub.StreamObserver<oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getFetchExternalEvidenceMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void listFetchEvents(oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsRequest request,
+        io.grpc.stub.StreamObserver<oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListFetchEventsMethod(), responseObserver);
+    }
+
+    /**
      */
     default void syncClaims(oscal.services.v1.TransparencyExchangeServiceOuterClass.SyncClaimsRequest request,
         io.grpc.stub.StreamObserver<oscal.services.v1.TransparencyExchangeServiceOuterClass.SyncClaimsResponse> responseObserver) {
@@ -664,6 +746,28 @@ public final class TransparencyExchangeServiceGrpc {
     }
 
     /**
+     * <pre>
+     * FetchExternalEvidence retrieves an external artifact over HTTPS under the
+     * deployment's bounded fetch policy, stores it as content-addressed
+     * evidence, and records an append-only fetch audit event. The RPC fails
+     * closed when no fetch policy is configured or the request violates it.
+     * </pre>
+     */
+    public void fetchExternalEvidence(oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceRequest request,
+        io.grpc.stub.StreamObserver<oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getFetchExternalEvidenceMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void listFetchEvents(oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsRequest request,
+        io.grpc.stub.StreamObserver<oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListFetchEventsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
      */
     public void syncClaims(oscal.services.v1.TransparencyExchangeServiceOuterClass.SyncClaimsRequest request,
         io.grpc.stub.StreamObserver<oscal.services.v1.TransparencyExchangeServiceOuterClass.SyncClaimsResponse> responseObserver) {
@@ -770,6 +874,26 @@ public final class TransparencyExchangeServiceGrpc {
     }
 
     /**
+     * <pre>
+     * FetchExternalEvidence retrieves an external artifact over HTTPS under the
+     * deployment's bounded fetch policy, stores it as content-addressed
+     * evidence, and records an append-only fetch audit event. The RPC fails
+     * closed when no fetch policy is configured or the request violates it.
+     * </pre>
+     */
+    public oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceResponse fetchExternalEvidence(oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getFetchExternalEvidenceMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsResponse listFetchEvents(oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getListFetchEventsMethod(), getCallOptions(), request);
+    }
+
+    /**
      */
     public oscal.services.v1.TransparencyExchangeServiceOuterClass.SyncClaimsResponse syncClaims(oscal.services.v1.TransparencyExchangeServiceOuterClass.SyncClaimsRequest request) throws io.grpc.StatusException {
       return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
@@ -872,6 +996,26 @@ public final class TransparencyExchangeServiceGrpc {
     public oscal.services.v1.TransparencyExchangeServiceOuterClass.VerifyEvidenceResponse verifyEvidence(oscal.services.v1.TransparencyExchangeServiceOuterClass.VerifyEvidenceRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getVerifyEvidenceMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * FetchExternalEvidence retrieves an external artifact over HTTPS under the
+     * deployment's bounded fetch policy, stores it as content-addressed
+     * evidence, and records an append-only fetch audit event. The RPC fails
+     * closed when no fetch policy is configured or the request violates it.
+     * </pre>
+     */
+    public oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceResponse fetchExternalEvidence(oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getFetchExternalEvidenceMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsResponse listFetchEvents(oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListFetchEventsMethod(), getCallOptions(), request);
     }
 
     /**
@@ -991,6 +1135,28 @@ public final class TransparencyExchangeServiceGrpc {
     }
 
     /**
+     * <pre>
+     * FetchExternalEvidence retrieves an external artifact over HTTPS under the
+     * deployment's bounded fetch policy, stores it as content-addressed
+     * evidence, and records an append-only fetch audit event. The RPC fails
+     * closed when no fetch policy is configured or the request violates it.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceResponse> fetchExternalEvidence(
+        oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getFetchExternalEvidenceMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsResponse> listFetchEvents(
+        oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListFetchEventsMethod(), getCallOptions()), request);
+    }
+
+    /**
      */
     public com.google.common.util.concurrent.ListenableFuture<oscal.services.v1.TransparencyExchangeServiceOuterClass.SyncClaimsResponse> syncClaims(
         oscal.services.v1.TransparencyExchangeServiceOuterClass.SyncClaimsRequest request) {
@@ -1010,7 +1176,9 @@ public final class TransparencyExchangeServiceGrpc {
   private static final int METHODID_UPLOAD_EVIDENCE = 8;
   private static final int METHODID_GET_EVIDENCE = 9;
   private static final int METHODID_VERIFY_EVIDENCE = 10;
-  private static final int METHODID_SYNC_CLAIMS = 11;
+  private static final int METHODID_FETCH_EXTERNAL_EVIDENCE = 11;
+  private static final int METHODID_LIST_FETCH_EVENTS = 12;
+  private static final int METHODID_SYNC_CLAIMS = 13;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1072,6 +1240,14 @@ public final class TransparencyExchangeServiceGrpc {
         case METHODID_VERIFY_EVIDENCE:
           serviceImpl.verifyEvidence((oscal.services.v1.TransparencyExchangeServiceOuterClass.VerifyEvidenceRequest) request,
               (io.grpc.stub.StreamObserver<oscal.services.v1.TransparencyExchangeServiceOuterClass.VerifyEvidenceResponse>) responseObserver);
+          break;
+        case METHODID_FETCH_EXTERNAL_EVIDENCE:
+          serviceImpl.fetchExternalEvidence((oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceRequest) request,
+              (io.grpc.stub.StreamObserver<oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceResponse>) responseObserver);
+          break;
+        case METHODID_LIST_FETCH_EVENTS:
+          serviceImpl.listFetchEvents((oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsRequest) request,
+              (io.grpc.stub.StreamObserver<oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsResponse>) responseObserver);
           break;
         case METHODID_SYNC_CLAIMS:
           serviceImpl.syncClaims((oscal.services.v1.TransparencyExchangeServiceOuterClass.SyncClaimsRequest) request,
@@ -1173,6 +1349,20 @@ public final class TransparencyExchangeServiceGrpc {
               oscal.services.v1.TransparencyExchangeServiceOuterClass.VerifyEvidenceResponse>(
                 service, METHODID_VERIFY_EVIDENCE)))
         .addMethod(
+          getFetchExternalEvidenceMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceRequest,
+              oscal.services.v1.TransparencyExchangeServiceOuterClass.FetchExternalEvidenceResponse>(
+                service, METHODID_FETCH_EXTERNAL_EVIDENCE)))
+        .addMethod(
+          getListFetchEventsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsRequest,
+              oscal.services.v1.TransparencyExchangeServiceOuterClass.ListFetchEventsResponse>(
+                service, METHODID_LIST_FETCH_EVENTS)))
+        .addMethod(
           getSyncClaimsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -1238,6 +1428,8 @@ public final class TransparencyExchangeServiceGrpc {
               .addMethod(getUploadEvidenceMethod())
               .addMethod(getGetEvidenceMethod())
               .addMethod(getVerifyEvidenceMethod())
+              .addMethod(getFetchExternalEvidenceMethod())
+              .addMethod(getListFetchEventsMethod())
               .addMethod(getSyncClaimsMethod())
               .build();
         }

@@ -67,6 +67,38 @@ type Security struct {
 	AuthTokens      []string `mapstructure:"auth_tokens"`
 }
 
+// FetchPolicy bounds external evidence fetches. Fetching stays disabled
+// unless explicitly enabled; an absent policy is a fail-closed default.
+type FetchPolicy struct {
+	Enabled      bool          `mapstructure:"enabled"`
+	MaxBytes     int64         `mapstructure:"max_bytes"`
+	Timeout      time.Duration `mapstructure:"timeout"`
+	AllowedHosts []string      `mapstructure:"allowed_hosts"`
+	MaxRedirects int           `mapstructure:"max_redirects"`
+}
+
+// KeyRegistryEntry is one registered issuer public key. Rotation keeps prior
+// keys registered with status "retired"; retired keys still verify existing
+// claims but surface the rotation in diagnostics.
+type KeyRegistryEntry struct {
+	Algorithm string `mapstructure:"algorithm"`
+	PublicKey string `mapstructure:"public_key"`
+	Status    string `mapstructure:"status"` // active | retired
+}
+
+// KeyRegistry maps issuer key IDs to public keys.
+type KeyRegistry struct {
+	Keys map[string]KeyRegistryEntry `mapstructure:"keys"`
+}
+
+// Transparency configures the transparency inclusion provider. The log key
+// is the Ed25519 public key that signs the log's checkpoints.
+type Transparency struct {
+	Enabled   bool   `mapstructure:"enabled"`
+	LogID     string `mapstructure:"log_id"`
+	PublicKey string `mapstructure:"public_key"`
+}
+
 // Config is the root application configuration.
 type Config struct {
 	Server        Server        `mapstructure:"server"`
@@ -74,6 +106,9 @@ type Config struct {
 	Vector        Vector        `mapstructure:"vector"`
 	Observability Observability `mapstructure:"observability"`
 	Security      Security      `mapstructure:"security"`
+	FetchPolicy   FetchPolicy   `mapstructure:"fetch_policy"`
+	KeyRegistry   KeyRegistry   `mapstructure:"key_registry"`
+	Transparency  Transparency  `mapstructure:"transparency"`
 }
 
 // Default returns a Config populated with production-safe defaults.
@@ -114,6 +149,12 @@ func Default() *Config {
 			RateLimitRPS:   100,
 			RateLimitBurst: 200,
 			AuthMode:       "none",
+		},
+		FetchPolicy: FetchPolicy{
+			Enabled:      false, // fail-closed: external fetching is opt-in
+			MaxBytes:     10 << 20,
+			Timeout:      30 * time.Second,
+			MaxRedirects: 3,
 		},
 	}
 }

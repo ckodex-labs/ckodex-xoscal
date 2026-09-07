@@ -1,4 +1,4 @@
-.PHONY: all build build-release test test-race coverage proto lint design-lint a11y-lint k8s-beta-check site-smoke site-verify fmt security docker clean tidy oscal-check oscal-update dagger-dev dagger-all dagger-test dagger-lint dagger-security dagger-image site site-serve
+.PHONY: all build build-release test test-race coverage proto lint design-lint a11y-lint a11y-live k8s-beta-check site-smoke site-verify fmt security docker clean tidy oscal-check oscal-update dagger-dev dagger-all dagger-test dagger-lint dagger-security dagger-image site site-serve
 
 BINARY := xoscal-server
 IMAGE  := xoscal-server
@@ -41,6 +41,9 @@ design-lint:
 
 a11y-lint:
 	python3 scripts/a11y-lint.py
+
+a11y-live:
+	python3 scripts/a11y-live.py --root site
 
 k8s-beta-check:
 	go test ./server/internal/k8scontract

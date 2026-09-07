@@ -10,34 +10,34 @@ plugins:
     opt:
       - paths=source_relative
   # gRPC-Gateway
-  - remote: buf.build/grpc-ecosystem/gateway
+  - remote: buf.build/grpc-ecosystem/gateway:v2.30.0
     out: proto/oscal
     opt:
       - paths=source_relative
   # Python SDK with gRPC
   - remote: buf.build/protocolbuffers/python:v24.4
     out: proto/oscal/gen/python
-  - remote: buf.build/grpc/python
+  - remote: buf.build/grpc/python:v1.83.1
     out: proto/oscal/gen/python
   # Java SDK with gRPC
-  - remote: buf.build/protocolbuffers/java
+  - remote: buf.build/protocolbuffers/java:v36.1
     out: proto/oscal/gen/java
-  - remote: buf.build/grpc/java
+  - remote: buf.build/grpc/java:v1.84.0
     out: proto/oscal/gen/java
   # C# SDK
-  - remote: buf.build/protocolbuffers/csharp
+  - remote: buf.build/protocolbuffers/csharp:v36.1
     out: proto/oscal/gen/csharp
   # TypeScript/JavaScript SDK
   - remote: buf.build/bufbuild/es:v2.14.1
     out: proto/oscal/gen/ts
   # Swift SDK with Connect RPC
-  - remote: buf.build/apple/swift
+  - remote: buf.build/apple/swift:v1.38.1
     out: proto/oscal/gen/swift
-  - remote: buf.build/connectrpc/swift
+  - remote: buf.build/connectrpc/swift:v1.2.3
     out: proto/oscal/gen/swift
   # OpenAPI specifications
-  - remote: buf.build/community/sudorandom-connect-openapi
+  - remote: buf.build/community/sudorandom-connect-openapi:v0.25.8
     out: proto/oscal/gen/openapi
   # JSON Schema specifications
-  - remote: buf.build/bufbuild/protoschema-jsonschema
+  - remote: buf.build/bufbuild/protoschema-jsonschema:v0.6.0
     out: proto/oscal/gen/jsonschema

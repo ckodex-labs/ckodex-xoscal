@@ -1053,6 +1053,153 @@ export declare type GetEvidenceResponse = Message<"oscal.services.v1.GetEvidence
 export declare const GetEvidenceResponseSchema: GenMessage<GetEvidenceResponse>;
 
 /**
+ * @generated from message oscal.services.v1.FetchExternalEvidenceRequest
+ */
+export declare type FetchExternalEvidenceRequest = Message<"oscal.services.v1.FetchExternalEvidenceRequest"> & {
+  /**
+   * @generated from field: string url = 1;
+   */
+  url: string;
+
+  /**
+   * @generated from field: string evidence_id = 2;
+   */
+  evidenceId: string;
+
+  /**
+   * @generated from field: string media_type = 3;
+   */
+  mediaType: string;
+
+  /**
+   * @generated from field: string bom_kind = 4;
+   */
+  bomKind: string;
+};
+
+/**
+ * Describes the message oscal.services.v1.FetchExternalEvidenceRequest.
+ * Use `create(FetchExternalEvidenceRequestSchema)` to create a new message.
+ */
+export declare const FetchExternalEvidenceRequestSchema: GenMessage<FetchExternalEvidenceRequest>;
+
+/**
+ * @generated from message oscal.services.v1.FetchExternalEvidenceResponse
+ */
+export declare type FetchExternalEvidenceResponse = Message<"oscal.services.v1.FetchExternalEvidenceResponse"> & {
+  /**
+   * @generated from field: oscal.services.v1.Evidence evidence = 1;
+   */
+  evidence?: Evidence | undefined;
+
+  /**
+   * @generated from field: bool stored = 2;
+   */
+  stored: boolean;
+
+  /**
+   * @generated from field: oscal.services.v1.EvidenceFetchAudit audit = 3;
+   */
+  audit?: EvidenceFetchAudit | undefined;
+};
+
+/**
+ * Describes the message oscal.services.v1.FetchExternalEvidenceResponse.
+ * Use `create(FetchExternalEvidenceResponseSchema)` to create a new message.
+ */
+export declare const FetchExternalEvidenceResponseSchema: GenMessage<FetchExternalEvidenceResponse>;
+
+/**
+ * @generated from message oscal.services.v1.EvidenceFetchAudit
+ */
+export declare type EvidenceFetchAudit = Message<"oscal.services.v1.EvidenceFetchAudit"> & {
+  /**
+   * @generated from field: string url = 1;
+   */
+  url: string;
+
+  /**
+   * @generated from field: string digest = 2;
+   */
+  digest: string;
+
+  /**
+   * @generated from field: int64 size_bytes = 3;
+   */
+  sizeBytes: bigint;
+
+  /**
+   * fetched | policy_denied | fetch_failed
+   *
+   * @generated from field: string outcome = 4;
+   */
+  outcome: string;
+
+  /**
+   * @generated from field: string detail = 5;
+   */
+  detail: string;
+
+  /**
+   * @generated from field: google.protobuf.Timestamp fetched_at = 6;
+   */
+  fetchedAt?: Timestamp | undefined;
+
+  /**
+   * @generated from field: int64 duration_ms = 7;
+   */
+  durationMs: bigint;
+};
+
+/**
+ * Describes the message oscal.services.v1.EvidenceFetchAudit.
+ * Use `create(EvidenceFetchAuditSchema)` to create a new message.
+ */
+export declare const EvidenceFetchAuditSchema: GenMessage<EvidenceFetchAudit>;
+
+/**
+ * @generated from message oscal.services.v1.ListFetchEventsRequest
+ */
+export declare type ListFetchEventsRequest = Message<"oscal.services.v1.ListFetchEventsRequest"> & {
+  /**
+   * @generated from field: int32 page_size = 1;
+   */
+  pageSize: number;
+
+  /**
+   * @generated from field: string page_token = 2;
+   */
+  pageToken: string;
+};
+
+/**
+ * Describes the message oscal.services.v1.ListFetchEventsRequest.
+ * Use `create(ListFetchEventsRequestSchema)` to create a new message.
+ */
+export declare const ListFetchEventsRequestSchema: GenMessage<ListFetchEventsRequest>;
+
+/**
+ * @generated from message oscal.services.v1.ListFetchEventsResponse
+ */
+export declare type ListFetchEventsResponse = Message<"oscal.services.v1.ListFetchEventsResponse"> & {
+  /**
+   * @generated from field: repeated oscal.services.v1.EvidenceFetchAudit events = 1;
+   */
+  events: EvidenceFetchAudit[];
+
+  /**
+   * @generated from field: string next_page_token = 2;
+   */
+  nextPageToken: string;
+};
+
+/**
+ * Describes the message oscal.services.v1.ListFetchEventsResponse.
+ * Use `create(ListFetchEventsResponseSchema)` to create a new message.
+ */
+export declare const ListFetchEventsResponseSchema: GenMessage<ListFetchEventsResponse>;
+
+/**
  * @generated from message oscal.services.v1.VerifyEvidenceRequest
  */
 export declare type VerifyEvidenceRequest = Message<"oscal.services.v1.VerifyEvidenceRequest"> & {
@@ -1334,6 +1481,27 @@ export declare const TransparencyExchangeService: GenService<{
     methodKind: "unary";
     input: typeof VerifyEvidenceRequestSchema;
     output: typeof VerifyEvidenceResponseSchema;
+  },
+  /**
+   * FetchExternalEvidence retrieves an external artifact over HTTPS under the
+   * deployment's bounded fetch policy, stores it as content-addressed
+   * evidence, and records an append-only fetch audit event. The RPC fails
+   * closed when no fetch policy is configured or the request violates it.
+   *
+   * @generated from rpc oscal.services.v1.TransparencyExchangeService.FetchExternalEvidence
+   */
+  fetchExternalEvidence: {
+    methodKind: "unary";
+    input: typeof FetchExternalEvidenceRequestSchema;
+    output: typeof FetchExternalEvidenceResponseSchema;
+  },
+  /**
+   * @generated from rpc oscal.services.v1.TransparencyExchangeService.ListFetchEvents
+   */
+  listFetchEvents: {
+    methodKind: "unary";
+    input: typeof ListFetchEventsRequestSchema;
+    output: typeof ListFetchEventsResponseSchema;
   },
   /**
    * @generated from rpc oscal.services.v1.TransparencyExchangeService.SyncClaims
