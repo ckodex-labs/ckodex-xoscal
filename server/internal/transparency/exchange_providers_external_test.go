@@ -2,11 +2,16 @@ package transparency
 
 import (
 	"context"
+	"crypto/ecdsa"
 	"crypto/ed25519"
+	"crypto/elliptic"
 	"crypto/rand"
+	"crypto/sha256"
+	"encoding/asn1"
 	"encoding/base64"
 	"encoding/json"
 	"fmt"
+	"math/big"
 	"net/http"
 	"net/http/httptest"
 	"strings"
@@ -343,5 +348,143 @@ func TestTransparencyInclusionRejectsWrongLogID(t *testing.T) {
 	result := server.verifyTransparencyInclusion(context.Background(), server.store, claim, server.transparencyCfg)
 	if result.State != "invalid" {
 		t.Fatalf("an inclusion proof for a different log must be invalid: %+v", result)
+	}
+}
+
+// ---- ECDSA P-256 / P-384 signature algorithms ----
+
+func ecdsaClaimFixture(t *testing.T, server *ExchangeServer, curve elliptic.Curve, algorithm string) (*Claim, ed25519.PublicKey) {
+	t.Helper()
+	private, err := ecdsa.GenerateKey(curve, rand.Reader)
+	if err != nil {
+		t.Fatalf("generate ecdsa key: %v", err)
+	}
+	size := (curve.Params().BitSize + 7) / 8
+	point := make([]byte, 2*size)
+	private.PublicKey.X.FillBytes(point[:size])
+	private.PublicKey.Y.FillBytes(point[size:])
+
+	claim := registryClaim(t, server, fmt.Sprintf(`{"kind":"ci","key":"{\"algorithm\":%q,\"public_key\":\"base64:%s\"}"}`,
+		algorithm, base64.StdEncoding.EncodeToString(point)))
+	payload, err := canonicalClaimPayload(claim)
+	if err != nil {
+		t.Fatalf("canonical payload: %v", err)
+	}
+	h := sha256.Sum256(payload)
+	sigDER, err := ecdsa.SignASN1(rand.Reader, private, h[:])
+	if err != nil {
+		t.Fatalf("sign: %v", err)
+	}
+	// Parse the DER signature into raw r||s.
+	var der struct{ R, S *big.Int }
+	if _, err := asn1.Unmarshal(sigDER, &der); err != nil {
+		t.Fatalf("parse der: %v", err)
+	}
+	byteLen := size / 2
+	raw := make([]byte, 2*byteLen)
+	der.R.FillBytes(raw[:byteLen])
+	der.S.FillBytes(raw[byteLen:])
+
+	claim.ProofRefsJSON = fmt.Sprintf("[{\"type\":\"signature\",\"ref\":\"ev-sig-%s\"}]", claim.ID)
+	if err := server.store.CreateEvidence(context.Background(), &Evidence{
+		ID: "ev-sig-" + claim.ID, MediaType: "application/octet-stream", BomKind: "signature",
+		Digest: digestFor(raw), SizeBytes: int64(len(raw)), ValidFrom: time.Now().UTC(), Blob: raw,
+	}); err != nil {
+		t.Fatalf("store signature evidence: %v", err)
+	}
+	return claim, nil
+}
+
+func TestECDSAP256SignatureVerifies(t *testing.T) {
+	server, _, _, _ := newRegistryFixture(t)
+	curve := elliptic.P256()
+	private, err := ecdsa.GenerateKey(curve, rand.Reader)
+	if err != nil {
+		t.Fatalf("generate key: %v", err)
+	}
+	point := make([]byte, 64)
+	curve.Params().BitSize = curve.Params().BitSize // no-op clarity
+	private.PublicKey.X.FillBytes(point[:32])
+	private.PublicKey.Y.FillBytes(point[32:])
+	issuerJSON := fmt.Sprintf(`{"kind":"ci","key":"{\"algorithm\":\"ecdsa-p256\",\"public_key\":\"base64:%s\"}"}`,
+		base64.StdEncoding.EncodeToString(point))
+	claim := registryClaim(t, server, issuerJSON)
+	payload, err := canonicalClaimPayload(claim)
+	if err != nil {
+		t.Fatalf("canonical payload: %v", err)
+	}
+	h := sha256.Sum256(payload)
+	r, s, err := ecdsa.Sign(rand.Reader, private, h[:])
+	if err != nil {
+		t.Fatalf("sign: %v", err)
+	}
+	raw := make([]byte, 64)
+	r.FillBytes(raw[:32])
+	s.FillBytes(raw[32:])
+	sigBlob := raw
+	if err := server.store.CreateEvidence(context.Background(), &Evidence{
+		ID: "ev-sig-ecdsa", MediaType: "application/octet-stream", BomKind: "signature",
+		Digest: digestFor(sigBlob), SizeBytes: int64(len(sigBlob)), ValidFrom: time.Now().UTC(), Blob: sigBlob,
+	}); err != nil {
+		t.Fatalf("store signature: %v", err)
+	}
+	claim.ProofRefsJSON = `[{"type":"signature","ref":"ev-sig-ecdsa"}]`
+
+	result := server.verifyClaimSignatureWithRegistry(context.Background(), claim)
+	if result.State != "signature_verified" {
+		t.Fatalf("ECDSA P-256 signature must verify: %+v", result)
+	}
+}
+
+func TestECDSAP384SignatureVerifies(t *testing.T) {
+	store, err := NewSQLiteStore(":memory:")
+	if err != nil {
+		t.Fatalf("new store: %v", err)
+	}
+	defer store.Close()
+	private, err := ecdsa.GenerateKey(elliptic.P384(), rand.Reader)
+	if err != nil {
+		t.Fatalf("generate key: %v", err)
+	}
+	point := make([]byte, 96)
+	private.PublicKey.X.FillBytes(point[:48])
+	private.PublicKey.Y.FillBytes(point[48:])
+	claim := &Claim{
+		ID: "claim-p384", Type: "artifact.produced_by",
+		SubjectJSON: `{"kind":"artifact","digest":"sha256:s"}`,
+		IssuerJSON: fmt.Sprintf(`{"kind":"ci","key":"{\"algorithm\":\"ecdsa-p384\",\"public_key\":\"base64:%s\"}"}`,
+			base64.StdEncoding.EncodeToString(point)),
+		ValidFrom: time.Now().UTC(), ObservedTime: time.Now().UTC(),
+	}
+	payload, err := canonicalClaimPayload(claim)
+	if err != nil {
+		t.Fatalf("payload: %v", err)
+	}
+	h := sha256.Sum256(payload)
+	sigDER, err := ecdsa.SignASN1(rand.Reader, private, h[:])
+	if err != nil {
+		t.Fatalf("sign: %v", err)
+	}
+	var der struct{ R, S *big.Int }
+	if _, err := asn1.Unmarshal(sigDER, &der); err != nil {
+		t.Fatalf("unmarshal: %v", err)
+	}
+	raw := make([]byte, 96)
+	der.R.FillBytes(raw[:48])
+	der.S.FillBytes(raw[48:])
+
+	verifier, err := verifierFromKeyMaterial("ecdsa-p384", "base64:"+base64.StdEncoding.EncodeToString(point))
+	if err != nil {
+		t.Fatalf("verifier: %v", err)
+	}
+	if got := verifySignatureAgainstKey(claim, raw, verifier, false); got.State != "signature_verified" {
+		t.Fatalf("P-384 signature must verify: %+v", got)
+	}
+}
+
+func TestUnsupportedAlgorithmIsRejected(t *testing.T) {
+	_, err := verifierFromKeyMaterial("rsa-2048", "base64:AAAA")
+	if err == nil || !strings.Contains(err.Error(), "not supported") {
+		t.Fatalf("an unsupported algorithm must be rejected explicitly, got %v", err)
 	}
 }

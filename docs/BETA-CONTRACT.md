@@ -53,15 +53,23 @@ The default profile requires:
 - a current-state check;
 - a persisted proof-state record and audit event.
 
-The beta includes two bounded local providers:
+The beta includes these bounded verification providers:
 
 - `ed25519` detached signatures: `issuer.key_json` contains the base64 public key and
   a `signature` proof reference resolves to raw signature bytes in content-addressed
   evidence. The signed payload is the canonical `xoscal-claim-signature-v1` claim
   envelope, excluding proof references themselves.
+- `ecdsa-p256` and `ecdsa-p384` detached signatures: the issuer key carries the raw
+  uncompressed point coordinates (`x || y`, base64) and the signature proof reference
+  resolves to the raw `r || s` signature (64 bytes for P-256, 96 for P-384) over the
+  SHA-256 digest of the same canonical claim envelope.
 - `xoscal-json` policy profiles: a policy reference resolves to a content-addressed
   JSON document with `version: xoscal-policy-v1` and optional relation, BOM-kind,
   issuer-kind, and validity constraints.
+- `xoscal-remote` policy profiles: fetched over HTTPS through the deployment's
+  bounded fetch policy and evaluated as `xoscal-policy-v1` documents.
+- `transparency` proof references resolve to an RFC 6962-style inclusion proof with
+  an Ed25519-signed checkpoint from the configured log.
 
 External evidence fetching is available only when the deployment enables a
 bounded fetch policy (`fetch_policy.enabled`). A fetch is admitted only over

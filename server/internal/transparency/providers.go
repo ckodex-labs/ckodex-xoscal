@@ -2,10 +2,14 @@ package transparency
 
 import (
 	"context"
+	"crypto/ecdsa"
 	"crypto/ed25519"
+	"crypto/elliptic"
+	"crypto/sha256"
 	"encoding/base64"
 	"encoding/json"
 	"fmt"
+	"math/big"
 	"strings"
 	"time"
 )
@@ -16,19 +20,60 @@ type providerResult struct {
 	Message  string
 }
 
+// signatureVerifier abstracts the supported detached-signature algorithms.
+// Every algorithm verifies the same canonical claim payload; the algorithms
+// differ in key encoding and signature byte layout, both documented in
+// docs/BETA-CONTRACT.md.
+type signatureVerifier struct {
+	algorithm string
+	size      int
+	verify    func(payload, signature []byte) bool
+}
+
+// ed25519Verifier adapts an Ed25519 public key: 64-byte raw signatures over
+// the canonical payload directly.
+func ed25519Verifier(publicKey ed25519.PublicKey) signatureVerifier {
+	return signatureVerifier{
+		algorithm: "ed25519",
+		size:      ed25519.SignatureSize,
+		verify: func(payload, sig []byte) bool {
+			return ed25519.Verify(publicKey, payload, sig)
+		},
+	}
+}
+
+// ecdsaVerifier builds a verifier for a raw r||s signature over the SHA-256
+// digest of the canonical payload. size is 2*byteLen(curve).
+func ecdsaVerifier(curve elliptic.Curve, publicX, publicY *big.Int) (signatureVerifier, error) {
+	size := (curve.Params().BitSize + 7) / 8 * 2
+	return signatureVerifier{
+		algorithm: curve.Params().Name,
+		size:      size,
+		verify: func(payload, sig []byte) bool {
+			if len(sig) != size {
+				return false
+			}
+			h := sha256.Sum256(payload)
+			r := new(big.Int).SetBytes(sig[:len(sig)/2])
+			s := new(big.Int).SetBytes(sig[len(sig)/2:])
+			return ecdsa.Verify(&ecdsa.PublicKey{Curve: curve, X: publicX, Y: publicY}, h[:][:], r, s)
+		},
+	}, nil
+}
+
 // verifyClaimSignature verifies the beta detached-signature contract:
-// issuer.key_json contains an Ed25519 public key and the signature proof ref
-// resolves to an evidence blob containing the raw 64-byte signature.
+// issuer.key_json contains a public key and the signature proof ref resolves
+// to an evidence blob containing the raw signature bytes.
 func verifyClaimSignature(ctx context.Context, store Store, claim *Claim) providerResult {
 	signature, result := resolveSignatureEvidence(ctx, store, claim)
 	if result != nil {
 		return *result
 	}
-	publicKey, retired, err := resolveIssuerKey(nil, claim)
+	verifier, retired, err := resolveIssuerVerifier(nil, claim)
 	if err != nil {
 		return providerResult{State: "invalid", Provider: "available", Message: err.Error()}
 	}
-	return verifySignatureAgainstKey(claim, signature, publicKey, retired)
+	return verifySignatureAgainstKey(claim, signature, verifier, retired)
 }
 
 // verifyClaimSignatureWithRegistry verifies the claim signature with the
@@ -41,7 +86,7 @@ func (s *ExchangeServer) verifyClaimSignatureWithRegistry(ctx context.Context, c
 	if result != nil {
 		return *result
 	}
-	publicKey, retired, err := resolveIssuerKey(s.keyRegistry, claim)
+	verifier, retired, err := resolveIssuerVerifier(s.keyRegistry, claim)
 	if err != nil {
 		msg := err.Error()
 		state := "invalid"
@@ -52,7 +97,7 @@ func (s *ExchangeServer) verifyClaimSignatureWithRegistry(ctx context.Context, c
 		}
 		return providerResult{State: state, Provider: provider, Message: msg}
 	}
-	return verifySignatureAgainstKey(claim, signature, publicKey, retired)
+	return verifySignatureAgainstKey(claim, signature, verifier, retired)
 }
 
 // resolveSignatureEvidence locates and validates the signature proof
@@ -86,68 +131,107 @@ func resolveSignatureEvidence(ctx context.Context, store Store, claim *Claim) ([
 	if err != nil {
 		return nil, &providerResult{State: "unverified", Provider: "available", Message: fmt.Sprintf("signature evidence is unavailable: %v", err)}
 	}
-	if len(signature) != ed25519.SignatureSize {
-		return nil, &providerResult{State: "invalid", Provider: "available", Message: "signature evidence is not a 64-byte Ed25519 signature"}
-	}
 	return signature, nil
 }
 
-// resolveIssuerKey returns the Ed25519 public key for a claim issuer. The
+// resolveIssuerVerifier resolves the claim issuer's key to a verifier. The
 // inline `key` object wins when present; otherwise the registry resolves the
 // issuer's key_id. The second return value flags a retired key so the
 // diagnostic can surface the rotation.
-func resolveIssuerKey(registry *KeyRegistry, claim *Claim) (ed25519.PublicKey, bool, error) {
+func resolveIssuerVerifier(registry *KeyRegistry, claim *Claim) (signatureVerifier, bool, error) {
 	var issuer map[string]string
 	if err := json.Unmarshal([]byte(claim.IssuerJSON), &issuer); err != nil {
-		return nil, false, fmt.Errorf("claim issuer is not valid JSON")
+		return signatureVerifier{}, false, fmt.Errorf("claim issuer is not valid JSON")
 	}
 	if inline, ok := issuer["key"]; ok && strings.TrimSpace(inline) != "" {
-		var key struct {
-			Algorithm string `json:"algorithm"`
-			PublicKey string `json:"public_key"`
-		}
-		if err := json.Unmarshal([]byte(inline), &key); err != nil {
-			return nil, false, fmt.Errorf("issuer key metadata is not valid JSON")
-		}
-		if key.Algorithm != "ed25519" {
-			return nil, false, fmt.Errorf("issuer key algorithm must be ed25519")
-		}
-		publicKey, err := decodeBase64Key(key.PublicKey)
-		if err != nil || len(publicKey) != ed25519.PublicKeySize {
-			return nil, false, fmt.Errorf("issuer public key is not a valid Ed25519 key")
-		}
-		return ed25519.PublicKey(publicKey), false, nil
+		return verifierFromKeyJSON(inline)
 	}
 
 	keyID := strings.TrimSpace(issuer["key_id"])
 	if keyID == "" {
-		return nil, false, fmt.Errorf("issuer has neither an inline key nor a key_id")
+		return signatureVerifier{}, false, fmt.Errorf("issuer has neither an inline key nor a key_id")
 	}
 	entry, ok := registry.lookup(keyID)
 	if !ok {
 		// Unknown key IDs are unavailable, not invalid: the registry may not
 		// know keys that a later rotation introduces.
-		return nil, false, fmt.Errorf("issuer key_id %q is not registered", keyID)
+		return signatureVerifier{}, false, fmt.Errorf("issuer key_id %q is not registered", keyID)
 	}
-	if entry.Algorithm != "ed25519" {
-		return nil, false, fmt.Errorf("registered key %q algorithm must be ed25519", keyID)
+	verifier, err := verifierFromKeyMaterial(entry.Algorithm, entry.PublicKey)
+	if err != nil {
+		return signatureVerifier{}, false, fmt.Errorf("registered key %q: %v", keyID, err)
 	}
-	publicKey, err := decodeBase64Key(entry.PublicKey)
-	if err != nil || len(publicKey) != ed25519.PublicKeySize {
-		return nil, false, fmt.Errorf("registered key %q is not a valid Ed25519 key", keyID)
+	return verifier, entry.Status == "retired", nil
+}
+
+// verifierFromKeyJSON parses an inline issuer key object.
+func verifierFromKeyJSON(raw string) (signatureVerifier, bool, error) {
+	var key struct {
+		Algorithm string `json:"algorithm"`
+		PublicKey string `json:"public_key"`
 	}
-	return ed25519.PublicKey(publicKey), entry.Status == "retired", nil
+	if err := json.Unmarshal([]byte(raw), &key); err != nil {
+		return signatureVerifier{}, false, fmt.Errorf("issuer key metadata is not valid JSON")
+	}
+	verifier, err := verifierFromKeyMaterial(key.Algorithm, key.PublicKey)
+	if err != nil {
+		return signatureVerifier{}, false, err
+	}
+	return verifier, false, nil
+}
+
+// verifierFromKeyMaterial decodes a base64 public key for a supported
+// algorithm: ed25519 (32-byte key, 64-byte signature) or ECDSA P-256/P-384
+// (raw x||y point coordinates, raw r||s signature over the SHA-256 digest).
+func verifierFromKeyMaterial(algorithm, encodedKey string) (signatureVerifier, error) {
+	publicKey, err := decodeBase64Key(encodedKey)
+	if err != nil {
+		return signatureVerifier{}, fmt.Errorf("issuer public key is not valid base64")
+	}
+	switch algorithm {
+	case "ed25519":
+		if len(publicKey) != ed25519.PublicKeySize {
+			return signatureVerifier{}, fmt.Errorf("issuer public key is not a valid Ed25519 key")
+		}
+		return ed25519Verifier(ed25519.PublicKey(publicKey)), nil
+	case "ecdsa-p256", "ecdsa-p384":
+		size := pointSize(algorithm)
+		if len(publicKey) != 2*size {
+			return signatureVerifier{}, fmt.Errorf("issuer public key is not a valid %s point", algorithm)
+		}
+		curve := elliptic.P256()
+		if algorithm == "ecdsa-p384" {
+			curve = elliptic.P384()
+		}
+		verifier, err := ecdsaVerifier(curve, new(big.Int).SetBytes(publicKey[:size]), new(big.Int).SetBytes(publicKey[size:]))
+		if err != nil {
+			return signatureVerifier{}, err
+		}
+		return verifier, nil
+	default:
+		return signatureVerifier{}, fmt.Errorf("signature algorithm %q is not supported", algorithm)
+	}
+}
+
+func pointSize(algorithm string) int {
+	if algorithm == "ecdsa-p384" {
+		return 48
+	}
+	return 32
 }
 
 // verifySignatureAgainstKey verifies the detached signature against a
-// resolved issuer public key. A retired key still verifies; the caller
+// resolved issuer verifier. A retired key still verifies; the caller
 // surfaces the rotation in the result message.
-func verifySignatureAgainstKey(claim *Claim, signature []byte, publicKey ed25519.PublicKey, retired bool) providerResult {
+func verifySignatureAgainstKey(claim *Claim, signature []byte, verifier signatureVerifier, retired bool) providerResult {
 	payload, err := canonicalClaimPayload(claim)
 	if err != nil {
 		return providerResult{State: "invalid", Provider: "available", Message: fmt.Sprintf("canonical claim payload: %v", err)}
 	}
-	if !ed25519.Verify(publicKey, payload, signature) {
+	if len(signature) != verifier.size {
+		return providerResult{State: "invalid", Provider: "available", Message: fmt.Sprintf("signature evidence is not a %d-byte %s signature", verifier.size, verifier.algorithm)}
+	}
+	if !verifier.verify(payload, signature) {
 		return providerResult{State: "invalid", Provider: "available", Message: "signature does not match the canonical claim payload"}
 	}
 	if retired {
