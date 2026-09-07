@@ -110,6 +110,14 @@ jobs:
         if: steps.latest.outputs.tag == ''
         run: echo "No releases found, skipping verification."
 
+      - name: Log in to GHCR
+        if: steps.latest.outputs.tag != ''
+        uses: docker/login-action@c94ce9fb468520275223c153574b00df6fe4bcc9 # v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Verify image attestation (GitHub-signed)
         if: steps.latest.outputs.tag != ''
         run: |
