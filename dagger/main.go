@@ -73,12 +73,20 @@ func (m *Xoscal) base(source *dagger.Directory) *dagger.Container {
 		WithWorkdir("/src")
 }
 
-// Build compiles a static release binary and returns it.
+// Build compiles a static release binary for xoscal-server and returns it.
 func (m *Xoscal) Build(source *dagger.Directory) *dagger.File {
 	ldflags := fmt.Sprintf("-ldflags=-s -w -X main.version=%s", m.Version)
 	return m.base(source).
 		WithExec([]string{"go", "build", ldflags, "-o", "/bin/xoscal-server", "./server/cmd/xoscal-server"}).
 		File("/bin/xoscal-server")
+}
+
+// BuildCtl compiles a static release binary for xoscal-ctl CLI and returns it.
+func (m *Xoscal) BuildCtl(source *dagger.Directory) *dagger.File {
+	ldflags := fmt.Sprintf("-ldflags=-s -w -X main.version=%s", m.Version)
+	return m.base(source).
+		WithExec([]string{"go", "build", ldflags, "-o", "/bin/xoscal-ctl", "./server/cmd/xoscal-ctl"}).
+		File("/bin/xoscal-ctl")
 }
 
 // Test runs unit tests.

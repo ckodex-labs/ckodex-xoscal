@@ -16,6 +16,22 @@ builds:
       - -s -w -X main.version={{.Version}}
     mod_timestamp: "{{ .CommitTimestamp }}"
 
+  - id: xoscal-ctl
+    main: ./server/cmd/xoscal-ctl
+    binary: xoscal-ctl
+    env:
+      - CGO_ENABLED=0
+    goos:
+      - linux
+      - darwin
+      - windows
+    goarch:
+      - amd64
+      - arm64
+    ldflags:
+      - -s -w -X main.version={{.Version}}
+    mod_timestamp: "{{ .CommitTimestamp }}"
+
 archives:
   - id: xoscal
     formats: [tar.gz]

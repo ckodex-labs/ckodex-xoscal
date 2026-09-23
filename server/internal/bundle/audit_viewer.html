@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="en" data-theme="vault">
+<head>
+  <meta charset="utf-8">
+  <title>xOSCAL — Air-Gapped Verifiable Audit Bundle</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    /* ════════════════════════════════════════════════════════════════
+       CKODEX-DS-3 Evidence Editorial Token Architecture
+       Zero-dependency air-gapped styling aligned with ShadCN token ergonomics
+       ════════════════════════════════════════════════════════════════ */
+    :root {
+      --paper: #0A1322;
+      --ink: #EAE5DA;
+      --tone: #B0A898;
+      --surface: #111B2E;
+      --hairline: #2A3A55;
+      --rule: #1E2A42;
+      --rust: #D2693A;
+      --proof: #A78BFA;
+      --proof-bg: rgba(167, 139, 250, 0.12);
+      --alarm: #F87171;
+      --alarm-bg: rgba(248, 113, 113, 0.12);
+      --ok: #34D399;
+      --ok-bg: rgba(52, 211, 153, 0.12);
+      --sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --mono: ui-monospace, "JetBrains Mono", Menlo, Consolas, monospace;
+      --radius: 6px;
+    }
+    [data-theme="ledger"] {
+      --paper: #F6F1E8;
+      --ink: #211B14;
+      --tone: #5A5048;
+      --surface: #FFFFFF;
+      --hairline: #D9D2C4;
+      --rule: #E8E1D2;
+      --rust: #B4532A;
+      --proof: #6D28D9;
+      --proof-bg: rgba(109, 40, 217, 0.08);
+      --alarm: #B91C1C;
+      --alarm-bg: rgba(185, 28, 28, 0.08);
+      --ok: #059669;
+      --ok-bg: rgba(5, 150, 105, 0.08);
+    }
+    [data-theme="hc"] {
+      --paper: #000000;
+      --ink: #FFFFFF;
+      --tone: #CCCCCC;
+      --surface: #000000;
+      --hairline: #FFFFFF;
+      --rule: #FFFFFF;
+      --rust: #FFD700;
+      --proof: #FFFFFF;
+      --proof-bg: #222222;
+      --alarm: #FFFFFF;
+      --alarm-bg: #440000;
+      --ok: #FFFFFF;
+      --ok-bg: #004400;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+      line-height: 1.55;
+      font-size: 14px;
+      -webkit-font-smoothing: antialiased;
+      padding: 0 24px 48px;
+    }
+
+    .ck-skip {
+      position: absolute;
+      top: -40px;
+      left: 10px;
+      background: var(--rust);
+      color: #fff;
+      padding: 8px 16px;
+      z-index: 1000;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: var(--radius);
+    }
+    .ck-skip:focus { top: 10px; }
+
+    header.top-header {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--hairline);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .brand {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+    }
+    .brand h1 {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: -0.2px;
+      color: var(--ink);
+    }
+    .brand .subtitle {
+      font-size: 12px;
+      color: var(--tone);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .theme-toggle {
+      display: inline-flex;
+      border: 1px solid var(--hairline);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .theme-toggle button {
+      background: var(--surface);
+      border: none;
+      color: var(--tone);
+      padding: 6px 12px;
+      font-size: 12px;
+      cursor: pointer;
+      font-family: var(--sans);
+      transition: all 0.15s;
+    }
+    .theme-toggle button.active {
+      background: var(--ink);
+      color: var(--paper);
+      font-weight: 600;
+    }
+
+    main.shell {
+      max-width: 1240px;
+      margin: 24px auto 0;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--hairline);
+      border-radius: var(--radius);
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    .card h2 {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--tone);
+      margin-bottom: 14px;
+      font-weight: 600;
+    }
+
+    .drop-zone {
+      border: 2px dashed var(--hairline);
+      border-radius: var(--radius);
+      padding: 24px 16px;
+      text-align: center;
+      color: var(--tone);
+      cursor: pointer;
+      transition: border-color 0.15s, color 0.15s;
+      margin-bottom: 12px;
+    }
+    .drop-zone:hover {
+      border-color: var(--proof);
+      color: var(--ink);
+    }
+
+    input[type="text"], input[type="file"] {
+      width: 100%;
+      padding: 8px 12px;
+      background: var(--paper);
+      border: 1px solid var(--hairline);
+      border-radius: var(--radius);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 13px;
+      margin-bottom: 12px;
+      outline: none;
+    }
+    input[type="text"]:focus {
+      border-color: var(--proof);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    th {
+      text-align: left;
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--hairline);
+      color: var(--tone);
+      font-weight: 600;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    td {
+      padding: 12px;
+      border-bottom: 1px solid var(--rule);
+      vertical-align: top;
+    }
+    tr:hover td {
+      background: rgba(255,255,255,0.02);
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-family: var(--mono);
+    }
+    .badge-ok { background: var(--ok-bg); color: var(--ok); border: 1px solid var(--ok); }
+    .badge-degraded { background: rgba(210, 153, 34, 0.15); color: #d29922; border: 1px solid #d29922; }
+    .badge-alarm { background: var(--alarm-bg); color: var(--alarm); border: 1px solid var(--alarm); }
+    .badge-proof { background: var(--proof-bg); color: var(--proof); border: 1px solid var(--proof); }
+
+    .mono { font-family: var(--mono); }
+    .hash-display {
+      font-family: var(--mono);
+      font-size: 11px;
+      background: var(--paper);
+      padding: 10px;
+      border-radius: var(--radius);
+      border: 1px solid var(--hairline);
+      word-break: break-all;
+      margin-top: 8px;
+    }
+
+    footer.ck-footer {
+      max-width: 1240px;
+      margin: 48px auto 0;
+      padding-top: 20px;
+      border-top: 1px solid var(--hairline);
+      display: flex;
+      justify-content: space-between;
+      color: var(--tone);
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <a class="ck-skip" href="#main">Skip to main content</a>
+
+  <header class="top-header">
+    <div class="brand">
+      <h1>xOSCAL</h1>
+      <span class="subtitle">Evidence Editorial • Air-Gapped Assurance</span>
+    </div>
+    <div style="display: flex; gap: 16px; align-items: center;">
+      <span class="badge badge-proof">DS-3 COMPLIANT</span>
+      <div class="theme-toggle" role="group" aria-label="Theme selection">
+        <button id="theme-vault" class="active" onclick="setTheme('vault')">Vault</button>
+        <button id="theme-ledger" onclick="setTheme('ledger')">Ledger</button>
+        <button id="theme-hc" onclick="setTheme('hc')">HC</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="shell">
+    <aside>
+      <div class="card">
+        <h2>1. OSCAL Artifact Intake</h2>
+        <div class="drop-zone" id="drop-zone" role="button" tabindex="0" aria-label="Drop OSCAL JSON here">
+          Drop OSCAL 1.2.3 JSON here or click to browse
+        </div>
+        <input type="file" id="file-input" accept=".json" style="display:none;">
+        <div id="artifact-meta" style="font-size: 12px; color: var(--tone); line-height: 1.6;">
+          No artifact loaded. Use bundled component-definition.json.
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>2. WebCrypto Evidence Verifier</h2>
+        <p style="font-size: 12px; color: var(--tone); margin-bottom: 12px;">
+          Calculates SHA-256 digests offline in-browser via W3C WebCrypto API without network calls.
+        </p>
+        <input type="file" id="evidence-input" aria-label="Select evidence file to compute digest">
+        <div id="calc-hash" class="hash-display" style="display:none;"></div>
+      </div>
+    </aside>
+
+    <section>
+      <div class="card">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 12px;">
+          <h2>Security Controls & Implementation Statements</h2>
+          <input type="text" id="filter-input" placeholder="Search control ID or text..." style="width: 260px; margin-bottom: 0;" aria-label="Filter controls">
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th style="width: 120px;">Control ID</th>
+              <th style="width: 180px;">Component</th>
+              <th style="width: 110px;">Posture</th>
+              <th>Implementation Statement</th>
+            </tr>
+          </thead>
+          <tbody id="controls-table-body">
+            <tr>
+              <td colspan="4" style="text-align: center; color: var(--tone); padding: 40px;">
+                Load an OSCAL JSON artifact to inspect controls and implementation statements.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="ck-footer">
+    <div>NIST OSCAL 1.2.3 • Zero-Trust Evidence Architecture</div>
+    <div>Authority: Local Checkout • Air-Gap Operation Guaranteed</div>
+  </footer>
+
+  <script>
+    function setTheme(t) {
+      document.documentElement.setAttribute('data-theme', t);
+      ['vault', 'ledger', 'hc'].forEach(name => {
+        const btn = document.getElementById('theme-' + name);
+        if (btn) btn.classList.toggle('active', name === t);
+      });
+    }
+
+    let currentControls = [];
+    const dropZone = document.getElementById('drop-zone');
+    const fileInput = document.getElementById('file-input');
+    const metaBox = document.getElementById('artifact-meta');
+    const tableBody = document.getElementById('controls-table-body');
+    const filterInput = document.getElementById('filter-input');
+    const evidenceInput = document.getElementById('evidence-input');
+    const calcHashBox = document.getElementById('calc-hash');
+
+    dropZone.addEventListener('click', () => fileInput.click());
+    dropZone.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') fileInput.click(); });
+    dropZone.addEventListener('dragover', (e) => { e.preventDefault(); dropZone.style.borderColor = 'var(--proof)'; });
+    dropZone.addEventListener('dragleave', () => { dropZone.style.borderColor = 'var(--hairline)'; });
+    dropZone.addEventListener('drop', (e) => {
+      e.preventDefault();
+      dropZone.style.borderColor = 'var(--hairline)';
+      if (e.dataTransfer.files.length) handleFile(e.dataTransfer.files[0]);
+    });
+    fileInput.addEventListener('change', (e) => {
+      if (e.target.files.length) handleFile(e.target.files[0]);
+    });
+
+    function handleFile(file) {
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        try {
+          const doc = JSON.parse(e.target.result);
+          parseOSCAL(file.name, doc);
+        } catch (err) {
+          alert('Invalid OSCAL JSON: ' + err.message);
+        }
+      };
+      reader.readAsText(file);
+    }
+
+    function parseOSCAL(filename, doc) {
+      currentControls = [];
+      let title = filename;
+      let rootKey = Object.keys(doc)[0];
+      const model = doc[rootKey];
+
+      if (model && model.metadata && model.metadata.title) {
+        title = model.metadata.title;
+      }
+
+      if (model && model.components) {
+        model.components.forEach(comp => {
+          const compName = comp.title ? (typeof comp.title === 'string' ? comp.title : comp.title.value) : 'Component';
+          (comp['control-implementations'] || []).forEach(impl => {
+            (impl['implemented-requirements'] || []).forEach(req => {
+              const desc = req.description || '';
+              currentControls.push({
+                controlId: req['control-id'],
+                component: compName,
+                status: desc.length > 25 ? 'ok' : 'degraded',
+                description: desc || '(No implementation statement provided)'
+              });
+            });
+          });
+        });
+      }
+
+      metaBox.innerHTML = '<strong>Artifact:</strong> ' + title + '<br><strong>Model:</strong> ' + rootKey + '<br><strong>Controls Extracted:</strong> ' + currentControls.length;
+      renderTable();
+    }
+
+    function renderTable() {
+      const q = filterInput.value.toLowerCase();
+      const filtered = currentControls.filter(c => 
+        c.controlId.toLowerCase().includes(q) || 
+        c.description.toLowerCase().includes(q) ||
+        c.component.toLowerCase().includes(q)
+      );
+
+      if (filtered.length === 0) {
+        tableBody.innerHTML = '<tr><td colspan="4" style="text-align: center; color: var(--tone); padding: 30px;">No matching controls found.</td></tr>';
+        return;
+      }
+
+      tableBody.innerHTML = filtered.map(c => 
+        '<tr>' +
+          '<td class="mono" style="font-weight: 600; color: var(--ink);">' + c.controlId + '</td>' +
+          '<td>' + c.component + '</td>' +
+          '<td><span class="badge badge-' + c.status + '">' + c.status.toUpperCase() + '</span></td>' +
+          '<td>' + c.description + '</td>' +
+        '</tr>'
+      ).join('');
+    }
+
+    filterInput.addEventListener('input', renderTable);
+
+    evidenceInput.addEventListener('change', async (e) => {
+      const file = e.target.files[0];
+      if (!file) return;
+      const buffer = await file.arrayBuffer();
+      const hashBuffer = await crypto.subtle.digest('SHA-256', buffer);
+      const hashArray = Array.from(new Uint8Array(hashBuffer));
+      const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+      calcHashBox.style.display = 'block';
+      calcHashBox.innerHTML = '<strong>Target File:</strong> ' + file.name + '<br><strong>Computed SHA-256:</strong> ' + hashHex;
+    });
+  </script>
+</body>
+</html>

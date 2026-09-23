@@ -36,12 +36,14 @@ RUN if [ "$LANCEDB" = "true" ]; then \
     fi
 
 RUN CGO_ENABLED=0 go build -ldflags="-s -w" -o /bin/xoscal-backup ./server/cmd/xoscal-backup
+RUN CGO_ENABLED=0 go build -ldflags="-s -w" -o /bin/xoscal-ctl ./server/cmd/xoscal-ctl
 
 # Runtime stage: base image includes glibc required by CGO-linked LanceDB binaries
 FROM gcr.io/distroless/base-debian12:nonroot@sha256:b12529fbbd0bb15eea8905f69d83148679e0b4d7d434c8808100792029b1caae
 WORKDIR /data
 COPY --from=builder /bin/xoscal-server /xoscal-server
 COPY --from=builder /bin/xoscal-backup /xoscal-backup
+COPY --from=builder /bin/xoscal-ctl /xoscal-ctl
 COPY --from=builder /app/k8s/server/configmap.yaml /etc/xoscal/config.yaml
 EXPOSE 50051 9090
 ENTRYPOINT ["/xoscal-server"]

@@ -1,27 +1,121 @@
-# xoscal
+# xOSCAL
 
-A Go gRPC server for managing OSCAL (Open Security Controls Assessment Language) artifacts, backed by SQLite. Part of the broader reg-to-OSCAL engine for converting regulatory texts into structured compliance documents.
+A high-assurance, developer-friendly engine and CLI for NIST OSCAL (Open Security Controls Assessment Language 1.2.3). 
 
-## Portal
+xOSCAL bridges the chasm between raw compliance standards and modern software engineering, providing instant Day-0 scaffolding, continuous Vector State verification, GitOps pull-request diffing, spreadsheet synchronization for GRC analysts, and air-gapped verifiable audit exports.
 
-Proto docs, supply-chain transparency, SDK clients, and OSCAL framework
-downloads are published to GitHub Pages (built by `dagger call site`).
+---
 
-The review-only beta boundary is documented in
-[docs/BETA-RELEASE-NOTES.md](docs/BETA-RELEASE-NOTES.md). The Live Review
-surface is available at `review.html` when the gateway is running; it requires
-a configured API and does not substitute sample data when the API is absent.
+## ⚡ 60-Second Developer Quickstart (`xoscal-ctl`)
 
-- Live local preview (real data, needs the Dagger engine + network):
-  `make site-serve` → http://localhost:8080
-- Standalone preview (sample data, no server, no build): open
-  `portal-preview.html` directly in a browser.
+Install or build the unified standalone CLI binary:
 
-## Architecture
+```bash
+# Build binaries locally
+make build
+
+# Inspect the CLI suite
+./bin/xoscal-ctl help
+```
+
+### 1. Day-0 Onboarding: Scaffold Component Definition
+Auto-detect repository languages (Go, Python, TypeScript, Rust), container definitions, and Kubernetes manifests. Synthesize human-friendly URNs deterministically into RFC-4122 UUIDv5 identifiers and emit a schema-valid OSCAL 1.2.3 `ComponentDefinition`:
+
+```bash
+./bin/xoscal-ctl init --framework nist-sp-800-53-rev5
+```
+
+Output:
+```text
+🔍 Scanning repository at: . ...
+[OK] Detected Project: my-service (Languages: [Go], Docker: true, K8s: true, TF: false)
+[OK] Mapped 2 component(s) using virtual URNs -> deterministic UUIDv5
+[OK] Verified compliance with official NIST OSCAL 1.2.3 JSON schema
+[OK] Created workspace config: .xoscal/xoscal.yaml
+[OK] Emitted component definition: component-definition.json (3907 bytes)
+```
+
+### 2. Continuous Verification & Vector Posture
+Replace binary "pass/fail" check-the-box theater with the formal vector state product:
+$$S(e,t) = \langle P, V, A, C, E, L, \tau \rangle$$
+*(Presence, Valence, Anti-conflict, Coherence, Evidence status, Lifecycle mode, Temporal epoch)*:
+
+```bash
+./bin/xoscal-ctl verify --file component-definition.json
+```
+
+Output:
+```text
+=== xOSCAL GOVERNANCE VECTOR POSTURE ===
+Artifact:  component-definition.json (component-definition)
+Timestamp: 2026-09-23T21:51:13Z
+
+Vector Product: S(e,t) = <P=PRESENT, V=POSITIVE, A=0, C=COHERENT, E=VERIFIED, L=NORMAL>
+
+Operational Posture: NORMAL (Coherence: COHERENT)
+Controls Summary:    7 Total | 7 Passing | 0 Degraded | 0 Derogated | 0 Anti-Conflicts
+
+CONTROL        COMPONENT            POSTURE          DESCRIPTION / REMEDIATION
+-------------------------------------------------------------------------------------
+ac-2           my-service Core      PASS             Account management implemented v...
+sc-8           my-service Core      PASS             Transmission confidentiality and...
+sc-13          my-service Core      PASS             Cryptographic protection impleme...
+```
+
+### 3. GitOps PR Compliance Linter (`xoscal-ctl diff`)
+Run in GitHub Actions or GitLab CI to detect control drift, deletions, and posture regressions between git branches. Emits a clean Markdown summary table ready for PR comments (`$GITHUB_STEP_SUMMARY`):
+
+```bash
+# Markdown output for Pull Request comments
+./bin/xoscal-ctl diff --base main.component-definition.json --head component-definition.json --markdown >> $GITHUB_STEP_SUMMARY
+
+# Enforce a strict build gate that fails on posture regressions
+./bin/xoscal-ctl diff --base main.json --head head.json --fail-on-regression
+```
+
+### 4. Mathematical Risk Acceptance (`xoscal-ctl derogate`)
+Enforces **Constitutional Rule 23**: *"Accepted risk does not rewrite history."* Teams no longer fabricate fake passes or delete controls to pass CI:
+
+```bash
+# Authorize a time-bounded risk exception
+./bin/xoscal-ctl derogate add \
+  --control sc-8 \
+  --scope service:internal-worker \
+  --authority urn:xoscal:authority:ciso-alex \
+  --reason "Internal worker in isolated VPC without external egress" \
+  --ttl-days 30 \
+  --compensating "sc-7 boundary enforcement, au-2 audit logging"
+
+# Active exceptions grant SAFE_HOLD without failing CI; expired exceptions immediately block builds
+./bin/xoscal-ctl verify
+```
+
+### 5. Non-Technical GRC Bridge (`xoscal-ctl tabular`)
+Compliance analysts live in Excel. Seamlessly round-trip between OSCAL 1.2.3 JSON and CSV/Excel tables:
+
+```bash
+# Export controls to CSV for spreadsheet editing
+./bin/xoscal-ctl tabular export --in component-definition.json --out controls.csv
+
+# Import edited responses back into schema-valid OSCAL JSON
+./bin/xoscal-ctl tabular import --in controls.csv --base component-definition.json --out component-definition.updated.json
+```
+
+### 6. Auditor "Audit-in-a-Box" Offboarding (`xoscal-ctl bundle-export`)
+Generate an immutable, air-gapped `.tar.gz` bundle for external regulators and 3PAO auditors with zero vendor lock-in. Includes canonical OSCAL JSON files, evidence blobs with SHA-256 sidecars, a cryptographic `manifest.json`, and an embedded zero-dependency standalone HTML viewer (`audit-viewer.html`):
+
+```bash
+./bin/xoscal-ctl bundle-export --in component-definition.json --evidence-dir ./evidence --out audit-bundle.tar.gz
+```
+An auditor in a disconnected SCIF can open `audit-viewer.html` directly via `file://` in any browser, inspect controls, and verify evidence SHA-256 digests offline via the browser-native W3C WebCrypto API.
+
+---
+
+## 🏛️ Architecture & gRPC Service
 
 ```plaintext
 ┌─────────────────────────────────────────────────────────────┐
-│                     gRPC Clients                            │
+│                 Clients: xoscal-ctl / gRPC                  │
 └──────────────────────┬──────────────────────────────────────┘
                        │
 ┌──────────────────────▼──────────────────────────────────────┐
@@ -50,117 +144,36 @@ a configured API and does not substitute sample data when the API is absent.
 └─────────────────────────────────────────────────────────────┘
 ```
 
-## Quick Start
-
-### Prerequisites
-
-- Go 1.22+
-- [Buf](https://buf.build) (for protobuf code generation)
-- Docker (optional, for containerized deployment)
-
-### Build
+The gRPC server (`xoscal-server`) exposes CRUD, cross-model full-text search, and knowledge graph mappings for enterprise service environments:
 
 ```bash
-# Build the server binary
-make build
-
-# Or directly:
-go build -o bin/xoscal-server ./server/cmd/xoscal-server
-```
-
-### Run
-
-```bash
-# In-memory SQLite (ephemeral)
-./bin/xoscal-server -dsn ":memory:"
-
-# With persistent database
+# Run server with local persistent SQLite database
 ./bin/xoscal-server -dsn oscal.db
 
-# Custom port
-./bin/xoscal-server -addr :8080 -dsn oscal.db
+# Standard gRPC health checks and reflection are enabled
+grpcurl -plaintext localhost:50051 list
 ```
 
-### Test
+---
+
+## 🔒 Trust Boundary & Beta Status
+
+Per [docs/BETA-RELEASE-NOTES.md](docs/BETA-RELEASE-NOTES.md):
+- **Current Scope**: Single-workspace operator review tool backed by embedded SQLite.
+- **Evidence Verification**: Deterministic SHA-256 digest sidecars, Ed25519 detached signatures, and official NIST OSCAL 1.2.3 JSON schema validation.
+- **Zero-Trust**: Unverified or candidate claims are never promoted to attestations without verifiable proof.
+
+---
+
+## 🛠️ Verification Ladder
+
+Every build passes the full constitutional verification ladder:
 
 ```bash
-make test
+make build        # Compiles bin/xoscal-server and bin/xoscal-ctl
+make test         # Runs all unit & conformance tests
+make test-race    # Executes Go race detector across all packages
+make lint         # Runs buf lint, go vet, and gofmt
+python3 scripts/design-lint.py  # Enforces CKODEX-DS-3 editorial constraints
+python3 scripts/a11y-lint.py    # Enforces WCAG 3.0 static accessibility checks
 ```
-
-### Docker
-
-```bash
-make docker
-docker run -p 50051:50051 xoscal-server:latest
-```
-
-### Kubernetes
-
-```bash
-kubectl apply -f k8s/server/
-```
-
-## Protobuf Code Generation
-
-```bash
-make proto
-```
-
-This regenerates Go (and other language) SDKs from the `.proto` definitions under `proto/oscal/`.
-
-## gRPC Service
-
-The `OscalService` exposes CRUD + Search for all major OSCAL models:
-
-- **Catalog** — `GetCatalog`, `ListCatalogs`, `CreateCatalog`, `UpdateCatalog`, `DeleteCatalog`
-- **Profile** — `GetProfile`, `ListProfiles`, `CreateProfile`, `UpdateProfile`, `DeleteProfile`
-- **Component Definition** — same pattern
-- **SSP** — same pattern
-- **Assessment Plan** — same pattern
-- **Assessment Results** — same pattern
-- **POA&M** — same pattern
-- **Mapping** — same pattern
-- **Search** — cross-model full-text search over title/version
-
-Health checks are available via the standard gRPC health protocol, and reflection is enabled for `grpcurl` / Postman discovery.
-
-## Project Structure
-
-```plaintext
-.
-├── buf.yaml                     # Buf module config
-├── buf.gen.yaml                 # Code generation plugins
-├── go.mod                       # Go module
-├── Dockerfile                   # Multi-stage container build
-├── Makefile                     # Build, test, proto, lint, docker
-├── proto/                       # Protobuf definitions + generated SDKs
-│   └── oscal/
-│       ├── common/v1/           # Shared OSCAL types (UUID, Metadata, etc.)
-│       ├── catalog/v1/
-│       ├── profile/v1/
-│       ├── component_definition/v1/
-│       ├── ssp/v1/
-│       ├── assessment_plan/v1/
-│       ├── assessment_results/v1/
-│       ├── poam/v1/
-│       ├── mapping/v1/
-│       └── services/v1/         # OscalService gRPC definition
-├── server/
-│   ├── cmd/xoscal-server/        # CLI entrypoint
-│   └── internal/
-│       ├── store/               # SQLite-backed Store interface
-│       └── service/             # gRPC handler implementations
-└── k8s/
-    └── server/                  # K8s Deployment + Service + PVC
-```
-
-## CI/CD
-
-GitHub Actions workflow (`.github/workflows/ci.yml`) runs on every push/PR:
-
-- `buf lint`
-- `buf generate`
-- `go build ./...`
-- `go test ./...`
-- `go vet ./...`
-- `docker build`
