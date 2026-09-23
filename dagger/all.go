@@ -14,6 +14,7 @@ func (m *Xoscal) All(source *dagger.Directory) *dagger.Directory {
 	specreg := m.SpecRegistryCheck(source)
 	schemaval := m.OscalSchemaValidation(source, fw)
 	constraints := m.OscalConstraintValidation(source, fw)
+	badges := m.Badges(source)
 
 	return dag.Directory().
 		WithFile("lint.ok", lint.File("/tmp/lint.ok")).
@@ -23,5 +24,6 @@ func (m *Xoscal) All(source *dagger.Directory) *dagger.Directory {
 		WithFile("specreg.ok", specreg.File("/tmp/specreg.ok")).
 		WithFile("schema.ok", schemaval.File("/tmp/schema.ok")).
 		WithFile("constraints.ok", constraints.File("/tmp/constraints.ok")).
-		WithFile("gosec-results.sarif", sec)
+		WithFile("gosec-results.sarif", sec).
+		WithDirectory("badges", badges)
 }

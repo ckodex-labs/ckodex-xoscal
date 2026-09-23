@@ -1,5 +1,29 @@
 # xOSCAL
 
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://shieldcn.dev/header/graph.svg?title=xOSCAL&subtitle=High-Assurance+NIST+OSCAL+Engine+%26+CLI&logo=shield&theme=zinc&mode=dark" />
+    <img alt="xOSCAL" src="https://shieldcn.dev/header/graph.svg?title=xOSCAL&subtitle=High-Assurance+NIST+OSCAL+Engine+%26+CLI&logo=shield&theme=zinc&mode=light" />
+  </picture>
+</p>
+
+<p align="center">
+  <a href="https://github.com/ckodex-labs/ckodex-xoscal/releases"><img src="https://shieldcn.dev/github/release/ckodex-labs/ckodex-xoscal.svg?variant=secondary" alt="Release" /></a>
+  <a href="https://github.com/ckodex-labs/ckodex-xoscal/actions/workflows/ci.yml"><img src="https://shieldcn.dev/github/ci/ckodex-labs/ckodex-xoscal.svg?workflow=ci.yml&branch=main&variant=secondary" alt="CI Status" /></a>
+  <a href="https://github.com/ckodex-labs/ckodex-xoscal/blob/main/LICENSE"><img src="https://shieldcn.dev/github/license/ckodex-labs/ckodex-xoscal.svg?variant=secondary" alt="License" /></a>
+  <a href="https://github.com/ckodex-labs/ckodex-xoscal/commits/main"><img src="https://shieldcn.dev/github/last-commit/ckodex-labs/ckodex-xoscal.svg?variant=secondary" alt="Last commit" /></a>
+  <a href="https://github.com/ckodex-labs/ckodex-xoscal/stargazers"><img src="https://shieldcn.dev/github/stars/ckodex-labs/ckodex-xoscal.svg?variant=secondary" alt="Stars" /></a>
+</p>
+
+<p align="center">
+  <a href="https://pages.nist.gov/OSCAL/"><img src="https://shieldcn.dev/badge/OSCAL-1.2.3%20Complete-18181b.svg?variant=secondary" alt="OSCAL 1.2.3" /></a>
+  <a href="https://go.dev/"><img src="https://shieldcn.dev/badge/Go-1.24+-18181b.svg?logo=go&variant=secondary" alt="Go 1.24+" /></a>
+  <a href="https://dagger.io/"><img src="https://shieldcn.dev/badge/Dagger-CI%2FCD-18181b.svg?logo=dagger&variant=secondary" alt="Dagger powered" /></a>
+  <a href="https://slsa.dev/"><img src="https://shieldcn.dev/badge/SLSA-Level%203-18181b.svg?variant=secondary" alt="SLSA Level 3" /></a>
+  <a href="#-air-gapped-verifiable-bundles-3pao--iso-auditors"><img src="https://shieldcn.dev/badge/airgap-ready-18181b.svg?variant=secondary" alt="Airgap ready" /></a>
+  <a href="https://github.com/MChorfa/shieldcn-zig"><img src="https://shieldcn.dev/badge/badges%20by-shieldcn--zig-18181b.svg?logo=zig&variant=secondary" alt="Badges by shieldcn-zig" /></a>
+</p>
+
 A high-assurance, developer-friendly engine and CLI for NIST OSCAL (Open Security Controls Assessment Language 1.2.3). 
 
 xOSCAL bridges the chasm between raw compliance standards and modern software engineering, providing instant Day-0 scaffolding, continuous Vector State verification, GitOps pull-request diffing, spreadsheet synchronization for GRC analysts, and air-gapped verifiable audit exports.
@@ -177,3 +201,6 @@ make lint         # Runs buf lint, go vet, and gofmt
 python3 scripts/design-lint.py  # Enforces CKODEX-DS-3 editorial constraints
 python3 scripts/a11y-lint.py    # Enforces WCAG 3.0 static accessibility checks
 ```
+
+Continuous integration runs via **[Dagger](https://dagger.io/)** (`dagger call all --source=.`), executing parallel hermetic validation for linting, security scanning (gosec, govulncheck), Metaschema constraints (Tier 2 oscal-cli), and offline air-gapped badge artifact bundling powered by **[shieldcn-zig](https://github.com/MChorfa/shieldcn-zig)**.
+

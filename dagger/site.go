@@ -113,10 +113,13 @@ func (m *Xoscal) Site(source *dagger.Directory,
 	scalarVer := "1.25.0" // pin explicitly; bump deliberately
 	scalarURL := "https://cdn.jsdelivr.net/npm/@scalar/api-reference@" + scalarVer + "/dist/browser/standalone.js"
 
+	badges := m.Badges(source)
+
 	asm := m.base(source).
 		WithDirectory("/out", source.Directory("site")).
 		WithDirectory("/out/sdk", sdks).
 		WithDirectory("/out/frameworks", frameworks).
+		WithDirectory("/out/assets/badges", badges).
 		WithFile("/out/openapi.json", sdks.File("openapi.json")).
 		WithFile("/out/provenance.json", prov.File("provenance.json")).
 		WithFile("/out/sbom-assessment-results.json", sbomValidation).
