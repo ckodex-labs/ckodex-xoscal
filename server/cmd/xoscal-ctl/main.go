@@ -80,7 +80,7 @@ func runInit(args []string) {
 	framework := fs.String("framework", "nist-sp-800-53-rev5", "Compliance framework baseline")
 	_ = fs.Parse(args)
 
-	fmt.Printf("🔍 Scanning repository at: %s ...\n", *dir)
+	fmt.Printf("Scanning repository at: %s ...\n", *dir)
 	scan, jsonBytes, err := scaffold.ScaffoldWorkspace(*dir, *framework)
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "error scaffolding workspace: %v\n", err)

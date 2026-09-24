@@ -43,10 +43,10 @@ func main() {
 	fmt.Println("============================================================")
 
 	if testsPassed == totalTests {
-		fmt.Println("✓ All tests passed!")
+		fmt.Println("[OK] All tests passed!")
 		os.Exit(0)
 	} else {
-		fmt.Println("✗ Some tests failed")
+		fmt.Println("[FAIL] Some tests failed")
 		os.Exit(1)
 	}
 }
@@ -57,28 +57,28 @@ func testCommonImports() bool {
 	// For now, we'll check if the generated files exist
 	genPath := filepath.Join("..", "gen", "go")
 	if _, err := os.Stat(genPath); os.IsNotExist(err) {
-		fmt.Printf("✗ Go SDK not found at %s\n", genPath)
+		fmt.Printf("[FAIL] Go SDK not found at %s\n", genPath)
 		return false
 	}
-	fmt.Println("✓ Go SDK directory exists")
-	fmt.Println("✓ Common proto test passed")
+	fmt.Println("[OK] Go SDK directory exists")
+	fmt.Println("[OK] Common proto test passed")
 	return true
 }
 
 func testCatalogImports() bool {
 	fmt.Println("Testing Catalog imports...")
-	fmt.Println("✓ Catalog proto test passed")
+	fmt.Println("[OK] Catalog proto test passed")
 	return true
 }
 
 func testProfileImports() bool {
 	fmt.Println("Testing Profile imports...")
-	fmt.Println("✓ Profile proto test passed")
+	fmt.Println("[OK] Profile proto test passed")
 	return true
 }
 
 func testComponentDefinitionImports() bool {
 	fmt.Println("Testing Component Definition imports...")
-	fmt.Println("✓ Component Definition proto test passed")
+	fmt.Println("[OK] Component Definition proto test passed")
 	return true
 }

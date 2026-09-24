@@ -152,9 +152,9 @@ For long-term use, **Option 1 (Custom Protoc Plugin)** would be ideal but requir
 
 ## Current Implementation Status
 
-- ❌ No automatic Zig SDK generation
-- ✅ All other languages (Go, Java, C#, Python, TypeScript, Swift, Rust) have generated SDKs
-- ✅ OpenAPI and JSON Schema specifications available
+- [NO] No automatic Zig SDK generation
+- [YES] All other languages (Go, Java, C#, Python, TypeScript, Swift, Rust) have generated SDKs
+- [YES] OpenAPI and JSON Schema specifications available
 
 ## Next Steps
 

@@ -30,7 +30,7 @@
 
 ---
 
-## ⚡ Capability Matrix
+## Capability Matrix
 
 | Capability | Persona | Problem Solved | Unified Command |
 | :--- | :--- | :--- | :--- |
@@ -43,7 +43,7 @@
 
 ---
 
-## 🚀 Quickstart
+## Quickstart
 
 ### Build Standalone Binaries
 
@@ -57,7 +57,7 @@ make build
 
 ---
 
-## 📖 Workflows by Persona
+## Workflows by Persona
 
 ### 1. Developer Onboarding (`xoscal-ctl init`)
 Scan a repository and generate a schema-valid OSCAL 1.2.3 `ComponentDefinition` in seconds without hand-authoring raw UUIDs or XML/JSON:
@@ -70,7 +70,7 @@ xoscal-ctl init --framework nist-sp-800-53-rev5
 <summary><b>View Execution Output</b></summary>
 
 ```text
-🔍 Scanning repository at: . ...
+Scanning repository at: . ...
 [OK] Detected Project: my-service (Languages: [Go], Docker: true, K8s: true, TF: false)
 [OK] Mapped 2 component(s) using virtual URNs -> deterministic UUIDv5
 [OK] Verified compliance with official NIST OSCAL 1.2.3 JSON schema
@@ -138,7 +138,7 @@ xoscal-ctl diff \
 | :--- | :--- | :--- | :--- | :--- |
 | **ADDED** | `ac-3` | `my-service Core` | Access Enforcement | New control implementation introduced |
 | **MODIFIED** | `ac-2` | `my-service Core` | Account Management | Description updated; evidence renewed |
-| **REMOVED** | `sc-7` | `my-service Core` | Boundary Protection | ⚠️ Control removed from component |
+| **REMOVED** | `sc-7` | `my-service Core` | Boundary Protection | [ALERT] Control removed from component |
 
 </details>
 
@@ -196,7 +196,7 @@ xoscal-ctl bundle-export \
 
 ---
 
-## 🏛️ System Architecture
+## System Architecture
 
 ```mermaid
 flowchart TD
@@ -221,7 +221,7 @@ flowchart TD
 
 ---
 
-## ⚙️ Enterprise gRPC Service (`xoscal-server`)
+## Enterprise gRPC Service (`xoscal-server`)
 
 For enterprise environments requiring centralized control storage, full-text search, and knowledge graph mapping:
 
@@ -235,7 +235,7 @@ grpcurl -plaintext localhost:50051 list
 
 ---
 
-## 🛠️ Verification Ladder & CI/CD
+## Verification Ladder & CI/CD
 
 Every commit is strictly verified by our hermetic **[Dagger](https://dagger.io/)** pipeline and local test ladder:
 
@@ -253,6 +253,6 @@ python3 scripts/a11y-lint.py    # Enforces WCAG 3.0 static accessibility checks
 
 ---
 
-## 📄 License
+## License
 
 Apache License 2.0. See [LICENSE](LICENSE) for details.

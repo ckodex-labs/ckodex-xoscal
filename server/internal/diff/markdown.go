@@ -9,12 +9,12 @@ import (
 func (d *ComplianceDiff) FormatMarkdown() string {
 	var sb strings.Builder
 
-	sb.WriteString("### 🛡️ xOSCAL Compliance Impact Report\n\n")
+	sb.WriteString("### xOSCAL Compliance Impact Report\n\n")
 
 	// Posture Summary
-	regressionAlert := "✅ **Posture Preserved**"
+	regressionAlert := "[PASS] **Posture Preserved**"
 	if d.HasRegression {
-		regressionAlert = "🚨 **Compliance Regression Detected**"
+		regressionAlert = "[ALERT] **Compliance Regression Detected**"
 	}
 	sb.WriteString(fmt.Sprintf("%s\n\n", regressionAlert))
 
@@ -43,7 +43,7 @@ func (d *ComplianceDiff) FormatMarkdown() string {
 	for _, delta := range d.Deltas {
 		changeBadge := string(delta.ChangeType)
 		if delta.Regression {
-			changeBadge += " ⚠️"
+			changeBadge += " [REGRESSION]"
 		}
 
 		statusDelta := fmt.Sprintf("`%s` → `%s`", delta.BaseStatus, delta.HeadStatus)
@@ -87,7 +87,7 @@ func formatCoherenceDelta(base, head interface{}) string {
 
 func formatAntiDelta(base, head int) string {
 	if head > base {
-		return "⚠️ Violations Added"
+		return "[WARNING] Violations Added"
 	} else if head < base {
 		return "Fixed Violations"
 	}
