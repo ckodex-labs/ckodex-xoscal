@@ -16,7 +16,7 @@ variables:
 
 lint:
   stage: lint
-  image: golang:1.24-bookworm
+  image: golang:1.25-bookworm
   before_script:
     - apt-get update && apt-get install -y --no-install-recommends python3
   script:
@@ -26,7 +26,7 @@ lint:
 
 test:
   stage: test
-  image: golang:1.24-bookworm
+  image: golang:1.25-bookworm
   extends: .go-cache
   before_script:
     - go mod download
@@ -35,7 +35,7 @@ test:
 
 build:
   stage: build
-  image: golang:1.24-bookworm
+  image: golang:1.25-bookworm
   extends: .go-cache
   needs: [test, lint]
   before_script:
