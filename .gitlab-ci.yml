@@ -1,0 +1,52 @@
+stages:
+  - lint
+  - test
+  - build
+
+variables:
+  GOPATH: $CI_PROJECT_DIR/.go
+  GOCACHE: $CI_PROJECT_DIR/.cache/go-build
+
+.go-cache:
+  cache:
+    key: "${CI_COMMIT_REF_SLUG}-go"
+    paths:
+      - .go/pkg/mod/
+      - .cache/go-build/
+
+lint:
+  stage: lint
+  image: golang:1.24-bookworm
+  before_script:
+    - apt-get update && apt-get install -y --no-install-recommends python3
+  script:
+    - go vet ./...
+    - python3 scripts/design-lint.py
+    - python3 scripts/a11y-lint.py
+
+test:
+  stage: test
+  image: golang:1.24-bookworm
+  extends: .go-cache
+  before_script:
+    - go mod download
+  script:
+    - go test -v ./server/...
+
+build:
+  stage: build
+  image: golang:1.24-bookworm
+  extends: .go-cache
+  needs: [test, lint]
+  before_script:
+    - go mod download
+  script:
+    - mkdir -p bin
+    - go build -ldflags="-s -w" -o bin/xoscal-server ./server/cmd/xoscal-server
+    - go build -ldflags="-s -w" -o bin/xoscal-ctl ./server/cmd/xoscal-ctl
+  artifacts:
+    name: "xoscal-binaries-$CI_COMMIT_REF_SLUG"
+    paths:
+      - bin/xoscal-server
+      - bin/xoscal-ctl
+    expire_in: 1 week
