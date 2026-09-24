@@ -20,36 +20,55 @@
   <a href="https://go.dev/"><img src="https://shieldcn.dev/badge/Go-1.24+-18181b.svg?logo=go&variant=secondary" alt="Go 1.24+" /></a>
   <a href="https://dagger.io/"><img src="https://shieldcn.dev/badge/Dagger-CI%2FCD-18181b.svg?logo=dagger&variant=secondary" alt="Dagger powered" /></a>
   <a href="https://slsa.dev/"><img src="https://shieldcn.dev/badge/SLSA-Level%203-18181b.svg?variant=secondary" alt="SLSA Level 3" /></a>
-  <a href="#-air-gapped-verifiable-bundles-3pao--iso-auditors"><img src="https://shieldcn.dev/badge/airgap-ready-18181b.svg?variant=secondary" alt="Airgap ready" /></a>
+  <a href="#6-offline-air-gapped-audit-bundles-xoscal-ctl-bundle-export"><img src="https://shieldcn.dev/badge/airgap-ready-18181b.svg?variant=secondary" alt="Airgap ready" /></a>
   <a href="https://github.com/MChorfa/shieldcn-zig"><img src="https://shieldcn.dev/badge/badges%20by-shieldcn--zig-18181b.svg?logo=zig&variant=secondary" alt="Badges by shieldcn-zig" /></a>
 </p>
 
-A high-assurance, developer-friendly engine and CLI for NIST OSCAL (Open Security Controls Assessment Language 1.2.3). 
+---
 
-xOSCAL bridges the chasm between raw compliance standards and modern software engineering, providing instant Day-0 scaffolding, continuous Vector State verification, GitOps pull-request diffing, spreadsheet synchronization for GRC analysts, and air-gapped verifiable audit exports.
+> **xOSCAL** is a high-assurance, developer-friendly compliance engine and unified CLI for [NIST OSCAL 1.2.3](https://pages.nist.gov/OSCAL/). It eliminates compliance theater by translating infrastructure and codebases into machine-verifiable governance artifacts, multi-dimensional vector state, GitOps pull-request diffs, spreadsheet round-trips, and air-gapped cryptographic bundles.
 
 ---
 
-## ⚡ 60-Second Developer Quickstart (`xoscal-ctl`)
+## ⚡ Capability Matrix
 
-Install or build the unified standalone CLI binary:
+| Capability | Persona | Problem Solved | Unified Command |
+| :--- | :--- | :--- | :--- |
+| **Day-0 Scaffolding** | App Developers | Auto-detects stack (Go, Python, Docker, K8s), synthesizes URNs to UUIDv5, generates schema-valid OSCAL | `xoscal-ctl init` |
+| **Vector State Verification** | Security Engineers | Replaces binary pass/fail with formal state vector $\mathbf{S}(e,t) = \langle P,V,A,C,E,L,\tau \rangle$, sidecar digests, and tamper gating | `xoscal-ctl verify` |
+| **GitOps PR Diffing** | Tech Leads / DevOps | Detects control drift, regressions, and deletions in CI with formatted Markdown for PR comments | `xoscal-ctl diff` |
+| **Spreadsheet Synchronization** | GRC Analysts | Bi-directional OSCAL $\leftrightarrow$ CSV/Excel round-trip with strict schema enforcement | `xoscal-ctl tabular` |
+| **Rule 23 Derogation Lifecycle** | CISOs / Risk Officers | Time-bounded risk acceptances with strict TTLs, justifications, and compensating controls | `xoscal-ctl derogate` |
+| **Air-Gapped Audit Bundles** | 3PAO / SCIF Auditors | Immutable `.tar.gz` bundle with embedded zero-dependency offline WebCrypto viewer | `xoscal-ctl bundle-export` |
+
+---
+
+## 🚀 Quickstart
+
+### Build Standalone Binaries
 
 ```bash
-# Build binaries locally
+# Compiles bin/xoscal-server and bin/xoscal-ctl locally
 make build
 
 # Inspect the CLI suite
 ./bin/xoscal-ctl help
 ```
 
-### 1. Day-0 Onboarding: Scaffold Component Definition
-Auto-detect repository languages (Go, Python, TypeScript, Rust), container definitions, and Kubernetes manifests. Synthesize human-friendly URNs deterministically into RFC-4122 UUIDv5 identifiers and emit a schema-valid OSCAL 1.2.3 `ComponentDefinition`:
+---
+
+## 📖 Workflows by Persona
+
+### 1. Developer Onboarding (`xoscal-ctl init`)
+Scan a repository and generate a schema-valid OSCAL 1.2.3 `ComponentDefinition` in seconds without hand-authoring raw UUIDs or XML/JSON:
 
 ```bash
-./bin/xoscal-ctl init --framework nist-sp-800-53-rev5
+xoscal-ctl init --framework nist-sp-800-53-rev5
 ```
 
-Output:
+<details>
+<summary><b>View Execution Output</b></summary>
+
 ```text
 🔍 Scanning repository at: . ...
 [OK] Detected Project: my-service (Languages: [Go], Docker: true, K8s: true, TF: false)
@@ -57,18 +76,29 @@ Output:
 [OK] Verified compliance with official NIST OSCAL 1.2.3 JSON schema
 [OK] Created workspace config: .xoscal/xoscal.yaml
 [OK] Emitted component definition: component-definition.json (3907 bytes)
-```
 
-### 2. Continuous Verification & Vector Posture
-Replace binary "pass/fail" check-the-box theater with the formal vector state product:
-$$S(e,t) = \langle P, V, A, C, E, L, \tau \rangle$$
-*(Presence, Valence, Anti-conflict, Coherence, Evidence status, Lifecycle mode, Temporal epoch)*:
+Next step: Run 'xoscal-ctl verify' to check control posture.
+```
+</details>
+
+---
+
+### 2. Continuous Verification & Vector Posture (`xoscal-ctl verify`)
+Verify compliance against the embedded official NIST JSON schema and calculate the formal state vector:
+
+$$\mathbf{S}(e,t) = \langle \text{Presence}, \text{Valence}, \text{Anti-Conflict}, \text{Coherence}, \text{Evidence}, \text{Lifecycle}, \tau \rangle$$
 
 ```bash
-./bin/xoscal-ctl verify --file component-definition.json
+# Verify controls and evidence sidecars
+xoscal-ctl verify --file component-definition.json
+
+# Emit machine-readable Vector State for automated admission gates
+xoscal-ctl verify --file component-definition.json --json
 ```
 
-Output:
+<details>
+<summary><b>View Posture Terminal Table</b></summary>
+
 ```text
 === xOSCAL GOVERNANCE VECTOR POSTURE ===
 Artifact:  component-definition.json (component-definition)
@@ -82,27 +112,60 @@ Controls Summary:    7 Total | 7 Passing | 0 Degraded | 0 Derogated | 0 Anti-Con
 CONTROL        COMPONENT            POSTURE          DESCRIPTION / REMEDIATION
 -------------------------------------------------------------------------------------
 ac-2           my-service Core      PASS             Account management implemented v...
-sc-8           my-service Core      PASS             Transmission confidentiality and...
-sc-13          my-service Core      PASS             Cryptographic protection impleme...
+ia-2           my-service Core      PASS             Identification & authentication ...
+sc-7           my-service Network   PASS             Boundary protection validated    
 ```
+</details>
 
-### 3. GitOps PR Compliance Linter (`xoscal-ctl diff`)
-Run in GitHub Actions or GitLab CI to detect control drift, deletions, and posture regressions between git branches. Emits a clean Markdown summary table ready for PR comments (`$GITHUB_STEP_SUMMARY`):
+---
+
+### 3. GitOps PR Compliance Diff (`xoscal-ctl diff`)
+Run in GitHub Actions or GitLab CI to catch control drift, deletions, and posture regressions between git branches before merging:
 
 ```bash
-# Markdown output for Pull Request comments
-./bin/xoscal-ctl diff --base main.component-definition.json --head component-definition.json --markdown >> $GITHUB_STEP_SUMMARY
-
-# Enforce a strict build gate that fails on posture regressions
-./bin/xoscal-ctl diff --base main.json --head head.json --fail-on-regression
+# Generate Markdown table for PR comment / $GITHUB_STEP_SUMMARY
+xoscal-ctl diff \
+  --base main.component-definition.json \
+  --head component-definition.json \
+  --markdown \
+  --fail-on-regression
 ```
 
-### 4. Mathematical Risk Acceptance (`xoscal-ctl derogate`)
-Enforces **Constitutional Rule 23**: *"Accepted risk does not rewrite history."* Teams no longer fabricate fake passes or delete controls to pass CI:
+<details>
+<summary><b>View Markdown Diff Output</b></summary>
+
+| Status | Control ID | Component | Title | Change Details |
+| :--- | :--- | :--- | :--- | :--- |
+| **ADDED** | `ac-3` | `my-service Core` | Access Enforcement | New control implementation introduced |
+| **MODIFIED** | `ac-2` | `my-service Core` | Account Management | Description updated; evidence renewed |
+| **REMOVED** | `sc-7` | `my-service Core` | Boundary Protection | ⚠️ Control removed from component |
+
+</details>
+
+---
+
+### 4. GRC Spreadsheet Bridge (`xoscal-ctl tabular`)
+Export nested OSCAL controls into flat RFC-4180 CSV tables for non-technical auditors, and re-import spreadsheet responses back into valid OSCAL with automated schema verification:
 
 ```bash
-# Authorize a time-bounded risk exception
-./bin/xoscal-ctl derogate add \
+# Export controls to CSV for spreadsheet editing
+xoscal-ctl tabular export --in component-definition.json --out controls.csv
+
+# Import edited responses back into schema-valid OSCAL JSON
+xoscal-ctl tabular import \
+  --in controls.csv \
+  --base component-definition.json \
+  --out component-definition.updated.json
+```
+
+---
+
+### 5. Rule 23 Derogation Lifecycle (`xoscal-ctl derogate`)
+Enforces **Constitutional Rule 23**: *"Accepted risk does not rewrite history."* Teams record formal, time-bounded risk acceptances with strict TTL expirations and compensating controls rather than deleting controls:
+
+```bash
+# Register a time-bounded risk exception
+xoscal-ctl derogate add \
   --control sc-8 \
   --scope service:internal-worker \
   --authority urn:xoscal:authority:ciso-alex \
@@ -110,88 +173,71 @@ Enforces **Constitutional Rule 23**: *"Accepted risk does not rewrite history."*
   --ttl-days 30 \
   --compensating "sc-7 boundary enforcement, au-2 audit logging"
 
-# Active exceptions grant SAFE_HOLD without failing CI; expired exceptions immediately block builds
-./bin/xoscal-ctl verify
+# Inspect active exceptions and remaining TTLs
+xoscal-ctl derogate list
 ```
 
-### 5. Non-Technical GRC Bridge (`xoscal-ctl tabular`)
-Compliance analysts live in Excel. Seamlessly round-trip between OSCAL 1.2.3 JSON and CSV/Excel tables:
-
-```bash
-# Export controls to CSV for spreadsheet editing
-./bin/xoscal-ctl tabular export --in component-definition.json --out controls.csv
-
-# Import edited responses back into schema-valid OSCAL JSON
-./bin/xoscal-ctl tabular import --in controls.csv --base component-definition.json --out component-definition.updated.json
-```
-
-### 6. Auditor "Audit-in-a-Box" Offboarding (`xoscal-ctl bundle-export`)
-Generate an immutable, air-gapped `.tar.gz` bundle for external regulators and 3PAO auditors with zero vendor lock-in. Includes canonical OSCAL JSON files, evidence blobs with SHA-256 sidecars, a cryptographic `manifest.json`, and an embedded zero-dependency standalone HTML viewer (`audit-viewer.html`):
-
-```bash
-./bin/xoscal-ctl bundle-export --in component-definition.json --evidence-dir ./evidence --out audit-bundle.tar.gz
-```
-An auditor in a disconnected SCIF can open `audit-viewer.html` directly via `file://` in any browser, inspect controls, and verify evidence SHA-256 digests offline via the browser-native W3C WebCrypto API.
+*Active derogations transition controls to `SAFE_HOLD` without failing CI. When a TTL lapses, the control transitions to `EXPIRED`, registers an anti-conflict, and blocks the build.*
 
 ---
 
-## 🏛️ Architecture & gRPC Service
-
-```plaintext
-┌─────────────────────────────────────────────────────────────┐
-│                 Clients: xoscal-ctl / gRPC                  │
-└──────────────────────┬──────────────────────────────────────┘
-                       │
-┌──────────────────────▼──────────────────────────────────────┐
-│              OSCAL gRPC Service (port 50051)                │
-│  ┌──────────────┐  ┌──────────────┐  ┌──────────────────┐   │
-│  │   Catalog    │  │   Profile    │  │ Component Def.   │   │
-│  │   CRUD +     │  │   CRUD +     │  │     CRUD +       │   │
-│  │   Search     │  │   Search     │  │     Search       │   │
-│  └──────────────┘  └──────────────┘  └──────────────────┘   │
-│  ┌──────────────┐  ┌──────────────┐  ┌──────────────────┐   │
-│  │     SSP      │  │  Assessment  │  │  Assessment      │   │
-│  │   CRUD +     │  │    Plan      │  │    Results       │   │
-│  │   Search     │  │   CRUD +     │  │   CRUD +         │   │
-│  └──────────────┘  └──────────────┘  └──────────────────┘   │
-│  ┌──────────────┐  ┌──────────────┐                         │
-│  │    POAM      │  │   Mapping    │                         │
-│  │   CRUD +     │  │   CRUD +     │                         │
-│  │   Search     │  │   Search     │                         │
-│  └──────────────┘  └──────────────┘                         │
-└──────────────────────┬──────────────────────────────────────┘
-                       │
-┌──────────────────────▼──────────────────────────────────────┐
-│              SQLite Store (embedded, single-node)           │
-│  One table per OSCAL model: catalogs, profiles, ssps, etc.  │
-│  Protobuf messages serialized as BLOBs for storage.         │
-└─────────────────────────────────────────────────────────────┘
-```
-
-The gRPC server (`xoscal-server`) exposes CRUD, cross-model full-text search, and knowledge graph mappings for enterprise service environments:
+### 6. Offline Air-Gapped Audit Bundles (`xoscal-ctl bundle-export`)
+Export self-contained `.tar.gz` packages for air-gapped SCIF environments and third-party auditors with zero external dependencies:
 
 ```bash
-# Run server with local persistent SQLite database
+xoscal-ctl bundle-export \
+  --in component-definition.json \
+  --evidence-dir ./evidence \
+  --out audit-bundle.tar.gz
+```
+
+- **Cryptographic Packaging**: Bundles canonical OSCAL JSON files, evidence blobs with SHA-256 sidecars, and a signed `manifest.json`.
+- **Zero-Dependency Offline Viewer**: Bundles an embedded `audit_viewer.html` styled with CKODEX-DS-3 editorial tokens that verifies SHA-256 digests in-browser using the native W3C WebCrypto API—requiring no local server, runtime, or network access.
+
+---
+
+## 🏛️ System Architecture
+
+```mermaid
+flowchart TD
+    subgraph Input["Discovery & Authoring"]
+        Repo["Source Code & Infrastructure"] -->|"xoscal-ctl init"| CompDef["Component Definition"]
+        Sheets["GRC Spreadsheets"] <-->|"xoscal-ctl tabular"| CompDef
+    end
+
+    subgraph Core["xOSCAL Verification & State Engine"]
+        CompDef --> Evaluator["Schema & Evidence Evaluator"]
+        Derogations[".xoscal/derogations.json"] --> Evaluator
+        Evaluator --> Vector["Vector State Engine S(e,t)"]
+    end
+
+    subgraph Output["Delivery & Assurance"]
+        Vector -->|"Terminal Posture"| CLI["xoscal-ctl verify"]
+        Vector -->|"GitOps Gate"| Diff["PR Diff Comment"]
+        Vector -->|"xoscal-ctl bundle-export"| Bundle["Air-Gapped Audit Bundle"]
+        Bundle --> Viewer["Embedded DS-3 Audit Viewer"]
+    end
+```
+
+---
+
+## ⚙️ Enterprise gRPC Service (`xoscal-server`)
+
+For enterprise environments requiring centralized control storage, full-text search, and knowledge graph mapping:
+
+```bash
+# Run gRPC server backed by embedded SQLite
 ./bin/xoscal-server -dsn oscal.db
 
-# Standard gRPC health checks and reflection are enabled
+# Inspect service reflection
 grpcurl -plaintext localhost:50051 list
 ```
 
 ---
 
-## 🔒 Trust Boundary & Beta Status
+## 🛠️ Verification Ladder & CI/CD
 
-Per [docs/BETA-RELEASE-NOTES.md](docs/BETA-RELEASE-NOTES.md):
-- **Current Scope**: Single-workspace operator review tool backed by embedded SQLite.
-- **Evidence Verification**: Deterministic SHA-256 digest sidecars, Ed25519 detached signatures, and official NIST OSCAL 1.2.3 JSON schema validation.
-- **Zero-Trust**: Unverified or candidate claims are never promoted to attestations without verifiable proof.
-
----
-
-## 🛠️ Verification Ladder
-
-Every build passes the full constitutional verification ladder:
+Every commit is strictly verified by our hermetic **[Dagger](https://dagger.io/)** pipeline and local test ladder:
 
 ```bash
 make build        # Compiles bin/xoscal-server and bin/xoscal-ctl
@@ -202,5 +248,11 @@ python3 scripts/design-lint.py  # Enforces CKODEX-DS-3 editorial constraints
 python3 scripts/a11y-lint.py    # Enforces WCAG 3.0 static accessibility checks
 ```
 
-Continuous integration runs via **[Dagger](https://dagger.io/)** (`dagger call all --source=.`), executing parallel hermetic validation for linting, security scanning (gosec, govulncheck), Metaschema constraints (Tier 2 oscal-cli), and offline air-gapped badge artifact bundling powered by **[shieldcn-zig](https://github.com/MChorfa/shieldcn-zig)**.
+- **Hermetic Dagger Suite**: Parallel execution of linters, security scans (gosec, govulncheck), Metaschema constraint checking (`oscal-cli`), and air-gap badge bundling.
+- **Badge Engine**: Powered by **[shieldcn-zig](https://github.com/MChorfa/shieldcn-zig)** (pure-Zig, zero external rendering dependencies, SLSA Level 3).
 
+---
+
+## 📄 License
+
+Apache License 2.0. See [LICENSE](LICENSE) for details.
