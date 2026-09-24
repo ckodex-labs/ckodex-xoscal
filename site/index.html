@@ -3,10 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>xOSCAL — Proto Portal</title>
+<title>xOSCAL — High-Assurance NIST OSCAL 1.2.3 Engine &amp; CLI</title>
 <link rel="stylesheet" href="styles.css">
 <link rel="icon" href="assets/logos/mark-a2-favicon.svg" type="image/svg+xml">
-<meta http-equiv="refresh" content="0; url=portal.html">
 </head>
 <body>
 <a class="ck-skip" href="#main">skip to main content</a>
@@ -17,34 +16,149 @@
       <span aria-hidden="true">XOSCAL</span>
     </a>
     <nav class="ck-site-nav" aria-label="Primary">
-      <a href="portal.html">Portal</a><a href="review.html">Live Review</a><a href="docs.html">API Docs</a>
-      <a href="transparency.html">Transparency</a><a href="downloads.html">Downloads</a>
+      <a href="index.html" aria-current="page">Overview</a>
+      <a href="cli.html">CLI Guide</a>
+      <a href="docs.html">API Docs</a>
+      <a href="downloads.html">Downloads</a>
+      <a href="review.html">Live Review</a>
+      <a href="portal.html">Assurance Room</a>
+      <a href="transparency.html">Transparency</a>
       <a href="sbom-validation.html">SBOM Validation</a>
     </nav>
   </header>
   <main id="main" class="ck-shell__main">
     <div class="ck-measure ck-stack">
       <div>
-        <p class="ck-label ck-page-kicker">routing surface</p>
-        <h1 class="ck-page-title">xOSCAL Proto Portal</h1>
+        <p class="ck-label ck-page-kicker">governed compliance engine</p>
+        <h1 class="ck-page-title">xOSCAL Engine &amp; Unified CLI</h1>
       </div>
-      <div class="ck-quiet ck-padded">
-        Redirecting to the <a href="portal.html">evidence portal</a>.
-      </div>
+      <p class="ck-site-note">A high-assurance, developer-friendly compliance platform for NIST OSCAL (Open Security Controls Assessment Language 1.2.3). Translates codebases and infrastructure into machine-verifiable governance artifacts, multi-dimensional vector state, GitOps pull-request diffs, and air-gapped cryptographic audit packages.</p>
+
+      <section class="ck-stack ck-stack--tight" aria-labelledby="quickstart-heading">
+        <h2 id="quickstart-heading">60-Second Developer Quickstart</h2>
+        <p>Scaffold a valid OSCAL component definition from any repository in one command without hand-writing XML or JSON:</p>
+        <div class="ck-quiet ck-code-block">
+          <pre><code># Build standalone binaries
+make build
+
+# Auto-detect stack, map URNs to UUIDv5, and emit OSCAL 1.2.3
+./bin/xoscal-ctl init --framework nist-sp-800-53-rev5
+
+# Evaluate multi-dimensional vector posture and evidence digests
+./bin/xoscal-ctl verify --file component-definition.json</code></pre>
+        </div>
+      </section>
+
+      <section class="ck-stack ck-stack--tight" aria-labelledby="capabilities-heading">
+        <h2 id="capabilities-heading">Core Capabilities</h2>
+        <div class="ck-data-grid">
+          <article class="ck-quiet ck-padded">
+            <h3>Day-0 Scaffolding</h3>
+            <p>Scans Go, Python, TypeScript, Rust, Docker, and Kubernetes manifests. Deterministically synthesizes virtual URNs into RFC-4122 UUIDv5 identifiers and produces schema-valid OSCAL 1.2.3 Component Definitions.</p>
+            <p><a href="cli.html#init">Inspect init command</a></p>
+          </article>
+          <article class="ck-quiet ck-padded">
+            <h3>Vector State Verification</h3>
+            <p>Replaces binary pass/fail theater with the formal vector product S(e,t) = &lt;P, V, A, C, E, L, &tau;&gt; (Presence, Valence, Anti-conflict, Coherence, Evidence status, Lifecycle, Temporal epoch) with tamper detection.</p>
+            <p><a href="cli.html#verify">Inspect verify command</a></p>
+          </article>
+          <article class="ck-quiet ck-padded">
+            <h3>GitOps PR Compliance Diff</h3>
+            <p>Integrates into GitHub Actions and GitLab CI to catch control drift, modifications, and posture regressions between git branches before merging, formatting Markdown summary tables for pull request comments.</p>
+            <p><a href="cli.html#diff">Inspect diff command</a></p>
+          </article>
+          <article class="ck-quiet ck-padded">
+            <h3>GRC Spreadsheet Bridge</h3>
+            <p>Provides bi-directional round-trip conversion between nested OSCAL 1.2.3 documents and flat RFC-4180 CSV tables, enabling non-technical compliance analysts to work in Excel without touching JSON.</p>
+            <p><a href="cli.html#tabular">Inspect tabular command</a></p>
+          </article>
+          <article class="ck-quiet ck-padded">
+            <h3>Rule 23 Derogation Lifecycle</h3>
+            <p>Enforces the constitutional principle: Accepted risk does not rewrite history. Manages formal, time-bounded risk acceptances with hard TTL expirations, authority URNs, and compensating controls.</p>
+            <p><a href="cli.html#derogate">Inspect derogate command</a></p>
+          </article>
+          <article class="ck-quiet ck-padded">
+            <h3>Air-Gapped Audit Bundles</h3>
+            <p>Exports self-contained .tar.gz archives containing canonical OSCAL models, evidence blobs with SHA-256 sidecars, cryptographic manifests, and an embedded zero-dependency WebCrypto offline viewer.</p>
+            <p><a href="cli.html#bundle-export">Inspect bundle-export command</a></p>
+          </article>
+        </div>
+      </section>
+
+      <section class="ck-stack ck-stack--tight" aria-labelledby="personas-heading">
+        <h2 id="personas-heading">Adoption by Persona</h2>
+        <table class="ck-table">
+          <thead>
+            <tr>
+              <th scope="col">Persona</th>
+              <th scope="col">Primary Need</th>
+              <th scope="col">xOSCAL Solution</th>
+              <th scope="col">Surface</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Application Developer</strong></td>
+              <td>Zero-friction onboarding; no manual compliance toil</td>
+              <td>Automated repo scan and deterministic UUIDv5 generation</td>
+              <td><code>xoscal-ctl init</code></td>
+            </tr>
+            <tr>
+              <td><strong>DevSecOps / Tech Lead</strong></td>
+              <td>Prevent compliance regressions in PRs</td>
+              <td>Continuous semantic diffing and automated gating in CI</td>
+              <td><code>xoscal-ctl diff</code></td>
+            </tr>
+            <tr>
+              <td><strong>GRC Analyst</strong></td>
+              <td>Review controls in familiar spreadsheet formats</td>
+              <td>Round-trip CSV export and import with schema revalidation</td>
+              <td><code>xoscal-ctl tabular</code></td>
+            </tr>
+            <tr>
+              <td><strong>CISO / Risk Officer</strong></td>
+              <td>Accurate risk accounting without history fabrication</td>
+              <td>Rule 23 time-bounded derogations with strict TTL enforcement</td>
+              <td><code>xoscal-ctl derogate</code></td>
+            </tr>
+            <tr>
+              <td><strong>3PAO Auditor</strong></td>
+              <td>Offline verifiable evidence in classified SCIFs</td>
+              <td>Air-gapped bundles with offline browser WebCrypto digest checks</td>
+              <td><code>xoscal-ctl bundle-export</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="ck-stack ck-stack--tight" aria-labelledby="resources-heading">
+        <h2 id="resources-heading">Portal Exploration Surfaces</h2>
+        <div class="ck-row-3">
+          <p><a class="ck-btn ck-btn--primary" href="cli.html">CLI User Guide</a></p>
+          <p><a class="ck-btn ck-btn--quiet" href="downloads.html">Release Downloads</a></p>
+          <p><a class="ck-btn ck-btn--quiet" href="docs.html">API Reference</a></p>
+          <p><a class="ck-btn ck-btn--quiet" href="review.html">Live Review Queue</a></p>
+          <p><a class="ck-btn ck-btn--quiet" href="portal.html">Assurance Room</a></p>
+          <p><a class="ck-btn ck-btn--quiet" href="transparency.html">Supply-chain Ledger</a></p>
+        </div>
+      </section>
     </div>
   </main>
   <aside class="ck-shell__margin" aria-label="Evidence Margin">
     <div class="ck-stack ck-stack--tight">
       <div class="ck-margin__head"><h2>Evidence Margin</h2></div>
-      <div class="ck-receipt"><span class="ck-receipt__rule"></span><div><div class="ck-receipt__event">redirect requested</div><div class="ck-receipt__detail">⊢ observed — portal.html</div></div></div>
-      <span class="ck-chip ck-chip--observed">⊢ observed</span>
-      <p class="ck-caption">No page-level proof object is generated by this redirect.</p>
+      <div class="ck-receipt"><span class="ck-receipt__rule"></span><div><div class="ck-receipt__event">NIST OSCAL 1.2.3 schema embedded</div><div class="ck-receipt__detail">&#8866; verified &mdash; oscal_complete_schema.json</div></div></div>
+      <div class="ck-receipt"><span class="ck-receipt__rule"></span><div><div class="ck-receipt__event">Vector state calculus enforced</div><div class="ck-receipt__detail">&#8866; verified &mdash; P, V, A, C, E, L, &tau;</div></div></div>
+      <div class="ck-receipt"><span class="ck-receipt__rule"></span><div><div class="ck-receipt__event">Dual CI verification passed</div><div class="ck-receipt__detail">&#8866; observed &mdash; GitHub Actions &amp; GitLab CI</div></div></div>
+      <div class="ck-receipt"><span class="ck-receipt__rule"></span><div><div class="ck-receipt__event">Rule 23 derogations immutable</div><div class="ck-receipt__detail">&#8866; observed &mdash; TTL bounded</div></div></div>
+      <span class="ck-chip ck-chip--observed">&#8866; observed</span>
+      <p class="ck-caption">All delivery surfaces are rendered from verified artifacts with content-addressed provenance.</p>
     </div>
   </aside>
   <footer class="ck-shell__footer ck-authority ck-authority--internal" aria-label="Authority Footer">
-    <span class="ck-authority__zone ck-authority__zone--start"><span class="ck-authority__k">boundary</span><span class="ck-authority__v">local / public preview</span></span>
+    <span class="ck-authority__zone ck-authority__zone--start"><span class="ck-authority__k">boundary</span><span class="ck-authority__v">public documentation</span></span>
     <span class="ck-authority__invariant">mode changes deployment, not governance semantics</span>
-    <span class="ck-authority__zone ck-authority__zone--end"><span class="ck-authority__k">handling</span><span class="ck-authority__v">internal</span></span>
+    <span class="ck-authority__zone ck-authority__zone--end"><span class="ck-authority__k">handling</span><span class="ck-authority__v">official</span></span>
   </footer>
 </div>
 </body>

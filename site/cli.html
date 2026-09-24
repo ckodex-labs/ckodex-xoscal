@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en" data-theme="ledger">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>xOSCAL — CLI User Guide</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="assets/logos/mark-a2-favicon.svg" type="image/svg+xml">
+</head>
+<body>
+<a class="ck-skip" href="#main">skip to main content</a>
+<div class="ck-shell ck-shell--document">
+  <header class="ck-shell__header">
+    <a class="ck-site-brand" href="index.html" aria-label="xOSCAL home">
+      <img class="ck-site-brand__mark" src="assets/logos/mark-a2-favicon.svg" alt="" width="24" height="24">
+      <span aria-hidden="true">XOSCAL</span>
+    </a>
+    <nav class="ck-site-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="cli.html" aria-current="page">CLI Guide</a>
+      <a href="docs.html">API Docs</a>
+      <a href="downloads.html">Downloads</a>
+      <a href="review.html">Live Review</a>
+      <a href="transparency.html">Transparency</a>
+      <a href="sbom-validation.html">SBOM Validation</a>
+      <a href="portal.html">Portal</a>
+    </nav>
+  </header>
+  <main id="main" class="ck-shell__main">
+    <div class="ck-measure ck-stack">
+      <div>
+        <p class="ck-label ck-page-kicker">command-line reference</p>
+        <h1 class="ck-page-title">xoscal-ctl Reference Manual</h1>
+      </div>
+      <p class="ck-site-note">The <code>xoscal-ctl</code> binary is the unified operator interface for machine-governed OSCAL 1.2.3 models. It is statically linked, requires zero runtime dependencies, and operates fully offline in air-gapped environments.</p>
+
+      <section class="ck-stack ck-stack--tight" aria-labelledby="toc-heading">
+        <h2 id="toc-heading">Command Index</h2>
+        <div class="ck-data-grid">
+          <article class="ck-quiet ck-padded">
+            <h3><a href="#init">init</a></h3>
+            <p class="ck-caption">Day-0 codebase scanner and deterministic UUIDv5 Component Definition synthesizer.</p>
+          </article>
+          <article class="ck-quiet ck-padded">
+            <h3><a href="#verify">verify</a></h3>
+            <p class="ck-caption">Vector state calculus S(e,t) evaluation and JSON schema conformance validator.</p>
+          </article>
+          <article class="ck-quiet ck-padded">
+            <h3><a href="#diff">diff</a></h3>
+            <p class="ck-caption">GitOps semantic PR compliance diffing with Markdown reporting.</p>
+          </article>
+          <article class="ck-quiet ck-padded">
+            <h3><a href="#tabular">tabular</a></h3>
+            <p class="ck-caption">Bi-directional RFC-4180 CSV spreadsheet bridge for Excel/GRC exchange.</p>
+          </article>
+          <article class="ck-quiet ck-padded">
+            <h3><a href="#derogate">derogate</a></h3>
+            <p class="ck-caption">Rule 23 immutable risk acceptance lifecycle with hard TTL expiration.</p>
+          </article>
+          <article class="ck-quiet ck-padded">
+            <h3><a href="#bundle-export">bundle-export</a></h3>
+            <p class="ck-caption">Self-contained air-gapped audit archive generator with offline WebCrypto viewer.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="ck-stack ck-stack--tight" id="init" aria-labelledby="init-heading">
+        <h2 id="init-heading">1. init &mdash; Repository Scaffolding</h2>
+        <p>Scans application source trees (Go, Python, TypeScript, Rust, Docker, Kubernetes) and deterministically maps project characteristics to an OSCAL 1.2.3 Component Definition. All UUIDs are synthesized via RFC-4122 UUIDv5 using the DNS namespace and the canonical repo URN.</p>
+        <pre class="ck-quiet ck-code-block"><code>xoscal-ctl init --repo &lt;path-to-repo&gt; --out component-definition.json</code></pre>
+        <table class="ck-table">
+          <thead>
+            <tr><th scope="col">Flag</th><th scope="col">Type</th><th scope="col">Default</th><th scope="col">Description</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><code>--repo</code></td><td>path</td><td><code>.</code></td><td>Root directory of the codebase to analyze.</td></tr>
+            <tr><td><code>--out</code></td><td>path</td><td><code>stdout</code></td><td>Output path for the generated OSCAL Component Definition JSON.</td></tr>
+            <tr><td><code>--type</code></td><td>string</td><td><code>software</code></td><td>Component classification: <code>software</code>, <code>service</code>, or <code>validation</code>.</td></tr>
+            <tr><td><code>--name</code></td><td>string</td><td>directory name</td><td>Explicit component name override.</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="ck-stack ck-stack--tight" id="verify" aria-labelledby="verify-heading">
+        <h2 id="verify-heading">2. verify &mdash; Vector State Verification</h2>
+        <p>Evaluates artifacts against the official embedded OSCAL 1.2.3 schema and calculates the multi-dimensional trust vector <code>S(e,t) = &lt;P, V, A, C, E, L, &tau;&gt;</code>. Violations of mandatory security invariants dominate composite scores, strictly preventing binary false-positive theater.</p>
+        <pre class="ck-quiet ck-code-block"><code>xoscal-ctl verify --file &lt;oscal-model.json&gt; --format table</code></pre>
+        <table class="ck-table">
+          <thead>
+            <tr><th scope="col">Flag</th><th scope="col">Type</th><th scope="col">Default</th><th scope="col">Description</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><code>--file</code></td><td>path</td><td><em>required</em></td><td>Path to OSCAL JSON artifact to evaluate.</td></tr>
+            <tr><td><code>--format</code></td><td>string</td><td><code>table</code></td><td>Output rendering: <code>table</code>, <code>json</code>, or <code>compact</code>.</td></tr>
+            <tr><td><code>--fail-on-invalid</code></td><td>bool</td><td><code>true</code></td><td>Return non-zero exit code on schema or invariant failure.</td></tr>
+            <tr><td><code>--check-integrity</code></td><td>bool</td><td><code>true</code></td><td>Verify SHA-256 sidecars and hash references if present.</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="ck-stack ck-stack--tight" id="diff" aria-labelledby="diff-heading">
+        <h2 id="diff-heading">3. diff &mdash; GitOps PR Compliance Diff</h2>
+        <p>Computes structural and semantic differences between two OSCAL documents (such as <code>main</code> vs <code>feature-branch</code>). In CI/CD pipelines, output is piped directly into pull request reviews to notify engineers of control regressions or dropped implementations.</p>
+        <pre class="ck-quiet ck-code-block"><code>xoscal-ctl diff --base baseline-ssp.json --head candidate-ssp.json --format markdown</code></pre>
+        <table class="ck-table">
+          <thead>
+            <tr><th scope="col">Flag</th><th scope="col">Type</th><th scope="col">Default</th><th scope="col">Description</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><code>--base</code></td><td>path</td><td><em>required</em></td><td>Baseline OSCAL document (e.g., target branch state).</td></tr>
+            <tr><td><code>--head</code></td><td>path</td><td><em>required</em></td><td>Candidate OSCAL document under review.</td></tr>
+            <tr><td><code>--format</code></td><td>string</td><td><code>markdown</code></td><td>Output format: <code>markdown</code> (for PR comments), <code>json</code>, or <code>text</code>.</td></tr>
+            <tr><td><code>--fail-on-regression</code></td><td>bool</td><td><code>true</code></td><td>Exit code 1 if controls are demoted or revoked.</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="ck-stack ck-stack--tight" id="tabular" aria-labelledby="tabular-heading">
+        <h2 id="tabular-heading">4. tabular &mdash; Spreadsheet Bridge</h2>
+        <p>Transforms hierarchical OSCAL 1.2.3 documents into flat, standardized RFC-4180 CSV tables for compliance teams and spreadsheets, with loss-free round-trip re-import into valid OSCAL models.</p>
+        <pre class="ck-quiet ck-code-block"><code># Export to CSV
+xoscal-ctl tabular export --in ssp.json --out controls.csv
+
+# Import modified CSV back into OSCAL
+xoscal-ctl tabular import --in controls.csv --base ssp.json --out updated-ssp.json</code></pre>
+        <table class="ck-table">
+          <thead>
+            <tr><th scope="col">Subcommand</th><th scope="col">Key Flags</th><th scope="col">Description</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><code>export</code></td><td><code>--in</code>, <code>--out</code></td><td>Extracts implemented requirements, control IDs, statements, and statuses.</td></tr>
+            <tr><td><code>import</code></td><td><code>--in</code>, <code>--base</code>, <code>--out</code></td><td>Applies spreadsheet updates to base document and re-validates schema.</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="ck-stack ck-stack--tight" id="derogate" aria-labelledby="derogate-heading">
+        <h2 id="derogate-heading">5. derogate &mdash; Risk Acceptance Lifecycle</h2>
+        <p>Constitutional Rule 23: <em>Accepted risk does not rewrite history</em>. Derogations attach explicit authority, justification, compensating controls, and a non-negotiable TTL. Expired derogations immediately decohere and flip posture vectors back to negative valence.</p>
+        <pre class="ck-quiet ck-code-block"><code>xoscal-ctl derogate create \
+  --control-id "ac-2" \
+  --justification "Legacy LDAP sync migration in progress" \
+  --authority "urn:ckodex:authority:ciso:sec-board" \
+  --ttl 720h \
+  --compensating-control "Dual-operator approval on all credential changes" \
+  --out derogations.json</code></pre>
+        <table class="ck-table">
+          <thead>
+            <tr><th scope="col">Action</th><th scope="col">Description</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><code>create</code></td><td>Instantiates a cryptographically bounded derogation record with explicit TTL.</td></tr>
+            <tr><td><code>audit</code></td><td>Inspects all active derogations, flagging expired or pending renewals.</td></tr>
+            <tr><td><code>prune</code></td><td>Revokes expired records and preserves audit receipts in the historical trace.</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="ck-stack ck-stack--tight" id="bundle-export" aria-labelledby="bundle-export-heading">
+        <h2 id="bundle-export-heading">6. bundle-export &mdash; Air-Gapped Bundles</h2>
+        <p>Packages full compliance packages for offline auditor consumption in high-security SCIFs. Contains complete OSCAL JSON models, linked evidence files, individual SHA-256 sidecars, and an embedded zero-dependency WebCrypto HTML viewer that verifies digests locally inside an air-gapped web browser.</p>
+        <pre class="ck-quiet ck-code-block"><code>xoscal-ctl bundle-export --model ssp.json --evidence-dir ./evidence --out audit-bundle.tar.gz</code></pre>
+        <table class="ck-table">
+          <thead>
+            <tr><th scope="col">Flag</th><th scope="col">Type</th><th scope="col">Default</th><th scope="col">Description</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><code>--model</code></td><td>path</td><td><em>required</em></td><td>Authoritative OSCAL document to bundle.</td></tr>
+            <tr><td><code>--evidence-dir</code></td><td>path</td><td><code>./evidence</code></td><td>Directory containing referenced raw evidence files.</td></tr>
+            <tr><td><code>--out</code></td><td>path</td><td><code>bundle.tar.gz</code></td><td>Archive output path.</td></tr>
+            <tr><td><code>--embed-viewer</code></td><td>bool</td><td><code>true</code></td><td>Include zero-dependency standalone HTML/WebCrypto verifier.</td></tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+  </main>
+  <aside class="ck-shell__margin" aria-label="Evidence Margin">
+    <div class="ck-stack ck-stack--tight">
+      <div class="ck-margin__head"><h2>Evidence Margin</h2></div>
+      <div class="ck-receipt"><span class="ck-receipt__rule"></span><div><div class="ck-receipt__event">Static CLI binary compiled</div><div class="ck-receipt__detail">&#8866; verified &mdash; Go 1.25.0 cgo-disabled</div></div></div>
+      <div class="ck-receipt"><span class="ck-receipt__rule"></span><div><div class="ck-receipt__event">Embedded OSCAL 1.2.3 schema</div><div class="ck-receipt__detail">&#8866; verified &mdash; NIST SP 800-53 Rev 5</div></div></div>
+      <div class="ck-receipt"><span class="ck-receipt__rule"></span><div><div class="ck-receipt__event">Air-gap self-contained execution</div><div class="ck-receipt__detail">&#8866; verified &mdash; 0 network calls required</div></div></div>
+      <span class="ck-chip ck-chip--observed">&#8866; observed</span>
+    </div>
+  </aside>
+  <footer class="ck-shell__footer ck-authority ck-authority--internal" aria-label="Authority Footer">
+    <span class="ck-authority__zone ck-authority__zone--start"><span class="ck-authority__k">boundary</span><span class="ck-authority__v">public documentation</span></span>
+    <span class="ck-authority__invariant">mode changes deployment, not governance semantics</span>
+    <span class="ck-authority__zone ck-authority__zone--end"><span class="ck-authority__k">handling</span><span class="ck-authority__v">official</span></span>
+  </footer>
+</div>
+</body>
+</html>

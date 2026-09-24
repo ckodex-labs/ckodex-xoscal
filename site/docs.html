@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>xOSCAL — API Docs</title>
+<title>xOSCAL — API &amp; gRPC Service Reference</title>
 <link rel="stylesheet" href="styles.css">
 <link rel="icon" href="assets/logos/mark-a2-favicon.svg" type="image/svg+xml">
 </head>
@@ -16,33 +16,117 @@
       <span aria-hidden="true">XOSCAL</span>
     </a>
     <nav class="ck-site-nav" aria-label="Primary">
-      <a href="portal.html">Portal</a><a href="docs.html" aria-current="page">API Docs</a>
-      <a href="transparency.html">Transparency</a><a href="downloads.html">Downloads</a>
-      <a href="sbom-validation.html">SBOM Validation</a><a href="index.html">Home</a>
+      <a href="index.html">Home</a>
+      <a href="cli.html">CLI Guide</a>
+      <a href="docs.html" aria-current="page">API Docs</a>
+      <a href="downloads.html">Downloads</a>
+      <a href="review.html">Live Review</a>
+      <a href="transparency.html">Transparency</a>
+      <a href="sbom-validation.html">SBOM Validation</a>
+      <a href="portal.html">Portal</a>
     </nav>
   </header>
   <main id="main" class="ck-shell__main">
     <div class="ck-measure ck-stack">
       <div>
         <p class="ck-label ck-page-kicker">contract surface</p>
-        <h1 class="ck-page-title">API Docs</h1>
+        <h1 class="ck-page-title">API &amp; gRPC Service Reference</h1>
       </div>
-      <p class="ck-site-note">The API reference is rendered from the build-generated OpenAPI document. The local Scalar bundle is pinned by Dagger; this page does not claim service reachability.</p>
-      <script id="api-reference" data-url="./openapi.json"></script>
+      <p class="ck-site-note">The xOSCAL control plane exposes dual-transport interfaces: high-throughput binary gRPC on port 9090 and an HTTP/1.1 REST gateway on port 8080. All endpoints accept and return canonical OSCAL 1.2.3 JSON schemas with vector-state headers.</p>
+
+      <section class="ck-stack ck-stack--tight" aria-labelledby="services-heading">
+        <h2 id="services-heading">Core gRPC Services</h2>
+        <table class="ck-table">
+          <thead>
+            <tr>
+              <th scope="col">Service</th>
+              <th scope="col">Protocol Package</th>
+              <th scope="col">Primary Capability</th>
+              <th scope="col">Gateway Base</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>OscalService</strong></td>
+              <td><code>oscal.services.v1</code></td>
+              <td>Full CRUD and validation for all 8 OSCAL 1.2.3 model types</td>
+              <td><code>/v1/catalogs</code>, <code>/v1/ssps</code>, <code>/v1/components</code></td>
+            </tr>
+            <tr>
+              <td><strong>GovernanceService</strong></td>
+              <td><code>oscal.services.v1</code></td>
+              <td>Immutable snapshots, release attestation, and entity graph ledger</td>
+              <td><code>/v1/entities</code>, <code>/v1/snapshots</code>, <code>/v1/releases</code></td>
+            </tr>
+            <tr>
+              <td><strong>TransparencyExchange</strong></td>
+              <td><code>oscal.services.v1</code></td>
+              <td>Claim admission, cryptographic receipts, and SLSA provenance export</td>
+              <td><code>/v1/claims</code>, <code>/v1/receipts</code></td>
+            </tr>
+            <tr>
+              <td><strong>TransparencyGraph</strong></td>
+              <td><code>oscal.services.v1</code></td>
+              <td>Semantic lineage traversal and control inheritance graph queries</td>
+              <td><code>/v1/graph</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="ck-stack ck-stack--tight" aria-labelledby="endpoints-heading">
+        <h2 id="endpoints-heading">Common REST Gateway Endpoints</h2>
+        <table class="ck-table">
+          <thead>
+            <tr><th scope="col">Method</th><th scope="col">HTTP Path</th><th scope="col">Description</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><code>GET</code></td><td><code>/v1/components</code></td><td>List all registered OSCAL Component Definitions.</td></tr>
+            <tr><td><code>POST</code></td><td><code>/v1/components</code></td><td>Register a newly synthesized Component Definition.</td></tr>
+            <tr><td><code>GET</code></td><td><code>/v1/catalogs/{uuid}</code></td><td>Fetch canonical catalog by RFC-4122 UUID.</td></tr>
+            <tr><td><code>POST</code></td><td><code>/v1/catalogs</code></td><td>Upload or ingest an authoritative control catalog.</td></tr>
+            <tr><td><code>GET</code></td><td><code>/v1/ssps/{uuid}</code></td><td>Retrieve System Security Plan (SSP) with control implementations.</td></tr>
+            <tr><td><code>POST</code></td><td><code>/v1/ssps</code></td><td>Store or update System Security Plan.</td></tr>
+            <tr><td><code>POST</code></td><td><code>/v1/snapshots</code></td><td>Freeze an immutable compliance snapshot across all models.</td></tr>
+            <tr><td><code>GET</code></td><td><code>/v1/entities/{urn}</code></td><td>Resolve an entity in the governance knowledge graph by URN.</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="ck-stack ck-stack--tight" aria-labelledby="example-heading">
+        <h2 id="example-heading">Gateway Usage Example</h2>
+        <div class="ck-quiet ck-padded ck-stack--tight">
+          <p class="ck-label">Querying Component Definitions via curl:</p>
+          <pre class="ck-code-block"><code>curl -s -X GET http://127.0.0.1:8080/v1/components \
+  -H "Accept: application/json"</code></pre>
+          <p class="ck-label">Publishing an Assessment Plan:</p>
+          <pre class="ck-code-block"><code>curl -s -X POST http://127.0.0.1:8080/v1/assessment-plans \
+  -H "Content-Type: application/json" \
+  -d @assessment-plan.json</code></pre>
+        </div>
+      </section>
+
+      <section class="ck-stack ck-stack--tight" aria-labelledby="interactive-heading">
+        <h2 id="interactive-heading">Interactive OpenAPI Specification</h2>
+        <p class="ck-caption">When served through the bundled container or build pipeline, the Scalar standalone runner below mounts the full generated OpenAPI specification.</p>
+        <script id="api-reference" data-url="./openapi.json"></script>
+        <div id="scalar-status" class="ck-caption">Standalone OpenAPI document: <a href="openapi.json">openapi.json</a></div>
+      </section>
     </div>
   </main>
   <aside class="ck-shell__margin" aria-label="Evidence Margin">
     <div class="ck-stack ck-stack--tight">
       <div class="ck-margin__head"><h2>Evidence Margin</h2></div>
-      <div class="ck-receipt"><span class="ck-receipt__rule"></span><div><div class="ck-receipt__event">OpenAPI projected</div><div class="ck-receipt__detail">⊢ observed — openapi.json</div></div></div>
-      <div class="ck-receipt"><span class="ck-receipt__rule"></span><div><div class="ck-receipt__event">Scalar loaded</div><div class="ck-receipt__detail">○ local bundle — pinned by Dagger</div></div></div>
-      <span class="ck-chip ck-chip--observed">⊢ observed</span>
+      <div class="ck-receipt"><span class="ck-receipt__rule"></span><div><div class="ck-receipt__event">gRPC interfaces defined</div><div class="ck-receipt__detail">&#8866; verified &mdash; proto/oscal/services/v1</div></div></div>
+      <div class="ck-receipt"><span class="ck-receipt__rule"></span><div><div class="ck-receipt__event">Protobuf schema compiled</div><div class="ck-receipt__detail">&#8866; verified &mdash; buf generate</div></div></div>
+      <div class="ck-receipt"><span class="ck-receipt__rule"></span><div><div class="ck-receipt__event">REST gateway mapped</div><div class="ck-receipt__detail">&#8866; observed &mdash; grpc-gateway</div></div></div>
+      <span class="ck-chip ck-chip--observed">&#8866; observed</span>
     </div>
   </aside>
   <footer class="ck-shell__footer ck-authority ck-authority--internal" aria-label="Authority Footer">
-    <span class="ck-authority__zone ck-authority__zone--start"><span class="ck-authority__k">boundary</span><span class="ck-authority__v">local / public preview</span></span>
+    <span class="ck-authority__zone ck-authority__zone--start"><span class="ck-authority__k">boundary</span><span class="ck-authority__v">public documentation</span></span>
     <span class="ck-authority__invariant">mode changes deployment, not governance semantics</span>
-    <span class="ck-authority__zone ck-authority__zone--end"><span class="ck-authority__k">handling</span><span class="ck-authority__v">internal</span></span>
+    <span class="ck-authority__zone ck-authority__zone--end"><span class="ck-authority__k">handling</span><span class="ck-authority__v">official</span></span>
   </footer>
 </div>
 <script src="./scalar.js"></script>
