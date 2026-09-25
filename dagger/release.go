@@ -8,10 +8,14 @@ import (
 )
 
 func (m *Xoscal) Dist(source *dagger.Directory) *dagger.Directory {
-	bin := m.Build(source)
+	server := m.Build(source)
+	ctl := m.BuildCtl(source)
+	backup := m.BuildBackup(source)
 	sbom := m.Sbom(source)
 	return dag.Directory().
-		WithFile("xoscal-server", bin).
+		WithFile("xoscal-server", server).
+		WithFile("xoscal-ctl", ctl).
+		WithFile("xoscal-backup", backup).
 		WithFile("sbom.cyclonedx.json", sbom)
 }
 

@@ -1,0 +1,523 @@
+{
+  "catalog": {
+    "groups": [
+      {
+        "controls": [
+          {
+            "id": "ac-1",
+            "parts": [
+              {
+                "id": "ac-1-stmt",
+                "name": "statement",
+                "prose": "The organization develops, documents, and disseminates an access control policy that complies with Treasury Board of Canada Secretariat (TBS) Policy on Government Security."
+              }
+            ],
+            "title": "Access Control Policy and Procedures"
+          },
+          {
+            "id": "ac-2",
+            "parts": [
+              {
+                "id": "ac-2-stmt",
+                "name": "statement",
+                "prose": "The organization identifies and selects account types, assigns account managers, and configures account lifecycle controls according to Government of Canada identity assurance levels."
+              }
+            ],
+            "title": "Account Management"
+          },
+          {
+            "id": "ac-3",
+            "parts": [
+              {
+                "id": "ac-3-stmt",
+                "name": "statement",
+                "prose": "The information system enforces approved authorizations for logical access to information and system resources in accordance with applicable access control policies."
+              }
+            ],
+            "title": "Access Enforcement"
+          },
+          {
+            "id": "ac-6",
+            "parts": [
+              {
+                "id": "ac-6-stmt",
+                "name": "statement",
+                "prose": "The organization employs the principle of least privilege, allowing only authorized accesses for users and processes necessary to accomplish assigned organizational tasks."
+              }
+            ],
+            "title": "Least Privilege"
+          }
+        ],
+        "id": "ac",
+        "title": "Access Control (Controle d'acces)"
+      },
+      {
+        "controls": [
+          {
+            "id": "at-1",
+            "parts": [
+              {
+                "id": "at-1-stmt",
+                "name": "statement",
+                "prose": "The organization establishes security awareness and training procedures aligned with CCCS threat intelligence."
+              }
+            ],
+            "title": "Security Awareness Policy and Procedures"
+          },
+          {
+            "id": "at-2",
+            "parts": [
+              {
+                "id": "at-2-stmt",
+                "name": "statement",
+                "prose": "The organization provides basic security awareness training to information system users as part of initial training and annually thereafter."
+              }
+            ],
+            "title": "Security Awareness Training"
+          }
+        ],
+        "id": "at",
+        "title": "Awareness and Training (Sensibilisation et formation)"
+      },
+      {
+        "controls": [
+          {
+            "id": "au-2",
+            "parts": [
+              {
+                "id": "au-2-stmt",
+                "name": "statement",
+                "prose": "The information system identifies and records auditable security events in accordance with CCCS logging guidance."
+              }
+            ],
+            "title": "Event Logging"
+          },
+          {
+            "id": "au-6",
+            "parts": [
+              {
+                "id": "au-6-stmt",
+                "name": "statement",
+                "prose": "The organization reviews and analyzes information system audit records for indications of unusual or suspicious activity."
+              }
+            ],
+            "title": "Audit Review, Analysis, and Reporting"
+          }
+        ],
+        "id": "au",
+        "title": "Audit and Accountability (Verification et responsabilite)"
+      },
+      {
+        "controls": [
+          {
+            "id": "ca-2",
+            "parts": [
+              {
+                "id": "ca-2-stmt",
+                "name": "statement",
+                "prose": "The organization assesses the security controls in the information system to determine effectiveness in accordance with ITSG-33 lifecycle Phase 3."
+              }
+            ],
+            "title": "Security Assessments"
+          },
+          {
+            "id": "ca-3",
+            "parts": [
+              {
+                "id": "ca-3-stmt",
+                "name": "statement",
+                "prose": "The organization approves and documents information system interconnections via formal Memorandums of Understanding (MOU)."
+              }
+            ],
+            "title": "Information Exchange Agreements"
+          }
+        ],
+        "id": "ca",
+        "title": "Security Assessment and Authorization (Evaluation et autorisation de securite)"
+      },
+      {
+        "controls": [
+          {
+            "id": "cm-2",
+            "parts": [
+              {
+                "id": "cm-2-stmt",
+                "name": "statement",
+                "prose": "The organization develops, documents, and maintains a current baseline configuration of the information system."
+              }
+            ],
+            "title": "Baseline Configuration"
+          },
+          {
+            "id": "cm-8",
+            "parts": [
+              {
+                "id": "cm-8-stmt",
+                "name": "statement",
+                "prose": "The organization develops and documents an inventory of information system components that accurately reflects the current system."
+              }
+            ],
+            "title": "Information System Component Inventory"
+          }
+        ],
+        "id": "cm",
+        "title": "Configuration Management (Gestion des configurations)"
+      },
+      {
+        "controls": [
+          {
+            "id": "cp-2",
+            "parts": [
+              {
+                "id": "cp-2-stmt",
+                "name": "statement",
+                "prose": "The organization develops a contingency plan for the information system that addresses system restoration without compromise."
+              }
+            ],
+            "title": "Contingency Plan"
+          },
+          {
+            "id": "cp-9",
+            "parts": [
+              {
+                "id": "cp-9-stmt",
+                "name": "statement",
+                "prose": "The organization conducts backups of user-level information, system-level information, and security-related documentation."
+              }
+            ],
+            "title": "Information System Backup"
+          }
+        ],
+        "id": "cp",
+        "title": "Contingency Planning (Planification de la continuite)"
+      },
+      {
+        "controls": [
+          {
+            "id": "ia-2",
+            "parts": [
+              {
+                "id": "ia-2-stmt",
+                "name": "statement",
+                "prose": "The information system uniquely identifies and authenticates organizational users with mandatory multi-factor authentication (MFA)."
+              }
+            ],
+            "title": "Identification and Authentication (Organizational Users)"
+          },
+          {
+            "id": "ia-5",
+            "parts": [
+              {
+                "id": "ia-5-stmt",
+                "name": "statement",
+                "prose": "The organization manages information system authenticators including passwords, tokens, certificates, and biometrics per CSE standards."
+              }
+            ],
+            "title": "Authenticator Management"
+          }
+        ],
+        "id": "ia",
+        "title": "Identification and Authentication (Identification et authentification)"
+      },
+      {
+        "controls": [
+          {
+            "id": "ir-4",
+            "parts": [
+              {
+                "id": "ir-4-stmt",
+                "name": "statement",
+                "prose": "The organization implements an incident handling capability for security incidents that includes coordination with the CCCS Canadian Cyber Incident Response Centre."
+              }
+            ],
+            "title": "Incident Handling"
+          },
+          {
+            "id": "ir-6",
+            "parts": [
+              {
+                "id": "ir-6-stmt",
+                "name": "statement",
+                "prose": "The organization reports information security incidents to designated authorities including the CCCS within mandated reporting windows."
+              }
+            ],
+            "title": "Incident Reporting"
+          }
+        ],
+        "id": "ir",
+        "title": "Incident Response (Intervention en cas d'incident)"
+      },
+      {
+        "controls": [
+          {
+            "id": "mp-2",
+            "parts": [
+              {
+                "id": "mp-2-stmt",
+                "name": "statement",
+                "prose": "The organization restricts access to digital and non-digital media containing Protected B or sensitive information."
+              }
+            ],
+            "title": "Media Access"
+          },
+          {
+            "id": "mp-6",
+            "parts": [
+              {
+                "id": "mp-6-stmt",
+                "name": "statement",
+                "prose": "The organization sanitizes information system media prior to disposal or reuse in accordance with RCMP and CSE sanitization standards."
+              }
+            ],
+            "title": "Media Sanitization"
+          }
+        ],
+        "id": "mp",
+        "title": "Media Protection (Protection des supports)"
+      },
+      {
+        "controls": [
+          {
+            "id": "pe-2",
+            "parts": [
+              {
+                "id": "pe-2-stmt",
+                "name": "statement",
+                "prose": "The organization develops and maintains a list of individuals with authorized access to physical facilities housing GC information systems."
+              }
+            ],
+            "title": "Physical Access Authorizations"
+          },
+          {
+            "id": "pe-3",
+            "parts": [
+              {
+                "id": "pe-3-stmt",
+                "name": "statement",
+                "prose": "The organization controls all physical access points to facilities processing Government of Canada workloads."
+              }
+            ],
+            "title": "Physical Access Control"
+          }
+        ],
+        "id": "pe",
+        "title": "Physical and Environmental Protection (Protection physique et environnementale)"
+      },
+      {
+        "controls": [
+          {
+            "id": "pl-2",
+            "parts": [
+              {
+                "id": "pl-2-stmt",
+                "name": "statement",
+                "prose": "The organization develops, documents, and updates a System Security Plan (SSP) describing security controls and boundary architectures."
+              }
+            ],
+            "title": "System Security Plan"
+          }
+        ],
+        "id": "pl",
+        "title": "Planning (Planification)"
+      },
+      {
+        "controls": [
+          {
+            "id": "ps-2",
+            "parts": [
+              {
+                "id": "ps-2-stmt",
+                "name": "statement",
+                "prose": "The organization assigns a risk designation to all positions and establishes screening criteria aligned with Government of Canada security clearances."
+              }
+            ],
+            "title": "Position Risk Designation"
+          },
+          {
+            "id": "ps-3",
+            "parts": [
+              {
+                "id": "ps-3-stmt",
+                "name": "statement",
+                "prose": "The organization screens individuals prior to authorizing access to systems processing sensitive or Protected B data."
+              }
+            ],
+            "title": "Personnel Screening"
+          }
+        ],
+        "id": "ps",
+        "title": "Personnel Security (Securite du personnel)"
+      },
+      {
+        "controls": [
+          {
+            "id": "ra-3",
+            "parts": [
+              {
+                "id": "ra-3-stmt",
+                "name": "statement",
+                "prose": "The organization assesses the risk relating to the operation of the information system in accordance with the Harmonized Threat and Risk Assessment (HTRA) methodology."
+              }
+            ],
+            "title": "Risk Assessment"
+          },
+          {
+            "id": "ra-5",
+            "parts": [
+              {
+                "id": "ra-5-stmt",
+                "name": "statement",
+                "prose": "The organization scans for vulnerabilities in the information system and hosted applications on a continuous basis."
+              }
+            ],
+            "title": "Vulnerability Scanning"
+          }
+        ],
+        "id": "ra",
+        "title": "Risk Assessment (Evaluation des risques)"
+      },
+      {
+        "controls": [
+          {
+            "id": "sa-4",
+            "parts": [
+              {
+                "id": "sa-4-stmt",
+                "name": "statement",
+                "prose": "The organization includes security requirements, descriptions of functional properties, and supply chain security controls in procurement solicitations."
+              }
+            ],
+            "title": "Acquisition Process"
+          },
+          {
+            "id": "sa-9",
+            "parts": [
+              {
+                "id": "sa-9-stmt",
+                "name": "statement",
+                "prose": "The organization mandates that external cloud and service providers comply with CCCS cloud security requirements."
+              }
+            ],
+            "title": "External Information System Services"
+          }
+        ],
+        "id": "sa",
+        "title": "System and Services Acquisition (Acquisition de systemes et de services)"
+      },
+      {
+        "controls": [
+          {
+            "id": "sc-7",
+            "parts": [
+              {
+                "id": "sc-7-stmt",
+                "name": "statement",
+                "prose": "The information system monitors and controls communications at external boundaries and key internal boundaries using approved network security zones."
+              }
+            ],
+            "title": "Boundary Protection"
+          },
+          {
+            "id": "sc-8",
+            "parts": [
+              {
+                "id": "sc-8-stmt",
+                "name": "statement",
+                "prose": "The information system protects the confidentiality and integrity of transmitted information using CSE Approved Cryptographic Algorithms (CACA / ITSP.40.111)."
+              }
+            ],
+            "title": "Transmission Confidentiality and Integrity"
+          },
+          {
+            "id": "sc-13",
+            "parts": [
+              {
+                "id": "sc-13-stmt",
+                "name": "statement",
+                "prose": "The information system implements cryptographic modules that are FIPS 140-2 or FIPS 140-3 validated in accordance with CSE cryptographic guidance."
+              }
+            ],
+            "title": "Cryptographic Protection"
+          },
+          {
+            "id": "sc-28",
+            "parts": [
+              {
+                "id": "sc-28-stmt",
+                "name": "statement",
+                "prose": "The information system protects the confidentiality and integrity of Protected B information at rest using approved cryptographic algorithms."
+              }
+            ],
+            "title": "Protection of Information at Rest"
+          }
+        ],
+        "id": "sc",
+        "title": "System and Communications Protection (Protection des systemes et des communications)"
+      },
+      {
+        "controls": [
+          {
+            "id": "si-2",
+            "parts": [
+              {
+                "id": "si-2-stmt",
+                "name": "statement",
+                "prose": "The organization identifies, reports, and corrects information system flaws within mandated remediation timeframes."
+              }
+            ],
+            "title": "Flaw Remediation"
+          },
+          {
+            "id": "si-3",
+            "parts": [
+              {
+                "id": "si-3-stmt",
+                "name": "statement",
+                "prose": "The information system employs anti-malware and threat detection mechanisms at endpoints and network entry points."
+              }
+            ],
+            "title": "Malicious Code Protection"
+          },
+          {
+            "id": "si-4",
+            "parts": [
+              {
+                "id": "si-4-stmt",
+                "name": "statement",
+                "prose": "The information system monitors inbound and outbound network traffic to detect attacks and indicators of compromise."
+              }
+            ],
+            "title": "Information System Monitoring"
+          }
+        ],
+        "id": "si",
+        "title": "System and Information Integrity (Integrite des systemes et de l'information)"
+      },
+      {
+        "controls": [
+          {
+            "id": "pm-1",
+            "parts": [
+              {
+                "id": "pm-1-stmt",
+                "name": "statement",
+                "prose": "The organization develops and disseminates an organization-wide information security program plan."
+              }
+            ],
+            "title": "Information Security Program Plan"
+          }
+        ],
+        "id": "pm",
+        "title": "Program Management (Gestion de programme)"
+      }
+    ],
+    "metadata": {
+      "last-modified": "2026-09-25T20:11:14Z",
+      "oscal-version": "1.2.3",
+      "remarks": "Authoritative Government of Canada security control catalogue published by the Canadian Centre for Cyber Security (CCCS) / Communications Security Establishment (CSE).",
+      "title": "CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach - Annex 3 Security Control Catalogue",
+      "version": "Annex 3 (Harmonized with NIST SP 800-53)"
+    },
+    "uuid": "5125ab76-67a1-51de-954b-4380cf085bc8"
+  }
+}

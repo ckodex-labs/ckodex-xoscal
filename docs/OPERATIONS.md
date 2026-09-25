@@ -180,38 +180,68 @@ The Kubernetes manifest intentionally runs one server replica because the
 SQLite PVC is read-write-once. Move to an external transactional database
 before enabling multiple server replicas.
 
-## Backup
+## Backup & Disaster Recovery
 
-The SQLite database is stored in the PVC mounted at `/data`. Back up:
+The SQLite database is stored in the PVC mounted at `/data`.
+
+### Performing a Hot Backup with Cryptographic Sidecar
+
+Create a hot, point-in-time snapshot with automated `PRAGMA integrity_check` verification and a SHA-256 sidecar:
+
 ```bash
 kubectl exec <pod> -- /xoscal-backup \
   -dsn /data/oscal.db \
-  -out /data/backups/oscal-backup-YYYYMMDD-HHMMSS.db
-kubectl cp <pod>:/data/backups/oscal-backup-YYYYMMDD-HHMMSS.db ./oscal-backup.db
+  -out /data/backups/oscal-backup-YYYYMMDD-HHMMSS.db \
+  -sidecar=true
 ```
 
-The backup command uses SQLite's `VACUUM INTO` and refuses to overwrite an
-existing destination. Keep the copied artifact outside the PVC and verify its
-size and hash before retention or transfer.
+Copy the backup snapshot and its sidecar off-cluster:
 
-Restore only during a maintenance window:
 ```bash
+kubectl cp <pod>:/data/backups/oscal-backup-YYYYMMDD-HHMMSS.db ./oscal-backup.db
+kubectl cp <pod>:/data/backups/oscal-backup-YYYYMMDD-HHMMSS.db.sha256 ./oscal-backup.db.sha256
+```
+
+### Verifying Backup Integrity & Digest
+
+Before archiving or attempting a restore, verify the snapshot integrity and cryptographic sidecar:
+
+```bash
+xoscal-backup -verify -file ./oscal-backup.db
+```
+
+This performs a read-only `PRAGMA integrity_check` against the SQLite engine and computes the SHA-256 hash to ensure zero corruption or bit rot.
+
+### Verified Disaster Recovery Drill & Database Restoration
+
+Restore only during an authorized maintenance window:
+
+```bash
+# 1. Scale down application server to fence traffic and close active SQLite connections
 kubectl scale deployment/xoscal-server --replicas=0
-# Start a maintenance pod that mounts the same PVC, then copy into it.
-kubectl cp ./oscal-backup.db <maintenance-pod>:/data/oscal.db
-# The runtime image is non-root (UID/GID 65532). kubectl cp commonly writes
-# root-owned files, so repair ownership before restarting the server.
+
+# 2. Start a maintenance pod mounting the PVC and copy backup artifact + sidecar
+kubectl cp ./oscal-backup.db <maintenance-pod>:/data/restore-snapshot.db
+kubectl cp ./oscal-backup.db.sha256 <maintenance-pod>:/data/restore-snapshot.db.sha256
+
+# 3. Execute atomic, preflight-verified restoration
+kubectl exec <maintenance-pod> -- /xoscal-backup \
+  -restore \
+  -file /data/restore-snapshot.db \
+  -dsn /data/oscal.db \
+  -force
+
+# 4. Repair ownership and permissions (runtime image runs as non-root UID 65532)
 kubectl exec <maintenance-pod> -- chown 65532:65532 /data/oscal.db
 kubectl exec <maintenance-pod> -- chmod 0600 /data/oscal.db
-# Remove the maintenance pod after the copy completes.
+
+# 5. Restore application server
 kubectl scale deployment/xoscal-server --replicas=1
 ```
 
-After restore, run `PRAGMA integrity_check`, verify the drill fixture and
-schema, wait for the server readiness probe, and run the review-flow smoke
-checks before reopening traffic. Keep the original PVC snapshot until the
-restored database has been verified. Repeat this procedure against the
-deployment's target storage class before production promotion.
+The `-restore` routine enforces preflight integrity verification, checks the SHA-256 sidecar, writes to a temporary staging file (`.restore.tmp`), runs a post-write integrity check on the staging file, and performs an atomic filesystem swap into the target path. No partial or corrupt database can ever be restored into active service.
+
+After restore, verify the server readiness probe, run the review-flow smoke checks, and confirm vector state coherence before reopening traffic. Keep the previous PVC volume snapshot until all operational smoke tests succeed.
 
 ## Release bundle retention and export
 

@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
+	"strings"
 
 	commonv1 "github.com/mchorfa/xoscal/proto/oscal/common/v1"
 	componentv1 "github.com/mchorfa/xoscal/proto/oscal/component_definition/v1"
@@ -66,19 +67,58 @@ func GenerateComponentDefinition(scan *ProjectScan, framework string) *component
 }
 
 func buildScaffoldBackMatter(framework string) *commonv1.BackMatter {
+	title := fmt.Sprintf("%s Reference", framework)
+	desc := fmt.Sprintf("Authoritative framework standard for %s", framework)
+	href := "https://csrc.nist.gov/publications/detail/sp/800-53/rev-5/final"
+	propType := "standard"
+	version := "rev5"
+
+	switch strings.ToLower(framework) {
+	case "cccs-itsg-33", "itsg-33":
+		title = "CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach - Annex 3"
+		desc = "Authoritative Government of Canada security control catalogue published by CCCS / CSE"
+		href = "https://www.cyber.gc.ca/en/guidance/it-security-risk-management-lifecycle-approach-itsg-33"
+		propType = "standard"
+		version = "Annex 3"
+	case "cccs-medium-cloud-pbmm", "pbmm":
+		title = "Government of Canada Cloud Security Control Profile: Protected B / Medium Integrity / Medium Availability (PBMM)"
+		desc = "Mandatory baseline security control profile for CSPs and GC cloud services per ITSP.50.103 and ITSG-33 Annex 4A Profile 1"
+		href = "https://www.cyber.gc.ca/en/guidance/government-canada-cloud-security-control-profile-protect-b-medium-integrity-medium-availability"
+		propType = "profile"
+		version = "ITSP.50.103"
+	case "cybersecure-canada", "csc":
+		title = "CyberSecure Canada - Baseline Cyber Security Controls for Small and Medium Organizations"
+		desc = "National cyber security certification standard developed by ISED and CCCS"
+		href = "https://ised-isde.canada.ca/site/cybersecure-canada/en"
+		propType = "standard"
+		version = "1.2"
+	case "cccs-itsp-10-171", "itsp-10-171":
+		title = "CCCS ITSP.10.171 - Protecting Specified Information in Non-Government of Canada Systems and Organizations"
+		desc = "Canadian cybersecurity baseline for defense suppliers and commercial organizations handling Controlled Goods"
+		href = "https://www.cyber.gc.ca/en/guidance/protecting-specified-information-non-government-canada-systems-and-organizations-itsp10171"
+		propType = "standard"
+		version = "1.0"
+	case "iso-27001", "iso27001":
+		title = "ISO/IEC 27001:2022 Information Security Management Systems"
+		desc = "International standard for information security management systems"
+		href = "https://www.iso.org/standard/27001"
+		propType = "standard"
+		version = "2022"
+	}
+
 	return &commonv1.BackMatter{
 		Resources: []*commonv1.Resource{{
 			Uuid:  UUIDFromURN("urn:xoscal:resource:" + framework),
-			Title: fmt.Sprintf("%s Reference", framework),
+			Title: title,
 			Description: &commonv1.MarkupMultiline{
-				Value: fmt.Sprintf("Authoritative framework standard for %s", framework),
+				Value: desc,
 			},
 			Props: []*commonv1.Property{
-				{Name: "type", Value: "standard"},
-				{Name: "version", Value: "rev5"},
+				{Name: "type", Value: propType},
+				{Name: "version", Value: version},
 			},
 			Rlinks: []*commonv1.Rlink{{
-				Href: &commonv1.URI{Value: "https://csrc.nist.gov/publications/detail/sp/800-53/rev-5/final"},
+				Href: &commonv1.URI{Value: href},
 			}},
 		}},
 	}

@@ -1,0 +1,157 @@
+{
+  "catalog": {
+    "controls": [
+      {
+        "id": "csc-1",
+        "parts": [
+          {
+            "id": "csc-1-stmt",
+            "name": "statement",
+            "prose": "Enable automatic updates for operating systems and applications to protect against known security vulnerabilities."
+          }
+        ],
+        "title": "Automatically Patch Operating Systems and Applications"
+      },
+      {
+        "id": "csc-2",
+        "parts": [
+          {
+            "id": "csc-2-stmt",
+            "name": "statement",
+            "prose": "Mandate multi-factor authentication (MFA) for administrative access, cloud accounts, remote connections, and sensitive applications."
+          }
+        ],
+        "title": "Implement Strong User Authentication"
+      },
+      {
+        "id": "csc-3",
+        "parts": [
+          {
+            "id": "csc-3-stmt",
+            "name": "statement",
+            "prose": "Train employees to recognize social engineering, phishing campaigns, suspicious attachments, and credential theft techniques."
+          }
+        ],
+        "title": "Provide Employee Cyber Security Awareness Training"
+      },
+      {
+        "id": "csc-4",
+        "parts": [
+          {
+            "id": "csc-4-stmt",
+            "name": "statement",
+            "prose": "Perform regular encrypted backups of critical business data, store backups offsite or in cloud isolation, and test recovery procedures."
+          }
+        ],
+        "title": "Backup and Encrypt Sensitive Data"
+      },
+      {
+        "id": "csc-5",
+        "parts": [
+          {
+            "id": "csc-5-stmt",
+            "name": "statement",
+            "prose": "Deploy and configure stateful boundary firewalls, disable unnecessary ports and protocols, and monitor ingress/egress boundaries."
+          }
+        ],
+        "title": "Enable Perimeter Defenses and Firewalls"
+      },
+      {
+        "id": "csc-6",
+        "parts": [
+          {
+            "id": "csc-6-stmt",
+            "name": "statement",
+            "prose": "Enforce device passcodes, biometric lock screens, automatic screen timeout, full-disk encryption, and mobile device management policies."
+          }
+        ],
+        "title": "Secure Mobile Devices"
+      },
+      {
+        "id": "csc-7",
+        "parts": [
+          {
+            "id": "csc-7-stmt",
+            "name": "statement",
+            "prose": "Restrict employee access rights to only those resources strictly necessary for their specific job functions."
+          }
+        ],
+        "title": "Establish Access Control and Least Privilege"
+      },
+      {
+        "id": "csc-8",
+        "parts": [
+          {
+            "id": "csc-8-stmt",
+            "name": "statement",
+            "prose": "Ensure cloud and outsourced IT service providers meet recognized security standards and protect organizational data."
+          }
+        ],
+        "title": "Secure Cloud and Outsourced IT Services"
+      },
+      {
+        "id": "csc-9",
+        "parts": [
+          {
+            "id": "csc-9-stmt",
+            "name": "statement",
+            "prose": "Protect public-facing websites and applications using TLS certificates, secure HTTP headers, and regular vulnerability scanning."
+          }
+        ],
+        "title": "Secure Website and Web Application Configurations"
+      },
+      {
+        "id": "csc-10",
+        "parts": [
+          {
+            "id": "csc-10-stmt",
+            "name": "statement",
+            "prose": "Install anti-malware and endpoint detection software on all workstations and servers with automated definition updates."
+          }
+        ],
+        "title": "Protect Against Malicious Code and Malware"
+      },
+      {
+        "id": "csc-11",
+        "parts": [
+          {
+            "id": "csc-11-stmt",
+            "name": "statement",
+            "prose": "Restrict and monitor the use of portable storage devices (USB drives) and encrypt all confidential data transferred to removable media."
+          }
+        ],
+        "title": "Implement Secure Portable Media Handling"
+      },
+      {
+        "id": "csc-12",
+        "parts": [
+          {
+            "id": "csc-12-stmt",
+            "name": "statement",
+            "prose": "Develop, document, and test an incident response plan to handle potential cyber security breaches and notify stakeholders."
+          }
+        ],
+        "title": "Maintain an Incident Response Plan"
+      },
+      {
+        "id": "csc-13",
+        "parts": [
+          {
+            "id": "csc-13-stmt",
+            "name": "statement",
+            "prose": "Separate standard user accounts from administrative accounts; use dedicated privileged credentials only when performing administrative tasks."
+          }
+        ],
+        "title": "Control Administrative Privileges"
+      }
+    ],
+    "metadata": {
+      "last-modified": "2026-09-25T20:11:14Z",
+      "oscal-version": "1.2.3",
+      "remarks": "National cyber security certification standard developed by Innovation, Science and Economic Development Canada (ISED) and the Canadian Centre for Cyber Security (CCCS).",
+      "title": "CyberSecure Canada - Baseline Cyber Security Controls for Small and Medium Organizations",
+      "version": "1.2"
+    },
+    "uuid": "b0f5400d-9f9f-5fae-ab6b-bf540ecbe02a"
+  }
+}

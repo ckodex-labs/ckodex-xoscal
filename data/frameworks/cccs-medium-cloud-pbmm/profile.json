@@ -1,0 +1,18 @@
+{
+  "profile": {
+    "imports": [
+      {
+        "href": "https://www.cyber.gc.ca/en/guidance/it-security-risk-management-lifecycle-approach-itsg-33",
+        "include-all": {}
+      }
+    ],
+    "metadata": {
+      "last-modified": "2026-09-25T20:11:14Z",
+      "oscal-version": "1.2.3",
+      "remarks": "Mandatory baseline security control profile for Cloud Service Providers (CSPs) and Government of Canada cloud-based services handling Protected B information.",
+      "title": "Government of Canada Cloud Security Control Profile: Protected B / Medium Integrity / Medium Availability (PBMM)",
+      "version": "ITSP.50.103 / ITSG-33 Annex 4A Profile 1"
+    },
+    "uuid": "f74d02fb-d9ca-57e0-a24b-246190f31cff"
+  }
+}

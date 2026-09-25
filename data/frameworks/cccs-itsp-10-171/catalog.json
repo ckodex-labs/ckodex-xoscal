@@ -1,0 +1,80 @@
+{
+  "catalog": {
+    "controls": [
+      {
+        "id": "itsp-ac-1",
+        "parts": [
+          {
+            "id": "itsp-ac-1-stmt",
+            "name": "statement",
+            "prose": "Limit information system access to authorized users, processes acting on behalf of authorized users, and devices handling Canadian specified information."
+          }
+        ],
+        "title": "Access Control for Specified Information"
+      },
+      {
+        "id": "itsp-au-1",
+        "parts": [
+          {
+            "id": "itsp-au-1-stmt",
+            "name": "statement",
+            "prose": "Create and retain system audit logs and records to the extent needed to enable the monitoring, analysis, investigation, and reporting of unlawful or unauthorized system activity."
+          }
+        ],
+        "title": "Audit Logging for Controlled Systems"
+      },
+      {
+        "id": "itsp-cm-1",
+        "parts": [
+          {
+            "id": "itsp-cm-1-stmt",
+            "name": "statement",
+            "prose": "Establish and maintain baseline configurations and inventories of organizational information systems throughout the system development life cycle."
+          }
+        ],
+        "title": "Configuration Baseline for Designated Assets"
+      },
+      {
+        "id": "itsp-ia-1",
+        "parts": [
+          {
+            "id": "itsp-ia-1-stmt",
+            "name": "statement",
+            "prose": "Identify information system users, processes acting on behalf of users, and devices; authenticate the identities of those users, processes, or devices."
+          }
+        ],
+        "title": "Identification and Authentication for Contractor Systems"
+      },
+      {
+        "id": "itsp-mp-1",
+        "parts": [
+          {
+            "id": "itsp-mp-1-stmt",
+            "name": "statement",
+            "prose": "Protect information system media containing specified information, both paper and digital; sanitize or destroy information system media before disposal."
+          }
+        ],
+        "title": "Media Protection for Controlled Goods"
+      },
+      {
+        "id": "itsp-sc-1",
+        "parts": [
+          {
+            "id": "itsp-sc-1-stmt",
+            "name": "statement",
+            "prose": "Monitor, control, and protect organizational communications at the external boundaries and key internal boundaries; employ FIPS 140-validated cryptography."
+          }
+        ],
+        "title": "Boundary and Cryptographic Protection"
+      }
+    ],
+    "metadata": {
+      "last-modified": "2026-09-25T20:11:14Z",
+      "oscal-version": "1.2.3",
+      "remarks": "Canadian cybersecurity baseline for defense suppliers, aerospace contractors, and commercial organizations handling Canadian Controlled Goods and specified federal data.",
+      "title": "CCCS ITSP.10.171 - Protecting Specified Information in Non-Government of Canada Systems and Organizations",
+      "version": "1.0"
+    },
+    "uuid": "41952e9c-dc21-5dcf-a2b5-61590e22bd0c"
+  }
+}

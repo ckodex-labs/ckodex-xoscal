@@ -25,6 +25,15 @@ frameworks:
     filename: dfs-500-2023-11.yaml
 
   # Canada
+  - ref_id: cccs-itsg-33
+    jurisdiction: canada
+    filename: cccs-itsg-33/catalog.json
+  - ref_id: cccs-medium-cloud-pbmm
+    jurisdiction: canada
+    filename: cccs-medium-cloud-pbmm/profile.json
+  - ref_id: cybersecure-canada
+    jurisdiction: canada
+    filename: cybersecure-canada/catalog.json
   - ref_id: itsp.10.171
     jurisdiction: canada
     filename: itsp.10.171.yaml

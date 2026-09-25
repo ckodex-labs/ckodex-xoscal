@@ -86,3 +86,36 @@ func TestScaffoldWorkspace_TempDir(t *testing.T) {
 		t.Errorf("component-definition.json missing: %v", err)
 	}
 }
+
+func TestScaffoldWorkspace_CanadianFrameworks(t *testing.T) {
+	frameworks := []string{"cccs-itsg-33", "cccs-medium-cloud-pbmm", "cybersecure-canada", "cccs-itsp-10-171"}
+
+	for _, fw := range frameworks {
+		t.Run(fw, func(t *testing.T) {
+			tmpDir, err := os.MkdirTemp("", "xoscal-scaffold-canadian-*")
+			if err != nil {
+				t.Fatalf("create temp dir: %v", err)
+			}
+			defer os.RemoveAll(tmpDir)
+
+			if err := os.WriteFile(filepath.Join(tmpDir, "go.mod"), []byte("module github.com/test/canadian-service\n\ngo 1.24\n"), 0600); err != nil {
+				t.Fatalf("write go.mod: %v", err)
+			}
+
+			_, jsonBytes, err := ScaffoldWorkspace(tmpDir, fw)
+			if err != nil {
+				t.Fatalf("ScaffoldWorkspace with framework %s failed: %v", fw, err)
+			}
+
+			v, err := schemavalidate.NewValidator()
+			if err != nil {
+				t.Fatalf("init validator: %v", err)
+			}
+
+			if err := v.Validate(jsonBytes, schemavalidate.KindComponentDefinition); err != nil {
+				t.Fatalf("generated component definition for framework %s failed schema validation: %v", fw, err)
+			}
+		})
+	}
+}
+

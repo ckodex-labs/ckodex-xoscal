@@ -89,6 +89,14 @@ func (m *Xoscal) BuildCtl(source *dagger.Directory) *dagger.File {
 		File("/bin/xoscal-ctl")
 }
 
+// BuildBackup compiles a static release binary for xoscal-backup and returns it.
+func (m *Xoscal) BuildBackup(source *dagger.Directory) *dagger.File {
+	ldflags := fmt.Sprintf("-ldflags=-s -w -X main.version=%s", m.Version)
+	return m.base(source).
+		WithExec([]string{"go", "build", ldflags, "-o", "/bin/xoscal-backup", "./server/cmd/xoscal-backup"}).
+		File("/bin/xoscal-backup")
+}
+
 // Test runs unit tests.
 func (m *Xoscal) Test(source *dagger.Directory) *dagger.Container {
 	return m.base(source).
