@@ -1,0 +1,332 @@
+[
+  {
+    "name": "3cf-v2-catalog.json",
+    "url": "https://github.com/ckodex-labs/ckodex-xoscal/releases/download/v0.2.0/3cf-v2-catalog.json",
+    "size": 926,
+    "digest": "sha256:d27a706b207e9684dc99c3fa3fc550e0df2869bf050907c63da942871434d351"
+  },
+  {
+    "name": "anssi-guide-admin-securisee-si-catalog.json",
+    "url": "https://github.com/ckodex-labs/ckodex-xoscal/releases/download/v0.2.0/anssi-guide-admin-securisee-si-catalog.json",
+    "size": 33844,
+    "digest": "sha256:e31af04fa49079dfe082489402d71a9f4d8267df4585b01410de98acf7bdb0f8"
+  },
+  {
+    "name": "anssi-guide-hygiene-catalog.json",
+    "url": "https://github.com/ckodex-labs/ckodex-xoscal/releases/download/v0.2.0/anssi-guide-hygiene-catalog.json",
+    "size": 88512,
+    "digest": "sha256:4497071d0c18f97a3f69681370c3591410c4bc14038b71b4e7712e103fb94ac9"
+  },
+  {
+    "name": "anssi-guide-hygiene-detail-catalog.json",
+    "url": "https://github.com/ckodex-labs/ckodex-xoscal/releases/download/v0.2.0/anssi-guide-hygiene-detail-catalog.json",
+    "size": 1006,
+    "digest": "sha256:4af8ea2dd0a6b2a093c68143e6e29ff3c6672f3b43379f3d4fd8eb12469b8460"
+  },
+  {
+    "name": "anssi-referentiel-general-de-securite-annexe-b2-catalog.json",
+    "url": "https://github.com/ckodex-labs/ckodex-xoscal/releases/download/v0.2.0/anssi-referentiel-general-de-securite-annexe-b2-catalog.json",
+    "size": 1090,
+    "digest": "sha256:a70dcda7852bc0ea1fbb88d1d3b6fb4475e057600e4290252731ceebf4ebb3b0"
+  },
+  {
+    "name": "bs-it-gs-2023-app-catalog.json",
+    "url": "https://github.com/ckodex-labs/ckodex-xoscal/releases/download/v0.2.0/bs-it-gs-2023-app-catalog.json",
+    "size": 970,
+    "digest": "sha256:6990f71138ab451a5f9d753073ee0b4f1b86ee1802f024ccb235a6c7c4ee2914"
+  },
+  {
+    "name": "bs-it-gs-2023-con-catalog.json",
+    "url": "https://github.com/ckodex-labs/ckodex-xoscal/releases/download/v0.2.0/bs-it-gs-2023-con-catalog.json",
+    "size": 970,
+    "digest": "sha256:370d543b65496b6cbe975c207a35e2d450ce5e008999c4d712d080d368fd77ce"
+  },
+  {
+    "name": "bs-it-gs-2023-der-catalog.json",
+    "url": "https://github.com/ckodex-labs/ckodex-xoscal/releases/download/v0.2.0/bs-it-gs-2023-der-catalog.json",
+    "size": 970,
+    "digest": "sha256:0be3e63b7ca9963feaad85cf22b16c9550b744312b243916baede639f33e78c5"
+  },
+  {
+    "name": "bs-it-gs-2023-ind-catalog.json",
+    "url": "https://github.com/ckodex-labs/ckodex-xoscal/releases/download/v0.2.0/bs-it-gs-2023-ind-catalog.json",
+    "size": 970,
+    "digest": "sha256:4cba18ddf65e03d196571154e62f6b31fed8156474ed0218917e7053458b9e9a"
+  },
+  {
+    "name": "bs-it-gs-2023-inf-catalog.json",
+    "url": "https://github.com/ckodex-labs/ckodex-xoscal/releases/download/v0.2.0/bs-it-gs-2023-inf-catalog.json",
+    "size": 970,
+    "digest": "sha256:5d536748d3d09fa6499def83e33575dfbadede627db027faa4d13e4f07230d55"
+  },
+  {
+    "name": "bs-it-gs-2023-isms-catalog.json",
+    "url": "https://github.com/ckodex-labs/ckodex-xoscal/releases/download/v0.2.0/bs-it-gs-2023-isms-catalog.json",
+    "size": 974,
+    "digest": "sha256:fd6df0f372dde775e50a257829f411c59f15aeb778b6636de1665aedcf8ef342"
+  },
+  {
+    "name": "bs-it-gs-2023-net-catalog.json",
+    "url": "https://github.com/ckodex-labs/ckodex-xoscal/releases/download/v0.2.0/bs-it-gs-2023-net-catalog.json",
+    "size": 970,
+    "digest": "sha256:61897db9cd8ec9d5381f186ad4eda69b66881f7a44a28497a0847e6686b73abc"
+  },
+  {
+    "name": "bs-it-gs-2023-ops-catalog.json",
+    "url": "https://github.com/ckodex-labs/ckodex-xoscal/releases/download/v0.2.0/bs-it-gs-2023-ops-catalog.json",
+    "size": 970,
+    "digest": "sha256:078ec894b156af7a8d58c4014d71d6a4903ea6663b48d6236a048ed813b62dd9"
+  },
+  {
+    "name": "bs-it-gs-2023-orp-catalog.json",
+    "url": "https://github.com/ckodex-labs/ckodex-xoscal/releases/download/v0.2.0/bs-it-gs-2023-orp-catalog.json",
+    "size": 970,
+    "digest": "sha256:fbb297901247cc4819c8004d8a00bb082af70b9049fc8d3c14f02317f6d6fefe"
+  },
+  {
+    "name": "bs-it-gs-2023-sys-catalog.json",
+    "url": "https://github.com/ckodex-labs/ckodex-xoscal/releases/download/v0.2.0/bs-it-gs-2023-sys-catalog.json",
+    "size": 970,
+    "digest": "sha256:6e5145a48110981ea69e18bd66ae1e2c1cea25d2f48a89d372bbad091b98c36d"
+  },
+  {
+    "name": "bsi-c5-2020-catalog.json",
+    "url": "https://github.com/ckodex-labs/ckodex-xoscal/releases/download/v0.2.0/bsi-c5-2020-catalog.json",
+    "size": 107104,
+    "digest": "sha256:825a9551cfc7a2ec0098f0febc6013f8fc68651d330d450d11142506910cdc97"
+  },
+  {
+    "name": "bsi-externer-cloud-dienste-catalog.json",
+    "url": "https://github.com/ckodex-labs/ckodex-xoscal/releases/download/v0.2.0/bsi-externer-cloud-dienste-catalog.json",
+    "size": 41231,
+    "digest": "sha256:2899f3a9c60e6b53f7510ccbf217652d0b342a95566adfe6ca7e0e57d2ac6913"
+  },
+  {
+    "name": "checksums.txt",
+    "url": "https://github.com/ckodex-labs/ckodex-xoscal/releases/download/v0.2.0/checksums.txt",
+    "size": 888,
+    "digest": "sha256:1f0935580dafcb59cb26026cfe0db717d5ee83f79068e8f39b6fc32e7c4416dd"
+  },
+  {
+    "name": "cisa-cpg-2.0-catalog.json",
+    "url": "https://github.com/ckodex-labs/ckodex-xoscal/releases/download/v0.2.0/cisa-cpg-2.0-catalog.json",
+    "size": 12820,
+    "digest": "sha256:957add9a82ce8663ce4299724a326244d2a38ec31b4ea5cb61642d04a2add1a3"
+  },
+  {
+    "name": "cisa-vendor-scrm-catalog.json",
+    "url": "https://github.com/ckodex-labs/ckodex-xoscal/releases/download/v0.2.0/cisa-vendor-scrm-catalog.json",
+    "size": 95278,
+    "digest": "sha256:75476eab2b28751b31858506d611cc1634eff716650285a0b2778363333a74be"
+  },
+  {
+    "name": "cjis-version-5.9.5-catalog.json",
+    "url": "https://github.com/ckodex-labs/ckodex-xoscal/releases/download/v0.2.0/cjis-version-5.9.5-catalog.json",
+    "size": 530071,
+    "digest": "sha256:d1c43b78f9e898aae1fcd9da923c0869dad022daaa2bc5dd585fe51fe3030bda"
+  },
+  {
+    "name": "ckodex-xoscal_0.2.0_Darwin_arm64.tar.gz",
+    "url": "https://github.com/ckodex-labs/ckodex-xoscal/releases/download/v0.2.0/ckodex-xoscal_0.2.0_Darwin_arm64.tar.gz",
+    "size": 9159264,
+    "digest": "sha256:559c2a80cd0077c81ac90439858f5f7240e1e667ae07dadbed35f0f61e37d2b0"
+  },
+  {
+    "name": "ckodex-xoscal_0.2.0_Darwin_arm64.tar.gz.sbom.json",
+    "url": "https://github.com/ckodex-labs/ckodex-xoscal/releases/download/v0.2.0/ckodex-xoscal_0.2.0_Darwin_arm64.tar.gz.sbom.json",
+    "size": 79755,
+    "digest": "sha256:cafe53f7842d247cc9e7454d1476f0aacf2c7c80b15ce18ef33719fdd38e79c4"
+  },
+  {
+    "name": "ckodex-xoscal_0.2.0_Darwin_x86_64.tar.gz",
+    "url": "https://github.com/ckodex-labs/ckodex-xoscal/releases/download/v0.2.0/ckodex-xoscal_0.2.0_Darwin_x86_64.tar.gz",
+    "size": 9709388,
+    "digest": "sha256:ca3c524295ca13f7078741aec552484e7ee3b04407b32262dc3cb07390ecf64e"
+  },
+  {
+    "name": "ckodex-xoscal_0.2.0_Darwin_x86_64.tar.gz.sbom.json",
+    "url": "https://github.com/ckodex-labs/ckodex-xoscal/releases/download/v0.2.0/ckodex-xoscal_0.2.0_Darwin_x86_64.tar.gz.sbom.json",
+    "size": 79809,
+    "digest": "sha256:f61ba6f05d83475c260232302564b138ca40ad775ce766ab184ed0e4fb6b2749"
+  },
+  {
+    "name": "ckodex-xoscal_0.2.0_Linux_arm64.tar.gz",
+    "url": "https://github.com/ckodex-labs/ckodex-xoscal/releases/download/v0.2.0/ckodex-xoscal_0.2.0_Linux_arm64.tar.gz",
+    "size": 8673386,
+    "digest": "sha256:597ef1a44ed3b7874cc3f0740178bf86dbd7c57c3f1ebf29e5a877d0c4edf5dd"
+  },
+  {
+    "name": "ckodex-xoscal_0.2.0_Linux_arm64.tar.gz.sbom.json",
+    "url": "https://github.com/ckodex-labs/ckodex-xoscal/releases/download/v0.2.0/ckodex-xoscal_0.2.0_Linux_arm64.tar.gz.sbom.json",
+    "size": 78363,
+    "digest": "sha256:c728ffa12546b8130b9cb65d293377c52ffdf3f1a4f6b739332e3dfe6dd24697"
+  },
+  {
+    "name": "ckodex-xoscal_0.2.0_Linux_x86_64.tar.gz",
+    "url": "https://github.com/ckodex-labs/ckodex-xoscal/releases/download/v0.2.0/ckodex-xoscal_0.2.0_Linux_x86_64.tar.gz",
+    "size": 9413085,
+    "digest": "sha256:d7a959b8796ee12b4bd15abcaa90d3bcd7bcd3eef4a0a6ed755614a6537d0a76"
+  },
+  {
+    "name": "ckodex-xoscal_0.2.0_Linux_x86_64.tar.gz.sbom.json",
+    "url": "https://github.com/ckodex-labs/ckodex-xoscal/releases/download/v0.2.0/ckodex-xoscal_0.2.0_Linux_x86_64.tar.gz.sbom.json",
+    "size": 78416,
+    "digest": "sha256:3596e8df53f8d368e49e1392866331c9d267e7773808e5c49ea381750cb4e954"
+  },
+  {
+    "name": "cmmc-2.0-catalog.json",
+    "url": "https://github.com/ckodex-labs/ckodex-xoscal/releases/download/v0.2.0/cmmc-2.0-catalog.json",
+    "size": 62821,
+    "digest": "sha256:76c5faaa07846000b13045dfd445fe628ee7b7902fec0714bc9e52f843893283"
+  },
+  {
+    "name": "cnil-guide-securite-catalog.json",
+    "url": "https://github.com/ckodex-labs/ckodex-xoscal/releases/download/v0.2.0/cnil-guide-securite-catalog.json",
+    "size": 21183,
+    "digest": "sha256:05803ee50847d9f6f05e7629756daff35d421a5d018090100467c414955f013f"
+  },
+  {
+    "name": "csharp.zip",
+    "url": "https://github.com/ckodex-labs/ckodex-xoscal/releases/download/v0.2.0/csharp.zip",
+    "size": 275994,
+    "digest": "sha256:9bdabb8719ef0ca29f345119a041cedfb3aa2b0a61c0573b69f48fb3db0d10e6"
+  },
+  {
+    "name": "csharp.zip.sha256",
+    "url": "https://github.com/ckodex-labs/ckodex-xoscal/releases/download/v0.2.0/csharp.zip.sha256",
+    "size": 72,
+    "digest": "sha256:ee401cddf72e8fc7174ea3c57c3c29fe1f77c46bda1eb46270b43dfea3a8b0c9"
+  },
+  {
+    "name": "cyber_essentials-catalog.json",
+    "url": "https://github.com/ckodex-labs/ckodex-xoscal/releases/download/v0.2.0/cyber_essentials-catalog.json",
+    "size": 966,
+    "digest": "sha256:1720f4315a2f7ea38b949d3d784aca41af1919d90cb7824f5bcf877ba5418062"
+  },
+  {
+    "name": "dfs-500-2023-11-catalog.json",
+    "url": "https://github.com/ckodex-labs/ckodex-xoscal/releases/download/v0.2.0/dfs-500-2023-11-catalog.json",
+    "size": 64998,
+    "digest": "sha256:750caa52efb86b49495bec05e6d7f618d28c70e6bbf83af0c2d1559ecf630883"
+  },
+  {
+    "name": "dora-catalog.json",
+    "url": "https://github.com/ckodex-labs/ckodex-xoscal/releases/download/v0.2.0/dora-catalog.json",
+    "size": 103171,
+    "digest": "sha256:06f748ad97cedef4da60f5673ec0ca52a4d6f991f1912a5b29d9faf32070ab3d"
+  },
+  {
+    "name": "e-its-2024-catalog.json",
+    "url": "https://github.com/ckodex-labs/ckodex-xoscal/releases/download/v0.2.0/e-its-2024-catalog.json",
+    "size": 1557988,
+    "digest": "sha256:41986def9c5d823acca91dcffab04d2fa8a0adb972f93797d554f680db800bf5"
+  },
+  {
+    "name": "eu-ai-act-catalog.json",
+    "url": "https://github.com/ckodex-labs/ckodex-xoscal/releases/download/v0.2.0/eu-ai-act-catalog.json",
+    "size": 938,
+    "digest": "sha256:2354a014958ff74f678baa288aa7a6b8d615bf37e19efaf35d47c6d2fa253445"
+  },
+  {
+    "name": "fedramp-rev5-catalog.json",
+    "url": "https://github.com/ckodex-labs/ckodex-xoscal/releases/download/v0.2.0/fedramp-rev5-catalog.json",
+    "size": 318031,
+    "digest": "sha256:8ee13b1825915a5e79f38f61072cb626945bbb668b7c9f2ce84e0477d7689304"
+  },
+  {
+    "name": "go.zip",
+    "url": "https://github.com/ckodex-labs/ckodex-xoscal/releases/download/v0.2.0/go.zip",
+    "size": 140147,
+    "digest": "sha256:47776d1ddeccd08998c9f2e75ce47887b2b9231019ca488613152a190c4b0a5f"
+  },
+  {
+    "name": "go.zip.sha256",
+    "url": "https://github.com/ckodex-labs/ckodex-xoscal/releases/download/v0.2.0/go.zip.sha256",
+    "size": 72,
+    "digest": "sha256:0a60957697cb26ba0fa5933d0a8f126750b23ddaa2b5ab5038c0de1b1ecf4314"
+  },
+  {
+    "name": "image-sbom-assessment-results.json",
+    "url": "https://github.com/ckodex-labs/ckodex-xoscal/releases/download/v0.2.0/image-sbom-assessment-results.json",
+    "size": 117855,
+    "digest": "sha256:d3a166b28c6a8a652c0c2f3202b21a0f10b70f30ce69b0cce6b9df93f0f3524c"
+  },
+  {
+    "name": "iso-iec-42001-catalog.json",
+    "url": "https://github.com/ckodex-labs/ckodex-xoscal/releases/download/v0.2.0/iso-iec-42001-catalog.json",
+    "size": 954,
+    "digest": "sha256:088636274d17964ea76e9c6bd4faee3c4069ab4b8de22c589ee6bb2e38c12dff"
+  },
+  {
+    "name": "itsp.10.171-catalog.json",
+    "url": "https://github.com/ckodex-labs/ckodex-xoscal/releases/download/v0.2.0/itsp.10.171-catalog.json",
+    "size": 100856,
+    "digest": "sha256:7588d34354771f028f686d44fbd4bf064dfd8eabf21cb26ada249a19db23209c"
+  },
+  {
+    "name": "java.zip",
+    "url": "https://github.com/ckodex-labs/ckodex-xoscal/releases/download/v0.2.0/java.zip",
+    "size": 1616680,
+    "digest": "sha256:b64a55ccf2fddd9a7b05260de880d677f3d16bf296eef655bee59098505ec53b"
+  },
+  {
+    "name": "java.zip.sha256",
+    "url": "https://github.com/ckodex-labs/ckodex-xoscal/releases/download/v0.2.0/java.zip.sha256",
+    "size": 72,
+    "digest": "sha256:665c833b019a9886835d6f5f720d5ab8350bfa70d2e641a5bcba3e6ee9a312ca"
+  },
+  {
+    "name": "nis2-catalog.json",
+    "url": "https://github.com/ckodex-labs/ckodex-xoscal/releases/download/v0.2.0/nis2-catalog.json",
+    "size": 918,
+    "digest": "sha256:b892f9190383c43d599050e3959e82a2d3ee8ade5f7ee166b28a8644d26ae920"
+  },
+  {
+    "name": "nist-csf-2.0-catalog.json",
+    "url": "https://github.com/ckodex-labs/ckodex-xoscal/releases/download/v0.2.0/nist-csf-2.0-catalog.json",
+    "size": 34437,
+    "digest": "sha256:ac7c978111d865fa0043f4fbc480a013b7caff80f6be4ee1c8259b79a41fc671"
+  },
+  {
+    "name": "python.zip",
+    "url": "https://github.com/ckodex-labs/ckodex-xoscal/releases/download/v0.2.0/python.zip",
+    "size": 95704,
+    "digest": "sha256:c4b25a07aace25b44845cf9e47ea4a5a0b16c06f2986278d9ce5e13a8a478fbc"
+  },
+  {
+    "name": "python.zip.sha256",
+    "url": "https://github.com/ckodex-labs/ckodex-xoscal/releases/download/v0.2.0/python.zip.sha256",
+    "size": 72,
+    "digest": "sha256:5bc5f1e0b0375547b16f51915042907a8dc4aaa4d0ceee43511945c853584b92"
+  },
+  {
+    "name": "sbom-assessment-results.json",
+    "url": "https://github.com/ckodex-labs/ckodex-xoscal/releases/download/v0.2.0/sbom-assessment-results.json",
+    "size": 95458,
+    "digest": "sha256:64a1a643cbc9d4afd1114fc667ee0f4947130fee137102d56fe92a40e7732bc4"
+  },
+  {
+    "name": "swift.zip",
+    "url": "https://github.com/ckodex-labs/ckodex-xoscal/releases/download/v0.2.0/swift.zip",
+    "size": 109315,
+    "digest": "sha256:1b6151d0c4a045b70bc55c1068187f1385bbc5fb88f681e7f937c97a0850488c"
+  },
+  {
+    "name": "swift.zip.sha256",
+    "url": "https://github.com/ckodex-labs/ckodex-xoscal/releases/download/v0.2.0/swift.zip.sha256",
+    "size": 72,
+    "digest": "sha256:4aaad4fcbeaaad253186b527b450d010cbdd1b2e805421b0a386a90d80066e76"
+  },
+  {
+    "name": "ts.zip",
+    "url": "https://github.com/ckodex-labs/ckodex-xoscal/releases/download/v0.2.0/ts.zip",
+    "size": 90881,
+    "digest": "sha256:281a63282a1c1b984e61f65a8f5c75c491d0ef8ca762237130feefc2107b9eeb"
+  },
+  {
+    "name": "ts.zip.sha256",
+    "url": "https://github.com/ckodex-labs/ckodex-xoscal/releases/download/v0.2.0/ts.zip.sha256",
+    "size": 72,
+    "digest": "sha256:2b29544b0372a3610484d713fdeb69a2d07e5469d616818374901729dc93f11b"
+  }
+]

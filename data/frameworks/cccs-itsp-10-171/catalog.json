@@ -2,76 +2,2947 @@
   "catalog": {
     "controls": [
       {
-        "id": "itsp-ac-1",
+        "id": "_03.01.01.A",
         "parts": [
           {
-            "id": "itsp-ac-1-stmt",
+            "id": "_03.01.01.A-stmt",
             "name": "statement",
-            "prose": "Limit information system access to authorized users, processes acting on behalf of authorized users, and devices handling Canadian specified information."
+            "prose": "Définir les types de comptes système autorisés et interdits."
           }
         ],
-        "title": "Access Control for Specified Information"
+        "title": "03.01.01.A"
       },
       {
-        "id": "itsp-au-1",
+        "id": "_03.01.01.B",
         "parts": [
           {
-            "id": "itsp-au-1-stmt",
+            "id": "_03.01.01.B-stmt",
             "name": "statement",
-            "prose": "Create and retain system audit logs and records to the extent needed to enable the monitoring, analysis, investigation, and reporting of unlawful or unauthorized system activity."
+            "prose": "Créer, activer, modifier, désactiver et retirer les comptes système conformément aux politiques, procédures, conditions préalables et critères de l’organisation."
           }
         ],
-        "title": "Audit Logging for Controlled Systems"
+        "title": "03.01.01.B"
       },
       {
-        "id": "itsp-cm-1",
+        "id": "_03.01.01.C.1",
         "parts": [
           {
-            "id": "itsp-cm-1-stmt",
+            "id": "_03.01.01.C.1-stmt",
             "name": "statement",
-            "prose": "Establish and maintain baseline configurations and inventories of organizational information systems throughout the system development life cycle."
+            "prose": "les utilisatrices et utilisateurs autorisés du système;"
           }
         ],
-        "title": "Configuration Baseline for Designated Assets"
+        "title": "03.01.01.C.1"
       },
       {
-        "id": "itsp-ia-1",
+        "id": "_03.01.01.C.2",
         "parts": [
           {
-            "id": "itsp-ia-1-stmt",
+            "id": "_03.01.01.C.2-stmt",
             "name": "statement",
-            "prose": "Identify information system users, processes acting on behalf of users, and devices; authenticate the identities of those users, processes, or devices."
+            "prose": "les membres des groupes et des rôles;"
           }
         ],
-        "title": "Identification and Authentication for Contractor Systems"
+        "title": "03.01.01.C.2"
       },
       {
-        "id": "itsp-mp-1",
+        "id": "_03.01.01.C.3",
         "parts": [
           {
-            "id": "itsp-mp-1-stmt",
+            "id": "_03.01.01.C.3-stmt",
             "name": "statement",
-            "prose": "Protect information system media containing specified information, both paper and digital; sanitize or destroy information system media before disposal."
+            "prose": "les autorisations d’accès (c’est-à-dire les privilèges) pour chaque compte."
           }
         ],
-        "title": "Media Protection for Controlled Goods"
+        "title": "03.01.01.C.3"
       },
       {
-        "id": "itsp-sc-1",
+        "id": "_03.01.01.D.1",
         "parts": [
           {
-            "id": "itsp-sc-1-stmt",
+            "id": "_03.01.01.D.1-stmt",
             "name": "statement",
-            "prose": "Monitor, control, and protect organizational communications at the external boundaries and key internal boundaries; employ FIPS 140-validated cryptography."
+            "prose": "une autorisation d’accès valide;"
           }
         ],
-        "title": "Boundary and Cryptographic Protection"
+        "title": "03.01.01.D.1"
+      },
+      {
+        "id": "_03.01.01.D.2",
+        "parts": [
+          {
+            "id": "_03.01.01.D.2-stmt",
+            "name": "statement",
+            "prose": "l’utilisation prévue du système."
+          }
+        ],
+        "title": "03.01.01.D.2"
+      },
+      {
+        "id": "_03.01.01.E",
+        "parts": [
+          {
+            "id": "_03.01.01.E-stmt",
+            "name": "statement",
+            "prose": "Surveiller l’utilisation des comptes système."
+          }
+        ],
+        "title": "03.01.01.E"
+      },
+      {
+        "id": "_03.01.01.F.1",
+        "parts": [
+          {
+            "id": "_03.01.01.F.1-stmt",
+            "name": "statement",
+            "prose": "les comptes sont expirés;"
+          }
+        ],
+        "title": "03.01.01.F.1"
+      },
+      {
+        "id": "_03.01.01.F.2",
+        "parts": [
+          {
+            "id": "_03.01.01.F.2-stmt",
+            "name": "statement",
+            "prose": "les comptes sont inactifs depuis [Affectation : durée définie par l’organisation];"
+          }
+        ],
+        "title": "03.01.01.F.2"
+      },
+      {
+        "id": "_03.01.01.F.3",
+        "parts": [
+          {
+            "id": "_03.01.01.F.3-stmt",
+            "name": "statement",
+            "prose": "les comptes ne sont plus associés à une utilisatrice ou un utilisateur, ou à une personne;"
+          }
+        ],
+        "title": "03.01.01.F.3"
+      },
+      {
+        "id": "_03.01.01.F.4",
+        "parts": [
+          {
+            "id": "_03.01.01.F.4-stmt",
+            "name": "statement",
+            "prose": "les comptes contreviennent à une politique organisationnelle;"
+          }
+        ],
+        "title": "03.01.01.F.4"
+      },
+      {
+        "id": "_03.01.01.F.5",
+        "parts": [
+          {
+            "id": "_03.01.01.F.5-stmt",
+            "name": "statement",
+            "prose": "des risques importants liés à des personnes sont découverts."
+          }
+        ],
+        "title": "03.01.01.F.5"
+      },
+      {
+        "id": "_03.01.01.G.1",
+        "parts": [
+          {
+            "id": "_03.01.01.G.1-stmt",
+            "name": "statement",
+            "prose": "[Affectation : période définie par l’organisation] lorsque les comptes ne sont plus requis;"
+          }
+        ],
+        "title": "03.01.01.G.1"
+      },
+      {
+        "id": "_03.01.01.G.2",
+        "parts": [
+          {
+            "id": "_03.01.01.G.2-stmt",
+            "name": "statement",
+            "prose": "[Affectation : période définie par l’organisation] lorsque les utilisatrices et utilisateurs quittent leur emploi ou sont transférés;"
+          }
+        ],
+        "title": "03.01.01.G.2"
+      },
+      {
+        "id": "_03.01.01.G.3",
+        "parts": [
+          {
+            "id": "_03.01.01.G.3-stmt",
+            "name": "statement",
+            "prose": "[Affectation : période définie par l’organisation] lorsque l’utilisation du système ou le besoin de connaître d’une personne change."
+          }
+        ],
+        "title": "03.01.01.G.3"
+      },
+      {
+        "id": "_03.01.01.H",
+        "parts": [
+          {
+            "id": "_03.01.01.H-stmt",
+            "name": "statement",
+            "prose": "Exiger que les utilisatrices et utilisateurs se déconnectent du système après [Affectation : période définie par l’organisation] d’inactivité ou lors de [Affectation : circonstances définies par l’organisation]."
+          }
+        ],
+        "title": "03.01.01.H"
+      },
+      {
+        "id": "_03.01.02.A",
+        "parts": [
+          {
+            "id": "_03.01.02.A-stmt",
+            "name": "statement",
+            "prose": "Appliquer les autorisations approuvées pour l’accès logique à l’information désignée et aux ressources système conformément aux politiques de contrôle d’accès applicables."
+          }
+        ],
+        "title": "03.01.02.A"
+      },
+      {
+        "id": "_03.01.03.A",
+        "parts": [
+          {
+            "id": "_03.01.03.A-stmt",
+            "name": "statement",
+            "prose": "Appliquer des autorisations approuvées pour contrôler le flux de l’information désignée dans le système et entre les systèmes interconnectés."
+          }
+        ],
+        "title": "03.01.03.A"
+      },
+      {
+        "id": "_03.01.04.A",
+        "parts": [
+          {
+            "id": "_03.01.04.A-stmt",
+            "name": "statement",
+            "prose": "Établir les tâches des personnes devant être séparées."
+          }
+        ],
+        "title": "03.01.04.A"
+      },
+      {
+        "id": "_03.01.04.B",
+        "parts": [
+          {
+            "id": "_03.01.04.B-stmt",
+            "name": "statement",
+            "prose": "Définir les autorisations d’accès au système afin d’appuyer la séparation des tâches."
+          }
+        ],
+        "title": "03.01.04.B"
+      },
+      {
+        "id": "_03.01.05.A",
+        "parts": [
+          {
+            "id": "_03.01.05.A-stmt",
+            "name": "statement",
+            "prose": "Permettre uniquement les accès autorisés au système pour les utilisatrices et utilisateurs (ou les processus exécutés en leur nom) qui sont nécessaires pour accomplir les tâches organisationnelles assignées."
+          }
+        ],
+        "title": "03.01.05.A"
+      },
+      {
+        "id": "_03.01.05.B",
+        "parts": [
+          {
+            "id": "_03.01.05.B-stmt",
+            "name": "statement",
+            "prose": "Autoriser l’accès aux [Affectation : fonctions de sécurité définies par l’organisation] et à [Affectation : information liée à la sécurité définie par l’organisation]."
+          }
+        ],
+        "title": "03.01.05.B"
+      },
+      {
+        "id": "_03.01.05.C",
+        "parts": [
+          {
+            "id": "_03.01.05.C-stmt",
+            "name": "statement",
+            "prose": "Examiner les privilèges attribués aux rôles ou aux classes d’utilisateur tous les [Affectation : fréquence définie par l’organisation] afin de valider la nécessité de détenir ces privilèges."
+          }
+        ],
+        "title": "03.01.05.C"
+      },
+      {
+        "id": "_03.01.05.D",
+        "parts": [
+          {
+            "id": "_03.01.05.D-stmt",
+            "name": "statement",
+            "prose": "Réattribuer ou retirer les privilèges, au besoin."
+          }
+        ],
+        "title": "03.01.05.D"
+      },
+      {
+        "id": "_03.01.06.A",
+        "parts": [
+          {
+            "id": "_03.01.06.A-stmt",
+            "name": "statement",
+            "prose": "Restreindre les comptes privilégiés sur le système à [Affectation : personnel ou rôles définis par l’organisation]."
+          }
+        ],
+        "title": "03.01.06.A"
+      },
+      {
+        "id": "_03.01.06.B",
+        "parts": [
+          {
+            "id": "_03.01.06.B-stmt",
+            "name": "statement",
+            "prose": "Exiger que les utilisatrices et utilisateurs (ou les rôles) associés à des comptes privilégiés utilisent des comptes non privilégiés lorsqu’ils accèdent à des fonctions ou à de l’information qui ne sont pas liées à la sécurité."
+          }
+        ],
+        "title": "03.01.06.B"
+      },
+      {
+        "id": "_03.01.06.C",
+        "parts": [
+          {
+            "id": "_03.01.06.C-stmt",
+            "name": "statement",
+            "prose": "Exiger que les opérations d’administration ou de superutilisateur soient réalisées à partir d’un poste de travail physique dédié à ces tâches précises et isolées des autres fonctions et réseaux. En particulier, la station ne devrait pas avoir accès à Internet."
+          }
+        ],
+        "title": "03.01.06.C"
+      },
+      {
+        "id": "_03.01.07.A",
+        "parts": [
+          {
+            "id": "_03.01.07.A-stmt",
+            "name": "statement",
+            "prose": "Empêcher les utilisatrices et utilisateurs non privilégiés d’exécuter des fonctions privilégiées."
+          }
+        ],
+        "title": "03.01.07.A"
+      },
+      {
+        "id": "_03.01.07.B",
+        "parts": [
+          {
+            "id": "_03.01.07.B-stmt",
+            "name": "statement",
+            "prose": "Journaliser l’exécution de fonctions privilégiées."
+          }
+        ],
+        "title": "03.01.07.B"
+      },
+      {
+        "id": "_03.01.08.A",
+        "parts": [
+          {
+            "id": "_03.01.08.A-stmt",
+            "name": "statement",
+            "prose": "Limiter le nombre de tentatives d’ouverture de session invalides à [Affectation : nombre défini par l’organisation] en moins de [Affectation : période définie par l’organisation]."
+          }
+        ],
+        "title": "03.01.08.A"
+      },
+      {
+        "id": "_03.01.08.B",
+        "parts": [
+          {
+            "id": "_03.01.08.B-stmt",
+            "name": "statement",
+            "prose": "[Sélection (un ou plusieurs) : Verrouiller le compte ou le nœud pendant [Affectation : période définie par l’organisation]; verrouiller le compte ou le nœud jusqu’à ce qu’une administratrice ou un administrateur le libère; retarder la prochaine invite d’ouverture de session; aviser l’administratrice ou administrateur de système; effectuer une autre opération] automatiquement lorsque le nombre maximal de tentatives infructueuses est dépassé."
+          }
+        ],
+        "title": "03.01.08.B"
+      },
+      {
+        "id": "_03.01.09.A",
+        "parts": [
+          {
+            "id": "_03.01.09.A-stmt",
+            "name": "statement",
+            "prose": "Afficher un message d’avis d’utilisation du système qui comprend des énoncés sur la protection de la vie privée et sur la sécurité qui sont conformes aux règles liées à l’information désignée applicables, avant d’accorder l’accès au système."
+          }
+        ],
+        "title": "03.01.09.A"
+      },
+      {
+        "id": "_03.01.10.A",
+        "parts": [
+          {
+            "id": "_03.01.10.A-stmt",
+            "name": "statement",
+            "prose": "Empêcher l’accès au système [Sélection (un ou plusieurs) : en procédant à un verrouillage d’appareil après [Affectation : période définie par l’organisation] d’inactivité; en exigeant que l’utilisatrice ou utilisateur procède à un verrouillage d’appareil avant de laisser le système sans surveillance]."
+          }
+        ],
+        "title": "03.01.10.A"
+      },
+      {
+        "id": "_03.01.10.B",
+        "parts": [
+          {
+            "id": "_03.01.10.B-stmt",
+            "name": "statement",
+            "prose": "Préserver le verrouillage d’appareil jusqu’à ce que l’utilisatrice ou utilisateur rétablisse l’accès au moyen des procédures d’identification et d’authentification établies."
+          }
+        ],
+        "title": "03.01.10.B"
+      },
+      {
+        "id": "_03.01.10.C",
+        "parts": [
+          {
+            "id": "_03.01.10.C-stmt",
+            "name": "statement",
+            "prose": "Masquer, au moyen d’un verrouillage d’appareil, l’information auparavant visible à l’écran en utilisant une image visible."
+          }
+        ],
+        "title": "03.01.10.C"
+      },
+      {
+        "id": "_03.01.11.A",
+        "parts": [
+          {
+            "id": "_03.01.11.A-stmt",
+            "name": "statement",
+            "prose": "Mettre automatiquement fin à une session utilisateur après [Affectation : conditions ou événements déclenchant une déconnexion définis par l’organisation]."
+          }
+        ],
+        "title": "03.01.11.A"
+      },
+      {
+        "id": "_03.01.12.A",
+        "parts": [
+          {
+            "id": "_03.01.12.A-stmt",
+            "name": "statement",
+            "prose": "Établir les restrictions d’utilisation ainsi que les exigences en matière de configuration et de connexion pour chaque type d’accès distant au système pouvant être autorisé."
+          }
+        ],
+        "title": "03.01.12.A"
+      },
+      {
+        "id": "_03.01.12.B",
+        "parts": [
+          {
+            "id": "_03.01.12.B-stmt",
+            "name": "statement",
+            "prose": "Autoriser chaque type d’accès distant au système avant d’établir une telle connexion."
+          }
+        ],
+        "title": "03.01.12.B"
+      },
+      {
+        "id": "_03.01.12.C",
+        "parts": [
+          {
+            "id": "_03.01.12.C-stmt",
+            "name": "statement",
+            "prose": "Acheminer l’accès distant au système au moyen de points de contrôle d’accès autorisés et gérés."
+          }
+        ],
+        "title": "03.01.12.C"
+      },
+      {
+        "id": "_03.01.12.D",
+        "parts": [
+          {
+            "id": "_03.01.12.D-stmt",
+            "name": "statement",
+            "prose": "Autoriser l’exécution distante des commandes privilégiées et les accès distants à l’information liée à la sécurité."
+          }
+        ],
+        "title": "03.01.12.D"
+      },
+      {
+        "id": "_03.01.16.A",
+        "parts": [
+          {
+            "id": "_03.01.16.A-stmt",
+            "name": "statement",
+            "prose": "Établir les restrictions d’utilisation ainsi que les exigences en matière de configuration et de connexion pour chaque type d’accès sans fil au système."
+          }
+        ],
+        "title": "03.01.16.A"
+      },
+      {
+        "id": "_03.01.16.B",
+        "parts": [
+          {
+            "id": "_03.01.16.B-stmt",
+            "name": "statement",
+            "prose": "Autoriser chaque type d’accès sans fil au système avant d’établir une telle connexion."
+          }
+        ],
+        "title": "03.01.16.B"
+      },
+      {
+        "id": "_03.01.16.C",
+        "parts": [
+          {
+            "id": "_03.01.16.C-stmt",
+            "name": "statement",
+            "prose": "Désactiver les capacités de réseau sans fil non destinées à être utilisées avant la remise et le déploiement du système."
+          }
+        ],
+        "title": "03.01.16.C"
+      },
+      {
+        "id": "_03.01.16.D",
+        "parts": [
+          {
+            "id": "_03.01.16.D-stmt",
+            "name": "statement",
+            "prose": "Protéger l’accès sans fil au système au moyen de mécanismes d’authentification et de chiffrement."
+          }
+        ],
+        "title": "03.01.16.D"
+      },
+      {
+        "id": "_03.01.18.A",
+        "parts": [
+          {
+            "id": "_03.01.18.A-stmt",
+            "name": "statement",
+            "prose": "Établir des restrictions d’utilisation ainsi que les exigences en matière de configuration et de connexion pour les appareils mobiles."
+          }
+        ],
+        "title": "03.01.18.A"
+      },
+      {
+        "id": "_03.01.18.B",
+        "parts": [
+          {
+            "id": "_03.01.18.B-stmt",
+            "name": "statement",
+            "prose": "Autoriser les connexions d’appareil mobile au système."
+          }
+        ],
+        "title": "03.01.18.B"
+      },
+      {
+        "id": "_03.01.18.C",
+        "parts": [
+          {
+            "id": "_03.01.18.C-stmt",
+            "name": "statement",
+            "prose": "Mettre en œuvre un chiffrement complet des appareils ou un chiffrement des contenants afin de protéger la confidentialité de l’information désignée sur les appareils mobiles."
+          }
+        ],
+        "title": "03.01.18.C"
+      },
+      {
+        "id": "_03.01.20.A",
+        "parts": [
+          {
+            "id": "_03.01.20.A-stmt",
+            "name": "statement",
+            "prose": "Empêcher l’utilisation de systèmes externes, sauf si ceux-ci sont explicitement autorisés."
+          }
+        ],
+        "title": "03.01.20.A"
+      },
+      {
+        "id": "_03.01.20.B",
+        "parts": [
+          {
+            "id": "_03.01.20.B-stmt",
+            "name": "statement",
+            "prose": "Établir les modalités, les conditions et les exigences de sécurité suivantes, que les systèmes externes doivent satisfaire avant de permettre aux personnes autorisées de les utiliser ou d’y accéder : [Affectation : exigences de sécurité définies par l’organisation]."
+          }
+        ],
+        "title": "03.01.20.B"
+      },
+      {
+        "id": "_03.01.20.C.1",
+        "parts": [
+          {
+            "id": "_03.01.20.C.1-stmt",
+            "name": "statement",
+            "prose": "vérifier la satisfaction des exigences de sécurité du système externe, telles qu’elles sont énoncées dans les plans de sécurité et de protection de la vie privée pour le système de l’organisation;"
+          }
+        ],
+        "title": "03.01.20.C.1"
+      },
+      {
+        "id": "_03.01.20.C.2",
+        "parts": [
+          {
+            "id": "_03.01.20.C.2-stmt",
+            "name": "statement",
+            "prose": "conserver les ententes approuvées de connexion au système ou de traitement avec les entités organisationnelles qui hébergent les systèmes externes."
+          }
+        ],
+        "title": "03.01.20.C.2"
+      },
+      {
+        "id": "_03.01.20.D",
+        "parts": [
+          {
+            "id": "_03.01.20.D-stmt",
+            "name": "statement",
+            "prose": "Restreindre l’utilisation de dispositifs de stockage portatifs contrôlés par l’organisation aux personnes autorisées pour les systèmes externes."
+          }
+        ],
+        "title": "03.01.20.D"
+      },
+      {
+        "id": "_03.01.22.A",
+        "parts": [
+          {
+            "id": "_03.01.22.A-stmt",
+            "name": "statement",
+            "prose": "Former les personnes autorisées afin de s’assurer que l’information à accès public ne contient pas d’information désignée."
+          }
+        ],
+        "title": "03.01.22.A"
+      },
+      {
+        "id": "_03.01.22.B",
+        "parts": [
+          {
+            "id": "_03.01.22.B-stmt",
+            "name": "statement",
+            "prose": "Vérifier périodiquement le contenu des systèmes à accès public afin de s’assurer qu’il ne contient pas d’information désignée et retirer toute information désignée, le cas échéant."
+          }
+        ],
+        "title": "03.01.22.B"
+      },
+      {
+        "id": "_03.02.01.A.1",
+        "parts": [
+          {
+            "id": "_03.02.01.A.1-stmt",
+            "name": "statement",
+            "prose": "dans le cadre d’une formation de base pour les nouvelles utilisatrices et nouveaux utilisateurs, et tous les [Affectation : fréquence définie par l’organisation] par la suite;"
+          }
+        ],
+        "title": "03.02.01.A.1"
+      },
+      {
+        "id": "_03.02.01.A.2",
+        "parts": [
+          {
+            "id": "_03.02.01.A.2-stmt",
+            "name": "statement",
+            "prose": "lors de changements apportés au système ou à la suite de [Affectation : événements définis par l’organisation];"
+          }
+        ],
+        "title": "03.02.01.A.2"
+      },
+      {
+        "id": "_03.02.01.A.3",
+        "parts": [
+          {
+            "id": "_03.02.01.A.3-stmt",
+            "name": "statement",
+            "prose": "pour reconnaître et signaler les indicateurs de menace interne, de piratage psychologique et de l’exploration de données dans les médias sociaux."
+          }
+        ],
+        "title": "03.02.01.A.3"
+      },
+      {
+        "id": "_03.02.01.B",
+        "parts": [
+          {
+            "id": "_03.02.01.B-stmt",
+            "name": "statement",
+            "prose": "Mettre à jour le contenu de formation en matière de sécurité et de protection de la vie privée tous les [Affectation : fréquence définie par l’organisation] et à la suite de [Affectation : événements définis par l’organisation]."
+          }
+        ],
+        "title": "03.02.01.B"
+      },
+      {
+        "id": "_03.02.02.A.1",
+        "parts": [
+          {
+            "id": "_03.02.02.A.1-stmt",
+            "name": "statement",
+            "prose": "avant d’autoriser l’accès au système ou à de l’information désignée, avant la réalisation des tâches attribuées et tous les [Affectation : fréquence définie par l’organisation] par la suite;"
+          }
+        ],
+        "title": "03.02.02.A.1"
+      },
+      {
+        "id": "_03.02.02.A.2",
+        "parts": [
+          {
+            "id": "_03.02.02.A.2-stmt",
+            "name": "statement",
+            "prose": "lors de changements apportés au système ou à la suite de [Affectation : événements définis par l’organisation]."
+          }
+        ],
+        "title": "03.02.02.A.2"
+      },
+      {
+        "id": "_03.02.02.B",
+        "parts": [
+          {
+            "id": "_03.02.02.B-stmt",
+            "name": "statement",
+            "prose": "Mettre à jour le contenu de la formation offerte selon le rôle tous les [Affectation : fréquence définie par l’organisation] ou à la suite de [Affectation : événements définis par l’organisation]."
+          }
+        ],
+        "title": "03.02.02.B"
+      },
+      {
+        "id": "_03.03.01.A",
+        "parts": [
+          {
+            "id": "_03.03.01.A-stmt",
+            "name": "statement",
+            "prose": "Préciser les types d’événements suivants sélectionnés pour la journalisation dans le système : [Affectations : types d’événements définis par l’organisation]."
+          }
+        ],
+        "title": "03.03.01.A"
+      },
+      {
+        "id": "_03.03.01.B",
+        "parts": [
+          {
+            "id": "_03.03.01.B-stmt",
+            "name": "statement",
+            "prose": "Vérifier et mettre à jour les types d’événements sélectionnés pour la journalisation tous les [Affectation : fréquence définie par l’organisation]."
+          }
+        ],
+        "title": "03.03.01.B"
+      },
+      {
+        "id": "_03.03.02.A.1",
+        "parts": [
+          {
+            "id": "_03.03.02.A.1-stmt",
+            "name": "statement",
+            "prose": "type d’événement qui s’est produit;"
+          }
+        ],
+        "title": "03.03.02.A.1"
+      },
+      {
+        "id": "_03.03.02.A.2",
+        "parts": [
+          {
+            "id": "_03.03.02.A.2-stmt",
+            "name": "statement",
+            "prose": "moment auquel l’événement s’est produit;"
+          }
+        ],
+        "title": "03.03.02.A.2"
+      },
+      {
+        "id": "_03.03.02.A.3",
+        "parts": [
+          {
+            "id": "_03.03.02.A.3-stmt",
+            "name": "statement",
+            "prose": "endroit où l’événement s’est produit;"
+          }
+        ],
+        "title": "03.03.02.A.3"
+      },
+      {
+        "id": "_03.03.02.A.4",
+        "parts": [
+          {
+            "id": "_03.03.02.A.4-stmt",
+            "name": "statement",
+            "prose": "source de l’événement;"
+          }
+        ],
+        "title": "03.03.02.A.4"
+      },
+      {
+        "id": "_03.03.02.A.5",
+        "parts": [
+          {
+            "id": "_03.03.02.A.5-stmt",
+            "name": "statement",
+            "prose": "résultat de l’événement;"
+          }
+        ],
+        "title": "03.03.02.A.5"
+      },
+      {
+        "id": "_03.03.02.A.6",
+        "parts": [
+          {
+            "id": "_03.03.02.A.6-stmt",
+            "name": "statement",
+            "prose": "identité des personnes, des sujets, des objets ou des entités associés à l’événement."
+          }
+        ],
+        "title": "03.03.02.A.6"
+      },
+      {
+        "id": "_03.03.02.B",
+        "parts": [
+          {
+            "id": "_03.03.02.B-stmt",
+            "name": "statement",
+            "prose": "Fournir des renseignements supplémentaires pour les enregistrements de vérification, au besoin."
+          }
+        ],
+        "title": "03.03.02.B"
+      },
+      {
+        "id": "_03.03.03.A",
+        "parts": [
+          {
+            "id": "_03.03.03.A-stmt",
+            "name": "statement",
+            "prose": "Générer les enregistrements de vérification pour les types d’événements sélectionnés et le contenu des enregistrements de vérification indiqué dans les exigences **Journalisation d'événements 03.03.01** et **Contenu des enregistrements de vérification 03.03.02** ."
+          }
+        ],
+        "title": "03.03.03.A"
+      },
+      {
+        "id": "_03.03.03.B",
+        "parts": [
+          {
+            "id": "_03.03.03.B-stmt",
+            "name": "statement",
+            "prose": "Conserver les enregistrements de vérification pendant la période correspondant à la stratégie de conservation des dossiers."
+          }
+        ],
+        "title": "03.03.03.B"
+      },
+      {
+        "id": "_03.03.04.A",
+        "parts": [
+          {
+            "id": "_03.03.04.A-stmt",
+            "name": "statement",
+            "prose": "Alerter le personnel ou les rôles désignés de l’organisation dans une période de [Affectation : période définie par l’organisation] en cas de défaillance d’un processus de journalisation des données de vérification."
+          }
+        ],
+        "title": "03.03.04.A"
+      },
+      {
+        "id": "_03.03.04.B",
+        "parts": [
+          {
+            "id": "_03.03.04.B-stmt",
+            "name": "statement",
+            "prose": "Prendre les mesures supplémentaires suivantes : [Affectation : mesures supplémentaires définies par l’organisation]."
+          }
+        ],
+        "title": "03.03.04.B"
+      },
+      {
+        "id": "_03.03.05.A",
+        "parts": [
+          {
+            "id": "_03.03.05.A-stmt",
+            "name": "statement",
+            "prose": "Examiner et analyser les enregistrements de vérification du système tous les [Affectation : fréquence définie par l’organisation] afin de repérer les indications et les répercussions potentielles d’activités inappropriées ou inhabituelles."
+          }
+        ],
+        "title": "03.03.05.A"
+      },
+      {
+        "id": "_03.03.05.B",
+        "parts": [
+          {
+            "id": "_03.03.05.B-stmt",
+            "name": "statement",
+            "prose": "Signaler les résultats au personnel ou aux rôles désignés de l’organisation."
+          }
+        ],
+        "title": "03.03.05.B"
+      },
+      {
+        "id": "_03.03.05.C",
+        "parts": [
+          {
+            "id": "_03.03.05.C-stmt",
+            "name": "statement",
+            "prose": "Analyser et mettre en correspondance les enregistrements de vérification provenant de différents dépôts afin d’établir une connaissance de la situation à l’échelle de l’organisation."
+          }
+        ],
+        "title": "03.03.05.C"
+      },
+      {
+        "id": "_03.03.06.A",
+        "parts": [
+          {
+            "id": "_03.03.06.A-stmt",
+            "name": "statement",
+            "prose": "Mettre en œuvre des capacités de réduction des enregistrements de vérification et de génération de rapports pour répondre aux exigences en matière d’examen, d’analyse et de production de rapports ainsi qu’aux enquêtes sur les incidents."
+          }
+        ],
+        "title": "03.03.06.A"
+      },
+      {
+        "id": "_03.03.06.B",
+        "parts": [
+          {
+            "id": "_03.03.06.B-stmt",
+            "name": "statement",
+            "prose": "Conserver le contenu original et la chronologie des enregistrements de vérification."
+          }
+        ],
+        "title": "03.03.06.B"
+      },
+      {
+        "id": "_03.03.07.A",
+        "parts": [
+          {
+            "id": "_03.03.07.A-stmt",
+            "name": "statement",
+            "prose": "Utiliser les horloges internes du système pour horodater les enregistrements de vérification."
+          }
+        ],
+        "title": "03.03.07.A"
+      },
+      {
+        "id": "_03.03.07.B",
+        "parts": [
+          {
+            "id": "_03.03.07.B-stmt",
+            "name": "statement",
+            "prose": "Consigner l’horodatage des enregistrements de vérification correspondant à [Affectation : granularité de mesure du temps définie par l’organisation] et utilisant le temps universel coordonné (UTC), un décalage fixe par rapport à l’UTC correspondant à l’heure locale, ou encore en incluant le décalage local dans les données d’horodatage."
+          }
+        ],
+        "title": "03.03.07.B"
+      },
+      {
+        "id": "_03.03.08.A",
+        "parts": [
+          {
+            "id": "_03.03.08.A-stmt",
+            "name": "statement",
+            "prose": "Protéger l’information de vérification et les outils de journalisation des données de vérification contre les accès non autorisés, les modifications et les suppressions."
+          }
+        ],
+        "title": "03.03.08.A"
+      },
+      {
+        "id": "_03.03.08.B",
+        "parts": [
+          {
+            "id": "_03.03.08.B-stmt",
+            "name": "statement",
+            "prose": "Autoriser l’accès pour la gestion de la fonctionnalité de journalisation des données de vérification uniquement à un sous-ensemble d’utilisatrices et utilisateurs ou de rôles privilégiés."
+          }
+        ],
+        "title": "03.03.08.B"
+      },
+      {
+        "id": "_03.04.01.A",
+        "parts": [
+          {
+            "id": "_03.04.01.A-stmt",
+            "name": "statement",
+            "prose": "Élaborer et tenir à jour, dans le cadre du contrôle des configurations, une configuration de référence du système."
+          }
+        ],
+        "title": "03.04.01.A"
+      },
+      {
+        "id": "_03.04.01.B",
+        "parts": [
+          {
+            "id": "_03.04.01.B-stmt",
+            "name": "statement",
+            "prose": "Examiner et mettre à jour la configuration de référence du système tous les [Affectation : fréquence définie par l’organisation] et lorsque des composants système sont installés ou modifiés."
+          }
+        ],
+        "title": "03.04.01.B"
+      },
+      {
+        "id": "_03.04.02.A",
+        "parts": [
+          {
+            "id": "_03.04.02.A-stmt",
+            "name": "statement",
+            "prose": "Établir, documenter et mettre en œuvre les paramètres de configuration suivants pour le système afin de refléter le mode le plus restrictif selon les exigences opérationnelles : [Affectation : paramètres de configuration définis par l’organisation]."
+          }
+        ],
+        "title": "03.04.02.A"
+      },
+      {
+        "id": "_03.04.02.B",
+        "parts": [
+          {
+            "id": "_03.04.02.B-stmt",
+            "name": "statement",
+            "prose": "Déterminer, documenter et approuver toute déviation des paramètres de configuration établis."
+          }
+        ],
+        "title": "03.04.02.B"
+      },
+      {
+        "id": "_03.04.03.A",
+        "parts": [
+          {
+            "id": "_03.04.03.A-stmt",
+            "name": "statement",
+            "prose": "Définir les types de changements apportés au système qui sont contrôlés par la configuration."
+          }
+        ],
+        "title": "03.04.03.A"
+      },
+      {
+        "id": "_03.04.03.B",
+        "parts": [
+          {
+            "id": "_03.04.03.B-stmt",
+            "name": "statement",
+            "prose": "Examiner les changements proposés au système qui sont contrôlés par la configuration et les approuver ou les refuser en tenant compte explicitement des répercussions sur la sécurité."
+          }
+        ],
+        "title": "03.04.03.B"
+      },
+      {
+        "id": "_03.04.03.C",
+        "parts": [
+          {
+            "id": "_03.04.03.C-stmt",
+            "name": "statement",
+            "prose": "Mettre en œuvre et documenter les changements approuvés au système qui sont contrôlés par la configuration."
+          }
+        ],
+        "title": "03.04.03.C"
+      },
+      {
+        "id": "_03.04.03.D",
+        "parts": [
+          {
+            "id": "_03.04.03.D-stmt",
+            "name": "statement",
+            "prose": "Surveiller et examiner les activités associées aux changements contrôlés par la configuration visant le système."
+          }
+        ],
+        "title": "03.04.03.D"
+      },
+      {
+        "id": "_03.04.04.A",
+        "parts": [
+          {
+            "id": "_03.04.04.A-stmt",
+            "name": "statement",
+            "prose": "Analyser les répercussions sur la sécurité et sur la vie privée des changements apportés au système, avant la mise en œuvre."
+          }
+        ],
+        "title": "03.04.04.A"
+      },
+      {
+        "id": "_03.04.04.B",
+        "parts": [
+          {
+            "id": "_03.04.04.B-stmt",
+            "name": "statement",
+            "prose": "Vérifier que les exigences de sécurité du système continueront d’être satisfaites après la mise en œuvre des changements."
+          }
+        ],
+        "title": "03.04.04.B"
+      },
+      {
+        "id": "_03.04.05.A",
+        "parts": [
+          {
+            "id": "_03.04.05.A-stmt",
+            "name": "statement",
+            "prose": "Définir, documenter, approuver et appliquer les restrictions d’accès physiques et logiques associées aux changements apportés au système."
+          }
+        ],
+        "title": "03.04.05.A"
+      },
+      {
+        "id": "_03.04.06.A",
+        "parts": [
+          {
+            "id": "_03.04.06.A-stmt",
+            "name": "statement",
+            "prose": "Configurer le système afin qu’il fournisse uniquement les capacités essentielles à la mission."
+          }
+        ],
+        "title": "03.04.06.A"
+      },
+      {
+        "id": "_03.04.06.B",
+        "parts": [
+          {
+            "id": "_03.04.06.B-stmt",
+            "name": "statement",
+            "prose": "Interdire ou restreindre l’utilisation des fonctions, des ports, des protocoles, des connexions et des services suivants : [Affectation : fonctions, ports, protocoles, connexions et services définis par l’organisation]."
+          }
+        ],
+        "title": "03.04.06.B"
+      },
+      {
+        "id": "_03.04.06.C",
+        "parts": [
+          {
+            "id": "_03.04.06.C-stmt",
+            "name": "statement",
+            "prose": "Examiner le système tous les [Affectation : fréquence définie par l’organisation] afin d’établir les fonctions, les ports, les protocoles, les connexions et les services non nécessaires."
+          }
+        ],
+        "title": "03.04.06.C"
+      },
+      {
+        "id": "_03.04.06.D",
+        "parts": [
+          {
+            "id": "_03.04.06.D-stmt",
+            "name": "statement",
+            "prose": "Désactiver ou retirer les fonctions, les ports, les protocoles, les connexions et les services qui ne sont pas nécessaires ou non sécurisés."
+          }
+        ],
+        "title": "03.04.06.D"
+      },
+      {
+        "id": "_03.04.08.A",
+        "parts": [
+          {
+            "id": "_03.04.08.A-stmt",
+            "name": "statement",
+            "prose": "Déterminer les programmes logiciels autorisés à être exécutés sur le système."
+          }
+        ],
+        "title": "03.04.08.A"
+      },
+      {
+        "id": "_03.04.08.B",
+        "parts": [
+          {
+            "id": "_03.04.08.B-stmt",
+            "name": "statement",
+            "prose": "Mettre en œuvre une stratégie de refus par défaut, autorisation par exception pour l’exécution des programmes logiciels sur le système."
+          }
+        ],
+        "title": "03.04.08.B"
+      },
+      {
+        "id": "_03.04.08.C",
+        "parts": [
+          {
+            "id": "_03.04.08.C-stmt",
+            "name": "statement",
+            "prose": "Examiner et mettre à jour la liste des programmes logiciels autorisés tous les [Affectation : fréquence définie par l’organisation]."
+          }
+        ],
+        "title": "03.04.08.C"
+      },
+      {
+        "id": "_03.04.10.A",
+        "parts": [
+          {
+            "id": "_03.04.10.A-stmt",
+            "name": "statement",
+            "prose": "Élaborer et documenter un inventaire des composants du système."
+          }
+        ],
+        "title": "03.04.10.A"
+      },
+      {
+        "id": "_03.04.10.B",
+        "parts": [
+          {
+            "id": "_03.04.10.B-stmt",
+            "name": "statement",
+            "prose": "Examiner et mettre à jour l’inventaire des composants du système tous les [Affectation : fréquence définie par l’organisation]."
+          }
+        ],
+        "title": "03.04.10.B"
+      },
+      {
+        "id": "_03.04.10.C",
+        "parts": [
+          {
+            "id": "_03.04.10.C-stmt",
+            "name": "statement",
+            "prose": "Mettre à jour l’inventaire des composants du système dans le cadre des activités d’installation, de retrait et de mise à jour du système."
+          }
+        ],
+        "title": "03.04.10.C"
+      },
+      {
+        "id": "_03.04.11.A",
+        "parts": [
+          {
+            "id": "_03.04.11.A-stmt",
+            "name": "statement",
+            "prose": "Établir et documenter l’emplacement de l’information désignée et des composants système où l’information est traitée et stockée."
+          }
+        ],
+        "title": "03.04.11.A"
+      },
+      {
+        "id": "_03.04.11.B",
+        "parts": [
+          {
+            "id": "_03.04.11.B-stmt",
+            "name": "statement",
+            "prose": "Documenter les changements d’emplacement sur le système ou les composants du système où l’information désignée est traitée et stockée."
+          }
+        ],
+        "title": "03.04.11.B"
+      },
+      {
+        "id": "_03.04.12.A",
+        "parts": [
+          {
+            "id": "_03.04.12.A-stmt",
+            "name": "statement",
+            "prose": "Remettre des systèmes ou des composants système dotés des configurations suivantes aux personnes qui voyagent dans des lieux à risque élevé : [Affectation : configurations système définies par l’organisation]."
+          }
+        ],
+        "title": "03.04.12.A"
+      },
+      {
+        "id": "_03.04.12.B",
+        "parts": [
+          {
+            "id": "_03.04.12.B-stmt",
+            "name": "statement",
+            "prose": "Appliquer les exigences de sécurité suivantes aux systèmes ou aux composants système lorsque les personnes reviennent de voyage : [Affectation : exigences de sécurité définies par l’organisation]."
+          }
+        ],
+        "title": "03.04.12.B"
+      },
+      {
+        "id": "_03.05.01.A",
+        "parts": [
+          {
+            "id": "_03.05.01.A-stmt",
+            "name": "statement",
+            "prose": "Identifier de manière unique et authentifier les utilisatrices et utilisateurs du système et associer un identificateur unique aux processus agissant en leur nom."
+          }
+        ],
+        "title": "03.05.01.A"
+      },
+      {
+        "id": "_03.05.01.B",
+        "parts": [
+          {
+            "id": "_03.05.01.B-stmt",
+            "name": "statement",
+            "prose": "Réauthentifier les utilisatrices et utilisateurs lors de [Affectation : circonstances ou situations nécessitant une réauthentification définies par l’organisation]."
+          }
+        ],
+        "title": "03.05.01.B"
+      },
+      {
+        "id": "_03.05.02.A",
+        "parts": [
+          {
+            "id": "_03.05.02.A-stmt",
+            "name": "statement",
+            "prose": "Identifier de manière unique et authentifier les [Affectation : dispositifs ou types de dispositifs définis par l’organisation] avant d’établir une connexion au système."
+          }
+        ],
+        "title": "03.05.02.A"
+      },
+      {
+        "id": "_03.05.03.A",
+        "parts": [
+          {
+            "id": "_03.05.03.A-stmt",
+            "name": "statement",
+            "prose": "Mettre en œuvre des mécanismes robustes d’authentification multifacteur (AMF) pour l’accès aux comptes privilégiés et non privilégiés."
+          }
+        ],
+        "title": "03.05.03.A"
+      },
+      {
+        "id": "_03.05.04.A",
+        "parts": [
+          {
+            "id": "_03.05.04.A-stmt",
+            "name": "statement",
+            "prose": "Mettre en œuvre des mécanismes d’authentification résistant à la réinsertion pour l’accès aux comptes privilégiés et non privilégiés."
+          }
+        ],
+        "title": "03.05.04.A"
+      },
+      {
+        "id": "_03.05.05.A",
+        "parts": [
+          {
+            "id": "_03.05.05.A-stmt",
+            "name": "statement",
+            "prose": "Recevoir une autorisation du personnel ou des rôles de l’organisation pour attribuer un identifiant à une personne, à un groupe, à un rôle, à un service ou à un dispositif."
+          }
+        ],
+        "title": "03.05.05.A"
+      },
+      {
+        "id": "_03.05.05.B",
+        "parts": [
+          {
+            "id": "_03.05.05.B-stmt",
+            "name": "statement",
+            "prose": "Sélectionner et attribuer un identifiant qui identifie une personne, un groupe, un rôle, un service ou un dispositif."
+          }
+        ],
+        "title": "03.05.05.B"
+      },
+      {
+        "id": "_03.05.05.C",
+        "parts": [
+          {
+            "id": "_03.05.05.C-stmt",
+            "name": "statement",
+            "prose": "Prévenir la réutilisation d’identifiant pendant [Affectation : période définie par l’organisation]."
+          }
+        ],
+        "title": "03.05.05.C"
+      },
+      {
+        "id": "_03.05.05.D",
+        "parts": [
+          {
+            "id": "_03.05.05.D-stmt",
+            "name": "statement",
+            "prose": "Gérer les identifiants personnels en identifiant de façon unique chaque personne à titre de [Affectation : caractéristique définie par l’organisation identifiant le statut de la personne]."
+          }
+        ],
+        "title": "03.05.05.D"
+      },
+      {
+        "id": "_03.05.07.A",
+        "parts": [
+          {
+            "id": "_03.05.07.A-stmt",
+            "name": "statement",
+            "prose": "Créer une liste des mots de passe couramment utilisés, attendus ou compromis et la mettre à jour tous les [Affectation : fréquence définie par l’organisation] et lorsque l’on soupçonne que les mots de passe de l’organisation ont été compromis."
+          }
+        ],
+        "title": "03.05.07.A"
+      },
+      {
+        "id": "_03.05.07.B",
+        "parts": [
+          {
+            "id": "_03.05.07.B-stmt",
+            "name": "statement",
+            "prose": "Vérifier que les mots de passe ne figurent pas sur la liste des mots de passe couramment utilisés, attendus ou compromis lorsque les utilisatrices et utilisateurs créent ou modifient leurs mots de passe."
+          }
+        ],
+        "title": "03.05.07.B"
+      },
+      {
+        "id": "_03.05.07.C",
+        "parts": [
+          {
+            "id": "_03.05.07.C-stmt",
+            "name": "statement",
+            "prose": "Transmettre les mots de passe uniquement par des canaux protégés par chiffrement."
+          }
+        ],
+        "title": "03.05.07.C"
+      },
+      {
+        "id": "_03.05.07.D",
+        "parts": [
+          {
+            "id": "_03.05.07.D-stmt",
+            "name": "statement",
+            "prose": "Stocker les mots de passe sous forme chiffrée."
+          }
+        ],
+        "title": "03.05.07.D"
+      },
+      {
+        "id": "_03.05.07.E",
+        "parts": [
+          {
+            "id": "_03.05.07.E-stmt",
+            "name": "statement",
+            "prose": "Sélectionner un nouveau mot de passe lors de la première utilisation à la suite d’une récupération de compte."
+          }
+        ],
+        "title": "03.05.07.E"
+      },
+      {
+        "id": "_03.05.07.F",
+        "parts": [
+          {
+            "id": "_03.05.07.F-stmt",
+            "name": "statement",
+            "prose": "Appliquer aux mots de passe les règles de composition et de complexité suivantes : [Affectation : règles de composition et de complexité définies par l’organisation]."
+          }
+        ],
+        "title": "03.05.07.F"
+      },
+      {
+        "id": "_03.05.11.A",
+        "parts": [
+          {
+            "id": "_03.05.11.A-stmt",
+            "name": "statement",
+            "prose": "Masquer la rétroaction d’information d’authentification durant le processus d’authentification."
+          }
+        ],
+        "title": "03.05.11.A"
+      },
+      {
+        "id": "_03.05.12.A",
+        "parts": [
+          {
+            "id": "_03.05.12.A-stmt",
+            "name": "statement",
+            "prose": "Vérifier l’identité de la personne, du groupe, du rôle, du service ou du dispositif recevant l’authentifiant dans le cadre de la distribution initiale d’authentifiant."
+          }
+        ],
+        "title": "03.05.12.A"
+      },
+      {
+        "id": "_03.05.12.B",
+        "parts": [
+          {
+            "id": "_03.05.12.B-stmt",
+            "name": "statement",
+            "prose": "Établir le contenu de l’authentifiant initial pour les authentifiants émis par l’organisation."
+          }
+        ],
+        "title": "03.05.12.B"
+      },
+      {
+        "id": "_03.05.12.C",
+        "parts": [
+          {
+            "id": "_03.05.12.C-stmt",
+            "name": "statement",
+            "prose": "Établir et mettre en œuvre des procédures administratives pour la distribution initiale des authentifiants en cas de perte, de compromission, de corruption et de révocation."
+          }
+        ],
+        "title": "03.05.12.C"
+      },
+      {
+        "id": "_03.05.12.D",
+        "parts": [
+          {
+            "id": "_03.05.12.D-stmt",
+            "name": "statement",
+            "prose": "Changer les authentifiants par défaut lors de la première utilisation."
+          }
+        ],
+        "title": "03.05.12.D"
+      },
+      {
+        "id": "_03.05.12.E",
+        "parts": [
+          {
+            "id": "_03.05.12.E-stmt",
+            "name": "statement",
+            "prose": "Changer ou actualiser les authentifiants tous les [Affectation : fréquence définie par l’organisation] ou lorsque les événements suivants se produisent : [Affectation : événements définis par l’organisation]."
+          }
+        ],
+        "title": "03.05.12.E"
+      },
+      {
+        "id": "_03.05.12.F",
+        "parts": [
+          {
+            "id": "_03.05.12.F-stmt",
+            "name": "statement",
+            "prose": "Protéger le contenu des authentifiants contre les divulgations ou les modifications non autorisées."
+          }
+        ],
+        "title": "03.05.12.F"
+      },
+      {
+        "id": "_03.06.01.A",
+        "parts": [
+          {
+            "id": "_03.06.01.A-stmt",
+            "name": "statement",
+            "prose": "Mettre en œuvre des capacités de traitement des incidents alignées sur le plan d’intervention en cas d’incident et y inclure les activités de préparation, de détection, d’analyse, de confinement, d’éradication et de reprise."
+          }
+        ],
+        "title": "03.06.01.A"
+      },
+      {
+        "id": "_03.06.02.A",
+        "parts": [
+          {
+            "id": "_03.06.02.A-stmt",
+            "name": "statement",
+            "prose": "Faire le suivi et documenter les incidents de sécurité du système."
+          }
+        ],
+        "title": "03.06.02.A"
+      },
+      {
+        "id": "_03.06.02.B",
+        "parts": [
+          {
+            "id": "_03.06.02.B-stmt",
+            "name": "statement",
+            "prose": "Signaler les incidents soupçonnés à l’équipe d’intervention en cas d’incident de l’organisation dans une période de [Affectation : période définie par l’organisation]."
+          }
+        ],
+        "title": "03.06.02.B"
+      },
+      {
+        "id": "_03.06.02.C",
+        "parts": [
+          {
+            "id": "_03.06.02.C-stmt",
+            "name": "statement",
+            "prose": "Donner de l’information sur l’incident à [Affectation : autorités définies par l’organisation]."
+          }
+        ],
+        "title": "03.06.02.C"
+      },
+      {
+        "id": "_03.06.02.D",
+        "parts": [
+          {
+            "id": "_03.06.02.D-stmt",
+            "name": "statement",
+            "prose": "Fournir une ressource de soutien pour l’intervention en cas d’incident qui offre des conseils et de l’assistance aux utilisatrices et utilisateurs du système pour le traitement et le signalement des incidents."
+          }
+        ],
+        "title": "03.06.02.D"
+      },
+      {
+        "id": "_03.06.03.A",
+        "parts": [
+          {
+            "id": "_03.06.03.A-stmt",
+            "name": "statement",
+            "prose": "Tester l’efficacité des capacités d’intervention en cas d’incident tous les [Affectation : fréquence définie par l’organisation]."
+          }
+        ],
+        "title": "03.06.03.A"
+      },
+      {
+        "id": "_03.06.04.A.1",
+        "parts": [
+          {
+            "id": "_03.06.04.A.1-stmt",
+            "name": "statement",
+            "prose": "dans une période de [Affectation : période définie par l’organisation] après avoir été affecté à un rôle ou à des responsabilités d’intervention en cas d’incident ou après avoir obtenu l’accès au système;"
+          }
+        ],
+        "title": "03.06.04.A.1"
+      },
+      {
+        "id": "_03.06.04.A.2",
+        "parts": [
+          {
+            "id": "_03.06.04.A.2-stmt",
+            "name": "statement",
+            "prose": "lorsque des changements apportés au système l’exigent;"
+          }
+        ],
+        "title": "03.06.04.A.2"
+      },
+      {
+        "id": "_03.06.04.A.3",
+        "parts": [
+          {
+            "id": "_03.06.04.A.3-stmt",
+            "name": "statement",
+            "prose": "tous les [Affectation : fréquence définie par l’organisation] par la suite."
+          }
+        ],
+        "title": "03.06.04.A.3"
+      },
+      {
+        "id": "_03.06.04.B",
+        "parts": [
+          {
+            "id": "_03.06.04.B-stmt",
+            "name": "statement",
+            "prose": "Examiner et mettre à jour le contenu de la formation d’intervention en cas d’incident tous les [Affectation : fréquence définie par l’organisation] et à la suite de [Affectation : événements définis par l’organisation]."
+          }
+        ],
+        "title": "03.06.04.B"
+      },
+      {
+        "id": "_03.06.05.A.1",
+        "parts": [
+          {
+            "id": "_03.06.05.A.1-stmt",
+            "name": "statement",
+            "prose": "fournit à l’organisation une feuille de route pour la mise en œuvre de ses capacités d’intervention en cas d’incident;"
+          }
+        ],
+        "title": "03.06.05.A.1"
+      },
+      {
+        "id": "_03.06.05.A.2",
+        "parts": [
+          {
+            "id": "_03.06.05.A.2-stmt",
+            "name": "statement",
+            "prose": "décrit la structure et l’organisation des capacités d’intervention en cas d’incident;"
+          }
+        ],
+        "title": "03.06.05.A.2"
+      },
+      {
+        "id": "_03.06.05.A.3",
+        "parts": [
+          {
+            "id": "_03.06.05.A.3-stmt",
+            "name": "statement",
+            "prose": "fournit une approche de haut niveau indiquant comment les capacités d’intervention en cas d’incident s’intègrent à l’organisation en général;"
+          }
+        ],
+        "title": "03.06.05.A.3"
+      },
+      {
+        "id": "_03.06.05.A.4",
+        "parts": [
+          {
+            "id": "_03.06.05.A.4-stmt",
+            "name": "statement",
+            "prose": "définit les incidents devant être signalés;"
+          }
+        ],
+        "title": "03.06.05.A.4"
+      },
+      {
+        "id": "_03.06.05.A.5",
+        "parts": [
+          {
+            "id": "_03.06.05.A.5-stmt",
+            "name": "statement",
+            "prose": "décrit les modalités d’échange d’information en cas d’incident;"
+          }
+        ],
+        "title": "03.06.05.A.5"
+      },
+      {
+        "id": "_03.06.05.A.6",
+        "parts": [
+          {
+            "id": "_03.06.05.A.6-stmt",
+            "name": "statement",
+            "prose": "désigne les responsabilités pour les entités, le personnel et les rôles organisationnels."
+          }
+        ],
+        "title": "03.06.05.A.6"
+      },
+      {
+        "id": "_03.06.05.B",
+        "parts": [
+          {
+            "id": "_03.06.05.B-stmt",
+            "name": "statement",
+            "prose": "Distribuer des copies des plans d’intervention en cas d’incident au personnel responsable de l’intervention en cas d’incident désigné (identifié par nom ou rôle) et aux équipes organisationnelles."
+          }
+        ],
+        "title": "03.06.05.B"
+      },
+      {
+        "id": "_03.06.05.C",
+        "parts": [
+          {
+            "id": "_03.06.05.C-stmt",
+            "name": "statement",
+            "prose": "Mettre à jour le plan d’intervention en cas d’incident afin de tenir compte des changements apportés aux systèmes et des changements organisationnels, ou encore des problèmes rencontrés durant la mise en œuvre, l’exécution ou la mise à l’essai du plan d’intervention."
+          }
+        ],
+        "title": "03.06.05.C"
+      },
+      {
+        "id": "_03.06.05.D",
+        "parts": [
+          {
+            "id": "_03.06.05.D-stmt",
+            "name": "statement",
+            "prose": "Protéger le plan d’intervention en cas d’incident des divulgations non autorisées."
+          }
+        ],
+        "title": "03.06.05.D"
+      },
+      {
+        "id": "_03.07.04.A",
+        "parts": [
+          {
+            "id": "_03.07.04.A-stmt",
+            "name": "statement",
+            "prose": "Approuver, contrôler et surveiller l’utilisation des outils de maintenance des systèmes."
+          }
+        ],
+        "title": "03.07.04.A"
+      },
+      {
+        "id": "_03.07.04.B",
+        "parts": [
+          {
+            "id": "_03.07.04.B-stmt",
+            "name": "statement",
+            "prose": "Vérifier les supports où sont stockés les programmes de diagnostic et de test afin de détecter la présence de code malveillant, avant d’utiliser les supports dans les systèmes."
+          }
+        ],
+        "title": "03.07.04.B"
+      },
+      {
+        "id": "_03.07.04.C",
+        "parts": [
+          {
+            "id": "_03.07.04.C-stmt",
+            "name": "statement",
+            "prose": "Prévenir le retrait d’équipement de maintenance de système qui pourrait contenir de l’information désignée et vérifier qu’il ne contient pas d’information désignée, en procédant à des opérations de nettoyage ou de destruction de l’équipement ou encore en conservant l’équipement dans l’installation."
+          }
+        ],
+        "title": "03.07.04.C"
+      },
+      {
+        "id": "_03.07.05.A",
+        "parts": [
+          {
+            "id": "_03.07.05.A-stmt",
+            "name": "statement",
+            "prose": "Approuver et surveiller les activités de maintenance et de diagnostic non locales."
+          }
+        ],
+        "title": "03.07.05.A"
+      },
+      {
+        "id": "_03.07.05.B",
+        "parts": [
+          {
+            "id": "_03.07.05.B-stmt",
+            "name": "statement",
+            "prose": "Mettre en œuvre des mécanismes d’authentification multifacteur et résistant à la réinsertion lors de l’établissement des sessions de maintenance et de diagnostic non locales."
+          }
+        ],
+        "title": "03.07.05.B"
+      },
+      {
+        "id": "_03.07.05.C",
+        "parts": [
+          {
+            "id": "_03.07.05.C-stmt",
+            "name": "statement",
+            "prose": "Mettre fin aux sessions et aux connexions réseau lorsque la maintenance non locale est terminée."
+          }
+        ],
+        "title": "03.07.05.C"
+      },
+      {
+        "id": "_03.07.06.A",
+        "parts": [
+          {
+            "id": "_03.07.06.A-stmt",
+            "name": "statement",
+            "prose": "Établir un processus pour l’autorisation du personnel de maintenance."
+          }
+        ],
+        "title": "03.07.06.A"
+      },
+      {
+        "id": "_03.07.06.B",
+        "parts": [
+          {
+            "id": "_03.07.06.B-stmt",
+            "name": "statement",
+            "prose": "Maintenir une liste des organisations ou du personnel autorisés pour la maintenance."
+          }
+        ],
+        "title": "03.07.06.B"
+      },
+      {
+        "id": "_03.07.06.C",
+        "parts": [
+          {
+            "id": "_03.07.06.C-stmt",
+            "name": "statement",
+            "prose": "Vérifier que le personnel non accompagné réalisant des activités de maintenance sur le système dispose des autorisations d’accès nécessaires."
+          }
+        ],
+        "title": "03.07.06.C"
+      },
+      {
+        "id": "_03.07.06.D",
+        "parts": [
+          {
+            "id": "_03.07.06.D-stmt",
+            "name": "statement",
+            "prose": "Désigner des membres du personnel de l’organisation qui possèdent les autorisations d’accès et les compétences techniques nécessaires pour superviser les activités de maintenance effectuées par le personnel qui ne possède pas les autorisations d’accès appropriées."
+          }
+        ],
+        "title": "03.07.06.D"
+      },
+      {
+        "id": "_03.08.01.A",
+        "parts": [
+          {
+            "id": "_03.08.01.A-stmt",
+            "name": "statement",
+            "prose": "Contrôler physiquement les supports du système contenant de l’information désignée et les ranger de façon sécurisée."
+          }
+        ],
+        "title": "03.08.01.A"
+      },
+      {
+        "id": "_03.08.02.A",
+        "parts": [
+          {
+            "id": "_03.08.02.A-stmt",
+            "name": "statement",
+            "prose": "Restreindre l’accès à l’information désignée qui se trouve sur les supports du système au personnel ou aux rôles autorisés."
+          }
+        ],
+        "title": "03.08.02.A"
+      },
+      {
+        "id": "_03.08.03.A",
+        "parts": [
+          {
+            "id": "_03.08.03.A-stmt",
+            "name": "statement",
+            "prose": "Nettoyer les supports du système qui contiennent de l’information désignée avant leur élimination ou leur transfert hors du contrôle de l’organisation ou aux fins de réutilisation."
+          }
+        ],
+        "title": "03.08.03.A"
+      },
+      {
+        "id": "_03.08.04.A",
+        "parts": [
+          {
+            "id": "_03.08.04.A-stmt",
+            "name": "statement",
+            "prose": "Marquer les supports du système contenant de l’information désignée afin d’indiquer les limites de distribution, les mises en garde concernant le traitement et les marquages applicables de l’information désignée."
+          }
+        ],
+        "title": "03.08.04.A"
+      },
+      {
+        "id": "_03.08.05.A",
+        "parts": [
+          {
+            "id": "_03.08.05.A-stmt",
+            "name": "statement",
+            "prose": "Protéger et contrôler les supports du système contenant de l’information désignée durant le transport à l’extérieur des zones contrôlées."
+          }
+        ],
+        "title": "03.08.05.A"
+      },
+      {
+        "id": "_03.08.05.B",
+        "parts": [
+          {
+            "id": "_03.08.05.B-stmt",
+            "name": "statement",
+            "prose": "Demeurer responsable des supports du système contenant de l’information désignée durant le transport à l’extérieur des zones contrôlées."
+          }
+        ],
+        "title": "03.08.05.B"
+      },
+      {
+        "id": "_03.08.05.C",
+        "parts": [
+          {
+            "id": "_03.08.05.C-stmt",
+            "name": "statement",
+            "prose": "Documenter les activités associées au transport des supports du système contenant de l’information désignée."
+          }
+        ],
+        "title": "03.08.05.C"
+      },
+      {
+        "id": "_03.08.07.A",
+        "parts": [
+          {
+            "id": "_03.08.07.A-stmt",
+            "name": "statement",
+            "prose": "Limiter ou interdire l’utilisation de [Affectation : types de supports définis par l’organisation]."
+          }
+        ],
+        "title": "03.08.07.A"
+      },
+      {
+        "id": "_03.08.07.B",
+        "parts": [
+          {
+            "id": "_03.08.07.B-stmt",
+            "name": "statement",
+            "prose": "Interdire l’utilisation de supports amovibles sans la présence d’un propriétaire identifiable."
+          }
+        ],
+        "title": "03.08.07.B"
+      },
+      {
+        "id": "_03.08.09.A",
+        "parts": [
+          {
+            "id": "_03.08.09.A-stmt",
+            "name": "statement",
+            "prose": "Protéger la confidentialité de l’information sauvegardée."
+          }
+        ],
+        "title": "03.08.09.A"
+      },
+      {
+        "id": "_03.08.09.B",
+        "parts": [
+          {
+            "id": "_03.08.09.B-stmt",
+            "name": "statement",
+            "prose": "Mettre en œuvre des mécanismes cryptographiques afin d’empêcher la divulgation non autorisée d’information désignée aux emplacements de stockage des sauvegardes."
+          }
+        ],
+        "title": "03.08.09.B"
+      },
+      {
+        "id": "_03.09.01.A",
+        "parts": [
+          {
+            "id": "_03.09.01.A-stmt",
+            "name": "statement",
+            "prose": "Procéder au filtrage de sécurité des personnes avant de leur accorder l’accès au système."
+          }
+        ],
+        "title": "03.09.01.A"
+      },
+      {
+        "id": "_03.09.01.B",
+        "parts": [
+          {
+            "id": "_03.09.01.B-stmt",
+            "name": "statement",
+            "prose": "Procéder à nouveau au filtrage de sécurité des personnes conformément à [Affectation : conditions nécessitant un nouveau filtrage de sécurité définies par l’organisation]."
+          }
+        ],
+        "title": "03.09.01.B"
+      },
+      {
+        "id": "_03.09.02.A.1",
+        "parts": [
+          {
+            "id": "_03.09.02.A.1-stmt",
+            "name": "statement",
+            "prose": "désactiver l’accès au système dans une période de [Affectation : période définie par l’organisation];"
+          }
+        ],
+        "title": "03.09.02.A.1"
+      },
+      {
+        "id": "_03.09.02.A.2",
+        "parts": [
+          {
+            "id": "_03.09.02.A.2-stmt",
+            "name": "statement",
+            "prose": "mettre fin ou révoquer les authentifiants et les justificatifs d’identité associés à la personne;"
+          }
+        ],
+        "title": "03.09.02.A.2"
+      },
+      {
+        "id": "_03.09.02.A.3",
+        "parts": [
+          {
+            "id": "_03.09.02.A.3-stmt",
+            "name": "statement",
+            "prose": "récupérer les propriétés système associées à la sécurité."
+          }
+        ],
+        "title": "03.09.02.A.3"
+      },
+      {
+        "id": "_03.09.02.B.1",
+        "parts": [
+          {
+            "id": "_03.09.02.B.1-stmt",
+            "name": "statement",
+            "prose": "examiner et confirmer le besoin opérationnel continu pour les autorisations d’accès logiques et physiques au système et aux installations;"
+          }
+        ],
+        "title": "03.09.02.B.1"
+      },
+      {
+        "id": "_03.09.02.B.2",
+        "parts": [
+          {
+            "id": "_03.09.02.B.2-stmt",
+            "name": "statement",
+            "prose": "modifier les autorisations d’accès afin de tenir compte des changements opérationnels nécessaires."
+          }
+        ],
+        "title": "03.09.02.B.2"
+      },
+      {
+        "id": "_03.10.01.A",
+        "parts": [
+          {
+            "id": "_03.10.01.A-stmt",
+            "name": "statement",
+            "prose": "Développer, approuver et tenir une liste des personnes disposant d’un accès autorisé à l’emplacement physique où se trouvent les systèmes."
+          }
+        ],
+        "title": "03.10.01.A"
+      },
+      {
+        "id": "_03.10.01.B",
+        "parts": [
+          {
+            "id": "_03.10.01.B-stmt",
+            "name": "statement",
+            "prose": "Émettre des justificatifs d’identité pour autoriser l’accès physique."
+          }
+        ],
+        "title": "03.10.01.B"
+      },
+      {
+        "id": "_03.10.01.C",
+        "parts": [
+          {
+            "id": "_03.10.01.C-stmt",
+            "name": "statement",
+            "prose": "Examiner la liste d’accès physique tous les [Affectation : fréquence définie par l’organisation]."
+          }
+        ],
+        "title": "03.10.01.C"
+      },
+      {
+        "id": "_03.10.01.D",
+        "parts": [
+          {
+            "id": "_03.10.01.D-stmt",
+            "name": "statement",
+            "prose": "Retirer les personnes de la liste d’accès physique lorsqu’un tel accès n’est plus nécessaire."
+          }
+        ],
+        "title": "03.10.01.D"
+      },
+      {
+        "id": "_03.10.02.A",
+        "parts": [
+          {
+            "id": "_03.10.02.A-stmt",
+            "name": "statement",
+            "prose": "Surveiller l’accès physique aux installations où se trouvent les systèmes afin de détecter et d’intervenir en cas d’incident de sécurité physique."
+          }
+        ],
+        "title": "03.10.02.A"
+      },
+      {
+        "id": "_03.10.02.B",
+        "parts": [
+          {
+            "id": "_03.10.02.B-stmt",
+            "name": "statement",
+            "prose": "Examiner les journaux d’accès physique tous les [Affectation : fréquence définie par l’organisation] et à la suite de [Affectation : événements ou indications potentielles d’événement définis par l’organisation]."
+          }
+        ],
+        "title": "03.10.02.B"
+      },
+      {
+        "id": "_03.10.06.A",
+        "parts": [
+          {
+            "id": "_03.10.06.A-stmt",
+            "name": "statement",
+            "prose": "Déterminer les autres lieux où le personnel peut travailler."
+          }
+        ],
+        "title": "03.10.06.A"
+      },
+      {
+        "id": "_03.10.06.B",
+        "parts": [
+          {
+            "id": "_03.10.06.B-stmt",
+            "name": "statement",
+            "prose": "Utiliser les exigences de sécurité suivantes pour les autres lieux de travail : [Affectation : exigences de sécurité définies par l’organisation]."
+          }
+        ],
+        "title": "03.10.06.B"
+      },
+      {
+        "id": "_03.10.07.A.1",
+        "parts": [
+          {
+            "id": "_03.10.07.A.1-stmt",
+            "name": "statement",
+            "prose": "vérification des autorisations d’accès physique avant d’accorder l’accès aux installations;"
+          }
+        ],
+        "title": "03.10.07.A.1"
+      },
+      {
+        "id": "_03.10.07.A.2",
+        "parts": [
+          {
+            "id": "_03.10.07.A.2-stmt",
+            "name": "statement",
+            "prose": "contrôle des points d’entrée et de sortie au moyen de systèmes de contrôle d’accès physique, de dispositifs ou de gardes."
+          }
+        ],
+        "title": "03.10.07.A.2"
+      },
+      {
+        "id": "_03.10.07.B",
+        "parts": [
+          {
+            "id": "_03.10.07.B-stmt",
+            "name": "statement",
+            "prose": "Tenir des journaux de vérification d’accès physique pour les points d’entrée et de sortie."
+          }
+        ],
+        "title": "03.10.07.B"
+      },
+      {
+        "id": "_03.10.07.C",
+        "parts": [
+          {
+            "id": "_03.10.07.C-stmt",
+            "name": "statement",
+            "prose": "Accompagner les visiteurs et contrôler les activités des visiteurs."
+          }
+        ],
+        "title": "03.10.07.C"
+      },
+      {
+        "id": "_03.10.07.D",
+        "parts": [
+          {
+            "id": "_03.10.07.D-stmt",
+            "name": "statement",
+            "prose": "Fournir des clés sécurisées, des cadenas ou d’autres dispositifs d’accès physique."
+          }
+        ],
+        "title": "03.10.07.D"
+      },
+      {
+        "id": "_03.10.07.E",
+        "parts": [
+          {
+            "id": "_03.10.07.E-stmt",
+            "name": "statement",
+            "prose": "Contrôler l’accès physique des dispositifs de sortie afin d’empêcher les personnes non autorisées d’obtenir l’accès à l’information désignée."
+          }
+        ],
+        "title": "03.10.07.E"
+      },
+      {
+        "id": "_03.10.08.A",
+        "parts": [
+          {
+            "id": "_03.10.08.A-stmt",
+            "name": "statement",
+            "prose": "Contrôler l’accès physique aux lignes de distribution et de transmission des systèmes dans les installations de l’organisation."
+          }
+        ],
+        "title": "03.10.08.A"
+      },
+      {
+        "id": "_03.11.01.A",
+        "parts": [
+          {
+            "id": "_03.11.01.A-stmt",
+            "name": "statement",
+            "prose": "Évaluer le risque (y compris les risques associés à la chaîne d’approvisionnement) de divulgation non autorisée résultant de la gestion, du traitement, du stockage ou de la transmission d’information désignée."
+          }
+        ],
+        "title": "03.11.01.A"
+      },
+      {
+        "id": "_03.11.01.B",
+        "parts": [
+          {
+            "id": "_03.11.01.B-stmt",
+            "name": "statement",
+            "prose": "Mettre à jour les évaluations des risques tous les [Affectation : fréquence définie par l’organisation]."
+          }
+        ],
+        "title": "03.11.01.B"
+      },
+      {
+        "id": "_03.11.02.A",
+        "parts": [
+          {
+            "id": "_03.11.02.A-stmt",
+            "name": "statement",
+            "prose": "Surveiller et balayer les vulnérabilités du système tous les [Affectation : fréquence définie par l’organisation] et lorsque de nouvelles vulnérabilités affectant le système sont identifiées."
+          }
+        ],
+        "title": "03.11.02.A"
+      },
+      {
+        "id": "_03.11.02.B",
+        "parts": [
+          {
+            "id": "_03.11.02.B-stmt",
+            "name": "statement",
+            "prose": "Corriger les vulnérabilités du système dans une période de [Affectation : délais d’exécution définis par l’organisation]."
+          }
+        ],
+        "title": "03.11.02.B"
+      },
+      {
+        "id": "_03.11.02.C",
+        "parts": [
+          {
+            "id": "_03.11.02.C-stmt",
+            "name": "statement",
+            "prose": "Mettre à jour la liste des vulnérabilités du système à balayer tous les [Affectation : fréquence définie par l’organisation] et lorsque de nouvelles vulnérabilités sont identifiées et signalées."
+          }
+        ],
+        "title": "03.11.02.C"
+      },
+      {
+        "id": "_03.11.04.A",
+        "parts": [
+          {
+            "id": "_03.11.04.A-stmt",
+            "name": "statement",
+            "prose": "Prendre des mesures à l’égard des résultats des évaluations, des activités de surveillance et des vérifications de la sécurité."
+          }
+        ],
+        "title": "03.11.04.A"
+      },
+      {
+        "id": "_03.12.01.A",
+        "parts": [
+          {
+            "id": "_03.12.01.A-stmt",
+            "name": "statement",
+            "prose": "Évaluer les exigences de sécurité et de protection de la vie privée pour le système et son environnement d’exploitation tous les [Affectation : fréquence définie par l’organisation] afin de déterminer si les exigences sont satisfaites."
+          }
+        ],
+        "title": "03.12.01.A"
+      },
+      {
+        "id": "_03.12.02.A.1",
+        "parts": [
+          {
+            "id": "_03.12.02.A.1-stmt",
+            "name": "statement",
+            "prose": "documenter les mesures correctives prévues pour corriger les faiblesses ou les lacunes établies lors des évaluations de sécurité;"
+          }
+        ],
+        "title": "03.12.02.A.1"
+      },
+      {
+        "id": "_03.12.02.A.2",
+        "parts": [
+          {
+            "id": "_03.12.02.A.2-stmt",
+            "name": "statement",
+            "prose": "réduire ou éliminer les vulnérabilités connues du système."
+          }
+        ],
+        "title": "03.12.02.A.2"
+      },
+      {
+        "id": "_03.12.02.B.1",
+        "parts": [
+          {
+            "id": "_03.12.02.B.1-stmt",
+            "name": "statement",
+            "prose": "les évaluations de sécurité;"
+          }
+        ],
+        "title": "03.12.02.B.1"
+      },
+      {
+        "id": "_03.12.02.B.2",
+        "parts": [
+          {
+            "id": "_03.12.02.B.2-stmt",
+            "name": "statement",
+            "prose": "les vérifications ou examens;"
+          }
+        ],
+        "title": "03.12.02.B.2"
+      },
+      {
+        "id": "_03.12.02.B.3",
+        "parts": [
+          {
+            "id": "_03.12.02.B.3-stmt",
+            "name": "statement",
+            "prose": "la surveillance continue."
+          }
+        ],
+        "title": "03.12.02.B.3"
+      },
+      {
+        "id": "_03.12.03.A",
+        "parts": [
+          {
+            "id": "_03.12.03.A-stmt",
+            "name": "statement",
+            "prose": "Élaborer et mettre en œuvre une stratégie de surveillance continue des systèmes qui comprend des activités continues d’évaluation de la sécurité et de surveillance."
+          }
+        ],
+        "title": "03.12.03.A"
+      },
+      {
+        "id": "_03.12.05.A",
+        "parts": [
+          {
+            "id": "_03.12.05.A-stmt",
+            "name": "statement",
+            "prose": "Approuver et gérer l’échange d’information désignée entre le système et d’autres systèmes au moyen de [Sélection (un ou plusieurs) : ententes sur la sécurité des interconnexions; ententes sur la sécurité de l’échange d’information; ententes ou protocoles d’entente; ententes sur l’échange d’information; accords sur les niveaux de service; ententes avec les utilisatrices et utilisateurs; accords de non-divulgation]."
+          }
+        ],
+        "title": "03.12.05.A"
+      },
+      {
+        "id": "_03.12.05.B",
+        "parts": [
+          {
+            "id": "_03.12.05.B-stmt",
+            "name": "statement",
+            "prose": "Documenter, dans le cadre des ententes d’échange, les caractéristiques d’interface, les exigences de sécurité et de protection de la vie privée ainsi que les responsabilités liées à chacun des systèmes."
+          }
+        ],
+        "title": "03.12.05.B"
+      },
+      {
+        "id": "_03.12.05.C",
+        "parts": [
+          {
+            "id": "_03.12.05.C-stmt",
+            "name": "statement",
+            "prose": "Examiner et mettre à jour les ententes d’échange tous les [Affectation : fréquence définie par l’organisation]."
+          }
+        ],
+        "title": "03.12.05.C"
+      },
+      {
+        "id": "_03.13.01.A",
+        "parts": [
+          {
+            "id": "_03.13.01.A-stmt",
+            "name": "statement",
+            "prose": "Surveiller et contrôler les communications des interfaces externes gérées vers le système et des principales interfaces internes gérées au sein du système."
+          }
+        ],
+        "title": "03.13.01.A"
+      },
+      {
+        "id": "_03.13.01.B",
+        "parts": [
+          {
+            "id": "_03.13.01.B-stmt",
+            "name": "statement",
+            "prose": "Mettre en œuvre des sous-réseaux pour les composants système à accès public qui sont séparés physiquement ou logiquement des réseaux internes."
+          }
+        ],
+        "title": "03.13.01.B"
+      },
+      {
+        "id": "_03.13.01.C",
+        "parts": [
+          {
+            "id": "_03.13.01.C-stmt",
+            "name": "statement",
+            "prose": "Assurer la connexion des systèmes externes seulement au moyen d’interfaces gérées constituées de dispositifs de protection de périmètre organisés conformément à l’architecture de sécurité de l’organisation."
+          }
+        ],
+        "title": "03.13.01.C"
+      },
+      {
+        "id": "_03.13.04.A",
+        "parts": [
+          {
+            "id": "_03.13.04.A-stmt",
+            "name": "statement",
+            "prose": "Empêcher les transferts d’information non autorisés ou non prévus au moyen de ressources système partagées."
+          }
+        ],
+        "title": "03.13.04.A"
+      },
+      {
+        "id": "_03.13.06.A",
+        "parts": [
+          {
+            "id": "_03.13.06.A-stmt",
+            "name": "statement",
+            "prose": "Refuser par défaut le trafic de communications réseau et permettre le trafic de communications réseau au moyen d’exceptions."
+          }
+        ],
+        "title": "03.13.06.A"
+      },
+      {
+        "id": "_03.13.08.A",
+        "parts": [
+          {
+            "id": "_03.13.08.A-stmt",
+            "name": "statement",
+            "prose": "Mettre en œuvre des mécanismes cryptographiques afin d’empêcher la divulgation non autorisée d’information désignée lors de la transmission et du stockage."
+          }
+        ],
+        "title": "03.13.08.A"
+      },
+      {
+        "id": "_03.13.09.A",
+        "parts": [
+          {
+            "id": "_03.13.09.A-stmt",
+            "name": "statement",
+            "prose": "Mettre fin aux connexions réseau associées aux sessions de communication à la fin de la session ou après [Affectation : période définie par l’organisation] d’inactivité."
+          }
+        ],
+        "title": "03.13.09.A"
+      },
+      {
+        "id": "_03.13.10.A",
+        "parts": [
+          {
+            "id": "_03.13.10.A-stmt",
+            "name": "statement",
+            "prose": "Établir et gérer les clés cryptographiques dans le système conformément aux exigences de gestion de clés suivantes : [Affectation : exigences définies par l’organisation liées à la génération, à la distribution, au stockage, à l’accès et à la destruction des clés]."
+          }
+        ],
+        "title": "03.13.10.A"
+      },
+      {
+        "id": "_03.13.11.A",
+        "parts": [
+          {
+            "id": "_03.13.11.A-stmt",
+            "name": "statement",
+            "prose": "Mettre en œuvre les types de cryptographie suivants pour protéger la confidentialité de l’information désignée : [Affectation : types de cryptographie définis par l’organisation]."
+          }
+        ],
+        "title": "03.13.11.A"
+      },
+      {
+        "id": "_03.13.12.A",
+        "parts": [
+          {
+            "id": "_03.13.12.A-stmt",
+            "name": "statement",
+            "prose": "Empêcher l’activation à distance d’applications et d’appareils informatiques collaboratifs, sauf pour les exceptions suivantes : [Affectation : exceptions définies par l’organisation pour lesquelles l’activation à distance doit être permise]."
+          }
+        ],
+        "title": "03.13.12.A"
+      },
+      {
+        "id": "_03.13.12.B",
+        "parts": [
+          {
+            "id": "_03.13.12.B-stmt",
+            "name": "statement",
+            "prose": "Indiquer de manière explicite l’utilisation permise pour les utilisatrices et utilisateurs physiquement à proximité des appareils."
+          }
+        ],
+        "title": "03.13.12.B"
+      },
+      {
+        "id": "_03.13.13.A",
+        "parts": [
+          {
+            "id": "_03.13.13.A-stmt",
+            "name": "statement",
+            "prose": "Définir le code mobile et les technologies de code mobile acceptables."
+          }
+        ],
+        "title": "03.13.13.A"
+      },
+      {
+        "id": "_03.13.13.B",
+        "parts": [
+          {
+            "id": "_03.13.13.B-stmt",
+            "name": "statement",
+            "prose": "Autoriser, surveiller et contrôler l’utilisation de code mobile."
+          }
+        ],
+        "title": "03.13.13.B"
+      },
+      {
+        "id": "_03.13.15.A",
+        "parts": [
+          {
+            "id": "_03.13.15.A-stmt",
+            "name": "statement",
+            "prose": "Protéger l’authenticité des sessions de communication."
+          }
+        ],
+        "title": "03.13.15.A"
+      },
+      {
+        "id": "_03.14.01.A",
+        "parts": [
+          {
+            "id": "_03.14.01.A-stmt",
+            "name": "statement",
+            "prose": "Établir, signaler et corriger les défauts du système."
+          }
+        ],
+        "title": "03.14.01.A"
+      },
+      {
+        "id": "_03.14.01.B",
+        "parts": [
+          {
+            "id": "_03.14.01.B-stmt",
+            "name": "statement",
+            "prose": "Installer les mises à jour de sécurité appropriées des logiciels et des micrologiciels dans une période de [Affectation : période définie par l’organisation] suivant la date de publication des mises à jour."
+          }
+        ],
+        "title": "03.14.01.B"
+      },
+      {
+        "id": "_03.14.02.A",
+        "parts": [
+          {
+            "id": "_03.14.02.A-stmt",
+            "name": "statement",
+            "prose": "Mettre en œuvre des mécanismes de protection contre les programmes malveillants aux points d’entrée et de sortie du système afin de détecter et d’éradiquer le code malveillant."
+          }
+        ],
+        "title": "03.14.02.A"
+      },
+      {
+        "id": "_03.14.02.B",
+        "parts": [
+          {
+            "id": "_03.14.02.B-stmt",
+            "name": "statement",
+            "prose": "Mettre à jour les mécanismes de protection contre les programmes malveillants dès que de nouvelles versions sont disponibles, conformément aux stratégies et procédures de gestion des configurations."
+          }
+        ],
+        "title": "03.14.02.B"
+      },
+      {
+        "id": "_03.14.02.C.1",
+        "parts": [
+          {
+            "id": "_03.14.02.C.1-stmt",
+            "name": "statement",
+            "prose": "effectuer un balayage du système tous les [Affectation : fréquence définie par l’organisation] et des balayages en temps réel des fichiers de sources externes aux points d’extrémité ou aux points d’entrée et de sortie du système lorsque des fichiers sont téléchargés, ouverts ou exécutés;"
+          }
+        ],
+        "title": "03.14.02.C.1"
+      },
+      {
+        "id": "_03.14.02.C.2",
+        "parts": [
+          {
+            "id": "_03.14.02.C.2-stmt",
+            "name": "statement",
+            "prose": "bloquer ou mettre en quarantaine le code malveillant ou entreprendre d’autres mesures d’atténuation afin d’intervenir lors de la détection de code malveillant."
+          }
+        ],
+        "title": "03.14.02.C.2"
+      },
+      {
+        "id": "_03.14.03.A",
+        "parts": [
+          {
+            "id": "_03.14.03.A-stmt",
+            "name": "statement",
+            "prose": "Recevoir régulièrement d’organisations externes des alertes, des avis et des directives de sécurité concernant les systèmes."
+          }
+        ],
+        "title": "03.14.03.A"
+      },
+      {
+        "id": "_03.14.03.B",
+        "parts": [
+          {
+            "id": "_03.14.03.B-stmt",
+            "name": "statement",
+            "prose": "Générer et diffuser les alertes, les avis et les directives de sécurité internes concernant les systèmes, au besoin."
+          }
+        ],
+        "title": "03.14.03.B"
+      },
+      {
+        "id": "_03.14.06.A.1",
+        "parts": [
+          {
+            "id": "_03.14.06.A.1-stmt",
+            "name": "statement",
+            "prose": "les attaques et les indicateurs d’attaques potentielles;"
+          }
+        ],
+        "title": "03.14.06.A.1"
+      },
+      {
+        "id": "_03.14.06.A.2",
+        "parts": [
+          {
+            "id": "_03.14.06.A.2-stmt",
+            "name": "statement",
+            "prose": "les connexions non autorisées."
+          }
+        ],
+        "title": "03.14.06.A.2"
+      },
+      {
+        "id": "_03.14.06.B",
+        "parts": [
+          {
+            "id": "_03.14.06.B-stmt",
+            "name": "statement",
+            "prose": "Détecter les utilisations non autorisées du système."
+          }
+        ],
+        "title": "03.14.06.B"
+      },
+      {
+        "id": "_03.14.06.C",
+        "parts": [
+          {
+            "id": "_03.14.06.C-stmt",
+            "name": "statement",
+            "prose": "Surveiller le trafic de communications entrantes et sortantes afin de détecter les activités ou les conditions atypiques ou non autorisées."
+          }
+        ],
+        "title": "03.14.06.C"
+      },
+      {
+        "id": "_03.14.08.A",
+        "parts": [
+          {
+            "id": "_03.14.08.A-stmt",
+            "name": "statement",
+            "prose": "Gérer et conserver l’information désignée au sein du système et les sorties d’information désignée du système conformément aux lois, aux décrets, aux directives, aux réglementations, aux politiques, aux normes, aux lignes directrices et aux exigences opérationnelles applicables."
+          }
+        ],
+        "title": "03.14.08.A"
+      },
+      {
+        "id": "_03.14.09.A",
+        "parts": [
+          {
+            "id": "_03.14.09.A-stmt",
+            "name": "statement",
+            "prose": "Exiger que les opérations d’administration ou de superutilisateur soient réalisées à partir d’un poste de travail physique dédié à ces tâches précises et isolées des autres fonctions et réseaux. En particulier, la station ne devrait pas avoir accès à Internet."
+          }
+        ],
+        "title": "03.14.09.A"
+      },
+      {
+        "id": "_03.14.09.B",
+        "parts": [
+          {
+            "id": "_03.14.09.B-stmt",
+            "name": "statement",
+            "prose": "S’assurer que la connexion distante d’un poste de travail administratif dédié à un réseau cible utilise un réseau privé d’opérateur (par exemple, un service LAN privé virtuel [VPLS] ou une commutation multiprotocole par étiquette [MPLS]) avec chiffrement de RPV."
+          }
+        ],
+        "title": "03.14.09.B"
+      },
+      {
+        "id": "_03.14.09.C",
+        "parts": [
+          {
+            "id": "_03.14.09.C-stmt",
+            "name": "statement",
+            "prose": "Utiliser un client léger ou un poste de travail physique dédié et renforcé univalent à titre de poste de travail administratif dédié, qui n’est pas partagé entre les domaines de sécurité."
+          }
+        ],
+        "title": "03.14.09.C"
+      },
+      {
+        "id": "_03.15.01.A",
+        "parts": [
+          {
+            "id": "_03.15.01.A-stmt",
+            "name": "statement",
+            "prose": "Élaborer, documenter et diffuser au personnel ou aux rôles de l’organisation les politiques et les procédures nécessaires afin de satisfaire les exigences de sécurité pour la protection de l’information désignée."
+          }
+        ],
+        "title": "03.15.01.A"
+      },
+      {
+        "id": "_03.15.01.B",
+        "parts": [
+          {
+            "id": "_03.15.01.B-stmt",
+            "name": "statement",
+            "prose": "Examiner et mettre à jour les politiques et les procédures tous les [Affectation : fréquence définie par l’organisation]."
+          }
+        ],
+        "title": "03.15.01.B"
+      },
+      {
+        "id": "_03.15.02.A.1",
+        "parts": [
+          {
+            "id": "_03.15.02.A.1-stmt",
+            "name": "statement",
+            "prose": "définit les composants constitutifs du système;"
+          }
+        ],
+        "title": "03.15.02.A.1"
+      },
+      {
+        "id": "_03.15.02.A.2",
+        "parts": [
+          {
+            "id": "_03.15.02.A.2-stmt",
+            "name": "statement",
+            "prose": "identifie les types d’informations traitées, stockées et transmises par le système;"
+          }
+        ],
+        "title": "03.15.02.A.2"
+      },
+      {
+        "id": "_03.15.02.A.3",
+        "parts": [
+          {
+            "id": "_03.15.02.A.3-stmt",
+            "name": "statement",
+            "prose": "décrit les menaces particulières pour le système qui sont préoccupantes pour l’organisation;"
+          }
+        ],
+        "title": "03.15.02.A.3"
+      },
+      {
+        "id": "_03.15.02.A.4",
+        "parts": [
+          {
+            "id": "_03.15.02.A.4-stmt",
+            "name": "statement",
+            "prose": "décrit l’environnement opérationnel du système ainsi que les dépendances ou les connexions à d’autres systèmes ou à d’autres composants du système;"
+          }
+        ],
+        "title": "03.15.02.A.4"
+      },
+      {
+        "id": "_03.15.02.A.5",
+        "parts": [
+          {
+            "id": "_03.15.02.A.5-stmt",
+            "name": "statement",
+            "prose": "fournit un aperçu des exigences de sécurité du système;"
+          }
+        ],
+        "title": "03.15.02.A.5"
+      },
+      {
+        "id": "_03.15.02.A.6",
+        "parts": [
+          {
+            "id": "_03.15.02.A.6-stmt",
+            "name": "statement",
+            "prose": "décrit les mesures de protection en place ou prévues pour répondre aux exigences de sécurité;"
+          }
+        ],
+        "title": "03.15.02.A.6"
+      },
+      {
+        "id": "_03.15.02.A.7",
+        "parts": [
+          {
+            "id": "_03.15.02.A.7-stmt",
+            "name": "statement",
+            "prose": "identifie les personnes qui assument des rôles et des responsabilités liés au système;"
+          }
+        ],
+        "title": "03.15.02.A.7"
+      },
+      {
+        "id": "_03.15.02.A.8",
+        "parts": [
+          {
+            "id": "_03.15.02.A.8-stmt",
+            "name": "statement",
+            "prose": "contient d’autres renseignements pertinents nécessaires à la protection de l’information désignée."
+          }
+        ],
+        "title": "03.15.02.A.8"
+      },
+      {
+        "id": "_03.15.02.B",
+        "parts": [
+          {
+            "id": "_03.15.02.B-stmt",
+            "name": "statement",
+            "prose": "Examiner et mettre à jour le plan de sécurité du système tous les [Affectation : fréquence définie par l’organisation]."
+          }
+        ],
+        "title": "03.15.02.B"
+      },
+      {
+        "id": "_03.15.02.C",
+        "parts": [
+          {
+            "id": "_03.15.02.C-stmt",
+            "name": "statement",
+            "prose": "Protéger le plan de sécurité du système contre les divulgations non autorisées."
+          }
+        ],
+        "title": "03.15.02.C"
+      },
+      {
+        "id": "_03.15.03.A",
+        "parts": [
+          {
+            "id": "_03.15.03.A-stmt",
+            "name": "statement",
+            "prose": "Établir des règles qui décrivent les responsabilités et le comportement attendu pour l’utilisation du système et la protection de l’information désignée."
+          }
+        ],
+        "title": "03.15.03.A"
+      },
+      {
+        "id": "_03.15.03.B",
+        "parts": [
+          {
+            "id": "_03.15.03.B-stmt",
+            "name": "statement",
+            "prose": "Fournir des règles aux personnes devant accéder au système."
+          }
+        ],
+        "title": "03.15.03.B"
+      },
+      {
+        "id": "_03.15.03.C",
+        "parts": [
+          {
+            "id": "_03.15.03.C-stmt",
+            "name": "statement",
+            "prose": "Obtenir des personnes devant accéder au système une attestation documentée selon laquelle elles ont lu et compris le document et acceptent de respecter les règles de conduite avant d’obtenir l’accès autorisé à l’information désignée et au système."
+          }
+        ],
+        "title": "03.15.03.C"
+      },
+      {
+        "id": "_03.15.03.D",
+        "parts": [
+          {
+            "id": "_03.15.03.D-stmt",
+            "name": "statement",
+            "prose": "Examiner et mettre à jour les règles de conduite tous les [Affectation : fréquence définie par l’organisation]."
+          }
+        ],
+        "title": "03.15.03.D"
+      },
+      {
+        "id": "_03.16.01.A",
+        "parts": [
+          {
+            "id": "_03.16.01.A-stmt",
+            "name": "statement",
+            "prose": "Appliquer les principes d’ingénierie de la sécurité des systèmes suivants pour le développement ou la modification des systèmes et des composants système : [Affectation : principes d’ingénierie de la sécurité des systèmes définis par l’organisation]."
+          }
+        ],
+        "title": "03.16.01.A"
+      },
+      {
+        "id": "_03.16.02.A",
+        "parts": [
+          {
+            "id": "_03.16.02.A-stmt",
+            "name": "statement",
+            "prose": "Remplacer les composants des systèmes lorsque les développeurs, les fournisseurs ou les fabricants ne prennent plus en charge ces composants."
+          }
+        ],
+        "title": "03.16.02.A"
+      },
+      {
+        "id": "_03.16.02.B",
+        "parts": [
+          {
+            "id": "_03.16.02.B-stmt",
+            "name": "statement",
+            "prose": "Fournir des options pour l’atténuation des risques ou d’autres sources pour bénéficier d’un soutien continu des composants non pris en charge si les composants ne peuvent pas être remplacés."
+          }
+        ],
+        "title": "03.16.02.B"
+      },
+      {
+        "id": "_03.16.03.A",
+        "parts": [
+          {
+            "id": "_03.16.03.A-stmt",
+            "name": "statement",
+            "prose": "Exiger que les fournisseurs de services de systèmes externes utilisés pour le traitement, le stockage ou la transmission d’information désignée respectent les exigences de sécurité suivantes : [Affectation : exigences de sécurité définies par l’organisation]."
+          }
+        ],
+        "title": "03.16.03.A"
+      },
+      {
+        "id": "_03.16.03.B",
+        "parts": [
+          {
+            "id": "_03.16.03.B-stmt",
+            "name": "statement",
+            "prose": "Définir et documenter les rôles et les responsabilités d’utilisateur concernant les services de système externe, y compris les responsabilités partagées avec les fournisseurs de services externes."
+          }
+        ],
+        "title": "03.16.03.B"
+      },
+      {
+        "id": "_03.16.03.C",
+        "parts": [
+          {
+            "id": "_03.16.03.C-stmt",
+            "name": "statement",
+            "prose": "Mettre en œuvre des processus, des méthodes et des techniques pour surveiller la conformité aux exigences de sécurité des fournisseurs de services externes sur une base continue."
+          }
+        ],
+        "title": "03.16.03.C"
+      },
+      {
+        "id": "_03.17.01.A",
+        "parts": [
+          {
+            "id": "_03.17.01.A-stmt",
+            "name": "statement",
+            "prose": "Élaborer un plan pour gérer les risques liés à la chaîne d’approvisionnement associés à la recherche, au développement, à la conception, à la fabrication, à l’acquisition, à la livraison, à l’intégration, à l’exploitation, à la maintenance et à l’élimination des systèmes, des composants système ou des services système."
+          }
+        ],
+        "title": "03.17.01.A"
+      },
+      {
+        "id": "_03.17.01.B",
+        "parts": [
+          {
+            "id": "_03.17.01.B-stmt",
+            "name": "statement",
+            "prose": "Examiner et mettre à jour le plan de gestion des risques liés à la chaîne d’approvisionnement tous les [Affectation : fréquence définie par l’organisation]."
+          }
+        ],
+        "title": "03.17.01.B"
+      },
+      {
+        "id": "_03.17.01.C",
+        "parts": [
+          {
+            "id": "_03.17.01.C-stmt",
+            "name": "statement",
+            "prose": "Protéger le plan de gestion des risques liés à la chaîne d’approvisionnement des divulgations non autorisées."
+          }
+        ],
+        "title": "03.17.01.C"
+      },
+      {
+        "id": "_03.17.02.A",
+        "parts": [
+          {
+            "id": "_03.17.02.A-stmt",
+            "name": "statement",
+            "prose": "Élaborer et mettre en œuvre des stratégies d’acquisition, des outils de contrats et des méthodes d’approvisionnement afin de déterminer, de contrer et d’atténuer les risques associés à la chaîne d’approvisionnement."
+          }
+        ],
+        "title": "03.17.02.A"
+      },
+      {
+        "id": "_03.17.03.A",
+        "parts": [
+          {
+            "id": "_03.17.03.A-stmt",
+            "name": "statement",
+            "prose": "Établir un processus pour identifier et corriger les faiblesses ou les lacunes établies dans les éléments et les processus de la chaîne d’approvisionnement."
+          }
+        ],
+        "title": "03.17.03.A"
+      },
+      {
+        "id": "_03.17.03.B",
+        "parts": [
+          {
+            "id": "_03.17.03.B-stmt",
+            "name": "statement",
+            "prose": "Appliquer les exigences de sécurité suivantes pour offrir une protection contre les risques liés à la chaîne d’approvisionnement pour les systèmes, les composants système ou les services système ainsi que pour limiter les conséquences ou les dommages potentiels associés aux événements de la chaîne d’approvisionnement : [Affectation : exigences de sécurité définies par l’organisation]."
+          }
+        ],
+        "title": "03.17.03.B"
       }
     ],
     "metadata": {
-      "last-modified": "2026-09-25T20:11:14Z",
+      "last-modified": "2026-09-25T20:44:28Z",
       "oscal-version": "1.2.3",
-      "remarks": "Canadian cybersecurity baseline for defense suppliers, aerospace contractors, and commercial organizations handling Canadian Controlled Goods and specified federal data.",
+      "remarks": "Authoritative Canadian cybersecurity requirements published by the Communications Security Establishment under the Open Government Licence - Canada for protecting specified information in non-GC systems and organizations.",
       "title": "CCCS ITSP.10.171 - Protecting Specified Information in Non-Government of Canada Systems and Organizations",
       "version": "1.0"
     },

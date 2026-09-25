@@ -22,6 +22,8 @@ go.work
 /xoscal-validate-schema
 /xoscal-validate-constraints
 /xoscal-export-frameworks
+site/sdk/
+site/frameworks/
 go.work.sum
 # Go test cache
 *.testcache

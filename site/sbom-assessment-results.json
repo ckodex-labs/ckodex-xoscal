@@ -1,0 +1,2832 @@
+{
+  "assessment-results": {
+    "import-ap": {
+      "href": "urn:sbom-tools:assessment-plan:validation"
+    },
+    "metadata": {
+      "last-modified": "2026-09-07T19:44:09Z",
+      "oscal-version": "1.1.2",
+      "title": "sbom-tools validation assessment results",
+      "version": "0.2.0"
+    },
+    "results": [
+      {
+        "description": "Validation results for NTIA Minimum Elements, derived only from the supplied SBOM.",
+        "findings": [
+          {
+            "description": "Overall verdict for NTIA Minimum Elements: 48 error(s), 1 warning(s), 0 informational finding(s).",
+            "target": {
+              "status": {
+                "state": "not-satisfied"
+              },
+              "target-id": "ntiaminimum-compliance",
+              "type": "objective-id"
+            },
+            "title": "NTIA Minimum Elements compliance roll-up",
+            "uuid": "c85562c7-3acc-4838-a7e2-043667a0f658"
+          },
+          {
+            "description": "Component 'github.com/beorn7/perks' missing supplier/manufacturer",
+            "related-observations": [
+              {
+                "observation-uuid": "45e083e4-15e2-48df-9c72-8cc746b6787d"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "not-satisfied"
+              },
+              "target-id": "sbom-ntia-supplier",
+              "type": "objective-id"
+            },
+            "title": "SBOM-NTIA-SUPPLIER",
+            "uuid": "089e5d90-686f-4514-ad69-ab21315bb6b1"
+          },
+          {
+            "description": "Component 'github.com/cespare/xxhash/v2' missing supplier/manufacturer",
+            "related-observations": [
+              {
+                "observation-uuid": "8c5286e5-f443-4878-b0d5-21ed8147cdb6"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "not-satisfied"
+              },
+              "target-id": "sbom-ntia-supplier",
+              "type": "objective-id"
+            },
+            "title": "SBOM-NTIA-SUPPLIER",
+            "uuid": "4521f54f-029f-4c0e-b0fc-0af226d3c70f"
+          },
+          {
+            "description": "Component 'github.com/dustin/go-humanize' missing supplier/manufacturer",
+            "related-observations": [
+              {
+                "observation-uuid": "3701158d-f644-4a38-bc4e-fee2079fbf5b"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "not-satisfied"
+              },
+              "target-id": "sbom-ntia-supplier",
+              "type": "objective-id"
+            },
+            "title": "SBOM-NTIA-SUPPLIER",
+            "uuid": "e7ea2e0d-9a10-48bc-a9dc-97ccea162275"
+          },
+          {
+            "description": "Component 'github.com/fsnotify/fsnotify' missing supplier/manufacturer",
+            "related-observations": [
+              {
+                "observation-uuid": "0d397582-f821-4495-849b-c076a87f8d60"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "not-satisfied"
+              },
+              "target-id": "sbom-ntia-supplier",
+              "type": "objective-id"
+            },
+            "title": "SBOM-NTIA-SUPPLIER",
+            "uuid": "f2bb912d-a70e-4421-80dc-9c64c17f7f37"
+          },
+          {
+            "description": "Component 'github.com/go-logr/logr' missing supplier/manufacturer",
+            "related-observations": [
+              {
+                "observation-uuid": "5553b4ee-3c7a-42f1-b332-4f49328d01c2"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "not-satisfied"
+              },
+              "target-id": "sbom-ntia-supplier",
+              "type": "objective-id"
+            },
+            "title": "SBOM-NTIA-SUPPLIER",
+            "uuid": "5ece775a-26df-4d04-abce-56e43b68a1f9"
+          },
+          {
+            "description": "Component 'github.com/go-logr/stdr' missing supplier/manufacturer",
+            "related-observations": [
+              {
+                "observation-uuid": "d02b3d28-8c4f-4fc4-9bf0-e2f28acb54a3"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "not-satisfied"
+              },
+              "target-id": "sbom-ntia-supplier",
+              "type": "objective-id"
+            },
+            "title": "SBOM-NTIA-SUPPLIER",
+            "uuid": "9c24e321-ccc2-47bb-9373-e40cfa7913b9"
+          },
+          {
+            "description": "Component 'github.com/go-viper/mapstructure/v2' missing supplier/manufacturer",
+            "related-observations": [
+              {
+                "observation-uuid": "91bf2adf-c804-4c89-b065-00c404838444"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "not-satisfied"
+              },
+              "target-id": "sbom-ntia-supplier",
+              "type": "objective-id"
+            },
+            "title": "SBOM-NTIA-SUPPLIER",
+            "uuid": "e80644da-62ed-43b9-8a97-01e1b804ceaf"
+          },
+          {
+            "description": "Component 'github.com/google/go-github/v62' missing supplier/manufacturer",
+            "related-observations": [
+              {
+                "observation-uuid": "7bdc6aaa-2828-47ad-9021-a2f1627e5e99"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "not-satisfied"
+              },
+              "target-id": "sbom-ntia-supplier",
+              "type": "objective-id"
+            },
+            "title": "SBOM-NTIA-SUPPLIER",
+            "uuid": "9e908fc3-87b1-4b86-a219-682a4e994bfb"
+          },
+          {
+            "description": "Component 'github.com/google/go-querystring' missing supplier/manufacturer",
+            "related-observations": [
+              {
+                "observation-uuid": "cf99f6f1-4208-4ae6-a244-2a0eb58d5121"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "not-satisfied"
+              },
+              "target-id": "sbom-ntia-supplier",
+              "type": "objective-id"
+            },
+            "title": "SBOM-NTIA-SUPPLIER",
+            "uuid": "9b34d281-b61e-47e6-b71e-a0386246ed10"
+          },
+          {
+            "description": "Component 'github.com/google/uuid' missing supplier/manufacturer",
+            "related-observations": [
+              {
+                "observation-uuid": "bf1f820c-b78b-4ec1-b00e-b339bda182e3"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "not-satisfied"
+              },
+              "target-id": "sbom-ntia-supplier",
+              "type": "objective-id"
+            },
+            "title": "SBOM-NTIA-SUPPLIER",
+            "uuid": "c9be57e2-038a-4c0c-a5d5-2788b1354b60"
+          },
+          {
+            "description": "Component 'github.com/grpc-ecosystem/grpc-gateway/v2' missing supplier/manufacturer",
+            "related-observations": [
+              {
+                "observation-uuid": "ebf4ba55-f370-42ad-93f6-8af8f513f911"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "not-satisfied"
+              },
+              "target-id": "sbom-ntia-supplier",
+              "type": "objective-id"
+            },
+            "title": "SBOM-NTIA-SUPPLIER",
+            "uuid": "fc86abf9-78b8-40d2-8828-f927849f904e"
+          },
+          {
+            "description": "Component 'github.com/mchorfa/xoscal' missing supplier/manufacturer",
+            "related-observations": [
+              {
+                "observation-uuid": "d1c47f2b-be57-4ed7-8e72-3dce2f6b98d9"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "not-satisfied"
+              },
+              "target-id": "sbom-ntia-supplier",
+              "type": "objective-id"
+            },
+            "title": "SBOM-NTIA-SUPPLIER",
+            "uuid": "4439ec0b-d198-4339-aa42-ac2a82c9350f"
+          },
+          {
+            "description": "Component 'github.com/munnerz/goautoneg' missing supplier/manufacturer",
+            "related-observations": [
+              {
+                "observation-uuid": "9bd40d22-596f-407b-b035-5ccbb8001245"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "not-satisfied"
+              },
+              "target-id": "sbom-ntia-supplier",
+              "type": "objective-id"
+            },
+            "title": "SBOM-NTIA-SUPPLIER",
+            "uuid": "3cbd9fbf-6a31-4d77-aed8-0d373f9c25d8"
+          },
+          {
+            "description": "Component 'github.com/pelletier/go-toml/v2' missing supplier/manufacturer",
+            "related-observations": [
+              {
+                "observation-uuid": "e9eb24ea-b4ff-4d04-b908-d9206b5c44b8"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "not-satisfied"
+              },
+              "target-id": "sbom-ntia-supplier",
+              "type": "objective-id"
+            },
+            "title": "SBOM-NTIA-SUPPLIER",
+            "uuid": "bd6c73b1-01f8-4bc0-a2b2-22b8e632a9ed"
+          },
+          {
+            "description": "Component 'github.com/prometheus/client_golang' missing supplier/manufacturer",
+            "related-observations": [
+              {
+                "observation-uuid": "bdc7e540-d646-4a25-9274-e01e38503bb5"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "not-satisfied"
+              },
+              "target-id": "sbom-ntia-supplier",
+              "type": "objective-id"
+            },
+            "title": "SBOM-NTIA-SUPPLIER",
+            "uuid": "b47ce74f-3d8e-4dd5-a10a-eda81ca4e67c"
+          },
+          {
+            "description": "Component 'github.com/prometheus/client_model' missing supplier/manufacturer",
+            "related-observations": [
+              {
+                "observation-uuid": "c5cd889d-ed84-4c52-a8b3-cb564192eee7"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "not-satisfied"
+              },
+              "target-id": "sbom-ntia-supplier",
+              "type": "objective-id"
+            },
+            "title": "SBOM-NTIA-SUPPLIER",
+            "uuid": "438f63f0-5e89-4d2e-a35d-3ef743cfeed9"
+          },
+          {
+            "description": "Component 'github.com/prometheus/common' missing supplier/manufacturer",
+            "related-observations": [
+              {
+                "observation-uuid": "9e8add4e-1e80-4dcf-a3d2-edf30f2cc8bf"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "not-satisfied"
+              },
+              "target-id": "sbom-ntia-supplier",
+              "type": "objective-id"
+            },
+            "title": "SBOM-NTIA-SUPPLIER",
+            "uuid": "fac061bd-b887-4969-90fd-a506433e17ad"
+          },
+          {
+            "description": "Component 'github.com/prometheus/procfs' missing supplier/manufacturer",
+            "related-observations": [
+              {
+                "observation-uuid": "b6e79f04-ecdd-4605-a3ef-d14333f0dd1e"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "not-satisfied"
+              },
+              "target-id": "sbom-ntia-supplier",
+              "type": "objective-id"
+            },
+            "title": "SBOM-NTIA-SUPPLIER",
+            "uuid": "d84d797f-a4e8-4fa9-9b7e-e4e497e6a65a"
+          },
+          {
+            "description": "Component 'github.com/remyoudompheng/bigfft' missing supplier/manufacturer",
+            "related-observations": [
+              {
+                "observation-uuid": "a6082c71-4ccf-4817-ba23-08b440b862f7"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "not-satisfied"
+              },
+              "target-id": "sbom-ntia-supplier",
+              "type": "objective-id"
+            },
+            "title": "SBOM-NTIA-SUPPLIER",
+            "uuid": "98e8d0be-f105-4e74-bd18-7869964433f1"
+          },
+          {
+            "description": "Component 'github.com/sagikazarmark/locafero' missing supplier/manufacturer",
+            "related-observations": [
+              {
+                "observation-uuid": "bfd84f90-567c-49ff-a1a8-e07fb1daf6e2"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "not-satisfied"
+              },
+              "target-id": "sbom-ntia-supplier",
+              "type": "objective-id"
+            },
+            "title": "SBOM-NTIA-SUPPLIER",
+            "uuid": "bd5c4d34-594c-4c40-9b6a-111661f82b6c"
+          },
+          {
+            "description": "Component 'github.com/sourcegraph/conc' missing supplier/manufacturer",
+            "related-observations": [
+              {
+                "observation-uuid": "8360d7a3-fec7-47b1-80f7-c6c9d55208de"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "not-satisfied"
+              },
+              "target-id": "sbom-ntia-supplier",
+              "type": "objective-id"
+            },
+            "title": "SBOM-NTIA-SUPPLIER",
+            "uuid": "6b2eabe1-0f80-4b87-a4ab-9465f3f2b597"
+          },
+          {
+            "description": "Component 'github.com/spf13/afero' missing supplier/manufacturer",
+            "related-observations": [
+              {
+                "observation-uuid": "51287c22-5192-4b70-892c-b1d8b072917e"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "not-satisfied"
+              },
+              "target-id": "sbom-ntia-supplier",
+              "type": "objective-id"
+            },
+            "title": "SBOM-NTIA-SUPPLIER",
+            "uuid": "b2b7f27c-3430-48f3-a8ed-e58284652ade"
+          },
+          {
+            "description": "Component 'github.com/spf13/cast' missing supplier/manufacturer",
+            "related-observations": [
+              {
+                "observation-uuid": "63bb0093-b720-41bf-a09a-2dd683673041"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "not-satisfied"
+              },
+              "target-id": "sbom-ntia-supplier",
+              "type": "objective-id"
+            },
+            "title": "SBOM-NTIA-SUPPLIER",
+            "uuid": "cb1102db-f612-429f-85fe-4593cb8fec03"
+          },
+          {
+            "description": "Component 'github.com/spf13/pflag' missing supplier/manufacturer",
+            "related-observations": [
+              {
+                "observation-uuid": "174462b8-b29e-4f4d-ad40-bda2922c7236"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "not-satisfied"
+              },
+              "target-id": "sbom-ntia-supplier",
+              "type": "objective-id"
+            },
+            "title": "SBOM-NTIA-SUPPLIER",
+            "uuid": "ec4a19f0-0cba-46e9-a173-65b37ca55bed"
+          },
+          {
+            "description": "Component 'github.com/spf13/viper' missing supplier/manufacturer",
+            "related-observations": [
+              {
+                "observation-uuid": "b678a2e3-0d8f-4f9a-90a3-60df12040282"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "not-satisfied"
+              },
+              "target-id": "sbom-ntia-supplier",
+              "type": "objective-id"
+            },
+            "title": "SBOM-NTIA-SUPPLIER",
+            "uuid": "204cf55a-11df-4210-af7e-ffd69b5a1b7a"
+          },
+          {
+            "description": "Component 'github.com/subosito/gotenv' missing supplier/manufacturer",
+            "related-observations": [
+              {
+                "observation-uuid": "572bf311-cdd8-4fd6-82d6-be36263fc768"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "not-satisfied"
+              },
+              "target-id": "sbom-ntia-supplier",
+              "type": "objective-id"
+            },
+            "title": "SBOM-NTIA-SUPPLIER",
+            "uuid": "d1987bc8-5e4d-4338-978b-ab6388f66129"
+          },
+          {
+            "description": "Component 'go.opentelemetry.io/auto/sdk' missing supplier/manufacturer",
+            "related-observations": [
+              {
+                "observation-uuid": "076c791d-03d0-4bee-9d65-e04c3112759d"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "not-satisfied"
+              },
+              "target-id": "sbom-ntia-supplier",
+              "type": "objective-id"
+            },
+            "title": "SBOM-NTIA-SUPPLIER",
+            "uuid": "9068c513-328c-41e2-9ccc-d8e7103aa037"
+          },
+          {
+            "description": "Component 'go.opentelemetry.io/otel' missing supplier/manufacturer",
+            "related-observations": [
+              {
+                "observation-uuid": "a64b9924-87be-42da-9a29-58d5068552fc"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "not-satisfied"
+              },
+              "target-id": "sbom-ntia-supplier",
+              "type": "objective-id"
+            },
+            "title": "SBOM-NTIA-SUPPLIER",
+            "uuid": "bf33242e-e3bd-4c92-8e40-38d0d4c6f9a7"
+          },
+          {
+            "description": "Component 'go.opentelemetry.io/otel/exporters/stdout/stdouttrace' missing supplier/manufacturer",
+            "related-observations": [
+              {
+                "observation-uuid": "dcaac8b8-5ee6-42cc-ad84-69f61ca46286"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "not-satisfied"
+              },
+              "target-id": "sbom-ntia-supplier",
+              "type": "objective-id"
+            },
+            "title": "SBOM-NTIA-SUPPLIER",
+            "uuid": "f40cd066-4d68-4bc9-a060-3d7084f2015a"
+          },
+          {
+            "description": "Component 'go.opentelemetry.io/otel/metric' missing supplier/manufacturer",
+            "related-observations": [
+              {
+                "observation-uuid": "5ad2334c-6d54-4124-937b-6bb3d3d95f74"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "not-satisfied"
+              },
+              "target-id": "sbom-ntia-supplier",
+              "type": "objective-id"
+            },
+            "title": "SBOM-NTIA-SUPPLIER",
+            "uuid": "b5e2a6ac-d83d-4dfc-b13e-ac34a826534b"
+          },
+          {
+            "description": "Component 'go.opentelemetry.io/otel/sdk' missing supplier/manufacturer",
+            "related-observations": [
+              {
+                "observation-uuid": "6f317fbb-6f44-4b7c-a7fa-75eabe22e4ba"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "not-satisfied"
+              },
+              "target-id": "sbom-ntia-supplier",
+              "type": "objective-id"
+            },
+            "title": "SBOM-NTIA-SUPPLIER",
+            "uuid": "b4c44901-454a-41a8-86d7-59beedefa772"
+          },
+          {
+            "description": "Component 'go.opentelemetry.io/otel/trace' missing supplier/manufacturer",
+            "related-observations": [
+              {
+                "observation-uuid": "cf89c836-6e7c-426d-bae7-49bd7b5e46c6"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "not-satisfied"
+              },
+              "target-id": "sbom-ntia-supplier",
+              "type": "objective-id"
+            },
+            "title": "SBOM-NTIA-SUPPLIER",
+            "uuid": "c105aba7-19dc-4e85-b32c-56d2a734cbb8"
+          },
+          {
+            "description": "Component 'go.yaml.in/yaml/v2' missing supplier/manufacturer",
+            "related-observations": [
+              {
+                "observation-uuid": "9ed0fa75-5b4c-46c1-93c7-f61130e75ceb"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "not-satisfied"
+              },
+              "target-id": "sbom-ntia-supplier",
+              "type": "objective-id"
+            },
+            "title": "SBOM-NTIA-SUPPLIER",
+            "uuid": "45405706-5223-462e-afee-a4f08dd4071e"
+          },
+          {
+            "description": "Component 'go.yaml.in/yaml/v3' missing supplier/manufacturer",
+            "related-observations": [
+              {
+                "observation-uuid": "4d14c802-1ca4-400a-b030-7e2d205bf04b"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "not-satisfied"
+              },
+              "target-id": "sbom-ntia-supplier",
+              "type": "objective-id"
+            },
+            "title": "SBOM-NTIA-SUPPLIER",
+            "uuid": "6d6a4050-6c1c-433c-b384-12b8a2fb6dd1"
+          },
+          {
+            "description": "Component 'golang.org/x/net' missing supplier/manufacturer",
+            "related-observations": [
+              {
+                "observation-uuid": "8aafa9ea-3b0a-466f-96ef-5d532196f5d9"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "not-satisfied"
+              },
+              "target-id": "sbom-ntia-supplier",
+              "type": "objective-id"
+            },
+            "title": "SBOM-NTIA-SUPPLIER",
+            "uuid": "1f39e693-0d6f-4be3-b15c-3b91051709c0"
+          },
+          {
+            "description": "Component 'golang.org/x/sys' missing supplier/manufacturer",
+            "related-observations": [
+              {
+                "observation-uuid": "f600f373-fe9a-434e-baaa-0cbfa5afd95a"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "not-satisfied"
+              },
+              "target-id": "sbom-ntia-supplier",
+              "type": "objective-id"
+            },
+            "title": "SBOM-NTIA-SUPPLIER",
+            "uuid": "f4d20a75-388f-46d8-8fbd-81f99cbf399c"
+          },
+          {
+            "description": "Component 'golang.org/x/text' missing supplier/manufacturer",
+            "related-observations": [
+              {
+                "observation-uuid": "82d49f08-e39c-431b-bdf3-07833459cba3"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "not-satisfied"
+              },
+              "target-id": "sbom-ntia-supplier",
+              "type": "objective-id"
+            },
+            "title": "SBOM-NTIA-SUPPLIER",
+            "uuid": "9ad5f09b-b010-4718-b4b7-6a38192b15be"
+          },
+          {
+            "description": "Component 'golang.org/x/time' missing supplier/manufacturer",
+            "related-observations": [
+              {
+                "observation-uuid": "a5df56f2-4b65-447e-a037-8bbe17b7e529"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "not-satisfied"
+              },
+              "target-id": "sbom-ntia-supplier",
+              "type": "objective-id"
+            },
+            "title": "SBOM-NTIA-SUPPLIER",
+            "uuid": "b2403cbe-f63d-459b-8caf-be6ecfe4c638"
+          },
+          {
+            "description": "Component 'google.golang.org/genproto/googleapis/api' missing supplier/manufacturer",
+            "related-observations": [
+              {
+                "observation-uuid": "f63aa3e7-c026-4bf1-95ed-e9c0a04ad2f4"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "not-satisfied"
+              },
+              "target-id": "sbom-ntia-supplier",
+              "type": "objective-id"
+            },
+            "title": "SBOM-NTIA-SUPPLIER",
+            "uuid": "acf409a8-59f0-41cd-8412-9acda5f6d838"
+          },
+          {
+            "description": "Component 'google.golang.org/genproto/googleapis/rpc' missing supplier/manufacturer",
+            "related-observations": [
+              {
+                "observation-uuid": "a488db7e-ae0e-46f2-a1a0-b87647d5ff05"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "not-satisfied"
+              },
+              "target-id": "sbom-ntia-supplier",
+              "type": "objective-id"
+            },
+            "title": "SBOM-NTIA-SUPPLIER",
+            "uuid": "12954d97-aeef-4b54-96f5-f88533a9ca4f"
+          },
+          {
+            "description": "Component 'google.golang.org/grpc' missing supplier/manufacturer",
+            "related-observations": [
+              {
+                "observation-uuid": "afa9b066-4914-45d8-86a8-4629bc97cc5a"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "not-satisfied"
+              },
+              "target-id": "sbom-ntia-supplier",
+              "type": "objective-id"
+            },
+            "title": "SBOM-NTIA-SUPPLIER",
+            "uuid": "dd939246-74ad-4a7b-8b8f-0e6d3cad6237"
+          },
+          {
+            "description": "Component 'google.golang.org/protobuf' missing supplier/manufacturer",
+            "related-observations": [
+              {
+                "observation-uuid": "809b6f4e-45e1-4d00-a44e-730ab4095b71"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "not-satisfied"
+              },
+              "target-id": "sbom-ntia-supplier",
+              "type": "objective-id"
+            },
+            "title": "SBOM-NTIA-SUPPLIER",
+            "uuid": "46750bc4-0e22-494c-8b42-44e25dfa31fd"
+          },
+          {
+            "description": "Component 'gopkg.in/yaml.v3' missing supplier/manufacturer",
+            "related-observations": [
+              {
+                "observation-uuid": "4ac6e396-c0fd-4a57-9061-b1f01e3bf590"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "not-satisfied"
+              },
+              "target-id": "sbom-ntia-supplier",
+              "type": "objective-id"
+            },
+            "title": "SBOM-NTIA-SUPPLIER",
+            "uuid": "5fa5d5a2-fce1-4d85-b17d-9107728d270c"
+          },
+          {
+            "description": "Component 'modernc.org/libc' missing supplier/manufacturer",
+            "related-observations": [
+              {
+                "observation-uuid": "d493a32e-747b-4cc3-8965-b62a4629e41c"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "not-satisfied"
+              },
+              "target-id": "sbom-ntia-supplier",
+              "type": "objective-id"
+            },
+            "title": "SBOM-NTIA-SUPPLIER",
+            "uuid": "d5013d28-8e72-4e73-9321-9f19d12927d2"
+          },
+          {
+            "description": "Component 'modernc.org/mathutil' missing supplier/manufacturer",
+            "related-observations": [
+              {
+                "observation-uuid": "c3714b88-66d0-40d1-a0b4-1b7d7bc61fb6"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "not-satisfied"
+              },
+              "target-id": "sbom-ntia-supplier",
+              "type": "objective-id"
+            },
+            "title": "SBOM-NTIA-SUPPLIER",
+            "uuid": "7bf54834-56a2-4f4d-9e16-95a4ba97129a"
+          },
+          {
+            "description": "Component 'modernc.org/memory' missing supplier/manufacturer",
+            "related-observations": [
+              {
+                "observation-uuid": "f109ba5d-05ac-424c-8d76-9e3fa0822273"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "not-satisfied"
+              },
+              "target-id": "sbom-ntia-supplier",
+              "type": "objective-id"
+            },
+            "title": "SBOM-NTIA-SUPPLIER",
+            "uuid": "6f28c874-1cae-44d4-9cb5-86a03d385865"
+          },
+          {
+            "description": "Component 'modernc.org/sqlite' missing supplier/manufacturer",
+            "related-observations": [
+              {
+                "observation-uuid": "22a839ae-36d3-4c31-9b13-92e78abbe4e2"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "not-satisfied"
+              },
+              "target-id": "sbom-ntia-supplier",
+              "type": "objective-id"
+            },
+            "title": "SBOM-NTIA-SUPPLIER",
+            "uuid": "f9bccbdc-8fe6-4f32-a144-543f35e6f1ee"
+          },
+          {
+            "description": "Component 'stdlib' missing supplier/manufacturer",
+            "related-observations": [
+              {
+                "observation-uuid": "c07c5777-8587-42e3-ab01-4402acfca7e7"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "not-satisfied"
+              },
+              "target-id": "sbom-ntia-supplier",
+              "type": "objective-id"
+            },
+            "title": "SBOM-NTIA-SUPPLIER",
+            "uuid": "5473e1b6-04fa-46a2-9d57-45a6457ce88c"
+          },
+          {
+            "description": "Primary component 'xoscal-server' participates in no dependency relationship",
+            "related-observations": [
+              {
+                "observation-uuid": "d80a9472-7ee5-4cc8-a074-89538971f4d4"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "not-satisfied"
+              },
+              "target-id": "sbom-ntia-dependency",
+              "type": "objective-id"
+            },
+            "title": "SBOM-NTIA-DEPENDENCY",
+            "uuid": "5f28e525-3141-44f7-ab33-65188c62c40d"
+          }
+        ],
+        "observations": [
+          {
+            "collected": "2026-09-07T19:44:09Z",
+            "description": "Component 'github.com/beorn7/perks' missing supplier/manufacturer",
+            "methods": [
+              "EXAMINE"
+            ],
+            "props": [
+              {
+                "name": "severity",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "error"
+              },
+              {
+                "name": "standard-reference",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "NTIA: Supplier information"
+              },
+              {
+                "name": "rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sarif-rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sbom-element",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "github.com/beorn7/perks"
+              }
+            ],
+            "title": "SBOM-NTIA-SUPPLIER",
+            "types": [
+              "finding"
+            ],
+            "uuid": "45e083e4-15e2-48df-9c72-8cc746b6787d"
+          },
+          {
+            "collected": "2026-09-07T19:44:09Z",
+            "description": "Component 'github.com/cespare/xxhash/v2' missing supplier/manufacturer",
+            "methods": [
+              "EXAMINE"
+            ],
+            "props": [
+              {
+                "name": "severity",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "error"
+              },
+              {
+                "name": "standard-reference",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "NTIA: Supplier information"
+              },
+              {
+                "name": "rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sarif-rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sbom-element",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "github.com/cespare/xxhash/v2"
+              }
+            ],
+            "title": "SBOM-NTIA-SUPPLIER",
+            "types": [
+              "finding"
+            ],
+            "uuid": "8c5286e5-f443-4878-b0d5-21ed8147cdb6"
+          },
+          {
+            "collected": "2026-09-07T19:44:09Z",
+            "description": "Component 'github.com/dustin/go-humanize' missing supplier/manufacturer",
+            "methods": [
+              "EXAMINE"
+            ],
+            "props": [
+              {
+                "name": "severity",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "error"
+              },
+              {
+                "name": "standard-reference",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "NTIA: Supplier information"
+              },
+              {
+                "name": "rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sarif-rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sbom-element",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "github.com/dustin/go-humanize"
+              }
+            ],
+            "title": "SBOM-NTIA-SUPPLIER",
+            "types": [
+              "finding"
+            ],
+            "uuid": "3701158d-f644-4a38-bc4e-fee2079fbf5b"
+          },
+          {
+            "collected": "2026-09-07T19:44:09Z",
+            "description": "Component 'github.com/fsnotify/fsnotify' missing supplier/manufacturer",
+            "methods": [
+              "EXAMINE"
+            ],
+            "props": [
+              {
+                "name": "severity",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "error"
+              },
+              {
+                "name": "standard-reference",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "NTIA: Supplier information"
+              },
+              {
+                "name": "rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sarif-rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sbom-element",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "github.com/fsnotify/fsnotify"
+              }
+            ],
+            "title": "SBOM-NTIA-SUPPLIER",
+            "types": [
+              "finding"
+            ],
+            "uuid": "0d397582-f821-4495-849b-c076a87f8d60"
+          },
+          {
+            "collected": "2026-09-07T19:44:09Z",
+            "description": "Component 'github.com/go-logr/logr' missing supplier/manufacturer",
+            "methods": [
+              "EXAMINE"
+            ],
+            "props": [
+              {
+                "name": "severity",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "error"
+              },
+              {
+                "name": "standard-reference",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "NTIA: Supplier information"
+              },
+              {
+                "name": "rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sarif-rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sbom-element",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "github.com/go-logr/logr"
+              }
+            ],
+            "title": "SBOM-NTIA-SUPPLIER",
+            "types": [
+              "finding"
+            ],
+            "uuid": "5553b4ee-3c7a-42f1-b332-4f49328d01c2"
+          },
+          {
+            "collected": "2026-09-07T19:44:09Z",
+            "description": "Component 'github.com/go-logr/stdr' missing supplier/manufacturer",
+            "methods": [
+              "EXAMINE"
+            ],
+            "props": [
+              {
+                "name": "severity",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "error"
+              },
+              {
+                "name": "standard-reference",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "NTIA: Supplier information"
+              },
+              {
+                "name": "rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sarif-rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sbom-element",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "github.com/go-logr/stdr"
+              }
+            ],
+            "title": "SBOM-NTIA-SUPPLIER",
+            "types": [
+              "finding"
+            ],
+            "uuid": "d02b3d28-8c4f-4fc4-9bf0-e2f28acb54a3"
+          },
+          {
+            "collected": "2026-09-07T19:44:09Z",
+            "description": "Component 'github.com/go-viper/mapstructure/v2' missing supplier/manufacturer",
+            "methods": [
+              "EXAMINE"
+            ],
+            "props": [
+              {
+                "name": "severity",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "error"
+              },
+              {
+                "name": "standard-reference",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "NTIA: Supplier information"
+              },
+              {
+                "name": "rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sarif-rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sbom-element",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "github.com/go-viper/mapstructure/v2"
+              }
+            ],
+            "title": "SBOM-NTIA-SUPPLIER",
+            "types": [
+              "finding"
+            ],
+            "uuid": "91bf2adf-c804-4c89-b065-00c404838444"
+          },
+          {
+            "collected": "2026-09-07T19:44:09Z",
+            "description": "Component 'github.com/google/go-github/v62' missing supplier/manufacturer",
+            "methods": [
+              "EXAMINE"
+            ],
+            "props": [
+              {
+                "name": "severity",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "error"
+              },
+              {
+                "name": "standard-reference",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "NTIA: Supplier information"
+              },
+              {
+                "name": "rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sarif-rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sbom-element",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "github.com/google/go-github/v62"
+              }
+            ],
+            "title": "SBOM-NTIA-SUPPLIER",
+            "types": [
+              "finding"
+            ],
+            "uuid": "7bdc6aaa-2828-47ad-9021-a2f1627e5e99"
+          },
+          {
+            "collected": "2026-09-07T19:44:09Z",
+            "description": "Component 'github.com/google/go-querystring' missing supplier/manufacturer",
+            "methods": [
+              "EXAMINE"
+            ],
+            "props": [
+              {
+                "name": "severity",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "error"
+              },
+              {
+                "name": "standard-reference",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "NTIA: Supplier information"
+              },
+              {
+                "name": "rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sarif-rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sbom-element",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "github.com/google/go-querystring"
+              }
+            ],
+            "title": "SBOM-NTIA-SUPPLIER",
+            "types": [
+              "finding"
+            ],
+            "uuid": "cf99f6f1-4208-4ae6-a244-2a0eb58d5121"
+          },
+          {
+            "collected": "2026-09-07T19:44:09Z",
+            "description": "Component 'github.com/google/uuid' missing supplier/manufacturer",
+            "methods": [
+              "EXAMINE"
+            ],
+            "props": [
+              {
+                "name": "severity",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "error"
+              },
+              {
+                "name": "standard-reference",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "NTIA: Supplier information"
+              },
+              {
+                "name": "rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sarif-rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sbom-element",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "github.com/google/uuid"
+              }
+            ],
+            "title": "SBOM-NTIA-SUPPLIER",
+            "types": [
+              "finding"
+            ],
+            "uuid": "bf1f820c-b78b-4ec1-b00e-b339bda182e3"
+          },
+          {
+            "collected": "2026-09-07T19:44:09Z",
+            "description": "Component 'github.com/grpc-ecosystem/grpc-gateway/v2' missing supplier/manufacturer",
+            "methods": [
+              "EXAMINE"
+            ],
+            "props": [
+              {
+                "name": "severity",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "error"
+              },
+              {
+                "name": "standard-reference",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "NTIA: Supplier information"
+              },
+              {
+                "name": "rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sarif-rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sbom-element",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "github.com/grpc-ecosystem/grpc-gateway/v2"
+              }
+            ],
+            "title": "SBOM-NTIA-SUPPLIER",
+            "types": [
+              "finding"
+            ],
+            "uuid": "ebf4ba55-f370-42ad-93f6-8af8f513f911"
+          },
+          {
+            "collected": "2026-09-07T19:44:09Z",
+            "description": "Component 'github.com/mchorfa/xoscal' missing supplier/manufacturer",
+            "methods": [
+              "EXAMINE"
+            ],
+            "props": [
+              {
+                "name": "severity",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "error"
+              },
+              {
+                "name": "standard-reference",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "NTIA: Supplier information"
+              },
+              {
+                "name": "rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sarif-rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sbom-element",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "github.com/mchorfa/xoscal"
+              }
+            ],
+            "title": "SBOM-NTIA-SUPPLIER",
+            "types": [
+              "finding"
+            ],
+            "uuid": "d1c47f2b-be57-4ed7-8e72-3dce2f6b98d9"
+          },
+          {
+            "collected": "2026-09-07T19:44:09Z",
+            "description": "Component 'github.com/munnerz/goautoneg' missing supplier/manufacturer",
+            "methods": [
+              "EXAMINE"
+            ],
+            "props": [
+              {
+                "name": "severity",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "error"
+              },
+              {
+                "name": "standard-reference",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "NTIA: Supplier information"
+              },
+              {
+                "name": "rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sarif-rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sbom-element",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "github.com/munnerz/goautoneg"
+              }
+            ],
+            "title": "SBOM-NTIA-SUPPLIER",
+            "types": [
+              "finding"
+            ],
+            "uuid": "9bd40d22-596f-407b-b035-5ccbb8001245"
+          },
+          {
+            "collected": "2026-09-07T19:44:09Z",
+            "description": "Component 'github.com/pelletier/go-toml/v2' missing supplier/manufacturer",
+            "methods": [
+              "EXAMINE"
+            ],
+            "props": [
+              {
+                "name": "severity",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "error"
+              },
+              {
+                "name": "standard-reference",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "NTIA: Supplier information"
+              },
+              {
+                "name": "rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sarif-rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sbom-element",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "github.com/pelletier/go-toml/v2"
+              }
+            ],
+            "title": "SBOM-NTIA-SUPPLIER",
+            "types": [
+              "finding"
+            ],
+            "uuid": "e9eb24ea-b4ff-4d04-b908-d9206b5c44b8"
+          },
+          {
+            "collected": "2026-09-07T19:44:09Z",
+            "description": "Component 'github.com/prometheus/client_golang' missing supplier/manufacturer",
+            "methods": [
+              "EXAMINE"
+            ],
+            "props": [
+              {
+                "name": "severity",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "error"
+              },
+              {
+                "name": "standard-reference",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "NTIA: Supplier information"
+              },
+              {
+                "name": "rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sarif-rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sbom-element",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "github.com/prometheus/client_golang"
+              }
+            ],
+            "title": "SBOM-NTIA-SUPPLIER",
+            "types": [
+              "finding"
+            ],
+            "uuid": "bdc7e540-d646-4a25-9274-e01e38503bb5"
+          },
+          {
+            "collected": "2026-09-07T19:44:09Z",
+            "description": "Component 'github.com/prometheus/client_model' missing supplier/manufacturer",
+            "methods": [
+              "EXAMINE"
+            ],
+            "props": [
+              {
+                "name": "severity",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "error"
+              },
+              {
+                "name": "standard-reference",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "NTIA: Supplier information"
+              },
+              {
+                "name": "rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sarif-rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sbom-element",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "github.com/prometheus/client_model"
+              }
+            ],
+            "title": "SBOM-NTIA-SUPPLIER",
+            "types": [
+              "finding"
+            ],
+            "uuid": "c5cd889d-ed84-4c52-a8b3-cb564192eee7"
+          },
+          {
+            "collected": "2026-09-07T19:44:09Z",
+            "description": "Component 'github.com/prometheus/common' missing supplier/manufacturer",
+            "methods": [
+              "EXAMINE"
+            ],
+            "props": [
+              {
+                "name": "severity",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "error"
+              },
+              {
+                "name": "standard-reference",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "NTIA: Supplier information"
+              },
+              {
+                "name": "rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sarif-rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sbom-element",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "github.com/prometheus/common"
+              }
+            ],
+            "title": "SBOM-NTIA-SUPPLIER",
+            "types": [
+              "finding"
+            ],
+            "uuid": "9e8add4e-1e80-4dcf-a3d2-edf30f2cc8bf"
+          },
+          {
+            "collected": "2026-09-07T19:44:09Z",
+            "description": "Component 'github.com/prometheus/procfs' missing supplier/manufacturer",
+            "methods": [
+              "EXAMINE"
+            ],
+            "props": [
+              {
+                "name": "severity",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "error"
+              },
+              {
+                "name": "standard-reference",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "NTIA: Supplier information"
+              },
+              {
+                "name": "rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sarif-rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sbom-element",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "github.com/prometheus/procfs"
+              }
+            ],
+            "title": "SBOM-NTIA-SUPPLIER",
+            "types": [
+              "finding"
+            ],
+            "uuid": "b6e79f04-ecdd-4605-a3ef-d14333f0dd1e"
+          },
+          {
+            "collected": "2026-09-07T19:44:09Z",
+            "description": "Component 'github.com/remyoudompheng/bigfft' missing supplier/manufacturer",
+            "methods": [
+              "EXAMINE"
+            ],
+            "props": [
+              {
+                "name": "severity",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "error"
+              },
+              {
+                "name": "standard-reference",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "NTIA: Supplier information"
+              },
+              {
+                "name": "rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sarif-rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sbom-element",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "github.com/remyoudompheng/bigfft"
+              }
+            ],
+            "title": "SBOM-NTIA-SUPPLIER",
+            "types": [
+              "finding"
+            ],
+            "uuid": "a6082c71-4ccf-4817-ba23-08b440b862f7"
+          },
+          {
+            "collected": "2026-09-07T19:44:09Z",
+            "description": "Component 'github.com/sagikazarmark/locafero' missing supplier/manufacturer",
+            "methods": [
+              "EXAMINE"
+            ],
+            "props": [
+              {
+                "name": "severity",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "error"
+              },
+              {
+                "name": "standard-reference",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "NTIA: Supplier information"
+              },
+              {
+                "name": "rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sarif-rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sbom-element",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "github.com/sagikazarmark/locafero"
+              }
+            ],
+            "title": "SBOM-NTIA-SUPPLIER",
+            "types": [
+              "finding"
+            ],
+            "uuid": "bfd84f90-567c-49ff-a1a8-e07fb1daf6e2"
+          },
+          {
+            "collected": "2026-09-07T19:44:09Z",
+            "description": "Component 'github.com/sourcegraph/conc' missing supplier/manufacturer",
+            "methods": [
+              "EXAMINE"
+            ],
+            "props": [
+              {
+                "name": "severity",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "error"
+              },
+              {
+                "name": "standard-reference",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "NTIA: Supplier information"
+              },
+              {
+                "name": "rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sarif-rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sbom-element",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "github.com/sourcegraph/conc"
+              }
+            ],
+            "title": "SBOM-NTIA-SUPPLIER",
+            "types": [
+              "finding"
+            ],
+            "uuid": "8360d7a3-fec7-47b1-80f7-c6c9d55208de"
+          },
+          {
+            "collected": "2026-09-07T19:44:09Z",
+            "description": "Component 'github.com/spf13/afero' missing supplier/manufacturer",
+            "methods": [
+              "EXAMINE"
+            ],
+            "props": [
+              {
+                "name": "severity",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "error"
+              },
+              {
+                "name": "standard-reference",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "NTIA: Supplier information"
+              },
+              {
+                "name": "rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sarif-rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sbom-element",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "github.com/spf13/afero"
+              }
+            ],
+            "title": "SBOM-NTIA-SUPPLIER",
+            "types": [
+              "finding"
+            ],
+            "uuid": "51287c22-5192-4b70-892c-b1d8b072917e"
+          },
+          {
+            "collected": "2026-09-07T19:44:09Z",
+            "description": "Component 'github.com/spf13/cast' missing supplier/manufacturer",
+            "methods": [
+              "EXAMINE"
+            ],
+            "props": [
+              {
+                "name": "severity",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "error"
+              },
+              {
+                "name": "standard-reference",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "NTIA: Supplier information"
+              },
+              {
+                "name": "rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sarif-rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sbom-element",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "github.com/spf13/cast"
+              }
+            ],
+            "title": "SBOM-NTIA-SUPPLIER",
+            "types": [
+              "finding"
+            ],
+            "uuid": "63bb0093-b720-41bf-a09a-2dd683673041"
+          },
+          {
+            "collected": "2026-09-07T19:44:09Z",
+            "description": "Component 'github.com/spf13/pflag' missing supplier/manufacturer",
+            "methods": [
+              "EXAMINE"
+            ],
+            "props": [
+              {
+                "name": "severity",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "error"
+              },
+              {
+                "name": "standard-reference",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "NTIA: Supplier information"
+              },
+              {
+                "name": "rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sarif-rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sbom-element",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "github.com/spf13/pflag"
+              }
+            ],
+            "title": "SBOM-NTIA-SUPPLIER",
+            "types": [
+              "finding"
+            ],
+            "uuid": "174462b8-b29e-4f4d-ad40-bda2922c7236"
+          },
+          {
+            "collected": "2026-09-07T19:44:09Z",
+            "description": "Component 'github.com/spf13/viper' missing supplier/manufacturer",
+            "methods": [
+              "EXAMINE"
+            ],
+            "props": [
+              {
+                "name": "severity",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "error"
+              },
+              {
+                "name": "standard-reference",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "NTIA: Supplier information"
+              },
+              {
+                "name": "rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sarif-rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sbom-element",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "github.com/spf13/viper"
+              }
+            ],
+            "title": "SBOM-NTIA-SUPPLIER",
+            "types": [
+              "finding"
+            ],
+            "uuid": "b678a2e3-0d8f-4f9a-90a3-60df12040282"
+          },
+          {
+            "collected": "2026-09-07T19:44:09Z",
+            "description": "Component 'github.com/subosito/gotenv' missing supplier/manufacturer",
+            "methods": [
+              "EXAMINE"
+            ],
+            "props": [
+              {
+                "name": "severity",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "error"
+              },
+              {
+                "name": "standard-reference",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "NTIA: Supplier information"
+              },
+              {
+                "name": "rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sarif-rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sbom-element",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "github.com/subosito/gotenv"
+              }
+            ],
+            "title": "SBOM-NTIA-SUPPLIER",
+            "types": [
+              "finding"
+            ],
+            "uuid": "572bf311-cdd8-4fd6-82d6-be36263fc768"
+          },
+          {
+            "collected": "2026-09-07T19:44:09Z",
+            "description": "Component 'go.opentelemetry.io/auto/sdk' missing supplier/manufacturer",
+            "methods": [
+              "EXAMINE"
+            ],
+            "props": [
+              {
+                "name": "severity",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "error"
+              },
+              {
+                "name": "standard-reference",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "NTIA: Supplier information"
+              },
+              {
+                "name": "rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sarif-rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sbom-element",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "go.opentelemetry.io/auto/sdk"
+              }
+            ],
+            "title": "SBOM-NTIA-SUPPLIER",
+            "types": [
+              "finding"
+            ],
+            "uuid": "076c791d-03d0-4bee-9d65-e04c3112759d"
+          },
+          {
+            "collected": "2026-09-07T19:44:09Z",
+            "description": "Component 'go.opentelemetry.io/otel' missing supplier/manufacturer",
+            "methods": [
+              "EXAMINE"
+            ],
+            "props": [
+              {
+                "name": "severity",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "error"
+              },
+              {
+                "name": "standard-reference",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "NTIA: Supplier information"
+              },
+              {
+                "name": "rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sarif-rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sbom-element",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "go.opentelemetry.io/otel"
+              }
+            ],
+            "title": "SBOM-NTIA-SUPPLIER",
+            "types": [
+              "finding"
+            ],
+            "uuid": "a64b9924-87be-42da-9a29-58d5068552fc"
+          },
+          {
+            "collected": "2026-09-07T19:44:09Z",
+            "description": "Component 'go.opentelemetry.io/otel/exporters/stdout/stdouttrace' missing supplier/manufacturer",
+            "methods": [
+              "EXAMINE"
+            ],
+            "props": [
+              {
+                "name": "severity",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "error"
+              },
+              {
+                "name": "standard-reference",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "NTIA: Supplier information"
+              },
+              {
+                "name": "rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sarif-rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sbom-element",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "go.opentelemetry.io/otel/exporters/stdout/stdouttrace"
+              }
+            ],
+            "title": "SBOM-NTIA-SUPPLIER",
+            "types": [
+              "finding"
+            ],
+            "uuid": "dcaac8b8-5ee6-42cc-ad84-69f61ca46286"
+          },
+          {
+            "collected": "2026-09-07T19:44:09Z",
+            "description": "Component 'go.opentelemetry.io/otel/metric' missing supplier/manufacturer",
+            "methods": [
+              "EXAMINE"
+            ],
+            "props": [
+              {
+                "name": "severity",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "error"
+              },
+              {
+                "name": "standard-reference",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "NTIA: Supplier information"
+              },
+              {
+                "name": "rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sarif-rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sbom-element",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "go.opentelemetry.io/otel/metric"
+              }
+            ],
+            "title": "SBOM-NTIA-SUPPLIER",
+            "types": [
+              "finding"
+            ],
+            "uuid": "5ad2334c-6d54-4124-937b-6bb3d3d95f74"
+          },
+          {
+            "collected": "2026-09-07T19:44:09Z",
+            "description": "Component 'go.opentelemetry.io/otel/sdk' missing supplier/manufacturer",
+            "methods": [
+              "EXAMINE"
+            ],
+            "props": [
+              {
+                "name": "severity",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "error"
+              },
+              {
+                "name": "standard-reference",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "NTIA: Supplier information"
+              },
+              {
+                "name": "rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sarif-rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sbom-element",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "go.opentelemetry.io/otel/sdk"
+              }
+            ],
+            "title": "SBOM-NTIA-SUPPLIER",
+            "types": [
+              "finding"
+            ],
+            "uuid": "6f317fbb-6f44-4b7c-a7fa-75eabe22e4ba"
+          },
+          {
+            "collected": "2026-09-07T19:44:09Z",
+            "description": "Component 'go.opentelemetry.io/otel/trace' missing supplier/manufacturer",
+            "methods": [
+              "EXAMINE"
+            ],
+            "props": [
+              {
+                "name": "severity",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "error"
+              },
+              {
+                "name": "standard-reference",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "NTIA: Supplier information"
+              },
+              {
+                "name": "rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sarif-rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sbom-element",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "go.opentelemetry.io/otel/trace"
+              }
+            ],
+            "title": "SBOM-NTIA-SUPPLIER",
+            "types": [
+              "finding"
+            ],
+            "uuid": "cf89c836-6e7c-426d-bae7-49bd7b5e46c6"
+          },
+          {
+            "collected": "2026-09-07T19:44:09Z",
+            "description": "Component 'go.yaml.in/yaml/v2' missing supplier/manufacturer",
+            "methods": [
+              "EXAMINE"
+            ],
+            "props": [
+              {
+                "name": "severity",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "error"
+              },
+              {
+                "name": "standard-reference",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "NTIA: Supplier information"
+              },
+              {
+                "name": "rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sarif-rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sbom-element",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "go.yaml.in/yaml/v2"
+              }
+            ],
+            "title": "SBOM-NTIA-SUPPLIER",
+            "types": [
+              "finding"
+            ],
+            "uuid": "9ed0fa75-5b4c-46c1-93c7-f61130e75ceb"
+          },
+          {
+            "collected": "2026-09-07T19:44:09Z",
+            "description": "Component 'go.yaml.in/yaml/v3' missing supplier/manufacturer",
+            "methods": [
+              "EXAMINE"
+            ],
+            "props": [
+              {
+                "name": "severity",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "error"
+              },
+              {
+                "name": "standard-reference",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "NTIA: Supplier information"
+              },
+              {
+                "name": "rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sarif-rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sbom-element",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "go.yaml.in/yaml/v3"
+              }
+            ],
+            "title": "SBOM-NTIA-SUPPLIER",
+            "types": [
+              "finding"
+            ],
+            "uuid": "4d14c802-1ca4-400a-b030-7e2d205bf04b"
+          },
+          {
+            "collected": "2026-09-07T19:44:09Z",
+            "description": "Component 'golang.org/x/net' missing supplier/manufacturer",
+            "methods": [
+              "EXAMINE"
+            ],
+            "props": [
+              {
+                "name": "severity",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "error"
+              },
+              {
+                "name": "standard-reference",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "NTIA: Supplier information"
+              },
+              {
+                "name": "rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sarif-rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sbom-element",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "golang.org/x/net"
+              }
+            ],
+            "title": "SBOM-NTIA-SUPPLIER",
+            "types": [
+              "finding"
+            ],
+            "uuid": "8aafa9ea-3b0a-466f-96ef-5d532196f5d9"
+          },
+          {
+            "collected": "2026-09-07T19:44:09Z",
+            "description": "Component 'golang.org/x/sys' missing supplier/manufacturer",
+            "methods": [
+              "EXAMINE"
+            ],
+            "props": [
+              {
+                "name": "severity",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "error"
+              },
+              {
+                "name": "standard-reference",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "NTIA: Supplier information"
+              },
+              {
+                "name": "rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sarif-rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sbom-element",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "golang.org/x/sys"
+              }
+            ],
+            "title": "SBOM-NTIA-SUPPLIER",
+            "types": [
+              "finding"
+            ],
+            "uuid": "f600f373-fe9a-434e-baaa-0cbfa5afd95a"
+          },
+          {
+            "collected": "2026-09-07T19:44:09Z",
+            "description": "Component 'golang.org/x/text' missing supplier/manufacturer",
+            "methods": [
+              "EXAMINE"
+            ],
+            "props": [
+              {
+                "name": "severity",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "error"
+              },
+              {
+                "name": "standard-reference",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "NTIA: Supplier information"
+              },
+              {
+                "name": "rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sarif-rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sbom-element",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "golang.org/x/text"
+              }
+            ],
+            "title": "SBOM-NTIA-SUPPLIER",
+            "types": [
+              "finding"
+            ],
+            "uuid": "82d49f08-e39c-431b-bdf3-07833459cba3"
+          },
+          {
+            "collected": "2026-09-07T19:44:09Z",
+            "description": "Component 'golang.org/x/time' missing supplier/manufacturer",
+            "methods": [
+              "EXAMINE"
+            ],
+            "props": [
+              {
+                "name": "severity",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "error"
+              },
+              {
+                "name": "standard-reference",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "NTIA: Supplier information"
+              },
+              {
+                "name": "rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sarif-rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sbom-element",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "golang.org/x/time"
+              }
+            ],
+            "title": "SBOM-NTIA-SUPPLIER",
+            "types": [
+              "finding"
+            ],
+            "uuid": "a5df56f2-4b65-447e-a037-8bbe17b7e529"
+          },
+          {
+            "collected": "2026-09-07T19:44:09Z",
+            "description": "Component 'google.golang.org/genproto/googleapis/api' missing supplier/manufacturer",
+            "methods": [
+              "EXAMINE"
+            ],
+            "props": [
+              {
+                "name": "severity",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "error"
+              },
+              {
+                "name": "standard-reference",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "NTIA: Supplier information"
+              },
+              {
+                "name": "rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sarif-rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sbom-element",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "google.golang.org/genproto/googleapis/api"
+              }
+            ],
+            "title": "SBOM-NTIA-SUPPLIER",
+            "types": [
+              "finding"
+            ],
+            "uuid": "f63aa3e7-c026-4bf1-95ed-e9c0a04ad2f4"
+          },
+          {
+            "collected": "2026-09-07T19:44:09Z",
+            "description": "Component 'google.golang.org/genproto/googleapis/rpc' missing supplier/manufacturer",
+            "methods": [
+              "EXAMINE"
+            ],
+            "props": [
+              {
+                "name": "severity",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "error"
+              },
+              {
+                "name": "standard-reference",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "NTIA: Supplier information"
+              },
+              {
+                "name": "rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sarif-rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sbom-element",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "google.golang.org/genproto/googleapis/rpc"
+              }
+            ],
+            "title": "SBOM-NTIA-SUPPLIER",
+            "types": [
+              "finding"
+            ],
+            "uuid": "a488db7e-ae0e-46f2-a1a0-b87647d5ff05"
+          },
+          {
+            "collected": "2026-09-07T19:44:09Z",
+            "description": "Component 'google.golang.org/grpc' missing supplier/manufacturer",
+            "methods": [
+              "EXAMINE"
+            ],
+            "props": [
+              {
+                "name": "severity",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "error"
+              },
+              {
+                "name": "standard-reference",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "NTIA: Supplier information"
+              },
+              {
+                "name": "rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sarif-rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sbom-element",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "google.golang.org/grpc"
+              }
+            ],
+            "title": "SBOM-NTIA-SUPPLIER",
+            "types": [
+              "finding"
+            ],
+            "uuid": "afa9b066-4914-45d8-86a8-4629bc97cc5a"
+          },
+          {
+            "collected": "2026-09-07T19:44:09Z",
+            "description": "Component 'google.golang.org/protobuf' missing supplier/manufacturer",
+            "methods": [
+              "EXAMINE"
+            ],
+            "props": [
+              {
+                "name": "severity",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "error"
+              },
+              {
+                "name": "standard-reference",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "NTIA: Supplier information"
+              },
+              {
+                "name": "rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sarif-rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sbom-element",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "google.golang.org/protobuf"
+              }
+            ],
+            "title": "SBOM-NTIA-SUPPLIER",
+            "types": [
+              "finding"
+            ],
+            "uuid": "809b6f4e-45e1-4d00-a44e-730ab4095b71"
+          },
+          {
+            "collected": "2026-09-07T19:44:09Z",
+            "description": "Component 'gopkg.in/yaml.v3' missing supplier/manufacturer",
+            "methods": [
+              "EXAMINE"
+            ],
+            "props": [
+              {
+                "name": "severity",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "error"
+              },
+              {
+                "name": "standard-reference",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "NTIA: Supplier information"
+              },
+              {
+                "name": "rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sarif-rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sbom-element",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "gopkg.in/yaml.v3"
+              }
+            ],
+            "title": "SBOM-NTIA-SUPPLIER",
+            "types": [
+              "finding"
+            ],
+            "uuid": "4ac6e396-c0fd-4a57-9061-b1f01e3bf590"
+          },
+          {
+            "collected": "2026-09-07T19:44:09Z",
+            "description": "Component 'modernc.org/libc' missing supplier/manufacturer",
+            "methods": [
+              "EXAMINE"
+            ],
+            "props": [
+              {
+                "name": "severity",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "error"
+              },
+              {
+                "name": "standard-reference",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "NTIA: Supplier information"
+              },
+              {
+                "name": "rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sarif-rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sbom-element",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "modernc.org/libc"
+              }
+            ],
+            "title": "SBOM-NTIA-SUPPLIER",
+            "types": [
+              "finding"
+            ],
+            "uuid": "d493a32e-747b-4cc3-8965-b62a4629e41c"
+          },
+          {
+            "collected": "2026-09-07T19:44:09Z",
+            "description": "Component 'modernc.org/mathutil' missing supplier/manufacturer",
+            "methods": [
+              "EXAMINE"
+            ],
+            "props": [
+              {
+                "name": "severity",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "error"
+              },
+              {
+                "name": "standard-reference",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "NTIA: Supplier information"
+              },
+              {
+                "name": "rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sarif-rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sbom-element",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "modernc.org/mathutil"
+              }
+            ],
+            "title": "SBOM-NTIA-SUPPLIER",
+            "types": [
+              "finding"
+            ],
+            "uuid": "c3714b88-66d0-40d1-a0b4-1b7d7bc61fb6"
+          },
+          {
+            "collected": "2026-09-07T19:44:09Z",
+            "description": "Component 'modernc.org/memory' missing supplier/manufacturer",
+            "methods": [
+              "EXAMINE"
+            ],
+            "props": [
+              {
+                "name": "severity",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "error"
+              },
+              {
+                "name": "standard-reference",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "NTIA: Supplier information"
+              },
+              {
+                "name": "rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sarif-rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sbom-element",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "modernc.org/memory"
+              }
+            ],
+            "title": "SBOM-NTIA-SUPPLIER",
+            "types": [
+              "finding"
+            ],
+            "uuid": "f109ba5d-05ac-424c-8d76-9e3fa0822273"
+          },
+          {
+            "collected": "2026-09-07T19:44:09Z",
+            "description": "Component 'modernc.org/sqlite' missing supplier/manufacturer",
+            "methods": [
+              "EXAMINE"
+            ],
+            "props": [
+              {
+                "name": "severity",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "error"
+              },
+              {
+                "name": "standard-reference",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "NTIA: Supplier information"
+              },
+              {
+                "name": "rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sarif-rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sbom-element",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "modernc.org/sqlite"
+              }
+            ],
+            "title": "SBOM-NTIA-SUPPLIER",
+            "types": [
+              "finding"
+            ],
+            "uuid": "22a839ae-36d3-4c31-9b13-92e78abbe4e2"
+          },
+          {
+            "collected": "2026-09-07T19:44:09Z",
+            "description": "Component 'stdlib' missing supplier/manufacturer",
+            "methods": [
+              "EXAMINE"
+            ],
+            "props": [
+              {
+                "name": "severity",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "error"
+              },
+              {
+                "name": "standard-reference",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "NTIA: Supplier information"
+              },
+              {
+                "name": "rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sarif-rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-SUPPLIER"
+              },
+              {
+                "name": "sbom-element",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "stdlib"
+              }
+            ],
+            "title": "SBOM-NTIA-SUPPLIER",
+            "types": [
+              "finding"
+            ],
+            "uuid": "c07c5777-8587-42e3-ab01-4402acfca7e7"
+          },
+          {
+            "collected": "2026-09-07T19:44:09Z",
+            "description": "Primary component 'xoscal-server' participates in no dependency relationship",
+            "methods": [
+              "EXAMINE"
+            ],
+            "props": [
+              {
+                "name": "severity",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "warning"
+              },
+              {
+                "name": "standard-reference",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "NTIA: Dependency relationships"
+              },
+              {
+                "name": "rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-DEPENDENCY"
+              },
+              {
+                "name": "sarif-rule-id",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "SBOM-NTIA-DEPENDENCY"
+              },
+              {
+                "name": "sbom-element",
+                "ns": "https://sbom.tools/ns/oscal",
+                "value": "xoscal-server"
+              }
+            ],
+            "title": "SBOM-NTIA-DEPENDENCY",
+            "types": [
+              "finding"
+            ],
+            "uuid": "d80a9472-7ee5-4cc8-a074-89538971f4d4"
+          }
+        ],
+        "props": [
+          {
+            "name": "standard",
+            "ns": "https://sbom.tools/ns/oscal",
+            "value": "NtiaMinimum"
+          },
+          {
+            "name": "standard-name",
+            "ns": "https://sbom.tools/ns/oscal",
+            "value": "NTIA Minimum Elements"
+          },
+          {
+            "name": "is-compliant",
+            "ns": "https://sbom.tools/ns/oscal",
+            "value": "false"
+          },
+          {
+            "name": "applicability",
+            "ns": "https://sbom.tools/ns/oscal",
+            "value": "applicable"
+          },
+          {
+            "name": "error-count",
+            "ns": "https://sbom.tools/ns/oscal",
+            "value": "48"
+          },
+          {
+            "name": "warning-count",
+            "ns": "https://sbom.tools/ns/oscal",
+            "value": "1"
+          },
+          {
+            "name": "info-count",
+            "ns": "https://sbom.tools/ns/oscal",
+            "value": "0"
+          },
+          {
+            "name": "score",
+            "ns": "https://sbom.tools/ns/oscal",
+            "value": "2"
+          }
+        ],
+        "reviewed-controls": {
+          "control-selections": [
+            {
+              "description": "Controls represented by the selected sbom-tools validation standards.",
+              "include-all": {}
+            }
+          ]
+        },
+        "start": "2026-09-07T19:44:09Z",
+        "title": "sbom-tools validation assessment — NTIA Minimum Elements",
+        "uuid": "c8367ef9-3324-4016-b3fb-0e362c631112"
+      }
+    ],
+    "uuid": "80e15206-5a7e-4774-b9f5-1a5fc4a3e00c"
+  }
+}

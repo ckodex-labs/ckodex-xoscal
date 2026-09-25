@@ -34,9 +34,9 @@ frameworks:
   - ref_id: cybersecure-canada
     jurisdiction: canada
     filename: cybersecure-canada/catalog.json
-  - ref_id: itsp.10.171
+  - ref_id: cccs-itsp-10-171
     jurisdiction: canada
-    filename: itsp.10.171.yaml
+    filename: cccs-itsp-10-171/catalog.json
 
   # UK
   - ref_id: cyber_essentials

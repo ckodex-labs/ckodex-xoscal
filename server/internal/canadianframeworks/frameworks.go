@@ -1,11 +1,37 @@
 package canadianframeworks
 
 import (
+	_ "embed"
+	"encoding/json"
+
 	catalogv1 "github.com/mchorfa/xoscal/proto/oscal/catalog/v1"
 	commonv1 "github.com/mchorfa/xoscal/proto/oscal/common/v1"
 	profilev1 "github.com/mchorfa/xoscal/proto/oscal/profile/v1"
 	"github.com/mchorfa/xoscal/server/internal/scaffold"
 )
+
+//go:embed itsp10171_controls.json
+var itsp10171ControlsJSON []byte
+
+//go:embed cybersecure_canada_controls.json
+var cybersecureCanadaControlsJSON []byte
+
+type jsonControl struct {
+	ID        string `json:"id"`
+	Title     string `json:"title"`
+	Statement string `json:"statement"`
+	RefID     string `json:"ref_id"`
+}
+
+type jsonGroup struct {
+	ID       string        `json:"id"`
+	Title    string        `json:"title"`
+	Controls []jsonControl `json:"controls"`
+}
+
+type cybersecurePayload struct {
+	Groups []jsonGroup `json:"groups"`
+}
 
 // BuildCCCSITSG33Catalog synthesizes an authoritative OSCAL 1.2.3 Catalog for
 // CCCS ITSG-33 Annex 3 (Security Control Catalogue for Government of Canada).
@@ -35,14 +61,16 @@ func BuildCCCSITSG33Catalog() *catalogv1.Catalog {
 			Controls: []*catalogv1.Control{
 				makeControl("au-2", "Event Logging", "The information system identifies and records auditable security events in accordance with CCCS logging guidance."),
 				makeControl("au-6", "Audit Review, Analysis, and Reporting", "The organization reviews and analyzes information system audit records for indications of unusual or suspicious activity."),
+				makeControl("au-12", "Audit Generation", "The information system provides audit record generation capability for the auditable events defined in AU-2."),
 			},
 		},
 		{
 			Id:    &commonv1.Token{Value: "ca"},
-			Title: &commonv1.MarkupLine{Value: "Security Assessment and Authorization (Evaluation et autorisation de securite)"},
+			Title: &commonv1.MarkupLine{Value: "Security Assessment, Authorization, and Monitoring (Evaluation, autorisation et surveillance)"},
 			Controls: []*catalogv1.Control{
 				makeControl("ca-2", "Security Assessments", "The organization assesses the security controls in the information system to determine effectiveness in accordance with ITSG-33 lifecycle Phase 3."),
 				makeControl("ca-3", "Information Exchange Agreements", "The organization approves and documents information system interconnections via formal Memorandums of Understanding (MOU)."),
+				makeControl("ca-7", "Continuous Monitoring", "The organization develops and implements a continuous monitoring strategy aligned with CCCS operational guidance."),
 			},
 		},
 		{
@@ -95,7 +123,7 @@ func BuildCCCSITSG33Catalog() *catalogv1.Catalog {
 		},
 		{
 			Id:    &commonv1.Token{Value: "pl"},
-			Title: &commonv1.MarkupLine{Value: "Planning (Planification)"},
+			Title: &commonv1.MarkupLine{Value: "Planning (Planification de la securite)"},
 			Controls: []*catalogv1.Control{
 				makeControl("pl-2", "System Security Plan", "The organization develops, documents, and updates a System Security Plan (SSP) describing security controls and boundary architectures."),
 			},
@@ -144,6 +172,15 @@ func BuildCCCSITSG33Catalog() *catalogv1.Catalog {
 			},
 		},
 		{
+			Id:    &commonv1.Token{Value: "sr"},
+			Title: &commonv1.MarkupLine{Value: "Supply Chain Risk Management (Gestion des risques lies a la chaine d'approvisionnement)"},
+			Controls: []*catalogv1.Control{
+				makeControl("sr-1", "Supply Chain Risk Management Policy", "The organization establishes and maintains a supply chain risk management policy for information systems and services."),
+				makeControl("sr-2", "Supply Chain Risk Assessment", "The organization assesses supply chain risks associated with IT components, vendors, and services."),
+				makeControl("sr-3", "Supply Chain Controls and Processes", "The organization establishes processes to identify and address supply chain risks throughout the system lifecycle."),
+			},
+		},
+		{
 			Id:    &commonv1.Token{Value: "pm"},
 			Title: &commonv1.MarkupLine{Value: "Program Management (Gestion de programme)"},
 			Controls: []*catalogv1.Control{
@@ -188,49 +225,84 @@ func BuildCCCSMediumCloudPBMMProfile() *profilev1.Profile {
 	}
 }
 
+// BuildCCCSMediumCloudPBMMCatalog synthesizes the resolved OSCAL 1.2.3 Catalog for
+// the CCCS Medium Cloud PBMM baseline controls per ITSP.50.103.
+func BuildCCCSMediumCloudPBMMCatalog() *catalogv1.Catalog {
+	base := BuildCCCSITSG33Catalog()
+	return &catalogv1.Catalog{
+		Uuid: scaffold.UUIDFromURN("urn:xoscal:catalog:cccs-medium-cloud-pbmm"),
+		Metadata: &commonv1.Metadata{
+			Title:        "Government of Canada Cloud Security Control Baseline: Protected B / Medium Integrity / Medium Availability (PBMM)",
+			Version:      "ITSP.50.103 / ITSG-33 Annex 4A Profile 1",
+			OscalVersion: "1.2.3",
+			Remarks: &commonv1.MarkupMultiline{
+				Value: "Resolved OSCAL catalog representation of the mandatory PBMM baseline security controls for Government of Canada cloud services.",
+			},
+		},
+		Groups: base.Groups,
+	}
+}
+
 // BuildCyberSecureCanadaCatalog synthesizes an authoritative OSCAL 1.2.3 Catalog for
-// CyberSecure Canada (CyberSecuritaire Canada) baseline cybersecurity controls for SMEs.
+// CyberSecure Canada (CAN/DGSI 104 / CCCS Baseline Cyber Security Controls for Small and Medium Organizations).
 func BuildCyberSecureCanadaCatalog() *catalogv1.Catalog {
-	controls := []*catalogv1.Control{
-		makeControl("csc-1", "Automatically Patch Operating Systems and Applications", "Enable automatic updates for operating systems and applications to protect against known security vulnerabilities."),
-		makeControl("csc-2", "Implement Strong User Authentication", "Mandate multi-factor authentication (MFA) for administrative access, cloud accounts, remote connections, and sensitive applications."),
-		makeControl("csc-3", "Provide Employee Cyber Security Awareness Training", "Train employees to recognize social engineering, phishing campaigns, suspicious attachments, and credential theft techniques."),
-		makeControl("csc-4", "Backup and Encrypt Sensitive Data", "Perform regular encrypted backups of critical business data, store backups offsite or in cloud isolation, and test recovery procedures."),
-		makeControl("csc-5", "Enable Perimeter Defenses and Firewalls", "Deploy and configure stateful boundary firewalls, disable unnecessary ports and protocols, and monitor ingress/egress boundaries."),
-		makeControl("csc-6", "Secure Mobile Devices", "Enforce device passcodes, biometric lock screens, automatic screen timeout, full-disk encryption, and mobile device management policies."),
-		makeControl("csc-7", "Establish Access Control and Least Privilege", "Restrict employee access rights to only those resources strictly necessary for their specific job functions."),
-		makeControl("csc-8", "Secure Cloud and Outsourced IT Services", "Ensure cloud and outsourced IT service providers meet recognized security standards and protect organizational data."),
-		makeControl("csc-9", "Secure Website and Web Application Configurations", "Protect public-facing websites and applications using TLS certificates, secure HTTP headers, and regular vulnerability scanning."),
-		makeControl("csc-10", "Protect Against Malicious Code and Malware", "Install anti-malware and endpoint detection software on all workstations and servers with automated definition updates."),
-		makeControl("csc-11", "Implement Secure Portable Media Handling", "Restrict and monitor the use of portable storage devices (USB drives) and encrypt all confidential data transferred to removable media."),
-		makeControl("csc-12", "Maintain an Incident Response Plan", "Develop, document, and test an incident response plan to handle potential cyber security breaches and notify stakeholders."),
-		makeControl("csc-13", "Control Administrative Privileges", "Separate standard user accounts from administrative accounts; use dedicated privileged credentials only when performing administrative tasks."),
+	var payload cybersecurePayload
+	if err := json.Unmarshal(cybersecureCanadaControlsJSON, &payload); err != nil {
+		return &catalogv1.Catalog{
+			Uuid: scaffold.UUIDFromURN("urn:xoscal:catalog:cybersecure-canada"),
+			Metadata: &commonv1.Metadata{
+				Title:        "CyberSecure Canada - Baseline Cyber Security Controls for Small and Medium Organizations",
+				Version:      "1.2",
+				OscalVersion: "1.2.3",
+			},
+		}
+	}
+
+	groups := make([]*catalogv1.Group, len(payload.Groups))
+	for i, g := range payload.Groups {
+		ctrls := make([]*catalogv1.Control, len(g.Controls))
+		for j, c := range g.Controls {
+			ctrls[j] = makeControl(c.ID, c.Title, c.Statement)
+		}
+		groups[i] = &catalogv1.Group{
+			Id:       &commonv1.Token{Value: g.ID},
+			Title:    &commonv1.MarkupLine{Value: g.Title},
+			Controls: ctrls,
+		}
 	}
 
 	return &catalogv1.Catalog{
 		Uuid: scaffold.UUIDFromURN("urn:xoscal:catalog:cybersecure-canada"),
 		Metadata: &commonv1.Metadata{
 			Title:        "CyberSecure Canada - Baseline Cyber Security Controls for Small and Medium Organizations",
-			Version:      "1.2",
+			Version:      "CAN/DGSI 104 / CCCS Baseline v1.2",
 			OscalVersion: "1.2.3",
 			Remarks: &commonv1.MarkupMultiline{
-				Value: "National cyber security certification standard developed by Innovation, Science and Economic Development Canada (ISED) and the Canadian Centre for Cyber Security (CCCS).",
+				Value: "National cyber security standard CAN/DGSI 104 and CCCS Baseline Cyber Security Controls for Small and Medium Organizations administered by the Standards Council of Canada (SCC) and the Canadian Centre for Cyber Security.",
 			},
 		},
-		Controls: controls,
+		Groups: groups,
 	}
 }
 
 // BuildCCCSITSP10171Catalog synthesizes an authoritative OSCAL 1.2.3 Catalog for
 // CCCS ITSP.10.171 (Protecting Specified Information in Non-Government of Canada Systems and Organizations).
 func BuildCCCSITSP10171Catalog() *catalogv1.Catalog {
-	controls := []*catalogv1.Control{
-		makeControl("itsp-ac-1", "Access Control for Specified Information", "Limit information system access to authorized users, processes acting on behalf of authorized users, and devices handling Canadian specified information."),
-		makeControl("itsp-au-1", "Audit Logging for Controlled Systems", "Create and retain system audit logs and records to the extent needed to enable the monitoring, analysis, investigation, and reporting of unlawful or unauthorized system activity."),
-		makeControl("itsp-cm-1", "Configuration Baseline for Designated Assets", "Establish and maintain baseline configurations and inventories of organizational information systems throughout the system development life cycle."),
-		makeControl("itsp-ia-1", "Identification and Authentication for Contractor Systems", "Identify information system users, processes acting on behalf of users, and devices; authenticate the identities of those users, processes, or devices."),
-		makeControl("itsp-mp-1", "Media Protection for Controlled Goods", "Protect information system media containing specified information, both paper and digital; sanitize or destroy information system media before disposal."),
-		makeControl("itsp-sc-1", "Boundary and Cryptographic Protection", "Monitor, control, and protect organizational communications at the external boundaries and key internal boundaries; employ FIPS 140-validated cryptography."),
+	var controls []jsonControl
+	if err := json.Unmarshal(itsp10171ControlsJSON, &controls); err != nil {
+		return &catalogv1.Catalog{
+			Uuid: scaffold.UUIDFromURN("urn:xoscal:catalog:cccs-itsp-10-171"),
+			Metadata: &commonv1.Metadata{
+				Title:        "CCCS ITSP.10.171 - Protecting Specified Information in Non-Government of Canada Systems and Organizations",
+				Version:      "1.0",
+				OscalVersion: "1.2.3",
+			},
+		}
+	}
+
+	oscalControls := make([]*catalogv1.Control, len(controls))
+	for i, c := range controls {
+		oscalControls[i] = makeControl(c.ID, c.Title, c.Statement)
 	}
 
 	return &catalogv1.Catalog{
@@ -240,10 +312,10 @@ func BuildCCCSITSP10171Catalog() *catalogv1.Catalog {
 			Version:      "1.0",
 			OscalVersion: "1.2.3",
 			Remarks: &commonv1.MarkupMultiline{
-				Value: "Canadian cybersecurity baseline for defense suppliers, aerospace contractors, and commercial organizations handling Canadian Controlled Goods and specified federal data.",
+				Value: "Authoritative Canadian cybersecurity requirements published by the Communications Security Establishment under the Open Government Licence - Canada for protecting specified information in non-GC systems and organizations.",
 			},
 		},
-		Controls: controls,
+		Controls: oscalControls,
 	}
 }
 

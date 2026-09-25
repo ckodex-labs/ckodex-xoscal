@@ -1,0 +1,76 @@
+{
+  "sdks": [
+    {
+      "name": "xoscal-sdk-csharp.zip",
+      "path": "sdk/xoscal-sdk-csharp.zip",
+      "digest": "sha256:fb04e52b787a60caac9138b328ba106e722a1333fccf8cc4a6ff8473ebaa0a3d"
+    },
+    {
+      "name": "xoscal-sdk-go.zip",
+      "path": "sdk/xoscal-sdk-go.zip",
+      "digest": "sha256:ffab4d0f4fae0c1cfb523ce6f864543f311ad7f9c6b7c74175cb95f9378be040"
+    },
+    {
+      "name": "xoscal-sdk-java.zip",
+      "path": "sdk/xoscal-sdk-java.zip",
+      "digest": "sha256:9abbee1f78217ed3d753bae59bf96d5a5057a260871e5ee065558a38079b509a"
+    },
+    {
+      "name": "xoscal-sdk-python.zip",
+      "path": "sdk/xoscal-sdk-python.zip",
+      "digest": "sha256:5a5e3c4f58ce5e563ef639baaa1ccf348711282ba0d48ada4464098f5d018512"
+    },
+    {
+      "name": "xoscal-sdk-swift.zip",
+      "path": "sdk/xoscal-sdk-swift.zip",
+      "digest": "sha256:e3cb85dcbd470c247b2c25857518edaf76bc6f6e2187e3121fd538b88ecf3b04"
+    },
+    {
+      "name": "xoscal-sdk-ts.zip",
+      "path": "sdk/xoscal-sdk-ts.zip",
+      "digest": "sha256:2c55564b1edeca83621ebc725592e9a6510bc9c8ef068dbb92132fa177b3f9a9"
+    }
+  ],
+  "frameworks": [
+    {
+      "name": "cccs-itsg-33",
+      "path": "frameworks/cccs-itsg-33/catalog.json",
+      "digest": "sha256:b32aa6cb5aa19d5b5052d945011771d3c0e5b14550f8dbede3bee697e752b69a"
+    },
+    {
+      "name": "cccs-itsp-10-171",
+      "path": "frameworks/cccs-itsp-10-171/catalog.json",
+      "digest": "sha256:f4e6ff19eeedc0177ba7edd2736e3da5e8bed44cec2856839122f60be8f930f9"
+    },
+    {
+      "name": "cccs-medium-cloud-pbmm",
+      "path": "frameworks/cccs-medium-cloud-pbmm/catalog.json",
+      "digest": "sha256:b3c04877d97890b9f75f5a79155cc700f9fc457b546d54cffe8279d6fb043ab7"
+    },
+    {
+      "name": "cisa-cpg-2.0",
+      "path": "frameworks/cisa-cpg-2.0/catalog.json",
+      "digest": "sha256:08fee8097c51d6b1b26434c77dc8f6915249c058a55fabd2935392c854587755"
+    },
+    {
+      "name": "cmmc-2.0",
+      "path": "frameworks/cmmc-2.0/catalog.json",
+      "digest": "sha256:f21fd3015f031821af7aaa1570678bcf2ba8632c83b2962698516751bca76944"
+    },
+    {
+      "name": "cybersecure-canada",
+      "path": "frameworks/cybersecure-canada/catalog.json",
+      "digest": "sha256:992d4535b7bfedd4fdc62f6673eb91320afcf94efe1195784a55b435604bcfd9"
+    },
+    {
+      "name": "fedramp-rev5",
+      "path": "frameworks/fedramp-rev5/catalog.json",
+      "digest": "sha256:285d52bf72899d43eaa4c5d2d97ba86213f4cb93729eefb75ac24b712a3056ae"
+    },
+    {
+      "name": "nist-csf-2.0",
+      "path": "frameworks/nist-csf-2.0/catalog.json",
+      "digest": "sha256:334bbba0b93128315461522e0a014a14af4c5482ff5560cbf36fed9e0ba78fee"
+    }
+  ]
+}

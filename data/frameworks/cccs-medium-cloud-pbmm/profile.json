@@ -7,7 +7,7 @@
       }
     ],
     "metadata": {
-      "last-modified": "2026-09-25T20:11:14Z",
+      "last-modified": "2026-09-25T20:44:28Z",
       "oscal-version": "1.2.3",
       "remarks": "Mandatory baseline security control profile for Cloud Service Providers (CSPs) and Government of Canada cloud-based services handling Protected B information.",
       "title": "Government of Canada Cloud Security Control Profile: Protected B / Medium Integrity / Medium Availability (PBMM)",

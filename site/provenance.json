@@ -1,0 +1,37 @@
+[
+  {
+    "name": "proto-set",
+    "digest": "sha256:61c0cc45de749d4774a4e6274d04ea31373ea88da5d06aa1d0689f89b8c71e70",
+    "signed": false
+  },
+  {
+    "name": "xoscal-sdk-csharp-sdk",
+    "digest": "sha256:fb04e52b787a60caac9138b328ba106e722a1333fccf8cc4a6ff8473ebaa0a3d",
+    "signed": false
+  },
+  {
+    "name": "xoscal-sdk-go-sdk",
+    "digest": "sha256:ffab4d0f4fae0c1cfb523ce6f864543f311ad7f9c6b7c74175cb95f9378be040",
+    "signed": false
+  },
+  {
+    "name": "xoscal-sdk-java-sdk",
+    "digest": "sha256:9abbee1f78217ed3d753bae59bf96d5a5057a260871e5ee065558a38079b509a",
+    "signed": false
+  },
+  {
+    "name": "xoscal-sdk-python-sdk",
+    "digest": "sha256:5a5e3c4f58ce5e563ef639baaa1ccf348711282ba0d48ada4464098f5d018512",
+    "signed": false
+  },
+  {
+    "name": "xoscal-sdk-swift-sdk",
+    "digest": "sha256:e3cb85dcbd470c247b2c25857518edaf76bc6f6e2187e3121fd538b88ecf3b04",
+    "signed": false
+  },
+  {
+    "name": "xoscal-sdk-ts-sdk",
+    "digest": "sha256:2c55564b1edeca83621ebc725592e9a6510bc9c8ef068dbb92132fa177b3f9a9",
+    "signed": false
+  }
+]

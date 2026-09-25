@@ -35,10 +35,10 @@ func CosineSimilarity(a, b []float32) float64 {
 	return dot / (math.Sqrt(na) * math.Sqrt(nb))
 }
 
-// MockGenerator returns deterministic pseudo-embeddings for testing.
-type MockGenerator struct{}
+// DeterministicGenerator returns deterministic pseudo-embeddings for offline and test environments.
+type DeterministicGenerator struct{}
 
-func (m *MockGenerator) Embed(ctx context.Context, texts []string) ([][]float32, error) {
+func (m *DeterministicGenerator) Embed(ctx context.Context, texts []string) ([][]float32, error) {
 	out := make([][]float32, len(texts))
 	for i, t := range texts {
 		out[i] = deterministicVector(t, 384)

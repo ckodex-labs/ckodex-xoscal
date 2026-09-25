@@ -44,6 +44,20 @@ func TestCanadianFrameworksSchemaConformance(t *testing.T) {
 		}
 	})
 
+	t.Run("CCCS_Medium_Cloud_PBMM_Catalog", func(t *testing.T) {
+		cat := BuildCCCSMediumCloudPBMMCatalog()
+		data, err := oscal.ExportCatalogJSON(cat)
+		if err != nil {
+			t.Fatalf("ExportCatalogJSON failed: %v", err)
+		}
+		if err := v.Validate(data, schemavalidate.KindCatalog); err != nil {
+			t.Fatalf("CCCS Medium Cloud PBMM Catalog failed OSCAL 1.2.3 schema validation: %v", err)
+		}
+		if len(cat.Groups) == 0 {
+			t.Fatalf("expected groups in PBMM catalog, got 0")
+		}
+	})
+
 	t.Run("CyberSecure_Canada_Catalog", func(t *testing.T) {
 		cat := BuildCyberSecureCanadaCatalog()
 		data, err := oscal.ExportCatalogJSON(cat)
@@ -53,8 +67,15 @@ func TestCanadianFrameworksSchemaConformance(t *testing.T) {
 		if err := v.Validate(data, schemavalidate.KindCatalog); err != nil {
 			t.Fatalf("CyberSecure Canada Catalog failed OSCAL 1.2.3 schema validation: %v", err)
 		}
-		if len(cat.Controls) != 13 {
-			t.Fatalf("expected 13 baseline controls in CyberSecure Canada catalog, got %d", len(cat.Controls))
+		if len(cat.Groups) != 14 {
+			t.Fatalf("expected 14 groups in CyberSecure Canada catalog, got %d", len(cat.Groups))
+		}
+		totalCtrls := 0
+		for _, g := range cat.Groups {
+			totalCtrls += len(g.Controls)
+		}
+		if totalCtrls != 46 {
+			t.Fatalf("expected 46 authoritative baseline controls in CyberSecure Canada catalog, got %d", totalCtrls)
 		}
 	})
 
@@ -67,8 +88,8 @@ func TestCanadianFrameworksSchemaConformance(t *testing.T) {
 		if err := v.Validate(data, schemavalidate.KindCatalog); err != nil {
 			t.Fatalf("CCCS ITSP.10.171 Catalog failed OSCAL 1.2.3 schema validation: %v", err)
 		}
-		if len(cat.Controls) == 0 {
-			t.Fatalf("expected controls in ITSP.10.171 catalog, got 0")
+		if len(cat.Controls) != 267 {
+			t.Fatalf("expected 267 assessable controls in ITSP.10.171 catalog, got %d", len(cat.Controls))
 		}
 	})
 }
@@ -86,6 +107,7 @@ func TestExportAll(t *testing.T) {
 	}{
 		{"cccs-itsg-33", "catalog.json"},
 		{"cccs-medium-cloud-pbmm", "profile.json"},
+		{"cccs-medium-cloud-pbmm", "catalog.json"},
 		{"cybersecure-canada", "catalog.json"},
 		{"cccs-itsp-10-171", "catalog.json"},
 	}

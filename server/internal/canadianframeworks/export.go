@@ -42,6 +42,14 @@ func ExportAll(outDir string) error {
 			},
 		},
 		{
+			subdir:   "cccs-medium-cloud-pbmm",
+			filename: "catalog.json",
+			kind:     schemavalidate.KindCatalog,
+			exportFn: func() ([]byte, error) {
+				return oscal.ExportCatalogJSON(BuildCCCSMediumCloudPBMMCatalog())
+			},
+		},
+		{
 			subdir:   "cybersecure-canada",
 			filename: "catalog.json",
 			kind:     schemavalidate.KindCatalog,

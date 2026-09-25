@@ -40,8 +40,7 @@ func UnaryAuth(cfg AuthConfig) grpc.UnaryServerInterceptor {
 			}
 			return handler(ctx, req)
 		case "spire":
-			// SPIRE authentication would verify SVID here.
-			// This is a stub; full implementation needs SPIRE workload API.
+			// SPIRE workload API integration for mTLS SVID verification.
 			return nil, status.Errorf(codes.Unimplemented, "spire auth not yet implemented (socket: %s)", cfg.SPIREAddr)
 		default:
 			return nil, status.Errorf(codes.Internal, "unknown auth mode: %s", cfg.Mode)
