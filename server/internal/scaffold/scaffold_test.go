@@ -118,4 +118,3 @@ func TestScaffoldWorkspace_CanadianFrameworks(t *testing.T) {
 		})
 	}
 }
-
