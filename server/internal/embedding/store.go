@@ -3,7 +3,10 @@ package embedding
 import (
 	"context"
 	"database/sql"
+	"encoding/binary"
 	"fmt"
+	"math"
+	"sort"
 
 	"github.com/mchorfa/xoscal/server/internal/config"
 	"github.com/mchorfa/xoscal/server/internal/dbutil"
@@ -14,6 +17,7 @@ import (
 type VectorStore interface {
 	Index(ctx context.Context, doc Document) error
 	Search(ctx context.Context, query string, framework string, topK int) ([]SearchResult, error)
+	VectorSearch(ctx context.Context, queryVec []float32, framework string, topK int) ([]SearchResult, error)
 	Close() error
 }
 
@@ -64,7 +68,8 @@ CREATE TABLE IF NOT EXISTS vector_index (
 	 entity_urn TEXT PRIMARY KEY,
 	 entity_type TEXT NOT NULL,
 	 framework TEXT NOT NULL,
-	 content TEXT NOT NULL
+	 content TEXT NOT NULL,
+	 embedding BLOB
 );
 CREATE VIRTUAL TABLE IF NOT EXISTS vector_fts USING fts5(content, content='vector_index', content_rowid='rowid');
 CREATE TRIGGER IF NOT EXISTS vector_index_ai AFTER INSERT ON vector_index BEGIN
@@ -81,16 +86,24 @@ END;
 	if _, err := s.db.Exec(schema); err != nil {
 		return fmt.Errorf("exec schema: %w", err)
 	}
+	// Ensure embedding column exists for stores migrated prior to dense vector support.
+	_, _ = s.db.Exec(`ALTER TABLE vector_index ADD COLUMN embedding BLOB`)
 	return nil
 }
 
 func (s *SQLiteVectorStore) Close() error { return s.db.Close() }
 
 func (s *SQLiteVectorStore) Index(ctx context.Context, doc Document) error {
+	var embBlob []byte
+	if len(doc.Embedding) > 0 {
+		embBlob = encodeVector(doc.Embedding)
+	}
 	_, err := s.db.ExecContext(ctx,
-		`INSERT INTO vector_index(entity_urn, entity_type, framework, content) VALUES (?, ?, ?, ?)
-		 ON CONFLICT(entity_urn) DO UPDATE SET content=excluded.content`,
-		doc.UUID, doc.ModelType, doc.Framework, doc.Content,
+		`INSERT INTO vector_index(entity_urn, entity_type, framework, content, embedding) VALUES (?, ?, ?, ?, ?)
+		 ON CONFLICT(entity_urn) DO UPDATE SET 
+		 	content=excluded.content,
+		 	embedding=COALESCE(excluded.embedding, vector_index.embedding)`,
+		doc.UUID, doc.ModelType, doc.Framework, doc.Content, embBlob,
 	)
 	if err != nil {
 		return fmt.Errorf("index document: %w", err)
@@ -131,4 +144,93 @@ func (s *SQLiteVectorStore) Search(ctx context.Context, query string, framework 
 		out = append(out, sr)
 	}
 	return out, rows.Err()
+}
+
+// VectorSearch performs dense vector cosine similarity search over stored embeddings.
+func (s *SQLiteVectorStore) VectorSearch(ctx context.Context, queryVec []float32, framework string, topK int) ([]SearchResult, error) {
+	if len(queryVec) == 0 || topK <= 0 {
+		return nil, nil
+	}
+
+	sqlQuery := `SELECT entity_urn, entity_type, embedding FROM vector_index WHERE embedding IS NOT NULL`
+	var args []interface{}
+	if framework != "" {
+		sqlQuery += ` AND framework = ?`
+		args = append(args, framework)
+	}
+
+	rows, err := s.db.QueryContext(ctx, sqlQuery, args...)
+	if err != nil {
+		return nil, fmt.Errorf("vector search: %w", err)
+	}
+	defer rows.Close()
+
+	type scored struct {
+		result SearchResult
+		score  float64
+	}
+	var scoredList []scored
+
+	for rows.Next() {
+		var urn, modelType string
+		var rawBlob []byte
+		if err := rows.Scan(&urn, &modelType, &rawBlob); err != nil {
+			return nil, fmt.Errorf("scan vector row: %w", err)
+		}
+		vec := decodeVector(rawBlob)
+		if len(vec) == 0 {
+			continue
+		}
+		sim := CosineSimilarity(queryVec, vec)
+		if sim > 0 {
+			scoredList = append(scoredList, scored{
+				result: SearchResult{
+					UUID:      urn,
+					ModelType: modelType,
+					Score:     sim,
+				},
+				score: sim,
+			})
+		}
+	}
+	if err := rows.Err(); err != nil {
+		return nil, err
+	}
+
+	sort.Slice(scoredList, func(i, j int) bool {
+		return scoredList[i].score > scoredList[j].score
+	})
+
+	if len(scoredList) > topK {
+		scoredList = scoredList[:topK]
+	}
+
+	out := make([]SearchResult, len(scoredList))
+	for i, item := range scoredList {
+		out[i] = item.result
+	}
+	return out, nil
+}
+
+func encodeVector(vec []float32) []byte {
+	if len(vec) == 0 {
+		return nil
+	}
+	buf := make([]byte, len(vec)*4)
+	for i, v := range vec {
+		binary.LittleEndian.PutUint32(buf[i*4:], math.Float32bits(v))
+	}
+	return buf
+}
+
+func decodeVector(buf []byte) []float32 {
+	if len(buf) < 4 || len(buf)%4 != 0 {
+		return nil
+	}
+	vec := make([]float32, len(buf)/4)
+	for i := range vec {
+		bits := binary.LittleEndian.Uint32(buf[i*4:])
+		vec[i] = math.Float32frombits(bits)
+	}
+	return vec
 }

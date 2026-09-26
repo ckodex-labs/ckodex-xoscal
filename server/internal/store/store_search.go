@@ -74,7 +74,18 @@ func (s *SQLiteStore) Search(ctx context.Context, query string, modelTypes []str
 			} else if r.ModelType == "poams" {
 				r.ModelType = "poam"
 			}
-			r.Score = 1.0 // placeholder until semantic search is implemented
+			// Calculate lexical match relevance score.
+			queryLower := strings.ToLower(query)
+			titleLower := strings.ToLower(r.Title)
+			if titleLower == queryLower {
+				r.Score = 1.0
+			} else if strings.HasPrefix(titleLower, queryLower) {
+				r.Score = 0.8
+			} else if strings.Contains(titleLower, queryLower) {
+				r.Score = 0.6
+			} else {
+				r.Score = 0.4
+			}
 			allResults = append(allResults, r)
 		}
 		if err := rows.Close(); err != nil {

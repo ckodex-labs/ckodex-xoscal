@@ -28,7 +28,6 @@ go.work
 /xoscal-validate-schema
 /xoscal-validate-constraints
 /xoscal-export-frameworks
-/xoscal-export-canadian
 site/sdk/
 site/frameworks/
 go.work.sum

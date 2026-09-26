@@ -2,9 +2,9 @@
 
 ## Supported Versions
 
-| Version | Supported          |
-| ------- | ------------------ |
-| 0.1.x   | :white_check_mark: |
+| Version | Supported |
+| ------- | --------- |
+| 0.1.x   | Yes       |
 
 ## Reporting a Vulnerability
 
@@ -52,7 +52,7 @@ Results are published in each GitHub release.
 
 ## Security-Related Features
 
-- **Authentication**: Token-based and SPIRE-based authentication support
+- **Authentication**: Token-based authentication (SPIRE/SPIFFE workload identity mTLS planned on roadmap)
 - **Rate Limiting**: Configurable rate limiting per client
 - **Input Validation**: Strict protobuf schema validation
 - **Audit Logging**: Comprehensive request/response logging

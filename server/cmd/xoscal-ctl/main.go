@@ -19,7 +19,10 @@ import (
 	"github.com/mchorfa/xoscal/server/internal/dbutil"
 	"github.com/mchorfa/xoscal/server/internal/derogation"
 	"github.com/mchorfa/xoscal/server/internal/diff"
+	"github.com/mchorfa/xoscal/server/internal/ingestion"
 	"github.com/mchorfa/xoscal/server/internal/kg"
+	"github.com/mchorfa/xoscal/server/internal/oscal"
+	"github.com/mchorfa/xoscal/server/internal/reconciler"
 	"github.com/mchorfa/xoscal/server/internal/scaffold"
 	"github.com/mchorfa/xoscal/server/internal/schemavalidate"
 	"github.com/mchorfa/xoscal/server/internal/tabular"
@@ -36,6 +39,8 @@ USAGE:
 
 COMMANDS:
   init           Auto-detect repository stack and scaffold OSCAL 1.2.3 Component Definition
+  generate       Generate OSCAL 1.2.3 artifacts from Knowledge Graph snapshot
+  ingest         Ingest raw regulatory requirements JSON into Knowledge Graph
   verify         Evaluate artifact against schemas and compute multi-dimensional Vector State
   validate       Fast standalone validation of OSCAL JSON artifacts against official schemas
   diff           Compute semantic compliance delta between base and PR head (GitOps)
@@ -60,6 +65,10 @@ func main() {
 	switch cmd {
 	case "init":
 		runInit(os.Args[2:])
+	case "generate":
+		runGenerate(os.Args[2:])
+	case "ingest":
+		runIngest(os.Args[2:])
 	case "verify":
 		runVerify(os.Args[2:])
 	case "validate":
@@ -511,6 +520,211 @@ func runSeed(args []string) {
 	fws, _ := store.ListEntities(ctx, "reg:Framework", kg.EntityStatusActive)
 	reqs, _ := store.ListEntities(ctx, "reg:Requirement", kg.EntityStatusActive)
 	fmt.Printf("[OK] Successfully seeded %d framework(s) and %d requirement(s) into %s\n", len(fws), len(reqs), *dsn)
+}
+
+// runGenerate generates OSCAL artifacts from the Knowledge Graph snapshot.
+func runGenerate(args []string) {
+	fs := flag.NewFlagSet("generate", flag.ExitOnError)
+	dsn := fs.String("dsn", "oscal.db", "SQLite DSN")
+	snapshot := fs.String("snapshot", "", "Snapshot name (required)")
+	framework := fs.String("framework", "eu-ai-act", "Framework identifier")
+	outDir := fs.String("out", "./oscal-out", "Output directory")
+	arOnly := fs.Bool("assessment-results-only", false, "Emit only assessment-results")
+	validate := fs.Bool("validate", false, "Schema-validate generated artifacts")
+	_ = fs.Parse(args)
+
+	if *snapshot == "" {
+		fmt.Fprintln(os.Stderr, "error: -snapshot is required")
+		fs.Usage()
+		os.Exit(1)
+	}
+
+	store, err := kg.NewSQLiteStore(*dsn, dbutil.PoolConfig{})
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "error opening store: %v\n", err)
+		os.Exit(1)
+	}
+	defer store.Close()
+
+	if err := os.MkdirAll(*outDir, 0750); err != nil {
+		fmt.Fprintf(os.Stderr, "error creating output directory: %v\n", err)
+		os.Exit(1)
+	}
+
+	var validator *schemavalidate.Validator
+	if *validate {
+		v, err := schemavalidate.NewValidator()
+		if err != nil {
+			fmt.Fprintf(os.Stderr, "error initializing schema validator: %v\n", err)
+			os.Exit(1)
+		}
+		validator = v
+	}
+
+	gen := oscal.NewGenerator(store)
+	ctx, cancel := context.WithTimeout(context.Background(), 60*time.Second)
+	defer cancel()
+
+	if *arOnly {
+		ar, err := gen.GenerateAssessmentResults(ctx, *snapshot, *framework)
+		if err != nil {
+			fmt.Fprintf(os.Stderr, "error generating assessment results: %v\n", err)
+			os.Exit(1)
+		}
+		path := filepath.Join(*outDir, "assessment-results.json")
+		data, err := oscal.ExportAssessmentResultsJSON(ar)
+		if err != nil {
+			fmt.Fprintf(os.Stderr, "error exporting assessment results: %v\n", err)
+			os.Exit(1)
+		}
+		if validator != nil {
+			if err := validator.Validate(data, schemavalidate.KindAssessmentResults); err != nil {
+				fmt.Fprintf(os.Stderr, "validation failed for %s: %v\n", path, err)
+				os.Exit(1)
+			}
+		}
+		if err := os.WriteFile(path, data, 0600); err != nil {
+			fmt.Fprintf(os.Stderr, "error writing %s: %v\n", path, err)
+			os.Exit(1)
+		}
+		fmt.Printf("[OK] Generated %s\n", path)
+		return
+	}
+
+	res, err := gen.GenerateAllArtifacts(ctx, *snapshot, *framework, nil)
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "error generating artifacts: %v\n", err)
+		os.Exit(1)
+	}
+
+	type fileEntry struct {
+		name string
+		data []byte
+		kind schemavalidate.ArtifactKind
+	}
+	var files []fileEntry
+
+	if res.Catalog != nil {
+		d, err := oscal.ExportCatalogJSON(res.Catalog)
+		if err != nil {
+			fmt.Fprintf(os.Stderr, "error exporting catalog: %v\n", err)
+			os.Exit(1)
+		}
+		files = append(files, fileEntry{"catalog.json", d, schemavalidate.KindCatalog})
+	}
+	if res.Profile != nil {
+		d, err := oscal.ExportProfileJSON(res.Profile)
+		if err != nil {
+			fmt.Fprintf(os.Stderr, "error exporting profile: %v\n", err)
+			os.Exit(1)
+		}
+		files = append(files, fileEntry{"profile.json", d, schemavalidate.KindProfile})
+	}
+	if res.ComponentDefinition != nil {
+		d, err := oscal.ExportComponentDefinitionJSON(res.ComponentDefinition)
+		if err != nil {
+			fmt.Fprintf(os.Stderr, "error exporting component definition: %v\n", err)
+			os.Exit(1)
+		}
+		files = append(files, fileEntry{"component-definition.json", d, schemavalidate.KindComponentDefinition})
+	}
+	if res.SSP != nil {
+		d, err := oscal.ExportSSPJSON(res.SSP)
+		if err != nil {
+			fmt.Fprintf(os.Stderr, "error exporting SSP: %v\n", err)
+			os.Exit(1)
+		}
+		files = append(files, fileEntry{"system-security-plan.json", d, schemavalidate.KindSSP})
+	}
+	if res.AssessmentPlan != nil {
+		d, err := oscal.ExportAssessmentPlanJSON(res.AssessmentPlan)
+		if err != nil {
+			fmt.Fprintf(os.Stderr, "error exporting assessment plan: %v\n", err)
+			os.Exit(1)
+		}
+		files = append(files, fileEntry{"assessment-plan.json", d, schemavalidate.KindAssessmentPlan})
+	}
+	if res.AssessmentResults != nil {
+		d, err := oscal.ExportAssessmentResultsJSON(res.AssessmentResults)
+		if err != nil {
+			fmt.Fprintf(os.Stderr, "error exporting assessment results: %v\n", err)
+			os.Exit(1)
+		}
+		files = append(files, fileEntry{"assessment-results.json", d, schemavalidate.KindAssessmentResults})
+	}
+	if res.POAM != nil {
+		d, err := oscal.ExportPOAMJSON(res.POAM)
+		if err != nil {
+			fmt.Fprintf(os.Stderr, "error exporting POAM: %v\n", err)
+			os.Exit(1)
+		}
+		files = append(files, fileEntry{"plan-of-action-and-milestones.json", d, schemavalidate.KindPOAM})
+	}
+
+	for _, fe := range files {
+		path := filepath.Join(*outDir, fe.name)
+		if validator != nil {
+			if err := validator.Validate(fe.data, fe.kind); err != nil {
+				fmt.Fprintf(os.Stderr, "validation failed for %s: %v\n", path, err)
+				os.Exit(1)
+			}
+		}
+		if err := os.WriteFile(path, fe.data, 0600); err != nil {
+			fmt.Fprintf(os.Stderr, "error writing %s: %v\n", path, err)
+			os.Exit(1)
+		}
+		fmt.Printf("[OK] Generated %s\n", path)
+	}
+}
+
+// runIngest ingests raw requirements JSON into the Knowledge Graph database.
+func runIngest(args []string) {
+	fs := flag.NewFlagSet("ingest", flag.ExitOnError)
+	dsn := fs.String("dsn", "oscal.db", "SQLite DSN")
+	input := fs.String("input", "", "Input JSON file path (required)")
+	framework := fs.String("framework", "eu-ai-act", "Framework identifier")
+	_ = fs.Parse(args)
+
+	if *input == "" {
+		fmt.Fprintln(os.Stderr, "error: -input is required")
+		fs.Usage()
+		os.Exit(1)
+	}
+
+	raw, err := os.ReadFile(*input)
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "error reading input: %v\n", err)
+		os.Exit(1)
+	}
+
+	store, err := kg.NewSQLiteStore(*dsn, dbutil.PoolConfig{})
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "error opening store: %v\n", err)
+		os.Exit(1)
+	}
+	defer store.Close()
+
+	rec := reconciler.NewReconciler(store)
+	pipeline := ingestion.NewPipeline(
+		&ingestion.EUAIActParser{},
+		ingestion.NewNormalizer(*framework),
+		rec,
+	)
+
+	ctx, cancel := context.WithTimeout(context.Background(), 30*time.Second)
+	defer cancel()
+
+	res, err := pipeline.Run(ctx, raw)
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "error running ingestion pipeline: %v\n", err)
+		os.Exit(1)
+	}
+
+	fmt.Printf("[OK] Ingested %d requirements, %d entities, %d conflicts into %s\n",
+		len(res.Requirements), len(res.Entities), len(res.Conflicts), *dsn)
+	for _, c := range res.Conflicts {
+		fmt.Printf("  Conflict: %s (%s)\n", c.Description, c.Type)
+	}
 }
 
 func resolveKind(kindFlag string, data []byte) (schemavalidate.ArtifactKind, error) {

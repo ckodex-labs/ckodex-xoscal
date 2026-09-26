@@ -167,3 +167,45 @@ func TestXoscalCtl_KindResolution(t *testing.T) {
 		t.Errorf("expected component-definition, got %s", explicitKind.RootKey)
 	}
 }
+
+func TestXoscalCtl_GenerateAndIngest(t *testing.T) {
+	tmpDir := t.TempDir()
+	dbPath := filepath.Join(tmpDir, "test-kg.db")
+	outDir := filepath.Join(tmpDir, "generated")
+
+	// 1. Seed database
+	runSeed([]string{"-dsn", dbPath})
+
+	// 2. Prepare sample requirement JSON to test ingest
+	sampleReq := `[
+		{
+			"id": "REQ-AI-001",
+			"title": "High-risk AI System Risk Management",
+			"description": "Establish, implement, document and maintain a risk management system.",
+			"article": "Article 9",
+			"category": "Risk Management"
+		}
+	]`
+	reqPath := filepath.Join(tmpDir, "req.json")
+	if err := os.WriteFile(reqPath, []byte(sampleReq), 0600); err != nil {
+		t.Fatalf("write sample req: %v", err)
+	}
+
+	runIngest([]string{"-dsn", dbPath, "-input", reqPath, "-framework", "eu-ai-act"})
+
+	// 3. Test generate with validation
+	runGenerate([]string{
+		"-dsn", dbPath,
+		"-snapshot", "v1.0",
+		"-framework", "eu-ai-act",
+		"-out", outDir,
+		"-assessment-results-only",
+		"-validate",
+	})
+
+	arPath := filepath.Join(outDir, "assessment-results.json")
+	if _, err := os.Stat(arPath); err != nil {
+		t.Fatalf("expected assessment-results.json generated, got err: %v", err)
+	}
+}
+

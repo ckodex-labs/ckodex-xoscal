@@ -53,14 +53,9 @@ func (h *HybridSearcher) Search(ctx context.Context, query string, framework str
 	return merged, nil
 }
 
-// vectorSearch attempts vector similarity search. It first tries the store's
-// native vector search if available; otherwise falls back to loading
-// embeddings from the store and computing cosine similarity in memory.
-// This is a placeholder until LanceDB Go SDK implements VectorSearch.
+// vectorSearch performs vector similarity search against the underlying store.
 func (h *HybridSearcher) vectorSearch(ctx context.Context, queryVec []float32, framework string, k int) ([]SearchResult, error) {
-	// TODO: call store.VectorSearch when LanceDB Go SDK exposes it.
-	// For now, return empty so RRF degrades gracefully to text-only.
-	return nil, nil
+	return h.store.VectorSearch(ctx, queryVec, framework, k)
 }
 
 // reciprocalRankFusion merges two ranked lists using Reciprocal Rank Fusion.

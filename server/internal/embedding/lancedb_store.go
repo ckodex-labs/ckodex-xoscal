@@ -134,9 +134,17 @@ func (s *LanceDBVectorStore) Search(ctx context.Context, query string, framework
 	if len(embeddings) == 0 || len(embeddings[0]) == 0 {
 		return nil, fmt.Errorf("empty query embedding")
 	}
-	queryVec := embeddings[0]
+	return s.VectorSearch(ctx, embeddings[0], framework, topK)
+}
+
+// VectorSearch performs direct vector similarity search on LanceDB.
+func (s *LanceDBVectorStore) VectorSearch(ctx context.Context, queryVec []float32, framework string, topK int) ([]SearchResult, error) {
+	if len(queryVec) == 0 || topK <= 0 {
+		return nil, nil
+	}
 
 	var rows []map[string]interface{}
+	var err error
 	if framework != "" {
 		safe := strings.ReplaceAll(framework, "'", "''")
 		filter := fmt.Sprintf("framework = '%s'", safe)
