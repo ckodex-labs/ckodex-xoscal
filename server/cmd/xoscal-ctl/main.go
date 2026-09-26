@@ -5,6 +5,7 @@
 package main
 
 import (
+	"context"
 	"encoding/json"
 	"flag"
 	"fmt"
@@ -14,9 +15,13 @@ import (
 	"time"
 
 	"github.com/mchorfa/xoscal/server/internal/bundle"
+	"github.com/mchorfa/xoscal/server/internal/canadianframeworks"
+	"github.com/mchorfa/xoscal/server/internal/dbutil"
 	"github.com/mchorfa/xoscal/server/internal/derogation"
 	"github.com/mchorfa/xoscal/server/internal/diff"
+	"github.com/mchorfa/xoscal/server/internal/kg"
 	"github.com/mchorfa/xoscal/server/internal/scaffold"
+	"github.com/mchorfa/xoscal/server/internal/schemavalidate"
 	"github.com/mchorfa/xoscal/server/internal/tabular"
 	"github.com/mchorfa/xoscal/server/internal/vectorstate"
 )
@@ -32,10 +37,13 @@ USAGE:
 COMMANDS:
   init           Auto-detect repository stack and scaffold OSCAL 1.2.3 Component Definition
   verify         Evaluate artifact against schemas and compute multi-dimensional Vector State
+  validate       Fast standalone validation of OSCAL JSON artifacts against official schemas
   diff           Compute semantic compliance delta between base and PR head (GitOps)
   derogate       Manage formal time-bounded risk exceptions (Rule 23)
   tabular        Convert between OSCAL JSON and standard CSV/Excel tables for GRC analysts
   bundle-export  Package an air-gapped, verifiable audit bundle with offline HTML viewer
+  frameworks     List or export authoritative compliance frameworks (incl. Canadian frameworks)
+  seed           Seed Knowledge Graph database with authoritative baseline frameworks
   version        Print CLI version and exit
 
 Run 'xoscal-ctl <command> -h' for details on specific command options.
@@ -54,6 +62,8 @@ func main() {
 		runInit(os.Args[2:])
 	case "verify":
 		runVerify(os.Args[2:])
+	case "validate":
+		runValidate(os.Args[2:])
 	case "diff":
 		runDiff(os.Args[2:])
 	case "derogate":
@@ -62,6 +72,10 @@ func main() {
 		runTabular(os.Args[2:])
 	case "bundle-export":
 		runBundleExport(os.Args[2:])
+	case "frameworks":
+		runFrameworks(os.Args[2:])
+	case "seed":
+		runSeed(os.Args[2:])
 	case "version", "-version", "--version":
 		fmt.Printf("xoscal-ctl version %s\n", version)
 	case "help", "-h", "--help":
@@ -376,4 +390,176 @@ func runBundleExport(args []string) {
 	fmt.Printf("[OK] Embedded standalone offline audit-viewer.html\n")
 	fmt.Printf("[OK] Generated manifest.json with cryptographic digests\n")
 	fmt.Printf("[OK] Bundle ready for air-gapped auditor handoff: %s\n", *outBundle)
+}
+
+// runValidate provides fast standalone validation against official NIST OSCAL schemas.
+func runValidate(args []string) {
+	fs := flag.NewFlagSet("validate", flag.ExitOnError)
+	filePath := fs.String("file", "", "Path to OSCAL JSON artifact to validate")
+	kindFlag := fs.String("kind", "", "Artifact kind (catalog, profile, ssp, component-definition, assessment-plan, assessment-results, poam, mapping)")
+	_ = fs.Parse(args)
+
+	if *filePath == "" {
+		fmt.Fprintln(os.Stderr, "error: -file is required")
+		fs.Usage()
+		os.Exit(1)
+	}
+
+	data, err := os.ReadFile(*filePath)
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "error reading file: %v\n", err)
+		os.Exit(1)
+	}
+
+	v, err := schemavalidate.NewValidator()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "error loading schemas: %v\n", err)
+		os.Exit(1)
+	}
+
+	kind, err := resolveKind(*kindFlag, data)
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "error: %v\n", err)
+		os.Exit(1)
+	}
+
+	if err := v.Validate(data, kind); err != nil {
+		fmt.Fprintf(os.Stderr, "INVALID: %s failed OSCAL %s schema validation\n", kind.Name, schemavalidate.SchemaVersion)
+		fmt.Fprintln(os.Stderr, err)
+		os.Exit(3)
+	}
+
+	fmt.Printf("VALID: %s passes official OSCAL %s schema validation\n", kind.Name, schemavalidate.SchemaVersion)
+}
+
+// runFrameworks lists or exports compliance frameworks.
+func runFrameworks(args []string) {
+	if len(args) < 1 {
+		fmt.Println("Usage: xoscal-ctl frameworks [list|export] [options]")
+		os.Exit(1)
+	}
+
+	sub := args[0]
+	switch sub {
+	case "list":
+		fmt.Printf("\n=== AUTHORITATIVE CANADIAN CYBERSECURITY FRAMEWORKS ===\n")
+		fmt.Printf("%-26s %-14s %-16s %s\n", "REF ID", "CONTROLS", "VERSION", "NAME")
+		fmt.Println(strings.Repeat("-", 90))
+		for _, fw := range canadianframeworks.ListFrameworks() {
+			profStr := ""
+			if fw.HasProfile {
+				profStr = " (+ Profile)"
+			}
+			ctrlCountStr := fmt.Sprintf("%d%s", fw.ControlCount, profStr)
+			fmt.Printf("%-26s %-14s %-16s %s\n", fw.RefID, ctrlCountStr, fw.Version, fw.Name)
+		}
+		fmt.Println()
+
+	case "export":
+		fs := flag.NewFlagSet("frameworks export", flag.ExitOnError)
+		outDir := fs.String("out", "data/frameworks", "Output destination directory")
+		fwName := fs.String("framework", "", "Optional specific framework ref_id (default: all Canadian)")
+		_ = fs.Parse(args[1:])
+
+		if *fwName != "" {
+			if !canadianframeworks.IsCanadian(*fwName) {
+				fmt.Fprintf(os.Stderr, "error: unknown Canadian framework %s\n", *fwName)
+				os.Exit(1)
+			}
+			if err := canadianframeworks.Export(*outDir, *fwName); err != nil {
+				fmt.Fprintf(os.Stderr, "error exporting %s: %v\n", *fwName, err)
+				os.Exit(1)
+			}
+			fmt.Printf("[OK] Exported %s -> %s\n", *fwName, *outDir)
+			return
+		}
+
+		if err := canadianframeworks.ExportAll(*outDir); err != nil {
+			fmt.Fprintf(os.Stderr, "error exporting Canadian frameworks: %v\n", err)
+			os.Exit(1)
+		}
+		fmt.Printf("[OK] Exported all Canadian frameworks -> %s\n", *outDir)
+
+	default:
+		fmt.Fprintf(os.Stderr, "unknown frameworks subcommand: %s (expected 'list' or 'export')\n", sub)
+		os.Exit(1)
+	}
+}
+
+// runSeed seeds the Knowledge Graph database with authoritative baseline frameworks.
+func runSeed(args []string) {
+	fs := flag.NewFlagSet("seed", flag.ExitOnError)
+	dsn := fs.String("dsn", "oscal.db", "SQLite database path or DSN")
+	_ = fs.Parse(args)
+
+	fmt.Printf("[INFO] Seeding Knowledge Graph at %s ...\n", *dsn)
+	store, err := kg.NewSQLiteStore(*dsn, dbutil.PoolConfig{})
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "error opening KG store: %v\n", err)
+		os.Exit(1)
+	}
+	defer store.Close()
+
+	ctx, cancel := context.WithTimeout(context.Background(), 30*time.Second)
+	defer cancel()
+
+	if err := canadianframeworks.SeedKG(ctx, store); err != nil {
+		fmt.Fprintf(os.Stderr, "error seeding Canadian frameworks: %v\n", err)
+		os.Exit(1)
+	}
+
+	fws, _ := store.ListEntities(ctx, "reg:Framework", kg.EntityStatusActive)
+	reqs, _ := store.ListEntities(ctx, "reg:Requirement", kg.EntityStatusActive)
+	fmt.Printf("[OK] Successfully seeded %d framework(s) and %d requirement(s) into %s\n", len(fws), len(reqs), *dsn)
+}
+
+func resolveKind(kindFlag string, data []byte) (schemavalidate.ArtifactKind, error) {
+	if kindFlag != "" {
+		return kindFromName(kindFlag)
+	}
+
+	var doc map[string]interface{}
+	if err := json.Unmarshal(data, &doc); err != nil {
+		return schemavalidate.ArtifactKind{}, fmt.Errorf("unmarshal JSON: %w", err)
+	}
+
+	for _, k := range []schemavalidate.ArtifactKind{
+		schemavalidate.KindCatalog,
+		schemavalidate.KindProfile,
+		schemavalidate.KindSSP,
+		schemavalidate.KindComponentDefinition,
+		schemavalidate.KindAssessmentPlan,
+		schemavalidate.KindAssessmentResults,
+		schemavalidate.KindPOAM,
+		schemavalidate.KindMapping,
+	} {
+		if _, ok := doc[k.RootKey]; ok {
+			return k, nil
+		}
+	}
+
+	return schemavalidate.ArtifactKind{}, fmt.Errorf("could not auto-detect artifact kind; specify -kind explicitly")
+}
+
+func kindFromName(name string) (schemavalidate.ArtifactKind, error) {
+	switch strings.ToLower(name) {
+	case "catalog":
+		return schemavalidate.KindCatalog, nil
+	case "profile":
+		return schemavalidate.KindProfile, nil
+	case "ssp", "system-security-plan":
+		return schemavalidate.KindSSP, nil
+	case "component-definition", "component":
+		return schemavalidate.KindComponentDefinition, nil
+	case "assessment-plan", "ap":
+		return schemavalidate.KindAssessmentPlan, nil
+	case "assessment-results", "ar":
+		return schemavalidate.KindAssessmentResults, nil
+	case "poam", "plan-of-action-and-milestones":
+		return schemavalidate.KindPOAM, nil
+	case "mapping", "mapping-collection":
+		return schemavalidate.KindMapping, nil
+	default:
+		return schemavalidate.ArtifactKind{}, fmt.Errorf("unknown kind: %s", name)
+	}
 }

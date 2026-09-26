@@ -10,7 +10,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 HTML_FILES = sorted((ROOT / "site").glob("*.html")) + [ROOT / "portal-preview.html"]
-FORBIDDEN_GLYPHS = ("✓", "✗", "•", "·")
+FORBIDDEN_GLYPHS = ("\u2713", "\u2717", "\u2022", "\u00b7")
 
 
 def fail(errors: list[str], path: Path, message: str) -> None:

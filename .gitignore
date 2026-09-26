@@ -17,11 +17,18 @@ vendor/
 go.work
 
 # CLI binaries built by go build (not go install)
+/xoscal-ctl
+/xoscal-server
+/xoscal-backup
 /xoscal-gateway
 /xoscal-generate
+/xoscal-ingest
+/xoscal-provenance
+/xoscal-spec-registry
 /xoscal-validate-schema
 /xoscal-validate-constraints
 /xoscal-export-frameworks
+/xoscal-export-canadian
 site/sdk/
 site/frameworks/
 go.work.sum

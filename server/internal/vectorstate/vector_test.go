@@ -8,7 +8,11 @@ import (
 	"testing"
 	"time"
 
+	commonv1 "github.com/mchorfa/xoscal/proto/oscal/common/v1"
+	sspv1 "github.com/mchorfa/xoscal/proto/oscal/ssp/v1"
+	"github.com/mchorfa/xoscal/server/internal/canadianframeworks"
 	"github.com/mchorfa/xoscal/server/internal/derogation"
+	"github.com/mchorfa/xoscal/server/internal/oscal"
 	"github.com/mchorfa/xoscal/server/internal/scaffold"
 )
 
@@ -159,5 +163,114 @@ func TestEvaluateArtifact_DerogationLifecycle(t *testing.T) {
 	}
 	if expiredState.Lifecycle != ModeFailed {
 		t.Errorf("expected ModeFailed on expired derogation, got %s", expiredState.Lifecycle)
+	}
+}
+
+func TestEvaluateArtifact_Catalog(t *testing.T) {
+	tmpDir := t.TempDir()
+	catPath := filepath.Join(tmpDir, "catalog.json")
+
+	cat := canadianframeworks.BuildCyberSecureCanadaCatalog()
+	catData, err := oscal.ExportCatalogJSON(cat)
+	if err != nil {
+		t.Fatalf("export catalog: %v", err)
+	}
+
+	if err := os.WriteFile(catPath, catData, 0600); err != nil {
+		t.Fatalf("write catalog: %v", err)
+	}
+
+	state, err := EvaluateArtifact(catPath, "")
+	if err != nil {
+		t.Fatalf("EvaluateArtifact(catalog) failed: %v", err)
+	}
+
+	if state.ArtifactKind != "catalog" {
+		t.Errorf("expected ArtifactKind 'catalog', got %s", state.ArtifactKind)
+	}
+	if state.TotalControls != 46 {
+		t.Errorf("expected 46 controls evaluated, got %d", state.TotalControls)
+	}
+	if state.Lifecycle != ModeNormal {
+		t.Errorf("expected ModeNormal, got %s", state.Lifecycle)
+	}
+}
+
+func TestEvaluateArtifact_SSP(t *testing.T) {
+	tmpDir := t.TempDir()
+	sspPath := filepath.Join(tmpDir, "ssp.json")
+
+	validUUID := "6ba7b810-9dad-51d1-80b4-00c04fd430c8"
+	ssp := &sspv1.SystemSecurityPlan{
+		Uuid: &commonv1.UUID{Value: validUUID},
+		Metadata: &commonv1.Metadata{
+			Title:   "Conformance SSP",
+			Version: "1.0",
+		},
+		ImportProfile: &sspv1.ImportProfile{
+			Href: &commonv1.URIReference{Value: "https://example.gov/profile.json"},
+		},
+		SystemCharacteristics: &sspv1.SystemCharacteristics{
+			SystemIds:   []*sspv1.SystemId{{Id: "test-system"}},
+			SystemName:  "Test System",
+			Description: &commonv1.MarkupMultiline{Value: "A test system description."},
+			SystemInformation: &sspv1.SystemInformation{
+				InformationTypes: []*sspv1.InformationType{{
+					Uuid:        &commonv1.UUID{Value: validUUID},
+					Title:       &commonv1.MarkupLine{Value: "Test info type"},
+					Description: &commonv1.MarkupMultiline{Value: "Test information type"},
+				}},
+			},
+			Status:                &sspv1.Status{State: "operational"},
+			AuthorizationBoundary: &sspv1.AuthorizationBoundary{Description: &commonv1.MarkupMultiline{Value: "Boundary"}},
+		},
+		SystemImplementation: &sspv1.SystemImplementation{
+			Users: []*sspv1.SystemUser{{
+				Uuid:  &commonv1.UUID{Value: validUUID},
+				Title: "Admin",
+			}},
+			Components: []*sspv1.SystemComponent{{
+				Uuid:        &commonv1.UUID{Value: validUUID},
+				Type:        "software",
+				Title:       "App",
+				Description: "App component",
+				Status:      &sspv1.Status{State: "operational"},
+			}},
+		},
+		ControlImplementation: &sspv1.ControlImplementation{
+			Description: &commonv1.MarkupMultiline{Value: "Implementation description"},
+			ImplementedRequirements: []*sspv1.ImplementedRequirement{{
+				Uuid:      &commonv1.UUID{Value: validUUID},
+				ControlId: &commonv1.Token{Value: "ac-1"},
+				Remarks:   []*commonv1.MarkupMultiline{{Value: "Access control policy is fully documented and maintained."}},
+			}},
+		},
+	}
+
+	sspData, err := oscal.ExportSSPJSON(ssp)
+	if err != nil {
+		t.Fatalf("ExportSSPJSON: %v", err)
+	}
+
+	if err := os.WriteFile(sspPath, sspData, 0600); err != nil {
+		t.Fatalf("write ssp: %v", err)
+	}
+
+	state, err := EvaluateArtifact(sspPath, "")
+	if err != nil {
+		t.Fatalf("EvaluateArtifact(ssp) failed: %v", err)
+	}
+
+	if state.ArtifactKind != "ssp" {
+		t.Errorf("expected ArtifactKind 'ssp', got %s", state.ArtifactKind)
+	}
+	if state.TotalControls != 1 {
+		t.Errorf("expected 1 control evaluated, got %d", state.TotalControls)
+	}
+	if state.PassingCount != 1 {
+		t.Errorf("expected 1 passing control, got %d", state.PassingCount)
+	}
+	if state.Lifecycle != ModeNormal {
+		t.Errorf("expected ModeNormal, got %s", state.Lifecycle)
 	}
 }

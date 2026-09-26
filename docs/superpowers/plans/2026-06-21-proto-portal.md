@@ -838,7 +838,7 @@ git commit -m "feat(portal): GitHub Pages workflow (dagger-built) + README link"
 
 ## Self-Review
 
-**Spec coverage:** proto docs (Task 5 docs.html + Task 6 openapi) ✓; transparency provenance (Tasks 1,4,7 + Task 5 transparency.html) ✓; SDK downloads (Task 6 + Task 8 index) ✓; OSCAL framework downloads (Tasks 2,3,7 + Task 8 index) ✓; Dagger Site + Pages publish (Tasks 8,9) ✓; DS-3 theming + digest law + honesty (Tasks 1,5) ✓.
+**Spec coverage:** proto docs (Task 5 docs.html + Task 6 openapi) [OK]; transparency provenance (Tasks 1,4,7 + Task 5 transparency.html) [OK]; SDK downloads (Task 6 + Task 8 index) [OK]; OSCAL framework downloads (Tasks 2,3,7 + Task 8 index) [OK]; Dagger Site + Pages publish (Tasks 8,9) [OK]; DS-3 theming + digest law + honesty (Tasks 1,5) [OK].
 
 **Placeholder scan:** no TBD/TODO; all Go and shell code is complete.
 

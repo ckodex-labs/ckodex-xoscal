@@ -70,40 +70,22 @@ func run(manifestPath, outDir, dsn string) error {
 
 	gen := oscal.NewGenerator(store)
 	for _, refID := range m.RefIDs() {
-		var data []byte
-		var err error
-
-		switch refID {
-		case "cccs-itsg-33":
-			data, err = oscal.ExportCatalogJSON(canadianframeworks.BuildCCCSITSG33Catalog())
-		case "cybersecure-canada":
-			data, err = oscal.ExportCatalogJSON(canadianframeworks.BuildCyberSecureCanadaCatalog())
-		case "cccs-itsp-10-171", "itsp.10.171":
-			data, err = oscal.ExportCatalogJSON(canadianframeworks.BuildCCCSITSP10171Catalog())
-		case "cccs-medium-cloud-pbmm":
-			data, err = oscal.ExportCatalogJSON(canadianframeworks.BuildCCCSMediumCloudPBMMCatalog())
-			if err == nil {
-				profData, pErr := oscal.ExportProfileJSON(canadianframeworks.BuildCCCSMediumCloudPBMMProfile())
-				if pErr == nil {
-					pDir := filepath.Join(outDir, refID)
-					// #nosec G703 -- outDir is an explicit local destination.
-					_ = os.MkdirAll(pDir, 0o750)
-					// #nosec G703,G304,G306
-					_ = os.WriteFile(filepath.Join(pDir, "profile.json"), profData, 0o600)
-					_, _ = dbutil.WriteDigestSidecar(filepath.Join(pDir, "profile.json"))
-				}
+		if canadianframeworks.IsCanadian(refID) {
+			if err := canadianframeworks.Export(outDir, refID); err != nil {
+				return fmt.Errorf("export %s: %w", refID, err)
 			}
-		default:
-			res, gErr := gen.GenerateAllArtifacts(ctx, "portal", refID, nil)
-			if gErr != nil {
-				return fmt.Errorf("generate %s: %w", refID, gErr)
-			}
-			if res.Catalog == nil {
-				log.Printf("warn: %s produced no catalog, skipping", refID)
-				continue
-			}
-			data, err = oscal.ExportCatalogJSON(res.Catalog)
+			continue
 		}
+
+		res, gErr := gen.GenerateAllArtifacts(ctx, "portal", refID, nil)
+		if gErr != nil {
+			return fmt.Errorf("generate %s: %w", refID, gErr)
+		}
+		if res.Catalog == nil {
+			log.Printf("warn: %s produced no catalog, skipping", refID)
+			continue
+		}
+		data, err := oscal.ExportCatalogJSON(res.Catalog)
 		if err != nil {
 			return fmt.Errorf("export %s: %w", refID, err)
 		}
