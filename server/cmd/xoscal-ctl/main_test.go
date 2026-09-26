@@ -208,4 +208,3 @@ func TestXoscalCtl_GenerateAndIngest(t *testing.T) {
 		t.Fatalf("expected assessment-results.json generated, got err: %v", err)
 	}
 }
-
