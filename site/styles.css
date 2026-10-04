@@ -1678,3 +1678,120 @@ footer.ck-shell__footer .ck-authority__invariant { color: var(--ck-fg-mute); }
   .shell.ck-portal-main .ck-portal-margin { border-left: none; border-top: 1px solid var(--ck-hairline); padding: var(--ck-sp-5) var(--ck-sp-4); }
   footer.ck-shell__footer { display: flex !important; }
 }
+
+/* ============================================================
+ * 11 · SITE LAYOUT CORRECTIONS
+ * Each rule below repairs an observed rendering defect on the
+ * static site surfaces. Kept last so it wins the cascade without
+ * resorting to !important (except [hidden], which must be absolute).
+ * ============================================================ */
+
+/* The hidden attribute must beat any component display value
+   (.ck-btn sets inline-flex, which was un-hiding buttons). */
+[hidden] { display: none !important; }
+
+/* Header navigation: the global link underline must not apply to
+   nav items; only the current page carries the ink rule. */
+.ck-site-nav { gap: var(--ck-sp-1) var(--ck-sp-4); }
+.ck-site-nav a {
+  border-bottom: 2px solid transparent;
+  color: var(--ck-fg-3);
+  white-space: nowrap;
+}
+.ck-site-nav a:hover { color: var(--ck-fg-1); border-bottom-color: var(--ck-hairline-strong); }
+.ck-site-nav a[aria-current="page"] { color: var(--ck-fg-1); border-bottom-color: var(--ck-fg-1); }
+
+/* Document pages: the column uses the available width; only running
+   prose is held to the reading measure. */
+.ck-shell--document .ck-shell__main > .ck-measure { max-width: 1040px; }
+.ck-shell__main p { max-width: var(--ck-measure); }
+.ck-shell__main h2 { margin: 0; }
+
+/* Vertical rhythm containers must actually stack. */
+.ck-stack--tight { display: grid; }
+
+/* Cards: no stray leading/trailing margins inside padded surfaces. */
+.ck-padded > :first-child { margin-top: 0; }
+.ck-padded > :last-child { margin-bottom: 0; }
+.ck-padded h3 { margin: 0 0 var(--ck-sp-2); }
+.ck-padded p { margin: 0 0 var(--ck-sp-3); }
+
+/* Card collections tile across the column instead of a single stack. */
+.ck-data-grid { grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); }
+
+/* Code: padded wells, no mid-token wrapping, horizontal scroll. */
+pre { margin: 0; }
+pre.ck-code-block {
+  padding: var(--ck-sp-3) var(--ck-sp-4);
+  background: var(--ck-bg-1);
+  border: 1px solid var(--ck-hairline);
+  white-space: pre;
+  overflow-wrap: normal;
+  overflow-x: auto;
+}
+#results.ck-code-block { white-space: pre-wrap; overflow-wrap: anywhere; }
+
+/* Tables: real column gutters; flags and paths do not wrap. */
+.ck-table th, .ck-table td { padding: var(--ck-sp-2) var(--ck-sp-4) var(--ck-sp-2) 0; }
+.ck-table th:last-child, .ck-table td:last-child { padding-right: 0; }
+.ck-table td > code:only-child { white-space: nowrap; }
+
+/* Forms: label above control, controls fill their column. */
+.ck-shell__main form label { display: block; font-size: var(--ck-fs-body-sm); font-weight: 500; color: var(--ck-fg-1); }
+.ck-shell__main .ck-field { display: block; width: 100%; max-width: 640px; }
+.ck-shell__main textarea.ck-field { max-width: none; font-family: var(--ck-ff-mono); font-size: var(--ck-fs-code); resize: vertical; }
+.ck-shell__main fieldset {
+  display: grid;
+  gap: var(--ck-sp-2);
+  margin: 0;
+  padding: var(--ck-sp-4);
+  border: 1px solid var(--ck-hairline);
+  min-width: 0;
+}
+.ck-shell__main legend {
+  padding: 0 var(--ck-sp-2);
+  font-family: var(--ck-ff-mono);
+  font-size: var(--ck-fs-micro);
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--ck-fg-mute);
+}
+.ck-shell__main fieldset label { margin-top: var(--ck-sp-2); }
+.ck-shell__main fieldset label:first-of-type { margin-top: 0; }
+.ck-row-3 { flex-wrap: wrap; }
+
+/* Margin status chips size to their content. */
+.ck-shell__margin .ck-chip { align-self: flex-start; justify-self: start; }
+
+/* Digests inside cards stay within the card: truncate with an
+   ellipsis; the full value remains in data-digest and the title. */
+.ck-padded { min-width: 0; }
+.ck-padded .ck-hash {
+  display: block;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left;
+}
+
+/* Narrow viewports: stacks cap their single track at the container so
+   one wide child (a table, a long code line) cannot widen the page. */
+.ck-stack { grid-template-columns: minmax(0, 1fr); }
+.ck-stack > * { min-width: 0; }
+.ck-shell__main h1, .ck-shell__main h2, .ck-shell__main h3 { overflow-wrap: break-word; }
+
+@media (max-width: 900px) {
+  /* Tables scroll inside their own box instead of the page. */
+  .ck-table { display: block; overflow-x: auto; }
+  /* Nav wraps in tight rows; 44px targets kept, no extra row gap. */
+  .ck-site-nav { gap: 0 var(--ck-sp-4); width: 100%; }
+}
+
+/* Nav targets are 44px including padding and rule, not 44px plus
+   padding (content-box made each item 62px and spread wrapped rows). */
+.ck-site-nav a { box-sizing: border-box; }
+
+/* Long artifact dumps scroll inside their well instead of running the
+   page to tens of thousands of pixels. */
+#results.ck-code-block { max-height: 70vh; overflow: auto; }
