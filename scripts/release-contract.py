@@ -3,6 +3,8 @@
 
 import argparse
 import json
+import os
+import re
 import subprocess
 from pathlib import Path
 
@@ -13,13 +15,31 @@ REPOSITORY = "ckodex-labs/ckodex-xoscal"
 WORKFLOW = REPOSITORY + "/.github/workflows/release.yml"
 
 
+def verifier_diagnostic(output):
+    """Retain verifier errors without exposing authentication material."""
+    text = output or "(empty)"
+    for name in ("GH_TOKEN", "GITHUB_TOKEN", "GH_ENTERPRISE_TOKEN", "GITHUB_ENTERPRISE_TOKEN"):
+        secret = os.environ.get(name)
+        if secret:
+            text = text.replace(secret, "[REDACTED]")
+    text = re.sub(r"(?i)(authorization\s*:\s*(?:bearer|token|basic)\s+)\S+", r"\1[REDACTED]", text)
+    return re.sub(r"\b(?:gh[pousr]_[A-Za-z0-9]+|github_pat_[A-Za-z0-9_]+)\b", "[REDACTED]", text)
+
+
 def verify_attestation(root, manifest_path, bundle, expected_tag, expected_revision):
     identity(expected_tag, expected_revision)
     document = json.loads(manifest_path.read_text())
     if document["release_tag"] != expected_tag or document["source_revision"] != expected_revision:
         raise ValueError("manifest differs from independently expected release identity")
     command = ["gh", "attestation", "verify", str(manifest_path)] + verification_flags(bundle, expected_tag, expected_revision)
-    result = subprocess.run(command, check=True, capture_output=True, text=True)
+    try:
+        result = subprocess.run(command, check=True, capture_output=True, text=True)
+    except subprocess.CalledProcessError as error:
+        raise ValueError(
+            f"gh attestation verify failed (exit {error.returncode})\n"
+            f"stdout:\n{verifier_diagnostic(error.stdout)}\n"
+            f"stderr:\n{verifier_diagnostic(error.stderr)}"
+        ) from None
     verified = json.loads(result.stdout)
     if not isinstance(verified, list) or not verified:
         raise ValueError("verifier supplied no successful attestation")
