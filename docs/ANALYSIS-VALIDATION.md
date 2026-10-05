@@ -187,3 +187,17 @@ The five dual-report tests cover missing/failed modes, original raw bindings,
 malformed versions/subjects and complete preservation of overlapping findings.
 All 28 analysis policy tests passed, including merged-report tampering, missing
 secondary status and a fixed CRITICAL finding observed only by binary analysis.
+
+The same frozen repaired producer then passed all six actual aggregate SDK ZIPs
+under `/tmp/xoscal-sdk-final-v3`, retaining raw outputs and admission receipts in
+`/tmp/xoscal-sdk-sca-dual-<language>{,.log}`. The exact subjects match the earlier
+aggregate SDK table above. Observations were Go 12 versioned packages plus its
+unversioned local module root, Python 4, Java 17, C# 14, TypeScript 2 and Swift 1;
+all raw severity levels reported zero findings. C#'s seven locked dependencies
+were independently observed by both modes and remain two observations, not 14
+unique components. Java's fs target inventories 16 POM-observed packages and
+rootfs separately identifies the delivered JAR; TypeScript's fs target observes
+the lock and rootfs identifies the delivered npm package. This scope does not
+claim every future dependency resolution or unshipped transitive package was
+analyzed. Both tools' logs and successful statuses are retained, including the
+actual primary Java database download for packaged JAR analysis.

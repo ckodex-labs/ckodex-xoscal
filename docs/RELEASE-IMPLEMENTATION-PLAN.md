@@ -2,13 +2,19 @@
 
 Baseline: `fcb55186083de069bc386757c5fd0d3f1709627d`, reconciled with remote main on 2026-10-05.
 Branch: `fix/evidence-gated-release`. The original MNC-MBP checkout is preserved.
-Status: implementation in progress; local verification does not establish hosted signing.
+Status: implementation and complete unsigned candidate validation passed; hosted signing and promotion remain unrun.
 
-Implementation has reached integrated local verification. The independent dependency
-remediation is commit `27422c93158aaf19b05ae230414e8e0b67a18051`. Final contract tests
-currently pass 226 cases; final Dagger All/Site/candidate exports are being run against
-the repaired graph. Earlier environmental failures and actual blocked findings remain
-recorded, rather than being converted to passing evidence.
+The independent dependency remediation is commit
+`27422c93158aaf19b05ae230414e8e0b67a18051`. The integrated production repair
+`74f3876784e720f76b2be30202b4bf95bb769b34` passed the complete Dagger candidate:
+555 inventoried files, 479 mandatory outputs, ten check markers and 28 analysis
+receipts. All 247 Python contract tests passed. Exact-byte integrity and final
+presentation replay passed, including 63 HTTP assets and 96 API operations.
+Six SDK consumers and four platform archives passed; browser inspection passed
+on desktop/mobile with keyboard interaction and no observed external resources.
+Earlier environmental failures and blocked findings remain recorded. See
+`docs/RELEASE-VALIDATION-HANDOFF.md` for precise evidence scope and remaining
+hosted-only boundaries. Local validation does not establish release signing.
 
 ## Outcome and authority
 
