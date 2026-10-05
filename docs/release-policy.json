@@ -1,0 +1,251 @@
+{
+  "artifact_files": [
+    "trivy-results.json",
+    "trivy.log",
+    "trivy.status",
+    "trivy-fs-results.json",
+    "trivy-fs.status",
+    "trivy-fs.log",
+    "trivy-rootfs-results.json",
+    "trivy-rootfs.status",
+    "trivy-rootfs.log",
+    "artifact.sha256",
+    "extraction.status",
+    "analysis-gate.json"
+  ],
+  "ci_outputs": [
+    "lint.ok",
+    "test.ok",
+    "race.ok",
+    "proto.ok",
+    "specreg.ok",
+    "schema.ok",
+    "openapi.ok",
+    "gosec-results.sarif",
+    "constraints.ok",
+    "release-contract.ok",
+    "constraints/results.tsv",
+    "constraints/result.status",
+    "constraints/nist-csf-2.0-catalog.log",
+    "constraints/cmmc-2.0-catalog.log",
+    "constraints/fedramp-rev5-catalog.log",
+    "constraints/cisa-cpg-2.0-catalog.log",
+    "constraints/cisa-vendor-scrm-catalog.log",
+    "constraints/cjis-version-5.9.5-catalog.log",
+    "constraints/dfs-500-2023-11-catalog.log",
+    "constraints/cccs-itsg-33-catalog.log",
+    "constraints/cccs-medium-cloud-pbmm-catalog.log",
+    "constraints/cybersecure-canada-catalog.log",
+    "constraints/cccs-itsp-10-171-catalog.log",
+    "constraints/cyber_essentials-catalog.log",
+    "constraints/anssi-guide-hygiene-catalog.log",
+    "constraints/anssi-guide-hygiene-detail-catalog.log",
+    "constraints/anssi-guide-admin-securisee-si-catalog.log",
+    "constraints/anssi-referentiel-general-de-securite-annexe-b2-catalog.log",
+    "constraints/cnil-guide-securite-catalog.log",
+    "constraints/3cf-v2-catalog.log",
+    "constraints/bs-it-gs-2023-isms-catalog.log",
+    "constraints/bs-it-gs-2023-orp-catalog.log",
+    "constraints/bs-it-gs-2023-con-catalog.log",
+    "constraints/bs-it-gs-2023-sys-catalog.log",
+    "constraints/bs-it-gs-2023-app-catalog.log",
+    "constraints/bs-it-gs-2023-inf-catalog.log",
+    "constraints/bs-it-gs-2023-net-catalog.log",
+    "constraints/bs-it-gs-2023-ops-catalog.log",
+    "constraints/bs-it-gs-2023-ind-catalog.log",
+    "constraints/bs-it-gs-2023-der-catalog.log",
+    "constraints/bsi-c5-2020-catalog.log",
+    "constraints/bsi-externer-cloud-dienste-catalog.log",
+    "constraints/e-its-2024-catalog.log",
+    "constraints/nis2-catalog.log",
+    "constraints/dora-catalog.log",
+    "constraints/eu-ai-act-catalog.log",
+    "constraints/iso-iec-42001-catalog.log",
+    "constraints/cccs-medium-cloud-pbmm-profile.log",
+    "tidy.ok",
+    "constraints/semantic-scope.json"
+  ],
+  "cli_platforms": [
+    {
+      "arch": "amd64",
+      "os": "linux"
+    },
+    {
+      "arch": "arm64",
+      "os": "linux"
+    },
+    {
+      "arch": "amd64",
+      "os": "darwin"
+    },
+    {
+      "arch": "arm64",
+      "os": "darwin"
+    }
+  ],
+  "framework_ids": [
+    "nist-csf-2.0",
+    "cmmc-2.0",
+    "fedramp-rev5",
+    "cisa-cpg-2.0",
+    "cisa-vendor-scrm",
+    "cjis-version-5.9.5",
+    "dfs-500-2023-11",
+    "cccs-itsg-33",
+    "cccs-medium-cloud-pbmm",
+    "cybersecure-canada",
+    "cccs-itsp-10-171",
+    "cyber_essentials",
+    "anssi-guide-hygiene",
+    "anssi-guide-hygiene-detail",
+    "anssi-guide-admin-securisee-si",
+    "anssi-referentiel-general-de-securite-annexe-b2",
+    "cnil-guide-securite",
+    "3cf-v2",
+    "bs-it-gs-2023-isms",
+    "bs-it-gs-2023-orp",
+    "bs-it-gs-2023-con",
+    "bs-it-gs-2023-sys",
+    "bs-it-gs-2023-app",
+    "bs-it-gs-2023-inf",
+    "bs-it-gs-2023-net",
+    "bs-it-gs-2023-ops",
+    "bs-it-gs-2023-ind",
+    "bs-it-gs-2023-der",
+    "bsi-c5-2020",
+    "bsi-externer-cloud-dienste",
+    "e-its-2024",
+    "nis2",
+    "dora",
+    "eu-ai-act",
+    "iso-iec-42001"
+  ],
+  "framework_manifest_sha256": "ed8c5c6350aca5bdade838a2435d83f1f31d6ccfd4757b9ebcc1e2d92625fed8",
+  "image_arches": [
+    "amd64",
+    "arm64"
+  ],
+  "image_files": [
+    "trivy-results.json",
+    "trivy.log",
+    "trivy.status",
+    "image.sha256",
+    "analysis-gate.json"
+  ],
+  "native_patterns": {
+    "csharp": [
+      "*.nupkg"
+    ],
+    "java": [
+      "*.jar",
+      "*.pom"
+    ],
+    "python": [
+      "*.whl",
+      "*.tar.gz"
+    ],
+    "ts": [
+      "*.tgz"
+    ]
+  },
+  "notes": [
+    "Policy replays raw analysis; saved passed booleans alone never admit.",
+    "Go and Swift distribute tested source ZIPs; Swift models only, no generated RPC client.",
+    "Dagger remains responsible for primary OSCAL JSON Schema and package builds; this gate binds resulting required evidence to exact release subjects."
+  ],
+  "policy_version": 1,
+  "profile_path": "frameworks/cccs-medium-cloud-pbmm/profile.json",
+  "sbom_files": [
+    "sbom.cyclonedx.json",
+    "sbom-assessment-results.oscal.json",
+    "sbom-validation.log",
+    "sbom-validation.status",
+    "subject.sha256",
+    "sbom-producer.txt",
+    "analysis-gate.json",
+    "sbom.raw.cyclonedx.json",
+    "sbom-distributor.json",
+    "sbom-enrichment.json",
+    "publishers/publishers.json"
+  ],
+  "sdk_languages": [
+    "go",
+    "python",
+    "java",
+    "csharp",
+    "ts",
+    "swift"
+  ],
+  "security_files": [
+    "govulncheck.json",
+    "govulncheck.log",
+    "govulncheck.status",
+    "gosec-results.json",
+    "gosec-results.sarif",
+    "gosec.log",
+    "gosec.status",
+    "gosec-sarif.log",
+    "gosec-sarif.status",
+    "analysis-gate.json"
+  ],
+  "final_outputs": [
+    "evidence/presentation.ok",
+    "evidence/release-source.json"
+  ],
+  "sbom_distributor": {
+    "version": 1,
+    "role": "release-distributor",
+    "entity": {
+      "name": "ckodex-labs",
+      "url": [
+        "https://github.com/ckodex-labs/ckodex-xoscal"
+      ]
+    }
+  },
+  "frontend_files": [
+    "THIRD-PARTY-NOTICES.txt",
+    "build-package.json",
+    "build-toolchain.json",
+    "build.log",
+    "build.mjs",
+    "build.status",
+    "bundle-inputs.tar.gz",
+    "bundle-notices.json",
+    "entry.js",
+    "esbuild-metafile.json",
+    "frontend-inventory.json",
+    "frontend.sha256",
+    "installed-package-manifests.json",
+    "npm-ci.log",
+    "npm-ci.status",
+    "npm-metadata.json",
+    "npm-package.tgz",
+    "package-lock.json",
+    "package.json",
+    "sbom.cyclonedx.json",
+    "scalar-LICENSE",
+    "scalar-license-source.json",
+    "scalar.css",
+    "scalar.css.map",
+    "scalar.js",
+    "scalar.js.map",
+    "trivy-results.json",
+    "trivy.log",
+    "trivy.status",
+    "analysis-gate.json"
+  ],
+  "frontend_assets": [
+    "scalar.js",
+    "scalar.js.map",
+    "scalar.css",
+    "scalar.css.map",
+    "THIRD-PARTY-NOTICES.txt"
+  ],
+  "frontend_sbom_files": [
+    "sbom.cyclonedx.json",
+    "sbom-assessment-results.oscal.json",
+    "sbom-validation.log",
+    "sbom-validation.status",
+    "analysis-gate.json"
+  ]
+}

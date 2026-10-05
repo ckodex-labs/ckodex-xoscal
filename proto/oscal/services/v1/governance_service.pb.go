@@ -3350,7 +3350,7 @@ const file_services_v1_governance_service_proto_rawDesc = "" +
 	"\x04body\x18\x06 \x01(\tR\x04body\"x\n" +
 	"\x1cProposeMappingUpdateResponse\x12(\n" +
 	"\x10pull_request_url\x18\x01 \x01(\tR\x0epullRequestUrl\x12.\n" +
-	"\x13pull_request_number\x18\x02 \x01(\x05R\x11pullRequestNumber2\xab\x1e\n" +
+	"\x13pull_request_number\x18\x02 \x01(\x05R\x11pullRequestNumber2\xb5\x1e\n" +
 	"\x11GovernanceService\x12x\n" +
 	"\fCreateEntity\x12&.oscal.services.v1.CreateEntityRequest\x1a'.oscal.services.v1.CreateEntityResponse\"\x17\x82\xd3\xe4\x93\x02\x11:\x01*\"\f/v1/entities\x12r\n" +
 	"\tGetEntity\x12#.oscal.services.v1.GetEntityRequest\x1a$.oscal.services.v1.GetEntityResponse\"\x1a\x82\xd3\xe4\x93\x02\x14\x12\x12/v1/entities/{urn}\x12\x85\x01\n" +
@@ -3362,9 +3362,8 @@ const file_services_v1_governance_service_proto_rawDesc = "" +
 	"\rCreateRelease\x12'.oscal.services.v1.CreateReleaseRequest\x1a(.oscal.services.v1.CreateReleaseResponse\"\x17\x82\xd3\xe4\x93\x02\x11:\x01*\"\f/v1/releases\x12u\n" +
 	"\fListReleases\x12&.oscal.services.v1.ListReleasesRequest\x1a'.oscal.services.v1.ListReleasesResponse\"\x14\x82\xd3\xe4\x93\x02\x0e\x12\f/v1/releases\x12\x88\x01\n" +
 	"\x12IngestRequirements\x12,.oscal.services.v1.IngestRequirementsRequest\x1a-.oscal.services.v1.IngestRequirementsResponse\"\x15\x82\xd3\xe4\x93\x02\x0f:\x01*\"\n" +
-	"/v1/ingest\x12y\n" +
-	"\x0eSemanticSearch\x12(.oscal.services.v1.SemanticSearchRequest\x1a).oscal.services.v1.SemanticSearchResponse\"\x12\x82\xd3\xe4\x93\x02\f\x12\n" +
-	"/v1/search\x12\x89\x01\n" +
+	"/v1/ingest\x12\x82\x01\n" +
+	"\x0eSemanticSearch\x12(.oscal.services.v1.SemanticSearchRequest\x1a).oscal.services.v1.SemanticSearchResponse\"\x1b\x82\xd3\xe4\x93\x02\x15\x12\x13/v1/search/semantic\x12\x89\x01\n" +
 	"\x0fGenerateCatalog\x12).oscal.services.v1.GenerateCatalogRequest\x1a*.oscal.services.v1.GenerateCatalogResponse\"\x1f\x82\xd3\xe4\x93\x02\x19:\x01*\"\x14/v1/generate/catalog\x12\x89\x01\n" +
 	"\x0fGenerateProfile\x12).oscal.services.v1.GenerateProfileRequest\x1a*.oscal.services.v1.GenerateProfileResponse\"\x1f\x82\xd3\xe4\x93\x02\x19:\x01*\"\x14/v1/generate/profile\x12\x8d\x01\n" +
 	"\x10GenerateMappings\x12*.oscal.services.v1.GenerateMappingsRequest\x1a+.oscal.services.v1.GenerateMappingsResponse\" \x82\xd3\xe4\x93\x02\x1a:\x01*\"\x15/v1/generate/mappings\x12y\n" +

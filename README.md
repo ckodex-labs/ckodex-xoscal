@@ -17,9 +17,8 @@
 
 <p align="center">
   <a href="https://pages.nist.gov/OSCAL/"><img src="https://shieldcn.dev/badge/OSCAL-1.2.3%20Complete-18181b.svg?variant=secondary" alt="OSCAL 1.2.3" /></a>
-  <a href="https://go.dev/"><img src="https://shieldcn.dev/badge/Go-1.24+-18181b.svg?logo=go&variant=secondary" alt="Go 1.24+" /></a>
+  <a href="https://go.dev/"><img src="https://shieldcn.dev/badge/Go-1.25+-18181b.svg?logo=go&variant=secondary" alt="Go 1.25+" /></a>
   <a href="https://dagger.io/"><img src="https://shieldcn.dev/badge/Dagger-CI%2FCD-18181b.svg?logo=dagger&variant=secondary" alt="Dagger powered" /></a>
-  <a href="https://slsa.dev/"><img src="https://shieldcn.dev/badge/SLSA-Level%203-18181b.svg?variant=secondary" alt="SLSA Level 3" /></a>
   <a href="#6-offline-air-gapped-audit-bundles-xoscal-ctl-bundle-export"><img src="https://shieldcn.dev/badge/airgap-ready-18181b.svg?variant=secondary" alt="Airgap ready" /></a>
   <a href="https://github.com/MChorfa/shieldcn-zig"><img src="https://shieldcn.dev/badge/badges%20by-shieldcn--zig-18181b.svg?logo=zig&variant=secondary" alt="Badges by shieldcn-zig" /></a>
 </p>
@@ -27,6 +26,18 @@
 ---
 
 > **xOSCAL** is a high-assurance, developer-friendly compliance engine and unified CLI for [NIST OSCAL 1.2.3](https://pages.nist.gov/OSCAL/). It eliminates compliance theater by translating infrastructure and codebases into machine-verifiable governance artifacts, multi-dimensional vector state, GitOps pull-request diffs, spreadsheet round-trips, and air-gapped cryptographic bundles.
+
+Published documentation: [Overview](https://ckodex-labs.github.io/ckodex-xoscal/),
+[CLI guide](https://ckodex-labs.github.io/ckodex-xoscal/cli.html),
+[API documentation](https://ckodex-labs.github.io/ckodex-xoscal/docs.html),
+[Downloads](https://ckodex-labs.github.io/ckodex-xoscal/downloads.html),
+[Transparency](https://ckodex-labs.github.io/ckodex-xoscal/transparency.html), and
+[SBOM validation](https://ckodex-labs.github.io/ckodex-xoscal/sbom-validation.html).
+Key operator guides: [verified installation](docs/INSTALL-CONTRACT.md),
+[gRPC usage](docs/GRPC_USAGE_EXAMPLES.md), [operations](docs/OPERATIONS.md), and
+[beta scope and evidence boundaries](docs/BETA-CONTRACT.md).
+The [Design Blueprint](https://ckodex-labs.github.io/ckodex-xoscal/portal.html)
+contains illustrative data; release verification requires the actual pinned proof.
 
 ---
 
@@ -48,12 +59,34 @@
 ### Build Standalone Binaries
 
 ```bash
-# Compiles bin/xoscal-server and bin/xoscal-ctl locally
+# Compiles bin/xoscal-server, bin/xoscal-ctl and bin/xoscal-backup locally
 make build
 
 # Inspect the CLI suite
 ./bin/xoscal-ctl help
 ```
+
+### Install a Verified Release CLI
+
+Choose an explicit release tag and its full source commit, and use the installer
+from a reviewed checkout of that commit. Download that release's manifest and
+detached provenance bundle as described in the [installation contract](docs/INSTALL-CONTRACT.md).
+Python 3.9+ and GitHub CLI are required for installation.
+
+```sh
+# Set RELEASE_TAG and SOURCE_REVISION to independently reviewed release values.
+sh scripts/install.sh \
+  --release "$RELEASE_TAG" --source "$SOURCE_REVISION" \
+  --manifest release-manifest.json --bundle release-manifest.sigstore.json \
+  --prefix "$HOME/.local" --dry-run
+# Omit --dry-run to install xoscal-ctl after the same checks.
+```
+
+The installer supports separate Linux/macOS AMD64 and ARM64 archives, verifies
+the release workflow identity and source revision, then checks exact archive
+digests before installing. Missing proofs block installation. Local `make build`
+outputs do not establish hosted signing. Add the selected prefix's `bin`
+directory to PATH after installation.
 
 ---
 
@@ -191,7 +224,7 @@ xoscal-ctl bundle-export \
   --out audit-bundle.tar.gz
 ```
 
-- **Cryptographic Packaging**: Bundles canonical OSCAL JSON files, evidence blobs with SHA-256 sidecars, and a signed `manifest.json`.
+- **Digest Packaging**: Bundles OSCAL JSON files, evidence blobs with SHA-256 sidecars, and a `manifest.json` containing cryptographic digests. The audit bundle command does not sign that manifest; release provenance is a separate gate.
 - **Zero-Dependency Offline Viewer**: Bundles an embedded `audit_viewer.html` styled with CKODEX-DS-3 editorial tokens that verifies SHA-256 digests in-browser using the native W3C WebCrypto API—requiring no local server, runtime, or network access.
 
 ---
@@ -227,7 +260,7 @@ For enterprise environments requiring centralized control storage, full-text sea
 
 ```bash
 # Run gRPC server backed by embedded SQLite
-./bin/xoscal-server -dsn oscal.db
+XOSCAL_STORE_DSN=oscal.db ./bin/xoscal-server
 
 # Inspect service reflection
 grpcurl -plaintext localhost:50051 list
@@ -237,7 +270,9 @@ grpcurl -plaintext localhost:50051 list
 
 ## Verification Ladder & CI/CD
 
-Every commit is strictly verified by our hermetic **[Dagger](https://dagger.io/)** pipeline and local test ladder:
+The **[Dagger](https://dagger.io/)** pipeline and local test ladder validate the
+checkout. Passing local checks is separate from verifying a hosted release's
+signed manifest and exact bytes:
 
 ```bash
 make build        # Compiles bin/xoscal-server and bin/xoscal-ctl
@@ -248,8 +283,8 @@ python3 scripts/design-lint.py  # Enforces CKODEX-DS-3 editorial constraints
 python3 scripts/a11y-lint.py    # Enforces WCAG 3.0 static accessibility checks
 ```
 
-- **Hermetic Dagger Suite**: Parallel execution of linters, security scans (gosec, govulncheck), Metaschema constraint checking (`oscal-cli`), and air-gap badge bundling.
-- **Badge Engine**: Powered by **[shieldcn-zig](https://github.com/MChorfa/shieldcn-zig)** (pure-Zig, zero external rendering dependencies, SLSA Level 3).
+- **Isolated Dagger Suite**: Parallel execution of linters, security scans (gosec, govulncheck), Metaschema constraint checking (`oscal-cli`), and local informational badge rendering.
+- **Badge artwork**: Static local SVGs describe the candidate and required evidence. They never assert a successful gate, signature or SLSA level.
 
 ---
 

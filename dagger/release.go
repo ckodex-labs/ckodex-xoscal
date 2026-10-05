@@ -69,8 +69,8 @@ func pinnedSyftInstall() string {
 		"test -x /usr/local/bin/syft", syftLinuxAMD64SHA, syftLinuxARM64SHA, syftVersion, strings.TrimPrefix(syftVersion, "v"))
 }
 
-// goreleaser returns a GoReleaser container with source, caches, and token mounted.
-func (m *Xoscal) goreleaser(source *dagger.Directory, githubToken *dagger.Secret) *dagger.Container {
+// goreleaser returns a GoReleaser container with source and build caches.
+func (m *Xoscal) goreleaser(source *dagger.Directory) *dagger.Container {
 	modCache := dag.CacheVolume("go-mod")
 	buildCache := dag.CacheVolume("go-build")
 	return m.goreleaserBase().
@@ -80,28 +80,23 @@ func (m *Xoscal) goreleaser(source *dagger.Directory, githubToken *dagger.Secret
 		WithMountedCache("/root/.cache/go-build", buildCache).
 		WithEnvVariable("GOMODCACHE", "/go/pkg/mod").
 		WithEnvVariable("GOCACHE", "/root/.cache/go-build").
-		WithEnvVariable("CGO_ENABLED", "0").
-		WithSecretVariable("GITHUB_TOKEN", githubToken)
+		WithEnvVariable("GOMAXPROCS", "2").
+		WithEnvVariable("GOFLAGS", "-p=2 -mod=readonly").
+		WithEnvVariable("GOWORK", "off").
+		WithEnvVariable("CGO_ENABLED", "0")
 }
 
-// Release runs GoReleaser release --clean (publishes GitHub release, archives, SBOMs).
-// SLSA L3 provenance is generated separately by slsa-github-generator.
-// Container image signing is done separately by cosign in the image job.
-func (m *Xoscal) Release(source *dagger.Directory, githubToken *dagger.Secret) *dagger.Directory {
-	return m.goreleaser(source, githubToken).
-		WithExec([]string{"goreleaser", "release", "--clean"}).
+// Release stages archives without publishing or signing. Hosted verification
+// and promotion belong to the release workflow after every Dagger gate passes.
+func (m *Xoscal) Release(source *dagger.Directory) *dagger.Directory {
+	return m.goreleaser(source).
+		WithExec([]string{"goreleaser", "release", "--parallelism", "2", "--clean", "--skip=publish,announce,sign"}).
 		Directory("/src/dist")
 }
 
-// Snapshot runs GoReleaser in snapshot mode (no publish, no sign, for CI validation).
-func (m *Xoscal) Snapshot(source *dagger.Directory, githubToken *dagger.Secret) *dagger.Directory {
-	return m.goreleaser(source, githubToken).
-		WithExec([]string{"goreleaser", "release", "--clean", "--snapshot", "--skip=sign"}).
+// Snapshot stages development archives without publication or credentials.
+func (m *Xoscal) Snapshot(source *dagger.Directory) *dagger.Directory {
+	return m.goreleaser(source).WithEnvVariable("XOSCAL_SNAPSHOT_VERSION", strings.TrimPrefix(m.Version, "v")).
+		WithExec([]string{"goreleaser", "release", "--parallelism", "2", "--clean", "--snapshot", "--skip=publish,announce,sign"}).
 		Directory("/src/dist")
 }
-
-// All runs lint, test, race, security, proto-drift, spec-registry,
-// OSCAL schema validation (tier 1, blocking), and OSCAL Metaschema constraint
-// validation (tier 2, non-blocking) checks in parallel branches.
-// Each branch shares the cached base container. The returned directory
-// contains outputs from all parallel checks.

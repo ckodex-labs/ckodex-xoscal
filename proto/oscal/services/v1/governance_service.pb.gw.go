@@ -1123,7 +1123,7 @@ func RegisterGovernanceServiceHandlerServer(ctx context.Context, mux *runtime.Se
 		var stream runtime.ServerTransportStream
 		ctx = grpc.NewContextWithServerTransportStream(ctx, &stream)
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/oscal.services.v1.GovernanceService/SemanticSearch", runtime.WithHTTPPathPattern("/v1/search"))
+		annotatedContext, err := runtime.AnnotateIncomingContext(ctx, mux, req, "/oscal.services.v1.GovernanceService/SemanticSearch", runtime.WithHTTPPathPattern("/v1/search/semantic"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -1691,7 +1691,7 @@ func RegisterGovernanceServiceHandlerClient(ctx context.Context, mux *runtime.Se
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/oscal.services.v1.GovernanceService/SemanticSearch", runtime.WithHTTPPathPattern("/v1/search"))
+		annotatedContext, err := runtime.AnnotateContext(ctx, mux, req, "/oscal.services.v1.GovernanceService/SemanticSearch", runtime.WithHTTPPathPattern("/v1/search/semantic"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -2007,7 +2007,7 @@ var (
 	pattern_GovernanceService_CreateRelease_0                  = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"v1", "releases"}, ""))
 	pattern_GovernanceService_ListReleases_0                   = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"v1", "releases"}, ""))
 	pattern_GovernanceService_IngestRequirements_0             = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"v1", "ingest"}, ""))
-	pattern_GovernanceService_SemanticSearch_0                 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"v1", "search"}, ""))
+	pattern_GovernanceService_SemanticSearch_0                 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2}, []string{"v1", "search", "semantic"}, ""))
 	pattern_GovernanceService_GenerateCatalog_0                = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2}, []string{"v1", "generate", "catalog"}, ""))
 	pattern_GovernanceService_GenerateProfile_0                = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2}, []string{"v1", "generate", "profile"}, ""))
 	pattern_GovernanceService_GenerateMappings_0               = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2}, []string{"v1", "generate", "mappings"}, ""))

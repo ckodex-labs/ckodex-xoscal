@@ -1,0 +1,6 @@
+{
+  "name": "secure-go-sdk",
+  "engineVersion": "v0.21.7",
+  "sdk": {"source": "python"},
+  "source": "."
+}

@@ -30,9 +30,21 @@
     <div class="ck-measure ck-stack">
       <div>
         <p class="ck-label ck-page-kicker">command-line reference</p>
-        <h1 class="ck-page-title">xoscal-ctl Reference Manual</h1>
+        <h1 class="ck-page-title">xoscal-ctl User Guide</h1>
       </div>
-      <p class="ck-site-note">The <code>xoscal-ctl</code> binary is the unified operator interface for machine-governed OSCAL 1.2.3 models. It is statically linked, requires zero runtime dependencies, and operates fully offline in air-gapped environments.</p>
+      <p class="ck-site-note">The <code>xoscal-ctl</code> binary provides local OSCAL 1.2.3 authoring, validation and review workflows. Release builds disable CGO. Installation requires separate provenance verification; this guide does not establish a particular release’s signing or execution results.</p>
+
+      <section class="ck-stack ck-stack--tight" id="install" aria-labelledby="install-heading">
+        <h2 id="install-heading">Pinned Installation</h2>
+        <p>Choose an explicit release tag and its full source commit. Use <a href="scripts/install.sh">the installer</a> from a reviewed checkout of that revision, together with the release’s <code>release-manifest.json</code> and <code>release-manifest.sigstore.json</code>. Python 3.9+ and GitHub CLI are required. The installer verifies the manifest’s GitHub release workflow identity, tag and source, then checks the exact archive bytes before installation.</p>
+        <pre class="ck-quiet ck-code-block"><code># Set RELEASE_TAG and SOURCE_REVISION to independently reviewed release values.
+sh scripts/install.sh \
+  --release "$RELEASE_TAG" --source "$SOURCE_REVISION" \
+  --manifest release-manifest.json --bundle release-manifest.sigstore.json \
+  --prefix "$HOME/.local" --dry-run
+# Omit --dry-run to install after the same checks.</code></pre>
+        <p class="ck-site-note">Linux and macOS have separate AMD64 and ARM64 archives. There is no universal macOS binary. Only <code>xoscal-ctl</code> is installed; each verified archive also contains <code>xoscal-server</code> and <code>xoscal-backup</code>. Missing or invalid proof prevents installation. Add the prefix’s <code>bin</code> directory to PATH. See the <a href="https://github.com/ckodex-labs/ckodex-xoscal/blob/main/docs/INSTALL-CONTRACT.md">installation contract</a> for proof download and offline archive steps.</p>
+      </section>
 
       <section class="ck-stack ck-stack--tight" aria-labelledby="toc-heading">
         <h2 id="toc-heading">Command Index</h2>
@@ -43,7 +55,11 @@
           </article>
           <article class="ck-quiet ck-padded">
             <h3><a href="#verify">verify</a></h3>
-            <p class="ck-caption">Vector state calculus S(e,t) evaluation and JSON schema conformance validator.</p>
+            <p class="ck-caption">Vector state calculus S(e,t) evaluation and evidence review.</p>
+          </article>
+          <article class="ck-quiet ck-padded">
+            <h3><a href="#validate">validate</a></h3>
+            <p class="ck-caption">Standalone validation against embedded OSCAL JSON schemas.</p>
           </article>
           <article class="ck-quiet ck-padded">
             <h3><a href="#diff">diff</a></h3>
@@ -67,16 +83,14 @@
       <section class="ck-stack ck-stack--tight" id="init" aria-labelledby="init-heading">
         <h2 id="init-heading">1. init &mdash; Repository Scaffolding</h2>
         <p>Scans application source trees (Go, Python, TypeScript, Rust, Docker, Kubernetes) and deterministically maps project characteristics to an OSCAL 1.2.3 Component Definition. All UUIDs are synthesized via RFC-4122 UUIDv5 using the DNS namespace and the canonical repo URN.</p>
-        <pre class="ck-quiet ck-code-block"><code>xoscal-ctl init --repo &lt;path-to-repo&gt; --out component-definition.json</code></pre>
+        <pre class="ck-quiet ck-code-block"><code>xoscal-ctl init --dir &lt;path-to-repo&gt; --framework nist-sp-800-53-rev5</code></pre>
         <table class="ck-table">
           <thead>
             <tr><th scope="col">Flag</th><th scope="col">Type</th><th scope="col">Default</th><th scope="col">Description</th></tr>
           </thead>
           <tbody>
-            <tr><td><code>--repo</code></td><td>path</td><td><code>.</code></td><td>Root directory of the codebase to analyze.</td></tr>
-            <tr><td><code>--out</code></td><td>path</td><td><code>stdout</code></td><td>Output path for the generated OSCAL Component Definition JSON.</td></tr>
-            <tr><td><code>--type</code></td><td>string</td><td><code>software</code></td><td>Component classification: <code>software</code>, <code>service</code>, or <code>validation</code>.</td></tr>
-            <tr><td><code>--name</code></td><td>string</td><td>directory name</td><td>Explicit component name override.</td></tr>
+            <tr><td><code>--dir</code></td><td>path</td><td><code>.</code></td><td>Root directory of the codebase to analyze.</td></tr>
+            <tr><td><code>--framework</code></td><td>string</td><td><code>nist-sp-800-53-rev5</code></td><td>Compliance framework baseline. Writes component-definition.json and .xoscal/xoscal.yaml within the selected directory.</td></tr>
           </tbody>
         </table>
       </section>
@@ -84,40 +98,49 @@
       <section class="ck-stack ck-stack--tight" id="verify" aria-labelledby="verify-heading">
         <h2 id="verify-heading">2. verify &mdash; Vector State Verification</h2>
         <p>Evaluates artifacts against the official embedded OSCAL 1.2.3 schema and calculates the multi-dimensional trust vector <code>S(e,t) = &lt;P, V, A, C, E, L, &tau;&gt;</code>. Violations of mandatory security invariants dominate composite scores, strictly preventing binary false-positive theater.</p>
-        <pre class="ck-quiet ck-code-block"><code>xoscal-ctl verify --file &lt;oscal-model.json&gt; --format table</code></pre>
+        <pre class="ck-quiet ck-code-block"><code>xoscal-ctl verify --file &lt;oscal-model.json&gt; --evidence-dir ./evidence
+# Add --json for machine-readable output.</code></pre>
         <table class="ck-table">
           <thead>
             <tr><th scope="col">Flag</th><th scope="col">Type</th><th scope="col">Default</th><th scope="col">Description</th></tr>
           </thead>
           <tbody>
-            <tr><td><code>--file</code></td><td>path</td><td><em>required</em></td><td>Path to OSCAL JSON artifact to evaluate.</td></tr>
-            <tr><td><code>--format</code></td><td>string</td><td><code>table</code></td><td>Output rendering: <code>table</code>, <code>json</code>, or <code>compact</code>.</td></tr>
-            <tr><td><code>--fail-on-invalid</code></td><td>bool</td><td><code>true</code></td><td>Return non-zero exit code on schema or invariant failure.</td></tr>
-            <tr><td><code>--check-integrity</code></td><td>bool</td><td><code>true</code></td><td>Verify SHA-256 sidecars and hash references if present.</td></tr>
+            <tr><td><code>--file</code></td><td>path</td><td><code>component-definition.json</code></td><td>Path to OSCAL JSON artifact to evaluate.</td></tr>
+            <tr><td><code>--json</code></td><td>bool</td><td><code>false</code></td><td>Emit the vector state as JSON; default output is a table.</td></tr>
+            <tr><td><code>--evidence-dir</code></td><td>path</td><td>empty</td><td>Optional evidence directory with SHA-256 sidecars. Failed or quarantined lifecycle returns exit code 3; evaluation errors return 1.</td></tr>
           </tbody>
         </table>
       </section>
 
+      <section class="ck-stack ck-stack--tight" id="validate" aria-labelledby="validate-heading">
+        <h2 id="validate-heading">Standalone Schema Validation</h2>
+        <p>Use <code>validate</code> to check an OSCAL document against the embedded official JSON schema. The <code>--file</code> path is required; <code>--kind</code> optionally selects catalog, profile, ssp, component-definition, assessment-plan, assessment-results, poam or mapping. Otherwise the root property determines the kind. Invalid schema results return exit code 3; read or configuration errors return 1.</p>
+        <pre class="ck-quiet ck-code-block"><code>xoscal-ctl validate --file component-definition.json --kind component-definition
+xoscal-ctl help
+xoscal-ctl verify -h</code></pre>
+        <p>Use command help for additional <code>generate</code>, <code>ingest</code>, <code>frameworks</code> and <code>seed</code> workflows. This guide’s examples do not submit evidence or send review messages automatically.</p>
+      </section>
+
       <section class="ck-stack ck-stack--tight" id="diff" aria-labelledby="diff-heading">
         <h2 id="diff-heading">3. diff &mdash; GitOps PR Compliance Diff</h2>
-        <p>Computes structural and semantic differences between two OSCAL documents (such as <code>main</code> vs <code>feature-branch</code>). In CI/CD pipelines, output is piped directly into pull request reviews to notify engineers of control regressions or dropped implementations.</p>
-        <pre class="ck-quiet ck-code-block"><code>xoscal-ctl diff --base baseline-ssp.json --head candidate-ssp.json --format markdown</code></pre>
+        <p>Computes structural and semantic differences between two OSCAL documents (such as <code>main</code> vs <code>feature-branch</code>). The optional Markdown report can be added to a CI step summary or a separately authorized pull request comment.</p>
+        <pre class="ck-quiet ck-code-block"><code>xoscal-ctl diff --base baseline.json --head candidate.json --markdown --fail-on-regression</code></pre>
         <table class="ck-table">
           <thead>
             <tr><th scope="col">Flag</th><th scope="col">Type</th><th scope="col">Default</th><th scope="col">Description</th></tr>
           </thead>
           <tbody>
-            <tr><td><code>--base</code></td><td>path</td><td><em>required</em></td><td>Baseline OSCAL document (e.g., target branch state).</td></tr>
-            <tr><td><code>--head</code></td><td>path</td><td><em>required</em></td><td>Candidate OSCAL document under review.</td></tr>
-            <tr><td><code>--format</code></td><td>string</td><td><code>markdown</code></td><td>Output format: <code>markdown</code> (for PR comments), <code>json</code>, or <code>text</code>.</td></tr>
-            <tr><td><code>--fail-on-regression</code></td><td>bool</td><td><code>true</code></td><td>Exit code 1 if controls are demoted or revoked.</td></tr>
+            <tr><td><code>--base</code></td><td>path</td><td><code>main.component-definition.json</code></td><td>Baseline OSCAL document (e.g., target branch state).</td></tr>
+            <tr><td><code>--head</code></td><td>path</td><td><code>component-definition.json</code></td><td>Candidate OSCAL document under review.</td></tr>
+            <tr><td><code>--markdown</code></td><td>bool</td><td><code>false</code></td><td>Emit a Markdown report for CI output.</td></tr>
+            <tr><td><code>--fail-on-regression</code></td><td>bool</td><td><code>false</code></td><td>Exit code 3 if a compliance regression is detected.</td></tr>
           </tbody>
         </table>
       </section>
 
       <section class="ck-stack ck-stack--tight" id="tabular" aria-labelledby="tabular-heading">
         <h2 id="tabular-heading">4. tabular &mdash; Spreadsheet Bridge</h2>
-        <p>Transforms hierarchical OSCAL 1.2.3 documents into flat, standardized RFC-4180 CSV tables for compliance teams and spreadsheets, with loss-free round-trip re-import into valid OSCAL models.</p>
+        <p>Transforms hierarchical OSCAL 1.2.3 documents into flat, standardized RFC-4180 CSV tables for compliance teams and spreadsheets, with re-import into a supplied base document. Review the resulting artifact before using it as evidence.</p>
         <pre class="ck-quiet ck-code-block"><code># Export to CSV
 xoscal-ctl tabular export --in ssp.json --out controls.csv
 
@@ -137,21 +160,20 @@ xoscal-ctl tabular import --in controls.csv --base ssp.json --out updated-ssp.js
       <section class="ck-stack ck-stack--tight" id="derogate" aria-labelledby="derogate-heading">
         <h2 id="derogate-heading">5. derogate &mdash; Risk Acceptance Lifecycle</h2>
         <p>Constitutional Rule 23: <em>Accepted risk does not rewrite history</em>. Derogations attach explicit authority, justification, compensating controls, and a non-negotiable TTL. Expired derogations immediately decohere and flip posture vectors back to negative valence.</p>
-        <pre class="ck-quiet ck-code-block"><code>xoscal-ctl derogate create \
-  --control-id "ac-2" \
-  --justification "Legacy LDAP sync migration in progress" \
+        <pre class="ck-quiet ck-code-block"><code>xoscal-ctl derogate add \
+  --control "ac-2" \
+  --reason "Legacy LDAP sync migration in progress" \
   --authority "urn:ckodex:authority:ciso:sec-board" \
-  --ttl 720h \
-  --compensating-control "Dual-operator approval on all credential changes" \
-  --out derogations.json</code></pre>
+  --ttl-days 30 \
+  --compensating "sc-7,au-2"</code></pre>
         <table class="ck-table">
           <thead>
             <tr><th scope="col">Action</th><th scope="col">Description</th></tr>
           </thead>
           <tbody>
-            <tr><td><code>create</code></td><td>Instantiates a cryptographically bounded derogation record with explicit TTL.</td></tr>
-            <tr><td><code>audit</code></td><td>Inspects all active derogations, flagging expired or pending renewals.</td></tr>
-            <tr><td><code>prune</code></td><td>Revokes expired records and preserves audit receipts in the historical trace.</td></tr>
+            <tr><td><code>add</code></td><td>Records a control, authority, reason and expiry in .xoscal/derogations.json.</td></tr>
+            <tr><td><code>list</code></td><td>Lists active, revoked and expired derogations.</td></tr>
+            <tr><td><code>revoke --id &lt;id&gt;</code></td><td>Revokes a recorded derogation and saves the store.</td></tr>
           </tbody>
         </table>
       </section>
@@ -159,16 +181,15 @@ xoscal-ctl tabular import --in controls.csv --base ssp.json --out updated-ssp.js
       <section class="ck-stack ck-stack--tight" id="bundle-export" aria-labelledby="bundle-export-heading">
         <h2 id="bundle-export-heading">6. bundle-export &mdash; Air-Gapped Bundles</h2>
         <p>Packages full compliance packages for offline auditor consumption in high-security SCIFs. Contains complete OSCAL JSON models, linked evidence files, individual SHA-256 sidecars, and an embedded zero-dependency WebCrypto HTML viewer that verifies digests locally inside an air-gapped web browser.</p>
-        <pre class="ck-quiet ck-code-block"><code>xoscal-ctl bundle-export --model ssp.json --evidence-dir ./evidence --out audit-bundle.tar.gz</code></pre>
+        <pre class="ck-quiet ck-code-block"><code>xoscal-ctl bundle-export --in ssp.json --evidence-dir ./evidence --out audit-bundle.tar.gz</code></pre>
         <table class="ck-table">
           <thead>
             <tr><th scope="col">Flag</th><th scope="col">Type</th><th scope="col">Default</th><th scope="col">Description</th></tr>
           </thead>
           <tbody>
-            <tr><td><code>--model</code></td><td>path</td><td><em>required</em></td><td>Authoritative OSCAL document to bundle.</td></tr>
-            <tr><td><code>--evidence-dir</code></td><td>path</td><td><code>./evidence</code></td><td>Directory containing referenced raw evidence files.</td></tr>
-            <tr><td><code>--out</code></td><td>path</td><td><code>bundle.tar.gz</code></td><td>Archive output path.</td></tr>
-            <tr><td><code>--embed-viewer</code></td><td>bool</td><td><code>true</code></td><td>Include zero-dependency standalone HTML/WebCrypto verifier.</td></tr>
+            <tr><td><code>--in</code></td><td>path</td><td><code>component-definition.json</code></td><td>OSCAL document to bundle.</td></tr>
+            <tr><td><code>--evidence-dir</code></td><td>path</td><td>empty</td><td>Optional directory containing raw evidence files.</td></tr>
+            <tr><td><code>--out</code></td><td>path</td><td><code>audit-bundle.tar.gz</code></td><td>Archive output path.</td></tr>
           </tbody>
         </table>
       </section>
@@ -177,10 +198,10 @@ xoscal-ctl tabular import --in controls.csv --base ssp.json --out updated-ssp.js
   <aside class="ck-shell__margin" aria-label="Evidence Margin">
     <div class="ck-stack ck-stack--tight">
       <div class="ck-margin__head"><h2>Evidence Margin</h2></div>
-      <div class="ck-receipt"><span class="ck-receipt__rule"></span><div><div class="ck-receipt__event">Static CLI binary compiled</div><div class="ck-receipt__detail">&#8866; verified &mdash; Go 1.25.0 cgo-disabled</div></div></div>
-      <div class="ck-receipt"><span class="ck-receipt__rule"></span><div><div class="ck-receipt__event">Embedded OSCAL 1.2.3 schema</div><div class="ck-receipt__detail">&#8866; verified &mdash; NIST SP 800-53 Rev 5</div></div></div>
-      <div class="ck-receipt"><span class="ck-receipt__rule"></span><div><div class="ck-receipt__event">Air-gap self-contained execution</div><div class="ck-receipt__detail">&#8866; verified &mdash; 0 network calls required</div></div></div>
-      <span class="ck-chip ck-chip--observed">&#8866; observed</span>
+      <div class="ck-receipt"><span class="ck-receipt__rule"></span><div><div class="ck-receipt__event">Release build configuration</div><div class="ck-receipt__detail">specified &mdash; CGO disabled; release proof required</div></div></div>
+      <div class="ck-receipt"><span class="ck-receipt__rule"></span><div><div class="ck-receipt__event">Embedded OSCAL 1.2.3 schema</div><div class="ck-receipt__detail">specified &mdash; embedded schema validation</div></div></div>
+      <div class="ck-receipt"><span class="ck-receipt__rule"></span><div><div class="ck-receipt__event">Offline audit bundle workflow</div><div class="ck-receipt__detail">specified &mdash; validate the actual bundle</div></div></div>
+      <span class="ck-chip">specified &mdash; public guide</span>
     </div>
   </aside>
   <footer class="ck-shell__footer ck-authority ck-authority--internal" aria-label="Authority Footer">

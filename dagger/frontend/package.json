@@ -1,0 +1,9 @@
+{
+  "name": "xoscal-verified-api-reference",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {"@scalar/api-reference": "1.72.4"},
+  "devDependencies": {"esbuild": "0.25.12"},
+  "overrides": {"nanoid": "5.1.16", "unhead": "2.1.13", "@ai-sdk/provider-utils": "4.0.33"}
+}

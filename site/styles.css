@@ -1719,6 +1719,17 @@ footer.ck-shell__footer .ck-authority__invariant { color: var(--ck-fg-mute); }
 /* Card collections tile across the column instead of a single stack. */
 .ck-data-grid { grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); }
 
+/* Artifact identities and proof paths stay readable inside narrow cards.
+   Digest code is a plain value, with no interactive hash-button semantics. */
+.ck-data-grid > article > strong,
+.ck-data-grid > article a { overflow-wrap: anywhere; }
+.ck-data-grid > article > code {
+  display: block;
+  max-width: 100%;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
 /* Code: padded wells, no mid-token wrapping, horizontal scroll. */
 pre { margin: 0; }
 pre.ck-code-block {
@@ -1730,6 +1741,13 @@ pre.ck-code-block {
   overflow-x: auto;
 }
 #results.ck-code-block { white-space: pre-wrap; overflow-wrap: anywhere; }
+
+/* Generated service and operation names exceed a phone's available width.
+   Scope wrapping to Scalar headings; code samples retain horizontal scroll. */
+section[aria-labelledby="interactive-heading"] .section-header .label {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
 
 /* Tables: real column gutters; flags and paths do not wrap. */
 .ck-table th, .ck-table td { padding: var(--ck-sp-2) var(--ck-sp-4) var(--ck-sp-2) 0; }

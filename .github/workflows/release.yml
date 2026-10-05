@@ -2,231 +2,215 @@ name: Release
 
 on:
   push:
-    tags:
-      - "v*"
+    tags: ["v*"]
 
 permissions:
   contents: read
 
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
-  goreleaser:
+  candidate:
     runs-on: ubuntu-latest
     permissions:
-      contents: write
-      packages: write
-      id-token: write
-      attestations: write
-    steps:
-      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
-        with:
-          fetch-depth: 0
-
-      - name: Run Dagger Release (GoReleaser)
-        uses: dagger/dagger-for-github@057a749131c864e4a719e6773baf0d1447ef998f # v7
-        with:
-          version: "v0.21.7"
-          args: release --source=. --github-token=env:GITHUB_TOKEN export --path=./dist
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Attest release artifacts (GitHub-signed provenance)
-        uses: actions/attest-build-provenance@4d101475d8b20a2381f78447822ac1eab6504dd8 # v4.2.2
-        with:
-          subject-path: |
-            dist/*.tar.gz
-            dist/checksums.txt
-            dist/*.sbom.json
-
-  sbom-validation:
-    needs: [goreleaser, image]
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    steps:
-      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
-
-      - name: Setup Dagger
-        uses: dagger/dagger-for-github@057a749131c864e4a719e6773baf0d1447ef998f # v7
-        with:
-          version: "v0.21.7"
-
-      - name: Validate binary SBOM with sbom-tools (oscal-json output)
-        run: |
-          dagger call sbom-validation --source=. export --path=./sbom-assessment-results.json
-
-      - name: Download image SBOM
-        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
-        with:
-          name: image-sbom
-          path: .
-
-      - name: Install pinned sbom-tools
-        run: |
-          set -eu
-          archive=/tmp/sbom-tools-linux-x86_64.tar.gz
-          curl -fsSL "https://github.com/sbom-tool/sbom-tools/releases/download/v0.2.0/sbom-tools-linux-x86_64.tar.gz" -o "$archive"
-          printf '%s  %s\n' "0f93406da9643a8ea3afe4fb56c7418fb74d29ecaa0af49b260dc4b2ff597956" "$archive" | sha256sum -c -
-          # Members are prefixed with ./ — extract into a fresh directory with
-          # the root entry excluded (its utime/mode would fail on /tmp), then
-          # install the binary.
-          mkdir -p /tmp/sbt
-          tar -xzf "$archive" -C /tmp/sbt --exclude='./'
-          install -m 0755 /tmp/sbt/sbom-tools /usr/local/bin/sbom-tools
-          sbom-tools validate image-sbom.cyclonedx.json --standard ntia -o oscal-json -O image-sbom-assessment-results.json || true
-          test -s image-sbom-assessment-results.json
-
-      - name: Upload SBOM validation results
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
-        with:
-          name: sbom-validation
-          path: |
-            sbom-assessment-results.json
-            image-sbom-assessment-results.json
-
-      - name: Attach to GitHub release
-        uses: softprops/action-gh-release@3bb12739c298aeb8a4eeaf626c5b8d85266b0e65 # v2
-        with:
-          files: |
-            sbom-assessment-results.json
-            image-sbom-assessment-results.json
-
-  image:
-    runs-on: ubuntu-latest
-    permissions:
-      packages: write
       contents: read
       id-token: write
       attestations: write
-      security-events: write
-    outputs:
-      image_digest: ${{ steps.push.outputs.digest }}
     steps:
-      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Setup pinned Dagger
+        uses: dagger/dagger-for-github@057a749131c864e4a719e6773baf0d1447ef998f
+        with:
+          version: "v0.21.7"
+      - name: Produce and admit complete candidate
+        run: |
+          dagger call with-version --version="$RELEASE_TAG" release-candidate \
+            --source=. --release-tag="$RELEASE_TAG" --source-revision="$SOURCE_REVISION" \
+            export --path=candidate
+        env:
+          RELEASE_TAG: ${{ github.ref_name }}
+          SOURCE_REVISION: ${{ github.sha }}
+      - name: Attest payload manifest with existing hosted identity
+        id: payload
+        uses: actions/attest-build-provenance@4d101475d8b20a2381f78447822ac1eab6504dd8
+        with:
+          subject-path: candidate/payload-manifest.json
+      - name: Verify payload and render final site in Dagger
+        run: |
+          dagger call finalize-candidate --source=. --candidate=candidate \
+            --payload-bundle="$PAYLOAD_BUNDLE" --release-tag="$RELEASE_TAG" \
+            --source-revision="$SOURCE_REVISION" export --path=final
+          dagger call package-candidate --source=. --candidate=final export --path=release-site.tar.gz
+        env:
+          PAYLOAD_BUNDLE: ${{ steps.payload.outputs.bundle-path }}
+          RELEASE_TAG: ${{ github.ref_name }}
+          SOURCE_REVISION: ${{ github.sha }}
+      - name: Attest frozen final manifest, transport and OCI root bytes
+        id: final
+        uses: actions/attest-build-provenance@4d101475d8b20a2381f78447822ac1eab6504dd8
+        with:
+          subject-path: |
+            final/release-manifest.json
+            release-site.tar.gz
+            final/release/image-index.json
+      - name: Verify exact final bytes and stage attachment view
+        run: |
+          dagger call verify-candidate --source=. --candidate=final \
+            --release-bundle="$RELEASE_BUNDLE" --release-tag="$RELEASE_TAG" \
+            --source-revision="$SOURCE_REVISION" export --path=verified
+          dagger call promotion-assets --source=. --candidate=final \
+            --release-bundle="$RELEASE_BUNDLE" --release-tag="$RELEASE_TAG" \
+            --source-revision="$SOURCE_REVISION" export --path=attachments
+          cp release-site.tar.gz attachments/
+          dagger call verify-transport --source=. --transport=attachments/release-site.tar.gz \
+            --bundle="$RELEASE_BUNDLE" --release-tag="$RELEASE_TAG" --source-revision="$SOURCE_REVISION" \
+            export --path=transport-verification.json
+        env:
+          RELEASE_BUNDLE: ${{ steps.final.outputs.bundle-path }}
+          RELEASE_TAG: ${{ github.ref_name }}
+          SOURCE_REVISION: ${{ github.sha }}
+      - name: Stage verified assets without public release or registry tags
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: verified-release
+          path: |
+            attachments/
+            verified/
+          if-no-files-found: error
+          retention-days: 14
+      - name: Preserve raw findings when candidate gate fails
+        if: failure()
+        run: |
+          status=0
+          mkdir -p failed-analysis/logs
+          printf 'subject\treport_mode\texport_status\n' > failed-analysis/exports.tsv
+          collect() {
+            subject="$1"
+            mode="$2"
+            result=0
+            dagger call with-version --version="$RELEASE_TAG" candidate-subject-reports \
+              --source=. --release-tag="$RELEASE_TAG" --source-revision="$SOURCE_REVISION" \
+              --subject="$subject" --report-mode="$mode" \
+              export --path="failed-analysis/$subject/$mode" \
+              > "failed-analysis/logs/$subject-$mode.log" 2>&1 || result=$?
+            printf '%s\t%s\t%s\n' "$subject" "$mode" "$result" >> failed-analysis/exports.tsv
+            if [ "$result" -ne 0 ]; then
+              status=1
+              printf 'Diagnostic export failed: %s/%s (exit %s); see retained log\n' "$subject" "$mode" "$result" >&2
+            fi
+          }
+          collect source vulnerabilities
+          collect frameworks constraints
+          for subject in sdk-go sdk-python sdk-java sdk-csharp sdk-ts sdk-swift \
+            archive-linux_amd64 archive-linux_arm64 archive-darwin_amd64 archive-darwin_arm64 \
+            image-amd64 image-arm64 binary frontend; do
+            for mode in vulnerabilities sbom-raw sbom-assessment; do
+              collect "$subject" "$mode"
+            done
+          done
+          exit "$status"
+        env:
+          RELEASE_TAG: ${{ github.ref_name }}
+          SOURCE_REVISION: ${{ github.sha }}
+      - name: Retain failed raw evidence
+        if: failure()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: failed-release-analysis
+          path: failed-analysis/
+          if-no-files-found: warn
 
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@8d2750c68a42422c14e847fe6c8ac0403b4cbd6f # v3
-
-      - name: Log in to GHCR
-        uses: docker/login-action@c94ce9fb468520275223c153574b00df6fe4bcc9 # v3
+  promote:
+    needs: candidate
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      packages: write
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          name: verified-release
+          path: staged
+      - name: Setup pinned Dagger
+        uses: dagger/dagger-for-github@057a749131c864e4a719e6773baf0d1447ef998f
+        with:
+          version: "v0.21.7"
+      - name: Reverify promotion subjects after staging transfer
+        run: |
+          dagger call verify-candidate --source=. --candidate=staged/verified \
+            --release-bundle=staged/attachments/release-manifest.sigstore.json \
+            --release-tag="$RELEASE_TAG" --source-revision="$SOURCE_REVISION" \
+            export --path=admitted
+          dagger call verify-transport --source=. --transport=staged/attachments/release-site.tar.gz \
+            --bundle=staged/attachments/release-manifest.sigstore.json --release-tag="$RELEASE_TAG" \
+            --source-revision="$SOURCE_REVISION" export --path=transport-verification.json
+          dagger call promotion-assets --source=. --candidate=admitted \
+            --release-bundle=admitted/proofs/release-manifest.sigstore.json \
+            --release-tag="$RELEASE_TAG" --source-revision="$SOURCE_REVISION" \
+            export --path=promoted-attachments
+          cp staged/attachments/release-site.tar.gz promoted-attachments/
+        env:
+          RELEASE_TAG: ${{ github.ref_name }}
+          SOURCE_REVISION: ${{ github.sha }}
+      - name: Log in to existing registry promotion boundary
+        uses: docker/login-action@c94ce9fb468520275223c153574b00df6fe4bcc9
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Refuse overwriting any consumer release identity
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends skopeo
+          python3 scripts/promotion-preflight.py --tag "$RELEASE_TAG" --revision "$SOURCE_REVISION"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RELEASE_TAG: ${{ github.ref_name }}
+          SOURCE_REVISION: ${{ github.sha }}
+      - name: Promote previously scanned and manifest-covered OCI bytes
+        run: |
+          skopeo copy --all --preserve-digests oci-archive:admitted/release/image.tar "docker://ghcr.io/$GITHUB_REPOSITORY:$RELEASE_TAG"
+          skopeo inspect --raw "docker://ghcr.io/$GITHUB_REPOSITORY:$RELEASE_TAG" > promoted-index.json
+          cmp admitted/release/image-index.json promoted-index.json
+        env:
+          RELEASE_TAG: ${{ github.ref_name }}
+      - name: Publish verified attachments without overwriting existing release
+        run: |
+          gh release create "$RELEASE_TAG" --verify-tag --draft promoted-attachments/* \
+            --title "$RELEASE_TAG" --notes "Source: $SOURCE_REVISION. Signed manifests bind exact artifacts and final portal bytes. See the retained verification envelope."
+          gh release edit "$RELEASE_TAG" --draft=false
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RELEASE_TAG: ${{ github.ref_name }}
+          SOURCE_REVISION: ${{ github.sha }}
 
-      - name: Build and push multi-arch image
-        id: push
-        uses: docker/build-push-action@10e90e3645eae34f1e60eeb005ba3a3d33f178e8 # v6
+      # GITHUB_TOKEN release publication does not trigger another workflow.
+      # Upload only the already admitted bytes; deploy in a separate Pages job.
+      - name: Stage admitted Pages bytes
+        uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa
         with:
-          context: .
-          push: true
-          platforms: linux/amd64,linux/arm64
-          tags: |
-            ghcr.io/${{ github.repository }}:${{ github.ref_name }}
-            ghcr.io/${{ github.repository }}:latest
+          path: admitted
 
-      - name: Attest the image (GitHub-signed provenance)
-        uses: actions/attest-build-provenance@4d101475d8b20a2381f78447822ac1eab6504dd8 # v4.2.2
-        with:
-          subject-name: "ghcr.io/${{ github.repository }}"
-          subject-digest: "${{ steps.push.outputs.digest }}"
-          push-to-registry: true
-
-      - name: Scan image with Trivy
-        uses: aquasecurity/trivy-action@a9c7b0f06e461e9d4b4d1711f154ee024b8d7ab8 # v0.36.0
-        with:
-          image-ref: ghcr.io/${{ github.repository }}:${{ github.ref_name }}
-          format: sarif
-          output: trivy-results.sarif
-          exit-code: "1"
-          severity: CRITICAL
-          ignore-unfixed: true
-
-      - name: Upload Trivy SARIF
-        uses: github/codeql-action/upload-sarif@988661ebb5e81487b3fb31b2185d2856c0a10679 # v4
-        if: always()
-        with:
-          sarif_file: trivy-results.sarif
-
-      - name: Generate image SBOM
-        uses: anchore/sbom-action@e22c389904149dbc22b58101806040fa8d37a610 # v0.24.0
-        with:
-          image: ghcr.io/${{ github.repository }}:${{ github.ref_name }}
-          format: cyclonedx-json
-          output-file: image-sbom.cyclonedx.json
-          upload-artifact: false
-          upload-release-assets: false
-
-      - name: Upload image SBOM
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
-        with:
-          name: image-sbom
-          path: image-sbom.cyclonedx.json
-
-  attest-sdks:
-    needs: [goreleaser]
+  pages:
+    needs: promote
     runs-on: ubuntu-latest
     permissions:
-      contents: write
+      pages: write
       id-token: write
-      attestations: write
+    concurrency:
+      group: pages
+      cancel-in-progress: false
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
-
-      - name: Setup Dagger
-        uses: dagger/dagger-for-github@057a749131c864e4a719e6773baf0d1447ef998f # v7
-        with:
-          version: "v0.21.7"
-
-      - name: Build SDK bundles
-        run: |
-          dagger call sdk-bundles --source=. export --path=./sdks
-
-      - name: Build OSCAL frameworks
-        run: |
-          dagger call oscal-frameworks --source=. export --path=./frameworks
-          # Rename each catalog.json to <framework>-catalog.json to avoid collisions
-          cd frameworks
-          for d in */; do
-            fw="${d%/}"
-            if [ -f "$d/catalog.json" ]; then
-              cp "$d/catalog.json" "../${fw}-catalog.json"
-            fi
-          done
-          cd ..
-
-      - name: Validate OSCAL schema compliance
-        run: |
-          dagger call oscal-schema-validation --source=. --frameworks=./frameworks
-
-      - name: Build xoscal-validate-schema and validate each catalog
-        run: |
-          go build -o /tmp/validate-schema ./server/cmd/xoscal-validate-schema
-          fail=0
-          for f in frameworks/*/catalog.json; do
-            [ -f "$f" ] || continue
-            echo "Validating $f..."
-            if ! /tmp/validate-schema -file "$f" -kind catalog; then
-              oscal_version=$(tr -d '[:space:]' < server/internal/oscalversion/VERSION)
-              echo "FAIL: $f does not conform to OSCAL $oscal_version schema"
-              fail=1
-            fi
-          done
-          if [ $fail -ne 0 ]; then exit 1; fi
-
-      - name: Attest SDK zips (GitHub-signed)
-        uses: actions/attest-build-provenance@4d101475d8b20a2381f78447822ac1eab6504dd8 # v4.2.2
-        with:
-          subject-path: "sdks/*.zip"
-
-      - name: Attest OSCAL framework catalogs (GitHub-signed)
-        uses: actions/attest-build-provenance@4d101475d8b20a2381f78447822ac1eab6504dd8 # v4.2.2
-        with:
-          subject-path: "*-catalog.json"
-
-      - name: Attach SDKs + frameworks to release
-        uses: softprops/action-gh-release@3bb12739c298aeb8a4eeaf626c5b8d85266b0e65 # v2
-        with:
-          files: |
-            sdks/*.zip
-            sdks/*.sha256
-            *-catalog.json
+      - id: deployment
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e

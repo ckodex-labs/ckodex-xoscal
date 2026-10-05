@@ -162,14 +162,21 @@
     const index = records.length;
     const clone = records[0].cloneNode(true);
     clone.dataset.importRecord = String(index);
+    const clonedIDs = new Map();
     clone.querySelectorAll("[id]").forEach(element => {
-      element.id = element.id.replace(/-0$/, `-${index}`);
+      const originalID = element.id;
+      element.id = originalID.replace(/-0$/, `-${index}`);
+      clonedIDs.set(originalID, element.id);
     });
     clone.querySelectorAll("label[for]").forEach(label => {
-      label.htmlFor = label.htmlFor.replace(/-0$/, `-${index}`);
+      label.htmlFor = clonedIDs.get(label.htmlFor) || label.htmlFor;
     });
-    clone.querySelectorAll("[aria-describedby]").forEach(element => {
-      element.setAttribute("aria-describedby", element.getAttribute("aria-describedby").replace(/-0$/, `-${index}`));
+    [clone, ...clone.querySelectorAll("[aria-describedby], [aria-labelledby]")].forEach(element => {
+      ["aria-describedby", "aria-labelledby"].forEach(attribute => {
+        if (!element.hasAttribute(attribute)) return;
+        const references = element.getAttribute(attribute).split(/\s+/).filter(Boolean);
+        element.setAttribute(attribute, references.map(id => clonedIDs.get(id) || id).join(" "));
+      });
     });
     clone.querySelectorAll(".ck-import-error").forEach(error => error.remove());
     clone.querySelectorAll("[aria-invalid]").forEach(element => element.removeAttribute("aria-invalid"));

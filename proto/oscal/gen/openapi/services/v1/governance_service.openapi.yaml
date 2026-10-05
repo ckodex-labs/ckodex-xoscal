@@ -519,7 +519,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/oscal.services.v1.CreateReleaseResponse'
-  /v1/search:
+  /v1/search/semantic:
     get:
       tags:
         - oscal.services.v1.GovernanceService

@@ -4,9 +4,6 @@ BINARY := xoscal-server
 IMAGE  := xoscal-server
 VERSION := $(shell git describe --tags --always 2>/dev/null || echo dev)
 LDFLAGS := -ldflags="-s -w -X main.version=$(VERSION)"
-GO_TOOLCHAIN := go1.25.13
-GOVULNCHECK_VERSION := v1.7.0
-GOSEC_VERSION := v2.28.0
 
 all: build
 
@@ -59,13 +56,7 @@ fmt:
 	gofmt -w .
 
 security:
-	GOTOOLCHAIN=$(GO_TOOLCHAIN) go install golang.org/x/vuln/cmd/govulncheck@$(GOVULNCHECK_VERSION)
-	GOTOOLCHAIN=$(GO_TOOLCHAIN) govulncheck ./...
-	GOTOOLCHAIN=$(GO_TOOLCHAIN) go install github.com/securego/gosec/v2/cmd/gosec@$(GOSEC_VERSION)
-	# govulncheck is the blocking dependency gate; gosec emits the SARIF report
-	# while excluding generated protobufs and tolerating analyzer-only failures.
-	# Limit analyzer concurrency so the report is stable in constrained CI runners.
-	GOTOOLCHAIN=$(GO_TOOLCHAIN) gosec -concurrency=2 -fmt sarif -out gosec-results.sarif -exclude-dir=proto -no-fail ./server/...
+	dagger call security-analysis --source=. export --path=security-analysis
 
 docker:
 	docker build -t $(IMAGE):$(VERSION) .
@@ -104,10 +95,10 @@ dagger-image: dagger-dev
 	dagger call image --source=.
 
 dagger-snapshot: dagger-dev
-	dagger call snapshot --source=. --github-token=env:GITHUB_TOKEN
+	dagger call snapshot --source=.
 
 dagger-release: dagger-dev
-	dagger call release --source=. --github-token=env:GITHUB_TOKEN
+	dagger call release --source=.
 
 site: dagger-dev ## Build the portal site to ./_site (real data; needs engine + network)
 	dagger call site --source=. export --path=_site
