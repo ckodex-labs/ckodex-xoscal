@@ -10,8 +10,7 @@
     "!coverage.html",
     "!gosec-results.sarif",
     "!*.db",
-    "!*.db-journal",
-    "!.github/"
+    "!*.db-journal"
   ],
   "source": "dagger",
   "disableDefaultFunctionCaching": true

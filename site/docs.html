@@ -32,7 +32,9 @@
         <p class="ck-label ck-page-kicker">contract surface</p>
         <h1 class="ck-page-title">API &amp; gRPC Service Reference</h1>
       </div>
-      <p class="ck-site-note">The xOSCAL control plane exposes dual-transport interfaces: high-throughput binary gRPC on port 9090 and an HTTP/1.1 REST gateway on port 8080. All endpoints accept and return canonical OSCAL 1.2.3 JSON schemas with vector-state headers.</p>
+      <p class="ck-site-note">The xOSCAL control plane exposes dual-transport interfaces: binary gRPC on port 50051 and an HTTP/1.1 REST gateway on port 8080. Metrics use port 9090. The gateway uses protobuf JSON request and response envelopes; OSCAL-bearing fields follow the OSCAL 1.2.3 model contract. Authentication and TLS depend on deployment configuration.</p>
+
+      <p class="ck-site-note">OSCAL search uses <code>GET /v1/search</code>; governance semantic search uses <code>GET /v1/search/semantic</code>. The semantic route replaces an overlapping annotation that could not expose both searches reliably. gRPC method names remain unchanged.</p>
 
       <section class="ck-stack ck-stack--tight" aria-labelledby="services-heading">
         <h2 id="services-heading">Core gRPC Services</h2>
@@ -49,23 +51,23 @@
             <tr>
               <td><strong>OscalService</strong></td>
               <td><code>oscal.services.v1</code></td>
-              <td>Full CRUD and validation for all 8 OSCAL 1.2.3 model types</td>
-              <td><code>/v1/catalogs</code>, <code>/v1/ssps</code>, <code>/v1/components</code></td>
+              <td>CRUD and search across all 8 OSCAL model types</td>
+              <td><code>/v1/catalogs</code>, <code>/v1/ssps</code>, <code>/v1/component-definitions</code></td>
             </tr>
             <tr>
               <td><strong>GovernanceService</strong></td>
               <td><code>oscal.services.v1</code></td>
-              <td>Immutable snapshots, release attestation, and entity graph ledger</td>
+              <td>Entity operations, snapshots, releases, ingestion, and semantic search</td>
               <td><code>/v1/entities</code>, <code>/v1/snapshots</code>, <code>/v1/releases</code></td>
             </tr>
             <tr>
-              <td><strong>TransparencyExchange</strong></td>
+              <td><strong>TransparencyExchangeService</strong></td>
               <td><code>oscal.services.v1</code></td>
-              <td>Claim admission, cryptographic receipts, and SLSA provenance export</td>
-              <td><code>/v1/claims</code>, <code>/v1/receipts</code></td>
+              <td>Claim and evidence intake, verification history, and verification receipts</td>
+              <td><code>/v1/transparency/claims</code>, <code>/v1/transparency/claims/{claim_id}/receipt</code></td>
             </tr>
             <tr>
-              <td><strong>TransparencyGraph</strong></td>
+              <td><strong>TransparencyGraphService</strong></td>
               <td><code>oscal.services.v1</code></td>
               <td>Semantic lineage traversal and control inheritance graph queries</td>
               <td><code>/v1/graph</code></td>
@@ -81,11 +83,11 @@
             <tr><th scope="col">Method</th><th scope="col">HTTP Path</th><th scope="col">Description</th></tr>
           </thead>
           <tbody>
-            <tr><td><code>GET</code></td><td><code>/v1/components</code></td><td>List all registered OSCAL Component Definitions.</td></tr>
-            <tr><td><code>POST</code></td><td><code>/v1/components</code></td><td>Register a newly synthesized Component Definition.</td></tr>
-            <tr><td><code>GET</code></td><td><code>/v1/catalogs/{uuid}</code></td><td>Fetch canonical catalog by RFC-4122 UUID.</td></tr>
+            <tr><td><code>GET</code></td><td><code>/v1/component-definitions</code></td><td>List all registered OSCAL Component Definitions.</td></tr>
+            <tr><td><code>POST</code></td><td><code>/v1/component-definitions</code></td><td>Register a newly synthesized Component Definition.</td></tr>
+            <tr><td><code>GET</code></td><td><code>/v1/catalogs/{uuid.value}</code></td><td>Fetch canonical catalog by RFC-4122 UUID.</td></tr>
             <tr><td><code>POST</code></td><td><code>/v1/catalogs</code></td><td>Upload or ingest an authoritative control catalog.</td></tr>
-            <tr><td><code>GET</code></td><td><code>/v1/ssps/{uuid}</code></td><td>Retrieve System Security Plan (SSP) with control implementations.</td></tr>
+            <tr><td><code>GET</code></td><td><code>/v1/ssps/{uuid.value}</code></td><td>Retrieve System Security Plan (SSP) with control implementations.</td></tr>
             <tr><td><code>POST</code></td><td><code>/v1/ssps</code></td><td>Store or update System Security Plan.</td></tr>
             <tr><td><code>POST</code></td><td><code>/v1/snapshots</code></td><td>Freeze an immutable compliance snapshot across all models.</td></tr>
             <tr><td><code>GET</code></td><td><code>/v1/entities/{urn}</code></td><td>Resolve an entity in the governance knowledge graph by URN.</td></tr>
@@ -97,12 +99,27 @@
         <h2 id="example-heading">Gateway Usage Example</h2>
         <div class="ck-quiet ck-padded ck-stack--tight">
           <p class="ck-label">Querying Component Definitions via curl:</p>
-          <pre class="ck-code-block"><code>curl -s -X GET http://127.0.0.1:8080/v1/components \
+          <pre class="ck-code-block"><code>curl -s -X GET http://127.0.0.1:8080/v1/component-definitions \
   -H "Accept: application/json"</code></pre>
           <p class="ck-label">Publishing an Assessment Plan:</p>
+          <p>Save this protobuf JSON request envelope as <code>create-assessment-plan-request.json</code>. Use camelCase fields and message wrappers such as <code>uuid.value</code> and <code>importSsp.href.value</code>; the gateway does not accept a raw NIST OSCAL document with an <code>assessment-plan</code> root. See the <a href="openapi.json">generated OpenAPI request schema</a> for <code>CreateAssessmentPlanRequest</code> and its model types.</p>
+          <pre id="assessment-plan-request" class="ck-code-block"><code>{
+  "assessmentPlan": {
+    "uuid": {"value": "123e4567-e89b-42d3-a456-426614174000"},
+    "metadata": {
+      "title": "Example assessment plan",
+      "version": "1.0",
+      "oscalVersion": "1.2.3"
+    },
+    "importSsp": {"href": {"value": "https://example.gov/ssp.json"}},
+    "reviewedControls": {
+      "controlSelections": [{"includeAll": {}}]
+    }
+  }
+}</code></pre>
           <pre class="ck-code-block"><code>curl -s -X POST http://127.0.0.1:8080/v1/assessment-plans \
   -H "Content-Type: application/json" \
-  -d @assessment-plan.json</code></pre>
+  -d @create-assessment-plan-request.json</code></pre>
         </div>
       </section>
 
@@ -117,10 +134,10 @@
   <aside class="ck-shell__margin" aria-label="Evidence Margin">
     <div class="ck-stack ck-stack--tight">
       <div class="ck-margin__head"><h2>Evidence Margin</h2></div>
-      <div class="ck-receipt"><span class="ck-receipt__rule"></span><div><div class="ck-receipt__event">gRPC interfaces defined</div><div class="ck-receipt__detail">&#8866; verified &mdash; proto/oscal/services/v1</div></div></div>
-      <div class="ck-receipt"><span class="ck-receipt__rule"></span><div><div class="ck-receipt__event">Protobuf schema compiled</div><div class="ck-receipt__detail">&#8866; verified &mdash; buf generate</div></div></div>
-      <div class="ck-receipt"><span class="ck-receipt__rule"></span><div><div class="ck-receipt__event">REST gateway mapped</div><div class="ck-receipt__detail">&#8866; observed &mdash; grpc-gateway</div></div></div>
-      <span class="ck-chip ck-chip--observed">&#8866; observed</span>
+      <div class="ck-receipt"><span class="ck-receipt__rule"></span><div><div class="ck-receipt__event">gRPC interface sources</div><div class="ck-receipt__detail">defined &mdash; proto/oscal/services/v1</div></div></div>
+      <div class="ck-receipt"><span class="ck-receipt__rule"></span><div><div class="ck-receipt__event">Protobuf generation contract</div><div class="ck-receipt__detail">producer &mdash; buf generate</div></div></div>
+      <div class="ck-receipt"><span class="ck-receipt__rule"></span><div><div class="ck-receipt__event">REST gateway mapped</div><div class="ck-receipt__detail">producer &mdash; grpc-gateway</div></div></div>
+      <span class="ck-chip ck-chip--observed">contract reference</span>
     </div>
   </aside>
   <footer class="ck-shell__footer ck-authority ck-authority--internal" aria-label="Authority Footer">

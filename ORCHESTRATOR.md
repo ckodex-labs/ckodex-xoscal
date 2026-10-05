@@ -1,7 +1,7 @@
 # ORCHESTRATOR — xOSCAL coding domain v1
 
 This file is the repository-bound execution contract for work in
-`ckodex-oscalify`. It adapts the generic orchestrator prompt to the actual
+`ckodex-xoscal`. It adapts the generic orchestrator prompt to the actual
 checkout: a Go gRPC service, an OSCAL 1.2.3 artifact pipeline, a Dagger build
 graph, and a static GitHub Pages portal.
 
@@ -9,12 +9,12 @@ graph, and a static GitHub Pages portal.
 
 ```yaml
 domain: coding
-repository: ckodex-oscalify
+repository: ckodex-xoscal
 workspace_boundary: local checkout; preserve unrelated user changes
 artifact_of_record: git diff and committed tree
-primary_runtime: Go 1.24+ service and Dagger SDK pipeline
-data_contract: OSCAL 1.2.3 JSON Schema; pinned oscal-cli 1.1.2 Metaschema checks are non-blocking
-presentation_runtime: static HTML/CSS/JavaScript under site/
+primary_runtime: Go 1.26.2+ service and Dagger 0.21.7 pipeline with an admitted Go 1.27.1 SDK runtime
+data_contract: OSCAL 1.2.3 JSON Schema; checksum-pinned oscal-cli 1.0.3 checks reviewed 1.1.2 semantic compatibility for exported catalogs/profiles; unsupported features block admission (docs/OSCAL-SEMANTIC-COVERAGE.md)
+presentation_runtime: static HTML/CSS/JavaScript under site/; pinned third-party Scalar bundle produced and analyzed by Dagger
 portal_entrypoints:
   live_build: site/portal.html assembled by dagger call site
   standalone_preview: portal-preview.html
@@ -24,10 +24,11 @@ proof_boundary: local tests and rendered checks are local evidence; hosted,
   release, signing, and external acceptance remain separate gates
 ```
 
-The checkout is not a React, Vite, or browser-bundled application. Do not
-invent those layers. UI changes target the static HTML, the canonical
-`site/styles.css` entry point, the Dagger site assembly, and the standalone
-preview together.
+The site's application remains static HTML/CSS/JavaScript. UI changes target
+those files, the canonical `site/styles.css` entry point, the Dagger site
+assembly, and the standalone preview together. Dagger's frozen esbuild producer
+rebundles the third-party Scalar API reference with reviewed dependency fixes;
+it does not introduce a framework or a server into the portal application.
 
 ## 1. Objective
 

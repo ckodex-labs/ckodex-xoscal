@@ -1,0 +1,10 @@
+import assert from "node:assert/strict";
+import { create, toBinary, fromBinary } from "@bufbuild/protobuf";
+import { ListCatalogsRequestSchema, OscalService } from "@ckodex/xoscal-sdk/services/v1/oscal_service_pb";
+import { GovernanceService } from "@ckodex/xoscal-sdk/services/v1/governance_service_pb";
+import { TransparencyExchangeService } from "@ckodex/xoscal-sdk/services/v1/transparency_exchange_service_pb";
+import { TransparencyGraphService } from "@ckodex/xoscal-sdk/services/v1/transparency_graph_service_pb";
+const message = create(ListCatalogsRequestSchema, { pageSize: 17 });
+assert.equal(fromBinary(ListCatalogsRequestSchema, toBinary(ListCatalogsRequestSchema, message)).pageSize, 17);
+for (const service of [OscalService, GovernanceService, TransparencyExchangeService, TransparencyGraphService]) assert.ok(service.methods.length > 0);
+console.log("Node ESM SDK message and four service descriptors passed");

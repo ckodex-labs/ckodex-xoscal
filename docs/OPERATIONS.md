@@ -245,24 +245,23 @@ After restore, verify the server readiness probe, run the review-flow smoke chec
 
 ## Release bundle retention and export
 
-Every published release has a verifiable evidence bundle. Assemble it with:
+Select an explicit release tag and independently expected full source revision. New evidence-gated releases include a signed transport and final manifest. Historical releases without that contract remain incomplete. Assemble a new-format bundle with:
 
 ```bash
-dagger call release-bundle --github-token=env:GITHUB_TOKEN export --path=./release-bundle
+dagger call release-bundle --source=. --release-tag=vX.Y.Z --source-revision=<full-sha> export --path=./release-bundle
 ```
 
-The bundle contains every release asset, `image-attestation.json`, and
-`inventory.json` (name, SHA-256, size, and verification status per asset).
-Assembly aborts unless checksums, the GitHub artifact attestations for every
-attested artifact, and the image attestation all verify; a partial bundle is
-never produced.
+The bundle contains the unchanged generated site, all locally staged payloads,
+`release-manifest.json`, and `proofs/` with signature bundles and exact-byte
+verification results. Assembly aborts unless the signed transport, expected
+workflow/source/tag identity, final manifest, and every covered byte verify.
 
 Retention procedure:
 
 1. Assemble the bundle for the deployed tag and store it beside the backup
    snapshot for that deployment.
 2. Record the bundle inventory digest alongside the backup hash:
-   `sha256sum bundle/inventory.json` in the operations log.
+   `sha256sum release-bundle/release-manifest.json` in the operations log.
 3. Keep the bundle for the same retention period as the matching database
    backup; the receipt export on the Live Review surface references the
    release tag, so the bundle must outlive the evidence it attests.
@@ -270,7 +269,7 @@ Retention procedure:
    before trusting the deployed artifact:
 
 ```bash
-dagger call verify-published-release --github-token=env:GITHUB_TOKEN export --path=./bundle-verify
+dagger call verify-published-release --source=. --release-tag=vX.Y.Z --source-revision=<full-sha> export --path=./bundle-verify
 ```
 
 The verification is fail-closed: checksum mismatch, missing signature,

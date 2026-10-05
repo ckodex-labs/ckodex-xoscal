@@ -14,17 +14,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
 
       - name: Setup Dagger
         uses: dagger/dagger-for-github@057a749131c864e4a719e6773baf0d1447ef998f # v7
         with:
           version: "v0.21.7"
 
-      - name: Check go.mod is tidy
-        run: go mod tidy && git diff --exit-code go.mod go.sum
-
       - name: Dagger All (lint + test + race + security)
-        run: dagger call all --source=.
+        run: dagger call all --source=. export --path=ci-gates
 
       - name: Coverage Report
         run: dagger call coverage --source=. export --path=coverage.html
@@ -38,9 +37,12 @@ jobs:
   security:
     runs-on: ubuntu-latest
     permissions:
+      contents: read
       security-events: write
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
 
       - name: Setup Dagger
         uses: dagger/dagger-for-github@057a749131c864e4a719e6773baf0d1447ef998f # v7
@@ -56,86 +58,54 @@ jobs:
         with:
           sarif_file: gosec-results.sarif
 
+  site:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Setup pinned Dagger
+        uses: dagger/dagger-for-github@057a749131c864e4a719e6773baf0d1447ef998f
+        with:
+          version: "v0.21.7"
+      - name: Retain raw frontend analysis through Dagger
+        run: dagger call frontend-analysis-reports export --path=frontend-analysis > frontend-export.log 2>&1
+      - name: Produce and validate exact served site through Dagger
+        run: dagger call site --source=. export --path=site-preview
+      - name: Preserve frontend evidence and producer diagnostics
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: frontend-analysis
+          path: |
+            frontend-analysis/
+            frontend-export.log
+          if-no-files-found: error
+
   container:
     runs-on: ubuntu-latest
     permissions:
-      security-events: write
+      contents: read
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
 
       - name: Setup Dagger
         uses: dagger/dagger-for-github@057a749131c864e4a719e6773baf0d1447ef998f # v7
         with:
           version: "v0.21.7"
 
-      - name: Dagger Image Build
-        run: dagger call image --source=. export --path=xoscal-server.tar
-
-      - name: Scan image with Trivy
-        uses: aquasecurity/trivy-action@a9c7b0f06e461e9d4b4d1711f154ee024b8d7ab8 # v0.36.0
-        with:
-          input: xoscal-server.tar
-          format: sarif
-          output: trivy-results.sarif
-          exit-code: "1"
-          severity: CRITICAL,HIGH
-          # Without this the wrapper unsets the severity filter for SARIF
-          # output, so exit-code fires on the base image's known low/medium
-          # findings instead of only the CRITICAL,HIGH gate.
-          limit-severities-for-sarif: true
-
-      - name: Upload Trivy SARIF
-        uses: github/codeql-action/upload-sarif@988661ebb5e81487b3fb31b2185d2856c0a10679 # v4
+      - name: Collect exact local image findings through Dagger
+        run: |
+          dagger call image --source=. export --path=xoscal-server.tar
+          dagger call image-analysis-reports --archive=xoscal-server.tar export --path=image-analysis
+      - name: Enforce image CI threshold through Dagger
+        run: dagger call image-analysis-ci --source=. --archive=xoscal-server.tar export --path=admitted-image-analysis
+      - name: Retain raw image analysis
         if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
-          sarif_file: trivy-results.sarif
-
-  verify-release:
-    runs-on: ubuntu-latest
-    if: github.event_name == 'push'
-    permissions:
-      contents: read
-      packages: read
-      attestations: read
-    steps:
-      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
-
-      - name: Get latest release tag
-        id: latest
-        run: echo "tag=$(gh release list --limit 1 --json tagName --jq '.[0].tagName')" >> "$GITHUB_OUTPUT"
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Skip if no release
-        if: steps.latest.outputs.tag == ''
-        run: echo "No releases found, skipping verification."
-
-      - name: Log in to GHCR
-        if: steps.latest.outputs.tag != ''
-        uses: docker/login-action@c94ce9fb468520275223c153574b00df6fe4bcc9 # v3
-        with:
-          registry: ghcr.io
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Verify image attestation (GitHub-signed)
-        if: steps.latest.outputs.tag != ''
-        run: |
-          gh attestation verify \
-            "oci://ghcr.io/ckodex-labs/ckodex-xoscal:${{ steps.latest.outputs.tag }}" \
-            -R ckodex-labs/ckodex-xoscal
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Verify artifact attestations (GitHub-signed)
-        if: steps.latest.outputs.tag != ''
-        run: |
-          tag="${{ steps.latest.outputs.tag }}"
-          gh release download "$tag" --pattern "*.tar.gz" --dir /tmp --clobber
-          gh release download "$tag" --pattern "checksums.txt" --dir /tmp --clobber
-          for artifact in /tmp/ckodex-xoscal_*.tar.gz /tmp/checksums.txt; do
-            echo "Verifying attestation: $artifact"
-            gh attestation verify "$artifact" -R ckodex-labs/ckodex-xoscal
-          done
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          name: image-analysis
+          path: image-analysis/
+          if-no-files-found: error

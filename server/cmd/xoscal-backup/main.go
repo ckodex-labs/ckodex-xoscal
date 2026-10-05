@@ -11,7 +11,10 @@ import (
 	"github.com/mchorfa/xoscal/server/internal/dbutil"
 )
 
+var version = "dev"
+
 func main() {
+	showVersion := flag.Bool("version", false, "Print build version and exit")
 	dsn := flag.String("dsn", "oscal.db", "SQLite data source path")
 	out := flag.String("out", "", "New backup destination path")
 	file := flag.String("file", "", "Target backup file for verify or restore")
@@ -20,6 +23,10 @@ func main() {
 	force := flag.Bool("force", false, "Allow overwriting target database during restore")
 	sidecar := flag.Bool("sidecar", true, "Automatically generate SHA-256 checksum sidecar (.sha256)")
 	flag.Parse()
+	if *showVersion {
+		fmt.Println(version)
+		return
+	}
 
 	ctx := context.Background()
 

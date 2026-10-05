@@ -6,6 +6,8 @@ FROM golang:1.25-bookworm@sha256:e401dae1bf814e29204a8cb7915682e1780951e609ca0dd
 ARG LANCEDB
 WORKDIR /app
 
+RUN case "$LANCEDB" in true|false) ;; *) echo "LANCEDB must be true or false" >&2; exit 1;; esac
+
 # Install base dependencies and optionally Rust for LanceDB builds
 RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates git \
     && if [ "$LANCEDB" = "true" ]; then \
@@ -30,7 +32,8 @@ RUN if [ "$LANCEDB" = "true" ]; then \
     && ARCH=$(uname -m | sed 's/x86_64/amd64/;s/aarch64/arm64/') \
     && export CGO_CFLAGS="-I/tmp/lancedb-go/include" \
     && export CGO_LDFLAGS="/tmp/lancedb-go/lib/linux_${ARCH}/liblancedb_go.a" \
-    && go build -tags lancedb -ldflags="-s -w -X main.version=$(git describe --tags --always 2>/dev/null || echo dev)" -o /bin/xoscal-server ./server/cmd/xoscal-server; \
+    && cd /app \
+    && CGO_ENABLED=1 go build -tags lancedb -ldflags="-s -w -X main.version=$(git describe --tags --always 2>/dev/null || echo dev)" -o /bin/xoscal-server ./server/cmd/xoscal-server; \
     else \
     CGO_ENABLED=0 go build -ldflags="-s -w -X main.version=$(git describe --tags --always 2>/dev/null || echo dev)" -o /bin/xoscal-server ./server/cmd/xoscal-server; \
     fi
@@ -38,13 +41,18 @@ RUN if [ "$LANCEDB" = "true" ]; then \
 RUN CGO_ENABLED=0 go build -ldflags="-s -w" -o /bin/xoscal-backup ./server/cmd/xoscal-backup
 RUN CGO_ENABLED=0 go build -ldflags="-s -w" -o /bin/xoscal-ctl ./server/cmd/xoscal-ctl
 
-# Runtime stage: base image includes glibc required by CGO-linked LanceDB binaries
-FROM gcr.io/distroless/base-debian12:nonroot@sha256:b12529fbbd0bb15eea8905f69d83148679e0b4d7d434c8808100792029b1caae
+# The default release path is static. The optional native path needs glibc.
+# LanceDB's Rust toolchain/native library are not release-validated here; this
+# runtime selection preserves the development option without a release claim.
+FROM gcr.io/distroless/static-debian13:nonroot@sha256:e2e927ec666bae08560abb3c55d0659eceabb657f56b6782ab500a9fc7f555e3 AS runtime-false
+FROM gcr.io/distroless/base-debian13:nonroot@sha256:a0d70d6a97cd697d9362bc2aae4a6560dd65817e365d0043b07325a97975dc91 AS runtime-true
+FROM runtime-${LANCEDB} AS runtime
 WORKDIR /data
 COPY --from=builder /bin/xoscal-server /xoscal-server
 COPY --from=builder /bin/xoscal-backup /xoscal-backup
 COPY --from=builder /bin/xoscal-ctl /xoscal-ctl
-COPY --from=builder /app/k8s/server/configmap.yaml /etc/xoscal/config.yaml
+# Mount actual application YAML at /etc/xoscal/config.yaml, plus its referenced
+# TLS/auth files. k8s/server/configmap.yaml is a Kubernetes wrapper, not that file.
 EXPOSE 50051 9090
 ENTRYPOINT ["/xoscal-server"]
 CMD ["-config", "/etc/xoscal/config.yaml"]

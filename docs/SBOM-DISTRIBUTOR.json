@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "role": "release-distributor",
+  "entity": {
+    "name": "ckodex-labs",
+    "url": ["https://github.com/ckodex-labs/ckodex-xoscal"]
+  },
+  "definition": "CycloneDX component supplier may be a distributor or repackager; this policy identifies the distributor of the delivered xoscal release bytes, never an upstream manufacturer.",
+  "definition_source": "https://raw.githubusercontent.com/CycloneDX/specification/1.7/schema/bom-1.7.schema.json"
+}

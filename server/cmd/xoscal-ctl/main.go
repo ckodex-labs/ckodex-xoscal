@@ -29,7 +29,7 @@ import (
 	"github.com/mchorfa/xoscal/server/internal/vectorstate"
 )
 
-const version = "1.0.0"
+var version = "dev"
 
 func printUsage() {
 	fmt.Printf(`xoscal-ctl v%s — Unified xOSCAL Compliance & Governance Engine
@@ -326,6 +326,7 @@ func runTabular(args []string) {
 			os.Exit(1)
 		}
 
+		// #nosec G703 -- The local invoking operator selects --out; artifact fields cannot select this destination.
 		if err := os.WriteFile(*outFile, csvBytes, 0600); err != nil {
 			fmt.Fprintf(os.Stderr, "error writing CSV: %v\n", err)
 			os.Exit(1)
@@ -357,6 +358,7 @@ func runTabular(args []string) {
 			os.Exit(1)
 		}
 
+		// #nosec G703 -- The local invoking operator selects --out; imported CSV cells cannot select this destination.
 		if err := os.WriteFile(*outFile, updatedJSON, 0600); err != nil {
 			fmt.Fprintf(os.Stderr, "error writing output JSON: %v\n", err)
 			os.Exit(1)

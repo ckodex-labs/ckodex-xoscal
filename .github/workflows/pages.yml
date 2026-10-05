@@ -1,42 +1,78 @@
 name: Pages
 
 on:
-  push:
-    branches: [main]
-  workflow_dispatch: {}
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      release_tag:
+        description: Explicit verified release tag
+        required: true
+        type: string
+      source_revision:
+        description: Independently expected full source SHA
+        required: true
+        type: string
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
   group: pages
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
-  build:
+  verify:
     runs-on: ubuntu-latest
+    outputs:
+      page_artifact: ${{ steps.upload.outputs.artifact_id }}
     steps:
-      - uses: actions/checkout@v4
-      - name: Setup Dagger
-        uses: dagger/dagger-for-github@v6
+      - name: Checkout trusted workflow source
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
-          install-only: true
-          version: "v0.21.7"
-      - name: Build site
-        run: dagger call site --source=. --github-token=env:GITHUB_TOKEN export --path=_site
+          persist-credentials: false
+      - name: Resolve published tag to immutable commit
+        id: identity
+        run: |
+          python3 - "$RELEASE_TAG" "$EXPECTED_SOURCE" <<'PYCODE'
+          import re, sys
+          if not re.fullmatch(r"v[0-9]+\.[0-9]+\.[0-9]+(?:[-+][A-Za-z0-9.-]+)?", sys.argv[1]):
+              raise SystemExit("explicit semantic release tag required")
+          if sys.argv[2] and not re.fullmatch(r"[0-9a-f]{40}", sys.argv[2]):
+              raise SystemExit("full expected source SHA required")
+          PYCODE
+          if [ -z "$EXPECTED_SOURCE" ]; then
+            git fetch --no-tags origin "refs/tags/$RELEASE_TAG:refs/tags/$RELEASE_TAG"
+            EXPECTED_SOURCE=$(git rev-parse "refs/tags/$RELEASE_TAG^{commit}")
+          fi
+          printf 'tag=%s\nrevision=%s\n' "$RELEASE_TAG" "$EXPECTED_SOURCE" >> "$GITHUB_OUTPUT"
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - uses: actions/upload-pages-artifact@v3
+          RELEASE_TAG: ${{ inputs.release_tag || github.event.release.tag_name }}
+          EXPECTED_SOURCE: ${{ inputs.source_revision }}
+      - name: Setup pinned Dagger
+        uses: dagger/dagger-for-github@057a749131c864e4a719e6773baf0d1447ef998f
+        with:
+          version: "v0.21.7"
+      - name: Retrieve and verify unchanged pinned release site
+        run: |
+          dagger call verify-published-release --source=. --release-tag="$RELEASE_TAG" \
+            --source-revision="$SOURCE_REVISION" export --path=_site
+        env:
+          RELEASE_TAG: ${{ steps.identity.outputs.tag }}
+          SOURCE_REVISION: ${{ steps.identity.outputs.revision }}
+      - id: upload
+        uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa
         with:
           path: _site
   deploy:
-    needs: build
+    needs: verify
     runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e

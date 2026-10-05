@@ -20,7 +20,7 @@ const (
 	syftVersion            = "v1.51.0"
 	syftLinuxAMD64SHA      = "2a2e837a2c8d59ec9af5472ee22d3b04ee463c4e44476ecf993fd1e5ab6ebc7f"
 	syftLinuxARM64SHA      = "6c0466811541ea03add5213a60a1562f0851e4c0b0ecfdee1a694a9455285900"
-	distrolessBase         = "gcr.io/distroless/base-debian12:nonroot@sha256:b12529fbbd0bb15eea8905f69d83148679e0b4d7d434c8808100792029b1caae"
+	distrolessBase         = "gcr.io/distroless/static-debian13:nonroot@sha256:e2e927ec666bae08560abb3c55d0659eceabb657f56b6782ab500a9fc7f555e3"
 	ubuntuBase             = "ubuntu:24.04@sha256:561618e2c15bf2397621dd04f96926663a3b5616c189cf7e38db7e82f5c538ea"
 )
 
@@ -57,6 +57,9 @@ func (m *Xoscal) base(source *dagger.Directory) *dagger.Container {
 		WithEnvVariable("GOMODCACHE", "/go/pkg/mod").
 		WithEnvVariable("GOCACHE", "/root/.cache/go-build").
 		WithEnvVariable("CGO_ENABLED", "0").
+		WithEnvVariable("GOFLAGS", "-p=2 -mod=readonly").
+		WithEnvVariable("GOWORK", "off").
+		WithEnvVariable("GOMAXPROCS", "2").
 		WithEnvVariable("DEBIAN_FRONTEND", "noninteractive").
 		WithMountedCache("/var/cache/apt", aptCache, dagger.ContainerWithMountedCacheOpts{Sharing: dagger.CacheSharingModePrivate}).
 		WithMountedCache("/var/lib/apt/lists", aptLists, dagger.ContainerWithMountedCacheOpts{Sharing: dagger.CacheSharingModePrivate}).
@@ -127,6 +130,9 @@ func (m *Xoscal) toolBase() *dagger.Container {
 	aptLists := dag.CacheVolume("apt-lists")
 	return dag.Container().
 		From(goBuilderImage).
+		WithEnvVariable("GOMAXPROCS", "2").
+		WithEnvVariable("GOFLAGS", "-p=2 -mod=readonly").
+		WithEnvVariable("GOWORK", "off").
 		WithMountedCache("/var/cache/apt", aptCache, dagger.ContainerWithMountedCacheOpts{Sharing: dagger.CacheSharingModePrivate}).
 		WithMountedCache("/var/lib/apt/lists", aptLists, dagger.ContainerWithMountedCacheOpts{Sharing: dagger.CacheSharingModePrivate}).
 		WithExec([]string{"apt-get", "update"}).
@@ -197,28 +203,9 @@ func (m *Xoscal) SpecRegistryCheck(source *dagger.Directory) *dagger.Container {
 		WithExec([]string{"sh", "-c", "echo 'specreg-ok' > /tmp/specreg.ok"})
 }
 
-// SdkBundles runs buf generate and zips each language SDK with a sha256 sidecar.
-// Also extracts the OpenAPI document for the docs page.
+// SdkBundles returns tested language distributions and source bundles.
 func (m *Xoscal) SdkBundles(source *dagger.Directory) *dagger.Directory {
-	langs := "go python java csharp ts swift"
-	gen := m.toolBase().
-		WithExec([]string{"sh", "-c", "apt-get update && apt-get install -y --no-install-recommends zip"}).
-		WithDirectory("/src", source).
-		WithWorkdir("/src").
-		// Use the nested proto/oscal module config: it emits every SDK to a
-		// uniform gen/<lang> layout (incl. gen/go). The ROOT buf.gen.yaml sends
-		// the Go SDK to proto/oscal/ source-relative, so gen/go never exists there.
-		WithExec([]string{"sh", "-c", "cd proto/oscal && buf generate && find gen/java -type f -name '*.java' -exec sed -i 's/[[:space:]]*$//' {} +"}).
-		WithExec([]string{"mkdir", "-p", "/out"}).
-		WithExec([]string{"sh", "-c",
-			"for l in " + langs + "; do " +
-				"d=proto/oscal/gen/$l; [ -d \"$d\" ] || { echo \"missing $d\" >&2; exit 1; }; " +
-				"(cd \"$d\" && zip -qr /out/$l.zip .); " +
-				"sha256sum /out/$l.zip | awk '{print \"sha256:\"$1}' > /out/$l.zip.sha256; " +
-				"done"}).
-		WithExec([]string{"sh", "-c",
-			"f=\"$(find proto/oscal/gen/openapi -name '*.json' -o -name '*.yaml' | head -n1)\"; [ -n \"$f\" ] || { echo 'no openapi doc found' >&2; exit 1; }; cp \"$f\" /out/openapi.json; test -s /out/openapi.json"})
-	return gen.Directory("/out")
+	return m.SdkPackages(source)
 }
 
 // OscalFrameworks builds and runs xoscal-export-frameworks over the manifest,
@@ -238,57 +225,52 @@ func (m *Xoscal) OscalSchemaValidation(source *dagger.Directory, frameworks *dag
 		WithExec([]string{"go", "build", "-o", "/bin/validate-schema", "./server/cmd/xoscal-validate-schema"}).
 		WithDirectory("/frameworks", frameworks).
 		WithExec([]string{"sh", "-c",
-			"fail=0; for f in /frameworks/*/catalog.json; do " +
+			"fail=0; count=0; for f in /frameworks/*/catalog.json /frameworks/*/profile.json; do " +
 				"[ -f \"$f\" ] || continue; " +
-				"if ! /bin/validate-schema -file \"$f\" -kind catalog; then " +
+				"kind=$(basename \"$f\" .json); count=$((count+1)); if ! /bin/validate-schema -file \"$f\" -kind \"$kind\"; then " +
 				"echo \"FAIL: $f\" >&2; fail=1; fi; done; " +
-				"if [ $fail -eq 0 ]; then echo 'oscal-schema-ok' > /tmp/schema.ok; else exit 3; fi"})
+				"if [ $fail -eq 0 ] && [ $count -gt 0 ]; then echo 'oscal-schema-ok' > /tmp/schema.ok; else exit 3; fi"})
 }
 
 // OscalConstraintValidation builds and runs xoscal-validate-constraints against
-// every framework catalog. This is tier-2 validation: full Metaschema constraint
+// every framework catalog and profile. This is tier-2 validation: Metaschema constraint
 // checking via oscal-cli (allowed-values, has-cardinality, index-has-key,
-// is-unique, matches). Non-blocking — violations are reported but do not fail
-// the pipeline. Requires JDK + oscal-cli, installed in-container.
+// is-unique, matches). Any constraint or tool failure blocks admission; raw
+// per-file logs and statuses remain independently exportable.
 func (m *Xoscal) OscalConstraintValidation(source *dagger.Directory, frameworks *dagger.Directory) *dagger.Container {
+	return m.OscalConstraintReports(source, frameworks).
+		WithExec([]string{"sh", "-ec", "test \"$(cat /tmp/constraint-evidence/result.status)\" = 0; echo 'oscal-constraints-ok' > /tmp/constraints.ok"})
+}
+
+// OscalConstraintReports collects each actual catalog/profile result without
+// granting admission. Use OscalConstraintValidation for the enforcing gate.
+func (m *Xoscal) OscalConstraintReports(source *dagger.Directory, frameworks *dagger.Directory) *dagger.Container {
 	const oscalCLIVersion = "1.0.3"
-	return m.base(source).
-		WithExec([]string{"sh", "-c", "apt-get update && apt-get install -y --no-install-recommends openjdk-17-jre-headless unzip"}).
-		WithExec([]string{"sh", "-c",
+	const oscalCLIHash = "c90166b6f94a8b32a4c0012bb3f3d32dfa54b950aed31ac1a4902ce75fc6a57e"
+	validator := m.base(source).
+		WithExec([]string{"go", "build", "-o", "/bin/validate-constraints", "./server/cmd/xoscal-validate-constraints"}).File("/bin/validate-constraints")
+	// Reuse the digest-pinned Java SDK producer rather than installing another
+	// mutable APT runtime. The JDK's jar tool extracts the checksum-pinned CLI.
+	return sdkToolchain("java").
+		WithExec([]string{"sh", "-ec", "apt-get update && apt-get install -y --no-install-recommends python3"}).
+		WithExec([]string{"sh", "-ec",
 			fmt.Sprintf(
 				"curl -fsSL -o /tmp/oscal-cli.zip "+
 					"https://repo1.maven.org/maven2/gov/nist/secauto/oscal/tools/oscal-cli/cli-core/%s/cli-core-%s-oscal-cli.zip && "+
-					"unzip -q -o /tmp/oscal-cli.zip -d /opt/oscal-cli && "+
+					"echo '%s  /tmp/oscal-cli.zip' | sha256sum -c - && "+
+					"mkdir -p /opt/oscal-cli && cd /opt/oscal-cli && jar xf /tmp/oscal-cli.zip && "+
+					"echo '65b7e116fc4991ccaf8f6e841d4af955313efbc6aad3b1de4472e0408c352dda  /opt/oscal-cli/lib/gov.nist.secauto.oscal.liboscal-java-3.0.3.jar' | sha256sum -c - && "+
 					"chmod +x /opt/oscal-cli/bin/oscal-cli",
-				oscalCLIVersion, oscalCLIVersion)}).
-		WithExec([]string{"go", "build", "-o", "/bin/validate-constraints", "./server/cmd/xoscal-validate-constraints"}).
+				oscalCLIVersion, oscalCLIVersion, oscalCLIHash)}).
+		WithFile("/bin/validate-constraints", validator).
+		WithFile("/tools/oscal-semantic-scope.py", source.File("scripts/oscal-semantic-scope.py")).
 		WithDirectory("/frameworks", frameworks).
 		WithExec([]string{"sh", "-c",
-			"fail=0; for f in /frameworks/*/catalog.json; do " +
+			"mkdir -p /tmp/constraint-evidence; : > /tmp/constraint-evidence/results.tsv; fail=0; count=0; python3 /tools/oscal-semantic-scope.py /frameworks /tmp/constraint-evidence/semantic-scope.json || fail=1; for f in /frameworks/*/catalog.json /frameworks/*/profile.json; do " +
 				"[ -f \"$f\" ] || continue; " +
-				"if ! /bin/validate-constraints -file \"$f\" -kind catalog -oscal-cli /opt/oscal-cli/bin/oscal-cli; then " +
-				"echo \"CONSTRAINT FAIL: $f\" >&2; fail=1; fi; done; " +
-				"if [ $fail -eq 0 ]; then echo 'oscal-constraints-ok' > /tmp/constraints.ok; " +
-				"else echo 'oscal-constraints-warn (non-blocking)' > /tmp/constraints.ok; fi"})
+				"kind=$(basename \"$f\" .json); name=$(basename \"$(dirname \"$f\")\"); count=$((count+1)); status=0; " +
+				"/bin/validate-constraints -file \"$f\" -kind \"$kind\" -oscal-cli /opt/oscal-cli/bin/oscal-cli > \"/tmp/constraint-evidence/${name}-${kind}.log\" 2>&1 || status=$?; " +
+				"cat \"/tmp/constraint-evidence/${name}-${kind}.log\"; sum=$(sha256sum \"$f\"); sum=${sum%% *}; printf '%s\\t%s\\t%s\\t%s\\n' \"${f#/frameworks/}\" \"$kind\" \"$status\" \"$sum\" >> /tmp/constraint-evidence/results.tsv; " +
+				"if [ \"$status\" -ne 0 ]; then fail=1; fi; done; " +
+				"if [ \"$count\" -eq 0 ]; then fail=1; fi; printf '%s\\n' \"$fail\" > /tmp/constraint-evidence/result.status"})
 }
-
-// provenanceManifest digests the proto set and each SDK zip and renders
-// provenance.json. Signing fields are left empty here (no cosign/rekor in this
-// build stage), so every record is honestly signed:false until Release wires them.
-func (m *Xoscal) provenanceManifest(source *dagger.Directory, sdks *dagger.Directory) *dagger.Directory {
-	return m.base(source).
-		WithDirectory("/sdks", sdks).
-		WithExec([]string{"go", "build", "-o", "/bin/prov", "./server/cmd/xoscal-provenance"}).
-		WithExec([]string{"sh", "-c",
-			"proto_digest=$(find proto/oscal -name '*.proto' | sort | xargs sha256sum | sha256sum | awk '{print \"sha256:\"$1}'); " +
-				"printf '[{\"Name\":\"proto-set\",\"Digest\":\"%s\"}' \"$proto_digest\" > /tmp/arts.json; " +
-				"for z in /sdks/*.zip; do " +
-				"d=$(sha256sum \"$z\" | awk '{print \"sha256:\"$1}'); " +
-				"printf ',{\"Name\":\"%s\",\"Digest\":\"%s\"}' \"$(basename $z .zip)-sdk\" \"$d\" >> /tmp/arts.json; " +
-				"done; printf ']' >> /tmp/arts.json"}).
-		WithExec([]string{"mkdir", "-p", "/out"}).
-		WithExec([]string{"/bin/prov", "-in", "/tmp/arts.json", "-out", "/out/provenance.json"}).
-		Directory("/out")
-}
-
-// buildDownloadsIndex emits /out/downloads.json from the SDK zips and OSCAL catalogs.

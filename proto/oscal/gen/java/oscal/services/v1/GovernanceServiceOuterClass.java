@@ -42022,7 +42022,7 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       "(\tR\004body\"x\n\034ProposeMappingUpdateResponse" +
       "\022(\n\020pull_request_url\030\001 \001(\tR\016pullRequestU" +
       "rl\022.\n\023pull_request_number\030\002 \001(\005R\021pullReq" +
-      "uestNumber2\253\036\n\021GovernanceService\022x\n\014Crea" +
+      "uestNumber2\265\036\n\021GovernanceService\022x\n\014Crea" +
       "teEntity\022&.oscal.services.v1.CreateEntit" +
       "yRequest\032\'.oscal.services.v1.CreateEntit" +
       "yResponse\"\027\202\323\344\223\002\021\"\014/v1/entities:\001*\022r\n\tGe" +
@@ -42054,74 +42054,74 @@ public final class GovernanceServiceOuterClass extends com.google.protobuf.Gener
       "irements\022,.oscal.services.v1.IngestRequi" +
       "rementsRequest\032-.oscal.services.v1.Inges" +
       "tRequirementsResponse\"\025\202\323\344\223\002\017\"\n/v1/inges" +
-      "t:\001*\022y\n\016SemanticSearch\022(.oscal.services." +
-      "v1.SemanticSearchRequest\032).oscal.service" +
-      "s.v1.SemanticSearchResponse\"\022\202\323\344\223\002\014\022\n/v1" +
-      "/search\022\211\001\n\017GenerateCatalog\022).oscal.serv" +
-      "ices.v1.GenerateCatalogRequest\032*.oscal.s" +
-      "ervices.v1.GenerateCatalogResponse\"\037\202\323\344\223" +
-      "\002\031\"\024/v1/generate/catalog:\001*\022\211\001\n\017Generate" +
-      "Profile\022).oscal.services.v1.GenerateProf" +
-      "ileRequest\032*.oscal.services.v1.GenerateP" +
-      "rofileResponse\"\037\202\323\344\223\002\031\"\024/v1/generate/pro" +
-      "file:\001*\022\215\001\n\020GenerateMappings\022*.oscal.ser" +
-      "vices.v1.GenerateMappingsRequest\032+.oscal" +
-      ".services.v1.GenerateMappingsResponse\" \202" +
-      "\323\344\223\002\032\"\025/v1/generate/mappings:\001*\022y\n\013Gener" +
-      "ateSSP\022%.oscal.services.v1.GenerateSSPRe" +
-      "quest\032&.oscal.services.v1.GenerateSSPRes" +
-      "ponse\"\033\202\323\344\223\002\025\"\020/v1/generate/ssp:\001*\022\272\001\n\033G" +
-      "enerateComponentDefinition\0225.oscal.servi" +
-      "ces.v1.GenerateComponentDefinitionReques" +
-      "t\0326.oscal.services.v1.GenerateComponentD" +
-      "efinitionResponse\",\202\323\344\223\002&\"!/v1/generate/" +
-      "component-definition:\001*\022\246\001\n\026GenerateAsse" +
-      "ssmentPlan\0220.oscal.services.v1.GenerateA" +
-      "ssessmentPlanRequest\0321.oscal.services.v1" +
-      ".GenerateAssessmentPlanResponse\"\'\202\323\344\223\002!\"" +
-      "\034/v1/generate/assessment-plan:\001*\022}\n\014Gene" +
-      "ratePOAM\022&.oscal.services.v1.GeneratePOA" +
-      "MRequest\032\'.oscal.services.v1.GeneratePOA" +
-      "MResponse\"\034\202\323\344\223\002\026\"\021/v1/generate/poam:\001*\022" +
-      "\262\001\n\031GenerateAssessmentResults\0223.oscal.se" +
-      "rvices.v1.GenerateAssessmentResultsReque" +
-      "st\0324.oscal.services.v1.GenerateAssessmen" +
-      "tResultsResponse\"*\202\323\344\223\002$\"\037/v1/generate/a" +
-      "ssessment-results:\001*\022\223\001\n\024BulkIngestFrame" +
-      "works\022..oscal.services.v1.BulkIngestFram" +
-      "eworksRequest\032/.oscal.services.v1.BulkIn" +
-      "gestFrameworksResponse\"\032\202\323\344\223\002\024\"\017/v1/inge" +
-      "st/bulk:\001*\022}\n\016ListFrameworks\022(.oscal.ser" +
-      "vices.v1.ListFrameworksRequest\032).oscal.s" +
-      "ervices.v1.ListFrameworksResponse\"\026\202\323\344\223\002" +
-      "\020\022\016/v1/frameworks\022\200\001\n\014GetFramework\022&.osc" +
-      "al.services.v1.GetFrameworkRequest\032\'.osc" +
-      "al.services.v1.GetFrameworkResponse\"\037\202\323\344" +
-      "\223\002\031\022\027/v1/frameworks/{ref_id}\022\275\001\n\036Generat" +
-      "eCrossFrameworkMappings\0228.oscal.services" +
-      ".v1.GenerateCrossFrameworkMappingsReques" +
-      "t\0329.oscal.services.v1.GenerateCrossFrame" +
-      "workMappingsResponse\"&\202\323\344\223\002 \"\033/v1/genera" +
-      "te/cross-mappings:\001*\022h\n\007Propose\022!.oscal." +
-      "services.v1.ProposeRequest\032\".oscal.servi" +
-      "ces.v1.ProposeResponse\"\026\202\323\344\223\002\020\"\013/v1/prop" +
-      "ose:\001*\022y\n\rListConflicts\022\'.oscal.services" +
-      ".v1.ListConflictsRequest\032(.oscal.service" +
-      "s.v1.ListConflictsResponse\"\025\202\323\344\223\002\017\022\r/v1/" +
-      "conflicts\022\231\001\n\017ResolveConflict\022).oscal.se" +
-      "rvices.v1.ResolveConflictRequest\032*.oscal" +
-      ".services.v1.ResolveConflictResponse\"/\202\323" +
-      "\344\223\002)\"$/v1/conflicts/{conflict_urn}/resol" +
-      "ve:\001*\022\204\001\n\016PublishRelease\022(.oscal.service" +
-      "s.v1.PublishReleaseRequest\032).oscal.servi" +
-      "ces.v1.PublishReleaseResponse\"\035\202\323\344\223\002\027\"\022/" +
-      "v1/gitops/release:\001*\022\231\001\n\024ProposeMappingU" +
-      "pdate\022..oscal.services.v1.ProposeMapping" +
-      "UpdateRequest\032/.oscal.services.v1.Propos" +
-      "eMappingUpdateResponse\" \202\323\344\223\002\032\"\025/v1/gito" +
-      "ps/mapping-pr:\001*B>Z<github.com/mchorfa/x" +
-      "oscal/proto/oscal/services/v1;servicesv1" +
-      "b\006proto3"
+      "t:\001*\022\202\001\n\016SemanticSearch\022(.oscal.services" +
+      ".v1.SemanticSearchRequest\032).oscal.servic" +
+      "es.v1.SemanticSearchResponse\"\033\202\323\344\223\002\025\022\023/v" +
+      "1/search/semantic\022\211\001\n\017GenerateCatalog\022)." +
+      "oscal.services.v1.GenerateCatalogRequest" +
+      "\032*.oscal.services.v1.GenerateCatalogResp" +
+      "onse\"\037\202\323\344\223\002\031\"\024/v1/generate/catalog:\001*\022\211\001" +
+      "\n\017GenerateProfile\022).oscal.services.v1.Ge" +
+      "nerateProfileRequest\032*.oscal.services.v1" +
+      ".GenerateProfileResponse\"\037\202\323\344\223\002\031\"\024/v1/ge" +
+      "nerate/profile:\001*\022\215\001\n\020GenerateMappings\022*" +
+      ".oscal.services.v1.GenerateMappingsReque" +
+      "st\032+.oscal.services.v1.GenerateMappingsR" +
+      "esponse\" \202\323\344\223\002\032\"\025/v1/generate/mappings:\001" +
+      "*\022y\n\013GenerateSSP\022%.oscal.services.v1.Gen" +
+      "erateSSPRequest\032&.oscal.services.v1.Gene" +
+      "rateSSPResponse\"\033\202\323\344\223\002\025\"\020/v1/generate/ss" +
+      "p:\001*\022\272\001\n\033GenerateComponentDefinition\0225.o" +
+      "scal.services.v1.GenerateComponentDefini" +
+      "tionRequest\0326.oscal.services.v1.Generate" +
+      "ComponentDefinitionResponse\",\202\323\344\223\002&\"!/v1" +
+      "/generate/component-definition:\001*\022\246\001\n\026Ge" +
+      "nerateAssessmentPlan\0220.oscal.services.v1" +
+      ".GenerateAssessmentPlanRequest\0321.oscal.s" +
+      "ervices.v1.GenerateAssessmentPlanRespons" +
+      "e\"\'\202\323\344\223\002!\"\034/v1/generate/assessment-plan:" +
+      "\001*\022}\n\014GeneratePOAM\022&.oscal.services.v1.G" +
+      "eneratePOAMRequest\032\'.oscal.services.v1.G" +
+      "eneratePOAMResponse\"\034\202\323\344\223\002\026\"\021/v1/generat" +
+      "e/poam:\001*\022\262\001\n\031GenerateAssessmentResults\022" +
+      "3.oscal.services.v1.GenerateAssessmentRe" +
+      "sultsRequest\0324.oscal.services.v1.Generat" +
+      "eAssessmentResultsResponse\"*\202\323\344\223\002$\"\037/v1/" +
+      "generate/assessment-results:\001*\022\223\001\n\024BulkI" +
+      "ngestFrameworks\022..oscal.services.v1.Bulk" +
+      "IngestFrameworksRequest\032/.oscal.services" +
+      ".v1.BulkIngestFrameworksResponse\"\032\202\323\344\223\002\024" +
+      "\"\017/v1/ingest/bulk:\001*\022}\n\016ListFrameworks\022(" +
+      ".oscal.services.v1.ListFrameworksRequest" +
+      "\032).oscal.services.v1.ListFrameworksRespo" +
+      "nse\"\026\202\323\344\223\002\020\022\016/v1/frameworks\022\200\001\n\014GetFrame" +
+      "work\022&.oscal.services.v1.GetFrameworkReq" +
+      "uest\032\'.oscal.services.v1.GetFrameworkRes" +
+      "ponse\"\037\202\323\344\223\002\031\022\027/v1/frameworks/{ref_id}\022\275" +
+      "\001\n\036GenerateCrossFrameworkMappings\0228.osca" +
+      "l.services.v1.GenerateCrossFrameworkMapp" +
+      "ingsRequest\0329.oscal.services.v1.Generate" +
+      "CrossFrameworkMappingsResponse\"&\202\323\344\223\002 \"\033" +
+      "/v1/generate/cross-mappings:\001*\022h\n\007Propos" +
+      "e\022!.oscal.services.v1.ProposeRequest\032\".o" +
+      "scal.services.v1.ProposeResponse\"\026\202\323\344\223\002\020" +
+      "\"\013/v1/propose:\001*\022y\n\rListConflicts\022\'.osca" +
+      "l.services.v1.ListConflictsRequest\032(.osc" +
+      "al.services.v1.ListConflictsResponse\"\025\202\323" +
+      "\344\223\002\017\022\r/v1/conflicts\022\231\001\n\017ResolveConflict\022" +
+      ").oscal.services.v1.ResolveConflictReque" +
+      "st\032*.oscal.services.v1.ResolveConflictRe" +
+      "sponse\"/\202\323\344\223\002)\"$/v1/conflicts/{conflict_" +
+      "urn}/resolve:\001*\022\204\001\n\016PublishRelease\022(.osc" +
+      "al.services.v1.PublishReleaseRequest\032).o" +
+      "scal.services.v1.PublishReleaseResponse\"" +
+      "\035\202\323\344\223\002\027\"\022/v1/gitops/release:\001*\022\231\001\n\024Propo" +
+      "seMappingUpdate\022..oscal.services.v1.Prop" +
+      "oseMappingUpdateRequest\032/.oscal.services" +
+      ".v1.ProposeMappingUpdateResponse\" \202\323\344\223\002\032" +
+      "\"\025/v1/gitops/mapping-pr:\001*B>Z<github.com" +
+      "/mchorfa/xoscal/proto/oscal/services/v1;" +
+      "servicesv1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

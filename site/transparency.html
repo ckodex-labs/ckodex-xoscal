@@ -26,87 +26,14 @@
       <a href="portal.html">Design Blueprint</a>
     </nav>
   </header>
-  <main id="main" class="ck-shell__main">
-    <div class="ck-measure ck-stack">
-      <div>
-        <p class="ck-label ck-page-kicker">disclosure ledger</p>
-        <h1 class="ck-page-title">Supply-chain Transparency</h1>
-      </div>
-      <div id="cards" class="ck-data-grid" aria-live="polite">
-        <article class="ck-quiet ck-sealed">
-          <strong>xoscal-ctl (Linux / macOS)</strong>
-          <span class="ck-chip ck-chip--attested">&#9670; attested &mdash; cosign+rekor</span>
-          <div class="ck-caption"><span class="ck-inline-status ck-inline-status--tone">attested in release provenance ledger</span></div>
-        </article>
-        <article class="ck-quiet ck-sealed">
-          <strong>xoscal-server (OCI Image)</strong>
-          <span class="ck-chip ck-chip--attested">&#9670; attested &mdash; slsa-level-3</span>
-          <div class="ck-caption"><span class="ck-hash ck-hash--unprefixed">ghcr.io/ckodex-labs/ckodex-xoscal</span></div>
-        </article>
-        <article class="ck-quiet ck-padded">
-          <strong>OSCAL 1.2.3 Schema Bundle</strong>
-          <span class="ck-chip ck-chip--observed">&#8866; verified &mdash; embedded</span>
-          <div class="ck-caption"><span class="ck-hash ck-hash--unprefixed">nist.gov/oscal/v1.2.3</span></div>
-        </article>
-        <article class="ck-quiet ck-padded">
-          <strong>Go SDK Distribution</strong>
-          <span class="ck-chip ck-chip--observed">&#8866; verified &mdash; source-locked</span>
-          <div class="ck-caption"><span class="ck-hash ck-hash--unprefixed">pkg.go.dev/github.com/ckodex-labs/ckodex-xoscal</span></div>
-        </article>
-      </div>
-      <section class="ck-quiet ck-padded" aria-labelledby="coverage-heading">
-        <h2 id="coverage-heading">Provenance coverage and published assets</h2>
-        <p>The generated provenance manifest describes the build context. Published assets are a separate exchange surface; this page keeps those scopes distinct and displays only the state supplied by the manifest.</p>
-        <h3>SBOM records</h3>
-        <table class="ck-table">
-          <thead><tr><th scope="col">SBOM</th><th scope="col">Format</th><th scope="col">Tool</th><th scope="col">Scope</th><th scope="col">State</th></tr></thead>
-          <tbody>
-            <tr><td>Binary SBOM</td><td>CycloneDX</td><td>syft</td><td>xoscal-server binary</td><td><span class="ck-chip ck-chip--observed">&#8866; observed</span></td></tr>
-            <tr><td>Archive SBOMs</td><td>SPDX 2.3</td><td>goreleaser</td><td>per-platform archives</td><td><span class="ck-chip ck-chip--claimed">&#9675; not validated here</span></td></tr>
-            <tr><td>Image SBOM</td><td>CycloneDX</td><td>anchore/sbom-action</td><td>container image</td><td><span class="ck-chip ck-chip--claimed">&#9675; not validated here</span></td></tr>
-          </tbody>
-        </table>
-      </section>
-    </div>
-  </main>
-  <aside class="ck-shell__margin" aria-label="Evidence Margin">
-    <div class="ck-stack ck-stack--tight">
-      <div class="ck-margin__head"><h2>Evidence Margin</h2></div>
-      <div class="ck-receipt"><span class="ck-receipt__rule"></span><div><div class="ck-receipt__event">provenance ledger mounted</div><div class="ck-receipt__detail">&#8866; observed &mdash; provenance.json</div></div></div>
-      <div class="ck-receipt"><span class="ck-receipt__rule"></span><div><div class="ck-receipt__event">signature state projected</div><div class="ck-receipt__detail">violet only when manifest says signed</div></div></div>
-      <span class="ck-chip ck-chip--observed">&#8866; observed</span>
-    </div>
-  </aside>
+  <main id="main" class="ck-shell__main"><div class="ck-measure ck-stack"><h1>Supply-chain Transparency</h1><p>Incomplete: this source template has no verified release inventory. Build the portal through Dagger. Downloads and favorable evidence states require exact-byte verification.</p></div></main>
+  <aside class="ck-shell__margin" aria-label="Evidence Margin"><h2>Evidence Margin</h2><p>Incomplete: no proof supplied.</p></aside>
   <footer class="ck-shell__footer ck-authority ck-authority--internal" aria-label="Authority Footer">
     <span class="ck-authority__zone ck-authority__zone--start"><span class="ck-authority__k">boundary</span><span class="ck-authority__v">public documentation</span></span>
     <span class="ck-authority__invariant">mode changes deployment, not governance semantics</span>
     <span class="ck-authority__zone ck-authority__zone--end"><span class="ck-authority__k">handling</span><span class="ck-authority__v">official</span></span>
   </footer>
 </div>
-<script>
-const escapeHTML = value => String(value ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-const digestView = value => {
-  const digest = String(value || "");
-  if (!digest) return '<span class="ck-chip ck-chip--claimed">&#9675; digest not supplied</span>';
-  if (!/^sha256:[0-9a-f]{16,}$/i.test(digest)) return `<span class="ck-hash ck-hash--unprefixed">${escapeHTML(digest)}</span>`;
-  return `<button type="button" class="ck-hash" data-digest="${escapeHTML(digest)}" title="Copy digest">${escapeHTML(digest)}</button>`;
-};
-fetch("./provenance.json").then(response => response.ok ? response.json() : Promise.reject()).then(rows => {
-  if (Array.isArray(rows) && rows.length > 0) {
-    document.getElementById("cards").innerHTML = rows.map(item => {
-      const signed = item.signed === true;
-      const state = signed ? '<span class="ck-chip ck-chip--attested">&#9670; attested &mdash; cosign+rekor</span>' : '<span class="ck-chip ck-chip--claimed">&#9675; unsigned</span>';
-      return `<article class="${signed ? "ck-quiet ck-sealed" : "ck-quiet ck-padded"}"><strong>${escapeHTML(item.name)}</strong> ${state}<div class="ck-caption">${digestView(item.digest)}</div></article>`;
-    }).join("");
-  }
-}).catch(() => {
-  // Pre-rendered cards remain visible
-});
-document.addEventListener("click", event => {
-  const button = event.target.closest("[data-digest]");
-  if (!button || !navigator.clipboard) return;
-  navigator.clipboard.writeText(button.dataset.digest).then(() => { button.dataset.done = "true"; button.textContent = "copied"; });
-});
-</script>
+
 </body>
 </html>
