@@ -29,7 +29,15 @@ class RenderReleaseSite(unittest.TestCase):
         (self.root / "sbom-assessment-results.json").unlink(missing_ok=True)
         # These are real file/ZIP fixtures for the static contract; language
         # installability and the pinned production Scalar bundle have their own gates.
-        (self.root / "scalar.js").write_text("/* static contract fixture */\n")
+        frontend_assets = {
+            "scalar.js": "/* static contract fixture */\n//# sourceMappingURL=scalar.js.map\n",
+            "scalar.js.map": '{"version":3,"file":"scalar.js","sources":[],"names":[],"mappings":""}\n',
+            "scalar.css": "/* static contract fixture */\n.fixture {}\n/*# sourceMappingURL=scalar.css.map */\n",
+            "scalar.css.map": '{"version":3,"file":"scalar.css","sources":[],"names":[],"mappings":""}\n',
+            "THIRD-PARTY-NOTICES.txt": "Synthetic static contract fixture; no production publisher claims.\n",
+        }
+        for name, content in frontend_assets.items():
+            (self.root / name).write_text(content)
         (self.root / "scripts").mkdir(exist_ok=True)
         shutil.copyfile(SCRIPTS / "install.sh", self.root / "scripts/install.sh")
         (self.root / "sdk").mkdir()
@@ -108,6 +116,17 @@ class RenderReleaseSite(unittest.TestCase):
                                  "--root", str(self.root), "--generated"], capture_output=True, text=True)
         self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
         self.assertIn("96 API operations", result.stdout)
+
+    def test_generated_http_surface_refuses_missing_scalar_source_map(self):
+        result = self.render()
+        self.assertEqual(result.returncode, 0, result.stderr)
+        (self.root / "scalar.js.map").unlink()
+        result = subprocess.run([sys.executable, str(SCRIPTS / "site-smoke.py"),
+                                 "--root", str(self.root), "--generated"], capture_output=True, text=True)
+        self.assertNotEqual(result.returncode, 0, result.stdout + result.stderr)
+        self.assertIn("site-smoke: FAIL", result.stdout)
+        self.assertIn("HTTP Error 404", result.stdout)
+        self.assertRegex(result.stderr, r'"GET /scalar\.js\.map HTTP/1\.[01]" 404')
 
     def test_internal_analysis_checksum_is_inventoried_without_download_card(self):
         internal = self.root / "evidence/internal/subject"
