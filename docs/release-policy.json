@@ -3,6 +3,12 @@
     "trivy-results.json",
     "trivy.log",
     "trivy.status",
+    "trivy-fs-results.json",
+    "trivy-fs.status",
+    "trivy-fs.log",
+    "trivy-rootfs-results.json",
+    "trivy-rootfs.status",
+    "trivy-rootfs.log",
     "artifact.sha256",
     "extraction.status",
     "analysis-gate.json"

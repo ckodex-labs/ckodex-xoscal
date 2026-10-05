@@ -143,3 +143,47 @@ CLI has no pin override or test mode. Existing 24 analysis, 8 safe extraction,
 `/tmp/xoscal-{analysis,extraction,sbom-enrichment,publisher}-tests-frontend.log`. Python
 compilation and scoped whitespace checks passed. No hosted signing, publication,
 release, merge, access/identity change or production cluster action was performed.
+
+## Actual platform archive inventory repair (2026-10-05)
+
+PreviewCandidate v5 correctly blocked an empty artifact inventory. The exact
+latest snapshot at source `91e0c8033f7f15cf287e1104fe1830320bfb61da` contains
+three ordinary executable Go binaries in each platform tar. Safe extraction
+previously removed their execute bits, and Trivy filesystem mode excludes the
+Go binary analyzer. Neither missing inventory was a clean security result.
+
+The original Linux amd64 raw failure is retained in
+`/tmp/xoscal-archive-sca-before-linux-amd64{,.log}`: scanner exit 0, no Results,
+exact archive SHA-256 `fd1e879d4735ebf33e8fdeba748add9e964fc029ecab22d422df457f754fbb76`.
+The intermediate execute-bit-only repair still failed admission; its raw report
+is `/tmp/xoscal-archive-sca-after-raw-linux-amd64`, and failed admission logs are
+`/tmp/xoscal-archive-sca-after-{linux-amd64,darwin-arm64}.log`.
+
+The repaired collector preserves only ordinary execute bits, never special
+permissions or archive-controlled write permissions, and scans both fs and
+rootfs over identical safely extracted bytes. Independent replay requires both
+raw reports and successful statuses, their exact combined targets and report
+hashes. The existing empty-inventory and CRITICAL/fixed gates remain strict.
+The actual pinned Dagger 0.21.7 repository method passed all four archives:
+
+| Platform | Exact archive SHA-256 | Versioned observations | Findings |
+| --- | --- | --- | --- |
+| Linux amd64 | `fd1e879d4735ebf33e8fdeba748add9e964fc029ecab22d422df457f754fbb76` | 74 | 0 |
+| Linux arm64 | `309046b9f7b86d2e9ea629c6a5368f8833b4b210c20bac6fa759dd117d550763` | 74 | 0 |
+| Darwin amd64 | `eb1fe05a07a091f3eda031904cf5234810426a0ac2d1ec0d9c5fbf6f2cbda978` | 79 | 0 |
+| Darwin arm64 | `7a653c3b93f8d2a3d15e062a8019db6b315513e78023d3ae59b85f176f0510b6` | 79 | 0 |
+
+Every report identifies all three actual `xoscal-backup`, `xoscal-ctl` and
+`xoscal-server` binaries from embedded build information, including both MachO
+architectures. The scanner does not execute these binaries. Complete raw and
+admission evidence is `/tmp/xoscal-archive-sca-dual-<platform>{,.log}`, where
+platform is `linux-amd64`, `linux-arm64`, `darwin-amd64` or `darwin-arm64`.
+These exported exact bytes predate the independent frontend font correction;
+the final candidate must still rerun analysis over its own final artifact graph.
+
+The 11 extractor tests cover ordinary execute bits, stripping privileged modes,
+non-Unix ZIP metadata, single-file input and existing malicious archive guards.
+The five dual-report tests cover missing/failed modes, original raw bindings,
+malformed versions/subjects and complete preservation of overlapping findings.
+All 28 analysis policy tests passed, including merged-report tampering, missing
+secondary status and a fixed CRITICAL finding observed only by binary analysis.

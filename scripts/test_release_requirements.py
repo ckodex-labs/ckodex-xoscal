@@ -26,6 +26,9 @@ sys.path.insert(0, str(requirements.SOURCE_ROOT / 'dagger'))
 ENRICH_SPEC = importlib.util.spec_from_file_location('requirements_enrichment_fixture', requirements.SOURCE_ROOT / 'dagger/enrich_sbom.py')
 ENRICH = importlib.util.module_from_spec(ENRICH_SPEC)
 ENRICH_SPEC.loader.exec_module(ENRICH)
+MERGE_SPEC = importlib.util.spec_from_file_location('requirements_artifact_fixture', requirements.SOURCE_ROOT / 'dagger/artifact_inventory.py')
+MERGE = importlib.util.module_from_spec(MERGE_SPEC)
+MERGE_SPEC.loader.exec_module(MERGE)
 
 
 def write_json(path, value):
@@ -89,6 +92,10 @@ def sbom_fixture(root, stage, subject):
     fixture_receipt(root, stage, 'sbom')
 
 
+def merge_fixture_scan(root, stage):
+    write_json(root / stage / 'trivy-results.json', MERGE.replay_merge(root / stage))
+
+
 def scan_fixture(root, stage, subject, image=None):
     artifact = image is None
     digest_file, source = ('artifact.sha256', '/input/artifact') if artifact else ('image.sha256', '/input/image.tar')
@@ -97,11 +104,19 @@ def scan_fixture(root, stage, subject, image=None):
     put(root, stage + '/trivy.log', b'fixture scan log\n')
     if artifact:
         put(root, stage + '/extraction.status', b'0\n')
-    report = {'SchemaVersion': 2, 'ArtifactName': source, 'ArtifactType': 'filesystem' if artifact else 'container_image', 'Trivy': {'Version': '0.72.0'},
+    report = {'SchemaVersion': 2, 'ArtifactName': '/input/unpacked' if artifact else source, 'ArtifactType': 'filesystem' if artifact else 'container_image', 'Trivy': {'Version': '0.72.0'},
               'Results': [{'Target': 'fixture-target', 'Packages': [{'Name': 'fixture-package', 'Version': '1.0.0'}], 'Vulnerabilities': []}]}
     if image:
         report['Metadata'] = {'ImageID': image['config_digest'], 'ImageConfig': {'architecture': image['arch'], 'os': image['os']}}
-    write_json(root / stage / 'trivy-results.json', report)
+    if artifact:
+        for mode in ('fs', 'rootfs'):
+            raw = dict(report, Results=report['Results'] if mode == 'fs' else [])
+            write_json(root / stage / f'trivy-{mode}-results.json', raw)
+            put(root, stage + f'/trivy-{mode}.status', b'0\n')
+            put(root, stage + f'/trivy-{mode}.log', b'Synthetic dual-mode scanner control fixture; not actual Trivy output.\n')
+        merge_fixture_scan(root, stage)
+    else:
+        write_json(root / stage / 'trivy-results.json', report)
     fixture_receipt(root, stage, 'artifact-release' if artifact else 'image-release')
 
 
@@ -594,10 +609,11 @@ class RequiredOutputTests(unittest.TestCase):
         self.reject('tag/platform mismatch')
 
     def test_saved_passed_boolean_cannot_hide_raw_scan_failure(self):
-        path = self.root / 'evidence/sdk-go/trivy-results.json'
+        path = self.root / 'evidence/sdk-go/trivy-fs-results.json'
         report = requirements.read_json(path)
         report['Results'][0]['Vulnerabilities'] = [{'Severity': 'CRITICAL', 'FixedVersion': '2', 'VulnerabilityID': 'fixture-blocking-advisory'}]
         write_json(path, report)
+        merge_fixture_scan(self.root, 'evidence/sdk-go')
         self.reject('policy rejected raw')
 
     def test_operational_scan_error_blocks(self):
@@ -605,9 +621,51 @@ class RequiredOutputTests(unittest.TestCase):
         self.reject('operational failure')
 
     def test_saved_receipt_cannot_hide_empty_raw_inventory(self):
-        path = self.root / 'evidence/sdk-swift/trivy-results.json'
+        path = self.root / 'evidence/sdk-swift/trivy-fs-results.json'
         report = requirements.read_json(path);report['Results'][0]['Packages'] = [];write_json(path, report)
+        merge_fixture_scan(self.root, 'evidence/sdk-swift')
         self.reject('no identifiable')
+
+    def test_both_artifact_modes_raw_files_are_mandatory(self):
+        for stage in ('evidence/sdk-go', 'evidence/archive-linux_amd64'):
+            for mode in ('fs', 'rootfs'):
+                for suffix in ('-results.json', '.status', '.log'):
+                    with self.subTest(stage=stage, mode=mode, suffix=suffix):
+                        path = self.root / stage / ('trivy-' + mode + suffix)
+                        original = path.read_bytes();path.unlink()
+                        self.reject('missing required')
+                        path.write_bytes(original)
+
+    def test_raw_artifact_report_tamper_without_new_merge_blocks(self):
+        path = self.root / 'evidence/sdk-go/trivy-rootfs-results.json'
+        report = requirements.read_json(path)
+        report['Results'] = [{'Target': 'synthetic observed executable', 'Packages': [{'Name': 'module', 'Version': '1.0.0'}]}]
+        write_json(path, report)
+        self.reject('combined report differs from raw scanner evidence')
+
+    def test_combined_artifact_report_tamper_blocks(self):
+        path = self.root / 'evidence/archive-linux_amd64/trivy-results.json'
+        report = requirements.read_json(path)
+        report['XoscalRawReports']['rootfs'] = 'a' * 64
+        write_json(path, report)
+        self.reject('combined report differs from raw scanner evidence')
+
+    def test_rootfs_finding_cannot_hide_behind_successful_fs_scan(self):
+        path = self.root / 'evidence/archive-linux_amd64/trivy-rootfs-results.json'
+        report = requirements.read_json(path)
+        report['Results'] = [{'Target': 'synthetic observed executable', 'Packages': [{'Name': 'module', 'Version': '1.0.0'}],
+                              'Vulnerabilities': [{'Severity': 'CRITICAL', 'FixedVersion': '2', 'VulnerabilityID': 'synthetic-rootfs-blocker'}]}]
+        write_json(path, report)
+        merge_fixture_scan(self.root, 'evidence/archive-linux_amd64')
+        self.reject('policy rejected raw')
+
+    def test_artifact_mode_operational_failure_blocks(self):
+        for mode in ('fs', 'rootfs'):
+            with self.subTest(mode=mode):
+                path = self.root / f'evidence/sdk-go/trivy-{mode}.status'
+                path.write_text('2\n')
+                self.reject('operational failure')
+                path.write_text('0\n')
 
     def test_scan_subject_digest_mismatch_blocks(self):
         path = self.root / 'evidence/sdk-go/artifact.sha256'

@@ -29,6 +29,35 @@ class ArchiveTests(unittest.TestCase):
         self.assertEqual(extractor.extract(self.archive, self.out), (1, 12))
         self.assertEqual((self.out / 'pkg/metadata.json').read_bytes(), b'actual bytes')
 
+    def test_tar_preserves_only_actual_execute_bits(self):
+        with tarfile.open(self.archive, 'w') as archive:
+            for name, mode in (('binary', 0o6755), ('data', 0o666), ('owner-only', 0o7100)):
+                entry = tarfile.TarInfo(name)
+                entry.mode, entry.size = mode, 3
+                archive.addfile(entry, io.BytesIO(b'yes'))
+        extractor.extract(self.archive, self.out)
+        self.assertEqual(stat.S_IMODE((self.out / 'binary').stat().st_mode), 0o711)
+        self.assertEqual(stat.S_IMODE((self.out / 'data').stat().st_mode), 0o600)
+        self.assertEqual(stat.S_IMODE((self.out / 'owner-only').stat().st_mode), 0o700)
+
+    def test_zip_execute_bits_require_unix_metadata_and_strip_special_bits(self):
+        with zipfile.ZipFile(self.archive, 'w') as archive:
+            for name, system, mode in (('binary', 3, 0o6755), ('data', 3, 0o666), ('dos', 0, 0o777)):
+                entry = zipfile.ZipInfo(name)
+                entry.create_system = system
+                entry.external_attr = (stat.S_IFREG | mode) << 16
+                archive.writestr(entry, b'yes')
+        extractor.extract(self.archive, self.out)
+        for name, mode in (('binary', 0o711), ('data', 0o600), ('dos', 0o600)):
+            self.assertEqual(stat.S_IMODE((self.out / name).stat().st_mode), mode)
+
+    def test_single_file_execute_bits_are_preserved_without_privilege(self):
+        self.archive.write_bytes(b'actual binary bytes')
+        self.archive.chmod(0o6755)
+        extractor.extract(self.archive, self.out, allow_file=True)
+        self.assertEqual((self.out / 'artifact').read_bytes(), self.archive.read_bytes())
+        self.assertEqual(stat.S_IMODE((self.out / 'artifact').stat().st_mode), 0o711)
+
     def test_traversal_and_absolute_paths_are_rejected(self):
         for path in ('../escape', '/escape', 'C:/escape', 'a\\escape', 'a/../escape'):
             with self.subTest(path=path):

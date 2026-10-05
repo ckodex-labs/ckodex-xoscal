@@ -175,18 +175,62 @@ class AdmissionTests(unittest.TestCase):
         with self.assertRaises(gate.GateError):
             gate.image_gate(self.root)
 
-    def test_artifact_admission_binds_original_digest(self):
+    def artifact(self):
         self.image()
         self.status('extraction')
         (self.root / 'artifact.sha256').write_text('b' * 64 + '  /input/artifact\n')
         report = json.loads((self.root / 'trivy-results.json').read_text())
         report['ArtifactType'] = 'filesystem'
         report['ArtifactName'] = '/input/unpacked'
-        self.write('trivy-results.json', report)
+        self.write('trivy-fs-results.json', report)
+        self.write('trivy-rootfs-results.json', dict(report, Results=[]))
+        self.status('trivy-fs'); self.status('trivy-rootfs')
+        helper_spec = importlib.util.spec_from_file_location('artifact_inventory', SCRIPT.parent.parent / 'dagger/artifact_inventory.py')
+        helper = importlib.util.module_from_spec(helper_spec); helper_spec.loader.exec_module(helper)
+        self.write('trivy-results.json', helper.replay_merge(self.root))
+
+    def test_artifact_admission_binds_original_digest(self):
+        self.artifact()
         self.assertEqual(gate.artifact_gate(self.root)['artifact_sha256'], 'b' * 64)
         self.status('extraction', 1)
         with self.assertRaises(gate.GateError):
             gate.artifact_gate(self.root)
+
+    def test_empty_dual_artifact_inventory_never_passes(self):
+        self.artifact()
+        for mode in ('fs', 'rootfs'):
+            path = self.root / f'trivy-{mode}-results.json'
+            doc = json.loads(path.read_text()); doc['Results'] = []
+            self.write(path.name, doc)
+        helper_spec = importlib.util.spec_from_file_location('artifact_inventory', SCRIPT.parent.parent / 'dagger/artifact_inventory.py')
+        helper = importlib.util.module_from_spec(helper_spec); helper_spec.loader.exec_module(helper)
+        self.write('trivy-results.json', helper.replay_merge(self.root))
+        with self.assertRaises(gate.GateError): gate.artifact_gate(self.root)
+
+    def test_artifact_combination_tamper_never_passes(self):
+        self.artifact()
+        path = self.root / 'trivy-results.json'
+        doc = json.loads(path.read_text()); doc['Results'] = []
+        self.write('trivy-results.json', doc)
+        with self.assertRaises(gate.GateError): gate.artifact_gate(self.root)
+
+    def test_missing_or_failed_secondary_scanner_never_passes(self):
+        self.artifact()
+        self.status('trivy-rootfs', 2)
+        with self.assertRaises(ValueError): gate.artifact_gate(self.root)
+        (self.root / 'trivy-rootfs.status').unlink()
+        with self.assertRaises(OSError): gate.artifact_gate(self.root)
+
+    def test_binary_mode_fixed_critical_finding_blocks(self):
+        self.artifact()
+        doc = json.loads((self.root / 'trivy-fs-results.json').read_text())
+        self.write('trivy-fs-results.json', dict(doc, Results=[]))
+        doc['Results'][0]['Vulnerabilities'] = [{'Severity': 'CRITICAL', 'VulnerabilityID': 'REAL-BINARY', 'FixedVersion': '2'}]
+        self.write('trivy-rootfs-results.json', doc)
+        helper_spec = importlib.util.spec_from_file_location('artifact_inventory', SCRIPT.parent.parent / 'dagger/artifact_inventory.py')
+        helper = importlib.util.module_from_spec(helper_spec); helper_spec.loader.exec_module(helper)
+        self.write('trivy-results.json', helper.replay_merge(self.root))
+        self.assertEqual(gate.artifact_gate(self.root)['blocked'], ['REAL-BINARY'])
 
     def test_empty_package_inventory_never_passes(self):
         self.image()

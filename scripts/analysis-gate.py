@@ -205,6 +205,14 @@ def image_gate(root, ci=False, artifact=False):
     digest_record = (root / digest_name).read_text()
     require(re.fullmatch(r"[0-9a-f]{64}  " + re.escape(input_path) + r"\n?", digest_record), "missing artifact digest")
     report = read_json(root / "trivy-results.json")
+    if artifact:
+        helper_path = Path(__file__).with_name("artifact_inventory.py")
+        if not helper_path.exists():
+            helper_path = Path(__file__).resolve().parents[1] / "dagger" / "artifact_inventory.py"
+        spec = importlib.util.spec_from_file_location("artifact_inventory", helper_path)
+        helper = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(helper)
+        require(helper.replay_merge(root) == report, "artifact combined report differs from raw scanner evidence")
     artifact_type = "filesystem" if artifact else "container_image"
     require(report.get("SchemaVersion") == 2 and report.get("ArtifactName") and report.get("ArtifactType") == artifact_type, "malformed artifact report")
     require(isinstance(report.get("Results"), list) and report["Results"], "Trivy has no scan targets")

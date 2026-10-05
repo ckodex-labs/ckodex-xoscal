@@ -29,6 +29,7 @@ func (m *Xoscal) analysisGate(source *dagger.Directory, evidence *dagger.Directo
 		WithExec([]string{"apt-get", "update"}).
 		WithExec([]string{"apt-get", "install", "-y", "--no-install-recommends", "python3"}).
 		WithFile("/policy/analysis-gate.py", source.File("scripts/analysis-gate.py")).
+		WithFile("/policy/artifact_inventory.py", dag.CurrentModule().Source().File("artifact_inventory.py")).
 		WithFile("/policy/frontend_inventory.py", dag.CurrentModule().Source().File("frontend_inventory.py")).
 		WithFile("/policy/enrich_sbom.py", dag.CurrentModule().Source().File("enrich_sbom.py")).
 		WithFile("/policy/publisher_metadata.py", dag.CurrentModule().Source().File("publisher_metadata.py")).
@@ -62,7 +63,24 @@ func (m *Xoscal) ArtifactAnalysisReports(archive *dagger.File) *dagger.Directory
 	return m.trivyBase().
 		WithFile("/input/artifact", archive).
 		WithFile("/tools/extract_archive.py", dag.CurrentModule().Source().File("extract_archive.py")).
-		WithExec([]string{"sh", "-c", "mkdir -p /evidence\nsha256sum /input/artifact > /evidence/artifact.sha256\nset +e\npython3 /tools/extract_archive.py /input/artifact /input/unpacked > /evidence/extraction.log 2>&1\nextract_status=$?\nprintf '%s\\n' \"$extract_status\" > /evidence/extraction.status\nif [ \"$extract_status\" -eq 0 ]; then\n  trivy fs /input/unpacked --scanners vuln --format json --list-all-pkgs --exit-code 0 --output /evidence/trivy-results.json > /evidence/trivy.log 2>&1\n  scan_status=$?\nelse\n  scan_status=125\nfi\nprintf '%s\\n' \"$scan_status\" > /evidence/trivy.status"}).Directory("/evidence")
+		WithFile("/tools/artifact_inventory.py", dag.CurrentModule().Source().File("artifact_inventory.py")).
+		WithExec([]string{"sh", "-c", `mkdir -p /evidence
+sha256sum /input/artifact > /evidence/artifact.sha256
+set +e
+python3 /tools/extract_archive.py /input/artifact /input/unpacked > /evidence/extraction.log 2>&1
+extract_status=$?
+printf '%s\n' "$extract_status" > /evidence/extraction.status
+for mode in fs rootfs; do
+  if [ "$extract_status" -eq 0 ]; then
+    trivy "$mode" /input/unpacked --scanners vuln --format json --list-all-pkgs --exit-code 0 --output "/evidence/trivy-$mode-results.json" > "/evidence/trivy-$mode.log" 2>&1
+    scan_status=$?
+  else
+    scan_status=125
+  fi
+  printf '%s\n' "$scan_status" > "/evidence/trivy-$mode.status"
+done
+python3 /tools/artifact_inventory.py --evidence /evidence > /evidence/trivy.log 2>&1
+printf '%s\n' "$?" > /evidence/trivy.status`}).Directory("/evidence")
 }
 
 // ArtifactAnalysis applies the existing release CRITICAL/fixed threshold to

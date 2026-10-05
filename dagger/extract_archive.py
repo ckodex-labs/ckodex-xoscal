@@ -24,6 +24,12 @@ def extract(source, destination, allow_file=False):
     destination.mkdir(parents=True, exist_ok=False)
     seen, files, size = set(), 0, 0
 
+    def finish_file(output, mode):
+        # Go binary analyzers select actual executable files. Preserve only the
+        # ordinary execute bits from the supplied artifact, never privileged or
+        # archive-controlled write permissions. Extraction does not execute code.
+        output.chmod(0o600 | (mode & 0o111))
+
     def target(name, length, directory=False):
         nonlocal files, size
         relative = safe_name(name.rstrip('/'))
@@ -54,6 +60,7 @@ def extract(source, destination, allow_file=False):
                 if not member.is_dir():
                     with archive.open(member) as incoming, output.open('xb') as outgoing:
                         shutil.copyfileobj(incoming, outgoing)
+                    finish_file(output, mode if member.create_system == 3 else 0)
     elif tarfile.is_tarfile(source):
         with tarfile.open(source, mode='r:*') as archive:
             for member in archive:
@@ -65,10 +72,12 @@ def extract(source, destination, allow_file=False):
                 if member.isfile():
                     with archive.extractfile(member) as incoming, output.open('xb') as outgoing:
                         shutil.copyfileobj(incoming, outgoing)
+                    finish_file(output, member.mode)
     elif allow_file:
         output = target('artifact', source.stat().st_size)
         with source.open('rb') as incoming, output.open('xb') as outgoing:
             shutil.copyfileobj(incoming, outgoing)
+        finish_file(output, source.stat().st_mode)
     else:
         raise ValueError('unsupported artifact archive format')
     if not files:

@@ -6,5 +6,5 @@ const marker = document.getElementById('api-reference')
 if (marker) {
   const container = document.createElement('div')
   marker.parentNode.insertBefore(container, marker)
-  window.Scalar.createApiReference(container, { url: marker.dataset.url, agent: { disabled: true }, telemetry: false, showDeveloperTools: "never", proxyUrl: "" })
+  window.Scalar.createApiReference(container, { url: marker.dataset.url, withDefaultFonts: false, agent: { disabled: true }, telemetry: false, showDeveloperTools: "never", proxyUrl: "" })
 }

@@ -49,10 +49,35 @@ The runtime checks the actual CLI version before scanning and limits Go runtime
 parallelism to two workers. No source compilation is needed on the release path.
 ZIP and tar inputs are extracted by `dagger/extract_archive.py`, which rejects
 traversal, absolute paths, links, device members, duplicate normalized paths,
-encrypted ZIP entries and oversized inventories. Failed extraction is preserved
+encrypted ZIP entries and oversized inventories. Extraction preserves only
+ordinary execute bits recorded by tar or Unix ZIP entries, using owner-only
+read/write permissions and never restoring setuid, setgid or sticky bits. ZIP
+entries from non-Unix creators do not supply Unix execute permissions. This
+retains byte-backed executable classification without executing artifact code.
+The pinned [Trivy Go binary analyzer](https://raw.githubusercontent.com/aquasecurity/trivy/v0.72.0/pkg/fanal/analyzer/language/golang/binary/binary.go)
+selects regular executable files and reads their embedded Go build metadata;
+stripping those bits would silently omit ELF and MachO inventories. Failed extraction is preserved
 with its status and log. Artifact admission requires actual versioned packages;
 empty or unsupported inventories cannot pass. `ArtifactAnalysis` collects all
 severities and uses the same existing CRITICAL/fixed release threshold.
+
+Artifact collection invokes both `trivy fs` and `trivy rootfs` against the same
+safe extraction. In pinned Trivy 0.72.0, [filesystem mode disables individual
+package analyzers, while rootfs disables lockfile analyzers](https://raw.githubusercontent.com/aquasecurity/trivy/v0.72.0/pkg/commands/artifact/run.go).
+Using only one would omit either delivered binaries or dependency declarations.
+The collector retains both `trivy-{fs,rootfs}-results.json`, statuses and logs.
+`dagger/artifact_inventory.py` combines their complete targets without dropping
+findings or conflating overlapping observations; each target records its scan
+mode and the combined document binds both original reports by SHA-256.
+`artifact_gate` independently replays that combination and requires both tools'
+successful statuses, the exact report subject and pinned version. A legitimate
+empty individual mode is retained, but an empty or unsupported combined inventory
+still blocks. Existing `trivy.status` and `trivy.log` describe the merge operation;
+a successful merge alone grants no eligibility. These six additional raw files
+are mandatory release evidence and the helper is integrity-covered. Scan counts
+include observations from both modes, so overlapping packages are not distinct
+component counts. All findings remain raw and the CRITICAL/fixed threshold is
+unchanged.
 
 `ArtifactSbomAnalysis` and `ImageSbomAnalysis` preserve original payload digest in
 `subject.sha256` (one lowercase SHA-256 and newline), pinned Syft producer version

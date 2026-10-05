@@ -121,7 +121,7 @@ def produce(metadata_bytes, tar_bytes):
 # Immutable inputs of the repository-owned published-module rebuild. These pins
 # are changed only together with an explicitly reviewed dependency lock/builder.
 NODE_MAJOR = 22
-BUILD_PINS = {'build-package.json': '59e31b76b652922756a0a31b6c50ace786dd6e56d6b2a81fe852451e6cea9377', 'package-lock.json': '96f9a32b4e85fe8732da6e75550151e30b68c5b8896d08a746e8b7f3dd29d947', 'entry.js': '66e3a5c2c3c4786c9116a9f62c560f9aaef24b1e49a76a2ed58a5eb7a450eda5', 'build.mjs': '75cc47d048ae68bce6f0da79730cb086d043c4dff780d5d23eab39efaf59bf52', 'scalar-LICENSE': '380cd0a6ad700e1f821f2a509f0dd9ff835041cee2d43daf5dedc1adb2bcc620', 'scalar-license-source.json': '47fbb8fa80a7ca2e9c6d6597896f91213b32872b79d7cf5849ce3f821d0a4a12'}
+BUILD_PINS = {'build-package.json': '59e31b76b652922756a0a31b6c50ace786dd6e56d6b2a81fe852451e6cea9377', 'package-lock.json': '96f9a32b4e85fe8732da6e75550151e30b68c5b8896d08a746e8b7f3dd29d947', 'entry.js': '2f69bd21a42977b8021a059fcceb723502fa85c520f04d334ce123ae839dccc1', 'build.mjs': '75cc47d048ae68bce6f0da79730cb086d043c4dff780d5d23eab39efaf59bf52', 'scalar-LICENSE': '380cd0a6ad700e1f821f2a509f0dd9ff835041cee2d43daf5dedc1adb2bcc620', 'scalar-license-source.json': '47fbb8fa80a7ca2e9c6d6597896f91213b32872b79d7cf5849ce3f821d0a4a12'}
 
 def rebuilt(root):
     root=Path(root)
