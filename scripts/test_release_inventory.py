@@ -79,6 +79,51 @@ class InventoryContract(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "missing required"):
             required_payload(self.root, self.manifest)
 
+    def final_context(self):
+        write(self.root / "payload-manifest.json", self.manifest)
+        marker = self.root / "evidence/presentation.ok"
+        marker.parent.mkdir(parents=True, exist_ok=True)
+        marker.write_bytes(b"presentation-analysis-ok\n")
+        write(self.root / "release-manifest.json", create(self.root, "v1.2.3", "a" * 40, final=True))
+
+    def test_final_context_admits_only_final_covered_presentation_receipt(self):
+        self.final_context()
+        with self.assertRaisesRegex(ValueError, "uncovered"):
+            validate(self.root, self.manifest)
+        self.assertEqual(len(validate(self.root, self.manifest, payload_in_final=True)), 1)
+
+    def test_final_context_still_rejects_new_raw_evidence_even_when_final_covered(self):
+        self.final_context()
+        self.root.joinpath("evidence/invented.json").write_bytes(b"new raw evidence")
+        write(self.root / "release-manifest.json", create(self.root, "v1.2.3", "a" * 40, final=True))
+        with self.assertRaisesRegex(ValueError, "uncovered"):
+            validate(self.root, self.manifest, payload_in_final=True)
+
+    def test_final_context_rejects_missing_tampered_or_wrong_identity_final(self):
+        self.final_context()
+        self.root.joinpath("evidence/presentation.ok").write_bytes(b"forged receipt\n")
+        with self.assertRaisesRegex(ValueError, "integrity"):
+            validate(self.root, self.manifest, payload_in_final=True)
+        self.final_context()
+        write(self.root / "release-manifest.json", create(self.root, "v1.2.4", "a" * 40, final=True))
+        with self.assertRaisesRegex(ValueError, "identities"):
+            validate(self.root, self.manifest, payload_in_final=True)
+        self.root.joinpath("release-manifest.json").unlink()
+        with self.assertRaises(FileNotFoundError):
+            validate(self.root, self.manifest, payload_in_final=True)
+
+    def test_final_context_rejects_wrong_presentation_receipt_and_changed_payload(self):
+        self.final_context()
+        self.root.joinpath("evidence/presentation.ok").write_bytes(b"forged receipt\n")
+        write(self.root / "release-manifest.json", create(self.root, "v1.2.3", "a" * 40, final=True))
+        with self.assertRaisesRegex(ValueError, "presentation receipt"):
+            validate(self.root, self.manifest, payload_in_final=True)
+        self.final_context()
+        changed = copy.deepcopy(self.manifest)
+        changed["artifacts"][0]["digest"] = "sha256:" + "0" * 64
+        with self.assertRaisesRegex(ValueError, "final-covered manifest bytes"):
+            validate(self.root, changed, payload_in_final=True)
+
     def test_metadata_tampering_rejected(self):
         for key, value in (("kind", "cli-archive"), ("producer", "invented"),
                            ("name", "renamed.zip"), ("platform", {"os": "darwin", "arch": "amd64"}),

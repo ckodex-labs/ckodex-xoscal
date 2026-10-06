@@ -14,6 +14,8 @@ concurrency:
 jobs:
   candidate:
     runs-on: ubuntu-latest
+    env:
+      RELEASE_WORKSPACE: /tmp/xoscal-release-${{ github.run_id }}-${{ github.run_attempt }}
     permissions:
       contents: read
       id-token: write
@@ -29,9 +31,10 @@ jobs:
           version: "v0.21.7"
       - name: Produce and admit complete candidate
         run: |
+          mkdir -p "$RELEASE_WORKSPACE"
           dagger call with-version --version="$RELEASE_TAG" release-candidate \
             --source=. --release-tag="$RELEASE_TAG" --source-revision="$SOURCE_REVISION" \
-            export --path=candidate
+            export --path="$RELEASE_WORKSPACE/candidate"
         env:
           RELEASE_TAG: ${{ github.ref_name }}
           SOURCE_REVISION: ${{ github.sha }}
@@ -39,13 +42,14 @@ jobs:
         id: payload
         uses: actions/attest-build-provenance@4d101475d8b20a2381f78447822ac1eab6504dd8
         with:
-          subject-path: candidate/payload-manifest.json
+          subject-path: ${{ env.RELEASE_WORKSPACE }}/candidate/payload-manifest.json
       - name: Verify payload and render final site in Dagger
         run: |
-          dagger call finalize-candidate --source=. --candidate=candidate \
+          dagger call finalize-candidate --source=. --candidate="$RELEASE_WORKSPACE/candidate" \
             --payload-bundle="$PAYLOAD_BUNDLE" --release-tag="$RELEASE_TAG" \
-            --source-revision="$SOURCE_REVISION" export --path=final
-          dagger call package-candidate --source=. --candidate=final export --path=release-site.tar.gz
+            --source-revision="$SOURCE_REVISION" export --path="$RELEASE_WORKSPACE/final"
+          dagger call package-candidate --source=. --candidate="$RELEASE_WORKSPACE/final" \
+            export --path="$RELEASE_WORKSPACE/release-site.tar.gz"
         env:
           PAYLOAD_BUNDLE: ${{ steps.payload.outputs.bundle-path }}
           RELEASE_TAG: ${{ github.ref_name }}
@@ -55,21 +59,21 @@ jobs:
         uses: actions/attest-build-provenance@4d101475d8b20a2381f78447822ac1eab6504dd8
         with:
           subject-path: |
-            final/release-manifest.json
-            release-site.tar.gz
-            final/release/image-index.json
+            ${{ env.RELEASE_WORKSPACE }}/final/release-manifest.json
+            ${{ env.RELEASE_WORKSPACE }}/release-site.tar.gz
+            ${{ env.RELEASE_WORKSPACE }}/final/release/image-index.json
       - name: Verify exact final bytes and stage attachment view
         run: |
-          dagger call verify-candidate --source=. --candidate=final \
+          dagger call verify-candidate --source=. --candidate="$RELEASE_WORKSPACE/final" \
             --release-bundle="$RELEASE_BUNDLE" --release-tag="$RELEASE_TAG" \
-            --source-revision="$SOURCE_REVISION" export --path=verified
-          dagger call promotion-assets --source=. --candidate=final \
+            --source-revision="$SOURCE_REVISION" export --path="$RELEASE_WORKSPACE/verified"
+          dagger call promotion-assets --source=. --candidate="$RELEASE_WORKSPACE/final" \
             --release-bundle="$RELEASE_BUNDLE" --release-tag="$RELEASE_TAG" \
-            --source-revision="$SOURCE_REVISION" export --path=attachments
-          cp release-site.tar.gz attachments/
-          dagger call verify-transport --source=. --transport=attachments/release-site.tar.gz \
+            --source-revision="$SOURCE_REVISION" export --path="$RELEASE_WORKSPACE/attachments"
+          cp "$RELEASE_WORKSPACE/release-site.tar.gz" "$RELEASE_WORKSPACE/attachments/"
+          dagger call verify-transport --source=. --transport="$RELEASE_WORKSPACE/attachments/release-site.tar.gz" \
             --bundle="$RELEASE_BUNDLE" --release-tag="$RELEASE_TAG" --source-revision="$SOURCE_REVISION" \
-            export --path=transport-verification.json
+            export --path="$RELEASE_WORKSPACE/transport-verification.json"
         env:
           RELEASE_BUNDLE: ${{ steps.final.outputs.bundle-path }}
           RELEASE_TAG: ${{ github.ref_name }}
@@ -79,16 +83,23 @@ jobs:
         with:
           name: verified-release
           path: |
-            attachments/
-            verified/
+            ${{ env.RELEASE_WORKSPACE }}/attachments/
+            ${{ env.RELEASE_WORKSPACE }}/verified/
           if-no-files-found: error
           retention-days: 14
       - name: Preserve raw findings when candidate gate fails
         if: failure()
         run: |
           status=0
-          mkdir -p failed-analysis/logs
-          printf 'subject\treport_mode\texport_status\n' > failed-analysis/exports.tsv
+          mkdir -p "$RELEASE_WORKSPACE/failed-analysis/logs"
+          # Preserve the original produced bytes before any independent rerun.
+          if [ -d "$RELEASE_WORKSPACE/candidate" ]; then
+            cp -a "$RELEASE_WORKSPACE/candidate" "$RELEASE_WORKSPACE/failed-analysis/produced-candidate"
+          fi
+          if [ -f "$PAYLOAD_BUNDLE" ]; then
+            cp "$PAYLOAD_BUNDLE" "$RELEASE_WORKSPACE/failed-analysis/payload.sigstore.json"
+          fi
+          printf 'subject\treport_mode\texport_status\n' > "$RELEASE_WORKSPACE/failed-analysis/exports.tsv"
           collect() {
             subject="$1"
             mode="$2"
@@ -96,9 +107,9 @@ jobs:
             dagger call with-version --version="$RELEASE_TAG" candidate-subject-reports \
               --source=. --release-tag="$RELEASE_TAG" --source-revision="$SOURCE_REVISION" \
               --subject="$subject" --report-mode="$mode" \
-              export --path="failed-analysis/$subject/$mode" \
-              > "failed-analysis/logs/$subject-$mode.log" 2>&1 || result=$?
-            printf '%s\t%s\t%s\n' "$subject" "$mode" "$result" >> failed-analysis/exports.tsv
+              export --path="$RELEASE_WORKSPACE/failed-analysis/$subject/$mode" \
+              > "$RELEASE_WORKSPACE/failed-analysis/logs/$subject-$mode.log" 2>&1 || result=$?
+            printf '%s\t%s\t%s\n' "$subject" "$mode" "$result" >> "$RELEASE_WORKSPACE/failed-analysis/exports.tsv"
             if [ "$result" -ne 0 ]; then
               status=1
               printf 'Diagnostic export failed: %s/%s (exit %s); see retained log\n' "$subject" "$mode" "$result" >&2
@@ -115,6 +126,7 @@ jobs:
           done
           exit "$status"
         env:
+          PAYLOAD_BUNDLE: ${{ steps.payload.outputs.bundle-path }}
           RELEASE_TAG: ${{ github.ref_name }}
           SOURCE_REVISION: ${{ github.sha }}
       - name: Retain failed raw evidence
@@ -122,7 +134,7 @@ jobs:
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: failed-release-analysis
-          path: failed-analysis/
+          path: ${{ env.RELEASE_WORKSPACE }}/failed-analysis/
           if-no-files-found: warn
 
   promote:

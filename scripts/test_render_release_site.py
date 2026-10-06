@@ -128,6 +128,66 @@ class RenderReleaseSite(unittest.TestCase):
         self.assertIn("HTTP Error 404", result.stdout)
         self.assertRegex(result.stderr, r'"GET /scalar\.js\.map HTTP/1\.[01]" 404')
 
+    def empty_log_fixture(self, status=b"0\n"):
+        log = self.root / "evidence/frontend/build.log"
+        log.parent.mkdir(parents=True, exist_ok=True)
+        log.write_bytes(b"")
+        log.with_suffix(".status").write_bytes(status)
+        self.reset_manifest()
+        result = self.render()
+        self.assertEqual(result.returncode, 0, result.stderr)
+        page = self.root / "transparency.html"
+        page.write_text(page.read_text().replace("</main>",
+                        '<p>Static HTTP fixture: <a href="evidence/frontend/build.log">empty tool log</a></p></main>'))
+        return log
+
+    def run_http_smoke(self):
+        return subprocess.run([sys.executable, str(SCRIPTS / "site-smoke.py"),
+                               "--root", str(self.root), "--generated"], capture_output=True, text=True)
+
+    def test_http_accepts_exact_inventoried_empty_success_log(self):
+        self.empty_log_fixture()
+        result = self.run_http_smoke()
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+        self.assertRegex(result.stderr, r'"GET /evidence/frontend/build\.log HTTP/1\.[01]" 200')
+
+    def test_http_refuses_empty_log_with_failed_missing_or_changed_status(self):
+        for mutation in ("failed", "missing", "changed"):
+            with self.subTest(mutation=mutation):
+                log = self.empty_log_fixture(status=b"1\n" if mutation == "failed" else b"0\n")
+                if mutation == "missing":
+                    log.with_suffix(".status").unlink()
+                elif mutation == "changed":
+                    log.with_suffix(".status").write_bytes(b"00\n")
+                result = self.run_http_smoke()
+                self.assertNotEqual(result.returncode, 0, result.stdout + result.stderr)
+
+    def test_http_refuses_empty_log_not_declared_in_inventory(self):
+        self.empty_log_fixture()
+        document = json.loads(self.manifest.read_text())
+        document["artifacts"] = [a for a in document["artifacts"] if a["path"] != "evidence/frontend/build.log"]
+        write(self.manifest, document)
+        result = self.run_http_smoke()
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn("HTTP 200 or empty body", result.stdout)
+
+    def test_http_still_refuses_empty_runtime_asset_even_when_inventoried(self):
+        self.root.joinpath("scalar.js").write_bytes(b"")
+        self.reset_manifest()
+        self.assertEqual(self.render().returncode, 0)
+        result = self.run_http_smoke()
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn("scalar.js: HTTP 200 or empty body", result.stdout)
+
+    def test_generated_smoke_rechecks_complete_final_tree(self):
+        self.assertEqual(self.render().returncode, 0)
+        marker = self.root / "evidence/presentation.ok"
+        marker.parent.mkdir(parents=True, exist_ok=True)
+        marker.write_bytes(b"presentation-analysis-ok\n")
+        write(self.root / "release-manifest.json", create(self.root, "v1.2.3", "a" * 40, final=True))
+        result = self.run_http_smoke()
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+
     def test_internal_analysis_checksum_is_inventoried_without_download_card(self):
         internal = self.root / "evidence/internal/subject"
         internal.parent.mkdir(parents=True)
