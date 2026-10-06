@@ -108,7 +108,7 @@ def check_openapi(root):
 def check_generated(root, pages):
     manifest_path = root / "payload-manifest.json"
     manifest = json.loads(manifest_path.read_text())
-    validate(root, manifest)
+    validate(root, manifest, payload_in_final=(root / "release-manifest.json").exists())
     index = json.loads((root / "downloads.json").read_text())
     if (index.get("release_tag"), index.get("source_revision")) != (
             manifest["release_tag"], manifest["source_revision"]):
@@ -185,6 +185,23 @@ def check_sidecar(path):
         raise ValueError(f"digest sidecar mismatch: {path}")
 
 
+def inventoried_empty_log(root, route):
+    """An empty stdout/stderr log is valid only with exact inventory and status."""
+    path = safe_path(route)
+    if not route.startswith("evidence/") or path.suffix != ".log":
+        return False
+    manifest = json.loads((root / "payload-manifest.json").read_text())
+    records = {item["path"]: item for item in manifest["artifacts"]}
+    status_path = route.removesuffix(".log") + ".status"
+    log, status = records.get(route), records.get(status_path)
+    if not log or not status or log.get("size") != 0:
+        return False
+    empty_digest = "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    return (log.get("digest") == empty_digest and (root / route).read_bytes() == b""
+            and (root / status_path).read_bytes() == b"0\n"
+            and status.get("size") == 2 and status.get("digest") == digest(root / status_path))
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--root", type=Path, default=Path("site"))
@@ -206,7 +223,7 @@ def main() -> int:
             return (root / route).read_bytes()
         with urllib.request.urlopen(base + "/" + urllib.parse.quote(route, safe="/"), timeout=10) as response:
             body = response.read()
-            if response.status != 200 or not body:
+            if response.status != 200 or (not body and not (args.generated and inventoried_empty_log(root, route))):
                 raise ValueError(f"{route}: HTTP {response.status} or empty body")
             if body != (root / route).read_bytes():
                 raise ValueError(f"{route}: served bytes differ from staged file")

@@ -174,7 +174,7 @@ def check_asset_names(entries):
         seen.add(name)
 
 
-def validate(root, manifest, final=False):
+def validate(root, manifest, final=False, *, payload_in_final=False):
     if manifest.get("schema_version") != SCHEMA or manifest.get("scope") != ("final" if final else "payload"):
         raise ValueError("unsupported manifest schema/scope")
     identity(manifest.get("release_tag", ""), manifest.get("source_revision", ""))
@@ -183,6 +183,21 @@ def validate(root, manifest, final=False):
         raise ValueError("missing artifacts")
     found = set()
     expected_paths = selected(root, final)
+    if payload_in_final:
+        if final:
+            raise ValueError("payload context cannot validate a final manifest")
+        frozen = json.loads((root / "release-manifest.json").read_text())
+        validate(root, frozen, final=True)
+        if any(frozen.get(key) != manifest.get(key) for key in ("release_tag", "source_revision")):
+            raise ValueError("payload and final identities differ")
+        if manifest != json.loads((root / "payload-manifest.json").read_text()):
+            raise ValueError("payload differs from final-covered manifest bytes")
+        # This receipt is produced after payload signing. Only this exact
+        # final-covered marker may extend the otherwise frozen payload scope.
+        marker = "evidence/presentation.ok"
+        if (root / marker).read_bytes() != b"presentation-analysis-ok\n":
+            raise ValueError("invalid final presentation receipt")
+        expected_paths -= {marker}
     check_asset_names(entries)
     for item in entries:
         path = str(safe_path(item["path"]))
