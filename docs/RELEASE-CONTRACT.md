@@ -23,8 +23,14 @@ credential or registry publication is introduced by local execution.
    evidence, HTML, CSS, JavaScript, fonts and other assets. `PackageCandidate` creates a
    deterministic transport archive of those frozen bytes. Hosted provenance signs the
    final manifest, transport and exact OCI root manifest bytes.
-5. `VerifyCandidate` checks final provenance and rehashes every file. Only its successful
-   result can reach registry/release/Pages promotion. Promotion re-verifies after transfer.
+5. `VerifyCandidate` checks final provenance and rehashes every file. `VerifyTransport`
+   verifies the signed transport, runs the actual public consumer's strict extraction,
+   checks the embedded final manifest identity and every file, then verifies that manifest's
+   signature and required raw-evidence policy. Both gates run before staging and again
+   after transfer, before any registry/release/Pages promotion. A signature on an archive
+   never substitutes for successful consumer admission. The producer emits regular file
+   headers even when Dagger materializes identical files with shared inodes; filesystem
+   links remain forbidden by the consumer. Promotion requires both gates to pass.
    It reconstructs flat attachments from that admitted candidate, rather than publishing
    unchecked transferred attachments; only the separately verified transport is added.
    Registry copy preserves OCI digests and compares the published root bytes. Read-only preflight refuses any existing release or image tag and fails when absence cannot be established; automatic recovery never overwrites them.
