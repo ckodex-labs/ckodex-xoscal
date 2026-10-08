@@ -322,24 +322,33 @@ async function safeRequests(context, log) {
   })
 }
 
+async function nativeContractTargets(page) {
+  return page.locator('#static-api-reference [data-api-operation] details:has(> pre),#api-model-schemas [data-api-schema] > details').evaluateAll(nodes => nodes.map(node => {
+    const pre = node.querySelector(':scope > pre')
+    return { selector: pre.id ? '#' + CSS.escape(pre.id) : '#' + CSS.escape(node.parentElement.id) + ' > details > pre', operation: Boolean(node.closest('[data-api-operation]')) }
+  }))
+}
+
 async function nativeContracts(page, profile, observation) {
-  const bodies = page.locator('#static-api-reference [data-api-operation] details:has(> pre),#api-model-schemas [data-api-schema] > details')
-  const count = await bodies.count()
+  const targets = await nativeContractTargets(page)
+  const count = targets.length
   verify(profile.id + ': all 491 native operation and model disclosures', count === 491, { count })
-  for (const [index, details] of (await bodies.all()).entries()) {
+  for (const [index, target] of targets.entries()) {
+    const pre = page.locator(target.selector), details = pre.locator('xpath=..')
     const outer = details.locator('xpath=ancestor::details[@data-api-operation-details]')
-    if (await outer.count() && await outer.getAttribute('open') !== null) { await outer.locator(':scope > summary').focus(); await page.keyboard.press('Enter') }
+    if (index % 100 === 0) console.log('presentation browser: ' + profile.id + ' native contracts ' + index + '/' + count)
+    if (target.operation && await outer.getAttribute('open') !== null) { await outer.locator(':scope > summary').focus(); await page.keyboard.press('Enter') }
     await reveal(page, details, profile.js)
-    if (await outer.count()) verify(profile.id + ': native contract ' + index + ': outer keyboard expansion', await outer.getAttribute('open') !== null)
-    const summary = details.locator(':scope > summary'), code = details.locator('pre code')
+    if (target.operation) verify(profile.id + ': native contract ' + index + ': outer keyboard expansion', await outer.getAttribute('open') !== null)
+    const summary = details.locator(':scope > summary'), code = pre.locator('code')
     if (await details.getAttribute('open') !== null) { await summary.focus(); await page.keyboard.press('Enter') }
     await summary.focus(); await page.keyboard.press('Enter')
     const width = await page.evaluate(() => ({ viewport: innerWidth, document: document.documentElement.scrollWidth }))
     verify(profile.id + ': native contract ' + index + ': keyboard expansion', await details.getAttribute('open') !== null && await code.isVisible() && width.document <= width.viewport, { summary: await summary.textContent(), width })
-    await hitTest(page, details.locator('pre'), profile.id + ': native contract ' + index)
+    await hitTest(page, pre, profile.id + ': native contract ' + index)
     await summary.focus(); await page.keyboard.press('Enter')
     verify(profile.id + ': native contract ' + index + ': keyboard collapse', await details.getAttribute('open') === null && !(await code.isVisible()))
-    if (await outer.count()) {
+    if (target.operation) {
       await outer.locator(':scope > summary').focus(); await page.keyboard.press('Enter')
       verify(profile.id + ': native contract ' + index + ': outer keyboard collapse', await outer.getAttribute('open') === null && !(await code.isVisible()))
     }
