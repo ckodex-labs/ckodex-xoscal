@@ -11,7 +11,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 INPUTS = Path(__file__).with_name("blueprint")
 VIEWS = ("room", "exchange", "downloads", "cartography", "personas", "pipeline")
-LABELS = ("Assurance Room", "Exchange", "Downloads", "Cartography", "Personas", "Pipeline")
+LABELS = ("Assurance Room", "Exchange", "Sample downloads", "Cartography", "Personas", "Pipeline")
 ASSETS = ("blueprint.js", "blueprint.css", "blueprint-views.css")
 
 

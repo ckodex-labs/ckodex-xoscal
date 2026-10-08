@@ -167,6 +167,20 @@ class BlueprintStaticContract(unittest.TestCase):
         self.assertNotIn(self.document.by_id('nav'), header.descendants())
         self.assertEqual(self.document.by_id('nav').attrs['aria-label'], 'Blueprint sections')
 
+    def test_sample_download_navigation_is_distinct_from_release_downloads(self):
+        release = [n for n in self.document.nodes if n.tag == 'a' and n.attrs.get('href') == 'downloads.html']
+        local = [n for n in self.document.by_id('nav').descendants()
+                 if n.tag == 'a' and n.attrs.get('href') == '#view-downloads']
+        adjacent = [n for n in self.document.nodes if n.tag == 'a'
+                    and n.attrs.get('href') == '#view-downloads'
+                    and any('vname' in child.attrs.get('class', '').split() for child in n.descendants())]
+        self.assertTrue(any(normalized(n.text()) == 'Downloads' for n in release))
+        self.assertEqual([normalized(n.text()) for n in local], ['Sample downloads'])
+        self.assertEqual(len(adjacent), 2)
+        for link in adjacent:
+            self.assertEqual([normalized(n.text()) for n in class_nodes(link, 'vname')], ['Sample downloads'])
+        self.assertTrue(normalized(self.document.by_id('view-downloads-title').text()).startswith('Sample downloads —'))
+
     def test_views_share_one_flow_container_instead_of_overlapping_grid_cells(self):
         main = self.document.by_id('main')
         children = [n for n in main.children if n.tag != 'script']

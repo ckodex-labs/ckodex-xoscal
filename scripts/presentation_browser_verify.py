@@ -122,7 +122,8 @@ def verify_coverage(root, receipt, mode):
 
 def mandatory_checks(mode):
     ids = {mode + ": fresh context no cookies",
-           mode + ": all 491 native operation and model disclosures"}
+           mode + ": all 491 native operation and model disclosures",
+           mode + "/portal.html: sample downloads distinct from release downloads"}
     for index in range(491):
         prefix = mode + ": native contract " + str(index) + ": "
         ids |= {prefix + "keyboard expansion", prefix + "keyboard collapse",

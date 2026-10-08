@@ -92,7 +92,7 @@ function requiredIds() {
 }
 
 function modeRequiredIds(mode) {
-  const ids = [...routeRequiredIds(mode), ...nativeRequiredIds(mode), mode + ': all 491 native operation and model disclosures', mode + ': exact 96 operations and 395 model definitions', mode + '/portal.html: Blueprint six native anchors', mode + '/portal.html: Blueprint all 18 prebuilt sections']
+  const ids = [...routeRequiredIds(mode), ...nativeRequiredIds(mode), mode + ': all 491 native operation and model disclosures', mode + ': exact 96 operations and 395 model definitions', mode + '/portal.html: Blueprint six native anchors', mode + '/portal.html: Blueprint all 18 prebuilt sections', mode + '/portal.html: sample downloads distinct from release downloads']
   if (!mode.endsWith('-js')) ids.push(mode + '/portal.html: all six no-JS views visible without overlap')
   else ids.push(...lifecycleRequiredIds(mode))
   return ids
@@ -241,6 +241,7 @@ async function framing(page, route, profile) {
 async function blueprint(page, profile) {
   const links = page.locator('#nav a[data-view]'), ids = await links.evaluateAll(nodes => nodes.map(node => node.hash))
   verify(profile.id + ': Blueprint six native anchors', ids.length === 6 && await page.locator('#nav button[data-view]').count() === 0, ids)
+  await sampleDownloadLabels(page, profile.id)
   for (const hash of ids) { await page.locator('#nav a[href="' + hash + '"]').focus(); await page.keyboard.press('Enter'); await page.locator(hash).waitFor({ state: 'visible' }); verify(profile.id + ': Blueprint keyboard ' + hash, new URL(page.url()).hash === hash) }
   const rects = await page.locator('.view').evaluateAll(nodes => nodes.map(node => ({ id: node.id, visible: Boolean(node.getClientRects().length), rect: node.getBoundingClientRect().toJSON() })))
   if (!profile.js) {
@@ -250,6 +251,14 @@ async function blueprint(page, profile) {
   verify(profile.id + ': Blueprint all 18 prebuilt sections', receipt.coverage_inventory['portal.html'].sections.length === 18)
   for (const container of ['release-artifacts', 'sdks', 'frameworks', 'prov', 'canonical-cards', 'interop-cards', 'defensive-cards', 'ext-cards', 'interop-matrix', 'dux-grid', 'persona-grid', 'pipe-flow', 'pipe-grid', 'wf-list', 'trace-table']) await containerChecks(page, profile, container)
   return { anchors: ids, views: rects, containers: 15 }
+}
+
+async function sampleDownloadLabels(page, id) {
+  const labels = await page.evaluate(() => {
+    const text = selector => [...document.querySelectorAll(selector)].map(node => node.textContent.trim())
+    return { release: text('nav[aria-label="Primary"] a[href="downloads.html"]'), local: text('#nav a[href="#view-downloads"]'), adjacent: text('.view-nav a[href="#view-downloads"] .vname'), heading: text('#view-downloads-title') }
+  })
+  verify(id + ': sample downloads distinct from release downloads', JSON.stringify(labels.release) === '["Downloads"]' && JSON.stringify(labels.local) === '["Sample downloads"]' && JSON.stringify(labels.adjacent) === '["Sample downloads","Sample downloads"]' && labels.heading.length === 1 && labels.heading[0].startsWith('Sample downloads —'), labels)
 }
 
 async function containerChecks(page, profile, container) {
