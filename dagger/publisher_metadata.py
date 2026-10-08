@@ -252,7 +252,7 @@ def verify_record(component,record,data,go_sum=None,resolved=None):
     return author.strip(),supplier
 
 
-def collect(sbom, output, producer=None, go_sum_path=None, resolved_path=None, requirements_path=None):
+def collect(sbom, output, producer=None, go_sum_path=None, resolved_path=None, requirements_path=None, go_mod_path=None):
     output.mkdir(parents=True,exist_ok=True)
     from enrich_sbom import BUNDLED
     components=[c for c in sbom['components'] if c.get('type')!='file' and not c.get('supplier') and not c.get('author') and not any(p.get('name')=='syft:package:foundBy' and p.get('value') in BUNDLED for p in c.get('properties',[]))]
@@ -260,6 +260,7 @@ def collect(sbom, output, producer=None, go_sum_path=None, resolved_path=None, r
     go_sum=go_sum_path.read_bytes() if go_sum_path is not None and go_sum_path.is_file() else None
     resolved=resolved_path.read_bytes() if resolved_path is not None and resolved_path.is_file() else None
     if go_sum is not None:(output/'go.sum').write_bytes(go_sum)
+    if go_mod_path is not None and go_mod_path.is_file():(output/'go.mod').write_bytes(go_mod_path.read_bytes())
     if resolved is not None:(output/'Package.resolved').write_bytes(resolved)
     if requirements_path is not None and requirements_path.is_file():(output/'requirements.txt').write_bytes(requirements_path.read_bytes())
     producer_bytes=producer.read_bytes() if producer is not None and producer.is_file() else None
@@ -283,5 +284,5 @@ def collect(sbom, output, producer=None, go_sum_path=None, resolved_path=None, r
     return ledger
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--sbom',required=True,type=Path);p.add_argument('--output',required=True,type=Path);p.add_argument('--producer',type=Path);p.add_argument('--go-sum',type=Path);p.add_argument('--resolved',type=Path);p.add_argument('--requirements',type=Path);a=p.parse_args()
-    collect(json.loads(a.sbom.read_text()),a.output,a.producer,a.go_sum,a.resolved,a.requirements)
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--sbom',required=True,type=Path);p.add_argument('--output',required=True,type=Path);p.add_argument('--producer',type=Path);p.add_argument('--go-sum',type=Path);p.add_argument('--resolved',type=Path);p.add_argument('--requirements',type=Path);p.add_argument('--go-mod',type=Path);a=p.parse_args()
+    collect(json.loads(a.sbom.read_text()),a.output,a.producer,a.go_sum,a.resolved,a.requirements,a.go_mod)

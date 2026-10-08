@@ -154,3 +154,26 @@ but SemVer build metadata (`+...`) and tags longer than 128 characters are rejec
 before source derivation or artifact production; tags are never rewritten.
 `PreviewCandidate` uses snapshot archives for full local graph
 validation without creating a tag or establishing production/signature authority.
+
+
+Trivy vulnerability and publisher-metadata observations can be explicitly selected with
+`with-analysis-attempt --attempt=<1-80 character ASCII label>`. The producer keeps
+a purpose-labelled receipt in its raw analysis, including enforcing SBOM evidence.
+CI and release producers use their run ID and attempt. This selects a fresh
+observation after tool installation; it does not retry automatically, change
+thresholds or supersede a failed prior receipt. Final verification and promotion
+consume frozen evidence without starting new observations.
+
+Go source SDK relationships are replayed from the exact delivered `go.mod`, its
+inventoried digest and the complete declared requirement set. Required
+versions and direct/indirect declaration roles must match. These edges describe
+declarations, not installed upstream bytes or inferred transitive requirements.
+Publisher proof remains independently mandatory. Missing or contradictory
+manifest inputs refuse enrichment; historical receipts remain bound to their
+historical consumer. PR CI checks out the reviewed head SHA explicitly.
+
+A fresh raw scan may retain additional resolved Go modules and dependency edges.
+These are preserved as scanner observations, separately from exact manifest
+declarations, only when their unique identities are valid and they are reachable
+from the SDK project through the retained graph. Unconnected extras refuse
+enrichment. No inferred transitive edge or installed upstream-byte claim is added.

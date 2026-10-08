@@ -133,3 +133,46 @@ use bounded host-side waits when page animation callbacks do not run. Passing
 these checks is scoped browser evidence, not a claim of formal WCAG certification
 or absence of security findings. Hosted signing is outside unsigned local
 validation and requires the existing authorized hosted identity boundary.
+
+## Candidate evidence recovery
+
+The first complete candidate refused artifact vulnerability analysis: the retained
+Darwin archive report records a Trivy database lookup DNS failure. A separate
+fresh observation of all four archive bytes passed the unchanged policy; it does
+not change the earlier result. The next candidate refused the Go SDK SBOM with
+twelve publisher lookup errors and one missing dependency-relationship warning.
+The retained publisher records show DNS errors. The relationship warning also
+reflects a separate inventory gap and cannot be attributed to DNS.
+
+1. Retain exact delivered SDK `go.mod` bytes beside publisher metadata. Replay
+   module and requirement identities against the unique manifest-cataloged
+   requirements and its SHA-256. Add only declaration relationships, with
+   explicit direct/indirect roles. Do not infer installed upstream bytes,
+   transitive dependencies or supplier identities. Contradictory, missing or
+   unsupported manifests and inventory refuse enrichment.
+2. Add an explicit `with-analysis-attempt --attempt=<label>` selection at Trivy vulnerability and publisher-metadata
+   observation boundaries, after pinned tool installation. Retain the label and
+   purpose with raw findings and enforcing SBOM evidence. An empty default keeps
+   existing cache behavior. No automatic retry, cache deletion, success fallback
+   or policy exception is introduced. A new observation has new evidence; the
+   failed historical observation keeps its result.
+3. Select a run/attempt label for CI and release Trivy/publisher observations. Preserve
+   existing hosted identity permissions and promotion ordering. PR CI checks out
+   the actual head SHA so its artifacts can be compared with reviewed source.
+4. Run positive and refusal controls, the nested Dagger module tests and the
+   repository contract gate. Freeze a reviewed source commit, then produce a
+   complete fresh Site and PreviewCandidate with an explicit attempt. Replay
+   actual candidate reports and run the independent six-profile served preview.
+   Require unchanged analysis policies and exact artifact/receipt bindings.
+
+These changes require no data migration. Reverting before promotion restores the
+previous producer. Historical Go enrichment receipts lacking retained manifest
+bytes require their version-bound historical consumer and cannot satisfy this
+stronger gate. Neither a successful diagnostic export nor a fresh raw scan grants
+candidate admission. External DNS or registry failures continue to block it.
+
+A fresh raw scan may retain additional resolved Go modules and dependency edges.
+These are preserved as scanner observations, separately from exact manifest
+declarations, only when their unique identities are valid and they are reachable
+from the SDK project through the retained graph. Unconnected extras refuse
+enrichment. No inferred transitive edge or installed upstream-byte claim is added.

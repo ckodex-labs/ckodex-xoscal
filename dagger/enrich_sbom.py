@@ -14,19 +14,7 @@ BUNDLED = {'go-module-binary-cataloger', 'java-archive-cataloger',
            'python-installed-package-cataloger'}
 
 
-def enrich(raw, policy, publisher_dir=None, subject=None):
-    if raw.get('bomFormat') != 'CycloneDX' or not raw.get('components'):
-        raise ValueError('no CycloneDX component inventory')
-    if policy.get('version') != 1 or policy.get('role') != 'release-distributor':
-        raise ValueError('invalid distributor policy')
-    distributor = policy['entity']
-    if not distributor.get('name') or not distributor.get('url'):
-        raise ValueError('distributor must have an evidenced identity')
-    refs = {c['bom-ref'] for c in raw['components']}
-    root = raw['metadata']['component']
-    root_ref = root['bom-ref']
-    if len(refs) != len(raw['components']) or root_ref in refs:
-        raise ValueError('ambiguous component references')
+def enrich_publishers(raw, publisher_dir):
     authors_changed = []
     if publisher_dir is not None:
         from publisher_metadata import verify_record
@@ -47,7 +35,10 @@ def enrich(raw, policy, publisher_dir=None, subject=None):
             if record.get('source')=='artifact:SDK-PRODUCER.json' and by_ref[ref].get('version') in (None,'','UNKNOWN'):
                 by_ref[ref]['version']=record['version']
                 if by_ref[ref].get('purl','').startswith('pkg:golang/') and '@' not in by_ref[ref]['purl']:by_ref[ref]['purl']+='@'+quote(record['version'],safe='')
-    declared=[]
+    return authors_changed
+
+
+def python_declarations(raw, publisher_dir, declared):
     if publisher_dir is not None and (publisher_dir/'requirements.txt').is_file():
         requirements=(publisher_dir/'requirements.txt').read_bytes()
         files=[c for c in raw['components'] if c.get('type')=='file' and Path(c['name']).name=='requirements.txt' and any(h.get('alg')=='SHA-256' and h.get('content')==hashlib.sha256(requirements).hexdigest() for h in c.get('hashes',[]))]
@@ -59,6 +50,10 @@ def enrich(raw, policy, publisher_dir=None, subject=None):
             matches=[c for c in raw['components'] if c.get('purl','').startswith('pkg:pypi/') and c['name'].replace('_','-').lower()==name.replace('_','-').lower() and c.get('version')==version]
             if len(matches)!=1:raise ValueError('requirement lacks unique exact-version inventory')
             declared.append(matches[0]['bom-ref'])
+    return declared
+
+
+def observed_components(raw, distributor):
     changed, bundled = [], []
     for c in raw['components']:
         props = {p['name']: p['value'] for p in c.get('properties', [])}
@@ -79,6 +74,27 @@ def enrich(raw, policy, publisher_dir=None, subject=None):
             changed.append(c['bom-ref'])
         if observed_os and not c.get('purl'):
             c['purl']='pkg:generic/'+quote(c['name'],safe='')+'@'+quote(c['version'],safe='')
+    return changed, bundled
+
+
+def enrich(raw, policy, publisher_dir=None, subject=None):
+    if raw.get('bomFormat') != 'CycloneDX' or not raw.get('components'):
+        raise ValueError('no CycloneDX component inventory')
+    if policy.get('version') != 1 or policy.get('role') != 'release-distributor':
+        raise ValueError('invalid distributor policy')
+    distributor = policy['entity']
+    if not distributor.get('name') or not distributor.get('url'):
+        raise ValueError('distributor must have an evidenced identity')
+    refs = {c['bom-ref'] for c in raw['components']}
+    root = raw['metadata']['component']
+    root_ref = root['bom-ref']
+    if len(refs) != len(raw['components']) or root_ref in refs:
+        raise ValueError('ambiguous component references')
+    authors_changed = enrich_publishers(raw, publisher_dir)
+    from go_module_relationships import declared_graph
+    declared, go_graph = declared_graph(raw, publisher_dir)
+    declared = python_declarations(raw, publisher_dir, declared)
+    changed, bundled = observed_components(raw, distributor)
     root['supplier'] = root.get('supplier') or dict(distributor)
     if subject and not root.get('version'):root['version']='sha256:'+subject
     if subject and not root.get('purl'):
@@ -97,6 +113,7 @@ def enrich(raw, policy, publisher_dir=None, subject=None):
             existing['dependsOn'] = sorted(set(existing.get('dependsOn', [])) | set(bundled+declared))
     raw['version'] = raw.get('version', 1) + 1
     return raw, {'author_components':authors_changed, 'supplier_components':changed, 'root_contains':sorted(bundled), 'root_declares':sorted(declared),
+                 'go_module_relationships':go_graph,
                  'unresolved_components':[c['bom-ref'] for c in raw['components'] if c.get('type') != 'file' and not c.get('supplier') and not c.get('manufacturer') and not c.get('author')]}
 
 

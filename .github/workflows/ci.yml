@@ -9,6 +9,9 @@ on:
 permissions:
   contents: read
 
+env:
+  ANALYSIS_ATTEMPT: gha-${{ github.run_id }}-${{ github.run_attempt }}
+
 jobs:
   ssdlc:
     runs-on: ubuntu-latest
@@ -16,6 +19,7 @@ jobs:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
           persist-credentials: false
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
 
       - name: Setup Dagger
         uses: dagger/dagger-for-github@057a749131c864e4a719e6773baf0d1447ef998f # v7
@@ -43,6 +47,7 @@ jobs:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
           persist-credentials: false
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
 
       - name: Setup Dagger
         uses: dagger/dagger-for-github@057a749131c864e4a719e6773baf0d1447ef998f # v7
@@ -64,14 +69,15 @@ jobs:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
           persist-credentials: false
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
       - name: Setup pinned Dagger
         uses: dagger/dagger-for-github@057a749131c864e4a719e6773baf0d1447ef998f
         with:
           version: "v0.21.7"
       - name: Retain raw frontend analysis through Dagger
-        run: dagger call frontend-analysis-reports export --path=frontend-analysis > frontend-export.log 2>&1
+        run: dagger call with-analysis-attempt --attempt="$ANALYSIS_ATTEMPT" frontend-analysis-reports export --path=frontend-analysis > frontend-export.log 2>&1
       - name: Produce and validate exact served site through Dagger
-        run: dagger call site --source=. export --path=site-preview
+        run: dagger call with-analysis-attempt --attempt="$ANALYSIS_ATTEMPT" site --source=. export --path=site-preview
       - name: Preserve frontend evidence and producer diagnostics
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
@@ -90,6 +96,7 @@ jobs:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
           persist-credentials: false
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
 
       - name: Setup Dagger
         uses: dagger/dagger-for-github@057a749131c864e4a719e6773baf0d1447ef998f # v7
@@ -99,9 +106,9 @@ jobs:
       - name: Collect exact local image findings through Dagger
         run: |
           dagger call image --source=. export --path=xoscal-server.tar
-          dagger call image-analysis-reports --archive=xoscal-server.tar export --path=image-analysis
+          dagger call with-analysis-attempt --attempt="$ANALYSIS_ATTEMPT" image-analysis-reports --archive=xoscal-server.tar export --path=image-analysis
       - name: Enforce image CI threshold through Dagger
-        run: dagger call image-analysis-ci --source=. --archive=xoscal-server.tar export --path=admitted-image-analysis
+        run: dagger call with-analysis-attempt --attempt="$ANALYSIS_ATTEMPT" image-analysis-ci --source=. --archive=xoscal-server.tar export --path=admitted-image-analysis
       - name: Retain raw image analysis
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
