@@ -5,6 +5,8 @@ import "dagger/xoscal/internal/dagger"
 // FrontendProductionReports builds published ES modules with a reviewed lock
 // and exact security overrides. Original npm tar/SRI/JS/map remain replayable;
 // the new assembly is explicitly a repository build, not publisher CDN bytes.
+// Reviewed landmark adapters run on hash-pinned upstream modules before
+// bundling; raw inputs, transformed-source receipt and final maps are replayed.
 func (m *Xoscal) FrontendProductionReports() *dagger.Directory {
 	publisher := m.trivyBase().
 		WithFile("/tools/frontend_inventory.py", dag.CurrentModule().Source().File("frontend_inventory.py")).
@@ -13,12 +15,15 @@ func (m *Xoscal) FrontendProductionReports() *dagger.Directory {
 	builder := sdkToolchain("ts").
 		WithDirectory("/build", dag.CurrentModule().Source().Directory("frontend")).
 		WithWorkdir("/build").WithEnvVariable("NODE_OPTIONS", "--max-old-space-size=2048").
-		WithExec([]string{"sh", "-c", "set -eu; mkdir -p out; npm ci --ignore-scripts --no-audit --no-fund --registry=https://registry.npmjs.org --userconfig=/dev/null --globalconfig=/tmp/xoscal-empty-global-npmrc > out/npm-ci.log 2>&1; printf '0\\n' > out/npm-ci.status; node build.mjs > out/build.log 2>&1; printf '0\\n' > out/build.status"})
+		WithExec([]string{"sh", "-c", "set -eu; mkdir -p out; npm ci --ignore-scripts --no-audit --no-fund --registry=https://registry.npmjs.org --userconfig=/dev/null --globalconfig=/tmp/xoscal-empty-global-npmrc > out/npm-ci.log 2>&1; printf '0\\n' > out/npm-ci.status; node --test landmark-transform.test.mjs > out/build.log 2>&1; node build.mjs >> out/build.log 2>&1; printf '0\\n' > out/build.status"})
 	evidence := publisher.WithDirectory("/", builder.Directory("/build/out")).
 		WithFile("build-package.json", dag.CurrentModule().Source().File("frontend/package.json")).
 		WithFile("package-lock.json", dag.CurrentModule().Source().File("frontend/package-lock.json")).
 		WithFile("entry.js", dag.CurrentModule().Source().File("frontend/entry.js")).
 		WithFile("build.mjs", dag.CurrentModule().Source().File("frontend/build.mjs")).
+		WithFile("landmark-transform.mjs", dag.CurrentModule().Source().File("frontend/landmark-transform.mjs")).
+		WithFile("landmark-transform.test.mjs", dag.CurrentModule().Source().File("frontend/landmark-transform.test.mjs")).
+		WithFile("landmark-transforms.json", dag.CurrentModule().Source().File("frontend/landmark-transforms.json")).
 		WithFile("scalar-LICENSE", dag.CurrentModule().Source().File("frontend/scalar-LICENSE")).
 		WithFile("scalar-license-source.json", dag.CurrentModule().Source().File("frontend/scalar-license-source.json"))
 	return m.trivyBase().WithDirectory("/evidence", evidence).

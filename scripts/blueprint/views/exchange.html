@@ -1,0 +1,125 @@
+  <section class="view" id="view-exchange" aria-labelledby="view-exchange-title" tabindex="-1">
+    <h2 class="room-title" id="view-exchange-title">Exchange — receiver-side verification</h2>
+    <p class="room-sub">Publishing does not imply trusted. Receiving does not imply verified.
+      Verification is re-run by the receiver. Reconciliation is by hash, not custody transfer.</p>
+
+    <div class="grid">
+      <div class="col">
+
+        <section class="panel inbound" aria-label="Inbound claim — pass">
+          <h3>Inbound Claim — from Agency-B</h3>
+          <div class="subj">Subject — <b>Shared-Service Boundary — AC-4</b></div>
+          <div class="from">Presented proofs: signature — transparency_log — witness_checkpoint</div>
+          <div class="verify-row">
+            <div class="name">VerifyClaim <span class="mono">rpc</span></div>
+            <span class="result v-pass">passed</span>
+          </div>
+          <div class="verify-row">
+            <div class="name">VerifyEvidence <span class="mono">rpc</span></div>
+            <span class="result v-pass">passed</span>
+          </div>
+          <div class="verify-row">
+            <div class="name">Digest reconciliation</div>
+            <span class="result v-pass">passed</span>
+          </div>
+          <div class="verify-row">
+            <div class="name">Disclosure class</div>
+            <span class="result v-pass">respected</span>
+          </div>
+          <div class="disposition">
+            <div class="label">Disposition</div>
+            <div class="verdict">◆ Attested — independently verified.</div>
+            <div class="reason">Receiver policy: accepted into graph. Sender assertion was not sufficient;
+              local verification passed.</div>
+          </div>
+          <div class="act-footer" style="margin-top:14px">
+            <span class="act-label">safe next actions</span>
+            <div class="act-list">
+              <a class="act primary" href="#">Accept into graph</a>
+              <a class="act" href="#">Open proof ladder</a>
+              <a class="act export" href="#">Export verification receipt</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel inbound" aria-label="Inbound claim — fail">
+          <h3>Inbound Claim — from Partner-C</h3>
+          <div class="subj">Subject — <b>Secure Transfer — SC-8</b></div>
+          <div class="from">Presented proofs: signature only</div>
+          <div class="verify-row">
+            <div class="name">VerifyClaim <span class="mono">rpc</span></div>
+            <span class="result v-fail">failed</span>
+          </div>
+          <div class="verify-row">
+            <div class="name">VerifyEvidence <span class="mono">rpc</span></div>
+            <span class="result v-skip">not run</span>
+          </div>
+          <div class="verify-row">
+            <div class="name">Digest reconciliation</div>
+            <span class="result v-fail">mismatch</span>
+          </div>
+          <div class="disposition fail">
+            <div class="label">Disposition</div>
+            <div class="verdict">⊘ Quarantined.</div>
+            <div class="reason">Digest mismatch between presented evidence and source reference.
+              Sender assertion is not sufficient. Claim held under containment pending re-verification.</div>
+          </div>
+          <div class="act-footer" style="margin-top:14px">
+            <div class="act-blocked"><span class="why">digest mismatch — claim held under containment, not accepted into local graph</span></div>
+            <span class="act-label">safe next actions</span>
+            <div class="act-list">
+              <a class="act primary" href="#">Request corrected evidence</a>
+              <a class="act" href="#">Open quarantine trace</a>
+              <a class="act" href="#">Reject import</a>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+      <div class="col">
+        <section class="panel" aria-label="Exchange doctrine">
+          <h3>Exchange doctrine</h3>
+          <p style="font-size:14px;color:var(--ink);margin:0 0 12px">
+            XOSCAL Exchange is a verification substrate, not a share button.</p>
+          <ul style="margin:0;padding-left:18px;font-size:13px;color:var(--tone);line-height:1.7">
+            <li>Publishing does not imply trusted.</li>
+            <li>Receiving does not imply verified.</li>
+            <li>Verification is the receiver's, re-run locally.</li>
+            <li>Reconciliation is by hash, not custody transfer.</li>
+            <li>Disclosure requires explicit class.</li>
+            <li>Inbound claims enter as <b style="color:var(--ink)">imported-unverified</b> until
+              <code style="font-family:var(--mono)">VerifyClaim</code> passes locally.</li>
+          </ul>
+        </section>
+
+        <section class="panel" aria-label="Sync status">
+          <h3>Sync status</h3>
+          <div class="verify-row">
+            <div class="name">FedRAMP PMO</div>
+            <span class="result v-pass">receiver verified</span>
+          </div>
+          <div class="verify-row">
+            <div class="name">Agency-B</div>
+            <span class="result v-pass">verified</span>
+          </div>
+          <div class="verify-row">
+            <div class="name">Partner-C</div>
+            <span class="result v-fail">quarantined</span>
+          </div>
+          <div class="verify-row">
+            <div class="name">Partner-D</div>
+            <span class="result v-skip">pending</span>
+          </div>
+          <div class="act-footer" style="margin-top:14px">
+            <span class="act-label">sync actions</span>
+            <div class="act-list">
+              <a class="act primary" href="#">Sync claims</a>
+              <a class="act" href="#">Reconcile-by-hash</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  {{view-navigation}}
+  </section>

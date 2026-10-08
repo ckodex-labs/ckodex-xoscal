@@ -27,7 +27,9 @@ func (m *Xoscal) ReleaseCandidate(source *dagger.Directory, releaseTag string, s
 // PreviewCandidate exercises the complete production/admission graph with
 // snapshot archives, without creating a Git tag, hosted proof or publication.
 func (m *Xoscal) PreviewCandidate(source *dagger.Directory, sourceRevision string) *dagger.Directory {
-	return m.releaseCandidate(source, m.Version, sourceRevision, m.Snapshot(source), nil)
+	candidate := m.releaseCandidate(source, m.Version, sourceRevision, m.Snapshot(source), nil)
+	return m.verifyTools().WithDirectory("/out", candidate).
+		WithFile("/tmp/presentation.ok", m.PresentationAnalysis(source, candidate).File("/tmp/presentation.ok")).Directory("/out")
 }
 
 func (m *Xoscal) releaseCandidate(source *dagger.Directory, releaseTag, sourceRevision string, archives *dagger.Directory, identity *dagger.File) *dagger.Directory {
@@ -57,6 +59,7 @@ func (m *Xoscal) releaseCandidate(source *dagger.Directory, releaseTag, sourceRe
 		WithDirectory("/staged", archives).
 		WithExec([]string{"sh", "-c", "set -eu; mkdir -p /out/release; cp /staged/*.tar.gz /staged/*.sbom.json /staged/checksums.txt /out/release/"}).
 		WithExec([]string{"python3", "scripts/inspect-image-archive.py", "/out/release/image.tar", "/out/release"})
+	c = c.WithExec([]string{"python3", "/tools/render_api_reference.py", "--root", "/out"})
 	for _, language := range []string{"go", "python", "java", "csharp", "ts", "swift"} {
 		artifact := sdks.File(language + ".zip")
 		stage := "/out/evidence/sdk-" + language
@@ -89,7 +92,9 @@ func (m *Xoscal) FinalizeCandidate(source *dagger.Directory, candidate *dagger.D
 		WithExec([]string{"sh", "-c", "python3 scripts/release-contract.py verify --root /out --bundle /out/proofs/payload.sigstore.json --tag \"$RELEASE_TAG\" --revision \"$SOURCE_REVISION\" --required"}).
 		WithExec([]string{"sh", "-c", "python3 scripts/render-release-site.py --root /out --manifest /out/payload-manifest.json --bundle /out/proofs/payload.sigstore.json --tag \"$RELEASE_TAG\" --revision \"$SOURCE_REVISION\""}).
 		WithExec([]string{"python3", "scripts/site-smoke.py", "--root", "/out", "--generated"})
-	c = c.WithFile("/out/evidence/presentation.ok", m.PresentationAnalysis(source, c.Directory("/out")).File("/tmp/presentation.ok"))
+	presentation := m.PresentationAnalysis(source, c.Directory("/out"))
+	c = c.WithDirectory("/out/evidence/presentation-browser", presentation.Directory("/tmp/presentation-browser")).
+		WithFile("/out/evidence/presentation.ok", presentation.File("/tmp/presentation.ok"))
 	return c.WithExec([]string{"sh", "-c", "python3 scripts/release-contract.py create --root /out --tag \"$RELEASE_TAG\" --revision \"$SOURCE_REVISION\" --final --required"}).Directory("/out")
 }
 

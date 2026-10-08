@@ -204,25 +204,22 @@ jobs:
           RELEASE_TAG: ${{ github.ref_name }}
           SOURCE_REVISION: ${{ github.sha }}
 
-      # GITHUB_TOKEN release publication does not trigger another workflow.
-      # Upload only the already admitted bytes; deploy in a separate Pages job.
+      # Preserve admitted Pages bytes. The protected Pages environment accepts
+      # main; publication with GITHUB_TOKEN does not trigger a second workflow.
       - name: Stage admitted Pages bytes
         uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa
         with:
           path: admitted
 
-  pages:
+  pages-handoff:
     needs: promote
     runs-on: ubuntu-latest
-    permissions:
-      pages: write
-      id-token: write
-    concurrency:
-      group: pages
-      cancel-in-progress: false
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - id: deployment
-        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e
+      - name: Identify the protected main-ref Pages deployment
+        run: |
+          printf 'Pages deployment is pending a separately authorized main-ref Pages run.\n' >> "$GITHUB_STEP_SUMMARY"
+          printf 'Release: `%s`; expected source: `%s`.\n' "$RELEASE_TAG" "$SOURCE_REVISION" >> "$GITHUB_STEP_SUMMARY"
+          printf 'Run `gh workflow run pages.yml --ref main -f release_tag=%s -f source_revision=%s`, then require both verification and deployment to succeed.\n' "$RELEASE_TAG" "$SOURCE_REVISION" >> "$GITHUB_STEP_SUMMARY"
+        env:
+          RELEASE_TAG: ${{ github.ref_name }}
+          SOURCE_REVISION: ${{ github.sha }}

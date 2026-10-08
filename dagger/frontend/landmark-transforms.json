@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "purpose": "Pinned source adapters before bundling: embed Scalar as a named section within the host main, retain the API-client dialog without a second main including its hidden lifecycle, and omit unrenderable text Lazy placeholders whose actual introduction/Markdown content already has a canonical anchor. Raw npm bytes remain intact; no served DOM or minified-output repair. Modal disclosure attrs assign IDs only to the intended panel while retaining root classes; table rows omit nonunique parameter-name IDs while preserving fields and model identity. The existing modal Escape handler owns closure before the open-state watcher releases focus trapping.",
+  "transforms": [
+    {
+      "path": "node_modules/@scalar/api-reference/dist/components/ApiReference.vue.script.js",
+      "package": "@scalar/api-reference",
+      "version": "1.72.4",
+      "input_sha256": "876d13680c325731987f9a7b4b47744d6e05612577999cbe1f3d3fc07c0db817",
+      "output_sha256": "7d2eaf94a2aef4df752fd4bcb0cfdddc669ed4215b46d4459703bdbcc28c6809",
+      "find": "createElementVNode(\"main\", {",
+      "replace": "createElementVNode(\"section\", {",
+      "count": 1
+    },
+    {
+      "path": "node_modules/@scalar/api-client/dist/v2/features/modal/Modal.vue.script.js",
+      "package": "@scalar/api-client",
+      "version": "3.21.4",
+      "input_sha256": "0e8926511fcf9eddeaf01332c873a1f9619b06a760854de2f17d4d78da4c0e8e",
+      "output_sha256": "1434bd0510e88d87c34460e6f112e720b609d0919e1f5970d3962d461430b201",
+      "find": "createElementBlock(\"main\", _hoisted_1, [",
+      "replace": "createElementBlock(\"div\", _hoisted_1, [",
+      "count": 1
+    },
+    {
+      "path": "node_modules/@scalar/api-reference/dist/components/Content/Operations/TraversedEntry.vue.script.js",
+      "package": "@scalar/api-reference",
+      "version": "1.72.4",
+      "input_sha256": "9063d9cbb6e6105602ef9370cc348316a30c594fc61a38d4bf97e38c2a1b27e1",
+      "output_sha256": "84fc90fdf05d4c5e199ee423bedd677b9f2bc02aabd870857af30fba7c667a04",
+      "find": "renderList(__props.entries, (entry) => {",
+      "replace": "renderList(__props.entries.filter((entry) => entry.type !== \"text\"), (entry) => {",
+      "count": 1
+    },
+    {
+      "path": "node_modules/@scalar/api-client/dist/v2/components/layout/CollapsibleSection.vue.script.js",
+      "package": "@scalar/api-client",
+      "version": "3.21.4",
+      "input_sha256": "6dcb3810400e2e5910986bfef7ec41135b03ac8de37d00ff0a8ce6aa3c07c9b4",
+      "output_sha256": "75e3a1be771128758042d854a55ec5fe8b1bdbee48da685ebdec3b07110fe970",
+      "find": "\tname: \"CollapsibleSection\",\n\tprops: {\n\t\tdefaultOpen: {\n\t\t\ttype: Boolean,\n\t\t\tdefault: true\n\t\t},\n\t\theading: {\n\t\t\ttype: Boolean,\n\t\t\tdefault: true\n\t\t},\n\t\titemCount: { default: 0 },\n\t\tisStatic: { type: Boolean }\n\t},\n\temits: [\"update:modelValue\"],\n\tsetup(__props, { emit: __emit }) {\n\t\tconst emit = __emit;\n\t\tconst { translate } = useLocalization();\n\t\t/**\n\t\t* Defaults to `h2`, for a section that sits directly below the page title. A\n\t\t* parent that renders a title above its sections provides a deeper level.\n\t\t*/\n\t\tconst headingLevel = inject(COLLAPSIBLE_SECTION_HEADING_LEVEL, 2);\n\t\t/**\n\t\t* The element that holds the title. A caller that opted out of the heading gets\n\t\t* a `span`, which reads as plain text and is also the only valid choice inside\n\t\t* the disclosure button, since a heading is not phrasing content.\n\t\t*/\n\t\tconst titleTag = computed(() => __props.heading ? `h${toValue(headingLevel)}` : \"span\");\n\t\t/** Names the `group` a section without a heading becomes. */\n\t\tconst titleId = useId();\n\t\treturn (_ctx, _cache) => {\n\t\t\treturn openBlock(), createBlock(unref(Disclosure), {\n\t\t\t\tas: \"div\",\n\t\t\t\tclass: normalizeClass([\"group/collapse text-c-2 focus-within:text-c-1 last:ui-open:border-b-0\", {\n\t\t\t\t\t\"last-of-type:first-of-type:border-b-0\": __props.isStatic,\n\t\t\t\t\t\"border-b\": !__props.isStatic\n\t\t\t\t}]),",
+      "replace": "\tname: \"CollapsibleSection\",\n\tinheritAttrs: false,\n\tprops: {\n\t\tdefaultOpen: {\n\t\t\ttype: Boolean,\n\t\t\tdefault: true\n\t\t},\n\t\theading: {\n\t\t\ttype: Boolean,\n\t\t\tdefault: true\n\t\t},\n\t\titemCount: { default: 0 },\n\t\tisStatic: { type: Boolean }\n\t},\n\temits: [\"update:modelValue\"],\n\tsetup(__props, { emit: __emit }) {\n\t\tconst emit = __emit;\n\t\tconst { translate } = useLocalization();\n\t\t/**\n\t\t* Defaults to `h2`, for a section that sits directly below the page title. A\n\t\t* parent that renders a title above its sections provides a deeper level.\n\t\t*/\n\t\tconst headingLevel = inject(COLLAPSIBLE_SECTION_HEADING_LEVEL, 2);\n\t\t/**\n\t\t* The element that holds the title. A caller that opted out of the heading gets\n\t\t* a `span`, which reads as plain text and is also the only valid choice inside\n\t\t* the disclosure button, since a heading is not phrasing content.\n\t\t*/\n\t\tconst titleTag = computed(() => __props.heading ? `h${toValue(headingLevel)}` : \"span\");\n\t\t/** Names the `group` a section without a heading becomes. */\n\t\tconst titleId = useId();\n\t\treturn (_ctx, _cache) => {\n\t\t\treturn openBlock(), createBlock(unref(Disclosure), {\n\t\t\t\tas: \"div\",\n\t\t\t\tclass: normalizeClass([_ctx.$attrs.class, \"group/collapse text-c-2 focus-within:text-c-1 last:ui-open:border-b-0\", {\n\t\t\t\t\t\"last-of-type:first-of-type:border-b-0\": __props.isStatic,\n\t\t\t\t\t\"border-b\": !__props.isStatic\n\t\t\t\t}]),",
+      "count": 1
+    },
+    {
+      "path": "node_modules/@scalar/api-client/dist/v2/blocks/request-block/components/RequestTableRow.vue.script.js",
+      "package": "@scalar/api-client",
+      "version": "3.21.4",
+      "input_sha256": "719f246151e80f99ac8caaed1a7e3d7039495e34a709cbdc0efd805b4a124dd8",
+      "output_sha256": "3a96fab5557dc19581dc051d1a2515113f014fbbf857dde7ebfab961b34e7d75",
+      "find": "id: __props.data.name,",
+      "replace": "id: void 0,",
+      "count": 1
+    },
+    {
+      "path": "node_modules/@scalar/api-client/dist/v2/components/modals/ModalClientContainer.vue.script.js",
+      "package": "@scalar/api-client",
+      "version": "3.21.4",
+      "input_sha256": "8275a199f377367e7db21a421dae038147e46f0782c1c53bb036fe3c764e2bb7",
+      "output_sha256": "953941c52005c69f1860f006a77342240aa196e27bdcb7fa39e8afdc71597cff",
+      "find": "allowOutsideClick: true,",
+      "replace": "allowOutsideClick: true,\n\t\t\tescapeDeactivates: false,",
+      "count": 1
+    }
+  ]
+}

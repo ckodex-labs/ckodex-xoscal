@@ -1,0 +1,44 @@
+  <section class="view" id="view-downloads" aria-labelledby="view-downloads-title" tabindex="-1">
+    <h2 class="room-title" id="view-downloads-title">Sample downloads — SDK clients & OSCAL frameworks</h2>
+    <p class="room-sub">Each artifact carries a sha256 digest and signing state. Only an
+      attested artifact is downloadable and earns violet + the sealed chamfer;
+      unsigned artifacts stay tone and are not downloadable — color is the policy.</p>
+
+    <div class="dl-section">
+      <h3>Release surface — sample data only</h3>
+      <p>Dagger stages release archives and image bytes; hosted GitHub attestations
+        cover digest manifests before exact-byte verification and promotion.
+        This preview supplies no release manifest, verified proof, or download link.
+        A live build must provide those objects before a violet state is earned.</p>
+      <div class="dl-grid" id="release-artifacts">{{release-artifacts}}</div>
+    </div>
+
+    <div class="dl-section">
+      <h3>SDK Clients</h3>
+      <p>Generated upfront from the OSCAL proto contracts by Dagger: six compatibility ZIPs,
+        a Go module, Python wheel and source distribution, Java JAR and Maven POM,
+        NuGet package, Node ESM/CJS package, and Swift Package Manager protobuf models.
+        Clean consumer tests gate these formats; the release manifest covers their
+        exact bytes. <b>This preview supplies no verified release proof</b>
+        and enables no download; hosted configuration alone cannot grant eligibility.</p>
+      <div class="dl-grid" id="sdks">{{sdks}}</div>
+    </div>
+
+    <div class="dl-section">
+      <h3>OSCAL Frameworks</h3>
+      <p>Converted catalogs published as <code>catalog.json</code> per framework,
+        produced by <code>xoscal-export-frameworks</code> over
+        <code>data/frameworks/manifest.yaml</code> (35 catalogs plus the PBMM profile).
+        Both kinds require validation and verified release manifest coverage.
+        This preview supplies no proof and enables no download.</p>
+      <div class="dl-grid" id="frameworks">{{frameworks}}</div>
+    </div>
+
+    <div class="dl-section">
+      <h3>Supply-chain transparency</h3>
+      <p>Per artifact: digest, producer, OSCAL touchpoint and verified evidence references.
+        Illustrative samples cannot establish download eligibility; missing proof stays tone.</p>
+      <div class="dl-grid" id="prov">{{prov}}</div>
+    </div>
+  {{view-navigation}}
+  </section>

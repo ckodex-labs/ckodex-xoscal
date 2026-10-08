@@ -1,0 +1,14 @@
+[
+  {
+    "name": "SAMPLE — release archive",
+    "lang": "not a real artifact — manifest required",
+    "digest": "not supplied",
+    "signed": false
+  },
+  {
+    "name": "SAMPLE — container image",
+    "lang": "not a real artifact — registry reference required",
+    "digest": "not supplied",
+    "signed": false
+  }
+]

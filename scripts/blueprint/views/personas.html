@@ -1,0 +1,20 @@
+  <section class="view" id="view-personas" aria-labelledby="view-personas-title" tabindex="-1">
+    <h2 class="room-title" id="view-personas-title">Persona journeys — who moves through what</h2>
+    <p class="room-sub">Six personas, six journeys through the assurance room, cartography,
+      exchange, and downloads. Each journey shows the entry point, the state transitions
+      they trigger, the defensive moments they hit, and what they produce. No journey
+      skips a proof ladder. No journey auto-merges a conflict. No journey trusts an import.</p>
+
+    <div class="persona-filter js-control" id="persona-filter">
+      <button class="active" data-pfilter="all">all personas</button>
+      <button data-pfilter="isso"><span class="glyph">I</span> ISSO</button>
+      <button data-pfilter="3pao"><span class="glyph">A</span> 3PAO Assessor</button>
+      <button data-pfilter="ciso"><span class="glyph">C</span> CISO / AO</button>
+      <button data-pfilter="eng"><span class="glyph">E</span> Platform Engineer</button>
+      <button data-pfilter="receiver"><span class="glyph">R</span> Exchange Receiver</button>
+      <button data-pfilter="aitool"><span class="glyph">T</span> AI Tool Operator</button>
+    </div>
+
+    <div class="persona-grid" id="persona-grid">{{persona-grid}}</div>
+  {{view-navigation}}
+  </section>

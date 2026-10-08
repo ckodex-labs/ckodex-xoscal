@@ -33,7 +33,7 @@ class SourceInventoryTests(unittest.TestCase):
 
 # Small, byte-real fixture. Pins are patched only in the test module namespace;
 # the production CLI exposes no custom pins or test mode.
-def make_fixture(root):
+def make_fixture(root, adapt=False):
     import base64, hashlib, io, json, tarfile
     root=Path(root);root.mkdir(parents=True,exist_ok=True)
     def tar(files):
@@ -56,11 +56,24 @@ def make_fixture(root):
     input_tar=tar({**inputs,'node_modules/vue/package.json':manifest,'scalar-LICENSE':b'actual fixture notice'})
     banner="(function(){const s=document.createElement('style');s.id='scalar-style';const n=document.querySelector('meta[property=\"csp-nonce\"]')?.getAttribute('nonce');if(n)s.setAttribute('nonce',n);s.textContent="+json.dumps(css.decode(),ensure_ascii=False,separators=(',',':'))+";document.head.appendChild(s);})();"
     js=(banner+'\nconsole.log("built");\n//# sourceMappingURL=scalar.js.map\n').encode()
-    jsmap=f.encoded({'version':3,'sources':['../entry.js','../node_modules/vue/index.js'],'sourcesContent':[entry.decode(),library.decode().replace('//# sourceMappingURL=index.js.map','')]})
+    adapted_library=library.replace(b'export const',b'export let') if adapt else library
+    jsmap=f.encoded({'version':3,'sources':['../entry.js','../node_modules/vue/index.js'],'sourcesContent':[entry.decode(),adapted_library.decode().replace('//# sourceMappingURL=index.js.map','')]})
     cssmap=f.encoded({'version':3,'sources':['../node_modules/vue/style.css'],'sourcesContent':[css.decode()]})
     lock=f.encoded({'lockfileVersion':3,'packages':{'':{},'node_modules/'+f.PACKAGE:{'version':f.VERSION,'resolved':f.TAR_URL,'integrity':sri},'node_modules/vue':{'version':'3.5.43','resolved':'https://registry.npmjs.org/vue/-/vue-3.5.43.tgz','integrity':'sha512-fixture'}}})
     outputs={'out/scalar.js':{'bytes':len(js),'inputs':{'entry.js':{'bytesInOutput':1},'node_modules/vue/index.js':{'bytesInOutput':1}}},'out/scalar.js.map':{'bytes':len(jsmap)},'out/scalar.css':{'bytes':len(css),'inputs':{'node_modules/vue/style.css':{'bytesInOutput':1}}},'out/scalar.css.map':{'bytes':len(cssmap)}}
     files={'scalar.js':js,'scalar.js.map':jsmap,'scalar.css':css,'scalar.css.map':cssmap,'bundle-inputs.tar.gz':input_tar,'build-package.json':b'{}\n','package-lock.json':lock,'entry.js':entry,'build.mjs':b'fixture builder\n','scalar-LICENSE':b'actual fixture notice','scalar-license-source.json':f.encoded({'role':'fixture'}),'build-toolchain.json':f.encoded({'node':'v22.23.3','npm':'10.9.9','esbuild':'0.25.12','built_at':'2026-10-05T14:38:14.362Z'}),'esbuild-metafile.json':f.encoded({'inputs':{p:{'bytes':len(d)} for p,d in inputs.items()},'outputs':outputs}),'installed-package-manifests.json':f.encoded({'node_modules/vue':{'name':'vue','version':'3.5.43','manifest_sha256':f.sha(manifest),'manifest':f.load(manifest),'inputs':[{'path':p,'sha256':f.sha(d)} for p,d in inputs.items() if p!='entry.js']}}),'bundle-notices.json':f.encoded(notices),'THIRD-PARTY-NOTICES.txt':('\n--- '+f.PACKAGE+'@'+f.VERSION+' (scalar-LICENSE) ---\nactual fixture notice').encode()}
+    # Explicit synthetic source adapter. These pins exist only in the isolated
+    # fixture module namespace; the real CLI requires its reviewed production
+    # recipe and exact upstream bytes.
+    files['landmark-transform.mjs']=b'fixture adapter\n'
+    files['landmark-transform.test.mjs']=b'fixture adapter tests\n'
+    changes=[{'path':'node_modules/vue/index.js','package':'vue','version':'3.5.43',
+        'input_sha256':f.sha(library),'output_sha256':f.sha(adapted_library),
+        'find':'export const','replace':'export let','count':1}] if adapt else []
+    files['landmark-transforms.json']=f.encoded({'schema_version':1,'transforms':changes})
+    files['landmark-transform-receipt.json']=f.encoded({'schema_version':1,
+        'recipe_sha256':f.sha(files['landmark-transforms.json']),
+        'transforms':[{k:v for k,v in c.items() if k not in ('find','replace')} for c in changes]})
     for name,data in files.items():root.joinpath(name).write_bytes(data)
     for tool in ('npm-ci','build','trivy'):root.joinpath(tool+'.status').write_text('0\n');root.joinpath(tool+'.log').write_text('fixture tool log\n')
     overrides={'TAR_SRI':sri,'JS_SHA':f.sha(published_js),'MAP_SHA':f.sha(published_map),'BUILD_PINS':{name:f.sha(files[name]) for name in f.BUILD_PINS}}
@@ -100,6 +113,40 @@ class RebuildTests(unittest.TestCase):
     def test_wrong_toolchain_blocks(self):
         p=self.root/'build-toolchain.json';m=f.load(p.read_bytes());m['node']='v26.10.0';p.write_bytes(f.encoded(m))
         with self.assertRaisesRegex(ValueError,'toolchain'):f.rebuilt(self.root)
+    def test_source_adapter_receipt_cannot_invent_transform(self):
+        p=self.root/'landmark-transform-receipt.json';r=f.load(p.read_bytes());r['transforms']=[{'path':'invented'}];p.write_bytes(f.encoded(r))
+        with self.assertRaisesRegex(ValueError,'receipt'):f.rebuilt(self.root)
+    def test_unreviewed_source_adapter_recipe_blocks(self):
+        (self.root/'landmark-transforms.json').write_text('{}')
+        with self.assertRaisesRegex(ValueError,'unreviewed'):f.rebuilt(self.root)
+
+
+class AdaptedSourceReplayTests(unittest.TestCase):
+    def setUp(self):
+        import tempfile
+        from unittest.mock import patch
+        self.tmp=tempfile.TemporaryDirectory();self.addCleanup(self.tmp.cleanup);self.root=Path(self.tmp.name)
+        self.pins=make_fixture(self.root,adapt=True)
+        self.patch=patch.dict(vars(f),self.pins);self.patch.start();self.addCleanup(self.patch.stop)
+    def test_replay_retains_raw_bytes_and_proves_transformed_map_content(self):
+        receipt=f.load(f.rebuilt(self.root)['frontend-inventory.json'])
+        self.assertEqual(receipt['build_inputs']['landmark-transform-receipt.json'],
+                         f.sha((self.root/'landmark-transform-receipt.json').read_bytes()))
+    def test_map_reverting_to_raw_upstream_source_is_rejected(self):
+        p=self.root/'scalar.js.map';m=f.load(p.read_bytes());m['sourcesContent'][1]=m['sourcesContent'][1].replace('export let','export const');p.write_bytes(f.encoded(m))
+        with self.assertRaises(ValueError):f.rebuilt(self.root)
+    def test_pinned_raw_source_or_transformed_receipt_cannot_drift(self):
+        p=self.root/'landmark-transform-receipt.json';m=f.load(p.read_bytes());m['transforms'][0]['output_sha256']='0'*64;p.write_bytes(f.encoded(m))
+        with self.assertRaisesRegex(ValueError,'receipt'):f.rebuilt(self.root)
+    def test_reviewed_adapter_omission_from_recipe_is_rejected(self):
+        p=self.root/'landmark-transforms.json';m=f.load(p.read_bytes());m['transforms']=[];p.write_bytes(f.encoded(m))
+        with self.assertRaisesRegex(ValueError,'unreviewed'):f.rebuilt(self.root)
+    def test_reviewed_adapter_omission_from_receipt_is_rejected(self):
+        p=self.root/'landmark-transform-receipt.json';m=f.load(p.read_bytes());m['transforms']=[];p.write_bytes(f.encoded(m))
+        with self.assertRaisesRegex(ValueError,'receipt'):f.rebuilt(self.root)
+    def test_transform_omission_from_emitted_graph_is_rejected(self):
+        p=self.root/'esbuild-metafile.json';m=f.load(p.read_bytes());m['outputs']['out/scalar.js']['inputs'].pop('node_modules/vue/index.js');p.write_bytes(f.encoded(m))
+        with self.assertRaisesRegex(ValueError,'adapter source absent'):f.rebuilt(self.root)
 
 
 class FrontendGateTests(unittest.TestCase):

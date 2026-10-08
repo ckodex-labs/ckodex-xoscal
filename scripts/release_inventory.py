@@ -76,6 +76,8 @@ def metadata(path):
         return "analysis", "ReleaseIdentity", "assessment-results"
     if path == "evidence/presentation.ok":
         return "analysis", "PresentationAnalysis", "assessment-results"
+    if path.startswith("evidence/presentation-browser/"):
+        return "analysis", "PresentationBrowserAnalysis", "assessment-results"
     if path.startswith("evidence/") or name.startswith("sbom-"):
         stage = PurePosixPath(path).parts[1] if path.startswith("evidence/") else "binary-sbom"
         if stage == "policy":
@@ -119,7 +121,7 @@ def analysis_refs(root, path, kind):
     elif kind == "installer":
         refs = ["evidence/ci/release-contract.ok"]
     elif kind == "site-asset":
-        refs = ["evidence/presentation.ok"]
+        refs = ["evidence/presentation.ok", "evidence/presentation-browser/presentation-browser.json"]
     return [ref for ref in refs if (root / ref).is_file()]
 
 
@@ -198,6 +200,11 @@ def validate(root, manifest, final=False, *, payload_in_final=False):
         if (root / marker).read_bytes() != b"presentation-analysis-ok\n":
             raise ValueError("invalid final presentation receipt")
         expected_paths -= {marker}
+        from presentation_browser_verify import DIRECTORY, FILES, verify as verify_browser
+        browser_files = {DIRECTORY + "/" + name for name in FILES}
+        if expected_paths & browser_files:
+            verify_browser(root)
+            expected_paths -= browser_files
     check_asset_names(entries)
     for item in entries:
         path = str(safe_path(item["path"]))

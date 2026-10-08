@@ -1,0 +1,68 @@
+[
+  [
+    "SBOM",
+    "SBOM Card",
+    "back-matter, assessment evidence, component inventory",
+    "sometimes"
+  ],
+  [
+    "VEX / VDR",
+    "VEX Card",
+    "assessment result, risk, POA&M",
+    "sometimes"
+  ],
+  [
+    "AI-BOM / ML-BOM",
+    "AI-BOM Card",
+    "back-matter, assessment evidence",
+    "yes"
+  ],
+  [
+    "Scanner result",
+    "Scanner Card",
+    "observation, finding, risk",
+    "no / sometimes"
+  ],
+  [
+    "Build attestation",
+    "Attestation Card",
+    "back-matter, evidence ref",
+    "sometimes"
+  ],
+  [
+    "CMMC scope",
+    "CMMC Profile / Scope Cards",
+    "SSP, assessment plan/results, back-matter",
+    "yes"
+  ],
+  [
+    "CPCSC",
+    "CPCSC Profile Card",
+    "catalog/profile/SSP/evidence",
+    "yes"
+  ],
+  [
+    "Contract Security",
+    "Capability Cards",
+    "back-matter, SSP metadata, evidence refs",
+    "yes"
+  ],
+  [
+    "Controlled Goods",
+    "Controlled Goods Cards",
+    "evidence refs, back-matter",
+    "yes"
+  ],
+  [
+    "AI tool output",
+    "AI Tool Card",
+    "inferred claim, provenance",
+    "yes"
+  ],
+  [
+    "Partner evidence",
+    "Inbound Evidence Card",
+    "back-matter, exchange ledger",
+    "sometimes"
+  ]
+]

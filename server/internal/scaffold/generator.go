@@ -1,9 +1,9 @@
 package scaffold
 
 import (
+	"errors"
 	"fmt"
 	"os"
-	"path/filepath"
 	"strings"
 
 	commonv1 "github.com/mchorfa/xoscal/proto/oscal/common/v1"
@@ -126,8 +126,13 @@ func buildScaffoldBackMatter(framework string) *commonv1.BackMatter {
 
 // ScaffoldWorkspace initializes the .xoscal workspace and writes component-definition.json.
 // It verifies that the generated JSON passes OSCAL 1.2.3 schema validation before writing to disk.
-func ScaffoldWorkspace(dir string, framework string) (*ProjectScan, []byte, error) {
-	scan, err := ScanRepository(dir)
+func ScaffoldWorkspace(dir string, framework string) (result *ProjectScan, resultJSON []byte, resultErr error) {
+	root, err := os.OpenRoot(dir)
+	if err != nil {
+		return nil, nil, fmt.Errorf("open repository: %w", err)
+	}
+	defer func() { resultErr = errors.Join(resultErr, root.Close()) }()
+	scan, err := scanRepository(root, dir)
 	if err != nil {
 		return nil, nil, fmt.Errorf("scan repository: %w", err)
 	}
@@ -147,10 +152,17 @@ func ScaffoldWorkspace(dir string, framework string) (*ProjectScan, []byte, erro
 		return nil, nil, fmt.Errorf("scaffolded component definition failed schema validation: %w", err)
 	}
 
+	if err := writeWorkspace(root, scan, framework, jsonBytes); err != nil {
+		return nil, nil, err
+	}
+
+	return scan, jsonBytes, nil
+}
+
+func writeWorkspace(root *os.Root, scan *ProjectScan, framework string, jsonBytes []byte) error {
 	// Create .xoscal directory
-	xoscalDir := filepath.Join(dir, ".xoscal")
-	if err := os.MkdirAll(xoscalDir, 0750); err != nil {
-		return nil, nil, fmt.Errorf("create .xoscal dir: %w", err)
+	if err := root.MkdirAll(".xoscal", 0750); err != nil {
+		return fmt.Errorf("create .xoscal dir: %w", err)
 	}
 
 	// Write workspace config
@@ -162,17 +174,16 @@ func ScaffoldWorkspace(dir string, framework string) (*ProjectScan, []byte, erro
 	}
 	cfgData, err := yaml.Marshal(cfg)
 	if err != nil {
-		return nil, nil, fmt.Errorf("marshal workspace config: %w", err)
+		return fmt.Errorf("marshal workspace config: %w", err)
 	}
-	if err := os.WriteFile(filepath.Join(xoscalDir, "xoscal.yaml"), cfgData, 0600); err != nil {
-		return nil, nil, fmt.Errorf("write xoscal.yaml: %w", err)
+	if err := root.WriteFile(".xoscal/xoscal.yaml", cfgData, 0600); err != nil {
+		return fmt.Errorf("write xoscal.yaml: %w", err)
 	}
 
 	// Write component-definition.json
-	compDefPath := filepath.Join(dir, "component-definition.json")
-	if err := os.WriteFile(compDefPath, jsonBytes, 0600); err != nil {
-		return nil, nil, fmt.Errorf("write component-definition.json: %w", err)
+	if err := root.WriteFile("component-definition.json", jsonBytes, 0600); err != nil {
+		return fmt.Errorf("write component-definition.json: %w", err)
 	}
 
-	return scan, jsonBytes, nil
+	return nil
 }

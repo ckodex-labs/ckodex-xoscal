@@ -1,0 +1,14 @@
+[
+  {
+    "name": "proto-set",
+    "lang": "buf-generated proto bundle",
+    "digest": "not supplied",
+    "signed": false
+  },
+  {
+    "name": "SAMPLE — attested state demo",
+    "lang": "not a real artifact — design example only",
+    "digest": "not supplied",
+    "signed": false
+  }
+]

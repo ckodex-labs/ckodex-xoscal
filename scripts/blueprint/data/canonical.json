@@ -1,0 +1,143 @@
+[
+  {
+    "id": "AC-2",
+    "title": "Account Management",
+    "chip": "◆ Attested",
+    "chipCls": "attested",
+    "sealed": true,
+    "meta": "Baseline: FedRAMP Moderate<br>Parameters: <b>ac-2_prm_1 = 30 days</b><br>State: 4 observations — 1 attested result — 0 open POA&M",
+    "evidence": "digest <span class='dig'>sha256:9f3c…a217</span>",
+    "links": "OSCAL: catalog — profile — SSP — assessment-results — POA&M — mapping",
+    "next": [
+      "Open proof ladder",
+      "Open evidence drawer",
+      "Export trace"
+    ]
+  },
+  {
+    "id": "C-018",
+    "title": "Account lifecycle reviewed every 30 days",
+    "chip": "○ Claimed",
+    "chipCls": "claimed",
+    "meta": "Subject: <b>AC-2 for prod-platform</b><br>Origin: authored<br>Proof: <b>incomplete</b><br>Missing: witness checkpoint, policy evaluation",
+    "links": "OSCAL: claim — assessment-result",
+    "next": [
+      "Run Attest",
+      "Open source refs"
+    ],
+    "blocked": "cannot skip to attested — proof ladder incomplete"
+  },
+  {
+    "id": "E-442",
+    "title": "Configuration export — Entra ID",
+    "chip": "⊢ Observed",
+    "chipCls": "observed",
+    "meta": "Type: configuration export<br>Source system: <b>Entra ID</b><br>Produced by: evidence-ingestor/entra<br>Collected: 2026-07-05<br>Freshness: <b>valid</b><br>Linked claims: AC-2, IA-2",
+    "evidence": "digest <span class='dig'>sha256:a91c…77e2</span><br>integrity: sha256 — redaction: none",
+    "links": "OSCAL: back-matter resource — assessment evidence",
+    "next": [
+      "Link to claim",
+      "Open evidence drawer"
+    ]
+  },
+  {
+    "id": "F-018",
+    "title": "AC-2 — satisfied",
+    "chip": "◆ Attested",
+    "chipCls": "attested",
+    "sealed": true,
+    "meta": "Control: <b>AC-2</b><br>Result: satisfied<br>Observations: 4<br>Evidence: 3 signed artifacts<br>Policy: passed<br>Transparency: logged",
+    "evidence": "digest <span class='dig'>sha256:9f3c…a217</span>",
+    "links": "OSCAL: finding — assessment-results",
+    "next": [
+      "Open proof ladder",
+      "Export finding trace"
+    ]
+  },
+  {
+    "id": "SC-7",
+    "title": "Boundary Protection — no attested claim",
+    "chip": "Gap",
+    "chipCls": "inferred",
+    "meta": "Required by: <b>FedRAMP Moderate</b><br>Current: 1 inferred claim — 0 observations — 0 proofs<br>Missing: authored statement or assessment observation",
+    "links": "OSCAL: catalog — baseline requirement",
+    "next": [
+      "Author implementation statement",
+      "Attach observation",
+      "Open reg-to-OSCAL provenance",
+      "Export gap summary"
+    ]
+  },
+  {
+    "id": "CF-021",
+    "title": "AU-6 — competing statements",
+    "chip": "⊭ Contradicted",
+    "chipCls": "contradicted",
+    "alarm": true,
+    "meta": "Control: <b>AU-6</b><br>Difference: parameter <span class='mono'>au-6_prm_1</span>",
+    "diff": "<div class=\"diff-row\"><div class=\"side\"><span class=\"who\">Claim A — authored by ISSO</span>7 days</div><div class=\"side\"><span class=\"who\">Claim B — reg-to-OSCAL</span>30 days</div></div>",
+    "links": "OSCAL: conflict — assessment-results",
+    "next": [
+      "Accept A",
+      "Accept B",
+      "Merge",
+      "Reject both",
+      "Escalate to human-root reviewer"
+    ]
+  },
+  {
+    "id": "P-017",
+    "title": "Logging retention fix",
+    "chip": "⊘ Past due",
+    "chipCls": "past-due",
+    "alarm": true,
+    "meta": "Finding: F-031<br>Risk: <b>moderate</b><br>Owner: platform-security<br>Due: <b>2026-07-20</b><br>Milestone: logging retention fix<br>Evidence required: new retention export + test result",
+    "links": "OSCAL: POA&M — finding",
+    "next": [
+      "Attach evidence",
+      "Update milestone",
+      "Request extension"
+    ]
+  },
+  {
+    "id": "M-088",
+    "title": "NIST AC-2 → ISO A.5.16",
+    "chip": "○ Claimed",
+    "chipCls": "claimed",
+    "meta": "Relation: <b>equivalent-to</b><br>Confidence: 0.95<br>Coverage: 100%<br>Method: human<br>Evidence: mapping rationale attached",
+    "links": "OSCAL: mapping edge — cross-framework",
+    "next": [
+      "Open rationale",
+      "Verify mapping",
+      "Export bridge"
+    ]
+  },
+  {
+    "id": "S-CA-CPCSC-L1",
+    "title": "CPCSC Level 1",
+    "chip": "source pinned",
+    "chipCls": "source-pinned",
+    "meta": "Authority: <b>PSPC</b><br>Jurisdiction: Canada<br>Framework: CPCSC Level 1<br>Maturity: <b>active</b><br>Pinned version: 2026-06<br>Used by: 13 controls — 1 profile",
+    "links": "OSCAL: catalog — profile",
+    "next": [
+      "Open framework",
+      "Check maturity",
+      "View usage"
+    ]
+  },
+  {
+    "id": "X-0194",
+    "title": "Export Bundle — to Agency-B",
+    "chip": "◆ Signed",
+    "chipCls": "signed",
+    "sealed": true,
+    "meta": "Contents: SSP, assessment-results, POA&M, evidence manifest<br>Scope: <b>prod-platform</b><br>Recipient: Agency-B<br>Redaction: <b>applied</b><br>Verification script: included",
+    "evidence": "manifest <span class='dig'>sha256:be21…04af</span>",
+    "links": "OSCAL: export bundle — back-matter",
+    "next": [
+      "Open manifest",
+      "Verify bundle",
+      "Download (attested)"
+    ]
+  }
+]

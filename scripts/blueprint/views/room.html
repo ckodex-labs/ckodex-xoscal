@@ -1,0 +1,270 @@
+  <section class="view active" id="view-room" aria-labelledby="view-room-title" tabindex="-1">
+
+    <section class="prov" aria-label="Provenance">
+      <dl class="row">
+        <div><dt>URN</dt><dd class="mono">urn:oscal:ssp:prod-platform:v3</dd></div>
+        <div><dt>Framework</dt><dd>FedRAMP Moderate — NIST 800-53</dd></div>
+        <div><dt>Jurisdiction</dt><dd>US Federal</dd></div>
+        <div><dt>Model</dt><dd>system-security-plan</dd></div>
+        <div><dt>Origin</dt><dd>authored + reg-to-OSCAL</dd></div>
+        <div><dt>OSCAL</dt><dd class="mono">1.2.3</dd></div>
+        <div><dt>Snapshot</dt><dd><span class="pill">v3 — sealed</span></dd></div>
+        <div><dt>Release</dt><dd><span class="pill">sample — no release proof</span></dd></div>
+      </dl>
+    </section>
+
+    <h2 class="room-title" id="view-room-title">Prod Platform — FedRAMP Moderate</h2>
+    <p class="room-sub">System Security Plan — 274 of 323 assessable controls attested through a
+      witnessed proof chain. 19 inferred drafts pending review. 16 honest gaps. 3 conflicts open.</p>
+
+    <div class="grid">
+      <div class="col">
+
+        <section class="panel claims" aria-label="Claims by state">
+          <h3>Claims by state</h3>
+          <details class="group st-attested" open>
+            <summary><span class="g">◆</span> Attested <span class="count">274</span></summary>
+            <div class="claim st-attested sel" data-claim="ac2">
+              <span class="g">◆</span>
+              <div class="body"><div class="id">AC-2 — Account Management</div>
+                <div class="desc">→ prod-platform — signed, witnessed, transparency-logged</div>
+                <div class="meta">3 observations — 1 finding — proof complete</div></div>
+            </div>
+            <div class="claim st-attested">
+              <span class="g">◆</span>
+              <div class="body"><div class="id">AU-2 — Audit Events</div>
+                <div class="desc">→ prod-platform — signed, witnessed</div>
+                <div class="meta">2 observations — proof complete</div></div>
+            </div>
+          </details>
+          <details class="group st-observed">
+            <summary><span class="g">⊢</span> Observed <span class="count">31</span></summary>
+            <div class="claim st-observed"><span class="g">⊢</span>
+              <div class="body"><div class="id">IA-2 — Identification & Auth</div>
+                <div class="desc">observation exists — proof incomplete</div>
+                <div class="meta">1 observation — 0 findings</div></div></div>
+          </details>
+          <details class="group st-claimed">
+            <summary><span class="g">○</span> Claimed <span class="count">22</span></summary>
+            <div class="claim st-claimed"><span class="g">○</span>
+              <div class="body"><div class="id">AU-6(1) — Audit Review</div>
+                <div class="desc">authored — unassessed</div>
+                <div class="meta">0 observations — 0 proofs</div></div></div>
+          </details>
+          <details class="group st-inferred">
+            <summary><span class="g">⇝</span> Inferred <span class="count">19</span></summary>
+            <div class="claim st-inferred"><span class="g">⇝</span>
+              <div class="body"><div class="id">SC-7 — Boundary Protection</div>
+                <div class="desc">reg-to-OSCAL draft — unverified</div>
+                <div class="meta">0 proofs — awaiting human review</div></div></div>
+          </details>
+          <details class="group st-contradicted">
+            <summary><span class="g">⊭</span> Contradicted <span class="count">3</span></summary>
+            <div class="claim st-contradicted"><span class="g">⊭</span>
+              <div class="body"><div class="id">IA-5 — Authenticator Mgmt</div>
+                <div class="desc">observation O-118 refutes claim</div>
+                <div class="meta">conflict open — needs resolution</div></div></div>
+          </details>
+          <details class="group st-quarantined">
+            <summary><span class="g">⊘</span> Quarantined <span class="count">2</span></summary>
+            <div class="claim st-quarantined"><span class="g">⊘</span>
+              <div class="body"><div class="id">CM-6 — Configuration Settings</div>
+                <div class="desc">imported claim failed VerifyClaim</div>
+                <div class="meta">digest mismatch — under containment</div></div></div>
+          </details>
+          <details class="group">
+            <summary><span class="g" style="color:var(--tone)">—</span> Gap <span class="count">16</span></summary>
+            <div class="claim"><span class="g" style="color:var(--tone)">—</span>
+              <div class="body"><div class="id">SC-7 — Boundary Protection</div>
+                <div class="desc">required by baseline — no attested claim</div>
+                <div class="meta">1 inferred — 0 proofs</div></div></div>
+          </details>
+        </section>
+
+        <section class="panel evd" aria-label="Evidence chain">
+          <h3>Evidence chain — AC-2</h3>
+          <ol>
+            <li class="pending"><div class="t">Generation Receipt</div>
+              <div class="s inferred"><span class="g">⇝</span> Inferred — reg-to-OSCAL draft from 800-53r5</div>
+              <div class="ref">source: 800-53r5 §AC-2 — <span class="dig">draft</span></div></li>
+            <li><div class="t">Implementation Statement</div>
+              <div class="s claimed"><span class="g">○</span> Claimed — authored by prod-platform ISSO</div>
+              <div class="ref">stmt: ac-2_impl.md</div></li>
+            <li><div class="t">Observation ×4</div>
+              <div class="s observed"><span class="g">⊢</span> Observed — assessment-results — method EXAMINE</div>
+              <div class="ref">O-441 — O-442 — O-443 — O-444</div></li>
+            <li><div class="t">Finding</div>
+              <div class="s attested"><span class="g">◆</span> Attested candidate — rolls up observations</div>
+              <div class="ref">F-0218 — <span class="dig">sha256:9f3c…a217</span></div></li>
+            <li><div class="t">ProofRef — signature</div>
+              <div class="s attested"><span class="g">◆</span> GitHub provenance — illustrative</div>
+              <div class="ref">digest <span class="dig">sha256:9f3c1d2e…a217</span></div></li>
+            <li><div class="t">ProofRef — transparency_log</div>
+              <div class="s attested"><span class="g">◆</span> inclusion proof</div>
+              <div class="ref">log index 44182</div></li>
+            <li class="pending"><div class="t">ProofRef — witness_checkpoint</div>
+              <div class="s"><span class="g" style="color:var(--tone)">○</span> Pending — witness anchor not yet set</div>
+              <div class="ref">awaiting checkpoint</div></li>
+            <li class="pending"><div class="t">ProofRef — policy_ref</div>
+              <div class="s"><span class="g" style="color:var(--tone)">○</span> Pending — policy not evaluated</div>
+              <div class="ref">policy: fedramp-moderate-attest</div></li>
+          </ol>
+        </section>
+
+        <!-- Conflict card -->
+        <section class="panel conflict" aria-label="Conflict">
+          <h3>Conflict — competing statements</h3>
+          <div class="ctrl">AU-6(1)</div>
+          <div class="ctrl-name">Audit Review — two statements claim this control</div>
+          <div class="side">
+            <div class="who">Proposed A — <b>authored by ISSO</b></div>
+            <div class="stmt">References SIEM component. Review window 7 days.</div>
+          </div>
+          <div class="side">
+            <div class="who">Proposed B — <b>generated by reg-to-OSCAL</b></div>
+            <div class="stmt">References log-review procedure. Review window 30 days.</div>
+          </div>
+          <div class="diff">
+            <h3>Parameter difference</h3>
+            <table>
+              <tr><td>au-6_prm_1</td><td class="a">A: 7 days</td><td class="b">B: 30 days</td></tr>
+              <tr><td>overlap</td><td class="a" colspan="2">Both claim AU-6(1)</td></tr>
+            </table>
+          </div>
+          <div class="act-footer" style="margin-top:14px">
+            <div class="act-blocked"><span class="why">conflicts are surfaced, never auto-merged — human resolution required</span></div>
+            <span class="act-label">resolution actions</span>
+            <div class="act-list">
+              <a class="act primary" href="#">Accept A</a>
+              <a class="act" href="#">Accept B</a>
+              <a class="act" href="#">Merge</a>
+              <a class="act" href="#">Reject both</a>
+              <a class="act" href="#">Escalate to human-root reviewer</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Gap card -->
+        <section class="panel gap" aria-label="Gap detail">
+          <h3>Gap — no attested claim</h3>
+          <div class="ctrl">SC-7</div>
+          <div class="ctrl-name">Boundary Protection — required by FedRAMP Moderate</div>
+          <div class="blk"><span class="lab">Coverage</span>
+            Baseline requires SC-7. No implementation statement resolves to an attested result.</div>
+          <div class="blk"><span class="lab">Current state</span>
+            1 inferred claim from reg-to-OSCAL — 0 proofs — 0 observations.</div>
+          <div class="blk"><span class="lab">Missing</span>
+            Authored implementation statement or assessment observation.</div>
+          <div class="act-footer" style="margin-top:14px">
+            <span class="act-label">safe next actions</span>
+            <div class="act-list">
+              <a class="act primary" href="#">Author implementation statement</a>
+              <a class="act" href="#">Attach observation</a>
+              <a class="act" href="#">Open reg-to-OSCAL provenance</a>
+              <a class="act export" href="#">Export gap summary</a>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+      <div class="col">
+
+        <section class="panel cov" aria-label="Coverage">
+          <h3>Coverage — FedRAMP Moderate</h3>
+          <div class="bar"><span style="width:84.8%"></span></div>
+          <div class="legend"><span><b>274</b> attested</span><span>of <b>323</b> assessable</span></div>
+          <table>
+            <tr class="attested"><td><span class="g">◆</span> Attested</td><td>274</td></tr>
+            <tr><td><span class="g">⊢</span> Observed</td><td>31</td></tr>
+            <tr><td><span class="g">○</span> Claimed, unverified</td><td>22</td></tr>
+            <tr><td><span class="g">⇝</span> Inferred drafts</td><td>19</td></tr>
+            <tr><td><span class="g">—</span> Gap</td><td>16</td></tr>
+            <tr class="alarm"><td><span class="g">⊭</span> In conflict</td><td>3</td></tr>
+            <tr class="alarm"><td><span class="g">⊘</span> Quarantined</td><td>2</td></tr>
+          </table>
+          <div class="sub">
+            <h3>Attestation quality</h3>
+            <table>
+              <tr><td>Signed</td><td>271</td></tr>
+              <tr><td>Witnessed</td><td>240</td></tr>
+              <tr><td>Transparency logged</td><td>268</td></tr>
+              <tr><td>Policy evaluated</td><td>236</td></tr>
+            </table>
+          </div>
+        </section>
+
+        <section class="panel ladder" aria-label="Proof ladder">
+          <h3>Proof ladder</h3>
+          <div class="claim-head">
+            <div class="cid">AC-2 — Account Management</div>
+            <div class="ctitle">Account Management → prod-platform</div>
+            <div class="csubj">Claimed → attesting — 2 stages remain</div>
+          </div>
+          <div class="rung resolved"><span class="mark">●</span>
+            <div><div class="name">Discovery</div><div class="detail">statement located</div></div>
+            <span class="state">resolved</span></div>
+          <div class="rung resolved"><span class="mark">●</span>
+            <div><div class="name">Graph</div><div class="detail">linked to 4 observations</div></div>
+            <span class="state">resolved</span></div>
+          <div class="rung resolved"><span class="mark">●</span>
+            <div><div class="name">Claim</div><div class="detail">assessment-result cites them</div></div>
+            <span class="state">resolved</span></div>
+          <div class="rung resolved"><span class="mark">●</span>
+            <div><div class="name">Source</div><div class="detail">source refs digest ok</div></div>
+            <span class="state">resolved</span></div>
+          <div class="rung resolved"><span class="mark">●</span>
+            <div><div class="name">Signature</div><div class="detail">proof_ref: signature</div></div>
+            <span class="state">resolved</span></div>
+          <div class="rung resolved"><span class="mark">●</span>
+            <div><div class="name">Transparency</div><div class="detail">inclusion proof — log 44182</div></div>
+            <span class="state">resolved</span></div>
+          <div class="rung pending"><span class="mark">○</span>
+            <div><div class="name">Witness</div><div class="detail">witness checkpoint not anchored</div></div>
+            <span class="state">pending</span></div>
+          <div class="rung pending"><span class="mark">○</span>
+            <div><div class="name">Policy</div><div class="detail">policy_ref not evaluated</div></div>
+            <span class="state">pending</span></div>
+          <div class="status">
+            <div><b style="color:var(--ink)">Claimed → attesting…</b> 2 stages remain.</div>
+            <div class="track">track: <b>Claimed</b> → Observed → <b>Attested</b> (on ladder completion)</div>
+          </div>
+          <div class="act-footer" style="margin-top:14px">
+            <span class="act-label">safe next actions</span>
+            <div class="act-list">
+              <a class="act primary" href="#">Run Attest</a>
+              <a class="act" href="#">Open evidence</a>
+              <a class="act" href="#">Open source refs</a>
+              <a class="act export" href="#">Export trace</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel sr" aria-label="Snapshot and release">
+          <h3>Lifecycle</h3>
+          <div class="item">
+            <div class="lab">Snapshot</div>
+            <div class="v">v3 <span class="sealed-tag">sealed</span></div>
+            <div class="meta">2026-07-05 16:42 UTC — manifest <span class="dig">sha256:22ac…19ff</span></div>
+            <div class="meta">from 274 attested — 16 gaps — 3 conflicts</div>
+          </div>
+          <div class="item">
+            <div class="lab">Release</div>
+            <div class="v">sample release <span class="status-tag">unverified</span></div>
+            <div class="meta">no hosted release proof is attached to this sample surface</div>
+            <div class="meta">release reference: not supplied</div>
+          </div>
+          <div class="act-footer" style="margin-top:14px">
+            <span class="act-label">lifecycle actions</span>
+            <div class="act-list">
+              <a class="act primary" href="#">Create new snapshot</a>
+              <a class="act" href="#">Compare with v2</a>
+              <a class="act export" href="#">Export manifest</a>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  {{view-navigation}}
+  </section>

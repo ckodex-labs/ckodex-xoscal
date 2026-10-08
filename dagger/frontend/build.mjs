@@ -3,9 +3,27 @@ import { readFileSync, writeFileSync, mkdirSync, readdirSync, lstatSync } from '
 import { createHash } from 'node:crypto'
 import { gzipSync } from 'node:zlib'
 import { dirname } from 'node:path'
+import { applyLandmarkTransform } from './landmark-transform.mjs'
 const digest = data => createHash('sha256').update(data).digest('hex')
 mkdirSync('out', { recursive: true })
-const discardUpstreamMaps = { name: 'compiled-input-maps', setup(builder) { builder.onLoad({filter: /\.[cm]?js$/}, args => ({ contents: readFileSync(args.path,'utf8').replace(/^\/\/[#@] sourceMappingURL=.*$/gm,''), loader: 'js', resolveDir: dirname(args.path) })) } }
+const landmarkRecipe = JSON.parse(readFileSync('landmark-transforms.json'))
+if (landmarkRecipe.schema_version !== 1 || landmarkRecipe.transforms.length !== 6)
+  throw Error('unexpected reviewed Scalar landmark recipe')
+const appliedLandmarks = new Map()
+const discardUpstreamMaps = { name: 'reviewed-source-adapters', setup(builder) {
+  builder.onLoad({filter: /\.[cm]?js$/}, args => {
+    let bytes = readFileSync(args.path)
+    for (const recipe of landmarkRecipe.transforms) {
+      if (!args.path.endsWith('/' + recipe.path)) continue
+      const version = JSON.parse(readFileSync('node_modules/' + recipe.package + '/package.json')).version
+      bytes = applyLandmarkTransform(bytes, recipe, version)
+      appliedLandmarks.set(recipe.path, { path: recipe.path, package: recipe.package, version,
+        input_sha256: recipe.input_sha256, output_sha256: digest(bytes), count: recipe.count })
+    }
+    return { contents: bytes.toString('utf8').replace(/^\/\/[#@] sourceMappingURL=.*$/gm,''),
+      loader: 'js', resolveDir: dirname(args.path) }
+  })
+} }
 const options = {
   entryPoints: ['entry.js'], bundle: true, format: 'iife', platform: 'browser',
   outfile: 'out/scalar.js', sourcemap: 'linked', sourcesContent: true,
@@ -22,6 +40,11 @@ if (!cssMap) throw Error('missing stylesheet source map')
 writeFileSync('out/scalar.css.map',cssMap.contents)
 const banner = `(function(){const s=document.createElement('style');s.id='scalar-style';const n=document.querySelector('meta[property="csp-nonce"]')?.getAttribute('nonce');if(n)s.setAttribute('nonce',n);s.textContent=${JSON.stringify(css)};document.head.appendChild(s);})();`
 const result = await build({ ...options, banner: { js: banner } })
+if (appliedLandmarks.size !== landmarkRecipe.transforms.length)
+  throw Error('Scalar landmark source adapter was not applied to every required module')
+writeFileSync('out/landmark-transform-receipt.json', JSON.stringify({schema_version: 1,
+  recipe_sha256: digest(readFileSync('landmark-transforms.json')),
+  transforms: [...appliedLandmarks.values()].sort((a,b) => a.path.localeCompare(b.path))}, null, 2)+'\n')
 for (const file of result.outputFiles) {
   if (file.path.endsWith('scalar.js')) writeFileSync('out/scalar.js', file.contents)
   else if (file.path.endsWith('scalar.js.map')) writeFileSync('out/scalar.js.map', file.contents)

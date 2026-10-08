@@ -1,0 +1,133 @@
+[
+  {
+    "id": "SB-204",
+    "title": "SBOM — prod-platform release 3.8.1",
+    "chip": "⊢ Observed",
+    "chipCls": "observed",
+    "meta": "Format: <b>CycloneDX</b><br>Components: 1,284<br>Critical vulnerabilities: 0 open<br>License findings: 2 review<br>Linked controls: CM, RA, SA, SI",
+    "evidence": "digest <span class='dig'>sha256:43ab…91df</span>",
+    "links": "OSCAL: back-matter + evidence refs",
+    "next": [
+      "Open component drilldown",
+      "Link to controls",
+      "Export SBOM trace"
+    ],
+    "blocked": "stale SBOM cannot support current release"
+  },
+  {
+    "id": "VX-011",
+    "title": "VEX — CVE-2026-12345 / openssl",
+    "chip": "○ Claimed",
+    "chipCls": "claimed",
+    "meta": "Vulnerability: CVE-2026-12345<br>Component: openssl<br>Status: <b>not_affected</b><br>Justification: vulnerable_code_not_in_execute_path<br>Evidence: runtime path analysis<br>Linked finding: RA-5",
+    "links": "OSCAL: assessment result — risk — POA&M",
+    "next": [
+      "Open justification",
+      "Link to finding"
+    ],
+    "blocked": "not_affected requires justification — present"
+  },
+  {
+    "id": "AI-042",
+    "title": "AI-BOM — claims-classifier",
+    "chip": "⊢ Observed",
+    "chipCls": "observed",
+    "meta": "System: claims-classifier<br>Model: internal-risk-router-v2<br>Datasets: 4 — Prompts: 12 — Tools: 6<br>Evaluation suites: 3<br>Known limitations: 5<br>Linked controls: AI governance, RA, SA, SI",
+    "evidence": "digest <span class='dig'>sha256:8a21…c901</span>",
+    "links": "OSCAL: back-matter + evidence refs — extension: ckx.ai_bom.v1",
+    "next": [
+      "Open model route",
+      "Open dataset lineage",
+      "Open eval evidence"
+    ],
+    "blocked": "model without eval cannot support autonomy claim"
+  },
+  {
+    "id": "AT-017",
+    "title": "AI Tool — reg-to-OSCAL generator",
+    "chip": "⇝ Inferred",
+    "chipCls": "inferred",
+    "meta": "Model route: model-x / policy route P-014<br>Input: EU AI Act Articles 9–15<br>Output: 41 inferred claims<br>Review: <b>required</b><br>Attestation: <b>forbidden</b> until human review + proof ladder",
+    "evidence": "prompt digest <span class='dig'>sha256:3f1a…b08c</span><br>context digest <span class='dig'>sha256:7c2d…e91f</span>",
+    "links": "OSCAL: inferred claim — provenance — extension: ckx.ai_tool.v1",
+    "next": [
+      "Open generation receipt",
+      "Review claims",
+      "Open source spans"
+    ],
+    "blocked": "generated claim cannot skip to attested"
+  },
+  {
+    "id": "SCAN-221",
+    "title": "Scanner Run — Trivy / prod-platform image",
+    "chip": "⊢ Observed",
+    "chipCls": "observed",
+    "meta": "Tool: Trivy<br>Target: prod-platform image<br>Findings: 0 critical — 4 high — 18 medium<br>SBOM: linked — VEX: partial<br>Collected: 2026-07-03<br>Linked controls: RA-5, SI-2, CM-6",
+    "evidence": "digest <span class='dig'>sha256:aa33…19fe</span>",
+    "links": "OSCAL: observation — finding — risk",
+    "next": [
+      "Open findings",
+      "Link to controls",
+      "Open VEX"
+    ],
+    "blocked": "stale scan cannot support current claim (47 days old)"
+  },
+  {
+    "id": "A-918",
+    "title": "Attestation — build provenance / release 3.8.1",
+    "chip": "◆ Attested",
+    "chipCls": "attested",
+    "sealed": true,
+    "meta": "Type: <b>in-toto / SLSA</b><br>Subject: release 3.8.1<br>Predicate: build provenance<br>Signer: <span class='mono'>workload://ci/release</span><br>Transparency: included",
+    "evidence": "digest <span class='dig'>sha256:e77a…1cd0</span>",
+    "links": "OSCAL: back-matter — evidence ref",
+    "next": [
+      "Open attestation",
+      "Verify signature",
+      "View transparency entry"
+    ]
+  },
+  {
+    "id": "CMMC L2",
+    "title": "CMMC Level 2 — CUI scope",
+    "chip": "source pinned",
+    "chipCls": "source-pinned",
+    "meta": "Jurisdiction: United States<br>Protected term: <b>CUI</b><br>Scope: CUI Asset — SPA — Specialized — OOS<br>Assessment: external assessment support<br>Projection: OSCAL + CKX scope manifest",
+    "links": "OSCAL: SSP — assessment plan/results — back-matter — extension: ckx.cmmc.v1",
+    "next": [
+      "Open CUI flow",
+      "Open scope manifest",
+      "View SPA dependencies"
+    ],
+    "blocked": "CUI flow without boundary decision is gap"
+  },
+  {
+    "id": "CPCSC L1",
+    "title": "CPCSC Level 1 — Specified Information",
+    "chip": "source pinned",
+    "chipCls": "source-pinned",
+    "meta": "Jurisdiction: Canada<br>Protected term: <b>Specified Information</b><br>Controls: 13<br>Assessment: annual self-assessment<br>Projection: OSCAL + CKX Canadian manifest",
+    "links": "OSCAL: catalog/profile/SSP/evidence — extension: ckx.cpcsc.v1",
+    "next": [
+      "Open control status",
+      "Open annual affirmation",
+      "View evidence retention"
+    ],
+    "blocked": "self-assessment is not external certification"
+  },
+  {
+    "id": "CG-001",
+    "title": "Controlled Goods Registration — supplier-qc",
+    "chip": "◆ Verified",
+    "chipCls": "verified",
+    "sealed": true,
+    "meta": "Organization: supplier-qc<br>Designated Official: verified attestation<br>Sites: 2<br>Security Plan: <b>current</b><br>Transfer Records: 42<br>Projection: CKX controlled-goods manifest + OSCAL evidence refs",
+    "evidence": "digest <span class='dig'>sha256:5b3c…f0a1</span>",
+    "links": "OSCAL: evidence refs — back-matter — extension: ckx.controlled_goods.v1",
+    "next": [
+      "Open transfer records",
+      "Open site security plan",
+      "View breach reports"
+    ]
+  }
+]

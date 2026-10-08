@@ -2,6 +2,10 @@ package scaffold
 
 import (
 	"encoding/json"
+	"errors"
+	"fmt"
+	"github.com/mchorfa/xoscal/server/internal/rootfs"
+	"io/fs"
 	"os"
 	"path/filepath"
 	"strings"
@@ -37,97 +41,127 @@ type ProjectScan struct {
 
 // ScanRepository inspects the given directory and identifies languages, frameworks,
 // infrastructure definitions, and components.
-func ScanRepository(dir string) (*ProjectScan, error) {
+func ScanRepository(dir string) (result *ProjectScan, resultErr error) {
+	root, err := os.OpenRoot(dir)
+	if err != nil {
+		return nil, err
+	}
+	defer func() { resultErr = errors.Join(resultErr, root.Close()) }()
+	return scanRepository(root, dir)
+}
+
+func scanRepository(root *os.Root, dir string) (*ProjectScan, error) {
 	absDir, err := filepath.Abs(dir)
 	if err != nil {
 		return nil, err
 	}
-
-	scan := &ProjectScan{
-		Dir:     absDir,
-		Name:    filepath.Base(absDir),
-		Version: "1.0.0",
+	scan := &ProjectScan{Dir: absDir, Name: filepath.Base(absDir), Version: "1.0.0"}
+	if err := scanMetadata(root, scan); err != nil {
+		return nil, err
 	}
+	if err := scanMarkers(root, scan); err != nil {
+		return nil, err
+	}
+	if err := fs.WalkDir(root.FS(), ".", func(name string, entry fs.DirEntry, err error) error {
+		if err != nil {
+			return err
+		}
+		info, err := root.Stat(name)
+		if err != nil {
+			return err
+		}
+		if info.Mode().IsRegular() && strings.HasSuffix(name, ".tf") {
+			scan.HasTF = true
+		}
+		return nil
+	}); err != nil {
+		return nil, fmt.Errorf("inspect repository tree: %w", err)
+	}
+	if scan.Description == "" {
+		scan.Description = scan.Name + " primary service and operational substrate"
+	}
+	addDefaultComponents(scan)
+	return scan, nil
+}
 
-	// 1. Check for Go
-	if data, err := os.ReadFile(filepath.Join(absDir, "go.mod")); err == nil {
+func scanMetadata(root *os.Root, scan *ProjectScan) error {
+	data, err := rootfs.OptionalReadFile(root, "go.mod")
+	if err != nil {
+		return fmt.Errorf("read go.mod: %w", err)
+	}
+	if data != nil {
 		scan.Languages = append(scan.Languages, "Go")
 		for _, line := range strings.Split(string(data), "\n") {
 			line = strings.TrimSpace(line)
 			if strings.HasPrefix(line, "module ") {
-				modName := strings.TrimSpace(strings.TrimPrefix(line, "module"))
-				parts := strings.Split(modName, "/")
+				parts := strings.Split(strings.TrimSpace(strings.TrimPrefix(line, "module")), "/")
 				scan.Name = parts[len(parts)-1]
 				break
 			}
 		}
 	}
-
-	// 2. Check for Node / TS
-	if data, err := os.ReadFile(filepath.Join(absDir, "package.json")); err == nil {
+	data, err = rootfs.OptionalReadFile(root, "package.json")
+	if err != nil {
+		return fmt.Errorf("read package.json: %w", err)
+	}
+	if data != nil {
 		scan.Languages = append(scan.Languages, "TypeScript/JavaScript")
-		var pkg struct {
-			Name        string `json:"name"`
-			Version     string `json:"version"`
-			Description string `json:"description"`
-		}
-		if json.Unmarshal(data, &pkg) == nil {
-			if pkg.Name != "" {
-				scan.Name = pkg.Name
+		applyPackageMetadata(data, scan)
+	}
+	return nil
+}
+
+func applyPackageMetadata(data []byte, scan *ProjectScan) {
+	var pkg struct{ Name, Version, Description string }
+	if json.Unmarshal(data, &pkg) != nil {
+		return
+	}
+	if pkg.Name != "" {
+		scan.Name = pkg.Name
+	}
+	if pkg.Version != "" {
+		scan.Version = pkg.Version
+	}
+	if pkg.Description != "" {
+		scan.Description = pkg.Description
+	}
+}
+
+func scanMarkers(root *os.Root, scan *ProjectScan) error {
+	markers := []struct {
+		names     []string
+		directory bool
+		language  string
+		detected  *bool
+	}{
+		{names: []string{"requirements.txt", "pyproject.toml", "Pipfile"}, language: "Python"},
+		{names: []string{"Cargo.toml"}, language: "Rust"},
+		{names: []string{"Dockerfile", "Containerfile", "docker-compose.yml"}, detected: &scan.HasDocker},
+		{names: []string{"k8s", "manifests", "charts"}, directory: true, detected: &scan.HasK8s},
+		{names: []string{"terraform"}, directory: true, detected: &scan.HasTF},
+	}
+	for _, marker := range markers {
+		found := false
+		for _, name := range marker.names {
+			info, err := rootfs.OptionalStat(root, name)
+			if err != nil {
+				return fmt.Errorf("inspect %s: %w", name, err)
 			}
-			if pkg.Version != "" {
-				scan.Version = pkg.Version
-			}
-			if pkg.Description != "" {
-				scan.Description = pkg.Description
+			if info != nil && info.IsDir() == marker.directory {
+				found = true
 			}
 		}
-	}
-
-	// 3. Check for Python
-	if fileExists(filepath.Join(absDir, "requirements.txt")) ||
-		fileExists(filepath.Join(absDir, "pyproject.toml")) ||
-		fileExists(filepath.Join(absDir, "Pipfile")) {
-		scan.Languages = append(scan.Languages, "Python")
-	}
-
-	// 4. Check for Rust
-	if fileExists(filepath.Join(absDir, "Cargo.toml")) {
-		scan.Languages = append(scan.Languages, "Rust")
-	}
-
-	// 5. Check for Containerization
-	if fileExists(filepath.Join(absDir, "Dockerfile")) ||
-		fileExists(filepath.Join(absDir, "Containerfile")) ||
-		fileExists(filepath.Join(absDir, "docker-compose.yml")) {
-		scan.HasDocker = true
-	}
-
-	// 6. Check for Kubernetes
-	if dirExists(filepath.Join(absDir, "k8s")) ||
-		dirExists(filepath.Join(absDir, "manifests")) ||
-		dirExists(filepath.Join(absDir, "charts")) {
-		scan.HasK8s = true
-	}
-
-	// 7. Check for Terraform / IaC
-	if dirExists(filepath.Join(absDir, "terraform")) {
-		scan.HasTF = true
-	}
-	_ = filepath.Walk(absDir, func(path string, info os.FileInfo, err error) error {
-		if err != nil || info.IsDir() {
-			return nil
+		if found && marker.language != "" {
+			scan.Languages = append(scan.Languages, marker.language)
 		}
-		if strings.HasSuffix(path, ".tf") {
-			scan.HasTF = true
+		if marker.detected != nil {
+			*marker.detected = found
 		}
-		return nil
-	})
-
-	if scan.Description == "" {
-		scan.Description = scan.Name + " primary service and operational substrate"
 	}
+	return nil
+}
 
+func addDefaultComponents(scan *ProjectScan) {
 	// Build default components
 	mainComp := ComponentCandidate{
 		Name:        scan.Name,
@@ -158,15 +192,4 @@ func ScanRepository(dir string) (*ProjectScan, error) {
 		scan.Components = append(scan.Components, infraComp)
 	}
 
-	return scan, nil
-}
-
-func fileExists(path string) bool {
-	info, err := os.Stat(path)
-	return err == nil && !info.IsDir()
-}
-
-func dirExists(path string) bool {
-	info, err := os.Stat(path)
-	return err == nil && info.IsDir()
 }

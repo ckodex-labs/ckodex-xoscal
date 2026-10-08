@@ -1,0 +1,335 @@
+[
+  {
+    "name": "Lint",
+    "fn": "Xoscal.Lint(source)",
+    "cls": "gate",
+    "status": "requires hosted proof",
+    "inputs": "pinned source",
+    "outputs": "format, vet and proto lint results",
+    "desc": "Checks Go formatting, vet and Buf lint. A quality gate is not a signature.",
+    "cmd": "dagger call lint --source=.",
+    "oscal": "assessment-results — checked requirement",
+    "tags": [
+      "gate",
+      "proof"
+    ]
+  },
+  {
+    "name": "Test",
+    "fn": "Xoscal.Test(source)",
+    "cls": "gate",
+    "status": "requires hosted proof",
+    "inputs": "pinned source",
+    "outputs": "unit and conformance test output",
+    "desc": "Runs repository tests. Actual run results remain separate evidence.",
+    "cmd": "dagger call test --source=.",
+    "oscal": "assessment-results — observation",
+    "tags": [
+      "gate",
+      "proof"
+    ]
+  },
+  {
+    "name": "TestRace",
+    "fn": "Xoscal.TestRace(source)",
+    "cls": "gate",
+    "status": "requires hosted proof",
+    "inputs": "pinned source",
+    "outputs": "race detector output",
+    "desc": "Runs Go tests with the race detector.",
+    "cmd": "dagger call test-race --source=.",
+    "oscal": "assessment-results — observation",
+    "tags": [
+      "gate",
+      "proof"
+    ]
+  },
+  {
+    "name": "Security",
+    "fn": "Xoscal.Security(source)",
+    "cls": "gate",
+    "status": "requires hosted proof",
+    "inputs": "pinned source and versioned policy",
+    "outputs": "raw govulncheck and gosec findings plus admission result",
+    "desc": "Preserves raw findings and enforces policy. Scanner errors and unapproved findings block admission.",
+    "cmd": "dagger call security --source=. export --path=gosec-results.sarif",
+    "oscal": "assessment-results — finding — risk",
+    "tags": [
+      "gate",
+      "evidence",
+      "proof"
+    ]
+  },
+  {
+    "name": "ProtoCheck",
+    "fn": "Xoscal.ProtoCheck(source)",
+    "cls": "gate",
+    "status": "requires hosted proof",
+    "inputs": "pinned proto contracts and generated code",
+    "outputs": "generation drift result",
+    "desc": "Regenerates the contract and fails when committed generated code differs.",
+    "cmd": "dagger call proto-check --source=.",
+    "oscal": "assessment-results — checked requirement",
+    "tags": [
+      "gate",
+      "proof"
+    ]
+  },
+  {
+    "name": "SpecRegistryCheck",
+    "fn": "Xoscal.SpecRegistryCheck(source)",
+    "cls": "gate",
+    "status": "requires hosted proof",
+    "inputs": "source and pinned OSCAL registry",
+    "outputs": "schema digest comparison",
+    "desc": "Checks pinned OSCAL assets against the schema registry. Drift prevents acceptance.",
+    "cmd": "dagger call spec-registry-check --source=.",
+    "oscal": "catalog — profile — schema integrity",
+    "tags": [
+      "gate",
+      "proof"
+    ]
+  },
+  {
+    "name": "Build",
+    "fn": "Xoscal.Build(source)",
+    "cls": "evidence",
+    "status": "requires hosted proof",
+    "inputs": "pinned source and version",
+    "outputs": "CGO-disabled server binary",
+    "desc": "Compiles the server. Build configuration alone supplies no signing claim.",
+    "cmd": "dagger call build --source=. export --path=xoscal-server",
+    "oscal": "component-definition — back-matter resource",
+    "tags": [
+      "evidence",
+      "proof"
+    ]
+  },
+  {
+    "name": "Coverage",
+    "fn": "Xoscal.Coverage(source)",
+    "cls": "evidence",
+    "status": "requires hosted proof",
+    "inputs": "pinned source",
+    "outputs": "coverage.html",
+    "desc": "Collects coverage from actual tests. A report does not establish a universal coverage threshold.",
+    "cmd": "dagger call coverage --source=. export --path=coverage.html",
+    "oscal": "assessment-results — observation",
+    "tags": [
+      "evidence",
+      "proof"
+    ]
+  },
+  {
+    "name": "SBOM",
+    "fn": "Xoscal.Sbom(source)",
+    "cls": "evidence",
+    "status": "requires hosted proof",
+    "inputs": "built binary",
+    "outputs": "CycloneDX SBOM",
+    "desc": "Inventories the built binary with Syft. Validation and signed manifest coverage are separate gates.",
+    "cmd": "dagger call sbom --source=. export --path=sbom.cyclonedx.json",
+    "oscal": "back-matter resource — component inventory",
+    "tags": [
+      "evidence",
+      "proof"
+    ]
+  },
+  {
+    "name": "SBOM Validation",
+    "fn": "Xoscal.SbomValidation(source)",
+    "cls": "gate",
+    "status": "requires hosted proof",
+    "inputs": "actual binary and image SBOMs, versioned exception policy",
+    "outputs": "raw validation findings and OSCAL assessment-results",
+    "desc": "Checks NTIA minimum elements. Findings require explicit valid exceptions; report existence is insufficient.",
+    "cmd": "dagger call sbom-validation --source=. export --path=sbom-assessment-results.json",
+    "oscal": "assessment-results — observation — finding",
+    "tags": [
+      "gate",
+      "evidence",
+      "proof"
+    ]
+  },
+  {
+    "name": "Image",
+    "fn": "Xoscal.Image(source)",
+    "cls": "evidence",
+    "status": "requires hosted proof",
+    "inputs": "pinned source and base image",
+    "outputs": "image archive and image digest",
+    "desc": "Exports image bytes for analysis before consumer publication. Server gRPC is :50051; metrics are :9090.",
+    "cmd": "dagger call image --source=. export --path=xoscal-server.tar",
+    "oscal": "component-definition — back-matter resource",
+    "tags": [
+      "evidence",
+      "proof"
+    ]
+  },
+  {
+    "name": "SDK Sources and Packages",
+    "fn": "Xoscal.SdkBundles(source) / SdkPackages(source)",
+    "cls": "evidence",
+    "status": "requires hosted proof",
+    "inputs": "pinned proto contracts and language build metadata",
+    "outputs": "six source ZIPs, supported language packages and consumer results",
+    "desc": "Builds six compatibility ZIPs plus a Go module, Python wheel/sdist, Java JAR/POM, NuGet package, Node ESM/CJS package, and Swift SPM protobuf models. Swift supplies no generated RPC client. Clean consumer tests and verified manifest coverage gate download eligibility.",
+    "cmd": "dagger call sdk-packages --source=. export --path=sdk-packages",
+    "oscal": "back-matter resource — software component",
+    "tags": [
+      "evidence",
+      "proof"
+    ]
+  },
+  {
+    "name": "OpenAPI",
+    "fn": "Xoscal.Openapi(source)",
+    "cls": "evidence",
+    "status": "requires hosted proof",
+    "inputs": "OSCAL, governance, transparency exchange and graph contracts",
+    "outputs": "complete openapi.json",
+    "desc": "Merges deterministic service specifications and rejects missing operations, empty paths and invalid references.",
+    "cmd": "Dagger API contract gate",
+    "oscal": "back-matter resource — service interface",
+    "tags": [
+      "evidence",
+      "proof"
+    ]
+  },
+  {
+    "name": "OSCAL Frameworks",
+    "fn": "Xoscal.OscalFrameworks(source)",
+    "cls": "evidence",
+    "status": "requires hosted proof",
+    "inputs": "framework manifest and pinned source",
+    "outputs": "35 catalog JSON files and the PBMM profile",
+    "desc": "Generates and validates catalogs plus the profile. Every artifact carries a producer and OSCAL touchpoint.",
+    "cmd": "dagger call oscal-frameworks --source=. export --path=frameworks",
+    "oscal": "catalog — profile",
+    "tags": [
+      "evidence",
+      "proof"
+    ]
+  },
+  {
+    "name": "Site Preview",
+    "fn": "Xoscal.Site(source)",
+    "cls": "evidence",
+    "status": "requires hosted proof",
+    "inputs": "pinned locally produced artifacts",
+    "outputs": "static local preview with local Scalar assets",
+    "desc": "Renders an incomplete local preview. Missing hosted proof keeps downloads ineligible; JavaScript cannot grant eligibility.",
+    "cmd": "dagger call site --source=. export --path=_site",
+    "oscal": "back-matter resource — presentation surface",
+    "tags": [
+      "evidence",
+      "proof"
+    ]
+  },
+  {
+    "name": "Serve",
+    "fn": "Xoscal.Serve(source)",
+    "cls": "evidence",
+    "status": "requires hosted proof",
+    "inputs": "local preview",
+    "outputs": "HTTP preview on :8080",
+    "desc": "Serves a local preview for browser checks. It does not promote a release or establish hosted verification.",
+    "cmd": "dagger call serve --source=. up --ports 8080:8080",
+    "oscal": "local verification surface",
+    "tags": [
+      "evidence",
+      "proof"
+    ]
+  },
+  {
+    "name": "All",
+    "fn": "Xoscal.All(source)",
+    "cls": "gate",
+    "status": "requires hosted proof",
+    "inputs": "pinned source",
+    "outputs": "repository gate results",
+    "desc": "Runs repository lint, tests, race, security, contract drift and schema validation. Every mandatory gate must pass.",
+    "cmd": "dagger call all --source=.",
+    "oscal": "assessment-plan — assessment-results",
+    "tags": [
+      "gate",
+      "proof"
+    ]
+  },
+  {
+    "name": "Release Archives",
+    "fn": "Xoscal.Release(source)",
+    "cls": "release",
+    "status": "requires hosted proof",
+    "inputs": "pinned tagged source",
+    "outputs": "GoReleaser archives, checksums and archive SBOMs",
+    "desc": "Runs GoReleaser with publish, announce and sign skipped. Archives stay staged until hosted proof and promotion gates succeed.",
+    "cmd": "dagger call release --source=. export --path=dist",
+    "oscal": "back-matter resource — software deliverable",
+    "tags": [
+      "release",
+      "proof"
+    ]
+  },
+  {
+    "name": "Release Candidate",
+    "fn": "Xoscal.ReleaseCandidate(source, releaseTag, sourceRevision)",
+    "cls": "release",
+    "status": "requires hosted proof",
+    "inputs": "pinned tagged source and analysis policy",
+    "outputs": "complete payload and initial payload manifest",
+    "desc": "Dagger packages six SDKs, 35 catalogs, PBMM profile, platform archives, multi-architecture OCI archive, API assets and enforced analysis. No public release or image tag is created here.",
+    "cmd": "dagger call release-candidate --source=. --release-tag=\"$RELEASE_TAG\" --source-revision=\"$SOURCE_REVISION\" export --path=candidate",
+    "oscal": "component-definition — catalog — profile — assessment-results",
+    "tags": [
+      "release",
+      "proof"
+    ]
+  },
+  {
+    "name": "Finalize Candidate",
+    "fn": "Xoscal.FinalizeCandidate(source, candidate, payloadBundle, releaseTag, sourceRevision)",
+    "cls": "release",
+    "status": "requires hosted proof",
+    "inputs": "candidate payload and hosted payload attestation",
+    "outputs": "rendered final site bytes and final release-manifest.json",
+    "desc": "Dagger verifies expected repository, workflow, source SHA and tag for exact payload bytes before rendering eligible release HTML. It then covers every final payload and site byte in a non-self-referential manifest.",
+    "cmd": "dagger call finalize-candidate --source=. --candidate=./candidate --payload-bundle=payload.sigstore.json --release-tag=\"$RELEASE_TAG\" --source-revision=\"$SOURCE_REVISION\" export --path=final",
+    "oscal": "back-matter resource — verified evidence presentation",
+    "tags": [
+      "release",
+      "proof"
+    ]
+  },
+  {
+    "name": "Verify Candidate",
+    "fn": "Xoscal.VerifyCandidate(source, candidate, releaseBundle, releaseTag, sourceRevision)",
+    "cls": "gate",
+    "status": "requires hosted proof",
+    "inputs": "unchanged final bytes and hosted final manifest attestation",
+    "outputs": "exact-byte verification result or failure",
+    "desc": "Dagger verifies the final manifest identity and all covered digests before any promotion. Any missing, tampered or unverified mandatory object fails. Detached proof envelopes never hash themselves.",
+    "cmd": "dagger call verify-candidate --source=. --candidate=./final --release-bundle=release-manifest.sigstore.json --release-tag=\"$RELEASE_TAG\" --source-revision=\"$SOURCE_REVISION\" export --path=verified",
+    "oscal": "assessment-results — checked requirement — attestation",
+    "tags": [
+      "gate",
+      "release",
+      "proof"
+    ]
+  },
+  {
+    "name": "Snapshot",
+    "fn": "Xoscal.Snapshot(source)",
+    "cls": "release",
+    "status": "requires hosted proof",
+    "inputs": "pinned development source",
+    "outputs": "development archives",
+    "desc": "Stages development archives with no publication or signing. Snapshot output is not a verified release.",
+    "cmd": "dagger call snapshot --source=. export --path=dist",
+    "oscal": "local development artifact",
+    "tags": [
+      "release",
+      "proof"
+    ]
+  }
+]

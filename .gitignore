@@ -114,6 +114,7 @@ yarn-debug.log*
 yarn-error.log*
 package-lock.json
 !dagger/frontend/package-lock.json
+!dagger/presentation-browser/package-lock.json
 yarn.lock
 
 # Python

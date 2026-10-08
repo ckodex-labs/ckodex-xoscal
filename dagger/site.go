@@ -16,7 +16,9 @@ func (m *Xoscal) siteShell(source *dagger.Directory) *dagger.Container {
 		WithFile("/out/scalar.js.map", frontend.File("scalar.js.map")).
 		WithFile("/out/scalar.css", frontend.File("scalar.css")).
 		WithFile("/out/scalar.css.map", frontend.File("scalar.css.map")).
-		WithFile("/out/THIRD-PARTY-NOTICES.txt", frontend.File("THIRD-PARTY-NOTICES.txt"))
+		WithFile("/out/THIRD-PARTY-NOTICES.txt", frontend.File("THIRD-PARTY-NOTICES.txt")).
+		WithFile("/tools/render_api_reference.py", dag.CurrentModule().Source().File("render_api_reference.py")).
+		WithExec([]string{"python3", "scripts/render-blueprint.py", "--output", "/out/portal.html"})
 }
 
 // Site builds a complete unsigned local preview. Only FinalizeCandidate may
@@ -26,6 +28,7 @@ func (m *Xoscal) Site(source *dagger.Directory) *dagger.Directory {
 		WithDirectory("/out/sdk", m.SdkBundles(source)).
 		WithDirectory("/out/frameworks", m.OscalFrameworks(source)).
 		WithFile("/out/openapi.json", m.Openapi(source)).
+		WithExec([]string{"python3", "/tools/render_api_reference.py", "--root", "/out"}).
 		WithFile("/out/sbom-assessment-results.json", m.SbomValidationReports(source, m.Sbom(source)).File("sbom-assessment-results.oscal.json")).
 		WithExec([]string{"sh", "-c", "revision=$(git rev-parse HEAD); python3 scripts/release-contract.py create --root /out --tag dev --revision \"$revision\""}).
 		WithExec([]string{"python3", "scripts/render-release-site.py", "--root", "/out", "--manifest", "/out/payload-manifest.json"}).

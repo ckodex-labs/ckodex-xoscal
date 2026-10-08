@@ -17,6 +17,7 @@ import release_inventory as inventory
 import release_requirements as requirements
 from test_inspect_image_archive import make_layout, write_archive, oci
 from test_frontend_inventory import make_fixture as make_frontend_fixture, f as FRONTEND
+from test_presentation_browser_verify import make_fixture as make_browser_fixture
 
 SDK = requirements.load_module('requirements_sdk_fixture', 'sdk-verify.py')
 GATE = requirements.load_module('requirements_analysis_fixture', 'analysis-gate.py')
@@ -324,7 +325,7 @@ class RequiredOutputTests(unittest.TestCase):
                 path.write_bytes(original)
 
     def test_frontend_producer_inputs_cannot_be_tampered(self):
-        for name in ('scalar.js', 'scalar.js.map', 'scalar.css', 'scalar.css.map', 'package-lock.json', 'entry.js', 'build.mjs', 'bundle-inputs.tar.gz', 'frontend-inventory.json', 'installed-package-manifests.json'):
+        for name in ('scalar.js', 'scalar.js.map', 'scalar.css', 'scalar.css.map', 'package-lock.json', 'entry.js', 'build.mjs', 'bundle-inputs.tar.gz', 'frontend-inventory.json', 'installed-package-manifests.json', 'landmark-transform.mjs', 'landmark-transform.test.mjs', 'landmark-transforms.json', 'landmark-transform-receipt.json'):
             with self.subTest(input=name):
                 path = self.root / 'evidence/frontend' / name;original = path.read_bytes();path.write_bytes(original + b'tampered')
                 self.reject()
@@ -699,11 +700,13 @@ class RequiredOutputTests(unittest.TestCase):
         self.reject('missing required.*presentation.ok', manifest)
         put(self.root, 'evidence/presentation.ok', b'presentation-analysis-ok\n')
         write_json(self.root / 'evidence/release-source.json', {'schema_version': 1, 'release_tag': 'v1.2.3', 'source_revision': 'a' * 40, 'version': 'v1.2.3', 'scope': 'clean-tagged-source', 'status': 'passed'})
+        make_browser_fixture(self.root)
         manifest = inventory.create(self.root, 'v1.2.3', 'a' * 40, final=True)
         self.assertEqual(requirements.required_payload(self.root, manifest)['status'], 'passed')
 
     def test_final_source_identity_must_match_manifest(self):
         put(self.root, 'evidence/presentation.ok', b'presentation-analysis-ok\n')
+        make_browser_fixture(self.root)
         for field, wrong in (('source_revision', 'b' * 40), ('release_tag', 'v1.2.4'), ('version', 'v1.2.4'), ('scope', 'preview'), ('status', 'incomplete')):
             with self.subTest(field=field):
                 doc = {'schema_version': 1, 'release_tag': 'v1.2.3', 'source_revision': 'a' * 40, 'version': 'v1.2.3', 'scope': 'clean-tagged-source', 'status': 'passed'}
