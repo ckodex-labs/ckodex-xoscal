@@ -28,6 +28,9 @@ type Xoscal struct {
 	// +optional
 	// Version is the build version injected into the binary.
 	Version string
+	// +optional
+	// AnalysisAttempt explicitly selects a fresh external-evidence observation.
+	AnalysisAttempt string
 }
 
 // New creates a new Xoscal pipeline with default version "dev".

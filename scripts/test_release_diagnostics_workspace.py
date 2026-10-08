@@ -17,6 +17,8 @@ def fixture_dagger(tools):
             print('dirty source fixture:', status, file=sys.stderr)
             sys.exit(13)
         args = sys.argv[1:]
+        if '--attempt=fixture-101-2' not in args:
+            sys.exit(14)
         subject = next(a.split('=',1)[1] for a in args if a.startswith('--subject='))
         if subject == 'source':
             print('deliberate independent export failure fixture', file=sys.stderr)
@@ -51,7 +53,7 @@ class DiagnosticWorkspace(unittest.TestCase):
             bundle.write_bytes(b'{"fixture":"not a signature"}\n')
             fixture_dagger(tools)
             env.update(PATH=str(tools) + os.pathsep + env["PATH"], RELEASE_WORKSPACE=str(workspace),
-                       PAYLOAD_BUNDLE=str(bundle), RELEASE_TAG="v1.2.3", SOURCE_REVISION="a" * 40)
+                       PAYLOAD_BUNDLE=str(bundle), RELEASE_TAG="v1.2.3", SOURCE_REVISION="a" * 40, ANALYSIS_ATTEMPT="fixture-101-2")
             result = subprocess.run(["sh", "-eu", "-c", script], cwd=checkout, env=env, capture_output=True, text=True)
             self.assertEqual(result.returncode, 1, result.stdout + result.stderr)
             rows = (workspace / "failed-analysis/exports.tsv").read_text().splitlines()

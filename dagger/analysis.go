@@ -32,6 +32,7 @@ func (m *Xoscal) analysisGate(source *dagger.Directory, evidence *dagger.Directo
 		WithFile("/policy/artifact_inventory.py", dag.CurrentModule().Source().File("artifact_inventory.py")).
 		WithFile("/policy/frontend_inventory.py", dag.CurrentModule().Source().File("frontend_inventory.py")).
 		WithFile("/policy/enrich_sbom.py", dag.CurrentModule().Source().File("enrich_sbom.py")).
+		WithFile("/policy/go_module_relationships.py", dag.CurrentModule().Source().File("go_module_relationships.py")).
 		WithFile("/policy/publisher_metadata.py", dag.CurrentModule().Source().File("publisher_metadata.py")).
 		WithFile("/policy/analysis-exceptions.json", source.File("docs/analysis-exceptions.json")).
 		WithDirectory("/evidence", evidence).
@@ -42,8 +43,8 @@ func (m *Xoscal) analysisGate(source *dagger.Directory, evidence *dagger.Directo
 // All severities and unfixed findings remain in the raw report. The release
 // gate retains the existing CRITICAL/fixed threshold; CI also blocks HIGH.
 func (m *Xoscal) ImageAnalysisReports(archive *dagger.File) *dagger.Directory {
-	return m.trivyBase().
-		WithFile("/input/image.tar", archive).
+	c := m.trivyBase().WithFile("/input/image.tar", archive)
+	return m.analysisAttempt(c, "image-vulnerabilities").
 		WithExec([]string{"sh", "-c", "mkdir -p /evidence\nsha256sum /input/image.tar > /evidence/image.sha256\nset +e\ntrivy image --input /input/image.tar --scanners vuln --format json --list-all-pkgs --exit-code 0 --output /evidence/trivy-results.json > /evidence/trivy.log 2>&1\nprintf '%s\\n' \"$?\" > /evidence/trivy.status"}).
 		Directory("/evidence")
 }
@@ -60,10 +61,11 @@ func (m *Xoscal) trivyBase() *dagger.Container {
 // ArtifactAnalysisReports analyzes safe extracted ZIP/tar package bytes. Empty
 // or unsupported package inventory is rejected by ArtifactAnalysis admission.
 func (m *Xoscal) ArtifactAnalysisReports(archive *dagger.File) *dagger.Directory {
-	return m.trivyBase().
+	c := m.trivyBase().
 		WithFile("/input/artifact", archive).
 		WithFile("/tools/extract_archive.py", dag.CurrentModule().Source().File("extract_archive.py")).
-		WithFile("/tools/artifact_inventory.py", dag.CurrentModule().Source().File("artifact_inventory.py")).
+		WithFile("/tools/artifact_inventory.py", dag.CurrentModule().Source().File("artifact_inventory.py"))
+	return m.analysisAttempt(c, "artifact-vulnerabilities").
 		WithExec([]string{"sh", "-c", `mkdir -p /evidence
 sha256sum /input/artifact > /evidence/artifact.sha256
 set +e
@@ -115,7 +117,7 @@ func (m *Xoscal) ArtifactSbomReports(artifact *dagger.File) *dagger.Directory {
 		WithExec([]string{"python3", "/tools/extract_archive.py", "/input/artifact", "/input/unpacked", "--allow-file"}).
 		WithExec([]string{"sh", "-c", "mkdir -p /evidence; sha256sum /input/artifact | cut -d ' ' -f 1 > /evidence/subject.sha256; syft version > /evidence/sbom-producer.txt"}).
 		WithExec([]string{"syft", "scan", "dir:/input/unpacked", "-o", "cyclonedx-json", "-q", "--file", "/evidence/sbom.cyclonedx.json"}).
-		WithExec([]string{"sh", "-c", "for pair in SDK-PRODUCER.json:sdk-producer.json go.sum:source-go.sum Package.resolved:source-Package.resolved requirements.txt:source-requirements.txt; do src=${pair%:*}; dst=${pair#*:}; if [ -f /input/unpacked/$src ]; then cp /input/unpacked/$src /evidence/$dst; fi; done"}).Directory("/evidence")
+		WithExec([]string{"sh", "-c", "for pair in SDK-PRODUCER.json:sdk-producer.json go.sum:source-go.sum go.mod:source-go.mod Package.resolved:source-Package.resolved requirements.txt:source-requirements.txt; do src=${pair%:*}; dst=${pair#*:}; if [ -f /input/unpacked/$src ]; then cp /input/unpacked/$src /evidence/$dst; fi; done"}).Directory("/evidence")
 }
 
 // ArtifactSbomAnalysis requires compliance of the exact generated package SBOM
@@ -133,6 +135,9 @@ func (m *Xoscal) boundSbomAnalysis(source *dagger.Directory, produced *dagger.Di
 		WithDirectory("publishers", produced.Directory("publishers")).
 		WithFile("subject.sha256", produced.File("subject.sha256")).
 		WithFile("sbom-producer.txt", produced.File("sbom-producer.txt"))
+	if m.AnalysisAttempt != "" {
+		evidence = evidence.WithFile("analysis-attempt.json", produced.File("analysis-attempt.json"))
+	}
 	return m.analysisGate(source, evidence, "sbom").Directory("/evidence")
 }
 
@@ -165,15 +170,17 @@ func (m *Xoscal) syftBase() *dagger.Container {
 // enrichSbomReports records the distributor only for observed packaged bytes.
 // Original scanner evidence and exact-subject receipt survive admission.
 func (m *Xoscal) enrichSbomReports(source *dagger.Directory, produced *dagger.Directory) *dagger.Directory {
-	return dag.Container().From(goBuilderImage).
+	c := dag.Container().From(goBuilderImage).
 		WithExec([]string{"apt-get", "update"}).
 		WithExec([]string{"apt-get", "install", "-y", "--no-install-recommends", "python3"}).
 		WithDirectory("/evidence", produced).
 		WithFile("/evidence/sbom.raw.cyclonedx.json", produced.File("sbom.cyclonedx.json")).
 		WithFile("/evidence/sbom-distributor.json", source.File("docs/SBOM-DISTRIBUTOR.json")).
 		WithFile("/tools/enrich_sbom.py", dag.CurrentModule().Source().File("enrich_sbom.py")).
-		WithFile("/tools/publisher_metadata.py", dag.CurrentModule().Source().File("publisher_metadata.py")).
-		WithExec([]string{"python3", "/tools/publisher_metadata.py", "--sbom", "/evidence/sbom.raw.cyclonedx.json", "--output", "/evidence/publishers", "--producer", "/evidence/sdk-producer.json", "--go-sum", "/evidence/source-go.sum", "--resolved", "/evidence/source-Package.resolved", "--requirements", "/evidence/source-requirements.txt"}).
+		WithFile("/tools/go_module_relationships.py", dag.CurrentModule().Source().File("go_module_relationships.py")).
+		WithFile("/tools/publisher_metadata.py", dag.CurrentModule().Source().File("publisher_metadata.py"))
+	return m.analysisAttempt(c, "publisher-metadata").
+		WithExec([]string{"python3", "/tools/publisher_metadata.py", "--sbom", "/evidence/sbom.raw.cyclonedx.json", "--output", "/evidence/publishers", "--producer", "/evidence/sdk-producer.json", "--go-sum", "/evidence/source-go.sum", "--go-mod", "/evidence/source-go.mod", "--resolved", "/evidence/source-Package.resolved", "--requirements", "/evidence/source-requirements.txt"}).
 		WithExec([]string{"python3", "/tools/enrich_sbom.py", "--raw", "/evidence/sbom.raw.cyclonedx.json", "--policy", "/evidence/sbom-distributor.json", "--subject", "/evidence/subject.sha256", "--output", "/evidence/sbom.cyclonedx.json", "--receipt", "/evidence/sbom-enrichment.json", "--publisher-dir", "/evidence/publishers"}).Directory("/evidence")
 }
 

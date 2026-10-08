@@ -130,6 +130,7 @@ func diagnosticMode(kind, mode string) bool {
 // A bare binary is not an archive. Scan its exact bytes without passing it to
 // the archive extractor, retaining the tool exit independently of admission.
 func (m *Xoscal) binaryDiagnosticReports(binary *dagger.File) *dagger.Directory {
-	return m.trivyBase().WithFile("/input/xoscal-server", binary).
+	c := m.trivyBase().WithFile("/input/xoscal-server", binary)
+	return m.analysisAttempt(c, "binary-vulnerabilities").
 		WithExec([]string{"sh", "-c", "mkdir -p /evidence\nsha256sum /input/xoscal-server > /evidence/artifact.sha256\nset +e\ntrivy rootfs /input --scanners vuln --format json --list-all-pkgs --exit-code 0 --output /evidence/trivy-results.json > /evidence/trivy.log 2>&1\nprintf '%s\\n' \"$?\" > /evidence/trivy.status"}).Directory("/evidence")
 }

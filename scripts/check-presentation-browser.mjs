@@ -8,14 +8,16 @@ import { fileURLToPath } from 'node:url'
 import { createRequire } from 'node:module'
 import { execFileSync } from 'node:child_process'
 import { chromium, request } from 'playwright'
-import { checkApiLandmarks, checkApiReferenceFallback, checkStaticApiDeepLink, checkApiTheme } from './check-api-landmarks.mjs'
+import { checkApiLandmarks, checkApiEntryKeyboard, checkApiEntryReentry, checkApiEntryRouteDuringLoading, checkApiEntryFallbackFocus, checkApiEntryCancellation, checkApiEntryForwardFocus, checkApiReferenceFallback, checkStaticApiDeepLink, checkApiTheme } from './check-api-landmarks.mjs'
 
+import { checkApiModelFocusAway } from './check-api-model-intent.mjs'
 const args = Object.fromEntries(process.argv.slice(2).reduce((pairs, value, index, all) => index % 2 ? pairs : [...pairs, [value.replace(/^--/, ''), all[index + 1]]], []))
 const root = fs.realpathSync(args.root), output = path.resolve(args.output)
 const toolRoot = path.dirname(fileURLToPath(import.meta.url)), require = createRequire(import.meta.url)
 const config = JSON.parse(fs.readFileSync(path.join(toolRoot, 'browser-toolchain.json')))
 const receiptPath = path.join(output, 'presentation-browser.json')
 const sha = bytes => 'sha256:' + crypto.createHash('sha256').update(bytes).digest('hex')
+const started = performance.now(), deadlineMs = 1500000
 const receipt = { schema_version: 1, status: 'failed', checks: [], failures: [], modes: [], negative_controls: [], subjects: {}, subject_sizes: {}, tools: {}, coverage_inventory: {}, proxy_denials: [] }
 let browser, api, proxy, base, deadline
 
@@ -24,7 +26,6 @@ function verify(id, passed, detail) {
   receipt.checks.push(record)
   if (!record.passed) receipt.failures.push(record)
 }
-
 async function bounded(id, fn) {
   try { await fn() } catch (error) { verify(id + ': exception', false, String(error.stack || error)) }
 }
@@ -54,10 +55,10 @@ function bindSubjects() {
 
 function stageTools() {
   fs.mkdirSync(output, { recursive: true })
-  for (const name of ['check-presentation-browser.mjs', 'check-api-landmarks.mjs', 'package.json', 'package-lock.json', 'browser-toolchain.json']) fs.copyFileSync(path.join(toolRoot, name), path.join(output, name))
+  for (const name of ['check-presentation-browser.mjs', 'check-api-landmarks.mjs', 'check-api-model-intent.mjs', 'package.json', 'package-lock.json', 'browser-toolchain.json']) fs.copyFileSync(path.join(toolRoot, name), path.join(output, name))
   const lock = JSON.parse(fs.readFileSync(path.join(toolRoot, 'package-lock.json')))
   receipt.tools = { image: args.image, playwright: require('playwright/package.json').version, chromium: null, node: process.version, npm: execFileSync('npm', ['--version'], { encoding: 'utf8' }).trim(), packages: config.packages, chromium_revision: config.chromium_revision }
-  for (const [key, name] of [['package_lock_digest', 'package-lock.json'], ['runner_digest', 'check-presentation-browser.mjs'], ['api_helper_digest', 'check-api-landmarks.mjs'], ['toolchain_digest', 'browser-toolchain.json'], ['package_digest', 'package.json']]) receipt.tools[key] = sha(fs.readFileSync(path.join(toolRoot, name)))
+  for (const [key, name] of [['package_lock_digest', 'package-lock.json'], ['runner_digest', 'check-presentation-browser.mjs'], ['api_helper_digest', 'check-api-landmarks.mjs'], ['model_intent_digest', 'check-api-model-intent.mjs'], ['toolchain_digest', 'browser-toolchain.json'], ['package_digest', 'package.json']]) receipt.tools[key] = sha(fs.readFileSync(path.join(toolRoot, name)))
   verify('toolchain: immutable image and package version', args.image === config.image && receipt.tools.playwright === config.playwright)
   for (const [name, integrity] of Object.entries(config.packages)) verify('toolchain: SRI ' + name, lock.packages['node_modules/' + name]?.integrity === integrity && lock.packages['node_modules/' + name]?.version === config.playwright)
 }
@@ -75,7 +76,7 @@ function admitReceipt() {
 
 function admitBindings(saved) {
   if (saved.tools.image !== config.image || saved.tools.playwright !== config.playwright || saved.tools.chromium !== config.chromium || JSON.stringify(saved.tools.packages) !== JSON.stringify(config.packages)) throw Error('Browser tooling differs from pinned configuration')
-  for (const [key, name] of [['package_lock_digest', 'package-lock.json'], ['runner_digest', 'check-presentation-browser.mjs'], ['api_helper_digest', 'check-api-landmarks.mjs'], ['toolchain_digest', 'browser-toolchain.json'], ['package_digest', 'package.json']]) if (saved.tools[key] !== sha(fs.readFileSync(path.join(toolRoot, name))) || saved.tools[key] !== sha(fs.readFileSync(path.join(output, name)))) throw Error('Changed browser producer: ' + name)
+  for (const [key, name] of [['package_lock_digest', 'package-lock.json'], ['runner_digest', 'check-presentation-browser.mjs'], ['api_helper_digest', 'check-api-landmarks.mjs'], ['model_intent_digest', 'check-api-model-intent.mjs'], ['toolchain_digest', 'browser-toolchain.json'], ['package_digest', 'package.json']]) if (saved.tools[key] !== sha(fs.readFileSync(path.join(toolRoot, name))) || saved.tools[key] !== sha(fs.readFileSync(path.join(output, name)))) throw Error('Changed browser producer: ' + name)
   if (JSON.stringify(Object.keys(saved.subjects).sort()) !== JSON.stringify(subjectPaths())) throw Error('Changed browser subject selection')
   for (const [relative, digest] of Object.entries(saved.subjects)) if (sha(fs.readFileSync(path.join(root, relative))) !== digest) throw Error('Changed browser subject: ' + relative)
 }
@@ -83,12 +84,15 @@ function admitBindings(saved) {
 function admitObservations(saved) {
   for (const mode of saved.modes) if (JSON.stringify(Object.keys(mode.observations)) !== JSON.stringify(['/', ...config.routes])) throw Error('Missing actual page coverage: ' + mode.id)
   for (const mode of saved.modes) if (mode.javaScriptEnabled !== mode.id.endsWith('-js') || ['console', 'network', 'page_errors'].some(key => !Array.isArray(mode[key]) || mode[key].length)) throw Error('Invalid or failed browser mode: ' + mode.id)
-  const controls = config.modes.filter(id => id.endsWith('-js')).flatMap(id => ['404', 'tamper', 'script'].map(failure => id + ':' + failure))
+  const controls = config.modes.filter(id => id.endsWith('-js')).flatMap(id => ['404', 'tamper', 'script', 'focus-return', 'cancel', 'forward-focus', 'host-failure'].map(failure => id + ':' + failure))
   if (JSON.stringify(saved.negative_controls.map(control => control.id).sort()) !== JSON.stringify(controls.sort())) throw Error('Missing required negative control')
 }
 
 function requiredIds() {
-  return ['toolchain: immutable image and package version', 'toolchain: actual pinned Chromium', 'inventory: exact eight actual pages', 'served root alias: exact index bytes', 'receipt: complete six negative controls', 'proxy: no non-service origins requested', 'inventory: read-only same-origin resources', ...config.modes.flatMap(modeRequiredIds)]
+  const failedEntries = config.modes.filter(mode => mode.endsWith('-js')).flatMap(mode => ['404', 'tamper'].map(failure => mode + ':' + failure + ': failed explorer: ready transition retains visible unoccluded keyboard focus'))
+  const coldEntries = config.modes.filter(mode => mode.endsWith('-js')).flatMap(mode => ['focus-return', 'cancel'].flatMap(failure => ['cold contract exact actual held response', 'cold contract: actual Tab enters explorer summary', 'cold contract: cancellation keydown occurs during loading', 'cold contract: cancelled explorer never resurrects', failure === 'cancel' ? 'cancel explorer: ready transition retains visible unoccluded keyboard focus' : 'cold contract: moved Plain focus remains visible and owned'].map(name => mode + ':' + failure + ': ' + name)))
+  const forwardEntries = config.modes.filter(mode => mode.endsWith('-js')).flatMap(mode => ['forward-focus', 'host-failure'].flatMap(failure => ['cold contract exact actual held response', 'cold forward: actual Tab enters explorer selector', 'cold forward: actual Tab keydown occurs during loading', 'cold forward: actual Tab selects host contract link', failure === 'host-failure' ? 'failed host explorer: ready transition retains visible unoccluded keyboard focus' : 'cold forward: ready retains visible unoccluded owned host focus'].map(name => mode + ':' + failure + ': ' + name)))
+  return ['toolchain: immutable image and package version', 'toolchain: actual pinned Chromium', 'inventory: exact eight actual pages', 'served root alias: exact index bytes', 'receipt: complete fourteen negative controls', 'proxy: no non-service origins requested', 'inventory: read-only same-origin resources', ...config.modes.flatMap(modeRequiredIds), ...failedEntries, ...coldEntries, ...forwardEntries, ...config.modes.filter(mode => mode.endsWith('-js')).map(mode => mode + ':host-failure: cold host failure: selects only Plain and disposes explorer')]
 }
 
 function modeRequiredIds(mode) {
@@ -111,11 +115,15 @@ function nativeRequiredIds(mode) {
 }
 
 function lifecycleRequiredIds(mode) {
-  const ids = []
+  const ids = ['view link', 'plain view link', 'native summary', 'intro reentry', 'model reentry'].map(kind => mode + (kind.endsWith('reentry') ? ': API native reentry/' : ': API keyboard entry/') + kind + ': ready transition retains visible unoccluded keyboard focus')
+  for (const name of ['view link: actual Tab reaches explorer selector', 'plain view link: actual Shift+Tab reaches Plain selector', 'native summary: actual Tab reaches explorer summary after far Plain contract']) ids.push(mode + ': API keyboard entry/' + name)
+  ids.push(mode + ': cold contract exact actual held response', ...['intro reentry: actual prior Scalar fragment', 'intro reentry: native close retains prior fragment', 'model reentry: actual prior Scalar fragment', 'model reentry: native close retains prior fragment', 'initial model deep link preserves requested route', 'initial model deep link: requested model owns visible focus after readiness', ...['intro reentry', 'model reentry'].flatMap(kind => [kind + ': actual Tab reaches explorer summary after far Plain contract', kind + ': ready transition selects only interactive reference'])].map(name => mode + ': API native reentry/' + name), ...['new route: actual hash navigation occurs during loading', 'new route: requested model owns visible focus after readiness'].map(name => mode + ': API route during loading/' + name))
+  ids.push(...['ready model navigation: requested model owns visible focus after readiness', 'model route: actual Tab cancels previous model ownership', 'model route: newer host fragment cancels previous route'].map(name => mode + ': API native reentry/' + name))
+  ids.push(mode + ':model-focus-away: cold contract exact actual held response', ...['pre-ready host focus is observed', 'ready preserves moved host focus'].map(name => mode + ': API model focus movement/' + name))
+  for (const kind of ['intro reentry', 'model reentry']) ids.push(mode + ': API native reentry/' + kind + ': pre-close setup preserves fragment and summary focus')
   for (const phase of ['online API lifecycle', 'loaded offline API lifecycle']) for (let cycle = 0; cycle < 3; cycle++) ids.push(mode + ': ' + phase + '/cycle ' + cycle + ': API client is a visible labelled dialog', mode + ': ' + phase + '/cycle ' + cycle + ' dismissed, including hidden DOM: no duplicate DOM IDs')
   return ids
 }
-
 async function startProxy() {
   // Loopback supplies the same secure-context semantics as hosted HTTPS without
   // changing browser security flags. Every byte comes from Dagger's HTTP service.
@@ -133,7 +141,6 @@ async function startProxy() {
   await new Promise((resolve, reject) => { proxy.once('error', reject); proxy.listen(8081, '127.0.0.1', resolve) })
   base = 'http://127.0.0.1:8081/'
 }
-
 async function httpBinding() {
   api = await request.newContext()
   for (const relative of Object.keys(receipt.subjects)) {
@@ -159,7 +166,6 @@ function inventoryDOM() {
   const record = element => ({ selector: selector(element), view: element.closest('.view')?.id, text: element.textContent.replace(/\s+/g, ' ').trim(), fragments: [...element.querySelectorAll('h1,h2,h3,h4,h5,h6,p,dt,dd,summary')].filter(node => !node.closest('noscript')).map(node => node.textContent.replace(/\s+/g, ' ').trim()).filter(Boolean) })
   return { ids: [...document.querySelectorAll('[id]')].map(node => node.id), sections: [...document.querySelectorAll('section')].map(record), headings: [...document.querySelectorAll('h1,h2,h3,h4,h5,h6')].map(record), links: [...document.querySelectorAll('a[href]')].map(node => ({ href: node.getAttribute('href'), disabled: node.getAttribute('aria-disabled') })) }
 }
-
 async function inventory() {
   const context = await browser.newContext({ javaScriptEnabled: false, serviceWorkers: 'block' }), page = await context.newPage()
   const log = { console: [], network: [], requests: [], page_errors: [], network_failures: [], http_failures: [] }
@@ -168,7 +174,6 @@ async function inventory() {
   cleanNetwork(log, 'inventory'); await context.close()
   verify('inventory: exact eight actual pages', JSON.stringify(fs.readdirSync(root).filter(name => name.endsWith('.html')).sort()) === JSON.stringify(config.routes))
 }
-
 async function reveal(page, locator, js) {
   const view = await locator.evaluate(node => node.closest('.view')?.id)
   if (view && js) { await page.locator('#nav a[href="#' + view + '"]').focus(); await page.keyboard.press('Enter'); await page.locator('#' + view).waitFor({ state: 'visible' }) }
@@ -188,15 +193,22 @@ async function semantics(page, id) {
 }
 
 async function hitTest(page, locator, id, native = false) {
-  if (!native) await locator.scrollIntoViewIfNeeded()
-  await locator.evaluate(node => node.scrollIntoView({ block: 'center', inline: 'nearest', behavior: 'instant' }))
-  if (!native) await page.waitForTimeout(100)
-  const hit = await locator.evaluate(node => {
-    const r = node.getBoundingClientRect(), left = Math.max(r.left, 0), right = Math.min(r.right, innerWidth), top = Math.max(r.top, 0), bottom = Math.min(r.bottom, innerHeight)
-    const point = { x: (left + right) / 2, y: (top + bottom) / 2 }, topmost = document.elementFromPoint(point.x, point.y)
-    return { rect: r.toJSON(), viewport: { width: innerWidth, height: innerHeight }, point, hit: topmost?.tagName + '#' + topmost?.id, unobscured: right > left && bottom > top && topmost !== null && (topmost === node || node.contains(topmost)) }
-  })
-  verify(id + ': actual visible point unoccluded', hit.unobscured, hit)
+  const attempts = []
+  for (let attempt = 0; attempt < 3; attempt++) {
+    if (!native) await locator.scrollIntoViewIfNeeded()
+    await locator.evaluate(node => node.scrollIntoView({ block: 'center', inline: 'nearest', behavior: 'instant' }))
+    if (!native) await page.waitForTimeout(100)
+    const hit = await locator.evaluate(node => {
+      const r = node.getBoundingClientRect(), left = Math.max(r.left, 0), right = Math.min(r.right, innerWidth), top = Math.max(r.top, 0), bottom = Math.min(r.bottom, innerHeight)
+      const point = { x: (left + right) / 2, y: (top + bottom) / 2 }, topmost = document.elementFromPoint(point.x, point.y)
+      const finite = Object.values(r.toJSON()).every(Number.isFinite)
+      return { rect: r.toJSON(), viewport: { width: innerWidth, height: innerHeight }, point, hit: topmost?.tagName + '#' + topmost?.id, unobscured: finite && right > left && bottom > top && topmost !== null && (topmost === node || node.contains(topmost)), time: performance.now(), focus: document.activeElement?.tagName + '#' + document.activeElement?.id, hash: location.hash, scrollY, documentHeight: document.documentElement.scrollHeight }
+    })
+    attempts.push(hit)
+    if (hit.unobscured) break
+  }
+  const hit = attempts.at(-1)
+  verify(id + ': actual visible point unoccluded', hit.unobscured, { ...hit, attempts })
   return hit
 }
 
@@ -312,7 +324,7 @@ function observe(page, log, expected = []) {
   page.on('pageerror', error => log.page_errors.push(String(error)))
   page.on('console', message => { if (['error', 'warning'].includes(message.type())) log.console.push({ type: message.type(), text: message.text() }) })
   page.on('request', req => log.requests.push({ url: req.url(), method: req.method(), type: req.resourceType() }))
-  page.on('requestfailed', req => { const failure = { url: req.url(), error: req.failure()?.errorText }; failure.intentional = failure.error === 'net::ERR_ABORTED' && expected.some(item => req.url() === new URL(item.path, base).href) && log.http_failures.some(item => item.url === req.url() && item.intentional); log.network_failures.push(failure); if (!failure.intentional) log.network.push(failure) })
+  page.on('requestfailed', req => { const failure = { url: req.url(), error: req.failure()?.errorText }; failure.intentional = failure.error === 'net::ERR_ABORTED' && expected.some(item => req.url() === new URL(item.path, base).href && (item.abort || log.http_failures.some(response => response.url === req.url() && response.intentional))); log.network_failures.push(failure); if (!failure.intentional) log.network.push(failure) })
   page.on('response', response => { if (response.status() >= 400) { const failure = { url: response.url(), status: response.status(), intentional: expected.some(item => response.url().endsWith(item.path) && response.status() === item.status) }; log.http_failures.push(failure); if (!failure.intentional) log.network.push(failure) } })
 }
 
@@ -372,6 +384,10 @@ async function apiChecks(page, context, profile, spec, observation, log) {
   verify(profile.id + ': exact 96 operations and 395 model definitions', observation.api.operations === 96 && observation.api.models === 395, observation.api)
   await nativeContracts(page, profile, observation)
   if (profile.js) {
+    await checkApiEntryKeyboard(page, callback('API keyboard entry'))
+    await checkApiEntryReentry(page, callback('API native reentry'))
+    await checkApiEntryRouteDuringLoading(page, { ...callback('API route during loading'), hold: () => holdContract(page, log, 'route-during-load') })
+    await checkApiModelFocusAway(page, { ...callback('API model focus movement'), hold: () => holdContract(page, { ...log, id: log.id + ':model-focus-away' }, 'model-focus-away') })
     await checkApiLandmarks(page, callback('online API lifecycle'))
     observation.scalar_themes = await themes(page, profile.id + ': Scalar', true)
     const before = log.requests.length
@@ -404,17 +420,41 @@ async function modeRun(profile, spec) {
   cleanNetwork(log, profile.id); await context.close()
 }
 
+async function holdContract(page, log, failure) {
+  let received, release
+  const held = new Promise(resolve => { received = resolve }), unlocked = new Promise(resolve => { release = resolve })
+  await page.route(new URL('openapi.json', base).href, async route => {
+    const response = await route.fetch(), bytes = await response.body()
+    log.held_contract = { status: response.status(), digest: sha(bytes), size: bytes.length }
+    verify(log.id + ': cold contract exact actual held response', response.status() === 200 && bytes.equals(fs.readFileSync(path.join(root, 'openapi.json'))), log.held_contract)
+    received(); await unlocked
+    try { await route.fulfill(failure === 'host-failure' ? { status: 404, body: 'Deliberate held host-failure control' } : { response, body: bytes }) } catch (error) {
+      log.cancelled_route = String(error)
+      verify(log.id + ': cold response release without unexpected route error', false, String(error))
+    }
+  })
+  return { held: () => held, release: () => release() }
+}
+
 async function negativeControl(profile, spec, failure) {
   const context = await browser.newContext({ viewport: profile.viewport, javaScriptEnabled: true, isMobile: profile.mobile, hasTouch: profile.mobile, serviceWorkers: 'block' }), page = await context.newPage()
-  const expected = failure === 'script' ? [{ path: '/scalar.js', status: 503 }] : failure === '404' ? [{ path: '/openapi.json', status: 404 }] : []
+  const cold = ['focus-return', 'cancel', 'forward-focus', 'host-failure'].includes(failure)
+  const expected = failure === 'host-failure' ? [{ path: '/openapi.json', status: 404 }] : failure === 'forward-focus' ? [] : cold ? [{ path: '/openapi.json', abort: true }] : failure === 'script' ? [{ path: '/scalar.js', status: 503 }] : failure === '404' ? [{ path: '/openapi.json', status: 404 }] : []
   const log = { id: profile.id + ':' + failure, console: [], network: [], requests: [], page_errors: [], network_failures: [], http_failures: [] }; receipt.negative_controls.push(log); observe(page, log, expected)
   await safeRequests(context, log)
+  const control = cold ? await holdContract(page, log, failure) : null
   if (failure === 'script') await context.route(new URL('scalar.js', base).href, route => route.fulfill({ status: 503, body: 'Deliberate failed-script control' }))
-  else await context.route(new URL('openapi.json', base).href, route => route.fulfill({ status: failure === '404' ? 404 : 200, contentType: 'application/json', body: failure === '404' ? 'Missing contract control' : fs.readFileSync(path.join(root, 'openapi.json'), 'utf8') + '\n' }))
+  else if (!cold) await context.route(new URL('openapi.json', base).href, route => route.fulfill({ status: failure === '404' ? 404 : 200, contentType: 'application/json', body: failure === '404' ? 'Missing contract control' : fs.readFileSync(path.join(root, 'openapi.json'), 'utf8') + '\n' }))
   await page.goto(base + 'docs.html', { waitUntil: 'networkidle' })
-  if (failure !== 'script') { await page.locator('#interactive-api-view > summary').focus(); await page.keyboard.press('Enter'); await page.waitForFunction(() => document.getElementById('interactive-api-view').dataset.enhancement === 'failed') }
-  await checkApiReferenceFallback(page, spec, { failed: failure !== 'script', check: (name, passed, detail) => verify(log.id + ': ' + name, passed, detail) })
-  await semantics(page, log.id); cleanNetwork(log, log.id, failure !== 'tamper'); await context.close()
+  const check = (name, passed, detail) => verify(log.id + ': ' + name, passed, detail)
+  if (['forward-focus', 'host-failure'].includes(failure)) await checkApiEntryForwardFocus(page, { ...control, check, failed: failure === 'host-failure' })
+  else if (cold) await checkApiEntryCancellation(page, { kind: failure, ...control, check })
+  else {
+    if (failure !== 'script') { await page.locator('#interactive-api-view > summary').focus(); await page.keyboard.press('Enter'); await page.waitForFunction(() => document.getElementById('interactive-api-view').dataset.enhancement === 'failed') }
+    if (failure !== 'script') await checkApiEntryFallbackFocus(page, { check })
+    await checkApiReferenceFallback(page, spec, { failed: failure !== 'script', check })
+  }
+  await semantics(page, log.id); cleanNetwork(log, log.id, failure === 'host-failure' || !cold && failure !== 'tamper'); await context.close()
 }
 
 async function run() {
@@ -426,10 +466,10 @@ async function run() {
   for (const id of config.modes) {
     const profile = { id, js: id.endsWith('-js'), mobile: id.startsWith('mobile'), viewport: id.startsWith('mobile') ? { width: 390, height: 844 } : { width: 1280, height: 900 } }
     await modeRun(profile, spec)
-    if (profile.js) for (const failure of ['404', 'tamper', 'script']) await bounded(profile.id + ': negative ' + failure, () => negativeControl(profile, spec, failure))
+    if (profile.js) for (const failure of ['404', 'tamper', 'script', 'focus-return', 'cancel', 'forward-focus', 'host-failure']) await bounded(profile.id + ': negative ' + failure, () => negativeControl(profile, spec, failure))
   }
   verify('receipt: check IDs uniquely identify observations', new Set(receipt.checks.map(check => check.id)).size === receipt.checks.length)
-  verify('receipt: complete six negative controls', receipt.negative_controls.length === 6 && new Set(receipt.negative_controls.map(control => control.id)).size === 6)
+  verify('receipt: complete fourteen negative controls', receipt.negative_controls.length === 14 && new Set(receipt.negative_controls.map(control => control.id)).size === 14)
   verify('proxy: no non-service origins requested', receipt.proxy_denials.length === 0, receipt.proxy_denials)
   const observed = new Set(receipt.checks.map(check => check.id))
   verify('receipt: every mandatory check actually ran', requiredIds().every(id => observed.has(id)), requiredIds().filter(id => !observed.has(id)))
@@ -444,14 +484,15 @@ async function finish() {
 
 function writeReceipt() {
   receipt.status = receipt.failures.length ? 'failed' : 'passed'
+  receipt.execution = { deadline_ms: deadlineMs, elapsed_ms: performance.now() - started }
   fs.mkdirSync(output, { recursive: true }); fs.writeFileSync(receiptPath, JSON.stringify(receipt, null, 2) + '\n')
 }
 
 if (args['require-pass'] === 'true') admitReceipt()
 else {
   deadline = setTimeout(() => {
-    verify('producer: bounded fifteen minute deadline', false, { limit_ms: 900000 })
+    verify('producer: bounded twenty-five minute deadline', false, { limit_ms: deadlineMs })
     writeReceipt(); process.exit(args['report-only'] === 'true' ? 0 : 1)
-  }, 900000)
+  }, deadlineMs)
   await run().catch(error => verify('producer: fatal error', false, String(error.stack || error))).finally(finish)
 }

@@ -72,7 +72,7 @@ def sbom_fixture(root, stage, subject):
     raw = {'bomFormat': 'CycloneDX', 'specVersion': '1.6', 'version': 1, 'metadata': {'component': {'name': 'fixture-root', 'bom-ref': 'fixture-root', 'type': 'file'}}, 'components': [{'name': 'fixture-component', 'bom-ref': 'fixture-component', 'version': '1.0.0', 'purl': 'pkg:npm/fixture-component@1.0.0', 'type': 'library'}]}
     if subject.startswith('sdk/') and subject.endswith('.zip'):
         with zipfile.ZipFile(root / subject) as archive:
-            for name in {'go.sum', 'Package.resolved', 'requirements.txt'} & set(archive.namelist()):
+            for name in {'go.mod', 'go.sum', 'Package.resolved', 'requirements.txt'} & set(archive.namelist()):
                 data = archive.read(name)
                 put(root, stage + '/publishers/' + name, data)
                 if name == 'requirements.txt':
@@ -190,7 +190,7 @@ def make_candidate(root):
         archive = root / 'sdk' / (language + '.zip')
         archive.parent.mkdir(parents=True, exist_ok=True)
         with zipfile.ZipFile(archive, 'w') as stream:
-            stream.writestr(SDK.METADATA[language], 'fixture package metadata')
+            stream.writestr(SDK.METADATA[language], 'module example.com/fixture-sdk\n\ngo 1.27.1\n' if language == 'go' else 'fixture package metadata')
             stream.writestr('LICENSE', 'fixture license')
             stream.writestr('SDK-VERSION', '1.2.3\n')
             stream.writestr('SDK-PRODUCER.json', json.dumps(SDK.package.producer_metadata(language, '1.2.3'), sort_keys=True) + '\n')
@@ -462,7 +462,7 @@ class RequiredOutputTests(unittest.TestCase):
         self.reject('malformed OSCAL constraints result row')
 
     def test_publisher_auxiliary_exact_sdk_binding(self):
-        for language, filename in (('go', 'go.sum'), ('swift', 'Package.resolved'), ('python', 'requirements.txt')):
+        for language, filename in (('go', 'go.mod'), ('go', 'go.sum'), ('swift', 'Package.resolved'), ('python', 'requirements.txt')):
             with self.subTest(language=language):
                 path = self.root / ('evidence/sdk-' + language + '-sbom/publishers/' + filename)
                 original = path.read_bytes();path.write_bytes(original + b'tampered')
@@ -470,7 +470,7 @@ class RequiredOutputTests(unittest.TestCase):
                 path.write_bytes(original)
 
     def test_publisher_auxiliary_missing_cannot_bypass(self):
-        for language, filename in (('go', 'go.sum'), ('swift', 'Package.resolved'), ('python', 'requirements.txt')):
+        for language, filename in (('go', 'go.mod'), ('go', 'go.sum'), ('swift', 'Package.resolved'), ('python', 'requirements.txt')):
             with self.subTest(language=language):
                 path = self.root / ('evidence/sdk-' + language + '-sbom/publishers/' + filename)
                 original = path.read_bytes();path.unlink()

@@ -34,7 +34,8 @@ func (m *Xoscal) FrontendProductionReports() *dagger.Directory {
 // FrontendAnalysisReports preserves all severities from the actual observed
 // browser assembly SBOM, including CSS/asset contributors and nested versions.
 func (m *Xoscal) FrontendAnalysisReports() *dagger.Directory {
-	return m.trivyBase().WithDirectory("/evidence", m.FrontendProductionReports()).
+	c := m.trivyBase().WithDirectory("/evidence", m.FrontendProductionReports())
+	return m.analysisAttempt(c, "frontend-vulnerabilities").
 		WithExec([]string{"sh", "-c", "set +e\ntrivy sbom /evidence/sbom.cyclonedx.json --scanners vuln --format json --list-all-pkgs --exit-code 0 --output /evidence/trivy-results.json > /evidence/trivy.log 2>&1\nprintf '%s\\n' \"$?\" > /evidence/trivy.status"}).Directory("/evidence")
 }
 

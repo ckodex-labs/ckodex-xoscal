@@ -24,12 +24,37 @@ credential or registry publication is introduced by local execution.
    the home alias run in fresh desktop/mobile JavaScript and no-JavaScript
    contexts. Mandatory checks include full prebuilt API content, repeated
    dialog/keyboard lifecycles, unique landmarks/IDs, themes, native content,
-   geometry/occlusion and six failed/tampered-enhancement controls. Browser
+   geometry/occlusion, actual keyboard view-entry focus and fourteen enhancement
+   controls. The controls cover missing/tampered contracts, failed scripts,
+   returning focus to Plain during loading, cancelling loading and forward
+   Tab to the raw OpenAPI host link during loading and failure after that
+   forward focus movement on desktop and mobile.
+   Cold controls hold an actual exact-byte contract response until the observed
+   key. Returning to Plain/cancelling permits only that contract's intentional
+   abort; forward Tab requires the exact successful GET and real readiness
+   while preserving the newly focused host link. A controlled missing-contract
+   response after host focus movement must return visible focus to Plain;
+   only that response's exact correlated abort is allowed. Independent replay
+   enforces finite in-viewport focus/heading
+   rectangles and actual loading key observations. Browser
    tooling stays in the analysis container. Raw observations and exact
    producer/toolchain sources are staged as six final-only evidence files;
    independent admission validates coverage and rehashes their presentation
    subjects. A saved success boolean alone is insufficient, and this receipt
-   is not signing authority. Rendering finishes before `release-manifest.json` inventories all final payload,
+   is not signing authority. The upgraded consumer refuses historical receipts
+   missing the fourteen controls. Historical evidence can be replayed with its
+   reviewed version-bound consumer, but cannot authorize promotion under this
+   stronger contract; new releases require newly produced evidence.
+   Coverage reachability permits at most three real scrolls of the same element,
+   retaining every geometry, clipped point, focus, route and timing sample.
+   Independent replay requires a final actual unoccluded point; nonfinite,
+   missing or inconsistent observations refuse admission. Actual keyboard
+   transition observers remain unrepaired. The expanded producer records its
+   duration under a fixed 25-minute ceiling; expiry saves a failed incomplete
+   receipt. Older receipts lacking these observations cannot satisfy the
+   current gate. `SitePresentationReports` exports unsigned payloads and raw
+   diagnostics for investigation; it cannot admit, sign or publish them.
+   Rendering finishes before `release-manifest.json` inventories all final payload,
    evidence, HTML, CSS, JavaScript, fonts and other assets. `PackageCandidate` creates a
    deterministic transport archive of those frozen bytes. Hosted provenance signs the
    final manifest, transport and exact OCI root manifest bytes.
@@ -129,3 +154,26 @@ but SemVer build metadata (`+...`) and tags longer than 128 characters are rejec
 before source derivation or artifact production; tags are never rewritten.
 `PreviewCandidate` uses snapshot archives for full local graph
 validation without creating a tag or establishing production/signature authority.
+
+
+Trivy vulnerability and publisher-metadata observations can be explicitly selected with
+`with-analysis-attempt --attempt=<1-80 character ASCII label>`. The producer keeps
+a purpose-labelled receipt in its raw analysis, including enforcing SBOM evidence.
+CI and release producers use their run ID and attempt. This selects a fresh
+observation after tool installation; it does not retry automatically, change
+thresholds or supersede a failed prior receipt. Final verification and promotion
+consume frozen evidence without starting new observations.
+
+Go source SDK relationships are replayed from the exact delivered `go.mod`, its
+inventoried digest and the complete declared requirement set. Required
+versions and direct/indirect declaration roles must match. These edges describe
+declarations, not installed upstream bytes or inferred transitive requirements.
+Publisher proof remains independently mandatory. Missing or contradictory
+manifest inputs refuse enrichment; historical receipts remain bound to their
+historical consumer. PR CI checks out the reviewed head SHA explicitly.
+
+A fresh raw scan may retain additional resolved Go modules and dependency edges.
+These are preserved as scanner observations, separately from exact manifest
+declarations, only when their unique identities are valid and they are reachable
+from the SDK project through the retained graph. Unconnected extras refuse
+enrichment. No inferred transitive edge or installed upstream-byte claim is added.

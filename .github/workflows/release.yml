@@ -15,6 +15,7 @@ jobs:
   candidate:
     runs-on: ubuntu-latest
     env:
+      ANALYSIS_ATTEMPT: gha-${{ github.run_id }}-${{ github.run_attempt }}
       RELEASE_WORKSPACE: /tmp/xoscal-release-${{ github.run_id }}-${{ github.run_attempt }}
     permissions:
       contents: read
@@ -32,7 +33,7 @@ jobs:
       - name: Produce and admit complete candidate
         run: |
           mkdir -p "$RELEASE_WORKSPACE"
-          dagger call with-version --version="$RELEASE_TAG" release-candidate \
+          dagger call with-version --version="$RELEASE_TAG" with-analysis-attempt --attempt="$ANALYSIS_ATTEMPT" release-candidate \
             --source=. --release-tag="$RELEASE_TAG" --source-revision="$SOURCE_REVISION" \
             export --path="$RELEASE_WORKSPACE/candidate"
         env:
@@ -104,7 +105,7 @@ jobs:
             subject="$1"
             mode="$2"
             result=0
-            dagger call with-version --version="$RELEASE_TAG" candidate-subject-reports \
+            dagger call with-version --version="$RELEASE_TAG" with-analysis-attempt --attempt="$ANALYSIS_ATTEMPT" candidate-subject-reports \
               --source=. --release-tag="$RELEASE_TAG" --source-revision="$SOURCE_REVISION" \
               --subject="$subject" --report-mode="$mode" \
               export --path="$RELEASE_WORKSPACE/failed-analysis/$subject/$mode" \
