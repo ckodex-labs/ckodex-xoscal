@@ -8,7 +8,7 @@ import { fileURLToPath } from 'node:url'
 import { createRequire } from 'node:module'
 import { execFileSync } from 'node:child_process'
 import { chromium, request } from 'playwright'
-import { checkApiLandmarks, checkApiEntryKeyboard, checkApiEntryFallbackFocus, checkApiEntryCancellation, checkApiReferenceFallback, checkStaticApiDeepLink, checkApiTheme } from './check-api-landmarks.mjs'
+import { checkApiLandmarks, checkApiEntryKeyboard, checkApiEntryFallbackFocus, checkApiEntryCancellation, checkApiEntryForwardFocus, checkApiReferenceFallback, checkStaticApiDeepLink, checkApiTheme } from './check-api-landmarks.mjs'
 
 const args = Object.fromEntries(process.argv.slice(2).reduce((pairs, value, index, all) => index % 2 ? pairs : [...pairs, [value.replace(/^--/, ''), all[index + 1]]], []))
 const root = fs.realpathSync(args.root), output = path.resolve(args.output)
@@ -83,14 +83,15 @@ function admitBindings(saved) {
 function admitObservations(saved) {
   for (const mode of saved.modes) if (JSON.stringify(Object.keys(mode.observations)) !== JSON.stringify(['/', ...config.routes])) throw Error('Missing actual page coverage: ' + mode.id)
   for (const mode of saved.modes) if (mode.javaScriptEnabled !== mode.id.endsWith('-js') || ['console', 'network', 'page_errors'].some(key => !Array.isArray(mode[key]) || mode[key].length)) throw Error('Invalid or failed browser mode: ' + mode.id)
-  const controls = config.modes.filter(id => id.endsWith('-js')).flatMap(id => ['404', 'tamper', 'script', 'focus-return', 'cancel'].map(failure => id + ':' + failure))
+  const controls = config.modes.filter(id => id.endsWith('-js')).flatMap(id => ['404', 'tamper', 'script', 'focus-return', 'cancel', 'forward-focus', 'host-failure'].map(failure => id + ':' + failure))
   if (JSON.stringify(saved.negative_controls.map(control => control.id).sort()) !== JSON.stringify(controls.sort())) throw Error('Missing required negative control')
 }
 
 function requiredIds() {
   const failedEntries = config.modes.filter(mode => mode.endsWith('-js')).flatMap(mode => ['404', 'tamper'].map(failure => mode + ':' + failure + ': failed explorer: ready transition retains visible unoccluded keyboard focus'))
   const coldEntries = config.modes.filter(mode => mode.endsWith('-js')).flatMap(mode => ['focus-return', 'cancel'].flatMap(failure => ['cold contract exact actual held response', 'cold contract: actual Tab enters explorer summary', 'cold contract: cancellation keydown occurs during loading', 'cold contract: cancelled explorer never resurrects', failure === 'cancel' ? 'cancel explorer: ready transition retains visible unoccluded keyboard focus' : 'cold contract: moved Plain focus remains visible and owned'].map(name => mode + ':' + failure + ': ' + name)))
-  return ['toolchain: immutable image and package version', 'toolchain: actual pinned Chromium', 'inventory: exact eight actual pages', 'served root alias: exact index bytes', 'receipt: complete ten negative controls', 'proxy: no non-service origins requested', 'inventory: read-only same-origin resources', ...config.modes.flatMap(modeRequiredIds), ...failedEntries, ...coldEntries]
+  const forwardEntries = config.modes.filter(mode => mode.endsWith('-js')).flatMap(mode => ['forward-focus', 'host-failure'].flatMap(failure => ['cold contract exact actual held response', 'cold forward: actual Tab enters explorer selector', 'cold forward: actual Tab keydown occurs during loading', 'cold forward: actual Tab selects host contract link', failure === 'host-failure' ? 'failed host explorer: ready transition retains visible unoccluded keyboard focus' : 'cold forward: ready retains visible unoccluded owned host focus'].map(name => mode + ':' + failure + ': ' + name)))
+  return ['toolchain: immutable image and package version', 'toolchain: actual pinned Chromium', 'inventory: exact eight actual pages', 'served root alias: exact index bytes', 'receipt: complete fourteen negative controls', 'proxy: no non-service origins requested', 'inventory: read-only same-origin resources', ...config.modes.flatMap(modeRequiredIds), ...failedEntries, ...coldEntries, ...forwardEntries, ...config.modes.filter(mode => mode.endsWith('-js')).map(mode => mode + ':host-failure: cold host failure: selects only Plain and disposes explorer')]
 }
 
 function modeRequiredIds(mode) {
@@ -408,7 +409,7 @@ async function modeRun(profile, spec) {
   cleanNetwork(log, profile.id); await context.close()
 }
 
-async function holdContract(page, log) {
+async function holdContract(page, log, failure) {
   let received, release
   const held = new Promise(resolve => { received = resolve }), unlocked = new Promise(resolve => { release = resolve })
   await page.route(new URL('openapi.json', base).href, async route => {
@@ -416,7 +417,7 @@ async function holdContract(page, log) {
     log.held_contract = { status: response.status(), digest: sha(bytes), size: bytes.length }
     verify(log.id + ': cold contract exact actual held response', response.status() === 200 && bytes.equals(fs.readFileSync(path.join(root, 'openapi.json'))), log.held_contract)
     received(); await unlocked
-    try { await route.fulfill({ response, body: bytes }) } catch (error) {
+    try { await route.fulfill(failure === 'host-failure' ? { status: 404, body: 'Deliberate held host-failure control' } : { response, body: bytes }) } catch (error) {
       log.cancelled_route = String(error)
       verify(log.id + ': cold response release without unexpected route error', false, String(error))
     }
@@ -426,22 +427,23 @@ async function holdContract(page, log) {
 
 async function negativeControl(profile, spec, failure) {
   const context = await browser.newContext({ viewport: profile.viewport, javaScriptEnabled: true, isMobile: profile.mobile, hasTouch: profile.mobile, serviceWorkers: 'block' }), page = await context.newPage()
-  const cold = ['focus-return', 'cancel'].includes(failure)
-  const expected = cold ? [{ path: '/openapi.json', abort: true }] : failure === 'script' ? [{ path: '/scalar.js', status: 503 }] : failure === '404' ? [{ path: '/openapi.json', status: 404 }] : []
+  const cold = ['focus-return', 'cancel', 'forward-focus', 'host-failure'].includes(failure)
+  const expected = failure === 'host-failure' ? [{ path: '/openapi.json', status: 404 }] : failure === 'forward-focus' ? [] : cold ? [{ path: '/openapi.json', abort: true }] : failure === 'script' ? [{ path: '/scalar.js', status: 503 }] : failure === '404' ? [{ path: '/openapi.json', status: 404 }] : []
   const log = { id: profile.id + ':' + failure, console: [], network: [], requests: [], page_errors: [], network_failures: [], http_failures: [] }; receipt.negative_controls.push(log); observe(page, log, expected)
   await safeRequests(context, log)
-  const control = cold ? await holdContract(page, log) : null
+  const control = cold ? await holdContract(page, log, failure) : null
   if (failure === 'script') await context.route(new URL('scalar.js', base).href, route => route.fulfill({ status: 503, body: 'Deliberate failed-script control' }))
   else if (!cold) await context.route(new URL('openapi.json', base).href, route => route.fulfill({ status: failure === '404' ? 404 : 200, contentType: 'application/json', body: failure === '404' ? 'Missing contract control' : fs.readFileSync(path.join(root, 'openapi.json'), 'utf8') + '\n' }))
   await page.goto(base + 'docs.html', { waitUntil: 'networkidle' })
   const check = (name, passed, detail) => verify(log.id + ': ' + name, passed, detail)
-  if (cold) await checkApiEntryCancellation(page, { kind: failure, ...control, check })
+  if (['forward-focus', 'host-failure'].includes(failure)) await checkApiEntryForwardFocus(page, { ...control, check, failed: failure === 'host-failure' })
+  else if (cold) await checkApiEntryCancellation(page, { kind: failure, ...control, check })
   else {
     if (failure !== 'script') { await page.locator('#interactive-api-view > summary').focus(); await page.keyboard.press('Enter'); await page.waitForFunction(() => document.getElementById('interactive-api-view').dataset.enhancement === 'failed') }
     if (failure !== 'script') await checkApiEntryFallbackFocus(page, { check })
     await checkApiReferenceFallback(page, spec, { failed: failure !== 'script', check })
   }
-  await semantics(page, log.id); cleanNetwork(log, log.id, !cold && failure !== 'tamper'); await context.close()
+  await semantics(page, log.id); cleanNetwork(log, log.id, failure === 'host-failure' || !cold && failure !== 'tamper'); await context.close()
 }
 
 async function run() {
@@ -453,10 +455,10 @@ async function run() {
   for (const id of config.modes) {
     const profile = { id, js: id.endsWith('-js'), mobile: id.startsWith('mobile'), viewport: id.startsWith('mobile') ? { width: 390, height: 844 } : { width: 1280, height: 900 } }
     await modeRun(profile, spec)
-    if (profile.js) for (const failure of ['404', 'tamper', 'script', 'focus-return', 'cancel']) await bounded(profile.id + ': negative ' + failure, () => negativeControl(profile, spec, failure))
+    if (profile.js) for (const failure of ['404', 'tamper', 'script', 'focus-return', 'cancel', 'forward-focus', 'host-failure']) await bounded(profile.id + ': negative ' + failure, () => negativeControl(profile, spec, failure))
   }
   verify('receipt: check IDs uniquely identify observations', new Set(receipt.checks.map(check => check.id)).size === receipt.checks.length)
-  verify('receipt: complete ten negative controls', receipt.negative_controls.length === 10 && new Set(receipt.negative_controls.map(control => control.id)).size === 10)
+  verify('receipt: complete fourteen negative controls', receipt.negative_controls.length === 14 && new Set(receipt.negative_controls.map(control => control.id)).size === 14)
   verify('proxy: no non-service origins requested', receipt.proxy_denials.length === 0, receipt.proxy_denials)
   const observed = new Set(receipt.checks.map(check => check.id))
   verify('receipt: every mandatory check actually ran', requiredIds().every(id => observed.has(id)), requiredIds().filter(id => !observed.has(id)))

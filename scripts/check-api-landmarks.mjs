@@ -160,6 +160,44 @@ export async function checkApiEntryCancellation(page, { check, kind, held, relea
   return results
 }
 
+/** Forward Tab selects an actual host link while the exact contract is held. */
+export async function checkApiEntryForwardFocus(page, { check, held, release, failed = false } = {}) {
+  const { results, verify } = recorder(check)
+  await page.locator('#api-reference-views a[href="#plain-api-view"]').focus()
+  await page.keyboard.press('Tab')
+  verify('cold forward: actual Tab enters explorer selector', await page.locator('#api-reference-views a[href="#interactive-api-view"]').evaluate(node => node === document.activeElement))
+  await page.keyboard.press('Enter')
+  await held()
+  const phase = await observeEntryKey(page, 'Tab', 'Tab')
+  verify('cold forward: actual Tab keydown occurs during loading', phase.phase === 'loading' && phase.key === 'Tab', phase)
+  const focused = await page.evaluateHandle(() => document.activeElement)
+  const identity = await focused.evaluate(node => ({ tag: node.tagName, href: node.getAttribute('href'),
+    host: document.getElementById('interactive-api-view').contains(node) && !document.getElementById('interactive-api-reference').contains(node) }))
+  verify('cold forward: actual Tab selects host contract link', identity.tag === 'A' && identity.href === 'openapi.json' && identity.host, identity)
+  await release()
+  if (failed) {
+    await page.waitForFunction(() => document.getElementById('interactive-api-view').dataset.enhancement === 'failed')
+    const state = await page.evaluate(() => ({ plain: document.getElementById('plain-api-view').open, interactive: document.getElementById('interactive-api-view').open, mounted: Boolean(document.querySelector('#interactive-api-reference .references-rendered')) }))
+    verify('cold host failure: selects only Plain and disposes explorer', state.plain && !state.interactive && !state.mounted, state)
+    await checkEntryGeometry(page, verify, 'failed host explorer', true)
+    return results
+  }
+  await page.waitForFunction(() => document.getElementById('interactive-api-view').dataset.enhancement === 'ready', null, { timeout: 40000 })
+  const samples = []
+  for (const delay of [0, 250, 250, 500]) {
+    await page.waitForTimeout(delay)
+    await page.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))))
+    samples.push(await focused.evaluate(node => {
+      const r = node.getBoundingClientRect(), hit = document.elementFromPoint(r.left + r.width / 2, r.top + r.height / 2)
+      return { target: document.activeElement === node && node.tagName === 'A' && node.getAttribute('href') === 'openapi.json',
+        visible: r.width > 0 && r.height > 0 && r.top >= 0 && r.bottom <= innerHeight && r.left >= 0 && r.right <= innerWidth,
+        unoccluded: Boolean(hit && (node === hit || node.contains(hit))), rect: r.toJSON(), viewport: { width: innerWidth, height: innerHeight }, scrollY }
+    }))
+  }
+  verify('cold forward: ready retains visible unoccluded owned host focus', samples.every(s => s.target && s.visible && s.unoccluded), samples)
+  return results
+}
+
 async function observeEntryKey(page, press, key) {
   // Capture actual keydown state, not a Playwright read that can race rendering.
   // This instrumentation observes only; it never changes focus, DOM or routing.

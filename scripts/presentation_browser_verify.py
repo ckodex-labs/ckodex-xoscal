@@ -149,10 +149,13 @@ def mandatory_checks(mode):
 
 def verify_negative_controls(root, receipt):
     controls = receipt.get("negative_controls", [])
-    expected = {mode + ":" + failure for mode in ("desktop-js", "mobile-js") for failure in ("404", "tamper", "script", "focus-return", "cancel")}
-    require(len(controls) == 10 and {item.get("id") for item in controls} == expected, "incomplete negative controls")
+    expected = {mode + ":" + failure for mode in ("desktop-js", "mobile-js") for failure in ("404", "tamper", "script", "focus-return", "cancel", "forward-focus", "host-failure")}
+    require(len(controls) == 14 and {item.get("id") for item in controls} == expected, "incomplete negative controls")
     ids = {item["id"] for item in receipt["checks"]}
     for log in controls:
+        if log["id"].endswith((":forward-focus", ":host-failure")):
+            verify_forward_control(root, receipt, log)
+            continue
         if log["id"].endswith((":focus-return", ":cancel")):
             verify_cold_control(root, receipt, log)
             continue
@@ -176,6 +179,57 @@ def verify_negative_controls(root, receipt):
             console = log.get("console", [])
             require(len(console) == 1 and all(re.search(r"404|503", item.get("text", "")) for item in console),
                     "unexpected negative-control console error")
+
+
+def verify_forward_control(root, receipt, log):
+    failed = log["id"].endswith(":host-failure")
+    verify_requests(log, ("/openapi.json", 404) if failed else None)
+    failures = log.get("network_failures", [])
+    require(len(failures) <= int(failed) and all(failure.get("url") == "http://127.0.0.1:8081/openapi.json" for failure in failures),
+            "only one exact controlled host404 abort may occur")
+    if failed:
+        require(log.get("http_failures") == [{"url": "http://127.0.0.1:8081/openapi.json", "status": 404, "intentional": True}],
+                "host failure must have its exact controlled missing response")
+        require(len(log.get("console", [])) == 1 and re.search(r"404", log["console"][0].get("text", "")),
+                "host failure console must contain only its controlled missing response")
+    else:
+        require(log.get("console") == log.get("http_failures") == [], "cold forward must have no runtime or HTTP failures")
+    url = "http://127.0.0.1:8081/openapi.json"
+    require(log.get("held_contract") == {"status": 200, "digest": digest(root / "openapi.json"),
+                                         "size": (root / "openapi.json").stat().st_size},
+            "cold forward did not hold exact actual contract bytes")
+    require(len([request for request in log["requests"] if request.get("method") == "GET" and
+                request.get("url") == url]) == 1 and
+            len([request for request in log["requests"] if urlsplit(request.get("url", "")).path == "/openapi.json"]) == 1,
+            "cold forward must correlate one exact contract GET")
+    checks = {item["id"]: item for item in receipt["checks"]}
+    prefix = log["id"] + ": "
+    required = {prefix + name for name in ("cold contract exact actual held response",
+        "cold forward: actual Tab enters explorer selector", "cold forward: actual Tab keydown occurs during loading",
+        "cold forward: actual Tab selects host contract link")}
+    required.add(prefix + ("failed host explorer: ready transition retains visible unoccluded keyboard focus" if failed else
+                          "cold forward: ready retains visible unoccluded owned host focus"))
+    require(required <= checks.keys(), "missing cold forward observations")
+    require(checks[prefix + "cold forward: actual Tab keydown occurs during loading"].get("detail") ==
+            {"key": "Tab", "phase": "loading"}, "missing actual forward loading keydown")
+    identity = checks[prefix + "cold forward: actual Tab selects host contract link"].get("detail")
+    require(isinstance(identity, dict) and identity.get("host") is True and
+            identity == {"tag": "A", "href": "openapi.json", "host": True}, "forward focus differs from actual host contract link")
+    if failed:
+        state_id = prefix + "cold host failure: selects only Plain and disposes explorer"
+        state = checks.get(state_id, {}).get("detail")
+        require(isinstance(state, dict) and state.get("plain") is True and state.get("interactive") is False and
+                state.get("mounted") is False and set(state) == {"plain", "interactive", "mounted"},
+                "failed host explorer did not select only the complete Plain reference")
+        return  # The common entry replay validates all four owned Plain samples.
+    samples = checks[prefix + "cold forward: ready retains visible unoccluded owned host focus"].get("detail")
+    require(isinstance(samples, list) and len(samples) == 4, "missing forward geometry samples")
+    viewport = {"width": 390, "height": 844} if log["id"].startswith("mobile") else {"width": 1280, "height": 900}
+    for sample in samples:
+        require(isinstance(sample, dict) and all(sample.get(key) is True for key in ("target", "visible", "unoccluded")),
+                "forward focus is hidden, unowned or occluded")
+        require(sample.get("viewport") == viewport, "forward viewport differs")
+        verify_entry_rect(sample.get("rect", {}), viewport)
 
 
 def verify_cold_control(root, receipt, log):

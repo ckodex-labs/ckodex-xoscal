@@ -95,9 +95,9 @@ def fixture_mode(mode):
 
 def fixture_negative_controls(root, receipt):
     for mode in ("desktop-js", "mobile-js"):
-        for failure in ("404", "tamper", "script", "focus-return", "cancel"):
+        for failure in ("404", "tamper", "script", "focus-return", "cancel", "forward-focus", "host-failure"):
             log = make_log(mode + ":" + failure)
-            if failure in ("focus-return", "cancel"):
+            if failure in ("focus-return", "cancel", "forward-focus", "host-failure"):
                 fixture_cold_control(root, receipt, log, failure)
                 continue
             if failure != "script":
@@ -116,7 +116,12 @@ def fixture_cold_control(root, receipt, log, failure):
     log["held_contract"] = {"status": 200, "digest": browser.digest(root / "openapi.json"),
                             "size": (root / "openapi.json").stat().st_size}
     log["requests"].append({"url": url, "method": "GET"})
-    log["network_failures"] = [{"url": url, "error": "net::ERR_ABORTED", "intentional": True}]
+    if failure not in ("forward-focus", "host-failure"):
+        log["network_failures"] = [{"url": url, "error": "net::ERR_ABORTED", "intentional": True}]
+    else:
+        fixture_forward_checks(receipt, log, failure)
+        receipt["negative_controls"].append(log)
+        return
     names = ["cold contract exact actual held response", "cold contract: actual Tab enters explorer summary",
              "cold contract: cancellation keydown occurs during loading", "cold contract: cancelled explorer never resurrects"]
     names.append("cancel explorer: ready transition retains visible unoccluded keyboard focus" if failure == "cancel" else
@@ -129,6 +134,23 @@ def fixture_cold_control(root, receipt, log, failure):
                 "viewport": {"width": 390, "height": 844} if log["id"].startswith("mobile") else {"width": 1280, "height": 900}}
         receipt["checks"].append(record)
     receipt["negative_controls"].append(log)
+
+
+def fixture_forward_checks(receipt, log, failure):
+    sample = {"target": True, "visible": True, "unoccluded": True,
+        "rect": {"top": 100, "bottom": 120, "left": 10, "right": 210, "width": 200, "height": 20},
+        "viewport": {"width": 390, "height": 844} if log["id"].startswith("mobile") else {"width": 1280, "height": 900}}
+    details = {"cold contract exact actual held response": None, "cold forward: actual Tab enters explorer selector": None,
+        "cold forward: actual Tab keydown occurs during loading": {"key": "Tab", "phase": "loading"},
+        "cold forward: actual Tab selects host contract link": {"tag": "A", "href": "openapi.json", "host": True},
+        "cold forward: ready retains visible unoccluded owned host focus": [copy.deepcopy(sample) for _ in range(4)]}
+    if failure == "host-failure":
+        details.pop("cold forward: ready retains visible unoccluded owned host focus")
+        details["failed host explorer: ready transition retains visible unoccluded keyboard focus"] = None
+        details["cold host failure: selects only Plain and disposes explorer"] = {"plain": True, "interactive": False, "mounted": False}
+        log["http_failures"] = [{"url": "http://127.0.0.1:8081/openapi.json", "status": 404, "intentional": True}]
+        log["console"] = [{"type": "error", "text": "Synthetic intentional HTTP 404"}]
+    receipt["checks"] += [{"id": log["id"] + ": " + name, "passed": True, "detail": detail} for name, detail in details.items()]
 
 
 def make_log(identifier):
@@ -148,6 +170,86 @@ class BrowserReceiptTests(unittest.TestCase):
 
     def test_complete_synthetic_fixture(self):
         self.assertEqual(browser.verify(self.root)["status"], "passed")
+
+    def test_forward_focus_requires_exact_bytes_request_owner_phase_and_geometry(self):
+        mutations = [lambda log, checks: log["held_contract"].update(digest="sha256:" + "0" * 64),
+            lambda log, checks: log["requests"].append(log["requests"][-1]),
+            lambda log, checks: log["requests"][-1].update(url="http://127.0.0.1:8081/openapi.json?other"),
+            lambda log, checks: log["requests"].append({"method": "GET", "url": "http://127.0.0.1:8081/openapi.json?extra"}),
+            lambda log, checks: log["network_failures"].append({"url": "http://127.0.0.1:8081/openapi.json", "error": "net::ERR_ABORTED", "intentional": True}),
+            lambda log, checks: checks["keydown"]["detail"].update(phase="ready"),
+            lambda log, checks: checks["identity"]["detail"].update(href="other.json"),
+            lambda log, checks: checks["identity"]["detail"].update(host=False),
+            lambda log, checks: checks["identity"]["detail"].update(host=1),
+            lambda log, checks: checks["geometry"]["detail"][0].update(target=False),
+            lambda log, checks: checks["geometry"]["detail"][1]["rect"].update(bottom=90000),
+            lambda log, checks: checks["geometry"]["detail"][2]["rect"].update(left=float("nan")),
+            lambda log, checks: checks["geometry"]["detail"].pop(),
+            lambda log, checks: checks["geometry"].update(id="removed mandatory forward geometry")]
+        for mutate in mutations:
+            with self.subTest(mutation=mutate):
+                receipt = copy.deepcopy(self.receipt)
+                log = next(log for log in receipt["negative_controls"] if log["id"] == "desktop-js:forward-focus")
+                owned = {item["id"].split(": ", 1)[1]: item for item in receipt["checks"] if item["id"].startswith(log["id"] + ": ")}
+                checks = {"keydown": owned["cold forward: actual Tab keydown occurs during loading"],
+                    "identity": owned["cold forward: actual Tab selects host contract link"],
+                    "geometry": owned["cold forward: ready retains visible unoccluded owned host focus"]}
+                mutate(log, checks)
+                self.save(receipt)
+                with self.assertRaises(ValueError):
+                    browser.verify(self.root)
+
+    def test_host404_abort_requires_exact_correlated_missing_response(self):
+        receipt = copy.deepcopy(self.receipt)
+        log = next(log for log in receipt["negative_controls"] if log["id"] == "desktop-js:host-failure")
+        abort = {"url": "http://127.0.0.1:8081/openapi.json", "error": "net::ERR_ABORTED", "intentional": True}
+        log["network_failures"] = [abort]
+        self.save(receipt)
+        self.assertEqual(browser.verify(self.root)["status"], "passed")
+        mutations = [lambda l: l["network_failures"].append(l["network_failures"][0]),
+            lambda l: l["network_failures"][0].update(url="https://elsewhere/openapi.json"),
+            lambda l: l["network_failures"][0].update(error="net::ERR_FAILED"),
+            lambda l: l["network_failures"][0].update(intentional=False),
+            lambda l: l["http_failures"].clear()]
+        for mutate in mutations:
+            changed = copy.deepcopy(receipt)
+            mutate(next(l for l in changed["negative_controls"] if l["id"] == "desktop-js:host-failure"))
+            self.save(changed)
+            with self.assertRaises(ValueError):
+                browser.verify(self.root)
+
+    def test_host_failure_requires_exact_controlled_http_and_owned_plain_focus(self):
+        mutations = [lambda log: log["http_failures"].clear(),
+            lambda log: log["http_failures"][0].update(status=503),
+            lambda log: log["http_failures"][0].update(url="http://127.0.0.1:8081/other.json"),
+            lambda log: log["http_failures"].append(log["http_failures"][0]),
+            lambda log: log["console"].append({"text": "Unexpected runtime error"})]
+        for mutate in mutations:
+            receipt = copy.deepcopy(self.receipt)
+            mutate(next(log for log in receipt["negative_controls"] if log["id"] == "desktop-js:host-failure"))
+            self.save(receipt)
+            with self.assertRaises(ValueError):
+                browser.verify(self.root)
+        receipt = copy.deepcopy(self.receipt)
+        check = next(c for c in receipt["checks"] if c["id"].startswith("desktop-js:host-failure: failed host explorer"))
+        check["detail"][1]["target"] = False
+        self.save(receipt)
+        with self.assertRaises(ValueError):
+            browser.verify(self.root)
+
+    def test_host_failure_must_close_interactive_and_dispose_its_rendered_content(self):
+        for detail in ({"plain": False, "interactive": False, "mounted": False},
+                       {"plain": True, "interactive": True, "mounted": False},
+                       {"plain": True, "interactive": False, "mounted": True},
+                       {"plain": 1, "interactive": False, "mounted": False},
+                       {"plain": True, "interactive": 0, "mounted": False},
+                       {"plain": True, "interactive": False, "mounted": 0}, None):
+            receipt = copy.deepcopy(self.receipt)
+            check = next(c for c in receipt["checks"] if c["id"].startswith("desktop-js:host-failure: cold host failure:"))
+            check["detail"] = detail
+            self.save(receipt)
+            with self.assertRaises(ValueError):
+                browser.verify(self.root)
 
     def test_failed_missing_and_truncated_observations_refused(self):
         mutations = [lambda r: r.update(status="failed"), lambda r: r.update(checks=[]),

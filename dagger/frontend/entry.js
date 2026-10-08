@@ -32,12 +32,19 @@ if (marker) {
     }
     restore()
     requestAnimationFrame(() => requestAnimationFrame(restore))
+    // Scalar lazily expands content above host footer controls. Bound the
+    // compensation; any later user gesture or focus movement invalidates it.
+    if (intent.host) for (const delay of [250, 500, 1000]) window.setTimeout(restore, delay)
   }
   const cancelEntry = () => { entryIntent = null }
   for (const event of ['keydown', 'pointerdown', 'wheel', 'touchstart'])
     window.addEventListener(event, cancelEntry, { capture: true, passive: true })
   document.addEventListener('focusin', event => {
     if (entryIntent && event.target !== entryIntent.target) cancelEntry()
+    const target = event.target
+    if (loading && interactive.contains(target) && !container.contains(target) &&
+        target !== summary && target.matches('a[href],button,input,select,textarea,summary,[tabindex]'))
+      entryIntent = { target, attempt, host: true }
     // A user returning to the readable contract cancels optional loading;
     // its eventual ready callback must not close the newly focused disclosure.
     if (loading && plain.contains(event.target)) showPlain()
@@ -51,7 +58,9 @@ if (marker) {
     }
   }
   const showPlain = () => {
-    const returnFocus = document.activeElement === summary
+    const focused = document.activeElement
+    const returnFocus = focused === summary || (interactive.contains(focused) &&
+      !container.contains(focused) && focused.matches('a[href],button,input,select,textarea,summary,[tabindex]'))
     cancelEntry()
     if (loading || instance) {
       attempt += 1

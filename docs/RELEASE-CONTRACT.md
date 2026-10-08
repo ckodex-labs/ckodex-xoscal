@@ -24,18 +24,28 @@ credential or registry publication is introduced by local execution.
    the home alias run in fresh desktop/mobile JavaScript and no-JavaScript
    contexts. Mandatory checks include full prebuilt API content, repeated
    dialog/keyboard lifecycles, unique landmarks/IDs, themes, native content,
-   geometry/occlusion, actual keyboard view-entry focus and ten enhancement
+   geometry/occlusion, actual keyboard view-entry focus and fourteen enhancement
    controls. The controls cover missing/tampered contracts, failed scripts,
-   returning focus to Plain during loading and cancelling loading on desktop
-   and mobile. Loading controls hold an actual exact-byte contract response
-   until the observed cancellation key; only that contract's intentional abort
-   is allowed. Independent replay enforces finite in-viewport focus/heading
+   returning focus to Plain during loading, cancelling loading and forward
+   Tab to the raw OpenAPI host link during loading and failure after that
+   forward focus movement on desktop and mobile.
+   Cold controls hold an actual exact-byte contract response until the observed
+   key. Returning to Plain/cancelling permits only that contract's intentional
+   abort; forward Tab requires the exact successful GET and real readiness
+   while preserving the newly focused host link. A controlled missing-contract
+   response after host focus movement must return visible focus to Plain;
+   only that response's exact correlated abort is allowed. Independent replay
+   enforces finite in-viewport focus/heading
    rectangles and actual loading key observations. Browser
    tooling stays in the analysis container. Raw observations and exact
    producer/toolchain sources are staged as six final-only evidence files;
    independent admission validates coverage and rehashes their presentation
    subjects. A saved success boolean alone is insufficient, and this receipt
-   is not signing authority. Rendering finishes before `release-manifest.json` inventories all final payload,
+   is not signing authority. The upgraded consumer refuses historical receipts
+   missing the fourteen controls. Historical evidence can be replayed with its
+   reviewed version-bound consumer, but cannot authorize promotion under this
+   stronger contract; new releases require newly produced evidence.
+   Rendering finishes before `release-manifest.json` inventories all final payload,
    evidence, HTML, CSS, JavaScript, fonts and other assets. `PackageCandidate` creates a
    deterministic transport archive of those frozen bytes. Hosted provenance signs the
    final manifest, transport and exact OCI root manifest bytes.
