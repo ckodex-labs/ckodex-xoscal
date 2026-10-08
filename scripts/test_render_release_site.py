@@ -3,6 +3,7 @@ import copy
 import importlib.util
 import json
 import os
+import re
 import shutil
 import subprocess
 import sys
@@ -18,6 +19,9 @@ REPO = SCRIPTS.parent
 spec = importlib.util.spec_from_file_location("site_smoke", SCRIPTS / "site-smoke.py")
 smoke = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(smoke)
+presentation_spec = importlib.util.spec_from_file_location("release_presentation", SCRIPTS / "check-release-presentation.py")
+presentation = importlib.util.module_from_spec(presentation_spec)
+presentation_spec.loader.exec_module(presentation)
 
 
 class RenderReleaseSite(unittest.TestCase):
@@ -91,6 +95,45 @@ class RenderReleaseSite(unittest.TestCase):
         index = json.loads((self.root / "downloads.json").read_text())
         self.assertEqual(index["verification"], "incomplete")
         self.assertFalse(any(item["eligible"] for item in index["artifacts"]))
+
+    def test_canonical_pages_keep_every_prebuilt_metadata_record_without_duplicate_download_actions(self):
+        self.assertEqual(self.render().returncode, 0)
+        presentation.check(self.root)
+        pages = self.pages()
+        self.assertEqual(pages["transparency.html"].downloads, [])
+        self.assertIn("Downloads", "".join(pages["downloads.html"].main_text))
+        self.assertIn("Supply-chain Transparency", "".join(pages["transparency.html"].main_text))
+
+    def test_inventory_disclosure_rejects_lost_or_duplicate_rows_metadata_and_actions(self):
+        self.assertEqual(self.render().returncode, 0)
+        path = self.root / "transparency.html"
+        original = path.read_text()
+        row = re.search(r'<tr id="inventory-artifact-[^>]*>.*?</tr>', original, re.S).group()
+        item = json.loads(self.manifest.read_text())["artifacts"][0]
+        mutations = {
+            "missing row": original.replace(row, "", 1),
+            "duplicate row": original.replace(row, row + row, 1),
+            "missing digest": original.replace(item["digest"], "omitted", 1),
+            "duplicate title": original.replace("<h1>Supply-chain Transparency</h1>", "<h1>Downloads</h1>"),
+            "duplicate action": original.replace("</main>", '<a download href="sdk/go.zip">Duplicate download</a></main>'),
+            "outside main": original.replace(row, "", 1).replace("</main>", "</main>" + row),
+        }
+        for name, text in mutations.items():
+            with self.subTest(mutation=name):
+                path.write_text(text)
+                with self.assertRaises(ValueError):
+                    presentation.check(self.root)
+        path.write_text(original)
+
+    def test_raw_sbom_remains_prebuilt_inside_native_disclosure(self):
+        document = {"assessment-results": {"results": [{"findings": [], "observations": []}]}}
+        write(self.root / "sbom-assessment-results.json", document)
+        self.reset_manifest()
+        self.assertEqual(self.render().returncode, 0)
+        text = (self.root / "sbom-validation.html").read_text()
+        self.assertRegex(text, r'<details><summary>Inspect the complete raw assessment</summary><pre')
+        self.assertIn("assessment-results", text)
+        self.assertIn('href="sbom-assessment-results.json"', text)
 
     def test_unsigned_generated_no_js_inventory_and_http_surface(self):
         result = self.render()
