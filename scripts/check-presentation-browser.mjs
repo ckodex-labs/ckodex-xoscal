@@ -187,10 +187,10 @@ async function semantics(page, id) {
   return raw
 }
 
-async function hitTest(page, locator, id) {
-  await locator.scrollIntoViewIfNeeded()
+async function hitTest(page, locator, id, native = false) {
+  if (!native) await locator.scrollIntoViewIfNeeded()
   await locator.evaluate(node => node.scrollIntoView({ block: 'center', inline: 'nearest', behavior: 'instant' }))
-  await page.waitForTimeout(100)
+  if (!native) await page.waitForTimeout(100)
   const hit = await locator.evaluate(node => {
     const r = node.getBoundingClientRect(), left = Math.max(r.left, 0), right = Math.min(r.right, innerWidth), top = Math.max(r.top, 0), bottom = Math.min(r.bottom, innerHeight)
     const point = { x: (left + right) / 2, y: (top + bottom) / 2 }, topmost = document.elementFromPoint(point.x, point.y)
@@ -345,7 +345,7 @@ async function nativeContracts(page, profile, observation) {
     await summary.focus(); await page.keyboard.press('Enter')
     const width = await page.evaluate(() => ({ viewport: innerWidth, document: document.documentElement.scrollWidth }))
     verify(profile.id + ': native contract ' + index + ': keyboard expansion', await details.getAttribute('open') !== null && await code.isVisible() && width.document <= width.viewport, { summary: await summary.textContent(), width })
-    await hitTest(page, pre, profile.id + ': native contract ' + index)
+    await hitTest(page, pre, profile.id + ': native contract ' + index, true)
     await summary.focus(); await page.keyboard.press('Enter')
     verify(profile.id + ': native contract ' + index + ': keyboard collapse', await details.getAttribute('open') === null && !(await code.isVisible()))
     if (target.operation) {
