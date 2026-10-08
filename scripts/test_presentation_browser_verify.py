@@ -76,6 +76,7 @@ def fixture_mode(mode):
                        "geometry": {"h1": {"top": 0}, "firstSection": 20}}
         if route == "docs.html":
             observation["api"] = {"operations": 96, "models": 395}
+            observation["api_native_contracts"] = 491
         if route == "portal.html":
             observation["blueprint"] = {"anchors": list(range(6)), "views": list(range(6)), "containers": 15}
         log["observations"][route] = observation
@@ -116,6 +117,7 @@ class BrowserReceiptTests(unittest.TestCase):
                      lambda r: r["checks"].append(r["checks"][0]), lambda r: r["modes"].pop(),
                      lambda r: r["modes"][0]["observations"].pop("docs.html"),
                      lambda r: r["modes"][0]["observations"]["docs.html"]["api"].update(operations=0),
+                     lambda r: r["modes"][0]["observations"]["docs.html"].update(api_native_contracts=490),
                      lambda r: r["modes"][0]["observations"]["portal.html"]["native"].update(sections=0),
                      lambda r: r["negative_controls"].pop(), lambda r: r["modes"][0]["page_errors"].append("error"),
                      lambda r: r["modes"][0]["requests"][0].update(method="POST"),
@@ -152,3 +154,21 @@ class BrowserReceiptTests(unittest.TestCase):
         self.save(receipt)
         with self.assertRaises(ValueError):
             browser.verify(self.root)
+
+    def test_only_exact_correlated_negative_aborts_allowed(self):
+        receipt = copy.deepcopy(self.receipt)
+        control = next(log for log in receipt["negative_controls"] if log["id"] == "desktop-js:script")
+        url = "http://127.0.0.1:8081/scalar.js"
+        control["http_failures"][0]["url"] = url
+        control["network_failures"] = [{"url": url, "error": "net::ERR_ABORTED", "intentional": True}]
+        self.save(receipt)
+        self.assertEqual(browser.verify(self.root)["status"], "passed")
+        for field, value in (("url", "http://127.0.0.1:8081/unexpected.js"),
+                             ("error", "net::ERR_CONNECTION_REFUSED"), ("intentional", False)):
+            with self.subTest(field=field):
+                altered = copy.deepcopy(receipt)
+                item = next(log for log in altered["negative_controls"] if log["id"] == "desktop-js:script")
+                item["network_failures"][0][field] = value
+                self.save(altered)
+                with self.assertRaises(ValueError):
+                    browser.verify(self.root)

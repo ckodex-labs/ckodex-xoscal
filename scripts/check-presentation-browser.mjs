@@ -17,7 +17,7 @@ const config = JSON.parse(fs.readFileSync(path.join(toolRoot, 'browser-toolchain
 const receiptPath = path.join(output, 'presentation-browser.json')
 const sha = bytes => 'sha256:' + crypto.createHash('sha256').update(bytes).digest('hex')
 const receipt = { schema_version: 1, status: 'failed', checks: [], failures: [], modes: [], negative_controls: [], subjects: {}, subject_sizes: {}, tools: {}, coverage_inventory: {}, proxy_denials: [] }
-let browser, api, proxy, base
+let browser, api, proxy, base, deadline
 
 function verify(id, passed, detail) {
   const record = { id, passed: passed === true, detail }
@@ -69,22 +69,29 @@ function admitReceipt() {
   const actualIds = new Set(saved.checks.map(check => check.id))
   for (const id of requiredIds()) if (!actualIds.has(id)) throw Error('Missing mandatory browser check: ' + id)
   if (JSON.stringify(saved.modes.map(mode => mode.id)) !== JSON.stringify(config.modes)) throw Error('Missing browser mode')
+  admitBindings(saved); admitObservations(saved)
+  console.log('presentation browser admission: passed (' + saved.checks.length + ' checks)')
+}
+
+function admitBindings(saved) {
   if (saved.tools.image !== config.image || saved.tools.playwright !== config.playwright || saved.tools.chromium !== config.chromium || JSON.stringify(saved.tools.packages) !== JSON.stringify(config.packages)) throw Error('Browser tooling differs from pinned configuration')
   for (const [key, name] of [['package_lock_digest', 'package-lock.json'], ['runner_digest', 'check-presentation-browser.mjs'], ['api_helper_digest', 'check-api-landmarks.mjs'], ['toolchain_digest', 'browser-toolchain.json'], ['package_digest', 'package.json']]) if (saved.tools[key] !== sha(fs.readFileSync(path.join(toolRoot, name))) || saved.tools[key] !== sha(fs.readFileSync(path.join(output, name)))) throw Error('Changed browser producer: ' + name)
   if (JSON.stringify(Object.keys(saved.subjects).sort()) !== JSON.stringify(subjectPaths())) throw Error('Changed browser subject selection')
   for (const [relative, digest] of Object.entries(saved.subjects)) if (sha(fs.readFileSync(path.join(root, relative))) !== digest) throw Error('Changed browser subject: ' + relative)
+}
+
+function admitObservations(saved) {
   for (const mode of saved.modes) if (JSON.stringify(Object.keys(mode.observations)) !== JSON.stringify(['/', ...config.routes])) throw Error('Missing actual page coverage: ' + mode.id)
   for (const mode of saved.modes) if (mode.javaScriptEnabled !== mode.id.endsWith('-js') || ['console', 'network', 'page_errors'].some(key => !Array.isArray(mode[key]) || mode[key].length)) throw Error('Invalid or failed browser mode: ' + mode.id)
   const controls = config.modes.filter(id => id.endsWith('-js')).flatMap(id => ['404', 'tamper', 'script'].map(failure => id + ':' + failure))
   if (JSON.stringify(saved.negative_controls.map(control => control.id).sort()) !== JSON.stringify(controls.sort())) throw Error('Missing required negative control')
-  console.log('presentation browser admission: passed (' + saved.checks.length + ' checks)')
 }
 
 function requiredIds() {
-  const ids = ['toolchain: immutable image and package version', 'toolchain: actual pinned Chromium', 'inventory: exact eight actual pages', 'served root alias: exact index bytes', 'receipt: complete six negative controls', 'proxy: no non-service origins requested']
+  const ids = ['toolchain: immutable image and package version', 'toolchain: actual pinned Chromium', 'inventory: exact eight actual pages', 'served root alias: exact index bytes', 'receipt: complete six negative controls', 'proxy: no non-service origins requested', 'inventory: read-only same-origin resources']
   for (const mode of config.modes) {
     for (const entry of ['/', ...config.routes]) for (const phase of ['initial', 'after native content']) ids.push(mode + '/' + entry + ': ' + phase + ': sole canonical main, unique IDs and ARIA', mode + '/' + entry + ': ' + phase + ': viewport fits native content')
-    ids.push(mode + ': exact 96 operations and 395 model definitions', mode + '/portal.html: Blueprint six native anchors', mode + '/portal.html: Blueprint all 18 prebuilt sections')
+    ids.push(mode + ': all 491 native operation and model disclosures', mode + ': exact 96 operations and 395 model definitions', mode + '/portal.html: Blueprint six native anchors', mode + '/portal.html: Blueprint all 18 prebuilt sections')
     if (!mode.endsWith('-js')) ids.push(mode + '/portal.html: all six no-JS views visible without overlap')
     else for (const phase of ['online API lifecycle', 'loaded offline API lifecycle']) for (let cycle = 0; cycle < 3; cycle++) ids.push(mode + ': ' + phase + '/cycle ' + cycle + ': API client is a visible labelled dialog', mode + ': ' + phase + '/cycle ' + cycle + ' dismissed, including hidden DOM: no duplicate DOM IDs')
   }
@@ -99,7 +106,7 @@ async function startProxy() {
       if (!['GET', 'HEAD'].includes(req.method)) { res.writeHead(405); res.end(); return }
       const target = new URL(req.url, args.base)
       if (target.origin !== new URL(args.base).origin) { receipt.proxy_denials.push({ url: req.url, method: req.method }); res.writeHead(403); res.end(); return }
-      const remote = await fetch(target, { method: req.method, redirect: 'error' })
+      const remote = await fetch(target, { method: req.method, redirect: 'error', signal: AbortSignal.timeout(15000) })
       const bytes = Buffer.from(await remote.arrayBuffer())
       res.writeHead(remote.status, { 'Content-Type': remote.headers.get('content-type') || 'application/octet-stream', 'Cache-Control': 'no-store' })
       res.end(req.method === 'HEAD' ? undefined : bytes)
@@ -137,8 +144,10 @@ function inventoryDOM() {
 
 async function inventory() {
   const context = await browser.newContext({ javaScriptEnabled: false, serviceWorkers: 'block' }), page = await context.newPage()
+  const log = { console: [], network: [], requests: [], page_errors: [], network_failures: [], http_failures: [] }
+  receipt.inventory_observations = log; observe(page, log); await safeRequests(context, log)
   for (const route of config.routes) { await page.goto(base + route, { waitUntil: 'networkidle' }); receipt.coverage_inventory[route] = await page.evaluate(inventoryDOM) }
-  await context.close()
+  cleanNetwork(log, 'inventory'); await context.close()
   verify('inventory: exact eight actual pages', JSON.stringify(fs.readdirSync(root).filter(name => name.endsWith('.html')).sort()) === JSON.stringify(config.routes))
 }
 
@@ -162,6 +171,8 @@ async function semantics(page, id) {
 
 async function hitTest(page, locator, id) {
   await locator.scrollIntoViewIfNeeded()
+  await locator.evaluate(node => node.scrollIntoView({ block: 'center', inline: 'nearest', behavior: 'instant' }))
+  await page.waitForTimeout(100)
   const hit = await locator.evaluate(node => {
     const r = node.getBoundingClientRect(), left = Math.max(r.left, 0), right = Math.min(r.right, innerWidth), top = Math.max(r.top, 0), bottom = Math.min(r.bottom, innerHeight)
     const point = { x: (left + right) / 2, y: (top + bottom) / 2 }, topmost = document.elementFromPoint(point.x, point.y)
@@ -187,7 +198,7 @@ async function nativeContent(page, route, profile, observation) {
 
 async function localLinks() {
   for (const route of config.routes) for (const [index, link] of receipt.coverage_inventory[route].links.entries()) {
-    const id = 'native link: ' + route + '/' + index, target = new URL(link.href, base)
+    const id = 'native link: ' + route + '/' + index, target = new URL(link.href, new URL(route, base))
     if (link.href === '#') { verify(id, link.disabled === 'true'); continue }
     if (target.origin !== new URL(base).origin) { verify(id, ['https:', 'mailto:'].includes(target.protocol), { href: link.href, scope: 'documented external URI syntax' }); continue }
     const relative = decodeURIComponent(target.pathname.slice(1) || 'index.html')
@@ -204,7 +215,8 @@ async function framing(page, route, profile) {
   const geometry = await page.evaluate(() => { const h = document.querySelector('main h1').getBoundingClientRect(); const s = [...document.querySelectorAll('main section')].filter(node => node.getClientRects().length); return { h1: h.toJSON(), firstSection: s.length ? Math.min(...s.map(node => node.getBoundingClientRect().top)) : null } })
   verify(id + ': title precedes visible section content', geometry.firstSection === null || geometry.h1.top < geometry.firstSection, geometry)
   const skip = page.locator('a[href="#main"]').first(); await skip.focus(); await page.keyboard.press('Enter')
-  verify(id + ': native keyboard skip link', new URL(page.url()).hash === '#main')
+  await page.waitForURL(url => url.hash === '#main')
+  verify(id + ': native keyboard skip link', new URL(page.url()).hash === '#main', { url: page.url() })
   return geometry
 }
 
@@ -273,14 +285,14 @@ function observe(page, log, expected = []) {
   page.on('pageerror', error => log.page_errors.push(String(error)))
   page.on('console', message => { if (['error', 'warning'].includes(message.type())) log.console.push({ type: message.type(), text: message.text() }) })
   page.on('request', req => log.requests.push({ url: req.url(), method: req.method(), type: req.resourceType() }))
-  page.on('requestfailed', req => { const failure = { url: req.url(), error: req.failure()?.errorText }; log.network_failures.push(failure); log.network.push(failure) })
+  page.on('requestfailed', req => { const failure = { url: req.url(), error: req.failure()?.errorText }; failure.intentional = failure.error === 'net::ERR_ABORTED' && expected.some(item => req.url() === new URL(item.path, base).href) && log.http_failures.some(item => item.url === req.url() && item.intentional); log.network_failures.push(failure); if (!failure.intentional) log.network.push(failure) })
   page.on('response', response => { if (response.status() >= 400) { const failure = { url: response.url(), status: response.status(), intentional: expected.some(item => response.url().endsWith(item.path) && response.status() === item.status) }; log.http_failures.push(failure); if (!failure.intentional) log.network.push(failure) } })
 }
 
 function cleanNetwork(log, id, expectedErrors = false) {
   verify(id + ': zero runtime errors', log.page_errors.length === 0, log.page_errors)
   verify(id + ': console only explicit negative controls', expectedErrors ? log.console.length === log.http_failures.filter(item => item.intentional).length && log.console.every(item => /404|503/.test(item.text)) : log.console.length === 0, log.console)
-  verify(id + ': no unexpected HTTP or request failures', log.http_failures.every(item => item.intentional) && log.network_failures.length === 0, { http: log.http_failures, requests: log.network_failures })
+  verify(id + ': no unexpected HTTP or request failures', log.http_failures.every(item => item.intentional) && log.network_failures.every(item => item.intentional), { http: log.http_failures, requests: log.network_failures })
   verify(id + ': read-only same-origin resources', log.requests.every(item => ['GET', 'HEAD'].includes(item.method) && new URL(item.url).origin === new URL(base).origin), log.requests)
 }
 
@@ -292,11 +304,30 @@ async function safeRequests(context, log) {
   })
 }
 
+async function nativeContracts(page, profile, observation) {
+  const bodies = page.locator('#static-api-reference [data-api-operation] > details,#api-model-schemas [data-api-schema] > details')
+  const count = await bodies.count()
+  verify(profile.id + ': all 491 native operation and model disclosures', count === 491, { count })
+  for (const [index, details] of (await bodies.all()).entries()) {
+    await reveal(page, details, profile.js)
+    const summary = details.locator(':scope > summary'), code = details.locator('pre code')
+    if (await details.getAttribute('open') !== null) { await summary.focus(); await page.keyboard.press('Enter') }
+    await summary.focus(); await page.keyboard.press('Enter')
+    const width = await page.evaluate(() => ({ viewport: innerWidth, document: document.documentElement.scrollWidth }))
+    verify(profile.id + ': native contract ' + index + ': keyboard expansion', await details.getAttribute('open') !== null && await code.isVisible() && width.document <= width.viewport, { summary: await summary.textContent(), width })
+    await hitTest(page, details.locator('pre'), profile.id + ': native contract ' + index)
+    await summary.focus(); await page.keyboard.press('Enter')
+    verify(profile.id + ': native contract ' + index + ': keyboard collapse', await details.getAttribute('open') === null && !(await code.isVisible()))
+  }
+  observation.api_native_contracts = count
+}
+
 async function apiChecks(page, context, profile, spec, observation, log) {
   const callback = prefix => ({ check: (name, passed, detail) => verify(profile.id + ': ' + prefix + '/' + name, passed, detail) })
   await checkApiReferenceFallback(page, spec, callback('initial fallback'))
   observation.api = { operations: await page.locator('[data-api-operation]').count(), models: await page.locator('[data-api-schema]').count() }
   verify(profile.id + ': exact 96 operations and 395 model definitions', observation.api.operations === 96 && observation.api.models === 395, observation.api)
+  await nativeContracts(page, profile, observation)
   if (profile.js) {
     await checkApiLandmarks(page, callback('online API lifecycle'))
     observation.scalar_themes = await themes(page, profile.id + ': Scalar', true)
@@ -317,6 +348,7 @@ async function modeRun(profile, spec) {
   await safeRequests(context, log)
   verify(profile.id + ': fresh context no cookies', (await context.cookies()).length === 0)
   for (const entry of ['/', ...config.routes]) await bounded(profile.id + '/' + entry, async () => {
+    console.log('presentation browser: ' + profile.id + '/' + entry)
     const route = entry === '/' ? 'index.html' : entry, observation = { route: entry }; log.observations[entry] = observation
     await page.goto(new URL(entry === '/' ? '' : entry, base).href, { waitUntil: 'networkidle' })
     observation.initial = await semantics(page, profile.id + '/' + entry + ': initial')
@@ -330,7 +362,7 @@ async function modeRun(profile, spec) {
 }
 
 async function negativeControl(profile, spec, failure) {
-  const context = await browser.newContext({ viewport: profile.viewport, serviceWorkers: 'block' }), page = await context.newPage()
+  const context = await browser.newContext({ viewport: profile.viewport, javaScriptEnabled: true, isMobile: profile.mobile, hasTouch: profile.mobile, serviceWorkers: 'block' }), page = await context.newPage()
   const expected = failure === 'script' ? [{ path: '/scalar.js', status: 503 }] : failure === '404' ? [{ path: '/openapi.json', status: 404 }] : []
   const log = { id: profile.id + ':' + failure, console: [], network: [], requests: [], page_errors: [], network_failures: [], http_failures: [] }; receipt.negative_controls.push(log); observe(page, log, expected)
   await safeRequests(context, log)
@@ -362,11 +394,21 @@ async function run() {
 
 async function finish() {
   if (browser) await browser.close(); if (api) await api.dispose(); if (proxy) await new Promise(resolve => proxy.close(resolve))
-  receipt.status = receipt.failures.length ? 'failed' : 'passed'
-  fs.mkdirSync(output, { recursive: true }); fs.writeFileSync(receiptPath, JSON.stringify(receipt, null, 2) + '\n')
+  clearTimeout(deadline); writeReceipt()
   console.log(JSON.stringify({ status: receipt.status, checks: receipt.checks.length, failures: receipt.failures }, null, 2))
   if (args['report-only'] !== 'true' && receipt.status !== 'passed') process.exitCode = 1
 }
 
+function writeReceipt() {
+  receipt.status = receipt.failures.length ? 'failed' : 'passed'
+  fs.mkdirSync(output, { recursive: true }); fs.writeFileSync(receiptPath, JSON.stringify(receipt, null, 2) + '\n')
+}
+
 if (args['require-pass'] === 'true') admitReceipt()
-else await run().catch(error => verify('producer: fatal error', false, String(error.stack || error))).finally(finish)
+else {
+  deadline = setTimeout(() => {
+    verify('producer: bounded fifteen minute deadline', false, { limit_ms: 900000 })
+    writeReceipt(); process.exit(args['report-only'] === 'true' ? 0 : 1)
+  }, 900000)
+  await run().catch(error => verify('producer: fatal error', false, String(error.stack || error))).finally(finish)
+}

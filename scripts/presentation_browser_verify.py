@@ -78,14 +78,22 @@ class Counts(HTMLParser):
         self.links += tag == "a" and "href" in dict(attrs)
 
 
-def verify_requests(log):
+def verify_requests(log, expected=None):
     require(isinstance(log.get("requests"), list) and log["requests"], "missing raw request observations")
     for request in log["requests"]:
         url = urlsplit(request.get("url", ""))
         require(request.get("method") in {"GET", "HEAD"} and url.scheme == "http" and
                 url.hostname == "127.0.0.1" and url.port == 8081, "request exceeded the candidate boundary")
-    for field in ("page_errors", "network", "network_failures"):
+    for field in ("page_errors", "network"):
         require(log.get(field) == [], "unexpected browser " + field)
+    require(isinstance(log.get("network_failures"), list), "missing raw request failures")
+    for failure in log["network_failures"]:
+        require(expected is not None and failure.get("intentional") is True and
+                failure.get("error") == "net::ERR_ABORTED" and
+                urlsplit(failure.get("url", "")).path == expected[0] and
+                any(response.get("url") == failure["url"] and response.get("status") == expected[1] and
+                    response.get("intentional") is True for response in log.get("http_failures", [])),
+                "unexpected or uncorrelated request failure")
 
 
 def verify_coverage(root, receipt, mode):
@@ -105,13 +113,16 @@ def verify_coverage(root, receipt, mode):
         require(geometry.get("firstSection") is None or geometry["h1"]["top"] < geometry["firstSection"],
                 "title follows visible content")
     require(observations["docs.html"].get("api") == {"operations": 96, "models": 395}, "incomplete API observations")
+    require(observations["docs.html"].get("api_native_contracts") == 491,
+            "incomplete native operation and model disclosure observations")
     blueprint = observations["portal.html"].get("blueprint", {})
     require(len(blueprint.get("anchors", [])) == len(blueprint.get("views", [])) == 6 and
             blueprint.get("containers") == 15, "incomplete Blueprint observations")
 
 
 def mandatory_checks(mode):
-    ids = {mode + ": fresh context no cookies"}
+    ids = {mode + ": fresh context no cookies",
+           mode + ": all 491 native operation and model disclosures"}
     for route in ROUTES | {"/"}:
         for phase in ("initial", "after native content"):
             prefix = mode + "/" + route + ": " + phase
@@ -129,7 +140,9 @@ def verify_negative_controls(receipt):
     require(len(controls) == 6 and {item.get("id") for item in controls} == expected, "incomplete negative controls")
     ids = {item["id"] for item in receipt["checks"]}
     for log in controls:
-        verify_requests(log)
+        expected_response = (("/openapi.json", 404) if log["id"].endswith(":404") else
+                             ("/scalar.js", 503) if log["id"].endswith(":script") else None)
+        verify_requests(log, expected_response)
         require(log["id"] + ": complete Plain HTML is the initial or failed-enhancement view" in ids,
                 "missing fail-closed fallback assertion")
         if log["id"].endswith(":tamper"):
