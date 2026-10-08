@@ -49,18 +49,14 @@ func createAuditBundle(artifactPaths []string, evidenceDir string, outTarGzPath 
 		}
 		defer func() { result = errors.Join(result, root.Close()) }()
 	}
-	outDir := filepath.Dir(outTarGzPath)
-	if err := os.MkdirAll(outDir, 0750); err != nil {
-		return fmt.Errorf("create bundle output directory: %w", err)
-	}
-	outFile, err := os.CreateTemp(outDir, ".xoscal-bundle-*.tmp")
+	outFile, excluded, err := stageBundleOutput(outTarGzPath)
 	if err != nil {
-		return fmt.Errorf("create private bundle output: %w", err)
+		return err
 	}
 	defer func() { _ = os.Remove(outFile.Name()) }()
 	gw := gzip.NewWriter(outFile)
 	tw := tar.NewWriter(&boundedBundleWriter{writer: gw, remaining: byteLimit})
-	err = buildBundle(tw, artifactPaths, root)
+	err = buildBundle(tw, artifactPaths, root, excluded)
 	err = errors.Join(err, tw.Close(), gw.Close(), outFile.Close())
 	if err != nil {
 		return fmt.Errorf("write bundle: %w", err)
@@ -71,14 +67,40 @@ func createAuditBundle(artifactPaths []string, evidenceDir string, outTarGzPath 
 	return nil
 }
 
+// stageBundleOutput excludes the active private file and previous output inode
+// from automatic evidence discovery. Lstat never follows an output symlink.
+func stageBundleOutput(outputPath string) (*os.File, []os.FileInfo, error) {
+	outDir := filepath.Dir(outputPath)
+	if err := os.MkdirAll(outDir, 0750); err != nil {
+		return nil, nil, fmt.Errorf("create bundle output directory: %w", err)
+	}
+	excluded := make([]os.FileInfo, 0, 2)
+	previous, err := os.Lstat(outputPath)
+	if err == nil {
+		excluded = append(excluded, previous)
+	} else if !errors.Is(err, os.ErrNotExist) {
+		return nil, nil, fmt.Errorf("inspect previous bundle output: %w", err)
+	}
+	file, err := os.CreateTemp(outDir, ".xoscal-bundle-*.tmp")
+	if err != nil {
+		return nil, nil, fmt.Errorf("create private bundle output: %w", err)
+	}
+	staged, err := file.Stat()
+	if err != nil {
+		return nil, nil, errors.Join(err, file.Close(), os.Remove(file.Name()))
+	}
+	return file, append(excluded, staged), nil
+}
+
 type bundleBuilder struct {
 	tar      *tar.Writer
 	manifest BundleManifest
 	members  map[string]bool
+	excluded []os.FileInfo
 }
 
-func buildBundle(tw *tar.Writer, artifactPaths []string, root *os.Root) error {
-	builder := &bundleBuilder{tar: tw, members: make(map[string]bool), manifest: BundleManifest{
+func buildBundle(tw *tar.Writer, artifactPaths []string, root *os.Root, excluded []os.FileInfo) error {
+	builder := &bundleBuilder{tar: tw, excluded: excluded, members: make(map[string]bool), manifest: BundleManifest{
 		CreatedAt: time.Now().UTC(), BundleVersion: "1.0.0", OSCALVersion: oscalversion.Current(),
 		Artifacts: make([]FileDigest, 0), Evidence: make([]FileDigest, 0),
 	}}
@@ -137,11 +159,18 @@ func (builder *bundleBuilder) addEvidence(root *os.Root) error {
 		if entry.IsDir() || strings.HasSuffix(entry.Name(), ".sha256") {
 			continue
 		}
+		linkInfo, err := root.Lstat(entry.Name())
+		if err != nil {
+			return fmt.Errorf("inspect evidence %s: %w", entry.Name(), err)
+		}
+		if builder.isOutputFile(linkInfo) {
+			continue
+		}
 		info, err := root.Stat(entry.Name())
 		if err != nil {
 			return fmt.Errorf("inspect evidence %s: %w", entry.Name(), err)
 		}
-		if info.IsDir() {
+		if info.IsDir() || builder.isOutputFile(info) {
 			continue
 		}
 		data, err := rootfs.ReadFile(root, entry.Name())
@@ -153,6 +182,15 @@ func (builder *bundleBuilder) addEvidence(root *os.Root) error {
 		}
 	}
 	return nil
+}
+
+func (builder *bundleBuilder) isOutputFile(info os.FileInfo) bool {
+	for _, excluded := range builder.excluded {
+		if os.SameFile(info, excluded) {
+			return true
+		}
+	}
+	return false
 }
 
 func writeTarEntry(tw *tar.Writer, name string, content []byte) error {

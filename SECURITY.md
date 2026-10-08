@@ -67,11 +67,18 @@ operator-maintained risk declarations, not hosted release signatures.
 
 Audit-bundle creation stages a private file and replaces the selected output
 name only after successful completion. The resulting archive has mode `0600`;
-an existing output symlink is replaced rather than followed. Producer and
+an existing output symlink is replaced rather than followed. The staging file
+and prior regular output are excluded from automatic evidence collection by
+file identity, including in-directory aliases. Explicit artifact inputs remain
+operator-selected. Producer and
 verifier share a 256 MiB limit on the total decompressed TAR stream, including
 headers and padding. Member names must be canonical slash-separated NFC names,
-portable to the supported native filesystems; aliases, case-fold collisions,
-reserved device names and undeclared members are rejected. Artifact/evidence
+with components at most 255 UTF-8 bytes (248 bytes before a generated checksum
+suffix); aliases, case-fold collisions, reserved device names and undeclared
+members are rejected. Extraction destination prefixes and native total-path
+limits remain operator constraints. This TAR limit does not bound memory used
+to read each input file, or turn special files into nonblocking inputs.
+Artifact/evidence
 digests and sidecars establish internal byte consistency, not signer identity.
 
 ## Dependency Scanning

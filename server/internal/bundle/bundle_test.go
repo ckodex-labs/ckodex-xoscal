@@ -51,3 +51,50 @@ func TestAuditBundle_CreateAndVerify(t *testing.T) {
 		t.Errorf("unexpected bundle version: %s", manifest.BundleVersion)
 	}
 }
+
+func TestAuditBundle_OutputWithinEvidenceDirectory(t *testing.T) {
+	for _, previous := range []bool{false, true} {
+		evidenceDir := t.TempDir()
+		mustBundleWrite(t, filepath.Join(evidenceDir, "report.log"), []byte("ordinary evidence"))
+		output := filepath.Join(evidenceDir, "bundle.tar.gz")
+		if previous {
+			mustBundleWrite(t, output, []byte("previous output"))
+		}
+		if err := CreateAuditBundle(nil, evidenceDir, output); err != nil {
+			t.Fatal(err)
+		}
+		manifest, err := VerifyBundle(output)
+		if err != nil {
+			t.Fatal(err)
+		}
+		if len(manifest.Evidence) != 1 || manifest.Evidence[0].Path != "evidence/report.log" {
+			t.Fatalf("output file became automatic evidence: %+v", manifest.Evidence)
+		}
+	}
+}
+
+func TestAuditBundle_OutputSymlinkIsReplacedWithoutReadingTarget(t *testing.T) {
+	evidenceDir := t.TempDir()
+	mustBundleWrite(t, filepath.Join(evidenceDir, "report.log"), []byte("ordinary evidence"))
+	previous := filepath.Join(t.TempDir(), "previous-output")
+	mustBundleWrite(t, previous, []byte("previous output target"))
+	output := filepath.Join(evidenceDir, "bundle.tar.gz")
+	if err := os.Symlink(previous, output); err != nil {
+		t.Fatal(err)
+	}
+	if err := CreateAuditBundle(nil, evidenceDir, output); err != nil {
+		t.Fatal(err)
+	}
+	manifest, err := VerifyBundle(output)
+	if err != nil || len(manifest.Evidence) != 1 {
+		t.Fatalf("output overlap: %+v %v", manifest, err)
+	}
+	info, err := os.Lstat(output)
+	if err != nil || !info.Mode().IsRegular() {
+		t.Fatalf("output symlink not replaced: %v", err)
+	}
+	data, err := os.ReadFile(previous)
+	if err != nil || string(data) != "previous output target" {
+		t.Fatalf("previous target changed: %q %v", data, err)
+	}
+}

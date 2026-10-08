@@ -8,7 +8,9 @@ import (
 	"io"
 	"os"
 	"path/filepath"
+	"strings"
 	"testing"
+	"unicode/utf16"
 )
 
 func TestVerifyBundleRejectsPathAliasesAndStrayMembers(t *testing.T) {
@@ -22,6 +24,46 @@ func TestVerifyBundleRejectsPathAliasesAndStrayMembers(t *testing.T) {
 				t.Fatal("alias or stray archive member accepted")
 			}
 		})
+	}
+}
+
+func TestCanonicalMemberComponentLengthCompatibility(t *testing.T) {
+	for _, test := range []struct {
+		name  string
+		valid bool
+	}{
+		{strings.Repeat("a", 255), true},
+		{strings.Repeat("a", 256), false},
+		{strings.Repeat("é", 127) + "a", true},
+		{strings.Repeat("é", 128), false},
+		{strings.Repeat("😀", 63) + "aaa", true},
+		{strings.Repeat("😀", 64), false},
+	} {
+		err := canonicalMember("evidence/" + test.name)
+		if (err == nil) != test.valid {
+			t.Errorf("component length %d bytes: valid=%t, error=%v", len(test.name), test.valid, err)
+		}
+		if test.valid && len(utf16.Encode([]rune(test.name))) > 255 {
+			t.Fatal("accepted component exceeds Windows UTF-16 limit")
+		}
+	}
+	if err := canonicalMember(strings.Repeat("a", 256) + "/report.json"); err == nil {
+		t.Fatal("oversized directory component accepted")
+	}
+}
+
+func TestGeneratedSidecarComponentLengthCompatibility(t *testing.T) {
+	for _, payloadBytes := range []int{248, 249, 255, 256} {
+		members := make(map[string]bool)
+		name := "oscal/" + strings.Repeat("a", payloadBytes)
+		payloadErr := registerMember(members, name)
+		sidecarErr := registerMember(members, name+".sha256")
+		if (payloadErr == nil) != (payloadBytes <= 255) {
+			t.Errorf("payload %d-byte component: %v", payloadBytes, payloadErr)
+		}
+		if (sidecarErr == nil) != (payloadBytes <= 248) {
+			t.Errorf("payload %d-byte generated sidecar: %v", payloadBytes, sidecarErr)
+		}
 	}
 }
 

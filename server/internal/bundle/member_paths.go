@@ -11,22 +11,36 @@ import (
 	"golang.org/x/text/unicode/norm"
 )
 
+// A 255-byte UTF-8 component fits the supported filesystems' component limit.
+// For valid UTF-8, its UTF-16 code-unit count cannot exceed its byte count.
+const maxMemberComponentBytes = 255
+
 func canonicalMember(name string) error {
 	if !fs.ValidPath(name) || name == "." || path.Clean(name) != name || !norm.NFC.IsNormalString(name) {
 		return fmt.Errorf("non-canonical bundle member: %q", name)
 	}
 	for _, part := range strings.Split(name, "/") {
-		if strings.ContainsAny(part, `\<>:"|?*`) || strings.TrimRight(part, ". ") != part {
-			return fmt.Errorf("non-portable bundle member: %q", name)
+		if err := portableComponent(part, name); err != nil {
+			return err
 		}
-		for _, char := range part {
-			if char < 32 || char == 127 {
-				return fmt.Errorf("invalid bundle member: %q", name)
-			}
+	}
+	return nil
+}
+
+func portableComponent(part, name string) error {
+	if len(part) > maxMemberComponentBytes {
+		return fmt.Errorf("bundle member component exceeds %d UTF-8 bytes: %q", maxMemberComponentBytes, name)
+	}
+	if strings.ContainsAny(part, `\<>:"|?*`) || strings.TrimRight(part, ". ") != part {
+		return fmt.Errorf("non-portable bundle member: %q", name)
+	}
+	for _, char := range part {
+		if char < 32 || char == 127 {
+			return fmt.Errorf("invalid bundle member: %q", name)
 		}
-		if reservedPortableBase(part) {
-			return fmt.Errorf("reserved bundle member: %q", name)
-		}
+	}
+	if reservedPortableBase(part) {
+		return fmt.Errorf("reserved bundle member: %q", name)
 	}
 	return nil
 }
