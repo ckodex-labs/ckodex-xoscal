@@ -55,9 +55,10 @@ absolute links to an in-directory file, are rejected. The selected directory
 itself may be a symlink. These pathname controls do not establish hardlink
 ownership or prevent an operator from selecting a mounted filesystem.
 
-Repository inspection fails on unreadable or broken child paths in the scanned
-tree, including paths outside the conventional metadata filenames. It does not
-silently report a complete scan after a filesystem failure.
+Repository inspection fails on directory traversal or child metadata/stat
+errors, including broken links outside the conventional metadata filenames.
+Unreadable metadata inputs also fail inspection. The scanner does not read
+every ordinary file's contents or claim to verify their readability.
 
 An explicitly supplied evidence directory must be readable. Missing blobs or
 checksums, malformed checksums and inaccessible files cannot establish verified

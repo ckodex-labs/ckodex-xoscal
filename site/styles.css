@@ -1557,6 +1557,71 @@ body {
 .ck-inline-status--tone { color: var(--ck-fg-3); }
 .ck-inline-status--alarm { color: var(--ck-alarm); }
 .ck-code-block { overflow: auto; white-space: pre-wrap; overflow-wrap: anywhere; }
+/* The complete generated API reference keeps canonical long protobuf names.
+   Wrap them within the page measure on narrow displays, including native
+   disclosure summaries; do not truncate contract names or hide their content. */
+#static-api-reference { min-width: 0; overflow-wrap: anywhere; }
+#static-api-reference code { overflow-wrap: anywhere; }
+#static-api-reference details { display: block; min-width: 0; max-width: 100%; }
+#static-api-reference summary { min-height: 44px; padding-block: var(--ck-sp-2); cursor: pointer; }
+#static-api-reference pre.ck-code-block { max-width: 100%; white-space: pre-wrap; overflow-wrap: anywhere; }
+.ck-reference-view > summary {
+  min-height: 44px;
+  padding: var(--ck-sp-3) 0;
+  cursor: pointer;
+  font-family: var(--ck-ff-ui);
+  font-weight: 600;
+  color: var(--ck-fg-1);
+  border-bottom: 1px solid var(--ck-hairline);
+}
+.ck-reference-view > section { margin-top: var(--ck-sp-4); }
+/* Reference and API-client portal use the same DS-3 palette. Pinned Scalar's
+   own light/dark class must not put light Vault/HC headings on a white canvas. */
+body.ck-api-document .scalar-app,
+body.ck-api-document .scalar-app .light-mode,
+body.ck-api-document .scalar-app .dark-mode {
+  --scalar-font: var(--ck-ff-ui);
+  --scalar-font-code: var(--ck-ff-mono);
+  --scalar-background-1: var(--ck-bg-0);
+  --scalar-background-2: var(--ck-bg-1);
+  --scalar-background-3: var(--ck-bg-2);
+  --scalar-background-accent: var(--ck-bg-2);
+  --scalar-color-1: var(--ck-fg-1);
+  --scalar-color-2: var(--ck-fg-2);
+  --scalar-color-3: var(--ck-fg-3);
+  --scalar-color-accent: var(--ck-accent);
+  --scalar-border-color: var(--ck-hairline-strong);
+  /* Sidebar tokens may already be resolved on Scalar's body theme class;
+     bind them again at the component boundary instead of inheriting white. */
+  --scalar-sidebar-background-1: var(--ck-bg-0);
+  --scalar-sidebar-color-1: var(--ck-fg-1);
+  --scalar-sidebar-color-2: var(--ck-fg-2);
+  --scalar-sidebar-border-color: var(--ck-hairline-strong);
+  --scalar-sidebar-item-hover-background: var(--ck-bg-2);
+  --scalar-sidebar-item-hover-color: var(--ck-fg-1);
+  --scalar-sidebar-item-active-background: var(--ck-bg-1);
+  --scalar-sidebar-color-active: var(--ck-fg-1);
+  --scalar-sidebar-indent-border: var(--ck-hairline-strong);
+  --scalar-sidebar-indent-border-hover: var(--ck-hairline-strong);
+  --scalar-sidebar-indent-border-active: var(--ck-hairline-strong);
+  --scalar-sidebar-search-background: var(--ck-bg-1);
+  --scalar-sidebar-search-color: var(--ck-fg-2);
+  --scalar-sidebar-search-border-color: var(--ck-hairline-strong);
+  --scalar-link-color: var(--ck-link);
+  --scalar-link-color-hover: var(--ck-link-hov);
+  --scalar-button-1: var(--ck-accent);
+  --scalar-button-1-hover: var(--ck-accent);
+  --scalar-button-1-color: var(--ck-accent-ink);
+  --scalar-tooltip-background: var(--ck-bg-1);
+  --scalar-tooltip-color: var(--ck-fg-1);
+  --scalar-color-blue: var(--ck-fg-2);
+  --scalar-color-green: var(--ck-fg-2);
+  --scalar-color-red: var(--ck-fg-2);
+  --scalar-color-orange: var(--ck-fg-2);
+  --scalar-color-yellow: var(--ck-fg-2);
+  --scalar-color-purple: var(--ck-fg-2);
+  --scalar-color-query: var(--ck-fg-2);
+}
 .ck-loading { color: var(--ck-fg-3); }
 .ck-stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: var(--ck-sp-3); margin: var(--ck-sp-6) 0; }
 .ck-stat { border: 1px solid var(--ck-hairline); background: var(--ck-bg-1); padding: var(--ck-sp-3) var(--ck-sp-4); }
@@ -1637,23 +1702,26 @@ header.top {
 .wordmark .x { color: var(--ck-accent) !important; }
 .top-controls { gap: var(--ck-sp-5) !important; }
 nav.surfaces { gap: var(--ck-sp-4) !important; }
-nav.surfaces button { min-height: 44px !important; padding: 8px 4px !important; color: var(--ck-fg-1) !important; font-family: var(--ck-ff-mono) !important; font-size: var(--ck-fs-micro) !important; }
-nav.surfaces button.active, nav.surfaces button:hover { color: var(--ck-accent) !important; border-bottom-color: var(--ck-accent) !important; }
+nav.surfaces a { min-height: 44px !important; padding: 8px 4px !important; color: var(--ck-fg-1) !important; font-family: var(--ck-ff-mono) !important; font-size: var(--ck-fs-micro) !important; }
+nav.surfaces a.active, nav.surfaces a:hover { color: var(--ck-accent) !important; border-bottom-color: var(--ck-accent) !important; }
+nav.surfaces a:focus-visible { outline: none; box-shadow: var(--ck-ring-focus); }
 .toggle { border-color: var(--ck-hairline) !important; }
 .toggle button { min-width: 44px !important; min-height: 44px !important; padding: 8px 10px !important; background: var(--ck-bg-1) !important; color: var(--ck-fg-3) !important; font-family: var(--ck-ff-mono) !important; }
 .toggle button.on { background: var(--ck-fg-1) !important; color: var(--ck-bg-0) !important; }
 .shell.ck-portal-main {
   display: grid !important;
   grid-template-columns: minmax(0, 1fr) var(--ck-margin-w) !important;
-  grid-template-rows: auto 1fr !important;
-  grid-template-areas: "banner banner" "portal margin" !important;
+  grid-template-rows: auto auto 1fr !important;
+  grid-template-areas: "title title" "banner banner" "content margin" !important;
   gap: 0 !important;
   max-width: none !important;
   margin: 0 !important;
   padding: 0 !important;
 }
+.shell.ck-portal-main > .ck-page-title { grid-area: title; margin: var(--ck-sp-6) var(--ck-sp-6) 0; }
 .shell.ck-portal-main > .banner { grid-area: banner; margin: var(--ck-sp-5) var(--ck-sp-6) 0 !important; background: var(--ck-bg-1) !important; border: 1px solid var(--ck-hairline) !important; border-left: var(--ck-rule) solid var(--ck-accent) !important; color: var(--ck-fg-2) !important; }
-.shell.ck-portal-main > .view { grid-area: portal; margin: 0 var(--ck-sp-6); padding-bottom: var(--ck-sp-10); }
+.shell.ck-portal-main > .ck-portal-content { grid-area: content; min-width: 0; margin: 0 var(--ck-sp-6); }
+.shell.ck-portal-main > .ck-portal-content > .view { padding-bottom: var(--ck-sp-10); }
 .shell.ck-portal-main > .ck-portal-margin { grid-area: margin; }
 .shell.ck-portal-main .prov, .shell.ck-portal-main .panel, .shell.ck-portal-main .ecard, .shell.ck-portal-main .dl-card, .shell.ck-portal-main .persona-card, .shell.ck-portal-main .defensive { background: var(--ck-bg-1) !important; border-color: var(--ck-hairline) !important; }
 .shell.ck-portal-main .prov { margin-top: var(--ck-sp-6) !important; }
@@ -1753,6 +1821,32 @@ section[aria-labelledby="interactive-heading"] .section-header .label {
 .ck-table th, .ck-table td { padding: var(--ck-sp-2) var(--ck-sp-4) var(--ck-sp-2) 0; }
 .ck-table th:last-child, .ck-table td:last-child { padding-right: 0; }
 .ck-table td > code:only-child { white-space: nowrap; }
+
+/* Release pages share compact identity/evidence controls without duplicating
+   every downloadable card in the full provenance inventory. */
+.ck-table-scroll { max-width: 100%; overflow-x: auto; }
+.ck-table-scroll:focus-visible { outline: 2px solid var(--ck-fg-1); outline-offset: 4px; }
+.ck-artifact-table { table-layout: fixed; }
+.ck-artifact-table th:first-child { width: 43%; }
+.ck-artifact-table th:nth-child(2) { width: 18%; }
+.ck-artifact-table th[scope="row"] { color: var(--ck-fg-1); text-transform: none; letter-spacing: normal; }
+.ck-artifact-table th code,
+.ck-artifact-table td,
+.ck-artifact-details a,
+.ck-artifact-digest { white-space: normal; overflow-wrap: anywhere; }
+.ck-artifact-digest { display: block; max-width: 100%; }
+.ck-artifact-details { min-width: 0; }
+.ck-artifact-details summary,
+.ck-inventory-group > summary { min-height: 44px; padding-block: var(--ck-sp-3); cursor: pointer; }
+.ck-artifact-details summary:focus-visible,
+.ck-inventory-group > summary:focus-visible { outline: 2px solid var(--ck-fg-1); outline-offset: 2px; }
+.ck-artifact-details p { margin-block: var(--ck-sp-2); }
+.ck-artifact-details ul { margin-block: var(--ck-sp-2); padding-left: var(--ck-sp-4); }
+
+@media (max-width: 600px) {
+  .ck-artifact-table { min-width: 540px; }
+  .ck-artifact-table th, .ck-artifact-table td { padding-right: var(--ck-sp-3); }
+}
 
 /* Forms: label above control, controls fill their column. */
 .ck-shell__main form label { display: block; font-size: var(--ck-fs-body-sm); font-weight: 500; color: var(--ck-fg-1); }

@@ -1,0 +1,50 @@
+[
+  [
+    "DUX_001",
+    "No external artifact supports a claim without digest and subject binding."
+  ],
+  [
+    "DUX_002",
+    "Generated AI output lands as inferred."
+  ],
+  [
+    "DUX_003",
+    "Imported evidence lands as imported-unverified."
+  ],
+  [
+    "DUX_004",
+    "Receiver verification is local."
+  ],
+  [
+    "DUX_005",
+    "Stale evidence remains visible and cannot render green/proof."
+  ],
+  [
+    "DUX_006",
+    "Lossiness must be declared when projecting non-native evidence."
+  ],
+  [
+    "DUX_007",
+    "Redaction is a visible transformation."
+  ],
+  [
+    "DUX_008",
+    "Personnel-sensitive evidence is minimized by default."
+  ],
+  [
+    "DUX_009",
+    "A scan result must match the release or subject it claims to support."
+  ],
+  [
+    "DUX_010",
+    "A bill of materials must be bound to a product, release, model, system, or dataset."
+  ],
+  [
+    "DUX_011",
+    "No extension manifest can be exported without schema and reason."
+  ],
+  [
+    "DUX_012",
+    "No export bundle leaves without manifest, hash, and redaction state."
+  ]
+]

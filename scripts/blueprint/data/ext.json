@@ -1,0 +1,17 @@
+[
+  {
+    "id": "EXT-CA-CG-001",
+    "title": "Canada Controlled Goods — transfer ledger",
+    "chip": "○ Claimed",
+    "chipCls": "claimed",
+    "meta": "Dialect: <b>Canada Controlled Goods</b><br>Reason: OSCAL cannot natively represent transfer ledger semantics<br>Linked OSCAL object: back-matter resource R-088<br>Schema: <span class='mono'>ckx.controlled_goods.v1</span><br>Lossiness: <b>declared</b>",
+    "evidence": "transfer ledger digest <span class='dig'>sha256:5b3c…f0a1</span>",
+    "links": "OSCAL: back-matter R-088 — export manifest",
+    "next": [
+      "Open schema",
+      "Open linked resource",
+      "View in export manifest"
+    ],
+    "blocked": "extension cannot export without schema and reason"
+  }
+]

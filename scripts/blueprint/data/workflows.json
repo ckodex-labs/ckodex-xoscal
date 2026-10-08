@@ -1,0 +1,117 @@
+[
+  {
+    "name": "CI",
+    "file": ".github/workflows/ci.yml",
+    "trigger": "push or pull request to main",
+    "status": "requires hosted proof",
+    "journey": [
+      {
+        "step": "Checkout pinned source and Dagger 0.21.7",
+        "detail": "Run repository All gates and collect actual results."
+      },
+      {
+        "step": "Collect security and coverage evidence",
+        "detail": "Retain raw findings; analysis policy determines admission, independently of report upload."
+      },
+      {
+        "step": "Build and analyze image archive",
+        "detail": "Dagger generates the container analysis inputs. No public release promotion occurs in CI."
+      }
+    ],
+    "oscal": "assessment-plan — assessment-results — finding",
+    "produces": [
+      "gate results",
+      "raw security findings",
+      "coverage report",
+      "image analysis"
+    ]
+  },
+  {
+    "name": "Release",
+    "file": ".github/workflows/release.yml",
+    "trigger": "explicit v* tag",
+    "status": "requires hosted proof",
+    "journey": [
+      {
+        "step": "Dagger ReleaseCandidate",
+        "detail": "Produce all artifacts upfront and enforce tests, scans, SBOM and schema gates; GoReleaser skips publication. Export the complete payload and initial manifest."
+      },
+      {
+        "step": "Hosted payload manifest attestation",
+        "detail": "Use the existing actions/attest-build-provenance GitHub OIDC identity. Signing configuration is not successful verification."
+      },
+      {
+        "step": "Dagger FinalizeCandidate",
+        "detail": "Verify exact payload manifest, repository, release.yml identity, source SHA and tag; render final site bytes and final release manifest."
+      },
+      {
+        "step": "Hosted final manifest attestation",
+        "detail": "Attest the final immutable manifest; retain its detached bundle outside the covered payload."
+      },
+      {
+        "step": "Dagger VerifyCandidate",
+        "detail": "Verify expected identity and every final payload/site digest. Missing mandatory proof or altered bytes blocks promotion."
+      },
+      {
+        "step": "Promote the unchanged candidate",
+        "detail": "Only after all gates pass, publish exact release assets and the verified OCI bytes; stage the exact site for Pages. No unsigned fallback or post-signing rewriting."
+      }
+    ],
+    "oscal": "back-matter resource — attestation — assessment-results",
+    "produces": [
+      "release/ archives",
+      "six SDK bundles and supported packages",
+      "35 catalogs + PBMM profile",
+      "multi-architecture OCI archive",
+      "analysis reports",
+      "final site",
+      "release-manifest.json",
+      "detached proof envelope"
+    ]
+  },
+  {
+    "name": "Pages",
+    "file": ".github/workflows/pages.yml",
+    "trigger": "explicit promoted release selection",
+    "status": "requires hosted proof",
+    "journey": [
+      {
+        "step": "Retrieve the promoted pinned candidate",
+        "detail": "Consume the release’s existing site bytes, inventory and detached proofs; do not rebuild from mutable main or merge latest assets."
+      },
+      {
+        "step": "Dagger VerifyCandidate",
+        "detail": "Recheck hosted identity and all exact bytes before publication. Incomplete proof stops this journey."
+      },
+      {
+        "step": "Publish the unchanged static site",
+        "detail": "Deploy the verified site bundle without rewriting links, evidence or final signed bytes."
+      }
+    ],
+    "oscal": "back-matter resource — evidence presentation",
+    "produces": [
+      "pinned verified site bytes"
+    ]
+  },
+  {
+    "name": "OSCAL Reconcile",
+    "file": ".github/workflows/oscal-reconcile.yml",
+    "trigger": "every six hours or manual dispatch",
+    "status": "requires hosted proof",
+    "journey": [
+      {
+        "step": "Poll pinned upstream feeds",
+        "detail": "Use repository reconciliation scripts to identify drift and operational errors."
+      },
+      {
+        "step": "Produce reviewable source changes",
+        "detail": "Open a draft PR when authorized by the workflow; human review remains required. Drift detection is not a release signature."
+      }
+    ],
+    "oscal": "catalog — profile — schema integrity",
+    "produces": [
+      "reconciliation report",
+      "reviewable draft PR"
+    ]
+  }
+]

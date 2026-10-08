@@ -57,6 +57,7 @@ func (m *Xoscal) releaseCandidate(source *dagger.Directory, releaseTag, sourceRe
 		WithDirectory("/staged", archives).
 		WithExec([]string{"sh", "-c", "set -eu; mkdir -p /out/release; cp /staged/*.tar.gz /staged/*.sbom.json /staged/checksums.txt /out/release/"}).
 		WithExec([]string{"python3", "scripts/inspect-image-archive.py", "/out/release/image.tar", "/out/release"})
+	c = c.WithExec([]string{"python3", "/tools/render_api_reference.py", "--root", "/out"})
 	for _, language := range []string{"go", "python", "java", "csharp", "ts", "swift"} {
 		artifact := sdks.File(language + ".zip")
 		stage := "/out/evidence/sdk-" + language

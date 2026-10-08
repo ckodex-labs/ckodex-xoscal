@@ -324,7 +324,7 @@ class RequiredOutputTests(unittest.TestCase):
                 path.write_bytes(original)
 
     def test_frontend_producer_inputs_cannot_be_tampered(self):
-        for name in ('scalar.js', 'scalar.js.map', 'scalar.css', 'scalar.css.map', 'package-lock.json', 'entry.js', 'build.mjs', 'bundle-inputs.tar.gz', 'frontend-inventory.json', 'installed-package-manifests.json'):
+        for name in ('scalar.js', 'scalar.js.map', 'scalar.css', 'scalar.css.map', 'package-lock.json', 'entry.js', 'build.mjs', 'bundle-inputs.tar.gz', 'frontend-inventory.json', 'installed-package-manifests.json', 'landmark-transform.mjs', 'landmark-transform.test.mjs', 'landmark-transforms.json', 'landmark-transform-receipt.json'):
             with self.subTest(input=name):
                 path = self.root / 'evidence/frontend' / name;original = path.read_bytes();path.write_bytes(original + b'tampered')
                 self.reject()

@@ -1,0 +1,300 @@
+  /* ── Card system (Evidence Cartography Addendum) ── */
+  .card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr));gap:16px}
+  .ecard{border:1px solid var(--hairline);background:var(--surface);padding:16px 18px;
+    display:flex;flex-direction:column;gap:8px}
+  .ecard.sealed{border-width:2px;
+    clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,0 100%)}
+  .ecard.alarm{border-color:var(--alarm)}
+  .ecard .head{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+  .ecard .head .title{font-family:var(--mono);font-size:13px;font-weight:600}
+  .ecard .head .title .sub{font-family:var(--sans);font-size:14px;font-weight:600;
+    display:block;color:var(--ink);margin-top:1px}
+  .ecard .head .chip{font-size:11px;font-weight:600;white-space:nowrap;display:inline-flex;
+    align-items:center;gap:5px;padding:2px 7px;border:1px solid var(--hairline)}
+  .ecard .chip.attested{color:var(--proof);border-color:var(--proof)}
+  .ecard .chip.observed{color:var(--ink);border-color:var(--ink)}
+  .ecard .chip.inferred,.ecard .chip.claimed,.ecard .chip.source-pinned{color:var(--tone)}
+  .ecard .chip.contradicted,.ecard .chip.quarantined,.ecard .chip.past-due{color:var(--alarm);border-color:var(--alarm)}
+  .ecard .chip.signed{color:var(--proof);border-color:var(--proof)}
+  .ecard .chip.verified{color:var(--proof);border-color:var(--proof)}
+  .ecard .meta{font-size:12px;color:var(--tone);line-height:1.5}
+  .ecard .meta b{color:var(--ink);font-weight:500}
+  .ecard .meta .mono{font-family:var(--mono);font-variant-ligatures:none;font-size:11px}
+  .ecard .role{font-size:13px;color:var(--ink);padding:6px 0;border-top:1px solid var(--rule);
+    border-bottom:1px solid var(--rule)}
+  .ecard .evidence{font-size:12px;color:var(--tone);font-family:var(--mono);
+    font-variant-ligatures:none}
+  .ecard .evidence .dig{color:var(--ink)}
+  .ecard .links{font-size:12px;color:var(--tone)}
+  .ecard .links .lk{font-family:var(--mono);font-size:11px}
+  .ecard .diff-row{display:grid;grid-template-columns:1fr 1fr;gap:8px;font-family:var(--mono);
+    font-size:12px;padding:6px 0;border-bottom:1px solid var(--rule)}
+  .ecard .diff-row:last-child{border-bottom:none}
+  .ecard .diff-row .side{color:var(--ink)}
+  .ecard .diff-row .side .who{color:var(--tone);font-size:11px;display:block}
+
+  /* ── Action footer (unified across cards + defensive blocks) ── */
+  .act-footer{margin-top:auto;padding-top:10px;border-top:1px solid var(--rule)}
+  .act-label{font-size:10px;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--tone);margin-bottom:6px;display:block}
+  .act-list{display:flex;flex-wrap:wrap;gap:6px}
+  .act{font-family:var(--sans);font-size:12px;font-weight:600;padding:5px 10px;
+    border:1px solid var(--hairline);background:var(--surface);color:var(--ink);
+    cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:5px;
+    transition:background .12s,border-color .12s,color .12s}
+  .act:hover{background:var(--paper);border-color:var(--ink)}
+  .act.primary{background:var(--rust);color:#fff;border-color:var(--rust)}
+  .act.primary:hover{filter:brightness(1.07);background:var(--rust);border-color:var(--rust);color:#fff}
+  .act.export{color:var(--tone);border-style:dashed}
+  .act.export:hover{color:var(--ink);border-style:solid;border-color:var(--ink)}
+  .act .glyph{font-size:13px;line-height:1;flex:none}
+  .act-blocked{font-size:11px;color:var(--alarm);font-family:var(--mono);
+    padding:6px 10px;border:1px solid var(--alarm);background:var(--surface);
+    margin-bottom:8px;display:flex;align-items:flex-start;gap:6px;line-height:1.4}
+  .act-blocked::before{content:"⊘";font-size:13px;flex:none;margin-top:1px}
+  .act-blocked .why{color:var(--alarm)}
+
+  /* defensive experience blocks */
+  .defensive{border:1px solid var(--hairline);background:var(--surface);padding:16px 18px;
+    display:flex;flex-direction:column}
+  .defensive.stale{border-color:var(--tone);border-style:dashed}
+  .defensive.denied{border-color:var(--alarm)}
+  .defensive.redacted{border-color:var(--proof)}
+  .defensive h3{font-family:var(--serif);font-weight:400;font-size:18px;margin:0 0 8px}
+  .defensive .body{font-size:13px;color:var(--ink);line-height:1.6}
+  .defensive .body .lab{color:var(--tone);font-size:11px;text-transform:uppercase;
+    letter-spacing:.06em;display:block;margin-top:8px;margin-bottom:2px}
+  .defensive .body .mono{font-family:var(--mono);font-size:12px}
+
+  .card-section{margin-top:28px}
+  .card-section > h2{font-family:var(--serif);font-weight:400;font-size:24px;
+    margin:0 0 4px;border-bottom:1px solid var(--tone);padding-bottom:6px}
+  .card-section > p{color:var(--tone);font-size:13px;margin:0 0 14px}
+  .card-filter{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+  .card-filter button{font-family:var(--sans);font-size:12px;font-weight:500;padding:4px 10px;
+    border:1px solid var(--hairline);background:var(--surface);color:var(--tone);cursor:pointer}
+  .card-filter button.active{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+
+  /* ── Interop matrix table ── */
+  .interop-matrix{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px}
+  .interop-matrix th{font-size:11px;letter-spacing:.06em;text-transform:uppercase;
+    color:var(--tone);font-weight:600;text-align:left;padding:8px 12px;
+    border-bottom:1px solid var(--tone)}
+  .interop-matrix td{padding:8px 12px;border-bottom:1px solid var(--rule);vertical-align:top}
+  .interop-matrix td:first-child{font-weight:600;color:var(--ink)}
+  .interop-matrix td .ext-yes{color:var(--proof);font-weight:600}
+  .interop-matrix td .ext-no{color:var(--tone)}
+  .interop-matrix td .ext-sometimes{color:var(--tone)}
+  .interop-matrix tr:last-child td{border-bottom:none}
+  .interop-matrix .touch{font-family:var(--mono);font-size:12px;color:var(--tone)}
+
+  /* ── DUX invariants ── */
+  .dux-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,280px),1fr));gap:8px}
+  .dux-item{border:1px solid var(--hairline);background:var(--surface);padding:10px 14px}
+  .dux-item .id{font-family:var(--mono);font-size:11px;font-weight:600;color:var(--tone)}
+  .dux-item .rule{font-size:13px;color:var(--ink);margin-top:3px;line-height:1.4}
+  .dux-mantra{font-family:var(--serif);font-size:18px;line-height:1.6;color:var(--ink);
+    padding:16px 20px;border:1px solid var(--hairline);background:var(--paper);margin-top:16px}
+  .dux-mantra .line{display:block}
+  .dux-mantra .line + .line{margin-top:2px}
+
+  /* ── Persona journeys ── */
+  .persona-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,360px),1fr));gap:16px}
+  .persona-card{border:1px solid var(--hairline);background:var(--surface);padding:18px 20px;
+    display:flex;flex-direction:column}
+  .persona-card .phead{display:flex;align-items:flex-start;gap:12px;margin-bottom:12px}
+  .persona-card .avatar{width:40px;height:40px;border:1px solid var(--hairline);
+    display:flex;align-items:center;justify-content:center;font-family:var(--serif);
+    font-size:20px;color:var(--rust);flex:none;background:var(--paper)}
+  .persona-card .pinfo{min-width:0}
+  .persona-card .pname{font-family:var(--serif);font-size:18px;font-weight:400;line-height:1.1}
+  .persona-card .prole{font-size:12px;color:var(--tone);margin-top:2px}
+  .persona-card .pgoal{font-size:13px;color:var(--ink);padding:8px 10px;
+    border-left:2px solid var(--rust);background:var(--paper);margin-bottom:14px;line-height:1.4}
+  .persona-card .pgoal .lab{font-size:10px;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--tone);display:block;margin-bottom:2px}
+
+  /* Journey steps */
+  .journey{list-style:none;margin:0;padding:0;counter-reset:jstep}
+  .journey li{counter-increment:jstep;position:relative;padding:0 0 14px 28px;
+    border-left:1px solid var(--hairline);margin-left:8px;padding-left:20px}
+  .journey li:last-child{border-left-color:transparent;padding-bottom:0}
+  .journey li::before{content:counter(jstep);position:absolute;left:-11px;top:-1px;
+    width:20px;height:20px;line-height:18px;text-align:center;font-size:10px;
+    font-family:var(--mono);color:var(--tone);background:var(--surface);
+    border:1px solid var(--hairline)}
+  .journey li .jtitle{font-size:13px;font-weight:600;color:var(--ink)}
+  .journey li .jsurface{font-family:var(--mono);font-size:11px;color:var(--rust);margin-top:1px;
+    cursor:pointer;text-decoration:underline;text-decoration-color:transparent;
+    text-decoration-thickness:1px;transition:text-decoration-color .12s}
+  .journey li .jsurface:hover{text-decoration-color:var(--rust)}
+  .journey li .jdetail{font-size:12px;color:var(--tone);margin-top:3px;line-height:1.4}
+  .journey li .jstate{font-size:11px;font-weight:600;margin-top:4px;display:inline-block}
+  .journey li .jstate.advance{color:var(--proof)}
+  .journey li .jstate.blocked{color:var(--alarm)}
+  .journey li .jstate.inspect{color:var(--tone)}
+  .journey li .jstate.export{color:var(--tone)}
+  .journey li.defensive::before{border-color:var(--alarm);color:var(--alarm)}
+  .journey li.complete::before{border-color:var(--proof);color:var(--proof)}
+
+  /* Persona filter chips */
+  .persona-filter{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+  .persona-filter button{font-family:var(--sans);font-size:12px;font-weight:500;padding:5px 12px;
+    border:1px solid var(--hairline);background:var(--surface);color:var(--tone);cursor:pointer;
+    display:inline-flex;align-items:center;gap:6px}
+  .persona-filter button.active{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+  .persona-filter button .glyph{font-family:var(--serif);font-size:15px}
+
+  /* ── Pipeline view (Dagger CI → OSCAL evidence journey) ── */
+  .pipe-flow{display:flex;overflow-x:auto;gap:0;padding:8px 0 16px;
+    border-bottom:1px solid var(--rule);margin-bottom:20px}
+  .pipe-stage{flex:none;width:160px;position:relative;
+    display:flex;flex-direction:column;align-items:center;text-align:center}
+  .pipe-stage:not(:last-child)::after{content:"";position:absolute;
+    right:-10px;top:24px;width:20px;height:1px;background:var(--hairline)}
+  .pipe-stage .pnode{width:48px;height:48px;border:1px solid var(--hairline);
+    background:var(--surface);display:flex;align-items:center;justify-content:center;
+    font-family:var(--mono);font-size:11px;font-weight:600;color:var(--tone);
+    position:relative;z-index:1}
+  .pipe-stage.gate .pnode{border-color:var(--ink);color:var(--ink)}
+  .pipe-stage.evidence .pnode{border-color:var(--tone);color:var(--tone)}
+  .pipe-stage.release .pnode{border-color:var(--rust);color:var(--rust)}
+  .pipe-stage.unsigned .pnode{border-style:dashed}
+  .pipe-stage .pname{font-size:11px;font-weight:600;color:var(--ink);
+    margin-top:8px;line-height:1.2}
+  .pipe-stage .pcmd{font-family:var(--mono);font-size:10px;color:var(--rust);
+    margin-top:2px;line-height:1.2}
+
+  /* Pipeline stage detail cards */
+  .pipe-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,380px),1fr));gap:12px}
+  .pipe-card{border:1px solid var(--hairline);background:var(--surface);
+    padding:14px 16px;display:flex;flex-direction:column}
+  .pipe-card .pc-head{display:flex;align-items:flex-start;justify-content:space-between;
+    gap:8px;margin-bottom:8px}
+  .pipe-card .pc-name{font-family:var(--mono);font-size:13px;font-weight:600;color:var(--ink)}
+  .pipe-card .pc-fn{font-family:var(--mono);font-size:11px;color:var(--rust);margin-top:1px}
+  .pipe-card .pc-chip{font-size:10px;font-weight:600;padding:2px 8px;
+    border:1px solid var(--hairline);color:var(--tone);white-space:normal}
+  .pipe-card .pc-chip.gate{border-color:var(--ink);color:var(--ink)}
+  .pipe-card .pc-chip.evidence{border-color:var(--tone);color:var(--tone)}
+  .pipe-card .pc-chip.release{border-color:var(--rust);color:var(--rust)}
+  .pipe-card .pc-chip.unsigned{border-style:dashed}
+  .pipe-card .pc-body{font-size:12px;color:var(--tone);line-height:1.5}
+  .pipe-card .pc-body .lab{font-size:10px;letter-spacing:.06em;text-transform:uppercase;
+    color:var(--tone);display:block;margin-top:6px;margin-bottom:1px}
+  .pipe-card .pc-body .mono{font-family:var(--mono);font-size:11px;color:var(--ink)}
+  .pipe-card .pc-oscal{font-size:11px;color:var(--tone);font-family:var(--mono);
+    padding:6px 8px;border:1px solid var(--hairline);background:var(--paper);
+    margin-top:8px;line-height:1.4}
+  .pipe-card .pc-oscal .lab{color:var(--tone);font-size:10px;
+    text-transform:uppercase;letter-spacing:.06em;display:block;margin-bottom:2px}
+
+  /* Workflow journey (GitHub Actions) */
+  .wf-card{border:1px solid var(--hairline);background:var(--surface);
+    padding:16px 18px;margin-bottom:12px}
+  .wf-card .wf-head{display:flex;align-items:flex-start;justify-content:space-between;
+    gap:10px;margin-bottom:10px}
+  .wf-card .wf-name{font-family:var(--serif);font-size:18px;font-weight:400}
+  .wf-card .wf-trigger{font-family:var(--mono);font-size:11px;color:var(--tone);
+    margin-top:2px}
+  .wf-card .wf-chip{font-size:10px;font-weight:600;padding:2px 8px;
+    border:1px solid var(--hairline);color:var(--tone);white-space:normal}
+  .wf-card .wf-chip.signed{border-color:var(--proof);color:var(--proof)}
+  .wf-card .wf-chip.unsigned{border-style:dashed}
+  .wf-card .wf-body{font-size:13px;color:var(--ink);line-height:1.5;
+    padding:8px 10px;border-left:2px solid var(--rule);background:var(--paper);
+    margin-bottom:10px}
+  .wf-card .wf-body .lab{font-size:10px;letter-spacing:.06em;text-transform:uppercase;
+    color:var(--tone);display:block;margin-bottom:2px}
+
+  /* Pipeline filter */
+  .pipe-filter{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+  .pipe-filter button{font-family:var(--sans);font-size:12px;font-weight:500;padding:4px 10px;
+    border:1px solid var(--hairline);background:var(--surface);color:var(--tone);cursor:pointer}
+  .pipe-filter button.active{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+
+  /* Honesty banner for pipeline */
+  .pipe-honesty{border:1px dashed var(--alarm);background:var(--surface);
+    padding:12px 16px;margin-bottom:20px;font-size:13px;color:var(--ink);line-height:1.5}
+  .pipe-honesty .lab{font-size:10px;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--alarm);font-weight:600;display:block;margin-bottom:4px}
+  .pipe-honesty code{font-family:var(--mono);font-size:12px;color:var(--rust)}
+
+  .card-section-title{font-family:var(--serif);font-weight:400;font-size:22px;
+    margin:20px 0 4px;border-bottom:1px solid var(--tone);padding-bottom:6px}
+  .card-section-sub{color:var(--tone);font-size:13px;margin:0 0 14px}
+
+  /* ── Prev/next view nav ── */
+  .view-nav{display:flex;justify-content:space-between;align-items:stretch;
+    gap:0;margin-top:32px;border-top:1px solid var(--rule);padding-top:16px}
+  .view-nav a{flex:1;text-decoration:none;color:var(--ink);padding:10px 14px;
+    border:1px solid var(--hairline);background:var(--surface);
+    display:flex;flex-direction:column;gap:2px;transition:border-color .12s,background .12s}
+  .view-nav a:hover{border-color:var(--ink);background:var(--paper)}
+  .view-nav a.next{text-align:right;align-items:flex-end}
+  .view-nav a .vlabel{font-size:10px;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--tone)}
+  .view-nav a .vname{font-family:var(--serif);font-size:18px;font-weight:400;
+    color:var(--ink)}
+  .view-nav .gap{flex:0 0 8px}
+
+  /* ── Pipeline → portal trace table ── */
+  .trace-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px}
+  .trace-table th{font-size:11px;letter-spacing:.06em;text-transform:uppercase;
+    color:var(--tone);font-weight:600;text-align:left;padding:8px 12px;
+    border-bottom:1px solid var(--tone)}
+  .trace-table td{padding:8px 12px;border-bottom:1px solid var(--rule);vertical-align:top}
+  .trace-table td:first-child{font-family:var(--mono);font-size:12px;color:var(--rust)}
+  .trace-table td:nth-child(2){font-weight:600;color:var(--ink)}
+  .trace-table td .where{font-family:var(--mono);font-size:11px;color:var(--proof)}
+  .trace-table tr:last-child td{border-bottom:none}
+  .trace-table tr:hover td{background:var(--paper)}
+
+  /* ── Print: evidence export stylesheet ── */
+  @media print{
+    :root{--paper:#fff;--ink:#000;--tone:#555;--rust:#000;--proof:#333;
+      --alarm:#000;--surface:#fff;--hairline:#ccc;--rule:#ddd}
+    [data-theme="vault"]{--paper:#fff;--ink:#000;--tone:#555;--rust:#000;
+      --proof:#333;--alarm:#000;--surface:#fff;--hairline:#ccc;--rule:#ddd}
+    body{font-size:11pt;background:#fff;color:#000}
+    .ck-shell__header,.ck-portal-toolbar,.banner,.card-filter,.persona-filter,.toggle,.act-list,
+    nav.surfaces,footer,.view-nav,.pipe-filter{display:none!important}
+    .view{display:block!important}
+    .view:not(#view-room) .room-title,
+    .view:not(#view-room) .room-sub{display:none}
+    .shell{max-width:100%;padding:0}
+    .panel,.ecard,.defensive,.persona-card{border:1px solid #ccc;
+      page-break-inside:avoid;break-inside:avoid}
+    .panel.sealed,.ecard.sealed{clip-path:none;border:2px solid #333}
+    .act-footer{border-top:1px solid #ddd;padding-top:6px}
+    .act-label{color:#555}
+    .chip,.sealed-tag,.pill{border:1px solid #999!important}
+    .act-blocked{border:1px solid #000!important}
+    a{color:#000;text-decoration:none}
+    a[href]:after{content:" (" attr(href) ")";font-size:9pt;color:#555}
+    a[href="#"]:after{content:""}
+    .prov{page-break-after:avoid}
+    .room-title{font-size:20pt}
+    .card-grid,.persona-grid,.dl-grid,.dux-grid{display:block}
+    .card-grid > *,.persona-grid > *,.dl-grid > *,.dux-grid > *{
+      margin-bottom:12pt;page-break-inside:avoid}
+    .grid{display:block}
+    .col{gap:12pt}
+  }
+  /* This file is a public design sample, not an evidence source. Keep
+     illustrative states neutral until a real proof object is supplied. */
+  html[data-sample="true"] {
+    --proof:var(--tone);
+    --alarm:var(--tone);
+  }
+  html[data-sample="true"] .panel.sealed,
+  html[data-sample="true"] .dl-card.attested,
+  html[data-sample="true"] .ecard.sealed {
+    clip-path:none;
+    border-width:1px;
+  }
+
+  .card-filter button,.persona-filter button,.pipe-filter button,.toggle button{min-height:44px;min-width:44px}
+  .journey li a.jsurface{display:flex;align-items:center;min-height:44px;min-width:44px}
+  .interop-matrix caption,.trace-table caption{text-align:left;padding:12px;color:var(--tone)}
+  .ck-action-unwired{cursor:default}

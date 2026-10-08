@@ -1,0 +1,38 @@
+[
+  {
+    "name": "go.zip",
+    "lang": "Go — protobuf + gRPC",
+    "digest": "not supplied",
+    "signed": false
+  },
+  {
+    "name": "python.zip",
+    "lang": "Python — protobuf + gRPC",
+    "digest": "not supplied",
+    "signed": false
+  },
+  {
+    "name": "java.zip",
+    "lang": "Java — protobuf + gRPC",
+    "digest": "not supplied",
+    "signed": false
+  },
+  {
+    "name": "csharp.zip",
+    "lang": "C# — protobuf + gRPC",
+    "digest": "not supplied",
+    "signed": false
+  },
+  {
+    "name": "ts.zip",
+    "lang": "TypeScript — protobuf only",
+    "digest": "not supplied",
+    "signed": false
+  },
+  {
+    "name": "swift.zip",
+    "lang": "Swift — protobuf models; no RPC client",
+    "digest": "not supplied",
+    "signed": false
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "node": "src",
+    "name": "Pinned Source",
+    "cmd": "tag + full commit SHA",
+    "cls": ""
+  },
+  {
+    "node": "gate",
+    "name": "Dagger Gates",
+    "cmd": "tests + enforce policy",
+    "cls": "gate"
+  },
+  {
+    "node": "build",
+    "name": "Candidate",
+    "cmd": "all packages + artifacts",
+    "cls": "evidence unsigned"
+  },
+  {
+    "node": "payload",
+    "name": "Payload Manifest",
+    "cmd": "exact payload digests",
+    "cls": "evidence unsigned"
+  },
+  {
+    "node": "proof",
+    "name": "Hosted Attest",
+    "cmd": "existing GitHub identity",
+    "cls": "release unsigned"
+  },
+  {
+    "node": "final",
+    "name": "Finalize Candidate",
+    "cmd": "verify payload + render site",
+    "cls": "gate"
+  },
+  {
+    "node": "manifest",
+    "name": "Final Manifest",
+    "cmd": "final site + payload bytes",
+    "cls": "evidence unsigned"
+  },
+  {
+    "node": "proof2",
+    "name": "Hosted Attest",
+    "cmd": "sign final manifest",
+    "cls": "release unsigned"
+  },
+  {
+    "node": "verify",
+    "name": "Verify Candidate",
+    "cmd": "identity + all exact bytes",
+    "cls": "gate"
+  },
+  {
+    "node": "promote",
+    "name": "Promote",
+    "cmd": "unchanged verified bytes",
+    "cls": "release unsigned"
+  }
+]

@@ -1,0 +1,92 @@
+[
+  [
+    "SdkBundles / SdkPackages",
+    "six source ZIPs and tested package formats",
+    "Downloads",
+    "Pinned manifest coverage; missing proof disables eligibility"
+  ],
+  [
+    "OpenAPI producer",
+    "complete four-service openapi.json",
+    "API Docs",
+    "Local Scalar reference with operation contract checks"
+  ],
+  [
+    "OscalFrameworks",
+    "35 catalogs + PBMM profile",
+    "Downloads",
+    "Catalog and profile entries are both inventoried and validated"
+  ],
+  [
+    "ReleaseCandidate",
+    "initial payload manifest + all producer outputs",
+    "Release staging",
+    "Analysis and byte integrity before hosted attestation"
+  ],
+  [
+    "Hosted Actions",
+    "payload manifest attestation",
+    "Detached proof envelope",
+    "Existing release.yml GitHub OIDC identity, verified by Dagger"
+  ],
+  [
+    "FinalizeCandidate",
+    "final HTML, inventory and release-manifest.json",
+    "Entire static site",
+    "Verified payload drives build-time presentation; final bytes frozen"
+  ],
+  [
+    "Hosted Actions",
+    "final manifest attestation",
+    "Detached proof envelope",
+    "Final proof is outside its own manifest"
+  ],
+  [
+    "VerifyCandidate",
+    "exact identity + all file digest results",
+    "Release / Pages gate",
+    "Promotion requires proof over the exact final bytes"
+  ],
+  [
+    "Security / Image analysis",
+    "raw findings and admission reports",
+    "Security / release evidence",
+    "Policy enforces thresholds and explicit exceptions"
+  ],
+  [
+    "SbomValidation",
+    "raw validation and OSCAL assessment-results",
+    "SBOM Validation",
+    "Actual counts; missing data is incomplete"
+  ],
+  [
+    "Release",
+    "platform tar.gz archives and archive SBOMs",
+    "Release downloads",
+    "GoReleaser stages; no publication by the producer"
+  ],
+  [
+    "ReleaseCandidate",
+    "multi-architecture OCI archive and image SBOM",
+    "Registry promotion",
+    "Analyze first; promote the exact verified image bytes"
+  ],
+  [
+    "Site",
+    "Scalar assets, scripts/install.sh and final HTML",
+    "Published guide / API Docs",
+    "Assets covered by final release manifest"
+  ],
+  [
+    "SpecRegistryCheck / ProtoCheck",
+    "contract drift and schema results",
+    "CI gate",
+    "Actual run evidence remains separate from configuration"
+  ],
+  [
+    "OSCAL Reconcile",
+    "reconciliation report and draft PR",
+    "Source review",
+    "No automatic merge or release signature claim"
+  ]
+]

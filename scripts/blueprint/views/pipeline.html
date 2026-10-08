@@ -1,0 +1,55 @@
+  <section class="view" id="view-pipeline" aria-labelledby="view-pipeline-title" tabindex="-1">
+    <h2 class="room-title" id="view-pipeline-title">Dagger pipeline — CI as OSCAL evidence generation</h2>
+    <p class="room-sub">Every Dagger function is an evidence-producing step. Every GitHub Actions
+      workflow is a journey that chains those steps. Every output maps to an OSCAL touchpoint.
+      The pipeline is the evidence generation layer; the portal is the evidence presentation layer.
+      No stage claims to be signed when it is not.</p>
+
+    <div class="pipe-honesty">
+      <span class="lab">illustrative contract — requires hosted proof</span>
+      Dagger produces every artifact, analysis result and digest manifest upfront.
+      The existing hosted <code>release.yml</code> identity attests the payload manifest;
+      Dagger verifies it before rendering the final site. Hosted Actions then attests
+      the final manifest, and Dagger checks every final byte before promotion.
+      This Design Blueprint supplies no signing result. Configuration, a digest,
+      or a green local gate cannot establish hosted verification.
+    </div>
+
+    <!-- Pipeline flow diagram -->
+    <h3 class="card-section-title">Pipeline flow</h3>
+    <p class="card-section-sub">Source enters from the left. Gate stages (ink) enforce quality.
+      Evidence stages (tone, dashed while proof is absent) produce artifacts. Hosted
+      attestation and exact-byte verification precede any release or Pages promotion.</p>
+    <div class="pipe-flow" id="pipe-flow">{{pipe-flow}}</div>
+
+    <!-- Stage detail cards -->
+    <h3 class="card-section-title">Dagger functions — evidence producers</h3>
+    <p class="card-section-sub">Each declared function produces an output or enforces a gate. The OSCAL
+      touchpoint column shows where the output lands in the OSCAL evidence model.</p>
+    <div class="pipe-filter js-control" id="pipe-filter">
+      <button class="active" data-pipef="all">all stages</button>
+      <button data-pipef="gate">gates</button>
+      <button data-pipef="evidence">evidence</button>
+      <button data-pipef="release">release</button>
+      <button data-pipef="proof">requires hosted proof</button>
+    </div>
+    <div class="pipe-grid" id="pipe-grid">{{pipe-grid}}</div>
+
+    <!-- GitHub Actions workflows -->
+    <h3 class="card-section-title" style="margin-top:28px">GitHub Actions — the journeys</h3>
+    <p class="card-section-sub">Four workflow contracts chain Dagger functions into CI/CD journeys.
+      Each journey requires actual run evidence; this illustrative view shows the contract.</p>
+    <div id="wf-list">{{wf-list}}</div>
+
+    <!-- Pipeline → Portal trace -->
+    <h3 class="card-section-title" style="margin-top:28px">Pipeline → portal trace</h3>
+    <p class="card-section-sub">Every pipeline output has a home in the portal. This table
+      traces each Dagger function's output to the view and element where it surfaces.
+      The pipeline is the evidence generation layer; the portal is the evidence
+      presentation layer. Nothing appears in the portal that was not produced by
+      a declared pipeline step.</p>
+    <div class="panel" style="padding:0;overflow-x:auto">
+      <table class="trace-table" id="trace-table">{{trace-table}}</table>
+    </div>
+  {{view-navigation}}
+  </section>

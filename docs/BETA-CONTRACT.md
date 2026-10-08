@@ -99,7 +99,10 @@ cannot produce a verified state.
 ## Beta release gates
 
 - `go test ./...`, `go vet ./...`, and `buf lint` pass.
-- Generated site assets exist and dynamic browser smoke passes.
+- Generated site assets contain complete Blueprint and API-reference content
+  before JavaScript runs; generator drift and negative contracts pass.
+- Desktop/mobile browser smoke passes with JavaScript enabled and disabled;
+  Scalar dialog/navigation cycles retain the single site main landmark.
 - Core review and verification journeys complete with keyboard-only input.
 - No user-visible beta action is an inert placeholder.
 - No `verified`, `attested`, `sealed`, or `signed` state is emitted without its proof object.

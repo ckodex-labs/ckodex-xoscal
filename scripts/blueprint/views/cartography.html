@@ -1,0 +1,76 @@
+  <section class="view" id="view-cartography" aria-labelledby="view-cartography-title" tabindex="-1">
+    <h2 class="room-title" id="view-cartography-title">Evidence Cartography — the card system</h2>
+    <p class="room-sub">Every external artifact becomes a card only when it can trace to an
+      OSCAL object, claim, assessment result, back-matter resource, mapping edge, or declared
+      extension manifest. No card may be decorative.</p>
+
+    <div class="card-filter js-control" id="card-filter">
+      <button class="active" data-filter="all">all</button>
+      <button data-filter="canonical">canonical</button>
+      <button data-filter="interop">interoperability</button>
+      <button data-filter="defensive">defensive UX</button>
+    </div>
+
+    <!-- Canonical card families -->
+    <div class="card-section" data-cat="canonical">
+      <h3>Canonical card families</h3>
+      <p>Control — Claim — Evidence — Finding — Gap — Conflict — POA&amp;M — Mapping Edge — Source — Export Bundle.
+        Each card answers: what is this, what does it claim, what does it support, what is its proof state,
+        what can safely happen next.</p>
+      <div class="card-grid" id="canonical-cards">{{canonical-cards}}</div>
+    </div>
+
+    <!-- Interoperability dialect cards -->
+    <div class="card-section" data-cat="interop">
+      <h3>Interoperability dialect cards</h3>
+      <p>External assurance ecosystems linked into OSCAL through back-matter, assessment evidence,
+        mapping edges, or declared extension manifests. When OSCAL can carry it natively, use OSCAL.
+        When it cannot, declare lossiness and link via extension manifest.</p>
+      <div class="card-grid" id="interop-cards">{{interop-cards}}</div>
+    </div>
+
+    <!-- Defensive experience patterns -->
+    <div class="card-section" data-cat="defensive">
+      <h3>Defensive experience patterns</h3>
+      <p>Gap is honest. Stale evidence is visible. Contradiction uses alarm. Quarantine holds.
+        Redaction is a visible transformation. Lossiness must be declared. Import never means trust.</p>
+      <div class="card-grid" id="defensive-cards">{{defensive-cards}}</div>
+    </div>
+
+    <!-- Extension manifest -->
+    <div class="card-section" data-cat="interop">
+      <h3>Extension manifest</h3>
+      <p>When OSCAL cannot natively represent external semantics, the extension manifest makes
+        the gap explicit — with schema, reason, lossiness, and OSCAL linkage.</p>
+      <div class="card-grid" id="ext-cards">{{ext-cards}}</div>
+    </div>
+
+    <!-- Interop matrix -->
+    <div class="card-section" data-cat="interop">
+      <h3>Interoperability matrix</h3>
+      <p>Every external artifact maps to a primary card, an OSCAL touchpoint, and an extension
+        decision. When OSCAL can carry it natively, use OSCAL. When it cannot, declare lossiness
+        and link via extension manifest.</p>
+      <div class="panel" style="padding:0;overflow-x:auto">
+        <table class="interop-matrix" id="interop-matrix">{{interop-matrix}}</table>
+      </div>
+    </div>
+
+    <!-- DUX invariants -->
+    <div class="card-section" data-cat="defensive">
+      <h3>Defensive UX invariants</h3>
+      <p>Twelve invariants that govern every card, every state transition, every export.
+        These are not suggestions — they are release-blocking constraints on the experience.</p>
+      <div class="dux-grid" id="dux-grid">{{dux-grid}}</div>
+      <div class="dux-mantra">
+        <span class="line">Every external artifact is a card.</span>
+        <span class="line">Every card supports, refutes, qualifies, or maps a claim.</span>
+        <span class="line">Every claim traces to evidence.</span>
+        <span class="line">Every export carries its envelope.</span>
+        <span class="line">Every receiver verifies locally.</span>
+        <span class="line">Every gap is drawn.</span>
+        <span class="line">Every loss is declared.</span>
+      </div>
+    </div>
+  {{view-navigation}}
+  </section>

@@ -71,6 +71,30 @@ def fail(errors: list[str], path: Path, message: str) -> None:
     errors.append(f"{path.relative_to(ROOT)}: {message}")
 
 
+def check_blueprint_navigation(path: Path, errors: list[str]) -> None:
+    parser = SurfaceParser()
+    parser.feed(path.read_text(encoding="utf-8"))
+    nav = next((item for item in parser.elements if item.attrs.get("id") == "nav"), None)
+    links = descendants(nav, "a") if nav else []
+    targets = {item.attrs.get("id") for item in parser.elements if "view" in classes(item)}
+    if len(links) != 6 or {link.attrs.get("href", "")[1:] for link in links} != targets:
+        fail(errors, path, "six native navigation links must target the existing views")
+    if nav and descendants(nav, "button"):
+        fail(errors, path, "view navigation must work through native anchors without JavaScript")
+    if any(not link.text.strip() or not link.attrs.get("href", "").startswith("#view-") for link in links):
+        fail(errors, path, "view links need names and stable fragment destinations")
+    enhancement = ROOT / "site" / "blueprint.js"
+    script = enhancement.read_text(encoding="utf-8") if enhancement.is_file() else ""
+    for marker, label in (
+        ("setAttribute('aria-current'", "current-view announcement"),
+        ("setAttribute('aria-pressed'", "filter selected-state announcement"),
+        ("setAttribute('role', 'button')", "keyboard role for enhanced claim controls"),
+        ("addEventListener('keydown'", "keyboard handling for enhanced claim controls"),
+    ):
+        if marker not in script:
+            fail(errors, path, f"missing {label}")
+
+
 def check_surface(path: Path, errors: list[str]) -> None:
     parser = SurfaceParser()
     parser.feed(path.read_text(encoding="utf-8"))
@@ -136,7 +160,8 @@ def main() -> int:
         (".ck-site-brand:focus-visible", "site-brand focus style"),
         (".wordmark:focus-visible", "portal-brand focus style"),
         (".ck-site-nav a", "navigation target-size rule"),
-        ("nav.surfaces button", "portal navigation target-size rule"),
+        ("nav.surfaces a", "portal navigation target-size rule"),
+        ("nav.surfaces a:focus-visible", "portal navigation focus rule"),
         (".toggle button", "theme control target-size rule"),
         (".card-filter button", "card filter target-size rule"),
         (".claims .claim", "claim target-size rule"),
@@ -153,14 +178,7 @@ def main() -> int:
     for page in HTML_FILES:
         check_surface(page, errors)
         if page.name in {"portal.html", "portal-preview.html"}:
-            text = page.read_text(encoding="utf-8")
-            for marker, label in (
-                ("setAttribute('aria-pressed'", "pressed-state announcement"),
-                ("setAttribute('role','button')", "keyboard role for scripted controls"),
-                ("addEventListener('keydown'", "keyboard handler for scripted controls"),
-            ):
-                if marker not in text:
-                    fail(errors, page, f"missing {label}")
+            check_blueprint_navigation(page, errors)
 
     if errors:
         print("a11y-lint: FAIL")

@@ -121,7 +121,7 @@ def produce(metadata_bytes, tar_bytes):
 # Immutable inputs of the repository-owned published-module rebuild. These pins
 # are changed only together with an explicitly reviewed dependency lock/builder.
 NODE_MAJOR = 22
-BUILD_PINS = {'build-package.json': '59e31b76b652922756a0a31b6c50ace786dd6e56d6b2a81fe852451e6cea9377', 'package-lock.json': '96f9a32b4e85fe8732da6e75550151e30b68c5b8896d08a746e8b7f3dd29d947', 'entry.js': '2f69bd21a42977b8021a059fcceb723502fa85c520f04d334ce123ae839dccc1', 'build.mjs': '75cc47d048ae68bce6f0da79730cb086d043c4dff780d5d23eab39efaf59bf52', 'scalar-LICENSE': '380cd0a6ad700e1f821f2a509f0dd9ff835041cee2d43daf5dedc1adb2bcc620', 'scalar-license-source.json': '47fbb8fa80a7ca2e9c6d6597896f91213b32872b79d7cf5849ce3f821d0a4a12'}
+BUILD_PINS = {'landmark-transform.test.mjs': 'ebaa22a6e720e9ee81bac0d43fc72ad75885f3aa680ca9f228cc8405138ae0b6', 'landmark-transforms.json': 'f769a6ba20b34018fa403e98b3c256f74e2f851ad7939a58c84af414b6d8e9bf', 'landmark-transform.mjs': 'f751e9ce1726d2f6a9bfcebb374a57f8ba8ed5146b41a2a4625e36db76b0acfe', 'build-package.json': '59e31b76b652922756a0a31b6c50ace786dd6e56d6b2a81fe852451e6cea9377', 'package-lock.json': '96f9a32b4e85fe8732da6e75550151e30b68c5b8896d08a746e8b7f3dd29d947', 'entry.js': '667e4756313f1e942a5b3efccbbaa72f19b74a1b7df639022f0ba4a99e5ccf43', 'build.mjs': '84293707e3f0dc489bce8c03b3613d7cdf5d5f7a2eac7dd2697631792dcbb205', 'scalar-LICENSE': '380cd0a6ad700e1f821f2a509f0dd9ff835041cee2d43daf5dedc1adb2bcc620', 'scalar-license-source.json': '47fbb8fa80a7ca2e9c6d6597896f91213b32872b79d7cf5849ce3f821d0a4a12'}
 
 def rebuilt(root):
     root=Path(root)
@@ -155,6 +155,25 @@ def rebuilt(root):
             files[member.name]=archive.extractfile(member).read()
     if set(files)!=expected_files:raise ValueError('missing bundle input bytes')
     if files.get('entry.js')!=(root/'entry.js').read_bytes():raise ValueError('bundle entry differs from reviewed entry')
+    # Raw npm bytes remain in the input archive. Replay the reviewed source
+    # adapter independently before comparing the generated source-map content.
+    # This never edits publisher bytes, final minified assets or the served DOM.
+    recipe=load((root/'landmark-transforms.json').read_bytes())
+    if recipe.get('schema_version')!=1 or not isinstance(recipe.get('transforms'),list):raise ValueError('invalid landmark source recipe')
+    adapted={};transform_records=[]
+    for change in recipe['transforms']:
+        path=change.get('path');package=change.get('package')
+        prefix='node_modules/'+str(package)
+        if path in adapted or path not in files or not path.startswith(prefix+'/') or change.get('count')!=1:raise ValueError('missing or ambiguous landmark source')
+        if lock_packages.get(prefix,{}).get('version')!=change.get('version') or sha(files[path])!=change.get('input_sha256'):raise ValueError('landmark source identity drift')
+        text=files[path].decode();before=change.get('find');after=change.get('replace')
+        if not isinstance(before,str) or not before or not isinstance(after,str) or text.count(before)!=1:raise ValueError('landmark source replacement count drift')
+        output=text.replace(before,after).encode()
+        if sha(output)!=change.get('output_sha256'):raise ValueError('landmark transformed source identity drift')
+        adapted[path]=output
+        transform_records.append({'path':path,'package':package,'version':change['version'],'input_sha256':sha(files[path]),'output_sha256':sha(output),'count':1})
+    expected_receipt={'schema_version':1,'recipe_sha256':sha((root/'landmark-transforms.json').read_bytes()),'transforms':sorted(transform_records,key=lambda r:r['path'])}
+    if load((root/'landmark-transform-receipt.json').read_bytes())!=expected_receipt:raise ValueError('landmark source adapter receipt differs from replay')
     publisher_prefix='node_modules/'+PACKAGE+'/'
     publisher_inputs={'package/'+path[len(publisher_prefix):]:data for path,data in files.items() if path.startswith(publisher_prefix)}
     with tarfile.open(fileobj=io.BytesIO((root/'npm-package.tgz').read_bytes()),mode='r:gz') as archive:
@@ -170,7 +189,7 @@ def rebuilt(root):
     if source_map.get('version')!=3 or not source_map.get('sources') or len(source_map.get('sources',[]))!=len(source_map.get('sourcesContent',[])):raise ValueError('incomplete rebuilt source map')
     for source,content in zip(source_map['sources'],source_map['sourcesContent']):
         if not isinstance(source,str) or not source.startswith('../') or source[3:] not in inputs or not isinstance(content,str):raise ValueError('unexplained final browser source-map source')
-        raw=files[source[3:]]
+        raw=adapted.get(source[3:],files[source[3:]])
         expected=re.sub(rb'^//[#@] sourceMappingURL=.*$',b'',raw,flags=re.MULTILINE) if re.search(r'\.[cm]?js$',source) else raw
         if expected!=content.encode():raise ValueError('source map differs from actual compiled bundle inputs')
     css=(root/'scalar.css').read_bytes();css_map=(root/'scalar.css.map').read_bytes()
@@ -185,6 +204,7 @@ def rebuilt(root):
     observed_components=[];used_inputs=set()
     emitted={path for output in outputs.values() for path,record in output.get('inputs',{}).items() if record.get('bytesInOutput',0)>0}
     if not emitted or not emitted.issubset(inputs):raise ValueError('invalid emitted browser input inventory')
+    if not set(adapted).issubset(emitted):raise ValueError('landmark adapter source absent from emitted browser assembly')
     for prefix,record in sorted(records.items()):
         if not re.fullmatch(r'node_modules/(?:@[A-Za-z0-9_.-]+/)?[A-Za-z0-9_.-]+(?:/node_modules/(?:@[A-Za-z0-9_.-]+/)?[A-Za-z0-9_.-]+)*',prefix):raise ValueError('unexplained bundle package root')
         manifest_bytes=files[prefix+'/package.json'];manifest=load(manifest_bytes);locked=lock_packages.get(prefix,{})
@@ -218,7 +238,7 @@ def rebuilt(root):
     components=[{'type':'library','name':r['name'],'version':r['version'],'purl':r['purl'],'bom-ref':r['purl'],'supplier':supplier,'properties':[{'name':'xoscal:frontend:role','value':'observed input to repository-distributed browser assembly; upstream authors not inferred'}]} for r in component_inventory.values()]
     sbom={'bomFormat':'CycloneDX','specVersion':'1.6','version':1,'metadata':{'timestamp':toolchain['built_at'],'authors':[{'name':'ckodex-labs'}],'tools':[{'vendor':'ckodex-labs','name':'frontend_inventory.py','version':'2'}],'component':{'type':'application','name':'xoscal-scalar-browser-assembly','version':VERSION,'bom-ref':root_ref,'purl':root_ref,'supplier':supplier,'hashes':[{'alg':'SHA-256','content':sha(js)}]}},'components':components,'dependencies':[{'ref':root_ref,'dependsOn':[c['bom-ref'] for c in components]}]}
     sbom_bytes=encoded(sbom)
-    receipt={'schema_version':2,'role':'rebuilt published-module browser assembly; observed build inputs, not complete upstream graph','package':{'name':PACKAGE,'version':VERSION},'tar_url':TAR_URL,'tar_sri':TAR_SRI,'tar_sha256':sha((root/'npm-package.tgz').read_bytes()),'metadata_sha256':sha((root/'npm-metadata.json').read_bytes()),'manifest_sha256':sha(original['package.json']),'js_sha256':sha(js),'source_map_sha256':sha(map_bytes),'sbom_sha256':sha(sbom_bytes),'source_count':len(source_map['sources']),'components':observed_components,'build_inputs':{name:sha((root/name).read_bytes()) for name in (*BUILD_PINS,'build-toolchain.json','esbuild-metafile.json','installed-package-manifests.json','bundle-inputs.tar.gz','scalar.css','scalar.css.map','bundle-notices.json','THIRD-PARTY-NOTICES.txt')}}
+    receipt={'schema_version':2,'role':'rebuilt published-module browser assembly; observed build inputs, not complete upstream graph','package':{'name':PACKAGE,'version':VERSION},'tar_url':TAR_URL,'tar_sri':TAR_SRI,'tar_sha256':sha((root/'npm-package.tgz').read_bytes()),'metadata_sha256':sha((root/'npm-metadata.json').read_bytes()),'manifest_sha256':sha(original['package.json']),'js_sha256':sha(js),'source_map_sha256':sha(map_bytes),'sbom_sha256':sha(sbom_bytes),'source_count':len(source_map['sources']),'components':observed_components,'build_inputs':{name:sha((root/name).read_bytes()) for name in (*BUILD_PINS,'build-toolchain.json','esbuild-metafile.json','installed-package-manifests.json','bundle-inputs.tar.gz','scalar.css','scalar.css.map','bundle-notices.json','THIRD-PARTY-NOTICES.txt','landmark-transform-receipt.json')}}
     return {'sbom.cyclonedx.json':sbom_bytes,'frontend-inventory.json':encoded(receipt),'frontend.sha256':(sha(js)+'  /input/scalar.js\n').encode()}
 
 
