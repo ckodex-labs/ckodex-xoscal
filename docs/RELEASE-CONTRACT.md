@@ -45,6 +45,15 @@ credential or registry publication is introduced by local execution.
    missing the fourteen controls. Historical evidence can be replayed with its
    reviewed version-bound consumer, but cannot authorize promotion under this
    stronger contract; new releases require newly produced evidence.
+   Coverage reachability permits at most three real scrolls of the same element,
+   retaining every geometry, clipped point, focus, route and timing sample.
+   Independent replay requires a final actual unoccluded point; nonfinite,
+   missing or inconsistent observations refuse admission. Actual keyboard
+   transition observers remain unrepaired. The expanded producer records its
+   duration under a fixed 25-minute ceiling; expiry saves a failed incomplete
+   receipt. Older receipts lacking these observations cannot satisfy the
+   current gate. `SitePresentationReports` exports unsigned payloads and raw
+   diagnostics for investigation; it cannot admit, sign or publish them.
    Rendering finishes before `release-manifest.json` inventories all final payload,
    evidence, HTML, CSS, JavaScript, fonts and other assets. `PackageCandidate` creates a
    deterministic transport archive of those frozen bytes. Hosted provenance signs the

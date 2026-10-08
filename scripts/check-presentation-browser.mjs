@@ -16,6 +16,7 @@ const toolRoot = path.dirname(fileURLToPath(import.meta.url)), require = createR
 const config = JSON.parse(fs.readFileSync(path.join(toolRoot, 'browser-toolchain.json')))
 const receiptPath = path.join(output, 'presentation-browser.json')
 const sha = bytes => 'sha256:' + crypto.createHash('sha256').update(bytes).digest('hex')
+const started = performance.now(), deadlineMs = 1500000
 const receipt = { schema_version: 1, status: 'failed', checks: [], failures: [], modes: [], negative_controls: [], subjects: {}, subject_sizes: {}, tools: {}, coverage_inventory: {}, proxy_denials: [] }
 let browser, api, proxy, base, deadline
 
@@ -192,15 +193,22 @@ async function semantics(page, id) {
 }
 
 async function hitTest(page, locator, id, native = false) {
-  if (!native) await locator.scrollIntoViewIfNeeded()
-  await locator.evaluate(node => node.scrollIntoView({ block: 'center', inline: 'nearest', behavior: 'instant' }))
-  if (!native) await page.waitForTimeout(100)
-  const hit = await locator.evaluate(node => {
-    const r = node.getBoundingClientRect(), left = Math.max(r.left, 0), right = Math.min(r.right, innerWidth), top = Math.max(r.top, 0), bottom = Math.min(r.bottom, innerHeight)
-    const point = { x: (left + right) / 2, y: (top + bottom) / 2 }, topmost = document.elementFromPoint(point.x, point.y)
-    return { rect: r.toJSON(), viewport: { width: innerWidth, height: innerHeight }, point, hit: topmost?.tagName + '#' + topmost?.id, unobscured: right > left && bottom > top && topmost !== null && (topmost === node || node.contains(topmost)) }
-  })
-  verify(id + ': actual visible point unoccluded', hit.unobscured, hit)
+  const attempts = []
+  for (let attempt = 0; attempt < 3; attempt++) {
+    if (!native) await locator.scrollIntoViewIfNeeded()
+    await locator.evaluate(node => node.scrollIntoView({ block: 'center', inline: 'nearest', behavior: 'instant' }))
+    if (!native) await page.waitForTimeout(100)
+    const hit = await locator.evaluate(node => {
+      const r = node.getBoundingClientRect(), left = Math.max(r.left, 0), right = Math.min(r.right, innerWidth), top = Math.max(r.top, 0), bottom = Math.min(r.bottom, innerHeight)
+      const point = { x: (left + right) / 2, y: (top + bottom) / 2 }, topmost = document.elementFromPoint(point.x, point.y)
+      const finite = Object.values(r.toJSON()).every(Number.isFinite)
+      return { rect: r.toJSON(), viewport: { width: innerWidth, height: innerHeight }, point, hit: topmost?.tagName + '#' + topmost?.id, unobscured: finite && right > left && bottom > top && topmost !== null && (topmost === node || node.contains(topmost)), time: performance.now(), focus: document.activeElement?.tagName + '#' + document.activeElement?.id, hash: location.hash, scrollY, documentHeight: document.documentElement.scrollHeight }
+    })
+    attempts.push(hit)
+    if (hit.unobscured) break
+  }
+  const hit = attempts.at(-1)
+  verify(id + ': actual visible point unoccluded', hit.unobscured, { ...hit, attempts })
   return hit
 }
 
@@ -473,14 +481,15 @@ async function finish() {
 
 function writeReceipt() {
   receipt.status = receipt.failures.length ? 'failed' : 'passed'
+  receipt.execution = { deadline_ms: deadlineMs, elapsed_ms: performance.now() - started }
   fs.mkdirSync(output, { recursive: true }); fs.writeFileSync(receiptPath, JSON.stringify(receipt, null, 2) + '\n')
 }
 
 if (args['require-pass'] === 'true') admitReceipt()
 else {
   deadline = setTimeout(() => {
-    verify('producer: bounded fifteen minute deadline', false, { limit_ms: 900000 })
+    verify('producer: bounded twenty-five minute deadline', false, { limit_ms: deadlineMs })
     writeReceipt(); process.exit(args['report-only'] === 'true' ? 0 : 1)
-  }, 900000)
+  }, deadlineMs)
   await run().catch(error => verify('producer: fatal error', false, String(error.stack || error))).finally(finish)
 }

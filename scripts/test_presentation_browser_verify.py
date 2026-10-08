@@ -21,12 +21,15 @@ def make_fixture(root):
     fixture_pages(root)
     receipt = {"schema_version": 1, "status": "passed", "failures": [], "modes": [],
                "negative_controls": [], "checks": [{"id": "inventory: read-only same-origin resources", "passed": True}],
-               "tools": tools, "inventory_observations": make_log("inventory"), "proxy_denials": []}
+               "tools": tools, "inventory_observations": make_log("inventory"), "proxy_denials": [],
+               "execution": {"deadline_ms": 1500000, "elapsed_ms": 1000}}
     for mode in sorted(browser.MODES):
         receipt["modes"].append(fixture_mode(mode))
         receipt["checks"] += [{"id": name, "passed": True} for name in sorted(browser.mandatory_checks(mode))]
     fixture_negative_controls(root, receipt)
     for check in receipt["checks"]:
+        if check["id"].endswith(": actual visible point unoccluded"):
+            check["detail"] = fixture_coverage_sample(check["id"])
         if check["id"].endswith(": cold contract: cancellation keydown occurs during loading"):
             check["detail"] = {"key": "Tab" if ":focus-return:" in check["id"] else "Enter", "phase": "loading"}
         if check["id"].endswith(": ready transition retains visible unoccluded keyboard focus"):
@@ -40,6 +43,14 @@ def make_fixture(root):
     receipt["subject_sizes"] = {name: (root / name).stat().st_size for name in names}
     write_json(stage / browser.FILES[0], receipt)
     return receipt
+
+
+def fixture_coverage_sample(identity):
+    sample = {"rect": {"x": 10, "y": 100, "top": 100, "bottom": 120, "left": 10, "right": 210, "width": 200, "height": 20},
+              "viewport": {"width": 390, "height": 844} if identity.startswith("mobile") else {"width": 1280, "height": 900},
+              "point": {"x": 110, "y": 110}, "hit": "PRE#fixture", "unobscured": True,
+              "time": 1000, "focus": "SUMMARY#", "hash": "", "scrollY": 0, "documentHeight": 2000}
+    return {**sample, "attempts": [copy.deepcopy(sample)]}
 
 
 def stage_fixture_tools(root):
@@ -275,6 +286,66 @@ class BrowserReceiptTests(unittest.TestCase):
                 self.save(receipt)
                 with self.assertRaises(ValueError):
                     browser.verify(self.root)
+
+    def test_execution_duration_and_fixed_ceiling_cannot_be_counterfeited(self):
+        invalid = [{}, {"deadline_ms": 1500001, "elapsed_ms": 1000}]
+        invalid += [{"deadline_ms": 1500000, "elapsed_ms": value}
+                    for value in (None, True, 0, -1, 1500001, float("nan"), float("inf"))]
+        for execution in invalid:
+            with self.subTest(execution=execution):
+                receipt = copy.deepcopy(self.receipt)
+                receipt["execution"] = execution
+                with self.assertRaises(ValueError):
+                    browser.verify_execution(receipt)
+
+    def test_coverage_attempts_must_be_bounded_and_actual(self):
+        detail = fixture_coverage_sample("desktop-js")
+        for attempts in (None, [], detail["attempts"] * 4):
+            with self.subTest(attempts=attempts):
+                value = copy.deepcopy(detail)
+                value["attempts"] = attempts
+                receipt = {"checks": [{"id": "desktop-js: actual visible point unoccluded", "detail": value}]}
+                with self.assertRaises(ValueError):
+                    browser.verify_coverage_geometry(receipt)
+        detail["attempts"].append(copy.deepcopy(detail["attempts"][0]))
+        with self.assertRaises(ValueError):
+            browser.verify_coverage_geometry({"checks": [{"id": "desktop-js: actual visible point unoccluded", "detail": detail}]})
+
+    def test_coverage_geometry_cannot_claim_nonfinite_offscreen_or_occluded_pass(self):
+        mutations = [lambda s: s["rect"].update(x=float("nan")),
+                     lambda s: s["rect"].update(top=float("inf")),
+                     lambda s: s["rect"].update(width=True),
+                     lambda s: s.update(unobscured=False), lambda s: s.update(unobscured=1),
+                     lambda s: s.update(hit="undefined#undefined"), lambda s: s["point"].update(y=9000),
+                     lambda s: s.update(time=float("nan")), lambda s: s.update(scrollY=True),
+                     lambda s: s.update(viewport={"width": 390, "height": 844}),
+                     lambda s: (s["rect"].update(y=-40, top=-40, bottom=-20), s["point"].update(y=-10))]
+        for mutate in mutations:
+            detail = fixture_coverage_sample("desktop-js")
+            mutate(detail["attempts"][0])
+            detail.update(detail["attempts"][0])
+            receipt = {"checks": [{"id": "desktop-js: actual visible point unoccluded", "detail": detail}]}
+            with self.subTest(mutate=mutate), self.assertRaises(ValueError):
+                browser.verify_coverage_geometry(receipt)
+
+    def test_coverage_retries_retain_failed_samples_without_repairing_keyboard_evidence(self):
+        detail = fixture_coverage_sample("desktop-js")
+        failed = copy.deepcopy(detail["attempts"][0])
+        failed.update(unobscured=False, time=900, hit="DIV#overlay")
+        detail["attempts"].insert(0, failed)
+        receipt = {"checks": [{"id": "desktop-js: actual visible point unoccluded", "detail": detail}]}
+        browser.verify_coverage_geometry(receipt)
+        detail["attempts"][1]["time"] = 899
+        with self.assertRaises(ValueError):
+            browser.verify_coverage_geometry(receipt)
+
+    def test_coverage_summary_numeric_boolean_equality_cannot_replace_typed_samples(self):
+        for key, value in (("unobscured", 1), ("scrollY", False)):
+            detail = fixture_coverage_sample("desktop-js")
+            detail[key] = value
+            with self.subTest(key=key), self.assertRaises(ValueError):
+                browser.verify_coverage_geometry({"checks": [{"id": "desktop-js: actual visible point unoccluded", "detail": detail}]})
+
 
     def test_changed_subject_and_producer_bytes_refused(self):
         for name in ("docs.html", "scripts/install.sh", browser.DIRECTORY + "/check-api-landmarks.mjs"):

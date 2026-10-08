@@ -50,6 +50,11 @@ without refocusing it or overriding Scalar's internal navigation.
    `scripts/presentation_browser_verify.py`; independently validate finite
    rectangles against the actual viewport instead of trusting pass flags.
    Add refusal tests in `scripts/test_presentation_browser_verify.py`.
+   Keep coverage reachability separate: at most three actual scroll-and-measure
+   attempts on the same element, retaining every sample, with no focus repair
+   or exception/network retry. Independently validate finite clipped geometry,
+   observation context and the final actual unoccluded point. These coverage
+   scrolls must never change the observe-only keyboard checks.
 4. **Produce and validate exact bytes.** Update only the reviewed entry digest
    in `dagger/frontend_inventory.py`. Generate and analyze the frontend through
    the pinned Dagger engine. Validate focused behavior, then commit the reviewed
@@ -57,6 +62,13 @@ without refocusing it or overriding Scalar's internal navigation.
    Run the complete independent browser suite on the exported bytes, including
    all routes/sections and desktop/mobile JavaScript, no-JavaScript and failed
    enhancement modes. Retain raw findings and producer/consumer evidence.
+   Use `SitePresentationReports` to retain exact unsigned payloads and raw
+   browser diagnostics when admission refuses; an export success is not
+   admission or signing proof. The full browser producer has a fixed 25-minute
+   ceiling, records its actual elapsed duration, and saves a failed receipt on
+   expiry. The previous 15-minute run completed three modes and reached the
+   fourth mode's API disclosures before expiry. Measured phase costs project
+   about 17 minutes for the expanded workload; this projection is not a pass.
 5. **Review and hand off.** Independently review the implementation, negative
    tests and actual generated-output evidence. Prepare a draft PR with the
    exact source revision and test limits. A separate authorized immutable
@@ -102,6 +114,16 @@ receipts. Replaying historical evidence requires its reviewed, version-bound
 consumer; that historical result cannot satisfy this stronger promotion gate.
 No older receipt is upgraded or substituted. Produce fresh evidence for a new
 immutable release, including any reviewed rollback release.
+
+The coverage consumer additionally requires retained bounded scroll samples and
+a finite duration within the fixed 25-minute ceiling. Historical receipts
+without these fields remain historical evidence under their version-bound
+consumer. A failed heading observation and deadline from the earlier full run
+remain failed. A separate host probe preserved meaningful visible Scalar model
+focus after restoring a retained model route; it did not reproduce the exact
+heading miss or establish a Linux cause. This measurement change requires a
+complete fresh run and does not justify changing the already-reviewed entry
+implementation or weakening any security, coverage or error threshold.
 
 Scalar can adjust scrolling after readiness, and cached rendering can make a
 test miss the loading phase. Delayed observations and actual keydown phase

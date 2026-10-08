@@ -292,6 +292,58 @@ def verify_entry_rect(rect, viewport):
             "entry geometry exceeds viewport or has inconsistent dimensions")
 
 
+def verify_execution(receipt):
+    execution = receipt.get("execution", {})
+    require(isinstance(execution, dict), "missing browser execution observations")
+    elapsed = execution.get("elapsed_ms")
+    require(type(execution.get("deadline_ms")) is int and execution["deadline_ms"] == 1500000,
+            "browser execution ceiling differs")
+    require(type(elapsed) in (int, float) and math.isfinite(elapsed) and 0 < elapsed <= 1500000,
+            "missing finite bounded browser duration")
+
+
+def verify_coverage_geometry(receipt):
+    for check in receipt["checks"]:
+        if not check["id"].endswith(": actual visible point unoccluded"):
+            continue
+        detail = check.get("detail", {})
+        require(isinstance(detail, dict), "missing coverage geometry observations")
+        attempts = detail.get("attempts")
+        require(isinstance(attempts, list) and 1 <= len(attempts) <= 3, "missing bounded coverage samples")
+        viewport = {"width": 390, "height": 844} if check["id"].startswith("mobile") else {"width": 1280, "height": 900}
+        verify_coverage_sample(detail, viewport)
+        for index, sample in enumerate(attempts):
+            verify_coverage_sample(sample, viewport)
+            require(sample.get("unobscured") is (index == len(attempts) - 1), "invalid coverage attempt outcome")
+            require(index == 0 or sample["time"] >= attempts[index - 1]["time"], "coverage observation time reversed")
+        require({key: value for key, value in detail.items() if key != "attempts"} == attempts[-1],
+                "coverage summary differs from its final actual sample")
+
+
+def verify_coverage_sample(sample, viewport):
+    require(isinstance(sample, dict) and sample.get("viewport") == viewport, "coverage viewport differs")
+    rect, point = sample.get("rect", {}), sample.get("point", {})
+    require(isinstance(rect, dict) and isinstance(point, dict), "missing coverage rectangle or point")
+    require(all(type(rect.get(key)) in (int, float) and math.isfinite(rect[key]) for key in
+                ("x", "y", "top", "bottom", "left", "right", "width", "height")), "nonfinite coverage geometry")
+    require(rect["width"] >= 0 and rect["height"] >= 0 and
+            abs(rect["right"] - rect["left"] - rect["width"]) < .01 and
+            abs(rect["bottom"] - rect["top"] - rect["height"]) < .01 and
+            rect["x"] == rect["left"] and rect["y"] == rect["top"], "inconsistent coverage dimensions")
+    left, right = max(rect["left"], 0), min(rect["right"], viewport["width"])
+    top, bottom = max(rect["top"], 0), min(rect["bottom"], viewport["height"])
+    require(all(type(point.get(key)) in (int, float) and math.isfinite(point[key]) for key in ("x", "y")) and
+            abs(point["x"] - (left + right) / 2) < .01 and abs(point["y"] - (top + bottom) / 2) < .01,
+            "coverage clipped point differs")
+    require(type(sample.get("unobscured")) is bool and
+            (not sample["unobscured"] or (right > left and bottom > top and sample.get("hit") not in (None, "", "undefined#undefined"))),
+            "offscreen or occluded coverage cannot pass")
+    require(all(type(sample.get(key)) in (int, float) and math.isfinite(sample[key]) and sample[key] >= 0
+                for key in ("time", "scrollY", "documentHeight")) and sample["documentHeight"] > 0 and
+            all(isinstance(sample.get(key), str) for key in ("focus", "hash", "hit")),
+            "missing actual coverage context")
+
+
 def verify_checks(root, receipt):
     require(receipt.get("schema_version") == 1 and receipt.get("status") == "passed", "missing successful raw receipt")
     checks = receipt.get("checks")
@@ -301,6 +353,7 @@ def verify_checks(root, receipt):
             "missing or duplicate check identity")
     require(all(item.get("passed") is True for item in checks), "failed, missing or nonboolean check")
     require(receipt.get("failures") == [], "raw failures cannot admit")
+    verify_execution(receipt)
     inventory = receipt.get("inventory_observations", {})
     verify_requests(inventory)
     require(inventory.get("console") == inventory.get("http_failures") == [],
@@ -317,6 +370,7 @@ def verify_checks(root, receipt):
         verify_coverage(root, receipt, mode)
     verify_negative_controls(root, receipt)
     verify_entry_geometry(receipt)
+    verify_coverage_geometry(receipt)
 
 
 def verify(root, stage=None):
