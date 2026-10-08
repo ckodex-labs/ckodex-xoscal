@@ -163,6 +163,12 @@ def verify_checks(root, receipt):
             "missing or duplicate check identity")
     require(all(item.get("passed") is True for item in checks), "failed, missing or nonboolean check")
     require(receipt.get("failures") == [], "raw failures cannot admit")
+    inventory = receipt.get("inventory_observations", {})
+    verify_requests(inventory)
+    require(inventory.get("console") == inventory.get("http_failures") == [],
+            "unexpected native inventory console or HTTP failure")
+    require("inventory: read-only same-origin resources" in ids and receipt.get("proxy_denials") == [],
+            "missing or failed inventory and proxy boundary observations")
     modes = receipt.get("modes", [])
     require(len(modes) == 4 and {mode.get("id") for mode in modes} == MODES, "incomplete browser modes")
     for mode in modes:

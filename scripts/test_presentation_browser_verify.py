@@ -20,7 +20,8 @@ def make_fixture(root):
     stage, tools = stage_fixture_tools(root)
     fixture_pages(root)
     receipt = {"schema_version": 1, "status": "passed", "failures": [], "modes": [],
-               "negative_controls": [], "checks": [], "tools": tools}
+               "negative_controls": [], "checks": [{"id": "inventory: read-only same-origin resources", "passed": True}],
+               "tools": tools, "inventory_observations": make_log("inventory"), "proxy_denials": []}
     for mode in sorted(browser.MODES):
         receipt["modes"].append(fixture_mode(mode))
         receipt["checks"] += [{"id": name, "passed": True} for name in sorted(browser.mandatory_checks(mode))]
@@ -121,7 +122,10 @@ class BrowserReceiptTests(unittest.TestCase):
                      lambda r: r["modes"][0]["observations"]["portal.html"]["native"].update(sections=0),
                      lambda r: r["negative_controls"].pop(), lambda r: r["modes"][0]["page_errors"].append("error"),
                      lambda r: r["modes"][0]["requests"][0].update(method="POST"),
-                     lambda r: r["modes"][0]["requests"][0].update(url="https://example.com/")]
+                     lambda r: r["modes"][0]["requests"][0].update(url="https://example.com/"),
+                     lambda r: r.pop("inventory_observations"),
+                     lambda r: r["inventory_observations"]["requests"][0].update(method="POST"),
+                     lambda r: r["proxy_denials"].append({"url": "https://example.com/"})]
         for mutation in mutations:
             with self.subTest(mutation=mutation):
                 receipt = copy.deepcopy(self.receipt)
