@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "image": "mcr.microsoft.com/playwright:v1.63.0-noble@sha256:eff16c30e6f3f4af0a03fa4b706120d5e9b0891c344a27d64559aff5900a4a27",
+  "playwright": "1.63.0",
+  "chromium": "153.0.8010.12",
+  "chromium_revision": "1243",
+  "packages": {
+    "playwright": "sha512-+7ziBLidS4NaNCdt57SUDT+wYmmd5fmiQejUic/kb+YsYSCPyOOE9sebzMjNmQrsnNpDJqd4WHvV/8lfKfUDUg==",
+    "playwright-core": "sha512-rYCsBF/M5HjUch52bbtVONEFjv6Xu8sm8h72dNlR5bzIE1fvC/bxgspzkjSfU+MweEMmPM8KJebG6nnyxo5mCg=="
+  },
+  "modes": ["desktop-js", "mobile-js", "desktop-nojs", "mobile-nojs"],
+  "routes": ["cli.html", "docs.html", "downloads.html", "index.html", "portal.html", "review.html", "sbom-validation.html", "transparency.html"]
+}

@@ -220,6 +220,9 @@ def required_payload(root, manifest, policy_path=None, exceptions_path=None):
                            'source_revision': manifest.get('source_revision'), 'version': manifest.get('release_tag'),
                            'scope': 'clean-tagged-source', 'status': 'passed'}
         require(read_json(root / 'evidence/release-source.json') == expected_source, 'production source identity differs from manifest')
+        if 'evidence/presentation-browser/presentation-browser.json' in policy['final_outputs']:
+            from presentation_browser_verify import verify as verify_browser
+            verify_browser(root)
     require({p for p in paths if p.startswith('frameworks/') and p.endswith('/catalog.json')} == catalogs, 'catalog IDs differ from exact policy')
     require({p for p in paths if p.startswith('frameworks/') and p.endswith('/profile.json')} == {policy['profile_path']}, 'profile set differs from exact policy')
     for path in mandatory:

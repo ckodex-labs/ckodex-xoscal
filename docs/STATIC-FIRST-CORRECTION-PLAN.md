@@ -83,6 +83,13 @@ formats with their clean consumers and preserve raw reports and exceptions.
 Do not disable package signature verification or reduce vulnerability
 thresholds to recover an environment failure.
 
+The final diff review additionally requires a mandatory Dagger browser
+producer, rather than leaving checked-in browser helpers as a manual-only
+step. Pin the analysis image and npm integrity, retain the raw observations
+and producer sources, enforce coverage/refusal checks, and bind all browser
+presentation subjects to the final exact bytes before signing. Keep these
+final-only receipts separate from the frozen payload and detached proofs.
+
 Against the actual exported site, visit every page and source section at
 desktop and mobile widths, with JavaScript both enabled and disabled. Exercise
 keyboard focus, deep links, history, filters, themes, reduced motion, forced

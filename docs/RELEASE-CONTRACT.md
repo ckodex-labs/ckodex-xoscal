@@ -19,7 +19,17 @@ credential or registry publication is introduced by local execution.
    against the manifest and supplied detached bundle. Verification enforces repository,
    `.github/workflows/release.yml`, source SHA, `refs/tags/<tag>` and hosted runners.
    Only that successful cryptographic verification allows download links in generated HTML.
-4. Rendering finishes before `release-manifest.json` inventories all final payload,
+4. `PresentationAnalysis` enforces static contracts and the pinned Dagger
+   browser producer against the final rendered candidate. All eight pages and
+   the home alias run in fresh desktop/mobile JavaScript and no-JavaScript
+   contexts. Mandatory checks include full prebuilt API content, repeated
+   dialog/keyboard lifecycles, unique landmarks/IDs, themes, native content,
+   geometry/occlusion and six failed/tampered-enhancement controls. Browser
+   tooling stays in the analysis container. Raw observations and exact
+   producer/toolchain sources are staged as six final-only evidence files;
+   independent admission validates coverage and rehashes their presentation
+   subjects. A saved success boolean alone is insufficient, and this receipt
+   is not signing authority. Rendering finishes before `release-manifest.json` inventories all final payload,
    evidence, HTML, CSS, JavaScript, fonts and other assets. `PackageCandidate` creates a
    deterministic transport archive of those frozen bytes. Hosted provenance signs the
    final manifest, transport and exact OCI root manifest bytes.
@@ -74,6 +84,13 @@ release artifacts, required reference content, or download eligibility. Pinned
 Scalar component transformations happen at the source build boundary, with
 upstream preimages, a versioned recipe and replay-checked receipts retained as
 mandatory frontend evidence.
+
+The frozen payload may gain only the exact admitted presentation marker and
+browser evidence files after payload signing. Their bytes are covered by the
+final manifest. Browser reports exclude themselves, detached proofs and
+manifests from their presentation subjects, avoiding recursive hashes. Local
+previews enforce the same browser gate while keeping the raw report available
+through `PresentationBrowserReports`; they remain unsigned and ineligible.
 
 Package formats and explicit unsupported promises are described in [SDK-CONTRACT.md](SDK-CONTRACT.md).
 Installer verification and platform support are in [INSTALL-CONTRACT.md](INSTALL-CONTRACT.md).

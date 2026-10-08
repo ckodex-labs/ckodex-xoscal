@@ -190,7 +190,13 @@
   ],
   "final_outputs": [
     "evidence/presentation.ok",
-    "evidence/release-source.json"
+    "evidence/release-source.json",
+    "evidence/presentation-browser/presentation-browser.json",
+    "evidence/presentation-browser/check-presentation-browser.mjs",
+    "evidence/presentation-browser/check-api-landmarks.mjs",
+    "evidence/presentation-browser/package.json",
+    "evidence/presentation-browser/package-lock.json",
+    "evidence/presentation-browser/browser-toolchain.json"
   ],
   "sbom_distributor": {
     "version": 1,

@@ -27,5 +27,7 @@ func (m *Xoscal) PresentationAnalysis(source *dagger.Directory, candidate *dagge
 		WithExec([]string{"python3", "scripts/design-lint.py"}).
 		WithExec([]string{"python3", "scripts/a11y-lint.py"}).
 		WithExec([]string{"python3", "scripts/site-smoke.py", "--root", "/src/site", "--generated"}).
+		WithDirectory("/tmp/presentation-browser", m.PresentationBrowserAnalysis(source, candidate).Directory("/evidence")).
+		WithExec([]string{"python3", "scripts/presentation_browser_verify.py", "--root", "/src/site", "--stage", "/tmp/presentation-browser"}).
 		WithExec([]string{"sh", "-c", "printf 'presentation-analysis-ok\\n' > /tmp/presentation.ok"})
 }
