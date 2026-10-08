@@ -176,3 +176,52 @@ These are preserved as scanner observations, separately from exact manifest
 declarations, only when their unique identities are valid and they are reachable
 from the SDK project through the retained graph. Unconnected extras refuse
 enrichment. No inferred transitive edge or installed upstream-byte claim is added.
+
+## Native reentry follow-up
+
+The reviewed `2a734a72f080` source passed all four exact-head hosted CI jobs,
+but fresh local Site admission and a separately produced raw Site receipt failed
+mobile interactive-heading coverage. Both failures remain retained. A passive
+Linux trace reproduced a failed first sample without changing the three-sample
+rule. Native Enter close/reentry, followed only by passive observation, then
+confirmed the focused summary stayed offscreen at -264px. A separate read-only
+CDP breakpoint diagnostic attributed the competing intro scrolls to Scalar's
+lazy navigation functions; debugger timing effects are explicit.
+
+Scalar's scroll observer retains `#description/...` or `#models/...` in the URL
+when the native disclosure closes. On explicit native reentry, its new instance
+mistook that previous fragment for a requested deep link. The host summary
+restore competed with Scalar's repeated lazy-render scroll. This is distinct
+from asynchronous restoration rescheduling through hashchange: the passive
+trace captured no hashchange events during the conflicting scrolls.
+
+1. In `dagger/frontend/entry.js`, clear only a Scalar fragment synchronously in
+   `rememberEntry()`, which represents explicit native summary or view-link
+   activation. Leave `route()` and loading host focus handling unchanged. Clear
+   before fetching so a newer route requested during loading remains intact.
+   Re-pin the exact producer source in `dagger/frontend_inventory.py`. Add the
+   scoped `site/api-explorer.css` native scroll margin through `site/docs.html`
+   so lazy-rendered deep-link controls remain fully inside the viewport. The
+   new actual desktop control exposed a retained -0.08px edge clip; keep the
+   finite/full-viewport geometry gate unchanged.
+2. In `scripts/check-api-landmarks.mjs`, exercise real intro/model routes,
+   native disclosure close/reentry, actual Tab from the distant Plain contract,
+   and all four passive owned-focus observations. Preserve genuine initial
+   model deep links and a newer same-document model navigation during a held
+   exact contract response. Neither focus nor scrolling may repair the page
+   after activation/readiness.
+3. Require those checks in `scripts/check-presentation-browser.mjs` and
+   `scripts/presentation_browser_verify.py`. Replay the held response digest
+   and actual route-focus geometry; refuse missing, misrouted, nonfinite,
+   hidden or false evidence in `scripts/test_presentation_browser_verify.py`.
+   Keep the existing three-sample coverage rule, fourteen failure/cancellation
+   controls, fixed producer deadline and analysis policies unchanged.
+4. Freeze reviewed source, then run the complete Dagger Site and unsigned
+   PreviewCandidate, actual raw-report replay, independent six-profile served
+   preview, SDK consumer receipts and exact-head CI. Scoped browser diagnostics
+   and prior successful CI do not replace these acceptance gates.
+
+There is no data migration or new credential requirement. Before promotion,
+rollback is a source revert followed by a fresh complete pipeline. Existing
+immutable releases and historical failed receipts remain unchanged. Publishing
+this correction still requires authorization for a new immutable release.

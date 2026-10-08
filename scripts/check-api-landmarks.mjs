@@ -127,6 +127,65 @@ export async function checkApiEntryKeyboard(page, { check, timeout = 20000 } = {
   return results
 }
 
+/** Native close/reentry must not inherit Scalar's previous scroll-spy route. */
+export async function checkApiEntryReentry(page, { check, timeout = 20000 } = {}) {
+  const { results, verify } = recorder(check)
+  for (const kind of ['intro reentry', 'model reentry']) {
+    if (kind === 'model reentry') {
+      await page.goto(page.url().split('#')[0] + '#models/oscalservicesv1CreateComponentDefinitionRequest', { waitUntil: 'networkidle' })
+      await page.reload({ waitUntil: 'networkidle' })
+      await page.waitForFunction(() => document.activeElement?.id === 'api-1/models/oscalservicesv1CreateComponentDefinitionRequest', null, { timeout })
+      verify('initial model deep link preserves requested route', new URL(page.url()).hash === '#models/oscalservicesv1CreateComponentDefinitionRequest', { fragment: new URL(page.url()).hash })
+      await checkModelRouteGeometry(page, verify, 'initial model deep link')
+    }
+    const fragment = new URL(page.url()).hash
+    verify(kind + ': actual prior Scalar fragment', kind === 'intro reentry' ? fragment === '#description/introduction' : fragment === '#models/oscalservicesv1CreateComponentDefinitionRequest', { fragment })
+    await page.locator('#interactive-api-view > summary').focus()
+    await page.keyboard.press('Enter')
+    await page.waitForFunction(() => document.getElementById('interactive-api-view').dataset.enhancement === 'idle')
+    verify(kind + ': native close retains prior fragment', new URL(page.url()).hash === fragment, { fragment: new URL(page.url()).hash })
+    await enterExplorer(page, verify, timeout, kind)
+  }
+  return results
+}
+
+async function checkModelRouteGeometry(page, verify, kind) {
+  const samples = []
+  for (const delay of [0, 250, 250, 500]) {
+    await page.waitForTimeout(delay)
+    samples.push(await page.evaluate(() => {
+      const node = document.activeElement, r = node.getBoundingClientRect(), hit = document.elementFromPoint(r.left + r.width / 2, r.top + r.height / 2)
+      return { target: node.id === 'api-1/models/oscalservicesv1CreateComponentDefinitionRequest', hash: location.hash,
+        visible: r.width > 0 && r.height > 0 && r.top >= 0 && r.bottom <= innerHeight && r.left >= 0 && r.right <= innerWidth,
+        unoccluded: Boolean(hit && (node === hit || node.contains(hit))), rect: r.toJSON(), viewport: { width: innerWidth, height: innerHeight } }
+    }))
+  }
+  verify(kind + ': requested model owns visible focus after readiness', samples.every(s => s.target && s.hash === '#models/oscalservicesv1CreateComponentDefinitionRequest' && s.visible && s.unoccluded), samples)
+}
+
+/** A newer actual hash navigation during held loading remains authoritative. */
+export async function checkApiEntryRouteDuringLoading(page, { check, hold, timeout = 20000 } = {}) {
+  const { results, verify } = recorder(check), documentURL = page.url().split('#')[0]
+  await page.goto(documentURL, { waitUntil: 'networkidle' })
+  await page.reload({ waitUntil: 'networkidle' })
+  const control = await hold()
+  try {
+    await page.locator('#interactive-api-view > summary').focus()
+    await page.keyboard.press('Enter')
+    await control.held()
+    const phase = await page.locator('#interactive-api-view').getAttribute('data-enhancement')
+    verify('new route: actual hash navigation occurs during loading', phase === 'loading', { phase, requested: '#models/oscalservicesv1CreateComponentDefinitionRequest' })
+    await page.goto(documentURL + '#models/oscalservicesv1CreateComponentDefinitionRequest', { waitUntil: 'domcontentloaded' })
+    control.release()
+    await page.waitForFunction(() => document.getElementById('interactive-api-view').dataset.enhancement === 'ready' && document.activeElement?.id === 'api-1/models/oscalservicesv1CreateComponentDefinitionRequest', null, { timeout })
+    await checkModelRouteGeometry(page, verify, 'new route')
+  } finally {
+    control.release()
+    await page.unroute(new URL('openapi.json', documentURL).href)
+  }
+  return results
+}
+
 /** Fresh cold-contract control: caller holds only its exact served response. */
 export async function checkApiEntryCancellation(page, { check, kind, held, release } = {}) {
   const { results, verify } = recorder(check)

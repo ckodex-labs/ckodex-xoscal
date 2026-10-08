@@ -38,11 +38,29 @@ def make_fixture(root):
                       "heading": {"top": 130, "bottom": 150, "left": 10, "right": 210, "width": 200, "height": 20},
                       "viewport": {"width": 390, "height": 844} if check["id"].startswith("mobile") else {"width": 1280, "height": 900}}
             check["detail"] = [copy.deepcopy(sample) for _ in range(4)]
+    fixture_route_evidence(root, receipt)
     names = browser.subjects(root)
     receipt["subjects"] = {name: browser.digest(root / name) for name in names}
     receipt["subject_sizes"] = {name: (root / name).stat().st_size for name in names}
     write_json(stage / browser.FILES[0], receipt)
     return receipt
+
+
+def fixture_route_evidence(root, receipt):
+    for check in receipt["checks"]:
+        if check["id"].endswith(": cold contract exact actual held response"):
+            check["detail"] = {"status": 200, "digest": browser.digest(root / "openapi.json"),
+                               "size": (root / "openapi.json").stat().st_size}
+        if ": API native reentry/" in check["id"] and check["id"].endswith(("actual prior Scalar fragment", "native close retains prior fragment", "initial model deep link preserves requested route")):
+            check["detail"] = {"fragment": "#description/introduction" if "/intro reentry:" in check["id"] else "#models/oscalservicesv1CreateComponentDefinitionRequest"}
+        if check["id"].endswith("new route: actual hash navigation occurs during loading"):
+            check["detail"] = {"phase": "loading", "requested": "#models/oscalservicesv1CreateComponentDefinitionRequest"}
+        if check["id"].endswith(("new route: requested model owns visible focus after readiness", "initial model deep link: requested model owns visible focus after readiness")):
+            viewport = {"width": 390, "height": 844} if check["id"].startswith("mobile") else {"width": 1280, "height": 900}
+            sample = {"target": True, "visible": True, "unoccluded": True,
+                      "hash": "#models/oscalservicesv1CreateComponentDefinitionRequest", "viewport": viewport,
+                      "rect": {"top": 100, "bottom": 120, "left": 10, "right": 210, "width": 200, "height": 20}}
+            check["detail"] = [copy.deepcopy(sample) for _ in range(4)]
 
 
 def fixture_coverage_sample(identity):

@@ -8,7 +8,7 @@ import { fileURLToPath } from 'node:url'
 import { createRequire } from 'node:module'
 import { execFileSync } from 'node:child_process'
 import { chromium, request } from 'playwright'
-import { checkApiLandmarks, checkApiEntryKeyboard, checkApiEntryFallbackFocus, checkApiEntryCancellation, checkApiEntryForwardFocus, checkApiReferenceFallback, checkStaticApiDeepLink, checkApiTheme } from './check-api-landmarks.mjs'
+import { checkApiLandmarks, checkApiEntryKeyboard, checkApiEntryReentry, checkApiEntryRouteDuringLoading, checkApiEntryFallbackFocus, checkApiEntryCancellation, checkApiEntryForwardFocus, checkApiReferenceFallback, checkStaticApiDeepLink, checkApiTheme } from './check-api-landmarks.mjs'
 
 const args = Object.fromEntries(process.argv.slice(2).reduce((pairs, value, index, all) => index % 2 ? pairs : [...pairs, [value.replace(/^--/, ''), all[index + 1]]], []))
 const root = fs.realpathSync(args.root), output = path.resolve(args.output)
@@ -25,7 +25,6 @@ function verify(id, passed, detail) {
   receipt.checks.push(record)
   if (!record.passed) receipt.failures.push(record)
 }
-
 async function bounded(id, fn) {
   try { await fn() } catch (error) { verify(id + ': exception', false, String(error.stack || error)) }
 }
@@ -115,12 +114,12 @@ function nativeRequiredIds(mode) {
 }
 
 function lifecycleRequiredIds(mode) {
-  const ids = ['view link', 'plain view link', 'native summary'].map(kind => mode + ': API keyboard entry/' + kind + ': ready transition retains visible unoccluded keyboard focus')
+  const ids = ['view link', 'plain view link', 'native summary', 'intro reentry', 'model reentry'].map(kind => mode + (kind.endsWith('reentry') ? ': API native reentry/' : ': API keyboard entry/') + kind + ': ready transition retains visible unoccluded keyboard focus')
   for (const name of ['view link: actual Tab reaches explorer selector', 'plain view link: actual Shift+Tab reaches Plain selector', 'native summary: actual Tab reaches explorer summary after far Plain contract']) ids.push(mode + ': API keyboard entry/' + name)
+  ids.push(mode + ': cold contract exact actual held response', ...['intro reentry: actual prior Scalar fragment', 'intro reentry: native close retains prior fragment', 'model reentry: actual prior Scalar fragment', 'model reentry: native close retains prior fragment', 'initial model deep link preserves requested route', 'initial model deep link: requested model owns visible focus after readiness', ...['intro reentry', 'model reentry'].flatMap(kind => [kind + ': actual Tab reaches explorer summary after far Plain contract', kind + ': ready transition selects only interactive reference'])].map(name => mode + ': API native reentry/' + name), ...['new route: actual hash navigation occurs during loading', 'new route: requested model owns visible focus after readiness'].map(name => mode + ': API route during loading/' + name))
   for (const phase of ['online API lifecycle', 'loaded offline API lifecycle']) for (let cycle = 0; cycle < 3; cycle++) ids.push(mode + ': ' + phase + '/cycle ' + cycle + ': API client is a visible labelled dialog', mode + ': ' + phase + '/cycle ' + cycle + ' dismissed, including hidden DOM: no duplicate DOM IDs')
   return ids
 }
-
 async function startProxy() {
   // Loopback supplies the same secure-context semantics as hosted HTTPS without
   // changing browser security flags. Every byte comes from Dagger's HTTP service.
@@ -138,7 +137,6 @@ async function startProxy() {
   await new Promise((resolve, reject) => { proxy.once('error', reject); proxy.listen(8081, '127.0.0.1', resolve) })
   base = 'http://127.0.0.1:8081/'
 }
-
 async function httpBinding() {
   api = await request.newContext()
   for (const relative of Object.keys(receipt.subjects)) {
@@ -164,7 +162,6 @@ function inventoryDOM() {
   const record = element => ({ selector: selector(element), view: element.closest('.view')?.id, text: element.textContent.replace(/\s+/g, ' ').trim(), fragments: [...element.querySelectorAll('h1,h2,h3,h4,h5,h6,p,dt,dd,summary')].filter(node => !node.closest('noscript')).map(node => node.textContent.replace(/\s+/g, ' ').trim()).filter(Boolean) })
   return { ids: [...document.querySelectorAll('[id]')].map(node => node.id), sections: [...document.querySelectorAll('section')].map(record), headings: [...document.querySelectorAll('h1,h2,h3,h4,h5,h6')].map(record), links: [...document.querySelectorAll('a[href]')].map(node => ({ href: node.getAttribute('href'), disabled: node.getAttribute('aria-disabled') })) }
 }
-
 async function inventory() {
   const context = await browser.newContext({ javaScriptEnabled: false, serviceWorkers: 'block' }), page = await context.newPage()
   const log = { console: [], network: [], requests: [], page_errors: [], network_failures: [], http_failures: [] }
@@ -173,7 +170,6 @@ async function inventory() {
   cleanNetwork(log, 'inventory'); await context.close()
   verify('inventory: exact eight actual pages', JSON.stringify(fs.readdirSync(root).filter(name => name.endsWith('.html')).sort()) === JSON.stringify(config.routes))
 }
-
 async function reveal(page, locator, js) {
   const view = await locator.evaluate(node => node.closest('.view')?.id)
   if (view && js) { await page.locator('#nav a[href="#' + view + '"]').focus(); await page.keyboard.press('Enter'); await page.locator('#' + view).waitFor({ state: 'visible' }) }
@@ -385,6 +381,8 @@ async function apiChecks(page, context, profile, spec, observation, log) {
   await nativeContracts(page, profile, observation)
   if (profile.js) {
     await checkApiEntryKeyboard(page, callback('API keyboard entry'))
+    await checkApiEntryReentry(page, callback('API native reentry'))
+    await checkApiEntryRouteDuringLoading(page, { ...callback('API route during loading'), hold: () => holdContract(page, log, 'route-during-load') })
     await checkApiLandmarks(page, callback('online API lifecycle'))
     observation.scalar_themes = await themes(page, profile.id + ': Scalar', true)
     const before = log.requests.length

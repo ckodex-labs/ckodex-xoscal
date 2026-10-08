@@ -1,0 +1,2 @@
+/* Keep native deep-link targets clear of the viewport edge after lazy layout. */
+#interactive-api-reference [id] { scroll-margin-top: 1rem; }

@@ -16,6 +16,9 @@ if (marker) {
   let timer = null, controller = null, attempt = 0, cachedSource = null
   let entryIntent = null
   const rememberEntry = () => {
+    // Explicit host activation owns the entry, not a prior Scalar scroll-spy
+    // fragment. Clear it before loading; subsequent route intent stays intact.
+    if (scalarHash()) history.replaceState(null, '', location.pathname + location.search)
     summary.focus({ preventScroll: true })
     summary.scrollIntoView({ block: 'center', behavior: 'instant' })
     entryIntent = { target: summary, attempt: attempt + (ready || loading ? 0 : 1) }

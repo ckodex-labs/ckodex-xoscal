@@ -141,6 +141,17 @@ def mandatory_checks(mode):
                      "plain view link: actual Shift+Tab reaches Plain selector",
                      "native summary: actual Tab reaches explorer summary after far Plain contract"):
             ids.add(mode + ": API keyboard entry/" + name)
+        for kind in ("intro reentry", "model reentry"):
+            ids |= {mode + ": API native reentry/" + kind + ": " + suffix for suffix in
+                    ("actual prior Scalar fragment", "native close retains prior fragment",
+                     "actual Tab reaches explorer summary after far Plain contract", "ready transition selects only interactive reference",
+                     "ready transition retains visible unoccluded keyboard focus")}
+        ids |= {mode + ": API native reentry/" + name for name in
+                ("initial model deep link preserves requested route", "initial model deep link: requested model owns visible focus after readiness")}
+        ids |= {mode + ": API route during loading/" + suffix for suffix in
+                ("new route: actual hash navigation occurs during loading",
+                 "new route: requested model owns visible focus after readiness")}
+        ids.add(mode + ": cold contract exact actual held response")
         for phase in ("online API lifecycle", "loaded offline API lifecycle"):
             for cycle in range(3):
                 ids.add(mode + ": " + phase + "/cycle " + str(cycle) + ": Escape dismisses the API client")
@@ -281,6 +292,36 @@ def verify_entry_geometry(receipt):
                 verify_entry_rect(sample.get(name, {}), viewport)
 
 
+def verify_route_navigation(root, receipt):
+    controls = {c["id"]: c for c in receipt["checks"]}
+    for mode in ("desktop-js", "mobile-js"):
+        held = controls[mode + ": cold contract exact actual held response"]
+        require(held.get("detail") == {"status": 200, "digest": digest(root / "openapi.json"),
+                "size": (root / "openapi.json").stat().st_size}, "new route held response differs from exact contract")
+        model = "#models/oscalservicesv1CreateComponentDefinitionRequest"
+        for kind, fragment in (("intro reentry", "#description/introduction"), ("model reentry", model)):
+            for suffix in ("actual prior Scalar fragment", "native close retains prior fragment"):
+                require(controls[mode + ": API native reentry/" + kind + ": " + suffix].get("detail") ==
+                        {"fragment": fragment}, "reentry fragment differs from observed route")
+        require(controls[mode + ": API native reentry/initial model deep link preserves requested route"].get("detail") ==
+                {"fragment": model}, "initial model route differs")
+        require(controls[mode + ": API route during loading/new route: actual hash navigation occurs during loading"].get("detail") ==
+                {"phase": "loading", "requested": model}, "missing actual new route loading observation")
+        for prefix in (": API route during loading/new route", ": API native reentry/initial model deep link"):
+            control = controls[mode + prefix + ": requested model owns visible focus after readiness"]
+            verify_model_route_samples(mode, control.get("detail"), model)
+
+
+def verify_model_route_samples(mode, samples, model):
+    require(isinstance(samples, list) and len(samples) == 4, "missing new route focus samples")
+    viewport = {"width": 390, "height": 844} if mode.startswith("mobile") else {"width": 1280, "height": 900}
+    for sample in samples:
+        require(isinstance(sample, dict) and all(sample.get(key) is True for key in
+                ("target", "visible", "unoccluded")) and sample.get("hash") == model and sample.get("viewport") == viewport,
+                "new route focus is hidden, unowned or misrouted")
+        verify_entry_rect(sample.get("rect", {}), viewport)
+
+
 def verify_entry_rect(rect, viewport):
     require(all(type(rect.get(key)) in (int, float) and math.isfinite(rect[key]) for key in
                 ("top", "bottom", "left", "right", "width", "height")), "missing finite actual entry geometry")
@@ -370,6 +411,7 @@ def verify_checks(root, receipt):
         verify_coverage(root, receipt, mode)
     verify_negative_controls(root, receipt)
     verify_entry_geometry(receipt)
+    verify_route_navigation(root, receipt)
     verify_coverage_geometry(receipt)
 
 
