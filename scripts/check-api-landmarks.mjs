@@ -141,7 +141,7 @@ export async function checkApiEntryReentry(page, { check, timeout = 20000 } = {}
     const fragment = new URL(page.url()).hash
     verify(kind + ': actual prior Scalar fragment', kind === 'intro reentry' ? fragment === '#description/introduction' : fragment === '#models/oscalservicesv1CreateComponentDefinitionRequest', { fragment })
     // Controlled pre-close setup preserves the genuine Scalar model route.
-    await page.locator('#interactive-api-view > summary').focus({ preventScroll: true })
+    await page.locator('#interactive-api-view > summary').evaluate(node => node.focus({ preventScroll: true }))
     const setup = await page.locator('#interactive-api-view > summary').evaluate(node => ({ fragment: location.hash, summaryFocused: node === document.activeElement }))
     verify(kind + ': pre-close setup preserves fragment and summary focus', setup.fragment === fragment && setup.summaryFocused, setup)
     await page.keyboard.press('Enter')

@@ -210,11 +210,14 @@ trace captured no hashchange events during the conflicting scrolls.
    model deep links and a newer same-document model navigation during a held
    exact contract response. Neither focus nor scrolling may repair the page
    after activation/readiness.
-   Use controlled `focus({preventScroll:true})` setup before native close to
+   Use controlled DOM `node.focus({preventScroll:true})` setup before native close to
    preserve the genuinely loaded model route; record its exact fragment and
    summary focus before Enter. Scrollful setup changed Scalar's scroll-spy
    fragment to introduction, so its failed receipts remain failed. This setup
    does not claim natural keyboard navigation to the close control never scrolls.
+   Call DOM focus through locator evaluation: Playwright locator focus accepts
+   signal/timeout options and ignores the DOM option. The earlier incorrect locator
+   invocation and its failed complete receipts remain retained.
 3. Require those checks in `scripts/check-presentation-browser.mjs` and
    `scripts/presentation_browser_verify.py`. Replay the held response digest
    and actual route-focus geometry; refuse missing, misrouted, nonfinite,
