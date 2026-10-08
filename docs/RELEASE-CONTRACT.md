@@ -34,7 +34,14 @@ credential or registry publication is introduced by local execution.
    It reconstructs flat attachments from that admitted candidate, rather than publishing
    unchecked transferred attachments; only the separately verified transport is added.
    Registry copy preserves OCI digests and compares the published root bytes. Read-only preflight refuses any existing release or image tag and fails when absence cannot be established; automatic recovery never overwrites them.
-6. The release workflow stages admitted Pages bytes and deploys them only after promotion, because releases created with `GITHUB_TOKEN` do not trigger a second workflow. Independent/manual Pages retrieval selects one explicit published release and expected source SHA, verifies the
+6. The release workflow stages admitted Pages bytes after promotion and records
+   an explicit deployment handoff. The protected Pages environment accepts the
+   main ref; a release-tag job must not request that environment. Releases
+   created with `GITHUB_TOKEN` do not trigger a second workflow. An authorized
+   operator dispatches `pages.yml` on `main`, supplying the exact release tag and
+   full expected source SHA. This separate Pages run must pass both verification
+   and deployment before publication is described as complete. Pages retrieval
+   selects one explicit published release and expected source SHA, verifies the
    transport before extraction and verifies the final manifest. It serves those bytes.
    It never merges main-generated assets with a mutable latest release.
 
@@ -60,6 +67,14 @@ incomplete states. SBOM findings are counts from actual raw assessment output, n
 42/0 pass summaries. `portal.html` and `portal-preview.html` remain Design Blueprints whose
 illustrative data and pipeline contract do not establish a live trust decision.
 
+Blueprint HTML is generated from tracked templates and fixtures before
+inventory. The API-reference HTML is generated from the actual four-service
+OpenAPI contract. JavaScript enhances existing content; it does not create
+release artifacts, required reference content, or download eligibility. Pinned
+Scalar component transformations happen at the source build boundary, with
+upstream preimages, a versioned recipe and replay-checked receipts retained as
+mandatory frontend evidence.
+
 Package formats and explicit unsupported promises are described in [SDK-CONTRACT.md](SDK-CONTRACT.md).
 Installer verification and platform support are in [INSTALL-CONTRACT.md](INSTALL-CONTRACT.md).
 The semantic-search route migration is in [API-CONTRACT.md](API-CONTRACT.md).
@@ -83,8 +98,9 @@ staged with raw findings. Roll back by choosing a previous independently verifie
 release/site subject; do not regenerate rollback artifacts from current main. Historical
 releases lacking complete proof remain historical, not silently upgraded to verified state.
 
-Hosted OIDC signing, registry publication and Pages deployment require actual successful
-runs on the exact reviewed commit. This repair run never executes those operations.
+Hosted OIDC signing, registry publication and Pages deployment require actual
+successful runs over the exact reviewed release. Local checks cannot establish
+that those operations have run or supply their hosted signing authority.
 
 Versioned admission policy, exceptions and the framework source manifest are
 staged as exact signed evidence. Historical release verification replays those

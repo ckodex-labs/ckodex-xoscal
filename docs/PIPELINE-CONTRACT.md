@@ -37,7 +37,10 @@ governance examples remain examples, not release admission inputs.
    final manifest/file digests. Missing proof, scanner failure, invalid required
    findings, changed bytes or an unexpected source/workflow must fail promotion.
 8. **Promotion**: publish the unchanged verified GitHub assets and OCI bytes,
-   and pass the same final static site to Pages. Pages retrieves the pinned
+   and stage the same final static site for Pages. The protected main-ref Pages
+   workflow is dispatched separately with the exact published tag and source;
+   tag jobs do not request the branch-protected deployment environment. A release
+   success alone does not establish successful Pages deployment. Pages retrieves the pinned
    promoted candidate and checks it before publication; it does not regenerate
    release files from main. No unsigned fallback or post-signing site mutation.
 
@@ -76,6 +79,7 @@ Other explicitly illustrative governance cards are not rewritten into release
 claims. Static design/accessibility lint and JavaScript syntax checks accompany
 the diff; rendered desktop/mobile/keyboard checks use the assembled final site.
 
-This change does not execute a release, deploy Pages, publish a container,
-create credentials, or establish hosted cryptographic success. Those remain
-required hosted gates over the actual future release bytes.
+This contract does not establish hosted cryptographic success. Actual signing,
+release/registry promotion and Pages deployment require their successful
+authorized hosted runs over the exact release bytes. No new credentials or
+permissions are needed for the protected main-ref handoff.
