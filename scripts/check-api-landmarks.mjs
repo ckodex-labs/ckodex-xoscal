@@ -132,11 +132,20 @@ export async function checkApiEntryReentry(page, { check, timeout = 20000 } = {}
   const { results, verify } = recorder(check)
   for (const kind of ['intro reentry', 'model reentry']) {
     if (kind === 'model reentry') {
-      await page.goto(page.url().split('#')[0] + '#models/oscalservicesv1CreateComponentDefinitionRequest', { waitUntil: 'networkidle' })
-      await page.reload({ waitUntil: 'networkidle' })
-      await page.waitForFunction(() => document.activeElement?.id === 'api-1/models/oscalservicesv1CreateComponentDefinitionRequest', null, { timeout })
+      const documentURL = page.url().split('#')[0]
+      await page.goto('about:blank')
+      await page.goto(documentURL + '#models/oscalservicesv1CreateComponentDefinitionRequest', { waitUntil: 'networkidle' })
+      await page.waitForFunction(() => document.getElementById('interactive-api-view').dataset.enhancement === 'ready' && document.activeElement?.id === 'api-1/models/oscalservicesv1CreateComponentDefinitionRequest', null, { timeout })
       verify('initial model deep link preserves requested route', new URL(page.url()).hash === '#models/oscalservicesv1CreateComponentDefinitionRequest', { fragment: new URL(page.url()).hash })
       await checkModelRouteGeometry(page, verify, 'initial model deep link')
+      await checkModelYield(page, verify)
+      await page.goto(documentURL + '#models/oscalservicesv1CreateMappingRequest')
+      await page.waitForFunction(() => document.activeElement?.id === 'api-1/models/oscalservicesv1CreateMappingRequest', null, { timeout })
+      await page.goto(documentURL + '#models/oscalservicesv1CreateComponentDefinitionRequest')
+      await page.waitForFunction(() => document.activeElement?.id === 'api-1/models/oscalservicesv1CreateComponentDefinitionRequest', null, { timeout })
+      await checkModelHashAway(page, verify)
+      await page.goto(documentURL + '#models/oscalservicesv1CreateComponentDefinitionRequest')
+      await checkModelRouteGeometry(page, verify, 'ready model navigation')
     }
     const fragment = new URL(page.url()).hash
     verify(kind + ': actual prior Scalar fragment', kind === 'intro reentry' ? fragment === '#description/introduction' : fragment === '#models/oscalservicesv1CreateComponentDefinitionRequest', { fragment })
@@ -152,6 +161,29 @@ export async function checkApiEntryReentry(page, { check, timeout = 20000 } = {}
   return results
 }
 
+async function checkModelYield(page, verify) {
+  await page.keyboard.press('Tab')
+  const moved = await page.evaluateHandle(() => document.activeElement), samples = []
+  for (const delay of [0, 250, 250, 500]) {
+    await page.waitForTimeout(delay)
+    samples.push(await moved.evaluate(node => ({ owned: document.activeElement === node,
+      moved: node.id !== 'api-1/models/oscalservicesv1CreateComponentDefinitionRequest' && node !== document.body })))
+  }
+  verify('model route: actual Tab cancels previous model ownership', samples.every(s => s.owned && s.moved), samples)
+  await moved.dispose()
+}
+
+async function checkModelHashAway(page, verify) {
+  const target = await page.evaluateHandle(() => document.activeElement), samples = []
+  await page.goto(page.url().split('#')[0] + '#unknown-api-model-route')
+  for (const delay of [0, 250, 250, 500]) {
+    await page.waitForTimeout(delay)
+    samples.push(await target.evaluate(node => ({ hash: location.hash, owned: document.activeElement === node })))
+  }
+  verify('model route: newer host fragment cancels previous route', samples.every(s => s.hash === '#unknown-api-model-route' && s.owned), samples)
+  await target.dispose()
+}
+
 async function checkModelRouteGeometry(page, verify, kind) {
   const samples = []
   for (const delay of [0, 250, 250, 500]) {
@@ -159,11 +191,12 @@ async function checkModelRouteGeometry(page, verify, kind) {
     samples.push(await page.evaluate(() => {
       const node = document.activeElement, r = node.getBoundingClientRect(), hit = document.elementFromPoint(r.left + r.width / 2, r.top + r.height / 2)
       return { target: node.id === 'api-1/models/oscalservicesv1CreateComponentDefinitionRequest', hash: location.hash,
+        ready: document.getElementById('interactive-api-view').dataset.enhancement === 'ready',
         visible: r.width > 0 && r.height > 0 && r.top >= 0 && r.bottom <= innerHeight && r.left >= 0 && r.right <= innerWidth,
         unoccluded: Boolean(hit && (node === hit || node.contains(hit))), rect: r.toJSON(), viewport: { width: innerWidth, height: innerHeight } }
     }))
   }
-  verify(kind + ': requested model owns visible focus after readiness', samples.every(s => s.target && s.hash === '#models/oscalservicesv1CreateComponentDefinitionRequest' && s.visible && s.unoccluded), samples)
+  verify(kind + ': requested model owns visible focus after readiness', samples.every(s => s.ready && s.target && s.hash === '#models/oscalservicesv1CreateComponentDefinitionRequest' && s.visible && s.unoccluded), samples)
 }
 
 /** A newer actual hash navigation during held loading remains authoritative. */

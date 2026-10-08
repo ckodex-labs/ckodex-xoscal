@@ -18,6 +18,7 @@ func (m *Xoscal) presentationBrowserProducer(source, candidate *dagger.Directory
 		WithExec([]string{"npm", "ci", "--ignore-scripts", "--no-audit", "--no-fund", "--registry=https://registry.npmjs.org", "--userconfig=/dev/null", "--globalconfig=/tmp/xoscal-empty-global-npmrc"}).
 		WithFile("/tools/check-presentation-browser.mjs", source.File("scripts/check-presentation-browser.mjs")).
 		WithFile("/tools/check-api-landmarks.mjs", source.File("scripts/check-api-landmarks.mjs")).
+		WithFile("/tools/check-api-model-intent.mjs", source.File("scripts/check-api-model-intent.mjs")).
 		WithFile("/tools/browser-toolchain.json", dag.CurrentModule().Source().File("presentation-browser/toolchain.json")).
 		WithDirectory("/candidate", candidate).
 		WithServiceBinding("presentation", service).

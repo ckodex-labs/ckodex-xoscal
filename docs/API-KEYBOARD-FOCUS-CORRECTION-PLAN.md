@@ -197,7 +197,7 @@ trace captured no hashchange events during the conflicting scrolls.
 
 1. In `dagger/frontend/entry.js`, clear only a Scalar fragment synchronously in
    `rememberEntry()`, which represents explicit native summary or view-link
-   activation. Leave `route()` and loading host focus handling unchanged. Clear
+   activation. Preserve loading host focus handling. Clear
    before fetching so a newer route requested during loading remains intact.
    Re-pin the exact producer source in `dagger/frontend_inventory.py`. Add the
    scoped `site/api-explorer.css` native scroll margin through `site/docs.html`
@@ -233,3 +233,60 @@ There is no data migration or new credential requirement. Before promotion,
 rollback is a source revert followed by a fresh complete pipeline. Existing
 immutable releases and historical failed receipts remain unchanged. Publishing
 this correction still requires authorization for a new immutable release.
+
+### Requested model ownership after lazy rendering
+
+The complete local Site run on `d42c76c8e625` failed despite passing exact-head
+hosted CI and Dagger All. On mobile the requested ComponentDefinition model
+owned focus while the URL named the neighbouring CreateMapping model. The
+failure and all unrun later controls remain retained; no candidate was produced.
+Scalar's actual installed source observes model sections in a narrow strip at
+the viewport centre and updates the URL through `history.replaceState`. A
+focused heading near the top can therefore disagree with the observed section.
+A scoped CSS-only centre-margin diagnostic clipped the heading and changed its
+URL; that approach was discarded, not admitted.
+
+1. Record initial and actual new model fragment intent in the host `route()`.
+   After the exact requested model owns focus and the reference is ready,
+   centre that focus anchor and preserve its requested URL while lazy siblings
+   settle. Before initial model readiness, close Plain and require the exact
+   focused target to be fully visible with unchanged measured container/target
+   layout, target document position and exact requested hash across three
+   consecutive animation-frame observations; require finite, unoccluded focus.
+   Also require no real Scalar lazy placeholder inside its installed 1200px
+   viewport overscan; three quiet frames alone allowed a deferred neighbour to
+   change the URL after readiness. This tests actual pending DOM work, without
+   asserting completion of every deferred callback. Keep the
+   existing 30-second fail/fallback timeout. An instrumented scroll-call trace found
+   readiness was previously declared during roughly 400ms of placeholder
+   shrinkage; its failed first samples remain retained. After admission, a
+   container ResizeObserver and bounded 250/500/1000ms observations compensate
+   layout changes; enforce a monotonic expiry and disconnect after one second.
+2. Require the same intent, attempt, open state and exact focus target before
+   compensation; pre-admission observations run only during bounded loading,
+   and post-admission settlement additionally requires readiness. Record model
+   focus ownership before readiness, cancel it at the start of a later focus
+   event, then establish any new loading host-control intent. Every key, pointer, wheel or touch gesture, actual
+   new hash navigation, changed focus, cancellation or destruction invalidates
+   it. Do not intercept Scalar's history implementation or patch its publisher
+   modules. Host compensation operates only on its owned requested model.
+3. Start the initial deep-link browser control from a blank document so it tests
+   a genuine requested initial URL. Also exercise actual same-document model
+   navigation in the ready reference and Tab away from model focus. Record four
+   passive observations for each; strictly replay actual readiness, geometry,
+   route and moved-focus booleans independently. Add a held actual-200 contract
+   control that deliberately moves focus from the genuinely focused model to
+   the host download link while loading. Observe four ready samples without
+   subsequent test repairs. Bind `check-api-model-intent.mjs` and the other
+   producer files by digest; reject missing controls, false/non-boolean ownership,
+   wrong phases, changed response bytes and nonfinite or clipped rectangles.
+   Synthetic fixtures in `presentation_browser_fixture.py` exercise receipt
+   refusal only; they are never browser or candidate acceptance evidence. Preserve existing failed receipts and thresholds.
+4. Re-pin the actual producer entry, freeze reviewed source, and repeat the
+   complete Site, unsigned candidate, All, raw replay, six-profile preview,
+   six SDK consumer and exact-head CI gates on that source. Scoped diagnostics
+   are iteration evidence, not release acceptance.
+
+The main risk is taking ownership from newer user intent. Actual Tab and newer
+route controls must pass before admission; compensation remains bounded and
+cancellable. Reverting this source change and rebuilding is the rollback.

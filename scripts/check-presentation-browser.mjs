@@ -10,6 +10,7 @@ import { execFileSync } from 'node:child_process'
 import { chromium, request } from 'playwright'
 import { checkApiLandmarks, checkApiEntryKeyboard, checkApiEntryReentry, checkApiEntryRouteDuringLoading, checkApiEntryFallbackFocus, checkApiEntryCancellation, checkApiEntryForwardFocus, checkApiReferenceFallback, checkStaticApiDeepLink, checkApiTheme } from './check-api-landmarks.mjs'
 
+import { checkApiModelFocusAway } from './check-api-model-intent.mjs'
 const args = Object.fromEntries(process.argv.slice(2).reduce((pairs, value, index, all) => index % 2 ? pairs : [...pairs, [value.replace(/^--/, ''), all[index + 1]]], []))
 const root = fs.realpathSync(args.root), output = path.resolve(args.output)
 const toolRoot = path.dirname(fileURLToPath(import.meta.url)), require = createRequire(import.meta.url)
@@ -54,10 +55,10 @@ function bindSubjects() {
 
 function stageTools() {
   fs.mkdirSync(output, { recursive: true })
-  for (const name of ['check-presentation-browser.mjs', 'check-api-landmarks.mjs', 'package.json', 'package-lock.json', 'browser-toolchain.json']) fs.copyFileSync(path.join(toolRoot, name), path.join(output, name))
+  for (const name of ['check-presentation-browser.mjs', 'check-api-landmarks.mjs', 'check-api-model-intent.mjs', 'package.json', 'package-lock.json', 'browser-toolchain.json']) fs.copyFileSync(path.join(toolRoot, name), path.join(output, name))
   const lock = JSON.parse(fs.readFileSync(path.join(toolRoot, 'package-lock.json')))
   receipt.tools = { image: args.image, playwright: require('playwright/package.json').version, chromium: null, node: process.version, npm: execFileSync('npm', ['--version'], { encoding: 'utf8' }).trim(), packages: config.packages, chromium_revision: config.chromium_revision }
-  for (const [key, name] of [['package_lock_digest', 'package-lock.json'], ['runner_digest', 'check-presentation-browser.mjs'], ['api_helper_digest', 'check-api-landmarks.mjs'], ['toolchain_digest', 'browser-toolchain.json'], ['package_digest', 'package.json']]) receipt.tools[key] = sha(fs.readFileSync(path.join(toolRoot, name)))
+  for (const [key, name] of [['package_lock_digest', 'package-lock.json'], ['runner_digest', 'check-presentation-browser.mjs'], ['api_helper_digest', 'check-api-landmarks.mjs'], ['model_intent_digest', 'check-api-model-intent.mjs'], ['toolchain_digest', 'browser-toolchain.json'], ['package_digest', 'package.json']]) receipt.tools[key] = sha(fs.readFileSync(path.join(toolRoot, name)))
   verify('toolchain: immutable image and package version', args.image === config.image && receipt.tools.playwright === config.playwright)
   for (const [name, integrity] of Object.entries(config.packages)) verify('toolchain: SRI ' + name, lock.packages['node_modules/' + name]?.integrity === integrity && lock.packages['node_modules/' + name]?.version === config.playwright)
 }
@@ -75,7 +76,7 @@ function admitReceipt() {
 
 function admitBindings(saved) {
   if (saved.tools.image !== config.image || saved.tools.playwright !== config.playwright || saved.tools.chromium !== config.chromium || JSON.stringify(saved.tools.packages) !== JSON.stringify(config.packages)) throw Error('Browser tooling differs from pinned configuration')
-  for (const [key, name] of [['package_lock_digest', 'package-lock.json'], ['runner_digest', 'check-presentation-browser.mjs'], ['api_helper_digest', 'check-api-landmarks.mjs'], ['toolchain_digest', 'browser-toolchain.json'], ['package_digest', 'package.json']]) if (saved.tools[key] !== sha(fs.readFileSync(path.join(toolRoot, name))) || saved.tools[key] !== sha(fs.readFileSync(path.join(output, name)))) throw Error('Changed browser producer: ' + name)
+  for (const [key, name] of [['package_lock_digest', 'package-lock.json'], ['runner_digest', 'check-presentation-browser.mjs'], ['api_helper_digest', 'check-api-landmarks.mjs'], ['model_intent_digest', 'check-api-model-intent.mjs'], ['toolchain_digest', 'browser-toolchain.json'], ['package_digest', 'package.json']]) if (saved.tools[key] !== sha(fs.readFileSync(path.join(toolRoot, name))) || saved.tools[key] !== sha(fs.readFileSync(path.join(output, name)))) throw Error('Changed browser producer: ' + name)
   if (JSON.stringify(Object.keys(saved.subjects).sort()) !== JSON.stringify(subjectPaths())) throw Error('Changed browser subject selection')
   for (const [relative, digest] of Object.entries(saved.subjects)) if (sha(fs.readFileSync(path.join(root, relative))) !== digest) throw Error('Changed browser subject: ' + relative)
 }
@@ -117,6 +118,8 @@ function lifecycleRequiredIds(mode) {
   const ids = ['view link', 'plain view link', 'native summary', 'intro reentry', 'model reentry'].map(kind => mode + (kind.endsWith('reentry') ? ': API native reentry/' : ': API keyboard entry/') + kind + ': ready transition retains visible unoccluded keyboard focus')
   for (const name of ['view link: actual Tab reaches explorer selector', 'plain view link: actual Shift+Tab reaches Plain selector', 'native summary: actual Tab reaches explorer summary after far Plain contract']) ids.push(mode + ': API keyboard entry/' + name)
   ids.push(mode + ': cold contract exact actual held response', ...['intro reentry: actual prior Scalar fragment', 'intro reentry: native close retains prior fragment', 'model reentry: actual prior Scalar fragment', 'model reentry: native close retains prior fragment', 'initial model deep link preserves requested route', 'initial model deep link: requested model owns visible focus after readiness', ...['intro reentry', 'model reentry'].flatMap(kind => [kind + ': actual Tab reaches explorer summary after far Plain contract', kind + ': ready transition selects only interactive reference'])].map(name => mode + ': API native reentry/' + name), ...['new route: actual hash navigation occurs during loading', 'new route: requested model owns visible focus after readiness'].map(name => mode + ': API route during loading/' + name))
+  ids.push(...['ready model navigation: requested model owns visible focus after readiness', 'model route: actual Tab cancels previous model ownership', 'model route: newer host fragment cancels previous route'].map(name => mode + ': API native reentry/' + name))
+  ids.push(mode + ':model-focus-away: cold contract exact actual held response', ...['pre-ready host focus is observed', 'ready preserves moved host focus'].map(name => mode + ': API model focus movement/' + name))
   for (const kind of ['intro reentry', 'model reentry']) ids.push(mode + ': API native reentry/' + kind + ': pre-close setup preserves fragment and summary focus')
   for (const phase of ['online API lifecycle', 'loaded offline API lifecycle']) for (let cycle = 0; cycle < 3; cycle++) ids.push(mode + ': ' + phase + '/cycle ' + cycle + ': API client is a visible labelled dialog', mode + ': ' + phase + '/cycle ' + cycle + ' dismissed, including hidden DOM: no duplicate DOM IDs')
   return ids
@@ -384,6 +387,7 @@ async function apiChecks(page, context, profile, spec, observation, log) {
     await checkApiEntryKeyboard(page, callback('API keyboard entry'))
     await checkApiEntryReentry(page, callback('API native reentry'))
     await checkApiEntryRouteDuringLoading(page, { ...callback('API route during loading'), hold: () => holdContract(page, log, 'route-during-load') })
+    await checkApiModelFocusAway(page, { ...callback('API model focus movement'), hold: () => holdContract(page, { ...log, id: log.id + ':model-focus-away' }, 'model-focus-away') })
     await checkApiLandmarks(page, callback('online API lifecycle'))
     observation.scalar_themes = await themes(page, profile.id + ': Scalar', true)
     const before = log.requests.length

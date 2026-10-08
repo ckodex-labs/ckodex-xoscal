@@ -7,6 +7,7 @@ import tempfile
 import unittest
 
 import presentation_browser_verify as browser
+from presentation_browser_fixture import fixture_route_evidence
 
 SOURCE = Path(__file__).resolve().parents[1]
 
@@ -46,24 +47,6 @@ def make_fixture(root):
     return receipt
 
 
-def fixture_route_evidence(root, receipt):
-    for check in receipt["checks"]:
-        if check["id"].endswith(": cold contract exact actual held response"):
-            check["detail"] = {"status": 200, "digest": browser.digest(root / "openapi.json"),
-                               "size": (root / "openapi.json").stat().st_size}
-        if ": API native reentry/" in check["id"] and check["id"].endswith(("actual prior Scalar fragment", "native close retains prior fragment", "initial model deep link preserves requested route")):
-            check["detail"] = {"fragment": "#description/introduction" if "/intro reentry:" in check["id"] else "#models/oscalservicesv1CreateComponentDefinitionRequest"}
-        if check["id"].endswith("pre-close setup preserves fragment and summary focus"):
-            check["detail"] = {"fragment": "#description/introduction" if "/intro reentry:" in check["id"] else "#models/oscalservicesv1CreateComponentDefinitionRequest", "summaryFocused": True}
-        if check["id"].endswith("new route: actual hash navigation occurs during loading"):
-            check["detail"] = {"phase": "loading", "requested": "#models/oscalservicesv1CreateComponentDefinitionRequest"}
-        if check["id"].endswith(("new route: requested model owns visible focus after readiness", "initial model deep link: requested model owns visible focus after readiness")):
-            viewport = {"width": 390, "height": 844} if check["id"].startswith("mobile") else {"width": 1280, "height": 900}
-            sample = {"target": True, "visible": True, "unoccluded": True,
-                      "hash": "#models/oscalservicesv1CreateComponentDefinitionRequest", "viewport": viewport,
-                      "rect": {"top": 100, "bottom": 120, "left": 10, "right": 210, "width": 200, "height": 20}}
-            check["detail"] = [copy.deepcopy(sample) for _ in range(4)]
-
 
 def fixture_coverage_sample(identity):
     sample = {"rect": {"x": 10, "y": 100, "top": 100, "bottom": 120, "left": 10, "right": 210, "width": 200, "height": 20},
@@ -77,7 +60,8 @@ def stage_fixture_tools(root):
     stage = root / browser.DIRECTORY
     stage.mkdir(parents=True, exist_ok=True)
     sources = {"check-presentation-browser.mjs": SOURCE / "scripts/check-presentation-browser.mjs",
-               "check-api-landmarks.mjs": SOURCE / "scripts/check-api-landmarks.mjs"}
+               "check-api-landmarks.mjs": SOURCE / "scripts/check-api-landmarks.mjs",
+               "check-api-model-intent.mjs": SOURCE / "scripts/check-api-model-intent.mjs"}
     for name in ("package.json", "package-lock.json", "browser-toolchain.json"):
         sources[name] = SOURCE / "dagger/presentation-browser" / ("toolchain.json" if name == "browser-toolchain.json" else name)
     for name, source in sources.items():
@@ -87,6 +71,7 @@ def stage_fixture_tools(root):
     tools.update(node="v22.0.0", npm="10.0.0")
     for key, name in (("runner_digest", "check-presentation-browser.mjs"),
                       ("api_helper_digest", "check-api-landmarks.mjs"),
+                      ("model_intent_digest", "check-api-model-intent.mjs"),
                       ("package_lock_digest", "package-lock.json"),
                       ("toolchain_digest", "browser-toolchain.json"),
                       ("package_digest", "package.json")):

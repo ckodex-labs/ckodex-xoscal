@@ -12,7 +12,7 @@ from html.parser import HTMLParser
 
 DIRECTORY = "evidence/presentation-browser"
 FILES = ("presentation-browser.json", "check-presentation-browser.mjs",
-         "check-api-landmarks.mjs", "package.json", "package-lock.json",
+         "check-api-landmarks.mjs", "check-api-model-intent.mjs", "package.json", "package-lock.json",
          "browser-toolchain.json")
 MODES = {"desktop-js", "mobile-js", "desktop-nojs", "mobile-nojs"}
 ROUTES = {"index.html", "cli.html", "docs.html", "downloads.html", "review.html",
@@ -54,6 +54,7 @@ def verify_tools(stage, receipt):
     require(re.fullmatch(r"[0-9]+\.[0-9]+\.[0-9]+", tools.get("npm", "")), "missing actual npm version")
     for field, name in (("runner_digest", "check-presentation-browser.mjs"),
                         ("api_helper_digest", "check-api-landmarks.mjs"),
+                        ("model_intent_digest", "check-api-model-intent.mjs"),
                         ("package_lock_digest", "package-lock.json"),
                         ("toolchain_digest", "browser-toolchain.json"),
                         ("package_digest", "package.json")):
@@ -147,11 +148,16 @@ def mandatory_checks(mode):
                      "actual Tab reaches explorer summary after far Plain contract", "ready transition selects only interactive reference",
                      "ready transition retains visible unoccluded keyboard focus")}
         ids |= {mode + ": API native reentry/" + name for name in
-                ("initial model deep link preserves requested route", "initial model deep link: requested model owns visible focus after readiness")}
+                ("initial model deep link preserves requested route", "initial model deep link: requested model owns visible focus after readiness",
+                 "ready model navigation: requested model owns visible focus after readiness", "model route: actual Tab cancels previous model ownership",
+                 "model route: newer host fragment cancels previous route")}
         ids |= {mode + ": API route during loading/" + suffix for suffix in
                 ("new route: actual hash navigation occurs during loading",
                  "new route: requested model owns visible focus after readiness")}
         ids.add(mode + ": cold contract exact actual held response")
+        ids.add(mode + ":model-focus-away: cold contract exact actual held response")
+        ids |= {mode + ": API model focus movement/" + name for name in
+                ("pre-ready host focus is observed", "ready preserves moved host focus")}
         for phase in ("online API lifecycle", "loaded offline API lifecycle"):
             for cycle in range(3):
                 ids.add(mode + ": " + phase + "/cycle " + str(cycle) + ": Escape dismisses the API client")
@@ -309,9 +315,39 @@ def verify_route_navigation(root, receipt):
                 {"fragment": model}, "initial model route differs")
         require(controls[mode + ": API route during loading/new route: actual hash navigation occurs during loading"].get("detail") ==
                 {"phase": "loading", "requested": model}, "missing actual new route loading observation")
-        for prefix in (": API route during loading/new route", ": API native reentry/initial model deep link"):
+        away = controls[mode + ": API native reentry/model route: newer host fragment cancels previous route"].get("detail")
+        require(isinstance(away, list) and len(away) == 4 and all(isinstance(s, dict) and
+                s == {"hash": "#unknown-api-model-route", "owned": True} and s["owned"] is True
+                for s in away), "model route overwrote newer host fragment")
+        yielded = controls[mode + ": API native reentry/model route: actual Tab cancels previous model ownership"].get("detail")
+        require(isinstance(yielded, list) and len(yielded) == 4 and all(isinstance(s, dict) and
+                s.get("owned") is True and s.get("moved") is True for s in yielded), "model route ignored moved focus")
+        for prefix in (": API route during loading/new route", ": API native reentry/initial model deep link",
+                       ": API native reentry/ready model navigation"):
             control = controls[mode + prefix + ": requested model owns visible focus after readiness"]
             verify_model_route_samples(mode, control.get("detail"), model)
+
+
+def verify_model_focus_movement(root, receipt):
+    controls = {c["id"]: c for c in receipt["checks"]}
+    for mode in ("desktop-js", "mobile-js"):
+        held = controls[mode + ":model-focus-away: cold contract exact actual held response"].get("detail")
+        require(held == {"status": 200, "digest": digest(root / "openapi.json"),
+                "size": (root / "openapi.json").stat().st_size}, "model focus movement held response differs")
+        setup = controls[mode + ": API model focus movement/pre-ready host focus is observed"].get("detail", {})
+        require(isinstance(setup, dict) and setup.get("phase") == "loading" and
+                setup.get("requested") == "#models/oscalservicesv1CreateComponentDefinitionRequest" and
+                setup.get("modelHadFocus") is True and setup.get("hostFocus") is True and setup.get("host") is True and
+                setup.get("tag") == "A" and setup.get("href") == "openapi.json",
+                "model focus movement was not observed during loading")
+        samples = controls[mode + ": API model focus movement/ready preserves moved host focus"].get("detail")
+        require(isinstance(samples, list) and len(samples) == 4, "missing model focus movement samples")
+        viewport = {"width": 390, "height": 844} if mode.startswith("mobile") else {"width": 1280, "height": 900}
+        for sample in samples:
+            require(isinstance(sample, dict) and all(sample.get(key) is True for key in
+                    ("ready", "target", "visible", "unoccluded")) and sample.get("viewport") == viewport and
+                    isinstance(sample.get("hash"), str), "model focus movement did not retain visible owned host focus")
+            verify_entry_rect(sample.get("rect", {}), viewport)
 
 
 def verify_model_route_samples(mode, samples, model):
@@ -319,7 +355,7 @@ def verify_model_route_samples(mode, samples, model):
     viewport = {"width": 390, "height": 844} if mode.startswith("mobile") else {"width": 1280, "height": 900}
     for sample in samples:
         require(isinstance(sample, dict) and all(sample.get(key) is True for key in
-                ("target", "visible", "unoccluded")) and sample.get("hash") == model and sample.get("viewport") == viewport,
+                ("ready", "target", "visible", "unoccluded")) and sample.get("hash") == model and sample.get("viewport") == viewport,
                 "new route focus is hidden, unowned or misrouted")
         verify_entry_rect(sample.get("rect", {}), viewport)
 
@@ -414,6 +450,7 @@ def verify_checks(root, receipt):
     verify_negative_controls(root, receipt)
     verify_entry_geometry(receipt)
     verify_route_navigation(root, receipt)
+    verify_model_focus_movement(root, receipt)
     verify_coverage_geometry(receipt)
 
 
