@@ -235,8 +235,7 @@ func RestoreSQLite(ctx context.Context, backupFile, targetDSN string, overwrite 
 	}
 
 	if _, err := io.Copy(dst, src); err != nil {
-		dst.Close()
-		return fmt.Errorf("copy backup to temp target: %w", err)
+		return fmt.Errorf("copy backup to temp target: %w", errors.Join(err, dst.Close()))
 	}
 	if err := dst.Close(); err != nil {
 		return fmt.Errorf("close temp target: %w", err)

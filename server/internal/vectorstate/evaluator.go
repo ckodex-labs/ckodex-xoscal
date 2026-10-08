@@ -1,33 +1,60 @@
 package vectorstate
 
 import (
-	"crypto/sha256"
-	"encoding/hex"
 	"encoding/json"
+	"errors"
 	"fmt"
+	"github.com/mchorfa/xoscal/server/internal/derogation"
+	"github.com/mchorfa/xoscal/server/internal/schemavalidate"
 	"os"
 	"path/filepath"
 	"strings"
 	"time"
-
-	"github.com/mchorfa/xoscal/server/internal/derogation"
-	"github.com/mchorfa/xoscal/server/internal/schemavalidate"
 )
 
-// EvaluateArtifact inspects an OSCAL JSON artifact, performs schema validation,
-// checks evidence integrity, and computes the complete Vector State.
-func EvaluateArtifact(artifactPath string, evidenceDir string) (*VectorState, error) {
+// EvaluateArtifact inspects an OSCAL JSON artifact, validates its schema,
+// checks evidence integrity, and computes its Vector State.
+func EvaluateArtifact(artifactPath, evidenceDir string) (result *VectorState, resultErr error) {
+	evidence, err := openEvidence(evidenceDir)
+	if err != nil {
+		return nil, fmt.Errorf("open evidence directory: %w", err)
+	}
+	if evidence != nil {
+		defer func() { resultErr = errors.Join(resultErr, evidence.root.Close()) }()
+	}
 	data, err := os.ReadFile(artifactPath)
 	if err != nil {
 		return nil, fmt.Errorf("read artifact: %w", err)
 	}
-
 	var root map[string]interface{}
 	if err := json.Unmarshal(data, &root); err != nil {
 		return nil, fmt.Errorf("parse JSON: %w", err)
 	}
+	kind, rootKey, err := artifactKind(root)
+	if err != nil {
+		return nil, err
+	}
+	state := initialState(artifactPath, kind)
+	if evidence != nil {
+		state.Evidence = EvidenceUnverified
+	}
+	valid, err := validateArtifact(data, kind, state)
+	if err != nil {
+		return nil, err
+	}
+	if !valid {
+		return state, nil
+	}
+	target, _ := root[rootKey].(map[string]interface{})
+	evaluateRequirements(target, rootKey, state, evidence, loadDerogations(artifactPath))
+	if evidence != nil {
+		evidence.finish(state)
+	}
+	synthesizeState(state)
+	return state, nil
+}
 
-	// Detect Kind across all 8 official OSCAL 1.2.3 model types
+func artifactKind(root map[string]interface{}) (schemavalidate.ArtifactKind, string, error) {
 	var kind schemavalidate.ArtifactKind
 	var rootKey string
 	for key := range root {
@@ -63,10 +90,14 @@ func EvaluateArtifact(artifactPath string, evidenceDir string) (*VectorState, er
 	}
 
 	if rootKey == "" {
-		return nil, fmt.Errorf("unrecognized or unsupported OSCAL artifact root key")
+		return kind, "", fmt.Errorf("unrecognized or unsupported OSCAL artifact root key")
 	}
 
-	state := &VectorState{
+	return kind, rootKey, nil
+}
+
+func initialState(artifactPath string, kind schemavalidate.ArtifactKind) *VectorState {
+	return &VectorState{
 		ArtifactName: filepath.Base(artifactPath),
 		ArtifactKind: kind.Name,
 		Presence:     PresencePresent,
@@ -79,10 +110,12 @@ func EvaluateArtifact(artifactPath string, evidenceDir string) (*VectorState, er
 		Findings:     make([]ControlFinding, 0),
 	}
 
-	// Step 1: Strict Schema Validation
+}
+
+func validateArtifact(data []byte, kind schemavalidate.ArtifactKind, state *VectorState) (bool, error) {
 	v, err := schemavalidate.NewValidator()
 	if err != nil {
-		return nil, fmt.Errorf("init validator: %w", err)
+		return false, fmt.Errorf("init validator: %w", err)
 	}
 
 	if err := v.Validate(data, kind); err != nil {
@@ -98,82 +131,22 @@ func EvaluateArtifact(artifactPath string, evidenceDir string) (*VectorState, er
 			Description: fmt.Sprintf("OSCAL %s schema validation failed", schemavalidate.SchemaVersion),
 			Remediation: err.Error(),
 		})
-		return state, nil
+		return false, nil
 	}
 
-	// Step 2: Control Extraction & Evaluation
-	targetObj, ok := root[rootKey].(map[string]interface{})
-	if !ok {
-		return state, nil
+	return true, nil
+}
+
+func loadDerogations(artifactPath string) *derogation.Store {
+	path := filepath.Join(".xoscal", "derogations.json")
+	if _, err := os.Stat(path); os.IsNotExist(err) {
+		path = filepath.Join(filepath.Dir(artifactPath), ".xoscal", "derogations.json")
 	}
+	store, _ := derogation.Load(path)
+	return store
+}
 
-	// Load derogation store if available
-	derogPath := filepath.Join(".xoscal", "derogations.json")
-	if _, err := os.Stat(derogPath); os.IsNotExist(err) {
-		derogPath = filepath.Join(filepath.Dir(artifactPath), ".xoscal", "derogations.json")
-	}
-	derogStore, _ := derogation.Load(derogPath)
-
-	// Component-Definition Evaluation
-	if rootKey == "component-definition" {
-		comps, _ := targetObj["components"].([]interface{})
-		for _, rawComp := range comps {
-			compMap, ok := rawComp.(map[string]interface{})
-			if !ok {
-				continue
-			}
-			compTitle := "Component"
-			if t, ok := compMap["title"].(string); ok && t != "" {
-				compTitle = t
-			} else if tMap, ok := compMap["title"].(map[string]interface{}); ok {
-				if s, ok := tMap["value"].(string); ok {
-					compTitle = s
-				}
-			}
-
-			ctrlImpls, _ := compMap["control-implementations"].([]interface{})
-			for _, rawImpl := range ctrlImpls {
-				implMap, ok := rawImpl.(map[string]interface{})
-				if !ok {
-					continue
-				}
-				reqs, _ := implMap["implemented-requirements"].([]interface{})
-				for _, rawReq := range reqs {
-					reqMap, ok := rawReq.(map[string]interface{})
-					if !ok {
-						continue
-					}
-					ctrlID, _ := reqMap["control-id"].(string)
-					desc, _ := reqMap["description"].(string)
-					evaluateControl(ctrlID, compTitle, desc, state, evidenceDir, derogStore)
-				}
-			}
-		}
-	} else if rootKey == "system-security-plan" {
-		// System Security Plan Evaluation
-		ctrlImpl, _ := targetObj["control-implementation"].(map[string]interface{})
-		if ctrlImpl != nil {
-			reqs, _ := ctrlImpl["implemented-requirements"].([]interface{})
-			for _, rawReq := range reqs {
-				reqMap, ok := rawReq.(map[string]interface{})
-				if !ok {
-					continue
-				}
-				ctrlID, _ := reqMap["control-id"].(string)
-				desc, _ := reqMap["description"].(string)
-				if desc == "" {
-					if rem, ok := reqMap["remarks"].(string); ok {
-						desc = rem
-					}
-				}
-				evaluateControl(ctrlID, "System Security Plan", desc, state, evidenceDir, derogStore)
-			}
-		}
-	} else if rootKey == "catalog" {
-		// Catalog Evaluation
-		evalCatalogControls(targetObj, state, evidenceDir, derogStore)
-	}
-
+func synthesizeState(state *VectorState) {
 	// Synthesize overall vector dimensions
 	if state.Evidence == EvidenceTampered {
 		state.Lifecycle = ModeQuarantined
@@ -183,7 +156,7 @@ func EvaluateArtifact(artifactPath string, evidenceDir string) (*VectorState, er
 		state.Lifecycle = ModeFailed
 		state.Coherence = Decoherent
 		state.Valence = ValenceNegative
-	} else if state.DegradedCount > 0 {
+	} else if state.DegradedCount > 0 || state.Evidence == EvidenceUnverified {
 		state.Lifecycle = ModeDegraded
 		state.Coherence = PartiallyCoherent
 		state.Valence = ValenceMixed
@@ -197,187 +170,50 @@ func EvaluateArtifact(artifactPath string, evidenceDir string) (*VectorState, er
 		state.Valence = ValencePositive
 	}
 
-	return state, nil
 }
 
-func evaluateControl(
-	ctrlID string,
-	compTitle string,
-	desc string,
-	state *VectorState,
-	evidenceDir string,
-	derogStore *derogation.Store,
-) {
-	state.TotalControls++
-
-	finding := ControlFinding{
-		ControlID:   ctrlID,
-		Component:   compTitle,
-		Status:      "coherent",
-		Valence:     "POSITIVE",
-		Description: desc,
-	}
-
-	// Check description quality
+func evaluateControl(ctrlID, compTitle, desc string, state *VectorState, evidence *evidenceSource, store *derogation.Store) {
+	finding := ControlFinding{ControlID: ctrlID, Component: compTitle, Status: "coherent", Valence: "POSITIVE", Description: desc}
 	if strings.TrimSpace(desc) == "" {
-		finding.Status = "incomplete"
-		finding.Valence = "NEUTRAL"
+		finding.Status, finding.Valence = "incomplete", "NEUTRAL"
 		finding.Remediation = "Provide detailed implementation statement prose"
-		state.DegradedCount++
 	} else if len(strings.TrimSpace(desc)) < 15 {
-		finding.Status = "degraded"
-		finding.Valence = "MIXED"
+		finding.Status, finding.Valence = "degraded", "MIXED"
 		finding.Remediation = "Implementation statement is overly terse; elaborate mechanism and verification"
-		state.DegradedCount++
-	} else {
-		state.PassingCount++
 	}
-
-	// Check evidence if directory supplied
-	if evidenceDir != "" {
-		evFiles, _ := filepath.Glob(filepath.Join(evidenceDir, fmt.Sprintf("*%s*", ctrlID)))
-		if len(evFiles) == 0 {
-			finding.Status = "degraded"
-			finding.Valence = "MIXED"
-			finding.Remediation = fmt.Sprintf("No corroborating evidence blob found matching control %s in %s", ctrlID, evidenceDir)
-			if state.Evidence != EvidenceTampered {
-				state.Evidence = EvidenceUnverified
-			}
-		} else {
-			for _, ev := range evFiles {
-				if strings.HasSuffix(ev, ".sha256") {
-					continue
-				}
-				finding.Evidence = append(finding.Evidence, filepath.Base(ev))
-				// Verify SHA-256 sidecar if present
-				sidecar := ev + ".sha256"
-				if sideData, err := os.ReadFile(sidecar); err == nil {
-					evData, _ := os.ReadFile(ev)
-					sum := sha256.Sum256(evData)
-					expected := strings.TrimSpace(string(sideData))
-					actual := hex.EncodeToString(sum[:])
-					if !strings.EqualFold(expected, actual) {
-						finding.Status = "violation"
-						finding.Valence = "NEGATIVE"
-						finding.Remediation = fmt.Sprintf("Evidence blob %s checksum mismatch! Expected %s, got %s", filepath.Base(ev), expected, actual)
-						state.AntiCount++
-						state.Evidence = EvidenceTampered
-					}
-				}
-			}
-		}
+	if evidence != nil {
+		evidence.evaluate(ctrlID, &finding, state)
 	}
-
-	// Check derogation store
-	if derogStore != nil {
-		if active := derogStore.GetActiveForControl(ctrlID, time.Now()); active != nil {
-			if finding.Status == "degraded" || finding.Status == "incomplete" {
-				state.DegradedCount--
-			} else if finding.Status == "coherent" {
-				state.PassingCount--
-			}
-			finding.Status = "derogated"
-			finding.Valence = "MIXED"
-			finding.Remediation = fmt.Sprintf("Derogated by %s (TTL remaining: %s; justification: %s)",
-				active.Authority, active.TimeRemaining(time.Now()).Round(time.Hour), active.Justification)
-			state.DerogatedCount++
-		} else if expired := derogStore.GetExpiredForControl(ctrlID, time.Now()); expired != nil {
-			if finding.Status == "coherent" {
-				state.PassingCount--
-			} else if finding.Status == "degraded" || finding.Status == "incomplete" {
-				state.DegradedCount--
-			}
-			finding.Status = "expired_derogation"
-			finding.Valence = "NEGATIVE"
-			finding.Remediation = fmt.Sprintf("CRITICAL: Derogation expired on %s! Authority %s must re-evaluate",
-				expired.ExpiresAt.Format(time.RFC3339), expired.Authority)
-			state.AntiCount++
-		}
-	}
-
-	state.Findings = append(state.Findings, finding)
+	applyDerogation(ctrlID, &finding, store)
+	recordFinding(finding, state)
 }
 
-func evalCatalogControls(
-	targetObj map[string]interface{},
-	state *VectorState,
-	evidenceDir string,
-	derogStore *derogation.Store,
-) {
-	var processCtrl func(rawCtrl interface{}, compTitle string)
-	processCtrl = func(rawCtrl interface{}, compTitle string) {
-		ctrlMap, ok := rawCtrl.(map[string]interface{})
-		if !ok {
-			return
-		}
-		ctrlID := ""
-		if idVal, ok := ctrlMap["id"].(string); ok {
-			ctrlID = idVal
-		} else if idMap, ok := ctrlMap["id"].(map[string]interface{}); ok {
-			ctrlID, _ = idMap["value"].(string)
-		}
-		if ctrlID == "" {
-			return
-		}
-
-		title := ""
-		if tVal, ok := ctrlMap["title"].(string); ok {
-			title = tVal
-		} else if tMap, ok := ctrlMap["title"].(map[string]interface{}); ok {
-			title, _ = tMap["value"].(string)
-		}
-
-		desc := title
-		if parts, ok := ctrlMap["parts"].([]interface{}); ok {
-			for _, p := range parts {
-				if pMap, ok := p.(map[string]interface{}); ok {
-					if pStr, ok := pMap["prose"].(string); ok && pStr != "" {
-						desc = pStr
-						break
-					} else if proseList, ok := pMap["prose"].([]interface{}); ok && len(proseList) > 0 {
-						if pStr, ok := proseList[0].(string); ok && pStr != "" {
-							desc = pStr
-							break
-						}
-					}
-				}
-			}
-		}
-
-		evaluateControl(ctrlID, compTitle, desc, state, evidenceDir, derogStore)
+func applyDerogation(ctrlID string, finding *ControlFinding, store *derogation.Store) {
+	if store == nil || finding.Status == "violation" {
+		return
 	}
-
-	if ctrls, ok := targetObj["controls"].([]interface{}); ok {
-		for _, c := range ctrls {
-			processCtrl(c, "Catalog Root")
-		}
+	if active := store.GetActiveForControl(ctrlID, time.Now()); active != nil {
+		finding.Status, finding.Valence = "derogated", "MIXED"
+		finding.Remediation = fmt.Sprintf("Derogated by %s (TTL remaining: %s; justification: %s)",
+			active.Authority, active.TimeRemaining(time.Now()).Round(time.Hour), active.Justification)
+	} else if expired := store.GetExpiredForControl(ctrlID, time.Now()); expired != nil {
+		finding.Status, finding.Valence = "expired_derogation", "NEGATIVE"
+		finding.Remediation = fmt.Sprintf("CRITICAL: Derogation expired on %s! Authority %s must re-evaluate",
+			expired.ExpiresAt.Format(time.RFC3339), expired.Authority)
 	}
+}
 
-	var processGroup func(rawGroup interface{})
-	processGroup = func(rawGroup interface{}) {
-		gMap, ok := rawGroup.(map[string]interface{})
-		if !ok {
-			return
-		}
-		gTitle := "Catalog Group"
-		if t, ok := gMap["title"].(string); ok && t != "" {
-			gTitle = t
-		}
-		if ctrls, ok := gMap["controls"].([]interface{}); ok {
-			for _, c := range ctrls {
-				processCtrl(c, gTitle)
-			}
-		}
-		if subGroups, ok := gMap["groups"].([]interface{}); ok {
-			for _, sub := range subGroups {
-				processGroup(sub)
-			}
-		}
+func recordFinding(finding ControlFinding, state *VectorState) {
+	state.TotalControls++
+	switch finding.Status {
+	case "coherent":
+		state.PassingCount++
+	case "incomplete", "degraded":
+		state.DegradedCount++
+	case "derogated":
+		state.DerogatedCount++
+	case "violation", "expired_derogation":
+		state.AntiCount++
 	}
-
-	if groups, ok := targetObj["groups"].([]interface{}); ok {
-		for _, g := range groups {
-			processGroup(g)
-		}
-	}
+	state.Findings = append(state.Findings, finding)
 }
