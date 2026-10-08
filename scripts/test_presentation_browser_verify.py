@@ -25,7 +25,16 @@ def make_fixture(root):
     for mode in sorted(browser.MODES):
         receipt["modes"].append(fixture_mode(mode))
         receipt["checks"] += [{"id": name, "passed": True} for name in sorted(browser.mandatory_checks(mode))]
-    fixture_negative_controls(receipt)
+    fixture_negative_controls(root, receipt)
+    for check in receipt["checks"]:
+        if check["id"].endswith(": cold contract: cancellation keydown occurs during loading"):
+            check["detail"] = {"key": "Tab" if ":focus-return:" in check["id"] else "Enter", "phase": "loading"}
+        if check["id"].endswith(": ready transition retains visible unoccluded keyboard focus"):
+            sample = {"target": True, "visible": True, "unoccluded": True, "headingVisible": True,
+                      "headingUnoccluded": True, "rect": {"top": 100, "bottom": 120, "left": 10, "right": 210, "width": 200, "height": 20},
+                      "heading": {"top": 130, "bottom": 150, "left": 10, "right": 210, "width": 200, "height": 20},
+                      "viewport": {"width": 390, "height": 844} if check["id"].startswith("mobile") else {"width": 1280, "height": 900}}
+            check["detail"] = [copy.deepcopy(sample) for _ in range(4)]
     names = browser.subjects(root)
     receipt["subjects"] = {name: browser.digest(root / name) for name in names}
     receipt["subject_sizes"] = {name: (root / name).stat().st_size for name in names}
@@ -84,10 +93,15 @@ def fixture_mode(mode):
     return log
 
 
-def fixture_negative_controls(receipt):
+def fixture_negative_controls(root, receipt):
     for mode in ("desktop-js", "mobile-js"):
-        for failure in ("404", "tamper", "script"):
+        for failure in ("404", "tamper", "script", "focus-return", "cancel"):
             log = make_log(mode + ":" + failure)
+            if failure in ("focus-return", "cancel"):
+                fixture_cold_control(root, receipt, log, failure)
+                continue
+            if failure != "script":
+                receipt["checks"].append({"id": log["id"] + ": failed explorer: ready transition retains visible unoccluded keyboard focus", "passed": True})
             if failure != "tamper":
                 status = 404 if failure == "404" else 503
                 url = "http://127.0.0.1:8081" + ("/openapi.json" if failure == "404" else "/scalar.js")
@@ -95,6 +109,26 @@ def fixture_negative_controls(receipt):
                 log["console"] = [{"type": "error", "text": "Synthetic intentional HTTP " + str(status)}]
             receipt["negative_controls"].append(log)
             receipt["checks"].append({"id": log["id"] + ": complete Plain HTML is the initial or failed-enhancement view", "passed": True})
+
+
+def fixture_cold_control(root, receipt, log, failure):
+    url = "http://127.0.0.1:8081/openapi.json"
+    log["held_contract"] = {"status": 200, "digest": browser.digest(root / "openapi.json"),
+                            "size": (root / "openapi.json").stat().st_size}
+    log["requests"].append({"url": url, "method": "GET"})
+    log["network_failures"] = [{"url": url, "error": "net::ERR_ABORTED", "intentional": True}]
+    names = ["cold contract exact actual held response", "cold contract: actual Tab enters explorer summary",
+             "cold contract: cancellation keydown occurs during loading", "cold contract: cancelled explorer never resurrects"]
+    names.append("cancel explorer: ready transition retains visible unoccluded keyboard focus" if failure == "cancel" else
+                 "cold contract: moved Plain focus remains visible and owned")
+    for name in names:
+        record = {"id": log["id"] + ": " + name, "passed": True}
+        if "moved Plain focus" in name:
+            record["detail"] = {"target": True, "visible": True, "unoccluded": True,
+                "rect": {"top": 100, "bottom": 120, "left": 10, "right": 210, "width": 200, "height": 20},
+                "viewport": {"width": 390, "height": 844} if log["id"].startswith("mobile") else {"width": 1280, "height": 900}}
+        receipt["checks"].append(record)
+    receipt["negative_controls"].append(log)
 
 
 def make_log(identifier):
@@ -149,6 +183,75 @@ class BrowserReceiptTests(unittest.TestCase):
                 with self.assertRaises(ValueError):
                     browser.verify(self.root)
                 path.write_bytes(original)
+
+    def test_entry_focus_geometry_cannot_be_missing_hidden_or_unowned(self):
+        for field in ("target", "visible", "unoccluded", "headingVisible", "headingUnoccluded"):
+            with self.subTest(field=field):
+                receipt = copy.deepcopy(self.receipt)
+                check = next(item for item in receipt["checks"] if item["id"].endswith(": ready transition retains visible unoccluded keyboard focus"))
+                check["detail"][2][field] = False
+                self.save(receipt)
+                with self.assertRaises(ValueError):
+                    browser.verify(self.root)
+        receipt = copy.deepcopy(self.receipt)
+        check = next(item for item in receipt["checks"] if item["id"].endswith(": ready transition retains visible unoccluded keyboard focus"))
+        check["detail"].pop()
+        self.save(receipt)
+        with self.assertRaises(ValueError):
+            browser.verify(self.root)
+
+    def test_entry_geometry_claims_cannot_override_actual_viewport_or_dimensions(self):
+        mutations = [("bottom", 90000), ("right", 90000), ("top", -1),
+                     ("width", 0), ("height", 300), ("left", float("nan")), ("bottom", float("inf"))]
+        for target in ("rect", "heading"):
+            for field, value in mutations:
+                with self.subTest(target=target, field=field):
+                    receipt = copy.deepcopy(self.receipt)
+                    check = next(item for item in receipt["checks"] if item["id"].endswith(": ready transition retains visible unoccluded keyboard focus"))
+                    check["detail"][2][target][field] = value
+                    self.save(receipt)
+                    with self.assertRaises(ValueError):
+                        browser.verify(self.root)
+
+    def test_missing_keyboard_entry_and_failure_focus_checks_refused(self):
+        markers = ["API keyboard entry/view link:", "API keyboard entry/plain view link:",
+                   "API keyboard entry/native summary:", "cold contract: cancellation keydown occurs during loading", "failed explorer:"]
+        for marker in markers:
+            with self.subTest(marker=marker):
+                receipt = copy.deepcopy(self.receipt)
+                removed = next(item for item in receipt["checks"] if marker in item["id"])
+                receipt["checks"].remove(removed)
+                self.save(receipt)
+                with self.assertRaises(ValueError):
+                    browser.verify(self.root)
+
+    def test_loading_key_observations_must_match_actual_control(self):
+        for value in ({"key": "Tab", "phase": "ready"}, {"key": "Enter", "phase": "loading"}, None):
+            receipt = copy.deepcopy(self.receipt)
+            check = next(item for item in receipt["checks"] if ":focus-return:" in item["id"] and item["id"].endswith("cancellation keydown occurs during loading"))
+            check["detail"] = value
+            self.save(receipt)
+            with self.assertRaises(ValueError):
+                browser.verify(self.root)
+
+    def test_cold_abort_is_bound_to_exact_request_bytes_and_user_focus(self):
+        mutations = [lambda log: log["network_failures"][0].update(url="https://elsewhere/openapi.json"),
+                     lambda log: log["requests"].append(log["requests"][-1]),
+                     lambda log: log["held_contract"].update(digest="sha256:" + "0" * 64),
+                     lambda log: log["held_contract"].update(size=0),
+                     lambda log: log["network_failures"].append(log["network_failures"][0])]
+        for mutate in mutations:
+            receipt = copy.deepcopy(self.receipt)
+            mutate(next(log for log in receipt["negative_controls"] if log["id"] == "desktop-js:focus-return"))
+            self.save(receipt)
+            with self.assertRaises(ValueError):
+                browser.verify(self.root)
+        receipt = copy.deepcopy(self.receipt)
+        check = next(item for item in receipt["checks"] if item["id"] == "desktop-js:focus-return: cold contract: moved Plain focus remains visible and owned")
+        check["detail"]["rect"]["bottom"] = 90000
+        self.save(receipt)
+        with self.assertRaises(ValueError):
+            browser.verify(self.root)
 
     def test_missing_sources_and_mutable_tooling_refused(self):
         stage = self.root / browser.DIRECTORY

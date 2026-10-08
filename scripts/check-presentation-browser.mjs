@@ -8,7 +8,7 @@ import { fileURLToPath } from 'node:url'
 import { createRequire } from 'node:module'
 import { execFileSync } from 'node:child_process'
 import { chromium, request } from 'playwright'
-import { checkApiLandmarks, checkApiReferenceFallback, checkStaticApiDeepLink, checkApiTheme } from './check-api-landmarks.mjs'
+import { checkApiLandmarks, checkApiEntryKeyboard, checkApiEntryFallbackFocus, checkApiEntryCancellation, checkApiReferenceFallback, checkStaticApiDeepLink, checkApiTheme } from './check-api-landmarks.mjs'
 
 const args = Object.fromEntries(process.argv.slice(2).reduce((pairs, value, index, all) => index % 2 ? pairs : [...pairs, [value.replace(/^--/, ''), all[index + 1]]], []))
 const root = fs.realpathSync(args.root), output = path.resolve(args.output)
@@ -83,12 +83,14 @@ function admitBindings(saved) {
 function admitObservations(saved) {
   for (const mode of saved.modes) if (JSON.stringify(Object.keys(mode.observations)) !== JSON.stringify(['/', ...config.routes])) throw Error('Missing actual page coverage: ' + mode.id)
   for (const mode of saved.modes) if (mode.javaScriptEnabled !== mode.id.endsWith('-js') || ['console', 'network', 'page_errors'].some(key => !Array.isArray(mode[key]) || mode[key].length)) throw Error('Invalid or failed browser mode: ' + mode.id)
-  const controls = config.modes.filter(id => id.endsWith('-js')).flatMap(id => ['404', 'tamper', 'script'].map(failure => id + ':' + failure))
+  const controls = config.modes.filter(id => id.endsWith('-js')).flatMap(id => ['404', 'tamper', 'script', 'focus-return', 'cancel'].map(failure => id + ':' + failure))
   if (JSON.stringify(saved.negative_controls.map(control => control.id).sort()) !== JSON.stringify(controls.sort())) throw Error('Missing required negative control')
 }
 
 function requiredIds() {
-  return ['toolchain: immutable image and package version', 'toolchain: actual pinned Chromium', 'inventory: exact eight actual pages', 'served root alias: exact index bytes', 'receipt: complete six negative controls', 'proxy: no non-service origins requested', 'inventory: read-only same-origin resources', ...config.modes.flatMap(modeRequiredIds)]
+  const failedEntries = config.modes.filter(mode => mode.endsWith('-js')).flatMap(mode => ['404', 'tamper'].map(failure => mode + ':' + failure + ': failed explorer: ready transition retains visible unoccluded keyboard focus'))
+  const coldEntries = config.modes.filter(mode => mode.endsWith('-js')).flatMap(mode => ['focus-return', 'cancel'].flatMap(failure => ['cold contract exact actual held response', 'cold contract: actual Tab enters explorer summary', 'cold contract: cancellation keydown occurs during loading', 'cold contract: cancelled explorer never resurrects', failure === 'cancel' ? 'cancel explorer: ready transition retains visible unoccluded keyboard focus' : 'cold contract: moved Plain focus remains visible and owned'].map(name => mode + ':' + failure + ': ' + name)))
+  return ['toolchain: immutable image and package version', 'toolchain: actual pinned Chromium', 'inventory: exact eight actual pages', 'served root alias: exact index bytes', 'receipt: complete ten negative controls', 'proxy: no non-service origins requested', 'inventory: read-only same-origin resources', ...config.modes.flatMap(modeRequiredIds), ...failedEntries, ...coldEntries]
 }
 
 function modeRequiredIds(mode) {
@@ -111,7 +113,8 @@ function nativeRequiredIds(mode) {
 }
 
 function lifecycleRequiredIds(mode) {
-  const ids = []
+  const ids = ['view link', 'plain view link', 'native summary'].map(kind => mode + ': API keyboard entry/' + kind + ': ready transition retains visible unoccluded keyboard focus')
+  for (const name of ['view link: actual Tab reaches explorer selector', 'plain view link: actual Shift+Tab reaches Plain selector', 'native summary: actual Tab reaches explorer summary after far Plain contract']) ids.push(mode + ': API keyboard entry/' + name)
   for (const phase of ['online API lifecycle', 'loaded offline API lifecycle']) for (let cycle = 0; cycle < 3; cycle++) ids.push(mode + ': ' + phase + '/cycle ' + cycle + ': API client is a visible labelled dialog', mode + ': ' + phase + '/cycle ' + cycle + ' dismissed, including hidden DOM: no duplicate DOM IDs')
   return ids
 }
@@ -312,7 +315,7 @@ function observe(page, log, expected = []) {
   page.on('pageerror', error => log.page_errors.push(String(error)))
   page.on('console', message => { if (['error', 'warning'].includes(message.type())) log.console.push({ type: message.type(), text: message.text() }) })
   page.on('request', req => log.requests.push({ url: req.url(), method: req.method(), type: req.resourceType() }))
-  page.on('requestfailed', req => { const failure = { url: req.url(), error: req.failure()?.errorText }; failure.intentional = failure.error === 'net::ERR_ABORTED' && expected.some(item => req.url() === new URL(item.path, base).href) && log.http_failures.some(item => item.url === req.url() && item.intentional); log.network_failures.push(failure); if (!failure.intentional) log.network.push(failure) })
+  page.on('requestfailed', req => { const failure = { url: req.url(), error: req.failure()?.errorText }; failure.intentional = failure.error === 'net::ERR_ABORTED' && expected.some(item => req.url() === new URL(item.path, base).href && (item.abort || log.http_failures.some(response => response.url === req.url() && response.intentional))); log.network_failures.push(failure); if (!failure.intentional) log.network.push(failure) })
   page.on('response', response => { if (response.status() >= 400) { const failure = { url: response.url(), status: response.status(), intentional: expected.some(item => response.url().endsWith(item.path) && response.status() === item.status) }; log.http_failures.push(failure); if (!failure.intentional) log.network.push(failure) } })
 }
 
@@ -372,6 +375,7 @@ async function apiChecks(page, context, profile, spec, observation, log) {
   verify(profile.id + ': exact 96 operations and 395 model definitions', observation.api.operations === 96 && observation.api.models === 395, observation.api)
   await nativeContracts(page, profile, observation)
   if (profile.js) {
+    await checkApiEntryKeyboard(page, callback('API keyboard entry'))
     await checkApiLandmarks(page, callback('online API lifecycle'))
     observation.scalar_themes = await themes(page, profile.id + ': Scalar', true)
     const before = log.requests.length
@@ -404,17 +408,40 @@ async function modeRun(profile, spec) {
   cleanNetwork(log, profile.id); await context.close()
 }
 
+async function holdContract(page, log) {
+  let received, release
+  const held = new Promise(resolve => { received = resolve }), unlocked = new Promise(resolve => { release = resolve })
+  await page.route(new URL('openapi.json', base).href, async route => {
+    const response = await route.fetch(), bytes = await response.body()
+    log.held_contract = { status: response.status(), digest: sha(bytes), size: bytes.length }
+    verify(log.id + ': cold contract exact actual held response', response.status() === 200 && bytes.equals(fs.readFileSync(path.join(root, 'openapi.json'))), log.held_contract)
+    received(); await unlocked
+    try { await route.fulfill({ response, body: bytes }) } catch (error) {
+      log.cancelled_route = String(error)
+      verify(log.id + ': cold response release without unexpected route error', false, String(error))
+    }
+  })
+  return { held: () => held, release: () => release() }
+}
+
 async function negativeControl(profile, spec, failure) {
   const context = await browser.newContext({ viewport: profile.viewport, javaScriptEnabled: true, isMobile: profile.mobile, hasTouch: profile.mobile, serviceWorkers: 'block' }), page = await context.newPage()
-  const expected = failure === 'script' ? [{ path: '/scalar.js', status: 503 }] : failure === '404' ? [{ path: '/openapi.json', status: 404 }] : []
+  const cold = ['focus-return', 'cancel'].includes(failure)
+  const expected = cold ? [{ path: '/openapi.json', abort: true }] : failure === 'script' ? [{ path: '/scalar.js', status: 503 }] : failure === '404' ? [{ path: '/openapi.json', status: 404 }] : []
   const log = { id: profile.id + ':' + failure, console: [], network: [], requests: [], page_errors: [], network_failures: [], http_failures: [] }; receipt.negative_controls.push(log); observe(page, log, expected)
   await safeRequests(context, log)
+  const control = cold ? await holdContract(page, log) : null
   if (failure === 'script') await context.route(new URL('scalar.js', base).href, route => route.fulfill({ status: 503, body: 'Deliberate failed-script control' }))
-  else await context.route(new URL('openapi.json', base).href, route => route.fulfill({ status: failure === '404' ? 404 : 200, contentType: 'application/json', body: failure === '404' ? 'Missing contract control' : fs.readFileSync(path.join(root, 'openapi.json'), 'utf8') + '\n' }))
+  else if (!cold) await context.route(new URL('openapi.json', base).href, route => route.fulfill({ status: failure === '404' ? 404 : 200, contentType: 'application/json', body: failure === '404' ? 'Missing contract control' : fs.readFileSync(path.join(root, 'openapi.json'), 'utf8') + '\n' }))
   await page.goto(base + 'docs.html', { waitUntil: 'networkidle' })
-  if (failure !== 'script') { await page.locator('#interactive-api-view > summary').focus(); await page.keyboard.press('Enter'); await page.waitForFunction(() => document.getElementById('interactive-api-view').dataset.enhancement === 'failed') }
-  await checkApiReferenceFallback(page, spec, { failed: failure !== 'script', check: (name, passed, detail) => verify(log.id + ': ' + name, passed, detail) })
-  await semantics(page, log.id); cleanNetwork(log, log.id, failure !== 'tamper'); await context.close()
+  const check = (name, passed, detail) => verify(log.id + ': ' + name, passed, detail)
+  if (cold) await checkApiEntryCancellation(page, { kind: failure, ...control, check })
+  else {
+    if (failure !== 'script') { await page.locator('#interactive-api-view > summary').focus(); await page.keyboard.press('Enter'); await page.waitForFunction(() => document.getElementById('interactive-api-view').dataset.enhancement === 'failed') }
+    if (failure !== 'script') await checkApiEntryFallbackFocus(page, { check })
+    await checkApiReferenceFallback(page, spec, { failed: failure !== 'script', check })
+  }
+  await semantics(page, log.id); cleanNetwork(log, log.id, !cold && failure !== 'tamper'); await context.close()
 }
 
 async function run() {
@@ -426,10 +453,10 @@ async function run() {
   for (const id of config.modes) {
     const profile = { id, js: id.endsWith('-js'), mobile: id.startsWith('mobile'), viewport: id.startsWith('mobile') ? { width: 390, height: 844 } : { width: 1280, height: 900 } }
     await modeRun(profile, spec)
-    if (profile.js) for (const failure of ['404', 'tamper', 'script']) await bounded(profile.id + ': negative ' + failure, () => negativeControl(profile, spec, failure))
+    if (profile.js) for (const failure of ['404', 'tamper', 'script', 'focus-return', 'cancel']) await bounded(profile.id + ': negative ' + failure, () => negativeControl(profile, spec, failure))
   }
   verify('receipt: check IDs uniquely identify observations', new Set(receipt.checks.map(check => check.id)).size === receipt.checks.length)
-  verify('receipt: complete six negative controls', receipt.negative_controls.length === 6 && new Set(receipt.negative_controls.map(control => control.id)).size === 6)
+  verify('receipt: complete ten negative controls', receipt.negative_controls.length === 10 && new Set(receipt.negative_controls.map(control => control.id)).size === 10)
   verify('proxy: no non-service origins requested', receipt.proxy_denials.length === 0, receipt.proxy_denials)
   const observed = new Set(receipt.checks.map(check => check.id))
   verify('receipt: every mandatory check actually ran', requiredIds().every(id => observed.has(id)), requiredIds().filter(id => !observed.has(id)))

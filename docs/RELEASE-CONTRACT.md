@@ -24,7 +24,13 @@ credential or registry publication is introduced by local execution.
    the home alias run in fresh desktop/mobile JavaScript and no-JavaScript
    contexts. Mandatory checks include full prebuilt API content, repeated
    dialog/keyboard lifecycles, unique landmarks/IDs, themes, native content,
-   geometry/occlusion and six failed/tampered-enhancement controls. Browser
+   geometry/occlusion, actual keyboard view-entry focus and ten enhancement
+   controls. The controls cover missing/tampered contracts, failed scripts,
+   returning focus to Plain during loading and cancelling loading on desktop
+   and mobile. Loading controls hold an actual exact-byte contract response
+   until the observed cancellation key; only that contract's intentional abort
+   is allowed. Independent replay enforces finite in-viewport focus/heading
+   rectangles and actual loading key observations. Browser
    tooling stays in the analysis container. Raw observations and exact
    producer/toolchain sources are staged as six final-only evidence files;
    independent admission validates coverage and rehashes their presentation

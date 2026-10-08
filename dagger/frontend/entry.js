@@ -11,8 +11,37 @@ if (marker) {
   const container = document.getElementById('interactive-api-reference')
   const status = document.getElementById('scalar-status')
   const links = [...document.querySelectorAll('#api-reference-views a')]
+  const summary = interactive.querySelector(':scope > summary')
   let instance = null, configuration = null, loading = false, ready = false
   let timer = null, controller = null, attempt = 0, cachedSource = null
+  let entryIntent = null
+  const rememberEntry = () => {
+    summary.focus({ preventScroll: true })
+    summary.scrollIntoView({ block: 'center', behavior: 'instant' })
+    entryIntent = { target: summary, attempt: attempt + (ready || loading ? 0 : 1) }
+  }
+  const settleEntry = () => {
+    const intent = entryIntent
+    if (!intent) return
+    const restore = () => {
+      if (entryIntent !== intent || intent?.attempt !== attempt || !interactive.open ||
+          !ready || document.activeElement !== intent.target) return
+      // Closing the tall Plain disclosure changes Scalar's document geometry.
+      // Keep the user's entry control visible before its observers sample it.
+      intent.target.scrollIntoView({ block: 'center', behavior: 'instant' })
+    }
+    restore()
+    requestAnimationFrame(() => requestAnimationFrame(restore))
+  }
+  const cancelEntry = () => { entryIntent = null }
+  for (const event of ['keydown', 'pointerdown', 'wheel', 'touchstart'])
+    window.addEventListener(event, cancelEntry, { capture: true, passive: true })
+  document.addEventListener('focusin', event => {
+    if (entryIntent && event.target !== entryIntent.target) cancelEntry()
+    // A user returning to the readable contract cancels optional loading;
+    // its eventual ready callback must not close the newly focused disclosure.
+    if (loading && plain.contains(event.target)) showPlain()
+  })
   const darkState = () => ['vault', 'hc'].includes(document.documentElement.dataset.theme) ? 'dark' : 'light'
   const scalarHash = () => /^#(?:tag|model|models|operation|description)(?:\/|$)/.test(location.hash)
   const current = id => {
@@ -22,6 +51,8 @@ if (marker) {
     }
   }
   const showPlain = () => {
+    const returnFocus = document.activeElement === summary
+    cancelEntry()
     if (loading || instance) {
       attempt += 1
       controller?.abort()
@@ -36,6 +67,11 @@ if (marker) {
     plain.open = true
     interactive.open = false
     current(plain.id)
+    if (returnFocus) {
+      const target = plain.querySelector(':scope > summary')
+      target.focus({ preventScroll: true })
+      target.scrollIntoView({ block: 'center', behavior: 'instant' })
+    }
   }
   const openTarget = target => {
     showPlain()
@@ -83,6 +119,7 @@ if (marker) {
     if (interactive.open) {
       plain.open = false
       current(interactive.id)
+      settleEntry()
     }
     return true
   }
@@ -129,6 +166,7 @@ if (marker) {
     if (ready) {
       plain.open = false
       current(interactive.id)
+      settleEntry()
       return
     }
     if (loading) return
@@ -157,6 +195,9 @@ if (marker) {
     if (interactive.open) enhance()
     else if (ready || loading) showPlain()
   })
+  summary.addEventListener('click', () => {
+    if (!interactive.open && document.activeElement === summary) rememberEntry()
+  })
   const route = () => {
     let target
     try { target = document.getElementById(decodeURIComponent(location.hash.slice(1))) }
@@ -168,9 +209,19 @@ if (marker) {
     }
   }
   window.addEventListener('hashchange', route)
-  for (const link of links) link.addEventListener('click', () => {
-    if (link.hash === '#' + plain.id) showPlain()
-    else {
+  for (const link of links) link.addEventListener('click', event => {
+    if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return
+    // The native fragment could scroll past a still-open or closing view.
+    // No-JS links remain native; only these two explicit view entries are owned.
+    event.preventDefault()
+    history.pushState(null, '', link.hash)
+    if (link.hash === '#' + plain.id) {
+      showPlain()
+      const target = plain.querySelector(':scope > summary')
+      target.focus({ preventScroll: true })
+      target.scrollIntoView({ block: 'center', behavior: 'instant' })
+    } else {
+      rememberEntry()
       interactive.open = true
       enhance()
     }

@@ -4,6 +4,7 @@
 import argparse
 import hashlib
 import json
+import math
 import re
 from pathlib import Path
 from urllib.parse import urlsplit
@@ -91,8 +92,8 @@ def verify_requests(log, expected=None):
         require(expected is not None and failure.get("intentional") is True and
                 failure.get("error") == "net::ERR_ABORTED" and
                 urlsplit(failure.get("url", "")).path == expected[0] and
-                any(response.get("url") == failure["url"] and response.get("status") == expected[1] and
-                    response.get("intentional") is True for response in log.get("http_failures", [])),
+                (expected[1] is None or any(response.get("url") == failure["url"] and response.get("status") == expected[1] and
+                    response.get("intentional") is True for response in log.get("http_failures", []))),
                 "unexpected or uncorrelated request failure")
 
 
@@ -133,23 +134,36 @@ def mandatory_checks(mode):
             prefix = mode + "/" + route + ": " + phase
             ids |= {prefix + ": sole canonical main, unique IDs and ARIA", prefix + ": viewport fits native content"}
     if mode.endswith("-js"):
+        for kind in ("view link", "plain view link", "native summary"):
+            ids.add(mode + ": API keyboard entry/" + kind +
+                    ": ready transition retains visible unoccluded keyboard focus")
+        for name in ("view link: actual Tab reaches explorer selector",
+                     "plain view link: actual Shift+Tab reaches Plain selector",
+                     "native summary: actual Tab reaches explorer summary after far Plain contract"):
+            ids.add(mode + ": API keyboard entry/" + name)
         for phase in ("online API lifecycle", "loaded offline API lifecycle"):
             for cycle in range(3):
                 ids.add(mode + ": " + phase + "/cycle " + str(cycle) + ": Escape dismisses the API client")
     return ids
 
 
-def verify_negative_controls(receipt):
+def verify_negative_controls(root, receipt):
     controls = receipt.get("negative_controls", [])
-    expected = {mode + ":" + failure for mode in ("desktop-js", "mobile-js") for failure in ("404", "tamper", "script")}
-    require(len(controls) == 6 and {item.get("id") for item in controls} == expected, "incomplete negative controls")
+    expected = {mode + ":" + failure for mode in ("desktop-js", "mobile-js") for failure in ("404", "tamper", "script", "focus-return", "cancel")}
+    require(len(controls) == 10 and {item.get("id") for item in controls} == expected, "incomplete negative controls")
     ids = {item["id"] for item in receipt["checks"]}
     for log in controls:
+        if log["id"].endswith((":focus-return", ":cancel")):
+            verify_cold_control(root, receipt, log)
+            continue
         expected_response = (("/openapi.json", 404) if log["id"].endswith(":404") else
                              ("/scalar.js", 503) if log["id"].endswith(":script") else None)
         verify_requests(log, expected_response)
         require(log["id"] + ": complete Plain HTML is the initial or failed-enhancement view" in ids,
                 "missing fail-closed fallback assertion")
+        if not log["id"].endswith(":script"):
+            require(log["id"] + ": failed explorer: ready transition retains visible unoccluded keyboard focus" in ids,
+                    "missing failed-entry focus assertion")
         if log["id"].endswith(":tamper"):
             require(log.get("console") == log.get("http_failures") == [], "tamper control caused an unexpected runtime error")
         else:
@@ -162,6 +176,66 @@ def verify_negative_controls(receipt):
             console = log.get("console", [])
             require(len(console) == 1 and all(re.search(r"404|503", item.get("text", "")) for item in console),
                     "unexpected negative-control console error")
+
+
+def verify_cold_control(root, receipt, log):
+    verify_requests(log, ("/openapi.json", None))
+    require(log.get("console") == log.get("http_failures") == [] and len(log.get("network_failures", [])) == 1,
+            "cold cancellation must have only its exact contract abort")
+    url = "http://127.0.0.1:8081/openapi.json"
+    require(log["network_failures"][0].get("url") == url, "cold cancellation abort URL differs")
+    require(log.get("held_contract") == {"status": 200, "digest": digest(root / "openapi.json"),
+                                         "size": (root / "openapi.json").stat().st_size},
+            "cold cancellation did not hold exact actual contract bytes")
+    require(len([request for request in log["requests"] if request.get("method") == "GET" and
+                request.get("url") == url]) == 1,
+            "cold cancellation must correlate one exact contract GET")
+    prefix = log["id"] + ": "
+    required = {prefix + name for name in ("cold contract exact actual held response",
+                "cold contract: actual Tab enters explorer summary",
+                "cold contract: cancellation keydown occurs during loading",
+                "cold contract: cancelled explorer never resurrects")}
+    required.add(prefix + ("cancel explorer: ready transition retains visible unoccluded keyboard focus" if
+                 log["id"].endswith(":cancel") else "cold contract: moved Plain focus remains visible and owned"))
+    require(required <= {item["id"] for item in receipt["checks"]}, "missing cold cancellation observations")
+    if log["id"].endswith(":focus-return"):
+        sample = next(item["detail"] for item in receipt["checks"] if item["id"] == prefix +
+                      "cold contract: moved Plain focus remains visible and owned")
+        require(all(sample.get(key) is True for key in ("target", "visible", "unoccluded")), "moved focus is hidden or unowned")
+        require(sample.get("viewport") == ({"width": 390, "height": 844} if log["id"].startswith("mobile") else
+                {"width": 1280, "height": 900}), "moved focus viewport differs")
+        verify_entry_rect(sample.get("rect", {}), sample["viewport"])
+
+
+def verify_entry_geometry(receipt):
+    for check in receipt["checks"]:
+        if check["id"].endswith(": cold contract: cancellation keydown occurs during loading"):
+            key = "Tab" if ":focus-return:" in check["id"] else "Enter"
+            require(check.get("detail") == {"key": key, "phase": "loading"}, "missing actual loading keydown observation")
+        if not check["id"].endswith(": ready transition retains visible unoccluded keyboard focus"):
+            continue
+        samples = check.get("detail")
+        require(isinstance(samples, list) and len(samples) == 4, "missing entry geometry samples")
+        for sample in samples:
+            require(isinstance(sample, dict) and all(sample.get(key) is True for key in
+                    ("target", "visible", "unoccluded", "headingVisible", "headingUnoccluded")),
+                    "entry focus or heading is hidden, unowned or occluded")
+            viewport = sample.get("viewport", {})
+            require(viewport == ({"width": 390, "height": 844} if check["id"].startswith("mobile") else
+                                 {"width": 1280, "height": 900}), "entry viewport differs from actual mode")
+            for name in ("rect", "heading"):
+                verify_entry_rect(sample.get(name, {}), viewport)
+
+
+def verify_entry_rect(rect, viewport):
+    require(all(type(rect.get(key)) in (int, float) and math.isfinite(rect[key]) for key in
+                ("top", "bottom", "left", "right", "width", "height")), "missing finite actual entry geometry")
+    require(0 <= rect["top"] < rect["bottom"] <= viewport["height"] and
+            0 <= rect["left"] < rect["right"] <= viewport["width"] and
+            rect["width"] > 0 and rect["height"] > 0 and
+            abs(rect["right"] - rect["left"] - rect["width"]) < .01 and
+            abs(rect["bottom"] - rect["top"] - rect["height"]) < .01,
+            "entry geometry exceeds viewport or has inconsistent dimensions")
 
 
 def verify_checks(root, receipt):
@@ -187,7 +261,8 @@ def verify_checks(root, receipt):
         require(mode.get("console") == mode.get("http_failures") == [], "unexpected console or HTTP failures")
         require(mandatory_checks(mode["id"]) <= set(ids), "missing mandatory browser assertions")
         verify_coverage(root, receipt, mode)
-    verify_negative_controls(receipt)
+    verify_negative_controls(root, receipt)
+    verify_entry_geometry(receipt)
 
 
 def verify(root, stage=None):

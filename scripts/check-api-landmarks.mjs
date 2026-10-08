@@ -57,6 +57,128 @@ function normalizedSchema(entries) {
   return JSON.stringify(canonical(entries.sort(([a], [b]) => a.localeCompare(b))))
 }
 
+async function entryGeometry(page, plain = false) {
+  // Observe only: neither scrolling nor focusing can hide an entry regression.
+  await page.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))))
+  return page.evaluate(plain => {
+    const active = document.activeElement, rect = active.getBoundingClientRect()
+    const x = Math.max(0, Math.min(innerWidth - 1, rect.left + rect.width / 2))
+    const y = Math.max(0, Math.min(innerHeight - 1, rect.top + rect.height / 2))
+    const hit = document.elementFromPoint(x, y), heading = document.getElementById(plain ? 'static-reference-heading' : 'interactive-heading')
+    const title = heading.getBoundingClientRect(), titleHit = document.elementFromPoint(title.left + title.width / 2, title.top + title.height / 2)
+    return { target: active === document.querySelector((plain ? '#plain-api-view' : '#interactive-api-view') + ' > summary'),
+      visible: rect.width > 0 && rect.height > 0 && rect.top >= 0 && rect.bottom <= innerHeight && rect.left >= 0 && rect.right <= innerWidth,
+      unoccluded: Boolean(hit && (active === hit || active.contains(hit))), rect: rect.toJSON(), scrollY,
+      headingVisible: title.width > 0 && title.height > 0 && title.top >= 0 && title.bottom <= innerHeight && title.left >= 0 && title.right <= innerWidth,
+      headingUnoccluded: Boolean(titleHit && (heading === titleHit || heading.contains(titleHit))), heading: title.toJSON(), viewport: { width: innerWidth, height: innerHeight } }
+  }, plain)
+}
+
+async function checkEntryGeometry(page, verify, kind, plain = false) {
+  const samples = []
+  for (const delay of [0, 250, 250, 500]) {
+    await page.waitForTimeout(delay)
+    samples.push(await entryGeometry(page, plain))
+  }
+  verify(kind + ': ready transition retains visible unoccluded keyboard focus', samples.every(geometry => geometry.target && geometry.visible && geometry.unoccluded && geometry.headingVisible && geometry.headingUnoccluded), samples)
+}
+
+/** The failed explorer must return its still-owned keyboard entry to Plain. */
+export async function checkApiEntryFallbackFocus(page, { check } = {}) {
+  const { results, verify } = recorder(check)
+  await checkEntryGeometry(page, verify, 'failed explorer', true)
+  return results
+}
+
+async function enterExplorer(page, verify, timeout, kind) {
+  if (kind === 'view link') {
+    await page.locator('#api-reference-views a[href="#plain-api-view"]').focus()
+    await page.keyboard.press('Tab')
+    verify(kind + ': actual Tab reaches explorer selector', await page.locator('#api-reference-views a[href="#interactive-api-view"]').evaluate(node => node === document.activeElement))
+  } else {
+    const models = page.locator('#api-model-definitions')
+    if (await models.getAttribute('open') === null) {
+      await models.locator(':scope > summary').focus()
+      await page.keyboard.press('Enter')
+    }
+    const last = page.locator('#api-model-schemas [data-api-schema] > details').last()
+    await last.locator(':scope > summary').focus()
+    if (await last.getAttribute('open') === null) await page.keyboard.press('Enter')
+    await page.keyboard.press('Tab')
+    verify(kind + ': actual Tab reaches explorer summary after far Plain contract', await page.locator('#interactive-api-view > summary').evaluate(node => node === document.activeElement))
+  }
+  await page.keyboard.press('Enter')
+  await page.waitForFunction(() => document.getElementById('interactive-api-view').dataset.enhancement === 'ready', null, { timeout })
+  await checkEntryGeometry(page, verify, kind)
+  verify(kind + ': ready transition selects only interactive reference', await page.locator('#plain-api-view').getAttribute('open') === null)
+}
+
+/** Actual entry keys; geometry is measured before any verifier scroll repair. */
+export async function checkApiEntryKeyboard(page, { check, timeout = 20000 } = {}) {
+  const { results, verify } = recorder(check)
+  await enterExplorer(page, verify, timeout, 'view link')
+  await page.locator('#api-reference-views a[href="#interactive-api-view"]').focus()
+  await page.keyboard.press('Shift+Tab')
+  verify('plain view link: actual Shift+Tab reaches Plain selector', await page.locator('#api-reference-views a[href="#plain-api-view"]').evaluate(node => node === document.activeElement))
+  await page.keyboard.press('Enter')
+  await page.waitForFunction(() => !document.querySelector('#interactive-api-reference .references-rendered'))
+  await checkEntryGeometry(page, verify, 'plain view link', true)
+  await enterExplorer(page, verify, timeout, 'native summary')
+  return results
+}
+
+/** Fresh cold-contract control: caller holds only its exact served response. */
+export async function checkApiEntryCancellation(page, { check, kind, held, release } = {}) {
+  const { results, verify } = recorder(check)
+  const plain = page.locator('#plain-api-view > summary'), interactive = page.locator('#interactive-api-view > summary')
+  const models = page.locator('#api-model-definitions')
+  await models.locator(':scope > summary').focus()
+  await page.keyboard.press('Enter')
+  const last = page.locator('#api-model-schemas [data-api-schema] > details').last().locator(':scope > summary')
+  await last.focus()
+  await page.keyboard.press('Enter')
+  await page.keyboard.press('Tab')
+  verify('cold contract: actual Tab enters explorer summary', await interactive.evaluate(node => node === document.activeElement))
+  await page.keyboard.press('Enter')
+  await held()
+  const key = kind === 'focus-return' ? 'Tab' : 'Enter'
+  const phase = await observeEntryKey(page, key === 'Tab' ? 'Shift+Tab' : key, key)
+  verify('cold contract: cancellation keydown occurs during loading', phase.phase === 'loading' && phase.key === key, phase)
+  const focused = await page.evaluateHandle(() => document.activeElement)
+  await release()
+  await page.waitForTimeout(1000)
+  verify('cold contract: cancelled explorer never resurrects', await page.evaluate(() => document.getElementById('plain-api-view').open && !document.getElementById('interactive-api-view').open && !document.querySelector('#interactive-api-reference .references-rendered')))
+  if (kind === 'focus-return') {
+    const geometry = await focused.evaluate(node => {
+      const r = node.getBoundingClientRect(), hit = document.elementFromPoint(r.left + r.width / 2, r.top + r.height / 2)
+      return { target: node !== document.body && document.activeElement === node && document.getElementById('plain-api-view').contains(node),
+        visible: r.width > 0 && r.height > 0 && r.top >= 0 && r.bottom <= innerHeight && r.left >= 0 && r.right <= innerWidth,
+        unoccluded: Boolean(hit && (node === hit || node.contains(hit))), rect: r.toJSON(), viewport: { width: innerWidth, height: innerHeight } }
+    })
+    verify('cold contract: moved Plain focus remains visible and owned', geometry.target && geometry.visible && geometry.unoccluded, geometry)
+  } else await checkEntryGeometry(page, verify, 'cancel explorer', true)
+  return results
+}
+
+async function observeEntryKey(page, press, key) {
+  // Capture actual keydown state, not a Playwright read that can race rendering.
+  // This instrumentation observes only; it never changes focus, DOM or routing.
+  await page.evaluate(key => {
+    const record = event => {
+      if (event.key !== key) return
+      window.__xoscalEntryKeyObservation = { key: event.key, phase: document.getElementById('interactive-api-view').dataset.enhancement }
+      window.removeEventListener('keydown', record, true)
+    }
+    window.addEventListener('keydown', record, true)
+  }, key)
+  await page.keyboard.press(press)
+  return page.evaluate(() => {
+    const result = window.__xoscalEntryKeyObservation
+    delete window.__xoscalEntryKeyObservation
+    return result
+  })
+}
+
 /** Run on the initial page or a deliberately failed enhancement fixture. */
 export async function checkApiReferenceFallback(page, spec, { check, failed = false } = {}) {
   const { results, verify } = recorder(check)
