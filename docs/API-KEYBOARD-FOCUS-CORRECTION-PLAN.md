@@ -290,3 +290,24 @@ URL; that approach was discarded, not admitted.
 The main risk is taking ownership from newer user intent. Actual Tab and newer
 route controls must pass before admission; compensation remains bounded and
 cancellable. Reverting this source change and rebuilding is the rollback.
+
+## Exact Go SDK publisher auxiliary replay
+
+Complete candidate production on `4222ed551bc016d7e305c9d461fc288ea37a8602`
+passed the artifact vulnerability and SBOM stage gates but refused independent
+required-payload replay: the producer retains the delivered `go.mod`, while the
+replay auxiliary allowlist omitted it. Keep that failed candidate unchanged.
+Bind retained `go.mod` to exact bytes from the original `sdk/go.zip`, reject
+missing, changed or symlinked auxiliary files, and retain exact ledger directory
+equality. Arbitrary extras and auxiliaries without an original SDK subject still
+block admission. This corrects producer/consumer alignment without changing any
+analysis exception, threshold, publisher attribution or dependency graph.
+
+Run synthetic acceptance and refusal controls, replay actual Go SDK evidence,
+then freeze a new reviewed source and repeat All, complete Site, unsigned
+PreviewCandidate, all six SDK consumer checks, independent raw browser replay,
+six-profile final browser preview and exact-head hosted CI. Prior-head passes
+remain prior-head evidence. No release, signing or publication is authorized by
+these local checks. Rollback reverts this isolated change; the previous strict
+consumer will continue refusing newly retained `go.mod`, rather than accepting
+unbound publisher files.

@@ -58,12 +58,12 @@ def replay_gate(root, evidence_path, kind, gate, exceptions, subject=None):
         ledger = read_json(evidence / 'publishers/publishers.json')
         require(type(ledger.get('version')) is int and ledger['version'] == 1 and isinstance(ledger.get('records'), list) and isinstance(ledger.get('unresolved'), list), 'invalid publisher ledger: ' + evidence_path)
         expected_files = {'publishers.json'}
-        auxiliary = {'go.sum', 'Package.resolved', 'requirements.txt'}
+        auxiliary = {'go.mod', 'go.sum', 'Package.resolved', 'requirements.txt'}
         if subject is not None and re.fullmatch(r'sdk/(go|python|java|csharp|ts|swift)\.zip', subject):
             with zipfile.ZipFile(root / subject) as archive:
                 for name in auxiliary & set(archive.namelist()):
                     retained = evidence / 'publishers' / name
-                    require(retained.is_file() and retained.read_bytes() == archive.read(name), 'publisher auxiliary differs from original SDK ZIP: ' + name)
+                    require(retained.is_file() and not retained.is_symlink() and retained.read_bytes() == archive.read(name), 'publisher auxiliary differs from original SDK ZIP: ' + name)
                     expected_files.add(name)
         for record in ledger['records']:
             require(isinstance(record, dict) and isinstance(record.get('raw_sha256'), str) and re.fullmatch(r'[0-9a-f]{64}', record['raw_sha256']), 'invalid publisher record digest')
