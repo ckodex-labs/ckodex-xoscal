@@ -88,13 +88,31 @@ function admitObservations(saved) {
 }
 
 function requiredIds() {
-  const ids = ['toolchain: immutable image and package version', 'toolchain: actual pinned Chromium', 'inventory: exact eight actual pages', 'served root alias: exact index bytes', 'receipt: complete six negative controls', 'proxy: no non-service origins requested', 'inventory: read-only same-origin resources']
-  for (const mode of config.modes) {
-    for (const entry of ['/', ...config.routes]) for (const phase of ['initial', 'after native content']) ids.push(mode + '/' + entry + ': ' + phase + ': sole canonical main, unique IDs and ARIA', mode + '/' + entry + ': ' + phase + ': viewport fits native content')
-    ids.push(mode + ': all 491 native operation and model disclosures', mode + ': exact 96 operations and 395 model definitions', mode + '/portal.html: Blueprint six native anchors', mode + '/portal.html: Blueprint all 18 prebuilt sections')
-    if (!mode.endsWith('-js')) ids.push(mode + '/portal.html: all six no-JS views visible without overlap')
-    else for (const phase of ['online API lifecycle', 'loaded offline API lifecycle']) for (let cycle = 0; cycle < 3; cycle++) ids.push(mode + ': ' + phase + '/cycle ' + cycle + ': API client is a visible labelled dialog', mode + ': ' + phase + '/cycle ' + cycle + ' dismissed, including hidden DOM: no duplicate DOM IDs')
-  }
+  return ['toolchain: immutable image and package version', 'toolchain: actual pinned Chromium', 'inventory: exact eight actual pages', 'served root alias: exact index bytes', 'receipt: complete six negative controls', 'proxy: no non-service origins requested', 'inventory: read-only same-origin resources', ...config.modes.flatMap(modeRequiredIds)]
+}
+
+function modeRequiredIds(mode) {
+  const ids = [...routeRequiredIds(mode), ...nativeRequiredIds(mode), mode + ': all 491 native operation and model disclosures', mode + ': exact 96 operations and 395 model definitions', mode + '/portal.html: Blueprint six native anchors', mode + '/portal.html: Blueprint all 18 prebuilt sections']
+  if (!mode.endsWith('-js')) ids.push(mode + '/portal.html: all six no-JS views visible without overlap')
+  else ids.push(...lifecycleRequiredIds(mode))
+  return ids
+}
+
+function routeRequiredIds(mode) {
+  const ids = []
+  for (const entry of ['/', ...config.routes]) for (const phase of ['initial', 'after native content']) ids.push(mode + '/' + entry + ': ' + phase + ': sole canonical main, unique IDs and ARIA', mode + '/' + entry + ': ' + phase + ': viewport fits native content')
+  return ids
+}
+
+function nativeRequiredIds(mode) {
+  const ids = []
+  for (let index = 0; index < 491; index++) for (const phase of ['keyboard expansion', 'keyboard collapse', 'actual visible point unoccluded']) ids.push(mode + ': native contract ' + index + ': ' + phase)
+  return ids
+}
+
+function lifecycleRequiredIds(mode) {
+  const ids = []
+  for (const phase of ['online API lifecycle', 'loaded offline API lifecycle']) for (let cycle = 0; cycle < 3; cycle++) ids.push(mode + ': ' + phase + '/cycle ' + cycle + ': API client is a visible labelled dialog', mode + ': ' + phase + '/cycle ' + cycle + ' dismissed, including hidden DOM: no duplicate DOM IDs')
   return ids
 }
 
@@ -305,11 +323,14 @@ async function safeRequests(context, log) {
 }
 
 async function nativeContracts(page, profile, observation) {
-  const bodies = page.locator('#static-api-reference [data-api-operation] > details,#api-model-schemas [data-api-schema] > details')
+  const bodies = page.locator('#static-api-reference [data-api-operation] details:has(> pre),#api-model-schemas [data-api-schema] > details')
   const count = await bodies.count()
   verify(profile.id + ': all 491 native operation and model disclosures', count === 491, { count })
   for (const [index, details] of (await bodies.all()).entries()) {
+    const outer = details.locator('xpath=ancestor::details[@data-api-operation-details]')
+    if (await outer.count() && await outer.getAttribute('open') !== null) { await outer.locator(':scope > summary').focus(); await page.keyboard.press('Enter') }
     await reveal(page, details, profile.js)
+    if (await outer.count()) verify(profile.id + ': native contract ' + index + ': outer keyboard expansion', await outer.getAttribute('open') !== null)
     const summary = details.locator(':scope > summary'), code = details.locator('pre code')
     if (await details.getAttribute('open') !== null) { await summary.focus(); await page.keyboard.press('Enter') }
     await summary.focus(); await page.keyboard.press('Enter')
@@ -318,6 +339,10 @@ async function nativeContracts(page, profile, observation) {
     await hitTest(page, details.locator('pre'), profile.id + ': native contract ' + index)
     await summary.focus(); await page.keyboard.press('Enter')
     verify(profile.id + ': native contract ' + index + ': keyboard collapse', await details.getAttribute('open') === null && !(await code.isVisible()))
+    if (await outer.count()) {
+      await outer.locator(':scope > summary').focus(); await page.keyboard.press('Enter')
+      verify(profile.id + ': native contract ' + index + ': outer keyboard collapse', await outer.getAttribute('open') === null && !(await code.isVisible()))
+    }
   }
   observation.api_native_contracts = count
 }

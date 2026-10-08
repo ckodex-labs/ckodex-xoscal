@@ -89,7 +89,10 @@ def fixture_negative_controls(receipt):
         for failure in ("404", "tamper", "script"):
             log = make_log(mode + ":" + failure)
             if failure != "tamper":
-                log["http_failures"] = [{"status": 404 if failure == "404" else 503, "intentional": True}]
+                status = 404 if failure == "404" else 503
+                url = "http://127.0.0.1:8081" + ("/openapi.json" if failure == "404" else "/scalar.js")
+                log["http_failures"] = [{"url": url, "status": status, "intentional": True}]
+                log["console"] = [{"type": "error", "text": "Synthetic intentional HTTP " + str(status)}]
             receipt["negative_controls"].append(log)
             receipt["checks"].append({"id": log["id"] + ": complete Plain HTML is the initial or failed-enhancement view", "passed": True})
 
@@ -114,6 +117,7 @@ class BrowserReceiptTests(unittest.TestCase):
 
     def test_failed_missing_and_truncated_observations_refused(self):
         mutations = [lambda r: r.update(status="failed"), lambda r: r.update(checks=[]),
+                     lambda r: r.update(checks=[c for c in r["checks"] if c["id"] != "desktop-js: native contract 490: keyboard collapse"]),
                      lambda r: r["checks"].pop(), lambda r: r["checks"][0].update(passed=1),
                      lambda r: r["checks"].append(r["checks"][0]), lambda r: r["modes"].pop(),
                      lambda r: r["modes"][0]["observations"].pop("docs.html"),
@@ -125,7 +129,9 @@ class BrowserReceiptTests(unittest.TestCase):
                      lambda r: r["modes"][0]["requests"][0].update(url="https://example.com/"),
                      lambda r: r.pop("inventory_observations"),
                      lambda r: r["inventory_observations"]["requests"][0].update(method="POST"),
-                     lambda r: r["proxy_denials"].append({"url": "https://example.com/"})]
+                     lambda r: r["proxy_denials"].append({"url": "https://example.com/"}),
+                     lambda r: r["negative_controls"][0]["http_failures"][0].update(url="http://127.0.0.1:8081/other.json"),
+                     lambda r: r["negative_controls"][0]["console"].append({"text": "Unexpected runtime error"})]
         for mutation in mutations:
             with self.subTest(mutation=mutation):
                 receipt = copy.deepcopy(self.receipt)

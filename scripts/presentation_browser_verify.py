@@ -123,6 +123,10 @@ def verify_coverage(root, receipt, mode):
 def mandatory_checks(mode):
     ids = {mode + ": fresh context no cookies",
            mode + ": all 491 native operation and model disclosures"}
+    for index in range(491):
+        prefix = mode + ": native contract " + str(index) + ": "
+        ids |= {prefix + "keyboard expansion", prefix + "keyboard collapse",
+                prefix + "actual visible point unoccluded"}
     for route in ROUTES | {"/"}:
         for phase in ("initial", "after native content"):
             prefix = mode + "/" + route + ": " + phase
@@ -152,6 +156,11 @@ def verify_negative_controls(receipt):
             failures = log.get("http_failures", [])
             require(len(failures) == 1 and failures[0].get("status") == status and failures[0].get("intentional") is True,
                     "missing intentional negative HTTP response")
+            require(failures[0].get("url") == "http://127.0.0.1:8081" + expected_response[0],
+                    "negative control HTTP failure differs from the expected resource")
+            console = log.get("console", [])
+            require(len(console) == 1 and all(re.search(r"404|503", item.get("text", "")) for item in console),
+                    "unexpected negative-control console error")
 
 
 def verify_checks(root, receipt):
