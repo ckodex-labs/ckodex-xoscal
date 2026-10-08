@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "purpose": "Pinned source adapters before bundling: embed Scalar as a named section within the host main, retain the API-client dialog without a second main including its hidden lifecycle, and omit unrenderable text Lazy placeholders whose actual introduction/Markdown content already has a canonical anchor. Raw npm bytes remain intact; no served DOM or minified-output repair. Modal disclosure attrs assign IDs only to the intended panel while retaining root classes; table rows omit nonunique parameter-name IDs while preserving fields and model identity.",
+  "purpose": "Pinned source adapters before bundling: embed Scalar as a named section within the host main, retain the API-client dialog without a second main including its hidden lifecycle, and omit unrenderable text Lazy placeholders whose actual introduction/Markdown content already has a canonical anchor. Raw npm bytes remain intact; no served DOM or minified-output repair. Modal disclosure attrs assign IDs only to the intended panel while retaining root classes; table rows omit nonunique parameter-name IDs while preserving fields and model identity. The existing modal Escape handler owns closure before the open-state watcher releases focus trapping.",
   "transforms": [
     {
       "path": "node_modules/@scalar/api-reference/dist/components/ApiReference.vue.script.js",
@@ -50,6 +50,16 @@
       "output_sha256": "3a96fab5557dc19581dc051d1a2515113f014fbbf857dde7ebfab961b34e7d75",
       "find": "id: __props.data.name,",
       "replace": "id: void 0,",
+      "count": 1
+    },
+    {
+      "path": "node_modules/@scalar/api-client/dist/v2/components/modals/ModalClientContainer.vue.script.js",
+      "package": "@scalar/api-client",
+      "version": "3.21.4",
+      "input_sha256": "8275a199f377367e7db21a421dae038147e46f0782c1c53bb036fe3c764e2bb7",
+      "output_sha256": "953941c52005c69f1860f006a77342240aa196e27bdcb7fa39e8afdc71597cff",
+      "find": "allowOutsideClick: true,",
+      "replace": "allowOutsideClick: true,\n\t\t\tescapeDeactivates: false,",
       "count": 1
     }
   ]

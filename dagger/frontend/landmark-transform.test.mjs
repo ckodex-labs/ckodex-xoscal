@@ -22,19 +22,20 @@ test('zero, multiple or unexpected replacement counts fail closed', () => {
     assert.throws(() => applyLandmarkTransform(bytes,{...recipe,input_sha256:sha(bytes)},'1.0.0'), /count drift/)
   assert.throws(() => applyLandmarkTransform(input,{...recipe,count:2},'1.0.0'), /count drift/)
 })
-test('reviewed recipe covers all five exact reference and API-client source modules', () => {
+test('reviewed recipe covers all six exact reference and API-client source modules', () => {
   const production = JSON.parse(readFileSync(new URL('./landmark-transforms.json', import.meta.url)))
   assert.equal(production.schema_version, 1)
-  assert.equal(production.transforms.length, 5)
+  assert.equal(production.transforms.length, 6)
   assert.deepEqual(production.transforms.map(r => [r.package,r.version,r.count]), [
     ['@scalar/api-reference','1.72.4',1], ['@scalar/api-client','3.21.4',1], ['@scalar/api-reference','1.72.4',1],
-    ['@scalar/api-client','3.21.4',1], ['@scalar/api-client','3.21.4',1]])
+    ['@scalar/api-client','3.21.4',1], ['@scalar/api-client','3.21.4',1], ['@scalar/api-client','3.21.4',1]])
   assert.equal(production.transforms[0].replace,'createElementVNode("section", {')
   assert.equal(production.transforms[1].replace,'createElementBlock("div", _hoisted_1, [')
   assert.equal(production.transforms[2].replace,'renderList(__props.entries.filter((entry) => entry.type !== "text"), (entry) => {')
   assert.match(production.transforms[3].replace, /inheritAttrs: false/)
   assert.match(production.transforms[3].replace, /normalizeClass\(\[_ctx\.\$attrs\.class,/)
   assert.equal(production.transforms[4].replace, 'id: void 0,')
+  assert.equal(production.transforms[5].replace, 'allowOutsideClick: true,\n\t\t\tescapeDeactivates: false,')
   for (const recipe of production.transforms) {
     assert.match(recipe.path,/^node_modules\/@scalar\/.+\.vue\.script\.js$/)
     assert.match(recipe.input_sha256,/^[a-f0-9]{64}$/)

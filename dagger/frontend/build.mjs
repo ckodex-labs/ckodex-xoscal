@@ -7,7 +7,7 @@ import { applyLandmarkTransform } from './landmark-transform.mjs'
 const digest = data => createHash('sha256').update(data).digest('hex')
 mkdirSync('out', { recursive: true })
 const landmarkRecipe = JSON.parse(readFileSync('landmark-transforms.json'))
-if (landmarkRecipe.schema_version !== 1 || landmarkRecipe.transforms.length !== 5)
+if (landmarkRecipe.schema_version !== 1 || landmarkRecipe.transforms.length !== 6)
   throw Error('unexpected reviewed Scalar landmark recipe')
 const appliedLandmarks = new Map()
 const discardUpstreamMaps = { name: 'reviewed-source-adapters', setup(builder) {

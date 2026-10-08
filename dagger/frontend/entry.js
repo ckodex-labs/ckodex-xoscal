@@ -121,13 +121,14 @@ if (marker) {
         cachedSource = null
         throw Error('API operation identities differ')
       }
-      // Force bare hashes instead of inferring a Scalar route prefix from the
-      // host's native reference-view or static-operation anchors.
-      if (location.hash === '#interactive-api-view' || location.hash === '#interactive-heading')
+      // Remove host-only fragments before Scalar infers its canonical bare hash
+      // routing. Preserve actual Scalar deep links; basePath:"#" expects "#/"
+      // on reads and silently discards a valid initial "#tag/..." route.
+      if (location.hash && !scalarHash())
         history.replaceState(null, '', location.pathname + location.search)
       configuration = { content: document, withDefaultFonts: false, agent: { disabled: true }, telemetry: false,
         showDeveloperTools: 'never', proxyUrl: '', theme: 'none', hideDarkModeToggle: true,
-        forceDarkModeState: darkState(), pathRouting: { basePath: '#' }, defaultOpenAllTags: true,
+        forceDarkModeState: darkState(), defaultOpenAllTags: true,
         onLoaded: () => {
           const awaitRender = () => {
             if (!loading || thisAttempt !== attempt || complete()) return

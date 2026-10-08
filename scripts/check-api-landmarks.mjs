@@ -137,6 +137,12 @@ export async function checkApiLandmarks(page, { check, timeout = 20000 } = {}) {
     verify('cycle ' + index + ': API client is a visible labelled dialog', await dialog.isVisible())
     await main('cycle ' + index + ' open')
     verify('cycle ' + index + ': dialog contains no main', await dialog.locator('main,[role="main"]').count() === 0)
+    const close = dialog.getByRole('button', { name: 'Close Client', exact: true })
+    await close.focus()
+    await page.keyboard.press('Tab')
+    verify('cycle ' + index + ': Tab wraps from the final close control into the dialog', await dialog.evaluate(node => node.contains(document.activeElement)) && !(await close.evaluate(node => document.activeElement === node)))
+    await page.keyboard.press('Shift+Tab')
+    verify('cycle ' + index + ': Shift+Tab wraps back to the final close control', await close.evaluate(node => document.activeElement === node))
     for (const name of [/^Cookies/, /^Headers/, /^Query Parameters/]) {
       const disclosure = dialog.getByRole('button', { name }).first()
       const panelId = await disclosure.getAttribute('aria-controls')
@@ -149,9 +155,21 @@ export async function checkApiLandmarks(page, { check, timeout = 20000 } = {}) {
     }
     await page.keyboard.press('Tab')
     verify('cycle ' + index + ': keyboard focus remains in dialog', await dialog.evaluate(node => node.contains(document.activeElement)))
+    // A focused request control can own a visible tooltip. Its first Escape
+    // dismisses that inner presentation; the modal retains focus trapping.
+    const tooltip = page.locator('#scalar-tooltip')
+    if (await page.evaluate(() => document.activeElement.getAttribute('aria-describedby') === 'scalar-tooltip'))
+      await tooltip.waitFor({ state: 'visible', timeout })
+    if (await tooltip.isVisible()) {
+      await page.keyboard.press('Escape')
+      await tooltip.waitFor({ state: 'hidden', timeout })
+      verify('cycle ' + index + ': Escape dismisses the nested tooltip first', await dialog.isVisible() && await dialog.evaluate(node => node.contains(document.activeElement)))
+    }
     await page.keyboard.press('Escape')
     await dialog.waitFor({ state: 'hidden', timeout })
     verify('cycle ' + index + ': Escape dismisses the API client', !(await dialog.isVisible()))
+    await page.waitForFunction(node => document.activeElement === node, await button.elementHandle(), { timeout })
+    verify('cycle ' + index + ': dismissal returns focus to the operation trigger', await button.evaluate(node => document.activeElement === node))
     await main('cycle ' + index + ' dismissed, including hidden DOM')
   }
   await page.locator('#plain-api-view > summary').focus()
