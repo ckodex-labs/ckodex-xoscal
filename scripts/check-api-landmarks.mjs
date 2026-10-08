@@ -85,9 +85,7 @@ export async function checkStaticApiDeepLink(page, { check } = {}) {
   return results
 }
 
-/** Run after the real Scalar bundle has loaded on either desktop or mobile. */
-export async function checkApiLandmarks(page, { check, timeout = 20000 } = {}) {
-  const { results, verify } = recorder(check)
+async function openInteractiveReference(page, verify, timeout) {
   if (await page.locator('#interactive-api-view').getAttribute('open') === null) {
     await page.locator('#interactive-api-view > summary').focus()
     await page.keyboard.press('Enter')
@@ -105,84 +103,116 @@ export async function checkApiLandmarks(page, { check, timeout = 20000 } = {}) {
   await region.waitFor({ timeout })
   verify('Scalar is a named documentation region', await region.count() === 1 &&
     Boolean((await region.getAttribute('aria-label')).trim()))
-  const main = async phase => {
-    verify(phase + ': exactly one canonical main', await page.locator('main,[role="main"]').count() === 1 && await page.locator('main#main').count() === 1)
-    verify(phase + ': no nested main landmark', await page.locator('main main,main [role="main"]').count() === 0)
-    verify(phase + ': no duplicate DOM IDs', await page.locator('[id]').evaluateAll(nodes => {
-      const ids = nodes.map(node => node.id)
-      return new Set(ids).size === ids.length
-    }))
+  return region
+}
+
+async function checkMainLandmarks(page, verify, phase) {
+  verify(phase + ': exactly one canonical main', await page.locator('main,[role="main"]').count() === 1 && await page.locator('main#main').count() === 1)
+  verify(phase + ': no nested main landmark', await page.locator('main main,main [role="main"]').count() === 0)
+  verify(phase + ': no duplicate DOM IDs', await page.locator('[id]').evaluateAll(nodes => {
+    const ids = nodes.map(node => node.id)
+    return new Set(ids).size === ids.length
+  }))
+}
+
+async function openApiClient(page, operation, timeout) {
+  const link = page.getByRole('link', { name: operation.name }).first()
+  if (!(await link.isVisible())) {
+    const menu = page.getByRole('button', { name: 'Open Menu', exact: true })
+    await menu.focus()
+    await page.keyboard.press('Enter')
   }
-  await main('before API-client interaction')
-  const operations = [
-    { name: /^ListConflicts/, button: 'Test Request (get /v1/conflicts)' },
-    { name: /^ListSnapshots/, button: 'Test Request (get /v1/snapshots)' },
-    { name: /^ListConflicts/, button: 'Test Request (get /v1/conflicts)' },
-  ]
-  for (const [index, operation] of operations.entries()) {
-    const link = page.getByRole('link', { name: operation.name }).first()
-    if (!(await link.isVisible())) {
-      const menu = page.getByRole('button', { name: 'Open Menu', exact: true })
-      await menu.focus()
-      await page.keyboard.press('Enter')
-    }
-    await link.focus()
+  await link.focus()
+  await page.keyboard.press('Enter')
+  const button = page.getByRole('button', { name: operation.button, exact: true })
+  await button.waitFor({ timeout })
+  await button.focus()
+  await page.keyboard.press('Enter')
+  const dialog = page.getByRole('dialog', { name: 'API Client', exact: true })
+  await dialog.waitFor({ timeout })
+  return { button, dialog }
+}
+
+async function checkFocusWrap(page, dialog, verify, index) {
+  const close = dialog.getByRole('button', { name: 'Close Client', exact: true })
+  await close.focus()
+  await page.keyboard.press('Tab')
+  verify('cycle ' + index + ': Tab wraps from the final close control into the dialog', await dialog.evaluate(node => node.contains(document.activeElement)) && !(await close.evaluate(node => document.activeElement === node)))
+  await page.keyboard.press('Shift+Tab')
+  verify('cycle ' + index + ': Shift+Tab wraps back to the final close control', await close.evaluate(node => document.activeElement === node))
+}
+
+async function checkRequestDisclosures(page, dialog, verify, index) {
+  for (const name of [/^Cookies/, /^Headers/, /^Query Parameters/]) {
+    const disclosure = dialog.getByRole('button', { name }).first()
+    const panelId = await disclosure.getAttribute('aria-controls')
+    verify('cycle ' + index + ': ' + name + ' controls exactly one panel', await page.locator('[id]').evaluateAll((nodes, id) => nodes.filter(node => node.id === id).length, panelId) === 1)
+    await disclosure.focus()
     await page.keyboard.press('Enter')
-    const button = page.getByRole('button', { name: operation.button, exact: true })
-    await button.waitFor({ timeout })
-    await button.focus()
+    verify('cycle ' + index + ': ' + name + ' collapses by keyboard', await disclosure.getAttribute('aria-expanded') === 'false')
     await page.keyboard.press('Enter')
-    const dialog = page.getByRole('dialog', { name: 'API Client', exact: true })
-    await dialog.waitFor({ timeout })
-    verify('cycle ' + index + ': API client is a visible labelled dialog', await dialog.isVisible())
-    await main('cycle ' + index + ' open')
-    verify('cycle ' + index + ': dialog contains no main', await dialog.locator('main,[role="main"]').count() === 0)
-    const close = dialog.getByRole('button', { name: 'Close Client', exact: true })
-    await close.focus()
-    await page.keyboard.press('Tab')
-    verify('cycle ' + index + ': Tab wraps from the final close control into the dialog', await dialog.evaluate(node => node.contains(document.activeElement)) && !(await close.evaluate(node => document.activeElement === node)))
-    await page.keyboard.press('Shift+Tab')
-    verify('cycle ' + index + ': Shift+Tab wraps back to the final close control', await close.evaluate(node => document.activeElement === node))
-    for (const name of [/^Cookies/, /^Headers/, /^Query Parameters/]) {
-      const disclosure = dialog.getByRole('button', { name }).first()
-      const panelId = await disclosure.getAttribute('aria-controls')
-      verify('cycle ' + index + ': ' + name + ' controls exactly one panel', await page.locator('[id]').evaluateAll((nodes, id) => nodes.filter(node => node.id === id).length, panelId) === 1)
-      await disclosure.focus()
-      await page.keyboard.press('Enter')
-      verify('cycle ' + index + ': ' + name + ' collapses by keyboard', await disclosure.getAttribute('aria-expanded') === 'false')
-      await page.keyboard.press('Enter')
-      verify('cycle ' + index + ': ' + name + ' reopens by keyboard', await disclosure.getAttribute('aria-expanded') === 'true')
-    }
-    await page.keyboard.press('Tab')
-    verify('cycle ' + index + ': keyboard focus remains in dialog', await dialog.evaluate(node => node.contains(document.activeElement)))
-    // A focused request control can own a visible tooltip. Its first Escape
-    // dismisses that inner presentation; the modal retains focus trapping.
-    const tooltip = page.locator('#scalar-tooltip')
-    if (await page.evaluate(() => document.activeElement.getAttribute('aria-describedby') === 'scalar-tooltip'))
-      await tooltip.waitFor({ state: 'visible', timeout })
-    if (await tooltip.isVisible()) {
-      await page.keyboard.press('Escape')
-      await tooltip.waitFor({ state: 'hidden', timeout })
-      verify('cycle ' + index + ': Escape dismisses the nested tooltip first', await dialog.isVisible() && await dialog.evaluate(node => node.contains(document.activeElement)))
-    }
+    verify('cycle ' + index + ': ' + name + ' reopens by keyboard', await disclosure.getAttribute('aria-expanded') === 'true')
+  }
+}
+
+async function escapeApiClient(page, dialog, button, verify, index, timeout) {
+  await page.keyboard.press('Tab')
+  verify('cycle ' + index + ': keyboard focus remains in dialog', await dialog.evaluate(node => node.contains(document.activeElement)))
+  // A focused request control can own a visible tooltip. Its first Escape
+  // dismisses that inner presentation; the modal retains focus trapping.
+  const tooltip = page.locator('#scalar-tooltip')
+  if (await page.evaluate(() => document.activeElement.getAttribute('aria-describedby') === 'scalar-tooltip'))
+    await tooltip.waitFor({ state: 'visible', timeout })
+  if (await tooltip.isVisible()) {
     await page.keyboard.press('Escape')
-    await dialog.waitFor({ state: 'hidden', timeout })
-    verify('cycle ' + index + ': Escape dismisses the API client', !(await dialog.isVisible()))
-    await page.waitForFunction(node => document.activeElement === node, await button.elementHandle(), { timeout })
-    verify('cycle ' + index + ': dismissal returns focus to the operation trigger', await button.evaluate(node => document.activeElement === node))
-    await main('cycle ' + index + ' dismissed, including hidden DOM')
+    await tooltip.waitFor({ state: 'hidden', timeout })
+    verify('cycle ' + index + ': Escape dismisses the nested tooltip first', await dialog.isVisible() && await dialog.evaluate(node => node.contains(document.activeElement)))
   }
+  await page.keyboard.press('Escape')
+  await dialog.waitFor({ state: 'hidden', timeout })
+  verify('cycle ' + index + ': Escape dismisses the API client', !(await dialog.isVisible()))
+  await page.waitForFunction(node => document.activeElement === node, await button.elementHandle(), { timeout })
+  verify('cycle ' + index + ': dismissal returns focus to the operation trigger', await button.evaluate(node => document.activeElement === node))
+}
+
+async function checkApiClientCycle(page, operation, index, verify, timeout) {
+  const { button, dialog } = await openApiClient(page, operation, timeout)
+  verify('cycle ' + index + ': API client is a visible labelled dialog', await dialog.isVisible())
+  await checkMainLandmarks(page, verify, 'cycle ' + index + ' open')
+  verify('cycle ' + index + ': dialog contains no main', await dialog.locator('main,[role="main"]').count() === 0)
+  await checkFocusWrap(page, dialog, verify, index)
+  await checkRequestDisclosures(page, dialog, verify, index)
+  await escapeApiClient(page, dialog, button, verify, index, timeout)
+  await checkMainLandmarks(page, verify, 'cycle ' + index + ' dismissed, including hidden DOM')
+}
+
+async function switchReferenceViews(page, region, verify, timeout) {
   await page.locator('#plain-api-view > summary').focus()
   await page.keyboard.press('Enter')
   await page.waitForFunction(() => !document.querySelector('#interactive-api-reference .references-rendered'))
   verify('plain view switch destroys the inactive Scalar instance', await page.locator('#interactive-api-reference .references-rendered').count() === 0)
   verify('plain view switch retains all prebuilt operation content', await page.locator('#static-api-reference article[data-api-operation]').count() === 96)
-  await main('after switch to Plain HTML')
+  await checkMainLandmarks(page, verify, 'after switch to Plain HTML')
   await page.locator('#interactive-api-view > summary').focus()
   await page.keyboard.press('Enter')
   await page.waitForFunction(() => document.getElementById('interactive-api-view').dataset.enhancement === 'ready', null, { timeout })
   verify('interactive view can be reopened after disposal', await page.locator('#plain-api-view').getAttribute('open') === null && await region.count() === 1)
-  await main('after reopening interactive explorer')
+  await checkMainLandmarks(page, verify, 'after reopening interactive explorer')
+}
+
+/** Run after the real Scalar bundle has loaded on either desktop or mobile. */
+export async function checkApiLandmarks(page, { check, timeout = 20000 } = {}) {
+  const { results, verify } = recorder(check)
+  const region = await openInteractiveReference(page, verify, timeout)
+  await checkMainLandmarks(page, verify, 'before API-client interaction')
+  const operations = [
+    { name: /^ListConflicts/, button: 'Test Request (get /v1/conflicts)' },
+    { name: /^ListSnapshots/, button: 'Test Request (get /v1/snapshots)' },
+    { name: /^ListConflicts/, button: 'Test Request (get /v1/conflicts)' },
+  ]
+  for (const [index, operation] of operations.entries())
+    await checkApiClientCycle(page, operation, index, verify, timeout)
+  await switchReferenceViews(page, region, verify, timeout)
   return results
 }
 

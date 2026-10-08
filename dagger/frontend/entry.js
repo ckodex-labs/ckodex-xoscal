@@ -86,6 +86,45 @@ if (marker) {
     }
     return true
   }
+  const fetchSource = async () => {
+    const response = await fetch(marker.dataset.url, { credentials: 'same-origin', signal: controller.signal })
+    if (!response.ok) throw Error('API contract unavailable')
+    const bytes = await response.arrayBuffer()
+    const digest = [...new Uint8Array(await crypto.subtle.digest('SHA-256', bytes))].map(byte => byte.toString(16).padStart(2, '0')).join('')
+    if (digest !== reference.dataset.openapiSha256) throw Error('API contract differs from prebuilt HTML')
+    cachedSource = new TextDecoder('utf-8', { fatal: true }).decode(bytes)
+  }
+  const validatedDocument = () => {
+    const document = JSON.parse(cachedSource)
+    const methods = new Set(['get', 'post', 'put', 'patch', 'delete', 'head', 'options', 'trace'])
+    const operations = Object.entries(document.paths).flatMap(([path, item]) => Object.entries(item)
+      .filter(([method]) => methods.has(method)).map(([method, operation]) => [operation.operationId, method.toUpperCase(), path]))
+    const prebuilt = [...reference.querySelectorAll('[data-api-operation]')].map(node => [node.dataset.apiOperation, node.dataset.apiMethod, node.dataset.apiPath])
+    const identities = entries => JSON.stringify(entries.sort(([a], [b]) => a.localeCompare(b)))
+    if (operations.length !== Number(reference.dataset.operationCount) || identities(operations) !== identities(prebuilt)) {
+      cachedSource = null
+      throw Error('API operation identities differ')
+    }
+    return document
+  }
+  const mountReference = (document, thisAttempt) => {
+    // Remove host-only fragments before Scalar infers its canonical bare hash
+    // routing. Preserve actual Scalar deep links; basePath:"#" expects "#/"
+    // on reads and silently discards a valid initial "#tag/..." route.
+    if (location.hash && !scalarHash())
+      history.replaceState(null, '', location.pathname + location.search)
+    configuration = { content: document, withDefaultFonts: false, agent: { disabled: true }, telemetry: false,
+      showDeveloperTools: 'never', proxyUrl: '', theme: 'none', hideDarkModeToggle: true,
+      forceDarkModeState: darkState(), defaultOpenAllTags: true,
+      onLoaded: () => {
+        const awaitRender = () => {
+          if (!loading || thisAttempt !== attempt || complete()) return
+          requestAnimationFrame(awaitRender)
+        }
+        requestAnimationFrame(awaitRender)
+      } }
+    instance = window.Scalar.createApiReference(container, configuration)
+  }
   const enhance = async () => {
     if (ready) {
       plain.open = false
@@ -102,41 +141,9 @@ if (marker) {
     status.textContent = 'Loading the optional interactive explorer. The complete Plain HTML reference remains available.'
     timer = window.setTimeout(() => { if (thisAttempt === attempt) unavailable() }, 30000)
     try {
-      if (!cachedSource) {
-        const response = await fetch(marker.dataset.url, { credentials: 'same-origin', signal: controller.signal })
-        if (!response.ok) throw Error('API contract unavailable')
-        const bytes = await response.arrayBuffer()
-        const digest = [...new Uint8Array(await crypto.subtle.digest('SHA-256', bytes))].map(byte => byte.toString(16).padStart(2, '0')).join('')
-        if (digest !== reference.dataset.openapiSha256) throw Error('API contract differs from prebuilt HTML')
-        cachedSource = new TextDecoder('utf-8', { fatal: true }).decode(bytes)
-      }
+      if (!cachedSource) await fetchSource()
       if (thisAttempt !== attempt) return
-      const document = JSON.parse(cachedSource)
-      const methods = new Set(['get', 'post', 'put', 'patch', 'delete', 'head', 'options', 'trace'])
-      const operations = Object.entries(document.paths).flatMap(([path, item]) => Object.entries(item)
-        .filter(([method]) => methods.has(method)).map(([method, operation]) => [operation.operationId, method.toUpperCase(), path]))
-      const prebuilt = [...reference.querySelectorAll('[data-api-operation]')].map(node => [node.dataset.apiOperation, node.dataset.apiMethod, node.dataset.apiPath])
-      const identities = entries => JSON.stringify(entries.sort(([a], [b]) => a.localeCompare(b)))
-      if (operations.length !== Number(reference.dataset.operationCount) || identities(operations) !== identities(prebuilt)) {
-        cachedSource = null
-        throw Error('API operation identities differ')
-      }
-      // Remove host-only fragments before Scalar infers its canonical bare hash
-      // routing. Preserve actual Scalar deep links; basePath:"#" expects "#/"
-      // on reads and silently discards a valid initial "#tag/..." route.
-      if (location.hash && !scalarHash())
-        history.replaceState(null, '', location.pathname + location.search)
-      configuration = { content: document, withDefaultFonts: false, agent: { disabled: true }, telemetry: false,
-        showDeveloperTools: 'never', proxyUrl: '', theme: 'none', hideDarkModeToggle: true,
-        forceDarkModeState: darkState(), defaultOpenAllTags: true,
-        onLoaded: () => {
-          const awaitRender = () => {
-            if (!loading || thisAttempt !== attempt || complete()) return
-            requestAnimationFrame(awaitRender)
-          }
-          requestAnimationFrame(awaitRender)
-        } }
-      instance = window.Scalar.createApiReference(container, configuration)
+      mountReference(validatedDocument(), thisAttempt)
     } catch {
       if (thisAttempt === attempt) unavailable()
     }

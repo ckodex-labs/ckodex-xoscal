@@ -83,12 +83,7 @@ def observed(source_map):
     return packages, first_party
 
 
-def produce(metadata_bytes, tar_bytes):
-    meta = load(metadata_bytes)
-    if meta.get('name') != PACKAGE or meta.get('version') != VERSION or meta.get('dist', {}).get('tarball') != TAR_URL or meta.get('dist', {}).get('integrity') != TAR_SRI:
-        raise ValueError('unexpected exact-version publishing metadata')
-    if len(tar_bytes) > 64*1024*1024 or 'sha512-' + base64.b64encode(hashlib.sha512(tar_bytes).digest()).decode() != TAR_SRI:
-        raise ValueError('npm tarball does not match pinned publisher SRI')
+def publisher_files(tar_bytes):
     required = {'package/package.json', 'package/dist/browser/standalone.js', 'package/dist/browser/standalone.js.map'}
     files = {}
     with tarfile.open(fileobj=io.BytesIO(tar_bytes), mode='r:gz') as archive:
@@ -99,6 +94,16 @@ def produce(metadata_bytes, tar_bytes):
                 if not member.isfile() or member.size>64*1024*1024:raise ValueError('invalid publisher input file')
                 files[member.name]=archive.extractfile(member).read()
     if set(files)!=required:raise ValueError('missing publisher JS/map/manifest')
+    return files
+
+
+def produce(metadata_bytes, tar_bytes):
+    meta = load(metadata_bytes)
+    if meta.get('name') != PACKAGE or meta.get('version') != VERSION or meta.get('dist', {}).get('tarball') != TAR_URL or meta.get('dist', {}).get('integrity') != TAR_SRI:
+        raise ValueError('unexpected exact-version publishing metadata')
+    if len(tar_bytes) > 64*1024*1024 or 'sha512-' + base64.b64encode(hashlib.sha512(tar_bytes).digest()).decode() != TAR_SRI:
+        raise ValueError('npm tarball does not match pinned publisher SRI')
+    files=publisher_files(tar_bytes)
     manifest=load(files['package/package.json']);js=files['package/dist/browser/standalone.js'];source_map_bytes=files['package/dist/browser/standalone.js.map']
     if manifest.get('name')!=PACKAGE or manifest.get('version')!=VERSION or manifest.get('dependencies')!=meta.get('dependencies') or manifest.get('repository',{}).get('url')!='git+https://github.com/scalar/scalar.git':raise ValueError('publisher root manifest identity mismatch')
     if sha(js)!=JS_SHA or sha(source_map_bytes)!=MAP_SHA or not js.rstrip().endswith(b'//# sourceMappingURL=standalone.js.map'):raise ValueError('published JS/source-map binding mismatch')
@@ -121,14 +126,9 @@ def produce(metadata_bytes, tar_bytes):
 # Immutable inputs of the repository-owned published-module rebuild. These pins
 # are changed only together with an explicitly reviewed dependency lock/builder.
 NODE_MAJOR = 22
-BUILD_PINS = {'landmark-transform.test.mjs': 'ea1a9698a31ee9b606949ef0dbfc3267b09dbbe8e6065d9e58114da0f2d29c8f', 'landmark-transforms.json': 'c957af1bdf01e8599c8900f02095254e157a21db935b20cd5263081a3f7e24d2', 'landmark-transform.mjs': 'f751e9ce1726d2f6a9bfcebb374a57f8ba8ed5146b41a2a4625e36db76b0acfe', 'build-package.json': '59e31b76b652922756a0a31b6c50ace786dd6e56d6b2a81fe852451e6cea9377', 'package-lock.json': '96f9a32b4e85fe8732da6e75550151e30b68c5b8896d08a746e8b7f3dd29d947', 'entry.js': 'c7199b886c8c6ec93fadbdeb27d819fce80b221bbb87ee0ac6b23b44b17d18b5', 'build.mjs': 'e7007461283f31d27fa52f2d932dc0dab07bcb429e992e5c87f04f26ddb0f898', 'scalar-LICENSE': '380cd0a6ad700e1f821f2a509f0dd9ff835041cee2d43daf5dedc1adb2bcc620', 'scalar-license-source.json': '47fbb8fa80a7ca2e9c6d6597896f91213b32872b79d7cf5849ce3f821d0a4a12'}
+BUILD_PINS = {'landmark-transform.test.mjs': 'ea1a9698a31ee9b606949ef0dbfc3267b09dbbe8e6065d9e58114da0f2d29c8f', 'landmark-transforms.json': 'c957af1bdf01e8599c8900f02095254e157a21db935b20cd5263081a3f7e24d2', 'landmark-transform.mjs': 'f751e9ce1726d2f6a9bfcebb374a57f8ba8ed5146b41a2a4625e36db76b0acfe', 'build-package.json': '59e31b76b652922756a0a31b6c50ace786dd6e56d6b2a81fe852451e6cea9377', 'package-lock.json': '96f9a32b4e85fe8732da6e75550151e30b68c5b8896d08a746e8b7f3dd29d947', 'entry.js': 'fd1eb4a13e6fcaa817d4904831f3330db46445e9f75e64ecaeb24eb2853a4a64', 'build.mjs': 'e7007461283f31d27fa52f2d932dc0dab07bcb429e992e5c87f04f26ddb0f898', 'scalar-LICENSE': '380cd0a6ad700e1f821f2a509f0dd9ff835041cee2d43daf5dedc1adb2bcc620', 'scalar-license-source.json': '47fbb8fa80a7ca2e9c6d6597896f91213b32872b79d7cf5849ce3f821d0a4a12'}
 
-def rebuilt(root):
-    root=Path(root)
-    original=produce((root/'npm-metadata.json').read_bytes(),(root/'npm-package.tgz').read_bytes())
-    if (root/'package.json').read_bytes()!=original['package.json']:raise ValueError('rebuilt publisher manifest mismatch')
-    for name,pin in BUILD_PINS.items():
-        if sha((root/name).read_bytes())!=pin:raise ValueError('unreviewed frontend build input: '+name)
+def verified_lock(root):
     lock=load((root/'package-lock.json').read_bytes())
     if lock.get('lockfileVersion')!=3:raise ValueError('unsupported frontend lock')
     lock_packages=lock.get('packages',{})
@@ -136,6 +136,15 @@ def rebuilt(root):
     if outer.get('version')!=VERSION or outer.get('resolved')!=TAR_URL or outer.get('integrity')!=TAR_SRI:raise ValueError('lock does not bind exact Scalar publisher tar')
     for name,record in lock_packages.items():
         if name and (not record.get('resolved','').startswith('https://registry.npmjs.org/') or not record.get('integrity','').startswith('sha512-')):raise ValueError('unverified lock registry/integrity')
+    return lock_packages
+
+
+def build_context(root):
+    original=produce((root/'npm-metadata.json').read_bytes(),(root/'npm-package.tgz').read_bytes())
+    if (root/'package.json').read_bytes()!=original['package.json']:raise ValueError('rebuilt publisher manifest mismatch')
+    for name,pin in BUILD_PINS.items():
+        if sha((root/name).read_bytes())!=pin:raise ValueError('unreviewed frontend build input: '+name)
+    lock_packages=verified_lock(root)
     toolchain=load((root/'build-toolchain.json').read_bytes())
     if not toolchain.get('node','').startswith('v'+str(NODE_MAJOR)+'.') or toolchain.get('esbuild')!='0.25.12':raise ValueError('unexpected frontend toolchain')
     metafile=load((root/'esbuild-metafile.json').read_bytes());records=load((root/'installed-package-manifests.json').read_bytes())
@@ -143,6 +152,10 @@ def rebuilt(root):
     if not isinstance(inputs,dict) or not inputs or not isinstance(outputs,dict):raise ValueError('missing observed bundle metafile')
     notices=load((root/'bundle-notices.json').read_bytes())
     if not isinstance(notices,list) or not notices:raise ValueError('missing actual distributed license notices')
+    return original,lock_packages,toolchain,inputs,outputs,records,notices
+
+
+def bundle_inputs(root,inputs,records,notices):
     expected_files=set(inputs)|{p+'/package.json' for p in records}|{r['path'] for r in notices}
     raw_inputs=(root/'bundle-inputs.tar.gz').read_bytes();files={}
     if len(raw_inputs)>64*1024*1024:raise ValueError('oversized bundle inputs')
@@ -155,6 +168,10 @@ def rebuilt(root):
             files[member.name]=archive.extractfile(member).read()
     if set(files)!=expected_files:raise ValueError('missing bundle input bytes')
     if files.get('entry.js')!=(root/'entry.js').read_bytes():raise ValueError('bundle entry differs from reviewed entry')
+    return files
+
+
+def replay_landmark_sources(root,files,lock_packages):
     # Raw npm bytes remain in the input archive. Replay the reviewed source
     # adapter independently before comparing the generated source-map content.
     # This never edits publisher bytes, final minified assets or the served DOM.
@@ -174,6 +191,10 @@ def rebuilt(root):
         transform_records.append({'path':path,'package':package,'version':change['version'],'input_sha256':sha(files[path]),'output_sha256':sha(output),'count':1})
     expected_receipt={'schema_version':1,'recipe_sha256':sha((root/'landmark-transforms.json').read_bytes()),'transforms':sorted(transform_records,key=lambda r:r['path'])}
     if load((root/'landmark-transform-receipt.json').read_bytes())!=expected_receipt:raise ValueError('landmark source adapter receipt differs from replay')
+    return adapted
+
+
+def verify_publisher_inputs(root,files):
     publisher_prefix='node_modules/'+PACKAGE+'/'
     publisher_inputs={'package/'+path[len(publisher_prefix):]:data for path,data in files.items() if path.startswith(publisher_prefix)}
     with tarfile.open(fileobj=io.BytesIO((root/'npm-package.tgz').read_bytes()),mode='r:gz') as archive:
@@ -183,15 +204,9 @@ def rebuilt(root):
                 if not member.isfile() or archive.extractfile(member).read()!=publisher_inputs[member.name]:raise ValueError('Scalar bundled input differs from pinned publisher tar bytes')
                 matched.add(member.name)
         if matched!=set(publisher_inputs):raise ValueError('Scalar bundled input absent from pinned publisher tar')
-    if set(outputs)!= {'out/scalar.js','out/scalar.js.map','out/scalar.css','out/scalar.css.map'}:raise ValueError('unexpected browser build outputs')
-    js=(root/'scalar.js').read_bytes();map_bytes=(root/'scalar.js.map').read_bytes();source_map=load(map_bytes)
-    if len(js)!=outputs['out/scalar.js'].get('bytes') or len(map_bytes)!=outputs['out/scalar.js.map'].get('bytes') or not js.rstrip().endswith(b'//# sourceMappingURL=scalar.js.map'):raise ValueError('rebuilt browser output identity mismatch')
-    if source_map.get('version')!=3 or not source_map.get('sources') or len(source_map.get('sources',[]))!=len(source_map.get('sourcesContent',[])):raise ValueError('incomplete rebuilt source map')
-    for source,content in zip(source_map['sources'],source_map['sourcesContent']):
-        if not isinstance(source,str) or not source.startswith('../') or source[3:] not in inputs or not isinstance(content,str):raise ValueError('unexplained final browser source-map source')
-        raw=adapted.get(source[3:],files[source[3:]])
-        expected=re.sub(rb'^//[#@] sourceMappingURL=.*$',b'',raw,flags=re.MULTILINE) if re.search(r'\.[cm]?js$',source) else raw
-        if expected!=content.encode():raise ValueError('source map differs from actual compiled bundle inputs')
+
+
+def verify_browser_stylesheet(root,files,inputs,outputs,js):
     css=(root/'scalar.css').read_bytes();css_map=(root/'scalar.css.map').read_bytes()
     if len(css)!=outputs['out/scalar.css'].get('bytes') or len(css_map)!=outputs['out/scalar.css.map'].get('bytes'):raise ValueError('browser stylesheet output identity mismatch')
     css_string=json.dumps(css.decode(),ensure_ascii=False,separators=(',',':'))
@@ -201,34 +216,76 @@ def rebuilt(root):
     if not css_sources.get('sources') or len(css_sources.get('sources',[]))!=len(css_sources.get('sourcesContent',[])):raise ValueError('incomplete stylesheet source map')
     for source,content in zip(css_sources['sources'],css_sources['sourcesContent']):
         if not isinstance(source,str) or not source.startswith('../') or source[3:] not in inputs or not isinstance(content,str) or files[source[3:]]!=content.encode():raise ValueError('stylesheet source map differs from actual inputs')
+
+
+def browser_sources(root,files,inputs,outputs,adapted):
+    if set(outputs)!= {'out/scalar.js','out/scalar.js.map','out/scalar.css','out/scalar.css.map'}:raise ValueError('unexpected browser build outputs')
+    js=(root/'scalar.js').read_bytes();map_bytes=(root/'scalar.js.map').read_bytes();source_map=load(map_bytes)
+    if len(js)!=outputs['out/scalar.js'].get('bytes') or len(map_bytes)!=outputs['out/scalar.js.map'].get('bytes') or not js.rstrip().endswith(b'//# sourceMappingURL=scalar.js.map'):raise ValueError('rebuilt browser output identity mismatch')
+    if source_map.get('version')!=3 or not source_map.get('sources') or len(source_map.get('sources',[]))!=len(source_map.get('sourcesContent',[])):raise ValueError('incomplete rebuilt source map')
+    for source,content in zip(source_map['sources'],source_map['sourcesContent']):
+        if not isinstance(source,str) or not source.startswith('../') or source[3:] not in inputs or not isinstance(content,str):raise ValueError('unexplained final browser source-map source')
+        raw=adapted.get(source[3:],files[source[3:]])
+        expected=re.sub(rb'^//[#@] sourceMappingURL=.*$',b'',raw,flags=re.MULTILINE) if re.search(r'\.[cm]?js$',source) else raw
+        if expected!=content.encode():raise ValueError('source map differs from actual compiled bundle inputs')
+    verify_browser_stylesheet(root,files,inputs,outputs,js)
+    return js,map_bytes,source_map
+
+
+def verified_manifest(prefix,record,files,lock_packages):
+    manifest_bytes=files[prefix+'/package.json'];manifest=load(manifest_bytes);locked=lock_packages.get(prefix,{})
+    name,version=manifest.get('name'),manifest.get('version')
+    if prefix.rsplit('node_modules/',1)[-1]!=name or not version or version!=locked.get('version') or record.get('name')!=name or record.get('version')!=version or sha(manifest_bytes)!=record.get('manifest_sha256') or record.get('manifest')!=manifest:raise ValueError('bundle manifest/lock identity mismatch')
+    return name,version,manifest_bytes,locked
+
+
+def verified_package_inputs(prefix,record,files,emitted,used_inputs):
+    seen=[]
+    for entry in record.get('inputs',[]):
+        path=entry.get('path')
+        if path not in emitted or not path.startswith(prefix+'/') or path in used_inputs or sha(files[path])!=entry.get('sha256'):raise ValueError('bundle input/manifest mismatch')
+        used_inputs.add(path);seen.append(path)
+    return seen
+
+
+def bundle_components(files,inputs,outputs,records,lock_packages,adapted):
     observed_components=[];used_inputs=set()
     emitted={path for output in outputs.values() for path,record in output.get('inputs',{}).items() if record.get('bytesInOutput',0)>0}
     if not emitted or not emitted.issubset(inputs):raise ValueError('invalid emitted browser input inventory')
     if not set(adapted).issubset(emitted):raise ValueError('landmark adapter source absent from emitted browser assembly')
     for prefix,record in sorted(records.items()):
         if not re.fullmatch(r'node_modules/(?:@[A-Za-z0-9_.-]+/)?[A-Za-z0-9_.-]+(?:/node_modules/(?:@[A-Za-z0-9_.-]+/)?[A-Za-z0-9_.-]+)*',prefix):raise ValueError('unexplained bundle package root')
-        manifest_bytes=files[prefix+'/package.json'];manifest=load(manifest_bytes);locked=lock_packages.get(prefix,{})
-        name,version=manifest.get('name'),manifest.get('version')
-        if prefix.rsplit('node_modules/',1)[-1]!=name or not version or version!=locked.get('version') or record.get('name')!=name or record.get('version')!=version or sha(manifest_bytes)!=record.get('manifest_sha256') or record.get('manifest')!=manifest:raise ValueError('bundle manifest/lock identity mismatch')
-        seen=[]
-        for entry in record.get('inputs',[]):
-            path=entry.get('path')
-            if path not in emitted or not path.startswith(prefix+'/') or path in used_inputs or sha(files[path])!=entry.get('sha256'):raise ValueError('bundle input/manifest mismatch')
-            used_inputs.add(path);seen.append(path)
+        name,version,manifest_bytes,locked=verified_manifest(prefix,record,files,lock_packages)
+        seen=verified_package_inputs(prefix,record,files,emitted,used_inputs)
         if not seen:raise ValueError('unobserved package in frontend inventory')
         observed_components.append({'name':name,'version':version,'purl':purl(name,version),'input_paths':sorted(seen),'manifest_sha256':sha(manifest_bytes),'lock_integrity':locked['integrity']})
     if used_inputs|{'entry.js'}!=emitted:raise ValueError('unexplained third-party bundle input')
+    return observed_components
+
+
+def verify_primary_notice(root,files,path,notice):
+    if files[path]!=(root/'scalar-LICENSE').read_bytes() or notice.get('source')!=load((root/'scalar-license-source.json').read_bytes()):raise ValueError('Scalar primary license notice mismatch')
+
+
+def verify_package_notice(records,path,notice):
+    prefix=path.rsplit('/',1)[0];manifest_record=records.get(prefix,{})
+    if notice.get('name')!=manifest_record.get('name') or notice.get('version')!=manifest_record.get('version') or not re.fullmatch(r'(licen[sc]e|notice|copying)([._-].*)?',path.rsplit('/',1)[-1],flags=re.IGNORECASE):raise ValueError('notice differs from actual observed package')
+
+
+def verify_distributed_notices(root,files,records,notices):
     notice_text=''
     for notice in notices:
         path=notice.get('path')
         if path not in files or sha(files[path])!=notice.get('sha256'):raise ValueError('unbound runtime license notice')
         if path=='scalar-LICENSE':
-            if files[path]!=(root/'scalar-LICENSE').read_bytes() or notice.get('source')!=load((root/'scalar-license-source.json').read_bytes()):raise ValueError('Scalar primary license notice mismatch')
+            verify_primary_notice(root,files,path,notice)
         else:
-            prefix=path.rsplit('/',1)[0];manifest_record=records.get(prefix,{})
-            if notice.get('name')!=manifest_record.get('name') or notice.get('version')!=manifest_record.get('version') or not re.fullmatch(r'(licen[sc]e|notice|copying)([._-].*)?',path.rsplit('/',1)[-1],flags=re.IGNORECASE):raise ValueError('notice differs from actual observed package')
+            verify_package_notice(records,path,notice)
         notice_text+='\n--- '+notice['name']+'@'+notice['version']+' ('+path+') ---\n'+files[path].decode()
     if (root/'THIRD-PARTY-NOTICES.txt').read_bytes()!=notice_text.encode():raise ValueError('distributed notices differ from actual input notice bytes')
+
+
+def rebuild_evidence(root,original,toolchain,js,map_bytes,source_map,observed_components):
     # This supplier is the repository distributor of the assembled browser bytes,
     # not a fabricated upstream package author/manufacturer.
     supplier={'name':'ckodex-labs','url':['https://github.com/ckodex-labs/ckodex-xoscal']}
@@ -241,6 +298,17 @@ def rebuilt(root):
     receipt={'schema_version':2,'role':'rebuilt published-module browser assembly; observed build inputs, not complete upstream graph','package':{'name':PACKAGE,'version':VERSION},'tar_url':TAR_URL,'tar_sri':TAR_SRI,'tar_sha256':sha((root/'npm-package.tgz').read_bytes()),'metadata_sha256':sha((root/'npm-metadata.json').read_bytes()),'manifest_sha256':sha(original['package.json']),'js_sha256':sha(js),'source_map_sha256':sha(map_bytes),'sbom_sha256':sha(sbom_bytes),'source_count':len(source_map['sources']),'components':observed_components,'build_inputs':{name:sha((root/name).read_bytes()) for name in (*BUILD_PINS,'build-toolchain.json','esbuild-metafile.json','installed-package-manifests.json','bundle-inputs.tar.gz','scalar.css','scalar.css.map','bundle-notices.json','THIRD-PARTY-NOTICES.txt','landmark-transform-receipt.json')}}
     return {'sbom.cyclonedx.json':sbom_bytes,'frontend-inventory.json':encoded(receipt),'frontend.sha256':(sha(js)+'  /input/scalar.js\n').encode()}
 
+
+def rebuilt(root):
+    root=Path(root)
+    original,lock_packages,toolchain,inputs,outputs,records,notices=build_context(root)
+    files=bundle_inputs(root,inputs,records,notices)
+    adapted=replay_landmark_sources(root,files,lock_packages)
+    verify_publisher_inputs(root,files)
+    js,map_bytes,source_map=browser_sources(root,files,inputs,outputs,adapted)
+    observed_components=bundle_components(files,inputs,outputs,records,lock_packages,adapted)
+    verify_distributed_notices(root,files,records,notices)
+    return rebuild_evidence(root,original,toolchain,js,map_bytes,source_map,observed_components)
 
 def replay(root):
     root=Path(root);outputs=rebuilt(root) if (root/'build-package.json').is_file() else produce((root/'npm-metadata.json').read_bytes(),(root/'npm-package.tgz').read_bytes())
