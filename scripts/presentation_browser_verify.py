@@ -143,7 +143,7 @@ def mandatory_checks(mode):
             ids.add(mode + ": API keyboard entry/" + name)
         for kind in ("intro reentry", "model reentry"):
             ids |= {mode + ": API native reentry/" + kind + ": " + suffix for suffix in
-                    ("actual prior Scalar fragment", "native close retains prior fragment",
+                    ("actual prior Scalar fragment", "native close retains prior fragment", "pre-close setup preserves fragment and summary focus",
                      "actual Tab reaches explorer summary after far Plain contract", "ready transition selects only interactive reference",
                      "ready transition retains visible unoccluded keyboard focus")}
         ids |= {mode + ": API native reentry/" + name for name in
@@ -303,6 +303,8 @@ def verify_route_navigation(root, receipt):
             for suffix in ("actual prior Scalar fragment", "native close retains prior fragment"):
                 require(controls[mode + ": API native reentry/" + kind + ": " + suffix].get("detail") ==
                         {"fragment": fragment}, "reentry fragment differs from observed route")
+            setup = controls[mode + ": API native reentry/" + kind + ": pre-close setup preserves fragment and summary focus"].get("detail", {})
+            require(setup == {"fragment": fragment, "summaryFocused": True} and setup["summaryFocused"] is True, "pre-close setup did not preserve route and focus")
         require(controls[mode + ": API native reentry/initial model deep link preserves requested route"].get("detail") ==
                 {"fragment": model}, "initial model route differs")
         require(controls[mode + ": API route during loading/new route: actual hash navigation occurs during loading"].get("detail") ==

@@ -42,12 +42,20 @@ class RouteReceiptTests(unittest.TestCase):
 
     def test_reentry_fragment_loading_and_deep_link_evidence_is_exact(self):
         suffixes = ("intro reentry: actual prior Scalar fragment", "model reentry: native close retains prior fragment",
-                    "initial model deep link preserves requested route", "new route: actual hash navigation occurs during loading")
+                    "initial model deep link preserves requested route", "new route: actual hash navigation occurs during loading", "model reentry: pre-close setup preserves fragment and summary focus")
         for suffix in suffixes:
             changed = copy.deepcopy(self.receipt)
             next(c for c in changed["checks"] if c["id"].endswith(suffix))["detail"] = {}
             self.save(changed)
             with self.assertRaises(ValueError):
+                browser.verify(self.root)
+
+    def test_pre_close_focus_requires_actual_boolean(self):
+        for value in (False, 1, "true"):
+            changed = copy.deepcopy(self.receipt)
+            next(c for c in changed["checks"] if c["id"].endswith("model reentry: pre-close setup preserves fragment and summary focus"))["detail"]["summaryFocused"] = value
+            self.save(changed)
+            with self.assertRaisesRegex(ValueError, "pre-close"):
                 browser.verify(self.root)
 
     def test_model_focus_geometry_requires_strict_booleans_and_finite_rectangles(self):

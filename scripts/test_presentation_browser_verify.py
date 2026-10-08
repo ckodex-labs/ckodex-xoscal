@@ -53,6 +53,8 @@ def fixture_route_evidence(root, receipt):
                                "size": (root / "openapi.json").stat().st_size}
         if ": API native reentry/" in check["id"] and check["id"].endswith(("actual prior Scalar fragment", "native close retains prior fragment", "initial model deep link preserves requested route")):
             check["detail"] = {"fragment": "#description/introduction" if "/intro reentry:" in check["id"] else "#models/oscalservicesv1CreateComponentDefinitionRequest"}
+        if check["id"].endswith("pre-close setup preserves fragment and summary focus"):
+            check["detail"] = {"fragment": "#description/introduction" if "/intro reentry:" in check["id"] else "#models/oscalservicesv1CreateComponentDefinitionRequest", "summaryFocused": True}
         if check["id"].endswith("new route: actual hash navigation occurs during loading"):
             check["detail"] = {"phase": "loading", "requested": "#models/oscalservicesv1CreateComponentDefinitionRequest"}
         if check["id"].endswith(("new route: requested model owns visible focus after readiness", "initial model deep link: requested model owns visible focus after readiness")):
