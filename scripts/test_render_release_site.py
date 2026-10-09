@@ -31,6 +31,8 @@ class RenderReleaseSite(unittest.TestCase):
         self.root = Path(self.temp.name) / "site"
         shutil.copytree(REPO / "site", self.root)
         (self.root / "sbom-assessment-results.json").unlink(missing_ok=True)
+        shutil.rmtree(self.root / "frameworks", ignore_errors=True)
+        shutil.rmtree(self.root / "sdk", ignore_errors=True)
         # These are real file/ZIP fixtures for the static contract; language
         # installability and the pinned production Scalar bundle have their own gates.
         frontend_assets = {
@@ -44,7 +46,7 @@ class RenderReleaseSite(unittest.TestCase):
             (self.root / name).write_text(content)
         (self.root / "scripts").mkdir(exist_ok=True)
         shutil.copyfile(SCRIPTS / "install.sh", self.root / "scripts/install.sh")
-        (self.root / "sdk").mkdir()
+        (self.root / "sdk").mkdir(exist_ok=True)
         for language in smoke.LANGUAGES:
             path = self.root / f"sdk/{language}.zip"
             with zipfile.ZipFile(path, "w") as archive:
@@ -52,7 +54,7 @@ class RenderReleaseSite(unittest.TestCase):
             Path(str(path) + ".sha256").write_text(digest(path) + "\n")
         for name in [f"fixture-{i:02}" for i in range(34)] + ["cccs-medium-cloud-pbmm"]:
             directory = self.root / "frameworks" / name
-            directory.mkdir(parents=True)
+            directory.mkdir(parents=True, exist_ok=True)
             path = directory / "catalog.json"
             write(path, {"catalog": {"uuid": "fixture", "metadata": {"title": name}}})
             Path(str(path) + ".sha256").write_text(digest(path) + "\n")
