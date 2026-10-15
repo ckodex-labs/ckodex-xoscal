@@ -6,7 +6,7 @@ from dagger import dag, function, object_type
 
 from .graph import LOG_MODULES, validate_graph
 
-GO_IMAGE = "golang:1.27.1-bookworm@sha256:69a7b9788769bec032d238959b61854e9ae87f57be9029ec04e9885fabf99195"
+GO_IMAGE = "golang:1.27.2-bookworm@sha256:5cf287a799e6b94384bad13d16b14904c531f51ba65792237e122ce42b392f61"
 
 
 @object_type
@@ -53,7 +53,7 @@ class SecureGoSdk:
             .with_env_variable("GOFLAGS", "-p=2")
             .with_env_variable("GOMAXPROCS", "2")
             .with_mounted_cache("/go/pkg/mod", dag.cache_volume("secure-go-sdk-mod-1.45-0.21"))
-            .with_mounted_cache("/root/.cache/go-build", dag.cache_volume("secure-go-sdk-build-1.27.1"))
+            .with_mounted_cache("/root/.cache/go-build", dag.cache_volume("secure-go-sdk-build-1.27.2"))
             .with_exec(command)
             .with_exec(["go", "mod", "tidy"])
             .with_exec(["go", "mod", "verify"])
@@ -103,8 +103,14 @@ grep -q '^exit status 3$' /runtime-evidence/scanner-negative.txt
 grep -q 'GO-0000-0001' /runtime-evidence/scanner-negative.txt
 '''])
             .with_exec(["sh", "-ec", "go test ./... > /runtime-evidence/tests.txt 2>&1"])
-            .with_exec(["sh", "-ec", "go vet ./... > /runtime-evidence/vet.txt 2>&1"])
-            .with_exec(["sh", "-ec", "cd third_party/otel-go; go mod verify > /runtime-evidence/fork-checksums.txt; go test -race ./... > /runtime-evidence/fork-tests.txt 2>&1; go vet ./... > /runtime-evidence/fork-vet.txt 2>&1; go run golang.org/x/vuln/cmd/govulncheck@v1.7.0 -json ./... > /runtime-evidence/fork-govulncheck.json; go run golang.org/x/vuln/cmd/govulncheck@v1.7.0 -mode=convert < /runtime-evidence/fork-govulncheck.json > /runtime-evidence/fork-govulncheck.txt"])
+            .with_exec(["sh", "-ec", '''
+cd third_party/otel-go
+go mod verify > /runtime-evidence/fork-checksums.txt 2>&1 || { cat /runtime-evidence/fork-checksums.txt >&2; exit 1; }
+go test -x -race ./... > /runtime-evidence/fork-tests.txt 2>&1 || { cat /runtime-evidence/fork-tests.txt >&2; exit 2; }
+go vet ./... > /runtime-evidence/fork-vet.txt 2>&1 || { cat /runtime-evidence/fork-vet.txt >&2; exit 3; }
+go run golang.org/x/vuln/cmd/govulncheck@v1.7.0 -json ./... > /runtime-evidence/fork-govulncheck.json 2>&1 || { cat /runtime-evidence/fork-govulncheck.json >&2; exit 4; }
+go run golang.org/x/vuln/cmd/govulncheck@v1.7.0 -mode=convert < /runtime-evidence/fork-govulncheck.json > /runtime-evidence/fork-govulncheck.txt 2>&1 || { cat /runtime-evidence/fork-govulncheck.txt >&2; exit 5; }
+'''])
             .with_exec(["sh", "-ec", "go build -ldflags '-s -w' -o /runtime . > /runtime-evidence/build.txt 2>&1; sha256sum /runtime > /runtime-evidence/runtime.sha256"])
             .with_new_file("/runtime-evidence/admission.json", json.dumps({
                 "schema": 1, "engineVersion": "v0.21.7", "compilerImage": GO_IMAGE,

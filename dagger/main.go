@@ -7,9 +7,9 @@ import (
 )
 
 const (
-	goBuilderImage         = "golang:1.25-bookworm@sha256:e401dae1bf814e29204a8cb7915682e1780951e609ca0dd8865ee1937f510c48"
+	goBuilderImage         = "golang:1.26-bookworm@sha256:d9c68c2c51161e12fd77e4c6320687c9cd86e1af1e3ad6e6cd63ff970641453c"
 	govulncheckVersion     = "v1.7.0"
-	gosecVersion           = "v2.28.0"
+	gosecVersion           = "v2.29.0"
 	goreleaserVersion      = "v2.17.1"
 	bufVersion             = "v1.71.0"
 	bufLinuxAMD64SHA       = "d3de2838c68a5759ca276884254bc70df4e4ad185d6ed5f65f327b6ce6363eab"
