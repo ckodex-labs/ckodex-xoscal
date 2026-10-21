@@ -1,0 +1,793 @@
+{
+  "profile": {
+    "uuid": "2d2bb6d6-10c6-5deb-bfbb-34142cc4f656",
+    "metadata": {
+      "title": "CCCS ITSP.10.033-01 Suggested Organizational Security and Privacy Control and Activity Profile - Medium Impact",
+      "published": "2026-04-01T00:00:00Z",
+      "last-modified": "2026-04-01T00:00:00Z",
+      "version": "1.0 (Supersedes ITSG-33 Annex 4A Profile 1 PBMM)",
+      "oscal-version": "1.2.3",
+      "remarks": "Authoritative Government of Canada Medium Impact (Protected B / Medium Integrity / Medium Availability - PBMM) profile published by the Canadian Centre for Cyber Security (CCCS) / Communications Security Establishment (CSE). Supersedes ITSG-33 Annex 4A Profile 1.",
+      "roles": [
+        {
+          "id": "creator",
+          "title": "Document Creator"
+        },
+        {
+          "id": "publisher",
+          "title": "Publisher"
+        }
+      ],
+      "parties": [
+        {
+          "uuid": "f5a7c094-5307-592f-ac5a-0e3ef9e1cade",
+          "type": "organization",
+          "name": "Canadian Centre for Cyber Security",
+          "short-name": "CCCS",
+          "email-addresses": [
+            "contact@cyber.gc.ca"
+          ],
+          "telephone-numbers": [
+            {
+              "type": "office",
+              "number": "+1-833-292-3722"
+            }
+          ],
+          "addresses": [
+            {
+              "addr-lines": [
+                "P.O. Box 9703, Terminal"
+              ],
+              "city": "Ottawa",
+              "state": "ON",
+              "postal-code": "K1G 3Z4",
+              "country": "CA"
+            }
+          ]
+        }
+      ],
+      "responsible-parties": [
+        {
+          "role-id": "publisher",
+          "party-uuids": [
+            "f5a7c094-5307-592f-ac5a-0e3ef9e1cade"
+          ]
+        }
+      ]
+    },
+    "imports": [
+      {
+        "href": "catalog.json",
+        "include-controls": [
+          {
+            "with-ids": [
+              "ac-1",
+              "ac-2",
+              "ac-2.1",
+              "ac-2.2",
+              "ac-2.3",
+              "ac-2.4",
+              "ac-2.5",
+              "ac-2.7",
+              "ac-2.10",
+              "ac-2.13",
+              "ac-3",
+              "ac-3.2",
+              "ac-3.4",
+              "ac-3.9",
+              "ac-4",
+              "ac-5",
+              "ac-6",
+              "ac-6.1",
+              "ac-6.2",
+              "ac-6.5",
+              "ac-6.7",
+              "ac-6.9",
+              "ac-6.10",
+              "ac-7",
+              "ac-8",
+              "ac-11",
+              "ac-11.1",
+              "ac-12",
+              "ac-14",
+              "ac-16",
+              "ac-16.2",
+              "ac-16.5",
+              "ac-17",
+              "ac-17.1",
+              "ac-17.2",
+              "ac-17.3",
+              "ac-17.4",
+              "ac-17.400",
+              "ac-18",
+              "ac-18.1",
+              "ac-18.3",
+              "ac-18.4",
+              "ac-19",
+              "ac-19.5",
+              "ac-20",
+              "ac-20.1",
+              "ac-20.2",
+              "ac-20.4",
+              "ac-21",
+              "ac-21.400",
+              "ac-21.401",
+              "ac-22",
+              "at-1",
+              "at-2",
+              "at-2.2",
+              "at-2.3",
+              "at-3",
+              "at-4",
+              "au-1",
+              "au-2",
+              "au-3",
+              "au-3.1",
+              "au-4",
+              "au-4.1",
+              "au-5",
+              "au-5.1",
+              "au-6",
+              "au-6.1",
+              "au-6.3",
+              "au-6.4",
+              "au-7",
+              "au-7.1",
+              "au-8",
+              "au-9",
+              "au-9.2",
+              "au-9.4",
+              "au-9.6",
+              "au-11",
+              "au-12",
+              "au-12.1",
+              "ca-1",
+              "ca-2",
+              "ca-2.1",
+              "ca-3",
+              "ca-5",
+              "ca-6",
+              "ca-7",
+              "ca-7.1",
+              "ca-7.4",
+              "ca-9",
+              "ca-9.1",
+              "cm-1",
+              "cm-2",
+              "cm-2.2",
+              "cm-2.3",
+              "cm-2.6",
+              "cm-2.7",
+              "cm-3",
+              "cm-3.2",
+              "cm-3.4",
+              "cm-4",
+              "cm-4.1",
+              "cm-4.2",
+              "cm-5",
+              "cm-6",
+              "cm-7",
+              "cm-7.1",
+              "cm-7.2",
+              "cm-7.5",
+              "cm-8",
+              "cm-8.1",
+              "cm-8.3",
+              "cm-8.4",
+              "cm-8.6",
+              "cm-9",
+              "cm-10",
+              "cm-11",
+              "cm-11.2",
+              "cm-12",
+              "cm-12.1",
+              "cp-1",
+              "cp-2",
+              "cp-2.1",
+              "cp-2.2",
+              "cp-2.3",
+              "cp-2.8",
+              "cp-3",
+              "cp-4",
+              "cp-4.1",
+              "cp-6",
+              "cp-6.1",
+              "cp-6.3",
+              "cp-7",
+              "cp-7.1",
+              "cp-7.2",
+              "cp-7.3",
+              "cp-7.4",
+              "cp-7.6",
+              "cp-8",
+              "cp-8.1",
+              "cp-8.2",
+              "cp-8.3",
+              "cp-8.5",
+              "cp-9",
+              "cp-9.1",
+              "cp-9.3",
+              "cp-9.5",
+              "cp-9.7",
+              "cp-9.8",
+              "cp-10",
+              "cp-10.2",
+              "cp-10.4",
+              "cp-10.6",
+              "ia-1",
+              "ia-2",
+              "ia-2.1",
+              "ia-2.2",
+              "ia-2.8",
+              "ia-2.10",
+              "ia-2.12",
+              "ia-3",
+              "ia-4",
+              "ia-4.4",
+              "ia-5",
+              "ia-5.1",
+              "ia-5.2",
+              "ia-5.6",
+              "ia-5.7",
+              "ia-5.8",
+              "ia-5.9",
+              "ia-5.13",
+              "ia-5.14",
+              "ia-6",
+              "ia-7",
+              "ia-8",
+              "ia-8.1",
+              "ia-8.2",
+              "ia-8.4",
+              "ia-11",
+              "ia-12",
+              "ia-12.2",
+              "ia-12.3",
+              "ia-12.4",
+              "ia-12.5",
+              "ir-1",
+              "ir-2",
+              "ir-3",
+              "ir-3.2",
+              "ir-4",
+              "ir-4.3",
+              "ir-4.8",
+              "ir-4.9",
+              "ir-5",
+              "ir-6",
+              "ir-6.1",
+              "ir-6.2",
+              "ir-6.3",
+              "ir-7",
+              "ir-7.1",
+              "ir-8",
+              "ma-1",
+              "ma-2",
+              "ma-3",
+              "ma-3.1",
+              "ma-3.2",
+              "ma-3.3",
+              "ma-4",
+              "ma-4.1",
+              "ma-4.3",
+              "ma-4.4",
+              "ma-4.6",
+              "ma-5",
+              "ma-5.1",
+              "ma-6",
+              "mp-1",
+              "mp-2",
+              "mp-3",
+              "mp-4",
+              "mp-5",
+              "mp-6",
+              "mp-6.3",
+              "mp-6.8",
+              "mp-7",
+              "mp-8",
+              "mp-8.3",
+              "pe-1",
+              "pe-2",
+              "pe-2.400",
+              "pe-3",
+              "pe-3.400",
+              "pe-4",
+              "pe-5",
+              "pe-6",
+              "pe-6.1",
+              "pe-8",
+              "pe-9",
+              "pe-10",
+              "pe-11",
+              "pe-12",
+              "pe-13",
+              "pe-13.1",
+              "pe-13.4",
+              "pe-13.400",
+              "pe-14",
+              "pe-15",
+              "pe-16",
+              "pe-17",
+              "pe-400",
+              "pe-400.1",
+              "pe-400.2",
+              "pe-401",
+              "pl-1",
+              "pl-2",
+              "pl-4",
+              "pl-4.1",
+              "pl-8",
+              "pl-10",
+              "pl-11",
+              "ps-1",
+              "ps-2",
+              "ps-3",
+              "ps-4",
+              "ps-5",
+              "ps-6",
+              "ps-7",
+              "ps-8",
+              "ps-9",
+              "ra-1",
+              "ra-2",
+              "ra-3",
+              "ra-3.1",
+              "ra-5",
+              "ra-5.2",
+              "ra-5.5",
+              "ra-5.11",
+              "ra-7",
+              "ra-9",
+              "sa-1",
+              "sa-2",
+              "sa-3",
+              "sa-4",
+              "sa-4.1",
+              "sa-4.9",
+              "sa-4.10",
+              "sa-4.12",
+              "sa-5",
+              "sa-8",
+              "sa-9",
+              "sa-9.1",
+              "sa-9.2",
+              "sa-9.8",
+              "sa-10",
+              "sa-10.1",
+              "sa-10.7",
+              "sa-11",
+              "sa-15",
+              "sa-15.3",
+              "sa-16",
+              "sa-17",
+              "sa-22",
+              "sa-400",
+              "sc-1",
+              "sc-2",
+              "sc-4",
+              "sc-5",
+              "sc-5.2",
+              "sc-5.3",
+              "sc-7",
+              "sc-7.3",
+              "sc-7.4",
+              "sc-7.5",
+              "sc-7.7",
+              "sc-7.8",
+              "sc-7.9",
+              "sc-7.11",
+              "sc-7.12",
+              "sc-7.13",
+              "sc-8",
+              "sc-8.1",
+              "sc-10",
+              "sc-12",
+              "sc-12.1",
+              "sc-13",
+              "sc-15",
+              "sc-15.3",
+              "sc-17",
+              "sc-18",
+              "sc-18.1",
+              "sc-18.2",
+              "sc-18.3",
+              "sc-18.4",
+              "sc-18.5",
+              "sc-20",
+              "sc-21",
+              "sc-22",
+              "sc-23",
+              "sc-23.1",
+              "sc-23.3",
+              "sc-28",
+              "sc-28.1",
+              "sc-29",
+              "sc-39",
+              "sc-45",
+              "si-1",
+              "si-2",
+              "si-2.2",
+              "si-2.6",
+              "si-3",
+              "si-3.4",
+              "si-4",
+              "si-4.2",
+              "si-4.4",
+              "si-4.5",
+              "si-4.10",
+              "si-4.11",
+              "si-4.12",
+              "si-4.13",
+              "si-4.14",
+              "si-4.15",
+              "si-5",
+              "si-7",
+              "si-7.1",
+              "si-7.2",
+              "si-7.3",
+              "si-7.7",
+              "si-8",
+              "si-8.2",
+              "si-10",
+              "si-11",
+              "si-12",
+              "si-16",
+              "si-400",
+              "sr-1",
+              "sr-2",
+              "sr-2.1",
+              "sr-3",
+              "sr-5",
+              "sr-6",
+              "sr-8",
+              "sr-10",
+              "sr-11",
+              "sr-11.1",
+              "sr-11.2",
+              "sr-12"
+            ]
+          }
+        ]
+      }
+    ],
+    "modify": {
+      "set-parameters": [
+        {
+          "param-id": "ac-1_prm_1",
+          "values": [
+            "C.1 C.2 frequency [at a frequency no longer than annually]"
+          ]
+        },
+        {
+          "param-id": "ac-2_prm_1",
+          "values": [
+            "(J) frequency [at a frequency no longer than monthly]"
+          ]
+        },
+        {
+          "param-id": "ac-2.2_prm_1",
+          "values": [
+            "time period [not to exceed 48 hours after no longer being required]"
+          ]
+        },
+        {
+          "param-id": "ac-2.3_prm_1",
+          "values": [
+            "a. b. time period [not to exceed 30 days] c. time period [not to exceed 24 hours]"
+          ]
+        },
+        {
+          "param-id": "ac-3.2_prm_1",
+          "values": [
+            "[1] privileged commands [creation and deletion of PKI officers and administrators accounts] [2] actions [examples are: PKI changes to administrators and security officers; global administrator actions in cloud tenancies; domain administrator actions in single-forest systems]"
+          ]
+        },
+        {
+          "param-id": "ac-7_prm_1",
+          "values": [
+            "A. number [of a maximum of 5] A. time period [period of at least 5 minutes]"
+          ]
+        },
+        {
+          "param-id": "ia-5.9_prm_1",
+          "values": [
+            "[SSC]"
+          ]
+        },
+        {
+          "param-id": "ir-4.8_prm_1",
+          "values": [
+            "[SSC, TBS, Cyber Centre]"
+          ]
+        },
+        {
+          "param-id": "mp-6.8_prm_1",
+          "values": [
+            "[lost, stolen, upon termination of employment]"
+          ]
+        },
+        {
+          "param-id": "sa-10.7_prm_1",
+          "values": [
+            "1 [SSC, TBS and Cyber Centre] 2 [SSC projects and services serving multiple departments]"
+          ]
+        },
+        {
+          "param-id": "sc-29_prm_1",
+          "values": [
+            "[cyber security devices and tools]"
+          ]
+        },
+        {
+          "param-id": "si-3_prm_1",
+          "values": [
+            "C. 1) frequency [at least every 30 days] C. 2) selection [quarantine malicious code]"
+          ]
+        },
+        {
+          "param-id": "si-7.1_prm_1",
+          "values": [
+            "[4][frequency at no longer than 30 days]"
+          ]
+        }
+      ],
+      "alters": [
+        {
+          "control-id": "ac-3.2",
+          "adds": [
+            {
+              "position": "after",
+              "parts": [
+                {
+                  "id": "ac-3.2_profile-guidance",
+                  "name": "guidance",
+                  "prose": "Organizations must assess which administrative actions are capable of creating the entire available Injury. These actions are candidates for dual authorization."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "control-id": "ac-3.4",
+          "adds": [
+            {
+              "position": "after",
+              "parts": [
+                {
+                  "id": "ac-3.4_profile-guidance",
+                  "name": "guidance",
+                  "prose": "Control enhancement (04) clarifies the Access Enforcement security control by detailing the policy that should be used for access enforcement to Protected B information. That is, while the system may be authorized to process PB, not all information will necessarily be PB. Therefore, DAC will be used to establish and enforce access controls over PB information to \u201cneed to know.\u201d Examples of DAC include Windows groups (at the file object level) and document management systems that allow document access permissions to be modified by the owner."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "control-id": "ac-16",
+          "adds": [
+            {
+              "position": "after",
+              "parts": [
+                {
+                  "id": "ac-16_profile-guidance",
+                  "name": "guidance",
+                  "prose": "In the context of this profile, the objective of this control is to achieve consistent labeling of Protected B material to the maximum extent supported by available, automated mechanisms (for example, email system enforcing classification labels). Since not all information on the system will be sensitive, labeling will help prevent the accidental distribution of Protected B information by providing filter mechanisms with a differentiator."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "control-id": "ac-21.400",
+          "adds": [
+            {
+              "position": "after",
+              "parts": [
+                {
+                  "id": "ac-21.400_profile-guidance",
+                  "name": "guidance",
+                  "prose": "GC specific"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "control-id": "ac-21.401",
+          "adds": [
+            {
+              "position": "after",
+              "parts": [
+                {
+                  "id": "ac-21.401_profile-guidance",
+                  "name": "guidance",
+                  "prose": "GC specific"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "control-id": "ia-12.5",
+          "adds": [
+            {
+              "position": "after",
+              "parts": [
+                {
+                  "id": "ia-12.5_profile-guidance",
+                  "name": "guidance",
+                  "prose": "This control is recommended for users external to the organization."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "control-id": "ir-9",
+          "adds": [
+            {
+              "position": "after",
+              "parts": [
+                {
+                  "id": "ir-9_profile-guidance",
+                  "name": "guidance",
+                  "prose": "This control should be selected by GC departments and"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "control-id": "ir-9.2",
+          "adds": [
+            {
+              "position": "after",
+              "parts": [
+                {
+                  "id": "ir-9.2_profile-guidance",
+                  "name": "guidance",
+                  "prose": "This control should be selected by GC departments and agencies that have systems categorized higher than Protected B."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "control-id": "ir-9.3",
+          "adds": [
+            {
+              "position": "after",
+              "parts": [
+                {
+                  "id": "ir-9.3_profile-guidance",
+                  "name": "guidance",
+                  "prose": "This control should be selected by GC departments and agencies that have systems categorized higher than Protected B."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "control-id": "ir-9.4",
+          "adds": [
+            {
+              "position": "after",
+              "parts": [
+                {
+                  "id": "ir-9.4_profile-guidance",
+                  "name": "guidance",
+                  "prose": "This control should be selected by GC departments and agencies that have systems categorized higher than Protected B."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "control-id": "pe-3",
+          "adds": [
+            {
+              "position": "after",
+              "parts": [
+                {
+                  "id": "pe-3_profile-guidance",
+                  "name": "guidance",
+                  "prose": "According to the TBS Policy on Government Security and RCMP GCPSG-006 Access Management Guide, access to sensitive information and areas must be limited. A physical Operations Zone is the minimum required where sensitive GC information is processed or stored. A TRA must be performed to ensure the appropriate level of physical security to protect Protected B information and information systems processing and storing PB data. This zone is an area where access is limited to personnel who work there and to properly-escorted visitors by an employee with a valid reliability status; it must be indicated by a recognizable perimeter and monitored periodically."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "control-id": "pe-3.400",
+          "adds": [
+            {
+              "position": "after",
+              "parts": [
+                {
+                  "id": "pe-3.400_profile-guidance",
+                  "name": "guidance",
+                  "prose": "GC specific."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "control-id": "pe-13.400",
+          "adds": [
+            {
+              "position": "after",
+              "parts": [
+                {
+                  "id": "pe-13.400_profile-guidance",
+                  "name": "guidance",
+                  "prose": "GC specific"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "control-id": "pe-400",
+          "adds": [
+            {
+              "position": "after",
+              "parts": [
+                {
+                  "id": "pe-400_profile-guidance",
+                  "name": "guidance",
+                  "prose": "GC specific."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "control-id": "pe-400.1",
+          "adds": [
+            {
+              "position": "after",
+              "parts": [
+                {
+                  "id": "pe-400.1_profile-guidance",
+                  "name": "guidance",
+                  "prose": "GC specific."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "control-id": "pe-400.2",
+          "adds": [
+            {
+              "position": "after",
+              "parts": [
+                {
+                  "id": "pe-400.2_profile-guidance",
+                  "name": "guidance",
+                  "prose": "GC specific."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "control-id": "sc-29",
+          "adds": [
+            {
+              "position": "after",
+              "parts": [
+                {
+                  "id": "sc-29_profile-guidance",
+                  "name": "guidance",
+                  "prose": "In order to protect PBMM against Td4 compromise using a single unknown system flaw (a 0-Day), disaggregate the business functions between systems that do not share a single-point-of-failure. For example, host one line-of-business database in Windows, and a different line-of-business database in Linux."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

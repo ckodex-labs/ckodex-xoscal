@@ -159,6 +159,7 @@ env/
 *.zip
 *.rar
 *.7z
+*.pdf
 
 # --- gRPC / Proto generated (if regenerating in CI) ---
 # Uncomment if you prefer CI-only generation:

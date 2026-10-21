@@ -65,8 +65,8 @@ func TestSeedKG(t *testing.T) {
 
 func TestListFrameworksAndIsCanadian(t *testing.T) {
 	fws := ListFrameworks()
-	if len(fws) != 4 {
-		t.Fatalf("expected 4 frameworks, got %d", len(fws))
+	if len(fws) != 5 {
+		t.Fatalf("expected 5 frameworks, got %d", len(fws))
 	}
 
 	for _, fw := range fws {
@@ -80,6 +80,9 @@ func TestListFrameworksAndIsCanadian(t *testing.T) {
 
 	if !IsCanadian("itsp.10.171") {
 		t.Errorf("expected alias itsp.10.171 to be recognized as Canadian")
+	}
+	if !IsCanadian("itsp.10.033") {
+		t.Errorf("expected alias itsp.10.033 to be recognized as Canadian")
 	}
 	if IsCanadian("nist-sp-800-53") {
 		t.Errorf("nist-sp-800-53 should not be recognized as Canadian")

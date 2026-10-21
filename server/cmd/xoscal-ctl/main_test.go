@@ -129,18 +129,23 @@ func TestXoscalCtl_FrameworksExportAndList(t *testing.T) {
 	tmpDir := t.TempDir()
 
 	fws := canadianframeworks.ListFrameworks()
-	if len(fws) != 4 {
-		t.Fatalf("expected 4 frameworks, got %d", len(fws))
+	if len(fws) != 5 {
+		t.Fatalf("expected 5 frameworks, got %d", len(fws))
 	}
 
 	// Export single
-	if err := canadianframeworks.Export(tmpDir, "cccs-itsp-10-171"); err != nil {
-		t.Fatalf("Export(cccs-itsp-10-171) failed: %v", err)
+	if err := canadianframeworks.Export(tmpDir, "cccs-itsp-10-033"); err != nil {
+		t.Fatalf("Export(cccs-itsp-10-033) failed: %v", err)
 	}
 
-	catFile := filepath.Join(tmpDir, "cccs-itsp-10-171", "catalog.json")
+	catFile := filepath.Join(tmpDir, "cccs-itsp-10-033", "catalog.json")
 	if err := dbutil.CheckDigestSidecar(catFile); err != nil {
 		t.Fatalf("digest verification failed for exported catalog: %v", err)
+	}
+
+	profFile := filepath.Join(tmpDir, "cccs-itsp-10-033", "profile.json")
+	if err := dbutil.CheckDigestSidecar(profFile); err != nil {
+		t.Fatalf("digest verification failed for exported profile: %v", err)
 	}
 }
 

@@ -92,6 +92,26 @@ func TestCanadianFrameworksSchemaConformance(t *testing.T) {
 			t.Fatalf("expected 267 assessable controls in ITSP.10.171 catalog, got %d", len(cat.Controls))
 		}
 	})
+
+	t.Run("CCCS_ITSP_10_033_Catalog", func(t *testing.T) {
+		data := GetCCCSITSP10033CatalogJSON()
+		if len(data) == 0 {
+			t.Fatalf("expected embedded ITSP.10.033 catalog JSON, got empty")
+		}
+		if err := v.Validate(data, schemavalidate.KindCatalog); err != nil {
+			t.Fatalf("CCCS ITSP.10.033 Catalog failed OSCAL 1.2.3 schema validation: %v", err)
+		}
+	})
+
+	t.Run("CCCS_ITSP_10_033_01_Profile", func(t *testing.T) {
+		data := GetCCCSITSP10033ProfileJSON()
+		if len(data) == 0 {
+			t.Fatalf("expected embedded ITSP.10.033-01 profile JSON, got empty")
+		}
+		if err := v.Validate(data, schemavalidate.KindProfile); err != nil {
+			t.Fatalf("CCCS ITSP.10.033-01 Profile failed OSCAL 1.2.3 schema validation: %v", err)
+		}
+	})
 }
 
 func TestExportAll(t *testing.T) {
@@ -110,6 +130,8 @@ func TestExportAll(t *testing.T) {
 		{"cccs-medium-cloud-pbmm", "catalog.json"},
 		{"cybersecure-canada", "catalog.json"},
 		{"cccs-itsp-10-171", "catalog.json"},
+		{"cccs-itsp-10-033", "catalog.json"},
+		{"cccs-itsp-10-033", "profile.json"},
 	}
 
 	for _, tgt := range targets {

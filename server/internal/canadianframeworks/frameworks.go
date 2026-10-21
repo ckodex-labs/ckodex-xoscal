@@ -16,6 +16,22 @@ var itsp10171ControlsJSON []byte
 //go:embed cybersecure_canada_controls.json
 var cybersecureCanadaControlsJSON []byte
 
+//go:embed itsp10033_catalog.json
+var itsp10033CatalogJSON []byte
+
+//go:embed itsp10033_profile.json
+var itsp10033ProfileJSON []byte
+
+// GetCCCSITSP10033CatalogJSON returns the authoritative OSCAL 1.2.3 JSON catalog for CCCS ITSP.10.033.
+func GetCCCSITSP10033CatalogJSON() []byte {
+	return itsp10033CatalogJSON
+}
+
+// GetCCCSITSP10033ProfileJSON returns the authoritative OSCAL 1.2.3 JSON profile for CCCS ITSP.10.033-01.
+func GetCCCSITSP10033ProfileJSON() []byte {
+	return itsp10033ProfileJSON
+}
+
 type jsonControl struct {
 	ID        string `json:"id"`
 	Title     string `json:"title"`

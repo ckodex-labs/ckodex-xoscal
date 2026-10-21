@@ -60,13 +60,22 @@ func ListFrameworks() []FrameworkInfo {
 			ControlCount: 30,
 			HasProfile:   true,
 		},
+		{
+			RefID:        "cccs-itsp-10-033",
+			Name:         "CCCS ITSP.10.033 Security and Privacy Controls and Assurance Activities Catalogue",
+			Version:      "1.0 (2026-03-31)",
+			Locale:       "ca",
+			Provider:     "Canadian Centre for Cyber Security / Communications Security Establishment",
+			ControlCount: 330,
+			HasProfile:   true,
+		},
 	}
 }
 
 // IsCanadian returns true if the given refID corresponds to an authoritative Canadian framework.
 func IsCanadian(refID string) bool {
 	switch refID {
-	case "cccs-itsg-33", "cybersecure-canada", "cccs-itsp-10-171", "itsp.10.171", "cccs-medium-cloud-pbmm":
+	case "cccs-itsg-33", "cybersecure-canada", "cccs-itsp-10-171", "itsp.10.171", "cccs-medium-cloud-pbmm", "cccs-itsp-10-033", "itsp.10.033":
 		return true
 	default:
 		return false
@@ -116,6 +125,21 @@ func Export(outDir, refID string) error {
 			kind:     schemavalidate.KindCatalog,
 			exportFn: func() ([]byte, error) {
 				return oscal.ExportCatalogJSON(BuildCCCSITSP10171Catalog())
+			},
+		})
+	case "cccs-itsp-10-033", "itsp.10.033":
+		targets = append(targets, target{
+			filename: "catalog.json",
+			kind:     schemavalidate.KindCatalog,
+			exportFn: func() ([]byte, error) {
+				return itsp10033CatalogJSON, nil
+			},
+		})
+		targets = append(targets, target{
+			filename: "profile.json",
+			kind:     schemavalidate.KindProfile,
+			exportFn: func() ([]byte, error) {
+				return itsp10033ProfileJSON, nil
 			},
 		})
 	case "cccs-medium-cloud-pbmm":
