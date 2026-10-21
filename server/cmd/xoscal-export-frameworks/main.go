@@ -14,9 +14,10 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/mchorfa/xoscal/server/internal/canadianframeworks"
+	_ "github.com/mchorfa/xoscal/server/internal/canadianframeworks"
 	"github.com/mchorfa/xoscal/server/internal/dbutil"
 	"github.com/mchorfa/xoscal/server/internal/fetcher"
+	"github.com/mchorfa/xoscal/server/internal/frameworks"
 	"github.com/mchorfa/xoscal/server/internal/ingestion"
 	"github.com/mchorfa/xoscal/server/internal/kg"
 	"github.com/mchorfa/xoscal/server/internal/oscal"
@@ -69,9 +70,10 @@ func run(manifestPath, outDir, dsn string) error {
 	}
 
 	gen := oscal.NewGenerator(store)
+	reg := frameworks.DefaultRegistry()
 	for _, refID := range m.RefIDs() {
-		if canadianframeworks.IsCanadian(refID) {
-			if err := canadianframeworks.Export(outDir, refID); err != nil {
+		if reg.Has(refID) {
+			if err := reg.Export(outDir, refID); err != nil {
 				return fmt.Errorf("export %s: %w", refID, err)
 			}
 			continue

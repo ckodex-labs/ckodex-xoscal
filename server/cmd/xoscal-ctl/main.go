@@ -15,10 +15,11 @@ import (
 	"time"
 
 	"github.com/mchorfa/xoscal/server/internal/bundle"
-	"github.com/mchorfa/xoscal/server/internal/canadianframeworks"
+	_ "github.com/mchorfa/xoscal/server/internal/canadianframeworks"
 	"github.com/mchorfa/xoscal/server/internal/dbutil"
 	"github.com/mchorfa/xoscal/server/internal/derogation"
 	"github.com/mchorfa/xoscal/server/internal/diff"
+	"github.com/mchorfa/xoscal/server/internal/frameworks"
 	"github.com/mchorfa/xoscal/server/internal/ingestion"
 	"github.com/mchorfa/xoscal/server/internal/kg"
 	"github.com/mchorfa/xoscal/server/internal/oscal"
@@ -451,33 +452,48 @@ func runFrameworks(args []string) {
 	}
 
 	sub := args[0]
+	reg := frameworks.DefaultRegistry()
+
 	switch sub {
 	case "list":
-		fmt.Printf("\n=== AUTHORITATIVE CANADIAN CYBERSECURITY FRAMEWORKS ===\n")
-		fmt.Printf("%-26s %-14s %-16s %s\n", "REF ID", "CONTROLS", "VERSION", "NAME")
-		fmt.Println(strings.Repeat("-", 90))
-		for _, fw := range canadianframeworks.ListFrameworks() {
+		fs := flag.NewFlagSet("frameworks list", flag.ExitOnError)
+		jurisdiction := fs.String("jurisdiction", "", "Optional filter by jurisdiction code (e.g. 'ca', 'us')")
+		_ = fs.Parse(args[1:])
+
+		var fws []frameworks.Framework
+		if *jurisdiction != "" {
+			fws = reg.FindByJurisdiction(*jurisdiction)
+			fmt.Printf("\n=== AUTHORITATIVE CYBERSECURITY FRAMEWORKS (%s) ===\n", strings.ToUpper(*jurisdiction))
+		} else {
+			fws = reg.List()
+			fmt.Printf("\n=== AUTHORITATIVE CYBERSECURITY FRAMEWORKS ===\n")
+		}
+
+		fmt.Printf("%-24s %-6s %-14s %-16s %s\n", "REF ID", "LOCALE", "CONTROLS", "VERSION", "NAME")
+		fmt.Println(strings.Repeat("-", 96))
+		for _, fw := range fws {
 			profStr := ""
-			if fw.HasProfile {
+			if fw.HasProfile() {
 				profStr = " (+ Profile)"
 			}
-			ctrlCountStr := fmt.Sprintf("%d%s", fw.ControlCount, profStr)
-			fmt.Printf("%-26s %-14s %-16s %s\n", fw.RefID, ctrlCountStr, fw.Version, fw.Name)
+			ctrlCountStr := fmt.Sprintf("%d%s", fw.ControlCount(), profStr)
+			fmt.Printf("%-24s %-6s %-14s %-16s %s\n", fw.ID(), strings.ToUpper(fw.Jurisdiction()), ctrlCountStr, fw.Version(), fw.Title())
 		}
 		fmt.Println()
 
 	case "export":
 		fs := flag.NewFlagSet("frameworks export", flag.ExitOnError)
 		outDir := fs.String("out", "data/frameworks", "Output destination directory")
-		fwName := fs.String("framework", "", "Optional specific framework ref_id (default: all Canadian)")
+		fwName := fs.String("framework", "", "Optional specific framework ref_id or alias")
+		jurisdiction := fs.String("jurisdiction", "", "Optional filter by jurisdiction (e.g. 'ca')")
 		_ = fs.Parse(args[1:])
 
 		if *fwName != "" {
-			if !canadianframeworks.IsCanadian(*fwName) {
-				fmt.Fprintf(os.Stderr, "error: unknown Canadian framework %s\n", *fwName)
+			if !reg.Has(*fwName) {
+				fmt.Fprintf(os.Stderr, "error: unknown framework %s\n", *fwName)
 				os.Exit(1)
 			}
-			if err := canadianframeworks.Export(*outDir, *fwName); err != nil {
+			if err := reg.Export(*outDir, *fwName); err != nil {
 				fmt.Fprintf(os.Stderr, "error exporting %s: %v\n", *fwName, err)
 				os.Exit(1)
 			}
@@ -485,11 +501,20 @@ func runFrameworks(args []string) {
 			return
 		}
 
-		if err := canadianframeworks.ExportAll(*outDir); err != nil {
-			fmt.Fprintf(os.Stderr, "error exporting Canadian frameworks: %v\n", err)
+		if *jurisdiction != "" {
+			if err := reg.ExportJurisdiction(*outDir, *jurisdiction); err != nil {
+				fmt.Fprintf(os.Stderr, "error exporting frameworks for jurisdiction %s: %v\n", *jurisdiction, err)
+				os.Exit(1)
+			}
+			fmt.Printf("[OK] Exported frameworks for jurisdiction %s -> %s\n", *jurisdiction, *outDir)
+			return
+		}
+
+		if err := reg.ExportAll(*outDir); err != nil {
+			fmt.Fprintf(os.Stderr, "error exporting frameworks: %v\n", err)
 			os.Exit(1)
 		}
-		fmt.Printf("[OK] Exported all Canadian frameworks -> %s\n", *outDir)
+		fmt.Printf("[OK] Exported all registered frameworks -> %s\n", *outDir)
 
 	default:
 		fmt.Fprintf(os.Stderr, "unknown frameworks subcommand: %s (expected 'list' or 'export')\n", sub)
@@ -514,8 +539,8 @@ func runSeed(args []string) {
 	ctx, cancel := context.WithTimeout(context.Background(), 30*time.Second)
 	defer cancel()
 
-	if err := canadianframeworks.SeedKG(ctx, store); err != nil {
-		fmt.Fprintf(os.Stderr, "error seeding Canadian frameworks: %v\n", err)
+	if err := frameworks.DefaultRegistry().SeedKG(ctx, store); err != nil {
+		fmt.Fprintf(os.Stderr, "error seeding baseline frameworks: %v\n", err)
 		os.Exit(1)
 	}
 

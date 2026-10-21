@@ -26,8 +26,8 @@ func TestSeedKG(t *testing.T) {
 	if err != nil {
 		t.Fatalf("list framework entities: %v", err)
 	}
-	if len(fws) != 4 {
-		t.Fatalf("expected 4 framework entities, got %d", len(fws))
+	if len(fws) != 5 {
+		t.Fatalf("expected 5 framework entities, got %d", len(fws))
 	}
 
 	// Verify requirement entities
@@ -44,8 +44,8 @@ func TestSeedKG(t *testing.T) {
 		t.Fatalf("second SeedKG failed: %v", err)
 	}
 	fwsAfter, _ := store.ListEntities(ctx, "reg:Framework", kg.EntityStatusActive)
-	if len(fwsAfter) != 4 {
-		t.Errorf("expected 4 frameworks after second seed, got %d", len(fwsAfter))
+	if len(fwsAfter) != 5 {
+		t.Errorf("expected 5 frameworks after second seed, got %d", len(fwsAfter))
 	}
 
 	// Test snapshot and catalog generation
