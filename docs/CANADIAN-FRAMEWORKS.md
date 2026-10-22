@@ -132,17 +132,22 @@ cccs-medium-cloud-pbmm  ca            1.0           CCCS Cloud Medium (PBMM) Pro
 ### Exporting Schema-Validated Artifacts
 
 ```bash
-# Export ITSP.10.033 Catalog with automated schema validation and .sha256 sidecar
+# Export ITSP.10.033 Catalog and Profile with automated schema validation and .sha256 sidecars
 xoscal-ctl frameworks export \
-  --framework cccs-itsp-10-033 \
-  --kind catalog \
-  --out itsp-10-033-catalog.oscal.json
+  -framework cccs-itsp-10-033 \
+  -out ./data/frameworks
+
+# Export all registered frameworks
+xoscal-ctl frameworks export -out ./exported-frameworks
 ```
 
 ### Seeding the Knowledge Graph
 
 ```bash
 # Seed SQLite Knowledge Graph with all 5 Canadian frameworks
+xoscal-ctl frameworks seed -db oscal.db
+# or top-level: xoscal-ctl seed -dsn oscal.db
+```
 xoscal-ctl frameworks seed --db oscal.db
 ```
 

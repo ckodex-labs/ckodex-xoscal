@@ -377,7 +377,7 @@ func main() {
 			err = fmt.Errorf("OpenAPI generation drift at %s", *output)
 		}
 	} else if err == nil {
-		err = os.WriteFile(*output, data, 0o644)
+		err = os.WriteFile(*output, data, 0o600)
 	}
 	if err != nil {
 		fmt.Fprintln(os.Stderr, err)

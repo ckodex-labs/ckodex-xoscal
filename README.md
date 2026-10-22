@@ -239,14 +239,14 @@ Query, export, and seed authoritative compliance frameworks (including sovereign
 xoscal-ctl frameworks list
 xoscal-ctl frameworks list --jurisdiction ca
 
-# Export schema-validated catalog or profile with .sha256 sidecar
+# Export schema-validated catalogs and profiles with .sha256 sidecars
 xoscal-ctl frameworks export \
   --framework cccs-itsp-10-033 \
-  --kind catalog \
-  --out itsp-10-033-catalog.oscal.json
+  --out ./data/frameworks
 
 # Seed the central Knowledge Graph with baseline framework requirements
-xoscal-ctl frameworks seed --db oscal.db
+xoscal-ctl frameworks seed -db oscal.db
+# or top-level: xoscal-ctl seed -dsn oscal.db
 ```
 
 #### Supported Sovereign Frameworks

@@ -411,8 +411,15 @@ func runValidate(args []string) {
 	kindFlag := fs.String("kind", "", "Artifact kind (catalog, profile, ssp, component-definition, assessment-plan, assessment-results, poam, mapping)")
 	_ = fs.Parse(args)
 
+	if *filePath == "" && fs.NArg() > 0 {
+		*filePath = fs.Arg(0)
+		if *kindFlag == "" && fs.NArg() > 1 {
+			*kindFlag = fs.Arg(1)
+		}
+	}
+
 	if *filePath == "" {
-		fmt.Fprintln(os.Stderr, "error: -file is required")
+		fmt.Fprintln(os.Stderr, "error: -file is required (or supply file path as first argument)")
 		fs.Usage()
 		os.Exit(1)
 	}
@@ -516,8 +523,11 @@ func runFrameworks(args []string) {
 		}
 		fmt.Printf("[OK] Exported all registered frameworks -> %s\n", *outDir)
 
+	case "seed":
+		runSeed(args[1:])
+
 	default:
-		fmt.Fprintf(os.Stderr, "unknown frameworks subcommand: %s (expected 'list' or 'export')\n", sub)
+		fmt.Fprintf(os.Stderr, "unknown frameworks subcommand: %s (expected 'list', 'export', or 'seed')\n", sub)
 		os.Exit(1)
 	}
 }
@@ -526,10 +536,16 @@ func runFrameworks(args []string) {
 func runSeed(args []string) {
 	fs := flag.NewFlagSet("seed", flag.ExitOnError)
 	dsn := fs.String("dsn", "oscal.db", "SQLite database path or DSN")
+	dbAlias := fs.String("db", "", "Alias for -dsn")
 	_ = fs.Parse(args)
 
-	fmt.Printf("[INFO] Seeding Knowledge Graph at %s ...\n", *dsn)
-	store, err := kg.NewSQLiteStore(*dsn, dbutil.PoolConfig{})
+	effectiveDSN := *dsn
+	if *dbAlias != "" {
+		effectiveDSN = *dbAlias
+	}
+
+	fmt.Printf("[INFO] Seeding Knowledge Graph at %s ...\n", effectiveDSN)
+	store, err := kg.NewSQLiteStore(effectiveDSN, dbutil.PoolConfig{})
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "error opening KG store: %v\n", err)
 		os.Exit(1)
@@ -546,7 +562,7 @@ func runSeed(args []string) {
 
 	fws, _ := store.ListEntities(ctx, "reg:Framework", kg.EntityStatusActive)
 	reqs, _ := store.ListEntities(ctx, "reg:Requirement", kg.EntityStatusActive)
-	fmt.Printf("[OK] Successfully seeded %d framework(s) and %d requirement(s) into %s\n", len(fws), len(reqs), *dsn)
+	fmt.Printf("[OK] Successfully seeded %d framework(s) and %d requirement(s) into %s\n", len(fws), len(reqs), effectiveDSN)
 }
 
 // runGenerate generates OSCAL artifacts from the Knowledge Graph snapshot.
