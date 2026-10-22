@@ -34,7 +34,8 @@ Published documentation: [Overview](https://ckodex-labs.github.io/ckodex-xoscal/
 [Transparency](https://ckodex-labs.github.io/ckodex-xoscal/transparency.html), and
 [SBOM validation](https://ckodex-labs.github.io/ckodex-xoscal/sbom-validation.html).
 Key operator guides: [verified installation](docs/INSTALL-CONTRACT.md),
-[gRPC usage](docs/GRPC_USAGE_EXAMPLES.md), [operations](docs/OPERATIONS.md), and
+[gRPC usage](docs/GRPC_USAGE_EXAMPLES.md), [operations](docs/OPERATIONS.md),
+[Canadian Sovereign Frameworks](docs/CANADIAN-FRAMEWORKS.md), and
 [beta scope and evidence boundaries](docs/BETA-CONTRACT.md).
 The [Design Blueprint](https://ckodex-labs.github.io/ckodex-xoscal/portal.html)
 contains illustrative data; release verification requires the actual pinned proof.
@@ -51,6 +52,7 @@ contains illustrative data; release verification requires the actual pinned proo
 | **Spreadsheet Synchronization** | GRC Analysts | Bi-directional OSCAL $\leftrightarrow$ CSV/Excel round-trip with strict schema enforcement | `xoscal-ctl tabular` |
 | **Rule 23 Derogation Lifecycle** | CISOs / Risk Officers | Time-bounded risk acceptances with strict TTLs, justifications, and compensating controls | `xoscal-ctl derogate` |
 | **Air-Gapped Audit Bundles** | 3PAO / SCIF Auditors | Immutable `.tar.gz` bundle with embedded zero-dependency offline WebCrypto viewer | `xoscal-ctl bundle-export` |
+| **Sovereign Framework Registry** | GRC Architects / SecOps | Unified compliance framework registry, authoritative Canadian suites (ITSP.10.033, ITSG-33, PBMM), schema-verified exports & SHA-256 sidecars | `xoscal-ctl frameworks` |
 
 ---
 
@@ -226,6 +228,36 @@ xoscal-ctl bundle-export \
 
 - **Digest Packaging**: Bundles OSCAL JSON files, evidence blobs with SHA-256 sidecars, and a `manifest.json` containing cryptographic digests. The audit bundle command does not sign that manifest; release provenance is a separate gate.
 - **Zero-Dependency Offline Viewer**: Bundles an embedded `audit_viewer.html` styled with CKODEX-DS-3 editorial tokens that verifies SHA-256 digests in-browser using the native W3C WebCrypto API—requiring no local server, runtime, or network access.
+
+---
+
+### 7. Compliance Framework Registry & Seeding (`xoscal-ctl frameworks`)
+Query, export, and seed authoritative compliance frameworks (including sovereign Canadian standards) with embedded NIST OSCAL 1.2.3 JSON schema validation and cryptographic SHA-256 sidecars:
+
+```bash
+# List all registered frameworks (or filter by jurisdiction)
+xoscal-ctl frameworks list
+xoscal-ctl frameworks list --jurisdiction ca
+
+# Export schema-validated catalog or profile with .sha256 sidecar
+xoscal-ctl frameworks export \
+  --framework cccs-itsp-10-033 \
+  --kind catalog \
+  --out itsp-10-033-catalog.oscal.json
+
+# Seed the central Knowledge Graph with baseline framework requirements
+xoscal-ctl frameworks seed --db oscal.db
+```
+
+#### Supported Sovereign Frameworks
+
+| Framework ID | Jurisdiction | Standard / Authority | Description |
+| :--- | :--- | :--- | :--- |
+| `cccs-itsp-10-033` | Canada (`ca`) | CCCS ITSP.10.033 (2026) | Security & privacy controls and assurance activities catalogue (330 base, 918 enhancements, 1,272 ODP params) |
+| `cccs-itsg-33` | Canada (`ca`) | CCCS ITSG-33 Annex 3A | IT security risk management baseline security control catalogue |
+| `cybersecure-canada` | Canada (`ca`) | ISED CyberSecure Canada | Small and medium organization baseline cybersecurity controls |
+| `cccs-itsp-10-171` | Canada (`ca`) | CCCS ITSP.10.171 | Security requirements for non-federal systems and organizations |
+| `cccs-medium-cloud-pbmm`| Canada (`ca`) | TBS / CCCS PBMM Cloud | Protected B, Medium Confidentiality, Medium Availability cloud security profile |
 
 ---
 
