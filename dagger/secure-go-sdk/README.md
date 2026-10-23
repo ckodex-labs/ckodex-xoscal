@@ -30,7 +30,7 @@ must fail conversion with the documented finding exit status; the control input
 and output are retained. It then runs module tests and vet, followed by the fork's checksum,
 race, vet and vulnerability checks with the same JSON conversion gate. It compiles
 the binary only after these gates pass. The compiler uses the immutable
-`golang:1.27.2-bookworm@sha256:5cf287a799e6b94384bad13d16b14904c531f51ba65792237e122ce42b392f61`
+`golang:1.27.3-bookworm@sha256:972b4110ba0f47539a975c31e52c64765e1ff19f2d74469ae4a595c6676e80a5`
 image, `GOTOOLCHAIN=local`, and limited Go parallelism. No downgrade, vulnerability
 exception, or suppressed scanner failure is used.
 
