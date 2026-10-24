@@ -9,11 +9,13 @@ all: build
 
 build:
 	go build $(LDFLAGS) -o bin/$(BINARY) ./server/cmd/xoscal-server
+	go build $(LDFLAGS) -o bin/xoscal ./server/cmd/xoscal
 	go build $(LDFLAGS) -o bin/xoscal-ctl ./server/cmd/xoscal-ctl
 	go build $(LDFLAGS) -o bin/xoscal-backup ./server/cmd/xoscal-backup
 
 build-release:
 	CGO_ENABLED=0 go build $(LDFLAGS) -o bin/$(BINARY) ./server/cmd/xoscal-server
+	CGO_ENABLED=0 go build $(LDFLAGS) -o bin/xoscal ./server/cmd/xoscal
 	CGO_ENABLED=0 go build $(LDFLAGS) -o bin/xoscal-ctl ./server/cmd/xoscal-ctl
 	CGO_ENABLED=0 go build $(LDFLAGS) -o bin/xoscal-backup ./server/cmd/xoscal-backup
 

@@ -15,16 +15,26 @@ import (
 // EvaluateArtifact inspects an OSCAL JSON artifact, validates its schema,
 // checks evidence integrity, and computes its Vector State.
 func EvaluateArtifact(artifactPath, evidenceDir string) (result *VectorState, resultErr error) {
+	data, err := os.ReadFile(artifactPath)
+	if err != nil {
+		return nil, fmt.Errorf("read artifact: %w", err)
+	}
+	return evaluateData(data, artifactPath, evidenceDir)
+}
+
+// EvaluateBytes inspects an in-memory OSCAL JSON artifact, validates its schema,
+// and computes its Vector State.
+func EvaluateBytes(data []byte, evidenceDir string) (*VectorState, error) {
+	return evaluateData(data, "memory.json", evidenceDir)
+}
+
+func evaluateData(data []byte, artifactPath, evidenceDir string) (result *VectorState, resultErr error) {
 	evidence, err := openEvidence(evidenceDir)
 	if err != nil {
 		return nil, fmt.Errorf("open evidence directory: %w", err)
 	}
 	if evidence != nil {
 		defer func() { resultErr = errors.Join(resultErr, evidence.root.Close()) }()
-	}
-	data, err := os.ReadFile(artifactPath)
-	if err != nil {
-		return nil, fmt.Errorf("read artifact: %w", err)
 	}
 	var root map[string]interface{}
 	if err := json.Unmarshal(data, &root); err != nil {

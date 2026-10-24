@@ -145,10 +145,48 @@ xoscal-ctl frameworks export -out ./exported-frameworks
 
 ```bash
 # Seed SQLite Knowledge Graph with all 5 Canadian frameworks
-xoscal-ctl frameworks seed -db oscal.db
-# or top-level: xoscal-ctl seed -dsn oscal.db
+xoscal frameworks seed -db oscal.db
+# or top-level: xoscal seed -dsn oscal.db
 ```
-xoscal-ctl frameworks seed --db oscal.db
+
+### Inspecting and Searching Controls
+
+```bash
+# Search controls across ITSP.10.033 with full-text keyword matching
+xoscal controls search "account" -framework cccs-itsp-10-033
+
+# Inspect a specific control in depth (statements, parameters, guidance, enhancements)
+xoscal controls get ac-2 -framework cccs-itsp-10-033
+
+# List all controls in a framework or family
+xoscal controls list -framework cccs-itsp-10-033 -family AC
+```
+
+### Sovereign Framework Transition and Delta Engine
+
+Compute transition deltas between CCCS ITSG-33 and the modern ITSP.10.033 standard to plan compliance migration:
+
+```bash
+# Terminal comparison table
+xoscal compare cccs-itsg-33 cccs-itsp-10-033
+
+# Generate Markdown transition matrix for PRs or documentation
+xoscal compare cccs-itsg-33 cccs-itsp-10-033 -markdown
+
+# Machine-readable JSON delta
+xoscal compare cccs-itsg-33 cccs-itsp-10-033 -json
+```
+
+### Local Web Studio and Interactive Explorer
+
+Launch the zero-dependency embedded web interface:
+
+```bash
+# Start local server
+xoscal serve -port 8080
+
+# Or launch immediately in default browser
+xoscal ui
 ```
 
 ---

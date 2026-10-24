@@ -233,14 +233,35 @@ type oscalJSONGroup struct {
 
 type oscalJSONControl struct {
 	ID       string             `json:"id"`
+	Class    string             `json:"class"`
 	Title    string             `json:"title"`
+	Params   []oscalJSONParam   `json:"params"`
+	Props    []oscalJSONProp    `json:"props"`
 	Parts    []oscalJSONPart    `json:"parts"`
 	Controls []oscalJSONControl `json:"controls"`
 }
 
-type oscalJSONPart struct {
+type oscalJSONParam struct {
+	ID     string   `json:"id"`
+	Class  string   `json:"class"`
+	Label  string   `json:"label"`
+	Values []string `json:"values"`
+}
+
+type oscalJSONProp struct {
 	Name  string `json:"name"`
-	Prose string `json:"prose"`
+	Value string `json:"value"`
+	Ns    string `json:"ns"`
+	Class string `json:"class"`
+}
+
+type oscalJSONPart struct {
+	ID    string          `json:"id"`
+	Name  string          `json:"name"`
+	Title string          `json:"title"`
+	Prose string          `json:"prose"`
+	Parts []oscalJSONPart `json:"parts"`
+	Props []oscalJSONProp `json:"props"`
 }
 
 func seedJSONCatalog(ctx context.Context, store kg.Store, f Framework) error {

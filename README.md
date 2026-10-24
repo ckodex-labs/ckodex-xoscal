@@ -44,28 +44,43 @@ contains illustrative data; release verification requires the actual pinned proo
 
 ## Capability Matrix
 
-| Capability | Persona | Problem Solved | Unified Command |
+| Capability | Persona | Problem Solved | Primary Command |
 | :--- | :--- | :--- | :--- |
-| **Day-0 Scaffolding** | App Developers | Auto-detects stack (Go, Python, Docker, K8s), synthesizes URNs to UUIDv5, generates schema-valid OSCAL | `xoscal-ctl init` |
-| **Vector State Verification** | Security Engineers | Replaces binary pass/fail with formal state vector $\mathbf{S}(e,t) = \langle P,V,A,C,E,L,\tau \rangle$, sidecar digests, and tamper gating | `xoscal-ctl verify` |
-| **GitOps PR Diffing** | Tech Leads / DevOps | Detects control drift, regressions, and deletions in CI with formatted Markdown for PR comments | `xoscal-ctl diff` |
-| **Spreadsheet Synchronization** | GRC Analysts | Bi-directional OSCAL $\leftrightarrow$ CSV/Excel round-trip with strict schema enforcement | `xoscal-ctl tabular` |
-| **Rule 23 Derogation Lifecycle** | CISOs / Risk Officers | Time-bounded risk acceptances with strict TTLs, justifications, and compensating controls | `xoscal-ctl derogate` |
-| **Air-Gapped Audit Bundles** | 3PAO / SCIF Auditors | Immutable `.tar.gz` bundle with embedded zero-dependency offline WebCrypto viewer | `xoscal-ctl bundle-export` |
-| **Sovereign Framework Registry** | GRC Architects / SecOps | Unified compliance framework registry, authoritative Canadian suites (ITSP.10.033, ITSG-33, PBMM), schema-verified exports & SHA-256 sidecars | `xoscal-ctl frameworks` |
+| **Terminal Control Intelligence** | Developers / Auditors | Full-text control search, AST statements, ODP parameters, guidance, and sovereign Canadian tags | `xoscal controls` |
+| **Framework Transition Engine** | GRC Architects / SecOps | Compare frameworks, compute migration deltas (e.g. ITSG-33 -> ITSP.10.033), family breakdown | `xoscal compare` |
+| **Zero-Dependency Web Studio** | Compliance Teams / Devs | Embedded local explorer, live control search, transition matrix, drag-and-drop OSCAL schema/vector validator | `xoscal serve` / `xoscal ui` |
+| **Day-0 Scaffolding** | App Developers | Auto-detects stack (Go, Python, Docker, K8s), synthesizes URNs to UUIDv5, generates schema-valid OSCAL | `xoscal init` |
+| **Guided Quickstart** | New Users / DevOps | Interactive guided onboarding, environment validation, workspace config, baseline scaffolding | `xoscal quickstart` |
+| **Vector State Verification** | Security Engineers | Replaces binary pass/fail with formal state vector $\mathbf{S}(e,t) = \langle P,V,A,C,E,L,\tau \rangle$, sidecar digests, and tamper gating | `xoscal verify` |
+| **GitOps PR Diffing** | Tech Leads / DevOps | Detects control drift, regressions, and deletions in CI with formatted Markdown for PR comments | `xoscal diff` |
+| **Spreadsheet Synchronization** | GRC Analysts | Bi-directional OSCAL $\leftrightarrow$ CSV/Excel round-trip with strict schema enforcement | `xoscal tabular` |
+| **Rule 23 Derogation Lifecycle** | CISOs / Risk Officers | Time-bounded risk acceptances with strict TTLs, justifications, and compensating controls | `xoscal derogate` |
+| **Air-Gapped Audit Bundles** | 3PAO / SCIF Auditors | Immutable `.tar.gz` bundle with embedded zero-dependency offline WebCrypto viewer | `xoscal bundle-export` |
+| **Sovereign Framework Registry** | GRC Architects / SecOps | Unified compliance framework registry, authoritative Canadian suites (ITSP.10.033, ITSG-33, PBMM), schema-verified exports & SHA-256 sidecars | `xoscal frameworks` |
+| **Shell Autocompletions** | Terminal Users | Fast tab-completion for bash, zsh, and fish shells | `xoscal completion` |
+
+*Note: `xoscal-ctl` remains fully supported as a backward-compatible command alias.*
 
 ---
 
 ## Quickstart
 
-### Build Standalone Binaries
+### 1. Guided Walkthrough (`xoscal quickstart`)
+
+Initialize a workspace with the interactive guided quickstart:
 
 ```bash
-# Compiles bin/xoscal-server, bin/xoscal-ctl and bin/xoscal-backup locally
+xoscal quickstart
+```
+
+### 2. Build Standalone Binaries
+
+```bash
+# Compiles bin/xoscal, bin/xoscal-ctl, bin/xoscal-server, and bin/xoscal-backup
 make build
 
-# Inspect the CLI suite
-./bin/xoscal-ctl help
+# Inspect the unified CLI
+./bin/xoscal help
 ```
 
 ### Install a Verified Release CLI
@@ -258,6 +273,78 @@ xoscal-ctl frameworks seed -db oscal.db
 | `cybersecure-canada` | Canada (`ca`) | ISED CyberSecure Canada | Small and medium organization baseline cybersecurity controls |
 | `cccs-itsp-10-171` | Canada (`ca`) | CCCS ITSP.10.171 | Security requirements for non-federal systems and organizations |
 | `cccs-medium-cloud-pbmm`| Canada (`ca`) | TBS / CCCS PBMM Cloud | Protected B, Medium Confidentiality, Medium Availability cloud security profile |
+
+---
+
+### 8. Terminal Control Intelligence (`xoscal controls`)
+
+Search, inspect, and explore controls across authoritative compliance frameworks from your terminal without opening massive PDF catalogs or complex JSON trees:
+
+```bash
+# Full-text search for controls matching keywords across titles, statements, and guidance
+xoscal controls search "account" -framework cccs-itsp-10-033
+
+# Inspect full control AST: title, statements, parameters, guidance, and enhancements
+xoscal controls get ac-2 -framework cccs-itsp-10-033
+
+# List controls by framework and family
+xoscal controls list -framework cccs-itsp-10-033 -family AC
+```
+
+Canadian sovereign controls, enhancements, statements, and GC discussions are explicitly tagged with `[CA SOVEREIGN]` in the terminal output.
+
+---
+
+### 9. Sovereign Framework Transition & Delta Engine (`xoscal compare`)
+
+Plan and verify migration between standards (e.g. from legacy CCCS ITSG-33 to the new ITSP.10.033 catalogue effective March 31, 2026):
+
+```bash
+# Terminal comparison table showing added, modified, retained, and removed controls
+xoscal compare cccs-itsg-33 cccs-itsp-10-033
+
+# Generate Markdown transition matrix suitable for Git PR comments or compliance roadmaps
+xoscal compare cccs-itsg-33 cccs-itsp-10-033 -markdown
+
+# Machine-readable JSON delta for pipeline automation
+xoscal compare cccs-itsg-33 cccs-itsp-10-033 -json
+```
+
+---
+
+### 10. Zero-Dependency Embedded Web Studio (`xoscal serve` / `xoscal ui`)
+
+A local web studio embedded directly in the `xoscal` binary with zero external CDN dependencies, fully functional in air-gapped SCIF environments:
+
+```bash
+# Start local server on port 8080
+xoscal serve -port 8080
+
+# Or launch immediately in your default browser
+xoscal ui
+```
+
+Features:
+- **Framework Catalog Explorer**: Live control browsing with instant client-side filtering.
+- **Sovereign Transition Matrix**: Side-by-side family comparison for ITSG-33 vs ITSP.10.033.
+- **Drag-and-Drop Validator**: Real-time NIST OSCAL 1.2.3 schema validation and formal Vector State evaluation for local artifacts.
+
+---
+
+### 11. Shell Autocompletions (`xoscal completion`)
+
+Generate fast tab-completion scripts for your shell:
+
+```bash
+# Bash
+xoscal completion bash > /etc/bash_completion.d/xoscal
+
+# Zsh
+xoscal completion zsh > "${fpath[1]}/_xoscal"
+
+# Fish
+xoscal completion fish > ~/.config/fish/completions/xoscal.fish
+```
 
 ---
 

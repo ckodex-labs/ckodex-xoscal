@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>xOSCAL Dev Studio & Sovereign Framework Explorer</title>
+  <style>
+    :root {
+      --bg: #090d16;
+      --card-bg: #111827;
+      --card-border: #1f2937;
+      --text-main: #f3f4f6;
+      --text-muted: #9ca3af;
+      --primary: #3b82f6;
+      --primary-hover: #2563eb;
+      --accent: #10b981;
+      --accent-badge: rgba(16, 185, 129, 0.15);
+      --danger: #ef4444;
+      --warning: #f59e0b;
+      --code-bg: #030712;
+      --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--bg);
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      line-height: 1.5;
+      padding: 0;
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: var(--card-bg);
+      border-bottom: 1px solid var(--card-border);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .brand-logo {
+      width: 32px;
+      height: 32px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      color: #fff;
+      font-size: 0.9rem;
+      font-family: var(--font-mono);
+    }
+    .brand-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    .brand-badge {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      background: var(--accent-badge);
+      color: var(--accent);
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      font-weight: 600;
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+
+    nav {
+      display: flex;
+      gap: 0.5rem;
+      background: var(--code-bg);
+      padding: 0.25rem;
+      border-radius: 8px;
+      border: 1px solid var(--card-border);
+    }
+    nav button {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      padding: 0.4rem 1rem;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    nav button.active {
+      background: var(--card-bg);
+      color: var(--text-main);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    }
+
+    main {
+      flex: 1;
+      padding: 2rem;
+      max-width: 1400px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+
+    /* Frameworks Grid */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: border-color 0.15s, transform 0.15s;
+    }
+    .card:hover {
+      border-color: var(--primary);
+      transform: translateY(-2px);
+    }
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 0.75rem;
+    }
+    .card-id {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--primary);
+      font-weight: 600;
+    }
+    .card-jurisdiction {
+      font-size: 0.7rem;
+      background: var(--card-border);
+      color: var(--text-muted);
+      padding: 0.15rem 0.4rem;
+      border-radius: 4px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    .card-title {
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      line-height: 1.35;
+    }
+    .card-desc {
+      font-size: 0.825rem;
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+      flex: 1;
+    }
+    .card-stats {
+      display: flex;
+      gap: 1rem;
+      border-top: 1px solid var(--card-border);
+      padding-top: 0.75rem;
+      margin-bottom: 1rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    .card-stats span b {
+      color: var(--text-main);
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.15s;
+    }
+    .btn:hover { background: var(--primary-hover); }
+    .btn-secondary {
+      background: var(--code-bg);
+      color: var(--text-main);
+      border: 1px solid var(--card-border);
+    }
+    .btn-secondary:hover {
+      background: var(--card-border);
+    }
+
+    /* Search & Filter Bar */
+    .toolbar {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .search-input {
+      flex: 1;
+      min-width: 280px;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: 0.6rem 1rem;
+      color: var(--text-main);
+      font-size: 0.9rem;
+      outline: none;
+    }
+    .search-input:focus { border-color: var(--primary); }
+    .select-dropdown {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: 0.6rem 1rem;
+      color: var(--text-main);
+      font-size: 0.9rem;
+      outline: none;
+    }
+
+    /* Controls Table */
+    .table-container {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
+      overflow-x: auto;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.875rem;
+      text-align: left;
+    }
+    th {
+      background: rgba(0,0,0,0.2);
+      padding: 0.75rem 1rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      border-bottom: 1px solid var(--card-border);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    td {
+      padding: 0.85rem 1rem;
+      border-bottom: 1px solid var(--card-border);
+      vertical-align: top;
+    }
+    tr:hover td {
+      background: rgba(255,255,255,0.02);
+      cursor: pointer;
+    }
+    .tag-badge {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      background: var(--accent-badge);
+      color: var(--accent);
+      padding: 0.15rem 0.4rem;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+
+    /* Modal / Drawer */
+    .modal-overlay {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.7);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 200;
+      padding: 1.5rem;
+    }
+    .modal-overlay.active { display: flex; }
+    .modal {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      width: 100%;
+      max-width: 800px;
+      max-height: 85vh;
+      overflow-y: auto;
+      padding: 2rem;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    }
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 1.25rem;
+      border-bottom: 1px solid var(--card-border);
+      padding-bottom: 1rem;
+    }
+    .modal-close {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      font-size: 1.5rem;
+      cursor: pointer;
+      line-height: 1;
+    }
+    .modal-section {
+      margin-top: 1.25rem;
+    }
+    .modal-section h4 {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+    .modal-prose {
+      background: var(--code-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 6px;
+      padding: 1rem;
+      font-size: 0.875rem;
+      white-space: pre-wrap;
+      font-family: var(--font-sans);
+    }
+    .gc-guidance-box {
+      border-left: 3px solid var(--accent);
+      background: rgba(16, 185, 129, 0.05);
+      padding: 1rem;
+      border-radius: 0 6px 6px 0;
+      margin-top: 0.5rem;
+      font-size: 0.875rem;
+    }
+
+    /* Validator Tab */
+    .dropzone {
+      border: 2px dashed var(--card-border);
+      border-radius: 10px;
+      padding: 3rem 2rem;
+      text-align: center;
+      background: var(--card-bg);
+      cursor: pointer;
+      transition: border-color 0.15s;
+    }
+    .dropzone:hover { border-color: var(--primary); }
+    .editor-textarea {
+      width: 100%;
+      height: 240px;
+      background: var(--code-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: 1rem;
+      color: var(--text-main);
+      font-family: var(--font-mono);
+      font-size: 0.825rem;
+      margin-top: 1rem;
+      outline: none;
+      resize: vertical;
+    }
+
+    /* Vector State Badges */
+    .vector-pill {
+      display: inline-block;
+      padding: 0.25rem 0.6rem;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      font-family: var(--font-mono);
+      margin-right: 0.5rem;
+      margin-top: 0.5rem;
+    }
+    .vector-pill.green { background: rgba(16,185,129,0.15); color: #10b981; border: 1px solid rgba(16,185,129,0.3); }
+    .vector-pill.blue { background: rgba(59,130,246,0.15); color: #3b82f6; border: 1px solid rgba(59,130,246,0.3); }
+    .vector-pill.red { background: rgba(239,68,68,0.15); color: #ef4444; border: 1px solid rgba(239,68,68,0.3); }
+    .vector-pill.yellow { background: rgba(245,158,11,0.15); color: #f59e0b; border: 1px solid rgba(245,158,11,0.3); }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="brand">
+      <div class="brand-logo">xO</div>
+      <div>
+        <div class="brand-title">xOSCAL Dev Studio</div>
+      </div>
+      <div class="brand-badge">Sovereign Edition</div>
+    </div>
+    <nav>
+      <button class="active" onclick="switchTab('frameworks')">Frameworks</button>
+      <button onclick="switchTab('controls')">Controls Explorer</button>
+      <button onclick="switchTab('transition')">Sovereign Transition</button>
+      <button onclick="switchTab('validator')">OSCAL Inspector</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- TAB 1: FRAMEWORKS -->
+    <div id="tab-frameworks" class="tab-content active">
+      <h2>Authoritative Compliance Frameworks</h2>
+      <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.25rem;">
+        Complete sovereign Canadian standards and international baselines embedded in xOSCAL.
+      </p>
+      <div id="frameworks-grid" class="grid">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+
+    <!-- TAB 2: CONTROLS EXPLORER -->
+    <div id="tab-controls" class="tab-content">
+      <h2>Control Intelligence Explorer</h2>
+      <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.25rem; margin-bottom: 1.5rem;">
+        Instant search across all 1,248 controls, enhancements, statements, and Canadian GC guidance.
+      </p>
+
+      <div class="toolbar">
+        <select id="fw-selector" class="select-dropdown" onchange="onFrameworkSelectChange()">
+          <!-- Populated dynamically -->
+        </select>
+        <input type="text" id="control-search-input" class="search-input" placeholder="Search controls (e.g. AC-2, 'multi-factor', 'cloud', 'cryptography')..." oninput="debounceSearch()">
+      </div>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th style="width: 120px;">Control ID</th>
+              <th style="width: 80px;">Family</th>
+              <th>Title & Overview</th>
+              <th style="width: 140px;">Sovereign Tag</th>
+            </tr>
+          </thead>
+          <tbody id="controls-table-body">
+            <!-- Controls rows -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- TAB 3: SOVEREIGN TRANSITION -->
+    <div id="tab-transition" class="tab-content">
+      <h2>ITSG-33 to ITSP.10.033 Transition Engine</h2>
+      <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.25rem; margin-bottom: 1.5rem;">
+        Automated architectural transition delta mapping the 2017 ITSG-33 standard to the 2026 CCCS ITSP.10.033 catalogue.
+      </p>
+
+      <div id="transition-summary-cards" style="display: flex; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap;">
+        <!-- Metrics cards -->
+      </div>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th style="width: 100px;">Family</th>
+              <th>Family Name</th>
+              <th style="width: 140px;">ITSG-33 Count</th>
+              <th style="width: 140px;">ITSP.10.033 Count</th>
+              <th style="width: 120px;">Net Delta</th>
+            </tr>
+          </thead>
+          <tbody id="transition-family-body">
+            <!-- Families -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- TAB 4: OSCAL VALIDATOR -->
+    <div id="tab-validator" class="tab-content">
+      <h2>OSCAL Inspector & Vector State Verifier</h2>
+      <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.25rem; margin-bottom: 1.5rem;">
+        Fast offline validation against NIST OSCAL 1.2.3 schemas with 6-dimensional Vector State evaluation.
+      </p>
+
+      <div class="dropzone" id="file-dropzone" onclick="document.getElementById('file-upload').click()">
+        <p style="font-weight: 600; margin-bottom: 0.5rem;">Click to upload or drag & drop any OSCAL JSON artifact</p>
+        <p style="color: var(--text-muted); font-size: 0.8rem;">Supports Component Definitions, System Security Plans, Catalogs, and Profiles</p>
+        <input type="file" id="file-upload" style="display: none;" onchange="handleFileUpload(event)">
+      </div>
+
+      <textarea id="json-textarea" class="editor-textarea" placeholder="Or paste raw OSCAL JSON here..."></textarea>
+      <div style="margin-top: 1rem; display: flex; gap: 1rem;">
+        <button class="btn" onclick="validatePastedJSON()">Verify Compliance</button>
+        <button class="btn btn-secondary" onclick="document.getElementById('json-textarea').value=''">Clear</button>
+      </div>
+
+      <div id="validation-result-box" style="margin-top: 1.5rem; display: none;">
+        <!-- Results -->
+      </div>
+    </div>
+  </main>
+
+  <!-- CONTROL DETAIL MODAL -->
+  <div id="control-modal" class="modal-overlay" onclick="closeModal(event)">
+    <div class="modal" onclick="event.stopPropagation()">
+      <div class="modal-header">
+        <div>
+          <span id="modal-ctrl-id" class="card-id" style="font-size: 1rem;"></span>
+          <h3 id="modal-ctrl-title" style="margin-top: 0.25rem;"></h3>
+          <span id="modal-ctrl-family" style="color: var(--text-muted); font-size: 0.8rem;"></span>
+        </div>
+        <button class="modal-close" onclick="closeModal()">&times;</button>
+      </div>
+      <div id="modal-content">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let frameworksList = [];
+    let currentControls = [];
+    let searchTimeout = null;
+
+    async function init() {
+      try {
+        const res = await fetch('/api/v1/frameworks');
+        frameworksList = await res.json();
+        renderFrameworksGrid(frameworksList);
+        populateFrameworkSelector(frameworksList);
+        loadTransitionDelta();
+      } catch (err) {
+        console.error('Failed to load frameworks:', err);
+      }
+    }
+
+    function switchTab(tabId) {
+      document.querySelectorAll('nav button').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+
+      event.target.classList.add('active');
+      document.getElementById('tab-' + tabId).classList.add('active');
+
+      if (tabId === 'controls' && currentControls.length === 0) {
+        onFrameworkSelectChange();
+      }
+    }
+
+    function renderFrameworksGrid(fws) {
+      const container = document.getElementById('frameworks-grid');
+      container.innerHTML = fws.map(fw => `
+        <div class="card">
+          <div>
+            <div class="card-header">
+              <span class="card-id">${fw.id}</span>
+              <span class="card-jurisdiction">${fw.jurisdiction}</span>
+            </div>
+            <div class="card-title">${fw.title}</div>
+            <div class="card-desc">${fw.authority}</div>
+          </div>
+          <div>
+            <div class="card-stats">
+              <span>Controls: <b>${fw.control_count}</b></span>
+              <span>Version: <b>${fw.version}</b></span>
+              <span>Profile: <b>${fw.has_profile ? 'Yes' : 'No'}</b></span>
+            </div>
+            <button class="btn" style="width: 100%;" onclick="selectAndExplore('${fw.id}')">Explore Controls</button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function populateFrameworkSelector(fws) {
+      const sel = document.getElementById('fw-selector');
+      sel.innerHTML = fws.map(f => `
+        <option value="${f.id}" ${f.id === 'cccs-itsp-10-033' ? 'selected' : ''}>
+          ${f.title} (${f.id})
+        </option>
+      `).join('');
+    }
+
+    function selectAndExplore(fwID) {
+      document.querySelectorAll('nav button')[1].click();
+      document.getElementById('fw-selector').value = fwID;
+      onFrameworkSelectChange();
+    }
+
+    async function onFrameworkSelectChange() {
+      const fwID = document.getElementById('fw-selector').value;
+      const tbody = document.getElementById('controls-table-body');
+      tbody.innerHTML = '<tr><td colspan="4" style="text-align: center; color: var(--text-muted);">Loading controls...</td></tr>';
+
+      try {
+        const res = await fetch(`/api/v1/frameworks/${fwID}/controls`);
+        currentControls = await res.json();
+        renderControlsTable(currentControls);
+      } catch (err) {
+        tbody.innerHTML = `<tr><td colspan="4" style="color: var(--danger);">Failed to load controls: ${err}</td></tr>`;
+      }
+    }
+
+    function renderControlsTable(ctrls) {
+      const tbody = document.getElementById('controls-table-body');
+      if (!ctrls || ctrls.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="4" style="text-align: center; color: var(--text-muted);">No matching controls found.</td></tr>';
+        return
+      }
+
+      tbody.innerHTML = ctrls.slice(0, 100).map(c => `
+        <tr onclick="showControlModal('${c.id}')">
+          <td style="font-family: var(--font-mono); font-weight: 600; color: var(--primary);">${c.id}</td>
+          <td><span style="font-family: var(--font-mono); font-size: 0.75rem; background: var(--code-bg); padding: 0.2rem 0.4rem; border-radius: 4px;">${c.family_id}</span></td>
+          <td>
+            <div style="font-weight: 600;">${c.title}</div>
+            <div style="color: var(--text-muted); font-size: 0.8rem; margin-top: 0.2rem;">${c.statements && c.statements[0] ? c.statements[0].substring(0, 120) + '...' : ''}</div>
+          </td>
+          <td>
+            ${c.is_canadian ? '<span class="tag-badge">CA SOVEREIGN</span>' : '<span style="color: var(--text-muted); font-size: 0.75rem;">Standard</span>'}
+          </td>
+        </tr>
+      `).join('');
+    }
+
+    function debounceSearch() {
+      clearTimeout(searchTimeout);
+      searchTimeout = setTimeout(async () => {
+        const q = document.getElementById('control-search-input').value.trim();
+        const fwID = document.getElementById('fw-selector').value;
+        const res = await fetch(`/api/v1/frameworks/${fwID}/controls?q=${encodeURIComponent(q)}`);
+        const results = await res.json();
+        renderControlsTable(results);
+      }, 250);
+    }
+
+    function showControlModal(ctrlID) {
+      const ctrl = currentControls.find(c => c.id === ctrlID);
+      if (!ctrl) return;
+
+      document.getElementById('modal-ctrl-id').innerText = ctrl.id.toUpperCase();
+      document.getElementById('modal-ctrl-title').innerText = ctrl.title;
+      document.getElementById('modal-ctrl-family').innerText = `${ctrl.family_id} — ${ctrl.family_title}`;
+
+      let contentHTML = '';
+
+      if (ctrl.statements && ctrl.statements.length > 0) {
+        contentHTML += `
+          <div class="modal-section">
+            <h4>Control Statement</h4>
+            <div class="modal-prose">${ctrl.statements.join('\n\n')}</div>
+          </div>
+        `;
+      }
+
+      if (ctrl.canadian_guidance) {
+        contentHTML += `
+          <div class="modal-section">
+            <h4>Canadian Sovereign Guidance (GC Discussion)</h4>
+            <div class="gc-guidance-box">${ctrl.canadian_guidance}</div>
+          </div>
+        `;
+      }
+
+      if (ctrl.guidance && ctrl.guidance !== ctrl.canadian_guidance) {
+        contentHTML += `
+          <div class="modal-section">
+            <h4>General Discussion</h4>
+            <div class="modal-prose">${ctrl.guidance}</div>
+          </div>
+        `;
+      }
+
+      if (ctrl.parameters && Object.keys(ctrl.parameters).length > 0) {
+        contentHTML += `
+          <div class="modal-section">
+            <h4>Organization-Defined Parameters (ODP)</h4>
+            <div class="table-container" style="margin-top: 0.5rem;">
+              <table>
+                <thead><tr><th>Param ID</th><th>Assigned Value</th></tr></thead>
+                <tbody>
+                  ${Object.entries(ctrl.parameters).map(([k,v]) => `
+                    <tr><td style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--primary);">${k}</td><td style="font-size: 0.8rem;">${v}</td></tr>
+                  `).join('')}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        `;
+      }
+
+      if (ctrl.enhancements && ctrl.enhancements.length > 0) {
+        contentHTML += `
+          <div class="modal-section">
+            <h4>Enhancements (${ctrl.enhancements.length})</h4>
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 0.5rem;">
+              ${ctrl.enhancements.map(e => `<span class="tag-badge" style="cursor: pointer;" onclick="showControlModal('${e}')">${e}</span>`).join('')}
+            </div>
+          </div>
+        `;
+      }
+
+      document.getElementById('modal-content').innerHTML = contentHTML;
+      document.getElementById('control-modal').classList.add('active');
+    }
+
+    function closeModal(e) {
+      document.getElementById('control-modal').classList.remove('active');
+    }
+
+    async function loadTransitionDelta() {
+      try {
+        const res = await fetch('/api/v1/compare?from=cccs-itsg-33&to=cccs-itsp-10-033');
+        const comp = await res.json();
+
+        document.getElementById('transition-summary-cards').innerHTML = `
+          <div class="card" style="flex: 1; min-width: 180px;">
+            <div style="color: var(--text-muted); font-size: 0.8rem;">ITSG-33 Base</div>
+            <div style="font-size: 1.75rem; font-weight: 700; color: var(--text-main);">${comp.from_total}</div>
+          </div>
+          <div class="card" style="flex: 1; min-width: 180px;">
+            <div style="color: var(--text-muted); font-size: 0.8rem;">ITSP.10.033 Target</div>
+            <div style="font-size: 1.75rem; font-weight: 700; color: var(--accent);">${comp.to_total}</div>
+          </div>
+          <div class="card" style="flex: 1; min-width: 180px;">
+            <div style="color: var(--text-muted); font-size: 0.8rem;">New Requirements Added</div>
+            <div style="font-size: 1.75rem; font-weight: 700; color: var(--primary);">+${comp.added_count}</div>
+          </div>
+          <div class="card" style="flex: 1; min-width: 180px;">
+            <div style="color: var(--text-muted); font-size: 0.8rem;">Modified Controls</div>
+            <div style="font-size: 1.75rem; font-weight: 700; color: var(--warning);">${comp.modified_count}</div>
+          </div>
+        `;
+
+        document.getElementById('transition-family-body').innerHTML = comp.families.map(f => `
+          <tr>
+            <td style="font-family: var(--font-mono); font-weight: 600; color: var(--primary);">${f.family_id}</td>
+            <td style="font-weight: 500;">${f.family_name}</td>
+            <td>${f.from_count}</td>
+            <td style="font-weight: 600;">${f.to_count}</td>
+            <td style="font-weight: 700; color: ${f.net_delta > 0 ? 'var(--accent)' : 'var(--text-muted)'};">
+              ${f.net_delta > 0 ? '+' + f.net_delta : f.net_delta}
+            </td>
+          </tr>
+        `).join('');
+      } catch (err) {
+        console.error('Failed to load transition delta:', err);
+      }
+    }
+
+    async function handleFileUpload(e) {
+      const file = e.target.files[0];
+      if (!file) return;
+      const text = await file.text();
+      document.getElementById('json-textarea').value = text;
+      validatePastedJSON();
+    }
+
+    async function validatePastedJSON() {
+      const raw = document.getElementById('json-textarea').value.trim();
+      const resBox = document.getElementById('validation-result-box');
+      if (!raw) return;
+
+      resBox.style.display = 'block';
+      resBox.innerHTML = '<p style="color: var(--text-muted);">Validating artifact against official schema...</p>';
+
+      try {
+        const res = await fetch('/api/v1/validate', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: raw
+        });
+        const data = await res.json();
+
+        let statePills = '';
+        if (data.vector_state) {
+          const vs = data.vector_state;
+          statePills = `
+            <div style="margin-top: 1rem;">
+              <span class="vector-pill blue">Presence: ${vs.presence}</span>
+              <span class="vector-pill green">Valence: ${vs.valence}</span>
+              <span class="vector-pill blue">Coherence: ${vs.coherence}</span>
+              <span class="vector-pill ${vs.lifecycle === 'CONFORMANT' ? 'green' : 'yellow'}">Lifecycle: ${vs.lifecycle}</span>
+            </div>
+          `;
+        }
+
+        resBox.innerHTML = `
+          <div class="card" style="border-color: ${data.valid ? 'var(--accent)' : 'var(--danger)'};">
+            <div style="font-weight: 700; font-size: 1.1rem; color: ${data.valid ? 'var(--accent)' : 'var(--danger)'};">
+              ${data.valid ? 'Schema Valid: Passes NIST OSCAL ' + data.schema_version : 'Schema Invalid'}
+            </div>
+            <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.25rem;">
+              Detected Kind: <b>${data.kind || 'Unknown'}</b>
+            </div>
+            ${data.schema_error ? `<div class="modal-prose" style="color: var(--danger); margin-top: 0.75rem;">${data.schema_error}</div>` : ''}
+            ${statePills}
+          </div>
+        `;
+      } catch (err) {
+        resBox.innerHTML = `<div class="card" style="border-color: var(--danger); color: var(--danger);">Network error: ${err}</div>`;
+      }
+    }
+
+    // Drag and drop setup
+    const dropzone = document.getElementById('file-dropzone');
+    dropzone.addEventListener('dragover', (e) => { e.preventDefault(); dropzone.style.borderColor = 'var(--primary)'; });
+    dropzone.addEventListener('dragleave', () => { dropzone.style.borderColor = 'var(--card-border)'; });
+    dropzone.addEventListener('drop', (e) => {
+      e.preventDefault();
+      dropzone.style.borderColor = 'var(--card-border)';
+      if (e.dataTransfer.files.length > 0) {
+        document.getElementById('file-upload').files = e.dataTransfer.files;
+        handleFileUpload({ target: { files: e.dataTransfer.files } });
+      }
+    });
+
+    init();
+  </script>
+</body>
+</html>

@@ -17,7 +17,9 @@ vendor/
 go.work
 
 # CLI binaries built by go build (not go install)
+/xoscal
 /xoscal-ctl
+.xoscal/
 /xoscal-server
 /xoscal-backup
 /xoscal-gateway
