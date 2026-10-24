@@ -59,7 +59,8 @@ COMMANDS:
   derogate       Manage formal time-bounded risk exceptions (Rule 23)
   tabular        Convert between OSCAL JSON and standard CSV/Excel tables for GRC analysts
   bundle-export  Package an air-gapped, verifiable audit bundle with offline HTML viewer
-  frameworks     List, export, or compare authoritative compliance frameworks
+  frameworks     List, export, compare, or verify authoritative compliance frameworks
+  verify-parity  Verify verbatim parity between framework definitions and created OSCAL artifacts
   seed           Seed Knowledge Graph database with authoritative baseline frameworks
   completion     Generate shell autocompletions (bash, zsh, fish)
   version        Print CLI version and exit
@@ -109,6 +110,8 @@ func Execute(args []string, version string) {
 		RunBundleExport(args[2:])
 	case "frameworks":
 		RunFrameworks(args[2:])
+	case "verify-parity":
+		RunVerifyParity(args[2:])
 	case "seed":
 		RunSeed(args[2:])
 	case "version", "-version", "--version":
@@ -552,10 +555,10 @@ func RunValidate(args []string) {
 	fmt.Printf("VALID: %s passes official OSCAL %s schema validation\n", kind.Name, schemavalidate.SchemaVersion)
 }
 
-// RunFrameworks lists, exports, or compares compliance frameworks.
+// RunFrameworks lists, exports, compares, or verifies compliance frameworks.
 func RunFrameworks(args []string) {
 	if len(args) < 1 {
-		fmt.Println("Usage: xoscal frameworks [list|export|compare|seed] [options]")
+		fmt.Println("Usage: xoscal frameworks [list|export|compare|verify|seed] [options]")
 		os.Exit(1)
 	}
 
@@ -627,11 +630,126 @@ func RunFrameworks(args []string) {
 	case "compare":
 		RunCompare(args[1:])
 
+	case "verify":
+		RunVerifyParity(args[1:])
+
 	case "seed":
 		RunSeed(args[1:])
 
 	default:
-		fmt.Fprintf(os.Stderr, "unknown frameworks subcommand: %s (expected 'list', 'export', 'compare', or 'seed')\n", sub)
+		fmt.Fprintf(os.Stderr, "unknown frameworks subcommand: %s (expected 'list', 'export', 'compare', 'verify', or 'seed')\n", sub)
+		os.Exit(1)
+	}
+}
+
+// RunVerifyParity verifies verbatim parity between framework definitions and created OSCAL artifacts.
+func RunVerifyParity(args []string) {
+	fs := flag.NewFlagSet("verify-parity", flag.ExitOnError)
+	fwName := fs.String("framework", "", "Optional specific framework ref_id or alias (e.g. 'cccs-itsp-10-033')")
+	dir := fs.String("dir", "data/frameworks", "Directory containing exported framework artifacts")
+	artifact := fs.String("artifact", "", "Direct path to an OSCAL JSON artifact to verify")
+	asJSON := fs.Bool("json", false, "Output results in JSON format")
+	asMarkdown := fs.Bool("markdown", false, "Output results in Markdown format")
+	verbose := fs.Bool("v", false, "Verbose output showing individual discrepancies")
+	strict := fs.Bool("strict", true, "Exit with non-zero status if any deviation is detected")
+	_ = fs.Parse(args)
+
+	reg := frameworks.DefaultRegistry()
+
+	var reports []*frameworks.ParityReport
+
+	if *artifact != "" {
+		if *fwName == "" {
+			fmt.Fprintf(os.Stderr, "error: -framework must be specified when using -artifact\n")
+			os.Exit(1)
+		}
+		fw, ok := reg.Get(*fwName)
+		if !ok {
+			fmt.Fprintf(os.Stderr, "error: unknown framework %s\n", *fwName)
+			os.Exit(1)
+		}
+		rep, err := frameworks.VerifyArtifactParity(fw, *artifact)
+		if err != nil {
+			fmt.Fprintf(os.Stderr, "error verifying parity: %v\n", err)
+			os.Exit(1)
+		}
+		reports = append(reports, rep)
+	} else if *fwName != "" {
+		fw, ok := reg.Get(*fwName)
+		if !ok {
+			fmt.Fprintf(os.Stderr, "error: unknown framework %s\n", *fwName)
+			os.Exit(1)
+		}
+		catPath := filepath.Join(*dir, fw.ID(), "catalog.json")
+		if _, err := os.Stat(catPath); err == nil {
+			rep, err := frameworks.VerifyArtifactParity(fw, catPath)
+			if err != nil {
+				fmt.Fprintf(os.Stderr, "error verifying %s catalog: %v\n", fw.ID(), err)
+				os.Exit(1)
+			}
+			reports = append(reports, rep)
+		} else {
+			catData, err := fw.CatalogJSON()
+			if err != nil {
+				fmt.Fprintf(os.Stderr, "error loading in-memory catalog for %s: %v\n", fw.ID(), err)
+				os.Exit(1)
+			}
+			rep, err := frameworks.VerifyBytesParity(fw, catData, "memory://"+fw.ID()+"/catalog.json")
+			if err != nil {
+				fmt.Fprintf(os.Stderr, "error verifying in-memory parity: %v\n", err)
+				os.Exit(1)
+			}
+			reports = append(reports, rep)
+		}
+
+		if fw.HasProfile() {
+			profPath := filepath.Join(*dir, fw.ID(), "profile.json")
+			if _, err := os.Stat(profPath); err == nil {
+				rep, err := frameworks.VerifyArtifactParity(fw, profPath)
+				if err != nil {
+					fmt.Fprintf(os.Stderr, "error verifying %s profile: %v\n", fw.ID(), err)
+					os.Exit(1)
+				}
+				reports = append(reports, rep)
+			}
+		}
+	} else {
+		var err error
+		reports, err = frameworks.VerifyAllFrameworksParity(reg, *dir)
+		if err != nil {
+			fmt.Fprintf(os.Stderr, "error verifying frameworks parity: %v\n", err)
+			os.Exit(1)
+		}
+	}
+
+	if *asJSON {
+		enc := json.NewEncoder(os.Stdout)
+		enc.SetIndent("", "  ")
+		if len(reports) == 1 {
+			_ = enc.Encode(reports[0])
+		} else {
+			_ = enc.Encode(reports)
+		}
+	} else if *asMarkdown {
+		for _, r := range reports {
+			fmt.Println(r.FormatMarkdown())
+			fmt.Println()
+		}
+	} else {
+		for _, r := range reports {
+			fmt.Print(r.FormatTerminal(*verbose))
+		}
+	}
+
+	hasDeviation := false
+	for _, r := range reports {
+		if r.Verdict != frameworks.VerdictVerbatimParity {
+			hasDeviation = true
+			break
+		}
+	}
+
+	if hasDeviation && *strict {
 		os.Exit(1)
 	}
 }

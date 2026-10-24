@@ -32,6 +32,7 @@ var CommandsList = []string{
 	"bundle-export",
 	"export-bundle",
 	"frameworks",
+	"verify-parity",
 	"controls",
 	"compare",
 	"serve",
@@ -90,7 +91,7 @@ func generateBash(bin string, w io.Writer) error {
 
     case "${words[1]}" in
         frameworks)
-            COMPREPLY=( $(compgen -W "list export compare seed" -- "${cur}") )
+            COMPREPLY=( $(compgen -W "list export compare seed verify" -- "${cur}") )
             return 0
             ;;
         controls)
@@ -134,6 +135,7 @@ _%s() {
         'tabular:Convert between OSCAL JSON and CSV/Excel tables'
         'bundle-export:Package verifiable audit bundle with offline HTML viewer'
         'frameworks:List, export, or compare authoritative compliance frameworks'
+        'verify-parity:Verify verbatim parity between framework and OSCAL artifacts'
         'controls:Search and inspect controls across registered frameworks'
         'compare:Compare two frameworks and compute sovereign transition delta'
         'serve:Start local zero-dependency xOSCAL Web Studio & Explorer'
@@ -157,6 +159,7 @@ _%s() {
                 'export:Export framework catalogs and profiles'
                 'compare:Compare two frameworks'
                 'seed:Seed database with baseline frameworks'
+                'verify:Verify verbatim parity against OSCAL artifacts'
             )
             _describe -t fw_cmds 'frameworks subcommand' fw_cmds
             ;;
@@ -195,7 +198,8 @@ complete -c %s -n "__fish_use_subcommand" -a "diff" -d "GitOps semantic complian
 complete -c %s -n "__fish_use_subcommand" -a "derogate" -d "Manage formal risk derogations"
 complete -c %s -n "__fish_use_subcommand" -a "tabular" -d "Bridge OSCAL and CSV tables"
 complete -c %s -n "__fish_use_subcommand" -a "bundle-export" -d "Package air-gapped audit bundle"
-complete -c %s -n "__fish_use_subcommand" -a "frameworks" -d "List, export, compare frameworks"
+complete -c %s -n "__fish_use_subcommand" -a "frameworks" -d "List, export, compare, verify frameworks"
+complete -c %s -n "__fish_use_subcommand" -a "verify-parity" -d "Verify verbatim framework parity"
 complete -c %s -n "__fish_use_subcommand" -a "controls" -d "Search and inspect controls"
 complete -c %s -n "__fish_use_subcommand" -a "compare" -d "Compare frameworks transition delta"
 complete -c %s -n "__fish_use_subcommand" -a "serve" -d "Start local Web Studio"
@@ -203,7 +207,7 @@ complete -c %s -n "__fish_use_subcommand" -a "ui" -d "Open local Web Studio in b
 complete -c %s -n "__fish_use_subcommand" -a "quickstart" -d "Guided onboarding tour"
 complete -c %s -n "__fish_use_subcommand" -a "completion" -d "Generate shell completion"
 complete -c %s -n "__fish_use_subcommand" -a "version" -d "Print version"
-`, bin, bin, bin, bin, bin, bin, bin, bin, bin, bin, bin, bin, bin, bin, bin, bin, bin)
+`, bin, bin, bin, bin, bin, bin, bin, bin, bin, bin, bin, bin, bin, bin, bin, bin, bin, bin)
 
 	_, err := io.WriteString(w, script)
 	return err

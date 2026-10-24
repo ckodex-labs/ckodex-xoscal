@@ -50,3 +50,33 @@ func TestQuickstart_NonDestructive(t *testing.T) {
 		t.Errorf("expected ready to scaffold in output")
 	}
 }
+
+func TestVerifyParity_CLI(t *testing.T) {
+	out := captureOutput(func() {
+		cli.RunVerifyParity([]string{
+			"-framework", "cybersecure-canada",
+			"-dir", "../../../data/frameworks",
+			"-strict=false",
+		})
+	})
+	if !strings.Contains(out, "xOSCAL FRAMEWORK VERBATIM PARITY REPORT") {
+		t.Errorf("expected parity report header, got: %s", out)
+	}
+	if !strings.Contains(out, "VERBATIM_PARITY") {
+		t.Errorf("expected VERBATIM_PARITY in output, got: %s", out)
+	}
+}
+
+func TestVerifyParity_CLI_JSON(t *testing.T) {
+	out := captureOutput(func() {
+		cli.RunVerifyParity([]string{
+			"-framework", "cybersecure-canada",
+			"-dir", "../../../data/frameworks",
+			"-json",
+			"-strict=false",
+		})
+	})
+	if !strings.Contains(out, `"verdict": "VERBATIM_PARITY"`) {
+		t.Errorf("expected JSON verdict VERBATIM_PARITY, got: %s", out)
+	}
+}

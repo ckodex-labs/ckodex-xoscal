@@ -272,6 +272,11 @@ xoscal-ctl frameworks export \
   --framework cccs-itsp-10-033 \
   --out ./data/frameworks
 
+# Verify verbatim parity between framework definitions and created OSCAL artifacts
+xoscal frameworks verify -framework cccs-itsp-10-033 -dir ./data/frameworks
+# Or top-level across all frameworks with markdown output
+xoscal verify-parity -dir ./data/frameworks -markdown
+
 # Seed the central Knowledge Graph with baseline framework requirements
 xoscal-ctl frameworks seed -db oscal.db
 # or top-level: xoscal-ctl seed -dsn oscal.db

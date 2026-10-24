@@ -31,10 +31,14 @@ func LoadControls(f Framework) ([]ControlInfo, error) {
 	if err != nil {
 		return nil, fmt.Errorf("load catalog for %s: %w", f.ID(), err)
 	}
+	return LoadControlsFromBytes(data, f.ID())
+}
 
+// LoadControlsFromBytes extracts all controls and enhancements from raw OSCAL catalog JSON bytes.
+func LoadControlsFromBytes(data []byte, frameworkID string) ([]ControlInfo, error) {
 	var doc oscalCatalogDoc
 	if err := json.Unmarshal(data, &doc); err != nil {
-		return nil, fmt.Errorf("unmarshal catalog json for %s: %w", f.ID(), err)
+		return nil, fmt.Errorf("unmarshal catalog json for %s: %w", frameworkID, err)
 	}
 
 	var result []ControlInfo
@@ -47,7 +51,7 @@ func LoadControls(f Framework) ([]ControlInfo, error) {
 			Class:           c.Class,
 			FamilyID:        strings.ToUpper(famID),
 			FamilyTitle:     famTitle,
-			FrameworkID:     f.ID(),
+			FrameworkID:     frameworkID,
 			Parameters:      make(map[string]string),
 			ParentControlID: strings.ToLower(parentID),
 			IsEnhancement:   parentID != "",

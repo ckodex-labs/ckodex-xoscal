@@ -103,6 +103,23 @@ func TestWebStudioServer(t *testing.T) {
 	if respVal.StatusCode != http.StatusOK {
 		t.Errorf("expected 200 OK, got %d", respVal.StatusCode)
 	}
+
+	// 6. Test GET /api/v1/frameworks/cybersecure-canada/parity
+	respParity, err := http.Get(baseURL + "/api/v1/frameworks/cybersecure-canada/parity")
+	if err != nil {
+		t.Fatalf("GET parity failed: %v", err)
+	}
+	defer respParity.Body.Close()
+	if respParity.StatusCode != http.StatusOK {
+		t.Errorf("expected 200 OK for parity, got %d", respParity.StatusCode)
+	}
+	var rep frameworks.ParityReport
+	if err := json.NewDecoder(respParity.Body).Decode(&rep); err != nil {
+		t.Fatalf("decode parity report: %v", err)
+	}
+	if rep.Verdict != frameworks.VerdictVerbatimParity {
+		t.Errorf("expected VERBATIM_PARITY from parity endpoint, got %s", rep.Verdict)
+	}
 }
 
 func TestWebStudioServer_PortFallback(t *testing.T) {

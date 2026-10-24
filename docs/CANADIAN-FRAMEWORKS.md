@@ -203,3 +203,27 @@ xoscal ui
 
 2. **Cryptographic Checksums**:
    Every exported framework artifact is accompanied by a SHA-256 sidecar file (`.sha256`) ensuring byte-for-byte immutability across air-gapped environments.
+
+3. **Verbatim Parity Verification**:
+   The xOSCAL integrity verifier performs deep forensic cross-examination comparing framework definitions against exported OSCAL artifacts:
+   ```bash
+   # Verify verbatim parity for a specific framework
+   xoscal frameworks verify -framework cccs-itsp-10-033 -dir data/frameworks
+
+   # Verify verbatim parity across all registered frameworks
+   xoscal verify-parity -dir data/frameworks
+
+   # Output audit results as GitHub Flavored Markdown
+   xoscal verify-parity -dir data/frameworks -markdown
+   ```
+
+   The verifier evaluates:
+   - **Control Existence**: Zero missing, zero extra controls or enhancements.
+   - **Title Parity**: Character-by-character normalized title match.
+   - **Statement Prose & AST Hierarchy**: Verbatim alignment across statement items (`A.`, `B.`, `1.`, `a.`, Canadian `AA.`, `BB.`).
+   - **Guidance & Canadian GC Discussion**: Complete verbatim verification of guidance and GC discussion notes.
+   - **ODP Parameters**: Exact parameter IDs, choices, labels, and interpolation syntax.
+   - **Sovereign Canadian Delta**: Enforcement of `jurisdiction: "ca"` and sovereign properties.
+   - **Cryptographic Digest Recalculation**: SHA-256 recalculation against sidecars.
+   - **OSCAL 1.2.3 Schema Validation**: Strict NIST schema compliance.
+   - **Semantic Reference Integrity**: Zero broken internal references or orphan elements.

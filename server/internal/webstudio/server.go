@@ -8,7 +8,9 @@ import (
 	"io"
 	"net"
 	"net/http"
+	"os"
 	"os/exec"
+	"path/filepath"
 	"runtime"
 	"strconv"
 	"strings"
@@ -152,6 +154,32 @@ func (s *Server) handleFrameworkSubpath(w http.ResponseWriter, r *http.Request) 
 	if len(parts) == 1 {
 		// Details of framework
 		writeJSON(w, http.StatusOK, frameworks.InfoOf(fw))
+		return
+	}
+
+	if parts[1] == "parity" {
+		dir := r.URL.Query().Get("dir")
+		if dir == "" {
+			dir = "data/frameworks"
+		}
+		catPath := filepath.Join(dir, fw.ID(), "catalog.json")
+		var rep *frameworks.ParityReport
+		var err error
+		if _, statErr := os.Stat(catPath); statErr == nil {
+			rep, err = frameworks.VerifyArtifactParity(fw, catPath)
+		} else {
+			catData, catErr := fw.CatalogJSON()
+			if catErr != nil {
+				http.Error(w, fmt.Sprintf("catalog error: %v", catErr), http.StatusInternalServerError)
+				return
+			}
+			rep, err = frameworks.VerifyBytesParity(fw, catData, "memory://"+fw.ID()+"/catalog.json")
+		}
+		if err != nil {
+			http.Error(w, fmt.Sprintf("parity check error: %v", err), http.StatusInternalServerError)
+			return
+		}
+		writeJSON(w, http.StatusOK, rep)
 		return
 	}
 

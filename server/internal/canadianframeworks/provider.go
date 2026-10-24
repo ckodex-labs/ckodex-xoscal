@@ -21,7 +21,7 @@ func RegisterAll(r *frameworks.Registry) {
 		Version:      "1.2.3",
 		Jurisdiction: "ca",
 		Authority:    "Canadian Centre for Cyber Security / Communications Security Establishment",
-		ControlCount: 18,
+		ControlCount: 42,
 		HasProfile:   false,
 		CatalogFn: func() ([]byte, error) {
 			return oscal.ExportCatalogJSON(BuildCCCSITSG33Catalog())
@@ -75,7 +75,7 @@ func RegisterAll(r *frameworks.Registry) {
 		Version:      "ITSP.50.103",
 		Jurisdiction: "ca",
 		Authority:    "Canadian Centre for Cyber Security / Communications Security Establishment",
-		ControlCount: 30,
+		ControlCount: 42,
 		HasProfile:   true,
 		CatalogFn: func() ([]byte, error) {
 			return oscal.ExportCatalogJSON(BuildCCCSMediumCloudPBMMCatalog())
