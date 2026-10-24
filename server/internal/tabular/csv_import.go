@@ -75,24 +75,42 @@ func ImportFromCSV(baseArtifactJSON []byte, csvData []byte) ([]byte, error) {
 		return nil, fmt.Errorf("unmarshal base OSCAL JSON: %w", err)
 	}
 
-	compDef, ok := root["component-definition"].(map[string]interface{})
-	if !ok {
-		return nil, fmt.Errorf("base artifact must be an OSCAL component-definition")
-	}
+	var targetKind schemavalidate.ArtifactKind
 
-	comps, _ := compDef["components"].([]interface{})
-	for _, rawComp := range comps {
-		compMap, ok := rawComp.(map[string]interface{})
-		if !ok {
-			continue
-		}
-		ctrlImpls, _ := compMap["control-implementations"].([]interface{})
-		for _, rawImpl := range ctrlImpls {
-			implMap, ok := rawImpl.(map[string]interface{})
+	if compDef, ok := root["component-definition"].(map[string]interface{}); ok {
+		targetKind = schemavalidate.KindComponentDefinition
+		comps, _ := compDef["components"].([]interface{})
+		for _, rawComp := range comps {
+			compMap, ok := rawComp.(map[string]interface{})
 			if !ok {
 				continue
 			}
-			reqs, _ := implMap["implemented-requirements"].([]interface{})
+			ctrlImpls, _ := compMap["control-implementations"].([]interface{})
+			for _, rawImpl := range ctrlImpls {
+				implMap, ok := rawImpl.(map[string]interface{})
+				if !ok {
+					continue
+				}
+				reqs, _ := implMap["implemented-requirements"].([]interface{})
+				for _, rawReq := range reqs {
+					reqMap, ok := rawReq.(map[string]interface{})
+					if !ok {
+						continue
+					}
+					ctrlID, _ := reqMap["control-id"].(string)
+					if u, exists := updates[ctrlID]; exists {
+						reqMap["description"] = u.description
+						if u.remarks != "" {
+							reqMap["remarks"] = u.remarks
+						}
+					}
+				}
+			}
+		}
+	} else if ssp, ok := root["system-security-plan"].(map[string]interface{}); ok {
+		targetKind = schemavalidate.KindSSP
+		if ctrlImpl, ok := ssp["control-implementation"].(map[string]interface{}); ok {
+			reqs, _ := ctrlImpl["implemented-requirements"].([]interface{})
 			for _, rawReq := range reqs {
 				reqMap, ok := rawReq.(map[string]interface{})
 				if !ok {
@@ -100,13 +118,19 @@ func ImportFromCSV(baseArtifactJSON []byte, csvData []byte) ([]byte, error) {
 				}
 				ctrlID, _ := reqMap["control-id"].(string)
 				if u, exists := updates[ctrlID]; exists {
-					reqMap["description"] = u.description
 					if u.remarks != "" {
 						reqMap["remarks"] = u.remarks
+					}
+					if byComps, ok := reqMap["by-components"].([]interface{}); ok && len(byComps) > 0 {
+						if bcMap, ok := byComps[0].(map[string]interface{}); ok {
+							bcMap["description"] = u.description
+						}
 					}
 				}
 			}
 		}
+	} else {
+		return nil, fmt.Errorf("base artifact must be an OSCAL component-definition or system-security-plan")
 	}
 
 	updatedJSON, err := json.MarshalIndent(root, "", "  ")
@@ -119,7 +143,7 @@ func ImportFromCSV(baseArtifactJSON []byte, csvData []byte) ([]byte, error) {
 	if err != nil {
 		return nil, fmt.Errorf("init validator: %w", err)
 	}
-	if err := v.Validate(updatedJSON, schemavalidate.KindComponentDefinition); err != nil {
+	if err := v.Validate(updatedJSON, targetKind); err != nil {
 		return nil, fmt.Errorf("updated OSCAL artifact failed schema validation: %w", err)
 	}
 

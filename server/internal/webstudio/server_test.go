@@ -104,3 +104,39 @@ func TestWebStudioServer(t *testing.T) {
 		t.Errorf("expected 200 OK, got %d", respVal.StatusCode)
 	}
 }
+
+func TestWebStudioServer_PortFallback(t *testing.T) {
+	// First server binds to 19876
+	srv1, err := webstudio.NewServer(webstudio.Config{
+		Host:     "127.0.0.1",
+		Port:     19876,
+		Registry: frameworks.DefaultRegistry(),
+	})
+	if err != nil {
+		t.Fatalf("failed to create server 1: %v", err)
+	}
+	addr1, err := srv1.Start()
+	if err != nil {
+		t.Fatalf("failed to start server 1: %v", err)
+	}
+	defer func() { _ = srv1.Stop(context.Background()) }()
+
+	// Second server also asks for 19876, should fallback to 19877
+	srv2, err := webstudio.NewServer(webstudio.Config{
+		Host:     "127.0.0.1",
+		Port:     19876,
+		Registry: frameworks.DefaultRegistry(),
+	})
+	if err != nil {
+		t.Fatalf("failed to create server 2: %v", err)
+	}
+	addr2, err := srv2.Start()
+	if err != nil {
+		t.Fatalf("failed to start server 2 with fallback: %v", err)
+	}
+	defer func() { _ = srv2.Stop(context.Background()) }()
+
+	if addr1 == addr2 {
+		t.Errorf("expected server 2 to bind to fallback port, but got same addr: %s", addr2)
+	}
+}

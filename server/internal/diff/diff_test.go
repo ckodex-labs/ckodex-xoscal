@@ -70,6 +70,34 @@ func TestCompareArtifacts_Detection(t *testing.T) {
 	}
 }
 
+func TestCompareArtifacts_InitialBaseline(t *testing.T) {
+	tmpDir := t.TempDir()
+
+	// Scaffold head artifact only; base artifact does not exist
+	_, headJSON, err := scaffold.ScaffoldWorkspace(tmpDir, "nist-sp-800-53-rev5")
+	if err != nil {
+		t.Fatalf("scaffold head: %v", err)
+	}
+
+	headPath := filepath.Join(tmpDir, "head.json")
+	if err := osWrite(headPath, headJSON); err != nil {
+		t.Fatalf("write head: %v", err)
+	}
+
+	nonExistentBase := filepath.Join(tmpDir, "does-not-exist.json")
+	complianceDiff, err := CompareArtifacts(nonExistentBase, headPath)
+	if err != nil {
+		t.Fatalf("CompareArtifacts should succeed with non-existent base, got: %v", err)
+	}
+
+	if complianceDiff.AddedCount == 0 {
+		t.Errorf("expected all controls to be added, got added_count = 0")
+	}
+	if complianceDiff.HasRegression {
+		t.Errorf("initial baseline should not register a regression")
+	}
+}
+
 func osWrite(path string, data []byte) error {
 	return os.WriteFile(path, data, 0600)
 }

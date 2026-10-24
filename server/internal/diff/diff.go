@@ -2,6 +2,7 @@ package diff
 
 import (
 	"fmt"
+	"os"
 	"strings"
 
 	"github.com/mchorfa/xoscal/server/internal/vectorstate"
@@ -43,10 +44,31 @@ type ComplianceDiff struct {
 }
 
 // CompareArtifacts evaluates and diffs two OSCAL JSON artifacts.
+// If basePath does not exist on disk, it is treated as an empty initial baseline,
+// causing all controls in headPath to be reported as Added.
 func CompareArtifacts(basePath, headPath string) (*ComplianceDiff, error) {
-	baseState, err := vectorstate.EvaluateArtifact(basePath, "")
-	if err != nil {
-		return nil, fmt.Errorf("evaluate base artifact %s: %w", basePath, err)
+	var baseState *vectorstate.VectorState
+	if basePath != "" {
+		if _, statErr := os.Stat(basePath); statErr == nil {
+			var err error
+			baseState, err = vectorstate.EvaluateArtifact(basePath, "")
+			if err != nil {
+				return nil, fmt.Errorf("evaluate base artifact %s: %w", basePath, err)
+			}
+		}
+	}
+	if baseState == nil {
+		baseState = &vectorstate.VectorState{
+			Presence:      vectorstate.PresenceEmpty,
+			Lifecycle:     vectorstate.ModeNormal,
+			Coherence:     vectorstate.Coherent,
+			Evidence:      vectorstate.EvidenceVerified,
+			TotalControls: 0,
+			Findings:      nil,
+		}
+		if basePath == "" {
+			basePath = "(none - initial baseline)"
+		}
 	}
 
 	headState, err := vectorstate.EvaluateArtifact(headPath, "")

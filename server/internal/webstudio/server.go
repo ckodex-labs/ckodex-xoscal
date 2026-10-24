@@ -10,6 +10,7 @@ import (
 	"net/http"
 	"os/exec"
 	"runtime"
+	"strconv"
 	"strings"
 	"sync"
 	"time"
@@ -75,9 +76,27 @@ func NewServer(cfg Config) (*Server, error) {
 }
 
 // Start begins listening on the configured address.
+// If the configured port is already in use, it attempts up to 9 consecutive fallback ports.
 func (s *Server) Start() (string, error) {
 	ln, err := net.Listen("tcp", s.httpServer.Addr)
 	if err != nil {
+		// Attempt port fallback if specific port was busy
+		host, portStr, splitErr := net.SplitHostPort(s.httpServer.Addr)
+		if splitErr == nil {
+			if basePort, numErr := strconv.Atoi(portStr); numErr == nil && basePort > 0 {
+				for p := basePort + 1; p <= basePort+9; p++ {
+					altAddr := net.JoinHostPort(host, strconv.Itoa(p))
+					if altLn, altErr := net.Listen("tcp", altAddr); altErr == nil {
+						s.listener = altLn
+						s.httpServer.Addr = altAddr
+						go func() {
+							_ = s.httpServer.Serve(altLn)
+						}()
+						return altLn.Addr().String(), nil
+					}
+				}
+			}
+		}
 		return "", fmt.Errorf("listen on %s: %w", s.httpServer.Addr, err)
 	}
 	s.listener = ln

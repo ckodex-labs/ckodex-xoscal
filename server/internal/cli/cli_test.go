@@ -38,3 +38,15 @@ func TestPrintUsage(t *testing.T) {
 		t.Errorf("expected new commands in usage output")
 	}
 }
+
+func TestQuickstart_NonDestructive(t *testing.T) {
+	out := captureOutput(func() {
+		cli.RunQuickstart([]string{})
+	})
+	if !strings.Contains(out, "xOSCAL DEVELOPER ONBOARDING QUICKSTART") {
+		t.Errorf("expected quickstart header in output")
+	}
+	if !strings.Contains(out, "Ready to scaffold") {
+		t.Errorf("expected ready to scaffold in output")
+	}
+}

@@ -21,6 +21,7 @@ import (
 	"github.com/mchorfa/xoscal/server/internal/diff"
 	"github.com/mchorfa/xoscal/server/internal/frameworks"
 	"github.com/mchorfa/xoscal/server/internal/ingestion"
+	"github.com/mchorfa/xoscal/server/internal/integrity"
 	"github.com/mchorfa/xoscal/server/internal/kg"
 	"github.com/mchorfa/xoscal/server/internal/oscal"
 	"github.com/mchorfa/xoscal/server/internal/reconciler"
@@ -94,7 +95,7 @@ func Execute(args []string, version string) {
 		RunGenerate(args[2:])
 	case "ingest":
 		RunIngest(args[2:])
-	case "verify":
+	case "verify", "check":
 		RunVerify(args[2:])
 	case "validate":
 		RunValidate(args[2:])
@@ -104,7 +105,7 @@ func Execute(args []string, version string) {
 		RunDerogate(args[2:])
 	case "tabular":
 		RunTabular(args[2:])
-	case "bundle-export":
+	case "bundle-export", "export-bundle":
 		RunBundleExport(args[2:])
 	case "frameworks":
 		RunFrameworks(args[2:])
@@ -148,19 +149,51 @@ func RunInit(args []string) {
 // RunVerify evaluates artifacts and outputs Vector State.
 func RunVerify(args []string) {
 	fs := flag.NewFlagSet("verify", flag.ExitOnError)
-	file := fs.String("file", "component-definition.json", "Path to OSCAL JSON artifact to evaluate")
+	file := fs.String("file", "", "Path to OSCAL JSON artifact to evaluate")
 	evidenceDir := fs.String("evidence-dir", "", "Optional path to evidence directory with SHA-256 sidecars")
 	jsonOut := fs.Bool("json", false, "Output Vector State as JSON")
 	_ = fs.Parse(args)
 
-	if _, err := os.Stat(*file); os.IsNotExist(err) {
-		fallback := filepath.Join(".xoscal", *file)
-		if _, err := os.Stat(fallback); err == nil {
-			*file = fallback
+	targetFile := *file
+	if targetFile == "" && fs.NArg() > 0 {
+		targetFile = fs.Arg(0)
+	}
+
+	if targetFile == "" {
+		candidates := []string{
+			"component-definition.json",
+			filepath.Join(".xoscal", "component-definition.json"),
+			"ssp.json",
+			"system-security-plan.json",
+			"catalog.json",
+			"profile.json",
+			"assessment-results.json",
+		}
+		for _, c := range candidates {
+			if _, err := os.Stat(c); err == nil {
+				targetFile = c
+				break
+			}
 		}
 	}
 
-	state, err := vectorstate.EvaluateArtifact(*file, *evidenceDir)
+	if targetFile == "" {
+		fmt.Fprintf(os.Stderr, "no OSCAL artifact specified and none found in current directory.\n\n")
+		fmt.Fprintf(os.Stderr, "To scaffold a new component definition, run:\n")
+		fmt.Fprintf(os.Stderr, "  xoscal init\n\n")
+		fmt.Fprintf(os.Stderr, "Or specify an existing artifact:\n")
+		fmt.Fprintf(os.Stderr, "  xoscal verify -file <path/to/artifact.json>\n")
+		os.Exit(1)
+	}
+
+	if _, err := os.Stat(targetFile); os.IsNotExist(err) {
+		fallback := filepath.Join(".xoscal", targetFile)
+		if _, err := os.Stat(fallback); err == nil {
+			targetFile = fallback
+		}
+	}
+
+	state, err := vectorstate.EvaluateArtifact(targetFile, *evidenceDir)
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "error evaluating artifact: %v\n", err)
 		os.Exit(1)
@@ -433,12 +466,31 @@ func RunValidate(args []string) {
 	fs := flag.NewFlagSet("validate", flag.ExitOnError)
 	filePath := fs.String("file", "", "Path to OSCAL JSON artifact to validate")
 	kindFlag := fs.String("kind", "", "Artifact kind (catalog, profile, ssp, component-definition, assessment-plan, assessment-results, poam, mapping)")
+	checkIntegrity := fs.Bool("integrity", false, "Perform deep semantic reference and UUID integrity checks")
 	_ = fs.Parse(args)
 
 	if *filePath == "" && fs.NArg() > 0 {
 		*filePath = fs.Arg(0)
 		if *kindFlag == "" && fs.NArg() > 1 {
 			*kindFlag = fs.Arg(1)
+		}
+	}
+
+	if *filePath == "" {
+		candidates := []string{
+			"component-definition.json",
+			filepath.Join(".xoscal", "component-definition.json"),
+			"ssp.json",
+			"system-security-plan.json",
+			"catalog.json",
+			"profile.json",
+			"assessment-results.json",
+		}
+		for _, c := range candidates {
+			if _, err := os.Stat(c); err == nil {
+				*filePath = c
+				break
+			}
 		}
 	}
 
@@ -470,6 +522,31 @@ func RunValidate(args []string) {
 		fmt.Fprintf(os.Stderr, "INVALID: %s failed OSCAL %s schema validation\n", kind.Name, schemavalidate.SchemaVersion)
 		fmt.Fprintln(os.Stderr, err)
 		os.Exit(3)
+	}
+
+	if *checkIntegrity {
+		findings, err := integrity.Check(data, kind)
+		if err != nil {
+			fmt.Fprintf(os.Stderr, "error running integrity check: %v\n", err)
+			os.Exit(1)
+		}
+
+		hasErrors := false
+		for _, f := range findings {
+			if f.Severity == integrity.SeverityError {
+				hasErrors = true
+				fmt.Fprintf(os.Stderr, "[INTEGRITY ERROR] %s: %s (%s)\n", f.Rule, f.Message, f.Path)
+			} else {
+				fmt.Fprintf(os.Stdout, "[INTEGRITY WARN]  %s: %s (%s)\n", f.Rule, f.Message, f.Path)
+			}
+		}
+
+		if hasErrors {
+			fmt.Fprintf(os.Stderr, "FAILED: %s failed semantic reference integrity checks\n", kind.Name)
+			os.Exit(3)
+		}
+		fmt.Printf("VALID: %s passes official OSCAL %s schema and semantic integrity checks\n", kind.Name, schemavalidate.SchemaVersion)
+		return
 	}
 
 	fmt.Printf("VALID: %s passes official OSCAL %s schema validation\n", kind.Name, schemavalidate.SchemaVersion)
@@ -1079,12 +1156,14 @@ func RunQuickstart(args []string) {
 	fmt.Printf("   [OK] Registered Sovereign Frameworks: %d\n", len(frameworks.DefaultRegistry().List()))
 
 	fmt.Printf("\n2. Scanning Current Working Directory ...\n")
-	scan, jsonBytes, err := scaffold.ScaffoldWorkspace(".", "cccs-itsp-10-033")
+	scan, err := scaffold.ScanRepository(".")
 	if err != nil {
-		fmt.Printf("   [WARN] Could not scaffold component definition in current dir: %v\n", err)
+		fmt.Printf("   [WARN] Could not scan current dir: %v\n", err)
 	} else {
-		fmt.Printf("   [OK] Detected Project: %s (Languages: %v)\n", scan.Name, scan.Languages)
-		fmt.Printf("   [OK] Scaffolding component-definition.json (%d bytes)\n", len(jsonBytes))
+		fmt.Printf("   [OK] Detected Project: %s (Languages: %v, Docker: %v, K8s: %v, TF: %v)\n",
+			scan.Name, scan.Languages, scan.HasDocker, scan.HasK8s, scan.HasTF)
+		fmt.Printf("   [OK] Ready to scaffold: %d detected component(s)\n", len(scan.Components))
+		fmt.Printf("   Run 'xoscal init' to scaffold component-definition.json and .xoscal workspace config.\n")
 	}
 
 	fmt.Printf("\n3. Recommended Developer Commands:\n")

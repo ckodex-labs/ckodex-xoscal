@@ -133,17 +133,23 @@ Next step: Run 'xoscal-ctl verify' to check control posture.
 
 ---
 
-### 2. Continuous Verification & Vector Posture (`xoscal-ctl verify`)
+### 2. Continuous Verification & Vector Posture (`xoscal verify` / `xoscal check`)
 Verify compliance against the embedded official NIST JSON schema and calculate the formal state vector:
 
 $$\mathbf{S}(e,t) = \langle \text{Presence}, \text{Valence}, \text{Anti-Conflict}, \text{Coherence}, \text{Evidence}, \text{Lifecycle}, \tau \rangle$$
 
 ```bash
-# Verify controls and evidence sidecars
-xoscal-ctl verify --file component-definition.json
+# Verify controls and evidence sidecars (auto-discovers local artifact)
+xoscal verify
+# or pre-commit/CI alias:
+xoscal check
 
-# Emit machine-readable Vector State for automated admission gates
-xoscal-ctl verify --file component-definition.json --json
+# Verify explicit artifact and emit machine-readable Vector State
+xoscal verify -file component-definition.json -json
+
+# Fast standalone schema validation and deep semantic reference integrity
+xoscal validate component-definition.json
+xoscal validate ssp.json -integrity
 ```
 
 <details>
@@ -194,18 +200,25 @@ xoscal-ctl diff \
 
 ---
 
-### 4. GRC Spreadsheet Bridge (`xoscal-ctl tabular`)
-Export nested OSCAL controls into flat RFC-4180 CSV tables for non-technical auditors, and re-import spreadsheet responses back into valid OSCAL with automated schema verification:
+### 4. GRC Spreadsheet Bridge (`xoscal tabular`)
+Export nested OSCAL controls into flat RFC-4180 CSV tables for non-technical auditors, and re-import spreadsheet responses back into valid OSCAL with automated schema verification. Supports Component Definitions, System Security Plans (SSP), and Catalogs:
 
 ```bash
-# Export controls to CSV for spreadsheet editing
-xoscal-ctl tabular export --in component-definition.json --out controls.csv
+# Export controls to CSV for spreadsheet editing (supports compdef, ssp, and catalog)
+xoscal tabular export --in component-definition.json --out controls.csv
+xoscal tabular export --in ssp.json --out ssp-controls.csv
 
 # Import edited responses back into schema-valid OSCAL JSON
-xoscal-ctl tabular import \
+xoscal tabular import \
   --in controls.csv \
   --base component-definition.json \
   --out component-definition.updated.json
+
+# Import spreadsheet edits back into a System Security Plan (SSP)
+xoscal tabular import \
+  --in ssp-controls.csv \
+  --base ssp.json \
+  --out ssp.updated.json
 ```
 
 ---
