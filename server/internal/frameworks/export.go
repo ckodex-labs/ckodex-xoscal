@@ -72,8 +72,8 @@ func ExportAllLayers(outDir string, f Framework) error {
 	return nil
 }
 
-// ExportAuthoritative exports only the canonical primary OSCAL artifact defined directly
-// by the framework (profile.json if f.HasProfile(), otherwise catalog.json) with schema
+// ExportAuthoritative exports the canonical primary OSCAL artifacts defined directly
+// by the framework (always catalog.json, and profile.json if f.HasProfile()) with schema
 // validation and SHA-256 sidecars. This preserves exact 1:1 compatibility with manifest
 // export pipelines and external semantic scope validators.
 func ExportAuthoritative(outDir string, f Framework) error {
@@ -88,6 +88,27 @@ func ExportAuthoritative(outDir string, f Framework) error {
 		return fmt.Errorf("create destination directory %s: %w", targetDir, err)
 	}
 
+	// 1. Export & Validate Catalog (always present)
+	catData, err := f.CatalogJSON()
+	if err != nil {
+		return fmt.Errorf("obtain catalog for %s: %w", f.ID(), err)
+	}
+
+	if err := v.Validate(catData, schemavalidate.KindCatalog); err != nil {
+		return fmt.Errorf("validate catalog for %s against OSCAL 1.2.3 schema: %w", f.ID(), err)
+	}
+
+	catPath := filepath.Join(targetDir, "catalog.json")
+	// #nosec G703,G304,G306 -- catPath is beneath operator-selected output directory
+	if err := os.WriteFile(catPath, catData, 0o600); err != nil {
+		return fmt.Errorf("write catalog %s: %w", catPath, err)
+	}
+
+	if _, err := dbutil.WriteDigestSidecar(catPath); err != nil {
+		return fmt.Errorf("write catalog digest sidecar %s: %w", catPath, err)
+	}
+
+	// 2. Export & Validate Profile (if and only if framework defines a profile)
 	if f.HasProfile() {
 		profData, err := f.ProfileJSON()
 		if err != nil {
@@ -106,25 +127,6 @@ func ExportAuthoritative(outDir string, f Framework) error {
 
 		if _, err := dbutil.WriteDigestSidecar(profPath); err != nil {
 			return fmt.Errorf("write profile digest sidecar %s: %w", profPath, err)
-		}
-	} else {
-		catData, err := f.CatalogJSON()
-		if err != nil {
-			return fmt.Errorf("obtain catalog for %s: %w", f.ID(), err)
-		}
-
-		if err := v.Validate(catData, schemavalidate.KindCatalog); err != nil {
-			return fmt.Errorf("validate catalog for %s against OSCAL 1.2.3 schema: %w", f.ID(), err)
-		}
-
-		catPath := filepath.Join(targetDir, "catalog.json")
-		// #nosec G703,G304,G306 -- catPath is beneath operator-selected output directory
-		if err := os.WriteFile(catPath, catData, 0o600); err != nil {
-			return fmt.Errorf("write catalog %s: %w", catPath, err)
-		}
-
-		if _, err := dbutil.WriteDigestSidecar(catPath); err != nil {
-			return fmt.Errorf("write catalog digest sidecar %s: %w", catPath, err)
 		}
 	}
 
