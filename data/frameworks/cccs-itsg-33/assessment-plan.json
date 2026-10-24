@@ -1,0 +1,132 @@
+{
+  "assessment-plan": {
+    "import-ssp": {
+      "href": "./system-security-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-10-24T21:09:31Z",
+      "oscal-version": "1.2.3",
+      "title": "CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3) Security Assessment Plan Template",
+      "version": "1.2.3"
+    },
+    "reviewed-controls": {
+      "control-selections": [
+        {
+          "description": "All controls in CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3)",
+          "include-all": {}
+        }
+      ]
+    },
+    "tasks": [
+      {
+        "description": "Verify and examine implementation of 4 controls in the Access Control (Controle d'acces) family for CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "title": "Assess Family AC (Access Control (Controle d'acces))",
+        "type": "examination",
+        "uuid": "28c25bfe-3b04-5ff5-8fc5-5f9383e92e22"
+      },
+      {
+        "description": "Verify and examine implementation of 2 controls in the Awareness and Training (Sensibilisation et formation) family for CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "title": "Assess Family AT (Awareness and Training (Sensibilisation et formation))",
+        "type": "examination",
+        "uuid": "870f433b-a509-5e1d-8f66-36cfc6bdd0b9"
+      },
+      {
+        "description": "Verify and examine implementation of 3 controls in the Audit and Accountability (Verification et responsabilite) family for CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "title": "Assess Family AU (Audit and Accountability (Verification et responsabilite))",
+        "type": "examination",
+        "uuid": "dbf621aa-4fb2-5314-bd9f-a3c64c1c96b4"
+      },
+      {
+        "description": "Verify and examine implementation of 3 controls in the Security Assessment, Authorization, and Monitoring (Evaluation, autorisation et surveillance) family for CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "title": "Assess Family CA (Security Assessment, Authorization, and Monitoring (Evaluation, autorisation et surveillance))",
+        "type": "examination",
+        "uuid": "4b85f71d-87f9-59bc-b832-efbb9a418745"
+      },
+      {
+        "description": "Verify and examine implementation of 2 controls in the Configuration Management (Gestion des configurations) family for CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "title": "Assess Family CM (Configuration Management (Gestion des configurations))",
+        "type": "examination",
+        "uuid": "ffceb7f3-878d-5a7f-8b15-5d9bd6ba055e"
+      },
+      {
+        "description": "Verify and examine implementation of 2 controls in the Contingency Planning (Planification de la continuite) family for CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "title": "Assess Family CP (Contingency Planning (Planification de la continuite))",
+        "type": "examination",
+        "uuid": "09ffbb55-0954-5bed-bbf9-895ada906751"
+      },
+      {
+        "description": "Verify and examine implementation of 2 controls in the Identification and Authentication (Identification et authentification) family for CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "title": "Assess Family IA (Identification and Authentication (Identification et authentification))",
+        "type": "examination",
+        "uuid": "21d02707-a953-5311-9e79-deb089cfc08d"
+      },
+      {
+        "description": "Verify and examine implementation of 2 controls in the Incident Response (Intervention en cas d'incident) family for CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "title": "Assess Family IR (Incident Response (Intervention en cas d'incident))",
+        "type": "examination",
+        "uuid": "b15aa139-011a-53ef-a16c-f626db2e3b16"
+      },
+      {
+        "description": "Verify and examine implementation of 2 controls in the Media Protection (Protection des supports) family for CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "title": "Assess Family MP (Media Protection (Protection des supports))",
+        "type": "examination",
+        "uuid": "549a9453-d4dc-5fb0-b498-d09633d0b42a"
+      },
+      {
+        "description": "Verify and examine implementation of 2 controls in the Physical and Environmental Protection (Protection physique et environnementale) family for CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "title": "Assess Family PE (Physical and Environmental Protection (Protection physique et environnementale))",
+        "type": "examination",
+        "uuid": "afd57d27-6ecc-5103-a47d-e4b57fff54ae"
+      },
+      {
+        "description": "Verify and examine implementation of 1 controls in the Planning (Planification de la securite) family for CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "title": "Assess Family PL (Planning (Planification de la securite))",
+        "type": "examination",
+        "uuid": "73a676a2-257d-51a5-8c61-82c0899dafea"
+      },
+      {
+        "description": "Verify and examine implementation of 1 controls in the Program Management (Gestion de programme) family for CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "title": "Assess Family PM (Program Management (Gestion de programme))",
+        "type": "examination",
+        "uuid": "ede9cac8-6255-570a-a77e-9cf250f8d862"
+      },
+      {
+        "description": "Verify and examine implementation of 2 controls in the Personnel Security (Securite du personnel) family for CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "title": "Assess Family PS (Personnel Security (Securite du personnel))",
+        "type": "examination",
+        "uuid": "15f0733e-fead-5973-8072-a0b548743814"
+      },
+      {
+        "description": "Verify and examine implementation of 2 controls in the Risk Assessment (Evaluation des risques) family for CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "title": "Assess Family RA (Risk Assessment (Evaluation des risques))",
+        "type": "examination",
+        "uuid": "cca04602-85a1-524e-adf6-08386f73231b"
+      },
+      {
+        "description": "Verify and examine implementation of 2 controls in the System and Services Acquisition (Acquisition de systemes et de services) family for CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "title": "Assess Family SA (System and Services Acquisition (Acquisition de systemes et de services))",
+        "type": "examination",
+        "uuid": "64c32fdd-d7b2-5107-9d03-0bccf85aa656"
+      },
+      {
+        "description": "Verify and examine implementation of 4 controls in the System and Communications Protection (Protection des systemes et des communications) family for CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "title": "Assess Family SC (System and Communications Protection (Protection des systemes et des communications))",
+        "type": "examination",
+        "uuid": "8e7fabf8-0349-57db-91cc-56d7bdec028e"
+      },
+      {
+        "description": "Verify and examine implementation of 3 controls in the System and Information Integrity (Integrite des systemes et de l'information) family for CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "title": "Assess Family SI (System and Information Integrity (Integrite des systemes et de l'information))",
+        "type": "examination",
+        "uuid": "fce3156c-5f15-5de6-81d3-eeb89efb5dd7"
+      },
+      {
+        "description": "Verify and examine implementation of 3 controls in the Supply Chain Risk Management (Gestion des risques lies a la chaine d'approvisionnement) family for CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "title": "Assess Family SR (Supply Chain Risk Management (Gestion des risques lies a la chaine d'approvisionnement))",
+        "type": "examination",
+        "uuid": "86c74140-c330-5fdd-95ee-0ae1b5524349"
+      }
+    ],
+    "uuid": "ad95edff-8ffa-5012-8221-a852b54ae019"
+  }
+}

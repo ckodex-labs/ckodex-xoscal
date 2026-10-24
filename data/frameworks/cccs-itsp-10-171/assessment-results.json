@@ -1,0 +1,63 @@
+{
+  "assessment-results": {
+    "import-ap": {
+      "href": "./assessment-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-10-24T21:09:31Z",
+      "oscal-version": "1.2.3",
+      "title": "CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Assessment Results Template",
+      "version": "1.2.3"
+    },
+    "results": [
+      {
+        "description": "Assessment evaluation findings and observations for CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "findings": [
+          {
+            "description": "Control _03.01.01.a has been evaluated and confirmed satisfied.",
+            "related-observations": [
+              {
+                "observation-uuid": "7ba37fe1-5da9-5cc7-a2a0-cc5871d7bbef"
+              }
+            ],
+            "target": {
+              "status": {
+                "state": "satisfied"
+              },
+              "target-id": "_03.01.01.a",
+              "type": "objective-id"
+            },
+            "title": "Assessment Finding for _03.01.01.a",
+            "uuid": "9fa28614-a725-559b-84ad-5e969753cf1a"
+          }
+        ],
+        "observations": [
+          {
+            "collected": "2026-10-24T21:09:31Z",
+            "description": "Verified control _03.01.01.a (03.01.01.A) implementation and supporting evidence.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "uuid": "7ba37fe1-5da9-5cc7-a2a0-cc5871d7bbef"
+          }
+        ],
+        "reviewed-controls": {
+          "control-selections": [
+            {
+              "description": "All controls evaluated for CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada",
+              "include-all": {}
+            }
+          ]
+        },
+        "start": "2026-10-24T21:09:31Z",
+        "title": "CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Assessment Results",
+        "uuid": "145b6b35-cb5a-5105-933c-e672bd33ea28"
+      }
+    ],
+    "uuid": "7cf5fa5b-038f-5cdd-b8e8-002ea700cdef"
+  }
+}

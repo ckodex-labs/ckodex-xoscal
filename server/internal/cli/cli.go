@@ -680,16 +680,33 @@ func RunVerifyParity(args []string) {
 			fmt.Fprintf(os.Stderr, "error: unknown framework %s\n", *fwName)
 			os.Exit(1)
 		}
-		catPath := filepath.Join(*dir, fw.ID(), "catalog.json")
-		// #nosec G703,G304 -- catPath is resolved within the operator-selected directory.
-		if _, err := os.Stat(catPath); err == nil {
-			rep, err := frameworks.VerifyArtifactParity(fw, catPath)
-			if err != nil {
-				fmt.Fprintf(os.Stderr, "error verifying %s catalog: %v\n", fw.ID(), err)
-				os.Exit(1)
+
+		artifactNames := []string{
+			"catalog.json",
+			"profile.json",
+			"component-definition.json",
+			"system-security-plan.json",
+			"assessment-plan.json",
+			"assessment-results.json",
+			"plan-of-action-and-milestones.json",
+		}
+
+		foundAny := false
+		for _, name := range artifactNames {
+			artPath := filepath.Join(*dir, fw.ID(), name)
+			// #nosec G703,G304 -- artPath is resolved within the operator-selected directory.
+			if _, err := os.Stat(artPath); err == nil {
+				foundAny = true
+				rep, err := frameworks.VerifyArtifactParity(fw, artPath)
+				if err != nil {
+					fmt.Fprintf(os.Stderr, "error verifying %s %s: %v\n", fw.ID(), name, err)
+					os.Exit(1)
+				}
+				reports = append(reports, rep)
 			}
-			reports = append(reports, rep)
-		} else {
+		}
+
+		if !foundAny {
 			catData, err := fw.CatalogJSON()
 			if err != nil {
 				fmt.Fprintf(os.Stderr, "error loading in-memory catalog for %s: %v\n", fw.ID(), err)
@@ -701,19 +718,6 @@ func RunVerifyParity(args []string) {
 				os.Exit(1)
 			}
 			reports = append(reports, rep)
-		}
-
-		if fw.HasProfile() {
-			profPath := filepath.Join(*dir, fw.ID(), "profile.json")
-			// #nosec G703,G304 -- profPath is resolved within the operator-selected directory.
-			if _, err := os.Stat(profPath); err == nil {
-				rep, err := frameworks.VerifyArtifactParity(fw, profPath)
-				if err != nil {
-					fmt.Fprintf(os.Stderr, "error verifying %s profile: %v\n", fw.ID(), err)
-					os.Exit(1)
-				}
-				reports = append(reports, rep)
-			}
 		}
 	} else {
 		var err error

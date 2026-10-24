@@ -7,7 +7,15 @@ Scope: Canadian Centre for Cyber Security (CCCS) and Treasury Board Secretariat 
 
 ## 1. Overview
 
-The Canadian Sovereign Frameworks suite in xOSCAL provides native, machine-verifiable NIST OSCAL 1.2.3 catalogs and profiles for all Government of Canada cybersecurity standards.
+The Canadian Sovereign Frameworks suite in xOSCAL provides native, machine-verifiable NIST OSCAL 1.2.3 artifacts across all 7 layers of the OSCAL model hierarchy for all Government of Canada cybersecurity standards:
+
+1. **Layer 1: Catalog** (`catalog.json`) — Authoritative control catalog, statement AST, guidance, GC discussion, and Organization-Defined Parameters (ODP).
+2. **Layer 2: Profile** (`profile.json`) — Baseline control selections, modifications, and parameter tailoring.
+3. **Layer 3: Component Definition** (`component-definition.json`) — Technical and operational capabilities mapped across all catalog controls.
+4. **Layer 4: System Security Plan** (`system-security-plan.json`) — System characteristics, authorization boundary, components, roles, and implemented requirements for every control.
+5. **Layer 5: Assessment Plan** (`assessment-plan.json`) — Assessment scope, tasks per control family, reviewed controls, and schedule linked to the SSP.
+6. **Layer 6: Assessment Results** (`assessment-results.json`) — Audited findings, observations, and reviewed controls linked to the Assessment Plan.
+7. **Layer 7: Plan of Action and Milestones** (`plan-of-action-and-milestones.json`) — Continuous monitoring, remediations, milestones, and poam-items linked to the SSP.
 
 All frameworks are registered in the unified framework registry (`server/internal/frameworks`) and implemented through the Canadian frameworks provider (`server/internal/canadianframeworks`).
 
@@ -32,7 +40,9 @@ server/internal/frameworks/
   ├── framework.go    # Framework interface and Info metadata
   ├── base.go         # BaseFramework configurable implementation
   ├── registry.go     # Thread-safe framework registry with aliases and jurisdiction filtering
-  ├── export.go       # Schema-validated export with SHA-256 sidecars
+  ├── projector.go    # 7-layer OSCAL 1.2.3 template projector (UUIDv5 links, all controls)
+  ├── export.go       # Schema-validated export with SHA-256 sidecars across all 7 layers
+  ├── verifier.go     # Verbatim parity verification engine across all 7 OSCAL model types
   ├── seeder.go       # Universal Knowledge Graph seeder (Protobuf and OSCAL JSON)
   └── default.go      # Thread-safe global registry singleton
 ```
@@ -41,6 +51,7 @@ server/internal/frameworks/
 
 - `frameworks` does not import any specific regional framework package.
 - `canadianframeworks` registers into `frameworks.DefaultRegistry()` via an explicit `RegisterAll()` hook.
+- `projector.go` dynamically derives and projects all missing downstream layers (Profile, Component Definition, System Security Plan, Assessment Plan, Assessment Results, POA&M) using RFC 4122 v5 deterministic UUIDs linked across document references (`import-profile`, `import-ssp`, `import-ap`, `by-components`).
 - All exported JSON artifacts are validated against the embedded official NIST OSCAL 1.2.3 schema before emission, generating cryptographic `.sha256` sidecars.
 
 ---
@@ -129,15 +140,15 @@ cccs-itsp-10-171        ca            1.0           CCCS ITSP.10.171
 cccs-medium-cloud-pbmm  ca            1.0           CCCS Cloud Medium (PBMM) Profile
 ```
 
-### Exporting Schema-Validated Artifacts
+### Exporting Schema-Validated Artifacts Across All 7 Layers
 
 ```bash
-# Export ITSP.10.033 Catalog and Profile with automated schema validation and .sha256 sidecars
+# Export all 7 OSCAL 1.2.3 layers for ITSP.10.033 with automated schema validation and .sha256 sidecars
 xoscal-ctl frameworks export \
   -framework cccs-itsp-10-033 \
   -out ./data/frameworks
 
-# Export all registered frameworks
+# Export all 7 layers across all registered frameworks
 xoscal-ctl frameworks export -out ./exported-frameworks
 ```
 
@@ -217,13 +228,14 @@ xoscal ui
    xoscal verify-parity -dir data/frameworks -markdown
    ```
 
-   The verifier evaluates:
-   - **Control Existence**: Zero missing, zero extra controls or enhancements.
+   The verifier evaluates across all 7 OSCAL layers (`catalog`, `profile`, `component-definition`, `system-security-plan`, `assessment-plan`, `assessment-results`, `plan-of-action-and-milestones`):
+   - **Control Existence**: Zero missing, zero extra controls or enhancements across catalogs, component definitions, and SSP implemented requirements.
    - **Title Parity**: Character-by-character normalized title match.
    - **Statement Prose & AST Hierarchy**: Verbatim alignment across statement items (`A.`, `B.`, `1.`, `a.`, Canadian `AA.`, `BB.`).
    - **Guidance & Canadian GC Discussion**: Complete verbatim verification of guidance and GC discussion notes.
    - **ODP Parameters**: Exact parameter IDs, choices, labels, and interpolation syntax.
    - **Sovereign Canadian Delta**: Enforcement of `jurisdiction: "ca"` and sovereign properties.
-   - **Cryptographic Digest Recalculation**: SHA-256 recalculation against sidecars.
-   - **OSCAL 1.2.3 Schema Validation**: Strict NIST schema compliance.
+   - **Inter-Layer Linkages**: Deterministic UUIDv5 references (`import-profile`, `import-ssp`, `import-ap`, `by-components[].component-uuid`).
+   - **Cryptographic Digest Recalculation**: SHA-256 recalculation against sidecars (`.sha256`).
+   - **OSCAL 1.2.3 Schema Validation**: Strict NIST schema compliance for all 7 model schemas.
    - **Semantic Reference Integrity**: Zero broken internal references or orphan elements.

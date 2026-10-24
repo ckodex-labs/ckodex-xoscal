@@ -1,0 +1,30 @@
+{
+  "assessment-plan": {
+    "import-ssp": {
+      "href": "./system-security-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-10-24T21:09:31Z",
+      "oscal-version": "1.2.3",
+      "title": "CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Security Assessment Plan Template",
+      "version": "1.2.3"
+    },
+    "reviewed-controls": {
+      "control-selections": [
+        {
+          "description": "All controls in CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada",
+          "include-all": {}
+        }
+      ]
+    },
+    "tasks": [
+      {
+        "description": "Verify and examine implementation of 267 controls in the General Controls family for CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "title": "Assess Family GENERAL (General Controls)",
+        "type": "examination",
+        "uuid": "eda1e0e4-1472-59ab-8219-bdb4a7960539"
+      }
+    ],
+    "uuid": "489fb549-6e43-50c6-86cf-473d60530396"
+  }
+}

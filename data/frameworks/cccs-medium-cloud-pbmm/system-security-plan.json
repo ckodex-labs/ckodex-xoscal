@@ -1,0 +1,659 @@
+{
+  "system-security-plan": {
+    "control-implementation": {
+      "description": "Control implementations for CCCS Medium Cloud PBMM Baseline (ITSP.50.103 / ITSG-33 Annex 4A Profile 1).",
+      "implemented-requirements": [
+        {
+          "by-components": [
+            {
+              "component-uuid": "339cbf23-ebaf-59e4-9800-bd69a2ed658f",
+              "description": "Control ac-1 (Access Control Policy and Procedures) is satisfied by the CCCS Medium Cloud PBMM Baseline (ITSP.50.103 / ITSG-33 Annex 4A Profile 1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "d1a2f515-03c0-5535-a018-53aa8cff61f5"
+            }
+          ],
+          "control-id": "ac-1",
+          "uuid": "64e8ee40-92a7-55ee-a40c-309c82fca416"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "339cbf23-ebaf-59e4-9800-bd69a2ed658f",
+              "description": "Control ac-2 (Account Management) is satisfied by the CCCS Medium Cloud PBMM Baseline (ITSP.50.103 / ITSG-33 Annex 4A Profile 1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "07767389-3ef0-55e5-8174-dc8eea261654"
+            }
+          ],
+          "control-id": "ac-2",
+          "uuid": "a9c3cb93-48ff-5fa2-8142-2eb5a25474c9"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "339cbf23-ebaf-59e4-9800-bd69a2ed658f",
+              "description": "Control ac-3 (Access Enforcement) is satisfied by the CCCS Medium Cloud PBMM Baseline (ITSP.50.103 / ITSG-33 Annex 4A Profile 1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "e8f37845-a260-5c49-8bcc-99b516f108ff"
+            }
+          ],
+          "control-id": "ac-3",
+          "uuid": "d723cfb4-a50b-556e-8ef3-41dc6bd518e1"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "339cbf23-ebaf-59e4-9800-bd69a2ed658f",
+              "description": "Control ac-6 (Least Privilege) is satisfied by the CCCS Medium Cloud PBMM Baseline (ITSP.50.103 / ITSG-33 Annex 4A Profile 1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "4ba3f010-0b31-510f-9c47-e00df86fc55a"
+            }
+          ],
+          "control-id": "ac-6",
+          "uuid": "7f8c5c32-820d-59d0-a596-7c45f0501e6f"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "339cbf23-ebaf-59e4-9800-bd69a2ed658f",
+              "description": "Control at-1 (Security Awareness Policy and Procedures) is satisfied by the CCCS Medium Cloud PBMM Baseline (ITSP.50.103 / ITSG-33 Annex 4A Profile 1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "0335e5dd-224f-525a-accd-7f2eab490ecb"
+            }
+          ],
+          "control-id": "at-1",
+          "uuid": "e665c0af-ccf3-59ff-9a26-9f6986fa6417"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "339cbf23-ebaf-59e4-9800-bd69a2ed658f",
+              "description": "Control at-2 (Security Awareness Training) is satisfied by the CCCS Medium Cloud PBMM Baseline (ITSP.50.103 / ITSG-33 Annex 4A Profile 1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "4582d01e-14f2-5388-b3e4-a71846a0babe"
+            }
+          ],
+          "control-id": "at-2",
+          "uuid": "3fed2023-fd11-5fdb-ae7c-ea5a345a99a1"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "339cbf23-ebaf-59e4-9800-bd69a2ed658f",
+              "description": "Control au-12 (Audit Generation) is satisfied by the CCCS Medium Cloud PBMM Baseline (ITSP.50.103 / ITSG-33 Annex 4A Profile 1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "37b5784c-1945-5aee-9c3d-47cc4e6e8cb0"
+            }
+          ],
+          "control-id": "au-12",
+          "uuid": "9ff6029e-86e7-5716-8226-445a33934f0e"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "339cbf23-ebaf-59e4-9800-bd69a2ed658f",
+              "description": "Control au-2 (Event Logging) is satisfied by the CCCS Medium Cloud PBMM Baseline (ITSP.50.103 / ITSG-33 Annex 4A Profile 1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "f636f506-25be-580c-beae-6aa090df64b6"
+            }
+          ],
+          "control-id": "au-2",
+          "uuid": "299fc3ec-76fe-5e16-8edd-d248e3ba7b7e"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "339cbf23-ebaf-59e4-9800-bd69a2ed658f",
+              "description": "Control au-6 (Audit Review, Analysis, and Reporting) is satisfied by the CCCS Medium Cloud PBMM Baseline (ITSP.50.103 / ITSG-33 Annex 4A Profile 1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "0f3f8a25-b37d-527c-bb47-ad8377c93971"
+            }
+          ],
+          "control-id": "au-6",
+          "uuid": "4bfa64a1-1d6d-56e2-9f0b-106ab28ff37f"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "339cbf23-ebaf-59e4-9800-bd69a2ed658f",
+              "description": "Control ca-2 (Security Assessments) is satisfied by the CCCS Medium Cloud PBMM Baseline (ITSP.50.103 / ITSG-33 Annex 4A Profile 1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "3686e56a-4d5c-55de-bb91-f49a11e87641"
+            }
+          ],
+          "control-id": "ca-2",
+          "uuid": "1e696286-0679-5238-9c0c-24316c4ee85e"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "339cbf23-ebaf-59e4-9800-bd69a2ed658f",
+              "description": "Control ca-3 (Information Exchange Agreements) is satisfied by the CCCS Medium Cloud PBMM Baseline (ITSP.50.103 / ITSG-33 Annex 4A Profile 1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "f562415a-5c8e-5634-ba27-df1a186f67a2"
+            }
+          ],
+          "control-id": "ca-3",
+          "uuid": "c4cbe0a1-aae4-5d80-bb5f-2ec4d80a94e3"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "339cbf23-ebaf-59e4-9800-bd69a2ed658f",
+              "description": "Control ca-7 (Continuous Monitoring) is satisfied by the CCCS Medium Cloud PBMM Baseline (ITSP.50.103 / ITSG-33 Annex 4A Profile 1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "94c146ec-c520-5364-872e-3608b10a897b"
+            }
+          ],
+          "control-id": "ca-7",
+          "uuid": "cf1ec0c8-2802-5646-97ac-9e77acdc5375"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "339cbf23-ebaf-59e4-9800-bd69a2ed658f",
+              "description": "Control cm-2 (Baseline Configuration) is satisfied by the CCCS Medium Cloud PBMM Baseline (ITSP.50.103 / ITSG-33 Annex 4A Profile 1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "f8402235-cad3-5ee1-b44f-8837ce7f0cc3"
+            }
+          ],
+          "control-id": "cm-2",
+          "uuid": "bd322f09-95fa-566a-aa45-5392d5183440"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "339cbf23-ebaf-59e4-9800-bd69a2ed658f",
+              "description": "Control cm-8 (Information System Component Inventory) is satisfied by the CCCS Medium Cloud PBMM Baseline (ITSP.50.103 / ITSG-33 Annex 4A Profile 1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "f48e2c8a-cadb-5913-b3cc-6bfcc687bc4c"
+            }
+          ],
+          "control-id": "cm-8",
+          "uuid": "ea94f56e-086d-5173-af3a-1bcc42cd58ba"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "339cbf23-ebaf-59e4-9800-bd69a2ed658f",
+              "description": "Control cp-2 (Contingency Plan) is satisfied by the CCCS Medium Cloud PBMM Baseline (ITSP.50.103 / ITSG-33 Annex 4A Profile 1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "e6ed8876-7722-5156-b5f7-5b84d5376a17"
+            }
+          ],
+          "control-id": "cp-2",
+          "uuid": "890221d9-b2a2-5577-9aac-5dccbcf8c26d"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "339cbf23-ebaf-59e4-9800-bd69a2ed658f",
+              "description": "Control cp-9 (Information System Backup) is satisfied by the CCCS Medium Cloud PBMM Baseline (ITSP.50.103 / ITSG-33 Annex 4A Profile 1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "4d9b8c14-e326-5e24-a36c-28f1be5fe9fb"
+            }
+          ],
+          "control-id": "cp-9",
+          "uuid": "342e0a03-d7a1-5b2f-ab14-760298b75d23"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "339cbf23-ebaf-59e4-9800-bd69a2ed658f",
+              "description": "Control ia-2 (Identification and Authentication (Organizational Users)) is satisfied by the CCCS Medium Cloud PBMM Baseline (ITSP.50.103 / ITSG-33 Annex 4A Profile 1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "92537f7e-ee8e-5cec-b737-247f9995b040"
+            }
+          ],
+          "control-id": "ia-2",
+          "uuid": "b19d26e9-8198-5073-ba84-a3d44f1dbab6"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "339cbf23-ebaf-59e4-9800-bd69a2ed658f",
+              "description": "Control ia-5 (Authenticator Management) is satisfied by the CCCS Medium Cloud PBMM Baseline (ITSP.50.103 / ITSG-33 Annex 4A Profile 1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "fc8da584-c482-5043-b17f-8fe085034c21"
+            }
+          ],
+          "control-id": "ia-5",
+          "uuid": "26f86ccd-6b6a-5f68-bd81-5fd6a32140f7"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "339cbf23-ebaf-59e4-9800-bd69a2ed658f",
+              "description": "Control ir-4 (Incident Handling) is satisfied by the CCCS Medium Cloud PBMM Baseline (ITSP.50.103 / ITSG-33 Annex 4A Profile 1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "14245ebe-0b08-5e44-82d7-44087aec0124"
+            }
+          ],
+          "control-id": "ir-4",
+          "uuid": "274205f9-d180-5a6c-8a4d-80af46bf0721"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "339cbf23-ebaf-59e4-9800-bd69a2ed658f",
+              "description": "Control ir-6 (Incident Reporting) is satisfied by the CCCS Medium Cloud PBMM Baseline (ITSP.50.103 / ITSG-33 Annex 4A Profile 1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "84bfc92f-3a33-5496-9d23-a22951e9291b"
+            }
+          ],
+          "control-id": "ir-6",
+          "uuid": "dcb09677-4255-5ffb-9d9d-35065ca40e76"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "339cbf23-ebaf-59e4-9800-bd69a2ed658f",
+              "description": "Control mp-2 (Media Access) is satisfied by the CCCS Medium Cloud PBMM Baseline (ITSP.50.103 / ITSG-33 Annex 4A Profile 1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "62affcc6-edfc-5baa-a670-0e1c40af2355"
+            }
+          ],
+          "control-id": "mp-2",
+          "uuid": "16aee43f-20a6-5119-99ae-dfebb91fb2ef"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "339cbf23-ebaf-59e4-9800-bd69a2ed658f",
+              "description": "Control mp-6 (Media Sanitization) is satisfied by the CCCS Medium Cloud PBMM Baseline (ITSP.50.103 / ITSG-33 Annex 4A Profile 1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "c4fdabe0-11cf-54a9-bbb3-431a934eced6"
+            }
+          ],
+          "control-id": "mp-6",
+          "uuid": "fb3f263e-e9a7-5967-985a-6f9c57ad49ee"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "339cbf23-ebaf-59e4-9800-bd69a2ed658f",
+              "description": "Control pe-2 (Physical Access Authorizations) is satisfied by the CCCS Medium Cloud PBMM Baseline (ITSP.50.103 / ITSG-33 Annex 4A Profile 1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "330d3726-9984-5f8c-ade7-1e935eead05d"
+            }
+          ],
+          "control-id": "pe-2",
+          "uuid": "f55e04c4-415b-5c01-99df-88b773e78ee1"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "339cbf23-ebaf-59e4-9800-bd69a2ed658f",
+              "description": "Control pe-3 (Physical Access Control) is satisfied by the CCCS Medium Cloud PBMM Baseline (ITSP.50.103 / ITSG-33 Annex 4A Profile 1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "4f61e164-f27a-5ded-81fb-764103b01985"
+            }
+          ],
+          "control-id": "pe-3",
+          "uuid": "05d837fb-7241-5811-b12a-1c09c1ef6c23"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "339cbf23-ebaf-59e4-9800-bd69a2ed658f",
+              "description": "Control pl-2 (System Security Plan) is satisfied by the CCCS Medium Cloud PBMM Baseline (ITSP.50.103 / ITSG-33 Annex 4A Profile 1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "6552f131-12be-5a51-bc5e-171cda0332af"
+            }
+          ],
+          "control-id": "pl-2",
+          "uuid": "3e02f508-f1f5-5236-9e09-65a9d088ddf5"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "339cbf23-ebaf-59e4-9800-bd69a2ed658f",
+              "description": "Control pm-1 (Information Security Program Plan) is satisfied by the CCCS Medium Cloud PBMM Baseline (ITSP.50.103 / ITSG-33 Annex 4A Profile 1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "75e89838-91e8-53da-93a0-0fa2b97ad887"
+            }
+          ],
+          "control-id": "pm-1",
+          "uuid": "c7dced70-48ef-567f-9cad-e16988177d1b"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "339cbf23-ebaf-59e4-9800-bd69a2ed658f",
+              "description": "Control ps-2 (Position Risk Designation) is satisfied by the CCCS Medium Cloud PBMM Baseline (ITSP.50.103 / ITSG-33 Annex 4A Profile 1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "65e86e4e-50a6-538b-b1e6-9a55260563a2"
+            }
+          ],
+          "control-id": "ps-2",
+          "uuid": "a0de495b-9213-5fc4-ba60-7a22d4022fef"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "339cbf23-ebaf-59e4-9800-bd69a2ed658f",
+              "description": "Control ps-3 (Personnel Screening) is satisfied by the CCCS Medium Cloud PBMM Baseline (ITSP.50.103 / ITSG-33 Annex 4A Profile 1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "ebac8c51-82b5-5838-bec9-b19a3323058a"
+            }
+          ],
+          "control-id": "ps-3",
+          "uuid": "387058a2-a5f2-5281-96c2-f3f71215005b"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "339cbf23-ebaf-59e4-9800-bd69a2ed658f",
+              "description": "Control ra-3 (Risk Assessment) is satisfied by the CCCS Medium Cloud PBMM Baseline (ITSP.50.103 / ITSG-33 Annex 4A Profile 1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "94b0caf8-6283-5774-8244-e2ba40c3ee15"
+            }
+          ],
+          "control-id": "ra-3",
+          "uuid": "eb9d14f6-9db4-5859-b03f-389ef10fec93"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "339cbf23-ebaf-59e4-9800-bd69a2ed658f",
+              "description": "Control ra-5 (Vulnerability Scanning) is satisfied by the CCCS Medium Cloud PBMM Baseline (ITSP.50.103 / ITSG-33 Annex 4A Profile 1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "60575657-c864-510b-a7ba-9edcd3bcaa38"
+            }
+          ],
+          "control-id": "ra-5",
+          "uuid": "e606a77f-6c02-5673-8cdf-0f1a50f81437"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "339cbf23-ebaf-59e4-9800-bd69a2ed658f",
+              "description": "Control sa-4 (Acquisition Process) is satisfied by the CCCS Medium Cloud PBMM Baseline (ITSP.50.103 / ITSG-33 Annex 4A Profile 1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "2946645b-4234-59cf-b68a-7b8b84f195fb"
+            }
+          ],
+          "control-id": "sa-4",
+          "uuid": "f9934e86-029d-5c97-9caf-254a861efae2"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "339cbf23-ebaf-59e4-9800-bd69a2ed658f",
+              "description": "Control sa-9 (External Information System Services) is satisfied by the CCCS Medium Cloud PBMM Baseline (ITSP.50.103 / ITSG-33 Annex 4A Profile 1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "bfbd8677-2f2b-536b-8691-705c3220d0d0"
+            }
+          ],
+          "control-id": "sa-9",
+          "uuid": "be04cb08-91f2-5c9d-a6cf-6f34579e4cf2"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "339cbf23-ebaf-59e4-9800-bd69a2ed658f",
+              "description": "Control sc-13 (Cryptographic Protection) is satisfied by the CCCS Medium Cloud PBMM Baseline (ITSP.50.103 / ITSG-33 Annex 4A Profile 1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "27fd57ef-dd19-5b19-8e58-1d796af4199c"
+            }
+          ],
+          "control-id": "sc-13",
+          "uuid": "9563c610-8730-5f3c-907c-0aa1a858d4d6"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "339cbf23-ebaf-59e4-9800-bd69a2ed658f",
+              "description": "Control sc-28 (Protection of Information at Rest) is satisfied by the CCCS Medium Cloud PBMM Baseline (ITSP.50.103 / ITSG-33 Annex 4A Profile 1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "7e44e567-bac3-57c7-929a-51b2c1d3c297"
+            }
+          ],
+          "control-id": "sc-28",
+          "uuid": "1f5ecc59-e01b-5fb3-be57-06314d6ad456"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "339cbf23-ebaf-59e4-9800-bd69a2ed658f",
+              "description": "Control sc-7 (Boundary Protection) is satisfied by the CCCS Medium Cloud PBMM Baseline (ITSP.50.103 / ITSG-33 Annex 4A Profile 1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "e8855770-321c-55fb-9c0a-13ee9ada54fb"
+            }
+          ],
+          "control-id": "sc-7",
+          "uuid": "e623327a-e5a2-5147-af2d-8b1430719331"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "339cbf23-ebaf-59e4-9800-bd69a2ed658f",
+              "description": "Control sc-8 (Transmission Confidentiality and Integrity) is satisfied by the CCCS Medium Cloud PBMM Baseline (ITSP.50.103 / ITSG-33 Annex 4A Profile 1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "69a138cc-6813-5f3a-b365-47198ee31ad8"
+            }
+          ],
+          "control-id": "sc-8",
+          "uuid": "cc62179c-527c-5055-af3e-8377d6f5523a"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "339cbf23-ebaf-59e4-9800-bd69a2ed658f",
+              "description": "Control si-2 (Flaw Remediation) is satisfied by the CCCS Medium Cloud PBMM Baseline (ITSP.50.103 / ITSG-33 Annex 4A Profile 1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "767553c4-344e-5ead-8d22-8e84f9223f04"
+            }
+          ],
+          "control-id": "si-2",
+          "uuid": "67d48039-2702-5b46-b7d4-17d3c0a59f71"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "339cbf23-ebaf-59e4-9800-bd69a2ed658f",
+              "description": "Control si-3 (Malicious Code Protection) is satisfied by the CCCS Medium Cloud PBMM Baseline (ITSP.50.103 / ITSG-33 Annex 4A Profile 1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "7ec1d550-8922-57dd-9ae6-48c348ef268a"
+            }
+          ],
+          "control-id": "si-3",
+          "uuid": "14bf5bf2-331d-5b2e-8088-69e28c519f7c"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "339cbf23-ebaf-59e4-9800-bd69a2ed658f",
+              "description": "Control si-4 (Information System Monitoring) is satisfied by the CCCS Medium Cloud PBMM Baseline (ITSP.50.103 / ITSG-33 Annex 4A Profile 1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "8bb1424b-2af9-50c7-b0ec-f5bfca53dbef"
+            }
+          ],
+          "control-id": "si-4",
+          "uuid": "9ff09173-ce40-5a12-8c37-e087467915d9"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "339cbf23-ebaf-59e4-9800-bd69a2ed658f",
+              "description": "Control sr-1 (Supply Chain Risk Management Policy) is satisfied by the CCCS Medium Cloud PBMM Baseline (ITSP.50.103 / ITSG-33 Annex 4A Profile 1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "459ae13a-b84d-5139-b56b-59ecb862b061"
+            }
+          ],
+          "control-id": "sr-1",
+          "uuid": "b60b6177-efb6-5159-a94e-0fab4c3ada87"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "339cbf23-ebaf-59e4-9800-bd69a2ed658f",
+              "description": "Control sr-2 (Supply Chain Risk Assessment) is satisfied by the CCCS Medium Cloud PBMM Baseline (ITSP.50.103 / ITSG-33 Annex 4A Profile 1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "541501f4-b129-553b-88c2-3ef18cd8bc7f"
+            }
+          ],
+          "control-id": "sr-2",
+          "uuid": "e9103850-d23c-57fa-8ab8-0744a5c796cd"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "339cbf23-ebaf-59e4-9800-bd69a2ed658f",
+              "description": "Control sr-3 (Supply Chain Controls and Processes) is satisfied by the CCCS Medium Cloud PBMM Baseline (ITSP.50.103 / ITSG-33 Annex 4A Profile 1) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "a324cab6-5a07-5238-8bb7-73dbf8f864ef"
+            }
+          ],
+          "control-id": "sr-3",
+          "uuid": "db019bdd-dd1a-5da2-bdf3-19745143a68b"
+        }
+      ]
+    },
+    "import-profile": {
+      "href": "./profile.json"
+    },
+    "metadata": {
+      "last-modified": "2026-10-24T21:09:31Z",
+      "oscal-version": "1.2.3",
+      "title": "CCCS Medium Cloud PBMM Baseline (ITSP.50.103 / ITSG-33 Annex 4A Profile 1) System Security Plan Template",
+      "version": "ITSP.50.103"
+    },
+    "system-characteristics": {
+      "authorization-boundary": {
+        "description": "The authorization boundary encompasses all computing resources, cloud tenancies, and network zones supporting CCCS Medium Cloud PBMM Baseline (ITSP.50.103 / ITSG-33 Annex 4A Profile 1) operations."
+      },
+      "description": "Reference system architecture implementing security controls for CCCS Medium Cloud PBMM Baseline (ITSP.50.103 / ITSG-33 Annex 4A Profile 1).",
+      "security-impact-level": {
+        "security-objective-availability": "moderate",
+        "security-objective-confidentiality": "moderate",
+        "security-objective-integrity": "high"
+      },
+      "security-sensitivity-level": "moderate",
+      "status": {
+        "state": "operational"
+      },
+      "system-ids": [
+        {
+          "id": "cccs-medium-cloud-pbmm-system"
+        }
+      ],
+      "system-information": {
+        "information-types": [
+          {
+            "description": "Operational and compliance data processed within the ca jurisdiction boundary.",
+            "title": "Sovereign Program Data"
+          }
+        ]
+      },
+      "system-name": "CCCS Medium Cloud PBMM Baseline (ITSP.50.103 / ITSG-33 Annex 4A Profile 1) Reference System",
+      "system-name-short": "cccs-medium-cloud-pbmm"
+    },
+    "system-implementation": {
+      "components": [
+        {
+          "description": "Central execution platform providing control implementations for CCCS Medium Cloud PBMM Baseline (ITSP.50.103 / ITSG-33 Annex 4A Profile 1).",
+          "status": {
+            "state": "operational"
+          },
+          "title": "CCCS Medium Cloud PBMM Baseline (ITSP.50.103 / ITSG-33 Annex 4A Profile 1) Core System Component",
+          "type": "software",
+          "uuid": "339cbf23-ebaf-59e4-9800-bd69a2ed658f"
+        }
+      ],
+      "users": [
+        {
+          "role-ids": [
+            "sec-admin"
+          ],
+          "title": "Security Administrator",
+          "uuid": "c6bdeacf-06af-51b0-9e5f-4a82b32e9465"
+        }
+      ]
+    },
+    "uuid": "8a419a70-adf7-53b4-b7f6-26409506d21a"
+  }
+}

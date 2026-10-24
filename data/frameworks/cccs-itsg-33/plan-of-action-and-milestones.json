@@ -1,0 +1,21 @@
+{
+  "plan-of-action-and-milestones": {
+    "import-ssp": {
+      "href": "./system-security-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-10-24T21:09:31Z",
+      "oscal-version": "1.2.3",
+      "title": "CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3) Plan of Action and Milestones Template",
+      "version": "1.2.3"
+    },
+    "poam-items": [
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+        "title": "Compliance Roadmap and Parameter Tailoring for CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3)",
+        "uuid": "9a4f5fad-99ab-5e3b-959d-1ed855b2d9f5"
+      }
+    ],
+    "uuid": "de2dd69f-161b-577b-85b8-90fa50c6d139"
+  }
+}

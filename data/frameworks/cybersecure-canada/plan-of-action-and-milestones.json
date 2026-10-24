@@ -1,0 +1,21 @@
+{
+  "plan-of-action-and-milestones": {
+    "import-ssp": {
+      "href": "./system-security-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-10-24T21:09:31Z",
+      "oscal-version": "1.2.3",
+      "title": "CyberSecure Canada (CAN/DGSI 104) Plan of Action and Milestones Template",
+      "version": "CAN/DGSI 104"
+    },
+    "poam-items": [
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for CyberSecure Canada (CAN/DGSI 104).",
+        "title": "Compliance Roadmap and Parameter Tailoring for CyberSecure Canada (CAN/DGSI 104)",
+        "uuid": "0da3025d-8c76-577d-add6-ff039e8d16c1"
+      }
+    ],
+    "uuid": "4f705ace-0dca-5682-981e-330200ce9319"
+  }
+}

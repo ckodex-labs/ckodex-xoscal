@@ -1,0 +1,144 @@
+{
+  "assessment-plan": {
+    "import-ssp": {
+      "href": "./system-security-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-10-24T21:09:31Z",
+      "oscal-version": "1.2.3",
+      "title": "CCCS ITSP.10.033 Security and Privacy Controls and Assurance Activities Catalogue Security Assessment Plan Template",
+      "version": "1.0 (2026-03-31)"
+    },
+    "reviewed-controls": {
+      "control-selections": [
+        {
+          "description": "All controls in CCCS ITSP.10.033 Security and Privacy Controls and Assurance Activities Catalogue",
+          "include-all": {}
+        }
+      ]
+    },
+    "tasks": [
+      {
+        "description": "Verify and examine implementation of 151 controls in the Access Control (Contrôle d'accès) family for CCCS ITSP.10.033 Security and Privacy Controls and Assurance Activities Catalogue.",
+        "title": "Assess Family AC (Access Control (Contrôle d'accès))",
+        "type": "examination",
+        "uuid": "86c17bf9-caab-5d10-8f30-bb0159de123e"
+      },
+      {
+        "description": "Verify and examine implementation of 17 controls in the Awareness and Training (Sensibilisation et formation) family for CCCS ITSP.10.033 Security and Privacy Controls and Assurance Activities Catalogue.",
+        "title": "Assess Family AT (Awareness and Training (Sensibilisation et formation))",
+        "type": "examination",
+        "uuid": "b9ae2fa4-f693-5a93-9a7c-e2f613b070ef"
+      },
+      {
+        "description": "Verify and examine implementation of 69 controls in the Audit and Accountability (Vérification et responsabilité) family for CCCS ITSP.10.033 Security and Privacy Controls and Assurance Activities Catalogue.",
+        "title": "Assess Family AU (Audit and Accountability (Vérification et responsabilité))",
+        "type": "examination",
+        "uuid": "cdddfa95-30a0-5bdc-83b1-8fd2e5b1e973"
+      },
+      {
+        "description": "Verify and examine implementation of 32 controls in the Assessment, Authorization, and Monitoring (Évaluation, autorisation et surveillance) family for CCCS ITSP.10.033 Security and Privacy Controls and Assurance Activities Catalogue.",
+        "title": "Assess Family CA (Assessment, Authorization, and Monitoring (Évaluation, autorisation et surveillance))",
+        "type": "examination",
+        "uuid": "bf9007b1-64c7-5347-b464-6e00040abc90"
+      },
+      {
+        "description": "Verify and examine implementation of 66 controls in the Configuration Management (Gestion de la configuration) family for CCCS ITSP.10.033 Security and Privacy Controls and Assurance Activities Catalogue.",
+        "title": "Assess Family CM (Configuration Management (Gestion de la configuration))",
+        "type": "examination",
+        "uuid": "518ca9a1-4d45-546a-952a-d19d57c4bb0b"
+      },
+      {
+        "description": "Verify and examine implementation of 56 controls in the Contingency Planning (Planification de la continuité des opérations) family for CCCS ITSP.10.033 Security and Privacy Controls and Assurance Activities Catalogue.",
+        "title": "Assess Family CP (Contingency Planning (Planification de la continuité des opérations))",
+        "type": "examination",
+        "uuid": "bd88d05a-f8ec-554e-9729-9576b21b9b60"
+      },
+      {
+        "description": "Verify and examine implementation of 78 controls in the Identification and Authentication (Identification et authentification) family for CCCS ITSP.10.033 Security and Privacy Controls and Assurance Activities Catalogue.",
+        "title": "Assess Family IA (Identification and Authentication (Identification et authentification))",
+        "type": "examination",
+        "uuid": "8b62fe02-cbf8-5520-841f-d4613a500e7c"
+      },
+      {
+        "description": "Verify and examine implementation of 42 controls in the Incident Response (Intervention en cas d'incident) family for CCCS ITSP.10.033 Security and Privacy Controls and Assurance Activities Catalogue.",
+        "title": "Assess Family IR (Incident Response (Intervention en cas d'incident))",
+        "type": "examination",
+        "uuid": "ee023435-6f7d-5b2a-ad62-4fe588c8a1e4"
+      },
+      {
+        "description": "Verify and examine implementation of 30 controls in the Maintenance (Maintenance) family for CCCS ITSP.10.033 Security and Privacy Controls and Assurance Activities Catalogue.",
+        "title": "Assess Family MA (Maintenance (Maintenance))",
+        "type": "examination",
+        "uuid": "d19e21b5-b1f7-5ad9-b06c-6cba180c7bff"
+      },
+      {
+        "description": "Verify and examine implementation of 30 controls in the Media Protection (Protection des supports) family for CCCS ITSP.10.033 Security and Privacy Controls and Assurance Activities Catalogue.",
+        "title": "Assess Family MP (Media Protection (Protection des supports))",
+        "type": "examination",
+        "uuid": "1f183268-07ff-545e-9a37-8708ae7a8b67"
+      },
+      {
+        "description": "Verify and examine implementation of 66 controls in the Physical and Environmental Protection (Protection physique et environnementale) family for CCCS ITSP.10.033 Security and Privacy Controls and Assurance Activities Catalogue.",
+        "title": "Assess Family PE (Physical and Environmental Protection (Protection physique et environnementale))",
+        "type": "examination",
+        "uuid": "e76dc99a-413e-5463-9dc2-b5fedbfa88fe"
+      },
+      {
+        "description": "Verify and examine implementation of 17 controls in the Planning (Planification) family for CCCS ITSP.10.033 Security and Privacy Controls and Assurance Activities Catalogue.",
+        "title": "Assess Family PL (Planning (Planification))",
+        "type": "examination",
+        "uuid": "c34330e5-f60c-5724-b41b-61f0c69fc46b"
+      },
+      {
+        "description": "Verify and examine implementation of 37 controls in the Program Management (Gestion des programmes) family for CCCS ITSP.10.033 Security and Privacy Controls and Assurance Activities Catalogue.",
+        "title": "Assess Family PM (Program Management (Gestion des programmes))",
+        "type": "examination",
+        "uuid": "0868cd58-b0b1-5f1c-b823-bff25d0d6736"
+      },
+      {
+        "description": "Verify and examine implementation of 20 controls in the Personnel Security (Sécurité du personnel) family for CCCS ITSP.10.033 Security and Privacy Controls and Assurance Activities Catalogue.",
+        "title": "Assess Family PS (Personnel Security (Sécurité du personnel))",
+        "type": "examination",
+        "uuid": "e2866135-a0b0-5da6-987d-ca8c7b4ffe41"
+      },
+      {
+        "description": "Verify and examine implementation of 23 controls in the Personal Information Handling and Transparency (Traitement des renseignements personnels et transparence) family for CCCS ITSP.10.033 Security and Privacy Controls and Assurance Activities Catalogue.",
+        "title": "Assess Family PT (Personal Information Handling and Transparency (Traitement des renseignements personnels et transparence))",
+        "type": "examination",
+        "uuid": "085d7193-3351-5a2a-aab1-b6d1f6454a63"
+      },
+      {
+        "description": "Verify and examine implementation of 27 controls in the Risk Assessment (Évaluation des risques) family for CCCS ITSP.10.033 Security and Privacy Controls and Assurance Activities Catalogue.",
+        "title": "Assess Family RA (Risk Assessment (Évaluation des risques))",
+        "type": "examination",
+        "uuid": "69e4416e-4662-5901-b2ac-e5072c3797e5"
+      },
+      {
+        "description": "Verify and examine implementation of 158 controls in the System and Services Acquisition (Acquisition de systèmes et de services) family for CCCS ITSP.10.033 Security and Privacy Controls and Assurance Activities Catalogue.",
+        "title": "Assess Family SA (System and Services Acquisition (Acquisition de systèmes et de services))",
+        "type": "examination",
+        "uuid": "e74c806a-c6db-5f0d-ab56-2665833cefa6"
+      },
+      {
+        "description": "Verify and examine implementation of 176 controls in the System and Communications Protection (Protection des systèmes et des communications) family for CCCS ITSP.10.033 Security and Privacy Controls and Assurance Activities Catalogue.",
+        "title": "Assess Family SC (System and Communications Protection (Protection des systèmes et des communications))",
+        "type": "examination",
+        "uuid": "5c3537df-cf02-5b41-9417-d575efd0a1f6"
+      },
+      {
+        "description": "Verify and examine implementation of 126 controls in the System and Information Integrity (Intégrité des systèmes et de l'information) family for CCCS ITSP.10.033 Security and Privacy Controls and Assurance Activities Catalogue.",
+        "title": "Assess Family SI (System and Information Integrity (Intégrité des systèmes et de l'information))",
+        "type": "examination",
+        "uuid": "3822e28e-4767-5138-9126-50eadac2ce74"
+      },
+      {
+        "description": "Verify and examine implementation of 27 controls in the Supply Chain Risk Management (Gestion des risques liés à la chaîne d'approvisionnement) family for CCCS ITSP.10.033 Security and Privacy Controls and Assurance Activities Catalogue.",
+        "title": "Assess Family SR (Supply Chain Risk Management (Gestion des risques liés à la chaîne d'approvisionnement))",
+        "type": "examination",
+        "uuid": "6d4b69b5-c170-5604-9651-c60efdcee053"
+      }
+    ],
+    "uuid": "ce380807-f53f-5db9-b48c-02d938ec6b6e"
+  }
+}

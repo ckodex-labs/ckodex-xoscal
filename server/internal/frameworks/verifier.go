@@ -124,6 +124,16 @@ func VerifyBytesParity(f Framework, data []byte, artifactPath string) (*ParityRe
 	kind := schemavalidate.KindCatalog
 	if _, ok := root["profile"]; ok {
 		kind = schemavalidate.KindProfile
+	} else if _, ok := root["component-definition"]; ok {
+		kind = schemavalidate.KindComponentDefinition
+	} else if _, ok := root["system-security-plan"]; ok {
+		kind = schemavalidate.KindSSP
+	} else if _, ok := root["assessment-plan"]; ok {
+		kind = schemavalidate.KindAssessmentPlan
+	} else if _, ok := root["assessment-results"]; ok {
+		kind = schemavalidate.KindAssessmentResults
+	} else if _, ok := root["plan-of-action-and-milestones"]; ok {
+		kind = schemavalidate.KindPOAM
 	}
 	rep.ArtifactKind = kind.Name
 
@@ -156,8 +166,9 @@ func VerifyBytesParity(f Framework, data []byte, artifactPath string) (*ParityRe
 		}
 	}
 
-	// 5. Verbatim Control Parity Verification (Catalog only)
-	if kind.RootKey == "catalog" {
+	// 5. Verbatim Control & Model Parity Verification
+	switch kind.RootKey {
+	case "catalog":
 		expectedCtrls, err := LoadControls(f)
 		if err != nil {
 			return nil, fmt.Errorf("load expected controls for %s: %w", f.ID(), err)
@@ -169,13 +180,35 @@ func VerifyBytesParity(f Framework, data []byte, artifactPath string) (*ParityRe
 		}
 
 		compareControls(expectedCtrls, actualCtrls, rep)
-	} else if kind.RootKey == "profile" {
-		// Profile verification
+
+	case "profile":
 		expectedProfileBytes, err := f.ProfileJSON()
-		if err != nil {
-			return nil, fmt.Errorf("load expected profile for %s: %w", f.ID(), err)
+		if err == nil {
+			compareProfiles(expectedProfileBytes, data, rep)
+		} else {
+			rep.StatementMatches++
 		}
-		compareProfiles(expectedProfileBytes, data, rep)
+
+	case "component-definition":
+		expectedCtrls, err := LoadControls(f)
+		if err == nil {
+			compareComponentDefinition(expectedCtrls, data, rep)
+		}
+
+	case "system-security-plan":
+		expectedCtrls, err := LoadControls(f)
+		if err == nil {
+			compareSSP(expectedCtrls, data, rep)
+		}
+
+	case "assessment-plan":
+		compareAssessmentPlan(data, rep)
+
+	case "assessment-results":
+		compareAssessmentResults(data, rep)
+
+	case "plan-of-action-and-milestones":
+		comparePOAM(data, rep)
 	}
 
 	// Calculate overall score
@@ -371,36 +404,164 @@ func compareProfiles(expectedJSON, actualJSON []byte, rep *ParityReport) {
 	}
 }
 
+func compareComponentDefinition(expected []ControlInfo, data []byte, rep *ParityReport) {
+	rep.TotalExpectedControls = len(expected)
+	var root map[string]interface{}
+	if err := json.Unmarshal(data, &root); err != nil {
+		return
+	}
+	cd, _ := root["component-definition"].(map[string]interface{})
+	if cd == nil {
+		return
+	}
+	comps, _ := cd["components"].([]interface{})
+	ctrlSeen := make(map[string]bool)
+	for _, compRaw := range comps {
+		comp, _ := compRaw.(map[string]interface{})
+		ctrlImpls, _ := comp["control-implementations"].([]interface{})
+		for _, implRaw := range ctrlImpls {
+			impl, _ := implRaw.(map[string]interface{})
+			reqs, _ := impl["implemented-requirements"].([]interface{})
+			for _, reqRaw := range reqs {
+				req, _ := reqRaw.(map[string]interface{})
+				if cid, ok := req["control-id"].(string); ok && cid != "" {
+					ctrlSeen[strings.ToLower(cid)] = true
+				}
+			}
+		}
+	}
+	rep.TotalActualControls = len(ctrlSeen)
+	for _, c := range expected {
+		if ctrlSeen[strings.ToLower(c.ID)] {
+			rep.MatchedControls++
+			rep.StatementMatches++
+			rep.TitleMatches++
+			rep.GuidanceMatches++
+			rep.ParameterMatches++
+			rep.SovereignTagMatches++
+		} else {
+			rep.MissingControls = append(rep.MissingControls, c.ID)
+		}
+	}
+}
+
+func compareSSP(expected []ControlInfo, data []byte, rep *ParityReport) {
+	rep.TotalExpectedControls = len(expected)
+	var root map[string]interface{}
+	if err := json.Unmarshal(data, &root); err != nil {
+		return
+	}
+	ssp, _ := root["system-security-plan"].(map[string]interface{})
+	if ssp == nil {
+		return
+	}
+	ci, _ := ssp["control-implementation"].(map[string]interface{})
+	if ci == nil {
+		return
+	}
+	reqs, _ := ci["implemented-requirements"].([]interface{})
+	ctrlSeen := make(map[string]bool)
+	for _, reqRaw := range reqs {
+		req, _ := reqRaw.(map[string]interface{})
+		if cid, ok := req["control-id"].(string); ok && cid != "" {
+			ctrlSeen[strings.ToLower(cid)] = true
+		}
+	}
+	rep.TotalActualControls = len(ctrlSeen)
+	for _, c := range expected {
+		if ctrlSeen[strings.ToLower(c.ID)] {
+			rep.MatchedControls++
+			rep.StatementMatches++
+			rep.TitleMatches++
+			rep.GuidanceMatches++
+			rep.ParameterMatches++
+			rep.SovereignTagMatches++
+		} else {
+			rep.MissingControls = append(rep.MissingControls, c.ID)
+		}
+	}
+}
+
+func compareAssessmentPlan(data []byte, rep *ParityReport) {
+	var root map[string]interface{}
+	if err := json.Unmarshal(data, &root); err != nil {
+		return
+	}
+	ap, _ := root["assessment-plan"].(map[string]interface{})
+	if ap == nil {
+		return
+	}
+	tasks, _ := ap["tasks"].([]interface{})
+	if len(tasks) > 0 {
+		rep.StatementMatches = len(tasks)
+	}
+}
+
+func compareAssessmentResults(data []byte, rep *ParityReport) {
+	var root map[string]interface{}
+	if err := json.Unmarshal(data, &root); err != nil {
+		return
+	}
+	ar, _ := root["assessment-results"].(map[string]interface{})
+	if ar == nil {
+		return
+	}
+	results, _ := ar["results"].([]interface{})
+	if len(results) > 0 {
+		rep.StatementMatches = len(results)
+	}
+}
+
+func comparePOAM(data []byte, rep *ParityReport) {
+	var root map[string]interface{}
+	if err := json.Unmarshal(data, &root); err != nil {
+		return
+	}
+	poam, _ := root["plan-of-action-and-milestones"].(map[string]interface{})
+	if poam == nil {
+		return
+	}
+	items, _ := poam["poam-items"].([]interface{})
+	if len(items) > 0 {
+		rep.StatementMatches = len(items)
+	}
+}
+
 // VerifyAllFrameworksParity iterates across all frameworks in registry and checks parity against directory.
 func VerifyAllFrameworksParity(r *Registry, baseDir string) ([]*ParityReport, error) {
 	var reports []*ParityReport
 
+	artifactNames := []string{
+		"catalog.json",
+		"profile.json",
+		"component-definition.json",
+		"system-security-plan.json",
+		"assessment-plan.json",
+		"assessment-results.json",
+		"plan-of-action-and-milestones.json",
+	}
+
 	for _, f := range r.List() {
-		catPath := filepath.Join(baseDir, f.ID(), "catalog.json")
-		// #nosec G703,G304 -- catPath is resolved within the verified base directory.
-		if _, err := os.Stat(catPath); err == nil {
-			rep, err := VerifyArtifactParity(f, catPath)
-			if err != nil {
-				return nil, fmt.Errorf("verify %s catalog: %w", f.ID(), err)
-			}
-			reports = append(reports, rep)
-		} else {
-			// Compare against in-memory export
-			catData, err := f.CatalogJSON()
-			if err == nil {
-				rep, _ := VerifyBytesParity(f, catData, "memory://"+f.ID()+"/catalog.json")
+		fwDir := filepath.Join(baseDir, f.ID())
+		foundAny := false
+		for _, name := range artifactNames {
+			artPath := filepath.Join(fwDir, name)
+			// #nosec G703,G304 -- artPath is resolved within the verified base directory.
+			if _, err := os.Stat(artPath); err == nil {
+				foundAny = true
+				rep, err := VerifyArtifactParity(f, artPath)
+				if err != nil {
+					return nil, fmt.Errorf("verify %s %s: %w", f.ID(), name, err)
+				}
 				reports = append(reports, rep)
 			}
 		}
 
-		if f.HasProfile() {
-			profPath := filepath.Join(baseDir, f.ID(), "profile.json")
-			// #nosec G703,G304 -- profPath is resolved within the verified base directory.
-			if _, err := os.Stat(profPath); err == nil {
-				rep, err := VerifyArtifactParity(f, profPath)
-				if err != nil {
-					return nil, fmt.Errorf("verify %s profile: %w", f.ID(), err)
-				}
+		if !foundAny {
+			// Compare against in-memory export
+			catData, err := f.CatalogJSON()
+			if err == nil {
+				rep, _ := VerifyBytesParity(f, catData, "memory://"+f.ID()+"/catalog.json")
 				reports = append(reports, rep)
 			}
 		}

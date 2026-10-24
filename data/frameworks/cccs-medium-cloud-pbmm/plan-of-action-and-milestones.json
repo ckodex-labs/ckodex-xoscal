@@ -1,0 +1,21 @@
+{
+  "plan-of-action-and-milestones": {
+    "import-ssp": {
+      "href": "./system-security-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-10-24T21:09:31Z",
+      "oscal-version": "1.2.3",
+      "title": "CCCS Medium Cloud PBMM Baseline (ITSP.50.103 / ITSG-33 Annex 4A Profile 1) Plan of Action and Milestones Template",
+      "version": "ITSP.50.103"
+    },
+    "poam-items": [
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for CCCS Medium Cloud PBMM Baseline (ITSP.50.103 / ITSG-33 Annex 4A Profile 1).",
+        "title": "Compliance Roadmap and Parameter Tailoring for CCCS Medium Cloud PBMM Baseline (ITSP.50.103 / ITSG-33 Annex 4A Profile 1)",
+        "uuid": "12843dbb-0015-574c-a77f-137cb4b4056d"
+      }
+    ],
+    "uuid": "da33244b-60be-5540-868f-a20fb733f833"
+  }
+}

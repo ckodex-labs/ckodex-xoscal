@@ -1,0 +1,132 @@
+{
+  "assessment-plan": {
+    "import-ssp": {
+      "href": "./system-security-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-10-24T21:09:31Z",
+      "oscal-version": "1.2.3",
+      "title": "CCCS Medium Cloud PBMM Baseline (ITSP.50.103 / ITSG-33 Annex 4A Profile 1) Security Assessment Plan Template",
+      "version": "ITSP.50.103"
+    },
+    "reviewed-controls": {
+      "control-selections": [
+        {
+          "description": "All controls in CCCS Medium Cloud PBMM Baseline (ITSP.50.103 / ITSG-33 Annex 4A Profile 1)",
+          "include-all": {}
+        }
+      ]
+    },
+    "tasks": [
+      {
+        "description": "Verify and examine implementation of 4 controls in the Access Control (Controle d'acces) family for CCCS Medium Cloud PBMM Baseline (ITSP.50.103 / ITSG-33 Annex 4A Profile 1).",
+        "title": "Assess Family AC (Access Control (Controle d'acces))",
+        "type": "examination",
+        "uuid": "347e443f-13da-523a-b821-df7c208ad233"
+      },
+      {
+        "description": "Verify and examine implementation of 2 controls in the Awareness and Training (Sensibilisation et formation) family for CCCS Medium Cloud PBMM Baseline (ITSP.50.103 / ITSG-33 Annex 4A Profile 1).",
+        "title": "Assess Family AT (Awareness and Training (Sensibilisation et formation))",
+        "type": "examination",
+        "uuid": "59f35e76-8168-5f31-b1c6-b685aea9840f"
+      },
+      {
+        "description": "Verify and examine implementation of 3 controls in the Audit and Accountability (Verification et responsabilite) family for CCCS Medium Cloud PBMM Baseline (ITSP.50.103 / ITSG-33 Annex 4A Profile 1).",
+        "title": "Assess Family AU (Audit and Accountability (Verification et responsabilite))",
+        "type": "examination",
+        "uuid": "23c9feb0-cb84-531d-87cd-d3fe45cf14dd"
+      },
+      {
+        "description": "Verify and examine implementation of 3 controls in the Security Assessment, Authorization, and Monitoring (Evaluation, autorisation et surveillance) family for CCCS Medium Cloud PBMM Baseline (ITSP.50.103 / ITSG-33 Annex 4A Profile 1).",
+        "title": "Assess Family CA (Security Assessment, Authorization, and Monitoring (Evaluation, autorisation et surveillance))",
+        "type": "examination",
+        "uuid": "7a6b4950-5040-57af-8589-4d930c75d7cc"
+      },
+      {
+        "description": "Verify and examine implementation of 2 controls in the Configuration Management (Gestion des configurations) family for CCCS Medium Cloud PBMM Baseline (ITSP.50.103 / ITSG-33 Annex 4A Profile 1).",
+        "title": "Assess Family CM (Configuration Management (Gestion des configurations))",
+        "type": "examination",
+        "uuid": "ce4f4b61-c5de-5e25-b10b-4395ef423101"
+      },
+      {
+        "description": "Verify and examine implementation of 2 controls in the Contingency Planning (Planification de la continuite) family for CCCS Medium Cloud PBMM Baseline (ITSP.50.103 / ITSG-33 Annex 4A Profile 1).",
+        "title": "Assess Family CP (Contingency Planning (Planification de la continuite))",
+        "type": "examination",
+        "uuid": "eb68c142-cd04-5914-8053-d794b0b910f2"
+      },
+      {
+        "description": "Verify and examine implementation of 2 controls in the Identification and Authentication (Identification et authentification) family for CCCS Medium Cloud PBMM Baseline (ITSP.50.103 / ITSG-33 Annex 4A Profile 1).",
+        "title": "Assess Family IA (Identification and Authentication (Identification et authentification))",
+        "type": "examination",
+        "uuid": "46231cd9-a109-566d-ab69-85bcb130a8bf"
+      },
+      {
+        "description": "Verify and examine implementation of 2 controls in the Incident Response (Intervention en cas d'incident) family for CCCS Medium Cloud PBMM Baseline (ITSP.50.103 / ITSG-33 Annex 4A Profile 1).",
+        "title": "Assess Family IR (Incident Response (Intervention en cas d'incident))",
+        "type": "examination",
+        "uuid": "57b07002-087a-558b-8b0d-a2968740eb7c"
+      },
+      {
+        "description": "Verify and examine implementation of 2 controls in the Media Protection (Protection des supports) family for CCCS Medium Cloud PBMM Baseline (ITSP.50.103 / ITSG-33 Annex 4A Profile 1).",
+        "title": "Assess Family MP (Media Protection (Protection des supports))",
+        "type": "examination",
+        "uuid": "9d86975a-e052-5695-bfe4-276a1fd883ac"
+      },
+      {
+        "description": "Verify and examine implementation of 2 controls in the Physical and Environmental Protection (Protection physique et environnementale) family for CCCS Medium Cloud PBMM Baseline (ITSP.50.103 / ITSG-33 Annex 4A Profile 1).",
+        "title": "Assess Family PE (Physical and Environmental Protection (Protection physique et environnementale))",
+        "type": "examination",
+        "uuid": "2907ce6e-ebdc-52cc-995d-d517d7530778"
+      },
+      {
+        "description": "Verify and examine implementation of 1 controls in the Planning (Planification de la securite) family for CCCS Medium Cloud PBMM Baseline (ITSP.50.103 / ITSG-33 Annex 4A Profile 1).",
+        "title": "Assess Family PL (Planning (Planification de la securite))",
+        "type": "examination",
+        "uuid": "0f80a358-2ebe-523e-8511-ccb8a01d2124"
+      },
+      {
+        "description": "Verify and examine implementation of 1 controls in the Program Management (Gestion de programme) family for CCCS Medium Cloud PBMM Baseline (ITSP.50.103 / ITSG-33 Annex 4A Profile 1).",
+        "title": "Assess Family PM (Program Management (Gestion de programme))",
+        "type": "examination",
+        "uuid": "9a4ce3f1-109a-5cd3-bf6a-9e39a0559a18"
+      },
+      {
+        "description": "Verify and examine implementation of 2 controls in the Personnel Security (Securite du personnel) family for CCCS Medium Cloud PBMM Baseline (ITSP.50.103 / ITSG-33 Annex 4A Profile 1).",
+        "title": "Assess Family PS (Personnel Security (Securite du personnel))",
+        "type": "examination",
+        "uuid": "77c154c8-6a15-5c97-9299-9bb2a4c12d84"
+      },
+      {
+        "description": "Verify and examine implementation of 2 controls in the Risk Assessment (Evaluation des risques) family for CCCS Medium Cloud PBMM Baseline (ITSP.50.103 / ITSG-33 Annex 4A Profile 1).",
+        "title": "Assess Family RA (Risk Assessment (Evaluation des risques))",
+        "type": "examination",
+        "uuid": "a5c15194-35d8-57a0-bac7-86e201ad0667"
+      },
+      {
+        "description": "Verify and examine implementation of 2 controls in the System and Services Acquisition (Acquisition de systemes et de services) family for CCCS Medium Cloud PBMM Baseline (ITSP.50.103 / ITSG-33 Annex 4A Profile 1).",
+        "title": "Assess Family SA (System and Services Acquisition (Acquisition de systemes et de services))",
+        "type": "examination",
+        "uuid": "642de570-e26c-54c8-b0db-9a369704e630"
+      },
+      {
+        "description": "Verify and examine implementation of 4 controls in the System and Communications Protection (Protection des systemes et des communications) family for CCCS Medium Cloud PBMM Baseline (ITSP.50.103 / ITSG-33 Annex 4A Profile 1).",
+        "title": "Assess Family SC (System and Communications Protection (Protection des systemes et des communications))",
+        "type": "examination",
+        "uuid": "3670d161-aae1-5da0-a9d8-ba2c5aabe9fb"
+      },
+      {
+        "description": "Verify and examine implementation of 3 controls in the System and Information Integrity (Integrite des systemes et de l'information) family for CCCS Medium Cloud PBMM Baseline (ITSP.50.103 / ITSG-33 Annex 4A Profile 1).",
+        "title": "Assess Family SI (System and Information Integrity (Integrite des systemes et de l'information))",
+        "type": "examination",
+        "uuid": "8bb9ac8b-fa73-549c-83e6-c4f31f44000d"
+      },
+      {
+        "description": "Verify and examine implementation of 3 controls in the Supply Chain Risk Management (Gestion des risques lies a la chaine d'approvisionnement) family for CCCS Medium Cloud PBMM Baseline (ITSP.50.103 / ITSG-33 Annex 4A Profile 1).",
+        "title": "Assess Family SR (Supply Chain Risk Management (Gestion des risques lies a la chaine d'approvisionnement))",
+        "type": "examination",
+        "uuid": "068f47ca-bdfd-554e-a21d-ea5d782a0f82"
+      }
+    ],
+    "uuid": "c5d47302-c21c-5967-b1da-28bc308d8e62"
+  }
+}

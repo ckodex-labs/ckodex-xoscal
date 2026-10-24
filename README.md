@@ -267,12 +267,12 @@ Query, export, and seed authoritative compliance frameworks (including sovereign
 xoscal-ctl frameworks list
 xoscal-ctl frameworks list --jurisdiction ca
 
-# Export schema-validated catalogs and profiles with .sha256 sidecars
+# Export all 7 schema-validated OSCAL layers (Catalog, Profile, Component Definition, SSP, SAP, SAR, POA&M) with .sha256 sidecars
 xoscal-ctl frameworks export \
   --framework cccs-itsp-10-033 \
   --out ./data/frameworks
 
-# Verify verbatim parity between framework definitions and created OSCAL artifacts
+# Verify verbatim parity between framework definitions and created OSCAL artifacts across all 7 layers
 xoscal frameworks verify -framework cccs-itsp-10-033 -dir ./data/frameworks
 # Or top-level across all frameworks with markdown output
 xoscal verify-parity -dir ./data/frameworks -markdown

@@ -1,0 +1,659 @@
+{
+  "system-security-plan": {
+    "control-implementation": {
+      "description": "Control implementations for CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+      "implemented-requirements": [
+        {
+          "by-components": [
+            {
+              "component-uuid": "c9ecc9e6-b822-5bfe-b768-7bb79138b4fa",
+              "description": "Control ac-1 (Access Control Policy and Procedures) is satisfied by the CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "52302f57-5816-5c5f-8e28-f31bbbe2b7ba"
+            }
+          ],
+          "control-id": "ac-1",
+          "uuid": "5320ffea-24f8-5fae-9d5a-4017659769bc"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c9ecc9e6-b822-5bfe-b768-7bb79138b4fa",
+              "description": "Control ac-2 (Account Management) is satisfied by the CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "e89f391d-be0f-5ef1-9dd3-cc6d3198c286"
+            }
+          ],
+          "control-id": "ac-2",
+          "uuid": "d68ae80c-f07c-5873-a671-e9637bdb0c93"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c9ecc9e6-b822-5bfe-b768-7bb79138b4fa",
+              "description": "Control ac-3 (Access Enforcement) is satisfied by the CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "2dc68ea0-d9ad-5daa-8651-d53ac3973212"
+            }
+          ],
+          "control-id": "ac-3",
+          "uuid": "28b6ea58-9354-5693-878f-43f51dfb3f61"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c9ecc9e6-b822-5bfe-b768-7bb79138b4fa",
+              "description": "Control ac-6 (Least Privilege) is satisfied by the CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "55885eb7-31f3-5c03-9c67-122a707208cc"
+            }
+          ],
+          "control-id": "ac-6",
+          "uuid": "ead1cbf2-3008-520d-8bb1-94edd2230785"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c9ecc9e6-b822-5bfe-b768-7bb79138b4fa",
+              "description": "Control at-1 (Security Awareness Policy and Procedures) is satisfied by the CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "980aed18-eb33-58eb-bb5d-d7366ee38aef"
+            }
+          ],
+          "control-id": "at-1",
+          "uuid": "fd1bb3c4-acd0-50a2-bffe-35c348409656"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c9ecc9e6-b822-5bfe-b768-7bb79138b4fa",
+              "description": "Control at-2 (Security Awareness Training) is satisfied by the CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "ea814f78-b5f4-5e7a-b644-ab468fbdbc7a"
+            }
+          ],
+          "control-id": "at-2",
+          "uuid": "29614336-89de-529e-830d-1861df545aed"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c9ecc9e6-b822-5bfe-b768-7bb79138b4fa",
+              "description": "Control au-12 (Audit Generation) is satisfied by the CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "04dde612-bc4d-5dec-be56-049a277945d2"
+            }
+          ],
+          "control-id": "au-12",
+          "uuid": "7a46cf80-5e5a-516c-80cb-82456c32e49d"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c9ecc9e6-b822-5bfe-b768-7bb79138b4fa",
+              "description": "Control au-2 (Event Logging) is satisfied by the CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "fffff42d-381c-5150-ac3b-01e9e5606d74"
+            }
+          ],
+          "control-id": "au-2",
+          "uuid": "80f25293-d582-5873-a5ce-185a3733fa07"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c9ecc9e6-b822-5bfe-b768-7bb79138b4fa",
+              "description": "Control au-6 (Audit Review, Analysis, and Reporting) is satisfied by the CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "8d6556b8-507e-58a9-a962-1946f33135e1"
+            }
+          ],
+          "control-id": "au-6",
+          "uuid": "01d7e2ac-8365-524b-92b5-993764503223"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c9ecc9e6-b822-5bfe-b768-7bb79138b4fa",
+              "description": "Control ca-2 (Security Assessments) is satisfied by the CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "38d5e548-649c-5310-b87e-bff701de3817"
+            }
+          ],
+          "control-id": "ca-2",
+          "uuid": "eba785e6-384c-5234-85f1-3ff21c20a952"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c9ecc9e6-b822-5bfe-b768-7bb79138b4fa",
+              "description": "Control ca-3 (Information Exchange Agreements) is satisfied by the CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "9e0e48d6-740a-5ffc-8bf5-ea90f700f6cc"
+            }
+          ],
+          "control-id": "ca-3",
+          "uuid": "84e0b112-25bd-5247-b179-bb6c885470f8"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c9ecc9e6-b822-5bfe-b768-7bb79138b4fa",
+              "description": "Control ca-7 (Continuous Monitoring) is satisfied by the CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "cb0df1c2-1c22-5bf5-95fd-5320c115883b"
+            }
+          ],
+          "control-id": "ca-7",
+          "uuid": "24fdf556-2181-5316-9c93-75471d0b8e3e"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c9ecc9e6-b822-5bfe-b768-7bb79138b4fa",
+              "description": "Control cm-2 (Baseline Configuration) is satisfied by the CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "3c120896-b827-57e8-9f40-c0fd021868f0"
+            }
+          ],
+          "control-id": "cm-2",
+          "uuid": "fe16a330-0c22-55aa-aa27-1896b22f0732"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c9ecc9e6-b822-5bfe-b768-7bb79138b4fa",
+              "description": "Control cm-8 (Information System Component Inventory) is satisfied by the CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "a562e65b-67e7-5702-a45e-0e1565068d9c"
+            }
+          ],
+          "control-id": "cm-8",
+          "uuid": "3aad1221-d800-56ea-882a-18a16897c917"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c9ecc9e6-b822-5bfe-b768-7bb79138b4fa",
+              "description": "Control cp-2 (Contingency Plan) is satisfied by the CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "d6409fba-f815-5ea7-9156-e07855664b6d"
+            }
+          ],
+          "control-id": "cp-2",
+          "uuid": "14fac21d-80bc-5648-90ac-c17d253cfceb"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c9ecc9e6-b822-5bfe-b768-7bb79138b4fa",
+              "description": "Control cp-9 (Information System Backup) is satisfied by the CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "3e9a14cd-186c-53d8-8539-12bce2553fd6"
+            }
+          ],
+          "control-id": "cp-9",
+          "uuid": "2bcd5925-a0c0-5b3d-9bfe-437fbc686b93"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c9ecc9e6-b822-5bfe-b768-7bb79138b4fa",
+              "description": "Control ia-2 (Identification and Authentication (Organizational Users)) is satisfied by the CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "9c3b5882-da9f-52af-9eaf-1b9e35816744"
+            }
+          ],
+          "control-id": "ia-2",
+          "uuid": "7cf67372-af97-5961-b19a-0b67c21ef196"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c9ecc9e6-b822-5bfe-b768-7bb79138b4fa",
+              "description": "Control ia-5 (Authenticator Management) is satisfied by the CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "e53954d9-26e7-5c25-84d4-892ac744d0f9"
+            }
+          ],
+          "control-id": "ia-5",
+          "uuid": "5dd4f3ae-adb1-5443-a7b4-1ec2d86ac844"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c9ecc9e6-b822-5bfe-b768-7bb79138b4fa",
+              "description": "Control ir-4 (Incident Handling) is satisfied by the CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "2a08a6f0-34b0-51df-8fc6-288f2bf5ec82"
+            }
+          ],
+          "control-id": "ir-4",
+          "uuid": "3a6ace3e-5357-5e78-a14d-4154ec8fa8ee"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c9ecc9e6-b822-5bfe-b768-7bb79138b4fa",
+              "description": "Control ir-6 (Incident Reporting) is satisfied by the CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "e4642cc6-53d3-5690-8445-fa67e9d98171"
+            }
+          ],
+          "control-id": "ir-6",
+          "uuid": "c5e77799-1868-53cc-a895-e58a614cb1ba"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c9ecc9e6-b822-5bfe-b768-7bb79138b4fa",
+              "description": "Control mp-2 (Media Access) is satisfied by the CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "232c1f62-0a7f-55ee-8d4e-59b5fb2681e8"
+            }
+          ],
+          "control-id": "mp-2",
+          "uuid": "5c8611f1-923c-5f18-a4c6-56755f864ade"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c9ecc9e6-b822-5bfe-b768-7bb79138b4fa",
+              "description": "Control mp-6 (Media Sanitization) is satisfied by the CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "bf39eb71-2ec2-5a01-8035-14275cf14623"
+            }
+          ],
+          "control-id": "mp-6",
+          "uuid": "d2e3d1cb-66a1-557e-8a7f-68f90ba7beeb"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c9ecc9e6-b822-5bfe-b768-7bb79138b4fa",
+              "description": "Control pe-2 (Physical Access Authorizations) is satisfied by the CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "28fd5840-6d29-5870-9478-f10be8ca80eb"
+            }
+          ],
+          "control-id": "pe-2",
+          "uuid": "9a0eb1e9-ffba-5d35-bc2a-d1548c3ee6c8"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c9ecc9e6-b822-5bfe-b768-7bb79138b4fa",
+              "description": "Control pe-3 (Physical Access Control) is satisfied by the CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "a22d65f8-81c9-55e4-b548-f83b9f1333a2"
+            }
+          ],
+          "control-id": "pe-3",
+          "uuid": "082a34ba-1b49-5e9c-81f9-9b35cbb73ca5"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c9ecc9e6-b822-5bfe-b768-7bb79138b4fa",
+              "description": "Control pl-2 (System Security Plan) is satisfied by the CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "7b5f4b1a-41ac-5d50-8ac0-0271e599f37f"
+            }
+          ],
+          "control-id": "pl-2",
+          "uuid": "f97f6517-6e81-59c8-b9f4-67d2be5cfd2c"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c9ecc9e6-b822-5bfe-b768-7bb79138b4fa",
+              "description": "Control pm-1 (Information Security Program Plan) is satisfied by the CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "45bcb94e-4a73-5ecf-8f49-824997a01fc2"
+            }
+          ],
+          "control-id": "pm-1",
+          "uuid": "be5e5807-92e1-5690-97d2-fb77ed192670"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c9ecc9e6-b822-5bfe-b768-7bb79138b4fa",
+              "description": "Control ps-2 (Position Risk Designation) is satisfied by the CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "d417ac4c-28aa-5251-b0fa-12bcd8fa81ba"
+            }
+          ],
+          "control-id": "ps-2",
+          "uuid": "d66e0057-1677-5f9f-804d-535d3ec9212d"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c9ecc9e6-b822-5bfe-b768-7bb79138b4fa",
+              "description": "Control ps-3 (Personnel Screening) is satisfied by the CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "f91c77ac-40dc-59f3-a2e9-965d71e6a881"
+            }
+          ],
+          "control-id": "ps-3",
+          "uuid": "2da5d1c6-bb3d-5211-a9e2-3d7fa63935a1"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c9ecc9e6-b822-5bfe-b768-7bb79138b4fa",
+              "description": "Control ra-3 (Risk Assessment) is satisfied by the CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "098d73a6-89a5-5161-917b-19670799d800"
+            }
+          ],
+          "control-id": "ra-3",
+          "uuid": "58bd3f9e-dde8-5926-af14-f9573177df92"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c9ecc9e6-b822-5bfe-b768-7bb79138b4fa",
+              "description": "Control ra-5 (Vulnerability Scanning) is satisfied by the CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "dca0d132-115d-5eb0-a87d-cd3dec7469d2"
+            }
+          ],
+          "control-id": "ra-5",
+          "uuid": "118c4b56-c9e2-59eb-8c26-3ec887591c7e"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c9ecc9e6-b822-5bfe-b768-7bb79138b4fa",
+              "description": "Control sa-4 (Acquisition Process) is satisfied by the CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "63d10d59-1e8c-5767-8c97-a78d68038b1f"
+            }
+          ],
+          "control-id": "sa-4",
+          "uuid": "e039de0a-e1d6-5dd0-b9ee-358ce02f6840"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c9ecc9e6-b822-5bfe-b768-7bb79138b4fa",
+              "description": "Control sa-9 (External Information System Services) is satisfied by the CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "b39c666a-4467-5a2f-a4f7-4b442345d873"
+            }
+          ],
+          "control-id": "sa-9",
+          "uuid": "50c5b037-9f52-5cc4-81cd-06df6ee9e3b9"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c9ecc9e6-b822-5bfe-b768-7bb79138b4fa",
+              "description": "Control sc-13 (Cryptographic Protection) is satisfied by the CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "56f596c8-6f02-5291-a6a2-1cdbe6d43607"
+            }
+          ],
+          "control-id": "sc-13",
+          "uuid": "f2e7c9ee-76bb-56a4-82af-fd7663bf9eca"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c9ecc9e6-b822-5bfe-b768-7bb79138b4fa",
+              "description": "Control sc-28 (Protection of Information at Rest) is satisfied by the CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "f1f325f4-1233-59f2-aa40-a763146e61c5"
+            }
+          ],
+          "control-id": "sc-28",
+          "uuid": "5d4d8e0c-00a3-510e-8934-d79a245fb696"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c9ecc9e6-b822-5bfe-b768-7bb79138b4fa",
+              "description": "Control sc-7 (Boundary Protection) is satisfied by the CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "28969685-c2fa-59f5-b71c-84731eb65c8f"
+            }
+          ],
+          "control-id": "sc-7",
+          "uuid": "7b12774b-08fd-5578-8b9c-27dd8b1df5f0"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c9ecc9e6-b822-5bfe-b768-7bb79138b4fa",
+              "description": "Control sc-8 (Transmission Confidentiality and Integrity) is satisfied by the CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "255b9a97-f21b-566a-8fe4-36f0d0442fc6"
+            }
+          ],
+          "control-id": "sc-8",
+          "uuid": "5907cadc-e280-5bd8-9744-d78456e48123"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c9ecc9e6-b822-5bfe-b768-7bb79138b4fa",
+              "description": "Control si-2 (Flaw Remediation) is satisfied by the CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "d553bcd9-2664-528b-9949-629c3934c0f5"
+            }
+          ],
+          "control-id": "si-2",
+          "uuid": "6b4c5867-120e-5686-a3e1-94d26013807e"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c9ecc9e6-b822-5bfe-b768-7bb79138b4fa",
+              "description": "Control si-3 (Malicious Code Protection) is satisfied by the CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "6cac34a3-8e15-5925-bc1d-89cf16883141"
+            }
+          ],
+          "control-id": "si-3",
+          "uuid": "e4420439-bbac-5538-8872-057f2e77b1fb"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c9ecc9e6-b822-5bfe-b768-7bb79138b4fa",
+              "description": "Control si-4 (Information System Monitoring) is satisfied by the CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "c50b469f-dd99-595d-b9cc-f97864f4b732"
+            }
+          ],
+          "control-id": "si-4",
+          "uuid": "7b697600-7a54-51ce-bcc7-fedfd90ad8ba"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c9ecc9e6-b822-5bfe-b768-7bb79138b4fa",
+              "description": "Control sr-1 (Supply Chain Risk Management Policy) is satisfied by the CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "04c1319d-7494-5a0f-8376-4a5a9bf5b48b"
+            }
+          ],
+          "control-id": "sr-1",
+          "uuid": "92d98ec0-9faa-54ff-b3fe-28de3ea49e1d"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c9ecc9e6-b822-5bfe-b768-7bb79138b4fa",
+              "description": "Control sr-2 (Supply Chain Risk Assessment) is satisfied by the CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "e2bd0baf-d8d1-5fba-aea0-329d8ea58d69"
+            }
+          ],
+          "control-id": "sr-2",
+          "uuid": "f41a0345-bd26-5eef-b3ad-bb11348ca563"
+        },
+        {
+          "by-components": [
+            {
+              "component-uuid": "c9ecc9e6-b822-5bfe-b768-7bb79138b4fa",
+              "description": "Control sr-3 (Supply Chain Controls and Processes) is satisfied by the CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3) Core System Component through automated policy enforcement, configuration controls, and administrative review.",
+              "implementation-status": {
+                "state": "implemented"
+              },
+              "uuid": "39d7a043-fdb1-5bd6-982b-e19e452111f5"
+            }
+          ],
+          "control-id": "sr-3",
+          "uuid": "59b386b3-cc50-5ae0-8d45-ec21837cba73"
+        }
+      ]
+    },
+    "import-profile": {
+      "href": "./catalog.json"
+    },
+    "metadata": {
+      "last-modified": "2026-10-24T21:09:31Z",
+      "oscal-version": "1.2.3",
+      "title": "CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3) System Security Plan Template",
+      "version": "1.2.3"
+    },
+    "system-characteristics": {
+      "authorization-boundary": {
+        "description": "The authorization boundary encompasses all computing resources, cloud tenancies, and network zones supporting CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3) operations."
+      },
+      "description": "Reference system architecture implementing security controls for CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+      "security-impact-level": {
+        "security-objective-availability": "moderate",
+        "security-objective-confidentiality": "moderate",
+        "security-objective-integrity": "high"
+      },
+      "security-sensitivity-level": "moderate",
+      "status": {
+        "state": "operational"
+      },
+      "system-ids": [
+        {
+          "id": "cccs-itsg-33-system"
+        }
+      ],
+      "system-information": {
+        "information-types": [
+          {
+            "description": "Operational and compliance data processed within the ca jurisdiction boundary.",
+            "title": "Sovereign Program Data"
+          }
+        ]
+      },
+      "system-name": "CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3) Reference System",
+      "system-name-short": "cccs-itsg-33"
+    },
+    "system-implementation": {
+      "components": [
+        {
+          "description": "Central execution platform providing control implementations for CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3).",
+          "status": {
+            "state": "operational"
+          },
+          "title": "CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3) Core System Component",
+          "type": "software",
+          "uuid": "c9ecc9e6-b822-5bfe-b768-7bb79138b4fa"
+        }
+      ],
+      "users": [
+        {
+          "role-ids": [
+            "sec-admin"
+          ],
+          "title": "Security Administrator",
+          "uuid": "5bc13f44-4c22-58d1-8dc2-8fb17fe03199"
+        }
+      ]
+    },
+    "uuid": "42d613ed-6d55-5ed7-84a6-3afb250cda51"
+  }
+}

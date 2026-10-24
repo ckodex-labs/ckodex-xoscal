@@ -1,0 +1,258 @@
+{
+  "component-definition": {
+    "components": [
+      {
+        "control-implementations": [
+          {
+            "description": "Security control implementations for CyberSecure Canada (CAN/DGSI 104).",
+            "implemented-requirements": [
+              {
+                "control-id": "bc-1-1",
+                "description": "Component capability addressing control bc-1-1 (Control BC.1.1).",
+                "uuid": "84d530c1-5fee-54c2-9e6f-08a75c970bd9"
+              },
+              {
+                "control-id": "bc-1-2",
+                "description": "Component capability addressing control bc-1-2 (Control BC.1.2).",
+                "uuid": "611dab2a-e2f4-5921-8440-66399c04a77f"
+              },
+              {
+                "control-id": "bc-1-3",
+                "description": "Component capability addressing control bc-1-3 (Control BC.1.3).",
+                "uuid": "40c80f59-9be3-5bbf-a4a9-db32907b2112"
+              },
+              {
+                "control-id": "bc-10-1",
+                "description": "Component capability addressing control bc-10-1 (Control BC.10.1).",
+                "uuid": "b3da8ad9-92dd-53de-97e6-76103fcdf332"
+              },
+              {
+                "control-id": "bc-10-2",
+                "description": "Component capability addressing control bc-10-2 (Control BC.10.2).",
+                "uuid": "03b09eb8-def7-54dc-8111-952248b1faeb"
+              },
+              {
+                "control-id": "bc-10-3",
+                "description": "Component capability addressing control bc-10-3 (Control BC.10.3).",
+                "uuid": "924c316a-8b5a-580b-b140-54ae47406318"
+              },
+              {
+                "control-id": "bc-10-4",
+                "description": "Component capability addressing control bc-10-4 (Control BC.10.4).",
+                "uuid": "92fefd59-226c-59ad-b4d8-ddac2998c6c7"
+              },
+              {
+                "control-id": "bc-10-5",
+                "description": "Component capability addressing control bc-10-5 (Control BC.10.5).",
+                "uuid": "52301a07-fe6a-5582-852a-3780b9cd3e57"
+              },
+              {
+                "control-id": "bc-11-1",
+                "description": "Component capability addressing control bc-11-1 (Control BC.11.1).",
+                "uuid": "6ac24c57-7ea9-51e4-ab27-f97f50c924bf"
+              },
+              {
+                "control-id": "bc-11-2",
+                "description": "Component capability addressing control bc-11-2 (Control BC.11.2).",
+                "uuid": "3291c7ae-09d7-59f6-9f0a-bb2f0b32ce42"
+              },
+              {
+                "control-id": "bc-12-1",
+                "description": "Component capability addressing control bc-12-1 (Control BC.12.1).",
+                "uuid": "8b5f395a-5046-5eff-9e9f-d6f7d4bc9661"
+              },
+              {
+                "control-id": "bc-12-2",
+                "description": "Component capability addressing control bc-12-2 (Control BC.12.2).",
+                "uuid": "dbbdbd52-5fa8-554c-b7e6-59c3e04ab76b"
+              },
+              {
+                "control-id": "bc-12-3",
+                "description": "Component capability addressing control bc-12-3 (Control BC.12.3).",
+                "uuid": "8ab0a23f-1f04-50ff-a799-9748ea791fb9"
+              },
+              {
+                "control-id": "bc-12-4",
+                "description": "Component capability addressing control bc-12-4 (Control BC.12.4).",
+                "uuid": "56776a38-26b0-5f48-b26f-d69ae38a1fe3"
+              },
+              {
+                "control-id": "bc-13-1",
+                "description": "Component capability addressing control bc-13-1 (Control BC.13.1).",
+                "uuid": "a710499c-6cfc-5d3f-a4ce-b09055f085d9"
+              },
+              {
+                "control-id": "bc-13-2",
+                "description": "Component capability addressing control bc-13-2 (Control BC.13.2).",
+                "uuid": "0143d22b-4d29-5040-92f6-78e56d0c1fa8"
+              },
+              {
+                "control-id": "bc-2-1",
+                "description": "Component capability addressing control bc-2-1 (Control BC.2.1).",
+                "uuid": "a43ad69a-6bf0-5cdb-86fb-2949c0e46eee"
+              },
+              {
+                "control-id": "bc-2-2",
+                "description": "Component capability addressing control bc-2-2 (Control BC.2.2).",
+                "uuid": "ad930c9a-81b8-55b7-9555-b7b04bc5b3bb"
+              },
+              {
+                "control-id": "bc-3-1",
+                "description": "Component capability addressing control bc-3-1 (Control BC.3.1).",
+                "uuid": "4762aef0-abab-53c6-abf8-1503eb4bdfa0"
+              },
+              {
+                "control-id": "bc-3-2",
+                "description": "Component capability addressing control bc-3-2 (Control BC.3.2).",
+                "uuid": "40d35ec1-9d55-59a3-b9ff-70e7e7ec91d8"
+              },
+              {
+                "control-id": "bc-4-1",
+                "description": "Component capability addressing control bc-4-1 (Control BC.4.1).",
+                "uuid": "9b79904e-7acc-519f-b0cf-f34357476187"
+              },
+              {
+                "control-id": "bc-5-1",
+                "description": "Component capability addressing control bc-5-1 (Control BC.5.1).",
+                "uuid": "10a64464-d33b-5197-aba2-9adb4a99b232"
+              },
+              {
+                "control-id": "bc-5-2",
+                "description": "Component capability addressing control bc-5-2 (Control BC.5.2).",
+                "uuid": "fd4eb821-36c2-575b-a343-99cfa5fd61ea"
+              },
+              {
+                "control-id": "bc-5-3",
+                "description": "Component capability addressing control bc-5-3 (Control BC.5.3).",
+                "uuid": "3b77bfde-08f0-51cc-b29e-7cf2984e1eef"
+              },
+              {
+                "control-id": "bc-6-1",
+                "description": "Component capability addressing control bc-6-1 (Control BC.6.1).",
+                "uuid": "6c1cf7cd-2f2c-5a8b-81b0-8243163b6e6f"
+              },
+              {
+                "control-id": "bc-7-1",
+                "description": "Component capability addressing control bc-7-1 (Control BC.7.1).",
+                "uuid": "5a2aff58-c90c-5f43-9b78-a0a222220847"
+              },
+              {
+                "control-id": "bc-7-2",
+                "description": "Component capability addressing control bc-7-2 (Control BC.7.2).",
+                "uuid": "a99da977-8ec8-51d2-bc44-39e874533bfb"
+              },
+              {
+                "control-id": "bc-8-1",
+                "description": "Component capability addressing control bc-8-1 (Control BC.8.1).",
+                "uuid": "09cf9818-711e-588d-9344-a5e5caec8639"
+              },
+              {
+                "control-id": "bc-8-2",
+                "description": "Component capability addressing control bc-8-2 (Control BC.8.2).",
+                "uuid": "820293f8-9d7c-5d62-9dc7-a710e5050d86"
+              },
+              {
+                "control-id": "bc-8-3",
+                "description": "Component capability addressing control bc-8-3 (Control BC.8.3).",
+                "uuid": "3823b7dd-b70c-5635-b05c-563342a33c27"
+              },
+              {
+                "control-id": "bc-8-4",
+                "description": "Component capability addressing control bc-8-4 (Control BC.8.4).",
+                "uuid": "4d07e138-19f3-57da-9c23-def179ce5f3e"
+              },
+              {
+                "control-id": "bc-8-5",
+                "description": "Component capability addressing control bc-8-5 (Control BC.8.5).",
+                "uuid": "02b53b7a-0c69-5c36-b0c2-9e8d3858fe4f"
+              },
+              {
+                "control-id": "bc-8-6",
+                "description": "Component capability addressing control bc-8-6 (Control BC.8.6).",
+                "uuid": "5084d54c-2ab1-5d1d-a639-733c7e410844"
+              },
+              {
+                "control-id": "bc-8-7",
+                "description": "Component capability addressing control bc-8-7 (Control BC.8.7).",
+                "uuid": "a92cdd0f-5e96-5877-9eac-cdcf4d84925f"
+              },
+              {
+                "control-id": "bc-9-1",
+                "description": "Component capability addressing control bc-9-1 (Control BC.9.1).",
+                "uuid": "a9748870-eba6-51a5-855a-992ad735a651"
+              },
+              {
+                "control-id": "bc-9-2",
+                "description": "Component capability addressing control bc-9-2 (Control BC.9.2).",
+                "uuid": "e8bd1460-fe33-5033-81ee-930525fc2046"
+              },
+              {
+                "control-id": "bc-9-3",
+                "description": "Component capability addressing control bc-9-3 (Control BC.9.3).",
+                "uuid": "b0b5880e-5e18-5c08-8e80-71ad72d1fb01"
+              },
+              {
+                "control-id": "bc-9-4",
+                "description": "Component capability addressing control bc-9-4 (Control BC.9.4).",
+                "uuid": "a6ee7cb9-8b30-5bd6-9f7b-714391cbe0d2"
+              },
+              {
+                "control-id": "bc-9-5",
+                "description": "Component capability addressing control bc-9-5 (Control BC.9.5).",
+                "uuid": "a6b90c81-f5b4-5c04-9f5d-4745ca495bb5"
+              },
+              {
+                "control-id": "bc-9-6",
+                "description": "Component capability addressing control bc-9-6 (Control BC.9.6).",
+                "uuid": "665c9356-4a69-583a-83d5-3681d7d3ab7b"
+              },
+              {
+                "control-id": "bc-9-7",
+                "description": "Component capability addressing control bc-9-7 (Control BC.9.7).",
+                "uuid": "f6726b25-8a96-5a6d-bbdc-e77643ca05ee"
+              },
+              {
+                "control-id": "bc-9-8",
+                "description": "Component capability addressing control bc-9-8 (Control BC.9.8).",
+                "uuid": "7f38d86e-ebd2-5849-a092-e3bf73155fa5"
+              },
+              {
+                "control-id": "oc-1",
+                "description": "Component capability addressing control oc-1 (Control OC.1).",
+                "uuid": "ce8d335a-fe75-5dd9-b122-c27720bd68ac"
+              },
+              {
+                "control-id": "oc-2",
+                "description": "Component capability addressing control oc-2 (Control OC.2).",
+                "uuid": "8d0c4e6d-4ae3-5b18-9859-7dbc3842b77c"
+              },
+              {
+                "control-id": "oc-3",
+                "description": "Component capability addressing control oc-3 (Control OC.3).",
+                "uuid": "be529cb4-67ed-5b4d-ae84-21ab92dc6b61"
+              },
+              {
+                "control-id": "oc-4",
+                "description": "Component capability addressing control oc-4 (Control OC.4).",
+                "uuid": "521e375c-3acb-5240-b6d8-93949010cda6"
+              }
+            ],
+            "source": "./catalog.json",
+            "uuid": "017316a2-f2dc-5e25-a24e-5846c2e5b170"
+          }
+        ],
+        "description": "Enterprise technical and operational capabilities implementing controls for CyberSecure Canada (CAN/DGSI 104).",
+        "title": "CyberSecure Canada (CAN/DGSI 104) Platform Component",
+        "type": "software",
+        "uuid": "a3b69ac3-feb1-5b8f-9dfe-4c020f205a2b"
+      }
+    ],
+    "metadata": {
+      "last-modified": "2026-10-24T21:09:31Z",
+      "oscal-version": "1.2.3",
+      "title": "CyberSecure Canada (CAN/DGSI 104) Component Definition Template",
+      "version": "CAN/DGSI 104"
+    },
+    "uuid": "86f12924-b433-590e-adc1-88b692b1238d"
+  }
+}

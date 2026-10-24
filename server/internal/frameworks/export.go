@@ -9,9 +9,9 @@ import (
 	"github.com/mchorfa/xoscal/server/internal/schemavalidate"
 )
 
-// Export exports a given framework to outDir/<framework-id>/catalog.json
-// (and profile.json if present), validating each document against the official
-// OSCAL 1.2.3 JSON schema and writing cryptographic SHA-256 sidecars.
+// Export exports all 7 layers of OSCAL 1.2.3 artifacts for a given framework
+// to outDir/<framework-id>/, validating each document against the official
+// NIST OSCAL 1.2.3 JSON schema and writing cryptographic SHA-256 sidecars.
 func Export(outDir string, f Framework) error {
 	v, err := schemavalidate.NewValidator()
 	if err != nil {
@@ -24,45 +24,40 @@ func Export(outDir string, f Framework) error {
 		return fmt.Errorf("create destination directory %s: %w", targetDir, err)
 	}
 
-	// 1. Export & Validate Catalog
-	catData, err := f.CatalogJSON()
+	layers, err := ProjectAllLayers(f)
 	if err != nil {
-		return fmt.Errorf("obtain catalog for %s: %w", f.ID(), err)
+		return fmt.Errorf("project all layers for %s: %w", f.ID(), err)
 	}
 
-	if err := v.Validate(catData, schemavalidate.KindCatalog); err != nil {
-		return fmt.Errorf("validate catalog for %s against OSCAL 1.2.3 schema: %w", f.ID(), err)
+	type layerArtifact struct {
+		name string
+		data []byte
+		kind schemavalidate.ArtifactKind
 	}
 
-	catPath := filepath.Join(targetDir, "catalog.json")
-	// #nosec G703,G304,G306 -- catPath is beneath operator-selected output directory
-	if err := os.WriteFile(catPath, catData, 0o600); err != nil {
-		return fmt.Errorf("write catalog %s: %w", catPath, err)
+	artifacts := []layerArtifact{
+		{"catalog.json", layers.Catalog, schemavalidate.KindCatalog},
+		{"profile.json", layers.Profile, schemavalidate.KindProfile},
+		{"component-definition.json", layers.ComponentDefinition, schemavalidate.KindComponentDefinition},
+		{"system-security-plan.json", layers.SystemSecurityPlan, schemavalidate.KindSSP},
+		{"assessment-plan.json", layers.AssessmentPlan, schemavalidate.KindAssessmentPlan},
+		{"assessment-results.json", layers.AssessmentResults, schemavalidate.KindAssessmentResults},
+		{"plan-of-action-and-milestones.json", layers.POAM, schemavalidate.KindPOAM},
 	}
 
-	if _, err := dbutil.WriteDigestSidecar(catPath); err != nil {
-		return fmt.Errorf("write catalog digest sidecar %s: %w", catPath, err)
-	}
-
-	// 2. Export & Validate Profile (if present)
-	if f.HasProfile() {
-		profData, err := f.ProfileJSON()
-		if err != nil {
-			return fmt.Errorf("obtain profile for %s: %w", f.ID(), err)
+	for _, art := range artifacts {
+		if err := v.Validate(art.data, art.kind); err != nil {
+			return fmt.Errorf("validate %s for %s against OSCAL 1.2.3 schema: %w", art.name, f.ID(), err)
 		}
 
-		if err := v.Validate(profData, schemavalidate.KindProfile); err != nil {
-			return fmt.Errorf("validate profile for %s against OSCAL 1.2.3 schema: %w", f.ID(), err)
+		filePath := filepath.Join(targetDir, art.name)
+		// #nosec G703,G304,G306 -- filePath is beneath operator-selected output directory
+		if err := os.WriteFile(filePath, art.data, 0o600); err != nil {
+			return fmt.Errorf("write %s: %w", filePath, err)
 		}
 
-		profPath := filepath.Join(targetDir, "profile.json")
-		// #nosec G703,G304,G306 -- profPath is beneath operator-selected output directory
-		if err := os.WriteFile(profPath, profData, 0o600); err != nil {
-			return fmt.Errorf("write profile %s: %w", profPath, err)
-		}
-
-		if _, err := dbutil.WriteDigestSidecar(profPath); err != nil {
-			return fmt.Errorf("write profile digest sidecar %s: %w", profPath, err)
+		if _, err := dbutil.WriteDigestSidecar(filePath); err != nil {
+			return fmt.Errorf("write digest sidecar for %s: %w", filePath, err)
 		}
 	}
 

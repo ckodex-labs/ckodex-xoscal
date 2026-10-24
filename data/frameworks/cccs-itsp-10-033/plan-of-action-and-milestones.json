@@ -1,0 +1,21 @@
+{
+  "plan-of-action-and-milestones": {
+    "import-ssp": {
+      "href": "./system-security-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-10-24T21:09:31Z",
+      "oscal-version": "1.2.3",
+      "title": "CCCS ITSP.10.033 Security and Privacy Controls and Assurance Activities Catalogue Plan of Action and Milestones Template",
+      "version": "1.0 (2026-03-31)"
+    },
+    "poam-items": [
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for CCCS ITSP.10.033 Security and Privacy Controls and Assurance Activities Catalogue.",
+        "title": "Compliance Roadmap and Parameter Tailoring for CCCS ITSP.10.033 Security and Privacy Controls and Assurance Activities Catalogue",
+        "uuid": "96813803-c82d-5380-8c61-477cca08bd0d"
+      }
+    ],
+    "uuid": "98137bd5-81d9-55cb-816d-ec3b895b53a2"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "plan-of-action-and-milestones": {
+    "import-ssp": {
+      "href": "./system-security-plan.json"
+    },
+    "metadata": {
+      "last-modified": "2026-10-24T21:09:31Z",
+      "oscal-version": "1.2.3",
+      "title": "CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Plan of Action and Milestones Template",
+      "version": "1.2.3"
+    },
+    "poam-items": [
+      {
+        "description": "Continuous monitoring, parameter assignment reviews, and periodic assessment milestones for CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada.",
+        "title": "Compliance Roadmap and Parameter Tailoring for CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada",
+        "uuid": "e297bcf6-bb23-5ff0-b846-0747052b9193"
+      }
+    ],
+    "uuid": "0290aca5-a509-55b6-aaf2-f3e9c133bba9"
+  }
+}

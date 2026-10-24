@@ -1,0 +1,64 @@
+{
+  "profile": {
+    "imports": [
+      {
+        "href": "./catalog.json",
+        "include-controls": [
+          {
+            "with-ids": [
+              "ac-1",
+              "ac-2",
+              "ac-3",
+              "ac-6",
+              "at-1",
+              "at-2",
+              "au-12",
+              "au-2",
+              "au-6",
+              "ca-2",
+              "ca-3",
+              "ca-7",
+              "cm-2",
+              "cm-8",
+              "cp-2",
+              "cp-9",
+              "ia-2",
+              "ia-5",
+              "ir-4",
+              "ir-6",
+              "mp-2",
+              "mp-6",
+              "pe-2",
+              "pe-3",
+              "pl-2",
+              "pm-1",
+              "ps-2",
+              "ps-3",
+              "ra-3",
+              "ra-5",
+              "sa-4",
+              "sa-9",
+              "sc-13",
+              "sc-28",
+              "sc-7",
+              "sc-8",
+              "si-2",
+              "si-3",
+              "si-4",
+              "sr-1",
+              "sr-2",
+              "sr-3"
+            ]
+          }
+        ]
+      }
+    ],
+    "metadata": {
+      "last-modified": "2026-10-24T21:09:31Z",
+      "oscal-version": "1.2.3",
+      "title": "CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3) Security Baseline Profile",
+      "version": "1.2.3"
+    },
+    "uuid": "2495fa2e-c9c0-50da-9450-6efe8796f863"
+  }
+}
