@@ -165,6 +165,7 @@ func (s *Server) handleFrameworkSubpath(w http.ResponseWriter, r *http.Request) 
 		catPath := filepath.Join(dir, fw.ID(), "catalog.json")
 		var rep *frameworks.ParityReport
 		var err error
+		// #nosec G703,G304 -- catPath is resolved within the configured framework artifact directory.
 		if _, statErr := os.Stat(catPath); statErr == nil {
 			rep, err = frameworks.VerifyArtifactParity(fw, catPath)
 		} else {

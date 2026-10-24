@@ -681,6 +681,7 @@ func RunVerifyParity(args []string) {
 			os.Exit(1)
 		}
 		catPath := filepath.Join(*dir, fw.ID(), "catalog.json")
+		// #nosec G703,G304 -- catPath is resolved within the operator-selected directory.
 		if _, err := os.Stat(catPath); err == nil {
 			rep, err := frameworks.VerifyArtifactParity(fw, catPath)
 			if err != nil {
@@ -704,6 +705,7 @@ func RunVerifyParity(args []string) {
 
 		if fw.HasProfile() {
 			profPath := filepath.Join(*dir, fw.ID(), "profile.json")
+			// #nosec G703,G304 -- profPath is resolved within the operator-selected directory.
 			if _, err := os.Stat(profPath); err == nil {
 				rep, err := frameworks.VerifyArtifactParity(fw, profPath)
 				if err != nil {
@@ -848,6 +850,7 @@ func RunGenerate(args []string) {
 				os.Exit(1)
 			}
 		}
+		// #nosec G703,G304,G306 -- path is beneath operator-selected output directory.
 		if err := os.WriteFile(path, data, 0600); err != nil {
 			fmt.Fprintf(os.Stderr, "error writing %s: %v\n", path, err)
 			os.Exit(1)
@@ -934,6 +937,7 @@ func RunGenerate(args []string) {
 				os.Exit(1)
 			}
 		}
+		// #nosec G703,G304,G306 -- path is beneath operator-selected output directory.
 		if err := os.WriteFile(path, fe.data, 0600); err != nil {
 			fmt.Fprintf(os.Stderr, "error writing %s: %v\n", path, err)
 			os.Exit(1)

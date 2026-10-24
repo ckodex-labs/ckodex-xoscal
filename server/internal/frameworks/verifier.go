@@ -65,6 +65,7 @@ type ParityReport struct {
 
 // VerifyArtifactParity verifies verbatim parity between a Framework and an OSCAL artifact on disk.
 func VerifyArtifactParity(f Framework, artifactPath string) (*ParityReport, error) {
+	// #nosec G703,G304 -- artifactPath is explicitly provided by the operator for parity verification.
 	data, err := os.ReadFile(artifactPath)
 	if err != nil {
 		return nil, fmt.Errorf("read artifact %s: %w", artifactPath, err)
@@ -89,6 +90,7 @@ func VerifyBytesParity(f Framework, data []byte, artifactPath string) (*ParityRe
 	// Check sidecar if artifactPath is a physical file
 	if artifactPath != "" && !strings.HasPrefix(artifactPath, "memory") {
 		sidecarPath := artifactPath + ".sha256"
+		// #nosec G703,G304 -- sidecarPath is derived from the verified artifact path.
 		if scBytes, err := os.ReadFile(sidecarPath); err == nil {
 			rep.SidecarPath = sidecarPath
 			scContent := strings.TrimSpace(string(scBytes))
@@ -375,6 +377,7 @@ func VerifyAllFrameworksParity(r *Registry, baseDir string) ([]*ParityReport, er
 
 	for _, f := range r.List() {
 		catPath := filepath.Join(baseDir, f.ID(), "catalog.json")
+		// #nosec G703,G304 -- catPath is resolved within the verified base directory.
 		if _, err := os.Stat(catPath); err == nil {
 			rep, err := VerifyArtifactParity(f, catPath)
 			if err != nil {
@@ -392,6 +395,7 @@ func VerifyAllFrameworksParity(r *Registry, baseDir string) ([]*ParityReport, er
 
 		if f.HasProfile() {
 			profPath := filepath.Join(baseDir, f.ID(), "profile.json")
+			// #nosec G703,G304 -- profPath is resolved within the verified base directory.
 			if _, err := os.Stat(profPath); err == nil {
 				rep, err := VerifyArtifactParity(f, profPath)
 				if err != nil {
