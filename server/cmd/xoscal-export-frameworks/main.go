@@ -73,7 +73,7 @@ func run(manifestPath, outDir, dsn string) error {
 	reg := frameworks.DefaultRegistry()
 	for _, refID := range m.RefIDs() {
 		if reg.Has(refID) {
-			if err := reg.Export(outDir, refID); err != nil {
+			if err := reg.ExportAuthoritative(outDir, refID); err != nil {
 				return fmt.Errorf("export %s: %w", refID, err)
 			}
 			continue

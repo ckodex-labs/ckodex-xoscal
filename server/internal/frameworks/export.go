@@ -13,6 +13,14 @@ import (
 // to outDir/<framework-id>/, validating each document against the official
 // NIST OSCAL 1.2.3 JSON schema and writing cryptographic SHA-256 sidecars.
 func Export(outDir string, f Framework) error {
+	return ExportAllLayers(outDir, f)
+}
+
+// ExportAllLayers exports all 7 layers of OSCAL 1.2.3 artifacts (Catalog, Profile,
+// Component Definition, System Security Plan, Assessment Plan, Assessment Results, POA&M)
+// to outDir/<framework-id>/, validating each document against the official
+// NIST OSCAL 1.2.3 JSON schema and writing cryptographic SHA-256 sidecars.
+func ExportAllLayers(outDir string, f Framework) error {
 	v, err := schemavalidate.NewValidator()
 	if err != nil {
 		return fmt.Errorf("init schema validator: %w", err)
@@ -58,6 +66,65 @@ func Export(outDir string, f Framework) error {
 
 		if _, err := dbutil.WriteDigestSidecar(filePath); err != nil {
 			return fmt.Errorf("write digest sidecar for %s: %w", filePath, err)
+		}
+	}
+
+	return nil
+}
+
+// ExportAuthoritative exports only the canonical primary OSCAL artifact defined directly
+// by the framework (profile.json if f.HasProfile(), otherwise catalog.json) with schema
+// validation and SHA-256 sidecars. This preserves exact 1:1 compatibility with manifest
+// export pipelines and external semantic scope validators.
+func ExportAuthoritative(outDir string, f Framework) error {
+	v, err := schemavalidate.NewValidator()
+	if err != nil {
+		return fmt.Errorf("init schema validator: %w", err)
+	}
+
+	targetDir := filepath.Join(outDir, f.ID())
+	// #nosec G703 -- targetDir is constructed beneath the operator-selected outDir
+	if err := os.MkdirAll(targetDir, 0o750); err != nil {
+		return fmt.Errorf("create destination directory %s: %w", targetDir, err)
+	}
+
+	if f.HasProfile() {
+		profData, err := f.ProfileJSON()
+		if err != nil {
+			return fmt.Errorf("obtain profile for %s: %w", f.ID(), err)
+		}
+
+		if err := v.Validate(profData, schemavalidate.KindProfile); err != nil {
+			return fmt.Errorf("validate profile for %s against OSCAL 1.2.3 schema: %w", f.ID(), err)
+		}
+
+		profPath := filepath.Join(targetDir, "profile.json")
+		// #nosec G703,G304,G306 -- profPath is beneath operator-selected output directory
+		if err := os.WriteFile(profPath, profData, 0o600); err != nil {
+			return fmt.Errorf("write profile %s: %w", profPath, err)
+		}
+
+		if _, err := dbutil.WriteDigestSidecar(profPath); err != nil {
+			return fmt.Errorf("write profile digest sidecar %s: %w", profPath, err)
+		}
+	} else {
+		catData, err := f.CatalogJSON()
+		if err != nil {
+			return fmt.Errorf("obtain catalog for %s: %w", f.ID(), err)
+		}
+
+		if err := v.Validate(catData, schemavalidate.KindCatalog); err != nil {
+			return fmt.Errorf("validate catalog for %s against OSCAL 1.2.3 schema: %w", f.ID(), err)
+		}
+
+		catPath := filepath.Join(targetDir, "catalog.json")
+		// #nosec G703,G304,G306 -- catPath is beneath operator-selected output directory
+		if err := os.WriteFile(catPath, catData, 0o600); err != nil {
+			return fmt.Errorf("write catalog %s: %w", catPath, err)
+		}
+
+		if _, err := dbutil.WriteDigestSidecar(catPath); err != nil {
+			return fmt.Errorf("write catalog digest sidecar %s: %w", catPath, err)
 		}
 	}
 

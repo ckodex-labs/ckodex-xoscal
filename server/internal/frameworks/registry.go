@@ -128,12 +128,23 @@ func (r *Registry) FindByJurisdiction(jurisdiction string) []Framework {
 }
 
 // Export exports a specific framework by canonical ID or alias to outDir.
+// Export exports all 7 layers of OSCAL 1.2.3 artifacts for a registered framework to outDir.
 func (r *Registry) Export(outDir, idOrAlias string) error {
 	f, ok := r.Get(idOrAlias)
 	if !ok {
 		return fmt.Errorf("%w: %s", ErrFrameworkNotFound, idOrAlias)
 	}
-	return Export(outDir, f)
+	return ExportAllLayers(outDir, f)
+}
+
+// ExportAuthoritative exports only the canonical primary OSCAL artifact (catalog or profile)
+// for a registered framework to outDir, preserving exact 1:1 compatibility with portal manifests.
+func (r *Registry) ExportAuthoritative(outDir, idOrAlias string) error {
+	f, ok := r.Get(idOrAlias)
+	if !ok {
+		return fmt.Errorf("%w: %s", ErrFrameworkNotFound, idOrAlias)
+	}
+	return ExportAuthoritative(outDir, f)
 }
 
 // ExportAll exports all registered frameworks to outDir.
