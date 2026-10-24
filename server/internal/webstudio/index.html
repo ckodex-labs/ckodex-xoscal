@@ -523,6 +523,23 @@
     </div>
   </div>
 
+  <!-- 7-LAYER OSCAL STACK & PARITY MODAL -->
+  <div id="layers-modal" class="modal-overlay" onclick="closeLayersModal(event)">
+    <div class="modal" style="max-width: 900px;" onclick="event.stopPropagation()">
+      <div class="modal-header">
+        <div>
+          <span id="modal-layers-id" class="card-id" style="font-size: 1rem;"></span>
+          <h3 id="modal-layers-title" style="margin-top: 0.25rem;">7-Layer OSCAL Stack &amp; Verbatim Parity</h3>
+          <span id="modal-layers-sub" style="color: var(--text-muted); font-size: 0.8rem;">Full OSCAL 1.2.3 Layer Hierarchy &amp; Parity Engine</span>
+        </div>
+        <button class="modal-close" onclick="closeLayersModal()">&times;</button>
+      </div>
+      <div id="modal-layers-content">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </div>
+
   <script>
     let frameworksList = [];
     let currentControls = [];
@@ -570,7 +587,10 @@
               <span>Version: <b>${fw.version}</b></span>
               <span>Profile: <b>${fw.has_profile ? 'Yes' : 'No'}</b></span>
             </div>
-            <button class="btn" style="width: 100%;" onclick="selectAndExplore('${fw.id}')">Explore Controls</button>
+            <div style="display: flex; gap: 0.5rem; margin-top: 0.5rem;">
+              <button class="btn" style="flex: 1;" onclick="selectAndExplore('${fw.id}')">Explore</button>
+              <button class="btn" style="flex: 1; background: var(--card-border); color: var(--text-main);" onclick="openLayersModal('${fw.id}', '${fw.title.replace(/'/g, "\\'")}')">7 Layers &amp; Parity</button>
+            </div>
           </div>
         </div>
       `).join('');
@@ -710,6 +730,87 @@
 
     function closeModal(e) {
       document.getElementById('control-modal').classList.remove('active');
+    }
+
+    async function openLayersModal(fwID, fwTitle) {
+      document.getElementById('modal-layers-id').innerText = fwID;
+      document.getElementById('modal-layers-title').innerText = `${fwTitle}`;
+      document.getElementById('modal-layers-sub').innerText = `Full 7-Layer OSCAL 1.2.3 Hierarchy & Verbatim Parity Verification`;
+
+      const content = document.getElementById('modal-layers-content');
+      content.innerHTML = `<div style="text-align: center; padding: 2rem; color: var(--text-muted);">Loading 7 layers and verifying parity...</div>`;
+      document.getElementById('layers-modal').classList.add('active');
+
+      try {
+        const [layersRes, parityRes] = await Promise.all([
+          fetch(`/api/v1/frameworks/${fwID}/layers`),
+          fetch(`/api/v1/frameworks/${fwID}/parity`)
+        ]);
+
+        const layers = await layersRes.json();
+        const parity = await parityRes.json();
+
+        const parityBadgeClass = parity.verdict === 'VERBATIM_PARITY' ? 'badge-pass' : 'badge-fail';
+        const parityHtml = `
+          <div class="modal-section" style="background: var(--code-bg); padding: 1rem; border-radius: 8px; border: 1px solid var(--card-border);">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+              <h4 style="margin: 0;">Verbatim Parity Verification</h4>
+              <span class="badge ${parityBadgeClass}">${parity.verdict} (${(parity.parity_score || 100).toFixed(1)}%)</span>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 0.75rem; font-size: 0.85rem;">
+              <div>Schema 1.2.3: <b style="color: ${parity.schema_valid ? 'var(--accent)' : 'var(--danger)'};">${parity.schema_valid ? 'VALID' : 'INVALID'}</b></div>
+              <div>Integrity: <b style="color: ${parity.integrity_valid ? 'var(--accent)' : 'var(--danger)'};">${parity.integrity_valid ? 'PASS' : 'FAIL'}</b></div>
+              <div>Controls: <b>${parity.matched_controls} / ${parity.total_expected_controls}</b></div>
+              <div>Statements: <b>${parity.statement_matches}</b></div>
+            </div>
+          </div>
+        `;
+
+        const layersRows = layers.map((l, idx) => `
+          <tr>
+            <td style="font-family: var(--font-mono); font-size: 0.8rem; font-weight: 600;">Layer ${idx + 1}</td>
+            <td style="font-weight: 600;">${l.kind}</td>
+            <td style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">${l.name}</td>
+            <td style="font-size: 0.85rem;">${(l.size_bytes / 1024).toFixed(1)} KB</td>
+            <td style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted);" title="${l.sha256}">${l.sha256.substring(0, 16)}...</td>
+            <td style="text-align: right;">
+              <a href="/api/v1/frameworks/${fwID}/layers/${l.kind}" target="_blank" class="btn" style="padding: 0.25rem 0.5rem; font-size: 0.75rem; text-decoration: none; display: inline-block;">View JSON</a>
+            </td>
+          </tr>
+        `).join('');
+
+        const layersHtml = `
+          <div class="modal-section" style="margin-top: 1rem;">
+            <h4>Projected OSCAL 1.2.3 Artifact Layers</h4>
+            <div class="table-container" style="margin-top: 0.5rem;">
+              <table>
+                <thead>
+                  <tr>
+                    <th style="width: 70px;">Layer</th>
+                    <th>Model Kind</th>
+                    <th>Filename</th>
+                    <th>Size</th>
+                    <th>SHA-256</th>
+                    <th style="text-align: right;">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  ${layersRows}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        `;
+
+        content.innerHTML = parityHtml + layersHtml;
+      } catch (e) {
+        content.innerHTML = `<div style="color: var(--danger); padding: 1rem;">Failed to load layers or parity: ${e.message}</div>`;
+      }
+    }
+
+    function closeLayersModal(e) {
+      if (e && e.target !== document.getElementById('layers-modal')) return;
+      document.getElementById('layers-modal').classList.remove('active');
     }
 
     async function loadTransitionDelta() {

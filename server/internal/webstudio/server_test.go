@@ -120,6 +120,59 @@ func TestWebStudioServer(t *testing.T) {
 	if rep.Verdict != frameworks.VerdictVerbatimParity {
 		t.Errorf("expected VERBATIM_PARITY from parity endpoint, got %s", rep.Verdict)
 	}
+
+	// 7. Test GET /api/v1/frameworks/cccs-itsp-10-033/layers
+	respLayers, err := http.Get(baseURL + "/api/v1/frameworks/cccs-itsp-10-033/layers")
+	if err != nil {
+		t.Fatalf("GET layers failed: %v", err)
+	}
+	defer respLayers.Body.Close()
+	if respLayers.StatusCode != http.StatusOK {
+		t.Errorf("expected 200 OK for layers, got %d", respLayers.StatusCode)
+	}
+	var layerSummaries []struct {
+		Name      string `json:"name"`
+		Kind      string `json:"kind"`
+		SizeBytes int    `json:"size_bytes"`
+		SHA256    string `json:"sha256"`
+	}
+	if err := json.NewDecoder(respLayers.Body).Decode(&layerSummaries); err != nil {
+		t.Fatalf("decode layers json: %v", err)
+	}
+	if len(layerSummaries) != 7 {
+		t.Errorf("expected 7 layers, got %d", len(layerSummaries))
+	}
+
+	// 8. Test GET /api/v1/frameworks/cccs-itsp-10-033/layers/ssp
+	respSSP, err := http.Get(baseURL + "/api/v1/frameworks/cccs-itsp-10-033/layers/ssp")
+	if err != nil {
+		t.Fatalf("GET ssp layer failed: %v", err)
+	}
+	defer respSSP.Body.Close()
+	if respSSP.StatusCode != http.StatusOK {
+		t.Errorf("expected 200 OK for ssp layer, got %d", respSSP.StatusCode)
+	}
+	sspBody, _ := io.ReadAll(respSSP.Body)
+	if !bytes.Contains(sspBody, []byte("system-security-plan")) {
+		t.Errorf("expected ssp layer to contain 'system-security-plan'")
+	}
+
+	// 9. Test GET /api/v1/frameworks/cccs-itsp-10-033/parity?layer=ssp
+	respSSPParity, err := http.Get(baseURL + "/api/v1/frameworks/cccs-itsp-10-033/parity?layer=ssp")
+	if err != nil {
+		t.Fatalf("GET ssp parity failed: %v", err)
+	}
+	defer respSSPParity.Body.Close()
+	if respSSPParity.StatusCode != http.StatusOK {
+		t.Errorf("expected 200 OK for ssp parity, got %d", respSSPParity.StatusCode)
+	}
+	var repSSP frameworks.ParityReport
+	if err := json.NewDecoder(respSSPParity.Body).Decode(&repSSP); err != nil {
+		t.Fatalf("decode ssp parity report: %v", err)
+	}
+	if repSSP.Verdict != frameworks.VerdictVerbatimParity {
+		t.Errorf("expected VERBATIM_PARITY for ssp, got %s", repSSP.Verdict)
+	}
 }
 
 func TestWebStudioServer_PortFallback(t *testing.T) {

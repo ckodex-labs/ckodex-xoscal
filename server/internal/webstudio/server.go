@@ -2,7 +2,9 @@ package webstudio
 
 import (
 	"context"
+	"crypto/sha256"
 	_ "embed"
+	"encoding/hex"
 	"encoding/json"
 	"fmt"
 	"io"
@@ -162,25 +164,130 @@ func (s *Server) handleFrameworkSubpath(w http.ResponseWriter, r *http.Request) 
 		if dir == "" {
 			dir = "data/frameworks"
 		}
-		catPath := filepath.Join(dir, fw.ID(), "catalog.json")
+		rawLayer := strings.ToLower(r.URL.Query().Get("layer"))
+		layer := "catalog.json"
+		switch rawLayer {
+		case "", "catalog", "catalog.json":
+			layer = "catalog.json"
+		case "profile", "profile.json":
+			layer = "profile.json"
+		case "component-definition", "component-definition.json", "components", "component":
+			layer = "component-definition.json"
+		case "system-security-plan", "system-security-plan.json", "ssp":
+			layer = "system-security-plan.json"
+		case "assessment-plan", "assessment-plan.json", "ap":
+			layer = "assessment-plan.json"
+		case "assessment-results", "assessment-results.json", "ar":
+			layer = "assessment-results.json"
+		case "plan-of-action-and-milestones", "plan-of-action-and-milestones.json", "poam":
+			layer = "plan-of-action-and-milestones.json"
+		default:
+			if strings.HasSuffix(rawLayer, ".json") {
+				layer = rawLayer
+			} else {
+				layer = rawLayer + ".json"
+			}
+		}
+
+		artPath := filepath.Join(dir, fw.ID(), layer)
 		var rep *frameworks.ParityReport
 		var err error
-		// #nosec G703,G304 -- catPath is resolved within the configured framework artifact directory.
-		if _, statErr := os.Stat(catPath); statErr == nil {
-			rep, err = frameworks.VerifyArtifactParity(fw, catPath)
+		// #nosec G703,G304 -- artPath is resolved within the configured framework artifact directory.
+		if _, statErr := os.Stat(artPath); statErr == nil {
+			rep, err = frameworks.VerifyArtifactParity(fw, artPath)
 		} else {
-			catData, catErr := fw.CatalogJSON()
-			if catErr != nil {
-				http.Error(w, fmt.Sprintf("catalog error: %v", catErr), http.StatusInternalServerError)
+			layers, pErr := frameworks.ProjectAllLayers(fw)
+			if pErr != nil {
+				http.Error(w, fmt.Sprintf("project layers: %v", pErr), http.StatusInternalServerError)
 				return
 			}
-			rep, err = frameworks.VerifyBytesParity(fw, catData, "memory://"+fw.ID()+"/catalog.json")
+			var b []byte
+			switch layer {
+			case "catalog.json":
+				b = layers.Catalog
+			case "profile.json":
+				b = layers.Profile
+			case "component-definition.json":
+				b = layers.ComponentDefinition
+			case "system-security-plan.json":
+				b = layers.SystemSecurityPlan
+			case "assessment-plan.json":
+				b = layers.AssessmentPlan
+			case "assessment-results.json":
+				b = layers.AssessmentResults
+			case "plan-of-action-and-milestones.json":
+				b = layers.POAM
+			default:
+				http.Error(w, fmt.Sprintf("unknown layer %s", layer), http.StatusBadRequest)
+				return
+			}
+			rep, err = frameworks.VerifyBytesParity(fw, b, "memory://"+fw.ID()+"/"+layer)
 		}
 		if err != nil {
 			http.Error(w, fmt.Sprintf("parity check error: %v", err), http.StatusInternalServerError)
 			return
 		}
 		writeJSON(w, http.StatusOK, rep)
+		return
+	}
+
+	if parts[1] == "layers" {
+		layers, err := frameworks.ProjectAllLayers(fw)
+		if err != nil {
+			http.Error(w, fmt.Sprintf("project layers error: %v", err), http.StatusInternalServerError)
+			return
+		}
+
+		if len(parts) == 3 && parts[2] != "" {
+			layerName := strings.ToLower(parts[2])
+			var data []byte
+			switch layerName {
+			case "catalog", "catalog.json":
+				data = layers.Catalog
+			case "profile", "profile.json":
+				data = layers.Profile
+			case "component-definition", "component-definition.json", "components":
+				data = layers.ComponentDefinition
+			case "system-security-plan", "system-security-plan.json", "ssp":
+				data = layers.SystemSecurityPlan
+			case "assessment-plan", "assessment-plan.json", "ap":
+				data = layers.AssessmentPlan
+			case "assessment-results", "assessment-results.json", "ar":
+				data = layers.AssessmentResults
+			case "plan-of-action-and-milestones", "plan-of-action-and-milestones.json", "poam":
+				data = layers.POAM
+			default:
+				http.Error(w, fmt.Sprintf("unknown layer %s", layerName), http.StatusNotFound)
+				return
+			}
+			w.Header().Set("Content-Type", "application/json; charset=utf-8")
+			w.WriteHeader(http.StatusOK)
+			_, _ = w.Write(data)
+			return
+		}
+
+		type LayerSummary struct {
+			Name      string `json:"name"`
+			Kind      string `json:"kind"`
+			SizeBytes int    `json:"size_bytes"`
+			SHA256    string `json:"sha256"`
+		}
+
+		hashOf := func(b []byte) string {
+			h := sha256.Sum256(b)
+			return hex.EncodeToString(h[:])
+		}
+
+		list := []LayerSummary{
+			{"catalog.json", "catalog", len(layers.Catalog), hashOf(layers.Catalog)},
+			{"profile.json", "profile", len(layers.Profile), hashOf(layers.Profile)},
+			{"component-definition.json", "component-definition", len(layers.ComponentDefinition), hashOf(layers.ComponentDefinition)},
+			{"system-security-plan.json", "system-security-plan", len(layers.SystemSecurityPlan), hashOf(layers.SystemSecurityPlan)},
+			{"assessment-plan.json", "assessment-plan", len(layers.AssessmentPlan), hashOf(layers.AssessmentPlan)},
+			{"assessment-results.json", "assessment-results", len(layers.AssessmentResults), hashOf(layers.AssessmentResults)},
+			{"plan-of-action-and-milestones.json", "plan-of-action-and-milestones", len(layers.POAM), hashOf(layers.POAM)},
+		}
+		writeJSON(w, http.StatusOK, list)
 		return
 	}
 
