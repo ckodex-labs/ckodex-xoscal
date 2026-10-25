@@ -15,6 +15,7 @@
             }
           ],
           "control-id": "_03.01.01.a",
+          "remarks": "Control _03.01.01.a (03.01.01.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "2c274f34-fd28-5ed0-ac22-eed1b4bc04b4"
         },
         {
@@ -29,6 +30,7 @@
             }
           ],
           "control-id": "_03.01.01.b",
+          "remarks": "Control _03.01.01.b (03.01.01.B) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "7c862575-dfb1-5e22-9195-537589134123"
         },
         {
@@ -43,6 +45,7 @@
             }
           ],
           "control-id": "_03.01.01.c.1",
+          "remarks": "Control _03.01.01.c.1 (03.01.01.C.1) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "2a5b29b4-d37a-527a-913b-c7d51ae0142e"
         },
         {
@@ -57,6 +60,7 @@
             }
           ],
           "control-id": "_03.01.01.c.2",
+          "remarks": "Control _03.01.01.c.2 (03.01.01.C.2) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "a8166ba0-62e2-5cc8-81c9-a96dd2b3ec64"
         },
         {
@@ -71,6 +75,7 @@
             }
           ],
           "control-id": "_03.01.01.c.3",
+          "remarks": "Control _03.01.01.c.3 (03.01.01.C.3) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "30b88c49-920c-5467-875c-2a946eae8196"
         },
         {
@@ -85,6 +90,7 @@
             }
           ],
           "control-id": "_03.01.01.d.1",
+          "remarks": "Control _03.01.01.d.1 (03.01.01.D.1) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "ea6aaa69-8887-53a9-af4b-565b875e2852"
         },
         {
@@ -99,6 +105,7 @@
             }
           ],
           "control-id": "_03.01.01.d.2",
+          "remarks": "Control _03.01.01.d.2 (03.01.01.D.2) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "18f95ac9-9069-55d5-966d-e142dd365071"
         },
         {
@@ -113,6 +120,7 @@
             }
           ],
           "control-id": "_03.01.01.e",
+          "remarks": "Control _03.01.01.e (03.01.01.E) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "ae40b0a0-b44f-5547-a5f9-3f2db83a2266"
         },
         {
@@ -127,6 +135,7 @@
             }
           ],
           "control-id": "_03.01.01.f.1",
+          "remarks": "Control _03.01.01.f.1 (03.01.01.F.1) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "96f3e61e-17c3-5bc8-93b9-02f38ab0bb00"
         },
         {
@@ -141,6 +150,7 @@
             }
           ],
           "control-id": "_03.01.01.f.2",
+          "remarks": "Control _03.01.01.f.2 (03.01.01.F.2) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "7d856b62-2180-5417-9301-3cf909299165"
         },
         {
@@ -155,6 +165,7 @@
             }
           ],
           "control-id": "_03.01.01.f.3",
+          "remarks": "Control _03.01.01.f.3 (03.01.01.F.3) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "bec1edb4-8caa-5433-962f-46c5e0c9a4a4"
         },
         {
@@ -169,6 +180,7 @@
             }
           ],
           "control-id": "_03.01.01.f.4",
+          "remarks": "Control _03.01.01.f.4 (03.01.01.F.4) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "d0267b64-6e46-5fd1-b9c8-924be0111462"
         },
         {
@@ -183,6 +195,7 @@
             }
           ],
           "control-id": "_03.01.01.f.5",
+          "remarks": "Control _03.01.01.f.5 (03.01.01.F.5) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "4781d36c-5362-5227-874a-a26b0d4d1abe"
         },
         {
@@ -197,6 +210,7 @@
             }
           ],
           "control-id": "_03.01.01.g.1",
+          "remarks": "Control _03.01.01.g.1 (03.01.01.G.1) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "584100a6-fd58-5590-a3fa-c2561a64cecf"
         },
         {
@@ -211,6 +225,7 @@
             }
           ],
           "control-id": "_03.01.01.g.2",
+          "remarks": "Control _03.01.01.g.2 (03.01.01.G.2) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "0f1b8588-3e23-5306-b863-a575255040ef"
         },
         {
@@ -225,6 +240,7 @@
             }
           ],
           "control-id": "_03.01.01.g.3",
+          "remarks": "Control _03.01.01.g.3 (03.01.01.G.3) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "7f90e06c-621b-5568-b666-fb6f017fea38"
         },
         {
@@ -239,6 +255,7 @@
             }
           ],
           "control-id": "_03.01.01.h",
+          "remarks": "Control _03.01.01.h (03.01.01.H) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "f120515d-708b-5430-900d-191828bf6d55"
         },
         {
@@ -253,6 +270,7 @@
             }
           ],
           "control-id": "_03.01.02.a",
+          "remarks": "Control _03.01.02.a (03.01.02.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "bed10e7f-9dd5-5fca-93f7-01a57d12706f"
         },
         {
@@ -267,6 +285,7 @@
             }
           ],
           "control-id": "_03.01.03.a",
+          "remarks": "Control _03.01.03.a (03.01.03.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "c8a1fe4c-c8bc-5a65-a05a-ffebcd070215"
         },
         {
@@ -281,6 +300,7 @@
             }
           ],
           "control-id": "_03.01.04.a",
+          "remarks": "Control _03.01.04.a (03.01.04.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "7ffd92a3-8f22-5cf5-a171-fa5d93a93588"
         },
         {
@@ -295,6 +315,7 @@
             }
           ],
           "control-id": "_03.01.04.b",
+          "remarks": "Control _03.01.04.b (03.01.04.B) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "5c8d0b2a-5035-5912-abbc-0ca5dfef4860"
         },
         {
@@ -309,6 +330,7 @@
             }
           ],
           "control-id": "_03.01.05.a",
+          "remarks": "Control _03.01.05.a (03.01.05.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "8fcf2e58-56a7-5e82-b7ee-bd9b2c0d079f"
         },
         {
@@ -323,6 +345,7 @@
             }
           ],
           "control-id": "_03.01.05.b",
+          "remarks": "Control _03.01.05.b (03.01.05.B) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "f65d92cc-5c80-5f2d-90da-16648ec271c9"
         },
         {
@@ -337,6 +360,7 @@
             }
           ],
           "control-id": "_03.01.05.c",
+          "remarks": "Control _03.01.05.c (03.01.05.C) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "86fec2c6-be1a-5153-a31d-a7893e6f7f08"
         },
         {
@@ -351,6 +375,7 @@
             }
           ],
           "control-id": "_03.01.05.d",
+          "remarks": "Control _03.01.05.d (03.01.05.D) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "b9c6d0f3-526f-5286-b816-4b4d28217bb1"
         },
         {
@@ -365,6 +390,7 @@
             }
           ],
           "control-id": "_03.01.06.a",
+          "remarks": "Control _03.01.06.a (03.01.06.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "cdb66763-e08b-5346-8750-ad6f8616ea00"
         },
         {
@@ -379,6 +405,7 @@
             }
           ],
           "control-id": "_03.01.06.b",
+          "remarks": "Control _03.01.06.b (03.01.06.B) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "72cb880f-6a5e-59bd-9c93-3c2cf185f98a"
         },
         {
@@ -393,6 +420,7 @@
             }
           ],
           "control-id": "_03.01.06.c",
+          "remarks": "Control _03.01.06.c (03.01.06.C) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "0553de8d-a934-54c8-85f1-7e03a932784c"
         },
         {
@@ -407,6 +435,7 @@
             }
           ],
           "control-id": "_03.01.07.a",
+          "remarks": "Control _03.01.07.a (03.01.07.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "8e57c438-fbef-5547-8531-811fd53c8ecd"
         },
         {
@@ -421,6 +450,7 @@
             }
           ],
           "control-id": "_03.01.07.b",
+          "remarks": "Control _03.01.07.b (03.01.07.B) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "aaf68c11-a473-59d1-8c17-e9ebe0b8619c"
         },
         {
@@ -435,6 +465,7 @@
             }
           ],
           "control-id": "_03.01.08.a",
+          "remarks": "Control _03.01.08.a (03.01.08.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "3f4d9809-81d2-5a6e-89ed-b28fec71bf14"
         },
         {
@@ -449,6 +480,7 @@
             }
           ],
           "control-id": "_03.01.08.b",
+          "remarks": "Control _03.01.08.b (03.01.08.B) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "aab2ccc0-3231-569a-a643-f27b9648cfa1"
         },
         {
@@ -463,6 +495,7 @@
             }
           ],
           "control-id": "_03.01.09.a",
+          "remarks": "Control _03.01.09.a (03.01.09.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "c3639967-acf0-54a6-88c6-4dccfdddb973"
         },
         {
@@ -477,6 +510,7 @@
             }
           ],
           "control-id": "_03.01.10.a",
+          "remarks": "Control _03.01.10.a (03.01.10.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "cb72723d-884c-54d7-88ca-affe77a2e262"
         },
         {
@@ -491,6 +525,7 @@
             }
           ],
           "control-id": "_03.01.10.b",
+          "remarks": "Control _03.01.10.b (03.01.10.B) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "376c7a4f-2108-5427-b90a-37c275ca4be2"
         },
         {
@@ -505,6 +540,7 @@
             }
           ],
           "control-id": "_03.01.10.c",
+          "remarks": "Control _03.01.10.c (03.01.10.C) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "6d9b35f9-c5d4-5b69-a9da-4bf80e0ac54b"
         },
         {
@@ -519,6 +555,7 @@
             }
           ],
           "control-id": "_03.01.11.a",
+          "remarks": "Control _03.01.11.a (03.01.11.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "8f3f9fe2-df1a-5b60-a44d-e7818059bc29"
         },
         {
@@ -533,6 +570,7 @@
             }
           ],
           "control-id": "_03.01.12.a",
+          "remarks": "Control _03.01.12.a (03.01.12.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "7b9701f2-b55b-542c-a87f-548321fd5146"
         },
         {
@@ -547,6 +585,7 @@
             }
           ],
           "control-id": "_03.01.12.b",
+          "remarks": "Control _03.01.12.b (03.01.12.B) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "6eee3e99-53e4-5f68-9eab-19faa289cb86"
         },
         {
@@ -561,6 +600,7 @@
             }
           ],
           "control-id": "_03.01.12.c",
+          "remarks": "Control _03.01.12.c (03.01.12.C) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "a118218b-5560-5cac-adf4-0c92aa21e3e0"
         },
         {
@@ -575,6 +615,7 @@
             }
           ],
           "control-id": "_03.01.12.d",
+          "remarks": "Control _03.01.12.d (03.01.12.D) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "4e597eba-adb2-5ecb-ad35-99d5af40f80f"
         },
         {
@@ -589,6 +630,7 @@
             }
           ],
           "control-id": "_03.01.16.a",
+          "remarks": "Control _03.01.16.a (03.01.16.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "0992a48b-2a49-5873-9cbd-e17118e361dc"
         },
         {
@@ -603,6 +645,7 @@
             }
           ],
           "control-id": "_03.01.16.b",
+          "remarks": "Control _03.01.16.b (03.01.16.B) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "9ec3bfde-ea95-5d02-b3bb-5d3af4b2594c"
         },
         {
@@ -617,6 +660,7 @@
             }
           ],
           "control-id": "_03.01.16.c",
+          "remarks": "Control _03.01.16.c (03.01.16.C) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "9778b956-d1c2-57d3-809d-f5b7956041c7"
         },
         {
@@ -631,6 +675,7 @@
             }
           ],
           "control-id": "_03.01.16.d",
+          "remarks": "Control _03.01.16.d (03.01.16.D) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "833882ed-40f3-59bc-a4fc-d24882fffbdd"
         },
         {
@@ -645,6 +690,7 @@
             }
           ],
           "control-id": "_03.01.18.a",
+          "remarks": "Control _03.01.18.a (03.01.18.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "e1172f75-acd9-5602-90c1-c8c2729cfda2"
         },
         {
@@ -659,6 +705,7 @@
             }
           ],
           "control-id": "_03.01.18.b",
+          "remarks": "Control _03.01.18.b (03.01.18.B) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "71da4719-2256-5b40-a984-2a27dda3d1d6"
         },
         {
@@ -673,6 +720,7 @@
             }
           ],
           "control-id": "_03.01.18.c",
+          "remarks": "Control _03.01.18.c (03.01.18.C) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "64b17772-3e5e-5701-a677-6918a12d1589"
         },
         {
@@ -687,6 +735,7 @@
             }
           ],
           "control-id": "_03.01.20.a",
+          "remarks": "Control _03.01.20.a (03.01.20.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "dc38d679-e154-5a7f-831e-742b71d500bb"
         },
         {
@@ -701,6 +750,7 @@
             }
           ],
           "control-id": "_03.01.20.b",
+          "remarks": "Control _03.01.20.b (03.01.20.B) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "7416ecd7-5c5a-5ed0-b5ae-03d662bc7a26"
         },
         {
@@ -715,6 +765,7 @@
             }
           ],
           "control-id": "_03.01.20.c.1",
+          "remarks": "Control _03.01.20.c.1 (03.01.20.C.1) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "36942957-4a43-5e7e-a199-e0535d88f041"
         },
         {
@@ -729,6 +780,7 @@
             }
           ],
           "control-id": "_03.01.20.c.2",
+          "remarks": "Control _03.01.20.c.2 (03.01.20.C.2) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "63302510-3065-52a7-b13f-2bfeb02d6b7e"
         },
         {
@@ -743,6 +795,7 @@
             }
           ],
           "control-id": "_03.01.20.d",
+          "remarks": "Control _03.01.20.d (03.01.20.D) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "db7f49f8-b475-5c4b-b9a5-29efff169a10"
         },
         {
@@ -757,6 +810,7 @@
             }
           ],
           "control-id": "_03.01.22.a",
+          "remarks": "Control _03.01.22.a (03.01.22.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "c78be3f6-54d5-573f-9cb4-1b002bc1092e"
         },
         {
@@ -771,6 +825,7 @@
             }
           ],
           "control-id": "_03.01.22.b",
+          "remarks": "Control _03.01.22.b (03.01.22.B) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "33dad8da-3c7b-50b9-b533-7fe9d910f8a6"
         },
         {
@@ -785,6 +840,7 @@
             }
           ],
           "control-id": "_03.02.01.a.1",
+          "remarks": "Control _03.02.01.a.1 (03.02.01.A.1) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "699018d4-b88b-50b3-9225-866c970643b1"
         },
         {
@@ -799,6 +855,7 @@
             }
           ],
           "control-id": "_03.02.01.a.2",
+          "remarks": "Control _03.02.01.a.2 (03.02.01.A.2) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "8886eb81-d8f5-59f1-9aa3-343007d5b2e7"
         },
         {
@@ -813,6 +870,7 @@
             }
           ],
           "control-id": "_03.02.01.a.3",
+          "remarks": "Control _03.02.01.a.3 (03.02.01.A.3) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "0651e1ed-ae45-5384-bb0c-6e1d7bacc695"
         },
         {
@@ -827,6 +885,7 @@
             }
           ],
           "control-id": "_03.02.01.b",
+          "remarks": "Control _03.02.01.b (03.02.01.B) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "6881a157-6ae6-52f4-b200-b32d12a6402c"
         },
         {
@@ -841,6 +900,7 @@
             }
           ],
           "control-id": "_03.02.02.a.1",
+          "remarks": "Control _03.02.02.a.1 (03.02.02.A.1) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "daae2569-0c68-5881-bef3-a6862d3eff63"
         },
         {
@@ -855,6 +915,7 @@
             }
           ],
           "control-id": "_03.02.02.a.2",
+          "remarks": "Control _03.02.02.a.2 (03.02.02.A.2) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "3fb911c7-07da-54ea-a3ce-18f1a4281825"
         },
         {
@@ -869,6 +930,7 @@
             }
           ],
           "control-id": "_03.02.02.b",
+          "remarks": "Control _03.02.02.b (03.02.02.B) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "71120ce5-afc2-5e0c-9f4e-dc7223b15b4b"
         },
         {
@@ -883,6 +945,7 @@
             }
           ],
           "control-id": "_03.03.01.a",
+          "remarks": "Control _03.03.01.a (03.03.01.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "008abadf-9716-52c2-b94a-0478b5dd3710"
         },
         {
@@ -897,6 +960,7 @@
             }
           ],
           "control-id": "_03.03.01.b",
+          "remarks": "Control _03.03.01.b (03.03.01.B) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "2265acf7-ac4f-580b-be1e-9464042a44cc"
         },
         {
@@ -911,6 +975,7 @@
             }
           ],
           "control-id": "_03.03.02.a.1",
+          "remarks": "Control _03.03.02.a.1 (03.03.02.A.1) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "8eece8d0-f2f0-582f-a6e3-e95f8f67fe95"
         },
         {
@@ -925,6 +990,7 @@
             }
           ],
           "control-id": "_03.03.02.a.2",
+          "remarks": "Control _03.03.02.a.2 (03.03.02.A.2) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "51e7a981-ba50-5d52-8385-4fc7d517eebf"
         },
         {
@@ -939,6 +1005,7 @@
             }
           ],
           "control-id": "_03.03.02.a.3",
+          "remarks": "Control _03.03.02.a.3 (03.03.02.A.3) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "369b1981-b364-5bac-b6e0-f4a574749a71"
         },
         {
@@ -953,6 +1020,7 @@
             }
           ],
           "control-id": "_03.03.02.a.4",
+          "remarks": "Control _03.03.02.a.4 (03.03.02.A.4) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "48c97f43-713d-5b75-8f7d-c27854384a9f"
         },
         {
@@ -967,6 +1035,7 @@
             }
           ],
           "control-id": "_03.03.02.a.5",
+          "remarks": "Control _03.03.02.a.5 (03.03.02.A.5) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "3a8c624b-b47f-5776-bf24-e58cd374dedb"
         },
         {
@@ -981,6 +1050,7 @@
             }
           ],
           "control-id": "_03.03.02.a.6",
+          "remarks": "Control _03.03.02.a.6 (03.03.02.A.6) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "b2ac79f3-d035-5b2a-9d45-692b9e7d2c63"
         },
         {
@@ -995,6 +1065,7 @@
             }
           ],
           "control-id": "_03.03.02.b",
+          "remarks": "Control _03.03.02.b (03.03.02.B) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "f700dbc2-ebb1-50d1-991b-f50e6383f67a"
         },
         {
@@ -1009,6 +1080,7 @@
             }
           ],
           "control-id": "_03.03.03.a",
+          "remarks": "Control _03.03.03.a (03.03.03.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "893bbaaa-44db-5a15-b159-98c9319c0127"
         },
         {
@@ -1023,6 +1095,7 @@
             }
           ],
           "control-id": "_03.03.03.b",
+          "remarks": "Control _03.03.03.b (03.03.03.B) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "9dd042c2-f67f-5999-93e5-376bf7f5a109"
         },
         {
@@ -1037,6 +1110,7 @@
             }
           ],
           "control-id": "_03.03.04.a",
+          "remarks": "Control _03.03.04.a (03.03.04.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "e2b51ede-58a5-5ddf-8870-fee6ed9cb624"
         },
         {
@@ -1051,6 +1125,7 @@
             }
           ],
           "control-id": "_03.03.04.b",
+          "remarks": "Control _03.03.04.b (03.03.04.B) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "95abc5b2-ca88-510b-afd4-6859e974b3f0"
         },
         {
@@ -1065,6 +1140,7 @@
             }
           ],
           "control-id": "_03.03.05.a",
+          "remarks": "Control _03.03.05.a (03.03.05.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "3d43e9b3-ae1d-59b7-81e1-3741371a317e"
         },
         {
@@ -1079,6 +1155,7 @@
             }
           ],
           "control-id": "_03.03.05.b",
+          "remarks": "Control _03.03.05.b (03.03.05.B) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "2fbbe26e-d74f-5919-a45b-781cd6867b4f"
         },
         {
@@ -1093,6 +1170,7 @@
             }
           ],
           "control-id": "_03.03.05.c",
+          "remarks": "Control _03.03.05.c (03.03.05.C) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "5168ef48-104e-54dc-85a7-c65c24a2b6ab"
         },
         {
@@ -1107,6 +1185,7 @@
             }
           ],
           "control-id": "_03.03.06.a",
+          "remarks": "Control _03.03.06.a (03.03.06.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "0dc1006b-ccf1-5dcb-9962-83277d27cafb"
         },
         {
@@ -1121,6 +1200,7 @@
             }
           ],
           "control-id": "_03.03.06.b",
+          "remarks": "Control _03.03.06.b (03.03.06.B) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "2eb116e7-18dd-5ffb-a0fe-7a7b0159feef"
         },
         {
@@ -1135,6 +1215,7 @@
             }
           ],
           "control-id": "_03.03.07.a",
+          "remarks": "Control _03.03.07.a (03.03.07.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "aefb0e0c-df30-5fde-8127-a89296fd6118"
         },
         {
@@ -1149,6 +1230,7 @@
             }
           ],
           "control-id": "_03.03.07.b",
+          "remarks": "Control _03.03.07.b (03.03.07.B) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "44d3e1d9-b249-5fe5-bd83-47f7a9cdf20f"
         },
         {
@@ -1163,6 +1245,7 @@
             }
           ],
           "control-id": "_03.03.08.a",
+          "remarks": "Control _03.03.08.a (03.03.08.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "c2dd1f82-b516-5adc-a4b7-111dc2003f4b"
         },
         {
@@ -1177,6 +1260,7 @@
             }
           ],
           "control-id": "_03.03.08.b",
+          "remarks": "Control _03.03.08.b (03.03.08.B) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "f590e1c0-fef5-54bd-985d-eef2313cb6c6"
         },
         {
@@ -1191,6 +1275,7 @@
             }
           ],
           "control-id": "_03.04.01.a",
+          "remarks": "Control _03.04.01.a (03.04.01.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "ba0d46f1-9286-59ad-8f4b-a05d923bf4e2"
         },
         {
@@ -1205,6 +1290,7 @@
             }
           ],
           "control-id": "_03.04.01.b",
+          "remarks": "Control _03.04.01.b (03.04.01.B) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "db096e3a-55e1-507a-a20e-8378d7d1e411"
         },
         {
@@ -1219,6 +1305,7 @@
             }
           ],
           "control-id": "_03.04.02.a",
+          "remarks": "Control _03.04.02.a (03.04.02.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "77c402bd-0e26-592f-a880-0f30eeed4cc8"
         },
         {
@@ -1233,6 +1320,7 @@
             }
           ],
           "control-id": "_03.04.02.b",
+          "remarks": "Control _03.04.02.b (03.04.02.B) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "395d4773-cdf9-5a60-8ee8-311c064ce9e5"
         },
         {
@@ -1247,6 +1335,7 @@
             }
           ],
           "control-id": "_03.04.03.a",
+          "remarks": "Control _03.04.03.a (03.04.03.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "b6b0ac6b-9873-57ca-9bf3-d5e12fb5c222"
         },
         {
@@ -1261,6 +1350,7 @@
             }
           ],
           "control-id": "_03.04.03.b",
+          "remarks": "Control _03.04.03.b (03.04.03.B) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "197d5ee7-0173-5f92-ac15-8d20aed73a5a"
         },
         {
@@ -1275,6 +1365,7 @@
             }
           ],
           "control-id": "_03.04.03.c",
+          "remarks": "Control _03.04.03.c (03.04.03.C) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "3970d500-6140-5ec5-8fe7-f1cd9c455c75"
         },
         {
@@ -1289,6 +1380,7 @@
             }
           ],
           "control-id": "_03.04.03.d",
+          "remarks": "Control _03.04.03.d (03.04.03.D) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "fbced70b-d48d-557e-8507-ed10b0968ec0"
         },
         {
@@ -1303,6 +1395,7 @@
             }
           ],
           "control-id": "_03.04.04.a",
+          "remarks": "Control _03.04.04.a (03.04.04.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "a1ed7797-6090-5557-9999-c400bfc9c137"
         },
         {
@@ -1317,6 +1410,7 @@
             }
           ],
           "control-id": "_03.04.04.b",
+          "remarks": "Control _03.04.04.b (03.04.04.B) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "350c00ae-b6f3-5624-b94e-196c28eb4611"
         },
         {
@@ -1331,6 +1425,7 @@
             }
           ],
           "control-id": "_03.04.05.a",
+          "remarks": "Control _03.04.05.a (03.04.05.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "d4e60a2f-5ab2-51af-a312-ed91408b1957"
         },
         {
@@ -1345,6 +1440,7 @@
             }
           ],
           "control-id": "_03.04.06.a",
+          "remarks": "Control _03.04.06.a (03.04.06.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "7c9557a1-153d-5c08-a71a-10d1bd430f7f"
         },
         {
@@ -1359,6 +1455,7 @@
             }
           ],
           "control-id": "_03.04.06.b",
+          "remarks": "Control _03.04.06.b (03.04.06.B) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "73aed268-348b-57af-a1c7-89c6dd93c562"
         },
         {
@@ -1373,6 +1470,7 @@
             }
           ],
           "control-id": "_03.04.06.c",
+          "remarks": "Control _03.04.06.c (03.04.06.C) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "58799c4a-0c80-579c-9bed-675297e0462d"
         },
         {
@@ -1387,6 +1485,7 @@
             }
           ],
           "control-id": "_03.04.06.d",
+          "remarks": "Control _03.04.06.d (03.04.06.D) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "8b838134-7ee5-57bc-b9e3-762d620238d8"
         },
         {
@@ -1401,6 +1500,7 @@
             }
           ],
           "control-id": "_03.04.08.a",
+          "remarks": "Control _03.04.08.a (03.04.08.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "1cf24620-7141-5488-917f-4f1e0c82d697"
         },
         {
@@ -1415,6 +1515,7 @@
             }
           ],
           "control-id": "_03.04.08.b",
+          "remarks": "Control _03.04.08.b (03.04.08.B) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "e7ae3e28-a219-5910-8fab-a6142cab0e34"
         },
         {
@@ -1429,6 +1530,7 @@
             }
           ],
           "control-id": "_03.04.08.c",
+          "remarks": "Control _03.04.08.c (03.04.08.C) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "cdbc06c4-2c57-531e-89be-327ddc6f3eae"
         },
         {
@@ -1443,6 +1545,7 @@
             }
           ],
           "control-id": "_03.04.10.a",
+          "remarks": "Control _03.04.10.a (03.04.10.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "917a1f3f-0fb6-5064-85cd-b8b545c4ed3e"
         },
         {
@@ -1457,6 +1560,7 @@
             }
           ],
           "control-id": "_03.04.10.b",
+          "remarks": "Control _03.04.10.b (03.04.10.B) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "1e166abd-b6d5-5300-a442-9614861ab292"
         },
         {
@@ -1471,6 +1575,7 @@
             }
           ],
           "control-id": "_03.04.10.c",
+          "remarks": "Control _03.04.10.c (03.04.10.C) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "cd39d8cc-5b56-5119-b014-db4a799d22bc"
         },
         {
@@ -1485,6 +1590,7 @@
             }
           ],
           "control-id": "_03.04.11.a",
+          "remarks": "Control _03.04.11.a (03.04.11.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "42170ecb-784f-50b4-ae87-f9196af952b2"
         },
         {
@@ -1499,6 +1605,7 @@
             }
           ],
           "control-id": "_03.04.11.b",
+          "remarks": "Control _03.04.11.b (03.04.11.B) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "9d15d000-742b-5df9-995a-fd720cffadde"
         },
         {
@@ -1513,6 +1620,7 @@
             }
           ],
           "control-id": "_03.04.12.a",
+          "remarks": "Control _03.04.12.a (03.04.12.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "80ac79ae-bd98-5f2b-bafe-bde298cfc7a1"
         },
         {
@@ -1527,6 +1635,7 @@
             }
           ],
           "control-id": "_03.04.12.b",
+          "remarks": "Control _03.04.12.b (03.04.12.B) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "5a9fbac0-b9a4-5265-94e8-ca768582b509"
         },
         {
@@ -1541,6 +1650,7 @@
             }
           ],
           "control-id": "_03.05.01.a",
+          "remarks": "Control _03.05.01.a (03.05.01.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "d1cebe6d-0cc1-5c3a-b35b-a5038e8540ea"
         },
         {
@@ -1555,6 +1665,7 @@
             }
           ],
           "control-id": "_03.05.01.b",
+          "remarks": "Control _03.05.01.b (03.05.01.B) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "5f2723b5-bb53-5f30-940c-16deac523c5d"
         },
         {
@@ -1569,6 +1680,7 @@
             }
           ],
           "control-id": "_03.05.02.a",
+          "remarks": "Control _03.05.02.a (03.05.02.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "821c63fc-1691-50f9-aad0-e328433878d0"
         },
         {
@@ -1583,6 +1695,7 @@
             }
           ],
           "control-id": "_03.05.03.a",
+          "remarks": "Control _03.05.03.a (03.05.03.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "f466881b-1ccd-5d81-a91b-cc1805fd101b"
         },
         {
@@ -1597,6 +1710,7 @@
             }
           ],
           "control-id": "_03.05.04.a",
+          "remarks": "Control _03.05.04.a (03.05.04.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "b50bae9c-eb19-55f2-b3f4-24a28e35b357"
         },
         {
@@ -1611,6 +1725,7 @@
             }
           ],
           "control-id": "_03.05.05.a",
+          "remarks": "Control _03.05.05.a (03.05.05.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "476cf924-2418-5082-91d8-b95834b7ac25"
         },
         {
@@ -1625,6 +1740,7 @@
             }
           ],
           "control-id": "_03.05.05.b",
+          "remarks": "Control _03.05.05.b (03.05.05.B) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "1bfacc34-6df0-5cd6-bb14-b5ddd3db5e18"
         },
         {
@@ -1639,6 +1755,7 @@
             }
           ],
           "control-id": "_03.05.05.c",
+          "remarks": "Control _03.05.05.c (03.05.05.C) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "8bb8b641-73fb-5e60-b462-ee4333536ed4"
         },
         {
@@ -1653,6 +1770,7 @@
             }
           ],
           "control-id": "_03.05.05.d",
+          "remarks": "Control _03.05.05.d (03.05.05.D) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "d34ca69c-a83b-5685-9b18-a1527d4473cc"
         },
         {
@@ -1667,6 +1785,7 @@
             }
           ],
           "control-id": "_03.05.07.a",
+          "remarks": "Control _03.05.07.a (03.05.07.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "40d1f36d-d039-50b6-9144-fc44d8c6d0d2"
         },
         {
@@ -1681,6 +1800,7 @@
             }
           ],
           "control-id": "_03.05.07.b",
+          "remarks": "Control _03.05.07.b (03.05.07.B) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "c3a23c29-c102-5925-820b-2c0fea46e241"
         },
         {
@@ -1695,6 +1815,7 @@
             }
           ],
           "control-id": "_03.05.07.c",
+          "remarks": "Control _03.05.07.c (03.05.07.C) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "5b5ff85e-15b4-581f-bdff-192479ace3c8"
         },
         {
@@ -1709,6 +1830,7 @@
             }
           ],
           "control-id": "_03.05.07.d",
+          "remarks": "Control _03.05.07.d (03.05.07.D) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "aa306302-2dde-5684-a43e-d1f441f6e0bc"
         },
         {
@@ -1723,6 +1845,7 @@
             }
           ],
           "control-id": "_03.05.07.e",
+          "remarks": "Control _03.05.07.e (03.05.07.E) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "c7b8ec60-aaf8-5dab-8161-bbf6a646ba03"
         },
         {
@@ -1737,6 +1860,7 @@
             }
           ],
           "control-id": "_03.05.07.f",
+          "remarks": "Control _03.05.07.f (03.05.07.F) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "cee5d83e-0bc4-5f36-9d4b-31a6be8e28e1"
         },
         {
@@ -1751,6 +1875,7 @@
             }
           ],
           "control-id": "_03.05.11.a",
+          "remarks": "Control _03.05.11.a (03.05.11.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "0ef58948-9bf1-58f8-ac21-d634eaecfe8f"
         },
         {
@@ -1765,6 +1890,7 @@
             }
           ],
           "control-id": "_03.05.12.a",
+          "remarks": "Control _03.05.12.a (03.05.12.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "7a63be65-d0e1-541a-a24d-ecfacee2a45b"
         },
         {
@@ -1779,6 +1905,7 @@
             }
           ],
           "control-id": "_03.05.12.b",
+          "remarks": "Control _03.05.12.b (03.05.12.B) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "9b13935e-1ab6-5491-bcf1-7ec931b98f4a"
         },
         {
@@ -1793,6 +1920,7 @@
             }
           ],
           "control-id": "_03.05.12.c",
+          "remarks": "Control _03.05.12.c (03.05.12.C) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "25a740b8-34f7-5b4a-9ba0-96df1cf4481e"
         },
         {
@@ -1807,6 +1935,7 @@
             }
           ],
           "control-id": "_03.05.12.d",
+          "remarks": "Control _03.05.12.d (03.05.12.D) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "fb38ccec-0d4e-53e9-a5ca-09c548684f23"
         },
         {
@@ -1821,6 +1950,7 @@
             }
           ],
           "control-id": "_03.05.12.e",
+          "remarks": "Control _03.05.12.e (03.05.12.E) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "f196d9a6-fddd-55d4-a281-278f156e8a6f"
         },
         {
@@ -1835,6 +1965,7 @@
             }
           ],
           "control-id": "_03.05.12.f",
+          "remarks": "Control _03.05.12.f (03.05.12.F) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "4b6475b7-9cab-5f9f-bf23-8d4033d7af27"
         },
         {
@@ -1849,6 +1980,7 @@
             }
           ],
           "control-id": "_03.06.01.a",
+          "remarks": "Control _03.06.01.a (03.06.01.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "c3d11617-b3f7-5f5b-8920-e554867ac266"
         },
         {
@@ -1863,6 +1995,7 @@
             }
           ],
           "control-id": "_03.06.02.a",
+          "remarks": "Control _03.06.02.a (03.06.02.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "276eff81-c084-5e34-8cba-c49607867ce8"
         },
         {
@@ -1877,6 +2010,7 @@
             }
           ],
           "control-id": "_03.06.02.b",
+          "remarks": "Control _03.06.02.b (03.06.02.B) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "401ab9c5-b253-5175-aa37-17162968b5fd"
         },
         {
@@ -1891,6 +2025,7 @@
             }
           ],
           "control-id": "_03.06.02.c",
+          "remarks": "Control _03.06.02.c (03.06.02.C) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "bef4ca59-65c5-53e9-8f6a-932352ab7abd"
         },
         {
@@ -1905,6 +2040,7 @@
             }
           ],
           "control-id": "_03.06.02.d",
+          "remarks": "Control _03.06.02.d (03.06.02.D) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "82e5c5f7-1432-5ac6-801e-c0c9066c1610"
         },
         {
@@ -1919,6 +2055,7 @@
             }
           ],
           "control-id": "_03.06.03.a",
+          "remarks": "Control _03.06.03.a (03.06.03.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "28b097fa-c895-53f7-ae17-97454efa12aa"
         },
         {
@@ -1933,6 +2070,7 @@
             }
           ],
           "control-id": "_03.06.04.a.1",
+          "remarks": "Control _03.06.04.a.1 (03.06.04.A.1) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "60f548cb-7cf1-5420-a3b2-9da176e32426"
         },
         {
@@ -1947,6 +2085,7 @@
             }
           ],
           "control-id": "_03.06.04.a.2",
+          "remarks": "Control _03.06.04.a.2 (03.06.04.A.2) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "64cca49d-9caf-5d69-bf62-ca456bde906b"
         },
         {
@@ -1961,6 +2100,7 @@
             }
           ],
           "control-id": "_03.06.04.a.3",
+          "remarks": "Control _03.06.04.a.3 (03.06.04.A.3) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "88882f24-9b0a-5090-9f34-d9317b3163c3"
         },
         {
@@ -1975,6 +2115,7 @@
             }
           ],
           "control-id": "_03.06.04.b",
+          "remarks": "Control _03.06.04.b (03.06.04.B) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "68bf2b85-7bba-5ef6-87d4-f5cc129112f0"
         },
         {
@@ -1989,6 +2130,7 @@
             }
           ],
           "control-id": "_03.06.05.a.1",
+          "remarks": "Control _03.06.05.a.1 (03.06.05.A.1) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "08cba352-ee36-54c5-9dd1-a36d91aa7c3b"
         },
         {
@@ -2003,6 +2145,7 @@
             }
           ],
           "control-id": "_03.06.05.a.2",
+          "remarks": "Control _03.06.05.a.2 (03.06.05.A.2) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "99215185-ee11-5366-9fc6-c43d17fc3859"
         },
         {
@@ -2017,6 +2160,7 @@
             }
           ],
           "control-id": "_03.06.05.a.3",
+          "remarks": "Control _03.06.05.a.3 (03.06.05.A.3) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "1007bf04-c043-5ca2-bf31-8283fbec5b45"
         },
         {
@@ -2031,6 +2175,7 @@
             }
           ],
           "control-id": "_03.06.05.a.4",
+          "remarks": "Control _03.06.05.a.4 (03.06.05.A.4) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "f3f770f3-1c29-5abf-aa77-fb8e9b460082"
         },
         {
@@ -2045,6 +2190,7 @@
             }
           ],
           "control-id": "_03.06.05.a.5",
+          "remarks": "Control _03.06.05.a.5 (03.06.05.A.5) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "4cd70885-a03e-5619-83f1-cbb9107df4e9"
         },
         {
@@ -2059,6 +2205,7 @@
             }
           ],
           "control-id": "_03.06.05.a.6",
+          "remarks": "Control _03.06.05.a.6 (03.06.05.A.6) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "c8b83a98-828c-5b2d-a3a8-aa5fe23ebe2c"
         },
         {
@@ -2073,6 +2220,7 @@
             }
           ],
           "control-id": "_03.06.05.b",
+          "remarks": "Control _03.06.05.b (03.06.05.B) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "bb09dd69-74ab-57f5-bbbe-77c67eeb3d23"
         },
         {
@@ -2087,6 +2235,7 @@
             }
           ],
           "control-id": "_03.06.05.c",
+          "remarks": "Control _03.06.05.c (03.06.05.C) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "5be04957-b5e1-564f-be9c-1ed44b1db471"
         },
         {
@@ -2101,6 +2250,7 @@
             }
           ],
           "control-id": "_03.06.05.d",
+          "remarks": "Control _03.06.05.d (03.06.05.D) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "4ea0653b-1568-58b1-9ef1-669069cd5ace"
         },
         {
@@ -2115,6 +2265,7 @@
             }
           ],
           "control-id": "_03.07.04.a",
+          "remarks": "Control _03.07.04.a (03.07.04.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "9adc01f4-46c9-5b8c-8ad0-852a6336ae08"
         },
         {
@@ -2129,6 +2280,7 @@
             }
           ],
           "control-id": "_03.07.04.b",
+          "remarks": "Control _03.07.04.b (03.07.04.B) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "bec19692-b9a9-5f3f-b8c9-f9e76b0b8d55"
         },
         {
@@ -2143,6 +2295,7 @@
             }
           ],
           "control-id": "_03.07.04.c",
+          "remarks": "Control _03.07.04.c (03.07.04.C) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "2530418b-4f35-556e-bac5-a58d8a6b22e3"
         },
         {
@@ -2157,6 +2310,7 @@
             }
           ],
           "control-id": "_03.07.05.a",
+          "remarks": "Control _03.07.05.a (03.07.05.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "31b14203-1f04-5ac3-b6ef-d498fa786b27"
         },
         {
@@ -2171,6 +2325,7 @@
             }
           ],
           "control-id": "_03.07.05.b",
+          "remarks": "Control _03.07.05.b (03.07.05.B) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "f97064a2-15d2-5049-a181-304f6af0350f"
         },
         {
@@ -2185,6 +2340,7 @@
             }
           ],
           "control-id": "_03.07.05.c",
+          "remarks": "Control _03.07.05.c (03.07.05.C) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "6dfa7dfd-557c-543f-9f45-d2ee36f55f77"
         },
         {
@@ -2199,6 +2355,7 @@
             }
           ],
           "control-id": "_03.07.06.a",
+          "remarks": "Control _03.07.06.a (03.07.06.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "d30797cd-73bc-564f-abe4-1cb474e935a8"
         },
         {
@@ -2213,6 +2370,7 @@
             }
           ],
           "control-id": "_03.07.06.b",
+          "remarks": "Control _03.07.06.b (03.07.06.B) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "0d6a6724-c8b2-5c80-bff4-e1c2da4bf831"
         },
         {
@@ -2227,6 +2385,7 @@
             }
           ],
           "control-id": "_03.07.06.c",
+          "remarks": "Control _03.07.06.c (03.07.06.C) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "d331dcd3-efd9-5e45-95d3-c0d0113a6b50"
         },
         {
@@ -2241,6 +2400,7 @@
             }
           ],
           "control-id": "_03.07.06.d",
+          "remarks": "Control _03.07.06.d (03.07.06.D) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "73ff56c5-6115-530b-bb92-7d0c6fd36c1b"
         },
         {
@@ -2255,6 +2415,7 @@
             }
           ],
           "control-id": "_03.08.01.a",
+          "remarks": "Control _03.08.01.a (03.08.01.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "f9a4976e-3d4a-5011-88fe-5f00937621a1"
         },
         {
@@ -2269,6 +2430,7 @@
             }
           ],
           "control-id": "_03.08.02.a",
+          "remarks": "Control _03.08.02.a (03.08.02.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "1fc5d14b-79d1-52b1-9885-8425ab4238dc"
         },
         {
@@ -2283,6 +2445,7 @@
             }
           ],
           "control-id": "_03.08.03.a",
+          "remarks": "Control _03.08.03.a (03.08.03.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "0d232782-4472-5f55-8ef8-79f135278c54"
         },
         {
@@ -2297,6 +2460,7 @@
             }
           ],
           "control-id": "_03.08.04.a",
+          "remarks": "Control _03.08.04.a (03.08.04.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "7d572157-79b0-57d2-8dcc-c9f41b032758"
         },
         {
@@ -2311,6 +2475,7 @@
             }
           ],
           "control-id": "_03.08.05.a",
+          "remarks": "Control _03.08.05.a (03.08.05.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "623a86e7-95dc-5d7c-bc98-4882cf3470be"
         },
         {
@@ -2325,6 +2490,7 @@
             }
           ],
           "control-id": "_03.08.05.b",
+          "remarks": "Control _03.08.05.b (03.08.05.B) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "f2a7a642-d804-52cc-9cf8-ea0db657ab10"
         },
         {
@@ -2339,6 +2505,7 @@
             }
           ],
           "control-id": "_03.08.05.c",
+          "remarks": "Control _03.08.05.c (03.08.05.C) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "3e048e8e-1af9-50d3-b634-a93cd4283606"
         },
         {
@@ -2353,6 +2520,7 @@
             }
           ],
           "control-id": "_03.08.07.a",
+          "remarks": "Control _03.08.07.a (03.08.07.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "1b9750af-ad17-521b-9a8b-214c26cf4a05"
         },
         {
@@ -2367,6 +2535,7 @@
             }
           ],
           "control-id": "_03.08.07.b",
+          "remarks": "Control _03.08.07.b (03.08.07.B) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "422e8cef-fd30-5637-86b8-f4317f4d9691"
         },
         {
@@ -2381,6 +2550,7 @@
             }
           ],
           "control-id": "_03.08.09.a",
+          "remarks": "Control _03.08.09.a (03.08.09.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "29daba46-0c61-54b1-9127-c5d609ab2d82"
         },
         {
@@ -2395,6 +2565,7 @@
             }
           ],
           "control-id": "_03.08.09.b",
+          "remarks": "Control _03.08.09.b (03.08.09.B) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "c39d5205-f5e9-5259-abf7-bbb646e88c7a"
         },
         {
@@ -2409,6 +2580,7 @@
             }
           ],
           "control-id": "_03.09.01.a",
+          "remarks": "Control _03.09.01.a (03.09.01.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "afdedab8-b805-593b-bc51-572babb0afc4"
         },
         {
@@ -2423,6 +2595,7 @@
             }
           ],
           "control-id": "_03.09.01.b",
+          "remarks": "Control _03.09.01.b (03.09.01.B) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "6395773b-56a8-506b-bcfb-a7cb14eec8ce"
         },
         {
@@ -2437,6 +2610,7 @@
             }
           ],
           "control-id": "_03.09.02.a.1",
+          "remarks": "Control _03.09.02.a.1 (03.09.02.A.1) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "7d566c21-da39-5fcc-8377-63134a1cbca2"
         },
         {
@@ -2451,6 +2625,7 @@
             }
           ],
           "control-id": "_03.09.02.a.2",
+          "remarks": "Control _03.09.02.a.2 (03.09.02.A.2) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "9dab3d44-da94-5513-b91a-5016b9f2bb7b"
         },
         {
@@ -2465,6 +2640,7 @@
             }
           ],
           "control-id": "_03.09.02.a.3",
+          "remarks": "Control _03.09.02.a.3 (03.09.02.A.3) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "68a10579-ad0f-58e1-b73d-19f688a9d6b8"
         },
         {
@@ -2479,6 +2655,7 @@
             }
           ],
           "control-id": "_03.09.02.b.1",
+          "remarks": "Control _03.09.02.b.1 (03.09.02.B.1) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "574f06d1-392c-5745-9963-e63863f1213c"
         },
         {
@@ -2493,6 +2670,7 @@
             }
           ],
           "control-id": "_03.09.02.b.2",
+          "remarks": "Control _03.09.02.b.2 (03.09.02.B.2) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "7b063122-e620-5151-952e-25c60a692d2f"
         },
         {
@@ -2507,6 +2685,7 @@
             }
           ],
           "control-id": "_03.10.01.a",
+          "remarks": "Control _03.10.01.a (03.10.01.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "37a19505-53b0-5563-bee2-1be9d99caecc"
         },
         {
@@ -2521,6 +2700,7 @@
             }
           ],
           "control-id": "_03.10.01.b",
+          "remarks": "Control _03.10.01.b (03.10.01.B) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "7ecc5873-a6ae-5cf5-af24-3cc3d3045d2c"
         },
         {
@@ -2535,6 +2715,7 @@
             }
           ],
           "control-id": "_03.10.01.c",
+          "remarks": "Control _03.10.01.c (03.10.01.C) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "b6d12f02-51c1-58f0-aeea-602df0b630bd"
         },
         {
@@ -2549,6 +2730,7 @@
             }
           ],
           "control-id": "_03.10.01.d",
+          "remarks": "Control _03.10.01.d (03.10.01.D) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "fc8bc533-b50b-5a5d-af81-f2f89f10502d"
         },
         {
@@ -2563,6 +2745,7 @@
             }
           ],
           "control-id": "_03.10.02.a",
+          "remarks": "Control _03.10.02.a (03.10.02.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "1b2e847d-bb3e-52ea-975d-6e59d53dd2de"
         },
         {
@@ -2577,6 +2760,7 @@
             }
           ],
           "control-id": "_03.10.02.b",
+          "remarks": "Control _03.10.02.b (03.10.02.B) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "ed3a0895-f3c9-5d7f-9942-eef8991419c1"
         },
         {
@@ -2591,6 +2775,7 @@
             }
           ],
           "control-id": "_03.10.06.a",
+          "remarks": "Control _03.10.06.a (03.10.06.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "2b261386-01e9-5e60-883f-e05009e4d402"
         },
         {
@@ -2605,6 +2790,7 @@
             }
           ],
           "control-id": "_03.10.06.b",
+          "remarks": "Control _03.10.06.b (03.10.06.B) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "2f920157-3057-51c2-8fc8-93df4e80456b"
         },
         {
@@ -2619,6 +2805,7 @@
             }
           ],
           "control-id": "_03.10.07.a.1",
+          "remarks": "Control _03.10.07.a.1 (03.10.07.A.1) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "0ef03fd8-a2e6-5c2c-94fb-d1d10ee47cfa"
         },
         {
@@ -2633,6 +2820,7 @@
             }
           ],
           "control-id": "_03.10.07.a.2",
+          "remarks": "Control _03.10.07.a.2 (03.10.07.A.2) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "6b123e66-a9fa-5020-b042-f8b0ff6a5170"
         },
         {
@@ -2647,6 +2835,7 @@
             }
           ],
           "control-id": "_03.10.07.b",
+          "remarks": "Control _03.10.07.b (03.10.07.B) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "ad00e78c-c814-520d-a2f7-b75341e2dc70"
         },
         {
@@ -2661,6 +2850,7 @@
             }
           ],
           "control-id": "_03.10.07.c",
+          "remarks": "Control _03.10.07.c (03.10.07.C) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "b57ac74f-3afc-52c5-94ac-03ef065061da"
         },
         {
@@ -2675,6 +2865,7 @@
             }
           ],
           "control-id": "_03.10.07.d",
+          "remarks": "Control _03.10.07.d (03.10.07.D) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "b216d252-d552-52b6-a66b-c350391eff74"
         },
         {
@@ -2689,6 +2880,7 @@
             }
           ],
           "control-id": "_03.10.07.e",
+          "remarks": "Control _03.10.07.e (03.10.07.E) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "8dc9813d-2850-547d-b6f3-69a86f27509d"
         },
         {
@@ -2703,6 +2895,7 @@
             }
           ],
           "control-id": "_03.10.08.a",
+          "remarks": "Control _03.10.08.a (03.10.08.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "2d31f09a-f2d1-5c9b-8340-434c696b30e3"
         },
         {
@@ -2717,6 +2910,7 @@
             }
           ],
           "control-id": "_03.11.01.a",
+          "remarks": "Control _03.11.01.a (03.11.01.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "4035686d-363d-5a2f-9d25-94979a75dffc"
         },
         {
@@ -2731,6 +2925,7 @@
             }
           ],
           "control-id": "_03.11.01.b",
+          "remarks": "Control _03.11.01.b (03.11.01.B) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "cc0e03db-e465-58f6-949b-791b527a9bd4"
         },
         {
@@ -2745,6 +2940,7 @@
             }
           ],
           "control-id": "_03.11.02.a",
+          "remarks": "Control _03.11.02.a (03.11.02.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "8423c6b3-2f6f-53bb-a90e-424016a3a4e9"
         },
         {
@@ -2759,6 +2955,7 @@
             }
           ],
           "control-id": "_03.11.02.b",
+          "remarks": "Control _03.11.02.b (03.11.02.B) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "8fa7bca1-a26f-5a1b-88f1-91458aa98e34"
         },
         {
@@ -2773,6 +2970,7 @@
             }
           ],
           "control-id": "_03.11.02.c",
+          "remarks": "Control _03.11.02.c (03.11.02.C) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "ef61b352-198d-5785-9db1-50a8acbcbb9b"
         },
         {
@@ -2787,6 +2985,7 @@
             }
           ],
           "control-id": "_03.11.04.a",
+          "remarks": "Control _03.11.04.a (03.11.04.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "0c16ea79-2ec1-58dc-8649-d85186c28245"
         },
         {
@@ -2801,6 +3000,7 @@
             }
           ],
           "control-id": "_03.12.01.a",
+          "remarks": "Control _03.12.01.a (03.12.01.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "a9bbda1c-c096-5bfe-b452-17e81fc35550"
         },
         {
@@ -2815,6 +3015,7 @@
             }
           ],
           "control-id": "_03.12.02.a.1",
+          "remarks": "Control _03.12.02.a.1 (03.12.02.A.1) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "5b83e3b3-1fa5-5a1d-81c4-d7486efa7936"
         },
         {
@@ -2829,6 +3030,7 @@
             }
           ],
           "control-id": "_03.12.02.a.2",
+          "remarks": "Control _03.12.02.a.2 (03.12.02.A.2) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "d5f373bb-fca2-5e45-a137-a06325be072a"
         },
         {
@@ -2843,6 +3045,7 @@
             }
           ],
           "control-id": "_03.12.02.b.1",
+          "remarks": "Control _03.12.02.b.1 (03.12.02.B.1) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "857c3de0-ed4d-5cd6-beae-e306b9d41070"
         },
         {
@@ -2857,6 +3060,7 @@
             }
           ],
           "control-id": "_03.12.02.b.2",
+          "remarks": "Control _03.12.02.b.2 (03.12.02.B.2) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "e2d17740-9339-577c-9bb9-d04bf35b724e"
         },
         {
@@ -2871,6 +3075,7 @@
             }
           ],
           "control-id": "_03.12.02.b.3",
+          "remarks": "Control _03.12.02.b.3 (03.12.02.B.3) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "f79483d8-5175-52fa-b76e-243633ecf80d"
         },
         {
@@ -2885,6 +3090,7 @@
             }
           ],
           "control-id": "_03.12.03.a",
+          "remarks": "Control _03.12.03.a (03.12.03.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "3c5304cf-a421-532c-8d92-b638e18f4cef"
         },
         {
@@ -2899,6 +3105,7 @@
             }
           ],
           "control-id": "_03.12.05.a",
+          "remarks": "Control _03.12.05.a (03.12.05.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "23b5ebe2-29b2-5f71-9760-86c125a989aa"
         },
         {
@@ -2913,6 +3120,7 @@
             }
           ],
           "control-id": "_03.12.05.b",
+          "remarks": "Control _03.12.05.b (03.12.05.B) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "47a0fb1a-0f3a-5c3a-a937-b232f5fd376a"
         },
         {
@@ -2927,6 +3135,7 @@
             }
           ],
           "control-id": "_03.12.05.c",
+          "remarks": "Control _03.12.05.c (03.12.05.C) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "92ce3236-1b01-5658-9743-c2fc8b1bd11e"
         },
         {
@@ -2941,6 +3150,7 @@
             }
           ],
           "control-id": "_03.13.01.a",
+          "remarks": "Control _03.13.01.a (03.13.01.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "025d3d91-9b11-5103-baa4-0bbfdb9ef677"
         },
         {
@@ -2955,6 +3165,7 @@
             }
           ],
           "control-id": "_03.13.01.b",
+          "remarks": "Control _03.13.01.b (03.13.01.B) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "91796374-3ce1-588b-a2b0-13d0594c8eee"
         },
         {
@@ -2969,6 +3180,7 @@
             }
           ],
           "control-id": "_03.13.01.c",
+          "remarks": "Control _03.13.01.c (03.13.01.C) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "98dc88c9-38e7-5abc-a932-c282f1acd26c"
         },
         {
@@ -2983,6 +3195,7 @@
             }
           ],
           "control-id": "_03.13.04.a",
+          "remarks": "Control _03.13.04.a (03.13.04.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "f23a30fd-8474-5ef0-b2ef-bc86f22fecad"
         },
         {
@@ -2997,6 +3210,7 @@
             }
           ],
           "control-id": "_03.13.06.a",
+          "remarks": "Control _03.13.06.a (03.13.06.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "a5855373-4ea6-5f7d-91f2-3d6932cd654f"
         },
         {
@@ -3011,6 +3225,7 @@
             }
           ],
           "control-id": "_03.13.08.a",
+          "remarks": "Control _03.13.08.a (03.13.08.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "c5b63ec4-4ab8-500c-9d14-117aee1086c3"
         },
         {
@@ -3025,6 +3240,7 @@
             }
           ],
           "control-id": "_03.13.09.a",
+          "remarks": "Control _03.13.09.a (03.13.09.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "848c2e8d-1b6b-5c4f-bf71-ab05ae89903b"
         },
         {
@@ -3039,6 +3255,7 @@
             }
           ],
           "control-id": "_03.13.10.a",
+          "remarks": "Control _03.13.10.a (03.13.10.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "e837203e-6dae-578f-b9e0-600e95a9acfb"
         },
         {
@@ -3053,6 +3270,7 @@
             }
           ],
           "control-id": "_03.13.11.a",
+          "remarks": "Control _03.13.11.a (03.13.11.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "b9f66976-ac9e-5cc1-b518-99a4707387ec"
         },
         {
@@ -3067,6 +3285,7 @@
             }
           ],
           "control-id": "_03.13.12.a",
+          "remarks": "Control _03.13.12.a (03.13.12.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "efa19598-ed72-5939-951e-c05cd4b38872"
         },
         {
@@ -3081,6 +3300,7 @@
             }
           ],
           "control-id": "_03.13.12.b",
+          "remarks": "Control _03.13.12.b (03.13.12.B) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "0cfa1ca1-fe9d-5344-8144-df8701176e39"
         },
         {
@@ -3095,6 +3315,7 @@
             }
           ],
           "control-id": "_03.13.13.a",
+          "remarks": "Control _03.13.13.a (03.13.13.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "436a783c-8c40-5353-b5ca-89d2888e6039"
         },
         {
@@ -3109,6 +3330,7 @@
             }
           ],
           "control-id": "_03.13.13.b",
+          "remarks": "Control _03.13.13.b (03.13.13.B) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "df6bbcf7-fd44-5a36-a031-1bed370adbf3"
         },
         {
@@ -3123,6 +3345,7 @@
             }
           ],
           "control-id": "_03.13.15.a",
+          "remarks": "Control _03.13.15.a (03.13.15.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "f60a9ddd-8328-516b-8e92-753b56a45d8c"
         },
         {
@@ -3137,6 +3360,7 @@
             }
           ],
           "control-id": "_03.14.01.a",
+          "remarks": "Control _03.14.01.a (03.14.01.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "2c902abc-b6c9-5dfe-8fd9-b6e67e83275b"
         },
         {
@@ -3151,6 +3375,7 @@
             }
           ],
           "control-id": "_03.14.01.b",
+          "remarks": "Control _03.14.01.b (03.14.01.B) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "2463a228-190e-5eb0-906e-d322e7abea30"
         },
         {
@@ -3165,6 +3390,7 @@
             }
           ],
           "control-id": "_03.14.02.a",
+          "remarks": "Control _03.14.02.a (03.14.02.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "fc45042c-81b5-5d43-8217-373ef806f3d9"
         },
         {
@@ -3179,6 +3405,7 @@
             }
           ],
           "control-id": "_03.14.02.b",
+          "remarks": "Control _03.14.02.b (03.14.02.B) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "fb65b8ff-7e84-505f-844f-7d594c5ab05f"
         },
         {
@@ -3193,6 +3420,7 @@
             }
           ],
           "control-id": "_03.14.02.c.1",
+          "remarks": "Control _03.14.02.c.1 (03.14.02.C.1) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "d2ccff0e-9595-5f34-b650-569540fd040f"
         },
         {
@@ -3207,6 +3435,7 @@
             }
           ],
           "control-id": "_03.14.02.c.2",
+          "remarks": "Control _03.14.02.c.2 (03.14.02.C.2) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "fff02dc7-fea2-5b53-aa57-42d6b86e4b90"
         },
         {
@@ -3221,6 +3450,7 @@
             }
           ],
           "control-id": "_03.14.03.a",
+          "remarks": "Control _03.14.03.a (03.14.03.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "fb53ec48-9a2e-5623-b096-f22bba2f8c21"
         },
         {
@@ -3235,6 +3465,7 @@
             }
           ],
           "control-id": "_03.14.03.b",
+          "remarks": "Control _03.14.03.b (03.14.03.B) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "cc4ee99c-acf2-5799-b978-ddd4c7d56eb3"
         },
         {
@@ -3249,6 +3480,7 @@
             }
           ],
           "control-id": "_03.14.06.a.1",
+          "remarks": "Control _03.14.06.a.1 (03.14.06.A.1) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "b31037ab-4ad2-5be2-ad26-e1338c04779c"
         },
         {
@@ -3263,6 +3495,7 @@
             }
           ],
           "control-id": "_03.14.06.a.2",
+          "remarks": "Control _03.14.06.a.2 (03.14.06.A.2) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "088cc1bc-b2e9-56b5-91a4-cedc37a20986"
         },
         {
@@ -3277,6 +3510,7 @@
             }
           ],
           "control-id": "_03.14.06.b",
+          "remarks": "Control _03.14.06.b (03.14.06.B) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "767199d4-eda4-5ec6-861f-731a99942dfb"
         },
         {
@@ -3291,6 +3525,7 @@
             }
           ],
           "control-id": "_03.14.06.c",
+          "remarks": "Control _03.14.06.c (03.14.06.C) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "00eee152-c623-55d8-82f6-a16ac0d1e394"
         },
         {
@@ -3305,6 +3540,7 @@
             }
           ],
           "control-id": "_03.14.08.a",
+          "remarks": "Control _03.14.08.a (03.14.08.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "1558bfe0-afb7-529f-85ac-4f7cd2eed74c"
         },
         {
@@ -3319,6 +3555,7 @@
             }
           ],
           "control-id": "_03.14.09.a",
+          "remarks": "Control _03.14.09.a (03.14.09.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "f54a3471-0613-5f7d-ab60-cd3a7d6d91ad"
         },
         {
@@ -3333,6 +3570,7 @@
             }
           ],
           "control-id": "_03.14.09.b",
+          "remarks": "Control _03.14.09.b (03.14.09.B) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "fac8cb85-9ec6-5b81-8d7f-d6a0edcc5e1b"
         },
         {
@@ -3347,6 +3585,7 @@
             }
           ],
           "control-id": "_03.14.09.c",
+          "remarks": "Control _03.14.09.c (03.14.09.C) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "41c2e925-3e1c-549f-8d79-250ffae55bf6"
         },
         {
@@ -3361,6 +3600,7 @@
             }
           ],
           "control-id": "_03.15.01.a",
+          "remarks": "Control _03.15.01.a (03.15.01.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "bab26545-fbdf-53a7-8918-b03e56794f09"
         },
         {
@@ -3375,6 +3615,7 @@
             }
           ],
           "control-id": "_03.15.01.b",
+          "remarks": "Control _03.15.01.b (03.15.01.B) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "f7811eee-83ca-5002-819e-2663220d9d88"
         },
         {
@@ -3389,6 +3630,7 @@
             }
           ],
           "control-id": "_03.15.02.a.1",
+          "remarks": "Control _03.15.02.a.1 (03.15.02.A.1) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "b3d1bee2-9d82-57f6-bc38-faea346ee477"
         },
         {
@@ -3403,6 +3645,7 @@
             }
           ],
           "control-id": "_03.15.02.a.2",
+          "remarks": "Control _03.15.02.a.2 (03.15.02.A.2) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "23df25a3-3ad5-5777-a26d-3274eaa9504a"
         },
         {
@@ -3417,6 +3660,7 @@
             }
           ],
           "control-id": "_03.15.02.a.3",
+          "remarks": "Control _03.15.02.a.3 (03.15.02.A.3) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "27510587-184f-5e2f-92f3-525675a65d35"
         },
         {
@@ -3431,6 +3675,7 @@
             }
           ],
           "control-id": "_03.15.02.a.4",
+          "remarks": "Control _03.15.02.a.4 (03.15.02.A.4) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "79a9dec6-a9a5-5e2d-9024-d4401059de3f"
         },
         {
@@ -3445,6 +3690,7 @@
             }
           ],
           "control-id": "_03.15.02.a.5",
+          "remarks": "Control _03.15.02.a.5 (03.15.02.A.5) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "07cd4ec0-45c2-5b43-a1da-b2529a3ca547"
         },
         {
@@ -3459,6 +3705,7 @@
             }
           ],
           "control-id": "_03.15.02.a.6",
+          "remarks": "Control _03.15.02.a.6 (03.15.02.A.6) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "17cac6b2-0f8b-54de-9fb4-68b3ef695e5d"
         },
         {
@@ -3473,6 +3720,7 @@
             }
           ],
           "control-id": "_03.15.02.a.7",
+          "remarks": "Control _03.15.02.a.7 (03.15.02.A.7) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "236f9737-797e-5f2d-beee-60adf5bcfc92"
         },
         {
@@ -3487,6 +3735,7 @@
             }
           ],
           "control-id": "_03.15.02.a.8",
+          "remarks": "Control _03.15.02.a.8 (03.15.02.A.8) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "372acc52-904b-54e3-9bd4-fca4574ac81b"
         },
         {
@@ -3501,6 +3750,7 @@
             }
           ],
           "control-id": "_03.15.02.b",
+          "remarks": "Control _03.15.02.b (03.15.02.B) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "e202c895-3a9a-5609-a36d-8944a946dbde"
         },
         {
@@ -3515,6 +3765,7 @@
             }
           ],
           "control-id": "_03.15.02.c",
+          "remarks": "Control _03.15.02.c (03.15.02.C) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "cdce6061-e154-5088-aeed-875411b79b7e"
         },
         {
@@ -3529,6 +3780,7 @@
             }
           ],
           "control-id": "_03.15.03.a",
+          "remarks": "Control _03.15.03.a (03.15.03.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "efa89475-3d0f-509d-8e3d-065fa1fcc591"
         },
         {
@@ -3543,6 +3795,7 @@
             }
           ],
           "control-id": "_03.15.03.b",
+          "remarks": "Control _03.15.03.b (03.15.03.B) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "61ed504b-bed1-509c-b793-2ab75809613e"
         },
         {
@@ -3557,6 +3810,7 @@
             }
           ],
           "control-id": "_03.15.03.c",
+          "remarks": "Control _03.15.03.c (03.15.03.C) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "43e02548-597d-5f60-86ab-09f7c5bda083"
         },
         {
@@ -3571,6 +3825,7 @@
             }
           ],
           "control-id": "_03.15.03.d",
+          "remarks": "Control _03.15.03.d (03.15.03.D) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "b8c42571-0e03-533f-9e77-1d21b8e10af7"
         },
         {
@@ -3585,6 +3840,7 @@
             }
           ],
           "control-id": "_03.16.01.a",
+          "remarks": "Control _03.16.01.a (03.16.01.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "d9da3d7b-dbc8-5054-ab9c-9f92b5297c4f"
         },
         {
@@ -3599,6 +3855,7 @@
             }
           ],
           "control-id": "_03.16.02.a",
+          "remarks": "Control _03.16.02.a (03.16.02.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "f11eb383-aa5c-5f60-ad1c-b1496b661b10"
         },
         {
@@ -3613,6 +3870,7 @@
             }
           ],
           "control-id": "_03.16.02.b",
+          "remarks": "Control _03.16.02.b (03.16.02.B) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "01be695f-555d-5371-b2ee-703fea743061"
         },
         {
@@ -3627,6 +3885,7 @@
             }
           ],
           "control-id": "_03.16.03.a",
+          "remarks": "Control _03.16.03.a (03.16.03.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "51ead0a6-dc1b-5cf6-81a4-262f9b60de23"
         },
         {
@@ -3641,6 +3900,7 @@
             }
           ],
           "control-id": "_03.16.03.b",
+          "remarks": "Control _03.16.03.b (03.16.03.B) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "a84c07cc-bf89-5f6b-9666-5fdba63eef52"
         },
         {
@@ -3655,6 +3915,7 @@
             }
           ],
           "control-id": "_03.16.03.c",
+          "remarks": "Control _03.16.03.c (03.16.03.C) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "d62aaf4f-363d-5b8b-a0f2-62e53c42b9f2"
         },
         {
@@ -3669,6 +3930,7 @@
             }
           ],
           "control-id": "_03.17.01.a",
+          "remarks": "Control _03.17.01.a (03.17.01.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "8a23cb35-97a8-5983-88aa-7a443139a7cd"
         },
         {
@@ -3683,6 +3945,7 @@
             }
           ],
           "control-id": "_03.17.01.b",
+          "remarks": "Control _03.17.01.b (03.17.01.B) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "b2645d2b-f142-583c-9d43-f457dcbcb63d"
         },
         {
@@ -3697,6 +3960,7 @@
             }
           ],
           "control-id": "_03.17.01.c",
+          "remarks": "Control _03.17.01.c (03.17.01.C) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "19cdb5d8-ee20-58f9-bfad-1ca05644d0a5"
         },
         {
@@ -3711,6 +3975,7 @@
             }
           ],
           "control-id": "_03.17.02.a",
+          "remarks": "Control _03.17.02.a (03.17.02.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "d70446e2-e1ed-509d-a4d0-f734caad9d8e"
         },
         {
@@ -3725,6 +3990,7 @@
             }
           ],
           "control-id": "_03.17.03.a",
+          "remarks": "Control _03.17.03.a (03.17.03.A) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "138ab6e5-0e6b-53c6-b070-b1c5a20b60a8"
         },
         {
@@ -3739,6 +4005,7 @@
             }
           ],
           "control-id": "_03.17.03.b",
+          "remarks": "Control _03.17.03.b (03.17.03.B) is satisfied by the CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada Core System Component through automated policy enforcement, configuration controls, and administrative review.",
           "uuid": "a8662375-23a9-546d-b94b-7f5e33caffba"
         }
       ]
@@ -3747,7 +4014,7 @@
       "href": "./catalog.json"
     },
     "metadata": {
-      "last-modified": "2026-10-24T21:09:31Z",
+      "last-modified": "2026-10-25T23:17:26Z",
       "oscal-version": "1.2.3",
       "title": "CCCS ITSP.10.171 Security Requirements for Contracting with the Government of Canada System Security Plan Template",
       "version": "1.2.3"

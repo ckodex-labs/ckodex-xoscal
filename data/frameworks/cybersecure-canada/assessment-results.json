@@ -4,7 +4,7 @@
       "href": "./assessment-plan.json"
     },
     "metadata": {
-      "last-modified": "2026-10-24T21:09:31Z",
+      "last-modified": "2026-10-25T23:17:26Z",
       "oscal-version": "1.2.3",
       "title": "CyberSecure Canada (CAN/DGSI 104) Assessment Results Template",
       "version": "CAN/DGSI 104"
@@ -254,7 +254,7 @@
         ],
         "observations": [
           {
-            "collected": "2026-10-24T21:09:31Z",
+            "collected": "2026-10-25T23:17:26Z",
             "description": "Verified control bc-1-1 (Control BC.1.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -266,7 +266,7 @@
             "uuid": "51562c58-f69b-5fd4-bb59-aa0d05c3e12a"
           },
           {
-            "collected": "2026-10-24T21:09:31Z",
+            "collected": "2026-10-25T23:17:26Z",
             "description": "Verified control bc-10-1 (Control BC.10.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -278,7 +278,7 @@
             "uuid": "23cf90fa-6e79-5fb7-a1af-6fe12b9a2a69"
           },
           {
-            "collected": "2026-10-24T21:09:31Z",
+            "collected": "2026-10-25T23:17:26Z",
             "description": "Verified control bc-11-1 (Control BC.11.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -290,7 +290,7 @@
             "uuid": "04244ffd-e2c6-51db-b556-d29d3f5934a0"
           },
           {
-            "collected": "2026-10-24T21:09:31Z",
+            "collected": "2026-10-25T23:17:26Z",
             "description": "Verified control bc-12-1 (Control BC.12.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -302,7 +302,7 @@
             "uuid": "edd1b562-9013-5a6d-8c77-27fd29a91a38"
           },
           {
-            "collected": "2026-10-24T21:09:31Z",
+            "collected": "2026-10-25T23:17:26Z",
             "description": "Verified control bc-13-1 (Control BC.13.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -314,7 +314,7 @@
             "uuid": "5cab8793-3d00-5d7d-9360-529a76e033e6"
           },
           {
-            "collected": "2026-10-24T21:09:31Z",
+            "collected": "2026-10-25T23:17:26Z",
             "description": "Verified control bc-2-1 (Control BC.2.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -326,7 +326,7 @@
             "uuid": "94c0f80f-97d4-5983-9746-38c2b270d3a6"
           },
           {
-            "collected": "2026-10-24T21:09:31Z",
+            "collected": "2026-10-25T23:17:26Z",
             "description": "Verified control bc-3-1 (Control BC.3.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -338,7 +338,7 @@
             "uuid": "9b2ee15f-794f-5d43-8e27-67560c5bfd6b"
           },
           {
-            "collected": "2026-10-24T21:09:31Z",
+            "collected": "2026-10-25T23:17:26Z",
             "description": "Verified control bc-4-1 (Control BC.4.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -350,7 +350,7 @@
             "uuid": "0e34a8ce-6c11-5f44-b534-39e9eea793e6"
           },
           {
-            "collected": "2026-10-24T21:09:31Z",
+            "collected": "2026-10-25T23:17:26Z",
             "description": "Verified control bc-5-1 (Control BC.5.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -362,7 +362,7 @@
             "uuid": "6c5e7b44-a3a2-5c89-973a-6dc1997d9533"
           },
           {
-            "collected": "2026-10-24T21:09:31Z",
+            "collected": "2026-10-25T23:17:26Z",
             "description": "Verified control bc-6-1 (Control BC.6.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -374,7 +374,7 @@
             "uuid": "093b6096-5764-5f52-bcf8-4a1b02670447"
           },
           {
-            "collected": "2026-10-24T21:09:31Z",
+            "collected": "2026-10-25T23:17:26Z",
             "description": "Verified control bc-7-1 (Control BC.7.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -386,7 +386,7 @@
             "uuid": "4d64bded-bb7d-5bb1-bdb0-3abfb324d91c"
           },
           {
-            "collected": "2026-10-24T21:09:31Z",
+            "collected": "2026-10-25T23:17:26Z",
             "description": "Verified control bc-8-1 (Control BC.8.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -398,7 +398,7 @@
             "uuid": "442708bd-10d2-5f1b-afa7-3be3bbe166f3"
           },
           {
-            "collected": "2026-10-24T21:09:31Z",
+            "collected": "2026-10-25T23:17:26Z",
             "description": "Verified control bc-9-1 (Control BC.9.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -410,7 +410,7 @@
             "uuid": "4ec53717-9857-5a8f-bb28-902dbccef9db"
           },
           {
-            "collected": "2026-10-24T21:09:31Z",
+            "collected": "2026-10-25T23:17:26Z",
             "description": "Verified control oc-1 (Control OC.1) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -430,7 +430,7 @@
             }
           ]
         },
-        "start": "2026-10-24T21:09:31Z",
+        "start": "2026-10-25T23:17:26Z",
         "title": "CyberSecure Canada (CAN/DGSI 104) Assessment Results",
         "uuid": "2fcfccb7-dc4a-5492-a6fd-5c6592765ca4"
       }

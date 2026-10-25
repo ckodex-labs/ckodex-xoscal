@@ -573,7 +573,7 @@
       }
     ],
     "metadata": {
-      "last-modified": "2026-10-24T21:09:31Z",
+      "last-modified": "2026-10-25T23:17:26Z",
       "oscal-version": "1.2.3",
       "remarks": "Resolved OSCAL catalog representation of the mandatory PBMM baseline security controls for Government of Canada cloud services.",
       "title": "Government of Canada Cloud Security Control Baseline: Protected B / Medium Integrity / Medium Availability (PBMM)",

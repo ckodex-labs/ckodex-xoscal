@@ -1,6 +1,10 @@
 package vectorstate
 
-import "github.com/mchorfa/xoscal/server/internal/derogation"
+import (
+	"strings"
+
+	"github.com/mchorfa/xoscal/server/internal/derogation"
+)
 
 func evaluateRequirements(target map[string]interface{}, key string, state *VectorState, evidence *evidenceSource, store *derogation.Store) {
 	switch key {
@@ -38,6 +42,21 @@ func evaluateImplemented(implementation map[string]interface{}, title string, us
 		}
 		id, _ := requirement["control-id"].(string)
 		description, _ := requirement["description"].(string)
+		if description == "" {
+			if byComps, ok := requirement["by-components"].([]interface{}); ok {
+				var descs []string
+				for _, bcRaw := range byComps {
+					if bc, ok := bcRaw.(map[string]interface{}); ok {
+						if d, ok := bc["description"].(string); ok && strings.TrimSpace(d) != "" {
+							descs = append(descs, strings.TrimSpace(d))
+						}
+					}
+				}
+				if len(descs) > 0 {
+					description = strings.Join(descs, "; ")
+				}
+			}
+		}
 		if useRemarks && description == "" {
 			description, _ = requirement["remarks"].(string)
 		}

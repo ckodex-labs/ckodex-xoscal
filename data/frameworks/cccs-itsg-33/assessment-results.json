@@ -4,7 +4,7 @@
       "href": "./assessment-plan.json"
     },
     "metadata": {
-      "last-modified": "2026-10-24T21:09:31Z",
+      "last-modified": "2026-10-25T23:17:26Z",
       "oscal-version": "1.2.3",
       "title": "CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3) Assessment Results Template",
       "version": "1.2.3"
@@ -322,7 +322,7 @@
         ],
         "observations": [
           {
-            "collected": "2026-10-24T21:09:31Z",
+            "collected": "2026-10-25T23:17:26Z",
             "description": "Verified control ac-1 (Access Control Policy and Procedures) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -334,7 +334,7 @@
             "uuid": "bd26582c-e20b-559d-ad0f-4cace8637a9b"
           },
           {
-            "collected": "2026-10-24T21:09:31Z",
+            "collected": "2026-10-25T23:17:26Z",
             "description": "Verified control at-1 (Security Awareness Policy and Procedures) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -346,7 +346,7 @@
             "uuid": "c52ba13c-6b0f-59a1-a63a-ba92c735338b"
           },
           {
-            "collected": "2026-10-24T21:09:31Z",
+            "collected": "2026-10-25T23:17:26Z",
             "description": "Verified control au-12 (Audit Generation) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -358,7 +358,7 @@
             "uuid": "cc029a8f-c9ea-588f-b0cb-a2f3a3b7be56"
           },
           {
-            "collected": "2026-10-24T21:09:31Z",
+            "collected": "2026-10-25T23:17:26Z",
             "description": "Verified control ca-2 (Security Assessments) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -370,7 +370,7 @@
             "uuid": "6254bb08-5344-5f20-b5e3-e9c530cae344"
           },
           {
-            "collected": "2026-10-24T21:09:31Z",
+            "collected": "2026-10-25T23:17:26Z",
             "description": "Verified control cm-2 (Baseline Configuration) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -382,7 +382,7 @@
             "uuid": "ab191440-0937-50c8-8f55-8480ee4dc6f7"
           },
           {
-            "collected": "2026-10-24T21:09:31Z",
+            "collected": "2026-10-25T23:17:26Z",
             "description": "Verified control cp-2 (Contingency Plan) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -394,7 +394,7 @@
             "uuid": "4a75e8f9-76b4-5ae9-85d0-1b8538ea12ee"
           },
           {
-            "collected": "2026-10-24T21:09:31Z",
+            "collected": "2026-10-25T23:17:26Z",
             "description": "Verified control ia-2 (Identification and Authentication (Organizational Users)) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -406,7 +406,7 @@
             "uuid": "732fed1f-ae25-5d78-aa96-6c36f47181db"
           },
           {
-            "collected": "2026-10-24T21:09:31Z",
+            "collected": "2026-10-25T23:17:26Z",
             "description": "Verified control ir-4 (Incident Handling) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -418,7 +418,7 @@
             "uuid": "6af2843e-6eaa-5979-80f6-e039a9ef26bf"
           },
           {
-            "collected": "2026-10-24T21:09:31Z",
+            "collected": "2026-10-25T23:17:26Z",
             "description": "Verified control mp-2 (Media Access) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -430,7 +430,7 @@
             "uuid": "6d14c992-f293-58ca-91ec-1f6034fc8ae7"
           },
           {
-            "collected": "2026-10-24T21:09:31Z",
+            "collected": "2026-10-25T23:17:26Z",
             "description": "Verified control pe-2 (Physical Access Authorizations) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -442,7 +442,7 @@
             "uuid": "5c4b38be-f8d8-55e7-b2e8-862d9b844bf9"
           },
           {
-            "collected": "2026-10-24T21:09:31Z",
+            "collected": "2026-10-25T23:17:26Z",
             "description": "Verified control pl-2 (System Security Plan) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -454,7 +454,7 @@
             "uuid": "6c37c848-394c-50f7-bc6b-8a2da95f9e79"
           },
           {
-            "collected": "2026-10-24T21:09:31Z",
+            "collected": "2026-10-25T23:17:26Z",
             "description": "Verified control pm-1 (Information Security Program Plan) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -466,7 +466,7 @@
             "uuid": "86bab401-0784-5c95-b469-dd4a7dcf15f2"
           },
           {
-            "collected": "2026-10-24T21:09:31Z",
+            "collected": "2026-10-25T23:17:26Z",
             "description": "Verified control ps-2 (Position Risk Designation) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -478,7 +478,7 @@
             "uuid": "97ae09cd-c676-5cd6-80ef-d4e1f7e6937c"
           },
           {
-            "collected": "2026-10-24T21:09:31Z",
+            "collected": "2026-10-25T23:17:26Z",
             "description": "Verified control ra-3 (Risk Assessment) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -490,7 +490,7 @@
             "uuid": "d4d5765c-c521-58bc-b1df-c2a3d46325ce"
           },
           {
-            "collected": "2026-10-24T21:09:31Z",
+            "collected": "2026-10-25T23:17:26Z",
             "description": "Verified control sa-4 (Acquisition Process) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -502,7 +502,7 @@
             "uuid": "d45ae75a-0ff5-5f84-a55a-a05af8c439c0"
           },
           {
-            "collected": "2026-10-24T21:09:31Z",
+            "collected": "2026-10-25T23:17:26Z",
             "description": "Verified control sc-13 (Cryptographic Protection) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -514,7 +514,7 @@
             "uuid": "d7f10404-7239-5f72-ae6d-d0f6de2ea151"
           },
           {
-            "collected": "2026-10-24T21:09:31Z",
+            "collected": "2026-10-25T23:17:26Z",
             "description": "Verified control si-2 (Flaw Remediation) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -526,7 +526,7 @@
             "uuid": "16b179f1-ec28-5ae0-a06c-965a35113105"
           },
           {
-            "collected": "2026-10-24T21:09:31Z",
+            "collected": "2026-10-25T23:17:26Z",
             "description": "Verified control sr-1 (Supply Chain Risk Management Policy) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -546,7 +546,7 @@
             }
           ]
         },
-        "start": "2026-10-24T21:09:31Z",
+        "start": "2026-10-25T23:17:26Z",
         "title": "CCCS ITSG-33 IT Security Risk Management: A Lifecycle Approach (Annex 3) Assessment Results",
         "uuid": "5e99520a-873e-5658-86a1-e05d5240d8a0"
       }

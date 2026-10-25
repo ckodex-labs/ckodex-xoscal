@@ -192,6 +192,7 @@ func ProjectSystemSecurityPlan(f Framework, ctrls []ControlInfo) ([]byte, error)
 		ir := map[string]interface{}{
 			"uuid":       irUUID,
 			"control-id": c.ID,
+			"remarks":    desc,
 			"by-components": []map[string]interface{}{
 				{
 					"component-uuid": compUUID,

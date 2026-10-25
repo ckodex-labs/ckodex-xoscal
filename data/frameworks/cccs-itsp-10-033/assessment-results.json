@@ -4,7 +4,7 @@
       "href": "./assessment-plan.json"
     },
     "metadata": {
-      "last-modified": "2026-10-24T21:09:31Z",
+      "last-modified": "2026-10-25T23:17:26Z",
       "oscal-version": "1.2.3",
       "title": "CCCS ITSP.10.033 Security and Privacy Controls and Assurance Activities Catalogue Assessment Results Template",
       "version": "1.0 (2026-03-31)"
@@ -356,7 +356,7 @@
         ],
         "observations": [
           {
-            "collected": "2026-10-24T21:09:31Z",
+            "collected": "2026-10-25T23:17:26Z",
             "description": "Verified control ac-1 (Access control policy and procedures) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -368,7 +368,7 @@
             "uuid": "1a9da829-ae0e-57eb-90a8-8791b351d81e"
           },
           {
-            "collected": "2026-10-24T21:09:31Z",
+            "collected": "2026-10-25T23:17:26Z",
             "description": "Verified control at-1 (Awareness and training policy and procedures) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -380,7 +380,7 @@
             "uuid": "b8c6347f-e2ca-5b1b-80a4-f5d9427fa961"
           },
           {
-            "collected": "2026-10-24T21:09:31Z",
+            "collected": "2026-10-25T23:17:26Z",
             "description": "Verified control au-1 (Audit and accountability policy and procedures) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -392,7 +392,7 @@
             "uuid": "6e51a8de-2aa1-512c-a332-a0e6e6bf240a"
           },
           {
-            "collected": "2026-10-24T21:09:31Z",
+            "collected": "2026-10-25T23:17:26Z",
             "description": "Verified control ca-1 (Assessment, authorization and monitoring policy and procedures) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -404,7 +404,7 @@
             "uuid": "412c4215-5a36-59fe-a347-f5739e8edc02"
           },
           {
-            "collected": "2026-10-24T21:09:31Z",
+            "collected": "2026-10-25T23:17:26Z",
             "description": "Verified control cm-1 (Configuration management policy and procedures) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -416,7 +416,7 @@
             "uuid": "0c81d59f-ae06-5485-9672-7c1351dc1921"
           },
           {
-            "collected": "2026-10-24T21:09:31Z",
+            "collected": "2026-10-25T23:17:26Z",
             "description": "Verified control cp-1 (Contingency planning policy and procedures) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -428,7 +428,7 @@
             "uuid": "a0a5782e-6966-5678-b022-a3e0022066e1"
           },
           {
-            "collected": "2026-10-24T21:09:31Z",
+            "collected": "2026-10-25T23:17:26Z",
             "description": "Verified control ia-1 (Identification and authentication policy and procedures) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -440,7 +440,7 @@
             "uuid": "b895dfbb-743e-59c5-9cd5-d509765daf41"
           },
           {
-            "collected": "2026-10-24T21:09:31Z",
+            "collected": "2026-10-25T23:17:26Z",
             "description": "Verified control ir-1 (Incident response policy and procedures) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -452,7 +452,7 @@
             "uuid": "6975c1a2-f181-5bca-a679-825842696c8d"
           },
           {
-            "collected": "2026-10-24T21:09:31Z",
+            "collected": "2026-10-25T23:17:26Z",
             "description": "Verified control ma-1 (Maintenance policy and procedures) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -464,7 +464,7 @@
             "uuid": "b6640176-38eb-56e7-a21e-3bdd6b4acaf2"
           },
           {
-            "collected": "2026-10-24T21:09:31Z",
+            "collected": "2026-10-25T23:17:26Z",
             "description": "Verified control mp-1 (Media protection policy and procedures) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -476,7 +476,7 @@
             "uuid": "8d1ad473-5607-51da-8a90-7f03fb0847c3"
           },
           {
-            "collected": "2026-10-24T21:09:31Z",
+            "collected": "2026-10-25T23:17:26Z",
             "description": "Verified control pe-1 (Physical and environmental protection policy and procedures) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -488,7 +488,7 @@
             "uuid": "6de3a2ec-e21f-5e03-b99d-e37173b028ae"
           },
           {
-            "collected": "2026-10-24T21:09:31Z",
+            "collected": "2026-10-25T23:17:26Z",
             "description": "Verified control pl-1 (Planning policy and procedures) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -500,7 +500,7 @@
             "uuid": "0a62704c-4e85-54ce-9636-9115475b15a7"
           },
           {
-            "collected": "2026-10-24T21:09:31Z",
+            "collected": "2026-10-25T23:17:26Z",
             "description": "Verified control pm-1 (Information security program plan) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -512,7 +512,7 @@
             "uuid": "2ea116b3-d975-5cc9-8419-8e1092c33ea9"
           },
           {
-            "collected": "2026-10-24T21:09:31Z",
+            "collected": "2026-10-25T23:17:26Z",
             "description": "Verified control ps-1 (Personnel security policy and procedures) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -524,7 +524,7 @@
             "uuid": "f58b3195-72ad-5cbc-ae5e-16a29d2b00bd"
           },
           {
-            "collected": "2026-10-24T21:09:31Z",
+            "collected": "2026-10-25T23:17:26Z",
             "description": "Verified control pt-1 (Personal information handling and transparency policy and procedures) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -536,7 +536,7 @@
             "uuid": "15f4c3e4-1f39-56b9-ae8a-07227916c141"
           },
           {
-            "collected": "2026-10-24T21:09:31Z",
+            "collected": "2026-10-25T23:17:26Z",
             "description": "Verified control ra-1 (Risk assessment policy and procedures) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -548,7 +548,7 @@
             "uuid": "b542d199-8620-558a-a4db-57fd3c2eb6ba"
           },
           {
-            "collected": "2026-10-24T21:09:31Z",
+            "collected": "2026-10-25T23:17:26Z",
             "description": "Verified control sa-1 (System and services acquisition policy and procedures) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -560,7 +560,7 @@
             "uuid": "0d09ad20-7582-5c9d-b8f6-d4b0d5832998"
           },
           {
-            "collected": "2026-10-24T21:09:31Z",
+            "collected": "2026-10-25T23:17:26Z",
             "description": "Verified control sc-1 (System and communications protection policy and procedures) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -572,7 +572,7 @@
             "uuid": "0bb8d8c1-e957-53a5-b5bd-4567f4163c7f"
           },
           {
-            "collected": "2026-10-24T21:09:31Z",
+            "collected": "2026-10-25T23:17:26Z",
             "description": "Verified control si-1 (System and information integrity policy and procedures) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -584,7 +584,7 @@
             "uuid": "d37f4384-ed66-5730-acd3-dd417d501a30"
           },
           {
-            "collected": "2026-10-24T21:09:31Z",
+            "collected": "2026-10-25T23:17:26Z",
             "description": "Verified control sr-1 (Supply chain risk management policy and procedures) implementation and supporting evidence.",
             "methods": [
               "EXAMINE",
@@ -604,7 +604,7 @@
             }
           ]
         },
-        "start": "2026-10-24T21:09:31Z",
+        "start": "2026-10-25T23:17:26Z",
         "title": "CCCS ITSP.10.033 Security and Privacy Controls and Assurance Activities Catalogue Assessment Results",
         "uuid": "7db93d91-061f-5316-a791-9fcd73b3d01f"
       }
