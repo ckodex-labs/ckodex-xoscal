@@ -64,7 +64,8 @@ docker:
 	docker build -t $(IMAGE):$(VERSION) .
 
 clean:
-	rm -rf bin/ coverage.out coverage.html gosec-results.sarif
+	rm -rf bin/ _site/ _site_real/ data/cache/ site/frameworks/ site/sdk/ coverage.out coverage.html gosec-results.sarif *.test
+	find . -name ".DS_Store" -delete
 
 tidy:
 	go mod tidy

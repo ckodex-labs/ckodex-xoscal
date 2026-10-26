@@ -18,7 +18,9 @@ import uuid
 from datetime import datetime, timezone
 import pypdf
 
-PDF_PATH = "itsp.10.033-2026-eng.pdf"
+PDF_PATH = os.environ.get("ITSP_PDF_PATH", "data/sources/itsp.10.033-2026-eng.pdf")
+if not os.path.exists(PDF_PATH) and os.path.exists("itsp.10.033-2026-eng.pdf"):
+    PDF_PATH = "itsp.10.033-2026-eng.pdf"
 OUTPUT_DIR = "data/frameworks/cccs-itsp-10-033"
 OUTPUT_FILE = os.path.join(OUTPUT_DIR, "catalog.json")
 
@@ -661,12 +663,8 @@ def build_oscal_catalog():
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         json.dump(catalog, f, indent=2, ensure_ascii=False)
 
-    with open("itsp-10-033-catalog.oscal.json", "w", encoding="utf-8") as f:
-        json.dump(catalog, f, indent=2, ensure_ascii=False)
-
     size_mb = os.path.getsize(OUTPUT_FILE) / (1024 * 1024)
     print(f"\nSuccessfully generated OSCAL 1.2.3 catalog: {OUTPUT_FILE} ({size_mb:.2f} MB)")
-    print(f"Top-level export written to: itsp-10-033-catalog.oscal.json")
 
 if __name__ == "__main__":
     build_oscal_catalog()

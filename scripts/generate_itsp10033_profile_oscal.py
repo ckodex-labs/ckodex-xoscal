@@ -1,3 +1,4 @@
+import os
 import json
 import re
 import uuid
@@ -20,7 +21,10 @@ def normalize_id(fam, raw_id):
 
 def main():
     print("Reading catalog to ensure reference validity...")
-    with open("itsp-10-033-catalog.oscal.json") as f:
+    catalog_path = "data/frameworks/cccs-itsp-10-033/catalog.json"
+    if not os.path.exists(catalog_path):
+        catalog_path = "server/internal/canadianframeworks/itsp10033_catalog.json"
+    with open(catalog_path) as f:
         cat = json.load(f)
     
     catalog_ids = set()
@@ -32,8 +36,12 @@ def main():
     
     print(f"Catalog contains {len(catalog_ids)} control IDs.")
 
-    print("Parsing ITSP.10.033-01 PDF Table 4...")
-    with pdfplumber.open("itsp.10.033-01-2026-eng.pdf") as pdf:
+    pdf_path = os.environ.get("ITSP_PROFILE_PDF_PATH", "data/sources/itsp.10.033-01-2026-eng.pdf")
+    if not os.path.exists(pdf_path) and os.path.exists("itsp.10.033-01-2026-eng.pdf"):
+        pdf_path = "itsp.10.033-01-2026-eng.pdf"
+
+    print(f"Parsing ITSP.10.033-01 PDF Table 4 from {pdf_path}...")
+    with pdfplumber.open(pdf_path) as pdf:
         curr_fam = ""
         selected_ids = []
         not_selected_ids = []
@@ -188,10 +196,17 @@ def main():
         }
     }
 
-    output_path = "itsp-10-033-01-profile.oscal.json"
+    output_path = "data/frameworks/cccs-itsp-10-033/profile.json"
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
     with open(output_path, "w") as f:
         json.dump(profile_doc, f, indent=2)
     print(f"Wrote profile to {output_path}")
+
+    embed_path = "server/internal/canadianframeworks/itsp10033_profile.json"
+    if os.path.exists(os.path.dirname(embed_path)):
+        with open(embed_path, "w") as f:
+            json.dump(profile_doc, f, indent=2)
+        print(f"Updated embedded profile in {embed_path}")
 
 if __name__ == "__main__":
     main()
