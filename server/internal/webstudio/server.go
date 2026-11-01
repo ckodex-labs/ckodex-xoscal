@@ -64,6 +64,8 @@ func NewServer(cfg Config) (*Server, error) {
 
 	mux := http.NewServeMux()
 	mux.HandleFunc("/", s.handleIndex)
+	mux.HandleFunc("/healthz", s.handleHealthz)
+	mux.HandleFunc("/readyz", s.handleHealthz)
 	mux.HandleFunc("/api/v1/frameworks", s.handleFrameworks)
 	mux.HandleFunc("/api/v1/frameworks/", s.handleFrameworkSubpath)
 	mux.HandleFunc("/api/v1/compare", s.handleCompare)
@@ -115,6 +117,22 @@ func (s *Server) Start() (string, error) {
 // Stop gracefully shuts down the server.
 func (s *Server) Stop(ctx context.Context) error {
 	return s.httpServer.Shutdown(ctx)
+}
+
+// Handler returns the underlying http.Handler for testing or embedding.
+func (s *Server) Handler() http.Handler {
+	return s.httpServer.Handler
+}
+
+func (s *Server) handleHealthz(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "application/json; charset=utf-8")
+	w.Header().Set("X-Content-Type-Options", "nosniff")
+	w.WriteHeader(http.StatusOK)
+	_ = json.NewEncoder(w).Encode(map[string]any{
+		"status":     "healthy",
+		"time":       time.Now().UTC().Format(time.RFC3339),
+		"frameworks": len(s.registry.ListInfo()),
+	})
 }
 
 func (s *Server) handleIndex(w http.ResponseWriter, r *http.Request) {
@@ -240,27 +258,65 @@ func (s *Server) handleFrameworkSubpath(w http.ResponseWriter, r *http.Request) 
 
 		if len(parts) == 3 && parts[2] != "" {
 			layerName := strings.ToLower(parts[2])
+			if layerName == "checksums.sha256" || layerName == "checksums" {
+				hashOf := func(b []byte) string {
+					h := sha256.Sum256(b)
+					return hex.EncodeToString(h[:])
+				}
+				lines := []string{
+					fmt.Sprintf("%s  catalog.json", hashOf(layers.Catalog)),
+					fmt.Sprintf("%s  profile.json", hashOf(layers.Profile)),
+					fmt.Sprintf("%s  component-definition.json", hashOf(layers.ComponentDefinition)),
+					fmt.Sprintf("%s  system-security-plan.json", hashOf(layers.SystemSecurityPlan)),
+					fmt.Sprintf("%s  assessment-plan.json", hashOf(layers.AssessmentPlan)),
+					fmt.Sprintf("%s  assessment-results.json", hashOf(layers.AssessmentResults)),
+					fmt.Sprintf("%s  plan-of-action-and-milestones.json", hashOf(layers.POAM)),
+				}
+				data := []byte(strings.Join(lines, "\n") + "\n")
+				w.Header().Set("Content-Type", "text/plain; charset=utf-8")
+				w.Header().Set("X-Content-Type-Options", "nosniff")
+				if r.URL.Query().Get("download") == "1" {
+					w.Header().Set("Content-Disposition", fmt.Sprintf("attachment; filename=\"%s-checksums.sha256\"", fwID))
+				}
+				w.WriteHeader(http.StatusOK)
+				_, _ = w.Write(data)
+				return
+			}
+
 			var data []byte
+			var fileName string
 			switch layerName {
 			case "catalog", "catalog.json":
 				data = layers.Catalog
+				fileName = "catalog.json"
 			case "profile", "profile.json":
 				data = layers.Profile
+				fileName = "profile.json"
 			case "component-definition", "component-definition.json", "components":
 				data = layers.ComponentDefinition
+				fileName = "component-definition.json"
 			case "system-security-plan", "system-security-plan.json", "ssp":
 				data = layers.SystemSecurityPlan
+				fileName = "system-security-plan.json"
 			case "assessment-plan", "assessment-plan.json", "ap":
 				data = layers.AssessmentPlan
+				fileName = "assessment-plan.json"
 			case "assessment-results", "assessment-results.json", "ar":
 				data = layers.AssessmentResults
+				fileName = "assessment-results.json"
 			case "plan-of-action-and-milestones", "plan-of-action-and-milestones.json", "poam":
 				data = layers.POAM
+				fileName = "plan-of-action-and-milestones.json"
 			default:
 				http.Error(w, fmt.Sprintf("unknown layer %s", layerName), http.StatusNotFound)
 				return
 			}
+
 			w.Header().Set("Content-Type", "application/json; charset=utf-8")
+			w.Header().Set("X-Content-Type-Options", "nosniff")
+			if r.URL.Query().Get("download") == "1" {
+				w.Header().Set("Content-Disposition", fmt.Sprintf("attachment; filename=\"%s-%s\"", fwID, fileName))
+			}
 			w.WriteHeader(http.StatusOK)
 			_, _ = w.Write(data)
 			return

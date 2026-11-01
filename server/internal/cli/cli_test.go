@@ -80,3 +80,27 @@ func TestVerifyParity_CLI_JSON(t *testing.T) {
 		t.Errorf("expected JSON verdict VERBATIM_PARITY, got: %s", out)
 	}
 }
+
+func TestDoctor_CLI(t *testing.T) {
+	out := captureOutput(func() {
+		cli.RunDoctor([]string{}, "v0.4.0-test")
+	})
+	if !strings.Contains(out, "xOSCAL Doctor: Deep Diagnostics") {
+		t.Errorf("expected doctor header, got: %s", out)
+	}
+	if !strings.Contains(out, "SYSTEM_OPERATIONAL") {
+		t.Errorf("expected SYSTEM_OPERATIONAL verdict, got: %s", out)
+	}
+}
+
+func TestDoctor_CLI_JSON(t *testing.T) {
+	out := captureOutput(func() {
+		cli.RunDoctor([]string{"-json"}, "v0.4.0-test")
+	})
+	if !strings.Contains(out, `"verdict": "SYSTEM_OPERATIONAL"`) {
+		t.Errorf("expected JSON verdict SYSTEM_OPERATIONAL, got: %s", out)
+	}
+	if !strings.Contains(out, `"schema_engine_tier1"`) {
+		t.Errorf("expected schema_engine_tier1 in JSON, got: %s", out)
+	}
+}

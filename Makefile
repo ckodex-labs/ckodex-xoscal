@@ -1,23 +1,30 @@
-.PHONY: all build build-release test test-race coverage proto lint design-lint a11y-lint a11y-live k8s-beta-check site-smoke site-verify fmt security docker clean tidy oscal-check oscal-update dagger-dev dagger-all dagger-test dagger-lint dagger-security dagger-image site site-serve
+.PHONY: all build build-release test test-race coverage proto lint design-lint a11y-lint a11y-live k8s-beta-check site-smoke site-verify fmt security docker clean tidy oscal-check oscal-update dagger-dev dagger-all dagger-test dagger-lint dagger-security dagger-image site site-serve doctor studio
 
 BINARY := xoscal-server
 IMAGE  := xoscal-server
 VERSION := $(shell git describe --tags --always 2>/dev/null || echo dev)
+GOFLAGS := -buildvcs=false
 LDFLAGS := -ldflags="-s -w -X main.version=$(VERSION)"
 
 all: build
 
 build:
-	go build $(LDFLAGS) -o bin/$(BINARY) ./server/cmd/xoscal-server
-	go build $(LDFLAGS) -o bin/xoscal ./server/cmd/xoscal
-	go build $(LDFLAGS) -o bin/xoscal-ctl ./server/cmd/xoscal-ctl
-	go build $(LDFLAGS) -o bin/xoscal-backup ./server/cmd/xoscal-backup
+	go build $(GOFLAGS) $(LDFLAGS) -o bin/$(BINARY) ./server/cmd/xoscal-server
+	go build $(GOFLAGS) $(LDFLAGS) -o bin/xoscal ./server/cmd/xoscal
+	go build $(GOFLAGS) $(LDFLAGS) -o bin/xoscal-ctl ./server/cmd/xoscal-ctl
+	go build $(GOFLAGS) $(LDFLAGS) -o bin/xoscal-backup ./server/cmd/xoscal-backup
 
 build-release:
-	CGO_ENABLED=0 go build $(LDFLAGS) -o bin/$(BINARY) ./server/cmd/xoscal-server
-	CGO_ENABLED=0 go build $(LDFLAGS) -o bin/xoscal ./server/cmd/xoscal
-	CGO_ENABLED=0 go build $(LDFLAGS) -o bin/xoscal-ctl ./server/cmd/xoscal-ctl
-	CGO_ENABLED=0 go build $(LDFLAGS) -o bin/xoscal-backup ./server/cmd/xoscal-backup
+	CGO_ENABLED=0 go build $(GOFLAGS) $(LDFLAGS) -o bin/$(BINARY) ./server/cmd/xoscal-server
+	CGO_ENABLED=0 go build $(GOFLAGS) $(LDFLAGS) -o bin/xoscal ./server/cmd/xoscal
+	CGO_ENABLED=0 go build $(GOFLAGS) $(LDFLAGS) -o bin/xoscal-ctl ./server/cmd/xoscal-ctl
+	CGO_ENABLED=0 go build $(GOFLAGS) $(LDFLAGS) -o bin/xoscal-backup ./server/cmd/xoscal-backup
+
+doctor:
+	go run $(GOFLAGS) ./server/cmd/xoscal doctor
+
+studio:
+	go run $(GOFLAGS) ./server/cmd/xoscal serve
 
 test:
 	go test -v ./...

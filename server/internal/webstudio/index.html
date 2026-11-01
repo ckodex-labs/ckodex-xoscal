@@ -389,6 +389,22 @@
     .vector-pill.blue { background: rgba(59,130,246,0.15); color: #3b82f6; border: 1px solid rgba(59,130,246,0.3); }
     .vector-pill.red { background: rgba(239,68,68,0.15); color: #ef4444; border: 1px solid rgba(239,68,68,0.3); }
     .vector-pill.yellow { background: rgba(245,158,11,0.15); color: #f59e0b; border: 1px solid rgba(245,158,11,0.3); }
+    :focus-visible {
+      outline: 2px solid var(--primary);
+      outline-offset: 2px;
+    }
+    .banner-alert {
+      background: rgba(239, 68, 68, 0.1);
+      border: 1px solid var(--danger);
+      color: #fca5a5;
+      padding: 0.75rem 1.25rem;
+      border-radius: 8px;
+      margin-bottom: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
   </style>
 </head>
 <body>
@@ -401,17 +417,22 @@
       </div>
       <div class="brand-badge">Sovereign Edition</div>
     </div>
-    <nav>
-      <button class="active" onclick="switchTab('frameworks')">Frameworks</button>
-      <button onclick="switchTab('controls')">Controls Explorer</button>
-      <button onclick="switchTab('transition')">Sovereign Transition</button>
-      <button onclick="switchTab('validator')">OSCAL Inspector</button>
+    <nav role="tablist" aria-label="Main Navigation">
+      <button id="tab-btn-frameworks" role="tab" aria-selected="true" aria-controls="tab-frameworks" class="active" onclick="switchTab('frameworks', this)">Frameworks</button>
+      <button id="tab-btn-controls" role="tab" aria-selected="false" aria-controls="tab-controls" onclick="switchTab('controls', this)">Controls Explorer</button>
+      <button id="tab-btn-transition" role="tab" aria-selected="false" aria-controls="tab-transition" onclick="switchTab('transition', this)">Sovereign Transition</button>
+      <button id="tab-btn-validator" role="tab" aria-selected="false" aria-controls="tab-validator" onclick="switchTab('validator', this)">OSCAL Inspector</button>
     </nav>
   </header>
 
   <main>
+    <div id="error-banner" class="banner-alert" style="display: none;" role="alert">
+      <span id="error-banner-text"></span>
+      <button class="btn btn-secondary" style="padding: 0.2rem 0.6rem; font-size: 0.75rem;" onclick="dismissErrorBanner()">Dismiss</button>
+    </div>
+
     <!-- TAB 1: FRAMEWORKS -->
-    <div id="tab-frameworks" class="tab-content active">
+    <div id="tab-frameworks" class="tab-content active" role="tabpanel" aria-labelledby="tab-btn-frameworks">
       <h2>Authoritative Compliance Frameworks</h2>
       <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.25rem;">
         Complete sovereign Canadian standards and international baselines embedded in xOSCAL.
@@ -422,17 +443,20 @@
     </div>
 
     <!-- TAB 2: CONTROLS EXPLORER -->
-    <div id="tab-controls" class="tab-content">
+    <div id="tab-controls" class="tab-content" role="tabpanel" aria-labelledby="tab-btn-controls">
       <h2>Control Intelligence Explorer</h2>
       <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.25rem; margin-bottom: 1.5rem;">
         Instant search across all 1,248 controls, enhancements, statements, and Canadian GC guidance.
       </p>
 
       <div class="toolbar">
-        <select id="fw-selector" class="select-dropdown" onchange="onFrameworkSelectChange()">
+        <select id="fw-selector" class="select-dropdown" aria-label="Select framework" onchange="onFrameworkSelectChange()">
           <!-- Populated dynamically -->
         </select>
-        <input type="text" id="control-search-input" class="search-input" placeholder="Search controls (e.g. AC-2, 'multi-factor', 'cloud', 'cryptography')..." oninput="debounceSearch()">
+        <div style="display: flex; flex: 1; min-width: 280px; gap: 0.5rem;">
+          <input type="text" id="control-search-input" class="search-input" placeholder="Search controls (e.g. AC-2, 'multi-factor', 'cloud', 'cryptography')..." aria-label="Search controls" oninput="debounceSearch()">
+          <button class="btn btn-secondary" onclick="clearControlSearch()" title="Clear search">Clear</button>
+        </div>
       </div>
 
       <div class="table-container">
@@ -453,7 +477,7 @@
     </div>
 
     <!-- TAB 3: SOVEREIGN TRANSITION -->
-    <div id="tab-transition" class="tab-content">
+    <div id="tab-transition" class="tab-content" role="tabpanel" aria-labelledby="tab-btn-transition">
       <h2>ITSG-33 to ITSP.10.033 Transition Engine</h2>
       <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.25rem; margin-bottom: 1.5rem;">
         Automated architectural transition delta mapping the 2017 ITSG-33 standard to the 2026 CCCS ITSP.10.033 catalogue.
@@ -482,15 +506,15 @@
     </div>
 
     <!-- TAB 4: OSCAL VALIDATOR -->
-    <div id="tab-validator" class="tab-content">
+    <div id="tab-validator" class="tab-content" role="tabpanel" aria-labelledby="tab-btn-validator">
       <h2>OSCAL Inspector & Vector State Verifier</h2>
       <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.25rem; margin-bottom: 1.5rem;">
         Fast offline validation against NIST OSCAL 1.2.3 schemas with 6-dimensional Vector State evaluation.
       </p>
 
-      <div class="dropzone" id="file-dropzone" onclick="document.getElementById('file-upload').click()">
+      <div class="dropzone" id="file-dropzone" role="button" tabindex="0" aria-label="Upload OSCAL JSON file" onclick="document.getElementById('file-upload').click()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();document.getElementById('file-upload').click();}">
         <p style="font-weight: 600; margin-bottom: 0.5rem;">Click to upload or drag & drop any OSCAL JSON artifact</p>
-        <p style="color: var(--text-muted); font-size: 0.8rem;">Supports Component Definitions, System Security Plans, Catalogs, and Profiles</p>
+        <p style="color: var(--text-muted); font-size: 0.8rem;">Supports Component Definitions, System Security Plans, Catalogs, and Profiles (or press Enter/Space)</p>
         <input type="file" id="file-upload" style="display: none;" onchange="handleFileUpload(event)">
       </div>
 
@@ -507,7 +531,7 @@
   </main>
 
   <!-- CONTROL DETAIL MODAL -->
-  <div id="control-modal" class="modal-overlay" onclick="closeModal(event)">
+  <div id="control-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-ctrl-title" onclick="closeModal(event)">
     <div class="modal" onclick="event.stopPropagation()">
       <div class="modal-header">
         <div>
@@ -515,7 +539,10 @@
           <h3 id="modal-ctrl-title" style="margin-top: 0.25rem;"></h3>
           <span id="modal-ctrl-family" style="color: var(--text-muted); font-size: 0.8rem;"></span>
         </div>
-        <button class="modal-close" onclick="closeModal()">&times;</button>
+        <div style="display: flex; gap: 0.5rem; align-items: center;">
+          <button id="copy-ctrl-btn" class="btn btn-secondary" style="padding: 0.25rem 0.6rem; font-size: 0.8rem;" onclick="copyControlStatement()">Copy Text</button>
+          <button class="modal-close" aria-label="Close modal" onclick="closeModal()">&times;</button>
+        </div>
       </div>
       <div id="modal-content">
         <!-- Rendered dynamically -->
@@ -524,15 +551,15 @@
   </div>
 
   <!-- 7-LAYER OSCAL STACK & PARITY MODAL -->
-  <div id="layers-modal" class="modal-overlay" onclick="closeLayersModal(event)">
-    <div class="modal" style="max-width: 900px;" onclick="event.stopPropagation()">
+  <div id="layers-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-layers-title" onclick="closeLayersModal(event)">
+    <div class="modal" style="max-width: 960px;" onclick="event.stopPropagation()">
       <div class="modal-header">
         <div>
           <span id="modal-layers-id" class="card-id" style="font-size: 1rem;"></span>
           <h3 id="modal-layers-title" style="margin-top: 0.25rem;">7-Layer OSCAL Stack &amp; Verbatim Parity</h3>
           <span id="modal-layers-sub" style="color: var(--text-muted); font-size: 0.8rem;">Full OSCAL 1.2.3 Layer Hierarchy &amp; Parity Engine</span>
         </div>
-        <button class="modal-close" onclick="closeLayersModal()">&times;</button>
+        <button class="modal-close" aria-label="Close modal" onclick="closeLayersModal()">&times;</button>
       </div>
       <div id="modal-layers-content">
         <!-- Rendered dynamically -->
@@ -545,24 +572,77 @@
     let currentControls = [];
     let searchTimeout = null;
 
+    function showErrorBanner(msg) {
+      const banner = document.getElementById('error-banner');
+      const text = document.getElementById('error-banner-text');
+      if (banner && text) {
+        text.innerText = msg;
+        banner.style.display = 'flex';
+      }
+    }
+
+    function dismissErrorBanner() {
+      const banner = document.getElementById('error-banner');
+      if (banner) banner.style.display = 'none';
+    }
+
+    function clearControlSearch() {
+      document.getElementById('control-search-input').value = '';
+      debounceSearch();
+    }
+
+    async function copyTextToClipboard(text, el) {
+      try {
+        await navigator.clipboard.writeText(text);
+        const orig = el.innerText;
+        el.innerText = 'Copied!';
+        setTimeout(() => { el.innerText = orig; }, 1500);
+      } catch (e) {
+        console.error('Clipboard copy failed:', e);
+      }
+    }
+
+    function copyControlStatement() {
+      const title = document.getElementById('modal-ctrl-title').innerText;
+      const id = document.getElementById('modal-ctrl-id').innerText;
+      const content = document.getElementById('modal-content').innerText;
+      const full = `${id}: ${title}\n\n${content}`;
+      const btn = document.getElementById('copy-ctrl-btn');
+      copyTextToClipboard(full, btn);
+    }
+
     async function init() {
       try {
         const res = await fetch('/api/v1/frameworks');
+        if (!res.ok) {
+          throw new Error('HTTP ' + res.status);
+        }
         frameworksList = await res.json();
         renderFrameworksGrid(frameworksList);
         populateFrameworkSelector(frameworksList);
         loadTransitionDelta();
       } catch (err) {
         console.error('Failed to load frameworks:', err);
+        showErrorBanner('Failed to load frameworks from backend: ' + err.message);
       }
     }
 
-    function switchTab(tabId) {
-      document.querySelectorAll('nav button').forEach(b => b.classList.remove('active'));
+    function switchTab(tabId, btn) {
+      document.querySelectorAll('nav button').forEach(b => {
+        b.classList.remove('active');
+        b.setAttribute('aria-selected', 'false');
+      });
       document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
 
-      event.target.classList.add('active');
-      document.getElementById('tab-' + tabId).classList.add('active');
+      const activeBtn = btn || document.getElementById('tab-btn-' + tabId);
+      if (activeBtn) {
+        activeBtn.classList.add('active');
+        activeBtn.setAttribute('aria-selected', 'true');
+      }
+      const panel = document.getElementById('tab-' + tabId);
+      if (panel) {
+        panel.classList.add('active');
+      }
 
       if (tabId === 'controls' && currentControls.length === 0) {
         onFrameworkSelectChange();
@@ -589,7 +669,7 @@
             </div>
             <div style="display: flex; gap: 0.5rem; margin-top: 0.5rem;">
               <button class="btn" style="flex: 1;" onclick="selectAndExplore('${fw.id}')">Explore</button>
-              <button class="btn" style="flex: 1; background: var(--card-border); color: var(--text-main);" onclick="openLayersModal('${fw.id}', '${fw.title.replace(/'/g, "\\'")}')">7 Layers &amp; Parity</button>
+              <button class="btn btn-secondary" style="flex: 1;" onclick="openLayersModal('${fw.id}', '${fw.title.replace(/'/g, "\\'")}')">7 Layers &amp; Parity</button>
             </div>
           </div>
         </div>
@@ -606,7 +686,7 @@
     }
 
     function selectAndExplore(fwID) {
-      document.querySelectorAll('nav button')[1].click();
+      switchTab('controls', document.getElementById('tab-btn-controls'));
       document.getElementById('fw-selector').value = fwID;
       onFrameworkSelectChange();
     }
@@ -618,10 +698,14 @@
 
       try {
         const res = await fetch(`/api/v1/frameworks/${fwID}/controls`);
+        if (!res.ok) {
+          throw new Error('HTTP ' + res.status);
+        }
         currentControls = await res.json();
         renderControlsTable(currentControls);
       } catch (err) {
         tbody.innerHTML = `<tr><td colspan="4" style="color: var(--danger);">Failed to load controls: ${err}</td></tr>`;
+        showErrorBanner(`Failed to load controls for ${fwID}: ${err.message}`);
       }
     }
 
@@ -629,11 +713,11 @@
       const tbody = document.getElementById('controls-table-body');
       if (!ctrls || ctrls.length === 0) {
         tbody.innerHTML = '<tr><td colspan="4" style="text-align: center; color: var(--text-muted);">No matching controls found.</td></tr>';
-        return
+        return;
       }
 
       tbody.innerHTML = ctrls.slice(0, 100).map(c => `
-        <tr onclick="showControlModal('${c.id}')">
+        <tr onclick="showControlModal('${c.id}')" tabindex="0" onkeydown="if(event.key==='Enter'){showControlModal('${c.id}')}">
           <td style="font-family: var(--font-mono); font-weight: 600; color: var(--primary);">${c.id}</td>
           <td><span style="font-family: var(--font-mono); font-size: 0.75rem; background: var(--code-bg); padding: 0.2rem 0.4rem; border-radius: 4px;">${c.family_id}</span></td>
           <td>
@@ -652,9 +736,14 @@
       searchTimeout = setTimeout(async () => {
         const q = document.getElementById('control-search-input').value.trim();
         const fwID = document.getElementById('fw-selector').value;
-        const res = await fetch(`/api/v1/frameworks/${fwID}/controls?q=${encodeURIComponent(q)}`);
-        const results = await res.json();
-        renderControlsTable(results);
+        try {
+          const res = await fetch(`/api/v1/frameworks/${fwID}/controls?q=${encodeURIComponent(q)}`);
+          if (!res.ok) throw new Error('HTTP ' + res.status);
+          const results = await res.json();
+          renderControlsTable(results);
+        } catch (e) {
+          showErrorBanner('Search request failed: ' + e.message);
+        }
       }, 250);
     }
 
@@ -729,6 +818,7 @@
     }
 
     function closeModal(e) {
+      if (e && e.target && e.target !== document.getElementById('control-modal') && !e.target.classList.contains('modal-close')) return;
       document.getElementById('control-modal').classList.remove('active');
     }
 
@@ -753,9 +843,12 @@
         const parityBadgeClass = parity.verdict === 'VERBATIM_PARITY' ? 'badge-pass' : 'badge-fail';
         const parityHtml = `
           <div class="modal-section" style="background: var(--code-bg); padding: 1rem; border-radius: 8px; border: 1px solid var(--card-border);">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; flex-wrap: wrap; gap: 0.5rem;">
               <h4 style="margin: 0;">Verbatim Parity Verification</h4>
-              <span class="badge ${parityBadgeClass}">${parity.verdict} (${(parity.parity_score || 100).toFixed(1)}%)</span>
+              <div style="display: flex; gap: 0.5rem; align-items: center;">
+                <a href="/api/v1/frameworks/${fwID}/layers/checksums.sha256?download=1" class="btn btn-secondary" style="padding: 0.25rem 0.6rem; font-size: 0.75rem; text-decoration: none;">Download Checksums (.sha256)</a>
+                <span class="badge ${parityBadgeClass}">${parity.verdict} (${(parity.parity_score || 100).toFixed(1)}%)</span>
+              </div>
             </div>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 0.75rem; font-size: 0.85rem;">
               <div>Schema 1.2.3: <b style="color: ${parity.schema_valid ? 'var(--accent)' : 'var(--danger)'};">${parity.schema_valid ? 'VALID' : 'INVALID'}</b></div>
@@ -772,9 +865,12 @@
             <td style="font-weight: 600;">${l.kind}</td>
             <td style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">${l.name}</td>
             <td style="font-size: 0.85rem;">${(l.size_bytes / 1024).toFixed(1)} KB</td>
-            <td style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted);" title="${l.sha256}">${l.sha256.substring(0, 16)}...</td>
-            <td style="text-align: right;">
-              <a href="/api/v1/frameworks/${fwID}/layers/${l.kind}" target="_blank" class="btn" style="padding: 0.25rem 0.5rem; font-size: 0.75rem; text-decoration: none; display: inline-block;">View JSON</a>
+            <td style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted);">
+              <span title="${l.sha256}" style="cursor: pointer;" onclick="copyTextToClipboard('${l.sha256}', this)">${l.sha256.substring(0, 16)}... 📋</span>
+            </td>
+            <td style="text-align: right; white-space: nowrap;">
+              <a href="/api/v1/frameworks/${fwID}/layers/${l.kind}" target="_blank" class="btn btn-secondary" style="padding: 0.25rem 0.5rem; font-size: 0.75rem; text-decoration: none; display: inline-block;">View</a>
+              <a href="/api/v1/frameworks/${fwID}/layers/${l.kind}?download=1" class="btn" style="padding: 0.25rem 0.5rem; font-size: 0.75rem; text-decoration: none; display: inline-block; margin-left: 0.25rem;">Download</a>
             </td>
           </tr>
         `).join('');
@@ -809,13 +905,21 @@
     }
 
     function closeLayersModal(e) {
-      if (e && e.target !== document.getElementById('layers-modal')) return;
+      if (e && e.target && e.target !== document.getElementById('layers-modal') && !e.target.classList.contains('modal-close')) return;
       document.getElementById('layers-modal').classList.remove('active');
     }
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        document.getElementById('control-modal').classList.remove('active');
+        document.getElementById('layers-modal').classList.remove('active');
+      }
+    });
 
     async function loadTransitionDelta() {
       try {
         const res = await fetch('/api/v1/compare?from=cccs-itsg-33&to=cccs-itsp-10-033');
+        if (!res.ok) throw new Error('HTTP ' + res.status);
         const comp = await res.json();
 
         document.getElementById('transition-summary-cards').innerHTML = `
@@ -850,6 +954,7 @@
         `).join('');
       } catch (err) {
         console.error('Failed to load transition delta:', err);
+        showErrorBanner('Failed to load sovereign transition delta: ' + err.message);
       }
     }
 
